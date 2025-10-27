@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>LivingDex.app - Living Pokédex Tracker</title>
+  <link rel="stylesheet" href="styles.css">
+  
+  <!-- Apply saved theme preference immediately to prevent flash -->
+  <script>
+    (function() {
+      const savedTheme = localStorage.getItem('theme-v1');
+      if (savedTheme) {
+        document.documentElement.dataset.theme = savedTheme;
+      }
+    })();
+  </script>
+</head>
+<body>
+  <header>
+    <div class="topbar">
+      <h1>
+        LivingDex.app - <span id="pageTitle"></span>
+        <button id="shareLink" class="btn" title="Copy share link" aria-label="Copy share link">🔗</button>
+      </h1>
+      <button id="themeToggle" class="btn" title="Toggle light or dark mode" aria-label="Toggle light or dark mode">🌙</button>
+    </div>
+
+    <div class="searchrow">
+      <input id="search" type="search" placeholder="Search by name or number (e.g. eevee, 133, #42)" aria-label="Search Pokemon" />
+      <button id="clearSearch" class="btn" title="Clear search">Clear</button>
+    </div>
+
+    <div class="filters">
+      <label class="switch"><input id="toggleUncaught" type="checkbox"> Show uncaught only</label>
+    </div>
+  </header>
+
+  <main aria-live="polite">
+    <div id="progressWrap" role="status" aria-live="polite" aria-label="Caught progress">
+      <div id="progressTrack">
+        <div id="progressFill"><span id="progressText"></span></div>
+      </div>
+    </div>
+
+    <div id="app"></div>
+  </main>
+
+  <footer>
+    Data and sprites via
+    <a href="https://pokeapi.co/" target="_blank" rel="noreferrer">PokeAPI</a>.
+    &nbsp;•&nbsp;
+    <button id="resetDex" class="btn btn-danger" title="Reset this Pokédex" aria-haspopup="dialog">
+      Reset progress
+    </button>
+  </footer>
+
+
+  <script src="app.js" defer></script>
+
+  <div id="toast" class="toast alert alert-success">Link copied to clipboard!</div>
+
+    <!-- Reset confirmation modal -->
+  <div id="modalReset" class="modal" role="dialog" aria-modal="true"
+       aria-labelledby="resetTitle" aria-describedby="resetDesc" hidden>
+    <div class="modal-backdrop" data-close></div>
+    <div class="modal-card" role="document">
+      <h3 id="resetTitle">Reset progress?</h3>
+      <p id="resetDesc">
+        This will clear your caught Pokémon for <strong id="docTitle"></strong> on this device.
+        This cannot be undone.
+      </p>
+      <div class="modal-actions">
+        <button id="confirmReset" class="btn btn-danger" aria-label="Confirm reset">
+          Yes, reset
+        </button>
+        <button id="cancelReset" class="btn" aria-label="Cancel reset">Cancel</button>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

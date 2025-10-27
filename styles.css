@@ -1,0 +1,427 @@
+/**********************************************
+ * LivingDex.app – Core Stylesheet
+ **********************************************/
+
+/* ============================================
+   1) DESIGN TOKENS (CSS Variables)
+   ============================================ */
+:root {
+  /* palette */
+  --bg: rgb(245, 247, 250);
+  --text: rgb(33, 33, 33);
+  --card: rgb(255, 255, 255);
+  --border: rgba(0, 0, 0, 0.12);
+  --muted: rgba(0, 0, 0, 0.65);
+  --accent: rgb(255, 204, 0);       /* primary brand accent */
+  --accent-2: rgb(66, 133, 244);    /* secondary/action (focus/hover) */
+  --label: rgba(255, 255, 255, 0.8);
+  --success: rgb(16, 185, 129);
+  --warning: rgb(245, 158, 11);
+  --danger: rgb(239, 68, 68);
+
+  /* layout */
+  --grid-gap: 8px;
+  --radius: 14px;
+}
+
+[data-theme="dark"] {
+  /* dark theme overrides */
+  --bg: rgb(24, 26, 27);
+  --text: rgb(235, 235, 235);
+  --card: rgb(40, 42, 45);
+  --border: rgba(255, 255, 255, 0.16);
+  --muted: rgba(255, 255, 255, 0.75);
+  --accent: rgb(255, 204, 0);
+  --accent-2: rgb(66, 133, 244);
+  --label: rgba(40, 42, 45, 0.8);
+}
+
+/* ============================================
+   2) BASE / RESET
+   ============================================ */
+* { box-sizing: border-box; }
+
+html, body { min-height: 100%; }
+
+body {
+  margin: 0;
+  font-family: system-ui, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  color: var(--text);
+  background: var(--bg);
+  position: relative;
+}
+
+h1 {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: clamp(18px, 2vw, 22px);
+  letter-spacing: 0.3px;
+}
+
+a { color: var(--accent-2); }
+
+/* ============================================
+   3) LAYOUT
+   ============================================ */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  padding: 12px 16px 10px;
+  border-bottom: 1px solid var(--border);
+  background: var(--accent);
+  color: rgb(33, 33, 33); /* explicit for contrast on yellow */
+}
+
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.searchrow {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.filters { display: flex; gap: 14px; align-items: center; }
+
+main {
+  padding: 18px;
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+footer {
+  padding: 30px 18px;
+  color: var(--text);
+  text-align: center;
+}
+
+/* ============================================
+   4) FORMS (inputs, selects, textareas)
+   ============================================ */
+.input,
+.select,
+.textarea,
+#search {
+  display: inline-block;
+  width: 100%;
+  min-width: 0;
+  padding: 0.55rem 0.7rem;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: var(--card);
+  color: var(--text);
+}
+
+/* Dedicated tweaks for the main search */
+#search {
+  flex: 1;
+  min-width: 260px;
+  padding: 0.6rem 1rem;
+}
+
+.input:focus,
+.select:focus,
+.textarea:focus,
+#search:focus {
+  outline: 3px solid var(--accent-2);
+  outline-offset: 1px;
+}
+
+/* Toggle/switch wrapper */
+.switch { display: inline-flex; align-items: center; gap: 6px; user-select: none; }
+
+/* ============================================
+   5) BUTTONS
+   ============================================ */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1rem;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: rgba(0, 0, 0, 0.12);
+  color: var(--text);
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 120ms ease, box-shadow 120ms ease, background 120ms ease, color 120ms ease, border-color 120ms ease;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+  border-color: var(--accent-2);
+}
+
+.btn[disabled],
+.btn.is-disabled {
+  opacity: 0.55;
+  pointer-events: none;
+}
+
+/* Header-specific buttons: white on yellow header */
+header .btn {
+  color: rgb(33, 33, 33);
+  background: #fff;
+  border: 1px solid var(--border);
+}
+
+/* ============================================
+   6) FEEDBACK – Toasts
+   ============================================ */
+.toast {
+  position: fixed;
+  bottom: 22px;
+  left: 50%;
+  transform: translateX(-50%) translateY(100%);
+  min-width: 240px;
+  text-align: center;
+  border-radius: 12px;
+  padding: 0.75rem 1rem;
+  border-left: 12px solid var(--success);
+  background: var(--card);
+  color: var(--text);
+  font-weight: 600;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.25);
+  opacity: 0;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  z-index: 50;
+  pointer-events: none;
+}
+
+.toast.show {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+.toast-success { border-color: var(--success); }
+.toast-warning { border-color: var(--warning); }
+.toast-danger  { border-color: var(--danger);  }
+
+/* ============================================
+   7) PROGRESS BAR
+   ============================================ */
+#progressWrap { margin: 6px 0 16px; position: relative; }
+
+#progressTrack {
+  width: 100%;
+  height: 25px;
+  border-radius: 12px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  overflow: hidden;
+  position: relative;
+}
+
+#progressFill {
+  height: 100%;
+  width: 0%;
+  background: var(--accent-2);
+  transition: width 0.25s ease;
+}
+
+#progressText {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  color: var(--text);
+}
+
+/* ============================================
+   8) BOX / PANELS
+   ============================================ */
+.box {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 14px;
+  margin-bottom: 20px;
+}
+
+.box h2 {
+  margin: 0 0 10px 4px;
+  font-size: 16px;
+  color: var(--text);
+  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* ============================================
+   9) GRID + CELLS (Dex grid)
+   ============================================ */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: var(--grid-gap);
+}
+
+/* Base cell */
+.cell {
+  background: var(--card);
+  color: var(--text);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  padding: 0;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  cursor: pointer;
+  overflow: hidden;
+  transition: transform 0.2s ease, border-color 0.2s ease, filter 0.2s ease, opacity 0.2s ease;
+}
+
+/* Sprite appearance (dim until caught) */
+.cell .sprite {
+  width: 125%;
+  height: 125%;
+  object-fit: contain;
+  margin-top: -12.5%;
+  filter: saturate(50%) opacity(50%) blur(2px);
+  transition: filter 0.2s ease;
+}
+
+/* Hover affordance */
+.cell:hover {
+  transform: translateY(-1px);
+  border-color: var(--accent-2);
+}
+
+/* Caught state: brighter + accent background */
+.cell.caught {
+  background: var(--accent);
+}
+
+.cell.caught .sprite {
+  filter: none;
+}
+
+/* Emphasis states */
+.cell.highlight {
+  transform: translateY(-2px) scale(1.02);
+  border-color: var(--accent);
+  z-index: 2;
+}
+
+.cell.dimmed {
+  opacity: 0.22;
+  filter: grayscale(1) saturate(0.2);
+  pointer-events: none;
+}
+
+/* Hide caught if the view is filtered */
+.hide-caught .cell.caught { display: none; }
+
+/* Label at the bottom of each cell */
+.label {
+  position: absolute;
+  bottom: 0;
+  z-index: 1;
+  width: 100%;
+  padding: 6px;
+  margin: 0;
+  text-align: center;
+  background: var(--label);
+  color: var(--text);
+  font-size: clamp(10px, 2.6vw, 13px);
+}
+
+/* Index badge in the top-left corner */
+.cell .index {
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  width: clamp(18px, 4.5vw, 22px);
+  height: clamp(18px, 4.5vw, 22px);
+  min-width: clamp(18px, 4.5vw, 22px);
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--label);
+  color: var(--text);
+  font-size: clamp(9px, 2.4vw, 11px);
+  font-weight: 700;
+  line-height: 1;
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* Keep badge on top when highlighted/caught */
+.cell.highlight .index,
+.cell.caught .index { z-index: 4; }
+
+/* ============================================
+   10) MODAL
+   ============================================ */
+.modal[hidden] { display: none !important; }
+
+.modal {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: grid;
+  place-items: center;
+}
+
+.modal-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+}
+
+.modal-card {
+  position: relative;
+  max-width: 520px;
+  width: calc(100% - 32px);
+  border-radius: var(--radius);
+  background: var(--card);
+  color: var(--text);
+  border: 1px solid var(--border);
+  padding: 18px;
+  box-shadow: 0 10px 36px rgba(0,0,0,0.35);
+}
+
+.modal-card h3 {
+  margin: 0 0 8px;
+  font-size: 18px;
+}
+
+.modal-actions {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+  margin-top: 14px;
+}
+
+/* Danger button (used elsewhere too) */
+.btn-danger {
+  background: var(--danger);
+  color: #fff;
+  border-color: var(--danger);
+}
+.btn-danger:hover {
+  filter: brightness(0.95);
+  border-color: var(--danger);
+}
+
+/* ============================================
+   11) UTILITIES
+   ============================================ */
+/* Add utility classes here if/when needed */
