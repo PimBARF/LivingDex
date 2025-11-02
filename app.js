@@ -10,15 +10,13 @@
 const DEXES = {
   za: {
     title: 'Pokémon Legends: Z-A',
-    order: [152,153,154,498,499,500,158,159,160,661,662,663,659,660,664,665,666,13,14,15,16,17,18,179,180,181,504,505,406,315,407,129,130,688,689,120,121,669,670,671,672,673,677,678,667,668,674,675,568,569,702,172,25,26,173,35,36,167,168,23,24,63,64,65,92,93,94,543,544,545,679,680,681,69,70,71,511,512,513,514,515,516,307,308,309,310,280,281,282,475,228,229,333,334,531,682,683,684,685,133,134,135,136,196,197,470,471,700,427,428,353,354,582,583,584,322,323,449,450,529,530,551,552,553,66,67,68,443,444,445,703,302,303,359,447,448,79,80,199,318,319,602,603,604,147,148,149,1,2,3,4,5,6,7,8,9,618,676,686,687,690,691,692,693,704,705,706,225,361,362,478,459,460,712,713,123,212,127,214,587,701,708,709,559,560,714,715,707,607,608,609,142,696,697,698,699,95,208,304,305,306,694,695,710,711,246,247,248,656,657,658,870,650,651,652,227,653,654,655,371,372,373,115,780,374,375,376,716,717,718],
-    slotCount: 230,
+    pokedex: 34,
     storagePrefix: 'za'
   },
 
   national: {
     title: 'National Dex',
-    order: Array.from({ length: 1025 }, (_, i) => i + 1),
-    slotCount: 1025,
+    pokedex: 1,
     storagePrefix: 'national'
   }
 };
@@ -30,9 +28,9 @@ const DEXES = {
 const DEX_KEY = new URLSearchParams(location.search).get('dex') || 'za';
 const CONFIG = DEXES[DEX_KEY] || DEXES.za;
 
-// Derived constants from active config
-const LIVING_DEX_SPECIES_ORDER = CONFIG.order;
-const LIVING_DEX_SLOT_COUNT = CONFIG.slotCount;
+// Derived (set later after we load the Pokédex from API/localStorage)
+let LIVING_DEX_SPECIES_ORDER = [];
+let LIVING_DEX_SLOT_COUNT = 0;
 const BOX_CAPACITY = 30;
 
 // Storage and cache keys (namespaced per dex to avoid collisions)
