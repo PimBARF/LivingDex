@@ -85,8 +85,7 @@ const DEXES = {
   
   newdex: {
     title: 'My Custom Dex',
-    order: [1, 4, 7, 25, 133], // Array of National Dex IDs
-    slotCount: 5,
+    pokedex: 1, // ID of Pokédex for PokéAPI
     storagePrefix: 'newdex'
   }
 };
@@ -117,8 +116,7 @@ Contributions are welcome! This project follows these principles:
 ### Multi-Dex System
 The app supports multiple Pokédex configurations through the `DEXES` object. Each dex defines:
 - **Title**: Display name shown in the header
-- **Order**: Array of National Dex numbers defining which Pokémon and their sequence
-- **Slot Count**: Total number of slots in this dex
+- **Pokédex**: ID of the Pokédex as used in the PokéAPI
 - **Storage Prefix**: Namespace for localStorage to prevent conflicts
 
 ### Intelligent Caching

@@ -35,7 +35,10 @@ const BOX_CAPACITY = 30;
 
 // Storage and cache keys (namespaced per dex to avoid collisions)
 const CAUGHT_STORAGE_KEY = `${CONFIG.storagePrefix}-caught-v1`;
+const POKEDEX_CACHE_KEY = `${CONFIG.storagePrefix}-pokedex-v1`;
+
 const THEME_STORAGE_KEY = 'theme-v1';
+
 const SPECIES_CACHE_KEY = `${CONFIG.storagePrefix}-species-names-v1`;
 const SPECIES_CACHE_META_KEY = `${CONFIG.storagePrefix}-species-names-meta-v1`;
 const SPECIES_CACHE_TTL_MS = 1000 * 60 * 60 * 24 * 180; // 180 days
@@ -277,6 +280,46 @@ function decodeCaughtState(hash) {
 // =============================================================================
 // SPECIES DATA & API INTEGRATION
 // =============================================================================
+
+/**
+ * Load the Pokédex entry list (order) for the active dex.
+ * - Uses localStorage cache to avoid hammering PokeAPI
+ * - Falls back to live fetch when no cache is present
+ * Returns: { ids: number[], slotCount: number }
+ */
+async function getOrFetchPokedex() {
+  // 1) Try cache
+  try {
+    const cached = JSON.parse(localStorage.getItem(POKEDEX_CACHE_KEY) || '');
+    if (cached && Array.isArray(cached.ids) && cached.ids.length) {
+      return { ids: cached.ids, slotCount: cached.ids.length };
+    }
+  } catch { /* ignore */ }
+
+  // 2) Fetch from PokeAPI
+  const res = await fetch(`https://pokeapi.co/api/v2/pokedex/${CONFIG.pokedex}/`);
+  if (!res.ok) throw new Error('Failed to load Pokédex from PokeAPI');
+  const data = await res.json();
+
+  // 3) Extract National Dex ids in proper Pokédex order
+  //    PokeAPI returns: pokemon_entries[{ entry_number, pokemon_species: { name, url } }]
+  const entries = (data.pokemon_entries || []).slice().sort((a, b) =>
+    (a.entry_number || 0) - (b.entry_number || 0)
+  );
+
+  const ids = entries.map(e => {
+    // species URL looks like .../pokemon-species/133/
+    const m = /\/pokemon-species\/(\d+)\//.exec(e.pokemon_species?.url || '');
+    return m ? Number(m[1]) : NaN;
+  }).filter(n => Number.isFinite(n));
+
+  // 4) Cache minimally (ids only)
+  try {
+    localStorage.setItem(POKEDEX_CACHE_KEY, JSON.stringify({ ids }));
+  } catch { /* ignore quota */ }
+
+  return { ids, slotCount: ids.length };
+}
 
 /**
  * Fetch English species name from PokeAPI.
@@ -699,6 +742,11 @@ async function initializeLivingDex() {
   const app = document.getElementById('app');
   if (!app) return;
 
+  // Load Pokédex order from cache or PokeAPI
+  const { ids, slotCount } = await getOrFetchPokedex();
+  LIVING_DEX_SPECIES_ORDER = ids;
+  LIVING_DEX_SLOT_COUNT = slotCount;
+
   // Render storage boxes
   renderLivingDexBoxes(app);
   window.__livingDexNames = {};
@@ -744,24 +792,6 @@ async function initializeLivingDex() {
     if (incomingState) syncCaughtState(incomingState);
   });
 }
-
-/**
- * Self-check IIFE for regression testing.
- * Validates share encoding/decoding round-trips.
- */
-(function runSelfCheck() {
-  try {
-    const empty = {};
-    const full = {};
-    for (let slot = 1; slot <= LIVING_DEX_SLOT_COUNT; slot += 1) full[slot] = true;
-    const emptyRoundTrip = decodeCaughtState(encodeCaughtState(empty));
-    const fullRoundTrip = decodeCaughtState(encodeCaughtState(full));
-    console.assert(emptyRoundTrip && Object.values(emptyRoundTrip).every(value => !value), 'Empty state failed');
-    console.assert(fullRoundTrip && Object.values(fullRoundTrip).every(value => value), 'Full state failed');
-  } catch (error) {
-    console.warn('Self-check warning:', error);
-  }
-})();
 
 /**
  * Bootstrap the application once the DOM is ready.
