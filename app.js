@@ -436,10 +436,9 @@ function renderLivingDexBoxes(container) {
     section.innerHTML = `
       <h2>
         <span>Box ${boxIndex + 1} — #${start}–${end}</span>
-        <span class="tools">
-          <button class="btn box-catch" data-range="${start}-${end}">Mark all caught</button>
-          <button class="btn box-clear" data-range="${start}-${end}">Clear box</button>
-        </span>
+           <span class="tools">
+             <button class="btn box-toggle" data-range="${start}-${end}"></button>
+           </span>
       </h2>
       <div class="grid"></div>
     `;
@@ -514,30 +513,35 @@ function registerBoxActions() {
     const grid = box.querySelector('.grid');
     
     // Mark all caught button
-    box.querySelector('.box-catch').onclick = () => {
-      const caught = loadCaughtSlots();
-      grid.querySelectorAll('.cell').forEach(cell => {
-        cell.classList.add('caught');
-        cell.setAttribute('aria-pressed', 'true');
-        caught[Number(cell.dataset.regional)] = true;
-      });
-      saveCaughtSlots(caught);
-      updateProgressBar();
-      applyUncaughtFilter();
-    };
     
     // Clear box button
-    box.querySelector('.box-clear').onclick = () => {
-      const caught = loadCaughtSlots();
-      grid.querySelectorAll('.cell').forEach(cell => {
-        cell.classList.remove('caught');
-        cell.setAttribute('aria-pressed', 'false');
-        caught[Number(cell.dataset.regional)] = false;
-      });
-      saveCaughtSlots(caught);
-      updateProgressBar();
-      applyUncaughtFilter();
-    };
+       const toggleBtn = box.querySelector('.box-toggle');
+       function updateToggleBtnLabel() {
+         const caught = loadCaughtSlots();
+         let allCaught = true;
+         grid.querySelectorAll('.cell').forEach(cell => {
+           if (!caught[Number(cell.dataset.regional)]) allCaught = false;
+         });
+         toggleBtn.textContent = allCaught ? 'Uncaught all' : 'Caught all';
+         toggleBtn.setAttribute('aria-label', `${allCaught ? 'Mark all uncaught' : 'Mark all caught'} in this box`);
+       }
+       updateToggleBtnLabel();
+       toggleBtn.onclick = () => {
+         const caught = loadCaughtSlots();
+         let allCaught = true;
+         grid.querySelectorAll('.cell').forEach(cell => {
+           if (!caught[Number(cell.dataset.regional)]) allCaught = false;
+         });
+         grid.querySelectorAll('.cell').forEach(cell => {
+           cell.classList.toggle('caught', !allCaught);
+           cell.setAttribute('aria-pressed', String(!allCaught));
+           caught[Number(cell.dataset.regional)] = !allCaught;
+         });
+         saveCaughtSlots(caught);
+         updateProgressBar();
+         applyUncaughtFilter();
+         updateToggleBtnLabel();
+       };
   });
 }
 
