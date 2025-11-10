@@ -40,6 +40,13 @@
   </header>
 
   <main aria-live="polite">
+    <div id="gameInfo">
+      <h1 id="gameTitle"></h1>
+      <div id="segmentToggles">
+        <!-- Populated by JavaScript based on current game -->
+      </div>
+    </div>
+
     <div id="progressWrap" role="status" aria-live="polite" aria-label="Caught progress">
       <div id="progressTrack">
         <div id="progressFill"><span id="progressText"></span></div>
@@ -62,6 +69,19 @@
   <script src="app.js" defer></script>
 
   <div id="toast" class="toast alert alert-success">Link copied to clipboard!</div>
+
+  <!-- Settings modal -->
+  <div id="modalSettings" class="modal" role="dialog" aria-modal="true"
+       aria-labelledby="settingsTitle" aria-describedby="settingsDesc" hidden>
+    <div class="modal-backdrop" data-close></div>
+    <div class="modal-card" role="document">
+      <h3 id="settingsTitle">Settings</h3>
+      <p id="settingsDesc">Additional settings will be available here in the future.</p>
+      <div class="modal-actions">
+        <button id="closeSettings" class="btn" aria-label="Close settings">Close</button>
+      </div>
+    </div>
+  </div>
 
     <!-- Reset confirmation modal -->
   <div id="modalReset" class="modal" role="dialog" aria-modal="true"

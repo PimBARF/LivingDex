@@ -1,75 +1,73 @@
-# Copilot Instructions for Pokedex Tracker
+# Copilot Instructions – LivingDex
 
-## Project Overview
-This is a client-side web app for tracking a "Living Dex" across multiple Pokémon games. The app is a single-page application built with vanilla JavaScript, HTML, and CSS. It does not use any frameworks or build tools.
+Concise, project-specific guidance for AI coding agents. Focus: vanilla JS SPA, no build tools, no dependencies, small, static footprint.
 
-## Architecture & Data Flow
-- **Main entry:** All logic is in `app.js`, loaded by `index.html`.
-- **Multi-Dex System:** The app supports multiple Pokédexes (e.g., `za` for Legends: Z-A, `national` for National Dex). Configuration is in the `DEXES` object at the top of `app.js`. Each dex defines `title`, `pokedex` (PokeAPI Pokédex ID), and `storagePrefix`.
-- **Dex Selection:** URL param `?dex=za` selects the active dex (defaults to `za`). The `CONFIG` constant holds the current dex config.
-- **Dynamic Data Loading:** Species order and count are loaded dynamically from PokeAPI via `getOrFetchPokedex()` using the configured `pokedex` ID. Results are cached in localStorage per-dex to reduce API calls.
-- **UI Structure:** The app dynamically renders boxes (30 slots each) and cells representing Pokémon slots. The DOM is manipulated directly via JS.
-- **State Management:** Caught Pokémon are tracked in localStorage with per-dex keys (e.g., `za-caught-v1`, `national-caught-v1`). Theme preference is global (`theme-v1`).
-- **Species Data:** The order and count of tracked Pokémon are fetched from PokeAPI's Pokédex endpoint, sorted by `entry_number`, and extracted from `pokemon_entries[].pokemon_species.url`.
-- **Sprites & Names:** Sprites are loaded from PokeAPI's GitHub CDN. Names are fetched from PokeAPI with intelligent caching (per-dex cache keys, 180-day TTL, cache invalidation on dex list changes).
-- **Sharing:** Caught state can be encoded/decoded into a URL hash (`#s=...`) for sharing progress via bitpacked binary.
+## Core Architecture
+- Single page: `index.html` + `app.js` + `styles.css`; everything dynamic is in `app.js` (DOM creation, events, caching, sharing).
+- Dex configuration lives in the `DEXES` object; some dexes are composite (base segment + optional segments toggled & persisted).
+- Active dex selected via `?dex=KEY` (default may change; read `app.js`—don’t hardcode). Config derived and stored in a `CONFIG` constant.
+- Species lists fetched from PokeAPI Pokédex endpoints; cached per dex/segment in `localStorage`.
+- UI boxes: 30 slots per box (mirrors in‑game storage). Bulk actions: mark all caught / clear box.
 
-## Developer Workflows
-- **No build step:** All files are static. Open `index.html` in a browser to run.
-- **Debugging:** Use browser DevTools. Console assertions in `app.js` provide regression checks for share encoding.
-- **Testing:** No formal test suite; manual regression via the self-check IIFE in `app.js`.
-- **Styling:** Theme tokens and responsive layout are in `styles.css`. Theme toggling is handled via a data attribute on `<html>`.
-  - CSS variables in `:root` define light theme (default)
-  - `[data-theme="dark"]` selector overrides for dark mode
-  - Key tokens: `--bg`, `--text`, `--card`, `--border`, `--accent` (yellow brand), `--accent-2` (blue interactive)
-  - Theme applied via `document.documentElement.dataset.theme = 'dark'|'light'`
+## State & Caching Patterns
+- Caught map key: `${storagePrefix}-caught-v1` (bit-like boolean map per species index).
+- Species list caches: `${storagePrefix}-pokedex-v1` (segments have their own keys).
+- Name cache: `${storagePrefix}-species-names-v1` + meta `${storagePrefix}-species-names-meta-v1` (stores TTL + hash of species IDs; expires after ~180 days or mismatch).
+- Segment toggles: `${storagePrefix}-segments-v1`; theme: `theme-v1`.
+- Sharing: Caught state serialized into `#s=...` via bit‑packing (read the encoding IIFE for reference before modifying).
 
-## Project-Specific Patterns
-- **DOM Manipulation:** All UI updates are direct DOM changes, not via frameworks.
-- **Concurrency:** Species name hydration uses `mapWithConcurrency()` helper (default 10 concurrent requests, configurable via `NAME_FETCH_CONCURRENCY`).
-- **Smart Caching:** Species names are cached per-dex with TTL + hash-based invalidation. Cache is rebuilt only when stale (180 days old) or when the species list changes.
-- **Accessibility:** ARIA attributes (`aria-pressed`, `aria-live`, `aria-label`), keyboard navigation, and focus trapping in modals.
-- **Box Controls:** Each box (30 slots) has "Mark all caught" and "Clear box" buttons for bulk operations.
-- **Search & Filter:** Search by name/number (supports `#42`, `42`, or `eevee`). "Show uncaught only" toggle hides caught cells via CSS class.
-- **Modal Dialogs:** Reset confirmation modal with focus trap, keyboard nav, and backdrop click handling.
-- **Toast Notifications:** Success/warning/danger toasts for user feedback (e.g., link copied, errors).
+## Data Fetch & Concurrency
+- Name hydration uses a helper `mapWithConcurrency(fn, items, limit)` (default 10; constant `NAME_FETCH_CONCURRENCY`). Maintain this pattern—avoid unbounded parallel fetches.
+- Sprite/official artwork served from PokeAPI’s GitHub CDN; no runtime transformation.
 
-## Integration Points
-- **External APIs:**
-  - PokeAPI for species names and sprites
-  - Browser localStorage for persistence
-  - Clipboard API for sharing links
+## UI & Interaction Conventions
+- Direct DOM manipulation (create elements, set `textContent`, add classes). Do NOT introduce frameworks or virtual DOM abstractions.
+- Theme toggle sets `document.documentElement.dataset.theme = 'dark' | 'light'`; CSS variables in `:root` and `[data-theme="dark"]` override tokens (`--bg`, `--text`, `--card`, `--border`, `--accent`, `--accent-2`).
+- Search accepts name, number, or `#number` (normalize input before matching). "Show uncaught only" implemented via a CSS class on caught cells—prefer class toggles over inline styles.
+- Accessible modals: focus trap, Escape closes, backdrop click closes; replicate existing ARIA patterns.
+- Toast notifications: danger/warn/success; reuse existing container & CSS classes—do not create new styling systems.
 
-## Conventions
-- **No external dependencies** (no npm, no package.json)
-- **All logic in a single JS file** (`app.js`)
-- **Static assets only**
-- **No backend/server code**
+## Adding / Modifying a Dex
+Minimal example (append inside `DEXES`):
+```js
+za: { title: 'Pokémon Legends: Z-A', pokedex: 34, storagePrefix: 'za' }
+```
+Composite form (base + optional segment):
+```js
+swsh: {
+  title: 'Sword/Shield', storagePrefix: 'swsh', composite: true,
+  segments: [
+    { key: 'base', title: 'Galar', pokedex: 27, kind: 'base', optional: false },
+    { key: 'forms', title: 'Forms', kind: 'forms', optional: true, manualIds: [] }
+  ]
+}
+```
+After adding: navigate with `?dex=swsh`; first load fetches + caches species.
 
-## Key Files
-- `app.js`: All application logic
-- `index.html`: App shell and UI structure
-- `styles.css`: Theme and layout
+## Safe Change Guidelines
+- Keep everything in `app.js`; new helpers fine, but avoid splitting files.
+- Preserve cache key version suffixes (`-v1`) unless performing a deliberate breaking change (then update all dependent logic & share encoder tests).
+- Before editing share encoding, run existing console assertions—maintain bit length invariants and correct decode symmetry.
+- Avoid adding dependencies or build tooling; PRs introducing them should be rejected.
 
-## Example: Adding a Feature
-To add a new filter or UI control:
-- Update `index.html` to add the control
-- Add event listeners and logic in `app.js`
-- Style in `styles.css` if needed
+## Common Tasks
+- Clear stale caches: manually `localStorage.removeItem(<key>)` in DevTools.
+- Add a UI control: edit `index.html`, wire listener in `app.js`, style via existing tokens in `styles.css`.
+- Extend search behavior: adjust normalization logic; keep performance O(n) over in‑memory species list.
 
-### Adding a New Dex
-1. Find the PokeAPI Pokédex ID at https://pokeapi.co/api/v2/pokedex/ (e.g., `1` = National, `34` = Legends: Z-A)
-2. Add entry to `DEXES` object in `app.js` with unique key:
-   ```js
-   scarlet: {
-     title: 'Pokémon Scarlet/Violet',
-     pokedex: 31,  // PokeAPI Pokédex ID for Paldea
-     storagePrefix: 'scarlet'
-   }
-   ```
-3. Users navigate via `?dex=scarlet` URL param
-4. Species order and count load automatically from PokeAPI on first visit
-5. Storage/cache keys auto-namespace per `storagePrefix`
+## Accessibility & Performance
+- Maintain ARIA roles/labels on interactive elements; preserve focus trap logic when modifying modals.
+- Be cautious of layout thrashing—batch DOM writes (create fragments, then append) as current code does.
 
----
-If any section is unclear or missing, please ask for clarification or provide feedback to improve these instructions.
+## Non-Goals
+- No server/API beyond PokeAPI. No analytics, no tracking.
+- No internationalization yet (future idea—don’t preemptively scaffold).
+
+## Review Checklist for Changes
+1. No new dependencies or build steps.
+2. Cache keys + TTL logic remain consistent.
+3. Share hash still round-trips encode/decode.
+4. Accessibility (focus, ARIA) unaffected.
+5. Performance: no excessive parallel fetches.
+
+Feedback welcome—clarify anything unclear or suggest missing high‑leverage patterns.

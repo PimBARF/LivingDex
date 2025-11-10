@@ -220,7 +220,58 @@ footer {
 .toast-danger  { border-color: var(--danger);  }
 
 /* ============================================
-   7) PROGRESS BAR
+   7) GAME INFO SECTION
+   ============================================ */
+#gameInfo {
+  margin-bottom: 12px;
+}
+
+#gameTitle {
+  font-size: 22px;
+  font-weight: 700;
+  margin: 0 0 8px 0;
+  color: var(--text);
+}
+
+#segmentToggles {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+}
+
+.segment-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  cursor: pointer;
+  user-select: none;
+  transition: border-color 0.2s ease, background 0.2s ease;
+}
+
+.segment-toggle:hover {
+  border-color: var(--accent-2);
+}
+
+.segment-toggle input[type="checkbox"] {
+  cursor: pointer;
+  width: 16px;
+  height: 16px;
+  margin: 0;
+}
+
+.segment-toggle span {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text);
+}
+
+/* ============================================
+   8) PROGRESS BAR
    ============================================ */
 #progressWrap { margin: 6px 0 16px; position: relative; }
 
@@ -252,8 +303,15 @@ footer {
 }
 
 /* ============================================
-   8) BOX / PANELS
+   9) BOX / PANELS
    ============================================ */
+.section-title {
+  margin: 18px 4px 8px;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text);
+}
+
 .box {
   background: var(--card);
   border: 1px solid var(--border);
@@ -272,7 +330,7 @@ footer {
 }
 
 /* ============================================
-   9) GRID + CELLS (Dex grid)
+   10) GRID + CELLS (Dex grid)
    ============================================ */
 .grid {
   display: grid;
@@ -379,8 +437,21 @@ footer {
 .cell.highlight .index,
 .cell.caught .index { z-index: 4; }
 
+/* Placeholder (empty) slot styling */
+.cell.is-placeholder {
+  background: repeating-linear-gradient(45deg,var(--card),var(--card) 6px,rgba(0,0,0,0.05) 6px,rgba(0,0,0,0.05) 12px);
+  border: 1px dashed var(--border);
+  opacity: 0.45;
+  cursor: default;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cell.is-placeholder .label { background: transparent; color: var(--muted); }
+.cell.is-placeholder .index { background: transparent; color: var(--muted); }
+
 /* ============================================
-   10) MODAL
+   11) MODAL
    ============================================ */
 .modal[hidden] { display: none !important; }
 
@@ -434,6 +505,6 @@ footer {
 }
 
 /* ============================================
-   11) UTILITIES
+   12) UTILITIES
    ============================================ */
 /* Add utility classes here if/when needed */
