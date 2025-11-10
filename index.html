@@ -4,6 +4,9 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>LivingDex.app - Living Pokédex Tracker</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   
   <!-- Apply saved theme preference immediately to prevent flash -->
@@ -19,20 +22,20 @@
 <body>
   <header>
     <div class="topbar">
-      <h1>
-        LivingDex.app - <span id="pageTitle"></span>
-        <button id="shareLink" class="btn" title="Copy share link" aria-label="Copy share link">🔗</button>
-      </h1>
-      <button id="themeToggle" class="btn" title="Toggle light or dark mode" aria-label="Toggle light or dark mode">🌙</button>
+      <div class="logo">
+        <a href="#" aria-label="LivingDex home"><span id="logo">LivingDex</span>.app</a>
+      </div>
+      <div class="controls">
+        <button id="themeToggle" class="btn" title="Toggle light or dark mode" aria-label="Toggle light or dark mode">🌙</button>
+        <button id="settingsBtn" class="btn" title="Open settings" aria-label="Open settings" aria-haspopup="dialog">⚙️</button>
+      </div>
+      <select id="dexSelector" class="select" aria-label="Select Pokédex">
+        <!-- Options populated by JavaScript -->
+      </select>
     </div>
-
     <div class="searchrow">
       <input id="search" type="search" placeholder="Search by name or number (e.g. eevee, 133, #42)" aria-label="Search Pokemon" />
       <button id="clearSearch" class="btn" title="Clear search">Clear</button>
-    </div>
-
-    <div class="filters">
-      <label class="switch"><input id="toggleUncaught" type="checkbox"> Show uncaught only</label>
     </div>
   </header>
 

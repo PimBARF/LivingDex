@@ -8,6 +8,7 @@
 :root {
   /* palette */
   --bg: rgb(245, 247, 250);
+  --bg-header: rgba(255, 255, 255, 0.5);
   --text: rgb(33, 33, 33);
   --card: rgb(255, 255, 255);
   --border: rgba(0, 0, 0, 0.12);
@@ -27,6 +28,7 @@
 [data-theme="dark"] {
   /* dark theme overrides */
   --bg: rgb(24, 26, 27);
+  --bg-header: rgba(40, 42, 45, 0.5);
   --text: rgb(235, 235, 235);
   --card: rgb(40, 42, 45);
   --border: rgba(255, 255, 255, 0.16);
@@ -45,19 +47,10 @@ html, body { min-height: 100%; }
 
 body {
   margin: 0;
-  font-family: system-ui, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  font-family: "Inter", system-ui, sans-serif;
   color: var(--text);
   background: var(--bg);
   position: relative;
-}
-
-h1 {
-  margin: 0;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-size: clamp(18px, 2vw, 22px);
-  letter-spacing: 0.3px;
 }
 
 a { color: var(--accent-2); }
@@ -71,16 +64,35 @@ header {
   z-index: 5;
   padding: 12px 16px 10px;
   border-bottom: 1px solid var(--border);
-  background: var(--accent);
+  background-color: var(--card);
+  background: linear-gradient(var(--card) 35%, var(--bg-header));
+  backdrop-filter: saturate(180%) blur(5px);
   color: rgb(33, 33, 33); /* explicit for contrast on yellow */
 }
 
 .topbar {
   display: flex;
   align-items: center;
-  justify-content: space-between;
   gap: 12px;
   margin-bottom: 10px;
+}
+
+.logo a {
+  font-weight: 700;
+  font-size: clamp(20px, 3vw, 26px);
+  text-decoration: none;
+  color: var(--text);
+}
+
+#logo {
+  color: var(--accent);
+}
+
+.controls {
+  margin-left: auto;
+  display: flex;
+  gap: 10px;
+  align-items: center;
 }
 
 .searchrow {
@@ -128,6 +140,13 @@ footer {
   padding: 0.6rem 1rem;
 }
 
+/* Dex selector dropdown */
+#dexSelector {
+  width: auto;
+  min-width: 180px;
+  font-weight: 600;
+}
+
 .input:focus,
 .select:focus,
 .textarea:focus,
@@ -150,7 +169,7 @@ footer {
   padding: 0.6rem 1rem;
   border-radius: 10px;
   border: 1px solid var(--border);
-  background: rgba(0, 0, 0, 0.12);
+  background: var(--card);
   color: var(--text);
   font-weight: 600;
   cursor: pointer;
@@ -166,13 +185,6 @@ footer {
 .btn.is-disabled {
   opacity: 0.55;
   pointer-events: none;
-}
-
-/* Header-specific buttons: white on yellow header */
-header .btn {
-  color: rgb(33, 33, 33);
-  background: #fff;
-  border: 1px solid var(--border);
 }
 
 /* ============================================

@@ -5,11 +5,12 @@ This is a client-side web app for tracking a "Living Dex" across multiple Pokém
 
 ## Architecture & Data Flow
 - **Main entry:** All logic is in `app.js`, loaded by `index.html`.
-- **Multi-Dex System:** The app supports multiple Pokédexes (e.g., `za` for Legends: Z-A, `national` for National Dex). Configuration is in the `DEXES` object at the top of `app.js`. Each dex defines `title`, `order` (species array), `slotCount`, and `storagePrefix`.
+- **Multi-Dex System:** The app supports multiple Pokédexes (e.g., `za` for Legends: Z-A, `national` for National Dex). Configuration is in the `DEXES` object at the top of `app.js`. Each dex defines `title`, `pokedex` (PokeAPI Pokédex ID), and `storagePrefix`.
 - **Dex Selection:** URL param `?dex=za` selects the active dex (defaults to `za`). The `CONFIG` constant holds the current dex config.
+- **Dynamic Data Loading:** Species order and count are loaded dynamically from PokeAPI via `getOrFetchPokedex()` using the configured `pokedex` ID. Results are cached in localStorage per-dex to reduce API calls.
 - **UI Structure:** The app dynamically renders boxes (30 slots each) and cells representing Pokémon slots. The DOM is manipulated directly via JS.
 - **State Management:** Caught Pokémon are tracked in localStorage with per-dex keys (e.g., `za-caught-v1`, `national-caught-v1`). Theme preference is global (`theme-v1`).
-- **Species Data:** The order and count of tracked Pokémon come from `CONFIG.order` and `CONFIG.slotCount`, derived from the `DEXES` object.
+- **Species Data:** The order and count of tracked Pokémon are fetched from PokeAPI's Pokédex endpoint, sorted by `entry_number`, and extracted from `pokemon_entries[].pokemon_species.url`.
 - **Sprites & Names:** Sprites are loaded from PokeAPI's GitHub CDN. Names are fetched from PokeAPI with intelligent caching (per-dex cache keys, 180-day TTL, cache invalidation on dex list changes).
 - **Sharing:** Caught state can be encoded/decoded into a URL hash (`#s=...`) for sharing progress via bitpacked binary.
 
@@ -57,17 +58,18 @@ To add a new filter or UI control:
 - Style in `styles.css` if needed
 
 ### Adding a New Dex
-1. Add entry to `DEXES` object in `app.js` with unique key:
+1. Find the PokeAPI Pokédex ID at https://pokeapi.co/api/v2/pokedex/ (e.g., `1` = National, `34` = Legends: Z-A)
+2. Add entry to `DEXES` object in `app.js` with unique key:
    ```js
    scarlet: {
      title: 'Pokémon Scarlet/Violet',
-     order: [1, 2, 3, ...],  // array of National Dex IDs
-     slotCount: 400,
+     pokedex: 31,  // PokeAPI Pokédex ID for Paldea
      storagePrefix: 'scarlet'
    }
    ```
-2. Users navigate via `?dex=scarlet` URL param
-3. Storage/cache keys auto-namespace per `storagePrefix`
+3. Users navigate via `?dex=scarlet` URL param
+4. Species order and count load automatically from PokeAPI on first visit
+5. Storage/cache keys auto-namespace per `storagePrefix`
 
 ---
 If any section is unclear or missing, please ask for clarification or provide feedback to improve these instructions.

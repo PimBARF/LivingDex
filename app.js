@@ -726,6 +726,35 @@ function registerResetControls() {
 // =============================================================================
 
 /**
+ * Populate the dex selector dropdown with available dexes.
+ */
+function populateDexSelector() {
+  const selector = document.getElementById('dexSelector');
+  if (!selector) return;
+  
+  selector.innerHTML = '';
+  Object.entries(DEXES).forEach(([key, config]) => {
+    const option = document.createElement('option');
+    option.value = key;
+    option.textContent = config.title;
+    if (key === DEX_KEY) option.selected = true;
+    selector.appendChild(option);
+  });
+  
+  // Handle dex switching
+  selector.addEventListener('change', (e) => {
+    const newDex = e.target.value;
+    if (newDex && newDex !== DEX_KEY) {
+      // Redirect to new dex with URL parameter
+      const url = new URL(location.href);
+      url.searchParams.set('dex', newDex);
+      url.hash = ''; // Clear any shared state
+      location.href = url.toString();
+    }
+  });
+}
+
+/**
  * Set page titles from active dex config.
  */
 function setTitles() {
@@ -741,6 +770,7 @@ function setTitles() {
  */
 async function initializeLivingDex() {
   setTitles();
+  populateDexSelector();
   applyTheme(localStorage.getItem(THEME_STORAGE_KEY) || 'light');
 
   const app = document.getElementById('app');
