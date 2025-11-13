@@ -53,12 +53,9 @@ const GAMES = {
   }
 };
 
-/**
- * Determine active dex from URL parameter (?dex=za) or default to 'home'.
- * CONFIG holds the configuration for the currently active dex.
- */
-const DEX_KEY = new URLSearchParams(location.search).get('dex') || 'home';
-const CONFIG = GAMES[DEX_KEY] || GAMES.home;
+ // Determine active game from URL parameter (?game=za) or default to Pokémon Home
+const ACTIVE_GAME_ID = new URLSearchParams(location.search).get('game') || 'home';
+const ACTIVE_GAME = GAMES[ACTIVE_GAME_ID] || GAMES.home;
 
 // Derived (set later after we load the Pokédex from API/localStorage)
 let LIVING_DEX_SPECIES_ORDER = [];
@@ -66,14 +63,13 @@ let LIVING_DEX_SLOT_COUNT = 0;
 const BOX_CAPACITY = 30;
 
 // Storage and cache keys (namespaced per dex to avoid collisions)
-const CAUGHT_STORAGE_KEY = `${CONFIG.storagePrefix}-caught-v1`;
-const POKEDEX_CACHE_KEY = `${CONFIG.storagePrefix}-pokedex-v1`;
-const SEGMENTS_STORAGE_KEY = `${CONFIG.storagePrefix}-segments-v1`;
+const CAUGHT_STORAGE_KEY = `${ACTIVE_GAME.storagePrefix}-caught-v1`;
+const SEGMENTS_STORAGE_KEY = `${ACTIVE_GAME.storagePrefix}-segments-v1`;
 
 const THEME_STORAGE_KEY = 'theme-v1';
 
-const SPECIES_CACHE_KEY = `${CONFIG.storagePrefix}-species-names-v1`;
-const SPECIES_CACHE_META_KEY = `${CONFIG.storagePrefix}-species-names-meta-v1`;
+const SPECIES_CACHE_KEY = `${ACTIVE_GAME.storagePrefix}-species-names-v1`;
+const SPECIES_CACHE_META_KEY = `${ACTIVE_GAME.storagePrefix}-species-names-meta-v1`;
 const SPECIES_CACHE_TTL_MS = 1000 * 60 * 60 * 24 * 180; // 180 days
 
 // API and UI constants
@@ -364,7 +360,7 @@ function updateProgressBar() {
   const label = document.getElementById('progressText');
   if (fill) fill.style.width = `${percentage}%`;
   if (label) label.textContent = `${caught}/${LIVING_DEX_SLOT_COUNT} caught (${percentage}%)`;
-  document.title = `${CONFIG.title} — ${caught}/${LIVING_DEX_SLOT_COUNT}`;
+  document.title = `${ACTIVE_GAME.title} — ${caught}/${LIVING_DEX_SLOT_COUNT}`;
 }
 
 /**
@@ -436,49 +432,7 @@ function decodeCaughtState(hash) {
 // SPECIES DATA & API INTEGRATION
 // =============================================================================
 
-/**
- * Load the Pokédex entry list (order) for the active dex.
- * - Uses localStorage cache to avoid hammering PokeAPI
- * - Falls back to live fetch when no cache is present
- * Returns: { entries: [{speciesId, formId}], slotCount: number }
- */
-async function getOrFetchPokedex() {
-  // 1) Try cache
-  try {
-    const cached = JSON.parse(localStorage.getItem(POKEDEX_CACHE_KEY) || '');
-    if (cached && Array.isArray(cached.entries) && cached.entries.length) {
-      return { entries: cached.entries, slotCount: cached.entries.length };
-    }
-  } catch { /* ignore */ }
 
-  // 2) Fetch from PokeAPI
-  const res = await fetch(`https://pokeapi.co/api/v2/pokedex/${CONFIG.pokedexId}/`);
-  if (!res.ok) throw new Error('Failed to load Pokédex from PokeAPI');
-  const data = await res.json();
-
-  // 3) Extract species ids and apply regional form mappings
-  const pokemonEntries = (data.pokemon_entries || []).slice().sort((a, b) =>
-    (a.entry_number || 0) - (b.entry_number || 0)
-  );
-  
-  const regionalMappings = REGIONAL_FORM_MAPPINGS[CONFIG.pokedexId] || {};
-  
-  const entries = pokemonEntries.map(e => {
-    // species URL looks like .../pokemon-species/133/
-    const m = /\/pokemon-species\/(\d+)\//.exec(e.pokemon_species?.url || '');
-    if (!m) return null;
-    const speciesId = Number(m[1]);
-    const formId = regionalMappings[speciesId] || speciesId;
-    return { speciesId, formId };
-  }).filter(Boolean);
-
-  // 4) Cache minimally
-  try {
-    localStorage.setItem(POKEDEX_CACHE_KEY, JSON.stringify({ entries }));
-  } catch { /* ignore quota */ }
-
-  return { entries, slotCount: entries.length };
-}
 
 /**
  * Fetch and cache a specific PokeAPI Pokédex by numeric id.
@@ -487,7 +441,7 @@ async function getOrFetchPokedex() {
  * regional variant if applicable, otherwise same as speciesId.
  */
 async function getOrFetchPokedexById(pokedexId) {
-  const cacheKey = `${CONFIG.storagePrefix}-pokedex-${pokedexId}-v2`;
+  const cacheKey = `${ACTIVE_GAME.storagePrefix}-pokedex-${pokedexId}-v2`;
   try {
     const cached = JSON.parse(localStorage.getItem(cacheKey) || '');
     if (cached && Array.isArray(cached.entries) && cached.entries.length) {
@@ -542,10 +496,10 @@ function saveEnabledSegments(set) {
  * entries is array of { speciesId, formId }
  */
 async function computeActiveSections() {
-  const enabled = loadEnabledSegments() || new Set(CONFIG.dexes.filter(s => !s.optional).map(s => s.id));
+  const enabled = loadEnabledSegments() || new Set(ACTIVE_GAME.dexes.filter(s => !s.optional).map(s => s.id));
 
   const sections = [];
-  for (const seg of CONFIG.dexes) {
+  for (const seg of ACTIVE_GAME.dexes) {
     const include = !seg.optional || enabled.has(seg.id);
     if (!include) continue;
     if (seg.manualIds) {
@@ -1019,17 +973,17 @@ function populateGameInfo() {
   const togglesEl = document.getElementById('segmentToggles');
   
   if (titleEl) {
-    titleEl.textContent = CONFIG.title;
+    titleEl.textContent = ACTIVE_GAME.title;
   }
   
   if (!togglesEl) return;
   
   togglesEl.innerHTML = '';
   
-  const enabled = loadEnabledSegments() || new Set(CONFIG.dexes.filter(s => !s.optional).map(s => s.id));
+  const enabled = loadEnabledSegments() || new Set(ACTIVE_GAME.dexes.filter(s => !s.optional).map(s => s.id));
   
   // Create checkboxes for optional segments
-  CONFIG.dexes.filter(s => s.optional).forEach(seg => {
+  ACTIVE_GAME.dexes.filter(s => s.optional).forEach(seg => {
     const id = `gameinfo-seg-${seg.id}`;
     const wrapper = document.createElement('label');
     wrapper.className = 'segment-toggle';
@@ -1049,7 +1003,7 @@ function populateGameInfo() {
     
     // Add event listener for live updates
     input.addEventListener('change', async () => {
-      const currentEnabled = loadEnabledSegments() || new Set(CONFIG.dexes.filter(s => !s.optional).map(s => s.id));
+      const currentEnabled = loadEnabledSegments() || new Set(ACTIVE_GAME.dexes.filter(s => !s.optional).map(s => s.id));
       
       if (input.checked) {
         currentEnabled.add(seg.id);
@@ -1126,7 +1080,7 @@ function registerSettingsControls() {
 }
 
 /**
- * Populate the dex selector dropdown with available dexes.
+ * Populate the dex selector dropdown with available games.
  */
 function populateDexSelector() {
   const selector = document.getElementById('dexSelector');
@@ -1137,17 +1091,17 @@ function populateDexSelector() {
     const option = document.createElement('option');
     option.value = key;
     option.textContent = config.title;
-    if (key === DEX_KEY) option.selected = true;
+    if (key === ACTIVE_GAME_ID) option.selected = true;
     selector.appendChild(option);
   });
   
   // Handle dex switching
   selector.addEventListener('change', (e) => {
-    const newDex = e.target.value;
-    if (newDex && newDex !== DEX_KEY) {
-      // Redirect to new dex with URL parameter
+    const newGame = e.target.value;
+    if (newGame && newGame !== ACTIVE_GAME_ID) {
+      // Redirect to new game with URL parameter
       const url = new URL(location.href);
-      url.searchParams.set('dex', newDex);
+      url.searchParams.set('game', newGame);
       url.hash = ''; // Clear any shared state
       location.href = url.toString();
     }
@@ -1160,8 +1114,8 @@ function populateDexSelector() {
 function setTitles() {
   const h1 = document.getElementById('pageTitle');
   const docTitle = document.getElementById('docTitle');
-  if (h1) h1.textContent = CONFIG.title;
-  if (docTitle) docTitle.textContent = CONFIG.title;
+  if (h1) h1.textContent = ACTIVE_GAME.title;
+  if (docTitle) docTitle.textContent = ACTIVE_GAME.title;
 }
 
 /**

@@ -35,4 +35,4 @@ const GAMES = {
 // Determine active game from URL parameter (?game=za) or default to Pokémon Home
 const ACTIVE_GAME_ID = new URLSearchParams(location.search).get('game') || 'home';
 const ACTIVE_GAME = GAMES[ACTIVE_GAME_ID] || GAMES['home'];
-
+const BOX_CAPACITY = 30;
