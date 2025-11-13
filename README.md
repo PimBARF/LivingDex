@@ -91,7 +91,6 @@ scarlet: {
 	title: 'Pokémon Scarlet/Violet',
 	pokedex: 31,           // PokeAPI Pokédex ID
 	storagePrefix: 'sv',   // used for localStorage namespacing
-	composite: true,
 	segments: [
 		{ key: 'base', title: 'Paldea Pokédex', pokedex: 31, kind: 'base', optional: false },
 		{ key: 'forms', title: 'Regional Forms', kind: 'forms', optional: true, manualIds: [] }

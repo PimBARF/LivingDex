@@ -2,69 +2,53 @@
 // CONFIGURATION & CONSTANTS
 // =============================================================================
 
-/**
- * Multi-Dex configuration object.
- * Each dex defines: title (display name), order (array of National Dex IDs),
- * slotCount (total slots), and storagePrefix (namespace for localStorage keys).
- */
-const DEXES = {
+
+const GAMES = {
 
 
   home: {
     title: 'Pokémon Home',
     storagePrefix: 'home',
-    composite: true,
-    segments: [
-      { key: 'base', title: 'National Pokédex', pokedex: 1, kind: 'base', optional: false }
+    dexes: [
+      { id: 'base', title: 'National Pokédex', pokedexId: 1, type: 'base', optional: false }
     ]
   },
 
-  /**
-   * Example composite dex for Pokémon Sword & Shield including DLC segments.
-   * Each composite dex supplies a base segment (always enabled) plus optional segments.
-   * segment.pokedex: PokeAPI pokedex id to pull ordering from.
-   * segment.optional: If true can be toggled in settings (DLC / extras).
-   * segment.kind: 'base' | 'dlc' | 'forms' – used for headings.
-   * regionalForms: placeholder manual list for regional/variant forms not represented by separate Pokédex entries (kept empty initially).
-   */
+
   swsh: {
     title: 'Sword / Shield',
     storagePrefix: 'swsh',
-    composite: true,
-    segments: [
-      { key: 'base', title: 'Galar Pokédex', pokedex: 27, kind: 'base', optional: false }, // galar
-      { key: 'armor', title: 'Isle of Armor', pokedex: 28, kind: 'dlc', optional: true }, // isle-of-armor
-      { key: 'tundra', title: 'Crown Tundra', pokedex: 29, kind: 'dlc', optional: true }, // crown-tundra
-      { key: 'forms', title: 'Other Regional Forms', kind: 'forms', optional: true, manualIds: [52, 77, 78, 79, 80, 83, 110, 122, 144, 145, 146, 199, 222, 263, 264, 554, 555, 562, 618] }
+    dexes: [
+      { id: 'base', title: 'Galar Pokédex', pokedexId: 27, type: 'base', optional: false }, // galar
+      { id: 'armor', title: 'Isle of Armor', pokedexId: 28, type: 'dlc', optional: true }, // isle-of-armor
+      { id: 'tundra', title: 'Crown Tundra', pokedexId: 29, type: 'dlc', optional: true }, // crown-tundra
+      { id: 'forms', title: 'Other Regional Forms', type: 'forms', optional: true, manualIds: [52, 77, 78, 79, 80, 83, 110, 122, 144, 145, 146, 199, 222, 263, 264, 554, 555, 562, 618] }
     ]
   },
 
   pla: {
     title: 'Legends: Arceus',
     storagePrefix: 'pla',
-    composite: true,
-    segments: [
-      { key: 'base', title: 'Hisui Pokédex', pokedex: 30, kind: 'base', optional: false },
-      { key: 'forms', title: 'Regional Forms', kind: 'forms', optional: true, manualIds: [] }
+    dexes: [
+      { id: 'base', title: 'Hisui Pokédex', pokedexId: 30, type: 'base', optional: false },
+      { id: 'forms', title: 'Regional Forms', type: 'forms', optional: true, manualIds: [] }
     ]
   },
 
   sv: {
     title: 'Scarlet / Violet',
     storagePrefix: 'sv',
-    composite: true,
-    segments: [
-      { key: 'base', title: 'Paldea Pokédex', pokedex: 31, kind: 'base', optional: false },
-      { key: 'forms', title: 'Regional Forms', kind: 'forms', optional: true, manualIds: [] }
+    dexes: [
+      { id: 'base', title: 'Paldea Pokédex', pokedexId: 31, type: 'base', optional: false },
+      { id: 'forms', title: 'Regional Forms', type: 'forms', optional: true, manualIds: [] }
     ]
   },
 
   za: {
     title: 'Pokémon Legends: Z-A',
     storagePrefix: 'za',
-    composite: true,
-    segments: [
-      { key: 'base', title: 'Lumiose Pokédex', pokedex: 34, kind: 'base', optional: false }
+    dexes: [
+      { id: 'base', title: 'Lumiose Pokédex', pokedexId: 34, type: 'base', optional: false }
     ]
   }
 };
@@ -74,7 +58,7 @@ const DEXES = {
  * CONFIG holds the configuration for the currently active dex.
  */
 const DEX_KEY = new URLSearchParams(location.search).get('dex') || 'home';
-const CONFIG = DEXES[DEX_KEY] || DEXES.home;
+const CONFIG = GAMES[DEX_KEY] || GAMES.home;
 
 // Derived (set later after we load the Pokédex from API/localStorage)
 let LIVING_DEX_SPECIES_ORDER = [];
@@ -468,7 +452,7 @@ async function getOrFetchPokedex() {
   } catch { /* ignore */ }
 
   // 2) Fetch from PokeAPI
-  const res = await fetch(`https://pokeapi.co/api/v2/pokedex/${CONFIG.pokedex}/`);
+  const res = await fetch(`https://pokeapi.co/api/v2/pokedex/${CONFIG.pokedexId}/`);
   if (!res.ok) throw new Error('Failed to load Pokédex from PokeAPI');
   const data = await res.json();
 
@@ -477,7 +461,7 @@ async function getOrFetchPokedex() {
     (a.entry_number || 0) - (b.entry_number || 0)
   );
   
-  const regionalMappings = REGIONAL_FORM_MAPPINGS[CONFIG.pokedex] || {};
+  const regionalMappings = REGIONAL_FORM_MAPPINGS[CONFIG.pokedexId] || {};
   
   const entries = pokemonEntries.map(e => {
     // species URL looks like .../pokemon-species/133/
@@ -534,7 +518,7 @@ async function getOrFetchPokedexById(pokedexId) {
 
 /**
  * Read enabled segments setting for the current dex.
- * Returns a Set of enabled segment keys for composite dexes.
+ * Returns a Set of enabled segment keys.
  */
 function loadEnabledSegments() {
   try {
@@ -558,24 +542,19 @@ function saveEnabledSegments(set) {
  * entries is array of { speciesId, formId }
  */
 async function computeActiveSections() {
-  if (!CONFIG.composite) {
-    // Simple single-section dex
-    const entries = await getOrFetchPokedexById(CONFIG.pokedex);
-    return [{ key: 'base', title: CONFIG.title, kind: 'base', entries }];
-  }
-  const enabled = loadEnabledSegments() || new Set(CONFIG.segments.filter(s => !s.optional).map(s => s.key));
+  const enabled = loadEnabledSegments() || new Set(CONFIG.dexes.filter(s => !s.optional).map(s => s.id));
 
   const sections = [];
-  for (const seg of CONFIG.segments) {
-    const include = !seg.optional || enabled.has(seg.key);
+  for (const seg of CONFIG.dexes) {
+    const include = !seg.optional || enabled.has(seg.id);
     if (!include) continue;
     if (seg.manualIds) {
       // Convert manual species IDs to entry format
       const entries = seg.manualIds.map(speciesId => ({ speciesId, formId: speciesId }));
-      if (entries.length) sections.push({ key: seg.key, title: seg.title, kind: seg.kind, entries });
-    } else if (seg.pokedex) {
-      const entries = await getOrFetchPokedexById(seg.pokedex);
-      if (entries.length) sections.push({ key: seg.key, title: seg.title, kind: seg.kind, entries });
+      if (entries.length) sections.push({ key: seg.id, title: seg.title, kind: seg.type, entries });
+    } else if (seg.pokedexId) {
+      const entries = await getOrFetchPokedexById(seg.pokedexId);
+      if (entries.length) sections.push({ key: seg.id, title: seg.title, kind: seg.type, entries });
     }
   }
   return sections;
@@ -1047,16 +1026,11 @@ function populateGameInfo() {
   
   togglesEl.innerHTML = '';
   
-  if (!CONFIG.composite) {
-    // No segments to toggle for simple dexes
-    return;
-  }
-  
-  const enabled = loadEnabledSegments() || new Set(CONFIG.segments.filter(s => !s.optional).map(s => s.key));
+  const enabled = loadEnabledSegments() || new Set(CONFIG.dexes.filter(s => !s.optional).map(s => s.id));
   
   // Create checkboxes for optional segments
-  CONFIG.segments.filter(s => s.optional).forEach(seg => {
-    const id = `gameinfo-seg-${seg.key}`;
+  CONFIG.dexes.filter(s => s.optional).forEach(seg => {
+    const id = `gameinfo-seg-${seg.id}`;
     const wrapper = document.createElement('label');
     wrapper.className = 'segment-toggle';
     
@@ -1064,10 +1038,10 @@ function populateGameInfo() {
     input.type = 'checkbox';
     input.id = id;
     input.name = id;
-    input.checked = enabled.has(seg.key);
+    input.checked = enabled.has(seg.id);
     
     const text = document.createElement('span');
-    text.textContent = (seg.kind === 'forms') ? 'Regional Forms & Variants' : seg.title;
+    text.textContent = (seg.type === 'forms') ? 'Regional Forms & Variants' : seg.title;
     
     wrapper.appendChild(input);
     wrapper.appendChild(text);
@@ -1075,12 +1049,12 @@ function populateGameInfo() {
     
     // Add event listener for live updates
     input.addEventListener('change', async () => {
-      const currentEnabled = loadEnabledSegments() || new Set(CONFIG.segments.filter(s => !s.optional).map(s => s.key));
+      const currentEnabled = loadEnabledSegments() || new Set(CONFIG.dexes.filter(s => !s.optional).map(s => s.id));
       
       if (input.checked) {
-        currentEnabled.add(seg.key);
+        currentEnabled.add(seg.id);
       } else {
-        currentEnabled.delete(seg.key);
+        currentEnabled.delete(seg.id);
       }
       
       saveEnabledSegments(currentEnabled);
@@ -1159,7 +1133,7 @@ function populateDexSelector() {
   if (!selector) return;
   
   selector.innerHTML = '';
-  Object.entries(DEXES).forEach(([key, config]) => {
+  Object.entries(GAMES).forEach(([key, config]) => {
     const option = document.createElement('option');
     option.value = key;
     option.textContent = config.title;
