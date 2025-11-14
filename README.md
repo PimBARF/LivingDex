@@ -15,7 +15,7 @@ Track a full “Living Dex” across multiple Pokémon games—fast, offline‑f
 - Per‑box bulk actions (mark all caught / clear box), 30 slots per box like in‑game storage
 - Progress bar with live counts; page title reflects progress
 - Dark/light theme toggle (remembered across visits)
-- Share progress with a compact URL hash you can paste anywhere
+- Shareable progress via a compact URL hash you can paste anywhere
 - Responsive layout, accessible modals (focus trap, ARIA labels), and keyboard‑friendly controls
 - Smart caching of species names (localStorage; 180‑day TTL) and sprites via PokeAPI’s CDN
 - No external dependencies, no trackers, no backend—your data stays on your device
@@ -47,72 +47,82 @@ python -m http.server 8080
 
 Share your progress:
 
-- Use the share button to copy a link containing `#s=...`. Anyone with the link sees your current caught state.  
-- Clearing the dex removes the shared state from the URL.
+- The app supports shareable links that include your progress in the URL hash (`#s=...`). Anyone with the link sees your current caught state.  
+- Clearing the dex removes any shared state from the URL.
+
+
+## Architecture (ES modules)
+
+The app now uses small, focused ES modules instead of a single `app.js` file:
+
+- `index.html` – App shell and UI scaffolding
+- `styles.css` – Theme tokens, layout, and responsive styles
+- `js/config.js` – Game/dex configuration, constants, and mappings
+- `js/api.js` – PokeAPI integration, forms/species resolution, caching, concurrency helpers
+- `js/storage.js` – localStorage helpers for caught state, name cache, and segment toggles
+- `js/ui.js` – DOM rendering, event handlers, progress bar, modals, and interactions
+- `js/main.js` – App bootstrap and initialization (`<script type="module" src="js/main.js">`)
+
+There’s still no build step or dependencies; everything runs directly in the browser as native modules.
 
 
 ## How it works
 
-This app is built with vanilla JavaScript, HTML, and CSS. There’s no build step; all logic lives in `app.js` and renders the UI dynamically.
-
-- Species ordering comes from PokeAPI’s Pokédex endpoints per game/segment and is cached per‑dex in `localStorage`.
-- Regional forms are handled via mappings so the correct artwork and labels appear in regional dexes.
-- Caught state is stored per‑dex in `localStorage` and synchronized with the UI.
+- Species ordering comes from PokeAPI’s Pokédex endpoints per game/segment and is cached per‑segment in `localStorage`.
+- Regional forms are handled via explicit mappings so the correct artwork and labels appear in regional dexes.
+- Caught state is stored per‑game in `localStorage` and synchronized with the UI.
 - Species names are fetched on demand (with concurrency limits) and cached for 180 days with a hash to invalidate when the dex list changes.
 - Sprites/artwork are loaded from PokeAPI’s GitHub CDN.
 
 
 ## Configuration and data flow
 
-- All dex configuration lives in `app.js` under the `DEXES` object.
-- The active dex is selected via the URL query string: `?dex=KEY` (defaults to `home`).
-- Composite dexes define one base segment (always on) plus optional segments (e.g., DLC or regional forms); toggles are persisted.
+- All game/dex configuration lives in `js/config.js` under `GAMES` (and related constants).
+- Game selection happens in the UI dropdown; optional segments (DLC/forms) are toggled per game and persisted.
+- The species list for each included segment is combined at runtime and rendered into in‑game‑style boxes.
 
-Current keys (examples):
+Example game keys include:
 
-- `home` – Pokémon Home (National Pokédex subset)
-- `swsh` – Sword / Shield (Galar, Isle of Armor, Crown Tundra, plus forms)
+- `home` – Pokémon Home (National Pokédex subset + optional regional forms)
+- `swsh` – Sword / Shield (Galar, Isle of Armor, Crown Tundra)
 - `pla` – Legends: Arceus (Hisui)
-- `sv` – Scarlet / Violet (Paldea)
+- `sv` – Scarlet / Violet (Paldea + DLC)
 - `za` – Pokémon Legends: Z‑A (Lumiose)
 
-You can jump straight to a dex, e.g.: `index.html?dex=sv`.
 
+## Adding or modifying a dex
 
-## Adding a new dex
+To add a new game or edit an existing one, update `js/config.js`:
 
-All code lives in `app.js`. To add another game/region:
-
-1) Find the PokeAPI Pokédex ID at https://pokeapi.co/api/v2/pokedex/ (e.g., `1` = National, `34` = Legends: Z‑A).  
-2) Append an entry to `DEXES` with a unique key:
+1) Find the PokeAPI Pokédex ID at https://pokeapi.co/api/v2/pokedex/ (e.g., `1` = National, `34` = Z‑A).  
+2) Add or edit an entry in `GAMES` with a `storagePrefix` and one or more `dexes` (segments):
 
 ```js
-scarlet: {
-	title: 'Pokémon Scarlet/Violet',
-	pokedex: 31,           // PokeAPI Pokédex ID
-	storagePrefix: 'sv',   // used for localStorage namespacing
-	composite: true,
-	segments: [
-		{ key: 'base', title: 'Paldea Pokédex', pokedex: 31, kind: 'base', optional: false },
-		{ key: 'forms', title: 'Regional Forms', kind: 'forms', optional: true, manualIds: [] }
+sv: {
+	title: 'Pokémon Scarlet & Violet',
+	storagePrefix: 'sv',
+	dexes: [
+		{ id: 'paldea', title: 'Paldea Pokédex', pokedexId: 31, type: 'base', optional: false },
+		{ id: 'kitakami', title: 'The Teal Mask', pokedexId: 32, type: 'dlc', optional: true },
+		{ id: 'blueberry', title: 'The Indigo Disk', pokedexId: 33, type: 'dlc', optional: true }
 	]
 }
 ```
 
-3) Open with `?dex=scarlet` and the species list is fetched and cached automatically.
+3) For regional forms, define a dedicated `forms` segment (either by `pokedexId` if available or via `manualIds` of Pokémon form IDs). The app will resolve form → species for proper naming.
 
 
 ## Storage and caching
 
-All data is stored locally in your browser’s `localStorage` and namespaced per‑dex:
+All data is stored locally in your browser’s `localStorage` and namespaced per game via its `storagePrefix`:
 
 - Caught map: `${storagePrefix}-caught-v1`
-- Dex cache: `${storagePrefix}-pokedex-v1` (and per‑segment caches)
-- Segment toggles: `${storagePrefix}-segments-v1`
-- Species names: `${storagePrefix}-species-names-v1` with metadata `${storagePrefix}-species-names-meta-v1` (180‑day TTL)
+- Per‑segment dex caches: `${storagePrefix}-pokedex-<pokedexId>-v2`
+- Enabled segments: `${storagePrefix}-segments-v1`
+- Species names cache: `${storagePrefix}-species-names-v1` and metadata `${storagePrefix}-species-names-meta-v1` (180‑day TTL)
 - Theme preference: `theme-v1`
 
-Share links encode your caught state into the URL `#s=...` using a compact bit‑packed format.
+Share links encode your caught state into the URL `#s=...` using a compact bit‑packed format. Opening such a link will prompt you to load that state.
 
 
 ## Accessibility
@@ -125,12 +135,17 @@ Share links encode your caught state into the URL `#s=...` using a compact bit�
 ## Project structure
 
 ```
-app.js       # All application logic
-index.html   # App shell and UI
-styles.css   # Theme tokens and layout
-CNAME        # Custom domain for GitHub Pages (livingdex.app)
-LICENSE      # MIT license
-NOTICE       # Notices (if any)
+index.html
+styles.css
+js/
+	config.js   # Game/dex config, constants, mappings
+	api.js      # PokeAPI calls, form/species resolution, concurrency helpers
+	storage.js  # localStorage helpers and cache meta
+	ui.js       # DOM rendering and user interactions
+	main.js     # App bootstrap and initialization
+CNAME
+LICENSE
+NOTICE
 ```
 
 
@@ -152,8 +167,9 @@ NOTICE       # Notices (if any)
 Issues and pull requests are welcome. Keep in mind the project constraints:
 
 - No external dependencies or build tools
-- Single JS file (`app.js`) and static assets only
+- Vanilla JS + ES modules only (no frameworks/bundlers)
 - Follow the existing coding and UI patterns (direct DOM updates, cache keys, accessibility)
+
 
 ## Future enhancements (ideas / wishlist)
 
@@ -166,8 +182,6 @@ These are intentionally low‑risk, incremental improvements that would still re
 - Small stats sidebar (percentage per segment, remaining count)
 - Localized names (behind a toggle) using existing PokeAPI language data
 - Visual indicator for newly released DLC species when segments are enabled
-- Print-friendly summary view (caught list only)
-- Optional high‑contrast color mode for accessibility
 
 
 ## License
