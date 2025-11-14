@@ -36,7 +36,8 @@ async function initializeLivingDex() {
   setTitles();
   populateDexSelector();
   populateGameInfo();
-  applyTheme(localStorage.getItem(THEME_STORAGE_KEY) || 'light');
+  const savedTheme = localStorage.getItem(THEME_STORAGE_KEY) || 'auto';
+  applyTheme(savedTheme);
 
   const app = document.getElementById('app');
   if (!app) return;

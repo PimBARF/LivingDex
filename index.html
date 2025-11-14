@@ -12,13 +12,39 @@
   
   <!-- Apply saved theme preference immediately to prevent flash -->
   <script>
-    (function() {
-      const savedTheme = localStorage.getItem('theme-v1');
-      if (savedTheme) {
-        document.documentElement.dataset.theme = savedTheme;
+    (function () {
+      var STORAGE_KEY = 'theme-v1';
+      var stored = null;
+
+      try {
+        stored = localStorage.getItem(STORAGE_KEY);
+      } catch (e) {
+        stored = null;
       }
+
+      // Determine system preference (if available)
+      var prefersDark = false;
+      if (window.matchMedia) {
+        try {
+          prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        } catch (e) {}
+      }
+
+      // Resolve the effective theme: 'light' or 'dark'
+      var effective;
+      if (stored === 'light' || stored === 'dark') {
+        effective = stored;
+      } else if (stored === 'auto') {
+        effective = prefersDark ? 'dark' : 'light';
+      } else {
+        // No stored preference yet: follow system by default
+        effective = prefersDark ? 'dark' : 'light';
+      }
+
+      document.documentElement.dataset.theme = effective;
     })();
-  </script>
+</script>
+
 </head>
 <body>
   <header>
@@ -93,7 +119,155 @@
     <div class="modal-backdrop" data-close></div>
     <div class="modal-card" role="document">
       <h3 id="settingsTitle">Settings</h3>
-      <p id="settingsDesc">Additional settings will be available here in the future.</p>
+      <p id="settingsDesc">
+        Change how LivingDex.app looks and behaves on this device.
+      </p>
+
+      <div class="settings-body">
+        <!-- Appearance -->
+        <section class="settings-section" aria-labelledby="settingsAppearanceHeading">
+          <h4 id="settingsAppearanceHeading">Appearance</h4>
+
+          <div class="settings-row">
+            <div class="settings-row-label">Theme</div>
+            <div class="settings-row-control" role="radiogroup" aria-label="Theme">
+              <label class="switch">
+                <input type="radio" name="settingsTheme" id="settingsThemeLight" value="light">
+                <span>Light</span>
+              </label>
+              <label class="switch">
+                <input type="radio" name="settingsTheme" id="settingsThemeDark" value="dark">
+                <span>Dark</span>
+              </label>
+              <label class="switch">
+                <input type="radio" name="settingsTheme" id="settingsThemeAuto" value="auto">
+                <span>Auto (system)</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="settings-row">
+            <label class="switch" for="settingsReducedMotion">
+              <input type="checkbox" id="settingsReducedMotion">
+              <span>Reduce motion (fewer animations)</span>
+            </label>
+          </div>
+        </section>
+
+        <!-- Display -->
+        <section class="settings-section" aria-labelledby="settingsDisplayHeading">
+          <h4 id="settingsDisplayHeading">Display</h4>
+
+          <div class="settings-row">
+            <label class="switch" for="settingsHideCaught">
+              <input type="checkbox" id="settingsHideCaught">
+              <span>Hide caught Pokémon by default</span>
+            </label>
+          </div>
+
+          <div class="settings-row">
+            <label for="settingsLanguage" class="settings-row-label">
+              Pokémon names language
+            </label>
+            <div class="settings-row-control">
+              <select id="settingsLanguage" class="select">
+                <option value="en">English (default)</option>
+                <option value="ja">Japanese</option>
+                <option value="fr">French</option>
+                <option value="es">Spanish</option>
+                <option value="de">German</option>
+                <option value="it">Italian</option>
+                <option value="ko">Korean</option>
+                <option value="zh-Hans">Chinese (simplified)</option>
+                <option value="zh-Hant">Chinese (traditional)</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="settings-row">
+            <label for="settingsSpriteStyle" class="settings-row-label">
+              Sprite style
+            </label>
+            <div class="settings-row-control">
+              <select id="settingsSpriteStyle" class="select">
+                <option value="official-artwork">Official artwork (default)</option>
+                <option value="home">Home sprites (3D)</option>
+                <option value="showdown">Showdown (animated)</option>
+                <option value="pokesprites">PokeAPI sprites (smaller filesize)</option>
+              </select>
+            </div>
+          </div>
+        </section>
+
+        <!-- Data -->
+        <section class="settings-section" aria-labelledby="settingsDataHeading">
+          <h4 id="settingsDataHeading">Data</h4>
+
+          <div class="settings-row">
+            <button type="button" id="settingsExportData" class="btn">
+              Export all data
+            </button>
+          </div>
+
+          <div class="settings-row">
+            <button type="button" id="settingsImportData" class="btn">
+              Import data
+            </button>
+          </div>
+
+          <div class="settings-row">
+            <button type="button" id="settingsClearSpeciesCache" class="btn">
+              Clear species cache
+            </button>
+          </div>
+
+          <div class="settings-row">
+            <button type="button" id="settingsClearAllData" class="btn btn-danger"
+                    aria-describedby="settingsClearAllHelp">
+              Clear all saved data ⚠️
+            </button>
+          </div>
+          <p id="settingsClearAllHelp" class="settings-help">
+            This removes all progress and cached data for all games on this device.
+          </p>
+        </section>
+
+        <!-- Other -->
+        <section class="settings-section" aria-labelledby="settingsOtherHeading">
+          <h4 id="settingsOtherHeading">Other</h4>
+
+          <div class="settings-row">
+            <label for="settingsDefaultGameMode" class="settings-row-label">
+              Default game
+            </label>
+            <div class="settings-row-control">
+              <select id="settingsDefaultGameMode" class="select">
+                <option value="last-used">Last used</option>
+                <option value="specific">Specific game…</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="settings-row" id="settingsDefaultGameWrapper">
+            <label for="settingsDefaultGame" class="settings-row-label">
+              Specific game
+            </label>
+            <div class="settings-row-control">
+              <select id="settingsDefaultGame" class="select">
+                <option value="">Select a game…</option>
+                <!-- Populate from GAMES in JS -->
+              </select>
+            </div>
+          </div>
+
+          <div class="settings-row">
+            <button type="button" id="settingsAbout" class="btn">
+              About LivingDex.app
+            </button>
+          </div>
+        </section>
+      </div>
+
       <div class="modal-actions">
         <button id="closeSettings" class="btn" aria-label="Close settings">Close</button>
       </div>

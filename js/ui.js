@@ -20,15 +20,70 @@ import {
     hydrateSpeciesNames,
 } from './api.js';
 
+// Track system color scheme for "auto" theme mode
+const SYSTEM_THEME_MQL = window.matchMedia
+  ? window.matchMedia('(prefers-color-scheme: dark)')
+  : null;
+
+function resolveTheme(mode) {
+  if (mode === 'auto') {
+    return SYSTEM_THEME_MQL && SYSTEM_THEME_MQL.matches ? 'dark' : 'light';
+  }
+  // Fallback to light/dark if anything unexpected is stored
+  return mode === 'dark' ? 'dark' : 'light';
+}
+
 /**
  * Apply theme to the document and persist preference.
- * Updates theme toggle button text and HTML data attribute.
+ * Supports 'light', 'dark', and 'auto' (system preference).
+ * - 'mode' is the user choice (stored as-is, including 'auto')
+ * - resolved theme ('light' or 'dark') is applied to the DOM
  */
 export function applyTheme(mode) {
-  document.documentElement.dataset.theme = mode;
-  localStorage.setItem(THEME_STORAGE_KEY, mode);
+  const storedMode = mode || localStorage.getItem(THEME_STORAGE_KEY) || 'light';
+  const resolved = resolveTheme(storedMode);
+
+  // Store the *selected* mode (can be 'auto')
+  localStorage.setItem(THEME_STORAGE_KEY, storedMode);
+
+  // Apply the effective theme to the document
+  document.documentElement.dataset.theme = resolved;
+
+  // Update small header toggle icon
   const button = document.getElementById('themeToggle');
-  if (button) button.textContent = mode === 'light' ? '🌙' : '☀️';
+  if (button) {
+    // Icon reflects the *current* visible theme:
+    // - show moon when light (click to go dark)
+    // - show sun when dark (click to go light)
+    button.textContent = resolved === 'light' ? '🌙' : '☀️';
+  }
+
+  // Keep settings modal radios in sync if it's open
+  syncThemeSettingsRadios(storedMode);
+}
+
+/**
+ * Keep the theme radios in the Settings modal in sync with the stored theme.
+ * @param {string} mode - 'light' | 'dark' | 'auto'
+ */
+function syncThemeSettingsRadios(mode) {
+  const value = mode || localStorage.getItem(THEME_STORAGE_KEY) || 'light';
+  const radios = document.querySelectorAll('input[name="settingsTheme"]');
+  if (!radios.length) return;
+
+  radios.forEach(radio => {
+    radio.checked = (radio.value === value);
+  });
+}
+
+// When the OS theme changes, re-resolve if we're in 'auto'
+if (SYSTEM_THEME_MQL) {
+  SYSTEM_THEME_MQL.addEventListener('change', () => {
+    const stored = localStorage.getItem(THEME_STORAGE_KEY) || 'light';
+    if (stored === 'auto') {
+      applyTheme('auto');
+    }
+  });
 }
 
 /**
@@ -745,11 +800,35 @@ export function registerSettingsControls() {
   const closeBtn = document.getElementById('closeSettings');
   let lastFocus = null;
 
+  function attachThemeSettingsHandlers() {
+    const radios = modal.querySelectorAll('input[name="settingsTheme"]');
+    if (!radios.length) return;
+
+    // Initialize checked state from stored theme
+    const stored = localStorage.getItem(THEME_STORAGE_KEY) || 'light';
+    syncThemeSettingsRadios(stored);
+
+    radios.forEach(radio => {
+      radio.addEventListener('change', (e) => {
+        if (e.target.checked) {
+          const value = e.target.value; // 'light' | 'dark' | 'auto'
+          applyTheme(value);
+        }
+      }, { once: false });
+    });
+  }
+
   function openModal() {
     if (!modal) return;
     lastFocus = document.activeElement;
     modal.hidden = false;
     closeBtn?.focus();
+
+    // Theme radios exist now in DOM, wire them up
+    attachThemeSettingsHandlers();
+    // Also sync in case theme changed via header toggle since last open
+    const stored = localStorage.getItem(THEME_STORAGE_KEY) || 'light';
+    syncThemeSettingsRadios(stored);
 
     function onKeydown(e) {
       if (e.key === 'Escape') closeModal();
