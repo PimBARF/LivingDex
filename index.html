@@ -36,13 +36,18 @@
     </div>
     <div class="searchrow">
       <input id="search" type="search" placeholder="Search by name or number (e.g. eevee, 133, #42)" aria-label="Search Pokemon" />
-      <button id="clearSearch" class="btn" title="Clear search">Clear</button>
+      <!-- Hidden checkbox used by applyUncaughtFilter() -->
+      <input id="toggleUncaught" type="checkbox" hidden aria-hidden="true" tabindex="-1" />
+      <button id="hideCaughtBtn" class="btn" title="Hide caught Pokémon" aria-pressed="false">Hide caught</button>
     </div>
   </header>
 
   <main aria-live="polite">
     <div id="gameInfo">
-      <h1 id="gameTitle"></h1>
+      <div id="gameTitleRow">
+        <h1 id="gameTitle"></h1>
+        <button id="shareDex" class="btn" title="Share this progress" aria-label="Share your current Pokédex progress">🔗</button>
+      </div>
       <div id="segmentToggles">
         <!-- Populated by JavaScript based on current game -->
       </div>
@@ -67,7 +72,7 @@
   </footer>
 
 
-  <!-- <script src="app.js" defer></script> -->
+  <script src="https://cdn.jsdelivr.net/npm/pako@2.1.0/dist/pako.min.js"></script>
   <script type="module" src="js/main.js"></script>
 
   <div id="toast" class="toast alert alert-success">Link copied to clipboard!</div>
@@ -81,6 +86,25 @@
       <p id="settingsDesc">Additional settings will be available here in the future.</p>
       <div class="modal-actions">
         <button id="closeSettings" class="btn" aria-label="Close settings">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Shared link warning modal -->
+  <div id="modalSharedLink" class="modal" role="dialog" aria-modal="true"
+       aria-labelledby="sharedLinkTitle" aria-describedby="sharedLinkDesc" hidden>
+    <div class="modal-backdrop" data-close></div>
+    <div class="modal-card" role="document">
+      <h3 id="sharedLinkTitle">Shared Progress Loaded</h3>
+      <p id="sharedLinkDesc">
+        You opened a shared link. This will <strong>replace</strong> your current progress.<br>
+        Changes will be saved to your device only if you continue. This cannot be undone.
+      </p>
+      <div class="modal-actions">
+        <button id="confirmSharedLink" class="btn btn-danger" aria-label="Confirm load shared link">
+          Yes, replace my progress
+        </button>
+        <button id="cancelSharedLink" class="btn" aria-label="Cancel load shared link">Cancel</button>
       </div>
     </div>
   </div>

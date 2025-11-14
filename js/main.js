@@ -78,9 +78,12 @@ async function initializeLivingDex() {
   // Handle shared state from URL hash
   const sharedState = decodeCaughtState(location.hash, LIVING_DEX_SLOT_COUNT);
   if (sharedState && Object.keys(sharedState).length) {
-    if (confirm('Load caught data from this link? This replaces your current progress.')) {
-      syncCaughtState(sharedState, LIVING_DEX_SLOT_COUNT);
-    }
+    // Show shared link warning modal
+    import('./ui.js').then(ui => {
+      ui.showSharedLinkWarningModal(() => {
+        syncCaughtState(sharedState, LIVING_DEX_SLOT_COUNT);
+      });
+    });
   }
 
   // Watch for hash changes (e.g., user clicking shared link)

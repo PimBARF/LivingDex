@@ -101,47 +101,72 @@ export function syncCaughtState(caught, slotCount) {
 // SHARING & ENCODING
 // =============================================================================
 
-/**
- * Encode caught state into a shareable URL hash using bitpacking.
- * Compact binary representation suitable for URL sharing.
- */
 export function encodeCaughtState(caught, slotCount) {
   try {
+    // 1) Bit-pack caught slots into bytes
     const bytes = new Uint8Array(Math.ceil(slotCount / 8));
     for (let slot = 1; slot <= slotCount; slot += 1) {
-      if (caught[slot]) bytes[(slot - 1) >> 3] |= 1 << ((slot - 1) & 7);
+      if (caught[slot]) {
+        const i = slot - 1;
+        bytes[i >> 3] |= 1 << (i & 7);
+      }
     }
+
+    // 2) Compress with pako.deflate
+    const compressed = window.pako.deflate(bytes);
+
+    // 3) Convert compressed bytes to binary string for Base64
     let binary = '';
-    bytes.forEach(byte => {
-      binary += String.fromCharCode(byte);
-    });
-    return '#s=' + btoa(binary).replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/g, '');
-  } catch {
+    for (let i = 0; i < compressed.length; i += 1) {
+      binary += String.fromCharCode(compressed[i]);
+    }
+
+    // 4) Base64 URL-safe + #s= prefix (compressed)
+    const base64url = btoa(binary)
+      .replace(/\+/g, '-')
+      .replace(/\//g, '_')
+      .replace(/=+$/g, '');
+
+    return '#s=' + base64url;
+  } catch (err) {
+    console.error('encodeCaughtState error:', err);
     return '';
   }
 }
 
-/**
- * Decode a share hash back into the caught-state map.
- * Reverses the bitpacking used in encodeCaughtState.
- */
+
 export function decodeCaughtState(hash, slotCount) {
   try {
     const match = /#s=([^&]+)/.exec(hash);
     if (!match) return null;
-    const base64 = match[1].replace(/-/g, '+').replace(/_/g, '/');
+
+    const encoded = match[1];
+    const base64 = encoded.replace(/-/g, '+').replace(/_/g, '/');
     const padded = base64 + '='.repeat((4 - (base64.length % 4)) % 4);
-    const decoded = atob(decodeURIComponent(padded));
-    const bytes = Uint8Array.from(decoded, value => value.charCodeAt(0));
+
+    // 1) Base64 decode to compressed bytes
+    const binary = atob(padded);
+    const compressed = new Uint8Array(binary.length);
+    for (let i = 0; i < binary.length; i += 1) {
+      compressed[i] = binary.charCodeAt(i);
+    }
+
+    // 2) Inflate with pako.inflate
+    const bytes = window.pako.inflate(compressed);
+
+    // 3) Rebuild caught map from bytes
     const caught = {};
     for (let slot = 1; slot <= slotCount; slot += 1) {
-      caught[slot] = !!(bytes[(slot - 1) >> 3] & (1 << ((slot - 1) & 7)));
+      const i = slot - 1;
+      caught[slot] = !!(bytes[i >> 3] & (1 << (i & 7)));
     }
     return caught;
-  } catch {
+  } catch (err) {
+    console.error('decodeCaughtState error:', err);
     return null;
   }
 }
+
 
 /**
  * Update species name display on all cells.
@@ -387,24 +412,34 @@ export function applySearchFilter(query) {
  */
 export function registerHeaderControls(slotCount) {
   const searchInput = document.getElementById('search');
-  const clearButton = document.getElementById('clearSearch');
   const uncaughtToggle = document.getElementById('toggleUncaught');
   const themeToggle = document.getElementById('themeToggle');
   const shareButton = document.getElementById('shareDex');
+  const hideCaughtBtn = document.getElementById('hideCaughtBtn');
+
+  const updateHideCaughtUi = () => {
+    if (!hideCaughtBtn || !uncaughtToggle) return;
+    const checked = !!uncaughtToggle.checked;
+    hideCaughtBtn.textContent = checked ? 'Show caught' : 'Hide caught';
+    hideCaughtBtn.setAttribute('aria-pressed', String(checked));
+  };
 
   // Search input
   searchInput?.addEventListener('input', event => applySearchFilter(event.target.value));
   
-  // Clear search button
-  clearButton?.addEventListener('click', () => {
-    if (!searchInput) return;
-    searchInput.value = '';
-    searchInput.focus();
-    applySearchFilter('');
-  });
-  
   // Uncaught filter toggle
-  uncaughtToggle?.addEventListener('change', applyUncaughtFilter);
+  uncaughtToggle?.addEventListener('change', () => {
+    applyUncaughtFilter();
+    updateHideCaughtUi();
+  });
+
+  // Hide caught button
+  hideCaughtBtn?.addEventListener('click', () => {
+    if (!uncaughtToggle) return;
+    uncaughtToggle.checked = !uncaughtToggle.checked;
+    applyUncaughtFilter();
+    updateHideCaughtUi();
+  });
   
   // Theme toggle
   themeToggle?.addEventListener('click', () => {
@@ -423,6 +458,35 @@ export function registerHeaderControls(slotCount) {
       showToast('Manual copy required.', 'warning');
     }
   });
+
+  // Initialize hide caught UI state
+  updateHideCaughtUi();
+
+  // Mobile: collapse the search bar after scrolling down a bit
+  const isMobile = () => window.matchMedia('(max-width: 640px)').matches;
+  const COLLAPSE_Y = 120; // px scrolled to collapse
+  const EXPAND_Y = 60;    // px to expand again (hysteresis)
+  const updateSearchCollapse = () => {
+    if (!isMobile()) {
+      document.body.classList.remove('search-collapsed');
+      return;
+    }
+    if (window.scrollY > COLLAPSE_Y) {
+      document.body.classList.add('search-collapsed');
+    } else if (window.scrollY < EXPAND_Y) {
+      document.body.classList.remove('search-collapsed');
+    }
+  };
+
+  // Expand when focusing the search input
+  searchInput?.addEventListener('focus', () => {
+    document.body.classList.remove('search-collapsed');
+  });
+
+  window.addEventListener('scroll', updateSearchCollapse, { passive: true });
+  window.addEventListener('resize', updateSearchCollapse);
+  // Run once on init in case the page loads scrolled
+  updateSearchCollapse();
 }
 
 
@@ -450,6 +514,67 @@ export function resetProgress(slotCount) {
 
   updateProgressBar(slotCount);
   applyUncaughtFilter();
+}
+
+/**
+ * Show the shared link warning modal and run a callback on confirm.
+ * On either confirm or cancel, the URL hash is cleared to avoid re-prompting.
+ */
+export function showSharedLinkWarningModal(onConfirm) {
+  const modal = document.getElementById('modalSharedLink');
+  const confirmBtn = document.getElementById('confirmSharedLink');
+  const cancelBtn = document.getElementById('cancelSharedLink');
+  const backdrop = modal?.querySelector('[data-close]');
+  let lastFocus = null;
+
+  if (!modal) {
+    // Fallback: if modal missing, just proceed
+    try { onConfirm?.(); } catch {}
+    return;
+  }
+
+  function clearHash() {
+    if (location.hash) {
+      history.replaceState(null, '', location.pathname + location.search);
+    }
+  }
+
+  function closeModal() {
+    modal.hidden = true;
+    modal._cleanup?.();
+    lastFocus?.focus();
+  }
+
+  function openModal() {
+    lastFocus = document.activeElement;
+    modal.hidden = false;
+    confirmBtn?.focus();
+
+    function onKeydown(e) {
+      if (e.key === 'Escape') { clearHash(); closeModal(); }
+      if (e.key === 'Tab') {
+        const focusables = modal.querySelectorAll('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])');
+        const list = Array.from(focusables).filter(el => !el.hasAttribute('disabled'));
+        if (!list.length) return;
+        const first = list[0], last = list[list.length - 1];
+        if (e.shiftKey && document.activeElement === first) { last.focus(); e.preventDefault(); }
+        else if (!e.shiftKey && document.activeElement === last) { first.focus(); e.preventDefault(); }
+      }
+    }
+    modal.addEventListener('keydown', onKeydown, { once: false });
+    modal._cleanup = () => modal.removeEventListener('keydown', onKeydown);
+  }
+
+  confirmBtn?.addEventListener('click', () => {
+    try { onConfirm?.(); } catch {}
+    clearHash();
+    closeModal();
+  }, { once: true });
+
+  cancelBtn?.addEventListener('click', () => { clearHash(); closeModal(); }, { once: true });
+  backdrop?.addEventListener('click', () => { clearHash(); closeModal(); }, { once: true });
+
+  openModal();
 }
 
 /**

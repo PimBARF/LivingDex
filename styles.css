@@ -18,6 +18,9 @@
   --label: rgba(255, 255, 255, 0.8);
   --success: rgb(16, 185, 129);
   --warning: rgb(245, 158, 11);
+  #hideCaughtBtn {
+    white-space: nowrap;
+  }
   --danger: rgb(239, 68, 68);
 
   /* layout */
@@ -68,6 +71,7 @@ header {
   background: linear-gradient(var(--card) 35%, var(--bg-header));
   backdrop-filter: saturate(180%) blur(5px);
   color: rgb(33, 33, 33); /* explicit for contrast on yellow */
+  transition: padding 200ms ease;
 }
 
 .topbar {
@@ -100,9 +104,36 @@ header {
   gap: 10px;
   align-items: center;
   margin-bottom: 8px;
+  transition: max-height 200ms ease, opacity 150ms ease, margin 200ms ease;
+  will-change: max-height, opacity, margin;
 }
 
 .filters { display: flex; gap: 14px; align-items: center; }
+
+/* Mobile: move game selector below topbar */
+@media (max-width: 640px) {
+  .topbar {
+    flex-wrap: wrap;
+  }
+  
+  #dexSelector {
+    order: 3;
+    width: 100%;
+    flex-basis: 100%;
+  }
+
+  /* Collapsible search bar on mobile */
+  /* Provide an explicit expanded max-height to animate from */
+  header .searchrow { max-height: 64px; }
+  body.search-collapsed header { padding-bottom: 6px; }
+  body.search-collapsed header .searchrow {
+    max-height: 0;
+    opacity: 0;
+    margin: 0;
+    pointer-events: none;
+    overflow: hidden;
+  }
+}
 
 main {
   padding: 18px;
@@ -231,6 +262,22 @@ footer {
   font-weight: 700;
   margin: 0 0 8px 0;
   color: var(--text);
+  line-height: 1;
+}
+
+/* Row wrapper for game title + share button */
+#gameTitleRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0 0 8px 0;
+}
+
+/* Slightly tighten padding on the inline icon button */
+#shareDex.btn {
+  padding: 0.35rem 0.6rem;
+  line-height: 1;
+  transform: translateY(-3px);
 }
 
 #segmentToggles {
