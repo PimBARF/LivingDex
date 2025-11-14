@@ -374,6 +374,7 @@ footer {
   font-weight: 600;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 /* ============================================
@@ -497,6 +498,11 @@ footer {
 .cell.is-placeholder .label { background: transparent; color: var(--muted); }
 .cell.is-placeholder .index { background: transparent; color: var(--muted); }
 
+/* Responsive grid columns */
+@media (max-width: 600px) {
+  .grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+
 /* ============================================
    11) MODAL
    ============================================ */
@@ -554,4 +560,30 @@ footer {
 /* ============================================
    12) UTILITIES
    ============================================ */
-/* Add utility classes here if/when needed */
+/* Scroll-to-top button */
+.scroll-top {
+  position: fixed;
+  bottom: 24px;
+  right: 18px;
+  z-index: 40;
+  width: 42px;
+  height: 42px;
+  padding: 0;
+  border-radius: 999px;
+  font-size: 20px;
+  line-height: 1;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+  opacity: 0;
+  transform: translateY(12px);
+  pointer-events: none;
+  transition:
+    opacity 0.25s ease,
+    transform 0.25s ease;
+}
+
+/* Visible state when scrolled down */
+.scroll-top.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}

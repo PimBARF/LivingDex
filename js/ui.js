@@ -335,7 +335,7 @@ export function registerBoxActions(slotCount) {
       const caught = loadCaughtSlots();
       const cells = interactiveCells();
       const allCaught = cells.every(cell => caught[Number(cell.dataset.regional)]);
-      toggleBtn.textContent = allCaught ? 'Uncatch all' : 'Catch all';
+      toggleBtn.textContent = allCaught ? 'Unmark all' : 'Mark all';
       toggleBtn.setAttribute('aria-label', `${allCaught ? 'Mark all uncaught' : 'Mark all caught'} in this box`);
     }
 
@@ -489,6 +489,33 @@ export function registerHeaderControls(slotCount) {
   updateSearchCollapse();
 }
 
+/**
+ * Register scroll-to-top button behavior.
+ * Shows the button after scrolling down a bit and scrolls back smoothly.
+ */
+export function registerScrollToTopControls() {
+  const button = document.getElementById('scrollTop');
+  if (!button) return;
+
+  const threshold = 320; // px
+
+  function onScroll() {
+    if (window.scrollY > threshold) {
+      button.classList.add('is-visible');
+    } else {
+      button.classList.remove('is-visible');
+    }
+  }
+
+  window.addEventListener('scroll', onScroll, { passive: true });
+
+  button.addEventListener('click', () => {
+    window.scrollTo({
+      top: 0,
+      behavior: prefersReducedMotion ? 'auto' : 'smooth',
+    });
+  });
+}
 
 // =============================================================================
 // RESET & MODAL DIALOGS

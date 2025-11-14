@@ -77,6 +77,16 @@
 
   <div id="toast" class="toast alert alert-success">Link copied to clipboard!</div>
 
+  <!-- Scroll to top button -->
+  <button
+    id="scrollTop"
+    class="btn scroll-top"
+    type="button"
+    aria-label="Scroll back to top"
+  >
+    ⬆
+  </button>
+
   <!-- Settings modal -->
   <div id="modalSettings" class="modal" role="dialog" aria-modal="true"
        aria-labelledby="settingsTitle" aria-describedby="settingsDesc" hidden>
@@ -114,7 +124,7 @@
        aria-labelledby="resetTitle" aria-describedby="resetDesc" hidden>
     <div class="modal-backdrop" data-close></div>
     <div class="modal-card" role="document">
-      <h3 id="resetTitle">Reset progress?</h3>
+      <h3 id="resetTitle">Reset progress ⚠️</h3>
       <p id="resetDesc">
         This will clear your caught Pokémon for <strong id="docTitle"></strong> on this device.
         This cannot be undone.

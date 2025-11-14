@@ -15,6 +15,7 @@ import {
     renderLivingDexBoxesForSection,
     populateDexSlots,
     registerHeaderControls,
+    registerScrollToTopControls,
     registerResetControls,
     registerSettingsControls,
     populateDexSelector,
@@ -66,6 +67,7 @@ async function initializeLivingDex() {
 
   // Register header and reset controls
   registerHeaderControls(LIVING_DEX_SLOT_COUNT);
+  registerScrollToTopControls();
   registerResetControls(LIVING_DEX_SLOT_COUNT);
   registerSettingsControls();
   
