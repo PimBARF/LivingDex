@@ -4,7 +4,44 @@ import {
     SPECIES_CACHE_KEY,
     SPECIES_CACHE_META_KEY,
     SPECIES_CACHE_TTL_MS,
+    SETTINGS_STORAGE_KEY,
 } from './config.js';
+
+// Global app settings (UI prefs)
+const DEFAULT_SETTINGS = {
+  theme: 'auto',               // 'light' | 'dark' | 'auto'
+  reducedMotion: 'system',     // 'system' | true | false
+  hideCaughtDefault: false,
+  language: 'en',
+  spriteStyle: 'official-artwork',
+  defaultGameMode: 'last-used', // 'last-used' | 'specific'
+  defaultGameId: null,
+  version: 1,
+};
+
+export function loadSettings() {
+  try {
+    const raw = localStorage.getItem(SETTINGS_STORAGE_KEY);
+    if (!raw) return { ...DEFAULT_SETTINGS };
+    const parsed = JSON.parse(raw);
+    if (!parsed || typeof parsed !== 'object') {
+      return { ...DEFAULT_SETTINGS };
+    }
+    return { ...DEFAULT_SETTINGS, ...parsed };
+  } catch {
+    return { ...DEFAULT_SETTINGS };
+  }
+}
+
+export function saveSettings(next) {
+  const merged = { ...DEFAULT_SETTINGS, ...next };
+  try {
+    localStorage.setItem(SETTINGS_STORAGE_KEY, JSON.stringify(merged));
+  } catch {
+    // ignore quota
+  }
+  return merged;
+}
 
 /**
  * Load caught-slot data from localStorage.

@@ -324,7 +324,8 @@ export const BOX_CAPACITY = 30;
 export const CAUGHT_STORAGE_KEY = `${ACTIVE_GAME.storagePrefix}-caught-v1`;
 export const SEGMENTS_STORAGE_KEY = `${ACTIVE_GAME.storagePrefix}-segments-v1`;
 
-export const THEME_STORAGE_KEY = 'theme-v1';
+// Global app settings
+export const SETTINGS_STORAGE_KEY = 'settings-v1';
 
 export const SPECIES_CACHE_KEY = `${ACTIVE_GAME.storagePrefix}-species-names-v1`;
 export const SPECIES_CACHE_META_KEY = `${ACTIVE_GAME.storagePrefix}-species-names-meta-v1`;

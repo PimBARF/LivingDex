@@ -13,14 +13,19 @@
   <!-- Apply saved theme preference immediately to prevent flash -->
   <script>
     (function () {
-      var STORAGE_KEY = 'theme-v1';
-      var stored = null;
+      var STORAGE_KEY = 'settings-v1';
+      var settings = null;
 
       try {
-        stored = localStorage.getItem(STORAGE_KEY);
+        var raw = localStorage.getItem(STORAGE_KEY);
+        if (raw) {
+          settings = JSON.parse(raw);
+        }
       } catch (e) {
-        stored = null;
+        settings = null;
       }
+
+      var stored = settings && settings.theme ? settings.theme : null;
 
       // Determine system preference (if available)
       var prefersDark = false;

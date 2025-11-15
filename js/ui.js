@@ -3,7 +3,6 @@ import {
     ACTIVE_GAME_ID,
     GAMES,
     BOX_CAPACITY,
-    THEME_STORAGE_KEY,
     prefersReducedMotion,
     spriteUrlForSpecies,
 } from './config.js';
@@ -13,6 +12,8 @@ import {
     saveCaughtSlots,
     loadEnabledSegments,
     saveEnabledSegments,
+    loadSettings,
+    saveSettings,
 } from './storage.js';
 
 import {
@@ -40,11 +41,12 @@ function resolveTheme(mode) {
  * - resolved theme ('light' or 'dark') is applied to the DOM
  */
 export function applyTheme(mode) {
-  const storedMode = mode || localStorage.getItem(THEME_STORAGE_KEY) || 'light';
+  const settings = loadSettings();
+  const storedMode = mode || settings.theme || 'light';
   const resolved = resolveTheme(storedMode);
 
   // Store the *selected* mode (can be 'auto')
-  localStorage.setItem(THEME_STORAGE_KEY, storedMode);
+  saveSettings({ ...settings, theme: storedMode });
 
   // Apply the effective theme to the document
   document.documentElement.dataset.theme = resolved;
@@ -67,7 +69,8 @@ export function applyTheme(mode) {
  * @param {string} mode - 'light' | 'dark' | 'auto'
  */
 function syncThemeSettingsRadios(mode) {
-  const value = mode || localStorage.getItem(THEME_STORAGE_KEY) || 'light';
+  const settings = loadSettings();
+  const value = mode || settings.theme || 'light';
   const radios = document.querySelectorAll('input[name="settingsTheme"]');
   if (!radios.length) return;
 
@@ -79,8 +82,8 @@ function syncThemeSettingsRadios(mode) {
 // When the OS theme changes, re-resolve if we're in 'auto'
 if (SYSTEM_THEME_MQL) {
   SYSTEM_THEME_MQL.addEventListener('change', () => {
-    const stored = localStorage.getItem(THEME_STORAGE_KEY) || 'light';
-    if (stored === 'auto') {
+    const settings = loadSettings();
+    if (settings.theme === 'auto') {
       applyTheme('auto');
     }
   });
@@ -498,8 +501,17 @@ export function registerHeaderControls(slotCount) {
   
   // Theme toggle
   themeToggle?.addEventListener('click', () => {
-    const current = document.documentElement.getAttribute('data-theme') || 'dark';
-    applyTheme(current === 'dark' ? 'light' : 'dark');
+    const settings = loadSettings();
+    const currentMode = settings.theme || 'light';
+    // Toggle between light and dark (if 'auto', switch to light or dark based on current resolved theme)
+    let nextMode;
+    if (currentMode === 'auto') {
+      const resolved = document.documentElement.getAttribute('data-theme') || 'light';
+      nextMode = resolved === 'dark' ? 'light' : 'dark';
+    } else {
+      nextMode = currentMode === 'dark' ? 'light' : 'dark';
+    }
+    applyTheme(nextMode);
   });
   
   // Share button
@@ -805,8 +817,8 @@ export function registerSettingsControls() {
     if (!radios.length) return;
 
     // Initialize checked state from stored theme
-    const stored = localStorage.getItem(THEME_STORAGE_KEY) || 'light';
-    syncThemeSettingsRadios(stored);
+    const settings = loadSettings();
+    syncThemeSettingsRadios(settings.theme);
 
     radios.forEach(radio => {
       radio.addEventListener('change', (e) => {
@@ -827,8 +839,8 @@ export function registerSettingsControls() {
     // Theme radios exist now in DOM, wire them up
     attachThemeSettingsHandlers();
     // Also sync in case theme changed via header toggle since last open
-    const stored = localStorage.getItem(THEME_STORAGE_KEY) || 'light';
-    syncThemeSettingsRadios(stored);
+    const settings = loadSettings();
+    syncThemeSettingsRadios(settings.theme);
 
     function onKeydown(e) {
       if (e.key === 'Escape') closeModal();

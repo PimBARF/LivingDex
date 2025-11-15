@@ -1,11 +1,11 @@
 import {
-  THEME_STORAGE_KEY
-} from './config.js';
-
-import {
     computeActiveSections,
     hydrateSpeciesNames,
 } from './api.js';
+
+import {
+    loadSettings,
+} from './storage.js';
 
 import {
     applyTheme,
@@ -36,8 +36,9 @@ async function initializeLivingDex() {
   setTitles();
   populateDexSelector();
   populateGameInfo();
-  const savedTheme = localStorage.getItem(THEME_STORAGE_KEY) || 'auto';
-  applyTheme(savedTheme);
+
+  const settings = loadSettings();
+  applyTheme(settings.theme);
 
   const app = document.getElementById('app');
   if (!app) return;
