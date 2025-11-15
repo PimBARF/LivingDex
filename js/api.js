@@ -31,7 +31,7 @@ function savePokemonToSpeciesMapCache(map) {
  * Resolve a pokemon resource id (which may represent a regional form) to its base species id.
  * Uses localStorage-backed cache to minimize API traffic.
  */
-async function geSpeciesIdForPokemon(pokemonId) {
+async function getSpeciesIdForPokemon(pokemonId) {
   const cache = loadPokemonToSpeciesMapCache();
   const key = String(pokemonId);
   if (cache[key]) return cache[key];
@@ -104,7 +104,7 @@ export async function buildActiveDexSections() {
         const ids = seg.manualIds.slice();
         const resolved = await mapWithConcurrency(ids, async (pokemonId) => {
           try {
-            const speciesId = await geSpeciesIdForPokemon(pokemonId);
+            const speciesId = await getSpeciesIdForPokemon(pokemonId);
             return { speciesId, formId: pokemonId };
           } catch {
             // Fallback: treat as species if resolution fails
@@ -137,7 +137,7 @@ export async function fetchSpeciesName(id) {
   }
   // If that failed, it may be a pokemon (form) id; resolve to species id and retry
   try {
-    const speciesId = await geSpeciesIdForPokemon(id);
+  const speciesId = await getSpeciesIdForPokemon(id);
     response = await fetch(`https://pokeapi.co/api/v2/pokemon-species/${speciesId}`);
     if (!response.ok) throw new Error('PokeAPI error');
     const payload = await response.json();
