@@ -337,4 +337,4 @@ export const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: 
 
 // Utility functions for sprite URLs and species name formatting
 export const spriteUrlForSpecies = id => `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${id}.png`;
-export const normaliseSpeciesName = name => name.replace(/-/g, ' ').replace(/\b\w/g, value => value.toUpperCase());
+export const normalizeSpeciesName = name => name.replace(/-/g, ' ').replace(/\b\w/g, value => value.toUpperCase());

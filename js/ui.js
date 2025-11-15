@@ -17,8 +17,8 @@ import {
 } from './storage.js';
 
 import {
-    computeActiveSections,
-    hydrateSpeciesNames,
+    buildActiveDexSections,
+    loadSpeciesNames,
 } from './api.js';
 
 // Track system color scheme for "auto" theme mode
@@ -92,7 +92,7 @@ if (SYSTEM_THEME_MQL) {
 /**
  * Toggle visibility of caught slots based on filter checkbox state.
  */
-export function applyUncaughtFilter() {
+export function applyHideCaughtFilter() {
   const toggle = document.getElementById('toggleUncaught');
   const enabled = toggle?.checked;
   document.body.classList.toggle('hide-caught', !!enabled);
@@ -152,7 +152,7 @@ export function syncCaughtState(caught, slotCount) {
     cell.setAttribute('aria-pressed', String(isCaught));
   });
   updateProgressBar(slotCount);
-  applyUncaughtFilter();
+  applyHideCaughtFilter();
 }
 
 // =============================================================================
@@ -252,7 +252,7 @@ export function applyNamesToCells() {
  * Create shell sections that mirror in-game storage boxes.
  * Each box contains up to BOX_CAPACITY slots.
  */
-export function renderLivingDexBoxesForSection(container, sectionKey, sectionTitle, slotsInSection, startGlobalSlot) {
+export function renderDexSectionBoxes(container, sectionKey, sectionTitle, slotsInSection, startGlobalSlot) {
   // Heading for section
   const heading = document.createElement('h2');
   heading.className = 'section-title';
@@ -343,7 +343,7 @@ export function populateDexSlots(sections, slotCount) {
         nextCaught[regionalSlot] = isCaught;
         saveCaughtSlots(nextCaught);
         updateProgressBar(slotCount);
-        applyUncaughtFilter();
+        applyHideCaughtFilter();
       };
 
       // Append to current box
@@ -379,7 +379,7 @@ export function populateDexSlots(sections, slotCount) {
  * Register per-box controls (Mark all caught, Clear box).
  * These buttons enable bulk operations on entire boxes.
  */
-export function registerBoxActions(slotCount) {
+export function registerBoxControls(slotCount) {
   document.querySelectorAll('.box').forEach(box => {
     const grid = box.querySelector('.grid');
     const toggleBtn = box.querySelector('.box-toggle');
@@ -410,7 +410,7 @@ export function registerBoxActions(slotCount) {
       });
       saveCaughtSlots(caught);
       updateProgressBar(slotCount);
-      applyUncaughtFilter();
+      applyHideCaughtFilter();
       updateToggleBtnLabel();
     };
   });
@@ -487,7 +487,7 @@ export function registerHeaderControls(slotCount) {
   
   // Uncaught filter toggle
   uncaughtToggle?.addEventListener('change', () => {
-    applyUncaughtFilter();
+    applyHideCaughtFilter();
     updateHideCaughtUi();
   });
 
@@ -495,7 +495,7 @@ export function registerHeaderControls(slotCount) {
   hideCaughtBtn?.addEventListener('click', () => {
     if (!uncaughtToggle) return;
     uncaughtToggle.checked = !uncaughtToggle.checked;
-    applyUncaughtFilter();
+    applyHideCaughtFilter();
     updateHideCaughtUi();
   });
   
@@ -560,7 +560,7 @@ export function registerHeaderControls(slotCount) {
  * Register scroll-to-top button behavior.
  * Shows the button after scrolling down a bit and scrolls back smoothly.
  */
-export function registerScrollToTopControls() {
+export function registerScrollToTopButton() {
   const button = document.getElementById('scrollTop');
   if (!button) return;
 
@@ -592,7 +592,7 @@ export function registerScrollToTopControls() {
  * Clear all caught slots and reset progress to empty state.
  * Also clears any shared hash state from the URL.
  */
-export function resetProgress(slotCount) {
+export function resetDexProgress(slotCount) {
   const empty = {};
   saveCaughtSlots(empty);
 
@@ -607,7 +607,7 @@ export function resetProgress(slotCount) {
   }
 
   updateProgressBar(slotCount);
-  applyUncaughtFilter();
+  applyHideCaughtFilter();
 }
 
 /**
@@ -719,7 +719,7 @@ export function registerResetControls(slotCount) {
 
   openBtn?.addEventListener('click', openModal);
   confirmBtn?.addEventListener('click', () => { 
-    resetProgress(slotCount); 
+    resetDexProgress(slotCount); 
     closeModal(); 
   });
   cancelBtn?.addEventListener('click', closeModal);
@@ -733,7 +733,7 @@ export function registerResetControls(slotCount) {
 /**
  * Populate the game info section with title and segment toggles.
  */
-export function populateGameInfo() {
+export function renderGameInfo() {
   const titleEl = document.getElementById('gameTitle');
   const togglesEl = document.getElementById('segmentToggles');
   
@@ -782,21 +782,21 @@ export function populateGameInfo() {
       // Rebuild UI with new sections
       const app = document.getElementById('app');
       if (app) {
-        const sections = await computeActiveSections();
+        const sections = await buildActiveDexSections();
         const combinedSpeciesIds = sections.flatMap(s => s.entries.map(e => e.speciesId));
         const newSpeciesOrder = combinedSpeciesIds;
         const newSlotCount = combinedSpeciesIds.length;
         app.innerHTML = '';
         let startGlobal = 1;
         for (const sec of sections) {
-          renderLivingDexBoxesForSection(app, sec.key, sec.title, sec.entries.length, startGlobal);
+          renderDexSectionBoxes(app, sec.key, sec.title, sec.entries.length, startGlobal);
           startGlobal += sec.entries.length;
         }
         populateDexSlots(sections, newSlotCount);
-        registerBoxActions(newSlotCount);
-        await hydrateSpeciesNames(newSpeciesOrder);
+        registerBoxControls(newSlotCount);
+        await loadSpeciesNames(newSpeciesOrder);
         updateProgressBar(newSlotCount);
-        applyUncaughtFilter();
+        applyHideCaughtFilter();
       }
     });
   });
@@ -872,7 +872,7 @@ export function registerSettingsControls() {
 /**
  * Populate the dex selector dropdown with available games.
  */
-export function populateDexSelector() {
+export function renderGameSelector() {
   const selector = document.getElementById('dexSelector');
   if (!selector) return;
   
@@ -901,7 +901,7 @@ export function populateDexSelector() {
 /**
  * Set page titles from active dex config.
  */
-export function setTitles() {
+export function setGameTitles() {
   const docTitle = document.getElementById('docTitle');
   if (docTitle) docTitle.textContent = ACTIVE_GAME.title;
 }

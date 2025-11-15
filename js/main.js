@@ -1,6 +1,6 @@
 import {
-    computeActiveSections,
-    hydrateSpeciesNames,
+    buildActiveDexSections,
+    loadSpeciesNames,
 } from './api.js';
 
 import {
@@ -11,16 +11,16 @@ import {
     applyTheme,
     updateProgressBar,
     syncCaughtState,
-    registerBoxActions,
-    renderLivingDexBoxesForSection,
+    registerBoxControls,
+    renderDexSectionBoxes,
     populateDexSlots,
     registerHeaderControls,
-    registerScrollToTopControls,
+    registerScrollToTopButton,
     registerResetControls,
     registerSettingsControls,
-    populateDexSelector,
-    populateGameInfo,
-    setTitles,
+    renderGameSelector,
+    renderGameInfo,
+    setGameTitles,
     decodeCaughtState,
 } from './ui.js';
 
@@ -32,10 +32,10 @@ let LIVING_DEX_SLOT_COUNT = 0;
  * Main initialization function.
  * Sets up UI, loads data, registers event listeners, and handles shared state.
  */
-async function initializeLivingDex() {
-  setTitles();
-  populateDexSelector();
-  populateGameInfo();
+async function initializeLivingDexApp() {
+  setGameTitles();
+  renderGameSelector();
+  renderGameInfo();
 
   const settings = loadSettings();
   applyTheme(settings.theme);
@@ -44,7 +44,7 @@ async function initializeLivingDex() {
   if (!app) return;
   
   // Compute active sections and combined order
-  const sections = await computeActiveSections();
+  const sections = await buildActiveDexSections();
   const combinedSpeciesIds = sections.flatMap(s => s.entries.map(e => e.speciesId));
   LIVING_DEX_SPECIES_ORDER = combinedSpeciesIds;
   LIVING_DEX_SLOT_COUNT = combinedSpeciesIds.length;
@@ -54,22 +54,22 @@ async function initializeLivingDex() {
   window.__livingDexNames = {};
   let startGlobal = 1;
   for (const sec of sections) {
-    renderLivingDexBoxesForSection(app, sec.key, sec.title, sec.entries.length, startGlobal);
+    renderDexSectionBoxes(app, sec.key, sec.title, sec.entries.length, startGlobal);
     startGlobal += sec.entries.length;
   }
   
   // Populate cells and register box controls
   populateDexSlots(sections, LIVING_DEX_SLOT_COUNT);
-  registerBoxActions(LIVING_DEX_SLOT_COUNT);
+  registerBoxControls(LIVING_DEX_SLOT_COUNT);
   
   // Fetch and apply species names from cache or API
-  await hydrateSpeciesNames(LIVING_DEX_SPECIES_ORDER);
+  await loadSpeciesNames(LIVING_DEX_SPECIES_ORDER);
 
-  // Names are applied by hydrateSpeciesNames() as cache arrives and fetch completes
+  // Names are applied by loadSpeciesNames() as cache arrives and fetch completes
 
   // Register header and reset controls
   registerHeaderControls(LIVING_DEX_SLOT_COUNT);
-  registerScrollToTopControls();
+  registerScrollToTopButton();
   registerResetControls(LIVING_DEX_SLOT_COUNT);
   registerSettingsControls();
   
@@ -101,5 +101,5 @@ async function initializeLivingDex() {
  * Bootstrap the application once the DOM is ready.
  */
 (async function bootstrapLivingDex() {
-  await initializeLivingDex();
+  await initializeLivingDexApp();
 })();

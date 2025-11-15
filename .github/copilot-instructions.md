@@ -54,4 +54,4 @@
 
 - Caught state: Stored as `${storagePrefix}-caught-v1` in localStorage.
 - Species names: Hydrated and cached via `js/api.js` and `js/storage.js`.
-- UI rendering: See `renderLivingDexBoxesForSection` and `populateDexSlots` in `js/ui.js`.
+- UI rendering: See `renderDexSectionBoxes` and `populateDexSlots` in `js/ui.js`.

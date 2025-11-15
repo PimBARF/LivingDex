@@ -2,7 +2,7 @@ import {
   ACTIVE_GAME,
   REGIONAL_FORM_MAPPINGS,
   NAME_FETCH_CONCURRENCY,
-  normaliseSpeciesName,
+  normalizeSpeciesName,
 } from './config.js';
 
 import {
@@ -17,12 +17,12 @@ import { applyNamesToCells } from './ui.js'; // CHANGE THIS LATER!
 // Local cache for resolving pokemon (form) IDs -> species IDs
 const POKEMON_TO_SPECIES_CACHE_KEY = `${ACTIVE_GAME.storagePrefix}-pokemon-to-species-v1`;
 
-function loadPokemonToSpeciesMap() {
+function loadPokemonToSpeciesMapCache() {
   try { return JSON.parse(localStorage.getItem(POKEMON_TO_SPECIES_CACHE_KEY) || '{}') || {}; }
   catch { return {}; }
 }
 
-function savePokemonToSpeciesMap(map) {
+function savePokemonToSpeciesMapCache(map) {
   try { localStorage.setItem(POKEMON_TO_SPECIES_CACHE_KEY, JSON.stringify(map)); }
   catch { /* ignore quota */ }
 }
@@ -31,8 +31,8 @@ function savePokemonToSpeciesMap(map) {
  * Resolve a pokemon resource id (which may represent a regional form) to its base species id.
  * Uses localStorage-backed cache to minimize API traffic.
  */
-async function resolveSpeciesIdForPokemon(pokemonId) {
-  const cache = loadPokemonToSpeciesMap();
+async function geSpeciesIdForPokemon(pokemonId) {
+  const cache = loadPokemonToSpeciesMapCache();
   const key = String(pokemonId);
   if (cache[key]) return cache[key];
 
@@ -43,7 +43,7 @@ async function resolveSpeciesIdForPokemon(pokemonId) {
   const speciesId = m ? Number(m[1]) : null;
   if (!speciesId) throw new Error('Malformed pokemon species URL');
   cache[key] = speciesId;
-  savePokemonToSpeciesMap(cache);
+  savePokemonToSpeciesMapCache(cache);
   return speciesId;
 }
 
@@ -53,7 +53,7 @@ async function resolveSpeciesIdForPokemon(pokemonId) {
  * Returns array of objects with { speciesId, formId } where formId is the 
  * regional variant if applicable, otherwise same as speciesId.
  */
-export async function getOrFetchPokedexById(pokedexId) {
+export async function loadPokedexEntries(pokedexId) {
   const cacheKey = `${ACTIVE_GAME.storagePrefix}-pokedex-${pokedexId}-v2`;
   try {
     const cached = JSON.parse(localStorage.getItem(cacheKey) || '');
@@ -88,7 +88,7 @@ export async function getOrFetchPokedexById(pokedexId) {
  * Returns array of { key, title, kind, entries } in render order.
  * entries is array of { speciesId, formId }
  */
-export async function computeActiveSections() {
+export async function buildActiveDexSections() {
   const enabled = loadEnabledSegments() || new Set(ACTIVE_GAME.dexes.filter(s => !s.optional).map(s => s.id));
 
   const sections = [];
@@ -104,7 +104,7 @@ export async function computeActiveSections() {
         const ids = seg.manualIds.slice();
         const resolved = await mapWithConcurrency(ids, async (pokemonId) => {
           try {
-            const speciesId = await resolveSpeciesIdForPokemon(pokemonId);
+            const speciesId = await geSpeciesIdForPokemon(pokemonId);
             return { speciesId, formId: pokemonId };
           } catch {
             // Fallback: treat as species if resolution fails
@@ -117,7 +117,7 @@ export async function computeActiveSections() {
       }
       if (entries.length) sections.push({ key: seg.id, title: seg.title, kind: seg.type, entries });
     } else if (seg.pokedexId) {
-      const entries = await getOrFetchPokedexById(seg.pokedexId);
+      const entries = await loadPokedexEntries(seg.pokedexId);
       if (entries.length) sections.push({ key: seg.id, title: seg.title, kind: seg.type, entries });
     }
   }
@@ -133,15 +133,15 @@ export async function fetchSpeciesName(id) {
   let response = await fetch(`https://pokeapi.co/api/v2/pokemon-species/${id}`);
   if (response.ok) {
     const payload = await response.json();
-    return payload.names?.find(entry => entry.language?.name === 'en')?.name || normaliseSpeciesName(payload.name || '');
+    return payload.names?.find(entry => entry.language?.name === 'en')?.name || normalizeSpeciesName(payload.name || '');
   }
   // If that failed, it may be a pokemon (form) id; resolve to species id and retry
   try {
-    const speciesId = await resolveSpeciesIdForPokemon(id);
+    const speciesId = await geSpeciesIdForPokemon(id);
     response = await fetch(`https://pokeapi.co/api/v2/pokemon-species/${speciesId}`);
     if (!response.ok) throw new Error('PokeAPI error');
     const payload = await response.json();
-    return payload.names?.find(entry => entry.language?.name === 'en')?.name || normaliseSpeciesName(payload.name || '');
+    return payload.names?.find(entry => entry.language?.name === 'en')?.name || normalizeSpeciesName(payload.name || '');
   } catch {
     throw new Error('PokeAPI error');
   }
@@ -172,7 +172,7 @@ export async function mapWithConcurrency(list, task, { concurrency = 6 } = {}) {
  * - Fetches only missing names with retries and concurrency control
  * - Merges results and updates cache for future sessions
  */
-export async function hydrateSpeciesNames(speciesOrder) {
+export async function loadSpeciesNames(speciesOrder) {
   const allIds = [...new Set(speciesOrder)];
   let cache = loadSpeciesCache();
 

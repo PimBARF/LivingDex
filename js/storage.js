@@ -86,7 +86,7 @@ export function saveSpeciesCache(map, speciesOrder) {
     localStorage.setItem(SPECIES_CACHE_KEY, JSON.stringify(map));
     localStorage.setItem(SPECIES_CACHE_META_KEY, JSON.stringify({
       ts: Date.now(),
-      idsHash: hashIds(speciesOrder),
+      idsHash: hashSpeciesIds(speciesOrder),
       version: 1,
     }));
   } catch {
@@ -112,7 +112,7 @@ export function isSpeciesCacheStale(speciesOrder) {
   const meta = readSpeciesCacheMeta();
   if (!meta) return true;
   if ((Date.now() - (meta.ts || 0)) > SPECIES_CACHE_TTL_MS) return true;
-  if (meta.idsHash !== hashIds(speciesOrder)) return true;
+  if (meta.idsHash !== hashSpeciesIds(speciesOrder)) return true;
   return false;
 }
 
@@ -120,7 +120,7 @@ export function isSpeciesCacheStale(speciesOrder) {
  * Generate a stable hash of the unique species list.
  * Used to invalidate cache when the dex list changes.
  */
-export function hashIds(speciesOrder) {
+export function hashSpeciesIds(speciesOrder) {
   const s = Array.from(new Set(speciesOrder)).join(',');
   let h = 0;
   for (let i = 0; i < s.length; i++) {
