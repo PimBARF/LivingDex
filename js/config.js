@@ -60,56 +60,192 @@ const GIGANTAMAX_FORM_IDS = [
     10225, 10226, 10227
 ];
 
+export const GAME_GROUP_ORDER = {
+    special: 0,
+    gen1: 10,
+    gen2: 20,
+    gen3: 30,
+    gen4: 40,
+    gen5: 50,
+    gen6: 60,
+    gen7: 70,
+    gen8: 80,
+    gen9: 90,
+};
+
+export function getOrderedGameEntries() {
+    return Object.entries(GAMES).sort(([, left], [, right]) => {
+        const leftGroup = GAME_GROUP_ORDER[left.group] ?? 999;
+        const rightGroup = GAME_GROUP_ORDER[right.group] ?? 999;
+        if (leftGroup !== rightGroup) return leftGroup - rightGroup;
+        return (left.order ?? 0) - (right.order ?? 0);
+    });
+}
+
 export const GAMES = {
     // Pokémon Home, only includes National Dex
     home: {
-        title: 'Pokémon Home',
+        title: 'Pokémon HOME',
         storagePrefix: 'home',
+        group: 'special',
+        order: 10,
         dexes: [
             { id: 'national', title: 'National Pokédex', pokedexId: 1, type: 'base', optional: false }
         ]
     },
-    
-    // Pokémon Sun and Moon
-    sm: {
-        title: 'Pokémon Sun & Moon',
-        storagePrefix: 'sm',
-        dexes: [
-            { id: 'alola', title: 'Alola Pokédex', pokedexId: 16, type: 'base', optional: false }
-        ]
-    },
-    
-    // Pokémon Ultra Sun and Ultra Moon
-    usum: {
-        title: 'Pokémon Ultra Sun & Ultra Moon',
-        storagePrefix: 'usum',
-        dexes: [
-            { id: 'alola', title: 'Alola Pokédex', pokedexId: 21, type: 'base', optional: false }
-        ]
-    },
-    
+
     // Pokémon Red, Blue, and Yellow
     rby: {
-        title: 'Pokémon Red, Blue & Yellow',
+        title: 'Red / Blue / Yellow',
         storagePrefix: 'rby',
+        group: 'gen1',
+        order: 10,
         dexes: [
             { id: 'kanto', title: 'Kanto Pokédex', pokedexId: 2, type: 'base', optional: false }
         ]
     },
 
+    // Pokémon Gold, Silver, and Crystal
+    gsc: {
+        title: 'Gold / Silver / Crystal',
+        storagePrefix: 'gsc',
+        group: 'gen2',
+        order: 10,
+        dexes: [
+            { id: 'johto', title: 'Johto Pokédex', pokedexId: 3, type: 'base', optional: false }
+        ]
+    },
+
+    // Pokémon Ruby, Sapphire, and Emerald
+    rse: {
+        title: 'Ruby / Sapphire / Emerald',
+        storagePrefix: 'rse',
+        group: 'gen3',
+        order: 10,
+        dexes: [
+            { id: 'hoenn', title: 'Hoenn Pokédex', pokedexId: 4, type: 'base', optional: false }
+        ]
+    },
+
+    // Pokémon FireRed and LeafGreen
+    frlg: {
+        title: 'FireRed / LeafGreen',
+        storagePrefix: 'frlg',
+        group: 'gen3',
+        order: 20,
+        dexes: [
+            { id: 'kanto', title: 'Kanto Pokédex', pokedexId: 2, type: 'base', optional: false }
+        ]
+    },
+
+    // Pokémon Diamond, Pearl, and Platinum
+    dppt: {
+        title: 'Diamond / Pearl / Platinum',
+        storagePrefix: 'dppt',
+        group: 'gen4',
+        order: 10,
+        dexes: [
+            { id: 'sinnoh', title: 'Sinnoh Pokédex', pokedexId: 5, type: 'base', optional: false },
+            { id: 'sinnoh-extended', title: 'Extended Sinnoh Pokédex', pokedexId: 6, type: 'base', optional: false }
+        ]
+    },
+
+    // Pokémon HeartGold and SoulSilver
+    hgss: {
+        title: 'HeartGold / SoulSilver',
+        storagePrefix: 'hgss',
+        group: 'gen4',
+        order: 20,
+        dexes: [
+            { id: 'johto-updated', title: 'Updated Johto Pokédex', pokedexId: 7, type: 'base', optional: false }
+        ]
+    },
+
+    // Pokémon Black and White
+    bw: {
+        title: 'Black / White',
+        storagePrefix: 'bw',
+        group: 'gen5',
+        order: 10,
+        dexes: [
+            { id: 'unova', title: 'Unova Pokédex', pokedexId: 8, type: 'base', optional: false }
+        ]
+    },
+
+    // Pokémon Black 2 and White 2
+    b2w2: {
+        title: 'Black 2 / White 2',
+        storagePrefix: 'b2w2',
+        group: 'gen5',
+        order: 20,
+        dexes: [
+            { id: 'unova-updated', title: 'Updated Unova Pokédex', pokedexId: 9, type: 'base', optional: false }
+        ]
+    },
+
+    // Pokémon X and Y
+    xy: {
+        title: 'X / Y',
+        storagePrefix: 'xy',
+        group: 'gen6',
+        order: 10,
+        dexes: [
+            { id: 'kalos-central', title: 'Kalos Central Pokédex', pokedexId: 12, type: 'base', optional: false },
+            { id: 'kalos-coastal', title: 'Kalos Coastal Pokédex', pokedexId: 13, type: 'base', optional: false },
+            { id: 'kalos-mountain', title: 'Kalos Mountain Pokédex', pokedexId: 14, type: 'base', optional: false }
+        ]
+    },
+
+    // Pokémon Omega Ruby and Alpha Sapphire
+    oras: {
+        title: 'Omega Ruby / Alpha Sapphire',
+        storagePrefix: 'oras',
+        group: 'gen6',
+        order: 20,
+        dexes: [
+            { id: 'hoenn-updated', title: 'Updated Hoenn Pokédex', pokedexId: 15, type: 'base', optional: false }
+        ]
+    },
+
+    // Pokémon Sun and Moon
+    sm: {
+        title: 'Sun / Moon',
+        storagePrefix: 'sm',
+        group: 'gen7',
+        order: 10,
+        dexes: [
+            { id: 'alola', title: 'Alola Pokédex', pokedexId: 16, type: 'base', optional: false }
+        ]
+    },
+
+    // Pokémon Ultra Sun and Ultra Moon
+    usum: {
+        title: 'Ultra Sun / Ultra Moon',
+        storagePrefix: 'usum',
+        group: 'gen7',
+        order: 20,
+        dexes: [
+            { id: 'alola', title: 'Alola Pokédex', pokedexId: 21, type: 'base', optional: false }
+        ]
+    },
+
     // Pokémon Let's Go Pikachu and Eevee
     lgpe: {
-        title: "Pokémon Let's Go Pikachu & Eevee",
+        title: "Let's Go Pikachu & Eevee",
         storagePrefix: 'lgpe',
+        group: 'gen7',
+        order: 30,
         dexes: [
             { id: 'kanto', title: 'Kanto Pokédex', pokedexId: 26, type: 'base', optional: false }
         ]
     },
-    
+
     // Pokémon Sword and Shield, includes Galar Dex and Isle of Armor/DLC
     swsh: {
-        title: 'Pokémon Sword & Shield',
+        title: 'Sword / Shield',
         storagePrefix: 'swsh',
+        group: 'gen8',
+        order: 10,
         dexes: [
             { id: 'galar', title: 'Galar Pokédex', pokedexId: 27, type: 'base', optional: false },
             { id: 'gigantamax-forms', title: 'Gigantamax Forms', type: 'forms', optional: true, manualIds: GIGANTAMAX_FORM_IDS },
@@ -117,40 +253,48 @@ export const GAMES = {
             { id: 'tundra', title: 'Crown Tundra', pokedexId: 29, type: 'dlc', optional: true }
         ]
     },
-    
+
     // Pokémon Brilliant Diamond and Shining Pearl
     bdsp: {
-        title: 'Pokémon Brilliant Diamond & Shining Pearl',
+        title: 'Brilliant Diamond / Shining Pearl',
         storagePrefix: 'bdsp',
+        group: 'gen8',
+        order: 20,
         dexes: [
             { id: 'sinnoh', title: 'Sinnoh Pokédex', pokedexId: 6, type: 'base', optional: false }
         ]
     },
-    
+
     // Pokémon Legends: Arceus
     pla: {
-        title: 'Pokémon Legends: Arceus',
+        title: 'Legends: Arceus',
         storagePrefix: 'pla',
+        group: 'special',
+        order: 20,
         dexes: [
             { id: 'hisui', title: 'Hisui Pokédex', pokedexId: 30, type: 'base', optional: false }
         ]
     },
-    
+
     // Pokémon Scarlet and Violet
     sv: {
-        title: 'Pokémon Scarlet & Violet',
+        title: 'Scarlet / Violet',
         storagePrefix: 'sv',
+        group: 'gen9',
+        order: 10,
         dexes: [
             { id: 'paldea', title: 'Paldea Pokédex', pokedexId: 31, type: 'base', optional: false },
             { id: 'kitakami', title: 'The Teal Mask', pokedexId: 32, type: 'dlc', optional: true },
             { id: 'blueberry', title: 'The Indigo Disk', pokedexId: 33, type: 'dlc', optional: true }
         ]
     },
-    
+
     // Pokémon Legends: Z-A
     za: {
-        title: 'Pokémon Legends: Z-A',
+        title: 'Legends: Z-A',
         storagePrefix: 'za',
+        group: 'special',
+        order: 30,
         dexes: [
             { id: 'lumiose-city', title: 'Lumiose Pokédex', pokedexId: 34, type: 'base', optional: false }
         ]

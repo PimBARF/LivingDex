@@ -3,6 +3,7 @@ import {
     ACTIVE_GAME_ID,
     GAMES,
     BOX_CAPACITY,
+    getOrderedGameEntries,
     prefersReducedMotion,
     spriteUrlForSpecies,
 } from './config.js';
@@ -888,6 +889,21 @@ export function registerSettingsControls() {
     const language = document.getElementById('settingsLanguage');
     const spriteStyle = document.getElementById('settingsSpriteStyle');
 
+    const buildGameSelectMarkup = () => {
+      const groups = new Map();
+      for (const [key, config] of getOrderedGameEntries()) {
+        const label = config.group ? config.group.replace('gen', 'Generation ').replace('special', 'Special / Other').replace(/^(Generation )([0-9])$/, '$1$2') : 'Other';
+        const normalized = label.startsWith('Generation') ? label : label;
+        if (!groups.has(normalized)) groups.set(normalized, []);
+        groups.get(normalized).push(`<option value="${key}">${config.title}</option>`);
+      }
+
+      const orderedGroups = Array.from(groups.entries()).map(([groupName, options]) => {
+        return `<optgroup label="${groupName}">${options.join('')}</optgroup>`;
+      }).join('');
+      return '<option value="">Select a game…</option>' + orderedGroups;
+    };
+
     syncThemeSettingsRadios(settings.theme);
     if (reducedMotion) reducedMotion.checked = !!settings.reducedMotion;
     if (hideCaught) hideCaught.checked = !!settings.hideCaughtDefault;
@@ -895,7 +911,7 @@ export function registerSettingsControls() {
     if (spriteStyle) spriteStyle.value = settings.spriteStyle || 'official-artwork';
     if (defaultGameModeSelect) defaultGameModeSelect.value = settings.defaultGameMode || 'last-used';
     if (defaultGameSelect) {
-      defaultGameSelect.innerHTML = '<option value="">Select a game…</option>' + Object.entries(GAMES).map(([key, config]) => `<option value="${key}">${config.title}</option>`).join('');
+      defaultGameSelect.innerHTML = buildGameSelectMarkup();
       defaultGameSelect.value = settings.defaultGameId || '';
     }
 
@@ -1063,24 +1079,39 @@ export function registerSettingsControls() {
 export function renderGameSelector() {
   const selector = document.getElementById('dexSelector');
   if (!selector) return;
-  
+
+  const groupedEntries = new Map();
+  for (const [key, config] of getOrderedGameEntries()) {
+    const groupLabel = config.group === 'special'
+      ? 'Special / Other'
+      : config.group?.startsWith('gen')
+        ? `Generation ${config.group.replace('gen', '')}`
+        : 'Other';
+    if (!groupedEntries.has(groupLabel)) groupedEntries.set(groupLabel, []);
+    groupedEntries.get(groupLabel).push({ key, title: config.title });
+  }
+
   selector.innerHTML = '';
-  Object.entries(GAMES).forEach(([key, config]) => {
-    const option = document.createElement('option');
-    option.value = key;
-    option.textContent = config.title;
-    if (key === ACTIVE_GAME_ID) option.selected = true;
-    selector.appendChild(option);
-  });
-  
+  for (const [groupLabel, entries] of groupedEntries) {
+    const optgroup = document.createElement('optgroup');
+    optgroup.label = groupLabel;
+    entries.forEach(({ key, title }) => {
+      const option = document.createElement('option');
+      option.value = key;
+      option.textContent = title;
+      if (key === ACTIVE_GAME_ID) option.selected = true;
+      optgroup.appendChild(option);
+    });
+    selector.appendChild(optgroup);
+  }
+
   // Handle dex switching
   selector.addEventListener('change', (e) => {
     const newGame = e.target.value;
     if (newGame && newGame !== ACTIVE_GAME_ID) {
-      // Redirect to new game with URL parameter
       const url = new URL(location.href);
       url.searchParams.set('game', newGame);
-      url.hash = ''; // Clear any shared state
+      url.hash = '';
       location.href = url.toString();
     }
   });

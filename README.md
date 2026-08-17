@@ -1,190 +1,60 @@
-# LivingDex.app – Living Pokédex Tracker
+# LivingDex.app ✨
 
-Track a full “Living Dex” across multiple Pokémon games—fast, offline‑friendly, and privacy‑respecting. This project is a static, single‑page web app with no frameworks and no build step: just open `index.html` in your browser.
+A simple Pokédex tracker for keeping tabs on every catch, across every game and region.
 
-• Live site: https://livingdex.app  
-• License: MIT
+It’s a lightweight static web app: no login, no backend, and no build step. Just open the site in a browser and start tracking.
 
+## What it does
 
-## Features
-
-- Multiple dexes in one UI (Home, Sword/Shield + DLC, Legends: Arceus, Scarlet/Violet, Legends: Z‑A)
-- Composite dex segments (base + optional DLC/forms) with simple toggles per game
-- Search by name or number (supports `eevee`, `133`, and `#42`)
-- “Show uncaught only” filter for quick clean‑up runs
-- Per‑box bulk actions (mark all caught / clear box), 30 slots per box like in‑game storage
-- Progress bar with live counts; page title reflects progress
-- Dark/light theme toggle (remembered across visits)
-- Shareable progress via a compact URL hash you can paste anywhere
-- Responsive layout, accessible modals (focus trap, ARIA labels), and keyboard‑friendly controls
-- Smart caching of species names (localStorage; 180‑day TTL) and sprites via PokeAPI’s CDN
-- No external dependencies, no trackers, no backend—your data stays on your device
-
+- Pick a game or region
+- Toggle optional dex segments like DLC or form groups
+- Mark Pokémon as caught or uncaught
+- Search by name or number
+- Hide already-caught entries when you want to focus on what’s left
+- See live progress while you play
+- Share your progress with a link
+- Keep everything saved in your browser
 
 ## Quick start
 
-1) Download or clone this repo.  
-2) Open `index.html` in a modern browser.
+1. Download or clone this repo.
+2. Open `index.html` in a browser.
 
-That’s it—no build step, package manager, or server required.
+Or run a tiny local server:
 
-Optional local serving (any static server works), for example:
-
-```powershell
-# Python (if installed)
+```bash
 python -m http.server 8080
-
-# Then open http://localhost:8080
 ```
 
+Then open http://localhost:8080 in your browser.
 
-## Using the app
+## Features
 
-- Pick the game from the dropdown in the header. Some games expose optional “segments” (DLC/forms) you can toggle on/off.
-- Click a cell to mark that Pokémon as caught. Use per‑box actions for bulk operations.
-- Use search to filter by name or number. Toggle “show uncaught only” to focus on what’s left.
-- Toggle the theme with the moon icon; the preference is saved.
-
-Share your progress:
-
-- The app supports shareable links that include your progress in the URL hash (`#s=...`). Anyone with the link sees your current caught state.  
-- Clearing the dex removes any shared state from the URL.
-
-
-## Architecture (ES modules)
-
-The app now uses small, focused ES modules instead of a single `app.js` file:
-
-- `index.html` – App shell and UI scaffolding
-- `styles.css` – Theme tokens, layout, and responsive styles
-- `js/config.js` – Game/dex configuration, constants, and mappings
-- `js/api.js` – PokeAPI integration, forms/species resolution, caching, concurrency helpers
-- `js/storage.js` – localStorage helpers for caught state, name cache, and segment toggles
-- `js/ui.js` – DOM rendering, event handlers, progress bar, modals, and interactions
-- `js/main.js` – App bootstrap and initialization (`<script type="module" src="js/main.js">`)
-
-There’s still no build step or dependencies; everything runs directly in the browser as native modules.
-
-
-## How it works
-
-- Species ordering comes from PokeAPI’s Pokédex endpoints per game/segment and is cached per‑segment in `localStorage`.
-- Regional forms are handled via explicit mappings so the correct artwork and labels appear in regional dexes.
-- Caught state is stored per‑game in `localStorage` and synchronized with the UI.
-- Species names are fetched on demand (with concurrency limits) and cached for 180 days with a hash to invalidate when the dex list changes.
-- Sprites/artwork are loaded from PokeAPI’s GitHub CDN.
-
-
-## Configuration and data flow
-
-- All game/dex configuration lives in `js/config.js` under `GAMES` (and related constants).
-- Game selection happens in the UI dropdown; optional segments (DLC/forms) are toggled per game and persisted.
-- The species list for each included segment is combined at runtime and rendered into in‑game‑style boxes.
-
-Example game keys include:
-
-- `home` – Pokémon Home (National Pokédex subset + optional regional forms)
-- `swsh` – Sword / Shield (Galar, Isle of Armor, Crown Tundra)
-- `pla` – Legends: Arceus (Hisui)
-- `sv` – Scarlet / Violet (Paldea + DLC)
-- `za` – Pokémon Legends: Z‑A (Lumiose)
-
-
-## Adding or modifying a dex
-
-To add a new game or edit an existing one, update `js/config.js`:
-
-1) Find the PokeAPI Pokédex ID at https://pokeapi.co/api/v2/pokedex/ (e.g., `1` = National, `34` = Z‑A).  
-2) Add or edit an entry in `GAMES` with a `storagePrefix` and one or more `dexes` (segments):
-
-```js
-sv: {
-	title: 'Pokémon Scarlet & Violet',
-	storagePrefix: 'sv',
-	dexes: [
-		{ id: 'paldea', title: 'Paldea Pokédex', pokedexId: 31, type: 'base', optional: false },
-		{ id: 'kitakami', title: 'The Teal Mask', pokedexId: 32, type: 'dlc', optional: true },
-		{ id: 'blueberry', title: 'The Indigo Disk', pokedexId: 33, type: 'dlc', optional: true }
-	]
-}
-```
-
-3) For regional forms, define a dedicated `forms` segment (either by `pokedexId` if available or via `manualIds` of Pokémon form IDs). The app will resolve form → species for proper naming.
-
-
-## Storage and caching
-
-All data is stored locally in your browser’s `localStorage` and namespaced per game via its `storagePrefix`:
-
-- Caught map: `${storagePrefix}-caught-v1`
-- Per‑segment dex caches: `${storagePrefix}-pokedex-<pokedexId>-v2`
-- Enabled segments: `${storagePrefix}-segments-v1`
-- Species names cache: `${storagePrefix}-species-names-v1` and metadata `${storagePrefix}-species-names-meta-v1` (180‑day TTL)
-- Theme preference: `theme-v1`
-
-Share links encode your caught state into the URL `#s=...` using a compact bit‑packed format. Opening such a link will prompt you to load that state.
-
-
-## Accessibility
-
-- ARIA labels and roles on interactive elements
-- Focus‑trapped, keyboard‑navigable modals (Escape to close, tab wrapping)
-- “Reduced motion” respected for certain UI transitions
-
+- Tracks many mainline games and dexes
+- Supports optional DLC and regional forms
+- Works with search and filtering
+- Includes dark mode and light mode
+- Uses local browser storage, so your progress stays on your device
+- Pulls Pokémon data from PokeAPI and caches it locally
 
 ## Project structure
 
-```
-index.html
-styles.css
-js/
-	config.js   # Game/dex config, constants, mappings
-	api.js      # PokeAPI calls, form/species resolution, concurrency helpers
-	storage.js  # localStorage helpers and cache meta
-	ui.js       # DOM rendering and user interactions
-	main.js     # App bootstrap and initialization
-CNAME
-LICENSE
-NOTICE
-```
+- `index.html` — app shell and UI
+- `styles.css` — layout and styling
+- `js/` — app logic
+  - `config.js` — game and dex definitions
+  - `api.js` — PokeAPI requests and caching
+  - `storage.js` — browser storage helpers
+  - `ui.js` — rendering and user interactions
+  - `main.js` — app startup
 
+## Notes
 
-## Development tips
-
-- Use your browser’s DevTools—there’s no build system to get in the way.
-- Species names hydrate progressively; it’s normal for labels to normalize after a moment on first run.
-- If you change dex definitions or suspect stale caches, clear the site’s `localStorage` for the relevant `storagePrefix` keys.
-
-
-## Data sources and attribution
-
-- Data and species names: https://pokeapi.co/
-- Official artwork sprites: https://github.com/PokeAPI/sprites
-
-
-## Contributing
-
-Issues and pull requests are welcome. Keep in mind the project constraints:
-
-- No external dependencies or build tools
-- Vanilla JS + ES modules only (no frameworks/bundlers)
-- Follow the existing coding and UI patterns (direct DOM updates, cache keys, accessibility)
-
-
-## Future enhancements (ideas / wishlist)
-
-These are intentionally low‑risk, incremental improvements that would still respect the project’s “no build tooling” philosophy:
-
-- Offline manifest / PWA support (optional add‑to‑home, caching sprites)
-- Export/import JSON alongside share hash for backups
-- Keyboard shortcuts (e.g. arrows to move focus; space to toggle caught)
-- Optional “show forms inline” expansion for species with multiple regional forms
-- Small stats sidebar (percentage per segment, remaining count)
-- Localized names (behind a toggle) using existing PokeAPI language data
-- Visual indicator for newly released DLC species when segments are enabled
-
+- No dependencies or build tools are required.
+- Progress is stored in your browser, not on a server.
+- If you want to clear saved progress, clear the site data for this app in your browser settings.
 
 ## License
 
-MIT © 2025 Pim Jong. See [`LICENSE`](./LICENSE) for details.
+MIT. See [LICENSE](./LICENSE) for details.
 
