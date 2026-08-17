@@ -55,3 +55,7 @@
 - Caught state: Stored as `${storagePrefix}-caught-v1` in localStorage.
 - Species names: Hydrated and cached via `js/api.js` and `js/storage.js`.
 - UI rendering: See `renderDexSectionBoxes` and `populateDexSlots` in `js/ui.js`.
+
+When writing Python code to fetch data or call external APIs:
+- Always include a custom `User-Agent` header (e.g., `Mozilla/5.0 (X11; Linux x86_64)`).
+- Prefer using the `requests` or `httpx` libraries over standard `urllib`.

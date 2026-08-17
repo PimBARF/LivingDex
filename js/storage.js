@@ -1,10 +1,12 @@
 import {
+    ACTIVE_GAME,
     CAUGHT_STORAGE_KEY,
     SEGMENTS_STORAGE_KEY,
     SPECIES_CACHE_KEY,
     SPECIES_CACHE_META_KEY,
     SPECIES_CACHE_TTL_MS,
     SETTINGS_STORAGE_KEY,
+    getDefaultEnabledSegments,
 } from './config.js';
 
 // Global app settings (UI prefs)
@@ -41,6 +43,26 @@ export function saveSettings(next) {
     // ignore quota
   }
   return merged;
+}
+
+export function clearSpeciesCache() {
+  try {
+    Object.keys(localStorage).forEach(key => {
+      if (key.endsWith('-species-names-v1') || key.endsWith('-species-names-meta-v1')) {
+        localStorage.removeItem(key);
+      }
+    });
+  } catch {
+    // ignore quota
+  }
+}
+
+export function clearAllSavedData() {
+  try {
+    localStorage.clear();
+  } catch {
+    // ignore quota
+  }
 }
 
 /**
@@ -81,12 +103,13 @@ export function loadSpeciesCache() {
 /**
  * Save species name cache to localStorage with metadata (timestamp, hash, version).
  */
-export function saveSpeciesCache(map, speciesOrder) {
+export function saveSpeciesCache(map, speciesOrder, language = 'en') {
   try {
     localStorage.setItem(SPECIES_CACHE_KEY, JSON.stringify(map));
     localStorage.setItem(SPECIES_CACHE_META_KEY, JSON.stringify({
       ts: Date.now(),
       idsHash: hashSpeciesIds(speciesOrder),
+      language,
       version: 1,
     }));
   } catch {
@@ -108,11 +131,12 @@ export function readSpeciesCacheMeta() {
 /**
  * Determine if the species cache is stale based on TTL and content hash.
  */
-export function isSpeciesCacheStale(speciesOrder) {
+export function isSpeciesCacheStale(speciesOrder, language = 'en') {
   const meta = readSpeciesCacheMeta();
   if (!meta) return true;
   if ((Date.now() - (meta.ts || 0)) > SPECIES_CACHE_TTL_MS) return true;
   if (meta.idsHash !== hashSpeciesIds(speciesOrder)) return true;
+  if (meta.language !== language) return true;
   return false;
 }
 
@@ -136,11 +160,11 @@ export function hashSpeciesIds(speciesOrder) {
 export function loadEnabledSegments() {
   try {
     const raw = localStorage.getItem(SEGMENTS_STORAGE_KEY);
-    if (!raw) return null;
+    if (!raw) return getDefaultEnabledSegments(ACTIVE_GAME);
     const parsed = JSON.parse(raw);
-    if (!parsed || typeof parsed !== 'object') return null;
-    return new Set(parsed.enabled || []);
-  } catch { return null; }
+    if (!parsed || typeof parsed !== 'object') return getDefaultEnabledSegments(ACTIVE_GAME);
+    return new Set(parsed.enabled || getDefaultEnabledSegments(ACTIVE_GAME));
+  } catch { return getDefaultEnabledSegments(ACTIVE_GAME); }
 }
 
 export function saveEnabledSegments(set) {

@@ -106,6 +106,7 @@
   <script src="https://cdn.jsdelivr.net/npm/pako@2.1.0/dist/pako.min.js"></script>
   <script type="module" src="js/main.js"></script>
 
+  <input id="settingsImportFile" type="file" accept="application/json" hidden />
   <div id="toast" class="toast alert alert-success">Link copied to clipboard!</div>
 
   <!-- Scroll to top button -->
@@ -275,6 +276,34 @@
 
       <div class="modal-actions">
         <button id="closeSettings" class="btn" aria-label="Close settings">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- About modal -->
+  <div id="modalAbout" class="modal" role="dialog" aria-modal="true"
+       aria-labelledby="aboutTitle" aria-describedby="aboutDesc" hidden>
+    <div class="modal-backdrop" data-close></div>
+    <div class="modal-card" role="document">
+      <h3 id="aboutTitle">About LivingDex.app</h3>
+      <div id="aboutDesc" class="about-body">
+        <p>
+          LivingDex.app is a static, privacy-first tracker for building and sharing your
+          living Pokédex progress across supported Pokémon games.
+        </p>
+        <p>
+          Project page:
+          <a href="https://github.com/PimBARF/LivingDex" target="_blank" rel="noopener noreferrer">
+            github.com/PimBARF/LivingDex
+          </a>
+        </p>
+        <p>
+          Credits: Built and maintained by PimBARF, with species and form data provided by
+          <a href="https://pokeapi.co/" target="_blank" rel="noopener noreferrer">PokeAPI</a>.
+        </p>
+      </div>
+      <div class="modal-actions">
+        <button id="closeAbout" class="btn" aria-label="Close about dialog">Close</button>
       </div>
     </div>
   </div>

@@ -14,6 +14,8 @@ import {
     saveEnabledSegments,
     loadSettings,
     saveSettings,
+    clearSpeciesCache,
+    clearAllSavedData,
 } from './storage.js';
 
 import {
@@ -32,6 +34,13 @@ function resolveTheme(mode) {
   }
   // Fallback to light/dark if anything unexpected is stored
   return mode === 'dark' ? 'dark' : 'light';
+}
+
+export function isMotionReduced() {
+  const settings = loadSettings();
+  if (settings.reducedMotion === true || settings.reducedMotion === 'true') return true;
+  if (settings.reducedMotion === false || settings.reducedMotion === 'false') return false;
+  return !!(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches);
 }
 
 /**
@@ -96,6 +105,27 @@ export function applyHideCaughtFilter() {
   const toggle = document.getElementById('toggleUncaught');
   const enabled = toggle?.checked;
   document.body.classList.toggle('hide-caught', !!enabled);
+}
+
+/**
+ * Rebuild the dex grid for the current game/segment selection.
+ * Centralizes the app render flow so it can be reused in multiple actions.
+ */
+export function rebuildDexView({ sections, slotCount }) {
+  const app = document.getElementById('app');
+  if (!app) return;
+
+  app.innerHTML = '';
+  let startGlobal = 1;
+  for (const sec of sections) {
+    renderDexSectionBoxes(app, sec.key, sec.title, sec.entries.length, startGlobal);
+    startGlobal += sec.entries.length;
+  }
+
+  populateDexSlots(sections, slotCount);
+  registerBoxControls(slotCount);
+  updateProgressBar(slotCount);
+  applyHideCaughtFilter();
 }
 
 /**
@@ -299,12 +329,28 @@ export function createDexSlot(slotIndex, speciesId, formId, name, displayIndex) 
   button.dataset.form = formId;
   button.dataset.name = name.toLowerCase();
   button.title = `#${displayIndex} — ${name} (${speciesId})`;
+  const spriteStyle = loadSettings().spriteStyle || 'official-artwork';
   button.innerHTML = `
     <div class="index">${displayIndex}</div>
-    <img class="sprite" src="${spriteUrlForSpecies(formId)}" alt="${name}" loading="lazy" onerror="this.style.opacity=.2"/>
+    <img class="sprite" src="${spriteUrlForSpecies(formId, spriteStyle)}" alt="${name}" loading="lazy" onerror="this.style.opacity=.2"/>
     <div class="label">${name}</div>
   `;
   return button;
+}
+
+/**
+ * Refresh the `src` of every rendered sprite image to match the currently
+ * selected sprite style setting, without re-building the whole DOM.
+ */
+export function applySpriteStyleToCells() {
+  const spriteStyle = loadSettings().spriteStyle || 'official-artwork';
+  document.querySelectorAll('.cell:not(.is-placeholder) img.sprite').forEach(img => {
+    const cell = img.closest('.cell');
+    const formId = cell?.dataset.form;
+    if (!formId) return;
+    img.style.opacity = '';
+    img.src = spriteUrlForSpecies(formId, spriteStyle);
+  });
 }
 
 /**
@@ -458,7 +504,7 @@ export function applySearchFilter(query) {
     });
     matches.forEach(cell => cell.classList.add('highlight'));
     matches[0].scrollIntoView({ 
-      behavior: prefersReducedMotion ? 'auto' : 'smooth', 
+      behavior: isMotionReduced() ? 'auto' : 'smooth', 
       block: 'center' 
     });
   }
@@ -527,6 +573,10 @@ export function registerHeaderControls(slotCount) {
   });
 
   // Initialize hide caught UI state
+  if (uncaughtToggle) {
+    uncaughtToggle.checked = !!loadSettings().hideCaughtDefault;
+  }
+  applyHideCaughtFilter();
   updateHideCaughtUi();
 
   // Mobile: collapse the search bar after scrolling down a bit
@@ -579,7 +629,7 @@ export function registerScrollToTopButton() {
   button.addEventListener('click', () => {
     window.scrollTo({
       top: 0,
-      behavior: prefersReducedMotion ? 'auto' : 'smooth',
+      behavior: isMotionReduced() ? 'auto' : 'smooth',
     });
   });
 }
@@ -614,15 +664,77 @@ export function resetDexProgress(slotCount) {
  * Show the shared link warning modal and run a callback on confirm.
  * On either confirm or cancel, the URL hash is cleared to avoid re-prompting.
  */
+function attachModalHandlers({
+  modal,
+  openBtn,
+  closeBtn,
+  backdrop,
+  onOpen,
+  onClose,
+  onKeydown,
+  focusSelector,
+}) {
+  if (!modal) return { openModal: () => {}, closeModal: () => {} };
+
+  let lastFocus = null;
+
+  function closeModal() {
+    modal.hidden = true;
+    modal._cleanup?.();
+    onClose?.();
+    lastFocus?.focus();
+  }
+
+  function openModal() {
+    lastFocus = document.activeElement;
+    modal.hidden = false;
+    onOpen?.(lastFocus);
+
+    const focusTarget = modal.querySelector(focusSelector || 'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])');
+    const fallbackTarget = focusTarget || modal.querySelector('button, [href], input, select, textarea');
+    fallbackTarget?.focus();
+
+    function handleKeydown(event) {
+      if (event.key === 'Escape') {
+        closeModal();
+        return;
+      }
+
+      if (event.key === 'Tab') {
+        const focusables = modal.querySelectorAll('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])');
+        const list = Array.from(focusables).filter(el => !el.hasAttribute('disabled'));
+        if (!list.length) return;
+        const first = list[0];
+        const last = list[list.length - 1];
+        if (event.shiftKey && document.activeElement === first) {
+          last.focus();
+          event.preventDefault();
+        } else if (!event.shiftKey && document.activeElement === last) {
+          first.focus();
+          event.preventDefault();
+        }
+      }
+      onKeydown?.(event, closeModal);
+    }
+
+    modal.addEventListener('keydown', handleKeydown, { once: false });
+    modal._cleanup = () => modal.removeEventListener('keydown', handleKeydown);
+  }
+
+  openBtn?.addEventListener('click', openModal);
+  closeBtn?.addEventListener('click', closeModal);
+  backdrop?.addEventListener('click', closeModal);
+
+  return { openModal, closeModal };
+}
+
 export function showSharedLinkWarningModal(onConfirm) {
   const modal = document.getElementById('modalSharedLink');
   const confirmBtn = document.getElementById('confirmSharedLink');
   const cancelBtn = document.getElementById('cancelSharedLink');
   const backdrop = modal?.querySelector('[data-close]');
-  let lastFocus = null;
 
   if (!modal) {
-    // Fallback: if modal missing, just proceed
     try { onConfirm?.(); } catch {}
     return;
   }
@@ -633,31 +745,18 @@ export function showSharedLinkWarningModal(onConfirm) {
     }
   }
 
-  function closeModal() {
-    modal.hidden = true;
-    modal._cleanup?.();
-    lastFocus?.focus();
-  }
-
-  function openModal() {
-    lastFocus = document.activeElement;
-    modal.hidden = false;
-    confirmBtn?.focus();
-
-    function onKeydown(e) {
-      if (e.key === 'Escape') { clearHash(); closeModal(); }
-      if (e.key === 'Tab') {
-        const focusables = modal.querySelectorAll('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])');
-        const list = Array.from(focusables).filter(el => !el.hasAttribute('disabled'));
-        if (!list.length) return;
-        const first = list[0], last = list[list.length - 1];
-        if (e.shiftKey && document.activeElement === first) { last.focus(); e.preventDefault(); }
-        else if (!e.shiftKey && document.activeElement === last) { first.focus(); e.preventDefault(); }
-      }
-    }
-    modal.addEventListener('keydown', onKeydown, { once: false });
-    modal._cleanup = () => modal.removeEventListener('keydown', onKeydown);
-  }
+  const { openModal, closeModal } = attachModalHandlers({
+    modal,
+    openBtn: null,
+    closeBtn: null,
+    backdrop,
+    onOpen: () => confirmBtn?.focus(),
+    onClose: () => {},
+    onKeydown: (event) => {
+      if (event.key === 'Escape') clearHash();
+    },
+    focusSelector: '#confirmSharedLink',
+  });
 
   confirmBtn?.addEventListener('click', () => {
     try { onConfirm?.(); } catch {}
@@ -681,49 +780,21 @@ export function registerResetControls(slotCount) {
   const confirmBtn = document.getElementById('confirmReset');
   const cancelBtn = document.getElementById('cancelReset');
   const backdrop = modal?.querySelector('[data-close]');
-  let lastFocus = null;
 
-  function openModal() {
-    if (!modal) return;
-    lastFocus = document.activeElement;
-    modal.hidden = false;
-    confirmBtn?.focus();
-
-    // Focus trap for Tab key
-    function onKeydown(e) {
-      if (e.key === 'Escape') closeModal();
-      if (e.key === 'Tab') {
-        const focusables = modal.querySelectorAll('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])');
-        const list = Array.from(focusables).filter(el => !el.hasAttribute('disabled'));
-        if (!list.length) return;
-        const first = list[0], last = list[list.length - 1];
-        if (e.shiftKey && document.activeElement === first) { 
-          last.focus(); 
-          e.preventDefault(); 
-        } else if (!e.shiftKey && document.activeElement === last) { 
-          first.focus(); 
-          e.preventDefault(); 
-        }
-      }
-    }
-    modal.addEventListener('keydown', onKeydown, { once: false });
-    modal._cleanup = () => modal.removeEventListener('keydown', onKeydown);
-  }
-
-  function closeModal() {
-    if (!modal) return;
-    modal.hidden = true;
-    modal._cleanup?.();
-    lastFocus?.focus();
-  }
-
-  openBtn?.addEventListener('click', openModal);
-  confirmBtn?.addEventListener('click', () => { 
-    resetDexProgress(slotCount); 
-    closeModal(); 
+  const { closeModal } = attachModalHandlers({
+    modal,
+    openBtn,
+    closeBtn: cancelBtn,
+    backdrop,
+    onOpen: () => confirmBtn?.focus(),
+    onClose: () => {},
+    focusSelector: '#confirmReset',
   });
-  cancelBtn?.addEventListener('click', closeModal);
-  backdrop?.addEventListener('click', closeModal);
+
+  confirmBtn?.addEventListener('click', () => {
+    resetDexProgress(slotCount);
+    closeModal();
+  });
 }
 
 // =============================================================================
@@ -745,7 +816,7 @@ export function renderGameInfo() {
   
   togglesEl.innerHTML = '';
   
-  const enabled = loadEnabledSegments() || new Set(ACTIVE_GAME.dexes.filter(s => !s.optional).map(s => s.id));
+  const enabled = loadEnabledSegments();
   
   // Create checkboxes for optional segments
   ACTIVE_GAME.dexes.filter(s => s.optional).forEach(seg => {
@@ -769,35 +840,22 @@ export function renderGameInfo() {
     
     // Add event listener for live updates
     input.addEventListener('change', async () => {
-      const currentEnabled = loadEnabledSegments() || new Set(ACTIVE_GAME.dexes.filter(s => !s.optional).map(s => s.id));
-      
+      const currentEnabled = loadEnabledSegments();
+
       if (input.checked) {
         currentEnabled.add(seg.id);
       } else {
         currentEnabled.delete(seg.id);
       }
-      
+
       saveEnabledSegments(currentEnabled);
-      
-      // Rebuild UI with new sections
-      const app = document.getElementById('app');
-      if (app) {
-        const sections = await buildActiveDexSections();
-        const combinedSpeciesIds = sections.flatMap(s => s.entries.map(e => e.speciesId));
-        const newSpeciesOrder = combinedSpeciesIds;
-        const newSlotCount = combinedSpeciesIds.length;
-        app.innerHTML = '';
-        let startGlobal = 1;
-        for (const sec of sections) {
-          renderDexSectionBoxes(app, sec.key, sec.title, sec.entries.length, startGlobal);
-          startGlobal += sec.entries.length;
-        }
-        populateDexSlots(sections, newSlotCount);
-        registerBoxControls(newSlotCount);
-        await loadSpeciesNames(newSpeciesOrder);
-        updateProgressBar(newSlotCount);
-        applyHideCaughtFilter();
-      }
+
+      const sections = await buildActiveDexSections();
+      const combinedSpeciesIds = sections.flatMap(s => s.entries.map(e => e.speciesId));
+      const newSlotCount = combinedSpeciesIds.length;
+
+      rebuildDexView({ sections, slotCount: newSlotCount });
+      await loadSpeciesNames(combinedSpeciesIds);
     });
   });
 }
@@ -810,63 +868,193 @@ export function registerSettingsControls() {
   const modal = document.getElementById('modalSettings');
   const backdrop = modal?.querySelector('[data-close]');
   const closeBtn = document.getElementById('closeSettings');
-  let lastFocus = null;
+  const exportBtn = document.getElementById('settingsExportData');
+  const importBtn = document.getElementById('settingsImportData');
+  const importInput = document.getElementById('settingsImportFile');
+  const clearCacheBtn = document.getElementById('settingsClearSpeciesCache');
+  const clearAllBtn = document.getElementById('settingsClearAllData');
+  const defaultGameModeSelect = document.getElementById('settingsDefaultGameMode');
+  const defaultGameSelect = document.getElementById('settingsDefaultGame');
+  const defaultGameWrapper = document.getElementById('settingsDefaultGameWrapper');
+  const aboutBtn = document.getElementById('settingsAbout');
+  const aboutModal = document.getElementById('modalAbout');
+  const aboutBackdrop = aboutModal?.querySelector('[data-close]');
+  const closeAboutBtn = document.getElementById('closeAbout');
+
+  function syncSettingsControls() {
+    const settings = loadSettings();
+    const reducedMotion = document.getElementById('settingsReducedMotion');
+    const hideCaught = document.getElementById('settingsHideCaught');
+    const language = document.getElementById('settingsLanguage');
+    const spriteStyle = document.getElementById('settingsSpriteStyle');
+
+    syncThemeSettingsRadios(settings.theme);
+    if (reducedMotion) reducedMotion.checked = !!settings.reducedMotion;
+    if (hideCaught) hideCaught.checked = !!settings.hideCaughtDefault;
+    if (language) language.value = settings.language || 'en';
+    if (spriteStyle) spriteStyle.value = settings.spriteStyle || 'official-artwork';
+    if (defaultGameModeSelect) defaultGameModeSelect.value = settings.defaultGameMode || 'last-used';
+    if (defaultGameSelect) {
+      defaultGameSelect.innerHTML = '<option value="">Select a game…</option>' + Object.entries(GAMES).map(([key, config]) => `<option value="${key}">${config.title}</option>`).join('');
+      defaultGameSelect.value = settings.defaultGameId || '';
+    }
+
+    if (defaultGameWrapper) {
+      defaultGameWrapper.hidden = (defaultGameModeSelect?.value || 'last-used') !== 'specific';
+    }
+  }
+
+  async function persistSettingsFromControls() {
+    const settings = loadSettings();
+    const selectedTheme = document.querySelector('input[name="settingsTheme"]:checked')?.value || settings.theme || 'auto';
+    const nextSettings = {
+      ...settings,
+      theme: selectedTheme,
+      reducedMotion: !!document.getElementById('settingsReducedMotion')?.checked,
+      hideCaughtDefault: !!document.getElementById('settingsHideCaught')?.checked,
+      language: document.getElementById('settingsLanguage')?.value || 'en',
+      spriteStyle: document.getElementById('settingsSpriteStyle')?.value || 'official-artwork',
+      defaultGameMode: document.getElementById('settingsDefaultGameMode')?.value || 'last-used',
+      defaultGameId: document.getElementById('settingsDefaultGame')?.value || null,
+    };
+
+    saveSettings(nextSettings);
+    applyTheme(nextSettings.theme);
+
+    const hideToggle = document.getElementById('toggleUncaught');
+    if (hideToggle) {
+      hideToggle.checked = !!nextSettings.hideCaughtDefault;
+      hideToggle.dispatchEvent(new Event('change'));
+    } else {
+      applyHideCaughtFilter();
+    }
+    applySpriteStyleToCells();
+    if (nextSettings.language !== settings.language) {
+      const speciesOrder = Array.from(document.querySelectorAll('.cell:not(.is-placeholder)'))
+        .map(cell => Number(cell.dataset.national))
+        .filter(Number.isFinite);
+      await loadSpeciesNames(speciesOrder);
+    }
+  }
+
+  function exportAllData() {
+    const payload = {
+      exportedAt: new Date().toISOString(),
+      settings: loadSettings(),
+      games: Object.fromEntries(Object.entries(GAMES).map(([gameKey, config]) => {
+        const key = `${config.storagePrefix}-caught-v1`;
+        return [gameKey, JSON.parse(localStorage.getItem(key) || '{}')];
+      })),
+    };
+
+    const blob = new Blob([JSON.stringify(payload, null, 2)], { type: 'application/json' });
+    const url = URL.createObjectURL(blob);
+    const anchor = document.createElement('a');
+    anchor.href = url;
+    anchor.download = 'livingdex-export.json';
+    anchor.click();
+    URL.revokeObjectURL(url);
+    showToast('Data exported.', 'success');
+  }
+
+  function importAllData(file) {
+    if (!file) return;
+    const reader = new FileReader();
+    reader.onload = () => {
+      try {
+        const payload = JSON.parse(String(reader.result));
+        if (!payload || typeof payload !== 'object') {
+          throw new Error('Invalid payload');
+        }
+        if (payload.settings && typeof payload.settings === 'object') {
+          saveSettings({ ...loadSettings(), ...payload.settings });
+        }
+        if (payload.games && typeof payload.games === 'object') {
+          Object.entries(payload.games).forEach(([gameKey, gameState]) => {
+            const config = GAMES[gameKey];
+            if (config && gameState && typeof gameState === 'object') {
+              localStorage.setItem(`${config.storagePrefix}-caught-v1`, JSON.stringify(gameState));
+            }
+          });
+        }
+        showToast('Data imported.', 'success');
+        window.location.reload();
+      } catch {
+        showToast('Import failed: invalid JSON.', 'danger');
+      }
+    };
+    reader.readAsText(file);
+  }
+
+  function clearSpeciesCacheAction() {
+    clearSpeciesCache();
+    showToast('Species cache cleared.', 'success');
+  }
+
+  function clearAllDataAction() {
+    if (!window.confirm('This will clear all saved progress and settings for this site. Continue?')) return;
+    clearAllSavedData();
+    window.location.reload();
+  }
 
   function attachThemeSettingsHandlers() {
-    const radios = modal.querySelectorAll('input[name="settingsTheme"]');
-    if (!radios.length) return;
-
-    // Initialize checked state from stored theme
-    const settings = loadSettings();
-    syncThemeSettingsRadios(settings.theme);
+    const radios = modal?.querySelectorAll('input[name="settingsTheme"]');
+    if (!radios || !radios.length) return;
 
     radios.forEach(radio => {
-      radio.addEventListener('change', (e) => {
+      radio.onchange = (e) => {
         if (e.target.checked) {
-          const value = e.target.value; // 'light' | 'dark' | 'auto'
-          applyTheme(value);
+          persistSettingsFromControls();
         }
-      }, { once: false });
+      };
     });
   }
 
-  function openModal() {
-    if (!modal) return;
-    lastFocus = document.activeElement;
-    modal.hidden = false;
-    closeBtn?.focus();
+  const { closeModal } = attachModalHandlers({
+    modal,
+    openBtn,
+    closeBtn,
+    backdrop,
+    onOpen: () => {
+      syncSettingsControls();
+      attachThemeSettingsHandlers();
+      closeBtn?.focus();
+    },
+    onClose: () => {},
+    focusSelector: '#closeSettings',
+  });
 
-    // Theme radios exist now in DOM, wire them up
-    attachThemeSettingsHandlers();
-    // Also sync in case theme changed via header toggle since last open
-    const settings = loadSettings();
-    syncThemeSettingsRadios(settings.theme);
+  const { openModal: openAboutModal } = attachModalHandlers({
+    modal: aboutModal,
+    openBtn: null,
+    closeBtn: closeAboutBtn,
+    backdrop: aboutBackdrop,
+    onOpen: () => closeAboutBtn?.focus(),
+    onClose: () => {},
+    focusSelector: '#closeAbout',
+  });
 
-    function onKeydown(e) {
-      if (e.key === 'Escape') closeModal();
-      if (e.key === 'Tab') {
-        const focusables = modal.querySelectorAll('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])');
-        const list = Array.from(focusables).filter(el => !el.hasAttribute('disabled'));
-        if (!list.length) return;
-        const first = list[0], last = list[list.length - 1];
-        if (e.shiftKey && document.activeElement === first) { last.focus(); e.preventDefault(); }
-        else if (!e.shiftKey && document.activeElement === last) { first.focus(); e.preventDefault(); }
-      }
+  document.getElementById('settingsReducedMotion')?.addEventListener('change', persistSettingsFromControls);
+  document.getElementById('settingsHideCaught')?.addEventListener('change', persistSettingsFromControls);
+  document.getElementById('settingsLanguage')?.addEventListener('change', persistSettingsFromControls);
+  document.getElementById('settingsSpriteStyle')?.addEventListener('change', persistSettingsFromControls);
+
+  defaultGameModeSelect?.addEventListener('change', () => {
+    if (defaultGameWrapper) {
+      defaultGameWrapper.hidden = defaultGameModeSelect.value !== 'specific';
     }
-    modal.addEventListener('keydown', onKeydown, { once: false });
-    modal._cleanup = () => modal.removeEventListener('keydown', onKeydown);
-  }
+    persistSettingsFromControls();
+  });
 
-  function closeModal() {
-    if (!modal) return;
-    modal.hidden = true;
-    modal._cleanup?.();
-    lastFocus?.focus();
-  }
+  defaultGameSelect?.addEventListener('change', persistSettingsFromControls);
+  exportBtn?.addEventListener('click', exportAllData);
+  importBtn?.addEventListener('click', () => importInput?.click());
+  importInput?.addEventListener('change', (event) => importAllData(event.target.files?.[0]));
+  clearCacheBtn?.addEventListener('click', clearSpeciesCacheAction);
+  clearAllBtn?.addEventListener('click', clearAllDataAction);
+  aboutBtn?.addEventListener('click', openAboutModal);
 
-  openBtn?.addEventListener('click', openModal);
-  closeBtn?.addEventListener('click', closeModal);
-  backdrop?.addEventListener('click', closeModal);
+  return { closeModal };
 }
 
 /**

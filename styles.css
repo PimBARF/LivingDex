@@ -237,7 +237,7 @@ footer {
   box-shadow: 0 4px 16px rgba(0,0,0,0.25);
   opacity: 0;
   transition: opacity 0.4s ease, transform 0.4s ease;
-  z-index: 50;
+  z-index: 200;
   pointer-events: none;
 }
 
@@ -526,16 +526,18 @@ footer {
   position: relative;
   max-width: 520px;
   width: calc(100% - 32px);
-  border-radius: var(--radius);
-  background: var(--card);
+  border-radius: 16px;
+  background: color-mix(in srgb, var(--card) 82%, transparent);
   color: var(--text);
   border: 1px solid var(--border);
-  padding: 18px;
+  padding: 16px 16px 12px;
   box-shadow: 0 10px 36px rgba(0,0,0,0.35);
   display: flex;
   flex-direction: column;
-  max-height: calc(100vh - 40px);
+  max-height: calc(100vh - 32px);
   overflow: hidden;
+  backdrop-filter: blur(10px) saturate(120%);
+  -webkit-backdrop-filter: blur(10px) saturate(120%);
 }
 
 .modal-card h3 {
@@ -553,17 +555,20 @@ footer {
 /* Scrollable content area inside modal */
 .settings-body {
   margin-top: 8px;
-  padding-right: 4px;          /* small space so scroll bar doesn't overlap text */
+  padding: 2px 4px 0 0;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 8px;
   overflow-y: auto;
 }
 
 /* Sections */
 .settings-section {
-  padding: 6px 0 8px;
-  border-bottom: 1px solid var(--border);
+  padding: 10px 10px 8px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--card);
+  box-shadow: 0 1px 0 rgba(0,0,0,0.04);
 }
 
 .settings-section:last-of-type {
@@ -571,11 +576,23 @@ footer {
 }
 
 .settings-section h4 {
-  margin: 0 0 4px;
-  font-size: 13px;
+  margin: 0 0 8px;
+  font-size: 11px;
   text-transform: uppercase;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.09em;
   color: var(--muted);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.settings-section h4::before {
+  content: "";
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--accent-2);
+  box-shadow: none;
 }
 
 /* Rows */
@@ -584,38 +601,153 @@ footer {
   align-items: center;
   justify-content: space-between;
   gap: 10px;
-  margin: 4px 0;
+  margin: 6px 0;
+  padding: 7px 10px;
+  border-radius: 10px;
+  background: rgba(0,0,0,0.02);
+  border: 1px solid rgba(0,0,0,0.04);
 }
 
 .settings-row-label {
   font-size: 14px;
-  font-weight: 500;
+  font-weight: 600;
+  color: var(--text);
 }
 
 .settings-row-control {
   display: flex;
   flex-wrap: wrap;
-  gap: 6px;
+  gap: 7px;
   justify-content: flex-end;
+  align-items: center;
+}
+
+.settings-row-control .select {
+  min-width: 180px;
+}
+
+.settings-row > .btn,
+.settings-row > .switch,
+.settings-row > .settings-row-control {
+  flex: 1;
+}
+
+.settings-row > .btn {
+  width: 100%;
+}
+
+/* Settings toggles */
+.settings-section .switch {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border-radius: 10px;
+  background: rgba(0,0,0,0.02);
+  border: 1px solid var(--border);
+  transition: border-color 0.15s ease, background 0.15s ease;
+}
+
+.settings-section .switch:hover {
+  border-color: var(--accent-2);
+  background: rgba(66,133,244,0.04);
+}
+
+.settings-section .switch input[type="checkbox"],
+.settings-section .switch input[type="radio"] {
+  accent-color: var(--accent-2);
+  width: 18px;
+  height: 18px;
+  margin: 0;
+}
+
+.settings-section .switch span {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text);
 }
 
 /* Help text under buttons */
 .settings-help {
   font-size: 12px;
   color: var(--muted);
-  margin: 4px 0 0;
+  margin: 8px 0 0;
+  padding-left: 2px;
 }
 
 /* Make actions bar sit nicely at the bottom */
 .modal-actions {
-  margin-top: 10px;
-  padding-top: 10px;
+  margin-top: 8px;
+  padding-top: 8px;
   border-top: 1px solid var(--border);
 }
 
-/* Smaller switches inside settings */
-.settings-section .switch span {
-  font-size: 14px;
+/* Modal shell polish */
+.modal-card {
+  background: color-mix(in srgb, var(--card) 82%, transparent);
+  border: 1px solid var(--border);
+  box-shadow: 0 18px 42px rgba(0,0,0,0.24);
+  backdrop-filter: blur(10px) saturate(120%);
+  -webkit-backdrop-filter: blur(10px) saturate(120%);
+}
+
+.modal-card h3 {
+  margin: 0 0 8px;
+  font-size: clamp(1.35rem, 2vw, 1.8rem);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+}
+
+#settingsDesc {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.96rem;
+}
+
+.about-body {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.about-body p {
+  margin: 0;
+  color: var(--text);
+}
+
+.modal-backdrop {
+  background: rgba(10, 12, 16, 0.52);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+
+@media (max-width: 520px) {
+  .modal-card {
+    padding: 16px;
+    max-height: calc(100vh - 24px);
+  }
+
+  .settings-row {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 10px;
+  }
+
+  .settings-row-label,
+  .settings-row-control {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .settings-row-control .select {
+    min-width: 0;
+    width: 100%;
+  }
+
+  .settings-section .switch {
+    width: 100%;
+    justify-content: flex-start;
+  }
 }
 
 /* Mobile adjustments */

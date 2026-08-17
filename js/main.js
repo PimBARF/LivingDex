@@ -12,8 +12,7 @@ import {
     updateProgressBar,
     syncCaughtState,
     registerBoxControls,
-    renderDexSectionBoxes,
-    populateDexSlots,
+    rebuildDexView,
     registerHeaderControls,
     registerScrollToTopButton,
     registerResetControls,
@@ -49,18 +48,8 @@ async function initializeLivingDexApp() {
   LIVING_DEX_SPECIES_ORDER = combinedSpeciesIds;
   LIVING_DEX_SLOT_COUNT = combinedSpeciesIds.length;
 
-  // Clear and render boxes per section
-  app.innerHTML = '';
   window.__livingDexNames = {};
-  let startGlobal = 1;
-  for (const sec of sections) {
-    renderDexSectionBoxes(app, sec.key, sec.title, sec.entries.length, startGlobal);
-    startGlobal += sec.entries.length;
-  }
-  
-  // Populate cells and register box controls
-  populateDexSlots(sections, LIVING_DEX_SLOT_COUNT);
-  registerBoxControls(LIVING_DEX_SLOT_COUNT);
+  rebuildDexView({ sections, slotCount: LIVING_DEX_SLOT_COUNT });
   
   // Fetch and apply species names from cache or API
   await loadSpeciesNames(LIVING_DEX_SPECIES_ORDER);

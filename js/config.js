@@ -10,32 +10,63 @@
  *   optional: Whether the Pokédex is optional to include
  */
 
+const HOME_REGIONAL_FORM_IDS = [
+    // Alolan Forms
+    10091, 10092, 10100, 10101, 10102, 10103, 10104, 10105, 10106, 10107,
+    10108, 10109, 10110, 10111, 10112, 10113, 10114, 10115,
+    // Galarian Forms
+    10161, 10162, 10163, 10164, 10165, 10166, 10167, 10168, 10169, 10170,
+    10171, 10172, 10173, 10174, 10175, 10176, 10177, 10179, 10180,
+    // Hisuian Forms
+    10229, 10230, 10231, 10232, 10233, 10234, 10235, 10236, 10237, 10238,
+    10239, 10240, 10241, 10242, 10243, 10244, 10247,
+    // Paldean Forms
+    10250, 10253
+];
+
+const ALOLAN_FORM_IDS = [
+    10091, 10092, 10100, 10101, 10102, 10103, 10104, 10105, 10106, 10107,
+    10108, 10109, 10110, 10111, 10112, 10113, 10114, 10115
+];
+
+const GALARIAN_FORM_IDS = [
+    10161, 10162, 10163, 10164, 10165, 10166, 10167, 10168, 10169, 10170,
+    10171, 10172, 10173, 10174, 10175, 10176, 10177, 10179, 10180
+];
+
+export function getDefaultEnabledSegments(game = ACTIVE_GAME) {
+    return new Set(game.dexes
+        .filter(seg => !seg.optional || seg.defaultEnabled === true)
+        .map(seg => seg.id));
+}
+
+const HISUIAN_FORM_IDS = [
+    10229, 10230, 10231, 10232, 10233, 10234, 10235, 10236, 10237, 10238,
+    10239, 10240, 10241, 10242, 10243, 10244, 10247
+];
+
+const PALDEAN_FORM_IDS = [10250, 10253];
+
+// IDs verified against PokeAPI (pokemon/[name]-gmax). Order:
+// venusaur, charizard, blastoise, butterfree, pikachu, meowth, machamp, gengar,
+// kingler, lapras, eevee, snorlax, garbodor, melmetal,
+// rillaboom, cinderace, inteleon, corviknight, orbeetle, drednaw, coalossal,
+// flapple, appletun, sandaconda, toxtricity-amped, centiskorch, hatterene,
+// grimmsnarl, alcremie, copperajah, duraludon, urshifu-single-strike, urshifu-rapid-strike
+const GIGANTAMAX_FORM_IDS = [
+    10195, 10196, 10197, 10198, 10199, 10200, 10201, 10202, 10203, 10204,
+    10205, 10206, 10207, 10208, 10209, 10210, 10211, 10212, 10213, 10214,
+    10215, 10216, 10217, 10218, 10219, 10220, 10221, 10222, 10223, 10224,
+    10225, 10226, 10227
+];
+
 export const GAMES = {
     // Pokémon Home, only includes National Dex
     home: {
         title: 'Pokémon Home',
         storagePrefix: 'home',
         dexes: [
-            { id: 'national', title: 'National Pokédex', pokedexId: 1, type: 'base', optional: false },
-            { 
-                id: 'forms', 
-                title: 'Regional Forms', 
-                type: 'forms', 
-                optional: true,
-                manualIds: [
-                    // Alolan Forms
-                    10091, 10092, 10100, 10101, 10102, 10103, 10104, 10105, 10106, 10107,
-                    10108, 10109, 10110, 10111, 10112, 10113, 10114, 10115,
-                    // Galarian Forms
-                    10161, 10162, 10163, 10164, 10165, 10166, 10167, 10168, 10169, 10170,
-                    10171, 10172, 10173, 10174, 10175, 10176, 10177, 10179, 10180,
-                    // Hisuian Forms
-                    10229, 10230, 10231, 10232, 10233, 10234, 10235, 10236, 10237, 10238,
-                    10239, 10240, 10241, 10242, 10243, 10244, 10247,
-                    // Paldean Forms
-                    10250, 10253
-                ]
-            }
+            { id: 'national', title: 'National Pokédex', pokedexId: 1, type: 'base', optional: false }
         ]
     },
     
@@ -81,6 +112,7 @@ export const GAMES = {
         storagePrefix: 'swsh',
         dexes: [
             { id: 'galar', title: 'Galar Pokédex', pokedexId: 27, type: 'base', optional: false },
+            { id: 'gigantamax-forms', title: 'Gigantamax Forms', type: 'forms', optional: true, manualIds: GIGANTAMAX_FORM_IDS },
             { id: 'armor', title: 'Isle of Armor', pokedexId: 28, type: 'dlc', optional: true },
             { id: 'tundra', title: 'Crown Tundra', pokedexId: 29, type: 'dlc', optional: true }
         ]
@@ -325,8 +357,32 @@ export const REGIONAL_FORM_MAPPINGS = {
   }
 };
 
-// Determine active game from URL parameter (?game=za) or default to Pokémon Home
-export const ACTIVE_GAME_ID = new URLSearchParams(location.search).get('game') || 'home';
+function readSavedSettings() {
+  try {
+    const raw = localStorage.getItem('settings-v1');
+    if (!raw) return {};
+    const parsed = JSON.parse(raw);
+    return parsed && typeof parsed === 'object' ? parsed : {};
+  } catch {
+    return {};
+  }
+}
+
+export function resolveActiveGameId(search = location.search) {
+  const params = new URLSearchParams(search);
+  const urlGame = params.get('game');
+  if (urlGame) return urlGame;
+
+  const settings = readSavedSettings();
+  if (settings.defaultGameMode === 'specific' && settings.defaultGameId) {
+    return settings.defaultGameId;
+  }
+
+  return 'home';
+}
+
+// Determine active game from URL parameter (?game=za), saved default game, or Pokémon Home
+export const ACTIVE_GAME_ID = resolveActiveGameId();
 export const ACTIVE_GAME = GAMES[ACTIVE_GAME_ID] || GAMES['home'];
 export const BOX_CAPACITY = 30;
 
@@ -345,5 +401,13 @@ export const NAME_FETCH_CONCURRENCY = 5;
 export const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
 // Utility functions for sprite URLs and species name formatting
-export const spriteUrlForSpecies = id => `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${id}.png`;
+const SPRITE_BASE = 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon';
+const SPRITE_STYLE_URLS = {
+  'official-artwork': id => `${SPRITE_BASE}/other/official-artwork/${id}.png`,
+  home: id => `${SPRITE_BASE}/other/home/${id}.png`,
+  showdown: id => `${SPRITE_BASE}/other/showdown/${id}.gif`,
+  pokesprites: id => `${SPRITE_BASE}/${id}.png`,
+};
+export const spriteUrlForSpecies = (id, style = 'official-artwork') =>
+  (SPRITE_STYLE_URLS[style] || SPRITE_STYLE_URLS['official-artwork'])(id);
 export const normalizeSpeciesName = name => name.replace(/-/g, ' ').replace(/\b\w/g, value => value.toUpperCase());

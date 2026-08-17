@@ -1,7 +1,7 @@
 import {
   ACTIVE_GAME,
-  REGIONAL_FORM_MAPPINGS,
   NAME_FETCH_CONCURRENCY,
+  REGIONAL_FORM_MAPPINGS,
   normalizeSpeciesName,
 } from './config.js';
 
@@ -10,6 +10,7 @@ import {
     saveSpeciesCache,
     isSpeciesCacheStale,
     loadEnabledSegments,
+    loadSettings,
 } from './storage.js';
 
 import { applyNamesToCells } from './ui.js'; // CHANGE THIS LATER!
@@ -36,12 +37,39 @@ async function getSpeciesIdForPokemon(pokemonId) {
   const key = String(pokemonId);
   if (cache[key]) return cache[key];
 
-  const res = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonId}`);
-  if (!res.ok) throw new Error('Failed to resolve species for pokemon');
-  const data = await res.json();
-  const m = /\/pokemon-species\/(\d+)\//.exec(data.species?.url || '');
-  const speciesId = m ? Number(m[1]) : null;
-  if (!speciesId) throw new Error('Malformed pokemon species URL');
+  let speciesId = null;
+  const endpoints = [
+    `https://pokeapi.co/api/v2/pokemon/${pokemonId}`,
+    `https://pokeapi.co/api/v2/pokemon-form/${pokemonId}`,
+  ];
+
+  for (const url of endpoints) {
+    const res = await fetch(url);
+    if (!res.ok) continue;
+
+    const data = await res.json();
+    const match = /\/pokemon-species\/(\d+)\//.exec(data.species?.url || '');
+    if (match) {
+      speciesId = Number(match[1]);
+      break;
+    }
+
+    const nestedBase = data.pokemon?.url || '';
+    const nestedMatch = /\/pokemon\/(\d+)\/$/.exec(nestedBase);
+    if (!nestedMatch) continue;
+
+    const nestedRes = await fetch(`https://pokeapi.co/api/v2/pokemon/${nestedMatch[1]}`);
+    if (!nestedRes.ok) continue;
+
+    const nestedData = await nestedRes.json();
+    const nestedSpeciesMatch = /\/pokemon-species\/(\d+)\//.exec(nestedData.species?.url || '');
+    if (nestedSpeciesMatch) {
+      speciesId = Number(nestedSpeciesMatch[1]);
+      break;
+    }
+  }
+
+  if (!speciesId) throw new Error('Failed to resolve species for pokemon');
   cache[key] = speciesId;
   savePokemonToSpeciesMapCache(cache);
   return speciesId;
@@ -54,7 +82,7 @@ async function getSpeciesIdForPokemon(pokemonId) {
  * regional variant if applicable, otherwise same as speciesId.
  */
 export async function loadPokedexEntries(pokedexId) {
-  const cacheKey = `${ACTIVE_GAME.storagePrefix}-pokedex-${pokedexId}-v2`;
+  const cacheKey = `${ACTIVE_GAME.storagePrefix}-pokedex-${pokedexId}-v3`;
   try {
     const cached = JSON.parse(localStorage.getItem(cacheKey) || '');
     if (cached && Array.isArray(cached.entries) && cached.entries.length) {
@@ -66,15 +94,12 @@ export async function loadPokedexEntries(pokedexId) {
   if (!res.ok) throw new Error('Failed to load Pokédex from PokeAPI');
   const data = await res.json();
   const pokemonEntries = (data.pokemon_entries || []).slice().sort((a, b) => (a.entry_number || 0) - (b.entry_number || 0));
-  
-  // Apply regional form mappings if available for this dex
+
   const regionalMappings = REGIONAL_FORM_MAPPINGS[pokedexId] || {};
-  
   const entries = pokemonEntries.map(e => {
     const m = /\/pokemon-species\/(\d+)\//.exec(e.pokemon_species?.url || '');
     if (!m) return null;
     const speciesId = Number(m[1]);
-    // Check if this species has a regional form for this dex
     const formId = regionalMappings[speciesId] || speciesId;
     return { speciesId, formId };
   }).filter(Boolean);
@@ -89,7 +114,7 @@ export async function loadPokedexEntries(pokedexId) {
  * entries is array of { speciesId, formId }
  */
 export async function buildActiveDexSections() {
-  const enabled = loadEnabledSegments() || new Set(ACTIVE_GAME.dexes.filter(s => !s.optional).map(s => s.id));
+  const enabled = loadEnabledSegments();
 
   const sections = [];
   for (const seg of ACTIVE_GAME.dexes) {
@@ -124,16 +149,22 @@ export async function buildActiveDexSections() {
   return sections;
 }
 
+function pickLocalizedSpeciesName(payload, language) {
+  return payload.names?.find(entry => entry.language?.name === language)?.name
+    || payload.names?.find(entry => entry.language?.name === 'en')?.name
+    || normalizeSpeciesName(payload.name || '');
+}
+
 /**
- * Fetch English species name from PokeAPI.
- * Falls back to normalized default name if lookup fails.
+ * Fetch a localized species name from PokeAPI.
+ * Falls back to English/default name if the requested locale is unavailable.
  */
-export async function fetchSpeciesName(id) {
+export async function fetchSpeciesName(id, language = 'en') {
   // First try assuming the id is a species id
   let response = await fetch(`https://pokeapi.co/api/v2/pokemon-species/${id}`);
   if (response.ok) {
     const payload = await response.json();
-    return payload.names?.find(entry => entry.language?.name === 'en')?.name || normalizeSpeciesName(payload.name || '');
+    return pickLocalizedSpeciesName(payload, language);
   }
   // If that failed, it may be a pokemon (form) id; resolve to species id and retry
   try {
@@ -141,7 +172,7 @@ export async function fetchSpeciesName(id) {
     response = await fetch(`https://pokeapi.co/api/v2/pokemon-species/${speciesId}`);
     if (!response.ok) throw new Error('PokeAPI error');
     const payload = await response.json();
-    return payload.names?.find(entry => entry.language?.name === 'en')?.name || normalizeSpeciesName(payload.name || '');
+    return pickLocalizedSpeciesName(payload, language);
   } catch {
     throw new Error('PokeAPI error');
   }
@@ -174,22 +205,23 @@ export async function mapWithConcurrency(list, task, { concurrency = 6 } = {}) {
  */
 export async function loadSpeciesNames(speciesOrder) {
   const allIds = [...new Set(speciesOrder)];
+  const language = loadSettings().language || 'en';
   let cache = loadSpeciesCache();
 
   // Discard stale cache (old TTL or dex list changed)
-  if (isSpeciesCacheStale(speciesOrder)) {
+  if (isSpeciesCacheStale(speciesOrder, language)) {
     cache = {};
   }
 
   // 1) Apply cached names immediately for fast visual feedback
-  window.__livingDexNames = { ...(window.__livingDexNames || {}), ...cache };
+  window.__livingDexNames = { ...cache };
   applyNamesToCells();
 
   // 2) Identify missing species names
   const missing = allIds.filter(id => !window.__livingDexNames[id]);
 
   if (missing.length === 0) {
-    saveSpeciesCache(window.__livingDexNames, speciesOrder);
+    saveSpeciesCache(window.__livingDexNames, speciesOrder, language);
     return;
   }
 
@@ -198,7 +230,7 @@ export async function loadSpeciesNames(speciesOrder) {
   await mapWithConcurrency(missing, async id => {
     for (let attempt = 0; attempt < 2; attempt += 1) {
       try {
-        const name = await fetchSpeciesName(id);
+        const name = await fetchSpeciesName(id, language);
         fresh[id] = name;
         return;
       } catch {
@@ -212,6 +244,6 @@ export async function loadSpeciesNames(speciesOrder) {
 
   // 4) Merge, persist, and refresh UI with newly fetched names
   window.__livingDexNames = { ...window.__livingDexNames, ...fresh };
-  saveSpeciesCache(window.__livingDexNames, speciesOrder);
+  saveSpeciesCache(window.__livingDexNames, speciesOrder, language);
   applyNamesToCells();
 }
