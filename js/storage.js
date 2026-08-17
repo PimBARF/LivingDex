@@ -15,7 +15,7 @@ const DEFAULT_SETTINGS = {
   reducedMotion: 'system',     // 'system' | true | false
   hideCaughtDefault: false,
   language: 'en',
-  spriteStyle: 'official-artwork',
+  spriteStyle: 'pokesprites',
   defaultGameMode: 'last-used', // 'last-used' | 'specific'
   defaultGameId: null,
   version: 1,

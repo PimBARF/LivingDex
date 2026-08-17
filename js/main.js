@@ -5,10 +5,12 @@ import {
 
 import {
     loadSettings,
+  loadEnabledSegments,
 } from './storage.js';
 
 import {
     applyTheme,
+    applyReducedMotionPreference,
     updateProgressBar,
     syncCaughtState,
     registerBoxControls,
@@ -21,6 +23,7 @@ import {
     renderGameInfo,
     setGameTitles,
     decodeCaughtState,
+    showToast,
 } from './ui.js';
 
 // Derived (set later after we load the Pokédex from API/localStorage)
@@ -38,6 +41,7 @@ async function initializeLivingDexApp() {
 
   const settings = loadSettings();
   applyTheme(settings.theme);
+  applyReducedMotionPreference(settings.reducedMotion);
 
   const app = document.getElementById('app');
   if (!app) return;
@@ -69,7 +73,8 @@ async function initializeLivingDexApp() {
   updateProgressBar(LIVING_DEX_SLOT_COUNT);
 
   // Handle shared state from URL hash
-  const sharedState = decodeCaughtState(location.hash, LIVING_DEX_SLOT_COUNT);
+  const getShareSegments = () => Array.from(loadEnabledSegments());
+  const sharedState = decodeCaughtState(location.hash, LIVING_DEX_SLOT_COUNT, getShareSegments());
   if (sharedState && Object.keys(sharedState).length) {
     // Show shared link warning modal
     import('./ui.js').then(ui => {
@@ -77,12 +82,27 @@ async function initializeLivingDexApp() {
         syncCaughtState(sharedState, LIVING_DEX_SLOT_COUNT);
       });
     });
+  } else if (/#s=/.test(location.hash)) {
+    showToast('This shared link is for a different game or segment selection.', 'warning');
   }
 
   // Watch for hash changes (e.g., user clicking shared link)
   window.addEventListener('hashchange', () => {
-    const incomingState = decodeCaughtState(location.hash, LIVING_DEX_SLOT_COUNT);
-    if (incomingState) syncCaughtState(incomingState, LIVING_DEX_SLOT_COUNT);
+    const activeSlotCount = document.querySelectorAll('.cell:not(.is-placeholder)').length || LIVING_DEX_SLOT_COUNT;
+    const incomingState = decodeCaughtState(
+      location.hash,
+      activeSlotCount,
+      getShareSegments(),
+    );
+    if (incomingState) {
+      import('./ui.js').then(ui => {
+        ui.showSharedLinkWarningModal(() => {
+          syncCaughtState(incomingState, activeSlotCount);
+        });
+      });
+    } else if (/#s=/.test(location.hash)) {
+      showToast('This shared link is for a different game or segment selection.', 'warning');
+    }
   });
 }
 

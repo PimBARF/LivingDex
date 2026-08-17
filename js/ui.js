@@ -24,9 +24,12 @@ import {
     loadSpeciesNames,
 } from './api.js';
 
-// Track system color scheme for "auto" theme mode
+// Track system preference fallbacks for theme and motion
 const SYSTEM_THEME_MQL = window.matchMedia
   ? window.matchMedia('(prefers-color-scheme: dark)')
+  : null;
+const REDUCED_MOTION_MQL = window.matchMedia
+  ? window.matchMedia('(prefers-reduced-motion: reduce)')
   : null;
 
 function resolveTheme(mode) {
@@ -37,11 +40,22 @@ function resolveTheme(mode) {
   return mode === 'dark' ? 'dark' : 'light';
 }
 
+export function resolveReducedMotionPreference(value = loadSettings().reducedMotion) {
+  if (value === true || value === 'true') return true;
+  if (value === false || value === 'false') return false;
+  return !!(REDUCED_MOTION_MQL && REDUCED_MOTION_MQL.matches);
+}
+
 export function isMotionReduced() {
+  return resolveReducedMotionPreference(loadSettings().reducedMotion);
+}
+
+export function applyReducedMotionPreference(value) {
   const settings = loadSettings();
-  if (settings.reducedMotion === true || settings.reducedMotion === 'true') return true;
-  if (settings.reducedMotion === false || settings.reducedMotion === 'false') return false;
-  return !!(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches);
+  const selected = value ?? settings.reducedMotion ?? 'system';
+  const reduced = resolveReducedMotionPreference(selected);
+  document.documentElement.dataset.motion = reduced ? 'reduced' : 'full';
+  document.body.classList.toggle('reduced-motion', reduced);
 }
 
 /**
@@ -95,6 +109,15 @@ if (SYSTEM_THEME_MQL) {
     const settings = loadSettings();
     if (settings.theme === 'auto') {
       applyTheme('auto');
+    }
+  });
+}
+
+if (REDUCED_MOTION_MQL) {
+  REDUCED_MOTION_MQL.addEventListener('change', () => {
+    const settings = loadSettings();
+    if (settings.reducedMotion === 'system' || settings.reducedMotion === undefined || settings.reducedMotion === null) {
+      applyReducedMotionPreference('system');
     }
   });
 }
@@ -190,6 +213,43 @@ export function syncCaughtState(caught, slotCount) {
 // SHARING & ENCODING
 // =============================================================================
 
+const SHARE_PAYLOAD_VERSION = 2;
+
+function getShareSegments() {
+  return Array.from(loadEnabledSegments()).sort();
+}
+
+function bytesToBase64Url(bytes) {
+  let binary = '';
+  for (let i = 0; i < bytes.length; i += 1) {
+    binary += String.fromCharCode(bytes[i]);
+  }
+  return btoa(binary)
+    .replace(/\+/g, '-')
+    .replace(/\//g, '_')
+    .replace(/=+$/g, '');
+}
+
+function base64UrlToBytes(encoded) {
+  const base64 = encoded.replace(/-/g, '+').replace(/_/g, '/');
+  const padded = base64 + '='.repeat((4 - (base64.length % 4)) % 4);
+  const binary = atob(padded);
+  const bytes = new Uint8Array(binary.length);
+  for (let i = 0; i < binary.length; i += 1) {
+    bytes[i] = binary.charCodeAt(i);
+  }
+  return bytes;
+}
+
+function shareContextMatches(payload, slotCount, segments) {
+  if (!payload || payload.version !== SHARE_PAYLOAD_VERSION) return false;
+  if (payload.gameId !== ACTIVE_GAME_ID || payload.slotCount !== slotCount) return false;
+  const expectedSegments = [...segments].sort();
+  const payloadSegments = Array.isArray(payload.segments) ? [...payload.segments].sort() : [];
+  return expectedSegments.length === payloadSegments.length
+    && expectedSegments.every((segment, index) => segment === payloadSegments[index]);
+}
+
 export function encodeCaughtState(caught, slotCount) {
   try {
     // 1) Bit-pack caught slots into bytes
@@ -201,22 +261,15 @@ export function encodeCaughtState(caught, slotCount) {
       }
     }
 
-    // 2) Compress with pako.deflate
-    const compressed = window.pako.deflate(bytes);
-
-    // 3) Convert compressed bytes to binary string for Base64
-    let binary = '';
-    for (let i = 0; i < compressed.length; i += 1) {
-      binary += String.fromCharCode(compressed[i]);
-    }
-
-    // 4) Base64 URL-safe + #s= prefix (compressed)
-    const base64url = btoa(binary)
-      .replace(/\+/g, '-')
-      .replace(/\//g, '_')
-      .replace(/=+$/g, '');
-
-    return '#s=' + base64url;
+    const payload = JSON.stringify({
+      version: SHARE_PAYLOAD_VERSION,
+      gameId: ACTIVE_GAME_ID,
+      segments: getShareSegments(),
+      slotCount,
+      bits: bytesToBase64Url(bytes),
+    });
+    const compressed = window.pako.deflate(new TextEncoder().encode(payload));
+    return '#s=' + bytesToBase64Url(compressed);
   } catch (err) {
     console.error('encodeCaughtState error:', err);
     return '';
@@ -224,26 +277,18 @@ export function encodeCaughtState(caught, slotCount) {
 }
 
 
-export function decodeCaughtState(hash, slotCount) {
+export function decodeCaughtState(hash, slotCount, segments = getShareSegments()) {
   try {
     const match = /#s=([^&]+)/.exec(hash);
     if (!match) return null;
 
-    const encoded = match[1];
-    const base64 = encoded.replace(/-/g, '+').replace(/_/g, '/');
-    const padded = base64 + '='.repeat((4 - (base64.length % 4)) % 4);
+    const compressed = base64UrlToBytes(match[1]);
+    const payload = JSON.parse(new TextDecoder().decode(window.pako.inflate(compressed)));
+    if (!shareContextMatches(payload, slotCount, segments)) return null;
 
-    // 1) Base64 decode to compressed bytes
-    const binary = atob(padded);
-    const compressed = new Uint8Array(binary.length);
-    for (let i = 0; i < binary.length; i += 1) {
-      compressed[i] = binary.charCodeAt(i);
-    }
+    const bytes = base64UrlToBytes(payload.bits);
+    if (bytes.length !== Math.ceil(slotCount / 8)) return null;
 
-    // 2) Inflate with pako.inflate
-    const bytes = window.pako.inflate(compressed);
-
-    // 3) Rebuild caught map from bytes
     const caught = {};
     for (let slot = 1; slot <= slotCount; slot += 1) {
       const i = slot - 1;
@@ -330,7 +375,7 @@ export function createDexSlot(slotIndex, speciesId, formId, name, displayIndex) 
   button.dataset.form = formId;
   button.dataset.name = name.toLowerCase();
   button.title = `#${displayIndex} — ${name} (${speciesId})`;
-  const spriteStyle = loadSettings().spriteStyle || 'official-artwork';
+  const spriteStyle = loadSettings().spriteStyle || 'pokesprites';
   button.innerHTML = `
     <div class="index">${displayIndex}</div>
     <img class="sprite" src="${spriteUrlForSpecies(formId, spriteStyle)}" alt="${name}" loading="lazy" onerror="this.style.opacity=.2"/>
@@ -344,7 +389,7 @@ export function createDexSlot(slotIndex, speciesId, formId, name, displayIndex) 
  * selected sprite style setting, without re-building the whole DOM.
  */
 export function applySpriteStyleToCells() {
-  const spriteStyle = loadSettings().spriteStyle || 'official-artwork';
+  const spriteStyle = loadSettings().spriteStyle || 'pokesprites';
   document.querySelectorAll('.cell:not(.is-placeholder) img.sprite').forEach(img => {
     const cell = img.closest('.cell');
     const formId = cell?.dataset.form;
@@ -563,7 +608,8 @@ export function registerHeaderControls(slotCount) {
   
   // Share button
   shareButton?.addEventListener('click', async () => {
-    const url = location.origin + location.pathname + location.search + encodeCaughtState(loadCaughtSlots(), slotCount);
+    const activeSlotCount = document.querySelectorAll('.cell:not(.is-placeholder)').length || slotCount;
+    const url = location.origin + location.pathname + location.search + encodeCaughtState(loadCaughtSlots(), activeSlotCount);
     try {
       await navigator.clipboard.writeText(url);
       showToast('Link copied to clipboard!', 'success');
@@ -746,27 +792,33 @@ export function showSharedLinkWarningModal(onConfirm) {
     }
   }
 
+  let confirmHandler;
+  let cancelHandler;
   const { openModal, closeModal } = attachModalHandlers({
     modal,
     openBtn: null,
     closeBtn: null,
     backdrop,
     onOpen: () => confirmBtn?.focus(),
-    onClose: () => {},
+    onClose: () => {
+      clearHash();
+      confirmBtn?.removeEventListener('click', confirmHandler);
+      cancelBtn?.removeEventListener('click', cancelHandler);
+    },
     onKeydown: (event) => {
       if (event.key === 'Escape') clearHash();
     },
     focusSelector: '#confirmSharedLink',
   });
 
-  confirmBtn?.addEventListener('click', () => {
+  confirmHandler = () => {
     try { onConfirm?.(); } catch {}
-    clearHash();
     closeModal();
-  }, { once: true });
+  };
+  confirmBtn?.addEventListener('click', confirmHandler);
 
-  cancelBtn?.addEventListener('click', () => { clearHash(); closeModal(); }, { once: true });
-  backdrop?.addEventListener('click', () => { clearHash(); closeModal(); }, { once: true });
+  cancelHandler = () => closeModal();
+  cancelBtn?.addEventListener('click', cancelHandler);
 
   openModal();
 }
@@ -905,10 +957,10 @@ export function registerSettingsControls() {
     };
 
     syncThemeSettingsRadios(settings.theme);
-    if (reducedMotion) reducedMotion.checked = !!settings.reducedMotion;
+    if (reducedMotion) reducedMotion.checked = resolveReducedMotionPreference(settings.reducedMotion);
     if (hideCaught) hideCaught.checked = !!settings.hideCaughtDefault;
     if (language) language.value = settings.language || 'en';
-    if (spriteStyle) spriteStyle.value = settings.spriteStyle || 'official-artwork';
+    if (spriteStyle) spriteStyle.value = settings.spriteStyle || 'pokesprites';
     if (defaultGameModeSelect) defaultGameModeSelect.value = settings.defaultGameMode || 'last-used';
     if (defaultGameSelect) {
       defaultGameSelect.innerHTML = buildGameSelectMarkup();
@@ -926,16 +978,17 @@ export function registerSettingsControls() {
     const nextSettings = {
       ...settings,
       theme: selectedTheme,
-      reducedMotion: !!document.getElementById('settingsReducedMotion')?.checked,
+      reducedMotion: document.getElementById('settingsReducedMotion')?.checked ? true : false,
       hideCaughtDefault: !!document.getElementById('settingsHideCaught')?.checked,
       language: document.getElementById('settingsLanguage')?.value || 'en',
-      spriteStyle: document.getElementById('settingsSpriteStyle')?.value || 'official-artwork',
+      spriteStyle: document.getElementById('settingsSpriteStyle')?.value || 'pokesprites',
       defaultGameMode: document.getElementById('settingsDefaultGameMode')?.value || 'last-used',
       defaultGameId: document.getElementById('settingsDefaultGame')?.value || null,
     };
 
     saveSettings(nextSettings);
     applyTheme(nextSettings.theme);
+    applyReducedMotionPreference(nextSettings.reducedMotion);
 
     const hideToggle = document.getElementById('toggleUncaught');
     if (hideToggle) {

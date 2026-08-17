@@ -552,6 +552,6 @@ const SPRITE_STYLE_URLS = {
   showdown: id => `${SPRITE_BASE}/other/showdown/${id}.gif`,
   pokesprites: id => `${SPRITE_BASE}/${id}.png`,
 };
-export const spriteUrlForSpecies = (id, style = 'official-artwork') =>
-  (SPRITE_STYLE_URLS[style] || SPRITE_STYLE_URLS['official-artwork'])(id);
+export const spriteUrlForSpecies = (id, style = 'pokesprites') =>
+  (SPRITE_STYLE_URLS[style] || SPRITE_STYLE_URLS['pokesprites'])(id);
 export const normalizeSpeciesName = name => name.replace(/-/g, ' ').replace(/\b\w/g, value => value.toUpperCase());

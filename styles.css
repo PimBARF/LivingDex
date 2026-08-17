@@ -41,6 +41,15 @@
   --label: rgba(40, 42, 45, 0.8);
 }
 
+html[data-motion="reduced"] *,
+html[data-motion="reduced"] *::before,
+html[data-motion="reduced"] *::after {
+  animation-duration: 0.01ms !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 0.01ms !important;
+  scroll-behavior: auto !important;
+}
+
 /* ============================================
    2) BASE / RESET
    ============================================ */
