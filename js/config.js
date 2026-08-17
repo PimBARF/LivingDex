@@ -57,6 +57,15 @@ export const GAMES = {
         ]
     },
     
+    // Pokémon Red, Blue, and Yellow
+    rby: {
+        title: 'Pokémon Red, Blue & Yellow',
+        storagePrefix: 'rby',
+        dexes: [
+            { id: 'kanto', title: 'Kanto Pokédex', pokedexId: 2, type: 'base', optional: false }
+        ]
+    },
+
     // Pokémon Let's Go Pikachu and Eevee
     lgpe: {
         title: "Pokémon Let's Go Pikachu & Eevee",
