@@ -58,8 +58,8 @@
         <a href="#" aria-label="LivingDex home"><span id="logo">LivingDex</span>.app</a>
       </div>
       <div class="controls">
-        <button id="themeToggle" class="btn" title="Toggle light or dark mode" aria-label="Toggle light or dark mode">🌙</button>
-        <button id="settingsBtn" class="btn" title="Open settings" aria-label="Open settings" aria-haspopup="dialog">⚙️</button>
+        <button id="themeToggle" class="btn" type="button" title="Toggle light or dark mode" aria-label="Toggle light or dark mode">🌙</button>
+        <button id="settingsBtn" class="btn" type="button" title="Open settings" aria-label="Open settings" aria-haspopup="dialog">⚙️</button>
       </div>
       <select id="dexSelector" class="select" aria-label="Select Pokédex">
         <!-- Options populated by JavaScript -->
@@ -69,7 +69,7 @@
       <input id="search" type="search" placeholder="Search by name or number (e.g. eevee, 133, #42)" aria-label="Search Pokemon" />
       <!-- Hidden checkbox used by applyHideCaughtFilter() -->
       <input id="toggleUncaught" type="checkbox" hidden aria-hidden="true" tabindex="-1" />
-      <button id="hideCaughtBtn" class="btn" title="Hide caught Pokémon" aria-pressed="false">Hide caught</button>
+      <button id="hideCaughtBtn" class="btn" type="button" title="Hide caught Pokémon" aria-pressed="false">Hide caught</button>
     </div>
   </header>
 
@@ -77,7 +77,7 @@
     <div id="gameInfo">
       <div id="gameTitleRow">
         <h1 id="gameTitle"></h1>
-        <button id="shareDex" class="btn" title="Share this progress" aria-label="Share your current Pokédex progress">🔗</button>
+        <button id="shareDex" class="btn" type="button" title="Share this progress" aria-label="Share your current Pokédex progress">🔗</button>
       </div>
       <div id="segmentToggles">
         <!-- Populated by JavaScript based on current game -->
@@ -97,7 +97,7 @@
     Data and sprites via
     <a href="https://pokeapi.co/" target="_blank" rel="noreferrer">PokeAPI</a>.
     &nbsp;•&nbsp;
-    <button id="resetDex" class="btn btn-danger" title="Reset this Pokédex" aria-haspopup="dialog">
+    <button id="resetDex" class="btn btn-danger" type="button" title="Reset this Pokédex" aria-haspopup="dialog">
       Reset progress
     </button>
   </footer>
@@ -279,7 +279,7 @@
       </div>
 
       <div class="modal-actions">
-        <button id="closeSettings" class="btn" aria-label="Close settings">Close</button>
+        <button id="closeSettings" class="btn" type="button" aria-label="Close settings">Close</button>
       </div>
     </div>
   </div>
@@ -296,10 +296,10 @@
       <div id="importDataSummary" class="import-summary"></div>
       <div id="importDataOptions" class="import-options"></div>
       <div class="modal-actions">
-        <button id="confirmImportData" class="btn btn-danger" aria-label="Import selected data">
+        <button id="confirmImportData" class="btn btn-danger" type="button" aria-label="Import selected data">
           Import selected data
         </button>
-        <button id="cancelImportData" class="btn" aria-label="Cancel import">Cancel</button>
+        <button id="cancelImportData" class="btn" type="button" aria-label="Cancel import">Cancel</button>
       </div>
     </div>
   </div>
@@ -327,7 +327,7 @@
         </p>
       </div>
       <div class="modal-actions">
-        <button id="closeAbout" class="btn" aria-label="Close about dialog">Close</button>
+        <button id="closeAbout" class="btn" type="button" aria-label="Close about dialog">Close</button>
       </div>
     </div>
   </div>
@@ -343,10 +343,10 @@
         Changes will be saved to your device only if you continue. This cannot be undone.
       </p>
       <div class="modal-actions">
-        <button id="confirmSharedLink" class="btn btn-danger" aria-label="Confirm load shared link">
+        <button id="confirmSharedLink" class="btn btn-danger" type="button" aria-label="Confirm load shared link">
           Yes, replace my progress
         </button>
-        <button id="cancelSharedLink" class="btn" aria-label="Cancel load shared link">Cancel</button>
+        <button id="cancelSharedLink" class="btn" type="button" aria-label="Cancel load shared link">Cancel</button>
       </div>
     </div>
   </div>
@@ -362,10 +362,10 @@
         This cannot be undone.
       </p>
       <div class="modal-actions">
-        <button id="confirmReset" class="btn btn-danger" aria-label="Confirm reset">
+        <button id="confirmReset" class="btn btn-danger" type="button" aria-label="Confirm reset">
           Yes, reset
         </button>
-        <button id="cancelReset" class="btn" aria-label="Cancel reset">Cancel</button>
+        <button id="cancelReset" class="btn" type="button" aria-label="Cancel reset">Cancel</button>
       </div>
     </div>
   </div>

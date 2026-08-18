@@ -15,12 +15,13 @@
   --muted: rgba(0, 0, 0, 0.65);
   --accent: rgb(255, 204, 0);       /* primary brand accent */
   --accent-2: rgb(66, 133, 244);    /* secondary/action (focus/hover) */
+  --focus-ring: rgb(37, 99, 235);
+  --surface-soft: rgba(0, 0, 0, 0.03);
+  --surface-soft-border: rgba(0, 0, 0, 0.06);
+  --surface-soft-hover: rgba(66, 133, 244, 0.08);
   --label: rgba(255, 255, 255, 0.8);
   --success: rgb(16, 185, 129);
   --warning: rgb(245, 158, 11);
-  #hideCaughtBtn {
-    white-space: nowrap;
-  }
   --danger: rgb(239, 68, 68);
 
   /* layout */
@@ -38,7 +39,11 @@
   --muted: rgba(255, 255, 255, 0.75);
   --accent: rgb(255, 204, 0);
   --accent-2: rgb(66, 133, 244);
-  --label: rgba(40, 42, 45, 0.8);
+  --focus-ring: rgb(96, 165, 250);
+  --surface-soft: rgba(255, 255, 255, 0.06);
+  --surface-soft-border: rgba(255, 255, 255, 0.12);
+  --surface-soft-hover: rgba(66, 133, 244, 0.14);
+  --label: rgba(24, 26, 27, 0.86);
 }
 
 html[data-motion="reduced"] *,
@@ -66,6 +71,20 @@ body {
 }
 
 a { color: var(--accent-2); }
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid var(--focus-ring);
+  outline-offset: 2px;
+}
+
+button:focus-visible,
+.btn:focus-visible {
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--focus-ring) 28%, transparent);
+}
 
 /* ============================================
    3) LAYOUT
@@ -214,6 +233,7 @@ footer {
   font-weight: 600;
   cursor: pointer;
   transition: transform 120ms ease, box-shadow 120ms ease, background 120ms ease, color 120ms ease, border-color 120ms ease;
+  white-space: nowrap;
 }
 
 .btn:hover {
@@ -289,6 +309,10 @@ footer {
   transform: translateY(-3px);
 }
 
+#hideCaughtBtn {
+  white-space: nowrap;
+}
+
 #segmentToggles {
   display: flex;
   flex-wrap: wrap;
@@ -302,8 +326,8 @@ footer {
   gap: 8px;
   padding: 8px 12px;
   border-radius: 8px;
-  background: var(--card);
-  border: 1px solid var(--border);
+  background: var(--surface-soft);
+  border: 1px solid var(--surface-soft-border);
   cursor: pointer;
   user-select: none;
   transition: border-color 0.2s ease, background 0.2s ease;
@@ -311,6 +335,11 @@ footer {
 
 .segment-toggle:hover {
   border-color: var(--accent-2);
+}
+
+.segment-toggle:focus-within {
+  border-color: var(--focus-ring);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--focus-ring) 18%, transparent);
 }
 
 .segment-toggle input[type="checkbox"] {
@@ -376,6 +405,11 @@ footer {
   margin-bottom: 20px;
 }
 
+.box:focus-within {
+  border-color: var(--focus-ring);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--focus-ring) 12%, transparent);
+}
+
 .box h2 {
   margin: 0 0 10px 4px;
   font-size: 16px;
@@ -412,6 +446,12 @@ footer {
   cursor: pointer;
   overflow: hidden;
   transition: transform 0.2s ease, border-color 0.2s ease, filter 0.2s ease, opacity 0.2s ease;
+}
+
+.cell:focus-visible {
+  z-index: 3;
+  border-color: var(--focus-ring);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--focus-ring) 28%, transparent);
 }
 
 /* Sprite appearance (dim until caught) */
@@ -613,8 +653,13 @@ footer {
   margin: 6px 0;
   padding: 7px 10px;
   border-radius: 10px;
-  background: rgba(0,0,0,0.02);
-  border: 1px solid rgba(0,0,0,0.04);
+  background: var(--surface-soft);
+  border: 1px solid var(--surface-soft-border);
+}
+
+.settings-row:focus-within {
+  border-color: var(--focus-ring);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--focus-ring) 14%, transparent);
 }
 
 .settings-row-label {
@@ -652,14 +697,19 @@ footer {
   gap: 8px;
   padding: 8px 12px;
   border-radius: 10px;
-  background: rgba(0,0,0,0.02);
-  border: 1px solid var(--border);
+  background: var(--surface-soft);
+  border: 1px solid var(--surface-soft-border);
   transition: border-color 0.15s ease, background 0.15s ease;
 }
 
 .settings-section .switch:hover {
   border-color: var(--accent-2);
-  background: rgba(66,133,244,0.04);
+  background: var(--surface-soft-hover);
+}
+
+.settings-section .switch:focus-within {
+  border-color: var(--focus-ring);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--focus-ring) 16%, transparent);
 }
 
 .settings-section .switch input[type="checkbox"],
@@ -706,9 +756,14 @@ footer {
   flex-direction: column;
   gap: 6px;
   padding: 10px 12px;
-  border: 1px solid var(--border);
   border-radius: 10px;
-  background: rgba(0,0,0,0.02);
+  background: var(--surface-soft);
+  border: 1px solid var(--surface-soft-border);
+}
+
+.import-option:focus-within {
+  border-color: var(--focus-ring);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--focus-ring) 14%, transparent);
 }
 
 .import-option .switch {
@@ -736,7 +791,7 @@ footer {
 
 /* Modal shell polish */
 .modal-card {
-  background: color-mix(in srgb, var(--card) 82%, transparent);
+  background: color-mix(in srgb, var(--card) 86%, transparent);
   border: 1px solid var(--border);
   box-shadow: 0 18px 42px rgba(0,0,0,0.24);
   backdrop-filter: blur(10px) saturate(120%);
@@ -768,7 +823,7 @@ footer {
 }
 
 .modal-backdrop {
-  background: rgba(10, 12, 16, 0.52);
+  background: rgba(10, 12, 16, 0.58);
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);
 }

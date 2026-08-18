@@ -371,7 +371,7 @@ export function renderDexSectionBoxes(container, sectionKey, sectionTitle, slots
       <h2>
         <span>${sectionTitle} — #${String(localStart).padStart(3, '0')}–${String(localEnd).padStart(3, '0')}</span>
         <span class="tools">
-          <button class="btn box-toggle" data-range="${globalStart}-${globalEnd}"></button>
+          <button class="btn box-toggle" type="button" data-range="${globalStart}-${globalEnd}"></button>
         </span>
       </h2>
       <div class="grid"></div>
@@ -392,6 +392,7 @@ export function renderDexSectionBoxes(container, sectionKey, sectionTitle, slots
 export function createDexSlot(slotIndex, speciesId, formId, name, displayIndex) {
   const button = document.createElement('button');
   button.className = 'cell';
+  button.type = 'button';
   button.setAttribute('aria-pressed', 'false');
   button.dataset.regional = slotIndex;
   button.dataset.national = speciesId;
