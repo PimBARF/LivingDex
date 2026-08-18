@@ -1,6 +1,7 @@
 import {
   ACTIVE_GAME,
   NAME_FETCH_CONCURRENCY,
+  SPECIES_CACHE_TTL_MS,
   REGIONAL_FORM_MAPPINGS,
   normalizeSpeciesName,
 } from './config.js';
@@ -8,7 +9,8 @@ import {
 import {
     loadSpeciesCache,
     saveSpeciesCache,
-    isSpeciesCacheStale,
+    readSpeciesCacheMeta,
+    hashSpeciesIds,
     loadEnabledSegments,
     loadSettings,
 } from './storage.js';
@@ -17,9 +19,59 @@ import { applyNamesToCells } from './ui.js'; // CHANGE THIS LATER!
 
 // Local cache for resolving pokemon (form) IDs -> species IDs
 const POKEMON_TO_SPECIES_CACHE_KEY = `${ACTIVE_GAME.storagePrefix}-pokemon-to-species-v1`;
+const NAME_FALLBACK_PREFIX = 'Name unavailable';
+
+function isPositiveInteger(value) {
+  return Number.isInteger(value) && value > 0;
+}
+
+function normalizeSpeciesOrder(speciesOrder) {
+  return Array.from(new Set((Array.isArray(speciesOrder) ? speciesOrder : [])
+    .map(Number)
+    .filter(isPositiveInteger)));
+}
+
+function normalizeSpeciesNameCache(rawCache) {
+  if (!rawCache || typeof rawCache !== 'object') return {};
+  return Object.fromEntries(
+    Object.entries(rawCache)
+      .map(([key, value]) => [Number(key), value])
+      .filter(([id, value]) => isPositiveInteger(id) && typeof value === 'string' && value.trim().length > 0),
+  );
+}
+
+function normalizePokedexEntries(entries) {
+  if (!Array.isArray(entries)) return [];
+  return entries
+    .map(entry => ({
+      speciesId: Number(entry?.speciesId),
+      formId: Number(entry?.formId ?? entry?.speciesId),
+    }))
+    .filter(entry => isPositiveInteger(entry.speciesId) && isPositiveInteger(entry.formId));
+}
+
+function getSpeciesCacheState(speciesOrder, language = 'en') {
+  const meta = readSpeciesCacheMeta();
+  if (!meta) return 'missing';
+  if (meta.language !== language) return 'language';
+  if (meta.idsHash !== hashSpeciesIds(speciesOrder)) return 'mismatch';
+  if ((Date.now() - (meta.ts || 0)) > SPECIES_CACHE_TTL_MS) return 'stale';
+  return 'fresh';
+}
+
+function buildNameFallback(id) {
+  return `${NAME_FALLBACK_PREFIX} #${id}`;
+}
 
 function loadPokemonToSpeciesMapCache() {
-  try { return JSON.parse(localStorage.getItem(POKEMON_TO_SPECIES_CACHE_KEY) || '{}') || {}; }
+  try {
+    const parsed = JSON.parse(localStorage.getItem(POKEMON_TO_SPECIES_CACHE_KEY) || '{}') || {};
+    return Object.fromEntries(
+      Object.entries(parsed)
+        .map(([key, value]) => [Number(key), Number(value)])
+        .filter(([key, value]) => isPositiveInteger(key) && isPositiveInteger(value)),
+    );
+  }
   catch { return {}; }
 }
 
@@ -35,7 +87,7 @@ function savePokemonToSpeciesMapCache(map) {
 async function getSpeciesIdForPokemon(pokemonId) {
   const cache = loadPokemonToSpeciesMapCache();
   const key = String(pokemonId);
-  if (cache[key]) return cache[key];
+  if (isPositiveInteger(cache[key])) return cache[key];
 
   let speciesId = null;
   const endpoints = [
@@ -85,8 +137,9 @@ export async function loadPokedexEntries(pokedexId) {
   const cacheKey = `${ACTIVE_GAME.storagePrefix}-pokedex-${pokedexId}-v3`;
   try {
     const cached = JSON.parse(localStorage.getItem(cacheKey) || '');
-    if (cached && Array.isArray(cached.entries) && cached.entries.length) {
-      return cached.entries;
+    const cachedEntries = normalizePokedexEntries(cached?.entries);
+    if (cachedEntries.length) {
+      return cachedEntries;
     }
   } catch { /* ignore */ }
 
@@ -110,43 +163,52 @@ export async function loadPokedexEntries(pokedexId) {
 
 /**
  * Compute active sections for current dex based on configuration and user settings.
- * Returns array of { key, title, kind, entries } in render order.
- * entries is array of { speciesId, formId }
+ * Returns { sections, warnings } where sections is an array of
+ * { key, title, kind, entries } in render order.
  */
 export async function buildActiveDexSections() {
   const enabled = loadEnabledSegments();
 
   const sections = [];
+  const warnings = [];
   for (const seg of ACTIVE_GAME.dexes) {
     const include = !seg.optional || enabled.has(seg.id);
     if (!include) continue;
-    if (seg.manualIds) {
-      // For manual lists:
-      // - forms segments provide pokemon (form) IDs; resolve their base species IDs for naming
-      // - any other manual segment is treated as species IDs directly
-      let entries = [];
-      if (seg.type === 'forms') {
-        const ids = seg.manualIds.slice();
-        const resolved = await mapWithConcurrency(ids, async (pokemonId) => {
-          try {
-            const speciesId = await getSpeciesIdForPokemon(pokemonId);
-            return { speciesId, formId: pokemonId };
-          } catch {
-            // Fallback: treat as species if resolution fails
-            return { speciesId: pokemonId, formId: pokemonId };
-          }
-        }, { concurrency: NAME_FETCH_CONCURRENCY });
-        entries = resolved.filter(Boolean);
-      } else {
-        entries = seg.manualIds.map(id => ({ speciesId: id, formId: id }));
+    try {
+      if (seg.manualIds) {
+        // For manual lists:
+        // - forms segments provide pokemon (form) IDs; resolve their base species IDs for naming
+        // - any other manual segment is treated as species IDs directly
+        let entries = [];
+        if (seg.type === 'forms') {
+          const ids = seg.manualIds.slice();
+          const resolved = await mapWithConcurrency(ids, async (pokemonId) => {
+            try {
+              const speciesId = await getSpeciesIdForPokemon(pokemonId);
+              return { speciesId, formId: pokemonId };
+            } catch {
+              // Fallback: treat as species if resolution fails
+              return { speciesId: pokemonId, formId: pokemonId };
+            }
+          }, { concurrency: NAME_FETCH_CONCURRENCY });
+          entries = resolved.filter(Boolean);
+        } else {
+          entries = seg.manualIds.map(id => ({ speciesId: id, formId: id }));
+        }
+        if (entries.length) sections.push({ key: seg.id, title: seg.title, kind: seg.type, entries });
+      } else if (seg.pokedexId) {
+        const entries = await loadPokedexEntries(seg.pokedexId);
+        if (entries.length) sections.push({ key: seg.id, title: seg.title, kind: seg.type, entries });
       }
-      if (entries.length) sections.push({ key: seg.id, title: seg.title, kind: seg.type, entries });
-    } else if (seg.pokedexId) {
-      const entries = await loadPokedexEntries(seg.pokedexId);
-      if (entries.length) sections.push({ key: seg.id, title: seg.title, kind: seg.type, entries });
+    } catch (err) {
+      warnings.push({
+        segmentId: seg.id,
+        title: seg.title,
+        error: err instanceof Error ? err.message : String(err),
+      });
     }
   }
-  return sections;
+  return { sections, warnings };
 }
 
 function pickLocalizedSpeciesName(payload, language) {
@@ -168,7 +230,7 @@ export async function fetchSpeciesName(id, language = 'en') {
   }
   // If that failed, it may be a pokemon (form) id; resolve to species id and retry
   try {
-  const speciesId = await getSpeciesIdForPokemon(id);
+    const speciesId = await getSpeciesIdForPokemon(id);
     response = await fetch(`https://pokeapi.co/api/v2/pokemon-species/${speciesId}`);
     if (!response.ok) throw new Error('PokeAPI error');
     const payload = await response.json();
@@ -204,46 +266,56 @@ export async function mapWithConcurrency(list, task, { concurrency = 6 } = {}) {
  * - Merges results and updates cache for future sessions
  */
 export async function loadSpeciesNames(speciesOrder) {
-  const allIds = [...new Set(speciesOrder)];
+  const allIds = normalizeSpeciesOrder(speciesOrder);
   const language = loadSettings().language || 'en';
-  let cache = loadSpeciesCache();
-
-  // Discard stale cache (old TTL or dex list changed)
-  if (isSpeciesCacheStale(speciesOrder, language)) {
-    cache = {};
-  }
+  const cacheState = getSpeciesCacheState(allIds, language);
+  const rawCache = normalizeSpeciesNameCache(loadSpeciesCache());
+  const canTrustCache = cacheState !== 'language';
+  const cache = canTrustCache ? rawCache : {};
+  const shouldRefreshAll = cacheState !== 'fresh';
 
   // 1) Apply cached names immediately for fast visual feedback
   window.__livingDexNames = { ...cache };
   applyNamesToCells();
 
   // 2) Identify missing species names
-  const missing = allIds.filter(id => !window.__livingDexNames[id]);
+  const missing = shouldRefreshAll
+    ? allIds
+    : allIds.filter(id => !window.__livingDexNames[id]);
 
   if (missing.length === 0) {
-    saveSpeciesCache(window.__livingDexNames, speciesOrder, language);
-    return;
+    saveSpeciesCache(window.__livingDexNames, allIds, language);
+    return { cacheState, failedIds: [] };
   }
 
   // 3) Fetch missing names with retries and concurrency control
   const fresh = {};
+  const failedIds = [];
   await mapWithConcurrency(missing, async id => {
     for (let attempt = 0; attempt < 2; attempt += 1) {
       try {
         const name = await fetchSpeciesName(id, language);
         fresh[id] = name;
         return;
-      } catch {
+      } catch (err) {
         // Exponential backoff before retry
         await new Promise(r => setTimeout(r, 300 + Math.random() * 400));
       }
     }
-    // Fallback keeps UI consistent if PokeAPI is unavailable
-    fresh[id] = `#${id}`;
+    failedIds.push(id);
   }, { concurrency: NAME_FETCH_CONCURRENCY });
 
   // 4) Merge, persist, and refresh UI with newly fetched names
   window.__livingDexNames = { ...window.__livingDexNames, ...fresh };
-  saveSpeciesCache(window.__livingDexNames, speciesOrder, language);
+  for (const id of failedIds) {
+    if (!window.__livingDexNames[id]) {
+      window.__livingDexNames[id] = buildNameFallback(id);
+    }
+  }
+  const persistedNames = canTrustCache
+    ? { ...cache, ...fresh }
+    : { ...fresh };
+  saveSpeciesCache(persistedNames, allIds, language);
   applyNamesToCells();
+  return { cacheState, failedIds };
 }

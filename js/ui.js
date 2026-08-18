@@ -163,6 +163,18 @@ export function rebuildDexView({ sections, slotCount }) {
   if (!app) return;
 
   app.innerHTML = '';
+  if (!sections.length) {
+    app.innerHTML = `
+      <section class="box app-empty-state" role="status" aria-live="polite">
+        <h2>Pokédex data unavailable</h2>
+        <p>The dex could not be loaded yet. Please check your connection and try again.</p>
+      </section>
+    `;
+    updateProgressBar(0);
+    applyHideCaughtFilter();
+    return;
+  }
+
   let startGlobal = 1;
   for (const sec of sections) {
     renderDexSectionBoxes(app, sec.key, sec.title, sec.entries.length, startGlobal);
@@ -206,13 +218,14 @@ export function countCaughtSlots(slotCount) {
  * Update progress bar text, width, and page title to reflect current caught total.
  */
 export function updateProgressBar(slotCount) {
-  const caught = countCaughtSlots(slotCount);
-  const percentage = Math.round((caught * 100) / slotCount);
+  const safeSlotCount = Number.isFinite(slotCount) && slotCount > 0 ? slotCount : 0;
+  const caught = countCaughtSlots(safeSlotCount);
+  const percentage = safeSlotCount > 0 ? Math.round((caught * 100) / safeSlotCount) : 0;
   const fill = document.getElementById('progressFill');
   const label = document.getElementById('progressText');
   if (fill) fill.style.width = `${percentage}%`;
-  if (label) label.textContent = `${caught}/${slotCount} caught (${percentage}%)`;
-  document.title = `${ACTIVE_GAME.title} — ${caught}/${slotCount}`;
+  if (label) label.textContent = `${caught}/${safeSlotCount} caught (${percentage}%)`;
+  document.title = `${ACTIVE_GAME.title} — ${caught}/${safeSlotCount}`;
 }
 
 /**
@@ -1003,12 +1016,20 @@ export function renderGameInfo() {
 
       saveEnabledSegments(currentEnabled);
 
-      const sections = await buildActiveDexSections();
+      const { sections, warnings } = await buildActiveDexSections();
       const combinedSpeciesIds = sections.flatMap(s => s.entries.map(e => e.speciesId));
       const newSlotCount = combinedSpeciesIds.length;
 
       rebuildDexView({ sections, slotCount: newSlotCount });
-      await loadSpeciesNames(combinedSpeciesIds);
+      if (warnings.length) {
+        console.warn('Pokédex sections loaded with warnings:', warnings);
+        showToast('Some Pokédex data could not be loaded.', 'warning');
+      }
+
+      const nameResult = await loadSpeciesNames(combinedSpeciesIds);
+      if (nameResult.failedIds.length) {
+        showToast('Some Pokémon names could not be loaded.', 'warning');
+      }
     });
   });
 }

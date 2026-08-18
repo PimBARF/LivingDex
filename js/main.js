@@ -48,16 +48,23 @@ async function initializeLivingDexApp() {
   if (!app) return;
   
   // Compute active sections and combined order
-  const sections = await buildActiveDexSections();
+  const { sections, warnings } = await buildActiveDexSections();
   const combinedSpeciesIds = sections.flatMap(s => s.entries.map(e => e.speciesId));
   LIVING_DEX_SPECIES_ORDER = combinedSpeciesIds;
   LIVING_DEX_SLOT_COUNT = combinedSpeciesIds.length;
 
   window.__livingDexNames = {};
   rebuildDexView({ sections, slotCount: LIVING_DEX_SLOT_COUNT });
+  if (warnings.length) {
+    console.warn('Pokédex sections loaded with warnings:', warnings);
+    showToast('Some Pokédex data could not be loaded.', 'warning');
+  }
   
   // Fetch and apply species names from cache or API
-  await loadSpeciesNames(LIVING_DEX_SPECIES_ORDER);
+  const nameResult = await loadSpeciesNames(LIVING_DEX_SPECIES_ORDER);
+  if (nameResult.failedIds.length) {
+    showToast('Some Pokémon names could not be loaded.', 'warning');
+  }
 
   // Names are applied by loadSpeciesNames() as cache arrives and fetch completes
 
@@ -112,5 +119,19 @@ async function initializeLivingDexApp() {
  * Bootstrap the application once the DOM is ready.
  */
 (async function bootstrapLivingDex() {
-  await initializeLivingDexApp();
+  try {
+    await initializeLivingDexApp();
+  } catch (err) {
+    console.error('LivingDex startup failed:', err);
+    const app = document.getElementById('app');
+    if (app) {
+      app.innerHTML = `
+        <section class="box app-empty-state" role="status" aria-live="polite">
+          <h2>LivingDex could not finish loading</h2>
+          <p>Please refresh the page or check your connection, then try again.</p>
+        </section>
+      `;
+    }
+    showToast('LivingDex startup encountered a loading problem.', 'warning');
+  }
 })();
