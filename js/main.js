@@ -19,6 +19,7 @@ import {
     registerScrollToTopButton,
     registerResetControls,
     registerSettingsControls,
+    applyPersistedViewSettings,
     renderGameSelector,
     renderGameInfo,
     setGameTitles,
@@ -65,6 +66,7 @@ async function initializeLivingDexApp() {
   registerScrollToTopButton();
   registerResetControls(LIVING_DEX_SLOT_COUNT);
   registerSettingsControls();
+  await applyPersistedViewSettings();
   
   // Trigger initial search if input has value
   const searchInput = document.getElementById('search');

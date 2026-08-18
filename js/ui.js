@@ -132,6 +132,29 @@ export function applyHideCaughtFilter() {
 }
 
 /**
+ * Apply persisted view preferences that affect the rendered dex grid.
+ * Keeps the hide-caught toggle and sprite style in sync with storage, and
+ * refreshes localized names when the selected language changes.
+ */
+export async function applyPersistedViewSettings({ speciesOrder = [], previousLanguage } = {}) {
+  const settings = loadSettings();
+  const hideToggle = document.getElementById('toggleUncaught');
+
+  if (hideToggle) {
+    hideToggle.checked = !!settings.hideCaughtDefault;
+    hideToggle.dispatchEvent(new Event('change'));
+  } else {
+    applyHideCaughtFilter();
+  }
+
+  applySpriteStyleToCells();
+
+  if (speciesOrder.length && previousLanguage !== undefined && previousLanguage !== settings.language) {
+    await loadSpeciesNames(speciesOrder);
+  }
+}
+
+/**
  * Rebuild the dex grid for the current game/segment selection.
  * Centralizes the app render flow so it can be reused in multiple actions.
  */
@@ -850,6 +873,82 @@ export function registerResetControls(slotCount) {
   });
 }
 
+function isPlainObject(value) {
+  return !!value && typeof value === 'object' && !Array.isArray(value);
+}
+
+function readStoredObject(key, fallback = null) {
+  try {
+    const raw = localStorage.getItem(key);
+    if (!raw) return fallback;
+    const parsed = JSON.parse(raw);
+    return isPlainObject(parsed) ? parsed : fallback;
+  } catch {
+    return fallback;
+  }
+}
+
+function countObjectEntries(value) {
+  return isPlainObject(value) ? Object.keys(value).length : 0;
+}
+
+function buildExportPayload() {
+  return {
+    exportedAt: new Date().toISOString(),
+    schemaVersion: 2,
+    settings: loadSettings(),
+    games: Object.fromEntries(Object.entries(GAMES).map(([gameKey, config]) => {
+      const caughtKey = `${config.storagePrefix}-caught-v1`;
+      const segmentsKey = `${config.storagePrefix}-segments-v1`;
+      const speciesCacheKey = `${config.storagePrefix}-species-names-v1`;
+      const speciesCacheMetaKey = `${config.storagePrefix}-species-names-meta-v1`;
+
+      return [gameKey, {
+        caught: readStoredObject(caughtKey, {}),
+        segments: readStoredObject(segmentsKey, null),
+        speciesCache: readStoredObject(speciesCacheKey, null),
+        speciesCacheMeta: readStoredObject(speciesCacheMetaKey, null),
+      }];
+    })),
+  };
+}
+
+function normalizeImportPayload(rawPayload) {
+  if (!isPlainObject(rawPayload)) {
+    throw new Error('Invalid payload');
+  }
+
+  const settings = isPlainObject(rawPayload.settings) ? rawPayload.settings : null;
+  const games = {};
+
+  if (isPlainObject(rawPayload.games)) {
+    for (const [gameKey, gamePayload] of Object.entries(rawPayload.games)) {
+      if (!GAMES[gameKey] || !isPlainObject(gamePayload)) continue;
+
+      const nextGame = {};
+      if (isPlainObject(gamePayload.caught)) nextGame.caught = gamePayload.caught;
+      if (isPlainObject(gamePayload.segments)) nextGame.segments = gamePayload.segments;
+      if (isPlainObject(gamePayload.speciesCache)) nextGame.speciesCache = gamePayload.speciesCache;
+      if (isPlainObject(gamePayload.speciesCacheMeta)) nextGame.speciesCacheMeta = gamePayload.speciesCacheMeta;
+
+      if (Object.keys(nextGame).length) {
+        games[gameKey] = nextGame;
+      }
+    }
+  }
+
+  if (!settings && !Object.keys(games).length) {
+    throw new Error('Invalid payload');
+  }
+
+  return {
+    exportedAt: typeof rawPayload.exportedAt === 'string' ? rawPayload.exportedAt : null,
+    schemaVersion: Number.isFinite(rawPayload.schemaVersion) ? rawPayload.schemaVersion : null,
+    settings,
+    games,
+  };
+}
+
 // =============================================================================
 // PAGE INITIALIZATION & BOOTSTRAP
 // =============================================================================
@@ -929,10 +1028,18 @@ export function registerSettingsControls() {
   const defaultGameModeSelect = document.getElementById('settingsDefaultGameMode');
   const defaultGameSelect = document.getElementById('settingsDefaultGame');
   const defaultGameWrapper = document.getElementById('settingsDefaultGameWrapper');
+  const importModal = document.getElementById('modalImportData');
+  const importBackdrop = importModal?.querySelector('[data-close]');
+  const importSummary = document.getElementById('importDataSummary');
+  const importOptions = document.getElementById('importDataOptions');
+  const confirmImportBtn = document.getElementById('confirmImportData');
+  const cancelImportBtn = document.getElementById('cancelImportData');
   const aboutBtn = document.getElementById('settingsAbout');
   const aboutModal = document.getElementById('modalAbout');
   const aboutBackdrop = aboutModal?.querySelector('[data-close]');
   const closeAboutBtn = document.getElementById('closeAbout');
+  let pendingImportPayload = null;
+  let pendingImportFileName = '';
 
   function syncSettingsControls() {
     const settings = loadSettings();
@@ -974,6 +1081,7 @@ export function registerSettingsControls() {
 
   async function persistSettingsFromControls() {
     const settings = loadSettings();
+    const previousLanguage = settings.language;
     const selectedTheme = document.querySelector('input[name="settingsTheme"]:checked')?.value || settings.theme || 'auto';
     const nextSettings = {
       ...settings,
@@ -990,32 +1098,14 @@ export function registerSettingsControls() {
     applyTheme(nextSettings.theme);
     applyReducedMotionPreference(nextSettings.reducedMotion);
 
-    const hideToggle = document.getElementById('toggleUncaught');
-    if (hideToggle) {
-      hideToggle.checked = !!nextSettings.hideCaughtDefault;
-      hideToggle.dispatchEvent(new Event('change'));
-    } else {
-      applyHideCaughtFilter();
-    }
-    applySpriteStyleToCells();
-    if (nextSettings.language !== settings.language) {
-      const speciesOrder = Array.from(document.querySelectorAll('.cell:not(.is-placeholder)'))
-        .map(cell => Number(cell.dataset.national))
-        .filter(Number.isFinite);
-      await loadSpeciesNames(speciesOrder);
-    }
+    const speciesOrder = Array.from(document.querySelectorAll('.cell:not(.is-placeholder)'))
+      .map(cell => Number(cell.dataset.national))
+      .filter(Number.isFinite);
+    await applyPersistedViewSettings({ speciesOrder, previousLanguage });
   }
 
   function exportAllData() {
-    const payload = {
-      exportedAt: new Date().toISOString(),
-      settings: loadSettings(),
-      games: Object.fromEntries(Object.entries(GAMES).map(([gameKey, config]) => {
-        const key = `${config.storagePrefix}-caught-v1`;
-        return [gameKey, JSON.parse(localStorage.getItem(key) || '{}')];
-      })),
-    };
-
+    const payload = buildExportPayload();
     const blob = new Blob([JSON.stringify(payload, null, 2)], { type: 'application/json' });
     const url = URL.createObjectURL(blob);
     const anchor = document.createElement('a');
@@ -1026,30 +1116,121 @@ export function registerSettingsControls() {
     showToast('Data exported.', 'success');
   }
 
+  function renderImportReview(payload) {
+    if (!importSummary || !importOptions) return;
+
+    const gameEntries = Object.entries(payload.games || {});
+    const hasSettings = !!payload.settings;
+    const fileLabel = pendingImportFileName ? ` from ${pendingImportFileName}` : '';
+    const settingsCount = hasSettings ? 1 : 0;
+
+    importSummary.textContent = `This file${fileLabel} contains ${settingsCount ? 'settings and ' : ''}${gameEntries.length} game entr${gameEntries.length === 1 ? 'y' : 'ies'}. Select what you want to import.`;
+    importOptions.innerHTML = '';
+
+    if (hasSettings) {
+      const row = document.createElement('label');
+      row.className = 'import-option';
+      row.innerHTML = `
+        <span class="switch">
+          <input type="checkbox" id="importSettingsCheckbox" checked>
+          <span>Import settings</span>
+        </span>
+        <p class="import-option-meta">Theme, display preferences, default game, and other app settings will be merged into the current device settings.</p>
+      `;
+      importOptions.appendChild(row);
+    }
+
+    for (const [gameKey, gameState] of gameEntries) {
+      const config = GAMES[gameKey];
+      if (!config) continue;
+
+      const caughtCount = countObjectEntries(gameState.caught);
+      const segmentCount = countObjectEntries(gameState.segments);
+      const cacheCount = countObjectEntries(gameState.speciesCache);
+      const hasMeta = isPlainObject(gameState.speciesCacheMeta);
+
+      const row = document.createElement('label');
+      row.className = 'import-option';
+      row.innerHTML = `
+        <span class="switch">
+          <input type="checkbox" data-game-key="${gameKey}" checked>
+          <span>${config.title}</span>
+        </span>
+        <p class="import-option-meta">
+          Caught: ${caughtCount} · Segments: ${segmentCount} · Cache names: ${cacheCount}${hasMeta ? ' · Cache metadata included' : ''}
+        </p>
+      `;
+      importOptions.appendChild(row);
+    }
+  }
+
+  function resetImportReviewState() {
+    pendingImportPayload = null;
+    pendingImportFileName = '';
+    if (importSummary) importSummary.textContent = '';
+    if (importOptions) importOptions.innerHTML = '';
+    if (importInput) importInput.value = '';
+  }
+
+  function openImportReviewModal(payload, fileName) {
+    pendingImportPayload = payload;
+    pendingImportFileName = fileName || '';
+    renderImportReview(payload);
+    openImportReviewDialog();
+  }
+
+  function applySelectedImport() {
+    if (!pendingImportPayload) return;
+    const importSettingsChecked = document.getElementById('importSettingsCheckbox')?.checked;
+    const selectedGameKeys = Array.from(importOptions?.querySelectorAll('input[data-game-key]') || [])
+      .filter(input => input.checked)
+      .map(input => input.dataset.gameKey)
+      .filter(Boolean);
+
+    if (!importSettingsChecked && !selectedGameKeys.length) {
+      showToast('Select at least one item to import.', 'warning');
+      return;
+    }
+
+    if (importSettingsChecked && pendingImportPayload.settings) {
+      saveSettings({ ...loadSettings(), ...pendingImportPayload.settings });
+    }
+
+    for (const gameKey of selectedGameKeys) {
+      const gamePayload = pendingImportPayload.games?.[gameKey];
+      const config = GAMES[gameKey];
+      if (!config || !gamePayload) continue;
+
+      if (isPlainObject(gamePayload.caught)) {
+        localStorage.setItem(`${config.storagePrefix}-caught-v1`, JSON.stringify(gamePayload.caught));
+      }
+      if (isPlainObject(gamePayload.segments)) {
+        localStorage.setItem(`${config.storagePrefix}-segments-v1`, JSON.stringify(gamePayload.segments));
+      }
+      if (isPlainObject(gamePayload.speciesCache)) {
+        localStorage.setItem(`${config.storagePrefix}-species-names-v1`, JSON.stringify(gamePayload.speciesCache));
+      }
+      if (isPlainObject(gamePayload.speciesCacheMeta)) {
+        localStorage.setItem(`${config.storagePrefix}-species-names-meta-v1`, JSON.stringify(gamePayload.speciesCacheMeta));
+      }
+    }
+
+    closeImportReviewDialog();
+    showToast('Selected data imported.', 'success');
+    window.location.reload();
+  }
+
   function importAllData(file) {
     if (!file) return;
+
     const reader = new FileReader();
     reader.onload = () => {
       try {
-        const payload = JSON.parse(String(reader.result));
-        if (!payload || typeof payload !== 'object') {
-          throw new Error('Invalid payload');
-        }
-        if (payload.settings && typeof payload.settings === 'object') {
-          saveSettings({ ...loadSettings(), ...payload.settings });
-        }
-        if (payload.games && typeof payload.games === 'object') {
-          Object.entries(payload.games).forEach(([gameKey, gameState]) => {
-            const config = GAMES[gameKey];
-            if (config && gameState && typeof gameState === 'object') {
-              localStorage.setItem(`${config.storagePrefix}-caught-v1`, JSON.stringify(gameState));
-            }
-          });
-        }
-        showToast('Data imported.', 'success');
-        window.location.reload();
+        const payload = normalizeImportPayload(JSON.parse(String(reader.result)));
+        openImportReviewModal(payload, file.name);
       } catch {
         showToast('Import failed: invalid JSON.', 'danger');
+        resetImportReviewState();
       }
     };
     reader.readAsText(file);
@@ -1103,6 +1284,18 @@ export function registerSettingsControls() {
     focusSelector: '#closeAbout',
   });
 
+  const { openModal: openImportReviewDialog, closeModal: closeImportReviewDialog } = attachModalHandlers({
+    modal: importModal,
+    openBtn: null,
+    closeBtn: cancelImportBtn,
+    backdrop: importBackdrop,
+    onOpen: () => confirmImportBtn?.focus(),
+    onClose: () => {
+      resetImportReviewState();
+    },
+    focusSelector: '#importDataOptions input[type="checkbox"]',
+  });
+
   document.getElementById('settingsReducedMotion')?.addEventListener('change', persistSettingsFromControls);
   document.getElementById('settingsHideCaught')?.addEventListener('change', persistSettingsFromControls);
   document.getElementById('settingsLanguage')?.addEventListener('change', persistSettingsFromControls);
@@ -1117,8 +1310,12 @@ export function registerSettingsControls() {
 
   defaultGameSelect?.addEventListener('change', persistSettingsFromControls);
   exportBtn?.addEventListener('click', exportAllData);
-  importBtn?.addEventListener('click', () => importInput?.click());
+  importBtn?.addEventListener('click', () => {
+    if (importInput) importInput.value = '';
+    importInput?.click();
+  });
   importInput?.addEventListener('change', (event) => importAllData(event.target.files?.[0]));
+  confirmImportBtn?.addEventListener('click', applySelectedImport);
   clearCacheBtn?.addEventListener('click', clearSpeciesCacheAction);
   clearAllBtn?.addEventListener('click', clearAllDataAction);
   aboutBtn?.addEventListener('click', openAboutModal);

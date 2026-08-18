@@ -216,10 +216,14 @@
           </div>
 
           <div class="settings-row">
-            <button type="button" id="settingsImportData" class="btn">
+            <button type="button" id="settingsImportData" class="btn"
+                    aria-describedby="settingsImportHelp">
               Import data
             </button>
           </div>
+          <p id="settingsImportHelp" class="settings-help">
+            Importing will replace your saved settings and progress for matching games on this device.
+          </p>
 
           <div class="settings-row">
             <button type="button" id="settingsClearSpeciesCache" class="btn">
@@ -276,6 +280,26 @@
 
       <div class="modal-actions">
         <button id="closeSettings" class="btn" aria-label="Close settings">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Import review modal -->
+  <div id="modalImportData" class="modal" role="dialog" aria-modal="true"
+       aria-labelledby="importDataTitle" aria-describedby="importDataDesc" hidden>
+    <div class="modal-backdrop" data-close></div>
+    <div class="modal-card import-modal-card" role="document">
+      <h3 id="importDataTitle">Review import</h3>
+      <p id="importDataDesc">
+        Review the selected data before it replaces anything on this device.
+      </p>
+      <div id="importDataSummary" class="import-summary"></div>
+      <div id="importDataOptions" class="import-options"></div>
+      <div class="modal-actions">
+        <button id="confirmImportData" class="btn btn-danger" aria-label="Import selected data">
+          Import selected data
+        </button>
+        <button id="cancelImportData" class="btn" aria-label="Cancel import">Cancel</button>
       </div>
     </div>
   </div>

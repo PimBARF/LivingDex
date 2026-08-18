@@ -684,6 +684,49 @@ footer {
   padding-left: 2px;
 }
 
+.import-modal-card {
+  max-width: 620px;
+}
+
+.import-summary {
+  margin: 0 0 8px;
+  color: var(--text);
+  font-size: 14px;
+}
+
+.import-options {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  overflow-y: auto;
+}
+
+.import-option {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 10px 12px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: rgba(0,0,0,0.02);
+}
+
+.import-option .switch {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.import-option-meta {
+  margin: 0;
+  font-size: 12px;
+  color: var(--muted);
+  line-height: 1.35;
+}
+
+.import-option-warning {
+  color: var(--warning);
+}
+
 /* Make actions bar sit nicely at the bottom */
 .modal-actions {
   margin-top: 8px;
