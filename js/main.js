@@ -44,6 +44,13 @@ async function initializeLivingDexApp() {
   applyTheme(settings.theme);
   applyReducedMotionPreference(settings.reducedMotion);
 
+  // Register controls immediately so the UI is interactive during data loading.
+  // slotCount 0 is safe — both functions use live DOM queries as primary source.
+  registerHeaderControls(0);
+  registerScrollToTopButton();
+  registerResetControls(0);
+  registerSettingsControls();
+
   const app = document.getElementById('app');
   if (!app) return;
   
@@ -66,13 +73,9 @@ async function initializeLivingDexApp() {
     showToast('Some Pokémon names could not be loaded.', 'warning');
   }
 
-  // Names are applied by loadSpeciesNames() as cache arrives and fetch completes
+  // Names are applied by loadSpeciesNames() as they arrive (incrementally)
 
-  // Register header and reset controls
-  registerHeaderControls(LIVING_DEX_SLOT_COUNT);
-  registerScrollToTopButton();
-  registerResetControls(LIVING_DEX_SLOT_COUNT);
-  registerSettingsControls();
+  // Apply persisted view settings now that cells exist in the DOM
   await applyPersistedViewSettings();
   
   // Trigger initial search if input has value

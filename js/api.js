@@ -291,11 +291,24 @@ export async function loadSpeciesNames(speciesOrder) {
   // 3) Fetch missing names with retries and concurrency control
   const fresh = {};
   const failedIds = [];
+
+  // Debounced applyNamesToCells to avoid thrashing the DOM per individual fetch
+  let applyNamesTimer = null;
+  const scheduleApplyNames = () => {
+    if (applyNamesTimer !== null) return;
+    applyNamesTimer = setTimeout(() => {
+      applyNamesTimer = null;
+      applyNamesToCells();
+    }, 50);
+  };
+
   await mapWithConcurrency(missing, async id => {
     for (let attempt = 0; attempt < 2; attempt += 1) {
       try {
         const name = await fetchSpeciesName(id, language);
         fresh[id] = name;
+        window.__livingDexNames[id] = name;
+        scheduleApplyNames();
         return;
       } catch (err) {
         // Exponential backoff before retry
@@ -305,7 +318,13 @@ export async function loadSpeciesNames(speciesOrder) {
     failedIds.push(id);
   }, { concurrency: NAME_FETCH_CONCURRENCY });
 
-  // 4) Merge, persist, and refresh UI with newly fetched names
+  // Flush any pending debounced update
+  if (applyNamesTimer !== null) {
+    clearTimeout(applyNamesTimer);
+    applyNamesTimer = null;
+  }
+
+  // 4) Persist and apply any remaining fallback names for failed fetches
   window.__livingDexNames = { ...window.__livingDexNames, ...fresh };
   for (const id of failedIds) {
     if (!window.__livingDexNames[id]) {
