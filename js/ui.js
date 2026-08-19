@@ -417,6 +417,7 @@ export function createDexSlot(slotIndex, speciesId, formId, name, displayIndex) 
     <div class="index">${displayIndex}</div>
     <img class="sprite" src="${spriteUrlForSpecies(formId, spriteStyle)}" alt="${name}" loading="lazy" onerror="this.style.opacity=.2"/>
     <div class="label">${name}</div>
+    <span class="cell-info-btn" role="button" aria-label="View info for ${name}" tabindex="0">i</span>
   `;
   return button;
 }
@@ -475,6 +476,23 @@ export function populateDexSlots(sections, slotCount) {
         applyHideCaughtFilter();
       };
 
+      // Info button: open info modal without toggling caught state
+      const infoBtn = cell.querySelector('.cell-info-btn');
+      if (infoBtn) {
+        const handleInfo = (event) => {
+          event.stopPropagation();
+          const latestName = window.__livingDexNames?.[speciesId] || speciesName;
+          openPokemonInfoModal(speciesId, formId, latestName);
+        };
+        infoBtn.addEventListener('click', handleInfo);
+        infoBtn.addEventListener('keydown', (event) => {
+          if (event.key === 'Enter' || event.key === ' ') {
+            event.preventDefault();
+            handleInfo(event);
+          }
+        });
+      }
+
       // Append to current box
       sectionBoxes[boxCursor]?.appendChild(cell);
       globalSlotIndex += 1;
@@ -502,6 +520,240 @@ export function populateDexSlots(sections, slotCount) {
       slotsPlacedInCurrentBox += 1;
     }
   });
+}
+
+// =============================================================================
+// POKÉMON INFO MODAL
+// =============================================================================
+
+/** In-memory cache for fetched Pokémon info, keyed by speciesId + selected generation. */
+const _pokemonInfoCache = {};
+const _speciesGenerationCache = {};
+
+/** One-time setup state for the info modal. */
+let _infoModalHandlers = null;
+
+function getSelectedGenerationNumber() {
+  const group = ACTIVE_GAME?.group || 'special';
+  if (!group.startsWith('gen')) return null;
+  return Number(group.replace('gen', ''));
+}
+
+function getGenerationNumberFromName(name) {
+  const key = String(name || '').replace(/^generation-/, '');
+  const map = { i: 1, ii: 2, iii: 3, iv: 4, v: 5, vi: 6, vii: 7, viii: 8, ix: 9 };
+  return map[key] ?? null;
+}
+
+function getInfoCacheKey(speciesId, generationNumber = getSelectedGenerationNumber()) {
+  return `${speciesId}:${generationNumber ?? 'all'}`;
+}
+
+function resolveTypeNamesForGeneration(pokemonData, generationNumber) {
+  const currentTypes = (pokemonData?.types || []).map(typeEntry => typeEntry?.type?.name).filter(Boolean);
+  if (!generationNumber) return currentTypes;
+
+  const sortedHistory = [...(pokemonData?.past_types || [])]
+    .map(entry => ({
+      ...entry,
+      generationNumber: getGenerationNumberFromName(entry?.generation?.name),
+    }))
+    .filter(entry => Number.isInteger(entry.generationNumber))
+    .sort((left, right) => left.generationNumber - right.generationNumber);
+
+  if (!sortedHistory.length) return currentTypes;
+
+  let snapshot = sortedHistory[0];
+  for (let i = sortedHistory.length - 1; i >= 0; i -= 1) {
+    const candidate = sortedHistory[i];
+    if (candidate.generationNumber <= generationNumber) {
+      snapshot = candidate;
+      break;
+    }
+  }
+
+  if (!snapshot) return currentTypes;
+  return (snapshot.types || []).map(typeEntry => typeEntry?.type?.name).filter(Boolean);
+}
+
+async function fetchSpeciesGenerationNumber(speciesId) {
+  if (_speciesGenerationCache[speciesId] !== undefined) return _speciesGenerationCache[speciesId];
+
+  try {
+    const response = await fetch(`https://pokeapi.co/api/v2/pokemon-species/${speciesId}`);
+    if (!response.ok) {
+      _speciesGenerationCache[speciesId] = null;
+      return null;
+    }
+    const data = await response.json();
+    const generationNumber = getGenerationNumberFromName(data?.generation?.name);
+    _speciesGenerationCache[speciesId] = generationNumber;
+    return generationNumber;
+  } catch {
+    _speciesGenerationCache[speciesId] = null;
+    return null;
+  }
+}
+
+function getInfoModalHandlers() {
+  if (_infoModalHandlers) return _infoModalHandlers;
+  const modal = document.getElementById('modalPokemonInfo');
+  const closeBtn = document.getElementById('closePokemonInfo');
+  const backdrop = modal?.querySelector('[data-close]');
+  _infoModalHandlers = attachModalHandlers({
+    modal,
+    openBtn: null,
+    closeBtn,
+    backdrop,
+    onOpen: () => closeBtn?.focus(),
+    onClose: () => {},
+    focusSelector: '#closePokemonInfo',
+  });
+  return _infoModalHandlers;
+}
+
+/**
+ * Collect all species names from a nested evolution chain node.
+ * Returns an array of { speciesId, name } in evolution order.
+ */
+function collectEvoChain(chainNode) {
+  if (!chainNode) return [];
+  const speciesUrl = chainNode.species?.url || '';
+  const match = speciesUrl.match(/\/pokemon-species\/(\d+)\//);
+  const speciesId = match ? Number(match[1]) : null;
+  const name = chainNode.species?.name || '';
+
+  const result = speciesId ? [{ speciesId, name }] : [];
+  for (const next of (chainNode.evolves_to || [])) {
+    result.push(...collectEvoChain(next));
+  }
+  return result;
+}
+
+/**
+ * Fetch and display info for a Pokémon in the info modal.
+ * Uses a simple in-memory cache to avoid redundant API calls.
+ */
+export async function openPokemonInfoModal(speciesId, formId, name) {
+  const modal = document.getElementById('modalPokemonInfo');
+  if (!modal) return;
+  const titleEl = document.getElementById('pokemonInfoTitle');
+  const numberEl = document.getElementById('pokemonInfoNumber');
+  const spriteEl = document.getElementById('pokemonInfoSprite');
+  const typesEl = document.getElementById('pokemonInfoTypes');
+  const flavorEl = document.getElementById('pokemonInfoFlavor');
+  const evoEl = document.getElementById('pokemonInfoEvo');
+  const bodyEl = document.getElementById('pokemonInfoBody');
+  const loadingEl = document.getElementById('pokemonInfoLoading');
+  const errorEl = document.getElementById('pokemonInfoError');
+
+  // Set initial state: show name/sprite immediately, load the rest
+  const spriteStyle = loadSettings().spriteStyle || 'pokesprites';
+  titleEl.textContent = name;
+  numberEl.textContent = `#${speciesId}`;
+  spriteEl.src = spriteUrlForSpecies(formId, spriteStyle);
+  spriteEl.alt = name;
+  typesEl.innerHTML = '';
+  flavorEl.textContent = '';
+  evoEl.innerHTML = '';
+  bodyEl.hidden = true;
+  errorEl.hidden = true;
+  loadingEl.hidden = false;
+
+  const { openModal } = getInfoModalHandlers();
+  openModal();
+
+  const selectedGeneration = getSelectedGenerationNumber();
+  const cacheKey = getInfoCacheKey(speciesId, selectedGeneration);
+
+  try {
+    if (!_pokemonInfoCache[cacheKey]) {
+      const language = loadSettings().language || 'en';
+
+      const [pokemonRes, speciesRes] = await Promise.all([
+        fetch(`https://pokeapi.co/api/v2/pokemon/${formId}`),
+        fetch(`https://pokeapi.co/api/v2/pokemon-species/${speciesId}`),
+      ]);
+
+      if (!pokemonRes.ok || !speciesRes.ok) throw new Error('Failed to fetch Pokémon data');
+
+      const [pokemonData, speciesData] = await Promise.all([
+        pokemonRes.json(),
+        speciesRes.json(),
+      ]);
+
+      const flavorEntries = speciesData.flavor_text_entries || [];
+      const langFlavor = flavorEntries.find(e => e.language.name === language)
+        || flavorEntries.find(e => e.language.name === 'en')
+        || flavorEntries[0];
+      const flavorText = langFlavor
+        ? langFlavor.flavor_text.replace(/[\f\n\r]/g, ' ')
+        : '';
+
+      let evoChain = [];
+      const evoUrl = speciesData.evolution_chain?.url;
+      if (evoUrl) {
+        const evoRes = await fetch(evoUrl);
+        if (evoRes.ok) {
+          const evoData = await evoRes.json();
+          const allEntries = collectEvoChain(evoData.chain);
+
+          if (selectedGeneration) {
+            const entriesWithGenerations = await Promise.all(allEntries.map(async entry => ({
+              ...entry,
+              generationNumber: await fetchSpeciesGenerationNumber(entry.speciesId),
+            })));
+
+            evoChain = entriesWithGenerations.filter(entry => {
+              if (!Number.isInteger(entry.generationNumber)) return true;
+              return entry.generationNumber <= selectedGeneration;
+            });
+          } else {
+            evoChain = allEntries;
+          }
+        }
+      }
+
+      _pokemonInfoCache[cacheKey] = {
+        types: resolveTypeNamesForGeneration(pokemonData, selectedGeneration),
+        flavorText,
+        evoChain,
+      };
+    }
+
+    const { types, flavorText, evoChain } = _pokemonInfoCache[cacheKey];
+
+    typesEl.innerHTML = types.map(t =>
+      `<span class="type-badge" data-type="${t}">${t}</span>`
+    ).join('');
+
+    flavorEl.textContent = flavorText || '—';
+
+    evoEl.innerHTML = '';
+    evoChain.forEach(({ speciesId: evoSpeciesId, name: evoName }, i) => {
+      if (i > 0) {
+        const arrow = document.createElement('span');
+        arrow.className = 'evo-arrow';
+        arrow.textContent = '→';
+        evoEl.appendChild(arrow);
+      }
+      const resolvedName = window.__livingDexNames?.[evoSpeciesId] || evoName;
+      const member = document.createElement('div');
+      member.className = 'evo-member';
+      member.innerHTML = `
+        <img class="evo-sprite" src="${spriteUrlForSpecies(evoSpeciesId, spriteStyle)}" alt="${resolvedName}" loading="lazy" onerror="this.style.opacity=.2" />
+        <span class="evo-name">${resolvedName}</span>
+      `;
+      evoEl.appendChild(member);
+    });
+
+    loadingEl.hidden = true;
+    bodyEl.hidden = false;
+  } catch {
+    loadingEl.hidden = true;
+    errorEl.textContent = 'Could not load Pokémon info. Check your connection and try again.';
+    errorEl.hidden = false;
+  }
 }
 
 /**

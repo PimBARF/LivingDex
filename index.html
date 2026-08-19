@@ -351,6 +351,36 @@
     </div>
   </div>
 
+  <!-- Pokémon info modal -->
+  <div id="modalPokemonInfo" class="modal" role="dialog" aria-modal="true"
+       aria-labelledby="pokemonInfoTitle" hidden>
+    <div class="modal-backdrop" data-close></div>
+    <div class="modal-card pokemon-info-card" role="document">
+      <div class="pokemon-info-header">
+        <div class="pokemon-info-sprite-wrap">
+          <img id="pokemonInfoSprite" class="pokemon-info-sprite" src="" alt="" />
+        </div>
+        <div class="pokemon-info-meta">
+          <div id="pokemonInfoNumber" class="pokemon-info-number"></div>
+          <h3 id="pokemonInfoTitle" class="pokemon-info-name"></h3>
+          <div id="pokemonInfoTypes" class="pokemon-info-types"></div>
+        </div>
+      </div>
+      <div id="pokemonInfoBody" class="pokemon-info-body">
+        <div id="pokemonInfoFlavor" class="pokemon-info-flavor"></div>
+        <div class="pokemon-info-section-label">Evolution line</div>
+        <div id="pokemonInfoEvo" class="pokemon-info-evo"></div>
+      </div>
+      <div id="pokemonInfoLoading" class="pokemon-info-loading" hidden>
+        <span class="pokemon-info-loading-text">Loading…</span>
+      </div>
+      <div id="pokemonInfoError" class="pokemon-info-error" hidden></div>
+      <div class="modal-actions">
+        <button id="closePokemonInfo" class="btn" type="button" aria-label="Close Pokémon info">Close</button>
+      </div>
+    </div>
+  </div>
+
     <!-- Reset confirmation modal -->
   <div id="modalReset" class="modal" role="dialog" aria-modal="true"
        aria-labelledby="resetTitle" aria-describedby="resetDesc" hidden>
