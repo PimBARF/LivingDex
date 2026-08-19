@@ -48,6 +48,12 @@ Then open http://localhost:8080 in your browser.
   - `ui.js` — rendering and user interactions
   - `main.js` — app startup
 
+## Support
+
+If you use this project and want to help keep it free and running, you can donate on Ko-fi:
+
+- https://ko-fi.com/pimbarf
+
 ## Notes
 
 - No dependencies or build tools are required.

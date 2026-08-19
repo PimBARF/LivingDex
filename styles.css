@@ -241,6 +241,23 @@ footer {
   border-color: var(--accent-2);
 }
 
+.support-btn {
+  background: linear-gradient(135deg, rgba(255, 204, 0, 0.18), rgba(255, 204, 0, 0.32));
+  border-color: rgba(255, 204, 0, 0.7);
+  color: var(--text);
+  text-decoration: none;
+  box-shadow: 0 0 0 1px rgba(255, 204, 0, 0.12);
+  padding: 0.45rem 0.8rem;
+  font-size: 0.85rem;
+  line-height: 1.1;
+  flex-shrink: 0;
+}
+
+.support-btn:hover {
+  background: linear-gradient(135deg, rgba(255, 204, 0, 0.24), rgba(255, 204, 0, 0.42));
+  border-color: rgba(255, 204, 0, 0.9);
+}
+
 .btn[disabled],
 .btn.is-disabled {
   opacity: 0.55;
