@@ -529,6 +529,7 @@ export function populateDexSlots(sections, slotCount) {
 /** In-memory cache for fetched Pokémon info, keyed by speciesId + selected generation. */
 const _pokemonInfoCache = {};
 const _speciesGenerationCache = {};
+const _pokemonFormIdByNameCache = {};
 
 /** One-time setup state for the info modal. */
 let _infoModalHandlers = null;
@@ -545,8 +546,8 @@ function getGenerationNumberFromName(name) {
   return map[key] ?? null;
 }
 
-function getInfoCacheKey(speciesId, generationNumber = getSelectedGenerationNumber()) {
-  return `${speciesId}:${generationNumber ?? 'all'}`;
+function getInfoCacheKey(speciesId, formId, generationNumber = getSelectedGenerationNumber()) {
+  return `${speciesId}:${formId}:${generationNumber ?? 'all'}`;
 }
 
 function resolveTypeNamesForGeneration(pokemonData, generationNumber) {
@@ -562,6 +563,11 @@ function resolveTypeNamesForGeneration(pokemonData, generationNumber) {
     .sort((left, right) => left.generationNumber - right.generationNumber);
 
   if (!sortedHistory.length) return currentTypes;
+
+  const latestHistoryGeneration = sortedHistory[sortedHistory.length - 1]?.generationNumber ?? null;
+  if (latestHistoryGeneration != null && generationNumber > latestHistoryGeneration) {
+    return currentTypes;
+  }
 
   let snapshot = sortedHistory[0];
   for (let i = sortedHistory.length - 1; i >= 0; i -= 1) {
@@ -612,22 +618,543 @@ function getInfoModalHandlers() {
   return _infoModalHandlers;
 }
 
-/**
- * Collect all species names from a nested evolution chain node.
- * Returns an array of { speciesId, name } in evolution order.
- */
-function collectEvoChain(chainNode) {
-  if (!chainNode) return [];
-  const speciesUrl = chainNode.species?.url || '';
-  const match = speciesUrl.match(/\/pokemon-species\/(\d+)\//);
-  const speciesId = match ? Number(match[1]) : null;
-  const name = chainNode.species?.name || '';
+function parseSpeciesIdFromUrl(url) {
+  const match = String(url || '').match(/\/pokemon-species\/(\d+)\//);
+  return match ? Number(match[1]) : null;
+}
 
-  const result = speciesId ? [{ speciesId, name }] : [];
+function prettifyResourceName(name) {
+  return String(name || '')
+    .replace(/-/g, ' ')
+    .replace(/\b\w/g, chr => chr.toUpperCase())
+    .trim();
+}
+
+function resolveSpeciesDisplayName(speciesId, fallbackName = '') {
+  return window.__livingDexNames?.[speciesId] || fallbackName || 'Unknown';
+}
+
+function collectEvolutionSpecies(chainNode, species = []) {
+  if (!chainNode) return species;
+  const speciesId = parseSpeciesIdFromUrl(chainNode.species?.url);
+  const name = chainNode.species?.name || '';
+  if (speciesId) species.push({ speciesId, name });
   for (const next of (chainNode.evolves_to || [])) {
-    result.push(...collectEvoChain(next));
+    collectEvolutionSpecies(next, species);
+  }
+  return species;
+}
+
+function dedupeSpeciesEntries(entries) {
+  const seen = new Set();
+  const result = [];
+  for (const entry of entries) {
+    if (!entry?.speciesId || seen.has(entry.speciesId)) continue;
+    seen.add(entry.speciesId);
+    result.push(entry);
   }
   return result;
+}
+
+function collectEvolutionTransitions(chainNode, allowedSpeciesIds, transitions = []) {
+  if (!chainNode) return transitions;
+  const fromSpeciesId = parseSpeciesIdFromUrl(chainNode.species?.url);
+  const fromName = chainNode.species?.name || '';
+  if (!fromSpeciesId || !allowedSpeciesIds.has(fromSpeciesId)) return transitions;
+
+  for (const next of (chainNode.evolves_to || [])) {
+    const toSpeciesId = parseSpeciesIdFromUrl(next.species?.url);
+    const toName = next.species?.name || '';
+    if (!toSpeciesId || !allowedSpeciesIds.has(toSpeciesId)) continue;
+
+    transitions.push({
+      fromSpeciesId,
+      fromName,
+      toSpeciesId,
+      toName,
+      details: Array.isArray(next.evolution_details) ? next.evolution_details : [],
+    });
+
+    collectEvolutionTransitions(next, allowedSpeciesIds, transitions);
+  }
+
+  return transitions;
+}
+
+function formatEvolutionDetail(detail) {
+  if (!detail || typeof detail !== 'object') return null;
+  const trigger = detail.trigger?.name || '';
+  const conditions = [];
+
+  const minLevel = Number.isInteger(detail.min_level) ? detail.min_level : null;
+  const minHappiness = Number.isInteger(detail.min_happiness) ? detail.min_happiness : null;
+  const minAffection = Number.isInteger(detail.min_affection) ? detail.min_affection : null;
+  const minBeauty = Number.isInteger(detail.min_beauty) ? detail.min_beauty : null;
+  const minSteps = Number.isInteger(detail.min_steps) ? detail.min_steps : null;
+  const minMoveCount = Number.isInteger(detail.min_move_count) ? detail.min_move_count : null;
+  const minDamageTaken = Number.isInteger(detail.min_damage_taken) ? detail.min_damage_taken : null;
+
+  if (detail.held_item?.name) conditions.push(`holding ${prettifyResourceName(detail.held_item.name)}`);
+  if (detail.known_move?.name) conditions.push(`knowing ${prettifyResourceName(detail.known_move.name)}`);
+  if (detail.used_move?.name) conditions.push(`after using ${prettifyResourceName(detail.used_move.name)}`);
+  if (detail.known_move_type?.name) conditions.push(`knowing a ${prettifyResourceName(detail.known_move_type.name)}-type move`);
+  if (detail.location?.name) conditions.push(`at ${prettifyResourceName(detail.location.name)}`);
+  if (minHappiness !== null) conditions.push(`friendship ${minHappiness}+`);
+  if (minAffection !== null) conditions.push(`affection ${minAffection}+`);
+  if (minBeauty !== null) conditions.push(`beauty ${minBeauty}+`);
+  if (minMoveCount !== null) conditions.push(`knowing at least ${minMoveCount} moves`);
+  if (minSteps !== null) conditions.push(`walking at least ${minSteps} steps`);
+  if (minDamageTaken !== null) conditions.push(`after taking at least ${minDamageTaken} damage without fainting`);
+  if (detail.needs_overworld_rain) conditions.push('while raining');
+  if (detail.near_special_rock) conditions.push('near a special rock');
+  if (detail.needs_multiplayer) conditions.push('in multiplayer');
+  if (detail.time_of_day) conditions.push(`during the ${prettifyResourceName(detail.time_of_day)}`);
+  if (detail.trade_species?.name) conditions.push(`when traded for ${prettifyResourceName(detail.trade_species.name)}`);
+  if (detail.party_species?.name) conditions.push(`with ${prettifyResourceName(detail.party_species.name)} in party`);
+  if (detail.party_type?.name) conditions.push(`with a ${prettifyResourceName(detail.party_type.name)}-type Pokémon in party`);
+  if (detail.turn_upside_down) conditions.push('while the console is upside down');
+  if (detail.region?.name) conditions.push(`in ${prettifyResourceName(detail.region.name)}`);
+
+  if (detail.gender === 1) conditions.push('for female Pokémon');
+  if (detail.gender === 2) conditions.push('for male Pokémon');
+
+  if (detail.relative_physical_stats === 1) conditions.push('with Attack > Defense');
+  if (detail.relative_physical_stats === -1) conditions.push('with Attack < Defense');
+  if (detail.relative_physical_stats === 0) conditions.push('with Attack = Defense');
+
+  let baseText = 'Special condition';
+  if (trigger === 'level-up') {
+    baseText = minLevel !== null ? `Level ${minLevel}` : 'Level up';
+  } else if (trigger === 'trade') {
+    baseText = 'Trade';
+  } else if (trigger === 'use-item') {
+    baseText = detail.item?.name ? `Use ${prettifyResourceName(detail.item.name)}` : 'Use item';
+  } else if (trigger === 'shed') {
+    baseText = 'Shed';
+  } else if (trigger) {
+    baseText = prettifyResourceName(trigger);
+  }
+
+  const methodText = conditions.length ? `${baseText} (${conditions.join('; ')})` : baseText;
+  return methodText.trim();
+}
+
+function getEvolutionMethodLines(details) {
+  const methods = (Array.isArray(details) ? details : [])
+    .map(formatEvolutionDetail)
+    .filter(Boolean);
+  if (!methods.length) return ['Unknown'];
+  return Array.from(new Set(methods));
+}
+
+function createEvolutionMember({ speciesId, spriteId = speciesId, fallbackName, spriteStyle }) {
+  const resolvedName = resolveSpeciesDisplayName(speciesId, fallbackName);
+  const member = document.createElement('div');
+  member.className = 'evo-member';
+
+  const sprite = document.createElement('img');
+  sprite.className = 'evo-sprite';
+  sprite.src = spriteUrlForSpecies(spriteId, spriteStyle);
+  sprite.alt = resolvedName;
+  sprite.loading = 'lazy';
+  sprite.onerror = function onEvolutionSpriteError() {
+    this.style.opacity = '0.2';
+  };
+
+  const label = document.createElement('span');
+  label.className = 'evo-name';
+  label.textContent = resolvedName;
+
+  member.append(sprite, label);
+  return member;
+}
+
+function normalizeFormName(name) {
+  return String(name || '').trim().toLowerCase();
+}
+
+async function fetchPokemonIdByName(formName) {
+  const normalizedName = normalizeFormName(formName);
+  if (!normalizedName) return null;
+  if (_pokemonFormIdByNameCache[normalizedName] !== undefined) {
+    return _pokemonFormIdByNameCache[normalizedName];
+  }
+
+  try {
+    const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${encodeURIComponent(normalizedName)}`);
+    if (!response.ok) {
+      _pokemonFormIdByNameCache[normalizedName] = null;
+      return null;
+    }
+    const payload = await response.json();
+    const pokemonId = Number(payload?.id);
+    const resolvedId = Number.isInteger(pokemonId) && pokemonId > 0 ? pokemonId : null;
+    _pokemonFormIdByNameCache[normalizedName] = resolvedId;
+    return resolvedId;
+  } catch {
+    _pokemonFormIdByNameCache[normalizedName] = null;
+    return null;
+  }
+}
+
+function filterEvolutionDetailsForForms(
+  details,
+  fromFormName = '',
+  toFormName = '',
+  fromIsDefault = undefined,
+  toIsDefault = undefined,
+) {
+  const allDetails = Array.isArray(details) ? details : [];
+  if (allDetails.length <= 1) return allDetails;
+
+  let filtered = allDetails;
+  const normalizedFromForm = normalizeFormName(fromFormName);
+  const normalizedToForm = normalizeFormName(toFormName);
+
+  if (normalizedFromForm) {
+    const fromMatches = filtered.filter(detail =>
+      normalizeFormName(detail?.base_form?.name) === normalizedFromForm
+    );
+    if (fromMatches.length) {
+      filtered = fromMatches;
+    } else {
+      const defaultFromMatches = filtered.filter(detail => !normalizeFormName(detail?.base_form?.name));
+      if (defaultFromMatches.length) filtered = defaultFromMatches;
+    }
+  }
+
+  if (normalizedToForm) {
+    const toMatches = filtered.filter(detail =>
+      normalizeFormName(detail?.evolved_form?.name) === normalizedToForm
+    );
+    if (toMatches.length) {
+      filtered = toMatches;
+    } else {
+      const defaultToMatches = filtered.filter(detail => !normalizeFormName(detail?.evolved_form?.name));
+      if (defaultToMatches.length) filtered = defaultToMatches;
+    }
+  }
+
+  if (filtered.length > 1 && fromIsDefault !== undefined) {
+    const fromDefaultMatches = filtered.filter(detail =>
+      typeof detail?.is_default === 'boolean' && detail.is_default === fromIsDefault
+    );
+    if (fromDefaultMatches.length) filtered = fromDefaultMatches;
+  }
+
+  if (filtered.length > 1 && toIsDefault !== undefined) {
+    const toDefaultMatches = filtered.filter(detail =>
+      typeof detail?.is_default === 'boolean' && detail.is_default === toIsDefault
+    );
+    if (toDefaultMatches.length) filtered = toDefaultMatches;
+  }
+
+  return filtered;
+}
+
+function inferPreferredEvolutionContext({
+  transitions,
+  selectedSpeciesId,
+  selectedFormName,
+  selectedIsDefault,
+}) {
+  const preferredForms = new Map();
+  const preferredDefaults = new Map();
+  const normalizedSelectedForm = normalizeFormName(selectedFormName);
+  if (selectedSpeciesId && normalizedSelectedForm) {
+    preferredForms.set(selectedSpeciesId, normalizedSelectedForm);
+  }
+  if (selectedSpeciesId && typeof selectedIsDefault === 'boolean') {
+    preferredDefaults.set(selectedSpeciesId, selectedIsDefault);
+  }
+
+  const maxPasses = Math.max(1, transitions.length * 2);
+  for (let pass = 0; pass < maxPasses; pass += 1) {
+    let changed = false;
+    for (const transition of transitions) {
+      const fromHint = preferredForms.get(transition.fromSpeciesId) || '';
+      const toHint = preferredForms.get(transition.toSpeciesId) || '';
+      const fromDefaultHint = preferredDefaults.has(transition.fromSpeciesId)
+        ? preferredDefaults.get(transition.fromSpeciesId)
+        : undefined;
+      const toDefaultHint = preferredDefaults.has(transition.toSpeciesId)
+        ? preferredDefaults.get(transition.toSpeciesId)
+        : undefined;
+      const matchingDetails = filterEvolutionDetailsForForms(
+        transition.details,
+        fromHint,
+        toHint,
+        fromDefaultHint,
+        toDefaultHint,
+      );
+
+      if (!fromHint) {
+        const baseFormValues = matchingDetails.map(detail => normalizeFormName(detail?.base_form?.name));
+        const hasUnnamedBaseForm = baseFormValues.some(value => !value);
+        const baseForms = Array.from(new Set(baseFormValues.filter(Boolean)));
+        if (!hasUnnamedBaseForm && baseForms.length === 1) {
+          preferredForms.set(transition.fromSpeciesId, baseForms[0]);
+          changed = true;
+        }
+      }
+
+      if (!toHint) {
+        const evolvedFormValues = matchingDetails.map(detail => normalizeFormName(detail?.evolved_form?.name));
+        const hasUnnamedEvolvedForm = evolvedFormValues.some(value => !value);
+        const evolvedForms = Array.from(new Set(evolvedFormValues.filter(Boolean)));
+        if (!hasUnnamedEvolvedForm && evolvedForms.length === 1) {
+          preferredForms.set(transition.toSpeciesId, evolvedForms[0]);
+          changed = true;
+        }
+      }
+
+      if (!preferredDefaults.has(transition.fromSpeciesId)) {
+        const fromDefaults = Array.from(new Set(matchingDetails
+          .map(detail => detail?.is_default)
+          .filter(value => typeof value === 'boolean')));
+        if (fromDefaults.length === 1) {
+          preferredDefaults.set(transition.fromSpeciesId, fromDefaults[0]);
+          changed = true;
+        }
+      }
+
+      if (!preferredDefaults.has(transition.toSpeciesId)) {
+        const toDefaults = Array.from(new Set(matchingDetails
+          .map(detail => detail?.is_default)
+          .filter(value => typeof value === 'boolean')));
+        if (toDefaults.length === 1) {
+          preferredDefaults.set(transition.toSpeciesId, toDefaults[0]);
+          changed = true;
+        }
+      }
+    }
+    if (!changed) break;
+  }
+
+  return { preferredForms, preferredDefaults };
+}
+
+function applyFormContextToTransitions(transitions, { preferredForms, preferredDefaults }) {
+  return transitions.map(transition => {
+    const fromFormName = preferredForms.get(transition.fromSpeciesId) || '';
+    const toFormName = preferredForms.get(transition.toSpeciesId) || '';
+    const fromIsDefault = preferredDefaults.has(transition.fromSpeciesId)
+      ? preferredDefaults.get(transition.fromSpeciesId)
+      : undefined;
+    const toIsDefault = preferredDefaults.has(transition.toSpeciesId)
+      ? preferredDefaults.get(transition.toSpeciesId)
+      : undefined;
+    return {
+      ...transition,
+      details: filterEvolutionDetailsForForms(
+        transition.details,
+        fromFormName,
+        toFormName,
+        fromIsDefault,
+        toIsDefault,
+      ),
+    };
+  });
+}
+
+async function resolveEvolutionSpriteMap({
+  selectedSpeciesId,
+  selectedFormId,
+  preferredForms,
+  speciesIds = [],
+}) {
+  const spriteMap = {};
+  if (Number.isInteger(selectedSpeciesId) && Number.isInteger(selectedFormId)) {
+    spriteMap[selectedSpeciesId] = selectedFormId;
+  }
+
+  const uniqueSpeciesIds = Array.from(new Set((Array.isArray(speciesIds) ? speciesIds : [])
+    .map(Number)
+    .filter(id => Number.isInteger(id) && id > 0)));
+
+  await Promise.all(uniqueSpeciesIds.map(async speciesId => {
+    const preferredFormName = preferredForms.get(speciesId) || '';
+    const normalizedFormName = normalizeFormName(preferredFormName);
+    if (!normalizedFormName || !normalizedFormName.includes('-')) return;
+    const formPokemonId = await fetchPokemonIdByName(normalizedFormName);
+    if (Number.isInteger(formPokemonId) && formPokemonId > 0) {
+      spriteMap[speciesId] = formPokemonId;
+    }
+  }));
+
+  return spriteMap;
+}
+
+function buildEvolutionPaths(base, transitions) {
+  if (!Array.isArray(transitions) || !transitions.length) return [];
+
+  const adjacency = new Map();
+  const fromIds = new Set();
+  const toIds = new Set();
+
+  transitions.forEach(transition => {
+    if (!transition?.fromSpeciesId || !transition?.toSpeciesId) return;
+    fromIds.add(transition.fromSpeciesId);
+    toIds.add(transition.toSpeciesId);
+    if (!adjacency.has(transition.fromSpeciesId)) adjacency.set(transition.fromSpeciesId, []);
+    adjacency.get(transition.fromSpeciesId).push(transition);
+  });
+
+  let roots = [];
+  if (base?.speciesId && fromIds.has(base.speciesId)) {
+    roots = [{ speciesId: base.speciesId, name: base.name || '' }];
+  } else {
+    roots = Array.from(fromIds)
+      .filter(speciesId => !toIds.has(speciesId))
+      .map(speciesId => {
+        const firstTransition = transitions.find(t => t.fromSpeciesId === speciesId);
+        return { speciesId, name: firstTransition?.fromName || '' };
+      });
+  }
+
+  const paths = [];
+  const dfs = (root, currentSpeciesId, chain, visitedSpeciesIds) => {
+    const outgoing = adjacency.get(currentSpeciesId) || [];
+    if (!outgoing.length) {
+      paths.push({ root, chain });
+      return;
+    }
+
+    outgoing.forEach(transition => {
+      if (visitedSpeciesIds.has(transition.toSpeciesId)) {
+        paths.push({ root, chain });
+        return;
+      }
+      const nextVisited = new Set(visitedSpeciesIds);
+      nextVisited.add(transition.toSpeciesId);
+      dfs(root, transition.toSpeciesId, [...chain, transition], nextVisited);
+    });
+  };
+
+  roots.forEach(root => {
+    dfs(root, root.speciesId, [], new Set([root.speciesId]));
+  });
+
+  return paths.filter(path => path.chain.length > 0);
+}
+
+function createEvolutionConnector({
+  arrowSymbol,
+  methods,
+  reverseArrowSymbol = '',
+  reverseMethods = [],
+}) {
+  const connector = document.createElement('div');
+  connector.className = 'evo-connector';
+
+  const arrow = document.createElement('span');
+  arrow.className = 'evo-arrow';
+  arrow.textContent = arrowSymbol;
+  connector.appendChild(arrow);
+
+  const methodLines = document.createElement('div');
+  methodLines.className = 'evo-method-lines';
+  methods.forEach(method => {
+    const line = document.createElement('span');
+    line.className = 'evo-method-line';
+    line.textContent = method;
+    methodLines.appendChild(line);
+  });
+  connector.appendChild(methodLines);
+
+  if (reverseArrowSymbol) {
+    const reverseArrow = document.createElement('span');
+    reverseArrow.className = 'evo-arrow evo-arrow-reverse';
+    reverseArrow.textContent = reverseArrowSymbol;
+    connector.appendChild(reverseArrow);
+  }
+
+  if (reverseMethods.length) {
+    const reverseMethodLines = document.createElement('div');
+    reverseMethodLines.className = 'evo-method-lines evo-method-lines-reverse';
+    reverseMethods.forEach(method => {
+      const line = document.createElement('span');
+      line.className = 'evo-method-line';
+      line.textContent = method;
+      reverseMethodLines.appendChild(line);
+    });
+    connector.appendChild(reverseMethodLines);
+  }
+
+  return connector;
+}
+
+function renderEvolutionDetails(evoEl, { base, transitions, breeding, speciesSpriteMap, spriteStyle }) {
+  evoEl.innerHTML = '';
+
+  if (!transitions.length) {
+    if (base?.speciesId) {
+      evoEl.appendChild(createEvolutionMember({
+        speciesId: base.speciesId,
+        spriteId: speciesSpriteMap?.[base.speciesId] || base.speciesId,
+        fallbackName: base.name,
+        spriteStyle,
+      }));
+      return;
+    }
+    const empty = document.createElement('div');
+    empty.className = 'evo-empty';
+    empty.textContent = 'No additional evolution information available.';
+    evoEl.appendChild(empty);
+    return;
+  }
+
+  const paths = buildEvolutionPaths(base, transitions);
+  const fallbackPaths = paths.length ? paths : [{
+    root: {
+      speciesId: transitions[0].fromSpeciesId,
+      name: transitions[0].fromName,
+    },
+    chain: transitions,
+  }];
+
+  fallbackPaths.forEach(path => {
+    const row = document.createElement('div');
+    row.className = 'evo-row';
+
+    const rootMember = createEvolutionMember({
+      speciesId: path.root.speciesId,
+      spriteId: speciesSpriteMap?.[path.root.speciesId] || path.root.speciesId,
+      fallbackName: path.root.name,
+      spriteStyle,
+    });
+
+    const hasBreedingForRoot = breeding?.itemName
+      && breeding?.baby?.speciesId
+      && breeding.baby.speciesId === path.root.speciesId;
+
+    row.appendChild(rootMember);
+
+    path.chain.forEach((transition, index) => {
+      const isBreedingTransition = hasBreedingForRoot && index === 0;
+      const parentSpeciesIds = new Set((breeding?.parents || []).map(parent => parent.speciesId));
+      const includeReverseBreeding = isBreedingTransition
+        && (!parentSpeciesIds.size || parentSpeciesIds.has(transition.toSpeciesId));
+
+      row.appendChild(createEvolutionConnector({
+        arrowSymbol: '→',
+        methods: getEvolutionMethodLines(transition.details),
+        reverseArrowSymbol: includeReverseBreeding ? '←' : '',
+        reverseMethods: includeReverseBreeding
+          ? [`Hold ${prettifyResourceName(breeding.itemName)}`]
+          : [],
+      }));
+
+      row.appendChild(createEvolutionMember({
+        speciesId: transition.toSpeciesId,
+        spriteId: speciesSpriteMap?.[transition.toSpeciesId] || transition.toSpeciesId,
+        fallbackName: transition.toName,
+        spriteStyle,
+      }));
+    });
+
+    evoEl.appendChild(row);
+  });
 }
 
 /**
@@ -664,7 +1191,7 @@ export async function openPokemonInfoModal(speciesId, formId, name) {
   openModal();
 
   const selectedGeneration = getSelectedGenerationNumber();
-  const cacheKey = getInfoCacheKey(speciesId, selectedGeneration);
+  const cacheKey = getInfoCacheKey(speciesId, formId, selectedGeneration);
 
   try {
     if (!_pokemonInfoCache[cacheKey]) {
@@ -690,13 +1217,14 @@ export async function openPokemonInfoModal(speciesId, formId, name) {
         ? langFlavor.flavor_text.replace(/[\f\n\r]/g, ' ')
         : '';
 
-      let evoChain = [];
+      let evolution = { base: null, transitions: [], breeding: null };
       const evoUrl = speciesData.evolution_chain?.url;
       if (evoUrl) {
         const evoRes = await fetch(evoUrl);
         if (evoRes.ok) {
           const evoData = await evoRes.json();
-          const allEntries = collectEvoChain(evoData.chain);
+          const allEntries = dedupeSpeciesEntries(collectEvolutionSpecies(evoData.chain));
+          let allowedSpeciesIds = new Set(allEntries.map(entry => entry.speciesId));
 
           if (selectedGeneration) {
             const entriesWithGenerations = await Promise.all(allEntries.map(async entry => ({
@@ -704,24 +1232,68 @@ export async function openPokemonInfoModal(speciesId, formId, name) {
               generationNumber: await fetchSpeciesGenerationNumber(entry.speciesId),
             })));
 
-            evoChain = entriesWithGenerations.filter(entry => {
-              if (!Number.isInteger(entry.generationNumber)) return true;
-              return entry.generationNumber <= selectedGeneration;
-            });
-          } else {
-            evoChain = allEntries;
+            allowedSpeciesIds = new Set(entriesWithGenerations
+              .filter(entry => !Number.isInteger(entry.generationNumber) || entry.generationNumber <= selectedGeneration)
+              .map(entry => entry.speciesId));
           }
+
+          const chainRootId = parseSpeciesIdFromUrl(evoData?.chain?.species?.url);
+          const chainRootName = evoData?.chain?.species?.name || '';
+          const base = chainRootId && allowedSpeciesIds.has(chainRootId)
+            ? { speciesId: chainRootId, name: chainRootName }
+            : allEntries.find(entry => allowedSpeciesIds.has(entry.speciesId)) || null;
+
+          const transitions = collectEvolutionTransitions(evoData.chain, allowedSpeciesIds);
+          const preferredEvolutionContext = inferPreferredEvolutionContext({
+            transitions,
+            selectedSpeciesId: speciesId,
+            selectedFormName: pokemonData?.name || '',
+            selectedIsDefault: typeof pokemonData?.is_default === 'boolean' ? pokemonData.is_default : undefined,
+          });
+          const contextualTransitions = applyFormContextToTransitions(transitions, preferredEvolutionContext);
+          const speciesSpriteMap = await resolveEvolutionSpriteMap({
+            selectedSpeciesId: speciesId,
+            selectedFormId: formId,
+            preferredForms: preferredEvolutionContext.preferredForms,
+            speciesIds: Array.from(allowedSpeciesIds),
+          });
+          let breeding = null;
+          const babyTriggerItem = evoData?.baby_trigger_item?.name || '';
+          const parentCandidates = (evoData?.chain?.evolves_to || [])
+            .map(entry => ({
+              speciesId: parseSpeciesIdFromUrl(entry?.species?.url),
+              name: entry?.species?.name || '',
+            }))
+            .filter(entry => entry.speciesId && allowedSpeciesIds.has(entry.speciesId));
+
+          if (babyTriggerItem && base?.speciesId) {
+            const uniqueParents = [];
+            const seenParentIds = new Set();
+            parentCandidates.forEach(parent => {
+              if (seenParentIds.has(parent.speciesId)) return;
+              seenParentIds.add(parent.speciesId);
+              uniqueParents.push(parent);
+            });
+
+            breeding = {
+              itemName: babyTriggerItem,
+              baby: base,
+              parents: uniqueParents,
+            };
+          }
+
+          evolution = { base, transitions: contextualTransitions, breeding, speciesSpriteMap };
         }
       }
 
       _pokemonInfoCache[cacheKey] = {
         types: resolveTypeNamesForGeneration(pokemonData, selectedGeneration),
         flavorText,
-        evoChain,
+        evolution,
       };
     }
 
-    const { types, flavorText, evoChain } = _pokemonInfoCache[cacheKey];
+    const { types, flavorText, evolution } = _pokemonInfoCache[cacheKey];
 
     typesEl.innerHTML = types.map(t =>
       `<span class="type-badge" data-type="${t}">${t}</span>`
@@ -729,22 +1301,12 @@ export async function openPokemonInfoModal(speciesId, formId, name) {
 
     flavorEl.textContent = flavorText || '—';
 
-    evoEl.innerHTML = '';
-    evoChain.forEach(({ speciesId: evoSpeciesId, name: evoName }, i) => {
-      if (i > 0) {
-        const arrow = document.createElement('span');
-        arrow.className = 'evo-arrow';
-        arrow.textContent = '→';
-        evoEl.appendChild(arrow);
-      }
-      const resolvedName = window.__livingDexNames?.[evoSpeciesId] || evoName;
-      const member = document.createElement('div');
-      member.className = 'evo-member';
-      member.innerHTML = `
-        <img class="evo-sprite" src="${spriteUrlForSpecies(evoSpeciesId, spriteStyle)}" alt="${resolvedName}" loading="lazy" onerror="this.style.opacity=.2" />
-        <span class="evo-name">${resolvedName}</span>
-      `;
-      evoEl.appendChild(member);
+    renderEvolutionDetails(evoEl, {
+      base: evolution?.base || null,
+      transitions: evolution?.transitions || [],
+      breeding: evolution?.breeding || null,
+      speciesSpriteMap: evolution?.speciesSpriteMap || {},
+      spriteStyle,
     });
 
     loadingEl.hidden = true;
