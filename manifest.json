@@ -1,0 +1,21 @@
+{
+  "name": "LivingDex.app - Living Pokédex Tracker",
+  "short_name": "LivingDex",
+  "description": "A fast, modern Living Pokédex tracker.",
+  "start_url": "/?source=pwa",
+  "display": "standalone",
+  "background_color": "#4285f4",
+  "theme_color": "#4285f4",
+  "icons": [
+    {
+      "src": "icon-192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "icon-512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ]
+}
