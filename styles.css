@@ -610,6 +610,7 @@ footer {
   display: flex;
   flex-direction: column;
   max-height: calc(100vh - 32px);
+  max-height: calc(100dvh - 32px - env(safe-area-inset-top) - env(safe-area-inset-bottom));
   overflow: hidden;
   backdrop-filter: blur(10px) saturate(120%);
   -webkit-backdrop-filter: blur(10px) saturate(120%);
@@ -858,6 +859,7 @@ footer {
   .modal-card {
     padding: 16px;
     max-height: calc(100vh - 24px);
+    max-height: calc(100dvh - 24px - env(safe-area-inset-top) - env(safe-area-inset-bottom));
   }
 
   .settings-row {
