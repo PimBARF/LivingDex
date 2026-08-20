@@ -623,11 +623,256 @@ function parseSpeciesIdFromUrl(url) {
   return match ? Number(match[1]) : null;
 }
 
+const GAME_VERSION_GROUPS = {
+  rby: ['red', 'blue', 'yellow'],
+  gsc: ['gold', 'silver', 'crystal'],
+  rse: ['ruby', 'sapphire', 'emerald'],
+  frlg: ['firered', 'leafgreen'],
+  dppt: ['diamond', 'pearl', 'platinum'],
+  hgss: ['heartgold', 'soulsilver'],
+  bw: ['black', 'white'],
+  'b2w2': ['black-2', 'white-2'],
+  xy: ['x', 'y'],
+  oras: ['omega-ruby', 'alpha-sapphire'],
+  sm: ['sun', 'moon'],
+  usum: ['ultra-sun', 'ultra-moon'],
+  lgpe: ['lets-go-pikachu', 'lets-go-eevee'],
+  swsh: ['sword', 'shield'],
+  bdsp: ['brilliant-diamond', 'shining-pearl'],
+  sv: ['scarlet', 'violet'],
+};
+
 function prettifyResourceName(name) {
   return String(name || '')
     .replace(/-/g, ' ')
     .replace(/\b\w/g, chr => chr.toUpperCase())
     .trim();
+}
+
+function normalizeEncounterLocationName(name) {
+  return prettifyResourceName(name)
+    .replace(/^[A-Z][a-z]+ Route /, 'Route ')
+    .replace(/\s+Area$/, '');
+}
+
+function prettifyVersionName(name) {
+  return String(name || '')
+    .split('-')
+    .map(part => part ? part.charAt(0).toUpperCase() + part.slice(1) : '')
+    .join(' ')
+    .replace(/\bX\b/g, 'X')
+    .replace(/\bY\b/g, 'Y')
+    .trim();
+}
+
+function getEncounterVersionNames() {
+  return GAME_VERSION_GROUPS[ACTIVE_GAME_ID] || [];
+}
+
+function buildEncounterEntriesForVersion(versionName, encounterData) {
+  const entries = new Set();
+
+  (Array.isArray(encounterData) ? encounterData : []).forEach(location => {
+    const matchingVersion = (location?.version_details || []).find(detail =>
+      String(detail?.version?.name || '') === String(versionName)
+    );
+
+    if (!matchingVersion) return;
+
+    const areaName = normalizeEncounterLocationName(location?.location_area?.name || 'Unknown location');
+    if (areaName) {
+      entries.add(areaName);
+    }
+  });
+
+  return Array.from(entries).sort((left, right) => left.localeCompare(right));
+}
+
+function joinVersionNames(versions) {
+  const names = versions.map(prettifyVersionName).filter(Boolean);
+  if (!names.length) return '';
+  if (names.length === 1) return names[0];
+  if (names.length === 2) return `${names[0]} / ${names[1]}`;
+  return `${names.slice(0, -1).join(' / ')} / ${names[names.length - 1]}`;
+}
+
+function formatTradeSourceList(versions) {
+  const names = versions.map(prettifyVersionName).filter(Boolean);
+  if (!names.length) return '';
+  if (names.length === 1) return `Trade from ${names[0]}`;
+  if (names.length === 2) return `Trade from ${names[0]} or ${names[1]}`;
+  return `Trade from ${names.slice(0, -1).join(', ')} or ${names[names.length - 1]}`;
+}
+
+function createEncounterList(entries, { maxVisible = 5 } = {}) {
+  if (!entries.length) {
+    return null;
+  }
+
+  const list = document.createElement('ul');
+  list.className = 'pokemon-info-encounter-list';
+
+  const collapsed = entries.length > maxVisible;
+  const visibleEntries = collapsed ? entries.slice(0, maxVisible) : entries;
+
+  visibleEntries.forEach(entry => {
+    const item = document.createElement('li');
+    item.className = 'pokemon-info-encounter-item';
+    item.textContent = entry;
+    list.appendChild(item);
+  });
+
+  if (collapsed) {
+    const hiddenEntries = entries.slice(maxVisible);
+    hiddenEntries.forEach(entry => {
+      const item = document.createElement('li');
+      item.className = 'pokemon-info-encounter-item pokemon-info-encounter-item-hidden';
+      item.textContent = entry;
+      item.hidden = true;
+      list.appendChild(item);
+    });
+
+    const toggle = document.createElement('button');
+    toggle.type = 'button';
+    toggle.className = 'pokemon-info-encounter-toggle';
+    toggle.textContent = `Show ${hiddenEntries.length} more`;
+    toggle.setAttribute('aria-expanded', 'false');
+    toggle.addEventListener('click', () => {
+      const isExpanded = toggle.getAttribute('aria-expanded') === 'true';
+      const hiddenItems = list.querySelectorAll('.pokemon-info-encounter-item-hidden');
+      hiddenItems.forEach(item => {
+        item.hidden = isExpanded;
+      });
+
+      toggle.setAttribute('aria-expanded', String(!isExpanded));
+      toggle.textContent = isExpanded ? `Show ${hiddenEntries.length} more` : 'Show fewer';
+    });
+    list.appendChild(toggle);
+  }
+
+  return list;
+}
+
+function getPreEvolutionNameFromTransitions(transitions, speciesId) {
+  if (!Array.isArray(transitions) || !transitions.length) return '';
+
+  const names = transitions
+    .filter(transition => Number(transition?.toSpeciesId) === Number(speciesId))
+    .map(transition => {
+      if (transition?.fromName) return prettifyResourceName(transition.fromName);
+      const fromId = Number(transition?.fromSpeciesId);
+      return fromId ? resolveSpeciesDisplayName(fromId, '') : '';
+    })
+    .filter(Boolean);
+
+  return names[0] || '';
+}
+
+function shouldShowEncounterDetails() {
+  return ACTIVE_GAME_ID !== 'home' && ACTIVE_GAME_ID !== 'pla' && ACTIVE_GAME_ID !== 'za';
+}
+
+function renderEncounterDetails(encounterEl, encounterData, { preEvolutionName = '' } = {}) {
+  encounterEl.innerHTML = '';
+
+  const versionNames = getEncounterVersionNames();
+  const groups = versionNames.map(version => ({
+    version,
+    entries: buildEncounterEntriesForVersion(version, encounterData),
+  }));
+
+  const populatedGroups = groups.filter(group => group.entries.length > 0);
+  if (!populatedGroups.length) {
+    if (preEvolutionName) {
+      const group = document.createElement('div');
+      group.className = 'pokemon-info-encounter-group';
+
+      const header = document.createElement('div');
+      header.className = 'pokemon-info-encounter-header';
+      header.textContent = joinVersionNames(versionNames);
+
+      const list = document.createElement('ul');
+      list.className = 'pokemon-info-encounter-list';
+      const item = document.createElement('li');
+      item.textContent = `Evolve ${preEvolutionName}`;
+      list.appendChild(item);
+
+      group.append(header, list);
+      encounterEl.appendChild(group);
+    } else {
+      const empty = document.createElement('div');
+      empty.className = 'pokemon-info-encounter-note';
+      empty.textContent = 'No encounters in this generation.';
+      encounterEl.appendChild(empty);
+    }
+    return;
+  }
+
+  const allSame = populatedGroups.length > 1 && populatedGroups.every(group => {
+    const other = populatedGroups[0].entries;
+    if (group.entries.length !== other.length) return false;
+    return group.entries.every((entry, index) => entry === other[index]);
+  });
+
+  if (allSame && populatedGroups.length > 1) {
+    const group = document.createElement('div');
+    group.className = 'pokemon-info-encounter-group';
+
+    const header = document.createElement('div');
+    header.className = 'pokemon-info-encounter-header';
+    header.textContent = joinVersionNames(populatedGroups.map(groupItem => groupItem.version));
+
+    const list = createEncounterList(populatedGroups[0].entries);
+    if (list) {
+      group.append(header, list);
+      encounterEl.appendChild(group);
+    }
+    return;
+  }
+
+  const hasEvolutionOnlyAcrossAllVersions = !!preEvolutionName && populatedGroups.length === versionNames.length;
+  if (hasEvolutionOnlyAcrossAllVersions && populatedGroups.length > 0) {
+    const group = document.createElement('div');
+    group.className = 'pokemon-info-encounter-group';
+
+    const header = document.createElement('div');
+    header.className = 'pokemon-info-encounter-header';
+    header.textContent = joinVersionNames(versionNames);
+
+    const uniqueEntries = Array.from(new Set(populatedGroups.flatMap(groupItem => groupItem.entries))).sort();
+    const list = createEncounterList(uniqueEntries);
+    if (list) {
+      group.append(header, list);
+      encounterEl.appendChild(group);
+    }
+    return;
+  }
+
+  versionNames.forEach(version => {
+    const groupData = groups.find(entry => entry.version === version);
+    const group = document.createElement('div');
+    group.className = 'pokemon-info-encounter-group';
+
+    const header = document.createElement('div');
+    header.className = 'pokemon-info-encounter-header';
+    header.textContent = prettifyVersionName(version);
+    group.appendChild(header);
+
+    if (groupData && groupData.entries.length) {
+      const list = createEncounterList(groupData.entries);
+      if (list) group.appendChild(list);
+    } else {
+      const tradeSources = versionNames.filter(source => groups.some(candidate => candidate.version === source && candidate.entries.length));
+      const list = document.createElement('ul');
+      list.className = 'pokemon-info-encounter-list';
+      const item = document.createElement('li');
+      item.textContent = formatTradeSourceList(tradeSources);
+      list.appendChild(item);
+      group.appendChild(list);
+    }
+
+    encounterEl.appendChild(group);
+  });
 }
 
 function resolveSpeciesDisplayName(speciesId, fallbackName = '') {
@@ -1169,10 +1414,16 @@ export async function openPokemonInfoModal(speciesId, formId, name) {
   const spriteEl = document.getElementById('pokemonInfoSprite');
   const typesEl = document.getElementById('pokemonInfoTypes');
   const flavorEl = document.getElementById('pokemonInfoFlavor');
+  const encounterEl = document.getElementById('pokemonInfoEncounter');
+  const encounterLabelEl = document.getElementById('pokemonInfoEncounterLabel');
   const evoEl = document.getElementById('pokemonInfoEvo');
   const bodyEl = document.getElementById('pokemonInfoBody');
   const loadingEl = document.getElementById('pokemonInfoLoading');
   const errorEl = document.getElementById('pokemonInfoError');
+  const showEncounterDetails = shouldShowEncounterDetails();
+
+  if (encounterLabelEl) encounterLabelEl.hidden = !showEncounterDetails;
+  if (encounterEl) encounterEl.hidden = !showEncounterDetails;
 
   // Set initial state: show name/sprite immediately, load the rest
   const spriteStyle = loadSettings().spriteStyle || 'pokesprites';
@@ -1182,6 +1433,7 @@ export async function openPokemonInfoModal(speciesId, formId, name) {
   spriteEl.alt = name;
   typesEl.innerHTML = '';
   flavorEl.textContent = '';
+  encounterEl.innerHTML = '';
   evoEl.innerHTML = '';
   bodyEl.hidden = true;
   errorEl.hidden = true;
@@ -1216,6 +1468,16 @@ export async function openPokemonInfoModal(speciesId, formId, name) {
       const flavorText = langFlavor
         ? langFlavor.flavor_text.replace(/[\f\n\r]/g, ' ')
         : '';
+
+      let encounters = [];
+      try {
+        const encounterRes = await fetch(`https://pokeapi.co/api/v2/pokemon/${formId}/encounters`);
+        if (encounterRes.ok) {
+          encounters = await encounterRes.json();
+        }
+      } catch {
+        encounters = [];
+      }
 
       let evolution = { base: null, transitions: [], breeding: null };
       const evoUrl = speciesData.evolution_chain?.url;
@@ -1289,17 +1551,24 @@ export async function openPokemonInfoModal(speciesId, formId, name) {
       _pokemonInfoCache[cacheKey] = {
         types: resolveTypeNamesForGeneration(pokemonData, selectedGeneration),
         flavorText,
+        encounters,
         evolution,
       };
     }
 
-    const { types, flavorText, evolution } = _pokemonInfoCache[cacheKey];
+    const { types, flavorText, encounters, evolution } = _pokemonInfoCache[cacheKey];
 
     typesEl.innerHTML = types.map(t =>
       `<span class="type-badge" data-type="${t}">${t}</span>`
     ).join('');
 
     flavorEl.textContent = flavorText || '—';
+    const preEvolutionName = getPreEvolutionNameFromTransitions(evolution?.transitions || [], speciesId);
+    if (showEncounterDetails) {
+      renderEncounterDetails(encounterEl, encounters || [], { preEvolutionName });
+    } else {
+      if (encounterEl) encounterEl.innerHTML = '';
+    }
 
     renderEvolutionDetails(evoEl, {
       base: evolution?.base || null,
