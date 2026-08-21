@@ -9,16 +9,12 @@ import {
 } from './storage.js';
 
 import {
-    applyTheme,
-    applyReducedMotionPreference,
     updateProgressBar,
     syncCaughtState,
     registerBoxControls,
     rebuildDexView,
     registerHeaderControls,
     registerScrollToTopButton,
-    registerResetControls,
-    registerSettingsControls,
     applyPersistedViewSettings,
     renderGameSelector,
     renderGameInfo,
@@ -26,6 +22,13 @@ import {
     decodeCaughtState,
     showToast,
 } from './ui.js';
+
+import { applyTheme, applyReducedMotionPreference } from './ui/theme.js';
+
+import {
+  registerResetControls,
+  registerSettingsControls,
+} from './ui/modals.js';
 
 // Derived (set later after we load the Pokédex from API/localStorage)
 let LIVING_DEX_SPECIES_ORDER = [];
