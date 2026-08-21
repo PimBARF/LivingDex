@@ -15,7 +15,7 @@ import {
     loadSettings,
 } from './storage.js';
 
-import { applyNamesToCells } from './ui.js'; // CHANGE THIS LATER!
+import { applyNamesToCells } from './ui/dom-render.js';
 
 // Local cache for resolving pokemon (form) IDs -> species IDs
 const POKEMON_TO_SPECIES_CACHE_KEY = `${ACTIVE_GAME.storagePrefix}-pokemon-to-species-v1`;
