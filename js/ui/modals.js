@@ -14,7 +14,10 @@ import {
 
 import { GAMES, getOrderedGameEntries } from '../config.js';
 
-import { resetDexProgress, applyPersistedViewSettings, showToast } from '../ui.js';
+import { resetDexProgress } from '../state.js';
+
+
+import { applyPersistedViewSettings } from '../main.js';
 
 /**
  * Show the shared link warning modal and run a callback on confirm.
@@ -544,4 +547,19 @@ export function registerSettingsControls() {
   aboutBtn?.addEventListener('click', openAboutModal);
 
   return { closeModal };
+}
+
+/**
+ * Display a toast notification with automatic dismissal.
+ * @param {string} message - The message to display
+ * @param {string} type - The toast type: 'success', 'warning', or 'danger'
+ */
+export function showToast(message, type = 'success') {
+  const toast = document.getElementById('toast');
+  if (!toast) return;
+
+  toast.className = `toast toast-${type}`;
+  toast.textContent = message;
+  toast.classList.add('show');
+  setTimeout(() => toast.classList.remove('show'), 2000);
 }

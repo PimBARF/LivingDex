@@ -1,6 +1,6 @@
-import { loadSettings, loadCaughtSlots } from '../storage.js';
+import { loadSettings, loadCaughtSlots, encodeCaughtState } from '../storage.js';
 import { applyTheme, isMotionReduced } from './theme.js';
-import { encodeCaughtState, showToast } from '../ui.js';
+import { showToast } from './modals.js';
 
 /**
  * Toggle visibility of caught slots based on filter checkbox state.

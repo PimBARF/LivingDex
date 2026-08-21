@@ -2,7 +2,7 @@ import { loadSettings, loadCaughtSlots, saveCaughtSlots } from '../storage.js';
 import { BOX_CAPACITY, spriteUrlForSpecies } from '../config.js';
 import { openPokemonInfoModal } from './pokemon-info.js';
 import { applyHideCaughtFilter } from './controls.js';
-import { updateProgressBar } from '../ui.js';
+import { updateProgressBar } from '../state.js';
 
 // =============================================================================
 // DOM RENDERING & BOX MANAGEMENT

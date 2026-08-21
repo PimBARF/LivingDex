@@ -1,5 +1,6 @@
 import {
     ACTIVE_GAME,
+    ACTIVE_GAME_ID,
     CAUGHT_STORAGE_KEY,
     SEGMENTS_STORAGE_KEY,
     SPECIES_CACHE_KEY,
@@ -171,4 +172,96 @@ export function saveEnabledSegments(set) {
   try {
     localStorage.setItem(SEGMENTS_STORAGE_KEY, JSON.stringify({ enabled: Array.from(set) }));
   } catch { /* ignore */ }
+}
+
+// =============================================================================
+// SHARING & ENCODING
+// =============================================================================
+
+const SHARE_PAYLOAD_VERSION = 2;
+
+function getShareSegments() {
+  return Array.from(loadEnabledSegments()).sort();
+}
+
+function bytesToBase64Url(bytes) {
+  let binary = '';
+  for (let i = 0; i < bytes.length; i += 1) {
+    binary += String.fromCharCode(bytes[i]);
+  }
+  return btoa(binary)
+    .replace(/\+/g, '-')
+    .replace(/\//g, '_')
+    .replace(/=+$/g, '');
+}
+
+function base64UrlToBytes(encoded) {
+  const base64 = encoded.replace(/-/g, '+').replace(/_/g, '/');
+  const padded = base64 + '='.repeat((4 - (base64.length % 4)) % 4);
+  const binary = atob(padded);
+  const bytes = new Uint8Array(binary.length);
+  for (let i = 0; i < binary.length; i += 1) {
+    bytes[i] = binary.charCodeAt(i);
+  }
+  return bytes;
+}
+
+function shareContextMatches(payload, slotCount, segments) {
+  if (!payload || payload.version !== SHARE_PAYLOAD_VERSION) return false;
+  if (payload.gameId !== ACTIVE_GAME_ID || payload.slotCount !== slotCount) return false;
+  const expectedSegments = [...segments].sort();
+  const payloadSegments = Array.isArray(payload.segments) ? [...payload.segments].sort() : [];
+  return expectedSegments.length === payloadSegments.length
+    && expectedSegments.every((segment, index) => segment === payloadSegments[index]);
+}
+
+export function encodeCaughtState(caught, slotCount) {
+  try {
+    // 1) Bit-pack caught slots into bytes
+    const bytes = new Uint8Array(Math.ceil(slotCount / 8));
+    for (let slot = 1; slot <= slotCount; slot += 1) {
+      if (caught[slot]) {
+        const i = slot - 1;
+        bytes[i >> 3] |= 1 << (i & 7);
+      }
+    }
+
+    const payload = JSON.stringify({
+      version: SHARE_PAYLOAD_VERSION,
+      gameId: ACTIVE_GAME_ID,
+      segments: getShareSegments(),
+      slotCount,
+      bits: bytesToBase64Url(bytes),
+    });
+    const compressed = window.pako.deflate(new TextEncoder().encode(payload));
+    return '#s=' + bytesToBase64Url(compressed);
+  } catch (err) {
+    console.error('encodeCaughtState error:', err);
+    return '';
+  }
+}
+
+
+export function decodeCaughtState(hash, slotCount, segments = getShareSegments()) {
+  try {
+    const match = /#s=([^&]+)/.exec(hash);
+    if (!match) return null;
+
+    const compressed = base64UrlToBytes(match[1]);
+    const payload = JSON.parse(new TextDecoder().decode(window.pako.inflate(compressed)));
+    if (!shareContextMatches(payload, slotCount, segments)) return null;
+
+    const bytes = base64UrlToBytes(payload.bits);
+    if (bytes.length !== Math.ceil(slotCount / 8)) return null;
+
+    const caught = {};
+    for (let slot = 1; slot <= slotCount; slot += 1) {
+      const i = slot - 1;
+      caught[slot] = !!(bytes[i >> 3] & (1 << (i & 7)));
+    }
+    return caught;
+  } catch (err) {
+    console.error('decodeCaughtState error:', err);
+    return null;
+  }
 }
