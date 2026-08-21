@@ -13,8 +13,6 @@ import {
     syncCaughtState,
     registerBoxControls,
     rebuildDexView,
-    registerHeaderControls,
-    registerScrollToTopButton,
     applyPersistedViewSettings,
     renderGameSelector,
     renderGameInfo,
@@ -29,6 +27,11 @@ import {
   registerResetControls,
   registerSettingsControls,
 } from './ui/modals.js';
+
+import {
+  registerHeaderControls,
+  registerScrollToTopButton,
+} from './ui/controls.js';
 
 // Derived (set later after we load the Pokédex from API/localStorage)
 let LIVING_DEX_SPECIES_ORDER = [];
