@@ -41,11 +41,13 @@ Then open http://localhost:8080 in your browser.
 
 - `index.html` — app shell and UI
 - `styles.css` — layout and styling
+- `manifest.json` & `sw.js` - Progressive Web App (PWA) offline caching
 - `js/` — app logic
   - `config.js` — game and dex definitions
-  - `api.js` — PokeAPI requests and caching
-  - `storage.js` — browser storage helpers
-  - `ui.js` — rendering and user interactions
+  - `api.js` — PokeAPI requests and local caching
+  - `state.js` — data management and UI synchronization
+  - `storage.js` — browser storage helpers and data encoding
+  - `ui/` — modular DOM rendering, modals, and user interactions
   - `main.js` — app startup
 
 ## Support
@@ -63,4 +65,3 @@ If you use this project and want to help keep it free and running, you can donat
 ## License
 
 MIT. See [LICENSE](./LICENSE) for details.
-

@@ -1,27 +1,33 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>LivingDex.app - Living Pokédex Tracker</title>
-  <meta name="description" content="A fast, modern Living Pokédex tracker for all Pokémon games, including regional forms and DLC. Zero dependencies, automatic local saving, and instant search." />
+  <meta name="description"
+    content="A fast, modern Living Pokédex tracker for all Pokémon games, including regional forms and DLC. Zero dependencies, automatic local saving, and instant search." />
   <meta name="apple-mobile-web-app-title" content="LivingDex">
   <meta name="application-name" content="LivingDex">
   <meta property="og:site_name" content="LivingDex" />
   <meta property="og:title" content="LivingDex.app - Living Pokédex Tracker" />
-  <meta property="og:description" content="A fast, modern Living Pokédex tracker for all Pokémon games, including regional forms and DLC." />
+  <meta property="og:description"
+    content="A fast, modern Living Pokédex tracker for all Pokémon games, including regional forms and DLC." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://livingdex.app/" />
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="icon" type="image/x-icon" href="https://livingdex.app/assets/favicon.ico">
   <link rel="manifest" href="manifest.json">
   <meta name="theme-color" content="#f5f7fa" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="#181a1b" media="(prefers-color-scheme: dark)">
-  <link rel="apple-touch-icon" href="icon-192.png">
+  
+  <link rel="apple-touch-icon" href="https://livingdex.app/assets/icon-192.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
-  
+
   <!-- Apply saved theme preference immediately to prevent flash -->
   <script>
     (function () {
@@ -44,7 +50,7 @@
       if (window.matchMedia) {
         try {
           prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-        } catch (e) {}
+        } catch (e) { }
       }
 
       // Resolve the effective theme: 'light' or 'dark'
@@ -60,9 +66,10 @@
 
       document.documentElement.dataset.theme = effective;
     })();
-</script>
+  </script>
 
 </head>
+
 <body>
   <header>
     <div class="topbar">
@@ -70,27 +77,33 @@
         <a href="#" aria-label="LivingDex home"><span id="logo">LivingDex</span>.app</a>
       </div>
       <div class="controls">
-        <a class="btn support-btn" href="https://ko-fi.com/pimbarf" target="_blank" rel="noreferrer" aria-label="Donate to LivingDex on Ko-fi">☕ Donate</a>
-        <button id="themeToggle" class="btn" type="button" title="Toggle light or dark mode" aria-label="Toggle light or dark mode">🌙</button>
-        <button id="settingsBtn" class="btn" type="button" title="Open settings" aria-label="Open settings" aria-haspopup="dialog">⚙️</button>
+        <a class="btn support-btn" href="https://ko-fi.com/pimbarf" target="_blank" rel="noreferrer"
+          aria-label="Donate to LivingDex on Ko-fi">☕ Donate</a>
+        <button id="themeToggle" class="btn" type="button" title="Toggle light or dark mode"
+          aria-label="Toggle light or dark mode">🌙</button>
+        <button id="settingsBtn" class="btn" type="button" title="Open settings" aria-label="Open settings"
+          aria-haspopup="dialog">⚙️</button>
       </div>
       <select id="dexSelector" class="select" aria-label="Select Pokédex">
         <!-- Options populated by JavaScript -->
       </select>
     </div>
     <div class="searchrow">
-      <input id="search" type="search" placeholder="Search by name or number (e.g. eevee, 133, #42)" aria-label="Search Pokemon" />
+      <input id="search" type="search" placeholder="Search by name or number (e.g. eevee, 133, #42)"
+        aria-label="Search Pokemon" />
       <!-- Hidden checkbox used by applyHideCaughtFilter() -->
       <input id="toggleUncaught" type="checkbox" hidden aria-hidden="true" tabindex="-1" />
-      <button id="hideCaughtBtn" class="btn" type="button" title="Hide caught Pokémon" aria-pressed="false">Hide caught</button>
+      <button id="hideCaughtBtn" class="btn" type="button" title="Hide caught Pokémon" aria-pressed="false">Hide
+        caught</button>
     </div>
   </header>
 
   <main aria-live="polite">
     <div id="gameInfo">
       <div id="gameTitleRow">
-        <h1 id="gameTitle"></h1>
-        <button id="shareDex" class="btn" type="button" title="Share this progress" aria-label="Share your current Pokédex progress">🔗</button>
+        <h1 id="gameTitle">LivingDex Tracker</h1>
+        <button id="shareDex" class="btn" type="button" title="Share this progress"
+          aria-label="Share your current Pokédex progress">🔗</button>
       </div>
       <div id="segmentToggles">
         <!-- Populated by JavaScript based on current game -->
@@ -110,7 +123,8 @@
     Data and sprites via
     <a href="https://pokeapi.co/" target="_blank" rel="noreferrer">PokeAPI</a>.
     &nbsp;•&nbsp;
-    <a class="btn support-btn" href="https://ko-fi.com/pimbarf" target="_blank" rel="noreferrer" aria-label="Donate to LivingDex on Ko-fi">
+    <a class="btn support-btn" href="https://ko-fi.com/pimbarf" target="_blank" rel="noreferrer"
+      aria-label="Donate to LivingDex on Ko-fi">
       ☕ Donate
     </a>
     &nbsp;•&nbsp;
@@ -119,26 +133,17 @@
     </button>
   </footer>
 
-
-  <script src="https://cdn.jsdelivr.net/npm/pako@2.1.0/dist/pako.min.js"></script>
-  <script type="module" src="js/main.js"></script>
-
-  <input id="settingsImportFile" type="file" accept="application/json" hidden />
+  <input id="settingsImportFile" type="file" accept="application/json" aria-label="Import settings file" hidden />
   <div id="toast" class="toast alert alert-success">Link copied to clipboard!</div>
 
   <!-- Scroll to top button -->
-  <button
-    id="scrollTop"
-    class="btn scroll-top"
-    type="button"
-    aria-label="Scroll back to top"
-  >
+  <button id="scrollTop" class="btn scroll-top" type="button" aria-label="Scroll back to top">
     ⬆
   </button>
 
   <!-- Settings modal -->
-  <div id="modalSettings" class="modal" role="dialog" aria-modal="true"
-       aria-labelledby="settingsTitle" aria-describedby="settingsDesc" hidden>
+  <div id="modalSettings" class="modal" role="dialog" aria-modal="true" aria-labelledby="settingsTitle"
+    aria-describedby="settingsDesc" hidden>
     <div class="modal-backdrop" data-close></div>
     <div class="modal-card" role="document">
       <h3 id="settingsTitle">Settings</h3>
@@ -233,8 +238,7 @@
           </div>
 
           <div class="settings-row">
-            <button type="button" id="settingsImportData" class="btn"
-                    aria-describedby="settingsImportHelp">
+            <button type="button" id="settingsImportData" class="btn" aria-describedby="settingsImportHelp">
               Import data
             </button>
           </div>
@@ -250,7 +254,7 @@
 
           <div class="settings-row">
             <button type="button" id="settingsClearAllData" class="btn btn-danger"
-                    aria-describedby="settingsClearAllHelp">
+              aria-describedby="settingsClearAllHelp">
               Clear all saved data ⚠️
             </button>
           </div>
@@ -302,8 +306,8 @@
   </div>
 
   <!-- Import review modal -->
-  <div id="modalImportData" class="modal" role="dialog" aria-modal="true"
-       aria-labelledby="importDataTitle" aria-describedby="importDataDesc" hidden>
+  <div id="modalImportData" class="modal" role="dialog" aria-modal="true" aria-labelledby="importDataTitle"
+    aria-describedby="importDataDesc" hidden>
     <div class="modal-backdrop" data-close></div>
     <div class="modal-card import-modal-card" role="document">
       <h3 id="importDataTitle">Review import</h3>
@@ -322,8 +326,8 @@
   </div>
 
   <!-- About modal -->
-  <div id="modalAbout" class="modal" role="dialog" aria-modal="true"
-       aria-labelledby="aboutTitle" aria-describedby="aboutDesc" hidden>
+  <div id="modalAbout" class="modal" role="dialog" aria-modal="true" aria-labelledby="aboutTitle"
+    aria-describedby="aboutDesc" hidden>
     <div class="modal-backdrop" data-close></div>
     <div class="modal-card" role="document">
       <h3 id="aboutTitle">About LivingDex.app</h3>
@@ -350,8 +354,8 @@
   </div>
 
   <!-- Shared link warning modal -->
-  <div id="modalSharedLink" class="modal" role="dialog" aria-modal="true"
-       aria-labelledby="sharedLinkTitle" aria-describedby="sharedLinkDesc" hidden>
+  <div id="modalSharedLink" class="modal" role="dialog" aria-modal="true" aria-labelledby="sharedLinkTitle"
+    aria-describedby="sharedLinkDesc" hidden>
     <div class="modal-backdrop" data-close></div>
     <div class="modal-card" role="document">
       <h3 id="sharedLinkTitle">Shared Progress Loaded</h3>
@@ -369,8 +373,7 @@
   </div>
 
   <!-- Pokémon info modal -->
-  <div id="modalPokemonInfo" class="modal" role="dialog" aria-modal="true"
-       aria-labelledby="pokemonInfoTitle" hidden>
+  <div id="modalPokemonInfo" class="modal" role="dialog" aria-modal="true" aria-labelledby="pokemonInfoTitle" hidden>
     <div class="modal-backdrop" data-close></div>
     <div class="modal-card pokemon-info-card" role="document">
       <div class="pokemon-info-header">
@@ -400,9 +403,9 @@
     </div>
   </div>
 
-    <!-- Reset confirmation modal -->
-  <div id="modalReset" class="modal" role="dialog" aria-modal="true"
-       aria-labelledby="resetTitle" aria-describedby="resetDesc" hidden>
+  <!-- Reset confirmation modal -->
+  <div id="modalReset" class="modal" role="dialog" aria-modal="true" aria-labelledby="resetTitle"
+    aria-describedby="resetDesc" hidden>
     <div class="modal-backdrop" data-close></div>
     <div class="modal-card" role="document">
       <h3 id="resetTitle">Reset progress ⚠️</h3>
@@ -419,5 +422,8 @@
     </div>
   </div>
 
+  <script type="module" src="js/main.js"></script>
+
 </body>
+
 </html>

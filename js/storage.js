@@ -10,6 +10,8 @@ import {
   getDefaultEnabledSegments,
 } from "./config.js";
 
+import pako from "./pako.esm.mjs";
+
 // Global app settings (UI prefs)
 const DEFAULT_SETTINGS = {
   theme: "auto", // 'light' | 'dark' | 'auto'
@@ -254,7 +256,7 @@ export function encodeCaughtState(caught, slotCount) {
       slotCount,
       bits: bytesToBase64Url(bytes),
     });
-    const compressed = window.pako.deflate(new TextEncoder().encode(payload));
+    const compressed = pako.deflate(new TextEncoder().encode(payload));
     return "#s=" + bytesToBase64Url(compressed);
   } catch (err) {
     console.error("encodeCaughtState error:", err);
@@ -273,7 +275,7 @@ export function decodeCaughtState(
 
     const compressed = base64UrlToBytes(match[1]);
     const payload = JSON.parse(
-      new TextDecoder().decode(window.pako.inflate(compressed)),
+      new TextDecoder().decode(pako.inflate(compressed)),
     );
     if (!shareContextMatches(payload, slotCount, segments)) return null;
 
