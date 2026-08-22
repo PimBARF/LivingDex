@@ -153,6 +153,7 @@ export function registerHeaderControls(slotCount) {
   const COLLAPSE_Y = 120; // px scrolled to collapse
   const EXPAND_Y = 60; // px to expand again (hysteresis)
   const updateSearchCollapse = () => {
+    document.body.classList.toggle("is-scrolled", window.scrollY > COLLAPSE_Y);
     if (!isMobile()) {
       document.body.classList.remove("search-collapsed");
       return;

@@ -431,16 +431,32 @@ footer {
 /* ============================================
    8) PROGRESS BAR
    ============================================ */
-#progressWrap { margin: 6px 0 16px; position: relative; }
+/*#progressWrap { margin: 6px 0 16px; position: relative; }*/
+#progressWrap {
+  position: sticky;
+  top: 135px;
+  z-index: 45;
+  width: 100%;
+  max-width: 680px;
+  margin: 6px auto 16px;
+  transition: top 0.2s ease, width 0.2s ease, max-width 0.2s ease;
+}
+
+body.is-scrolled #progressWrap {
+  width: 96%;
+  max-width: 580px;
+}
 
 #progressTrack {
   width: 100%;
   height: 25px;
   border-radius: 12px;
-  background: var(--card);
   border: 1px solid var(--border);
   overflow: hidden;
   position: relative;
+  background: color-mix(in srgb, var(--card) 75%, transparent);
+  backdrop-filter: saturate(180%) blur(6px);
+  -webkit-backdrop-filter: saturate(180%) blur(6px);
 }
 
 #progressFill {
@@ -458,6 +474,12 @@ footer {
   justify-content: center;
   font-weight: 600;
   color: var(--text);
+}
+
+/* Adjustments for the mobile header */
+@media (max-width: 640px) {
+  #progressWrap { top: 220px; }
+  body.search-collapsed #progressWrap { top: 165px; }
 }
 
 /* ============================================
