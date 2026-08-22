@@ -64,6 +64,27 @@ html[data-motion="reduced"] *::after {
   scroll-behavior: auto !important;
 }
 
+/* Pokémon type colors */
+.type-badge[data-type="normal"]   { --type-color: #9FA19F; }
+.type-badge[data-type="fire"]     { --type-color: #E62829; }
+.type-badge[data-type="water"]    { --type-color: #2980EF; }
+.type-badge[data-type="grass"]    { --type-color: #3FA129; }
+.type-badge[data-type="electric"] { --type-color: #FAC000; color: #333; }
+.type-badge[data-type="ice"]      { --type-color: #3DCEF3; color: #333; }
+.type-badge[data-type="fighting"] { --type-color: #FF8000; }
+.type-badge[data-type="poison"]   { --type-color: #9141CB; }
+.type-badge[data-type="ground"]   { --type-color: #915121; }
+.type-badge[data-type="flying"]   { --type-color: #81B9EF; color: #333; }
+.type-badge[data-type="psychic"]  { --type-color: #EF4179; }
+.type-badge[data-type="bug"]      { --type-color: #91A119; }
+.type-badge[data-type="rock"]     { --type-color: #AFA981; }
+.type-badge[data-type="ghost"]    { --type-color: #704170; }
+.type-badge[data-type="dragon"]   { --type-color: #5060E1; }
+.type-badge[data-type="dark"]     { --type-color: #624D4E; }
+.type-badge[data-type="steel"]    { --type-color: #60A1B8; }
+.type-badge[data-type="fairy"]    { --type-color: #EF70EF; color: #333; }
+.type-badge[data-type="stellar"]  { --type-color: #40B5A5; }
+
 /* ============================================
    2) BASE / RESET
    ============================================ */
@@ -1000,27 +1021,6 @@ footer {
   color: #fff;
   background: var(--type-color, #888);
 }
-
-/* Pokémon type colors */
-.type-badge[data-type="normal"]   { --type-color: #9FA19F; }
-.type-badge[data-type="fire"]     { --type-color: #E62829; }
-.type-badge[data-type="water"]    { --type-color: #2980EF; }
-.type-badge[data-type="grass"]    { --type-color: #3FA129; }
-.type-badge[data-type="electric"] { --type-color: #FAC000; color: #333; }
-.type-badge[data-type="ice"]      { --type-color: #3DCEF3; color: #333; }
-.type-badge[data-type="fighting"] { --type-color: #FF8000; }
-.type-badge[data-type="poison"]   { --type-color: #9141CB; }
-.type-badge[data-type="ground"]   { --type-color: #915121; }
-.type-badge[data-type="flying"]   { --type-color: #81B9EF; color: #333; }
-.type-badge[data-type="psychic"]  { --type-color: #EF4179; }
-.type-badge[data-type="bug"]      { --type-color: #91A119; }
-.type-badge[data-type="rock"]     { --type-color: #AFA981; }
-.type-badge[data-type="ghost"]    { --type-color: #704170; }
-.type-badge[data-type="dragon"]   { --type-color: #5060E1; }
-.type-badge[data-type="dark"]     { --type-color: #624D4E; }
-.type-badge[data-type="steel"]    { --type-color: #60A1B8; }
-.type-badge[data-type="fairy"]    { --type-color: #EF70EF; color: #333; }
-.type-badge[data-type="stellar"]  { --type-color: #40B5A5; }
 
 .pokemon-info-body {
   display: flex;
