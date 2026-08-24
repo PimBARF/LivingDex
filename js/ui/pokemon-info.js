@@ -446,8 +446,13 @@ function collectEvolutionTransitions(
   if (!chainNode) return transitions;
   const fromSpeciesId = parseSpeciesIdFromUrl(chainNode.species?.url);
   const fromName = chainNode.species?.name || "";
-  if (!fromSpeciesId || !allowedSpeciesIds.has(fromSpeciesId))
+  if (!fromSpeciesId || !allowedSpeciesIds.has(fromSpeciesId)) {
+    // Continue traversing down the chain to find valid descendants (e.g., bypassing Gen 2 babies for Gen 1 games)
+    for (const next of chainNode.evolves_to || []) {
+      collectEvolutionTransitions(next, allowedSpeciesIds, transitions);
+    }
     return transitions;
+  }
 
   for (const next of chainNode.evolves_to || []) {
     const toSpeciesId = parseSpeciesIdFromUrl(next.species?.url);
