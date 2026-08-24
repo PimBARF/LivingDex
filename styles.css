@@ -883,7 +883,23 @@ body.is-scrolled #progressWrap {
 .about-body {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 12px;
+}
+
+.about-section {
+  padding-top: 8px;
+  border-top: 1px solid var(--border);
+}
+
+.about-features {
+  margin: 6px 0 0;
+  padding-left: 18px;
+  font-size: 0.9em;
+}
+
+.about-credits {
+  color: var(--muted);
+  font-size: 0.85em;
 }
 
 .about-body p {
