@@ -111,12 +111,12 @@ export function populateDexSlots(sections, slotCount) {
   let globalSlotIndex = 1; // continuous global slot numbering for storage
 
   sections.forEach((section) => {
-    const { key, entries } = section;
+    const { key, entries, startIndex } = section;
     // Select all grids for this section (in order)
     const sectionBoxes = Array.from(
       document.querySelectorAll(`.box[data-section='${key}'] .grid`),
     );
-    let localIndex = 0;
+    let localIndex = (startIndex || 1) - 1;
     let boxCursor = 0;
     let slotsPlacedInCurrentBox = 0;
 

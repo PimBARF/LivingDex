@@ -189,6 +189,8 @@ export const GAMES = {
         pokedexId: 6,
         type: "base",
         optional: false,
+        startEntry: 152,
+        endEntry: 210,
       },
     ],
   },

@@ -239,15 +239,20 @@ export async function buildActiveDexSections() {
             title: seg.title,
             kind: seg.type,
             entries,
+            startIndex: seg.startEntry || 1,
           });
       } else if (seg.pokedexId) {
-        const entries = await loadPokedexEntries(seg.pokedexId);
+        let entries = await loadPokedexEntries(seg.pokedexId);
+        if (seg.startEntry && seg.endEntry) {
+          entries = entries.slice(seg.startEntry - 1, seg.endEntry);
+        }
         if (entries.length)
           sections.push({
             key: seg.id,
             title: seg.title,
             kind: seg.type,
             entries,
+            startIndex: seg.startEntry || 1,
           });
       }
     } catch (err) {
