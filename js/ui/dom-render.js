@@ -1,8 +1,14 @@
-import { loadSettings, loadCaughtSlots, saveCaughtSlots } from "../storage.js";
+import {
+  loadSettings,
+  loadCaughtSlots,
+  saveCaughtSlots,
+  loadShinyCaughtSlots,
+  saveShinyCaughtSlots,
+} from "../storage.js";
 import { BOX_CAPACITY, spriteUrlForSpecies } from "../config.js";
 import { openPokemonInfoModal } from "./pokemon-info.js";
 import { applyHideCaughtFilter } from "./controls.js";
-import { updateProgressBar } from "../state.js";
+import { updateProgressBar, isShinyMode } from "../state.js";
 
 // =============================================================================
 // DOM RENDERING & BOX MANAGEMENT
@@ -78,7 +84,7 @@ export function createDexSlot(
   const spriteStyle = loadSettings().spriteStyle || "pokesprites";
   button.innerHTML = `
     <div class="index">${displayIndex}</div>
-    <img class="sprite" src="${spriteUrlForSpecies(formId, spriteStyle)}" alt="${name}" loading="lazy" onerror="this.style.opacity=.2"/>
+    <img class="sprite" src="${spriteUrlForSpecies(formId, spriteStyle, isShinyMode)}" alt="${name}" loading="lazy" onerror="this.style.opacity=.2"/>
     <div class="label">${name}</div>
     <span class="cell-info-btn" role="button" aria-label="View info for ${name}" tabindex="0">i</span>
   `;
@@ -98,7 +104,7 @@ export function applySpriteStyleToCells() {
       const formId = cell?.dataset.form;
       if (!formId) return;
       img.style.opacity = "";
-      img.src = spriteUrlForSpecies(formId, spriteStyle);
+      img.src = spriteUrlForSpecies(formId, spriteStyle, isShinyMode);
     });
 }
 
@@ -107,7 +113,7 @@ export function applySpriteStyleToCells() {
  * Applies caught state from storage and sets up click handlers.
  */
 export function populateDexSlots(sections, slotCount) {
-  const caught = loadCaughtSlots();
+  const caught = isShinyMode ? loadShinyCaughtSlots() : loadCaughtSlots();
   let globalSlotIndex = 1; // continuous global slot numbering for storage
 
   sections.forEach((section) => {
@@ -139,13 +145,19 @@ export function populateDexSlots(sections, slotCount) {
       }
 
       cell.onclick = () => {
-        const nextCaught = loadCaughtSlots();
+        const nextCaught = isShinyMode
+          ? loadShinyCaughtSlots()
+          : loadCaughtSlots();
         const regionalSlot = Number(cell.dataset.regional);
         const isCaught = !cell.classList.contains("caught");
         cell.classList.toggle("caught", isCaught);
         cell.setAttribute("aria-pressed", String(isCaught));
         nextCaught[regionalSlot] = isCaught;
-        saveCaughtSlots(nextCaught);
+        if (isShinyMode) {
+          saveShinyCaughtSlots(nextCaught);
+        } else {
+          saveCaughtSlots(nextCaught);
+        }
         updateProgressBar(slotCount);
         applyHideCaughtFilter();
       };

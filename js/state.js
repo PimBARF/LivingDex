@@ -1,5 +1,10 @@
 import { ACTIVE_GAME } from "./config.js";
-import { loadCaughtSlots, saveCaughtSlots } from "./storage.js";
+import {
+  loadCaughtSlots,
+  saveCaughtSlots,
+  loadShinyCaughtSlots,
+  saveShinyCaughtSlots,
+} from "./storage.js";
 import { applyHideCaughtFilter } from "./ui/controls.js";
 import {
   renderDexSectionBoxes,
@@ -8,10 +13,18 @@ import {
 } from "./ui/dom-render.js";
 
 /**
+ * Global state to track if the user is viewing a shiny dex or a normal dex.
+ */
+export let isShinyMode = false;
+export function setShinyMode(active) {
+  isShinyMode = active;
+}
+
+/**
  * Count how many slots in the living dex have been caught.
  */
 export function countCaughtSlots(slotCount) {
-  const caught = loadCaughtSlots();
+  const caught = isShinyMode ? loadShinyCaughtSlots() : loadCaughtSlots();
   let total = 0;
   for (let slot = 1; slot <= slotCount; slot += 1) {
     if (caught[slot]) total += 1;
@@ -31,9 +44,15 @@ export function updateProgressBar(slotCount) {
   const fill = document.getElementById("progressFill");
   const label = document.getElementById("progressText");
   if (fill) fill.style.width = `${percentage}%`;
+
+  // Differentiate between shiny and normal dex in the progress label
+  const modeText = isShinyMode ? "✨ Shiny caught" : "caught";
   if (label)
-    label.textContent = `${caught}/${safeSlotCount} caught (${percentage}%)`;
-  document.title = `${ACTIVE_GAME.title} — ${caught}/${safeSlotCount}`;
+    label.textContent = `${caught}/${safeSlotCount} ${modeText} (${percentage}%)`;
+
+  // Update the window title with an optional shiny indicator
+  const titlePrefix = isShinyMode ? "✨ Shiny " : "";
+  document.title = `${titlePrefix}${ACTIVE_GAME.title} — ${caught}/${safeSlotCount}`;
 }
 
 /**
@@ -42,13 +61,22 @@ export function updateProgressBar(slotCount) {
  */
 export function syncCaughtState(caught, slotCount) {
   if (!caught) return;
-  saveCaughtSlots(caught);
+
+  // Route data to correct storage key based on shiny mode
+  if (isShinyMode) {
+    saveShinyCaughtSlots(caught);
+  } else {
+    saveCaughtSlots(caught);
+  }
+
+  // Update all cells in the UI to match caught state
   document.querySelectorAll(".cell:not(.is-placeholder)").forEach((cell) => {
     const slot = Number(cell.dataset.regional);
     const isCaught = !!caught[slot];
     cell.classList.toggle("caught", isCaught);
     cell.setAttribute("aria-pressed", String(isCaught));
   });
+
   updateProgressBar(slotCount);
   applyHideCaughtFilter();
 }

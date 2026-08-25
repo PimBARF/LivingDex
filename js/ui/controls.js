@@ -5,6 +5,8 @@ import {
 } from "../storage.js";
 import { applyTheme, isMotionReduced } from "./theme.js";
 import { showToast } from "./modals.js";
+import { isShinyMode, setShinyMode, rebuildDexView } from "../state.js";
+import { buildActiveDexSections } from "../api.js";
 
 /**
  * Toggle visibility of caught slots based on filter checkbox state.
@@ -78,6 +80,7 @@ export function registerHeaderControls(slotCount) {
   const uncaughtToggle = document.getElementById("toggleUncaught");
   const themeToggle = document.getElementById("themeToggle");
   const shareButton = document.getElementById("shareDex");
+  const shinyToggle = document.getElementById("shinyToggle");
   const hideCaughtBtn = document.getElementById("hideCaughtBtn");
 
   const updateHideCaughtUi = () => {
@@ -120,6 +123,25 @@ export function registerHeaderControls(slotCount) {
       nextMode = currentMode === "dark" ? "light" : "dark";
     }
     applyTheme(nextMode);
+  });
+
+  // Shiny toggle
+  shinyToggle?.addEventListener("click", async () => {
+    const nextMode = !isShinyMode;
+    setShinyMode(nextMode);
+
+    document.body.classList.toggle("shiny-mode", nextMode);
+
+    shinyToggle.setAttribute("aria-pressed", String(nextMode));
+    shinyToggle.classList.toggle("active", nextMode);
+
+    // Rebuild the dex view to reflect shiny mode change
+    const { sections } = await buildActiveDexSections();
+    const combinedSpeciesIds = sections.flatMap((s) =>
+      s.entries.map((e) => e.speciesId),
+    );
+    const currentSlotCount = combinedSpeciesIds.length;
+    rebuildDexView({ sections, slotCount: currentSlotCount });
   });
 
   // Share button

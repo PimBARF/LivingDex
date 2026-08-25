@@ -696,6 +696,7 @@ export const ACTIVE_GAME = GAMES[ACTIVE_GAME_ID] || GAMES["home"];
 export const BOX_CAPACITY = 30;
 
 export const CAUGHT_STORAGE_KEY = `${ACTIVE_GAME.storagePrefix}-caught-v1`;
+export const SHINY_CAUGHT_STORAGE_KEY = `${ACTIVE_GAME.storagePrefix}-shiny-caught-v1`;
 export const SEGMENTS_STORAGE_KEY = `${ACTIVE_GAME.storagePrefix}-segments-v1`;
 
 // Global app settings
@@ -715,12 +716,20 @@ export const prefersReducedMotion = window.matchMedia(
 const SPRITE_BASE =
   "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon";
 const SPRITE_STYLE_URLS = {
-  "official-artwork": (id) => `${SPRITE_BASE}/other/official-artwork/${id}.png`,
-  home: (id) => `${SPRITE_BASE}/other/home/${id}.png`,
-  showdown: (id) => `${SPRITE_BASE}/other/showdown/${id}.gif`,
-  pokesprites: (id) => `${SPRITE_BASE}/${id}.png`,
+  "official-artwork": (id, isShiny) =>
+    `${SPRITE_BASE}/other/official-artwork/${isShiny ? "shiny/" : ""}${id}.png`,
+  home: (id, isShiny) =>
+    `${SPRITE_BASE}/other/home/${isShiny ? "shiny/" : ""}${id}.png`,
+  showdown: (id, isShiny) =>
+    `${SPRITE_BASE}/other/showdown/${isShiny ? "shiny/" : ""}${id}.gif`,
+  pokesprites: (id, isShiny) =>
+    `${SPRITE_BASE}/${isShiny ? "shiny/" : ""}${id}.png`,
 };
-export const spriteUrlForSpecies = (id, style = "pokesprites") =>
-  (SPRITE_STYLE_URLS[style] || SPRITE_STYLE_URLS["pokesprites"])(id);
+export const spriteUrlForSpecies = (
+  id,
+  style = "pokesprites",
+  isShiny = false,
+) =>
+  (SPRITE_STYLE_URLS[style] || SPRITE_STYLE_URLS["pokesprites"])(id, isShiny);
 export const normalizeSpeciesName = (name) =>
   name.replace(/-/g, " ").replace(/\b\w/g, (value) => value.toUpperCase());

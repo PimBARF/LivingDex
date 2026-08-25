@@ -23,6 +23,11 @@
   --success: rgb(16, 185, 129);
   --warning: rgb(245, 158, 11);
   --danger: rgb(239, 68, 68);
+  --shiny-star-rgb: 230, 120, 0;
+  --shiny-bg-core: rgba(255, 160, 0, 0.85);
+  --shiny-bg-edge: rgba(255, 130, 0, 0.25);
+  --shiny-bg-core-hover: rgba(255, 160, 0, 1);
+  --shiny-bg-edge-hover: rgba(255, 130, 0, 0.4);
 
   /* layout */
   --grid-gap: 8px;
@@ -53,6 +58,11 @@
   --surface-soft-border: rgba(255, 255, 255, 0.12);
   --surface-soft-hover: rgba(66, 133, 244, 0.14);
   --label: rgba(24, 26, 27, 0.86);
+  --shiny-star-rgb: 255, 255, 255;
+  --shiny-bg-core: rgba(255, 215, 0, 0.65);
+  --shiny-bg-edge: rgba(255, 180, 0, 0.2);
+  --shiny-bg-core-hover: rgba(255, 215, 0, 0.85);
+  --shiny-bg-edge-hover: rgba(255, 180, 0, 0.3);
 }
 
 html[data-motion="reduced"] *,
@@ -376,10 +386,21 @@ footer {
 }
 
 /* Slightly tighten padding on the inline icon button */
-#shareDex.btn {
-  padding: 0.35rem 0.6rem;
+#shareDex.btn, #shinyToggle.btn {
+  padding: 0.5rem 0.8rem;
   line-height: 1;
   transform: translateY(-3px);
+}
+
+#shinyToggle.active,
+#shinyToggle[aria-pressed="true"] {
+  border-color: rgba(255, 215, 0, 0.8);
+  box-shadow: 0 0 8px rgba(255, 215, 0, 0.25);
+}
+
+#shinyToggle.active:hover,
+#shinyToggle[aria-pressed="true"]:hover {
+  border-color: var(--accent-2, #2AA3EF); 
 }
 
 #hideCaughtBtn {
@@ -647,6 +668,29 @@ body.is-scrolled #progressWrap {
   .grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 }
 
+/* ============================================
+   SHINY MODE
+   ============================================ */
+
+.shiny-mode .cell.caught {
+  /* 1. Revert to your native theme accent color */
+  background-color: var(--accent);
+
+  /* 2. Apply a subtle, repeating SVG sparkle pattern */
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 2L14.5 9.5L22 12L14.5 14.5L12 22L9.5 14.5L2 12L9.5 9.5L12 2Z" fill="rgba(255, 255, 255, 0.3)"/></svg>');
+  background-size: 32px 32px;
+  background-position: center;
+  
+  /* 3. Keep a distinct golden border for framing */
+  border-color: #F5A623 !important;
+}
+
+.shiny-mode .cell.caught:hover {
+  /* Slightly increase the visibility of the pattern on hover */
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 2L14.5 9.5L22 12L14.5 14.5L12 22L9.5 14.5L2 12L9.5 9.5L12 2Z" fill="rgba(255, 255, 255, 0.5)"/></svg>');
+  box-shadow: 0 0 8px rgba(245, 166, 35, 0.4);
+}
+  
 /* ============================================
    11) MODALS
    ============================================ */

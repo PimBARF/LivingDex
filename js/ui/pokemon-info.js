@@ -1,6 +1,7 @@
 import { loadSettings } from "../storage.js";
 import { ACTIVE_GAME, ACTIVE_GAME_ID, spriteUrlForSpecies } from "../config.js";
 import { attachModalHandlers } from "./modals.js";
+import { isShinyMode } from "../state.js";
 
 // =============================================================================
 // POKÉMON INFO MODAL
@@ -595,7 +596,7 @@ function createEvolutionMember({
 
   const sprite = document.createElement("img");
   sprite.className = "evo-sprite";
-  sprite.src = spriteUrlForSpecies(spriteId, spriteStyle);
+  sprite.src = spriteUrlForSpecies(spriteId, spriteStyle, isShinyMode);
   sprite.alt = resolvedName;
   sprite.loading = "lazy";
   sprite.onerror = function onEvolutionSpriteError() {
@@ -1086,7 +1087,7 @@ export async function openPokemonInfoModal(speciesId, formId, name) {
   const spriteStyle = loadSettings().spriteStyle || "pokesprites";
   titleEl.textContent = name;
   numberEl.textContent = `#${speciesId}`;
-  spriteEl.src = spriteUrlForSpecies(formId, spriteStyle);
+  spriteEl.src = spriteUrlForSpecies(formId, spriteStyle, isShinyMode);
   spriteEl.alt = name;
   typesEl.innerHTML = "";
   flavorEl.textContent = "";

@@ -2,6 +2,7 @@ import {
   ACTIVE_GAME,
   ACTIVE_GAME_ID,
   CAUGHT_STORAGE_KEY,
+  SHINY_CAUGHT_STORAGE_KEY,
   SEGMENTS_STORAGE_KEY,
   SPECIES_CACHE_KEY,
   SPECIES_CACHE_META_KEY,
@@ -90,6 +91,30 @@ export function loadCaughtSlots() {
 export function saveCaughtSlots(caught) {
   try {
     localStorage.setItem(CAUGHT_STORAGE_KEY, JSON.stringify(caught));
+  } catch {
+    // Ignore quota errors silently
+  }
+}
+
+/**
+ * Load caught-slot data from localStorage.
+ * Defaults to an empty object when nothing is stored yet.
+ */
+export function loadShinyCaughtSlots() {
+  try {
+    return JSON.parse(localStorage.getItem(SHINY_CAUGHT_STORAGE_KEY) || "{}");
+  } catch {
+    return {};
+  }
+}
+
+/**
+ * Persist caught-slot data to localStorage.
+ * Ignores quota errors to keep the UI responsive.
+ */
+export function saveShinyCaughtSlots(caught) {
+  try {
+    localStorage.setItem(SHINY_CAUGHT_STORAGE_KEY, JSON.stringify(caught));
   } catch {
     // Ignore quota errors silently
   }
