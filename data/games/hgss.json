@@ -9,10 +9,11 @@
   ],
   "sections": [
     {
-      "id": "base",
-      "title": "Regional Pokédex",
+      "id": "johto-updated",
+      "title": "Updated Johto Pokédex",
       "type": "base",
       "optional": false,
+      "defaultEnabled": false,
       "entries": [
         {
           "speciesId": 152,
@@ -1298,6 +1299,224 @@
     }
   ],
   "encounters": {
+    "1": {
+      "heartgold": {
+        "locations": [
+          "pallet town area"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "pallet town area"
+        ]
+      }
+    },
+    "2": {
+      "heartgold": {
+        "locations": [
+          "Evolve Bulbasaur"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "Evolve Bulbasaur"
+        ]
+      }
+    },
+    "3": {
+      "heartgold": {
+        "locations": [
+          "Evolve Ivysaur"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "Evolve Ivysaur"
+        ]
+      }
+    },
+    "4": {
+      "heartgold": {
+        "locations": [
+          "pallet town area"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "pallet town area"
+        ]
+      }
+    },
+    "5": {
+      "heartgold": {
+        "locations": [
+          "Evolve Charmander"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "Evolve Charmander"
+        ]
+      }
+    },
+    "6": {
+      "heartgold": {
+        "locations": [
+          "Evolve Charmeleon"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "Evolve Charmeleon"
+        ]
+      }
+    },
+    "7": {
+      "heartgold": {
+        "locations": [
+          "pallet town area"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "pallet town area"
+        ]
+      }
+    },
+    "8": {
+      "heartgold": {
+        "locations": [
+          "Evolve Squirtle"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "Evolve Squirtle"
+        ]
+      }
+    },
+    "9": {
+      "heartgold": {
+        "locations": [
+          "Evolve Wartortle"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "Evolve Wartortle"
+        ]
+      }
+    },
+    "10": {
+      "heartgold": {
+        "locations": [
+          "johto route 30 area",
+          "johto route 31 area",
+          "ilex forest area",
+          "national park area",
+          "unknown all bugs area",
+          "kanto route 2 south towards viridian city",
+          "kanto route 2 north towards pewter city",
+          "viridian forest area"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "national park area"
+        ]
+      }
+    },
+    "11": {
+      "heartgold": {
+        "locations": [
+          "johto route 30 area",
+          "johto route 31 area",
+          "ilex forest area",
+          "national park area",
+          "johto route 47 area",
+          "kanto route 2 south towards viridian city",
+          "kanto route 2 north towards pewter city",
+          "viridian forest area"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "national park area"
+        ]
+      }
+    },
+    "12": {
+      "heartgold": {
+        "locations": [
+          "ilex forest area",
+          "national park area",
+          "johto route 47 area",
+          "kanto route 2 south towards viridian city",
+          "kanto route 2 north towards pewter city",
+          "viridian forest area"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "national park area"
+        ]
+      }
+    },
+    "13": {
+      "soulsilver": {
+        "locations": [
+          "johto route 30 area",
+          "johto route 31 area",
+          "ilex forest area",
+          "national park area",
+          "unknown all bugs area",
+          "kanto route 2 south towards viridian city",
+          "kanto route 2 north towards pewter city",
+          "viridian forest area"
+        ]
+      },
+      "heartgold": {
+        "locations": [
+          "national park area"
+        ]
+      }
+    },
+    "14": {
+      "soulsilver": {
+        "locations": [
+          "johto route 30 area",
+          "johto route 31 area",
+          "ilex forest area",
+          "national park area",
+          "johto route 47 area",
+          "kanto route 2 south towards viridian city",
+          "kanto route 2 north towards pewter city",
+          "viridian forest area"
+        ]
+      },
+      "heartgold": {
+        "locations": [
+          "national park area"
+        ]
+      }
+    },
+    "15": {
+      "soulsilver": {
+        "locations": [
+          "ilex forest area",
+          "national park area",
+          "johto route 47 area",
+          "kanto route 2 south towards viridian city",
+          "kanto route 2 north towards pewter city",
+          "viridian forest area"
+        ]
+      },
+      "heartgold": {
+        "locations": [
+          "national park area"
+        ]
+      }
+    },
     "16": {
       "heartgold": {
         "locations": [
@@ -1335,6 +1554,3038 @@
           "kanto route 2 north towards pewter city",
           "viridian forest area",
           "johto safari zone forest"
+        ]
+      }
+    },
+    "17": {
+      "heartgold": {
+        "locations": [
+          "johto route 37 area",
+          "johto route 43 area",
+          "kanto route 2 south towards viridian city",
+          "kanto route 8 area",
+          "kanto route 13 area",
+          "kanto route 14 area",
+          "kanto route 15 area",
+          "kanto route 25 area",
+          "kanto route 2 north towards pewter city",
+          "viridian forest area",
+          "johto safari zone plains",
+          "johto safari zone mountain"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "johto route 37 area",
+          "johto route 43 area",
+          "kanto route 2 south towards viridian city",
+          "kanto route 8 area",
+          "kanto route 13 area",
+          "kanto route 14 area",
+          "kanto route 15 area",
+          "kanto route 25 area",
+          "kanto route 2 north towards pewter city",
+          "viridian forest area",
+          "johto safari zone plains",
+          "johto safari zone mountain"
+        ]
+      }
+    },
+    "18": {
+      "heartgold": {
+        "locations": [
+          "Evolve Pidgeotto"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "Evolve Pidgeotto"
+        ]
+      }
+    },
+    "19": {
+      "heartgold": {
+        "locations": [
+          "johto route 29 area",
+          "johto route 30 area",
+          "johto route 31 area",
+          "sprout tower 2f",
+          "sprout tower 3f",
+          "johto route 32 area",
+          "union cave 1f",
+          "union cave b1f",
+          "union cave b2f",
+          "johto route 33 area",
+          "johto route 34 area",
+          "burned tower 1f",
+          "burned tower b1f",
+          "bell tower 2f",
+          "bell tower 3f",
+          "bell tower 4f",
+          "bell tower 5f",
+          "bell tower 6f",
+          "bell tower 7f",
+          "bell tower 8f",
+          "bell tower 9f",
+          "johto route 38 area",
+          "johto route 39 area",
+          "mt mortar 1f",
+          "mt mortar lower cave",
+          "mt mortar b1f",
+          "johto route 46 area",
+          "bell tower 10f",
+          "unknown all rattata area",
+          "kanto route 1 area",
+          "kanto route 3 area",
+          "kanto route 4 area",
+          "kanto route 7 area",
+          "kanto route 9 area",
+          "kanto route 11 area",
+          "kanto route 22 area",
+          "tohjo falls area"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "johto route 29 area",
+          "johto route 30 area",
+          "johto route 31 area",
+          "sprout tower 2f",
+          "sprout tower 3f",
+          "johto route 32 area",
+          "union cave 1f",
+          "union cave b1f",
+          "union cave b2f",
+          "johto route 33 area",
+          "johto route 34 area",
+          "burned tower 1f",
+          "burned tower b1f",
+          "bell tower 2f",
+          "bell tower 3f",
+          "bell tower 4f",
+          "bell tower 5f",
+          "bell tower 6f",
+          "bell tower 7f",
+          "bell tower 8f",
+          "bell tower 9f",
+          "mt mortar 1f",
+          "mt mortar lower cave",
+          "mt mortar b1f",
+          "johto route 46 area",
+          "bell tower 10f",
+          "unknown all rattata area",
+          "kanto route 1 area",
+          "kanto route 3 area",
+          "kanto route 4 area",
+          "kanto route 7 area",
+          "kanto route 9 area",
+          "kanto route 11 area",
+          "kanto route 22 area",
+          "tohjo falls area"
+        ]
+      }
+    },
+    "20": {
+      "heartgold": {
+        "locations": [
+          "union cave b2f",
+          "burned tower 1f",
+          "johto route 38 area",
+          "johto route 39 area",
+          "mt mortar upper cave",
+          "mt mortar b1f",
+          "johto route 47 area",
+          "kanto route 26 area",
+          "kanto route 27 area",
+          "kanto route 7 area",
+          "kanto route 9 area",
+          "kanto route 10 area",
+          "tohjo falls area",
+          "johto safari zone plains",
+          "johto safari zone meadow",
+          "johto safari zone mountain"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "union cave b2f",
+          "burned tower 1f",
+          "johto route 38 area",
+          "johto route 39 area",
+          "mt mortar upper cave",
+          "mt mortar b1f",
+          "johto route 47 area",
+          "kanto route 26 area",
+          "kanto route 27 area",
+          "kanto route 7 area",
+          "kanto route 9 area",
+          "kanto route 10 area",
+          "tohjo falls area",
+          "johto safari zone plains",
+          "johto safari zone meadow",
+          "johto safari zone mountain"
+        ]
+      }
+    },
+    "21": {
+      "heartgold": {
+        "locations": [
+          "johto route 33 area",
+          "johto route 42 area",
+          "johto route 44 area",
+          "johto route 45 area",
+          "johto route 46 area",
+          "johto route 47 area",
+          "vermilion city area",
+          "celadon city area",
+          "kanto route 3 area",
+          "kanto route 4 area",
+          "kanto route 7 area",
+          "kanto route 9 area",
+          "kanto route 10 area",
+          "kanto route 11 area",
+          "kanto route 16 area",
+          "kanto route 22 area",
+          "goldenrod city north gate",
+          "azalea town area",
+          "johto safari zone wetland"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "johto route 33 area",
+          "johto route 42 area",
+          "johto route 44 area",
+          "johto route 45 area",
+          "johto route 46 area",
+          "johto route 47 area",
+          "vermilion city area",
+          "celadon city area",
+          "kanto route 3 area",
+          "kanto route 4 area",
+          "kanto route 7 area",
+          "kanto route 9 area",
+          "kanto route 10 area",
+          "kanto route 11 area",
+          "kanto route 16 area",
+          "kanto route 22 area",
+          "goldenrod city north gate",
+          "azalea town area",
+          "johto safari zone wetland"
+        ]
+      }
+    },
+    "22": {
+      "heartgold": {
+        "locations": [
+          "johto route 47 area",
+          "johto route 48 area",
+          "kanto route 9 area",
+          "kanto route 10 area",
+          "kanto route 16 area",
+          "kanto route 17 area",
+          "kanto route 18 area",
+          "kanto route 22 area",
+          "johto safari zone peak",
+          "johto safari zone desert",
+          "johto safari zone wasteland"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "johto route 47 area",
+          "johto route 48 area",
+          "kanto route 9 area",
+          "kanto route 10 area",
+          "kanto route 16 area",
+          "kanto route 17 area",
+          "kanto route 18 area",
+          "kanto route 22 area",
+          "johto safari zone peak",
+          "johto safari zone desert",
+          "johto safari zone wasteland"
+        ]
+      }
+    },
+    "23": {
+      "soulsilver": {
+        "locations": [
+          "johto route 32 area",
+          "johto route 33 area",
+          "kanto route 3 area",
+          "kanto route 4 area",
+          "johto safari zone marshland"
+        ]
+      },
+      "heartgold": {
+        "locations": [
+          "johto safari zone marshland",
+          "goldenrod city game corner"
+        ]
+      }
+    },
+    "24": {
+      "soulsilver": {
+        "locations": [
+          "kanto route 26 area",
+          "kanto route 27 area",
+          "kanto route 3 area",
+          "kanto route 4 area",
+          "johto safari zone marshland"
+        ]
+      },
+      "heartgold": {
+        "locations": [
+          "johto safari zone marshland"
+        ]
+      }
+    },
+    "25": {
+      "heartgold": {
+        "locations": [
+          "viridian forest area",
+          "saffron city magnet train station"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "viridian forest area",
+          "saffron city magnet train station"
+        ]
+      }
+    },
+    "26": {
+      "heartgold": {
+        "locations": [
+          "Evolve Pikachu"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "Evolve Pikachu"
+        ]
+      }
+    },
+    "27": {
+      "heartgold": {
+        "locations": [
+          "union cave 1f",
+          "union cave b1f",
+          "mt moon 1f",
+          "mt moon 2f",
+          "johto safari zone desert"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "johto safari zone desert",
+          "goldenrod city game corner"
+        ]
+      }
+    },
+    "28": {
+      "heartgold": {
+        "locations": [
+          "kanto route 26 area",
+          "kanto route 27 area",
+          "mt moon 1f",
+          "mt moon 2f",
+          "johto safari zone desert"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "johto safari zone desert"
+        ]
+      }
+    },
+    "29": {
+      "heartgold": {
+        "locations": [
+          "johto route 35 area",
+          "johto route 36 area",
+          "johto safari zone savannah"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "johto route 35 area",
+          "johto route 36 area",
+          "johto safari zone savannah"
+        ]
+      }
+    },
+    "30": {
+      "heartgold": {
+        "locations": [
+          "kanto route 13 area",
+          "kanto route 14 area",
+          "kanto route 15 area",
+          "johto safari zone savannah"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "kanto route 13 area",
+          "kanto route 14 area",
+          "kanto route 15 area",
+          "johto safari zone savannah"
+        ]
+      }
+    },
+    "31": {
+      "heartgold": {
+        "locations": [
+          "Evolve Nidorina"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "Evolve Nidorina"
+        ]
+      }
+    },
+    "32": {
+      "heartgold": {
+        "locations": [
+          "johto route 35 area",
+          "johto route 36 area"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "johto route 35 area",
+          "johto route 36 area"
+        ]
+      }
+    },
+    "33": {
+      "heartgold": {
+        "locations": [
+          "kanto route 13 area",
+          "kanto route 14 area",
+          "kanto route 15 area",
+          "johto safari zone savannah"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "kanto route 13 area",
+          "kanto route 14 area",
+          "kanto route 15 area",
+          "johto safari zone savannah"
+        ]
+      }
+    },
+    "34": {
+      "heartgold": {
+        "locations": [
+          "Evolve Nidorino"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "Evolve Nidorino"
+        ]
+      }
+    },
+    "35": {
+      "heartgold": {
+        "locations": [
+          "mt moon 1f",
+          "mt moon 2f",
+          "johto safari zone meadow"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "mt moon 1f",
+          "mt moon 2f",
+          "johto safari zone meadow"
+        ]
+      }
+    },
+    "36": {
+      "heartgold": {
+        "locations": [
+          "Evolve Clefairy"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "Evolve Clefairy"
+        ]
+      }
+    },
+    "37": {
+      "soulsilver": {
+        "locations": [
+          "johto route 36 area",
+          "johto route 37 area",
+          "johto route 48 area",
+          "kanto route 7 area",
+          "kanto route 8 area"
+        ]
+      }
+    },
+    "38": {
+      "soulsilver": {
+        "locations": [
+          "Evolve Vulpix"
+        ]
+      }
+    },
+    "39": {
+      "heartgold": {
+        "locations": [
+          "kanto route 3 area",
+          "kanto route 4 area",
+          "johto safari zone meadow",
+          "johto safari zone swamp"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "kanto route 3 area",
+          "kanto route 4 area",
+          "johto safari zone meadow",
+          "johto safari zone swamp"
+        ]
+      }
+    },
+    "40": {
+      "heartgold": {
+        "locations": [
+          "Evolve Jigglypuff"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "Evolve Jigglypuff"
+        ]
+      }
+    },
+    "41": {
+      "heartgold": {
+        "locations": [
+          "johto route 32 area",
+          "union cave 1f",
+          "union cave b1f",
+          "union cave b2f",
+          "johto route 33 area",
+          "slowpoke well 1f",
+          "slowpoke well b1f",
+          "ilex forest area",
+          "burned tower 1f",
+          "burned tower b1f",
+          "whirl islands 1f",
+          "whirl islands b1f",
+          "whirl islands b2f",
+          "whirl islands b3f",
+          "johto route 42 area",
+          "mt mortar 1f",
+          "mt mortar lower cave",
+          "mt mortar b1f",
+          "ice path 1f",
+          "ice path b1f",
+          "ice path b2f",
+          "ice path b3f",
+          "dark cave violet city entrance",
+          "dark cave blackthorn city entrance",
+          "seafoam islands 1f",
+          "seafoam islands b1f",
+          "seafoam islands b2f",
+          "seafoam islands b3f",
+          "johto route 47 inside cave",
+          "mt moon 1f",
+          "mt moon 2f",
+          "rock tunnel 1f",
+          "rock tunnel b1f",
+          "kanto route 3 area",
+          "kanto route 4 area",
+          "tohjo falls area",
+          "johto safari zone mountain",
+          "johto safari zone rocky beach",
+          "johto safari zone savannah"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "johto route 32 area",
+          "union cave 1f",
+          "union cave b1f",
+          "union cave b2f",
+          "johto route 33 area",
+          "slowpoke well 1f",
+          "slowpoke well b1f",
+          "ilex forest area",
+          "burned tower 1f",
+          "burned tower b1f",
+          "whirl islands 1f",
+          "whirl islands b1f",
+          "whirl islands b2f",
+          "whirl islands b3f",
+          "johto route 42 area",
+          "mt mortar 1f",
+          "mt mortar lower cave",
+          "mt mortar b1f",
+          "ice path 1f",
+          "ice path b1f",
+          "ice path b2f",
+          "ice path b3f",
+          "dark cave violet city entrance",
+          "dark cave blackthorn city entrance",
+          "seafoam islands 1f",
+          "seafoam islands b1f",
+          "seafoam islands b2f",
+          "seafoam islands b3f",
+          "johto route 47 inside cave",
+          "mt moon 1f",
+          "mt moon 2f",
+          "rock tunnel 1f",
+          "rock tunnel b1f",
+          "kanto route 3 area",
+          "kanto route 4 area",
+          "tohjo falls area",
+          "johto safari zone mountain",
+          "johto safari zone rocky beach",
+          "johto safari zone savannah"
+        ]
+      }
+    },
+    "42": {
+      "heartgold": {
+        "locations": [
+          "union cave b2f",
+          "slowpoke well b1f",
+          "whirl islands 1f",
+          "whirl islands b1f",
+          "whirl islands b2f",
+          "whirl islands b3f",
+          "mt mortar upper cave",
+          "ice path 1f",
+          "ice path b1f",
+          "ice path b2f",
+          "ice path b3f",
+          "dark cave blackthorn city entrance",
+          "seafoam islands 1f",
+          "seafoam islands b1f",
+          "seafoam islands b2f",
+          "seafoam islands b3f",
+          "seafoam islands b4f",
+          "mt silver 2f",
+          "mt silver 1f top",
+          "mt silver 4f",
+          "johto route 47 inside cave",
+          "mt silver 1f",
+          "mt silver mountainside",
+          "mt silver 3f",
+          "mt silver top",
+          "kanto victory road 1 1f",
+          "tohjo falls area",
+          "kanto victory road 1 2f",
+          "kanto victory road 1 3f",
+          "cerulean cave 1f",
+          "cerulean cave 2f",
+          "cerulean cave b1f",
+          "johto safari zone mountain",
+          "johto safari zone savannah"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "union cave b2f",
+          "slowpoke well b1f",
+          "whirl islands 1f",
+          "whirl islands b1f",
+          "whirl islands b2f",
+          "whirl islands b3f",
+          "mt mortar upper cave",
+          "ice path 1f",
+          "ice path b1f",
+          "ice path b2f",
+          "ice path b3f",
+          "dark cave blackthorn city entrance",
+          "seafoam islands 1f",
+          "seafoam islands b1f",
+          "seafoam islands b2f",
+          "seafoam islands b3f",
+          "seafoam islands b4f",
+          "mt silver 2f",
+          "mt silver 1f top",
+          "mt silver 4f",
+          "johto route 47 inside cave",
+          "mt silver 1f",
+          "mt silver mountainside",
+          "mt silver 3f",
+          "mt silver top",
+          "kanto victory road 1 1f",
+          "tohjo falls area",
+          "kanto victory road 1 2f",
+          "kanto victory road 1 3f",
+          "cerulean cave 1f",
+          "cerulean cave 2f",
+          "cerulean cave b1f",
+          "johto safari zone mountain",
+          "johto safari zone savannah"
+        ]
+      }
+    },
+    "43": {
+      "heartgold": {
+        "locations": [
+          "ilex forest area",
+          "kanto route 5 area",
+          "kanto route 6 area",
+          "kanto route 24 area",
+          "kanto route 25 area",
+          "johto safari zone marshland"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "ilex forest area",
+          "kanto route 5 area",
+          "kanto route 6 area",
+          "kanto route 24 area",
+          "kanto route 25 area",
+          "johto safari zone marshland"
+        ]
+      }
+    },
+    "44": {
+      "heartgold": {
+        "locations": [
+          "johto route 47 area",
+          "johto route 48 area",
+          "kanto route 5 area",
+          "johto safari zone marshland"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "johto route 47 area",
+          "johto route 48 area",
+          "kanto route 5 area",
+          "johto safari zone marshland"
+        ]
+      }
+    },
+    "45": {
+      "heartgold": {
+        "locations": [
+          "Evolve Gloom"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "Evolve Gloom"
+        ]
+      }
+    },
+    "46": {
+      "heartgold": {
+        "locations": [
+          "ilex forest area",
+          "national park area",
+          "mt moon 1f",
+          "mt moon 2f",
+          "johto safari zone peak",
+          "johto safari zone swamp"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "ilex forest area",
+          "national park area",
+          "mt moon 1f",
+          "mt moon 2f",
+          "johto safari zone peak",
+          "johto safari zone swamp"
+        ]
+      }
+    },
+    "47": {
+      "heartgold": {
+        "locations": [
+          "cerulean cave 1f",
+          "cerulean cave 2f",
+          "cerulean cave b1f",
+          "johto safari zone swamp"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "cerulean cave 1f",
+          "cerulean cave 2f",
+          "cerulean cave b1f",
+          "johto safari zone swamp"
+        ]
+      }
+    },
+    "48": {
+      "heartgold": {
+        "locations": [
+          "national park area",
+          "johto route 43 area",
+          "lake of rage area",
+          "kanto route 24 area",
+          "kanto route 25 area"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "national park area",
+          "johto route 43 area",
+          "lake of rage area",
+          "kanto route 24 area",
+          "kanto route 25 area"
+        ]
+      }
+    },
+    "49": {
+      "heartgold": {
+        "locations": [
+          "kanto route 24 area",
+          "kanto route 25 area"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "kanto route 24 area",
+          "kanto route 25 area"
+        ]
+      }
+    },
+    "50": {
+      "heartgold": {
+        "locations": [
+          "vermilion city area",
+          "johto route 48 area",
+          "digletts cave area",
+          "johto safari zone marshland"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "vermilion city area",
+          "johto route 48 area",
+          "digletts cave area",
+          "johto safari zone marshland"
+        ]
+      }
+    },
+    "51": {
+      "heartgold": {
+        "locations": [
+          "digletts cave area"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "digletts cave area"
+        ]
+      }
+    },
+    "52": {
+      "soulsilver": {
+        "locations": [
+          "johto route 38 area",
+          "johto route 39 area",
+          "kanto route 5 area",
+          "kanto route 6 area",
+          "kanto route 7 area",
+          "kanto route 8 area"
+        ]
+      }
+    },
+    "53": {
+      "soulsilver": {
+        "locations": [
+          "kanto route 7 area",
+          "cerulean cave 1f"
+        ]
+      }
+    },
+    "54": {
+      "heartgold": {
+        "locations": [
+          "ilex forest area",
+          "johto route 35 area",
+          "seafoam islands 1f",
+          "seafoam islands b1f",
+          "seafoam islands b2f",
+          "seafoam islands b3f",
+          "seafoam islands b4f",
+          "kanto route 6 area",
+          "cerulean cave 1f",
+          "cerulean cave 2f",
+          "cerulean cave b1f",
+          "johto safari zone wetland"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "ilex forest area",
+          "johto route 35 area",
+          "seafoam islands 1f",
+          "seafoam islands b1f",
+          "seafoam islands b2f",
+          "seafoam islands b3f",
+          "seafoam islands b4f",
+          "kanto route 6 area",
+          "cerulean cave 1f",
+          "cerulean cave 2f",
+          "cerulean cave b1f",
+          "johto safari zone wetland"
+        ]
+      }
+    },
+    "55": {
+      "heartgold": {
+        "locations": [
+          "ilex forest area",
+          "johto route 35 area",
+          "seafoam islands 1f",
+          "seafoam islands b1f",
+          "seafoam islands b2f",
+          "seafoam islands b3f",
+          "seafoam islands b4f",
+          "mt silver 2f",
+          "mt silver 1f top",
+          "mt silver 4f",
+          "mt silver mountainside",
+          "mt silver 3f",
+          "mt silver top",
+          "kanto route 6 area",
+          "cerulean cave 1f",
+          "cerulean cave 2f",
+          "cerulean cave b1f",
+          "johto safari zone wasteland",
+          "johto safari zone wetland"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "ilex forest area",
+          "johto route 35 area",
+          "seafoam islands 1f",
+          "seafoam islands b1f",
+          "seafoam islands b2f",
+          "seafoam islands b3f",
+          "seafoam islands b4f",
+          "mt silver 2f",
+          "mt silver 1f top",
+          "mt silver 4f",
+          "mt silver mountainside",
+          "mt silver 3f",
+          "mt silver top",
+          "kanto route 6 area",
+          "cerulean cave 1f",
+          "cerulean cave 2f",
+          "cerulean cave b1f",
+          "johto safari zone wasteland",
+          "johto safari zone wetland"
+        ]
+      }
+    },
+    "56": {
+      "heartgold": {
+        "locations": [
+          "johto route 42 area",
+          "kanto route 9 area"
+        ]
+      }
+    },
+    "57": {
+      "heartgold": {
+        "locations": [
+          "kanto route 9 area",
+          "cerulean cave 1f"
+        ]
+      }
+    },
+    "58": {
+      "heartgold": {
+        "locations": [
+          "johto route 36 area",
+          "johto route 37 area",
+          "johto route 48 area",
+          "kanto route 7 area",
+          "kanto route 8 area"
+        ]
+      }
+    },
+    "59": {
+      "heartgold": {
+        "locations": [
+          "Evolve Growlithe"
+        ]
+      }
+    },
+    "60": {
+      "heartgold": {
+        "locations": [
+          "johto route 30 area",
+          "johto route 31 area",
+          "violet city area",
+          "ruins of alph outside",
+          "ilex forest area",
+          "johto route 35 area",
+          "ecruteak city area",
+          "johto route 43 area",
+          "johto route 44 area",
+          "blackthorn city area",
+          "johto route 45 area",
+          "mt moon mt moon square",
+          "unknown all poliwag area",
+          "johto route 47 cave gate",
+          "mt silver outside",
+          "viridian city area",
+          "kanto route 28 area",
+          "kanto route 6 area",
+          "kanto route 22 area",
+          "cerulean cave 1f",
+          "cerulean cave 2f",
+          "cerulean cave b1f",
+          "johto safari zone meadow",
+          "johto safari zone marshland",
+          "johto safari zone rocky beach",
+          "johto safari zone wetland"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "johto route 30 area",
+          "johto route 31 area",
+          "violet city area",
+          "ruins of alph outside",
+          "ilex forest area",
+          "johto route 35 area",
+          "ecruteak city area",
+          "johto route 43 area",
+          "johto route 44 area",
+          "blackthorn city area",
+          "johto route 45 area",
+          "mt moon mt moon square",
+          "unknown all poliwag area",
+          "johto route 47 cave gate",
+          "mt silver outside",
+          "viridian city area",
+          "kanto route 28 area",
+          "kanto route 6 area",
+          "kanto route 22 area",
+          "cerulean cave 1f",
+          "cerulean cave 2f",
+          "cerulean cave b1f",
+          "johto safari zone meadow",
+          "johto safari zone marshland",
+          "johto safari zone rocky beach",
+          "johto safari zone wetland"
+        ]
+      }
+    },
+    "61": {
+      "heartgold": {
+        "locations": [
+          "johto route 30 area",
+          "johto route 31 area",
+          "violet city area",
+          "ecruteak city area",
+          "johto route 44 area",
+          "mt silver outside",
+          "viridian city area",
+          "kanto route 28 area",
+          "kanto route 22 area",
+          "cerulean cave 1f",
+          "cerulean cave 2f",
+          "cerulean cave b1f",
+          "johto safari zone meadow",
+          "johto safari zone marshland",
+          "johto safari zone rocky beach",
+          "johto safari zone wetland"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "johto route 30 area",
+          "johto route 31 area",
+          "violet city area",
+          "ecruteak city area",
+          "johto route 44 area",
+          "mt silver outside",
+          "viridian city area",
+          "kanto route 28 area",
+          "kanto route 22 area",
+          "cerulean cave 1f",
+          "cerulean cave 2f",
+          "cerulean cave b1f",
+          "johto safari zone meadow",
+          "johto safari zone marshland",
+          "johto safari zone rocky beach",
+          "johto safari zone wetland"
+        ]
+      }
+    },
+    "62": {
+      "heartgold": {
+        "locations": [
+          "Evolve Poliwhirl"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "Evolve Poliwhirl"
+        ]
+      }
+    },
+    "63": {
+      "heartgold": {
+        "locations": [
+          "johto route 34 area",
+          "johto route 35 area",
+          "kanto route 5 area",
+          "kanto route 6 area",
+          "kanto route 8 area",
+          "kanto route 24 area",
+          "kanto route 25 area",
+          "johto safari zone plains",
+          "goldenrod city game corner"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "johto route 34 area",
+          "johto route 35 area",
+          "kanto route 5 area",
+          "kanto route 6 area",
+          "kanto route 8 area",
+          "kanto route 24 area",
+          "kanto route 25 area",
+          "johto safari zone plains",
+          "goldenrod city game corner"
+        ]
+      }
+    },
+    "64": {
+      "heartgold": {
+        "locations": [
+          "kanto route 8 area",
+          "cerulean cave 2f",
+          "cerulean cave b1f"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "kanto route 8 area",
+          "cerulean cave 2f",
+          "cerulean cave b1f"
+        ]
+      }
+    },
+    "65": {
+      "heartgold": {
+        "locations": [
+          "Evolve Kadabra"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "Evolve Kadabra"
+        ]
+      }
+    },
+    "66": {
+      "heartgold": {
+        "locations": [
+          "mt mortar 1f",
+          "mt mortar lower cave",
+          "mt mortar upper cave",
+          "mt mortar b1f",
+          "johto route 47 inside cave",
+          "rock tunnel 1f",
+          "johto safari zone wasteland",
+          "goldenrod city department store 5f"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "mt mortar 1f",
+          "mt mortar lower cave",
+          "mt mortar upper cave",
+          "mt mortar b1f",
+          "johto route 47 inside cave",
+          "rock tunnel 1f",
+          "johto safari zone wasteland",
+          "goldenrod city department store 5f"
+        ]
+      }
+    },
+    "67": {
+      "heartgold": {
+        "locations": [
+          "mt mortar upper cave",
+          "johto route 47 inside cave",
+          "rock tunnel 1f",
+          "cerulean cave 1f",
+          "cerulean cave 2f",
+          "cerulean cave b1f",
+          "johto safari zone wasteland"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "mt mortar upper cave",
+          "johto route 47 inside cave",
+          "rock tunnel 1f",
+          "cerulean cave 1f",
+          "cerulean cave 2f",
+          "cerulean cave b1f",
+          "johto safari zone wasteland"
+        ]
+      }
+    },
+    "68": {
+      "heartgold": {
+        "locations": [
+          "Evolve Machoke"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "Evolve Machoke"
+        ]
+      }
+    },
+    "69": {
+      "heartgold": {
+        "locations": [
+          "johto route 31 area",
+          "johto route 32 area",
+          "johto route 44 area",
+          "kanto route 5 area",
+          "kanto route 6 area",
+          "kanto route 24 area",
+          "kanto route 25 area",
+          "johto safari zone forest",
+          "johto safari zone wasteland"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "johto route 31 area",
+          "johto route 32 area",
+          "johto route 44 area",
+          "kanto route 5 area",
+          "kanto route 6 area",
+          "kanto route 24 area",
+          "kanto route 25 area",
+          "johto safari zone forest",
+          "johto safari zone wasteland"
+        ]
+      }
+    },
+    "70": {
+      "heartgold": {
+        "locations": [
+          "johto route 44 area",
+          "kanto route 24 area",
+          "kanto route 25 area",
+          "johto safari zone swamp"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "johto route 44 area",
+          "kanto route 24 area",
+          "kanto route 25 area",
+          "johto safari zone swamp"
+        ]
+      }
+    },
+    "71": {
+      "heartgold": {
+        "locations": [
+          "Evolve Weepinbell"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "Evolve Weepinbell"
+        ]
+      }
+    },
+    "72": {
+      "heartgold": {
+        "locations": [
+          "new bark town area",
+          "cherrygrove city area",
+          "johto route 32 area",
+          "union cave b2f",
+          "johto route 34 area",
+          "olivine city area",
+          "johto sea route 40 area",
+          "johto sea route 41 area",
+          "whirl islands 1f",
+          "cianwood city area",
+          "johto route 47 area",
+          "kanto route 12 area",
+          "kanto sea route 19 area",
+          "kanto sea route 20 area",
+          "cinnabar island area",
+          "vermilion city area",
+          "pallet town area",
+          "kanto route 26 area",
+          "kanto route 27 area",
+          "kanto route 13 area",
+          "kanto sea route 21 area",
+          "vermilion city ss anne dock",
+          "cianwood city pokemon center"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "new bark town area",
+          "cherrygrove city area",
+          "johto route 32 area",
+          "union cave b2f",
+          "johto route 34 area",
+          "olivine city area",
+          "johto sea route 40 area",
+          "johto sea route 41 area",
+          "whirl islands 1f",
+          "cianwood city area",
+          "johto route 47 area",
+          "kanto route 12 area",
+          "kanto sea route 19 area",
+          "kanto sea route 20 area",
+          "cinnabar island area",
+          "vermilion city area",
+          "pallet town area",
+          "kanto route 26 area",
+          "kanto route 27 area",
+          "kanto route 13 area",
+          "kanto sea route 21 area",
+          "vermilion city ss anne dock",
+          "cianwood city pokemon center"
+        ]
+      }
+    },
+    "73": {
+      "heartgold": {
+        "locations": [
+          "new bark town area",
+          "cherrygrove city area",
+          "johto route 32 area",
+          "union cave b2f",
+          "johto route 34 area",
+          "olivine city area",
+          "johto sea route 40 area",
+          "johto sea route 41 area",
+          "whirl islands 1f",
+          "whirl islands b2f",
+          "cianwood city area",
+          "johto route 47 area",
+          "kanto route 12 area",
+          "kanto sea route 19 area",
+          "kanto sea route 20 area",
+          "cinnabar island area",
+          "vermilion city area",
+          "pallet town area",
+          "kanto route 26 area",
+          "kanto route 27 area",
+          "kanto route 13 area",
+          "kanto sea route 21 area",
+          "vermilion city ss anne dock"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "new bark town area",
+          "cherrygrove city area",
+          "johto route 32 area",
+          "union cave b2f",
+          "johto route 34 area",
+          "olivine city area",
+          "johto sea route 40 area",
+          "johto sea route 41 area",
+          "whirl islands 1f",
+          "whirl islands b2f",
+          "cianwood city area",
+          "johto route 47 area",
+          "kanto route 12 area",
+          "kanto sea route 19 area",
+          "kanto sea route 20 area",
+          "cinnabar island area",
+          "vermilion city area",
+          "pallet town area",
+          "kanto route 26 area",
+          "kanto route 27 area",
+          "kanto route 13 area",
+          "kanto sea route 21 area",
+          "vermilion city ss anne dock"
+        ]
+      }
+    },
+    "74": {
+      "heartgold": {
+        "locations": [
+          "ruins of alph outside",
+          "union cave 1f",
+          "union cave b1f",
+          "union cave b2f",
+          "mt mortar 1f",
+          "mt mortar lower cave",
+          "mt mortar upper cave",
+          "mt mortar b1f",
+          "johto route 45 area",
+          "johto route 46 area",
+          "dark cave violet city entrance",
+          "dark cave blackthorn city entrance",
+          "johto route 47 inside cave",
+          "mt moon 1f",
+          "mt moon 2f",
+          "rock tunnel 1f",
+          "rock tunnel b1f",
+          "kanto victory road 1 3f",
+          "cerulean cave 1f",
+          "cerulean cave b1f",
+          "johto safari zone peak",
+          "johto safari zone meadow",
+          "team rocket hq area"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "ruins of alph outside",
+          "union cave 1f",
+          "union cave b1f",
+          "union cave b2f",
+          "mt mortar 1f",
+          "mt mortar lower cave",
+          "mt mortar upper cave",
+          "mt mortar b1f",
+          "johto route 45 area",
+          "johto route 46 area",
+          "dark cave violet city entrance",
+          "dark cave blackthorn city entrance",
+          "johto route 47 inside cave",
+          "mt moon 1f",
+          "mt moon 2f",
+          "rock tunnel 1f",
+          "rock tunnel b1f",
+          "kanto victory road 1 3f",
+          "cerulean cave 1f",
+          "cerulean cave b1f",
+          "johto safari zone peak",
+          "johto safari zone meadow",
+          "team rocket hq area"
+        ]
+      }
+    },
+    "75": {
+      "heartgold": {
+        "locations": [
+          "mt mortar upper cave",
+          "johto route 45 area",
+          "dark cave blackthorn city entrance",
+          "johto route 47 inside cave",
+          "mt silver 1f",
+          "kanto victory road 1 1f",
+          "kanto victory road 1 2f",
+          "kanto victory road 1 3f",
+          "cerulean cave 1f",
+          "cerulean cave b1f"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "mt mortar upper cave",
+          "johto route 45 area",
+          "dark cave blackthorn city entrance",
+          "johto route 47 inside cave",
+          "mt silver 1f",
+          "kanto victory road 1 1f",
+          "kanto victory road 1 2f",
+          "kanto victory road 1 3f",
+          "cerulean cave 1f",
+          "cerulean cave b1f"
+        ]
+      }
+    },
+    "76": {
+      "heartgold": {
+        "locations": [
+          "johto safari zone peak"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "johto safari zone peak"
+        ]
+      }
+    },
+    "77": {
+      "heartgold": {
+        "locations": [
+          "mt silver outside",
+          "kanto route 26 area",
+          "kanto route 27 area",
+          "kanto route 28 area",
+          "kanto route 22 area",
+          "johto safari zone plains"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "mt silver outside",
+          "kanto route 26 area",
+          "kanto route 27 area",
+          "kanto route 28 area",
+          "kanto route 22 area",
+          "johto safari zone plains"
+        ]
+      }
+    },
+    "78": {
+      "heartgold": {
+        "locations": [
+          "mt silver outside",
+          "kanto route 28 area"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "mt silver outside",
+          "kanto route 28 area"
+        ]
+      }
+    },
+    "79": {
+      "heartgold": {
+        "locations": [
+          "slowpoke well 1f",
+          "slowpoke well b1f",
+          "tohjo falls area",
+          "johto safari zone rocky beach"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "slowpoke well 1f",
+          "slowpoke well b1f",
+          "tohjo falls area",
+          "johto safari zone rocky beach"
+        ]
+      }
+    },
+    "80": {
+      "heartgold": {
+        "locations": [
+          "slowpoke well b1f",
+          "seafoam islands b4f",
+          "johto safari zone peak",
+          "johto safari zone rocky beach"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "slowpoke well b1f",
+          "seafoam islands b4f",
+          "johto safari zone peak",
+          "johto safari zone rocky beach"
+        ]
+      }
+    },
+    "81": {
+      "heartgold": {
+        "locations": [
+          "johto route 38 area",
+          "johto route 39 area",
+          "kanto route 6 area",
+          "kanto route 11 area",
+          "johto safari zone peak",
+          "johto safari zone wasteland"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "johto route 38 area",
+          "johto route 39 area",
+          "kanto route 6 area",
+          "kanto route 11 area",
+          "johto safari zone peak",
+          "johto safari zone wasteland"
+        ]
+      }
+    },
+    "82": {
+      "heartgold": {
+        "locations": [
+          "cerulean cave 1f",
+          "cerulean cave 2f",
+          "cerulean cave b1f",
+          "kanto power plant area",
+          "johto safari zone peak",
+          "johto safari zone mountain"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "cerulean cave 1f",
+          "cerulean cave 2f",
+          "cerulean cave b1f",
+          "kanto power plant area",
+          "johto safari zone peak",
+          "johto safari zone mountain"
+        ]
+      }
+    },
+    "83": {
+      "heartgold": {
+        "locations": [
+          "johto route 38 area",
+          "johto route 39 area",
+          "johto route 47 area",
+          "johto route 48 area",
+          "johto safari zone wetland"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "johto route 38 area",
+          "johto route 39 area",
+          "johto route 47 area",
+          "johto route 48 area",
+          "johto safari zone wetland"
+        ]
+      }
+    },
+    "84": {
+      "heartgold": {
+        "locations": [
+          "mt silver outside",
+          "kanto route 26 area",
+          "kanto route 27 area",
+          "kanto route 28 area",
+          "kanto route 22 area",
+          "johto safari zone rocky beach",
+          "johto safari zone wetland"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "mt silver outside",
+          "kanto route 26 area",
+          "kanto route 27 area",
+          "kanto route 28 area",
+          "kanto route 22 area",
+          "johto safari zone rocky beach",
+          "johto safari zone wetland"
+        ]
+      }
+    },
+    "85": {
+      "heartgold": {
+        "locations": [
+          "blackthorn city area",
+          "mt silver outside",
+          "kanto route 26 area",
+          "kanto route 28 area",
+          "johto safari zone rocky beach"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "blackthorn city area",
+          "mt silver outside",
+          "kanto route 27 area",
+          "kanto route 28 area",
+          "johto safari zone rocky beach"
+        ]
+      }
+    },
+    "86": {
+      "heartgold": {
+        "locations": [
+          "whirl islands 1f",
+          "whirl islands b1f",
+          "whirl islands b2f",
+          "whirl islands b3f",
+          "johto route 47 area",
+          "seafoam islands b1f",
+          "seafoam islands b2f",
+          "seafoam islands b3f",
+          "seafoam islands b4f"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "whirl islands 1f",
+          "whirl islands b1f",
+          "whirl islands b2f",
+          "whirl islands b3f",
+          "johto route 47 area",
+          "seafoam islands b1f",
+          "seafoam islands b2f",
+          "seafoam islands b3f",
+          "seafoam islands b4f"
+        ]
+      }
+    },
+    "87": {
+      "heartgold": {
+        "locations": [
+          "seafoam islands b3f",
+          "seafoam islands b4f"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "seafoam islands b3f",
+          "seafoam islands b4f"
+        ]
+      }
+    },
+    "88": {
+      "heartgold": {
+        "locations": [
+          "celadon city area",
+          "kanto route 16 area",
+          "kanto route 17 area",
+          "kanto route 18 area",
+          "johto safari zone marshland"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "celadon city area",
+          "kanto route 16 area",
+          "kanto route 17 area",
+          "kanto route 18 area",
+          "johto safari zone marshland"
+        ]
+      }
+    },
+    "89": {
+      "heartgold": {
+        "locations": [
+          "celadon city area",
+          "kanto route 16 area",
+          "kanto route 17 area",
+          "kanto route 18 area",
+          "johto safari zone marshland"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "celadon city area",
+          "kanto route 16 area",
+          "kanto route 17 area",
+          "kanto route 18 area",
+          "johto safari zone marshland"
+        ]
+      }
+    },
+    "90": {
+      "heartgold": {
+        "locations": [
+          "new bark town area",
+          "johto sea route 41 area",
+          "johto route 47 area",
+          "kanto sea route 20 area",
+          "cinnabar island area",
+          "vermilion city area",
+          "pallet town area",
+          "kanto route 26 area",
+          "kanto route 27 area",
+          "kanto sea route 21 area",
+          "vermilion city ss anne dock"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "new bark town area",
+          "johto sea route 41 area",
+          "johto route 47 area",
+          "kanto sea route 20 area",
+          "cinnabar island area",
+          "vermilion city area",
+          "pallet town area",
+          "kanto route 26 area",
+          "kanto route 27 area",
+          "kanto sea route 21 area",
+          "vermilion city ss anne dock"
+        ]
+      }
+    },
+    "91": {
+      "heartgold": {
+        "locations": [
+          "Evolve Shellder"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "Evolve Shellder"
+        ]
+      }
+    },
+    "92": {
+      "heartgold": {
+        "locations": [
+          "sprout tower 2f",
+          "sprout tower 3f",
+          "bell tower 2f",
+          "bell tower 3f",
+          "bell tower 4f",
+          "bell tower 5f",
+          "bell tower 6f",
+          "bell tower 7f",
+          "bell tower 8f",
+          "bell tower 9f",
+          "bell tower 10f",
+          "johto safari zone forest"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "sprout tower 2f",
+          "sprout tower 3f",
+          "bell tower 2f",
+          "bell tower 3f",
+          "bell tower 4f",
+          "bell tower 5f",
+          "bell tower 6f",
+          "bell tower 7f",
+          "bell tower 8f",
+          "bell tower 9f",
+          "bell tower 10f",
+          "johto safari zone forest"
+        ]
+      }
+    },
+    "93": {
+      "heartgold": {
+        "locations": [
+          "kanto route 8 area",
+          "johto safari zone forest"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "kanto route 8 area",
+          "johto safari zone forest"
+        ]
+      }
+    },
+    "94": {
+      "heartgold": {
+        "locations": [
+          "Evolve Haunter"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "Evolve Haunter"
+        ]
+      }
+    },
+    "95": {
+      "heartgold": {
+        "locations": [
+          "violet city area",
+          "union cave 1f",
+          "union cave b1f",
+          "union cave b2f",
+          "johto route 47 inside cave",
+          "mt silver 1f",
+          "mt silver mountainside",
+          "rock tunnel b1f",
+          "kanto victory road 1 1f",
+          "kanto victory road 1 2f",
+          "kanto victory road 1 3f",
+          "johto safari zone wasteland"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "violet city area",
+          "union cave 1f",
+          "union cave b1f",
+          "union cave b2f",
+          "johto route 47 inside cave",
+          "mt silver 1f",
+          "mt silver mountainside",
+          "rock tunnel b1f",
+          "kanto victory road 1 1f",
+          "kanto victory road 1 2f",
+          "kanto victory road 1 3f",
+          "johto safari zone wasteland"
+        ]
+      }
+    },
+    "96": {
+      "heartgold": {
+        "locations": [
+          "johto route 34 area",
+          "johto route 35 area",
+          "kanto route 11 area",
+          "johto safari zone swamp"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "johto route 34 area",
+          "johto route 35 area",
+          "kanto route 11 area",
+          "johto safari zone swamp"
+        ]
+      }
+    },
+    "97": {
+      "heartgold": {
+        "locations": [
+          "kanto route 11 area",
+          "johto safari zone swamp"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "kanto route 11 area",
+          "johto safari zone swamp"
+        ]
+      }
+    },
+    "98": {
+      "heartgold": {
+        "locations": [
+          "cherrygrove city area",
+          "union cave b2f",
+          "johto route 34 area",
+          "olivine city area",
+          "johto sea route 40 area",
+          "whirl islands 1f",
+          "whirl islands b1f",
+          "whirl islands b2f",
+          "whirl islands b3f",
+          "cianwood city area",
+          "seafoam islands b4f",
+          "johto route 47 inside cave",
+          "kanto sea route 19 area",
+          "johto safari zone mountain",
+          "johto safari zone rocky beach"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "cherrygrove city area",
+          "union cave b2f",
+          "johto route 34 area",
+          "olivine city area",
+          "johto sea route 40 area",
+          "whirl islands 1f",
+          "whirl islands b1f",
+          "whirl islands b2f",
+          "whirl islands b3f",
+          "cianwood city area",
+          "seafoam islands b4f",
+          "johto route 47 inside cave",
+          "kanto sea route 19 area",
+          "johto safari zone mountain",
+          "johto safari zone rocky beach"
+        ]
+      }
+    },
+    "99": {
+      "heartgold": {
+        "locations": [
+          "cherrygrove city area",
+          "union cave b2f",
+          "johto route 34 area",
+          "olivine city area",
+          "johto sea route 40 area",
+          "whirl islands 1f",
+          "whirl islands b2f",
+          "cianwood city area",
+          "seafoam islands b4f",
+          "johto route 47 inside cave",
+          "kanto sea route 19 area",
+          "johto safari zone rocky beach",
+          "johto safari zone wasteland"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "cherrygrove city area",
+          "union cave b2f",
+          "johto route 34 area",
+          "olivine city area",
+          "johto sea route 40 area",
+          "whirl islands 1f",
+          "whirl islands b2f",
+          "cianwood city area",
+          "seafoam islands b4f",
+          "johto route 47 inside cave",
+          "kanto sea route 19 area",
+          "johto safari zone rocky beach",
+          "johto safari zone wasteland"
+        ]
+      }
+    },
+    "100": {
+      "heartgold": {
+        "locations": [
+          "olivine city area",
+          "kanto route 10 area",
+          "johto safari zone swamp",
+          "team rocket hq area"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "olivine city area",
+          "kanto route 10 area",
+          "johto safari zone swamp",
+          "team rocket hq area"
+        ]
+      }
+    },
+    "101": {
+      "heartgold": {
+        "locations": [
+          "cerulean cave 1f",
+          "cerulean cave 2f",
+          "cerulean cave b1f",
+          "team rocket hq area"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "cerulean cave 1f",
+          "cerulean cave 2f",
+          "cerulean cave b1f",
+          "team rocket hq area"
+        ]
+      }
+    },
+    "102": {
+      "heartgold": {
+        "locations": [
+          "new bark town area",
+          "johto route 29 area",
+          "cherrygrove city area",
+          "johto route 30 area",
+          "johto route 31 area",
+          "violet city area",
+          "johto route 32 area",
+          "johto route 34 area",
+          "johto route 35 area",
+          "national park area",
+          "johto route 36 area",
+          "johto route 37 area",
+          "ecruteak city area",
+          "johto route 38 area",
+          "johto route 39 area",
+          "johto route 43 area",
+          "lake of rage area",
+          "johto route 47 area",
+          "johto route 48 area",
+          "kanto route 26 area",
+          "kanto route 27 area",
+          "safari zone gate area"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "new bark town area",
+          "johto route 29 area",
+          "cherrygrove city area",
+          "johto route 30 area",
+          "johto route 31 area",
+          "violet city area",
+          "johto route 32 area",
+          "johto route 34 area",
+          "johto route 35 area",
+          "national park area",
+          "johto route 36 area",
+          "johto route 37 area",
+          "ecruteak city area",
+          "johto route 38 area",
+          "johto route 39 area",
+          "johto route 43 area",
+          "lake of rage area",
+          "johto route 47 area",
+          "johto route 48 area",
+          "kanto route 26 area",
+          "kanto route 27 area",
+          "safari zone gate area"
+        ]
+      }
+    },
+    "103": {
+      "heartgold": {
+        "locations": [
+          "Evolve Exeggcute"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "Evolve Exeggcute"
+        ]
+      }
+    },
+    "104": {
+      "heartgold": {
+        "locations": [
+          "rock tunnel 1f",
+          "rock tunnel b1f",
+          "johto safari zone desert"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "rock tunnel 1f",
+          "rock tunnel b1f",
+          "johto safari zone desert"
+        ]
+      }
+    },
+    "105": {
+      "heartgold": {
+        "locations": [
+          "rock tunnel b1f",
+          "johto safari zone desert"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "rock tunnel b1f",
+          "johto safari zone desert"
+        ]
+      }
+    },
+    "106": {
+      "heartgold": {
+        "locations": [
+          "Evolve Tyrogue"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "Evolve Tyrogue"
+        ]
+      }
+    },
+    "107": {
+      "heartgold": {
+        "locations": [
+          "Evolve Tyrogue"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "Evolve Tyrogue"
+        ]
+      }
+    },
+    "108": {
+      "heartgold": {
+        "locations": [
+          "johto route 44 area",
+          "johto safari zone forest",
+          "johto safari zone mountain"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "johto route 44 area",
+          "johto safari zone forest",
+          "johto safari zone mountain"
+        ]
+      }
+    },
+    "109": {
+      "heartgold": {
+        "locations": [
+          "burned tower 1f",
+          "burned tower b1f",
+          "johto safari zone marshland",
+          "team rocket hq area"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "burned tower 1f",
+          "burned tower b1f",
+          "johto safari zone marshland",
+          "team rocket hq area"
+        ]
+      }
+    },
+    "110": {
+      "heartgold": {
+        "locations": [
+          "johto safari zone marshland"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "johto safari zone marshland"
+        ]
+      }
+    },
+    "111": {
+      "heartgold": {
+        "locations": [
+          "kanto victory road 1 1f",
+          "digletts cave area",
+          "kanto victory road 1 2f",
+          "kanto victory road 1 3f",
+          "johto safari zone savannah"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "kanto victory road 1 1f",
+          "digletts cave area",
+          "kanto victory road 1 2f",
+          "kanto victory road 1 3f",
+          "johto safari zone savannah"
+        ]
+      }
+    },
+    "112": {
+      "heartgold": {
+        "locations": [
+          "johto safari zone savannah"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "johto safari zone savannah"
+        ]
+      }
+    },
+    "113": {
+      "heartgold": {
+        "locations": [
+          "kanto route 13 area",
+          "kanto route 14 area",
+          "kanto route 15 area",
+          "johto safari zone meadow"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "kanto route 13 area",
+          "kanto route 14 area",
+          "kanto route 15 area",
+          "johto safari zone meadow"
+        ]
+      }
+    },
+    "114": {
+      "heartgold": {
+        "locations": [
+          "johto route 44 area",
+          "mt silver outside",
+          "kanto route 12 area",
+          "fuchsia city area",
+          "kanto route 28 area",
+          "kanto route 13 area",
+          "kanto route 14 area",
+          "kanto route 15 area",
+          "kanto route 18 area",
+          "kanto sea route 21 area"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "johto route 44 area",
+          "mt silver outside",
+          "kanto route 12 area",
+          "fuchsia city area",
+          "kanto route 28 area",
+          "kanto route 13 area",
+          "kanto route 14 area",
+          "kanto route 15 area",
+          "kanto route 18 area",
+          "kanto sea route 21 area"
+        ]
+      }
+    },
+    "115": {
+      "heartgold": {
+        "locations": [
+          "rock tunnel b1f",
+          "johto safari zone wasteland"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "rock tunnel b1f",
+          "johto safari zone wasteland"
+        ]
+      }
+    },
+    "116": {
+      "heartgold": {
+        "locations": [
+          "whirl islands 1f",
+          "whirl islands b2f",
+          "seafoam islands b4f"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "whirl islands 1f",
+          "whirl islands b2f",
+          "seafoam islands b4f"
+        ]
+      }
+    },
+    "117": {
+      "heartgold": {
+        "locations": [
+          "whirl islands 1f",
+          "whirl islands b2f",
+          "seafoam islands b4f"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "whirl islands 1f",
+          "whirl islands b2f",
+          "seafoam islands b4f"
+        ]
+      }
+    },
+    "118": {
+      "heartgold": {
+        "locations": [
+          "union cave 1f",
+          "union cave b1f",
+          "slowpoke well 1f",
+          "slowpoke well b1f",
+          "johto route 42 area",
+          "mt mortar 1f",
+          "mt mortar upper cave",
+          "mt mortar b1f",
+          "dark cave violet city entrance",
+          "dark cave blackthorn city entrance",
+          "mt silver 2f",
+          "mt silver 1f top",
+          "mt silver 4f",
+          "mt silver 1f",
+          "mt silver top",
+          "unknown all rattata area",
+          "cerulean city area",
+          "kanto route 4 area",
+          "kanto route 9 area",
+          "kanto route 10 area",
+          "kanto route 24 area",
+          "kanto route 25 area",
+          "tohjo falls area",
+          "cerulean cave 1f",
+          "cerulean cave 2f",
+          "cerulean cave b1f",
+          "johto safari zone swamp",
+          "johto safari zone rocky beach"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "union cave 1f",
+          "union cave b1f",
+          "slowpoke well 1f",
+          "slowpoke well b1f",
+          "johto route 42 area",
+          "mt mortar 1f",
+          "mt mortar upper cave",
+          "mt mortar b1f",
+          "dark cave violet city entrance",
+          "dark cave blackthorn city entrance",
+          "mt silver 2f",
+          "mt silver 1f top",
+          "mt silver 4f",
+          "mt silver 1f",
+          "mt silver top",
+          "unknown all rattata area",
+          "cerulean city area",
+          "kanto route 4 area",
+          "kanto route 9 area",
+          "kanto route 10 area",
+          "kanto route 24 area",
+          "kanto route 25 area",
+          "tohjo falls area",
+          "cerulean cave 1f",
+          "cerulean cave 2f",
+          "cerulean cave b1f",
+          "johto safari zone swamp",
+          "johto safari zone rocky beach"
+        ]
+      }
+    },
+    "119": {
+      "heartgold": {
+        "locations": [
+          "union cave 1f",
+          "union cave b1f",
+          "slowpoke well 1f",
+          "slowpoke well b1f",
+          "johto route 42 area",
+          "mt mortar 1f",
+          "mt mortar upper cave",
+          "mt mortar b1f",
+          "dark cave violet city entrance",
+          "dark cave blackthorn city entrance",
+          "mt silver 2f",
+          "mt silver 1f top",
+          "mt silver 4f",
+          "mt silver 1f",
+          "mt silver top",
+          "cerulean city area",
+          "kanto route 4 area",
+          "kanto route 9 area",
+          "kanto route 10 area",
+          "kanto route 24 area",
+          "kanto route 25 area",
+          "tohjo falls area",
+          "johto safari zone swamp",
+          "johto safari zone rocky beach"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "union cave 1f",
+          "union cave b1f",
+          "slowpoke well 1f",
+          "slowpoke well b1f",
+          "johto route 42 area",
+          "mt mortar 1f",
+          "mt mortar upper cave",
+          "mt mortar b1f",
+          "dark cave violet city entrance",
+          "dark cave blackthorn city entrance",
+          "mt silver 2f",
+          "mt silver 1f top",
+          "mt silver 4f",
+          "mt silver 1f",
+          "mt silver top",
+          "cerulean city area",
+          "kanto route 4 area",
+          "kanto route 9 area",
+          "kanto route 10 area",
+          "kanto route 24 area",
+          "kanto route 25 area",
+          "tohjo falls area",
+          "johto safari zone swamp",
+          "johto safari zone rocky beach"
+        ]
+      }
+    },
+    "120": {
+      "heartgold": {
+        "locations": [
+          "cherrygrove city area",
+          "union cave b2f",
+          "johto route 34 area",
+          "olivine city area",
+          "johto sea route 40 area",
+          "cianwood city area",
+          "johto route 47 area",
+          "kanto sea route 19 area"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "cherrygrove city area",
+          "union cave b2f",
+          "johto route 34 area",
+          "olivine city area",
+          "johto sea route 40 area",
+          "cianwood city area",
+          "johto route 47 area",
+          "kanto sea route 19 area"
+        ]
+      }
+    },
+    "121": {
+      "heartgold": {
+        "locations": [
+          "Evolve Staryu"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "Evolve Staryu"
+        ]
+      }
+    },
+    "122": {
+      "heartgold": {
+        "locations": [
+          "kanto sea route 21 area",
+          "johto safari zone forest",
+          "celadon city prize corner"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "kanto sea route 21 area",
+          "johto safari zone forest",
+          "celadon city prize corner"
+        ]
+      }
+    },
+    "123": {
+      "heartgold": {
+        "locations": [
+          "national park area"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "national park area"
+        ]
+      }
+    },
+    "124": {
+      "heartgold": {
+        "locations": [
+          "ice path 1f",
+          "ice path b1f",
+          "ice path b2f",
+          "ice path b3f",
+          "seafoam islands b4f"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "ice path 1f",
+          "ice path b1f",
+          "ice path b2f",
+          "ice path b3f",
+          "seafoam islands b4f"
+        ]
+      }
+    },
+    "125": {
+      "heartgold": {
+        "locations": [
+          "kanto route 10 area",
+          "johto safari zone forest"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "kanto route 10 area",
+          "johto safari zone forest"
+        ]
+      }
+    },
+    "126": {
+      "heartgold": {
+        "locations": [
+          "burned tower b1f",
+          "johto safari zone peak"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "burned tower b1f",
+          "johto safari zone peak"
+        ]
+      }
+    },
+    "127": {
+      "heartgold": {
+        "locations": [
+          "national park area"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "national park area"
+        ]
+      }
+    },
+    "128": {
+      "heartgold": {
+        "locations": [
+          "johto route 38 area",
+          "johto route 39 area",
+          "johto route 48 area",
+          "johto safari zone savannah"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "johto route 38 area",
+          "johto route 39 area",
+          "johto route 48 area",
+          "johto safari zone savannah"
+        ]
+      }
+    },
+    "129": {
+      "heartgold": {
+        "locations": [
+          "new bark town area",
+          "cherrygrove city area",
+          "johto route 30 area",
+          "johto route 31 area",
+          "violet city area",
+          "johto route 32 area",
+          "ruins of alph outside",
+          "union cave 1f",
+          "union cave b1f",
+          "union cave b2f",
+          "slowpoke well 1f",
+          "slowpoke well b1f",
+          "ilex forest area",
+          "johto route 34 area",
+          "johto route 35 area",
+          "ecruteak city area",
+          "olivine city area",
+          "johto sea route 40 area",
+          "johto sea route 41 area",
+          "whirl islands 1f",
+          "whirl islands b2f",
+          "cianwood city area",
+          "johto route 42 area",
+          "mt mortar 1f",
+          "mt mortar upper cave",
+          "mt mortar b1f",
+          "johto route 43 area",
+          "lake of rage area",
+          "johto route 44 area",
+          "blackthorn city area",
+          "dragons den area",
+          "johto route 45 area",
+          "dark cave violet city entrance",
+          "dark cave blackthorn city entrance",
+          "johto route 47 area",
+          "mt moon mt moon square",
+          "unknown all poliwag area",
+          "seafoam islands b4f",
+          "mt silver 2f",
+          "mt silver 1f top",
+          "mt silver 4f",
+          "johto route 47 cave gate",
+          "mt silver outside",
+          "mt silver 1f",
+          "mt silver top",
+          "unknown all rattata area",
+          "kanto route 12 area",
+          "kanto sea route 19 area",
+          "kanto sea route 20 area",
+          "cinnabar island area",
+          "viridian city area",
+          "cerulean city area",
+          "vermilion city area",
+          "fuchsia city area",
+          "pallet town area",
+          "kanto route 26 area",
+          "kanto route 27 area",
+          "kanto route 28 area",
+          "kanto route 4 area",
+          "kanto route 6 area",
+          "kanto route 9 area",
+          "kanto route 10 area",
+          "kanto route 13 area",
+          "kanto sea route 21 area",
+          "kanto route 22 area",
+          "kanto route 24 area",
+          "kanto route 25 area",
+          "tohjo falls area",
+          "cerulean cave 1f",
+          "cerulean cave 2f",
+          "cerulean cave b1f",
+          "vermilion city ss anne dock",
+          "johto safari zone meadow",
+          "johto safari zone swamp",
+          "johto safari zone marshland",
+          "johto safari zone rocky beach",
+          "johto safari zone wetland"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "new bark town area",
+          "cherrygrove city area",
+          "johto route 30 area",
+          "johto route 31 area",
+          "violet city area",
+          "johto route 32 area",
+          "ruins of alph outside",
+          "union cave 1f",
+          "union cave b1f",
+          "union cave b2f",
+          "slowpoke well 1f",
+          "slowpoke well b1f",
+          "ilex forest area",
+          "johto route 34 area",
+          "johto route 35 area",
+          "ecruteak city area",
+          "olivine city area",
+          "johto sea route 40 area",
+          "johto sea route 41 area",
+          "whirl islands 1f",
+          "whirl islands b2f",
+          "cianwood city area",
+          "johto route 42 area",
+          "mt mortar 1f",
+          "mt mortar upper cave",
+          "mt mortar b1f",
+          "johto route 43 area",
+          "lake of rage area",
+          "johto route 44 area",
+          "blackthorn city area",
+          "dragons den area",
+          "johto route 45 area",
+          "dark cave violet city entrance",
+          "dark cave blackthorn city entrance",
+          "johto route 47 area",
+          "mt moon mt moon square",
+          "unknown all poliwag area",
+          "seafoam islands b4f",
+          "mt silver 2f",
+          "mt silver 1f top",
+          "mt silver 4f",
+          "johto route 47 cave gate",
+          "mt silver outside",
+          "mt silver 1f",
+          "mt silver top",
+          "unknown all rattata area",
+          "kanto route 12 area",
+          "kanto sea route 19 area",
+          "kanto sea route 20 area",
+          "cinnabar island area",
+          "viridian city area",
+          "cerulean city area",
+          "vermilion city area",
+          "fuchsia city area",
+          "pallet town area",
+          "kanto route 26 area",
+          "kanto route 27 area",
+          "kanto route 28 area",
+          "kanto route 4 area",
+          "kanto route 6 area",
+          "kanto route 9 area",
+          "kanto route 10 area",
+          "kanto route 13 area",
+          "kanto sea route 21 area",
+          "kanto route 22 area",
+          "kanto route 24 area",
+          "kanto route 25 area",
+          "tohjo falls area",
+          "cerulean cave 1f",
+          "cerulean cave 2f",
+          "cerulean cave b1f",
+          "vermilion city ss anne dock",
+          "johto safari zone meadow",
+          "johto safari zone swamp",
+          "johto safari zone marshland",
+          "johto safari zone rocky beach",
+          "johto safari zone wetland"
+        ]
+      }
+    },
+    "130": {
+      "heartgold": {
+        "locations": [
+          "lake of rage area",
+          "seafoam islands b4f",
+          "mt silver 1f",
+          "fuchsia city area",
+          "cerulean cave 1f",
+          "cerulean cave 2f",
+          "cerulean cave b1f",
+          "johto safari zone meadow",
+          "johto safari zone marshland",
+          "johto safari zone wetland"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "lake of rage area",
+          "seafoam islands b4f",
+          "mt silver 1f",
+          "fuchsia city area",
+          "cerulean cave 1f",
+          "cerulean cave 2f",
+          "cerulean cave b1f",
+          "johto safari zone meadow",
+          "johto safari zone marshland",
+          "johto safari zone wetland"
+        ]
+      }
+    },
+    "131": {
+      "heartgold": {
+        "locations": [
+          "union cave b2f",
+          "johto safari zone rocky beach"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "union cave b2f",
+          "johto safari zone rocky beach"
+        ]
+      }
+    },
+    "132": {
+      "heartgold": {
+        "locations": [
+          "johto route 34 area",
+          "johto route 35 area",
+          "johto route 47 area",
+          "cerulean cave 1f",
+          "cerulean cave 2f",
+          "cerulean cave b1f",
+          "johto safari zone wetland"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "johto route 34 area",
+          "johto route 35 area",
+          "johto route 47 area",
+          "cerulean cave 1f",
+          "cerulean cave 2f",
+          "cerulean cave b1f",
+          "johto safari zone wetland"
+        ]
+      }
+    },
+    "133": {
+      "heartgold": {
+        "locations": [
+          "goldenrod city bills house",
+          "celadon city prize corner"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "goldenrod city bills house",
+          "celadon city prize corner"
+        ]
+      }
+    },
+    "134": {
+      "heartgold": {
+        "locations": [
+          "Evolve Eevee"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "Evolve Eevee"
+        ]
+      }
+    },
+    "135": {
+      "heartgold": {
+        "locations": [
+          "Evolve Eevee"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "Evolve Eevee"
+        ]
+      }
+    },
+    "136": {
+      "heartgold": {
+        "locations": [
+          "Evolve Eevee"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "Evolve Eevee"
+        ]
+      }
+    },
+    "137": {
+      "heartgold": {
+        "locations": [
+          "celadon city prize corner"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "celadon city prize corner"
+        ]
+      }
+    },
+    "138": {
+      "heartgold": {
+        "locations": [
+          "pewter city pewter museum of science"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "pewter city pewter museum of science"
+        ]
+      }
+    },
+    "139": {
+      "heartgold": {
+        "locations": [
+          "Evolve Omanyte"
+        ]
+      }
+    },
+    "140": {
+      "heartgold": {
+        "locations": [
+          "pewter city pewter museum of science"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "pewter city pewter museum of science"
+        ]
+      }
+    },
+    "141": {
+      "soulsilver": {
+        "locations": [
+          "Evolve Kabuto"
+        ]
+      }
+    },
+    "142": {
+      "heartgold": {
+        "locations": [
+          "pewter city pewter museum of science"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "pewter city pewter museum of science"
+        ]
+      }
+    },
+    "143": {
+      "heartgold": {
+        "locations": [
+          "kanto route 12 area",
+          "kanto route 11 area"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "kanto route 12 area",
+          "kanto route 11 area"
+        ]
+      }
+    },
+    "144": {
+      "heartgold": {
+        "locations": [
+          "seafoam islands b4f"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "seafoam islands b4f"
+        ]
+      }
+    },
+    "145": {
+      "heartgold": {
+        "locations": [
+          "kanto route 10 area"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "kanto route 10 area"
+        ]
+      }
+    },
+    "146": {
+      "heartgold": {
+        "locations": [
+          "mt silver top"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "mt silver top"
+        ]
+      }
+    },
+    "147": {
+      "heartgold": {
+        "locations": [
+          "dragons den area",
+          "johto safari zone swamp",
+          "goldenrod city game corner"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "dragons den area",
+          "johto safari zone swamp",
+          "goldenrod city game corner"
+        ]
+      }
+    },
+    "148": {
+      "heartgold": {
+        "locations": [
+          "dragons den area",
+          "johto safari zone swamp"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "dragons den area",
+          "johto safari zone swamp"
+        ]
+      }
+    },
+    "149": {
+      "heartgold": {
+        "locations": [
+          "Evolve Dragonair"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "Evolve Dragonair"
+        ]
+      }
+    },
+    "150": {
+      "heartgold": {
+        "locations": [
+          "cerulean cave b1f"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "cerulean cave b1f"
+        ]
+      }
+    },
+    "151": {
+      "heartgold": {
+        "locations": [
+          "Event"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "Event"
         ]
       }
     },
@@ -1443,6 +4694,1669 @@
       "soulsilver": {
         "locations": [
           "Evolve Croconaw"
+        ]
+      }
+    },
+    "161": {
+      "heartgold": {
+        "locations": [
+          "johto route 29 area",
+          "kanto route 1 area",
+          "johto safari zone swamp",
+          "johto safari zone wetland"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "johto route 29 area",
+          "kanto route 1 area",
+          "johto safari zone swamp",
+          "johto safari zone wetland"
+        ]
+      }
+    },
+    "162": {
+      "heartgold": {
+        "locations": [
+          "kanto route 1 area",
+          "johto safari zone swamp",
+          "johto safari zone wetland"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "kanto route 1 area",
+          "johto safari zone swamp",
+          "johto safari zone wetland"
+        ]
+      }
+    },
+    "163": {
+      "heartgold": {
+        "locations": [
+          "new bark town area",
+          "johto route 29 area",
+          "cherrygrove city area",
+          "johto route 30 area",
+          "johto route 31 area",
+          "violet city area",
+          "johto route 32 area",
+          "ilex forest area",
+          "johto route 34 area",
+          "johto route 35 area",
+          "national park area",
+          "johto route 36 area",
+          "johto route 37 area",
+          "ecruteak city area",
+          "johto route 38 area",
+          "johto route 39 area",
+          "johto route 43 area",
+          "lake of rage area",
+          "johto route 47 area",
+          "kanto route 12 area",
+          "viridian city area",
+          "cerulean city area",
+          "fuchsia city area",
+          "pallet town area",
+          "johto route 48 area",
+          "kanto route 26 area",
+          "kanto route 27 area",
+          "kanto route 1 area",
+          "kanto route 2 south towards viridian city",
+          "kanto route 3 area",
+          "kanto route 4 area",
+          "kanto route 5 area",
+          "kanto route 6 area",
+          "kanto route 8 area",
+          "kanto route 13 area",
+          "kanto route 14 area",
+          "kanto route 15 area",
+          "kanto route 18 area",
+          "kanto sea route 21 area",
+          "kanto route 22 area",
+          "kanto route 25 area",
+          "kanto route 2 north towards pewter city",
+          "viridian forest area",
+          "pewter city area",
+          "safari zone gate area"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "new bark town area",
+          "johto route 29 area",
+          "cherrygrove city area",
+          "johto route 30 area",
+          "johto route 31 area",
+          "violet city area",
+          "johto route 32 area",
+          "ilex forest area",
+          "johto route 34 area",
+          "johto route 35 area",
+          "national park area",
+          "johto route 36 area",
+          "johto route 37 area",
+          "ecruteak city area",
+          "johto route 38 area",
+          "johto route 39 area",
+          "johto route 43 area",
+          "lake of rage area",
+          "johto route 47 area",
+          "kanto route 12 area",
+          "viridian city area",
+          "cerulean city area",
+          "fuchsia city area",
+          "pallet town area",
+          "johto route 48 area",
+          "kanto route 26 area",
+          "kanto route 27 area",
+          "kanto route 1 area",
+          "kanto route 2 south towards viridian city",
+          "kanto route 3 area",
+          "kanto route 4 area",
+          "kanto route 5 area",
+          "kanto route 6 area",
+          "kanto route 8 area",
+          "kanto route 13 area",
+          "kanto route 14 area",
+          "kanto route 15 area",
+          "kanto route 18 area",
+          "kanto sea route 21 area",
+          "kanto route 22 area",
+          "kanto route 25 area",
+          "kanto route 2 north towards pewter city",
+          "viridian forest area",
+          "pewter city area",
+          "safari zone gate area"
+        ]
+      }
+    },
+    "164": {
+      "heartgold": {
+        "locations": [
+          "ilex forest area",
+          "johto route 43 area",
+          "johto route 47 area",
+          "kanto route 2 south towards viridian city",
+          "kanto route 8 area",
+          "kanto route 13 area",
+          "kanto route 14 area",
+          "kanto route 15 area",
+          "kanto route 2 north towards pewter city",
+          "viridian forest area"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "ilex forest area",
+          "johto route 43 area",
+          "johto route 47 area",
+          "kanto route 2 south towards viridian city",
+          "kanto route 8 area",
+          "kanto route 13 area",
+          "kanto route 14 area",
+          "kanto route 15 area",
+          "kanto route 2 north towards pewter city",
+          "viridian forest area"
+        ]
+      }
+    },
+    "165": {
+      "soulsilver": {
+        "locations": [
+          "new bark town area",
+          "johto route 29 area",
+          "cherrygrove city area",
+          "johto route 30 area",
+          "johto route 31 area",
+          "johto route 34 area",
+          "johto route 35 area",
+          "national park area",
+          "johto route 36 area",
+          "johto route 37 area",
+          "ecruteak city area",
+          "johto route 38 area",
+          "johto route 39 area",
+          "johto route 47 area",
+          "kanto route 12 area",
+          "viridian city area",
+          "fuchsia city area",
+          "pallet town area",
+          "johto route 48 area",
+          "kanto route 26 area",
+          "kanto route 27 area",
+          "kanto route 1 area",
+          "kanto route 2 south towards viridian city",
+          "kanto route 13 area",
+          "kanto route 14 area",
+          "kanto route 15 area",
+          "kanto route 18 area",
+          "kanto sea route 21 area",
+          "kanto route 22 area",
+          "kanto route 2 north towards pewter city",
+          "viridian forest area",
+          "safari zone gate area"
+        ]
+      }
+    },
+    "166": {
+      "soulsilver": {
+        "locations": [
+          "kanto route 2 south towards viridian city",
+          "kanto route 2 north towards pewter city",
+          "viridian forest area"
+        ]
+      }
+    },
+    "167": {
+      "heartgold": {
+        "locations": [
+          "new bark town area",
+          "johto route 29 area",
+          "cherrygrove city area",
+          "johto route 30 area",
+          "johto route 31 area",
+          "johto route 34 area",
+          "johto route 35 area",
+          "national park area",
+          "johto route 36 area",
+          "johto route 37 area",
+          "ecruteak city area",
+          "johto route 38 area",
+          "johto route 39 area",
+          "johto route 47 area",
+          "kanto route 12 area",
+          "viridian city area",
+          "fuchsia city area",
+          "pallet town area",
+          "johto route 48 area",
+          "kanto route 26 area",
+          "kanto route 27 area",
+          "kanto route 1 area",
+          "kanto route 2 south towards viridian city",
+          "kanto route 13 area",
+          "kanto route 14 area",
+          "kanto route 15 area",
+          "kanto route 18 area",
+          "kanto sea route 21 area",
+          "kanto route 22 area",
+          "kanto route 2 north towards pewter city",
+          "viridian forest area",
+          "safari zone gate area"
+        ]
+      }
+    },
+    "168": {
+      "heartgold": {
+        "locations": [
+          "kanto route 2 south towards viridian city",
+          "kanto route 2 north towards pewter city",
+          "viridian forest area"
+        ]
+      }
+    },
+    "169": {
+      "heartgold": {
+        "locations": [
+          "Evolve Golbat"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "Evolve Golbat"
+        ]
+      }
+    },
+    "170": {
+      "heartgold": {
+        "locations": [
+          "new bark town area",
+          "johto sea route 41 area",
+          "johto route 47 area",
+          "kanto sea route 20 area",
+          "cinnabar island area",
+          "vermilion city area",
+          "pallet town area",
+          "kanto route 26 area",
+          "kanto route 27 area",
+          "kanto sea route 21 area",
+          "vermilion city ss anne dock"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "new bark town area",
+          "johto sea route 41 area",
+          "johto route 47 area",
+          "kanto sea route 20 area",
+          "cinnabar island area",
+          "vermilion city area",
+          "pallet town area",
+          "kanto route 26 area",
+          "kanto route 27 area",
+          "kanto sea route 21 area",
+          "vermilion city ss anne dock"
+        ]
+      }
+    },
+    "171": {
+      "heartgold": {
+        "locations": [
+          "new bark town area",
+          "johto sea route 41 area",
+          "johto route 47 area",
+          "kanto sea route 20 area",
+          "cinnabar island area",
+          "vermilion city area",
+          "pallet town area",
+          "kanto route 26 area",
+          "kanto route 27 area",
+          "kanto sea route 21 area",
+          "vermilion city ss anne dock"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "new bark town area",
+          "johto sea route 41 area",
+          "johto route 47 area",
+          "kanto sea route 20 area",
+          "cinnabar island area",
+          "vermilion city area",
+          "pallet town area",
+          "kanto route 26 area",
+          "kanto route 27 area",
+          "kanto sea route 21 area",
+          "vermilion city ss anne dock"
+        ]
+      }
+    },
+    "172": {
+      "heartgold": {
+        "locations": [
+          "Breed Raichu"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "Breed Raichu"
+        ]
+      }
+    },
+    "173": {
+      "heartgold": {
+        "locations": [
+          "Breed Clefable"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "Breed Clefable"
+        ]
+      }
+    },
+    "174": {
+      "heartgold": {
+        "locations": [
+          "Breed Wigglytuff"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "Breed Wigglytuff"
+        ]
+      }
+    },
+    "175": {
+      "heartgold": {
+        "locations": [
+          "violet city poke mart"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "violet city poke mart"
+        ]
+      }
+    },
+    "176": {
+      "heartgold": {
+        "locations": [
+          "Evolve Togepi"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "Evolve Togepi"
+        ]
+      }
+    },
+    "177": {
+      "heartgold": {
+        "locations": [
+          "ruins of alph outside",
+          "mt silver outside",
+          "mt silver mountainside",
+          "kanto route 28 area"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "ruins of alph outside",
+          "mt silver outside",
+          "mt silver mountainside",
+          "kanto route 28 area"
+        ]
+      }
+    },
+    "178": {
+      "heartgold": {
+        "locations": [
+          "pewter city area"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "pewter city area"
+        ]
+      }
+    },
+    "179": {
+      "heartgold": {
+        "locations": [
+          "johto route 32 area",
+          "johto route 42 area",
+          "johto route 43 area",
+          "violet city pokemon center",
+          "johto safari zone rocky beach"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "johto route 32 area",
+          "johto route 42 area",
+          "johto route 43 area",
+          "violet city pokemon center",
+          "johto safari zone rocky beach"
+        ]
+      }
+    },
+    "180": {
+      "heartgold": {
+        "locations": [
+          "johto route 42 area",
+          "johto route 43 area"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "johto route 42 area",
+          "johto route 43 area"
+        ]
+      }
+    },
+    "181": {
+      "heartgold": {
+        "locations": [
+          "Evolve Flaaffy"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "Evolve Flaaffy"
+        ]
+      }
+    },
+    "182": {
+      "heartgold": {
+        "locations": [
+          "Evolve Gloom"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "Evolve Gloom"
+        ]
+      }
+    },
+    "183": {
+      "heartgold": {
+        "locations": [
+          "mt mortar 1f",
+          "johto safari zone meadow"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "mt mortar 1f",
+          "johto safari zone meadow"
+        ]
+      }
+    },
+    "184": {
+      "heartgold": {
+        "locations": [
+          "Evolve Marill"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "Evolve Marill"
+        ]
+      }
+    },
+    "185": {
+      "heartgold": {
+        "locations": [
+          "johto route 36 area"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "johto route 36 area"
+        ]
+      }
+    },
+    "186": {
+      "heartgold": {
+        "locations": [
+          "Evolve Poliwhirl"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "Evolve Poliwhirl"
+        ]
+      }
+    },
+    "187": {
+      "heartgold": {
+        "locations": [
+          "johto route 32 area",
+          "johto route 33 area",
+          "johto route 48 area",
+          "kanto route 13 area",
+          "kanto route 14 area",
+          "kanto route 15 area",
+          "johto safari zone meadow"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "johto route 32 area",
+          "johto route 33 area",
+          "johto route 48 area",
+          "kanto route 13 area",
+          "kanto route 14 area",
+          "kanto route 15 area",
+          "johto safari zone meadow"
+        ]
+      }
+    },
+    "188": {
+      "heartgold": {
+        "locations": [
+          "kanto route 14 area",
+          "johto safari zone meadow"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "kanto route 14 area",
+          "johto safari zone meadow"
+        ]
+      }
+    },
+    "189": {
+      "heartgold": {
+        "locations": [
+          "johto safari zone marshland"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "johto safari zone marshland"
+        ]
+      }
+    },
+    "190": {
+      "heartgold": {
+        "locations": [
+          "johto route 33 area",
+          "johto route 42 area",
+          "johto route 44 area",
+          "johto route 45 area",
+          "johto route 46 area",
+          "mt silver outside",
+          "mt silver mountainside",
+          "kanto route 28 area",
+          "azalea town area"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "johto route 33 area",
+          "johto route 42 area",
+          "johto route 44 area",
+          "johto route 45 area",
+          "johto route 46 area",
+          "mt silver outside",
+          "mt silver mountainside",
+          "kanto route 28 area",
+          "azalea town area"
+        ]
+      }
+    },
+    "191": {
+      "heartgold": {
+        "locations": [
+          "national park area",
+          "kanto route 24 area",
+          "johto safari zone meadow"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "national park area",
+          "kanto route 24 area",
+          "johto safari zone meadow"
+        ]
+      }
+    },
+    "192": {
+      "heartgold": {
+        "locations": [
+          "Evolve Sunkern"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "Evolve Sunkern"
+        ]
+      }
+    },
+    "193": {
+      "heartgold": {
+        "locations": [
+          "johto route 35 area"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "johto route 35 area"
+        ]
+      }
+    },
+    "194": {
+      "heartgold": {
+        "locations": [
+          "johto route 32 area",
+          "ruins of alph outside",
+          "union cave 1f",
+          "union cave b1f",
+          "johto route 47 cave gate",
+          "johto route 47 inside cave",
+          "violet city pokemon center",
+          "johto safari zone meadow",
+          "johto safari zone marshland",
+          "johto safari zone wetland"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "johto route 32 area",
+          "ruins of alph outside",
+          "union cave 1f",
+          "union cave b1f",
+          "johto route 47 cave gate",
+          "johto route 47 inside cave",
+          "violet city pokemon center",
+          "johto safari zone meadow",
+          "johto safari zone marshland",
+          "johto safari zone wetland"
+        ]
+      }
+    },
+    "195": {
+      "heartgold": {
+        "locations": [
+          "johto route 32 area",
+          "ruins of alph outside",
+          "union cave 1f",
+          "union cave b1f",
+          "union cave b2f",
+          "mt silver 2f",
+          "mt silver 1f top",
+          "mt silver 4f",
+          "johto route 47 cave gate",
+          "johto route 47 inside cave",
+          "mt silver 3f",
+          "mt silver top",
+          "kanto route 12 area",
+          "kanto route 26 area",
+          "kanto route 27 area",
+          "kanto route 10 area",
+          "kanto route 13 area",
+          "kanto route 14 area",
+          "kanto route 15 area",
+          "johto safari zone marshland",
+          "johto safari zone wetland"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "johto route 32 area",
+          "ruins of alph outside",
+          "union cave 1f",
+          "union cave b1f",
+          "union cave b2f",
+          "mt silver 2f",
+          "mt silver 1f top",
+          "mt silver 4f",
+          "johto route 47 cave gate",
+          "johto route 47 inside cave",
+          "mt silver 3f",
+          "mt silver top",
+          "kanto route 12 area",
+          "kanto route 26 area",
+          "kanto route 27 area",
+          "kanto route 10 area",
+          "kanto route 13 area",
+          "kanto route 14 area",
+          "kanto route 15 area",
+          "johto safari zone marshland",
+          "johto safari zone wetland"
+        ]
+      }
+    },
+    "196": {
+      "heartgold": {
+        "locations": [
+          "Evolve Eevee"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "Evolve Eevee"
+        ]
+      }
+    },
+    "197": {
+      "heartgold": {
+        "locations": [
+          "Evolve Eevee"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "Evolve Eevee"
+        ]
+      }
+    },
+    "198": {
+      "heartgold": {
+        "locations": [
+          "kanto route 7 area",
+          "kanto route 16 area",
+          "johto safari zone swamp"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "kanto route 7 area",
+          "kanto route 16 area",
+          "johto safari zone swamp"
+        ]
+      }
+    },
+    "199": {
+      "heartgold": {
+        "locations": [
+          "Evolve Slowpoke"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "Evolve Slowpoke"
+        ]
+      }
+    },
+    "200": {
+      "heartgold": {
+        "locations": [
+          "mt silver 2f",
+          "mt silver 1f top",
+          "mt silver 4f",
+          "johto route 47 inside cave",
+          "mt silver 3f",
+          "mt silver top",
+          "johto safari zone forest"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "mt silver 2f",
+          "mt silver 1f top",
+          "mt silver 4f",
+          "johto route 47 inside cave",
+          "mt silver 3f",
+          "mt silver top",
+          "johto safari zone forest"
+        ]
+      }
+    },
+    "201": {
+      "heartgold": {
+        "locations": [
+          "ruins of alph interior a",
+          "ruins of alph interior b",
+          "ruins of alph interior c",
+          "ruins of alph interior d"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "ruins of alph interior a",
+          "ruins of alph interior b",
+          "ruins of alph interior c",
+          "ruins of alph interior d"
+        ]
+      }
+    },
+    "202": {
+      "heartgold": {
+        "locations": [
+          "dark cave blackthorn city entrance",
+          "cerulean cave 1f",
+          "cerulean cave 2f",
+          "cerulean cave b1f",
+          "johto safari zone peak"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "dark cave blackthorn city entrance",
+          "cerulean cave 1f",
+          "cerulean cave 2f",
+          "cerulean cave b1f",
+          "johto safari zone peak"
+        ]
+      }
+    },
+    "203": {
+      "heartgold": {
+        "locations": [
+          "johto route 43 area",
+          "johto route 48 area",
+          "johto safari zone plains"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "johto route 43 area",
+          "johto route 48 area",
+          "johto safari zone plains"
+        ]
+      }
+    },
+    "204": {
+      "heartgold": {
+        "locations": [
+          "new bark town area",
+          "johto route 29 area",
+          "cherrygrove city area",
+          "johto route 30 area",
+          "johto route 31 area",
+          "violet city area",
+          "johto route 32 area",
+          "ilex forest area",
+          "johto route 34 area",
+          "johto route 35 area",
+          "national park area",
+          "johto route 36 area",
+          "johto route 37 area",
+          "ecruteak city area",
+          "johto route 38 area",
+          "johto route 39 area",
+          "johto route 43 area",
+          "lake of rage area",
+          "johto route 47 area",
+          "viridian city area",
+          "cerulean city area",
+          "pallet town area",
+          "johto route 48 area",
+          "kanto route 26 area",
+          "kanto route 27 area",
+          "kanto route 1 area",
+          "kanto route 2 south towards viridian city",
+          "kanto route 3 area",
+          "kanto route 4 area",
+          "kanto route 5 area",
+          "kanto route 6 area",
+          "kanto route 8 area",
+          "kanto route 22 area",
+          "kanto route 25 area",
+          "kanto route 2 north towards pewter city",
+          "pewter city area",
+          "safari zone gate area"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "new bark town area",
+          "johto route 29 area",
+          "cherrygrove city area",
+          "johto route 30 area",
+          "johto route 31 area",
+          "violet city area",
+          "johto route 32 area",
+          "ilex forest area",
+          "johto route 34 area",
+          "johto route 35 area",
+          "national park area",
+          "johto route 36 area",
+          "johto route 37 area",
+          "ecruteak city area",
+          "johto route 38 area",
+          "johto route 39 area",
+          "johto route 43 area",
+          "lake of rage area",
+          "johto route 47 area",
+          "viridian city area",
+          "cerulean city area",
+          "pallet town area",
+          "johto route 48 area",
+          "kanto route 26 area",
+          "kanto route 27 area",
+          "kanto route 1 area",
+          "kanto route 2 south towards viridian city",
+          "kanto route 3 area",
+          "kanto route 4 area",
+          "kanto route 5 area",
+          "kanto route 6 area",
+          "kanto route 8 area",
+          "kanto route 22 area",
+          "kanto route 25 area",
+          "kanto route 2 north towards pewter city",
+          "pewter city area",
+          "safari zone gate area"
+        ]
+      }
+    },
+    "205": {
+      "heartgold": {
+        "locations": [
+          "Evolve Pineco"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "Evolve Pineco"
+        ]
+      }
+    },
+    "206": {
+      "heartgold": {
+        "locations": [
+          "dark cave violet city entrance"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "dark cave violet city entrance"
+        ]
+      }
+    },
+    "207": {
+      "heartgold": {
+        "locations": [
+          "johto route 45 area"
+        ]
+      }
+    },
+    "208": {
+      "heartgold": {
+        "locations": [
+          "mt silver 2f",
+          "johto route 47 inside cave",
+          "olivine city gym"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "mt silver 2f",
+          "johto route 47 inside cave",
+          "olivine city gym"
+        ]
+      }
+    },
+    "209": {
+      "heartgold": {
+        "locations": [
+          "johto route 38 area"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "johto route 38 area"
+        ]
+      }
+    },
+    "210": {
+      "heartgold": {
+        "locations": [
+          "Evolve Snubbull"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "Evolve Snubbull"
+        ]
+      }
+    },
+    "211": {
+      "heartgold": {
+        "locations": [
+          "johto route 32 area",
+          "kanto route 12 area",
+          "kanto route 13 area"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "johto route 32 area",
+          "kanto route 12 area",
+          "kanto route 13 area"
+        ]
+      }
+    },
+    "212": {
+      "heartgold": {
+        "locations": [
+          "Evolve Scyther"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "Evolve Scyther"
+        ]
+      }
+    },
+    "213": {
+      "heartgold": {
+        "locations": [
+          "cianwood city area",
+          "vermilion city area",
+          "cianwood city kirks house",
+          "johto safari zone marshland"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "cianwood city area",
+          "vermilion city area",
+          "cianwood city kirks house",
+          "johto safari zone marshland"
+        ]
+      }
+    },
+    "214": {
+      "heartgold": {
+        "locations": [
+          "johto route 33 area",
+          "johto route 42 area",
+          "johto route 44 area",
+          "johto route 45 area",
+          "johto route 46 area",
+          "johto route 47 area",
+          "mt silver outside",
+          "mt silver mountainside",
+          "vermilion city area",
+          "celadon city area",
+          "kanto route 28 area",
+          "kanto route 7 area",
+          "kanto route 11 area",
+          "kanto route 16 area",
+          "azalea town area"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "johto route 33 area",
+          "johto route 42 area",
+          "johto route 44 area",
+          "johto route 45 area",
+          "johto route 46 area",
+          "johto route 47 area",
+          "mt silver outside",
+          "mt silver mountainside",
+          "vermilion city area",
+          "celadon city area",
+          "kanto route 28 area",
+          "kanto route 7 area",
+          "kanto route 11 area",
+          "kanto route 16 area",
+          "azalea town area"
+        ]
+      }
+    },
+    "215": {
+      "heartgold": {
+        "locations": [
+          "mt silver 1f top",
+          "mt silver 4f",
+          "mt silver outside",
+          "mt silver top",
+          "kanto route 28 area"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "mt silver 1f top",
+          "mt silver 4f",
+          "mt silver outside",
+          "mt silver top",
+          "kanto route 28 area"
+        ]
+      }
+    },
+    "216": {
+      "soulsilver": {
+        "locations": [
+          "johto route 45 area",
+          "mt silver 1f top",
+          "mt silver 1f",
+          "mt silver mountainside",
+          "mt silver 3f"
+        ]
+      }
+    },
+    "217": {
+      "soulsilver": {
+        "locations": [
+          "mt silver 2f",
+          "mt silver 1f top",
+          "mt silver 4f",
+          "mt silver outside",
+          "mt silver 1f",
+          "mt silver mountainside",
+          "mt silver 3f",
+          "mt silver top",
+          "kanto route 28 area",
+          "kanto victory road 1 1f",
+          "kanto victory road 1 2f",
+          "kanto victory road 1 3f"
+        ]
+      }
+    },
+    "218": {
+      "heartgold": {
+        "locations": [
+          "kanto route 16 area",
+          "kanto route 17 area",
+          "kanto route 18 area",
+          "violet city pokemon center"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "kanto route 16 area",
+          "kanto route 17 area",
+          "kanto route 18 area",
+          "violet city pokemon center"
+        ]
+      }
+    },
+    "219": {
+      "heartgold": {
+        "locations": [
+          "Evolve Slugma"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "Evolve Slugma"
+        ]
+      }
+    },
+    "220": {
+      "heartgold": {
+        "locations": [
+          "ice path 1f",
+          "ice path b1f",
+          "ice path b2f",
+          "ice path b3f"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "ice path 1f",
+          "ice path b1f",
+          "ice path b2f",
+          "ice path b3f"
+        ]
+      }
+    },
+    "221": {
+      "heartgold": {
+        "locations": [
+          "Evolve Swinub"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "Evolve Swinub"
+        ]
+      }
+    },
+    "222": {
+      "heartgold": {
+        "locations": [
+          "cherrygrove city area",
+          "union cave b2f",
+          "johto route 34 area",
+          "olivine city area",
+          "johto sea route 40 area",
+          "cianwood city area",
+          "kanto sea route 19 area"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "cherrygrove city area",
+          "union cave b2f",
+          "johto route 34 area",
+          "olivine city area",
+          "johto sea route 40 area",
+          "cianwood city area",
+          "kanto sea route 19 area"
+        ]
+      }
+    },
+    "223": {
+      "heartgold": {
+        "locations": [
+          "johto route 44 area"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "johto route 44 area"
+        ]
+      }
+    },
+    "224": {
+      "heartgold": {
+        "locations": [
+          "Evolve Remoraid"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "Evolve Remoraid"
+        ]
+      }
+    },
+    "225": {
+      "soulsilver": {
+        "locations": [
+          "ice path 1f",
+          "ice path b1f",
+          "ice path b2f",
+          "ice path b3f"
+        ]
+      }
+    },
+    "226": {
+      "heartgold": {
+        "locations": [
+          "johto sea route 41 area"
+        ]
+      }
+    },
+    "227": {
+      "soulsilver": {
+        "locations": [
+          "johto route 45 area"
+        ]
+      }
+    },
+    "228": {
+      "heartgold": {
+        "locations": [
+          "kanto route 7 area",
+          "johto safari zone savannah"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "kanto route 7 area",
+          "johto safari zone savannah"
+        ]
+      }
+    },
+    "229": {
+      "heartgold": {
+        "locations": [
+          "johto safari zone plains"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "johto safari zone plains"
+        ]
+      }
+    },
+    "230": {
+      "heartgold": {
+        "locations": [
+          "Evolve Seadra"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "Evolve Seadra"
+        ]
+      }
+    },
+    "231": {
+      "heartgold": {
+        "locations": [
+          "johto route 45 area",
+          "mt silver 1f top",
+          "mt silver 1f",
+          "mt silver mountainside",
+          "mt silver 3f"
+        ]
+      }
+    },
+    "232": {
+      "heartgold": {
+        "locations": [
+          "mt silver 2f",
+          "mt silver 1f top",
+          "mt silver 4f",
+          "mt silver outside",
+          "mt silver 1f",
+          "mt silver mountainside",
+          "mt silver 3f",
+          "mt silver top",
+          "kanto route 28 area",
+          "kanto victory road 1 1f",
+          "kanto victory road 1 2f",
+          "kanto victory road 1 3f"
+        ]
+      }
+    },
+    "233": {
+      "heartgold": {
+        "locations": [
+          "Evolve Porygon"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "Evolve Porygon"
+        ]
+      }
+    },
+    "234": {
+      "heartgold": {
+        "locations": [
+          "johto route 36 area",
+          "johto route 37 area",
+          "johto safari zone plains"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "johto route 36 area",
+          "johto route 37 area",
+          "johto safari zone plains"
+        ]
+      }
+    },
+    "235": {
+      "heartgold": {
+        "locations": [
+          "ruins of alph outside",
+          "johto safari zone plains"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "ruins of alph outside",
+          "johto safari zone plains"
+        ]
+      }
+    },
+    "236": {
+      "heartgold": {
+        "locations": [
+          "mt mortar b1f"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "mt mortar b1f"
+        ]
+      }
+    },
+    "237": {
+      "heartgold": {
+        "locations": [
+          "Evolve Tyrogue"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "Evolve Tyrogue"
+        ]
+      }
+    },
+    "238": {
+      "heartgold": {
+        "locations": [
+          "Breed Jynx, transfer from Pokéwalker"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "Breed Jynx, transfer from Pokéwalker"
+        ]
+      }
+    },
+    "239": {
+      "heartgold": {
+        "locations": [
+          "Breed Electivire"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "Breed Electivire"
+        ]
+      }
+    },
+    "240": {
+      "heartgold": {
+        "locations": [
+          "Breed Magmortar"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "Breed Magmortar"
+        ]
+      }
+    },
+    "241": {
+      "heartgold": {
+        "locations": [
+          "johto route 38 area",
+          "johto route 39 area",
+          "johto route 47 area"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "johto route 38 area",
+          "johto route 39 area",
+          "johto route 47 area"
+        ]
+      }
+    },
+    "242": {
+      "heartgold": {
+        "locations": [
+          "Evolve Chansey"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "Evolve Chansey"
+        ]
+      }
+    },
+    "243": {
+      "heartgold": {
+        "locations": [
+          "roaming johto area"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "roaming johto area"
+        ]
+      }
+    },
+    "244": {
+      "heartgold": {
+        "locations": [
+          "roaming johto area"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "roaming johto area"
+        ]
+      }
+    },
+    "245": {
+      "heartgold": {
+        "locations": [
+          "kanto route 25 area"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "kanto route 25 area"
+        ]
+      }
+    },
+    "246": {
+      "heartgold": {
+        "locations": [
+          "mt silver 2f",
+          "mt silver 1f top",
+          "mt silver 4f",
+          "mt silver 1f",
+          "mt silver mountainside",
+          "mt silver 3f",
+          "mt silver top",
+          "johto safari zone mountain"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "mt silver 2f",
+          "mt silver 1f top",
+          "mt silver 4f",
+          "mt silver 1f",
+          "mt silver mountainside",
+          "mt silver 3f",
+          "mt silver top",
+          "johto safari zone mountain"
+        ]
+      }
+    },
+    "247": {
+      "heartgold": {
+        "locations": [
+          "mt silver 3f"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "mt silver 3f"
+        ]
+      }
+    },
+    "248": {
+      "heartgold": {
+        "locations": [
+          "Evolve Pupitar"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "Evolve Pupitar"
+        ]
+      }
+    },
+    "249": {
+      "heartgold": {
+        "locations": [
+          "whirl islands b3f"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "whirl islands b3f"
+        ]
+      }
+    },
+    "250": {
+      "heartgold": {
+        "locations": [
+          "bell tower roof"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "bell tower roof"
+        ]
+      }
+    },
+    "251": {
+      "heartgold": {
+        "locations": [
+          "Event"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "Event"
+        ]
+      }
+    },
+    "424": {
+      "heartgold": {
+        "locations": [
+          "Evolve Aipom"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "Evolve Aipom"
+        ]
+      }
+    },
+    "463": {
+      "heartgold": {
+        "locations": [
+          "Evolve Lickitung"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "Evolve Lickitung"
+        ]
+      }
+    },
+    "465": {
+      "heartgold": {
+        "locations": [
+          "Evolve Tangela"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "Evolve Tangela"
+        ]
+      }
+    },
+    "469": {
+      "heartgold": {
+        "locations": [
+          "Evolve Yanma"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "Evolve Yanma"
+        ]
+      }
+    },
+    "473": {
+      "heartgold": {
+        "locations": [
+          "Evolve Piloswine"
+        ]
+      },
+      "soulsilver": {
+        "locations": [
+          "Evolve Piloswine"
         ]
       }
     }

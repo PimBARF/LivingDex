@@ -9,10 +9,11 @@
   ],
   "sections": [
     {
-      "id": "base",
-      "title": "Regional Pokédex",
+      "id": "kalos-central",
+      "title": "Kalos Central Pokédex",
       "type": "base",
       "optional": false,
+      "defaultEnabled": false,
       "entries": [
         {
           "speciesId": 650,
@@ -780,9 +781,6803 @@
           "dexNumber": 153
         }
       ]
+    },
+    {
+      "id": "kalos-coastal",
+      "title": "Kalos Coastal Pokédex",
+      "type": "base",
+      "optional": false,
+      "defaultEnabled": false,
+      "entries": [
+        {
+          "speciesId": 425,
+          "formId": 425,
+          "dexNumber": 1
+        },
+        {
+          "speciesId": 426,
+          "formId": 426,
+          "dexNumber": 2
+        },
+        {
+          "speciesId": 619,
+          "formId": 619,
+          "dexNumber": 3
+        },
+        {
+          "speciesId": 620,
+          "formId": 620,
+          "dexNumber": 4
+        },
+        {
+          "speciesId": 335,
+          "formId": 335,
+          "dexNumber": 5
+        },
+        {
+          "speciesId": 336,
+          "formId": 336,
+          "dexNumber": 6
+        },
+        {
+          "speciesId": 325,
+          "formId": 325,
+          "dexNumber": 7
+        },
+        {
+          "speciesId": 326,
+          "formId": 326,
+          "dexNumber": 8
+        },
+        {
+          "speciesId": 359,
+          "formId": 359,
+          "dexNumber": 9
+        },
+        {
+          "speciesId": 686,
+          "formId": 686,
+          "dexNumber": 10
+        },
+        {
+          "speciesId": 687,
+          "formId": 687,
+          "dexNumber": 11
+        },
+        {
+          "speciesId": 337,
+          "formId": 337,
+          "dexNumber": 12
+        },
+        {
+          "speciesId": 338,
+          "formId": 338,
+          "dexNumber": 13
+        },
+        {
+          "speciesId": 371,
+          "formId": 371,
+          "dexNumber": 14
+        },
+        {
+          "speciesId": 372,
+          "formId": 372,
+          "dexNumber": 15
+        },
+        {
+          "speciesId": 373,
+          "formId": 373,
+          "dexNumber": 16
+        },
+        {
+          "speciesId": 278,
+          "formId": 278,
+          "dexNumber": 17
+        },
+        {
+          "speciesId": 279,
+          "formId": 279,
+          "dexNumber": 18
+        },
+        {
+          "speciesId": 276,
+          "formId": 276,
+          "dexNumber": 19
+        },
+        {
+          "speciesId": 277,
+          "formId": 277,
+          "dexNumber": 20
+        },
+        {
+          "speciesId": 688,
+          "formId": 688,
+          "dexNumber": 21
+        },
+        {
+          "speciesId": 689,
+          "formId": 689,
+          "dexNumber": 22
+        },
+        {
+          "speciesId": 557,
+          "formId": 557,
+          "dexNumber": 23
+        },
+        {
+          "speciesId": 558,
+          "formId": 558,
+          "dexNumber": 24
+        },
+        {
+          "speciesId": 72,
+          "formId": 72,
+          "dexNumber": 25
+        },
+        {
+          "speciesId": 73,
+          "formId": 73,
+          "dexNumber": 26
+        },
+        {
+          "speciesId": 320,
+          "formId": 320,
+          "dexNumber": 27
+        },
+        {
+          "speciesId": 321,
+          "formId": 321,
+          "dexNumber": 28
+        },
+        {
+          "speciesId": 370,
+          "formId": 370,
+          "dexNumber": 29
+        },
+        {
+          "speciesId": 690,
+          "formId": 690,
+          "dexNumber": 30
+        },
+        {
+          "speciesId": 691,
+          "formId": 691,
+          "dexNumber": 31
+        },
+        {
+          "speciesId": 692,
+          "formId": 692,
+          "dexNumber": 32
+        },
+        {
+          "speciesId": 693,
+          "formId": 693,
+          "dexNumber": 33
+        },
+        {
+          "speciesId": 120,
+          "formId": 120,
+          "dexNumber": 34
+        },
+        {
+          "speciesId": 121,
+          "formId": 121,
+          "dexNumber": 35
+        },
+        {
+          "speciesId": 90,
+          "formId": 90,
+          "dexNumber": 36
+        },
+        {
+          "speciesId": 91,
+          "formId": 91,
+          "dexNumber": 37
+        },
+        {
+          "speciesId": 211,
+          "formId": 211,
+          "dexNumber": 38
+        },
+        {
+          "speciesId": 116,
+          "formId": 116,
+          "dexNumber": 39
+        },
+        {
+          "speciesId": 117,
+          "formId": 117,
+          "dexNumber": 40
+        },
+        {
+          "speciesId": 230,
+          "formId": 230,
+          "dexNumber": 41
+        },
+        {
+          "speciesId": 369,
+          "formId": 369,
+          "dexNumber": 42
+        },
+        {
+          "speciesId": 551,
+          "formId": 551,
+          "dexNumber": 43
+        },
+        {
+          "speciesId": 552,
+          "formId": 552,
+          "dexNumber": 44
+        },
+        {
+          "speciesId": 553,
+          "formId": 553,
+          "dexNumber": 45
+        },
+        {
+          "speciesId": 694,
+          "formId": 694,
+          "dexNumber": 46
+        },
+        {
+          "speciesId": 695,
+          "formId": 695,
+          "dexNumber": 47
+        },
+        {
+          "speciesId": 449,
+          "formId": 449,
+          "dexNumber": 48
+        },
+        {
+          "speciesId": 450,
+          "formId": 450,
+          "dexNumber": 49
+        },
+        {
+          "speciesId": 111,
+          "formId": 111,
+          "dexNumber": 50
+        },
+        {
+          "speciesId": 112,
+          "formId": 112,
+          "dexNumber": 51
+        },
+        {
+          "speciesId": 464,
+          "formId": 464,
+          "dexNumber": 52
+        },
+        {
+          "speciesId": 95,
+          "formId": 95,
+          "dexNumber": 53
+        },
+        {
+          "speciesId": 208,
+          "formId": 208,
+          "dexNumber": 54
+        },
+        {
+          "speciesId": 527,
+          "formId": 527,
+          "dexNumber": 55
+        },
+        {
+          "speciesId": 528,
+          "formId": 528,
+          "dexNumber": 56
+        },
+        {
+          "speciesId": 66,
+          "formId": 66,
+          "dexNumber": 57
+        },
+        {
+          "speciesId": 67,
+          "formId": 67,
+          "dexNumber": 58
+        },
+        {
+          "speciesId": 68,
+          "formId": 68,
+          "dexNumber": 59
+        },
+        {
+          "speciesId": 104,
+          "formId": 104,
+          "dexNumber": 60
+        },
+        {
+          "speciesId": 105,
+          "formId": 105,
+          "dexNumber": 61
+        },
+        {
+          "speciesId": 115,
+          "formId": 115,
+          "dexNumber": 62
+        },
+        {
+          "speciesId": 303,
+          "formId": 303,
+          "dexNumber": 63
+        },
+        {
+          "speciesId": 696,
+          "formId": 696,
+          "dexNumber": 64
+        },
+        {
+          "speciesId": 697,
+          "formId": 697,
+          "dexNumber": 65
+        },
+        {
+          "speciesId": 698,
+          "formId": 698,
+          "dexNumber": 66
+        },
+        {
+          "speciesId": 699,
+          "formId": 699,
+          "dexNumber": 67
+        },
+        {
+          "speciesId": 142,
+          "formId": 142,
+          "dexNumber": 68
+        },
+        {
+          "speciesId": 597,
+          "formId": 597,
+          "dexNumber": 69
+        },
+        {
+          "speciesId": 598,
+          "formId": 598,
+          "dexNumber": 70
+        },
+        {
+          "speciesId": 209,
+          "formId": 209,
+          "dexNumber": 71
+        },
+        {
+          "speciesId": 210,
+          "formId": 210,
+          "dexNumber": 72
+        },
+        {
+          "speciesId": 309,
+          "formId": 309,
+          "dexNumber": 73
+        },
+        {
+          "speciesId": 310,
+          "formId": 310,
+          "dexNumber": 74
+        },
+        {
+          "speciesId": 228,
+          "formId": 228,
+          "dexNumber": 75
+        },
+        {
+          "speciesId": 229,
+          "formId": 229,
+          "dexNumber": 76
+        },
+        {
+          "speciesId": 133,
+          "formId": 133,
+          "dexNumber": 77
+        },
+        {
+          "speciesId": 134,
+          "formId": 134,
+          "dexNumber": 78
+        },
+        {
+          "speciesId": 135,
+          "formId": 135,
+          "dexNumber": 79
+        },
+        {
+          "speciesId": 136,
+          "formId": 136,
+          "dexNumber": 80
+        },
+        {
+          "speciesId": 196,
+          "formId": 196,
+          "dexNumber": 81
+        },
+        {
+          "speciesId": 197,
+          "formId": 197,
+          "dexNumber": 82
+        },
+        {
+          "speciesId": 470,
+          "formId": 470,
+          "dexNumber": 83
+        },
+        {
+          "speciesId": 471,
+          "formId": 471,
+          "dexNumber": 84
+        },
+        {
+          "speciesId": 700,
+          "formId": 700,
+          "dexNumber": 85
+        },
+        {
+          "speciesId": 587,
+          "formId": 587,
+          "dexNumber": 86
+        },
+        {
+          "speciesId": 193,
+          "formId": 193,
+          "dexNumber": 87
+        },
+        {
+          "speciesId": 469,
+          "formId": 469,
+          "dexNumber": 88
+        },
+        {
+          "speciesId": 701,
+          "formId": 701,
+          "dexNumber": 89
+        },
+        {
+          "speciesId": 561,
+          "formId": 561,
+          "dexNumber": 90
+        },
+        {
+          "speciesId": 622,
+          "formId": 622,
+          "dexNumber": 91
+        },
+        {
+          "speciesId": 623,
+          "formId": 623,
+          "dexNumber": 92
+        },
+        {
+          "speciesId": 299,
+          "formId": 299,
+          "dexNumber": 93
+        },
+        {
+          "speciesId": 476,
+          "formId": 476,
+          "dexNumber": 94
+        },
+        {
+          "speciesId": 296,
+          "formId": 296,
+          "dexNumber": 95
+        },
+        {
+          "speciesId": 297,
+          "formId": 297,
+          "dexNumber": 96
+        },
+        {
+          "speciesId": 538,
+          "formId": 538,
+          "dexNumber": 97
+        },
+        {
+          "speciesId": 539,
+          "formId": 539,
+          "dexNumber": 98
+        },
+        {
+          "speciesId": 396,
+          "formId": 396,
+          "dexNumber": 99
+        },
+        {
+          "speciesId": 397,
+          "formId": 397,
+          "dexNumber": 100
+        },
+        {
+          "speciesId": 398,
+          "formId": 398,
+          "dexNumber": 101
+        },
+        {
+          "speciesId": 434,
+          "formId": 434,
+          "dexNumber": 102
+        },
+        {
+          "speciesId": 435,
+          "formId": 435,
+          "dexNumber": 103
+        },
+        {
+          "speciesId": 29,
+          "formId": 29,
+          "dexNumber": 104
+        },
+        {
+          "speciesId": 30,
+          "formId": 30,
+          "dexNumber": 105
+        },
+        {
+          "speciesId": 31,
+          "formId": 31,
+          "dexNumber": 106
+        },
+        {
+          "speciesId": 32,
+          "formId": 32,
+          "dexNumber": 107
+        },
+        {
+          "speciesId": 33,
+          "formId": 33,
+          "dexNumber": 108
+        },
+        {
+          "speciesId": 34,
+          "formId": 34,
+          "dexNumber": 109
+        },
+        {
+          "speciesId": 702,
+          "formId": 702,
+          "dexNumber": 110
+        },
+        {
+          "speciesId": 433,
+          "formId": 433,
+          "dexNumber": 111
+        },
+        {
+          "speciesId": 358,
+          "formId": 358,
+          "dexNumber": 112
+        },
+        {
+          "speciesId": 439,
+          "formId": 439,
+          "dexNumber": 113
+        },
+        {
+          "speciesId": 122,
+          "formId": 122,
+          "dexNumber": 114
+        },
+        {
+          "speciesId": 577,
+          "formId": 577,
+          "dexNumber": 115
+        },
+        {
+          "speciesId": 578,
+          "formId": 578,
+          "dexNumber": 116
+        },
+        {
+          "speciesId": 579,
+          "formId": 579,
+          "dexNumber": 117
+        },
+        {
+          "speciesId": 360,
+          "formId": 360,
+          "dexNumber": 118
+        },
+        {
+          "speciesId": 202,
+          "formId": 202,
+          "dexNumber": 119
+        },
+        {
+          "speciesId": 524,
+          "formId": 524,
+          "dexNumber": 120
+        },
+        {
+          "speciesId": 525,
+          "formId": 525,
+          "dexNumber": 121
+        },
+        {
+          "speciesId": 526,
+          "formId": 526,
+          "dexNumber": 122
+        },
+        {
+          "speciesId": 302,
+          "formId": 302,
+          "dexNumber": 123
+        },
+        {
+          "speciesId": 703,
+          "formId": 703,
+          "dexNumber": 124
+        },
+        {
+          "speciesId": 128,
+          "formId": 128,
+          "dexNumber": 125
+        },
+        {
+          "speciesId": 241,
+          "formId": 241,
+          "dexNumber": 126
+        },
+        {
+          "speciesId": 179,
+          "formId": 179,
+          "dexNumber": 127
+        },
+        {
+          "speciesId": 180,
+          "formId": 180,
+          "dexNumber": 128
+        },
+        {
+          "speciesId": 181,
+          "formId": 181,
+          "dexNumber": 129
+        },
+        {
+          "speciesId": 127,
+          "formId": 127,
+          "dexNumber": 130
+        },
+        {
+          "speciesId": 214,
+          "formId": 214,
+          "dexNumber": 131
+        },
+        {
+          "speciesId": 417,
+          "formId": 417,
+          "dexNumber": 132
+        },
+        {
+          "speciesId": 79,
+          "formId": 79,
+          "dexNumber": 133
+        },
+        {
+          "speciesId": 80,
+          "formId": 80,
+          "dexNumber": 134
+        },
+        {
+          "speciesId": 199,
+          "formId": 199,
+          "dexNumber": 135
+        },
+        {
+          "speciesId": 102,
+          "formId": 102,
+          "dexNumber": 136
+        },
+        {
+          "speciesId": 103,
+          "formId": 103,
+          "dexNumber": 137
+        },
+        {
+          "speciesId": 441,
+          "formId": 441,
+          "dexNumber": 138
+        },
+        {
+          "speciesId": 458,
+          "formId": 458,
+          "dexNumber": 139
+        },
+        {
+          "speciesId": 226,
+          "formId": 226,
+          "dexNumber": 140
+        },
+        {
+          "speciesId": 366,
+          "formId": 366,
+          "dexNumber": 141
+        },
+        {
+          "speciesId": 367,
+          "formId": 367,
+          "dexNumber": 142
+        },
+        {
+          "speciesId": 368,
+          "formId": 368,
+          "dexNumber": 143
+        },
+        {
+          "speciesId": 223,
+          "formId": 223,
+          "dexNumber": 144
+        },
+        {
+          "speciesId": 224,
+          "formId": 224,
+          "dexNumber": 145
+        },
+        {
+          "speciesId": 222,
+          "formId": 222,
+          "dexNumber": 146
+        },
+        {
+          "speciesId": 170,
+          "formId": 170,
+          "dexNumber": 147
+        },
+        {
+          "speciesId": 171,
+          "formId": 171,
+          "dexNumber": 148
+        },
+        {
+          "speciesId": 594,
+          "formId": 594,
+          "dexNumber": 149
+        },
+        {
+          "speciesId": 131,
+          "formId": 131,
+          "dexNumber": 150
+        },
+        {
+          "speciesId": 144,
+          "formId": 144,
+          "dexNumber": 151
+        },
+        {
+          "speciesId": 145,
+          "formId": 145,
+          "dexNumber": 152
+        },
+        {
+          "speciesId": 146,
+          "formId": 146,
+          "dexNumber": 153
+        }
+      ]
+    },
+    {
+      "id": "kalos-mountain",
+      "title": "Kalos Mountain Pokédex",
+      "type": "base",
+      "optional": false,
+      "defaultEnabled": false,
+      "entries": [
+        {
+          "speciesId": 50,
+          "formId": 50,
+          "dexNumber": 1
+        },
+        {
+          "speciesId": 51,
+          "formId": 51,
+          "dexNumber": 2
+        },
+        {
+          "speciesId": 328,
+          "formId": 328,
+          "dexNumber": 3
+        },
+        {
+          "speciesId": 329,
+          "formId": 329,
+          "dexNumber": 4
+        },
+        {
+          "speciesId": 330,
+          "formId": 330,
+          "dexNumber": 5
+        },
+        {
+          "speciesId": 443,
+          "formId": 443,
+          "dexNumber": 6
+        },
+        {
+          "speciesId": 444,
+          "formId": 444,
+          "dexNumber": 7
+        },
+        {
+          "speciesId": 445,
+          "formId": 445,
+          "dexNumber": 8
+        },
+        {
+          "speciesId": 74,
+          "formId": 74,
+          "dexNumber": 9
+        },
+        {
+          "speciesId": 75,
+          "formId": 75,
+          "dexNumber": 10
+        },
+        {
+          "speciesId": 76,
+          "formId": 76,
+          "dexNumber": 11
+        },
+        {
+          "speciesId": 218,
+          "formId": 218,
+          "dexNumber": 12
+        },
+        {
+          "speciesId": 219,
+          "formId": 219,
+          "dexNumber": 13
+        },
+        {
+          "speciesId": 213,
+          "formId": 213,
+          "dexNumber": 14
+        },
+        {
+          "speciesId": 451,
+          "formId": 451,
+          "dexNumber": 15
+        },
+        {
+          "speciesId": 452,
+          "formId": 452,
+          "dexNumber": 16
+        },
+        {
+          "speciesId": 194,
+          "formId": 194,
+          "dexNumber": 17
+        },
+        {
+          "speciesId": 195,
+          "formId": 195,
+          "dexNumber": 18
+        },
+        {
+          "speciesId": 704,
+          "formId": 704,
+          "dexNumber": 19
+        },
+        {
+          "speciesId": 705,
+          "formId": 705,
+          "dexNumber": 20
+        },
+        {
+          "speciesId": 706,
+          "formId": 706,
+          "dexNumber": 21
+        },
+        {
+          "speciesId": 588,
+          "formId": 588,
+          "dexNumber": 22
+        },
+        {
+          "speciesId": 589,
+          "formId": 589,
+          "dexNumber": 23
+        },
+        {
+          "speciesId": 616,
+          "formId": 616,
+          "dexNumber": 24
+        },
+        {
+          "speciesId": 617,
+          "formId": 617,
+          "dexNumber": 25
+        },
+        {
+          "speciesId": 69,
+          "formId": 69,
+          "dexNumber": 26
+        },
+        {
+          "speciesId": 70,
+          "formId": 70,
+          "dexNumber": 27
+        },
+        {
+          "speciesId": 71,
+          "formId": 71,
+          "dexNumber": 28
+        },
+        {
+          "speciesId": 455,
+          "formId": 455,
+          "dexNumber": 29
+        },
+        {
+          "speciesId": 92,
+          "formId": 92,
+          "dexNumber": 30
+        },
+        {
+          "speciesId": 93,
+          "formId": 93,
+          "dexNumber": 31
+        },
+        {
+          "speciesId": 94,
+          "formId": 94,
+          "dexNumber": 32
+        },
+        {
+          "speciesId": 60,
+          "formId": 60,
+          "dexNumber": 33
+        },
+        {
+          "speciesId": 61,
+          "formId": 61,
+          "dexNumber": 34
+        },
+        {
+          "speciesId": 62,
+          "formId": 62,
+          "dexNumber": 35
+        },
+        {
+          "speciesId": 186,
+          "formId": 186,
+          "dexNumber": 36
+        },
+        {
+          "speciesId": 23,
+          "formId": 23,
+          "dexNumber": 37
+        },
+        {
+          "speciesId": 24,
+          "formId": 24,
+          "dexNumber": 38
+        },
+        {
+          "speciesId": 618,
+          "formId": 618,
+          "dexNumber": 39
+        },
+        {
+          "speciesId": 339,
+          "formId": 339,
+          "dexNumber": 40
+        },
+        {
+          "speciesId": 340,
+          "formId": 340,
+          "dexNumber": 41
+        },
+        {
+          "speciesId": 509,
+          "formId": 509,
+          "dexNumber": 42
+        },
+        {
+          "speciesId": 510,
+          "formId": 510,
+          "dexNumber": 43
+        },
+        {
+          "speciesId": 261,
+          "formId": 261,
+          "dexNumber": 44
+        },
+        {
+          "speciesId": 262,
+          "formId": 262,
+          "dexNumber": 45
+        },
+        {
+          "speciesId": 504,
+          "formId": 504,
+          "dexNumber": 46
+        },
+        {
+          "speciesId": 505,
+          "formId": 505,
+          "dexNumber": 47
+        },
+        {
+          "speciesId": 624,
+          "formId": 624,
+          "dexNumber": 48
+        },
+        {
+          "speciesId": 625,
+          "formId": 625,
+          "dexNumber": 49
+        },
+        {
+          "speciesId": 707,
+          "formId": 707,
+          "dexNumber": 50
+        },
+        {
+          "speciesId": 198,
+          "formId": 198,
+          "dexNumber": 51
+        },
+        {
+          "speciesId": 430,
+          "formId": 430,
+          "dexNumber": 52
+        },
+        {
+          "speciesId": 590,
+          "formId": 590,
+          "dexNumber": 53
+        },
+        {
+          "speciesId": 591,
+          "formId": 591,
+          "dexNumber": 54
+        },
+        {
+          "speciesId": 270,
+          "formId": 270,
+          "dexNumber": 55
+        },
+        {
+          "speciesId": 271,
+          "formId": 271,
+          "dexNumber": 56
+        },
+        {
+          "speciesId": 272,
+          "formId": 272,
+          "dexNumber": 57
+        },
+        {
+          "speciesId": 418,
+          "formId": 418,
+          "dexNumber": 58
+        },
+        {
+          "speciesId": 419,
+          "formId": 419,
+          "dexNumber": 59
+        },
+        {
+          "speciesId": 550,
+          "formId": 550,
+          "dexNumber": 60
+        },
+        {
+          "speciesId": 708,
+          "formId": 708,
+          "dexNumber": 61
+        },
+        {
+          "speciesId": 709,
+          "formId": 709,
+          "dexNumber": 62
+        },
+        {
+          "speciesId": 710,
+          "formId": 710,
+          "dexNumber": 63
+        },
+        {
+          "speciesId": 711,
+          "formId": 711,
+          "dexNumber": 64
+        },
+        {
+          "speciesId": 607,
+          "formId": 607,
+          "dexNumber": 65
+        },
+        {
+          "speciesId": 608,
+          "formId": 608,
+          "dexNumber": 66
+        },
+        {
+          "speciesId": 609,
+          "formId": 609,
+          "dexNumber": 67
+        },
+        {
+          "speciesId": 479,
+          "formId": 479,
+          "dexNumber": 68
+        },
+        {
+          "speciesId": 81,
+          "formId": 81,
+          "dexNumber": 69
+        },
+        {
+          "speciesId": 82,
+          "formId": 82,
+          "dexNumber": 70
+        },
+        {
+          "speciesId": 462,
+          "formId": 462,
+          "dexNumber": 71
+        },
+        {
+          "speciesId": 100,
+          "formId": 100,
+          "dexNumber": 72
+        },
+        {
+          "speciesId": 101,
+          "formId": 101,
+          "dexNumber": 73
+        },
+        {
+          "speciesId": 568,
+          "formId": 568,
+          "dexNumber": 74
+        },
+        {
+          "speciesId": 569,
+          "formId": 569,
+          "dexNumber": 75
+        },
+        {
+          "speciesId": 220,
+          "formId": 220,
+          "dexNumber": 76
+        },
+        {
+          "speciesId": 221,
+          "formId": 221,
+          "dexNumber": 77
+        },
+        {
+          "speciesId": 473,
+          "formId": 473,
+          "dexNumber": 78
+        },
+        {
+          "speciesId": 712,
+          "formId": 712,
+          "dexNumber": 79
+        },
+        {
+          "speciesId": 713,
+          "formId": 713,
+          "dexNumber": 80
+        },
+        {
+          "speciesId": 613,
+          "formId": 613,
+          "dexNumber": 81
+        },
+        {
+          "speciesId": 614,
+          "formId": 614,
+          "dexNumber": 82
+        },
+        {
+          "speciesId": 238,
+          "formId": 238,
+          "dexNumber": 83
+        },
+        {
+          "speciesId": 124,
+          "formId": 124,
+          "dexNumber": 84
+        },
+        {
+          "speciesId": 582,
+          "formId": 582,
+          "dexNumber": 85
+        },
+        {
+          "speciesId": 583,
+          "formId": 583,
+          "dexNumber": 86
+        },
+        {
+          "speciesId": 584,
+          "formId": 584,
+          "dexNumber": 87
+        },
+        {
+          "speciesId": 459,
+          "formId": 459,
+          "dexNumber": 88
+        },
+        {
+          "speciesId": 460,
+          "formId": 460,
+          "dexNumber": 89
+        },
+        {
+          "speciesId": 225,
+          "formId": 225,
+          "dexNumber": 90
+        },
+        {
+          "speciesId": 215,
+          "formId": 215,
+          "dexNumber": 91
+        },
+        {
+          "speciesId": 461,
+          "formId": 461,
+          "dexNumber": 92
+        },
+        {
+          "speciesId": 532,
+          "formId": 532,
+          "dexNumber": 93
+        },
+        {
+          "speciesId": 533,
+          "formId": 533,
+          "dexNumber": 94
+        },
+        {
+          "speciesId": 534,
+          "formId": 534,
+          "dexNumber": 95
+        },
+        {
+          "speciesId": 324,
+          "formId": 324,
+          "dexNumber": 96
+        },
+        {
+          "speciesId": 27,
+          "formId": 27,
+          "dexNumber": 97
+        },
+        {
+          "speciesId": 28,
+          "formId": 28,
+          "dexNumber": 98
+        },
+        {
+          "speciesId": 304,
+          "formId": 304,
+          "dexNumber": 99
+        },
+        {
+          "speciesId": 305,
+          "formId": 305,
+          "dexNumber": 100
+        },
+        {
+          "speciesId": 306,
+          "formId": 306,
+          "dexNumber": 101
+        },
+        {
+          "speciesId": 246,
+          "formId": 246,
+          "dexNumber": 102
+        },
+        {
+          "speciesId": 247,
+          "formId": 247,
+          "dexNumber": 103
+        },
+        {
+          "speciesId": 248,
+          "formId": 248,
+          "dexNumber": 104
+        },
+        {
+          "speciesId": 631,
+          "formId": 631,
+          "dexNumber": 105
+        },
+        {
+          "speciesId": 632,
+          "formId": 632,
+          "dexNumber": 106
+        },
+        {
+          "speciesId": 167,
+          "formId": 167,
+          "dexNumber": 107
+        },
+        {
+          "speciesId": 168,
+          "formId": 168,
+          "dexNumber": 108
+        },
+        {
+          "speciesId": 21,
+          "formId": 21,
+          "dexNumber": 109
+        },
+        {
+          "speciesId": 22,
+          "formId": 22,
+          "dexNumber": 110
+        },
+        {
+          "speciesId": 615,
+          "formId": 615,
+          "dexNumber": 111
+        },
+        {
+          "speciesId": 227,
+          "formId": 227,
+          "dexNumber": 112
+        },
+        {
+          "speciesId": 714,
+          "formId": 714,
+          "dexNumber": 113
+        },
+        {
+          "speciesId": 715,
+          "formId": 715,
+          "dexNumber": 114
+        },
+        {
+          "speciesId": 207,
+          "formId": 207,
+          "dexNumber": 115
+        },
+        {
+          "speciesId": 472,
+          "formId": 472,
+          "dexNumber": 116
+        },
+        {
+          "speciesId": 163,
+          "formId": 163,
+          "dexNumber": 117
+        },
+        {
+          "speciesId": 164,
+          "formId": 164,
+          "dexNumber": 118
+        },
+        {
+          "speciesId": 174,
+          "formId": 174,
+          "dexNumber": 119
+        },
+        {
+          "speciesId": 39,
+          "formId": 39,
+          "dexNumber": 120
+        },
+        {
+          "speciesId": 40,
+          "formId": 40,
+          "dexNumber": 121
+        },
+        {
+          "speciesId": 353,
+          "formId": 353,
+          "dexNumber": 122
+        },
+        {
+          "speciesId": 354,
+          "formId": 354,
+          "dexNumber": 123
+        },
+        {
+          "speciesId": 570,
+          "formId": 570,
+          "dexNumber": 124
+        },
+        {
+          "speciesId": 571,
+          "formId": 571,
+          "dexNumber": 125
+        },
+        {
+          "speciesId": 574,
+          "formId": 574,
+          "dexNumber": 126
+        },
+        {
+          "speciesId": 575,
+          "formId": 575,
+          "dexNumber": 127
+        },
+        {
+          "speciesId": 576,
+          "formId": 576,
+          "dexNumber": 128
+        },
+        {
+          "speciesId": 438,
+          "formId": 438,
+          "dexNumber": 129
+        },
+        {
+          "speciesId": 185,
+          "formId": 185,
+          "dexNumber": 130
+        },
+        {
+          "speciesId": 327,
+          "formId": 327,
+          "dexNumber": 131
+        },
+        {
+          "speciesId": 216,
+          "formId": 216,
+          "dexNumber": 132
+        },
+        {
+          "speciesId": 217,
+          "formId": 217,
+          "dexNumber": 133
+        },
+        {
+          "speciesId": 108,
+          "formId": 108,
+          "dexNumber": 134
+        },
+        {
+          "speciesId": 463,
+          "formId": 463,
+          "dexNumber": 135
+        },
+        {
+          "speciesId": 123,
+          "formId": 123,
+          "dexNumber": 136
+        },
+        {
+          "speciesId": 212,
+          "formId": 212,
+          "dexNumber": 137
+        },
+        {
+          "speciesId": 132,
+          "formId": 132,
+          "dexNumber": 138
+        },
+        {
+          "speciesId": 333,
+          "formId": 333,
+          "dexNumber": 139
+        },
+        {
+          "speciesId": 334,
+          "formId": 334,
+          "dexNumber": 140
+        },
+        {
+          "speciesId": 621,
+          "formId": 621,
+          "dexNumber": 141
+        },
+        {
+          "speciesId": 633,
+          "formId": 633,
+          "dexNumber": 142
+        },
+        {
+          "speciesId": 634,
+          "formId": 634,
+          "dexNumber": 143
+        },
+        {
+          "speciesId": 635,
+          "formId": 635,
+          "dexNumber": 144
+        },
+        {
+          "speciesId": 147,
+          "formId": 147,
+          "dexNumber": 145
+        },
+        {
+          "speciesId": 148,
+          "formId": 148,
+          "dexNumber": 146
+        },
+        {
+          "speciesId": 149,
+          "formId": 149,
+          "dexNumber": 147
+        },
+        {
+          "speciesId": 716,
+          "formId": 716,
+          "dexNumber": 148
+        },
+        {
+          "speciesId": 717,
+          "formId": 717,
+          "dexNumber": 149
+        },
+        {
+          "speciesId": 718,
+          "formId": 718,
+          "dexNumber": 150
+        },
+        {
+          "speciesId": 150,
+          "formId": 150,
+          "dexNumber": 151
+        }
+      ]
     }
   ],
   "encounters": {
+    "1": {
+      "x": {
+        "locations": [
+          "lumiose city area"
+        ]
+      },
+      "y": {
+        "locations": [
+          "lumiose city area"
+        ]
+      }
+    },
+    "2": {
+      "x": {
+        "locations": [
+          "friend safari grass"
+        ]
+      },
+      "y": {
+        "locations": [
+          "friend safari grass"
+        ]
+      }
+    },
+    "3": {
+      "x": {
+        "locations": [
+          "Evolve Ivysaur"
+        ]
+      },
+      "y": {
+        "locations": [
+          "Evolve Ivysaur"
+        ]
+      }
+    },
+    "4": {
+      "x": {
+        "locations": [
+          "lumiose city area"
+        ]
+      },
+      "y": {
+        "locations": [
+          "lumiose city area"
+        ]
+      }
+    },
+    "5": {
+      "x": {
+        "locations": [
+          "friend safari fire"
+        ]
+      },
+      "y": {
+        "locations": [
+          "friend safari fire"
+        ]
+      }
+    },
+    "6": {
+      "x": {
+        "locations": [
+          "Evolve Charmeleon"
+        ]
+      },
+      "y": {
+        "locations": [
+          "Evolve Charmeleon"
+        ]
+      }
+    },
+    "7": {
+      "x": {
+        "locations": [
+          "lumiose city area"
+        ]
+      },
+      "y": {
+        "locations": [
+          "lumiose city area"
+        ]
+      }
+    },
+    "8": {
+      "x": {
+        "locations": [
+          "friend safari water"
+        ]
+      },
+      "y": {
+        "locations": [
+          "friend safari water"
+        ]
+      }
+    },
+    "9": {
+      "x": {
+        "locations": [
+          "Evolve Wartortle"
+        ]
+      },
+      "y": {
+        "locations": [
+          "Evolve Wartortle"
+        ]
+      }
+    },
+    "10": {
+      "y": {
+        "locations": [
+          "kalos route 2 area",
+          "santalune forest area"
+        ]
+      },
+      "x": {
+        "locations": [
+          "santalune forest area"
+        ]
+      }
+    },
+    "11": {
+      "y": {
+        "locations": [
+          "santalune forest area"
+        ]
+      },
+      "x": {
+        "locations": [
+          "Evolve Caterpie"
+        ]
+      }
+    },
+    "12": {
+      "x": {
+        "locations": [
+          "friend safari bug"
+        ]
+      },
+      "y": {
+        "locations": [
+          "friend safari bug"
+        ]
+      }
+    },
+    "13": {
+      "x": {
+        "locations": [
+          "kalos route 2 area",
+          "santalune forest area"
+        ]
+      },
+      "y": {
+        "locations": [
+          "santalune forest area"
+        ]
+      }
+    },
+    "14": {
+      "x": {
+        "locations": [
+          "santalune forest area",
+          "friend safari poison"
+        ]
+      },
+      "y": {
+        "locations": [
+          "friend safari poison"
+        ]
+      }
+    },
+    "15": {
+      "x": {
+        "locations": [
+          "Evolve Kakuna"
+        ]
+      },
+      "y": {
+        "locations": [
+          "Evolve Kakuna"
+        ]
+      }
+    },
+    "16": {
+      "x": {
+        "locations": [
+          "kalos route 2 area",
+          "kalos route 3 area",
+          "friend safari flying"
+        ]
+      },
+      "y": {
+        "locations": [
+          "kalos route 2 area",
+          "kalos route 3 area",
+          "friend safari flying"
+        ]
+      }
+    },
+    "17": {
+      "x": {
+        "locations": [
+          "Evolve Pidgey"
+        ]
+      },
+      "y": {
+        "locations": [
+          "Evolve Pidgey"
+        ]
+      }
+    },
+    "18": {
+      "x": {
+        "locations": [
+          "Evolve Pidgeotto"
+        ]
+      },
+      "y": {
+        "locations": [
+          "Evolve Pidgeotto"
+        ]
+      }
+    },
+    "21": {
+      "x": {
+        "locations": [
+          "friend safari flying"
+        ]
+      },
+      "y": {
+        "locations": [
+          "friend safari flying"
+        ]
+      }
+    },
+    "22": {
+      "x": {
+        "locations": [
+          "kalos victory road outside"
+        ]
+      },
+      "y": {
+        "locations": [
+          "kalos victory road outside"
+        ]
+      }
+    },
+    "23": {
+      "x": {
+        "locations": [
+          "kalos route 14 area"
+        ]
+      },
+      "y": {
+        "locations": [
+          "kalos route 14 area"
+        ]
+      }
+    },
+    "24": {
+      "x": {
+        "locations": [
+          "kalos route 19 area"
+        ]
+      },
+      "y": {
+        "locations": [
+          "kalos route 19 area"
+        ]
+      }
+    },
+    "25": {
+      "x": {
+        "locations": [
+          "kalos route 3 area",
+          "santalune forest area",
+          "friend safari electric"
+        ]
+      },
+      "y": {
+        "locations": [
+          "kalos route 3 area",
+          "santalune forest area",
+          "friend safari electric"
+        ]
+      }
+    },
+    "26": {
+      "x": {
+        "locations": [
+          "Evolve Pikachu"
+        ]
+      },
+      "y": {
+        "locations": [
+          "Evolve Pikachu"
+        ]
+      }
+    },
+    "27": {
+      "x": {
+        "locations": [
+          "friend safari ground"
+        ]
+      },
+      "y": {
+        "locations": [
+          "friend safari ground"
+        ]
+      }
+    },
+    "28": {
+      "x": {
+        "locations": [
+          "kalos route 18 area",
+          "terminus cave 1f",
+          "terminus cave b1f left",
+          "terminus cave b1f right",
+          "terminus cave b2f",
+          "terminus cave zygardes chamber"
+        ]
+      },
+      "y": {
+        "locations": [
+          "kalos route 18 area",
+          "terminus cave 1f",
+          "terminus cave b1f left",
+          "terminus cave b1f right",
+          "terminus cave b2f",
+          "terminus cave zygardes chamber"
+        ]
+      }
+    },
+    "29": {
+      "x": {
+        "locations": [
+          "kalos route 11 area"
+        ]
+      },
+      "y": {
+        "locations": [
+          "kalos route 11 area"
+        ]
+      }
+    },
+    "30": {
+      "x": {
+        "locations": [
+          "kalos route 11 area"
+        ]
+      },
+      "y": {
+        "locations": [
+          "kalos route 11 area"
+        ]
+      }
+    },
+    "31": {
+      "x": {
+        "locations": [
+          "Evolve Nidorina"
+        ]
+      },
+      "y": {
+        "locations": [
+          "Evolve Nidorina"
+        ]
+      }
+    },
+    "32": {
+      "x": {
+        "locations": [
+          "kalos route 11 area"
+        ]
+      },
+      "y": {
+        "locations": [
+          "kalos route 11 area"
+        ]
+      }
+    },
+    "33": {
+      "x": {
+        "locations": [
+          "kalos route 11 area"
+        ]
+      },
+      "y": {
+        "locations": [
+          "kalos route 11 area"
+        ]
+      }
+    },
+    "34": {
+      "x": {
+        "locations": [
+          "Evolve Nidorino"
+        ]
+      },
+      "y": {
+        "locations": [
+          "Evolve Nidorino"
+        ]
+      }
+    },
+    "39": {
+      "x": {
+        "locations": [
+          "kalos route 20 area",
+          "pokemon village area",
+          "friend safari fairy"
+        ]
+      },
+      "y": {
+        "locations": [
+          "kalos route 20 area",
+          "pokemon village area",
+          "friend safari fairy"
+        ]
+      }
+    },
+    "40": {
+      "x": {
+        "locations": [
+          "Evolve Jigglypuff"
+        ]
+      },
+      "y": {
+        "locations": [
+          "Evolve Jigglypuff"
+        ]
+      }
+    },
+    "41": {
+      "x": {
+        "locations": [
+          "connecting cave area"
+        ]
+      },
+      "y": {
+        "locations": [
+          "connecting cave area"
+        ]
+      }
+    },
+    "42": {
+      "x": {
+        "locations": [
+          "Evolve Zubat"
+        ]
+      },
+      "y": {
+        "locations": [
+          "Evolve Zubat"
+        ]
+      }
+    },
+    "43": {
+      "x": {
+        "locations": [
+          "kalos route 6 area",
+          "friend safari grass"
+        ]
+      },
+      "y": {
+        "locations": [
+          "kalos route 6 area",
+          "friend safari grass"
+        ]
+      }
+    },
+    "44": {
+      "x": {
+        "locations": [
+          "friend safari poison"
+        ]
+      },
+      "y": {
+        "locations": [
+          "friend safari poison"
+        ]
+      }
+    },
+    "45": {
+      "x": {
+        "locations": [
+          "Evolve Gloom"
+        ]
+      },
+      "y": {
+        "locations": [
+          "Evolve Gloom"
+        ]
+      }
+    },
+    "50": {
+      "x": {
+        "locations": [
+          "Breed Dugtrio"
+        ]
+      },
+      "y": {
+        "locations": [
+          "Breed Dugtrio"
+        ]
+      }
+    },
+    "51": {
+      "x": {
+        "locations": [
+          "kalos route 13 area",
+          "friend safari ground"
+        ]
+      },
+      "y": {
+        "locations": [
+          "kalos route 13 area",
+          "friend safari ground"
+        ]
+      }
+    },
+    "54": {
+      "x": {
+        "locations": [
+          "kalos route 7 area",
+          "kalos route 22 area"
+        ]
+      },
+      "y": {
+        "locations": [
+          "kalos route 7 area",
+          "kalos route 22 area"
+        ]
+      }
+    },
+    "55": {
+      "x": {
+        "locations": [
+          "Evolve Psyduck"
+        ]
+      },
+      "y": {
+        "locations": [
+          "Evolve Psyduck"
+        ]
+      }
+    },
+    "60": {
+      "x": {
+        "locations": [
+          "couriway town area",
+          "laverre city area",
+          "kalos route 14 area",
+          "kalos route 15 area",
+          "kalos route 16 area",
+          "kalos route 19 area",
+          "kalos route 21 area",
+          "frost cavern unknown area 313",
+          "frost cavern unknown area 315",
+          "pokemon village area",
+          "kalos victory road unknown area 322",
+          "kalos victory road outside",
+          "kalos victory road unknown area 328"
+        ]
+      },
+      "y": {
+        "locations": [
+          "couriway town area",
+          "laverre city area",
+          "kalos route 14 area",
+          "kalos route 15 area",
+          "kalos route 16 area",
+          "kalos route 19 area",
+          "kalos route 21 area",
+          "frost cavern unknown area 313",
+          "frost cavern unknown area 315",
+          "pokemon village area",
+          "kalos victory road unknown area 322",
+          "kalos victory road outside",
+          "kalos victory road unknown area 328"
+        ]
+      }
+    },
+    "61": {
+      "x": {
+        "locations": [
+          "couriway town area",
+          "laverre city area",
+          "kalos route 14 area",
+          "kalos route 15 area",
+          "kalos route 16 area",
+          "kalos route 19 area",
+          "kalos route 21 area",
+          "frost cavern unknown area 313",
+          "frost cavern unknown area 315",
+          "pokemon village area",
+          "kalos victory road unknown area 322",
+          "kalos victory road outside",
+          "kalos victory road unknown area 328",
+          "friend safari water"
+        ]
+      },
+      "y": {
+        "locations": [
+          "couriway town area",
+          "laverre city area",
+          "kalos route 14 area",
+          "kalos route 15 area",
+          "kalos route 16 area",
+          "kalos route 19 area",
+          "kalos route 21 area",
+          "frost cavern unknown area 313",
+          "frost cavern unknown area 315",
+          "pokemon village area",
+          "kalos victory road unknown area 322",
+          "kalos victory road outside",
+          "kalos victory road unknown area 328",
+          "friend safari water"
+        ]
+      }
+    },
+    "62": {
+      "x": {
+        "locations": [
+          "kalos victory road unknown area 328"
+        ]
+      },
+      "y": {
+        "locations": [
+          "kalos victory road unknown area 328"
+        ]
+      }
+    },
+    "63": {
+      "x": {
+        "locations": [
+          "kalos route 5 area",
+          "friend safari psychic"
+        ]
+      },
+      "y": {
+        "locations": [
+          "kalos route 5 area",
+          "friend safari psychic"
+        ]
+      }
+    },
+    "64": {
+      "x": {
+        "locations": [
+          "Evolve Abra"
+        ]
+      },
+      "y": {
+        "locations": [
+          "Evolve Abra"
+        ]
+      }
+    },
+    "65": {
+      "x": {
+        "locations": [
+          "Evolve Kadabra"
+        ]
+      },
+      "y": {
+        "locations": [
+          "Evolve Kadabra"
+        ]
+      }
+    },
+    "66": {
+      "x": {
+        "locations": [
+          "glittering cave unknown area 303"
+        ]
+      },
+      "y": {
+        "locations": [
+          "glittering cave unknown area 303"
+        ]
+      }
+    },
+    "67": {
+      "x": {
+        "locations": [
+          "friend safari fighting"
+        ]
+      },
+      "y": {
+        "locations": [
+          "friend safari fighting"
+        ]
+      }
+    },
+    "68": {
+      "x": {
+        "locations": [
+          "Evolve Machoke"
+        ]
+      },
+      "y": {
+        "locations": [
+          "Evolve Machoke"
+        ]
+      }
+    },
+    "69": {
+      "x": {
+        "locations": [
+          "kalos route 14 area"
+        ]
+      },
+      "y": {
+        "locations": [
+          "kalos route 14 area"
+        ]
+      }
+    },
+    "70": {
+      "x": {
+        "locations": [
+          "kalos route 14 area",
+          "kalos route 16 area",
+          "kalos route 19 area"
+        ]
+      },
+      "y": {
+        "locations": [
+          "kalos route 14 area",
+          "kalos route 16 area",
+          "kalos route 19 area"
+        ]
+      }
+    },
+    "71": {
+      "x": {
+        "locations": [
+          "Evolve Weepinbell"
+        ]
+      },
+      "y": {
+        "locations": [
+          "Evolve Weepinbell"
+        ]
+      }
+    },
+    "72": {
+      "x": {
+        "locations": [
+          "ambrette town area",
+          "cyllage city area",
+          "shalour city area",
+          "kalos route 8 area",
+          "kalos route 12 area",
+          "azure bay area"
+        ]
+      },
+      "y": {
+        "locations": [
+          "ambrette town area",
+          "cyllage city area",
+          "shalour city area",
+          "kalos route 8 area",
+          "kalos route 12 area",
+          "azure bay area"
+        ]
+      }
+    },
+    "73": {
+      "x": {
+        "locations": [
+          "Evolve Tentacool"
+        ]
+      },
+      "y": {
+        "locations": [
+          "Evolve Tentacool"
+        ]
+      }
+    },
+    "74": {
+      "x": {
+        "locations": [
+          "kalos route 18 area",
+          "kalos victory road unknown area 322",
+          "kalos victory road unknown area 324",
+          "kalos victory road unknown area 326",
+          "kalos victory road unknown area 328",
+          "terminus cave 1f",
+          "terminus cave b1f left",
+          "terminus cave b1f right",
+          "terminus cave b2f",
+          "terminus cave zygardes chamber"
+        ]
+      },
+      "y": {
+        "locations": [
+          "kalos route 18 area",
+          "kalos victory road unknown area 322",
+          "kalos victory road unknown area 324",
+          "kalos victory road unknown area 326",
+          "kalos victory road unknown area 328",
+          "terminus cave 1f",
+          "terminus cave b1f left",
+          "terminus cave b1f right",
+          "terminus cave b2f",
+          "terminus cave zygardes chamber"
+        ]
+      }
+    },
+    "75": {
+      "x": {
+        "locations": [
+          "kalos route 13 area",
+          "kalos route 18 area",
+          "kalos victory road unknown area 322",
+          "kalos victory road unknown area 324",
+          "kalos victory road unknown area 326",
+          "kalos victory road unknown area 328",
+          "terminus cave 1f",
+          "terminus cave b1f left",
+          "terminus cave b1f right",
+          "terminus cave b2f",
+          "terminus cave zygardes chamber"
+        ]
+      },
+      "y": {
+        "locations": [
+          "kalos route 13 area",
+          "kalos route 18 area",
+          "kalos victory road unknown area 322",
+          "kalos victory road unknown area 324",
+          "kalos victory road unknown area 326",
+          "kalos victory road unknown area 328",
+          "terminus cave 1f",
+          "terminus cave b1f left",
+          "terminus cave b1f right",
+          "terminus cave b2f",
+          "terminus cave zygardes chamber"
+        ]
+      }
+    },
+    "76": {
+      "x": {
+        "locations": [
+          "Evolve Graveler"
+        ]
+      },
+      "y": {
+        "locations": [
+          "Evolve Graveler"
+        ]
+      }
+    },
+    "79": {
+      "x": {
+        "locations": [
+          "kalos route 12 area",
+          "azure bay area"
+        ]
+      },
+      "y": {
+        "locations": [
+          "kalos route 12 area",
+          "azure bay area"
+        ]
+      }
+    },
+    "80": {
+      "x": {
+        "locations": [
+          "Evolve Slowpoke"
+        ]
+      },
+      "y": {
+        "locations": [
+          "Evolve Slowpoke"
+        ]
+      }
+    },
+    "81": {
+      "x": {
+        "locations": [
+          "Breed Magnezone"
+        ]
+      },
+      "y": {
+        "locations": [
+          "Breed Magnezone"
+        ]
+      }
+    },
+    "82": {
+      "x": {
+        "locations": [
+          "lost hotel area",
+          "friend safari steel"
+        ]
+      },
+      "y": {
+        "locations": [
+          "lost hotel area",
+          "friend safari steel"
+        ]
+      }
+    },
+    "83": {
+      "x": {
+        "locations": [
+          "kalos route 22 area",
+          "friend safari flying"
+        ]
+      },
+      "y": {
+        "locations": [
+          "kalos route 22 area",
+          "friend safari flying"
+        ]
+      }
+    },
+    "84": {
+      "x": {
+        "locations": [
+          "kalos route 5 area",
+          "friend safari flying"
+        ]
+      },
+      "y": {
+        "locations": [
+          "kalos route 5 area",
+          "friend safari flying"
+        ]
+      }
+    },
+    "85": {
+      "x": {
+        "locations": [
+          "Evolve Doduo"
+        ]
+      },
+      "y": {
+        "locations": [
+          "Evolve Doduo"
+        ]
+      }
+    },
+    "90": {
+      "y": {
+        "locations": [
+          "kalos route 8 area"
+        ]
+      },
+      "x": {
+        "locations": [
+          "Breed Cloyster"
+        ]
+      }
+    },
+    "91": {
+      "y": {
+        "locations": [
+          "kalos route 8 area",
+          "friend safari ice"
+        ]
+      },
+      "x": {
+        "locations": [
+          "friend safari ice"
+        ]
+      }
+    },
+    "92": {
+      "x": {
+        "locations": [
+          "Breed Gengar"
+        ]
+      },
+      "y": {
+        "locations": [
+          "Breed Gengar"
+        ]
+      }
+    },
+    "93": {
+      "x": {
+        "locations": [
+          "kalos route 14 area",
+          "kalos route 19 area",
+          "frost cavern unknown area 314",
+          "frost cavern unknown area 315",
+          "frost cavern unknown area 316",
+          "frost cavern unknown area 317",
+          "kalos victory road unknown area 322",
+          "kalos victory road unknown area 324",
+          "kalos victory road unknown area 326",
+          "kalos victory road unknown area 328"
+        ]
+      },
+      "y": {
+        "locations": [
+          "kalos route 14 area",
+          "kalos route 19 area",
+          "frost cavern unknown area 314",
+          "frost cavern unknown area 315",
+          "frost cavern unknown area 316",
+          "frost cavern unknown area 317",
+          "kalos victory road unknown area 322",
+          "kalos victory road unknown area 324",
+          "kalos victory road unknown area 326",
+          "kalos victory road unknown area 328"
+        ]
+      }
+    },
+    "94": {
+      "x": {
+        "locations": [
+          "Evolve Haunter"
+        ]
+      },
+      "y": {
+        "locations": [
+          "Evolve Haunter"
+        ]
+      }
+    },
+    "95": {
+      "x": {
+        "locations": [
+          "cyllage city area",
+          "glittering cave unknown area 303",
+          "glittering cave unknown area 304",
+          "friend safari rock"
+        ]
+      },
+      "y": {
+        "locations": [
+          "glittering cave unknown area 303",
+          "glittering cave unknown area 304",
+          "friend safari rock"
+        ]
+      }
+    },
+    "100": {
+      "x": {
+        "locations": [
+          "Breed Electrode"
+        ]
+      },
+      "y": {
+        "locations": [
+          "Breed Electrode"
+        ]
+      }
+    },
+    "101": {
+      "x": {
+        "locations": [
+          "lost hotel area",
+          "friend safari electric"
+        ]
+      },
+      "y": {
+        "locations": [
+          "lost hotel area",
+          "friend safari electric"
+        ]
+      }
+    },
+    "102": {
+      "x": {
+        "locations": [
+          "kalos route 12 area",
+          "azure bay area"
+        ]
+      },
+      "y": {
+        "locations": [
+          "kalos route 12 area",
+          "azure bay area"
+        ]
+      }
+    },
+    "103": {
+      "x": {
+        "locations": [
+          "Evolve Exeggcute"
+        ]
+      },
+      "y": {
+        "locations": [
+          "Evolve Exeggcute"
+        ]
+      }
+    },
+    "104": {
+      "x": {
+        "locations": [
+          "glittering cave unknown area 303"
+        ]
+      },
+      "y": {
+        "locations": [
+          "glittering cave unknown area 303"
+        ]
+      }
+    },
+    "105": {
+      "x": {
+        "locations": [
+          "friend safari ground"
+        ]
+      },
+      "y": {
+        "locations": [
+          "friend safari ground"
+        ]
+      }
+    },
+    "108": {
+      "x": {
+        "locations": [
+          "kalos victory road unknown area 322",
+          "kalos victory road unknown area 324",
+          "kalos victory road unknown area 326",
+          "kalos victory road unknown area 328"
+        ]
+      },
+      "y": {
+        "locations": [
+          "kalos victory road unknown area 322",
+          "kalos victory road unknown area 324",
+          "kalos victory road unknown area 326",
+          "kalos victory road unknown area 328"
+        ]
+      }
+    },
+    "111": {
+      "x": {
+        "locations": [
+          "glittering cave unknown area 303"
+        ]
+      },
+      "y": {
+        "locations": [
+          "glittering cave unknown area 303"
+        ]
+      }
+    },
+    "112": {
+      "x": {
+        "locations": [
+          "friend safari rock"
+        ]
+      },
+      "y": {
+        "locations": [
+          "friend safari rock"
+        ]
+      }
+    },
+    "115": {
+      "x": {
+        "locations": [
+          "glittering cave unknown area 303"
+        ]
+      },
+      "y": {
+        "locations": [
+          "glittering cave unknown area 303"
+        ]
+      }
+    },
+    "116": {
+      "x": {
+        "locations": [
+          "ambrette town area",
+          "cyllage city area"
+        ]
+      },
+      "y": {
+        "locations": [
+          "ambrette town area",
+          "cyllage city area"
+        ]
+      }
+    },
+    "117": {
+      "x": {
+        "locations": [
+          "ambrette town area",
+          "cyllage city area"
+        ]
+      },
+      "y": {
+        "locations": [
+          "ambrette town area",
+          "cyllage city area"
+        ]
+      }
+    },
+    "118": {
+      "x": {
+        "locations": [
+          "kalos route 3 area",
+          "kalos route 22 area",
+          "parfum palace area"
+        ]
+      },
+      "y": {
+        "locations": [
+          "kalos route 3 area",
+          "kalos route 22 area",
+          "parfum palace area"
+        ]
+      }
+    },
+    "119": {
+      "x": {
+        "locations": [
+          "kalos route 3 area",
+          "kalos route 22 area",
+          "parfum palace area"
+        ]
+      },
+      "y": {
+        "locations": [
+          "kalos route 3 area",
+          "kalos route 22 area",
+          "parfum palace area"
+        ]
+      }
+    },
+    "120": {
+      "x": {
+        "locations": [
+          "kalos route 8 area"
+        ]
+      }
+    },
+    "121": {
+      "x": {
+        "locations": [
+          "kalos route 8 area"
+        ]
+      }
+    },
+    "122": {
+      "x": {
+        "locations": [
+          "reflection cave unknown area 305",
+          "reflection cave unknown area 306",
+          "reflection cave unknown area 307",
+          "reflection cave unknown area 308"
+        ]
+      },
+      "y": {
+        "locations": [
+          "reflection cave unknown area 305",
+          "reflection cave unknown area 306",
+          "reflection cave unknown area 307",
+          "reflection cave unknown area 308"
+        ]
+      }
+    },
+    "123": {
+      "x": {
+        "locations": [
+          "kalos route 21 area"
+        ]
+      },
+      "y": {
+        "locations": [
+          "kalos route 21 area"
+        ]
+      }
+    },
+    "124": {
+      "x": {
+        "locations": [
+          "frost cavern unknown area 314",
+          "frost cavern unknown area 315",
+          "frost cavern unknown area 316",
+          "frost cavern unknown area 317"
+        ]
+      },
+      "y": {
+        "locations": [
+          "frost cavern unknown area 314",
+          "frost cavern unknown area 315",
+          "frost cavern unknown area 316",
+          "frost cavern unknown area 317"
+        ]
+      }
+    },
+    "127": {
+      "x": {
+        "locations": [
+          "kalos route 12 area",
+          "friend safari bug"
+        ]
+      },
+      "y": {
+        "locations": [
+          "friend safari bug"
+        ]
+      }
+    },
+    "128": {
+      "x": {
+        "locations": [
+          "kalos route 12 area"
+        ]
+      },
+      "y": {
+        "locations": [
+          "kalos route 12 area"
+        ]
+      }
+    },
+    "129": {
+      "x": {
+        "locations": [
+          "kalos route 3 area",
+          "kalos route 22 area",
+          "parfum palace area"
+        ]
+      },
+      "y": {
+        "locations": [
+          "kalos route 3 area",
+          "kalos route 22 area",
+          "parfum palace area"
+        ]
+      }
+    },
+    "130": {
+      "x": {
+        "locations": [
+          "kalos route 3 area",
+          "kalos route 22 area",
+          "parfum palace area",
+          "friend safari water"
+        ]
+      },
+      "y": {
+        "locations": [
+          "kalos route 3 area",
+          "kalos route 22 area",
+          "parfum palace area",
+          "friend safari water"
+        ]
+      }
+    },
+    "131": {
+      "x": {
+        "locations": [
+          "kalos route 12 area",
+          "azure bay area",
+          "friend safari ice"
+        ]
+      },
+      "y": {
+        "locations": [
+          "kalos route 12 area",
+          "azure bay area",
+          "friend safari ice"
+        ]
+      }
+    },
+    "132": {
+      "x": {
+        "locations": [
+          "pokemon village area",
+          "friend safari normal"
+        ]
+      },
+      "y": {
+        "locations": [
+          "pokemon village area",
+          "friend safari normal"
+        ]
+      }
+    },
+    "133": {
+      "x": {
+        "locations": [
+          "kalos route 10 area",
+          "friend safari normal"
+        ]
+      },
+      "y": {
+        "locations": [
+          "kalos route 10 area",
+          "friend safari normal"
+        ]
+      }
+    },
+    "134": {
+      "x": {
+        "locations": [
+          "Evolve Eevee"
+        ]
+      },
+      "y": {
+        "locations": [
+          "Evolve Eevee"
+        ]
+      }
+    },
+    "135": {
+      "x": {
+        "locations": [
+          "Evolve Eevee"
+        ]
+      },
+      "y": {
+        "locations": [
+          "Evolve Eevee"
+        ]
+      }
+    },
+    "136": {
+      "x": {
+        "locations": [
+          "Evolve Eevee"
+        ]
+      },
+      "y": {
+        "locations": [
+          "Evolve Eevee"
+        ]
+      }
+    },
+    "142": {
+      "x": {
+        "locations": [
+          "Revive from Old Amber at the Ambrette Town Fossil Lab"
+        ]
+      },
+      "y": {
+        "locations": [
+          "Revive from Old Amber at the Ambrette Town Fossil Lab"
+        ]
+      }
+    },
+    "143": {
+      "x": {
+        "locations": [
+          "kalos route 7 area"
+        ]
+      },
+      "y": {
+        "locations": [
+          "kalos route 7 area"
+        ]
+      }
+    },
+    "144": {
+      "x": {
+        "locations": [
+          "sea spirits den area",
+          "roaming kalos area"
+        ]
+      },
+      "y": {
+        "locations": [
+          "sea spirits den area",
+          "roaming kalos area"
+        ]
+      }
+    },
+    "145": {
+      "x": {
+        "locations": [
+          "sea spirits den area",
+          "roaming kalos area"
+        ]
+      },
+      "y": {
+        "locations": [
+          "sea spirits den area",
+          "roaming kalos area"
+        ]
+      }
+    },
+    "146": {
+      "x": {
+        "locations": [
+          "sea spirits den area",
+          "roaming kalos area"
+        ]
+      },
+      "y": {
+        "locations": [
+          "sea spirits den area",
+          "roaming kalos area"
+        ]
+      }
+    },
+    "147": {
+      "x": {
+        "locations": [
+          "kalos route 21 area"
+        ]
+      },
+      "y": {
+        "locations": [
+          "kalos route 21 area"
+        ]
+      }
+    },
+    "148": {
+      "x": {
+        "locations": [
+          "kalos route 21 area",
+          "friend safari dragon"
+        ]
+      },
+      "y": {
+        "locations": [
+          "kalos route 21 area",
+          "friend safari dragon"
+        ]
+      }
+    },
+    "149": {
+      "x": {
+        "locations": [
+          "Evolve Dragonair"
+        ]
+      },
+      "y": {
+        "locations": [
+          "Evolve Dragonair"
+        ]
+      }
+    },
+    "150": {
+      "x": {
+        "locations": [
+          "unknown dungeon area"
+        ]
+      },
+      "y": {
+        "locations": [
+          "unknown dungeon area"
+        ]
+      }
+    },
+    "161": {
+      "x": {
+        "locations": [
+          "kalos route 6 area"
+        ]
+      },
+      "y": {
+        "locations": [
+          "kalos route 6 area"
+        ]
+      }
+    },
+    "162": {
+      "x": {
+        "locations": [
+          "Evolve Sentret"
+        ]
+      },
+      "y": {
+        "locations": [
+          "Evolve Sentret"
+        ]
+      }
+    },
+    "163": {
+      "x": {
+        "locations": [
+          "friend safari flying"
+        ]
+      },
+      "y": {
+        "locations": [
+          "friend safari flying"
+        ]
+      }
+    },
+    "164": {
+      "x": {
+        "locations": [
+          "kalos route 20 area",
+          "pokemon village area"
+        ]
+      },
+      "y": {
+        "locations": [
+          "kalos route 20 area",
+          "pokemon village area"
+        ]
+      }
+    },
+    "165": {
+      "x": {
+        "locations": [
+          "kalos route 4 area",
+          "friend safari bug",
+          "kalos berry fields area"
+        ]
+      },
+      "y": {
+        "locations": [
+          "kalos route 4 area",
+          "friend safari bug",
+          "kalos berry fields area"
+        ]
+      }
+    },
+    "166": {
+      "x": {
+        "locations": [
+          "Evolve Ledyba"
+        ]
+      },
+      "y": {
+        "locations": [
+          "Evolve Ledyba"
+        ]
+      }
+    },
+    "167": {
+      "x": {
+        "locations": [
+          "Breed Ariados"
+        ]
+      },
+      "y": {
+        "locations": [
+          "Breed Ariados"
+        ]
+      }
+    },
+    "168": {
+      "x": {
+        "locations": [
+          "kalos victory road unknown area 322",
+          "kalos victory road unknown area 324",
+          "kalos victory road unknown area 326",
+          "kalos victory road unknown area 328",
+          "terminus cave 1f",
+          "terminus cave b1f left",
+          "terminus cave b1f right",
+          "terminus cave b2f",
+          "terminus cave zygardes chamber",
+          "friend safari poison"
+        ]
+      },
+      "y": {
+        "locations": [
+          "kalos victory road unknown area 322",
+          "kalos victory road unknown area 324",
+          "kalos victory road unknown area 326",
+          "kalos victory road unknown area 328",
+          "terminus cave 1f",
+          "terminus cave b1f left",
+          "terminus cave b1f right",
+          "terminus cave b2f",
+          "terminus cave zygardes chamber",
+          "friend safari poison"
+        ]
+      }
+    },
+    "169": {
+      "x": {
+        "locations": [
+          "Evolve Golbat"
+        ]
+      },
+      "y": {
+        "locations": [
+          "Evolve Golbat"
+        ]
+      }
+    },
+    "170": {
+      "x": {
+        "locations": [
+          "shalour city area",
+          "azure bay area"
+        ]
+      },
+      "y": {
+        "locations": [
+          "shalour city area",
+          "azure bay area"
+        ]
+      }
+    },
+    "171": {
+      "x": {
+        "locations": [
+          "shalour city area",
+          "azure bay area"
+        ]
+      },
+      "y": {
+        "locations": [
+          "shalour city area",
+          "azure bay area"
+        ]
+      }
+    },
+    "172": {
+      "x": {
+        "locations": [
+          "Breed Raichu"
+        ]
+      },
+      "y": {
+        "locations": [
+          "Breed Raichu"
+        ]
+      }
+    },
+    "174": {
+      "x": {
+        "locations": [
+          "Breed Wigglytuff"
+        ]
+      },
+      "y": {
+        "locations": [
+          "Breed Wigglytuff"
+        ]
+      }
+    },
+    "179": {
+      "x": {
+        "locations": [
+          "kalos route 12 area"
+        ]
+      },
+      "y": {
+        "locations": [
+          "kalos route 12 area"
+        ]
+      }
+    },
+    "180": {
+      "x": {
+        "locations": [
+          "Evolve Mareep"
+        ]
+      },
+      "y": {
+        "locations": [
+          "Evolve Mareep"
+        ]
+      }
+    },
+    "181": {
+      "x": {
+        "locations": [
+          "Evolve Flaaffy"
+        ]
+      },
+      "y": {
+        "locations": [
+          "Evolve Flaaffy"
+        ]
+      }
+    },
+    "182": {
+      "x": {
+        "locations": [
+          "Evolve Gloom"
+        ]
+      },
+      "y": {
+        "locations": [
+          "Evolve Gloom"
+        ]
+      }
+    },
+    "183": {
+      "x": {
+        "locations": [
+          "kalos route 3 area"
+        ]
+      },
+      "y": {
+        "locations": [
+          "kalos route 3 area"
+        ]
+      }
+    },
+    "184": {
+      "x": {
+        "locations": [
+          "kalos route 22 area",
+          "friend safari water"
+        ]
+      },
+      "y": {
+        "locations": [
+          "kalos route 22 area",
+          "friend safari water"
+        ]
+      }
+    },
+    "185": {
+      "x": {
+        "locations": [
+          "kalos route 20 area"
+        ]
+      },
+      "y": {
+        "locations": [
+          "kalos route 20 area"
+        ]
+      }
+    },
+    "186": {
+      "x": {
+        "locations": [
+          "kalos route 19 area"
+        ]
+      },
+      "y": {
+        "locations": [
+          "kalos route 19 area"
+        ]
+      }
+    },
+    "187": {
+      "x": {
+        "locations": [
+          "kalos route 7 area"
+        ]
+      },
+      "y": {
+        "locations": [
+          "kalos route 7 area"
+        ]
+      }
+    },
+    "188": {
+      "x": {
+        "locations": [
+          "Evolve Hoppip"
+        ]
+      },
+      "y": {
+        "locations": [
+          "Evolve Hoppip"
+        ]
+      }
+    },
+    "189": {
+      "x": {
+        "locations": [
+          "Evolve Skiploom"
+        ]
+      },
+      "y": {
+        "locations": [
+          "Evolve Skiploom"
+        ]
+      }
+    },
+    "193": {
+      "x": {
+        "locations": [
+          "kalos route 10 area"
+        ]
+      },
+      "y": {
+        "locations": [
+          "kalos route 10 area"
+        ]
+      }
+    },
+    "194": {
+      "x": {
+        "locations": [
+          "friend safari ground"
+        ]
+      },
+      "y": {
+        "locations": [
+          "friend safari ground"
+        ]
+      }
+    },
+    "195": {
+      "x": {
+        "locations": [
+          "kalos route 14 area",
+          "kalos route 19 area",
+          "friend safari water"
+        ]
+      },
+      "y": {
+        "locations": [
+          "kalos route 14 area",
+          "kalos route 19 area",
+          "friend safari water"
+        ]
+      }
+    },
+    "196": {
+      "x": {
+        "locations": [
+          "Evolve Eevee"
+        ]
+      },
+      "y": {
+        "locations": [
+          "Evolve Eevee"
+        ]
+      }
+    },
+    "197": {
+      "x": {
+        "locations": [
+          "Evolve Eevee"
+        ]
+      },
+      "y": {
+        "locations": [
+          "Evolve Eevee"
+        ]
+      }
+    },
+    "198": {
+      "x": {
+        "locations": [
+          "kalos route 15 area",
+          "kalos route 16 area"
+        ]
+      },
+      "y": {
+        "locations": [
+          "kalos route 15 area",
+          "kalos route 16 area"
+        ]
+      }
+    },
+    "199": {
+      "x": {
+        "locations": [
+          "Evolve Slowpoke"
+        ]
+      },
+      "y": {
+        "locations": [
+          "Evolve Slowpoke"
+        ]
+      }
+    },
+    "202": {
+      "x": {
+        "locations": [
+          "reflection cave unknown area 305",
+          "reflection cave unknown area 306",
+          "reflection cave unknown area 307",
+          "reflection cave unknown area 308",
+          "friend safari psychic"
+        ]
+      },
+      "y": {
+        "locations": [
+          "reflection cave unknown area 305",
+          "reflection cave unknown area 306",
+          "reflection cave unknown area 307",
+          "reflection cave unknown area 308",
+          "friend safari psychic"
+        ]
+      }
+    },
+    "206": {
+      "x": {
+        "locations": [
+          "kalos route 3 area",
+          "kalos route 22 area",
+          "friend safari normal"
+        ]
+      },
+      "y": {
+        "locations": [
+          "kalos route 3 area",
+          "kalos route 22 area",
+          "friend safari normal"
+        ]
+      }
+    },
+    "207": {
+      "x": {
+        "locations": [
+          "kalos route 19 area"
+        ]
+      },
+      "y": {
+        "locations": [
+          "kalos route 19 area"
+        ]
+      }
+    },
+    "208": {
+      "x": {
+        "locations": [
+          "Trade Luvdisc in Cyllage City"
+        ]
+      },
+      "y": {
+        "locations": [
+          "Trade Luvdisc in Cyllage City"
+        ]
+      }
+    },
+    "209": {
+      "x": {
+        "locations": [
+          "kalos route 10 area",
+          "friend safari fairy"
+        ]
+      },
+      "y": {
+        "locations": [
+          "kalos route 10 area",
+          "friend safari fairy"
+        ]
+      }
+    },
+    "210": {
+      "x": {
+        "locations": [
+          "Evolve Snubbull"
+        ]
+      },
+      "y": {
+        "locations": [
+          "Evolve Snubbull"
+        ]
+      }
+    },
+    "211": {
+      "x": {
+        "locations": [
+          "kalos route 8 area"
+        ]
+      },
+      "y": {
+        "locations": [
+          "kalos route 8 area"
+        ]
+      }
+    },
+    "212": {
+      "x": {
+        "locations": [
+          "Evolve Scyther"
+        ]
+      },
+      "y": {
+        "locations": [
+          "Evolve Scyther"
+        ]
+      }
+    },
+    "213": {
+      "x": {
+        "locations": [
+          "kalos route 18 area",
+          "kalos victory road unknown area 322",
+          "kalos victory road unknown area 324",
+          "terminus cave 1f",
+          "terminus cave b1f left",
+          "terminus cave b1f right",
+          "friend safari rock"
+        ]
+      },
+      "y": {
+        "locations": [
+          "kalos route 18 area",
+          "kalos victory road unknown area 322",
+          "kalos victory road unknown area 324",
+          "terminus cave 1f",
+          "terminus cave b1f left",
+          "terminus cave b1f right",
+          "friend safari rock"
+        ]
+      }
+    },
+    "214": {
+      "y": {
+        "locations": [
+          "kalos route 12 area",
+          "friend safari bug"
+        ]
+      },
+      "x": {
+        "locations": [
+          "friend safari bug"
+        ]
+      }
+    },
+    "215": {
+      "x": {
+        "locations": [
+          "kalos route 17 area",
+          "friend safari ice",
+          "friend safari dark"
+        ]
+      },
+      "y": {
+        "locations": [
+          "kalos route 17 area",
+          "friend safari ice",
+          "friend safari dark"
+        ]
+      }
+    },
+    "216": {
+      "x": {
+        "locations": [
+          "friend safari normal"
+        ]
+      },
+      "y": {
+        "locations": [
+          "friend safari normal"
+        ]
+      }
+    },
+    "217": {
+      "x": {
+        "locations": [
+          "kalos route 21 area"
+        ]
+      },
+      "y": {
+        "locations": [
+          "kalos route 21 area"
+        ]
+      }
+    },
+    "218": {
+      "x": {
+        "locations": [
+          "kalos route 13 area",
+          "friend safari fire"
+        ]
+      },
+      "y": {
+        "locations": [
+          "kalos route 13 area",
+          "friend safari fire"
+        ]
+      }
+    },
+    "219": {
+      "x": {
+        "locations": [
+          "friend safari rock"
+        ]
+      },
+      "y": {
+        "locations": [
+          "friend safari rock"
+        ]
+      }
+    },
+    "220": {
+      "x": {
+        "locations": [
+          "Breed Mamoswine"
+        ]
+      },
+      "y": {
+        "locations": [
+          "Breed Mamoswine"
+        ]
+      }
+    },
+    "221": {
+      "x": {
+        "locations": [
+          "frost cavern unknown area 314",
+          "frost cavern unknown area 315",
+          "frost cavern unknown area 316",
+          "frost cavern unknown area 317",
+          "friend safari ice"
+        ]
+      },
+      "y": {
+        "locations": [
+          "frost cavern unknown area 314",
+          "frost cavern unknown area 315",
+          "frost cavern unknown area 316",
+          "frost cavern unknown area 317",
+          "friend safari ice"
+        ]
+      }
+    },
+    "222": {
+      "x": {
+        "locations": [
+          "kalos route 12 area",
+          "friend safari rock"
+        ]
+      },
+      "y": {
+        "locations": [
+          "kalos route 12 area",
+          "friend safari rock"
+        ]
+      }
+    },
+    "223": {
+      "x": {
+        "locations": [
+          "shalour city area",
+          "kalos route 12 area",
+          "azure bay area"
+        ]
+      },
+      "y": {
+        "locations": [
+          "shalour city area",
+          "kalos route 12 area",
+          "azure bay area"
+        ]
+      }
+    },
+    "224": {
+      "x": {
+        "locations": [
+          "shalour city area",
+          "kalos route 12 area",
+          "azure bay area",
+          "friend safari water"
+        ]
+      },
+      "y": {
+        "locations": [
+          "shalour city area",
+          "kalos route 12 area",
+          "azure bay area",
+          "friend safari water"
+        ]
+      }
+    },
+    "225": {
+      "x": {
+        "locations": [
+          "kalos route 17 area",
+          "friend safari ice"
+        ]
+      },
+      "y": {
+        "locations": [
+          "kalos route 17 area",
+          "friend safari ice"
+        ]
+      }
+    },
+    "226": {
+      "x": {
+        "locations": [
+          "Evolve Mantyke"
+        ]
+      },
+      "y": {
+        "locations": [
+          "Evolve Mantyke"
+        ]
+      }
+    },
+    "227": {
+      "x": {
+        "locations": [
+          "kalos victory road outside",
+          "friend safari steel"
+        ]
+      },
+      "y": {
+        "locations": [
+          "kalos victory road outside",
+          "friend safari steel"
+        ]
+      }
+    },
+    "228": {
+      "x": {
+        "locations": [
+          "kalos route 10 area"
+        ]
+      }
+    },
+    "229": {
+      "x": {
+        "locations": [
+          "Evolve Houndour"
+        ]
+      },
+      "y": {
+        "locations": [
+          "Trade, Event"
+        ]
+      }
+    },
+    "230": {
+      "x": {
+        "locations": [
+          "Evolve Seadra"
+        ]
+      },
+      "y": {
+        "locations": [
+          "Evolve Seadra"
+        ]
+      }
+    },
+    "235": {
+      "x": {
+        "locations": [
+          "kalos route 7 area",
+          "friend safari normal"
+        ]
+      },
+      "y": {
+        "locations": [
+          "kalos route 7 area",
+          "friend safari normal"
+        ]
+      }
+    },
+    "238": {
+      "x": {
+        "locations": [
+          "frost cavern unknown area 313",
+          "frost cavern unknown area 314",
+          "frost cavern unknown area 315",
+          "frost cavern unknown area 316",
+          "frost cavern unknown area 317"
+        ]
+      },
+      "y": {
+        "locations": [
+          "frost cavern unknown area 313",
+          "frost cavern unknown area 314",
+          "frost cavern unknown area 315",
+          "frost cavern unknown area 316",
+          "frost cavern unknown area 317"
+        ]
+      }
+    },
+    "241": {
+      "x": {
+        "locations": [
+          "kalos route 12 area"
+        ]
+      },
+      "y": {
+        "locations": [
+          "kalos route 12 area"
+        ]
+      }
+    },
+    "246": {
+      "y": {
+        "locations": [
+          "terminus cave 1f",
+          "terminus cave b1f left",
+          "terminus cave b1f right",
+          "terminus cave b2f",
+          "terminus cave zygardes chamber"
+        ]
+      },
+      "x": {
+        "locations": [
+          "Breed Tyranitar"
+        ]
+      }
+    },
+    "247": {
+      "y": {
+        "locations": [
+          "kalos route 18 area",
+          "terminus cave 1f",
+          "terminus cave b1f left",
+          "terminus cave b1f right",
+          "terminus cave b2f",
+          "terminus cave zygardes chamber",
+          "friend safari rock"
+        ]
+      },
+      "x": {
+        "locations": [
+          "friend safari rock"
+        ]
+      }
+    },
+    "248": {
+      "x": {
+        "locations": [
+          "Evolve Pupitar"
+        ]
+      },
+      "y": {
+        "locations": [
+          "Evolve Pupitar"
+        ]
+      }
+    },
+    "261": {
+      "x": {
+        "locations": [
+          "Breed Mightyena"
+        ]
+      },
+      "y": {
+        "locations": [
+          "Breed Mightyena"
+        ]
+      }
+    },
+    "262": {
+      "x": {
+        "locations": [
+          "kalos route 15 area",
+          "friend safari dark"
+        ]
+      },
+      "y": {
+        "locations": [
+          "friend safari dark"
+        ]
+      }
+    },
+    "263": {
+      "x": {
+        "locations": [
+          "kalos route 2 area"
+        ]
+      },
+      "y": {
+        "locations": [
+          "kalos route 2 area"
+        ]
+      }
+    },
+    "264": {
+      "x": {
+        "locations": [
+          "Evolve Zigzagoon"
+        ]
+      },
+      "y": {
+        "locations": [
+          "Evolve Zigzagoon"
+        ]
+      }
+    },
+    "270": {
+      "x": {
+        "locations": [
+          "Breed Ludicolo"
+        ]
+      },
+      "y": {
+        "locations": [
+          "Breed Ludicolo"
+        ]
+      }
+    },
+    "271": {
+      "x": {
+        "locations": [
+          "couriway town area",
+          "kalos route 15 area",
+          "kalos route 16 area",
+          "kalos route 21 area",
+          "pokemon village area",
+          "kalos victory road outside"
+        ]
+      },
+      "y": {
+        "locations": [
+          "couriway town area",
+          "kalos route 15 area",
+          "kalos route 16 area",
+          "kalos route 21 area",
+          "pokemon village area",
+          "kalos victory road outside"
+        ]
+      }
+    },
+    "272": {
+      "x": {
+        "locations": [
+          "Evolve Lombre"
+        ]
+      },
+      "y": {
+        "locations": [
+          "Evolve Lombre"
+        ]
+      }
+    },
+    "276": {
+      "x": {
+        "locations": [
+          "kalos route 8 area"
+        ]
+      },
+      "y": {
+        "locations": [
+          "kalos route 8 area"
+        ]
+      }
+    },
+    "277": {
+      "x": {
+        "locations": [
+          "Evolve Taillow"
+        ]
+      },
+      "y": {
+        "locations": [
+          "Evolve Taillow"
+        ]
+      }
+    },
+    "278": {
+      "x": {
+        "locations": [
+          "kalos route 8 area",
+          "kalos route 12 area",
+          "azure bay area"
+        ]
+      },
+      "y": {
+        "locations": [
+          "kalos route 8 area",
+          "kalos route 12 area",
+          "azure bay area"
+        ]
+      }
+    },
+    "279": {
+      "x": {
+        "locations": [
+          "Evolve Wingull"
+        ]
+      },
+      "y": {
+        "locations": [
+          "Evolve Wingull"
+        ]
+      }
+    },
+    "280": {
+      "x": {
+        "locations": [
+          "kalos route 4 area"
+        ]
+      },
+      "y": {
+        "locations": [
+          "kalos route 4 area"
+        ]
+      }
+    },
+    "281": {
+      "x": {
+        "locations": [
+          "friend safari fairy"
+        ]
+      },
+      "y": {
+        "locations": [
+          "friend safari fairy"
+        ]
+      }
+    },
+    "282": {
+      "x": {
+        "locations": [
+          "Evolve Kirlia"
+        ]
+      },
+      "y": {
+        "locations": [
+          "Evolve Kirlia"
+        ]
+      }
+    },
+    "283": {
+      "x": {
+        "locations": [
+          "Breed Masquerain"
+        ]
+      },
+      "y": {
+        "locations": [
+          "Breed Masquerain"
+        ]
+      }
+    },
+    "284": {
+      "x": {
+        "locations": [
+          "kalos route 3 area",
+          "friend safari bug"
+        ]
+      },
+      "y": {
+        "locations": [
+          "kalos route 3 area",
+          "friend safari bug"
+        ]
+      }
+    },
+    "290": {
+      "x": {
+        "locations": [
+          "kalos route 6 area",
+          "friend safari ground"
+        ]
+      },
+      "y": {
+        "locations": [
+          "kalos route 6 area",
+          "friend safari ground"
+        ]
+      }
+    },
+    "291": {
+      "x": {
+        "locations": [
+          "Evolve Nincada"
+        ]
+      },
+      "y": {
+        "locations": [
+          "Evolve Nincada"
+        ]
+      }
+    },
+    "292": {
+      "x": {
+        "locations": [
+          "Evolve Poké Ball"
+        ]
+      },
+      "y": {
+        "locations": [
+          "Evolve Poké Ball"
+        ]
+      }
+    },
+    "293": {
+      "x": {
+        "locations": [
+          "connecting cave area"
+        ]
+      },
+      "y": {
+        "locations": [
+          "connecting cave area"
+        ]
+      }
+    },
+    "294": {
+      "x": {
+        "locations": [
+          "friend safari normal"
+        ]
+      },
+      "y": {
+        "locations": [
+          "friend safari normal"
+        ]
+      }
+    },
+    "295": {
+      "x": {
+        "locations": [
+          "Evolve Loudred"
+        ]
+      },
+      "y": {
+        "locations": [
+          "Evolve Loudred"
+        ]
+      }
+    },
+    "296": {
+      "x": {
+        "locations": [
+          "Breed Hariyama"
+        ]
+      },
+      "y": {
+        "locations": [
+          "Breed Hariyama"
+        ]
+      }
+    },
+    "297": {
+      "x": {
+        "locations": [
+          "kalos route 11 area",
+          "friend safari fighting"
+        ]
+      },
+      "y": {
+        "locations": [
+          "kalos route 11 area",
+          "friend safari fighting"
+        ]
+      }
+    },
+    "298": {
+      "x": {
+        "locations": [
+          "kalos route 3 area",
+          "kalos route 22 area"
+        ]
+      },
+      "y": {
+        "locations": [
+          "kalos route 3 area",
+          "kalos route 22 area"
+        ]
+      }
+    },
+    "299": {
+      "x": {
+        "locations": [
+          "kalos route 10 area",
+          "friend safari rock"
+        ]
+      },
+      "y": {
+        "locations": [
+          "kalos route 10 area",
+          "friend safari rock"
+        ]
+      }
+    },
+    "300": {
+      "x": {
+        "locations": [
+          "kalos route 4 area"
+        ]
+      },
+      "y": {
+        "locations": [
+          "kalos route 4 area"
+        ]
+      }
+    },
+    "301": {
+      "x": {
+        "locations": [
+          "Evolve Skitty"
+        ]
+      },
+      "y": {
+        "locations": [
+          "Evolve Skitty"
+        ]
+      }
+    },
+    "302": {
+      "x": {
+        "locations": [
+          "reflection cave unknown area 305",
+          "reflection cave unknown area 306",
+          "reflection cave unknown area 307",
+          "reflection cave unknown area 308",
+          "friend safari dark"
+        ]
+      },
+      "y": {
+        "locations": [
+          "reflection cave unknown area 305",
+          "reflection cave unknown area 306",
+          "reflection cave unknown area 307",
+          "reflection cave unknown area 308",
+          "friend safari dark"
+        ]
+      }
+    },
+    "303": {
+      "x": {
+        "locations": [
+          "glittering cave unknown area 303",
+          "friend safari steel",
+          "friend safari fairy"
+        ]
+      },
+      "y": {
+        "locations": [
+          "glittering cave unknown area 303",
+          "friend safari steel",
+          "friend safari fairy"
+        ]
+      }
+    },
+    "304": {
+      "x": {
+        "locations": [
+          "terminus cave 1f",
+          "terminus cave b1f left",
+          "terminus cave b1f right",
+          "terminus cave b2f",
+          "terminus cave zygardes chamber"
+        ]
+      }
+    },
+    "305": {
+      "x": {
+        "locations": [
+          "kalos route 18 area",
+          "terminus cave 1f",
+          "terminus cave b1f left",
+          "terminus cave b1f right",
+          "terminus cave b2f",
+          "terminus cave zygardes chamber"
+        ]
+      }
+    },
+    "306": {
+      "x": {
+        "locations": [
+          "Evolve Lairon"
+        ]
+      },
+      "y": {
+        "locations": [
+          "Trade, Event"
+        ]
+      }
+    },
+    "307": {
+      "x": {
+        "locations": [
+          "connecting cave area",
+          "friend safari fighting"
+        ]
+      },
+      "y": {
+        "locations": [
+          "connecting cave area",
+          "friend safari fighting"
+        ]
+      }
+    },
+    "308": {
+      "x": {
+        "locations": [
+          "Evolve Meditite"
+        ]
+      },
+      "y": {
+        "locations": [
+          "Evolve Meditite"
+        ]
+      }
+    },
+    "309": {
+      "y": {
+        "locations": [
+          "kalos route 10 area"
+        ]
+      },
+      "x": {
+        "locations": [
+          "Breed Manectric"
+        ]
+      }
+    },
+    "310": {
+      "x": {
+        "locations": [
+          "friend safari electric"
+        ]
+      },
+      "y": {
+        "locations": [
+          "friend safari electric"
+        ]
+      }
+    },
+    "311": {
+      "x": {
+        "locations": [
+          "kalos route 5 area"
+        ]
+      },
+      "y": {
+        "locations": [
+          "kalos route 5 area"
+        ]
+      }
+    },
+    "312": {
+      "x": {
+        "locations": [
+          "kalos route 5 area"
+        ]
+      },
+      "y": {
+        "locations": [
+          "kalos route 5 area"
+        ]
+      }
+    },
+    "313": {
+      "x": {
+        "locations": [
+          "kalos route 7 area",
+          "friend safari bug",
+          "kalos berry fields area"
+        ]
+      },
+      "y": {
+        "locations": [
+          "kalos route 7 area",
+          "friend safari bug",
+          "kalos berry fields area"
+        ]
+      }
+    },
+    "314": {
+      "x": {
+        "locations": [
+          "kalos route 7 area",
+          "friend safari bug",
+          "kalos berry fields area"
+        ]
+      },
+      "y": {
+        "locations": [
+          "kalos route 7 area",
+          "friend safari bug",
+          "kalos berry fields area"
+        ]
+      }
+    },
+    "315": {
+      "x": {
+        "locations": [
+          "kalos route 7 area"
+        ]
+      },
+      "y": {
+        "locations": [
+          "kalos route 7 area"
+        ]
+      }
+    },
+    "316": {
+      "x": {
+        "locations": [
+          "kalos route 5 area"
+        ]
+      },
+      "y": {
+        "locations": [
+          "kalos route 5 area"
+        ]
+      }
+    },
+    "317": {
+      "x": {
+        "locations": [
+          "friend safari poison"
+        ]
+      },
+      "y": {
+        "locations": [
+          "friend safari poison"
+        ]
+      }
+    },
+    "318": {
+      "x": {
+        "locations": [
+          "kalos route 22 area"
+        ]
+      },
+      "y": {
+        "locations": [
+          "kalos route 22 area"
+        ]
+      }
+    },
+    "319": {
+      "x": {
+        "locations": [
+          "kalos route 22 area"
+        ]
+      },
+      "y": {
+        "locations": [
+          "kalos route 22 area"
+        ]
+      }
+    },
+    "320": {
+      "x": {
+        "locations": [
+          "ambrette town area",
+          "cyllage city area",
+          "kalos route 8 area"
+        ]
+      },
+      "y": {
+        "locations": [
+          "ambrette town area",
+          "cyllage city area",
+          "kalos route 8 area"
+        ]
+      }
+    },
+    "321": {
+      "x": {
+        "locations": [
+          "Evolve Wailmer"
+        ]
+      },
+      "y": {
+        "locations": [
+          "Evolve Wailmer"
+        ]
+      }
+    },
+    "324": {
+      "x": {
+        "locations": [
+          "kalos route 18 area"
+        ]
+      },
+      "y": {
+        "locations": [
+          "kalos route 18 area"
+        ]
+      }
+    },
+    "325": {
+      "x": {
+        "locations": [
+          "kalos route 8 area"
+        ]
+      },
+      "y": {
+        "locations": [
+          "kalos route 8 area"
+        ]
+      }
+    },
+    "326": {
+      "x": {
+        "locations": [
+          "friend safari psychic"
+        ]
+      },
+      "y": {
+        "locations": [
+          "friend safari psychic"
+        ]
+      }
+    },
+    "327": {
+      "x": {
+        "locations": [
+          "kalos route 21 area"
+        ]
+      },
+      "y": {
+        "locations": [
+          "kalos route 21 area"
+        ]
+      }
+    },
+    "328": {
+      "x": {
+        "locations": [
+          "kalos route 13 area",
+          "friend safari ground"
+        ]
+      },
+      "y": {
+        "locations": [
+          "kalos route 13 area",
+          "friend safari ground"
+        ]
+      }
+    },
+    "329": {
+      "x": {
+        "locations": [
+          "Evolve Trapinch"
+        ]
+      },
+      "y": {
+        "locations": [
+          "Evolve Trapinch"
+        ]
+      }
+    },
+    "330": {
+      "x": {
+        "locations": [
+          "Evolve Vibrava"
+        ]
+      },
+      "y": {
+        "locations": [
+          "Evolve Vibrava"
+        ]
+      }
+    },
+    "333": {
+      "x": {
+        "locations": [
+          "kalos route 21 area"
+        ]
+      },
+      "y": {
+        "locations": [
+          "kalos route 21 area"
+        ]
+      }
+    },
+    "334": {
+      "x": {
+        "locations": [
+          "kalos route 21 area"
+        ]
+      },
+      "y": {
+        "locations": [
+          "kalos route 21 area"
+        ]
+      }
+    },
+    "335": {
+      "x": {
+        "locations": [
+          "kalos route 8 area"
+        ]
+      },
+      "y": {
+        "locations": [
+          "kalos route 8 area"
+        ]
+      }
+    },
+    "336": {
+      "x": {
+        "locations": [
+          "kalos route 8 area",
+          "friend safari poison"
+        ]
+      },
+      "y": {
+        "locations": [
+          "kalos route 8 area",
+          "friend safari poison"
+        ]
+      }
+    },
+    "337": {
+      "x": {
+        "locations": [
+          "glittering cave unknown area 303"
+        ]
+      },
+      "y": {
+        "locations": [
+          "glittering cave unknown area 303"
+        ]
+      }
+    },
+    "338": {
+      "x": {
+        "locations": [
+          "glittering cave unknown area 303"
+        ]
+      },
+      "y": {
+        "locations": [
+          "glittering cave unknown area 303"
+        ]
+      }
+    },
+    "339": {
+      "x": {
+        "locations": [
+          "kalos route 14 area",
+          "kalos route 19 area"
+        ]
+      },
+      "y": {
+        "locations": [
+          "kalos route 14 area",
+          "kalos route 19 area"
+        ]
+      }
+    },
+    "340": {
+      "x": {
+        "locations": [
+          "kalos route 14 area",
+          "kalos route 19 area"
+        ]
+      },
+      "y": {
+        "locations": [
+          "kalos route 14 area",
+          "kalos route 19 area"
+        ]
+      }
+    },
+    "341": {
+      "x": {
+        "locations": [
+          "kalos route 3 area",
+          "parfum palace area"
+        ]
+      },
+      "y": {
+        "locations": [
+          "kalos route 3 area",
+          "parfum palace area"
+        ]
+      }
+    },
+    "342": {
+      "x": {
+        "locations": [
+          "kalos route 3 area",
+          "parfum palace area",
+          "friend safari dark"
+        ]
+      },
+      "y": {
+        "locations": [
+          "kalos route 3 area",
+          "parfum palace area",
+          "friend safari dark"
+        ]
+      }
+    },
+    "352": {
+      "x": {
+        "locations": [
+          "kalos route 6 area",
+          "friend safari normal"
+        ]
+      },
+      "y": {
+        "locations": [
+          "kalos route 6 area",
+          "friend safari normal"
+        ]
+      }
+    },
+    "353": {
+      "x": {
+        "locations": [
+          "friend safari ghost"
+        ]
+      },
+      "y": {
+        "locations": [
+          "friend safari ghost"
+        ]
+      }
+    },
+    "354": {
+      "x": {
+        "locations": [
+          "pokemon village area"
+        ]
+      },
+      "y": {
+        "locations": [
+          "pokemon village area"
+        ]
+      }
+    },
+    "358": {
+      "x": {
+        "locations": [
+          "Evolve Chingling"
+        ]
+      },
+      "y": {
+        "locations": [
+          "Evolve Chingling"
+        ]
+      }
+    },
+    "359": {
+      "x": {
+        "locations": [
+          "kalos route 8 area",
+          "friend safari dark"
+        ]
+      },
+      "y": {
+        "locations": [
+          "kalos route 8 area",
+          "friend safari dark"
+        ]
+      }
+    },
+    "360": {
+      "x": {
+        "locations": [
+          "Breed Wobbuffet holding a Lax Incense"
+        ]
+      },
+      "y": {
+        "locations": [
+          "Breed Wobbuffet holding a Lax Incense"
+        ]
+      }
+    },
+    "366": {
+      "x": {
+        "locations": [
+          "kalos route 12 area"
+        ]
+      },
+      "y": {
+        "locations": [
+          "kalos route 12 area"
+        ]
+      }
+    },
+    "367": {
+      "x": {
+        "locations": [
+          "kalos route 12 area"
+        ]
+      },
+      "y": {
+        "locations": [
+          "Evolve Clamperl"
+        ]
+      }
+    },
+    "368": {
+      "y": {
+        "locations": [
+          "kalos route 12 area"
+        ]
+      },
+      "x": {
+        "locations": [
+          "Evolve Clamperl"
+        ]
+      }
+    },
+    "369": {
+      "x": {
+        "locations": [
+          "ambrette town area",
+          "cyllage city area"
+        ]
+      },
+      "y": {
+        "locations": [
+          "ambrette town area",
+          "cyllage city area"
+        ]
+      }
+    },
+    "370": {
+      "x": {
+        "locations": [
+          "ambrette town area",
+          "cyllage city area",
+          "shalour city area",
+          "kalos route 8 area",
+          "kalos route 12 area",
+          "azure bay area"
+        ]
+      },
+      "y": {
+        "locations": [
+          "ambrette town area",
+          "cyllage city area",
+          "shalour city area",
+          "kalos route 8 area",
+          "kalos route 12 area",
+          "azure bay area"
+        ]
+      }
+    },
+    "371": {
+      "x": {
+        "locations": [
+          "kalos route 8 area"
+        ]
+      },
+      "y": {
+        "locations": [
+          "kalos route 8 area"
+        ]
+      }
+    },
+    "372": {
+      "x": {
+        "locations": [
+          "friend safari dragon"
+        ]
+      },
+      "y": {
+        "locations": [
+          "friend safari dragon"
+        ]
+      }
+    },
+    "373": {
+      "x": {
+        "locations": [
+          "Evolve Shelgon"
+        ]
+      },
+      "y": {
+        "locations": [
+          "Evolve Shelgon"
+        ]
+      }
+    },
+    "396": {
+      "x": {
+        "locations": [
+          "kalos route 11 area"
+        ]
+      },
+      "y": {
+        "locations": [
+          "kalos route 11 area"
+        ]
+      }
+    },
+    "397": {
+      "x": {
+        "locations": [
+          "kalos route 11 area"
+        ]
+      },
+      "y": {
+        "locations": [
+          "kalos route 11 area"
+        ]
+      }
+    },
+    "398": {
+      "x": {
+        "locations": [
+          "Evolve Staravia"
+        ]
+      },
+      "y": {
+        "locations": [
+          "Evolve Staravia"
+        ]
+      }
+    },
+    "399": {
+      "x": {
+        "locations": [
+          "kalos route 3 area",
+          "kalos route 22 area"
+        ]
+      },
+      "y": {
+        "locations": [
+          "kalos route 3 area",
+          "kalos route 22 area"
+        ]
+      }
+    },
+    "400": {
+      "x": {
+        "locations": [
+          "kalos route 22 area",
+          "friend safari water"
+        ]
+      },
+      "y": {
+        "locations": [
+          "kalos route 22 area",
+          "friend safari water"
+        ]
+      }
+    },
+    "406": {
+      "x": {
+        "locations": [
+          "kalos route 4 area"
+        ]
+      },
+      "y": {
+        "locations": [
+          "kalos route 4 area"
+        ]
+      }
+    },
+    "407": {
+      "x": {
+        "locations": [
+          "Evolve Roselia"
+        ]
+      },
+      "y": {
+        "locations": [
+          "Evolve Roselia"
+        ]
+      }
+    },
+    "412": {
+      "x": {
+        "locations": [
+          "kalos route 3 area",
+          "kalos berry fields area"
+        ]
+      },
+      "y": {
+        "locations": [
+          "kalos route 3 area",
+          "kalos berry fields area"
+        ]
+      }
+    },
+    "413": {
+      "x": {
+        "locations": [
+          "Evolve Burmy♀"
+        ]
+      },
+      "y": {
+        "locations": [
+          "Evolve Burmy♀"
+        ]
+      }
+    },
+    "414": {
+      "x": {
+        "locations": [
+          "Evolve Burmy♂"
+        ]
+      },
+      "y": {
+        "locations": [
+          "Evolve Burmy♂"
+        ]
+      }
+    },
+    "415": {
+      "x": {
+        "locations": [
+          "kalos route 4 area",
+          "friend safari bug",
+          "kalos berry fields area"
+        ]
+      },
+      "y": {
+        "locations": [
+          "kalos route 4 area",
+          "friend safari bug",
+          "kalos berry fields area"
+        ]
+      }
+    },
+    "416": {
+      "x": {
+        "locations": [
+          "Evolve Combeefemale"
+        ]
+      },
+      "y": {
+        "locations": [
+          "Evolve Combeefemale"
+        ]
+      }
+    },
+    "417": {
+      "x": {
+        "locations": [
+          "kalos route 12 area",
+          "friend safari electric"
+        ]
+      },
+      "y": {
+        "locations": [
+          "kalos route 12 area",
+          "friend safari electric"
+        ]
+      }
+    },
+    "418": {
+      "x": {
+        "locations": [
+          "Breed Floatzel"
+        ]
+      },
+      "y": {
+        "locations": [
+          "Breed Floatzel"
+        ]
+      }
+    },
+    "419": {
+      "x": {
+        "locations": [
+          "couriway town area",
+          "kalos route 15 area",
+          "kalos route 16 area",
+          "kalos route 21 area",
+          "frost cavern unknown area 313",
+          "frost cavern unknown area 315",
+          "kalos victory road unknown area 322",
+          "kalos victory road outside",
+          "kalos victory road unknown area 328",
+          "friend safari water"
+        ]
+      },
+      "y": {
+        "locations": [
+          "couriway town area",
+          "kalos route 15 area",
+          "kalos route 16 area",
+          "kalos route 21 area",
+          "frost cavern unknown area 313",
+          "frost cavern unknown area 315",
+          "kalos victory road unknown area 322",
+          "kalos victory road outside",
+          "kalos victory road unknown area 328",
+          "friend safari water"
+        ]
+      }
+    },
+    "425": {
+      "x": {
+        "locations": [
+          "kalos route 8 area"
+        ]
+      },
+      "y": {
+        "locations": [
+          "kalos route 8 area"
+        ]
+      }
+    },
+    "426": {
+      "x": {
+        "locations": [
+          "friend safari ghost"
+        ]
+      },
+      "y": {
+        "locations": [
+          "friend safari ghost"
+        ]
+      }
+    },
+    "430": {
+      "x": {
+        "locations": [
+          "Evolve Murkrow"
+        ]
+      },
+      "y": {
+        "locations": [
+          "Evolve Murkrow"
+        ]
+      }
+    },
+    "433": {
+      "x": {
+        "locations": [
+          "kalos route 11 area",
+          "reflection cave unknown area 305",
+          "reflection cave unknown area 306",
+          "reflection cave unknown area 307",
+          "reflection cave unknown area 308"
+        ]
+      },
+      "y": {
+        "locations": [
+          "kalos route 11 area",
+          "reflection cave unknown area 305",
+          "reflection cave unknown area 306",
+          "reflection cave unknown area 307",
+          "reflection cave unknown area 308"
+        ]
+      }
+    },
+    "434": {
+      "x": {
+        "locations": [
+          "kalos route 11 area"
+        ]
+      },
+      "y": {
+        "locations": [
+          "kalos route 11 area"
+        ]
+      }
+    },
+    "435": {
+      "x": {
+        "locations": [
+          "Evolve Stunky"
+        ]
+      },
+      "y": {
+        "locations": [
+          "Evolve Stunky"
+        ]
+      }
+    },
+    "438": {
+      "x": {
+        "locations": [
+          "Breed Sudowoodo holding a Rock Incense"
+        ]
+      },
+      "y": {
+        "locations": [
+          "Breed Sudowoodo holding a Rock Incense"
+        ]
+      }
+    },
+    "439": {
+      "x": {
+        "locations": [
+          "reflection cave unknown area 305",
+          "reflection cave unknown area 306",
+          "reflection cave unknown area 307",
+          "reflection cave unknown area 308"
+        ]
+      },
+      "y": {
+        "locations": [
+          "reflection cave unknown area 305",
+          "reflection cave unknown area 306",
+          "reflection cave unknown area 307",
+          "reflection cave unknown area 308"
+        ]
+      }
+    },
+    "441": {
+      "x": {
+        "locations": [
+          "kalos route 12 area",
+          "azure bay area"
+        ]
+      },
+      "y": {
+        "locations": [
+          "kalos route 12 area",
+          "azure bay area"
+        ]
+      }
+    },
+    "443": {
+      "x": {
+        "locations": [
+          "kalos route 13 area"
+        ]
+      },
+      "y": {
+        "locations": [
+          "kalos route 13 area"
+        ]
+      }
+    },
+    "444": {
+      "x": {
+        "locations": [
+          "friend safari dragon"
+        ]
+      },
+      "y": {
+        "locations": [
+          "friend safari dragon"
+        ]
+      }
+    },
+    "445": {
+      "x": {
+        "locations": [
+          "Evolve Gabite"
+        ]
+      },
+      "y": {
+        "locations": [
+          "Evolve Gabite"
+        ]
+      }
+    },
+    "446": {
+      "x": {
+        "locations": [
+          "Breed Snorlax holding a Full Incense"
+        ]
+      },
+      "y": {
+        "locations": [
+          "Breed Snorlax holding a Full Incense"
+        ]
+      }
+    },
+    "447": {
+      "x": {
+        "locations": [
+          "kalos route 22 area",
+          "friend safari fighting"
+        ]
+      },
+      "y": {
+        "locations": [
+          "kalos route 22 area",
+          "friend safari fighting"
+        ]
+      }
+    },
+    "448": {
+      "x": {
+        "locations": [
+          "tower of mastery area"
+        ]
+      },
+      "y": {
+        "locations": [
+          "tower of mastery area"
+        ]
+      }
+    },
+    "449": {
+      "x": {
+        "locations": [
+          "kalos route 9 area"
+        ]
+      },
+      "y": {
+        "locations": [
+          "kalos route 9 area"
+        ]
+      }
+    },
+    "450": {
+      "x": {
+        "locations": [
+          "Evolve Hippopotas"
+        ]
+      },
+      "y": {
+        "locations": [
+          "Evolve Hippopotas"
+        ]
+      }
+    },
+    "451": {
+      "x": {
+        "locations": [
+          "kalos route 14 area",
+          "kalos route 15 area",
+          "kalos route 16 area"
+        ]
+      },
+      "y": {
+        "locations": [
+          "kalos route 14 area",
+          "kalos route 15 area",
+          "kalos route 16 area"
+        ]
+      }
+    },
+    "452": {
+      "x": {
+        "locations": [
+          "kalos route 19 area",
+          "friend safari poison"
+        ]
+      },
+      "y": {
+        "locations": [
+          "kalos route 19 area",
+          "friend safari poison"
+        ]
+      }
+    },
+    "453": {
+      "x": {
+        "locations": [
+          "kalos route 7 area"
+        ]
+      },
+      "y": {
+        "locations": [
+          "kalos route 7 area"
+        ]
+      }
+    },
+    "454": {
+      "x": {
+        "locations": [
+          "friend safari poison"
+        ]
+      },
+      "y": {
+        "locations": [
+          "friend safari poison"
+        ]
+      }
+    },
+    "455": {
+      "x": {
+        "locations": [
+          "kalos route 14 area",
+          "kalos route 19 area"
+        ]
+      },
+      "y": {
+        "locations": [
+          "kalos route 14 area",
+          "kalos route 19 area"
+        ]
+      }
+    },
+    "458": {
+      "x": {
+        "locations": [
+          "shalour city area",
+          "kalos route 12 area",
+          "azure bay area"
+        ]
+      },
+      "y": {
+        "locations": [
+          "shalour city area",
+          "kalos route 12 area",
+          "azure bay area"
+        ]
+      }
+    },
+    "459": {
+      "x": {
+        "locations": [
+          "kalos route 17 area",
+          "friend safari ice"
+        ]
+      },
+      "y": {
+        "locations": [
+          "kalos route 17 area",
+          "friend safari ice"
+        ]
+      }
+    },
+    "460": {
+      "x": {
+        "locations": [
+          "kalos route 17 area"
+        ]
+      },
+      "y": {
+        "locations": [
+          "kalos route 17 area"
+        ]
+      }
+    },
+    "461": {
+      "x": {
+        "locations": [
+          "Evolve Sneasel"
+        ]
+      },
+      "y": {
+        "locations": [
+          "Evolve Sneasel"
+        ]
+      }
+    },
+    "462": {
+      "x": {
+        "locations": [
+          "Evolve Magneton"
+        ]
+      },
+      "y": {
+        "locations": [
+          "Evolve Magneton"
+        ]
+      }
+    },
+    "463": {
+      "x": {
+        "locations": [
+          "Evolve Lickitung"
+        ]
+      },
+      "y": {
+        "locations": [
+          "Evolve Lickitung"
+        ]
+      }
+    },
+    "464": {
+      "x": {
+        "locations": [
+          "Evolve Rhydon"
+        ]
+      },
+      "y": {
+        "locations": [
+          "Evolve Rhydon"
+        ]
+      }
+    },
+    "469": {
+      "x": {
+        "locations": [
+          "Evolve Yanma"
+        ]
+      },
+      "y": {
+        "locations": [
+          "Evolve Yanma"
+        ]
+      }
+    },
+    "470": {
+      "x": {
+        "locations": [
+          "Evolve Eevee"
+        ]
+      },
+      "y": {
+        "locations": [
+          "Evolve Eevee"
+        ]
+      }
+    },
+    "471": {
+      "x": {
+        "locations": [
+          "Evolve Eevee"
+        ]
+      },
+      "y": {
+        "locations": [
+          "Evolve Eevee"
+        ]
+      }
+    },
+    "472": {
+      "x": {
+        "locations": [
+          "Evolve Gligar"
+        ]
+      },
+      "y": {
+        "locations": [
+          "Evolve Gligar"
+        ]
+      }
+    },
+    "473": {
+      "x": {
+        "locations": [
+          "Evolve Piloswine"
+        ]
+      },
+      "y": {
+        "locations": [
+          "Evolve Piloswine"
+        ]
+      }
+    },
+    "475": {
+      "x": {
+        "locations": [
+          "Evolve Kirliamale"
+        ]
+      },
+      "y": {
+        "locations": [
+          "Evolve Kirliamale"
+        ]
+      }
+    },
+    "476": {
+      "x": {
+        "locations": [
+          "Evolve Nosepass"
+        ]
+      },
+      "y": {
+        "locations": [
+          "Evolve Nosepass"
+        ]
+      }
+    },
+    "479": {
+      "x": {
+        "locations": [
+          "lost hotel area"
+        ]
+      },
+      "y": {
+        "locations": [
+          "lost hotel area"
+        ]
+      }
+    },
+    "504": {
+      "x": {
+        "locations": [
+          "Breed Watchog"
+        ]
+      },
+      "y": {
+        "locations": [
+          "Breed Watchog"
+        ]
+      }
+    },
+    "505": {
+      "x": {
+        "locations": [
+          "kalos route 15 area"
+        ]
+      },
+      "y": {
+        "locations": [
+          "kalos route 15 area"
+        ]
+      }
+    },
+    "509": {
+      "x": {
+        "locations": [
+          "Breed Liepard"
+        ]
+      },
+      "y": {
+        "locations": [
+          "Breed Liepard"
+        ]
+      }
+    },
+    "510": {
+      "y": {
+        "locations": [
+          "kalos route 15 area",
+          "friend safari dark"
+        ]
+      },
+      "x": {
+        "locations": [
+          "friend safari dark"
+        ]
+      }
+    },
+    "511": {
+      "x": {
+        "locations": [
+          "santalune forest area",
+          "friend safari grass"
+        ]
+      },
+      "y": {
+        "locations": [
+          "santalune forest area",
+          "friend safari grass"
+        ]
+      }
+    },
+    "512": {
+      "x": {
+        "locations": [
+          "Evolve Pansage"
+        ]
+      },
+      "y": {
+        "locations": [
+          "Evolve Pansage"
+        ]
+      }
+    },
+    "513": {
+      "x": {
+        "locations": [
+          "santalune forest area",
+          "friend safari fire"
+        ]
+      },
+      "y": {
+        "locations": [
+          "santalune forest area",
+          "friend safari fire"
+        ]
+      }
+    },
+    "514": {
+      "x": {
+        "locations": [
+          "Evolve Pansear"
+        ]
+      },
+      "y": {
+        "locations": [
+          "Evolve Pansear"
+        ]
+      }
+    },
+    "515": {
+      "x": {
+        "locations": [
+          "santalune forest area",
+          "friend safari water"
+        ]
+      },
+      "y": {
+        "locations": [
+          "santalune forest area",
+          "friend safari water"
+        ]
+      }
+    },
+    "516": {
+      "x": {
+        "locations": [
+          "Evolve Panpour"
+        ]
+      },
+      "y": {
+        "locations": [
+          "Evolve Panpour"
+        ]
+      }
+    },
+    "524": {
+      "x": {
+        "locations": [
+          "reflection cave unknown area 305",
+          "reflection cave unknown area 306",
+          "reflection cave unknown area 307",
+          "reflection cave unknown area 308"
+        ]
+      },
+      "y": {
+        "locations": [
+          "reflection cave unknown area 305",
+          "reflection cave unknown area 306",
+          "reflection cave unknown area 307",
+          "reflection cave unknown area 308"
+        ]
+      }
+    },
+    "525": {
+      "x": {
+        "locations": [
+          "friend safari rock"
+        ]
+      },
+      "y": {
+        "locations": [
+          "friend safari rock"
+        ]
+      }
+    },
+    "526": {
+      "x": {
+        "locations": [
+          "Evolve Boldore"
+        ]
+      },
+      "y": {
+        "locations": [
+          "Evolve Boldore"
+        ]
+      }
+    },
+    "527": {
+      "x": {
+        "locations": [
+          "glittering cave unknown area 303",
+          "glittering cave unknown area 304",
+          "reflection cave unknown area 305",
+          "friend safari flying"
+        ]
+      },
+      "y": {
+        "locations": [
+          "glittering cave unknown area 303",
+          "glittering cave unknown area 304",
+          "reflection cave unknown area 305",
+          "friend safari flying"
+        ]
+      }
+    },
+    "528": {
+      "x": {
+        "locations": [
+          "Evolve Woobat"
+        ]
+      },
+      "y": {
+        "locations": [
+          "Evolve Woobat"
+        ]
+      }
+    },
+    "531": {
+      "x": {
+        "locations": [
+          "kalos route 6 area",
+          "friend safari normal"
+        ]
+      },
+      "y": {
+        "locations": [
+          "kalos route 6 area",
+          "friend safari normal"
+        ]
+      }
+    },
+    "532": {
+      "x": {
+        "locations": [
+          "Breed Conkeldurr"
+        ]
+      },
+      "y": {
+        "locations": [
+          "Breed Conkeldurr"
+        ]
+      }
+    },
+    "533": {
+      "x": {
+        "locations": [
+          "kalos route 18 area",
+          "kalos victory road unknown area 322",
+          "kalos victory road unknown area 324",
+          "kalos victory road unknown area 326",
+          "kalos victory road unknown area 328"
+        ]
+      },
+      "y": {
+        "locations": [
+          "kalos route 18 area",
+          "kalos victory road unknown area 322",
+          "kalos victory road unknown area 324",
+          "kalos victory road unknown area 326",
+          "kalos victory road unknown area 328"
+        ]
+      }
+    },
+    "534": {
+      "x": {
+        "locations": [
+          "Evolve Gurdurr"
+        ]
+      },
+      "y": {
+        "locations": [
+          "Evolve Gurdurr"
+        ]
+      }
+    },
+    "538": {
+      "y": {
+        "locations": [
+          "kalos route 11 area",
+          "friend safari fighting"
+        ]
+      },
+      "x": {
+        "locations": [
+          "friend safari fighting"
+        ]
+      }
+    },
+    "539": {
+      "x": {
+        "locations": [
+          "kalos route 11 area",
+          "friend safari fighting"
+        ]
+      },
+      "y": {
+        "locations": [
+          "friend safari fighting"
+        ]
+      }
+    },
+    "543": {
+      "x": {
+        "locations": [
+          "kalos route 6 area"
+        ]
+      },
+      "y": {
+        "locations": [
+          "kalos route 6 area"
+        ]
+      }
+    },
+    "544": {
+      "x": {
+        "locations": [
+          "friend safari poison"
+        ]
+      },
+      "y": {
+        "locations": [
+          "friend safari poison"
+        ]
+      }
+    },
+    "545": {
+      "x": {
+        "locations": [
+          "Evolve Whirlipede"
+        ]
+      },
+      "y": {
+        "locations": [
+          "Evolve Whirlipede"
+        ]
+      }
+    },
+    "550": {
+      "x": {
+        "locations": [
+          "couriway town area",
+          "laverre city area",
+          "kalos route 15 area",
+          "kalos route 16 area",
+          "kalos route 21 area",
+          "frost cavern unknown area 313",
+          "frost cavern unknown area 315",
+          "pokemon village area",
+          "kalos victory road unknown area 322",
+          "kalos victory road outside",
+          "kalos victory road unknown area 328"
+        ]
+      },
+      "y": {
+        "locations": [
+          "couriway town area",
+          "laverre city area",
+          "kalos route 15 area",
+          "kalos route 16 area",
+          "kalos route 21 area",
+          "frost cavern unknown area 313",
+          "frost cavern unknown area 315",
+          "pokemon village area",
+          "kalos victory road unknown area 322",
+          "kalos victory road outside",
+          "kalos victory road unknown area 328"
+        ]
+      }
+    },
+    "551": {
+      "x": {
+        "locations": [
+          "kalos route 9 area",
+          "friend safari dark"
+        ]
+      },
+      "y": {
+        "locations": [
+          "kalos route 9 area",
+          "friend safari dark"
+        ]
+      }
+    },
+    "552": {
+      "x": {
+        "locations": [
+          "Evolve Sandile"
+        ]
+      },
+      "y": {
+        "locations": [
+          "Evolve Sandile"
+        ]
+      }
+    },
+    "553": {
+      "x": {
+        "locations": [
+          "Evolve Krokorok"
+        ]
+      },
+      "y": {
+        "locations": [
+          "Evolve Krokorok"
+        ]
+      }
+    },
+    "557": {
+      "x": {
+        "locations": [
+          "ambrette town area",
+          "cyllage city area",
+          "kalos route 8 area",
+          "kalos route 12 area",
+          "glittering cave unknown area 304",
+          "azure bay area",
+          "friend safari rock"
+        ]
+      },
+      "y": {
+        "locations": [
+          "ambrette town area",
+          "cyllage city area",
+          "kalos route 8 area",
+          "kalos route 12 area",
+          "glittering cave unknown area 304",
+          "azure bay area",
+          "friend safari rock"
+        ]
+      }
+    },
+    "558": {
+      "x": {
+        "locations": [
+          "Evolve Dwebble"
+        ]
+      },
+      "y": {
+        "locations": [
+          "Evolve Dwebble"
+        ]
+      }
+    },
+    "559": {
+      "x": {
+        "locations": [
+          "kalos route 5 area"
+        ]
+      },
+      "y": {
+        "locations": [
+          "kalos route 5 area"
+        ]
+      }
+    },
+    "560": {
+      "x": {
+        "locations": [
+          "Evolve Scraggy"
+        ]
+      },
+      "y": {
+        "locations": [
+          "Evolve Scraggy"
+        ]
+      }
+    },
+    "561": {
+      "x": {
+        "locations": [
+          "kalos route 10 area",
+          "friend safari psychic"
+        ]
+      },
+      "y": {
+        "locations": [
+          "kalos route 10 area",
+          "friend safari psychic"
+        ]
+      }
+    },
+    "568": {
+      "x": {
+        "locations": [
+          "lost hotel area"
+        ]
+      },
+      "y": {
+        "locations": [
+          "lost hotel area"
+        ]
+      }
+    },
+    "569": {
+      "x": {
+        "locations": [
+          "pokemon village area",
+          "lost hotel area",
+          "friend safari poison"
+        ]
+      },
+      "y": {
+        "locations": [
+          "pokemon village area",
+          "lost hotel area",
+          "friend safari poison"
+        ]
+      }
+    },
+    "570": {
+      "x": {
+        "locations": [
+          "Breed Zoroark"
+        ]
+      },
+      "y": {
+        "locations": [
+          "Breed Zoroark"
+        ]
+      }
+    },
+    "571": {
+      "x": {
+        "locations": [
+          "kalos route 20 area",
+          "pokemon village area"
+        ]
+      },
+      "y": {
+        "locations": [
+          "kalos route 20 area",
+          "pokemon village area"
+        ]
+      }
+    },
+    "574": {
+      "x": {
+        "locations": [
+          "Breed Gothitelle"
+        ]
+      },
+      "y": {
+        "locations": [
+          "Breed Gothitelle"
+        ]
+      }
+    },
+    "575": {
+      "x": {
+        "locations": [
+          "kalos route 20 area",
+          "pokemon village area",
+          "friend safari psychic"
+        ]
+      },
+      "y": {
+        "locations": [
+          "kalos route 20 area",
+          "pokemon village area",
+          "friend safari psychic"
+        ]
+      }
+    },
+    "576": {
+      "x": {
+        "locations": [
+          "Evolve Gothorita"
+        ]
+      },
+      "y": {
+        "locations": [
+          "Evolve Gothorita"
+        ]
+      }
+    },
+    "577": {
+      "x": {
+        "locations": [
+          "reflection cave unknown area 305",
+          "reflection cave unknown area 306",
+          "reflection cave unknown area 307",
+          "reflection cave unknown area 308"
+        ]
+      },
+      "y": {
+        "locations": [
+          "reflection cave unknown area 305",
+          "reflection cave unknown area 306",
+          "reflection cave unknown area 307",
+          "reflection cave unknown area 308"
+        ]
+      }
+    },
+    "578": {
+      "x": {
+        "locations": [
+          "friend safari psychic"
+        ]
+      },
+      "y": {
+        "locations": [
+          "friend safari psychic"
+        ]
+      }
+    },
+    "579": {
+      "x": {
+        "locations": [
+          "Evolve Duosion"
+        ]
+      },
+      "y": {
+        "locations": [
+          "Evolve Duosion"
+        ]
+      }
+    },
+    "580": {
+      "x": {
+        "locations": [
+          "kalos route 7 area"
+        ]
+      },
+      "y": {
+        "locations": [
+          "kalos route 7 area"
+        ]
+      }
+    },
+    "581": {
+      "x": {
+        "locations": [
+          "friend safari flying"
+        ]
+      },
+      "y": {
+        "locations": [
+          "friend safari flying"
+        ]
+      }
+    },
+    "582": {
+      "x": {
+        "locations": [
+          "frost cavern unknown area 313",
+          "frost cavern unknown area 314",
+          "frost cavern unknown area 315",
+          "frost cavern unknown area 316",
+          "frost cavern unknown area 317"
+        ]
+      },
+      "y": {
+        "locations": [
+          "frost cavern unknown area 313",
+          "frost cavern unknown area 314",
+          "frost cavern unknown area 315",
+          "frost cavern unknown area 316",
+          "frost cavern unknown area 317"
+        ]
+      }
+    },
+    "583": {
+      "x": {
+        "locations": [
+          "Evolve Vanillite"
+        ]
+      },
+      "y": {
+        "locations": [
+          "Evolve Vanillite"
+        ]
+      }
+    },
+    "584": {
+      "x": {
+        "locations": [
+          "Evolve Vanillish"
+        ]
+      },
+      "y": {
+        "locations": [
+          "Evolve Vanillish"
+        ]
+      }
+    },
+    "587": {
+      "x": {
+        "locations": [
+          "kalos route 10 area",
+          "friend safari electric"
+        ]
+      },
+      "y": {
+        "locations": [
+          "kalos route 10 area",
+          "friend safari electric"
+        ]
+      }
+    },
+    "588": {
+      "x": {
+        "locations": [
+          "kalos route 14 area",
+          "kalos route 19 area"
+        ]
+      },
+      "y": {
+        "locations": [
+          "kalos route 14 area",
+          "kalos route 19 area"
+        ]
+      }
+    },
+    "589": {
+      "x": {
+        "locations": [
+          "Evolve Karrablast"
+        ]
+      },
+      "y": {
+        "locations": [
+          "Evolve Karrablast"
+        ]
+      }
+    },
+    "590": {
+      "x": {
+        "locations": [
+          "kalos route 15 area",
+          "kalos route 16 area",
+          "kalos route 20 area",
+          "pokemon village area"
+        ]
+      },
+      "y": {
+        "locations": [
+          "kalos route 15 area",
+          "kalos route 16 area",
+          "kalos route 20 area",
+          "pokemon village area"
+        ]
+      }
+    },
+    "591": {
+      "x": {
+        "locations": [
+          "kalos route 20 area",
+          "pokemon village area"
+        ]
+      },
+      "y": {
+        "locations": [
+          "kalos route 20 area",
+          "pokemon village area"
+        ]
+      }
+    },
+    "594": {
+      "x": {
+        "locations": [
+          "shalour city area",
+          "azure bay area"
+        ]
+      },
+      "y": {
+        "locations": [
+          "shalour city area",
+          "azure bay area"
+        ]
+      }
+    },
+    "597": {
+      "x": {
+        "locations": [
+          "glittering cave unknown area 303",
+          "glittering cave unknown area 304",
+          "reflection cave unknown area 305",
+          "friend safari steel"
+        ]
+      },
+      "y": {
+        "locations": [
+          "glittering cave unknown area 303",
+          "glittering cave unknown area 304",
+          "reflection cave unknown area 305",
+          "friend safari steel"
+        ]
+      }
+    },
+    "598": {
+      "x": {
+        "locations": [
+          "Evolve Ferroseed"
+        ]
+      },
+      "y": {
+        "locations": [
+          "Evolve Ferroseed"
+        ]
+      }
+    },
+    "607": {
+      "x": {
+        "locations": [
+          "lost hotel area"
+        ]
+      },
+      "y": {
+        "locations": [
+          "lost hotel area"
+        ]
+      }
+    },
+    "608": {
+      "x": {
+        "locations": [
+          "friend safari ghost"
+        ]
+      },
+      "y": {
+        "locations": [
+          "friend safari ghost"
+        ]
+      }
+    },
+    "609": {
+      "x": {
+        "locations": [
+          "Evolve Lampent"
+        ]
+      },
+      "y": {
+        "locations": [
+          "Evolve Lampent"
+        ]
+      }
+    },
+    "610": {
+      "x": {
+        "locations": [
+          "connecting cave area"
+        ]
+      },
+      "y": {
+        "locations": [
+          "connecting cave area"
+        ]
+      }
+    },
+    "611": {
+      "x": {
+        "locations": [
+          "friend safari dragon"
+        ]
+      },
+      "y": {
+        "locations": [
+          "friend safari dragon"
+        ]
+      }
+    },
+    "612": {
+      "x": {
+        "locations": [
+          "Evolve Fraxure"
+        ]
+      },
+      "y": {
+        "locations": [
+          "Evolve Fraxure"
+        ]
+      }
+    },
+    "613": {
+      "x": {
+        "locations": [
+          "frost cavern unknown area 313",
+          "frost cavern unknown area 314",
+          "frost cavern unknown area 315",
+          "frost cavern unknown area 316",
+          "frost cavern unknown area 317"
+        ]
+      },
+      "y": {
+        "locations": [
+          "frost cavern unknown area 313",
+          "frost cavern unknown area 314",
+          "frost cavern unknown area 315",
+          "frost cavern unknown area 316",
+          "frost cavern unknown area 317"
+        ]
+      }
+    },
+    "614": {
+      "x": {
+        "locations": [
+          "frost cavern unknown area 314",
+          "frost cavern unknown area 315",
+          "frost cavern unknown area 316",
+          "frost cavern unknown area 317",
+          "friend safari ice"
+        ]
+      },
+      "y": {
+        "locations": [
+          "frost cavern unknown area 314",
+          "frost cavern unknown area 315",
+          "frost cavern unknown area 316",
+          "frost cavern unknown area 317",
+          "friend safari ice"
+        ]
+      }
+    },
+    "615": {
+      "x": {
+        "locations": [
+          "frost cavern unknown area 314",
+          "frost cavern unknown area 315",
+          "frost cavern unknown area 316",
+          "frost cavern unknown area 317"
+        ]
+      },
+      "y": {
+        "locations": [
+          "frost cavern unknown area 314",
+          "frost cavern unknown area 316",
+          "frost cavern unknown area 317"
+        ]
+      }
+    },
+    "616": {
+      "x": {
+        "locations": [
+          "kalos route 14 area",
+          "kalos route 19 area"
+        ]
+      },
+      "y": {
+        "locations": [
+          "kalos route 14 area",
+          "kalos route 19 area"
+        ]
+      }
+    },
+    "617": {
+      "x": {
+        "locations": [
+          "Evolve Shelmet"
+        ]
+      },
+      "y": {
+        "locations": [
+          "Evolve Shelmet"
+        ]
+      }
+    },
+    "618": {
+      "x": {
+        "locations": [
+          "kalos route 14 area",
+          "kalos route 19 area",
+          "friend safari electric"
+        ]
+      },
+      "y": {
+        "locations": [
+          "kalos route 14 area",
+          "kalos route 19 area",
+          "friend safari electric"
+        ]
+      }
+    },
+    "619": {
+      "x": {
+        "locations": [
+          "kalos route 8 area",
+          "friend safari fighting"
+        ]
+      },
+      "y": {
+        "locations": [
+          "kalos route 8 area",
+          "friend safari fighting"
+        ]
+      }
+    },
+    "620": {
+      "x": {
+        "locations": [
+          "Evolve Mienfoo"
+        ]
+      },
+      "y": {
+        "locations": [
+          "Evolve Mienfoo"
+        ]
+      }
+    },
+    "621": {
+      "x": {
+        "locations": [
+          "kalos victory road unknown area 322",
+          "kalos victory road unknown area 324",
+          "kalos victory road unknown area 326",
+          "kalos victory road unknown area 328",
+          "friend safari dragon"
+        ]
+      },
+      "y": {
+        "locations": [
+          "kalos victory road unknown area 322",
+          "kalos victory road unknown area 324",
+          "kalos victory road unknown area 326",
+          "kalos victory road unknown area 328",
+          "friend safari dragon"
+        ]
+      }
+    },
+    "622": {
+      "x": {
+        "locations": [
+          "kalos route 10 area"
+        ]
+      },
+      "y": {
+        "locations": [
+          "kalos route 10 area"
+        ]
+      }
+    },
+    "623": {
+      "x": {
+        "locations": [
+          "friend safari ghost"
+        ]
+      },
+      "y": {
+        "locations": [
+          "friend safari ghost"
+        ]
+      }
+    },
+    "624": {
+      "x": {
+        "locations": [
+          "kalos route 15 area",
+          "lost hotel area",
+          "friend safari dark"
+        ]
+      },
+      "y": {
+        "locations": [
+          "kalos route 15 area",
+          "lost hotel area",
+          "friend safari dark"
+        ]
+      }
+    },
+    "625": {
+      "x": {
+        "locations": [
+          "Trade Jigglypuff in Snowbelle City"
+        ]
+      },
+      "y": {
+        "locations": [
+          "Trade Jigglypuff in Snowbelle City"
+        ]
+      }
+    },
+    "631": {
+      "x": {
+        "locations": [
+          "kalos route 18 area"
+        ]
+      },
+      "y": {
+        "locations": [
+          "kalos route 18 area"
+        ]
+      }
+    },
+    "632": {
+      "x": {
+        "locations": [
+          "kalos route 18 area",
+          "terminus cave 1f",
+          "terminus cave b1f left",
+          "terminus cave b1f right",
+          "terminus cave b2f",
+          "terminus cave zygardes chamber"
+        ]
+      },
+      "y": {
+        "locations": [
+          "kalos route 18 area",
+          "terminus cave 1f",
+          "terminus cave b1f left",
+          "terminus cave b1f right",
+          "terminus cave b2f",
+          "terminus cave zygardes chamber"
+        ]
+      }
+    },
+    "633": {
+      "x": {
+        "locations": [
+          "Breed Hydreigon"
+        ]
+      },
+      "y": {
+        "locations": [
+          "Breed Hydreigon"
+        ]
+      }
+    },
+    "634": {
+      "x": {
+        "locations": [
+          "kalos victory road unknown area 322",
+          "kalos victory road unknown area 324",
+          "kalos victory road unknown area 326",
+          "kalos victory road unknown area 328"
+        ]
+      },
+      "y": {
+        "locations": [
+          "kalos victory road unknown area 322",
+          "kalos victory road unknown area 324",
+          "kalos victory road unknown area 326",
+          "kalos victory road unknown area 328"
+        ]
+      }
+    },
+    "635": {
+      "x": {
+        "locations": [
+          "kalos victory road outside"
+        ]
+      },
+      "y": {
+        "locations": [
+          "kalos victory road outside"
+        ]
+      }
+    },
     "650": {
       "x": {
         "locations": [
@@ -906,6 +7701,819 @@
           "kalos route 3 area",
           "kalos route 5 area",
           "kalos route 22 area"
+        ]
+      }
+    },
+    "660": {
+      "x": {
+        "locations": [
+          "kalos route 22 area",
+          "friend safari ground"
+        ]
+      },
+      "y": {
+        "locations": [
+          "kalos route 22 area",
+          "friend safari ground"
+        ]
+      }
+    },
+    "661": {
+      "x": {
+        "locations": [
+          "kalos route 2 area",
+          "kalos route 3 area",
+          "santalune forest area"
+        ]
+      },
+      "y": {
+        "locations": [
+          "kalos route 2 area",
+          "kalos route 3 area",
+          "santalune forest area"
+        ]
+      }
+    },
+    "662": {
+      "x": {
+        "locations": [
+          "friend safari fire",
+          "friend safari flying"
+        ]
+      },
+      "y": {
+        "locations": [
+          "friend safari fire",
+          "friend safari flying"
+        ]
+      }
+    },
+    "663": {
+      "x": {
+        "locations": [
+          "Evolve Fletchinder"
+        ]
+      },
+      "y": {
+        "locations": [
+          "Evolve Fletchinder"
+        ]
+      }
+    },
+    "664": {
+      "x": {
+        "locations": [
+          "kalos route 2 area",
+          "santalune forest area"
+        ]
+      },
+      "y": {
+        "locations": [
+          "kalos route 2 area",
+          "santalune forest area"
+        ]
+      }
+    },
+    "665": {
+      "x": {
+        "locations": [
+          "kalos berry fields area"
+        ]
+      },
+      "y": {
+        "locations": [
+          "kalos berry fields area"
+        ]
+      }
+    },
+    "666": {
+      "x": {
+        "locations": [
+          "friend safari bug"
+        ]
+      },
+      "y": {
+        "locations": [
+          "friend safari bug"
+        ]
+      }
+    },
+    "667": {
+      "x": {
+        "locations": [
+          "kalos route 22 area"
+        ]
+      },
+      "y": {
+        "locations": [
+          "kalos route 22 area"
+        ]
+      }
+    },
+    "668": {
+      "x": {
+        "locations": [
+          "friend safari fire"
+        ]
+      },
+      "y": {
+        "locations": [
+          "friend safari fire"
+        ]
+      }
+    },
+    "669": {
+      "x": {
+        "locations": [
+          "kalos route 4 area",
+          "kalos route 7 area"
+        ]
+      },
+      "y": {
+        "locations": [
+          "kalos route 4 area",
+          "kalos route 7 area"
+        ]
+      }
+    },
+    "670": {
+      "x": {
+        "locations": [
+          "friend safari fairy"
+        ]
+      },
+      "y": {
+        "locations": [
+          "friend safari fairy"
+        ]
+      }
+    },
+    "671": {
+      "x": {
+        "locations": [
+          "Evolve Floette"
+        ]
+      },
+      "y": {
+        "locations": [
+          "Evolve Floette"
+        ]
+      }
+    },
+    "672": {
+      "x": {
+        "locations": [
+          "kalos route 5 area"
+        ]
+      },
+      "y": {
+        "locations": [
+          "kalos route 5 area"
+        ]
+      }
+    },
+    "673": {
+      "x": {
+        "locations": [
+          "friend safari grass"
+        ]
+      },
+      "y": {
+        "locations": [
+          "friend safari grass"
+        ]
+      }
+    },
+    "674": {
+      "x": {
+        "locations": [
+          "kalos route 5 area",
+          "friend safari fighting"
+        ]
+      },
+      "y": {
+        "locations": [
+          "kalos route 5 area",
+          "friend safari fighting"
+        ]
+      }
+    },
+    "675": {
+      "x": {
+        "locations": [
+          "Evolve Pancham"
+        ]
+      },
+      "y": {
+        "locations": [
+          "Evolve Pancham"
+        ]
+      }
+    },
+    "676": {
+      "x": {
+        "locations": [
+          "kalos route 5 area"
+        ]
+      },
+      "y": {
+        "locations": [
+          "kalos route 5 area"
+        ]
+      }
+    },
+    "677": {
+      "x": {
+        "locations": [
+          "kalos route 6 area",
+          "friend safari psychic"
+        ]
+      },
+      "y": {
+        "locations": [
+          "kalos route 6 area",
+          "friend safari psychic"
+        ]
+      }
+    },
+    "678": {
+      "x": {
+        "locations": [
+          "Evolve Espurr"
+        ]
+      },
+      "y": {
+        "locations": [
+          "Evolve Espurr"
+        ]
+      }
+    },
+    "679": {
+      "x": {
+        "locations": [
+          "kalos route 6 area"
+        ]
+      },
+      "y": {
+        "locations": [
+          "kalos route 6 area"
+        ]
+      }
+    },
+    "680": {
+      "x": {
+        "locations": [
+          "Evolve Honedge"
+        ]
+      },
+      "y": {
+        "locations": [
+          "Evolve Honedge"
+        ]
+      }
+    },
+    "681": {
+      "x": {
+        "locations": [
+          "Evolve Doublade"
+        ]
+      },
+      "y": {
+        "locations": [
+          "Evolve Doublade"
+        ]
+      }
+    },
+    "682": {
+      "y": {
+        "locations": [
+          "kalos route 7 area",
+          "friend safari fairy"
+        ]
+      },
+      "x": {
+        "locations": [
+          "friend safari fairy"
+        ]
+      }
+    },
+    "683": {
+      "x": {
+        "locations": [
+          "Evolve Spritzee"
+        ]
+      },
+      "y": {
+        "locations": [
+          "Evolve Spritzee"
+        ]
+      }
+    },
+    "684": {
+      "x": {
+        "locations": [
+          "kalos route 7 area",
+          "friend safari fairy"
+        ]
+      },
+      "y": {
+        "locations": [
+          "friend safari fairy"
+        ]
+      }
+    },
+    "685": {
+      "x": {
+        "locations": [
+          "Evolve Swirlix"
+        ]
+      },
+      "y": {
+        "locations": [
+          "Evolve Swirlix"
+        ]
+      }
+    },
+    "686": {
+      "x": {
+        "locations": [
+          "kalos route 8 area",
+          "azure bay area",
+          "friend safari dark"
+        ]
+      },
+      "y": {
+        "locations": [
+          "kalos route 8 area",
+          "azure bay area",
+          "friend safari dark"
+        ]
+      }
+    },
+    "687": {
+      "x": {
+        "locations": [
+          "Evolve Inkay"
+        ]
+      },
+      "y": {
+        "locations": [
+          "Evolve Inkay"
+        ]
+      }
+    },
+    "688": {
+      "x": {
+        "locations": [
+          "ambrette town area",
+          "kalos route 8 area",
+          "kalos route 12 area",
+          "azure bay area"
+        ]
+      },
+      "y": {
+        "locations": [
+          "ambrette town area",
+          "cyllage city area",
+          "kalos route 8 area",
+          "kalos route 12 area",
+          "azure bay area"
+        ]
+      }
+    },
+    "689": {
+      "x": {
+        "locations": [
+          "friend safari rock"
+        ]
+      },
+      "y": {
+        "locations": [
+          "friend safari rock"
+        ]
+      }
+    },
+    "690": {
+      "y": {
+        "locations": [
+          "ambrette town area",
+          "cyllage city area",
+          "kalos route 8 area"
+        ]
+      }
+    },
+    "691": {
+      "y": {
+        "locations": [
+          "ambrette town area",
+          "cyllage city area",
+          "kalos route 8 area"
+        ]
+      }
+    },
+    "692": {
+      "x": {
+        "locations": [
+          "ambrette town area",
+          "cyllage city area",
+          "kalos route 8 area"
+        ]
+      }
+    },
+    "693": {
+      "x": {
+        "locations": [
+          "ambrette town area",
+          "cyllage city area",
+          "kalos route 8 area"
+        ]
+      }
+    },
+    "694": {
+      "x": {
+        "locations": [
+          "kalos route 9 area",
+          "friend safari electric"
+        ]
+      },
+      "y": {
+        "locations": [
+          "kalos route 9 area",
+          "friend safari electric"
+        ]
+      }
+    },
+    "695": {
+      "x": {
+        "locations": [
+          "Evolve Helioptile"
+        ]
+      },
+      "y": {
+        "locations": [
+          "Evolve Helioptile"
+        ]
+      }
+    },
+    "696": {
+      "x": {
+        "locations": [
+          "glittering cave unknown area 303"
+        ]
+      },
+      "y": {
+        "locations": [
+          "glittering cave unknown area 303"
+        ]
+      }
+    },
+    "697": {
+      "x": {
+        "locations": [
+          "Evolve Tyrunt"
+        ]
+      },
+      "y": {
+        "locations": [
+          "Evolve Tyrunt"
+        ]
+      }
+    },
+    "698": {
+      "x": {
+        "locations": [
+          "glittering cave unknown area 303"
+        ]
+      },
+      "y": {
+        "locations": [
+          "glittering cave unknown area 303"
+        ]
+      }
+    },
+    "699": {
+      "x": {
+        "locations": [
+          "Evolve Amaura"
+        ]
+      },
+      "y": {
+        "locations": [
+          "Evolve Amaura"
+        ]
+      }
+    },
+    "700": {
+      "x": {
+        "locations": [
+          "Evolve Eevee"
+        ]
+      },
+      "y": {
+        "locations": [
+          "Evolve Eevee"
+        ]
+      }
+    },
+    "701": {
+      "x": {
+        "locations": [
+          "kalos route 10 area",
+          "friend safari flying"
+        ]
+      },
+      "y": {
+        "locations": [
+          "kalos route 10 area",
+          "friend safari flying"
+        ]
+      }
+    },
+    "702": {
+      "x": {
+        "locations": [
+          "kalos route 11 area",
+          "friend safari electric",
+          "friend safari fairy"
+        ]
+      },
+      "y": {
+        "locations": [
+          "kalos route 11 area",
+          "friend safari electric",
+          "friend safari fairy"
+        ]
+      }
+    },
+    "703": {
+      "x": {
+        "locations": [
+          "reflection cave unknown area 305",
+          "reflection cave unknown area 306",
+          "reflection cave unknown area 307",
+          "reflection cave unknown area 308"
+        ]
+      },
+      "y": {
+        "locations": [
+          "reflection cave unknown area 305",
+          "reflection cave unknown area 306",
+          "reflection cave unknown area 307",
+          "reflection cave unknown area 308"
+        ]
+      }
+    },
+    "704": {
+      "x": {
+        "locations": [
+          "kalos route 14 area"
+        ]
+      },
+      "y": {
+        "locations": [
+          "kalos route 14 area"
+        ]
+      }
+    },
+    "705": {
+      "x": {
+        "locations": [
+          "kalos route 19 area",
+          "friend safari dragon"
+        ]
+      },
+      "y": {
+        "locations": [
+          "kalos route 19 area",
+          "friend safari dragon"
+        ]
+      }
+    },
+    "706": {
+      "x": {
+        "locations": [
+          "Evolve Sliggoo"
+        ]
+      },
+      "y": {
+        "locations": [
+          "Evolve Sliggoo"
+        ]
+      }
+    },
+    "707": {
+      "x": {
+        "locations": [
+          "kalos route 15 area",
+          "kalos route 16 area",
+          "lost hotel area",
+          "friend safari steel"
+        ]
+      },
+      "y": {
+        "locations": [
+          "kalos route 15 area",
+          "kalos route 16 area",
+          "lost hotel area",
+          "friend safari steel"
+        ]
+      }
+    },
+    "708": {
+      "x": {
+        "locations": [
+          "kalos route 16 area",
+          "friend safari ghost"
+        ]
+      },
+      "y": {
+        "locations": [
+          "kalos route 16 area",
+          "friend safari ghost"
+        ]
+      }
+    },
+    "709": {
+      "x": {
+        "locations": [
+          "kalos route 20 area"
+        ]
+      },
+      "y": {
+        "locations": [
+          "kalos route 20 area"
+        ]
+      }
+    },
+    "710": {
+      "x": {
+        "locations": [
+          "kalos route 16 area",
+          "friend safari ghost"
+        ]
+      },
+      "y": {
+        "locations": [
+          "kalos route 16 area",
+          "friend safari ghost"
+        ]
+      }
+    },
+    "711": {
+      "x": {
+        "locations": [
+          "Evolve Pumpkaboo"
+        ]
+      },
+      "y": {
+        "locations": [
+          "Evolve Pumpkaboo"
+        ]
+      }
+    },
+    "712": {
+      "x": {
+        "locations": [
+          "frost cavern unknown area 314",
+          "frost cavern unknown area 315",
+          "frost cavern unknown area 316",
+          "frost cavern unknown area 317",
+          "friend safari ice"
+        ]
+      },
+      "y": {
+        "locations": [
+          "frost cavern unknown area 314",
+          "frost cavern unknown area 315",
+          "frost cavern unknown area 316",
+          "frost cavern unknown area 317",
+          "friend safari ice"
+        ]
+      }
+    },
+    "713": {
+      "x": {
+        "locations": [
+          "Evolve Bergmite"
+        ]
+      },
+      "y": {
+        "locations": [
+          "Evolve Bergmite"
+        ]
+      }
+    },
+    "714": {
+      "x": {
+        "locations": [
+          "kalos victory road unknown area 322",
+          "kalos victory road unknown area 324",
+          "kalos victory road unknown area 326",
+          "kalos victory road unknown area 328",
+          "terminus cave 1f",
+          "terminus cave b1f left",
+          "terminus cave b1f right",
+          "terminus cave b2f",
+          "terminus cave zygardes chamber",
+          "friend safari dragon"
+        ]
+      },
+      "y": {
+        "locations": [
+          "kalos victory road unknown area 322",
+          "kalos victory road unknown area 324",
+          "kalos victory road unknown area 326",
+          "kalos victory road unknown area 328",
+          "terminus cave 1f",
+          "terminus cave b1f left",
+          "terminus cave b1f right",
+          "terminus cave b2f",
+          "terminus cave zygardes chamber",
+          "friend safari dragon"
+        ]
+      }
+    },
+    "715": {
+      "x": {
+        "locations": [
+          "Evolve Noibat"
+        ]
+      },
+      "y": {
+        "locations": [
+          "Evolve Noibat"
+        ]
+      }
+    },
+    "716": {
+      "x": {
+        "locations": [
+          "team flare secret hq area"
+        ]
+      },
+      "y": {
+        "locations": [
+          "Trade, Event"
+        ]
+      }
+    },
+    "717": {
+      "y": {
+        "locations": [
+          "team flare secret hq area"
+        ]
+      },
+      "x": {
+        "locations": [
+          "Trade, Event"
+        ]
+      }
+    },
+    "718": {
+      "x": {
+        "locations": [
+          "terminus cave zygardes chamber"
+        ]
+      },
+      "y": {
+        "locations": [
+          "terminus cave zygardes chamber"
+        ]
+      }
+    },
+    "719": {
+      "x": {
+        "locations": [
+          "Event"
+        ]
+      },
+      "y": {
+        "locations": [
+          "Event"
+        ]
+      }
+    },
+    "720": {
+      "x": {
+        "locations": [
+          "Event"
+        ]
+      },
+      "y": {
+        "locations": [
+          "Event"
+        ]
+      }
+    },
+    "721": {
+      "x": {
+        "locations": [
+          "Event"
+        ]
+      },
+      "y": {
+        "locations": [
+          "Event"
         ]
       }
     }

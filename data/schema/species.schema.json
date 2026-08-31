@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "PokemonSpeciesDatabase",
-  "description": "Schema for the master Pokémon species, multilingual names, and forms database",
+  "description": "Schema for the master Pokémon species, multilingual names, traits, and forms database",
   "type": "object",
   "patternProperties": {
     "^[0-9]+$": {
@@ -42,12 +42,33 @@
         },
         "flavorText": {
           "type": "object",
-          "description": "Default or multi-language species Pokédex flavor text",
+          "description": "Multi-language species Pokédex flavor text",
           "additionalProperties": { "type": "string" }
         },
+        "baseStats": {
+          "type": "object",
+          "description": "Base stats and Base Stat Total (BST)",
+          "properties": {
+            "hp": { "type": "integer" },
+            "attack": { "type": "integer" },
+            "defense": { "type": "integer" },
+            "specialAttack": { "type": "integer" },
+            "specialDefense": { "type": "integer" },
+            "speed": { "type": "integer" },
+            "bst": { "type": "integer" }
+          }
+        },
+        "isLegendary": { "type": "boolean" },
+        "isMythical": { "type": "boolean" },
+        "isBaby": { "type": "boolean" },
+        "hasGenderDifferences": { "type": "boolean" },
+        "height": { "type": ["number", "null"], "description": "Height in meters" },
+        "weight": { "type": ["number", "null"], "description": "Weight in kilograms" },
+        "color": { "type": ["string", "null"] },
+        "shape": { "type": ["string", "null"] },
         "forms": {
           "type": "array",
-          "description": "List of distinct battle/regional/visual forms for this species",
+          "description": "List of distinct battle, regional, gender, or cosmetic forms for this species",
           "items": {
             "type": "object",
             "required": ["formId", "name", "isDefault", "types"],
@@ -59,24 +80,26 @@
               },
               "name": {
                 "type": "string",
-                "description": "Form identifier name (e.g., 'pikachu-alola', 'rattata-alola')"
+                "description": "Form identifier name (e.g. 'pikachu-alola', 'unown-b', 'meowstic-female')"
               },
               "formKey": {
                 "type": "string",
-                "description": "Short form key suffix (e.g. 'alola', 'galar', 'gmax', 'mega')"
+                "description": "Short form key suffix (e.g. 'default', 'alola', 'female', 'cap-original')"
               },
-              "isDefault": {
-                "type": "boolean",
-                "description": "Whether this is the base/canonical form"
+              "formType": {
+                "type": "string",
+                "enum": ["default", "regional", "gender", "cosmetic", "mega", "gmax", "battle", "event", "other"],
+                "description": "Form category classification"
               },
-              "isMega": {
-                "type": "boolean"
-              },
-              "isGmax": {
-                "type": "boolean"
-              },
-              "isRegional": {
-                "type": "boolean"
+              "isDefault": { "type": "boolean" },
+              "isMega": { "type": "boolean" },
+              "isGmax": { "type": "boolean" },
+              "isRegional": { "type": "boolean" },
+              "isGenderDifference": { "type": "boolean" },
+              "isCosmetic": { "type": "boolean" },
+              "gender": {
+                "type": ["string", "null"],
+                "enum": ["male", "female", null]
               },
               "region": {
                 "type": ["string", "null"],
@@ -91,7 +114,7 @@
               },
               "pastTypes": {
                 "type": "object",
-                "description": "Historical types prior to generation changes (e.g. '1': ['normal'] for Clefairy)",
+                "description": "Historical types prior to generation changes",
                 "patternProperties": {
                   "^[1-9]$": {
                     "type": "array",

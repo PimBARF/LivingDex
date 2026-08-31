@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "PokemonEvolutionDatabase",
-  "description": "Schema for pre-compiled evolution trees and triggers",
+  "description": "Schema for pre-compiled evolution trees, triggers, and flowchart paths",
   "type": "object",
   "patternProperties": {
     "^[0-9]+$": {
@@ -60,13 +60,45 @@
               "description": {
                 "type": "string",
                 "description": "Human readable evolution requirement condition string"
-              },
-              "specialConditions": {
-                "type": "array",
-                "items": { "type": "string" }
               }
             },
             "additionalProperties": true
+          }
+        },
+        "paths": {
+          "type": "array",
+          "description": "Pre-calculated linear flowchart paths for direct UI rendering",
+          "items": {
+            "type": "object",
+            "required": ["root", "steps"],
+            "properties": {
+              "root": {
+                "type": "object",
+                "required": ["speciesId", "name"],
+                "properties": {
+                  "speciesId": { "type": "integer" },
+                  "name": { "type": "string" }
+                }
+              },
+              "steps": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "required": ["toSpeciesId", "toName", "description"],
+                  "properties": {
+                    "toSpeciesId": { "type": "integer" },
+                    "toName": { "type": "string" },
+                    "description": { "type": "string" },
+                    "reverseBreeding": {
+                      "type": "object",
+                      "properties": {
+                        "itemName": { "type": "string" }
+                      }
+                    }
+                  }
+                }
+              }
+            }
           }
         }
       },

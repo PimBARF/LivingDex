@@ -10,10 +10,11 @@
   ],
   "sections": [
     {
-      "id": "base",
-      "title": "Regional Pokédex",
+      "id": "johto",
+      "title": "Johto Pokédex",
       "type": "base",
       "optional": false,
+      "defaultEnabled": false,
       "entries": [
         {
           "speciesId": 152,
@@ -1274,6 +1275,353 @@
     }
   ],
   "encounters": {
+    "1": {
+      "gold": {
+        "locations": [
+          "Time Capsule, Event"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "Time Capsule, Event"
+        ]
+      },
+      "crystal": {
+        "locations": [
+          "Time Capsule, Event"
+        ]
+      }
+    },
+    "2": {
+      "gold": {
+        "locations": [
+          "Time Capsule"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "Time Capsule"
+        ]
+      },
+      "crystal": {
+        "locations": [
+          "Time Capsule"
+        ]
+      }
+    },
+    "3": {
+      "gold": {
+        "locations": [
+          "Time Capsule, Event"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "Time Capsule, Event"
+        ]
+      },
+      "crystal": {
+        "locations": [
+          "Time Capsule, Event"
+        ]
+      }
+    },
+    "4": {
+      "gold": {
+        "locations": [
+          "Time Capsule, Event"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "Time Capsule, Event"
+        ]
+      },
+      "crystal": {
+        "locations": [
+          "Time Capsule, Event"
+        ]
+      }
+    },
+    "5": {
+      "gold": {
+        "locations": [
+          "Time Capsule, Evolve Event Charmander"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "Time Capsule, Evolve Event Charmander"
+        ]
+      },
+      "crystal": {
+        "locations": [
+          "Time Capsule, Evolve Event Charmander"
+        ]
+      }
+    },
+    "6": {
+      "gold": {
+        "locations": [
+          "Time Capsule, Event"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "Time Capsule, Event"
+        ]
+      },
+      "crystal": {
+        "locations": [
+          "Time Capsule, Event"
+        ]
+      }
+    },
+    "7": {
+      "gold": {
+        "locations": [
+          "Time Capsule, Event"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "Time Capsule, Event"
+        ]
+      },
+      "crystal": {
+        "locations": [
+          "Time Capsule, Event"
+        ]
+      }
+    },
+    "8": {
+      "gold": {
+        "locations": [
+          "Time Capsule, Evolve Event Squirtle"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "Time Capsule, Evolve Event Squirtle"
+        ]
+      },
+      "crystal": {
+        "locations": [
+          "Time Capsule, Evolve Event Squirtle"
+        ]
+      }
+    },
+    "9": {
+      "gold": {
+        "locations": [
+          "Time Capsule, Event"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "Time Capsule, Event"
+        ]
+      },
+      "crystal": {
+        "locations": [
+          "Time Capsule, Event"
+        ]
+      }
+    },
+    "10": {
+      "gold": {
+        "locations": [
+          "johto route 30 area",
+          "johto route 31 area",
+          "ilex forest area",
+          "johto route 34 area",
+          "johto route 35 area",
+          "national park area",
+          "johto route 36 area",
+          "johto route 37 area",
+          "johto route 38 area",
+          "johto route 39 area",
+          "lake of rage area",
+          "kanto route 26 area",
+          "kanto route 27 area",
+          "kanto route 2 south towards viridian city",
+          "azalea town area"
+        ]
+      },
+      "crystal": {
+        "locations": [
+          "johto route 30 area",
+          "johto route 31 area",
+          "ilex forest area",
+          "national park area",
+          "kanto route 2 south towards viridian city",
+          "kanto route 24 area",
+          "kanto route 25 area"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "National Park (Bug-Catching Contest)ThSa"
+        ]
+      }
+    },
+    "11": {
+      "gold": {
+        "locations": [
+          "johto route 30 area",
+          "johto route 31 area",
+          "ilex forest area",
+          "johto route 34 area",
+          "johto route 35 area",
+          "national park area",
+          "johto route 36 area",
+          "johto route 37 area",
+          "johto route 38 area",
+          "johto route 39 area",
+          "lake of rage area",
+          "kanto route 26 area",
+          "kanto route 27 area",
+          "kanto route 2 south towards viridian city",
+          "azalea town area"
+        ]
+      },
+      "crystal": {
+        "locations": [
+          "ilex forest area",
+          "kanto route 24 area",
+          "kanto route 25 area"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "National Park (Bug-Catching Contest)ThSa"
+        ]
+      }
+    },
+    "12": {
+      "gold": {
+        "locations": [
+          "ilex forest area",
+          "johto route 34 area",
+          "johto route 35 area",
+          "johto route 36 area",
+          "johto route 37 area",
+          "johto route 38 area",
+          "johto route 39 area",
+          "lake of rage area",
+          "kanto route 26 area",
+          "kanto route 27 area",
+          "kanto route 2 south towards viridian city",
+          "azalea town area"
+        ]
+      },
+      "crystal": {
+        "locations": [
+          "ilex forest area",
+          "kanto route 2 south towards viridian city",
+          "kanto route 24 area",
+          "kanto route 25 area"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "National Park (Bug-Catching Contest)ThSa"
+        ]
+      }
+    },
+    "13": {
+      "silver": {
+        "locations": [
+          "johto route 30 area",
+          "johto route 31 area",
+          "ilex forest area",
+          "johto route 34 area",
+          "johto route 35 area",
+          "national park area",
+          "johto route 36 area",
+          "johto route 37 area",
+          "johto route 38 area",
+          "johto route 39 area",
+          "lake of rage area",
+          "kanto route 26 area",
+          "kanto route 27 area",
+          "kanto route 2 south towards viridian city",
+          "azalea town area"
+        ]
+      },
+      "crystal": {
+        "locations": [
+          "johto route 30 area",
+          "johto route 31 area",
+          "ilex forest area",
+          "national park area"
+        ]
+      },
+      "gold": {
+        "locations": [
+          "National Park (Bug-Catching Contest)ThSa"
+        ]
+      }
+    },
+    "14": {
+      "silver": {
+        "locations": [
+          "johto route 30 area",
+          "johto route 31 area",
+          "ilex forest area",
+          "johto route 34 area",
+          "johto route 35 area",
+          "national park area",
+          "johto route 36 area",
+          "johto route 37 area",
+          "johto route 38 area",
+          "johto route 39 area",
+          "lake of rage area",
+          "kanto route 26 area",
+          "kanto route 27 area",
+          "kanto route 2 south towards viridian city",
+          "azalea town area"
+        ]
+      },
+      "crystal": {
+        "locations": [
+          "ilex forest area"
+        ]
+      },
+      "gold": {
+        "locations": [
+          "National Park (Bug-Catching Contest)ThSa"
+        ]
+      }
+    },
+    "15": {
+      "silver": {
+        "locations": [
+          "ilex forest area",
+          "johto route 34 area",
+          "johto route 35 area",
+          "johto route 36 area",
+          "johto route 37 area",
+          "johto route 38 area",
+          "johto route 39 area",
+          "lake of rage area",
+          "kanto route 26 area",
+          "kanto route 27 area",
+          "kanto route 2 south towards viridian city",
+          "azalea town area"
+        ]
+      },
+      "crystal": {
+        "locations": [
+          "ilex forest area"
+        ]
+      },
+      "gold": {
+        "locations": [
+          "National Park (Bug-Catching Contest)ThSa"
+        ]
+      }
+    },
     "16": {
       "gold": {
         "locations": [
@@ -1323,6 +1671,3705 @@
           "kanto route 2 south towards viridian city",
           "kanto route 5 area",
           "kanto route 25 area"
+        ]
+      }
+    },
+    "17": {
+      "gold": {
+        "locations": [
+          "johto route 37 area",
+          "johto route 43 area",
+          "kanto route 2 south towards viridian city",
+          "kanto route 8 area",
+          "kanto route 13 area",
+          "kanto route 14 area",
+          "kanto route 15 area",
+          "kanto route 25 area"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "johto route 37 area",
+          "johto route 43 area",
+          "kanto route 2 south towards viridian city",
+          "kanto route 8 area",
+          "kanto route 13 area",
+          "kanto route 14 area",
+          "kanto route 15 area",
+          "kanto route 25 area"
+        ]
+      },
+      "crystal": {
+        "locations": [
+          "johto route 37 area",
+          "johto route 38 area",
+          "johto route 39 area",
+          "johto route 43 area",
+          "kanto route 2 south towards viridian city",
+          "kanto route 5 area",
+          "kanto route 8 area",
+          "kanto route 11 area",
+          "kanto route 13 area",
+          "kanto route 14 area",
+          "kanto route 15 area",
+          "kanto route 25 area"
+        ]
+      }
+    },
+    "18": {
+      "gold": {
+        "locations": [
+          "Evolve Pidgeotto"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "Evolve Pidgeotto"
+        ]
+      },
+      "crystal": {
+        "locations": [
+          "Evolve Pidgeotto"
+        ]
+      }
+    },
+    "19": {
+      "gold": {
+        "locations": [
+          "johto route 29 area",
+          "johto route 30 area",
+          "johto route 31 area",
+          "sprout tower 2f",
+          "sprout tower 3f",
+          "johto route 32 area",
+          "union cave 1f",
+          "union cave b1f",
+          "union cave b2f",
+          "johto route 33 area",
+          "johto route 34 area",
+          "burned tower 1f",
+          "burned tower b1f",
+          "bell tower 2f",
+          "bell tower 3f",
+          "bell tower 4f",
+          "bell tower 5f",
+          "bell tower 6f",
+          "bell tower 7f",
+          "bell tower 8f",
+          "bell tower 9f",
+          "johto route 38 area",
+          "johto route 39 area",
+          "mt mortar 1f",
+          "mt mortar lower cave",
+          "mt mortar b1f",
+          "johto route 46 area",
+          "kanto route 1 area",
+          "kanto route 3 area",
+          "kanto route 4 area",
+          "kanto route 7 area",
+          "kanto route 8 area",
+          "kanto route 9 area",
+          "kanto route 11 area",
+          "kanto route 22 area",
+          "tohjo falls area"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "johto route 29 area",
+          "johto route 30 area",
+          "johto route 31 area",
+          "sprout tower 2f",
+          "sprout tower 3f",
+          "johto route 32 area",
+          "union cave 1f",
+          "union cave b1f",
+          "union cave b2f",
+          "johto route 33 area",
+          "johto route 34 area",
+          "burned tower 1f",
+          "burned tower b1f",
+          "bell tower 2f",
+          "bell tower 3f",
+          "bell tower 4f",
+          "bell tower 5f",
+          "bell tower 6f",
+          "bell tower 7f",
+          "bell tower 8f",
+          "bell tower 9f",
+          "johto route 38 area",
+          "johto route 39 area",
+          "mt mortar 1f",
+          "mt mortar lower cave",
+          "mt mortar b1f",
+          "johto route 46 area",
+          "kanto route 1 area",
+          "kanto route 3 area",
+          "kanto route 4 area",
+          "kanto route 7 area",
+          "kanto route 8 area",
+          "kanto route 9 area",
+          "kanto route 11 area",
+          "kanto route 22 area",
+          "tohjo falls area"
+        ]
+      },
+      "crystal": {
+        "locations": [
+          "johto route 29 area",
+          "sprout tower 2f",
+          "sprout tower 3f",
+          "johto route 32 area",
+          "union cave 1f",
+          "union cave b1f",
+          "johto route 33 area",
+          "johto route 34 area",
+          "burned tower 1f",
+          "burned tower b1f",
+          "bell tower 2f",
+          "bell tower 3f",
+          "bell tower 4f",
+          "bell tower 5f",
+          "bell tower 6f",
+          "bell tower 7f",
+          "bell tower 8f",
+          "bell tower 9f",
+          "johto route 38 area",
+          "johto route 39 area",
+          "johto route 42 area",
+          "mt mortar 1f",
+          "mt mortar lower cave",
+          "johto route 46 area",
+          "kanto route 1 area",
+          "kanto route 3 area",
+          "kanto route 4 area",
+          "kanto route 6 area",
+          "kanto route 7 area",
+          "kanto route 9 area",
+          "kanto route 11 area",
+          "kanto sea route 21 area",
+          "kanto route 22 area",
+          "tohjo falls area"
+        ]
+      }
+    },
+    "20": {
+      "gold": {
+        "locations": [
+          "union cave b2f",
+          "burned tower 1f",
+          "johto route 38 area",
+          "johto route 39 area",
+          "mt mortar upper cave",
+          "mt mortar b1f",
+          "kanto route 26 area",
+          "kanto route 27 area",
+          "kanto route 7 area",
+          "kanto route 9 area",
+          "kanto route 10 area",
+          "tohjo falls area"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "union cave b2f",
+          "burned tower 1f",
+          "johto route 38 area",
+          "johto route 39 area",
+          "mt mortar upper cave",
+          "mt mortar b1f",
+          "kanto route 26 area",
+          "kanto route 27 area",
+          "kanto route 7 area",
+          "kanto route 9 area",
+          "kanto route 10 area",
+          "tohjo falls area"
+        ]
+      },
+      "crystal": {
+        "locations": [
+          "union cave b2f",
+          "burned tower 1f",
+          "johto route 38 area",
+          "johto route 39 area",
+          "johto route 42 area",
+          "mt mortar 1f",
+          "mt mortar lower cave",
+          "mt mortar upper cave",
+          "mt mortar b1f",
+          "johto route 43 area",
+          "kanto route 26 area",
+          "kanto route 27 area",
+          "kanto route 1 area",
+          "kanto route 3 area",
+          "kanto route 4 area",
+          "kanto route 6 area",
+          "kanto route 7 area",
+          "kanto route 9 area",
+          "kanto route 10 area",
+          "kanto route 11 area",
+          "kanto sea route 21 area",
+          "tohjo falls area"
+        ]
+      }
+    },
+    "21": {
+      "gold": {
+        "locations": [
+          "johto route 29 area",
+          "johto route 30 area",
+          "johto route 31 area",
+          "johto route 32 area",
+          "johto route 33 area",
+          "johto route 42 area",
+          "johto route 43 area",
+          "johto route 44 area",
+          "johto route 45 area",
+          "johto route 46 area",
+          "kanto route 3 area",
+          "kanto route 4 area",
+          "kanto route 7 area",
+          "kanto route 9 area",
+          "kanto route 10 area",
+          "kanto route 22 area",
+          "goldenrod city north gate"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "johto route 29 area",
+          "johto route 30 area",
+          "johto route 31 area",
+          "johto route 32 area",
+          "johto route 33 area",
+          "johto route 42 area",
+          "johto route 43 area",
+          "johto route 44 area",
+          "johto route 45 area",
+          "johto route 46 area",
+          "kanto route 3 area",
+          "kanto route 4 area",
+          "kanto route 7 area",
+          "kanto route 9 area",
+          "kanto route 10 area",
+          "kanto route 22 area",
+          "goldenrod city north gate"
+        ]
+      },
+      "crystal": {
+        "locations": [
+          "johto route 33 area",
+          "johto route 42 area",
+          "johto route 44 area",
+          "johto route 45 area",
+          "johto route 46 area",
+          "kanto route 3 area",
+          "kanto route 4 area",
+          "kanto route 7 area",
+          "kanto route 9 area",
+          "kanto route 10 area",
+          "kanto route 22 area",
+          "goldenrod city north gate",
+          "azalea town area"
+        ]
+      }
+    },
+    "22": {
+      "crystal": {
+        "locations": [
+          "johto route 42 area",
+          "kanto route 9 area",
+          "kanto route 10 area",
+          "kanto route 16 area",
+          "kanto route 17 area",
+          "kanto route 18 area",
+          "kanto route 22 area"
+        ]
+      },
+      "gold": {
+        "locations": [
+          "kanto route 9 area",
+          "kanto route 10 area",
+          "kanto route 16 area",
+          "kanto route 17 area",
+          "kanto route 18 area",
+          "kanto route 22 area"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "kanto route 9 area",
+          "kanto route 10 area",
+          "kanto route 16 area",
+          "kanto route 17 area",
+          "kanto route 18 area",
+          "kanto route 22 area"
+        ]
+      }
+    },
+    "23": {
+      "silver": {
+        "locations": [
+          "johto route 32 area",
+          "johto route 33 area",
+          "kanto route 3 area",
+          "kanto route 4 area"
+        ]
+      },
+      "crystal": {
+        "locations": [
+          "johto route 32 area",
+          "johto route 33 area",
+          "johto route 42 area",
+          "kanto route 26 area",
+          "kanto route 27 area",
+          "kanto route 3 area",
+          "kanto route 4 area",
+          "azalea town area"
+        ]
+      },
+      "gold": {
+        "locations": [
+          "goldenrod city game corner"
+        ]
+      }
+    },
+    "24": {
+      "crystal": {
+        "locations": [
+          "johto route 42 area",
+          "mt silver outside",
+          "kanto route 26 area",
+          "kanto route 27 area",
+          "kanto route 28 area",
+          "kanto route 3 area",
+          "kanto route 4 area"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "kanto route 26 area",
+          "kanto route 27 area",
+          "kanto route 3 area",
+          "kanto route 4 area"
+        ]
+      },
+      "gold": {
+        "locations": [
+          "Evolve Ekans"
+        ]
+      }
+    },
+    "25": {
+      "gold": {
+        "locations": [
+          "kanto route 2 south towards viridian city"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "kanto route 2 south towards viridian city"
+        ]
+      },
+      "crystal": {
+        "locations": [
+          "kanto route 2 south towards viridian city",
+          "celadon city prize corner"
+        ]
+      }
+    },
+    "26": {
+      "gold": {
+        "locations": [
+          "Evolve Pikachu"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "Evolve Pikachu"
+        ]
+      },
+      "crystal": {
+        "locations": [
+          "Evolve Pikachu"
+        ]
+      }
+    },
+    "27": {
+      "gold": {
+        "locations": [
+          "union cave 1f",
+          "union cave b1f",
+          "mt moon 1f"
+        ]
+      },
+      "crystal": {
+        "locations": [
+          "union cave 1f",
+          "mt moon 1f"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "goldenrod city game corner"
+        ]
+      }
+    },
+    "28": {
+      "gold": {
+        "locations": [
+          "kanto route 26 area",
+          "kanto route 27 area",
+          "mt moon 1f"
+        ]
+      },
+      "crystal": {
+        "locations": [
+          "kanto route 26 area",
+          "kanto victory road 1 1f",
+          "kanto victory road 1 2f",
+          "kanto victory road 1 3f"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "Evolve Sandshrew"
+        ]
+      }
+    },
+    "29": {
+      "gold": {
+        "locations": [
+          "johto route 35 area",
+          "johto route 36 area"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "johto route 35 area",
+          "johto route 36 area"
+        ]
+      },
+      "crystal": {
+        "locations": [
+          "johto route 35 area",
+          "national park area"
+        ]
+      }
+    },
+    "30": {
+      "gold": {
+        "locations": [
+          "kanto route 13 area",
+          "kanto route 14 area",
+          "kanto route 15 area"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "kanto route 13 area",
+          "kanto route 14 area",
+          "kanto route 15 area"
+        ]
+      },
+      "crystal": {
+        "locations": [
+          "kanto route 13 area",
+          "kanto route 14 area",
+          "kanto route 15 area"
+        ]
+      }
+    },
+    "31": {
+      "gold": {
+        "locations": [
+          "Evolve Nidorina"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "Evolve Nidorina"
+        ]
+      },
+      "crystal": {
+        "locations": [
+          "Evolve Nidorina"
+        ]
+      }
+    },
+    "32": {
+      "gold": {
+        "locations": [
+          "johto route 35 area",
+          "johto route 36 area"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "johto route 35 area",
+          "johto route 36 area"
+        ]
+      },
+      "crystal": {
+        "locations": [
+          "johto route 35 area",
+          "national park area"
+        ]
+      }
+    },
+    "33": {
+      "gold": {
+        "locations": [
+          "kanto route 13 area",
+          "kanto route 14 area",
+          "kanto route 15 area"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "kanto route 13 area",
+          "kanto route 14 area",
+          "kanto route 15 area"
+        ]
+      },
+      "crystal": {
+        "locations": [
+          "kanto route 13 area",
+          "kanto route 14 area",
+          "kanto route 15 area"
+        ]
+      }
+    },
+    "34": {
+      "gold": {
+        "locations": [
+          "Evolve Nidorino"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "Evolve Nidorino"
+        ]
+      },
+      "crystal": {
+        "locations": [
+          "Evolve Nidorino"
+        ]
+      }
+    },
+    "35": {
+      "gold": {
+        "locations": [
+          "mt moon 1f"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "mt moon 1f"
+        ]
+      },
+      "crystal": {
+        "locations": [
+          "mt moon 1f",
+          "kanto route 3 area",
+          "kanto route 4 area"
+        ]
+      }
+    },
+    "36": {
+      "gold": {
+        "locations": [
+          "Evolve Clefairy"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "Evolve Clefairy"
+        ]
+      },
+      "crystal": {
+        "locations": [
+          "Evolve Clefairy"
+        ]
+      }
+    },
+    "37": {
+      "silver": {
+        "locations": [
+          "johto route 36 area",
+          "johto route 37 area",
+          "kanto route 7 area",
+          "kanto route 8 area"
+        ]
+      }
+    },
+    "38": {
+      "silver": {
+        "locations": [
+          "Evolve Vulpix"
+        ]
+      }
+    },
+    "39": {
+      "crystal": {
+        "locations": [
+          "johto route 34 area",
+          "johto route 35 area",
+          "kanto route 5 area",
+          "kanto route 6 area",
+          "kanto route 7 area",
+          "kanto route 8 area"
+        ]
+      },
+      "gold": {
+        "locations": [
+          "johto route 46 area",
+          "kanto route 3 area",
+          "kanto route 4 area"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "johto route 46 area",
+          "kanto route 3 area",
+          "kanto route 4 area"
+        ]
+      }
+    },
+    "40": {
+      "gold": {
+        "locations": [
+          "Evolve Jigglypuff"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "Evolve Jigglypuff"
+        ]
+      },
+      "crystal": {
+        "locations": [
+          "Evolve Jigglypuff"
+        ]
+      }
+    },
+    "41": {
+      "crystal": {
+        "locations": [
+          "johto route 30 area",
+          "johto route 31 area",
+          "johto route 32 area",
+          "union cave 1f",
+          "union cave b1f",
+          "union cave b2f",
+          "johto route 33 area",
+          "slowpoke well 1f",
+          "slowpoke well b1f",
+          "burned tower 1f",
+          "burned tower b1f",
+          "whirl islands 1f",
+          "whirl islands b1f",
+          "whirl islands b2f",
+          "whirl islands b3f",
+          "johto route 42 area",
+          "mt mortar 1f",
+          "mt mortar lower cave",
+          "mt mortar b1f",
+          "dark cave violet city entrance",
+          "dark cave blackthorn city entrance",
+          "mt moon 1f",
+          "rock tunnel 1f",
+          "rock tunnel b1f",
+          "kanto route 3 area",
+          "kanto route 4 area",
+          "kanto route 9 area",
+          "kanto route 10 area",
+          "tohjo falls area"
+        ]
+      },
+      "gold": {
+        "locations": [
+          "johto route 32 area",
+          "union cave 1f",
+          "union cave b1f",
+          "union cave b2f",
+          "johto route 33 area",
+          "slowpoke well 1f",
+          "slowpoke well b1f",
+          "ilex forest area",
+          "burned tower 1f",
+          "burned tower b1f",
+          "whirl islands 1f",
+          "whirl islands b1f",
+          "whirl islands b2f",
+          "whirl islands b3f",
+          "johto route 42 area",
+          "mt mortar 1f",
+          "mt mortar lower cave",
+          "mt mortar b1f",
+          "ice path 1f",
+          "ice path b1f",
+          "ice path b2f",
+          "ice path b3f",
+          "dark cave violet city entrance",
+          "dark cave blackthorn city entrance",
+          "mt moon 1f",
+          "rock tunnel 1f",
+          "rock tunnel b1f",
+          "kanto route 3 area",
+          "kanto route 4 area",
+          "tohjo falls area"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "johto route 32 area",
+          "union cave 1f",
+          "union cave b1f",
+          "union cave b2f",
+          "johto route 33 area",
+          "slowpoke well 1f",
+          "slowpoke well b1f",
+          "ilex forest area",
+          "burned tower 1f",
+          "burned tower b1f",
+          "whirl islands 1f",
+          "whirl islands b1f",
+          "whirl islands b2f",
+          "whirl islands b3f",
+          "johto route 42 area",
+          "mt mortar 1f",
+          "mt mortar lower cave",
+          "mt mortar b1f",
+          "ice path 1f",
+          "ice path b1f",
+          "ice path b2f",
+          "ice path b3f",
+          "dark cave violet city entrance",
+          "dark cave blackthorn city entrance",
+          "mt moon 1f",
+          "rock tunnel 1f",
+          "rock tunnel b1f",
+          "kanto route 3 area",
+          "kanto route 4 area",
+          "tohjo falls area"
+        ]
+      }
+    },
+    "42": {
+      "gold": {
+        "locations": [
+          "union cave b2f",
+          "slowpoke well b1f",
+          "whirl islands 1f",
+          "whirl islands b1f",
+          "whirl islands b2f",
+          "whirl islands b3f",
+          "mt mortar upper cave",
+          "ice path 1f",
+          "ice path b1f",
+          "ice path b2f",
+          "ice path b3f",
+          "dark cave blackthorn city entrance",
+          "mt silver 2f",
+          "mt silver 1f",
+          "mt silver top",
+          "kanto victory road 1 1f",
+          "tohjo falls area",
+          "kanto victory road 1 2f",
+          "kanto victory road 1 3f"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "union cave b2f",
+          "slowpoke well b1f",
+          "whirl islands 1f",
+          "whirl islands b1f",
+          "whirl islands b2f",
+          "whirl islands b3f",
+          "mt mortar upper cave",
+          "ice path 1f",
+          "ice path b1f",
+          "ice path b2f",
+          "ice path b3f",
+          "dark cave blackthorn city entrance",
+          "mt silver 2f",
+          "mt silver 1f",
+          "mt silver top",
+          "kanto victory road 1 1f",
+          "tohjo falls area",
+          "kanto victory road 1 2f",
+          "kanto victory road 1 3f"
+        ]
+      },
+      "crystal": {
+        "locations": [
+          "union cave b2f",
+          "slowpoke well b1f",
+          "whirl islands 1f",
+          "whirl islands b1f",
+          "whirl islands b2f",
+          "whirl islands b3f",
+          "johto route 42 area",
+          "mt mortar 1f",
+          "mt mortar lower cave",
+          "mt mortar upper cave",
+          "mt mortar b1f",
+          "ice path 1f",
+          "ice path b1f",
+          "ice path b2f",
+          "ice path b3f",
+          "dark cave blackthorn city entrance",
+          "mt silver 2f",
+          "mt silver outside",
+          "mt silver 1f",
+          "mt silver top",
+          "kanto route 28 area",
+          "rock tunnel b1f",
+          "kanto victory road 1 1f",
+          "tohjo falls area",
+          "kanto victory road 1 2f",
+          "kanto victory road 1 3f"
+        ]
+      }
+    },
+    "43": {
+      "gold": {
+        "locations": [
+          "ilex forest area",
+          "kanto route 5 area",
+          "kanto route 6 area",
+          "kanto route 24 area",
+          "kanto route 25 area"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "ilex forest area",
+          "kanto route 5 area",
+          "kanto route 6 area",
+          "kanto route 24 area",
+          "kanto route 25 area"
+        ]
+      },
+      "crystal": {
+        "locations": [
+          "ilex forest area",
+          "kanto route 24 area",
+          "kanto route 25 area"
+        ]
+      }
+    },
+    "44": {
+      "gold": {
+        "locations": [
+          "kanto route 5 area"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "kanto route 5 area"
+        ]
+      },
+      "crystal": {
+        "locations": [
+          "kanto route 24 area"
+        ]
+      }
+    },
+    "45": {
+      "gold": {
+        "locations": [
+          "Evolve Gloom"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "Evolve Gloom"
+        ]
+      },
+      "crystal": {
+        "locations": [
+          "Evolve Gloom"
+        ]
+      }
+    },
+    "46": {
+      "gold": {
+        "locations": [
+          "ilex forest area",
+          "mt moon 1f"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "ilex forest area",
+          "mt moon 1f"
+        ]
+      },
+      "crystal": {
+        "locations": [
+          "ilex forest area",
+          "mt moon 1f"
+        ]
+      }
+    },
+    "47": {
+      "crystal": {
+        "locations": [
+          "mt silver 2f"
+        ]
+      },
+      "gold": {
+        "locations": [
+          "Evolve Paras"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "Evolve Paras"
+        ]
+      }
+    },
+    "48": {
+      "crystal": {
+        "locations": [
+          "ilex forest area",
+          "national park area",
+          "johto route 43 area",
+          "lake of rage area",
+          "kanto route 9 area",
+          "kanto route 10 area",
+          "kanto route 13 area",
+          "kanto route 14 area",
+          "kanto route 15 area",
+          "kanto route 24 area",
+          "kanto route 25 area"
+        ]
+      },
+      "gold": {
+        "locations": [
+          "johto route 43 area",
+          "kanto route 24 area",
+          "kanto route 25 area"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "johto route 43 area",
+          "kanto route 24 area",
+          "kanto route 25 area"
+        ]
+      }
+    },
+    "49": {
+      "crystal": {
+        "locations": [
+          "johto route 43 area",
+          "kanto route 9 area",
+          "kanto route 10 area",
+          "kanto route 13 area",
+          "kanto route 14 area",
+          "kanto route 15 area"
+        ]
+      },
+      "gold": {
+        "locations": [
+          "kanto route 24 area",
+          "kanto route 25 area"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "kanto route 24 area",
+          "kanto route 25 area"
+        ]
+      }
+    },
+    "50": {
+      "gold": {
+        "locations": [
+          "digletts cave area"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "digletts cave area"
+        ]
+      },
+      "crystal": {
+        "locations": [
+          "digletts cave area"
+        ]
+      }
+    },
+    "51": {
+      "gold": {
+        "locations": [
+          "digletts cave area"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "digletts cave area"
+        ]
+      },
+      "crystal": {
+        "locations": [
+          "digletts cave area"
+        ]
+      }
+    },
+    "52": {
+      "crystal": {
+        "locations": [
+          "johto route 35 area",
+          "johto route 38 area",
+          "johto route 39 area",
+          "kanto route 5 area",
+          "kanto route 6 area",
+          "kanto route 7 area",
+          "kanto route 8 area",
+          "kanto route 11 area"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "johto route 38 area",
+          "johto route 39 area",
+          "kanto route 5 area",
+          "kanto route 6 area",
+          "kanto route 7 area",
+          "kanto route 8 area"
+        ]
+      }
+    },
+    "53": {
+      "silver": {
+        "locations": [
+          "kanto route 7 area"
+        ]
+      },
+      "crystal": {
+        "locations": [
+          "kanto route 7 area"
+        ]
+      }
+    },
+    "54": {
+      "gold": {
+        "locations": [
+          "ilex forest area",
+          "johto route 35 area",
+          "kanto route 6 area"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "ilex forest area",
+          "johto route 35 area",
+          "kanto route 6 area"
+        ]
+      },
+      "crystal": {
+        "locations": [
+          "ilex forest area",
+          "johto route 35 area",
+          "national park area",
+          "kanto route 6 area"
+        ]
+      }
+    },
+    "55": {
+      "gold": {
+        "locations": [
+          "ilex forest area",
+          "johto route 35 area",
+          "mt silver 2f",
+          "mt silver top",
+          "kanto route 6 area"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "ilex forest area",
+          "johto route 35 area",
+          "mt silver 2f",
+          "mt silver top",
+          "kanto route 6 area"
+        ]
+      },
+      "crystal": {
+        "locations": [
+          "ilex forest area",
+          "johto route 35 area",
+          "mt silver 2f",
+          "mt silver top",
+          "kanto route 6 area"
+        ]
+      }
+    },
+    "56": {
+      "gold": {
+        "locations": [
+          "johto route 42 area",
+          "kanto route 9 area"
+        ]
+      }
+    },
+    "57": {
+      "gold": {
+        "locations": [
+          "kanto route 9 area"
+        ]
+      }
+    },
+    "58": {
+      "crystal": {
+        "locations": [
+          "johto route 35 area",
+          "johto route 36 area",
+          "johto route 37 area",
+          "kanto route 8 area"
+        ]
+      },
+      "gold": {
+        "locations": [
+          "johto route 36 area",
+          "johto route 37 area",
+          "kanto route 7 area",
+          "kanto route 8 area"
+        ]
+      }
+    },
+    "59": {
+      "gold": {
+        "locations": [
+          "Evolve Growlithe"
+        ]
+      },
+      "crystal": {
+        "locations": [
+          "Evolve Growlithe"
+        ]
+      }
+    },
+    "60": {
+      "gold": {
+        "locations": [
+          "johto route 30 area",
+          "johto route 31 area",
+          "violet city area",
+          "ruins of alph outside",
+          "ilex forest area",
+          "johto route 35 area",
+          "ecruteak city area",
+          "johto route 43 area",
+          "johto route 44 area",
+          "blackthorn city area",
+          "mt silver outside",
+          "viridian city area",
+          "kanto route 28 area",
+          "kanto route 6 area",
+          "kanto route 22 area"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "johto route 30 area",
+          "johto route 31 area",
+          "violet city area",
+          "ruins of alph outside",
+          "ilex forest area",
+          "johto route 35 area",
+          "ecruteak city area",
+          "johto route 43 area",
+          "johto route 44 area",
+          "blackthorn city area",
+          "mt silver outside",
+          "viridian city area",
+          "kanto route 28 area",
+          "kanto route 6 area",
+          "kanto route 22 area"
+        ]
+      },
+      "crystal": {
+        "locations": [
+          "johto route 30 area",
+          "johto route 31 area",
+          "violet city area",
+          "ruins of alph outside",
+          "ilex forest area",
+          "johto route 35 area",
+          "ecruteak city area",
+          "johto route 43 area",
+          "johto route 44 area",
+          "blackthorn city area",
+          "mt silver outside",
+          "viridian city area",
+          "kanto route 28 area",
+          "kanto route 6 area",
+          "kanto route 22 area"
+        ]
+      }
+    },
+    "61": {
+      "gold": {
+        "locations": [
+          "johto route 30 area",
+          "johto route 31 area",
+          "violet city area",
+          "ecruteak city area",
+          "johto route 44 area",
+          "mt silver outside",
+          "viridian city area",
+          "kanto route 28 area",
+          "kanto route 22 area"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "johto route 30 area",
+          "johto route 31 area",
+          "violet city area",
+          "ecruteak city area",
+          "johto route 44 area",
+          "mt silver outside",
+          "viridian city area",
+          "kanto route 28 area",
+          "kanto route 22 area"
+        ]
+      },
+      "crystal": {
+        "locations": [
+          "johto route 30 area",
+          "johto route 31 area",
+          "violet city area",
+          "ecruteak city area",
+          "johto route 44 area",
+          "mt silver outside",
+          "viridian city area",
+          "kanto route 28 area",
+          "kanto route 22 area"
+        ]
+      }
+    },
+    "62": {
+      "gold": {
+        "locations": [
+          "Evolve Poliwhirl"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "Evolve Poliwhirl"
+        ]
+      },
+      "crystal": {
+        "locations": [
+          "Evolve Poliwhirl"
+        ]
+      }
+    },
+    "63": {
+      "gold": {
+        "locations": [
+          "johto route 34 area",
+          "johto route 35 area",
+          "kanto route 5 area",
+          "kanto route 6 area",
+          "kanto route 8 area",
+          "kanto route 24 area",
+          "kanto route 25 area",
+          "goldenrod city game corner"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "johto route 34 area",
+          "johto route 35 area",
+          "kanto route 5 area",
+          "kanto route 6 area",
+          "kanto route 8 area",
+          "kanto route 24 area",
+          "kanto route 25 area",
+          "goldenrod city game corner"
+        ]
+      },
+      "crystal": {
+        "locations": [
+          "johto route 34 area",
+          "johto route 35 area",
+          "kanto route 5 area",
+          "kanto route 7 area",
+          "kanto route 8 area",
+          "kanto route 24 area",
+          "goldenrod city game corner"
+        ]
+      }
+    },
+    "64": {
+      "gold": {
+        "locations": [
+          "kanto route 8 area"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "kanto route 8 area"
+        ]
+      },
+      "crystal": {
+        "locations": [
+          "kanto route 8 area"
+        ]
+      }
+    },
+    "65": {
+      "gold": {
+        "locations": [
+          "Evolve Kadabra"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "Evolve Kadabra"
+        ]
+      },
+      "crystal": {
+        "locations": [
+          "Evolve Kadabra"
+        ]
+      }
+    },
+    "66": {
+      "gold": {
+        "locations": [
+          "mt mortar 1f",
+          "mt mortar lower cave",
+          "mt mortar upper cave",
+          "mt mortar b1f",
+          "rock tunnel 1f",
+          "goldenrod city department store 5f"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "mt mortar 1f",
+          "mt mortar lower cave",
+          "mt mortar upper cave",
+          "mt mortar b1f",
+          "rock tunnel 1f",
+          "goldenrod city department store 5f"
+        ]
+      },
+      "crystal": {
+        "locations": [
+          "mt mortar 1f",
+          "mt mortar lower cave",
+          "mt mortar upper cave",
+          "mt mortar b1f",
+          "rock tunnel 1f",
+          "goldenrod city department store 5f"
+        ]
+      }
+    },
+    "67": {
+      "gold": {
+        "locations": [
+          "mt mortar upper cave",
+          "rock tunnel 1f"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "mt mortar upper cave",
+          "rock tunnel 1f"
+        ]
+      },
+      "crystal": {
+        "locations": [
+          "mt mortar upper cave",
+          "mt silver 2f",
+          "rock tunnel 1f"
+        ]
+      }
+    },
+    "68": {
+      "gold": {
+        "locations": [
+          "Evolve Machoke"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "Evolve Machoke"
+        ]
+      },
+      "crystal": {
+        "locations": [
+          "Evolve Machoke"
+        ]
+      }
+    },
+    "69": {
+      "gold": {
+        "locations": [
+          "johto route 31 area",
+          "johto route 32 area",
+          "johto route 44 area",
+          "kanto route 5 area",
+          "kanto route 6 area",
+          "kanto route 24 area",
+          "kanto route 25 area"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "johto route 31 area",
+          "johto route 32 area",
+          "johto route 44 area",
+          "kanto route 5 area",
+          "kanto route 6 area",
+          "kanto route 24 area",
+          "kanto route 25 area"
+        ]
+      },
+      "crystal": {
+        "locations": [
+          "johto route 31 area",
+          "johto route 32 area",
+          "johto route 36 area",
+          "johto route 44 area",
+          "kanto route 24 area",
+          "kanto route 25 area"
+        ]
+      }
+    },
+    "70": {
+      "gold": {
+        "locations": [
+          "johto route 44 area",
+          "kanto route 24 area",
+          "kanto route 25 area"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "johto route 44 area",
+          "kanto route 24 area",
+          "kanto route 25 area"
+        ]
+      },
+      "crystal": {
+        "locations": [
+          "johto route 44 area"
+        ]
+      }
+    },
+    "71": {
+      "gold": {
+        "locations": [
+          "Evolve Weepinbell"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "Evolve Weepinbell"
+        ]
+      },
+      "crystal": {
+        "locations": [
+          "Evolve Weepinbell"
+        ]
+      }
+    },
+    "72": {
+      "gold": {
+        "locations": [
+          "new bark town area",
+          "cherrygrove city area",
+          "johto route 32 area",
+          "union cave b2f",
+          "johto route 34 area",
+          "olivine city area",
+          "johto sea route 40 area",
+          "johto sea route 41 area",
+          "whirl islands 1f",
+          "cianwood city area",
+          "kanto route 12 area",
+          "kanto sea route 19 area",
+          "kanto sea route 20 area",
+          "cinnabar island area",
+          "vermilion city area",
+          "pallet town area",
+          "kanto route 26 area",
+          "kanto route 27 area",
+          "kanto route 13 area",
+          "kanto sea route 21 area",
+          "vermilion city ss anne dock"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "new bark town area",
+          "cherrygrove city area",
+          "johto route 32 area",
+          "union cave b2f",
+          "johto route 34 area",
+          "olivine city area",
+          "johto sea route 40 area",
+          "johto sea route 41 area",
+          "whirl islands 1f",
+          "cianwood city area",
+          "kanto route 12 area",
+          "kanto sea route 19 area",
+          "kanto sea route 20 area",
+          "cinnabar island area",
+          "vermilion city area",
+          "pallet town area",
+          "kanto route 26 area",
+          "kanto route 27 area",
+          "kanto route 13 area",
+          "kanto sea route 21 area",
+          "vermilion city ss anne dock"
+        ]
+      },
+      "crystal": {
+        "locations": [
+          "new bark town area",
+          "cherrygrove city area",
+          "johto route 32 area",
+          "union cave b2f",
+          "johto route 34 area",
+          "olivine city area",
+          "johto sea route 40 area",
+          "johto sea route 41 area",
+          "whirl islands 1f",
+          "cianwood city area",
+          "kanto route 12 area",
+          "kanto sea route 19 area",
+          "kanto sea route 20 area",
+          "cinnabar island area",
+          "vermilion city area",
+          "pallet town area",
+          "kanto route 26 area",
+          "kanto route 27 area",
+          "kanto route 13 area",
+          "kanto sea route 21 area",
+          "vermilion city ss anne dock"
+        ]
+      }
+    },
+    "73": {
+      "gold": {
+        "locations": [
+          "new bark town area",
+          "cherrygrove city area",
+          "johto route 32 area",
+          "union cave b2f",
+          "johto route 34 area",
+          "olivine city area",
+          "johto sea route 40 area",
+          "johto sea route 41 area",
+          "whirl islands 1f",
+          "whirl islands b2f",
+          "whirl islands b3f",
+          "cianwood city area",
+          "kanto route 12 area",
+          "kanto sea route 19 area",
+          "kanto sea route 20 area",
+          "cinnabar island area",
+          "vermilion city area",
+          "pallet town area",
+          "kanto route 26 area",
+          "kanto route 27 area",
+          "kanto route 13 area",
+          "kanto sea route 21 area",
+          "vermilion city ss anne dock"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "new bark town area",
+          "cherrygrove city area",
+          "johto route 32 area",
+          "union cave b2f",
+          "johto route 34 area",
+          "olivine city area",
+          "johto sea route 40 area",
+          "johto sea route 41 area",
+          "whirl islands 1f",
+          "whirl islands b2f",
+          "whirl islands b3f",
+          "cianwood city area",
+          "kanto route 12 area",
+          "kanto sea route 19 area",
+          "kanto sea route 20 area",
+          "cinnabar island area",
+          "vermilion city area",
+          "pallet town area",
+          "kanto route 26 area",
+          "kanto route 27 area",
+          "kanto route 13 area",
+          "kanto sea route 21 area",
+          "vermilion city ss anne dock"
+        ]
+      },
+      "crystal": {
+        "locations": [
+          "new bark town area",
+          "cherrygrove city area",
+          "johto route 32 area",
+          "union cave b2f",
+          "johto route 34 area",
+          "olivine city area",
+          "johto sea route 40 area",
+          "johto sea route 41 area",
+          "whirl islands 1f",
+          "whirl islands b2f",
+          "whirl islands b3f",
+          "cianwood city area",
+          "kanto route 12 area",
+          "kanto sea route 19 area",
+          "kanto sea route 20 area",
+          "cinnabar island area",
+          "vermilion city area",
+          "pallet town area",
+          "kanto route 26 area",
+          "kanto route 27 area",
+          "kanto route 13 area",
+          "kanto sea route 21 area",
+          "vermilion city ss anne dock"
+        ]
+      }
+    },
+    "74": {
+      "gold": {
+        "locations": [
+          "union cave 1f",
+          "union cave b1f",
+          "union cave b2f",
+          "mt mortar 1f",
+          "mt mortar lower cave",
+          "mt mortar upper cave",
+          "mt mortar b1f",
+          "johto route 45 area",
+          "johto route 46 area",
+          "dark cave violet city entrance",
+          "dark cave blackthorn city entrance",
+          "mt moon 1f",
+          "rock tunnel 1f",
+          "rock tunnel b1f",
+          "team rocket hq area"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "union cave 1f",
+          "union cave b1f",
+          "union cave b2f",
+          "mt mortar 1f",
+          "mt mortar lower cave",
+          "mt mortar upper cave",
+          "mt mortar b1f",
+          "johto route 45 area",
+          "johto route 46 area",
+          "dark cave violet city entrance",
+          "dark cave blackthorn city entrance",
+          "mt moon 1f",
+          "rock tunnel 1f",
+          "rock tunnel b1f",
+          "team rocket hq area"
+        ]
+      },
+      "crystal": {
+        "locations": [
+          "union cave 1f",
+          "union cave b1f",
+          "union cave b2f",
+          "johto route 33 area",
+          "mt mortar 1f",
+          "mt mortar lower cave",
+          "mt mortar upper cave",
+          "mt mortar b1f",
+          "johto route 45 area",
+          "johto route 46 area",
+          "dark cave violet city entrance",
+          "dark cave blackthorn city entrance",
+          "mt moon 1f",
+          "rock tunnel 1f",
+          "rock tunnel b1f",
+          "team rocket hq area"
+        ]
+      }
+    },
+    "75": {
+      "gold": {
+        "locations": [
+          "mt mortar upper cave",
+          "johto route 45 area",
+          "dark cave blackthorn city entrance",
+          "mt silver 1f",
+          "kanto victory road 1 1f",
+          "kanto victory road 1 2f",
+          "kanto victory road 1 3f"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "mt mortar upper cave",
+          "johto route 45 area",
+          "dark cave blackthorn city entrance",
+          "mt silver 1f",
+          "kanto victory road 1 1f",
+          "kanto victory road 1 2f",
+          "kanto victory road 1 3f"
+        ]
+      },
+      "crystal": {
+        "locations": [
+          "mt mortar upper cave",
+          "johto route 45 area",
+          "dark cave blackthorn city entrance",
+          "mt silver 1f",
+          "mt silver top",
+          "kanto victory road 1 1f",
+          "kanto victory road 1 2f",
+          "kanto victory road 1 3f"
+        ]
+      }
+    },
+    "76": {
+      "gold": {
+        "locations": [
+          "Evolve Graveler"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "Evolve Graveler"
+        ]
+      },
+      "crystal": {
+        "locations": [
+          "Evolve Graveler"
+        ]
+      }
+    },
+    "77": {
+      "gold": {
+        "locations": [
+          "mt silver outside",
+          "kanto route 26 area",
+          "kanto route 27 area",
+          "kanto route 28 area",
+          "kanto route 22 area"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "mt silver outside",
+          "kanto route 26 area",
+          "kanto route 27 area",
+          "kanto route 28 area",
+          "kanto route 22 area"
+        ]
+      },
+      "crystal": {
+        "locations": [
+          "mt silver outside",
+          "kanto route 26 area",
+          "kanto route 27 area",
+          "kanto route 28 area",
+          "kanto route 22 area"
+        ]
+      }
+    },
+    "78": {
+      "gold": {
+        "locations": [
+          "mt silver outside",
+          "kanto route 28 area",
+          "pewter city area"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "mt silver outside",
+          "kanto route 28 area",
+          "pewter city area"
+        ]
+      },
+      "crystal": {
+        "locations": [
+          "mt silver outside",
+          "kanto route 28 area"
+        ]
+      }
+    },
+    "79": {
+      "gold": {
+        "locations": [
+          "slowpoke well 1f",
+          "slowpoke well b1f",
+          "tohjo falls area"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "slowpoke well 1f",
+          "slowpoke well b1f",
+          "tohjo falls area"
+        ]
+      },
+      "crystal": {
+        "locations": [
+          "slowpoke well 1f",
+          "slowpoke well b1f",
+          "tohjo falls area"
+        ]
+      }
+    },
+    "80": {
+      "gold": {
+        "locations": [
+          "slowpoke well b1f"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "slowpoke well b1f"
+        ]
+      },
+      "crystal": {
+        "locations": [
+          "slowpoke well b1f"
+        ]
+      }
+    },
+    "81": {
+      "gold": {
+        "locations": [
+          "johto route 38 area",
+          "johto route 39 area",
+          "kanto route 6 area",
+          "kanto route 11 area"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "johto route 38 area",
+          "johto route 39 area",
+          "kanto route 6 area",
+          "kanto route 11 area"
+        ]
+      },
+      "crystal": {
+        "locations": [
+          "johto route 38 area",
+          "johto route 39 area",
+          "kanto route 6 area",
+          "kanto route 11 area"
+        ]
+      }
+    },
+    "82": {
+      "crystal": {
+        "locations": [
+          "kanto power plant area"
+        ]
+      },
+      "gold": {
+        "locations": [
+          "Evolve Magnemite"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "Evolve Magnemite"
+        ]
+      }
+    },
+    "83": {
+      "gold": {
+        "locations": [
+          "johto route 38 area",
+          "johto route 39 area"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "johto route 38 area",
+          "johto route 39 area"
+        ]
+      },
+      "crystal": {
+        "locations": [
+          "johto route 43 area"
+        ]
+      }
+    },
+    "84": {
+      "gold": {
+        "locations": [
+          "mt silver outside",
+          "kanto route 26 area",
+          "kanto route 27 area",
+          "kanto route 28 area",
+          "kanto route 22 area"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "mt silver outside",
+          "kanto route 26 area",
+          "kanto route 27 area",
+          "kanto route 28 area",
+          "kanto route 22 area"
+        ]
+      },
+      "crystal": {
+        "locations": [
+          "mt silver outside",
+          "kanto route 26 area",
+          "kanto route 27 area",
+          "kanto route 28 area",
+          "kanto route 22 area"
+        ]
+      }
+    },
+    "85": {
+      "crystal": {
+        "locations": [
+          "blackthorn city area",
+          "mt silver outside",
+          "kanto route 27 area",
+          "kanto route 28 area"
+        ]
+      },
+      "gold": {
+        "locations": [
+          "mt silver outside",
+          "kanto route 26 area",
+          "kanto route 28 area"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "mt silver outside",
+          "kanto route 27 area",
+          "kanto route 28 area"
+        ]
+      }
+    },
+    "86": {
+      "gold": {
+        "locations": [
+          "whirl islands 1f",
+          "whirl islands b1f",
+          "whirl islands b2f",
+          "whirl islands b3f"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "whirl islands 1f",
+          "whirl islands b1f",
+          "whirl islands b2f",
+          "whirl islands b3f"
+        ]
+      },
+      "crystal": {
+        "locations": [
+          "whirl islands 1f",
+          "whirl islands b1f",
+          "whirl islands b2f",
+          "whirl islands b3f"
+        ]
+      }
+    },
+    "87": {
+      "gold": {
+        "locations": [
+          "Evolve Seel"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "Evolve Seel"
+        ]
+      },
+      "crystal": {
+        "locations": [
+          "Evolve Seel"
+        ]
+      }
+    },
+    "88": {
+      "gold": {
+        "locations": [
+          "celadon city area",
+          "kanto route 16 area",
+          "kanto route 17 area",
+          "kanto route 18 area"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "celadon city area",
+          "kanto route 16 area",
+          "kanto route 17 area",
+          "kanto route 18 area"
+        ]
+      },
+      "crystal": {
+        "locations": [
+          "celadon city area",
+          "kanto route 16 area",
+          "kanto route 17 area",
+          "kanto route 18 area"
+        ]
+      }
+    },
+    "89": {
+      "gold": {
+        "locations": [
+          "celadon city area",
+          "kanto route 16 area",
+          "kanto route 17 area",
+          "kanto route 18 area"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "celadon city area",
+          "kanto route 16 area",
+          "kanto route 17 area",
+          "kanto route 18 area"
+        ]
+      },
+      "crystal": {
+        "locations": [
+          "celadon city area",
+          "kanto route 16 area",
+          "kanto route 17 area",
+          "kanto route 18 area"
+        ]
+      }
+    },
+    "90": {
+      "gold": {
+        "locations": [
+          "new bark town area",
+          "johto sea route 41 area",
+          "kanto sea route 20 area",
+          "cinnabar island area",
+          "vermilion city area",
+          "pallet town area",
+          "kanto route 26 area",
+          "kanto route 27 area",
+          "kanto sea route 21 area",
+          "vermilion city ss anne dock"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "new bark town area",
+          "johto sea route 41 area",
+          "kanto sea route 20 area",
+          "cinnabar island area",
+          "vermilion city area",
+          "pallet town area",
+          "kanto route 26 area",
+          "kanto route 27 area",
+          "kanto sea route 21 area",
+          "vermilion city ss anne dock"
+        ]
+      },
+      "crystal": {
+        "locations": [
+          "new bark town area",
+          "johto sea route 41 area",
+          "kanto sea route 20 area",
+          "cinnabar island area",
+          "vermilion city area",
+          "pallet town area",
+          "kanto route 26 area",
+          "kanto route 27 area",
+          "kanto sea route 21 area",
+          "vermilion city ss anne dock"
+        ]
+      }
+    },
+    "91": {
+      "gold": {
+        "locations": [
+          "Evolve Shellder"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "Evolve Shellder"
+        ]
+      },
+      "crystal": {
+        "locations": [
+          "Evolve Shellder"
+        ]
+      }
+    },
+    "92": {
+      "crystal": {
+        "locations": [
+          "johto route 31 area",
+          "sprout tower 2f",
+          "sprout tower 3f",
+          "johto route 32 area",
+          "johto route 36 area",
+          "bell tower 2f",
+          "bell tower 3f",
+          "bell tower 4f",
+          "bell tower 5f",
+          "bell tower 6f",
+          "bell tower 7f",
+          "bell tower 8f",
+          "bell tower 9f"
+        ]
+      },
+      "gold": {
+        "locations": [
+          "sprout tower 2f",
+          "sprout tower 3f",
+          "bell tower 2f",
+          "bell tower 3f",
+          "bell tower 4f",
+          "bell tower 5f",
+          "bell tower 6f",
+          "bell tower 7f",
+          "bell tower 8f",
+          "bell tower 9f"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "sprout tower 2f",
+          "sprout tower 3f",
+          "bell tower 2f",
+          "bell tower 3f",
+          "bell tower 4f",
+          "bell tower 5f",
+          "bell tower 6f",
+          "bell tower 7f",
+          "bell tower 8f",
+          "bell tower 9f"
+        ]
+      }
+    },
+    "93": {
+      "crystal": {
+        "locations": [
+          "rock tunnel 1f",
+          "rock tunnel b1f",
+          "kanto route 8 area"
+        ]
+      },
+      "gold": {
+        "locations": [
+          "kanto route 8 area"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "kanto route 8 area"
+        ]
+      }
+    },
+    "94": {
+      "gold": {
+        "locations": [
+          "Evolve Haunter"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "Evolve Haunter"
+        ]
+      },
+      "crystal": {
+        "locations": [
+          "Evolve Haunter"
+        ]
+      }
+    },
+    "95": {
+      "gold": {
+        "locations": [
+          "union cave 1f",
+          "union cave b1f",
+          "union cave b2f",
+          "mt silver 1f",
+          "mt silver top",
+          "rock tunnel b1f",
+          "kanto victory road 1 1f",
+          "kanto victory road 1 2f",
+          "kanto victory road 1 3f",
+          "violet city southwest house"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "union cave 1f",
+          "union cave b1f",
+          "union cave b2f",
+          "mt silver 1f",
+          "mt silver top",
+          "rock tunnel b1f",
+          "kanto victory road 1 1f",
+          "kanto victory road 1 2f",
+          "kanto victory road 1 3f",
+          "violet city southwest house"
+        ]
+      },
+      "crystal": {
+        "locations": [
+          "union cave 1f",
+          "union cave b1f",
+          "union cave b2f",
+          "mt silver 1f",
+          "mt silver top",
+          "rock tunnel b1f",
+          "kanto victory road 1 1f",
+          "kanto victory road 1 2f",
+          "kanto victory road 1 3f",
+          "violet city southwest house"
+        ]
+      }
+    },
+    "96": {
+      "gold": {
+        "locations": [
+          "johto route 34 area",
+          "johto route 35 area",
+          "kanto route 11 area"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "johto route 34 area",
+          "johto route 35 area",
+          "kanto route 11 area"
+        ]
+      },
+      "crystal": {
+        "locations": [
+          "johto route 34 area",
+          "johto route 35 area",
+          "kanto route 6 area",
+          "kanto route 11 area"
+        ]
+      }
+    },
+    "97": {
+      "gold": {
+        "locations": [
+          "kanto route 11 area"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "kanto route 11 area"
+        ]
+      },
+      "crystal": {
+        "locations": [
+          "kanto route 11 area"
+        ]
+      }
+    },
+    "98": {
+      "gold": {
+        "locations": [
+          "cherrygrove city area",
+          "union cave b2f",
+          "johto route 34 area",
+          "olivine city area",
+          "johto sea route 40 area",
+          "whirl islands 1f",
+          "whirl islands b1f",
+          "whirl islands b2f",
+          "whirl islands b3f",
+          "cianwood city area",
+          "dark cave violet city entrance",
+          "kanto sea route 19 area"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "cherrygrove city area",
+          "union cave b2f",
+          "johto route 34 area",
+          "olivine city area",
+          "johto sea route 40 area",
+          "whirl islands 1f",
+          "whirl islands b1f",
+          "whirl islands b2f",
+          "whirl islands b3f",
+          "cianwood city area",
+          "dark cave violet city entrance",
+          "kanto sea route 19 area"
+        ]
+      },
+      "crystal": {
+        "locations": [
+          "cherrygrove city area",
+          "union cave b2f",
+          "johto route 34 area",
+          "olivine city area",
+          "johto sea route 40 area",
+          "whirl islands 1f",
+          "whirl islands b1f",
+          "whirl islands b2f",
+          "whirl islands b3f",
+          "cianwood city area",
+          "dark cave violet city entrance",
+          "kanto sea route 19 area"
+        ]
+      }
+    },
+    "99": {
+      "gold": {
+        "locations": [
+          "cherrygrove city area",
+          "union cave b2f",
+          "johto route 34 area",
+          "olivine city area",
+          "johto sea route 40 area",
+          "whirl islands 1f",
+          "whirl islands b2f",
+          "whirl islands b3f",
+          "cianwood city area",
+          "kanto sea route 19 area"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "cherrygrove city area",
+          "union cave b2f",
+          "johto route 34 area",
+          "olivine city area",
+          "johto sea route 40 area",
+          "whirl islands 1f",
+          "whirl islands b2f",
+          "whirl islands b3f",
+          "cianwood city area",
+          "kanto sea route 19 area"
+        ]
+      },
+      "crystal": {
+        "locations": [
+          "cherrygrove city area",
+          "union cave b2f",
+          "johto route 34 area",
+          "olivine city area",
+          "johto sea route 40 area",
+          "whirl islands 1f",
+          "whirl islands b2f",
+          "whirl islands b3f",
+          "cianwood city area",
+          "kanto sea route 19 area"
+        ]
+      }
+    },
+    "100": {
+      "gold": {
+        "locations": [
+          "olivine city area",
+          "kanto route 10 area",
+          "team rocket hq area"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "olivine city area",
+          "kanto route 10 area",
+          "team rocket hq area"
+        ]
+      },
+      "crystal": {
+        "locations": [
+          "olivine city area",
+          "kanto route 10 area",
+          "team rocket hq area"
+        ]
+      }
+    },
+    "101": {
+      "gold": {
+        "locations": [
+          "team rocket hq area"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "team rocket hq area"
+        ]
+      },
+      "crystal": {
+        "locations": [
+          "team rocket hq area"
+        ]
+      }
+    },
+    "102": {
+      "crystal": {
+        "locations": [
+          "johto route 29 area",
+          "johto route 30 area",
+          "johto route 31 area",
+          "johto route 32 area",
+          "johto route 34 area",
+          "johto route 35 area",
+          "johto route 36 area",
+          "johto route 37 area",
+          "johto route 38 area",
+          "johto route 39 area",
+          "johto route 43 area",
+          "lake of rage area",
+          "kanto route 26 area",
+          "kanto route 27 area"
+        ]
+      },
+      "gold": {
+        "locations": [
+          "ilex forest area",
+          "johto route 34 area",
+          "johto route 35 area",
+          "johto route 36 area",
+          "johto route 37 area",
+          "johto route 38 area",
+          "johto route 39 area",
+          "lake of rage area",
+          "kanto route 26 area",
+          "kanto route 27 area",
+          "azalea town area"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "ilex forest area",
+          "johto route 34 area",
+          "johto route 35 area",
+          "johto route 36 area",
+          "johto route 37 area",
+          "johto route 38 area",
+          "johto route 39 area",
+          "lake of rage area",
+          "kanto route 26 area",
+          "kanto route 27 area",
+          "azalea town area"
+        ]
+      }
+    },
+    "103": {
+      "gold": {
+        "locations": [
+          "Evolve Exeggcute"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "Evolve Exeggcute"
+        ]
+      },
+      "crystal": {
+        "locations": [
+          "Evolve Exeggcute"
+        ]
+      }
+    },
+    "104": {
+      "gold": {
+        "locations": [
+          "rock tunnel 1f",
+          "rock tunnel b1f"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "rock tunnel 1f",
+          "rock tunnel b1f"
+        ]
+      },
+      "crystal": {
+        "locations": [
+          "rock tunnel 1f",
+          "rock tunnel b1f",
+          "goldenrod city game corner"
+        ]
+      }
+    },
+    "105": {
+      "crystal": {
+        "locations": [
+          "rock tunnel 1f",
+          "rock tunnel b1f",
+          "kanto route 9 area",
+          "kanto route 10 area"
+        ]
+      },
+      "gold": {
+        "locations": [
+          "rock tunnel b1f"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "rock tunnel b1f"
+        ]
+      }
+    },
+    "106": {
+      "gold": {
+        "locations": [
+          "Evolve Tyrogue"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "Evolve Tyrogue"
+        ]
+      },
+      "crystal": {
+        "locations": [
+          "Evolve Tyrogue"
+        ]
+      }
+    },
+    "107": {
+      "gold": {
+        "locations": [
+          "Evolve Tyrogue"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "Evolve Tyrogue"
+        ]
+      },
+      "crystal": {
+        "locations": [
+          "Evolve Tyrogue"
+        ]
+      }
+    },
+    "108": {
+      "gold": {
+        "locations": [
+          "johto route 44 area"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "johto route 44 area"
+        ]
+      },
+      "crystal": {
+        "locations": [
+          "johto route 44 area"
+        ]
+      }
+    },
+    "109": {
+      "gold": {
+        "locations": [
+          "burned tower 1f",
+          "burned tower b1f",
+          "team rocket hq area"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "burned tower 1f",
+          "burned tower b1f",
+          "team rocket hq area"
+        ]
+      },
+      "crystal": {
+        "locations": [
+          "burned tower 1f",
+          "burned tower b1f",
+          "team rocket hq area"
+        ]
+      }
+    },
+    "110": {
+      "crystal": {
+        "locations": [
+          "burned tower b1f"
+        ]
+      },
+      "gold": {
+        "locations": [
+          "Evolve Koffing"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "Evolve Koffing"
+        ]
+      }
+    },
+    "111": {
+      "gold": {
+        "locations": [
+          "kanto victory road 1 1f",
+          "kanto victory road 1 2f",
+          "kanto victory road 1 3f"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "kanto victory road 1 1f",
+          "kanto victory road 1 2f",
+          "kanto victory road 1 3f"
+        ]
+      },
+      "crystal": {
+        "locations": [
+          "kanto victory road 1 1f",
+          "kanto victory road 1 2f",
+          "kanto victory road 1 3f"
+        ]
+      }
+    },
+    "112": {
+      "gold": {
+        "locations": [
+          "blackthorn city area"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "blackthorn city area"
+        ]
+      },
+      "crystal": {
+        "locations": [
+          "kanto victory road 1 1f",
+          "kanto victory road 1 2f",
+          "kanto victory road 1 3f"
+        ]
+      }
+    },
+    "113": {
+      "gold": {
+        "locations": [
+          "kanto route 13 area",
+          "kanto route 14 area",
+          "kanto route 15 area"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "kanto route 13 area",
+          "kanto route 14 area",
+          "kanto route 15 area"
+        ]
+      },
+      "crystal": {
+        "locations": [
+          "kanto route 13 area",
+          "kanto route 14 area",
+          "kanto route 15 area"
+        ]
+      }
+    },
+    "114": {
+      "gold": {
+        "locations": [
+          "johto route 44 area",
+          "mt silver outside",
+          "kanto route 28 area",
+          "kanto sea route 21 area"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "johto route 44 area",
+          "mt silver outside",
+          "kanto route 28 area",
+          "kanto sea route 21 area"
+        ]
+      },
+      "crystal": {
+        "locations": [
+          "johto route 44 area",
+          "mt silver outside",
+          "kanto route 28 area",
+          "kanto sea route 21 area"
+        ]
+      }
+    },
+    "115": {
+      "gold": {
+        "locations": [
+          "rock tunnel b1f"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "rock tunnel b1f"
+        ]
+      },
+      "crystal": {
+        "locations": [
+          "rock tunnel b1f"
+        ]
+      }
+    },
+    "116": {
+      "gold": {
+        "locations": [
+          "whirl islands 1f",
+          "whirl islands b2f",
+          "whirl islands b3f"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "whirl islands 1f",
+          "whirl islands b2f",
+          "whirl islands b3f"
+        ]
+      },
+      "crystal": {
+        "locations": [
+          "whirl islands 1f",
+          "whirl islands b2f",
+          "whirl islands b3f"
+        ]
+      }
+    },
+    "117": {
+      "gold": {
+        "locations": [
+          "whirl islands 1f",
+          "whirl islands b2f",
+          "whirl islands b3f"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "whirl islands 1f",
+          "whirl islands b2f",
+          "whirl islands b3f"
+        ]
+      },
+      "crystal": {
+        "locations": [
+          "whirl islands 1f",
+          "whirl islands b2f",
+          "whirl islands b3f"
+        ]
+      }
+    },
+    "118": {
+      "gold": {
+        "locations": [
+          "union cave 1f",
+          "union cave b1f",
+          "slowpoke well 1f",
+          "slowpoke well b1f",
+          "johto route 42 area",
+          "mt mortar 1f",
+          "mt mortar upper cave",
+          "mt mortar b1f",
+          "dark cave violet city entrance",
+          "dark cave blackthorn city entrance",
+          "mt silver 2f",
+          "cerulean city area",
+          "kanto route 4 area",
+          "kanto route 9 area",
+          "kanto route 10 area",
+          "kanto route 24 area",
+          "kanto route 25 area",
+          "tohjo falls area"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "union cave 1f",
+          "union cave b1f",
+          "slowpoke well 1f",
+          "slowpoke well b1f",
+          "johto route 42 area",
+          "mt mortar 1f",
+          "mt mortar upper cave",
+          "mt mortar b1f",
+          "dark cave violet city entrance",
+          "dark cave blackthorn city entrance",
+          "mt silver 2f",
+          "cerulean city area",
+          "kanto route 4 area",
+          "kanto route 9 area",
+          "kanto route 10 area",
+          "kanto route 24 area",
+          "kanto route 25 area",
+          "tohjo falls area"
+        ]
+      },
+      "crystal": {
+        "locations": [
+          "union cave 1f",
+          "union cave b1f",
+          "slowpoke well 1f",
+          "slowpoke well b1f",
+          "johto route 42 area",
+          "mt mortar 1f",
+          "mt mortar upper cave",
+          "mt mortar b1f",
+          "dark cave violet city entrance",
+          "dark cave blackthorn city entrance",
+          "mt silver 2f",
+          "cerulean city area",
+          "kanto route 4 area",
+          "kanto route 9 area",
+          "kanto route 10 area",
+          "kanto route 24 area",
+          "kanto route 25 area",
+          "tohjo falls area"
+        ]
+      }
+    },
+    "119": {
+      "gold": {
+        "locations": [
+          "union cave 1f",
+          "union cave b1f",
+          "slowpoke well 1f",
+          "slowpoke well b1f",
+          "johto route 42 area",
+          "mt mortar 1f",
+          "mt mortar upper cave",
+          "mt mortar b1f",
+          "dark cave violet city entrance",
+          "dark cave blackthorn city entrance",
+          "mt silver 2f",
+          "cerulean city area",
+          "kanto route 4 area",
+          "kanto route 9 area",
+          "kanto route 10 area",
+          "kanto route 24 area",
+          "kanto route 25 area",
+          "tohjo falls area"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "union cave 1f",
+          "union cave b1f",
+          "slowpoke well 1f",
+          "slowpoke well b1f",
+          "johto route 42 area",
+          "mt mortar 1f",
+          "mt mortar upper cave",
+          "mt mortar b1f",
+          "dark cave violet city entrance",
+          "dark cave blackthorn city entrance",
+          "mt silver 2f",
+          "cerulean city area",
+          "kanto route 4 area",
+          "kanto route 9 area",
+          "kanto route 10 area",
+          "kanto route 24 area",
+          "kanto route 25 area",
+          "tohjo falls area"
+        ]
+      },
+      "crystal": {
+        "locations": [
+          "union cave 1f",
+          "union cave b1f",
+          "slowpoke well 1f",
+          "slowpoke well b1f",
+          "johto route 42 area",
+          "mt mortar 1f",
+          "mt mortar upper cave",
+          "mt mortar b1f",
+          "dark cave violet city entrance",
+          "dark cave blackthorn city entrance",
+          "mt silver 2f",
+          "cerulean city area",
+          "kanto route 4 area",
+          "kanto route 9 area",
+          "kanto route 10 area",
+          "kanto route 24 area",
+          "kanto route 25 area",
+          "tohjo falls area"
+        ]
+      }
+    },
+    "120": {
+      "gold": {
+        "locations": [
+          "cherrygrove city area",
+          "union cave b2f",
+          "johto route 34 area",
+          "olivine city area",
+          "johto sea route 40 area",
+          "cianwood city area",
+          "kanto sea route 19 area"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "cherrygrove city area",
+          "union cave b2f",
+          "johto route 34 area",
+          "olivine city area",
+          "johto sea route 40 area",
+          "cianwood city area",
+          "kanto sea route 19 area"
+        ]
+      },
+      "crystal": {
+        "locations": [
+          "cherrygrove city area",
+          "union cave b2f",
+          "johto route 34 area",
+          "olivine city area",
+          "johto sea route 40 area",
+          "cianwood city area",
+          "kanto sea route 19 area"
+        ]
+      }
+    },
+    "121": {
+      "gold": {
+        "locations": [
+          "Evolve Staryu"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "Evolve Staryu"
+        ]
+      },
+      "crystal": {
+        "locations": [
+          "Evolve Staryu"
+        ]
+      }
+    },
+    "122": {
+      "gold": {
+        "locations": [
+          "kanto sea route 21 area",
+          "celadon city prize corner"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "kanto sea route 21 area",
+          "celadon city prize corner"
+        ]
+      },
+      "crystal": {
+        "locations": [
+          "kanto sea route 21 area"
+        ]
+      }
+    },
+    "123": {
+      "gold": {
+        "locations": [
+          "National Park (Bug-Catching Contest)ThSa"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "National Park (Bug-Catching Contest)ThSa"
+        ]
+      },
+      "crystal": {
+        "locations": [
+          "National Park (Bug-Catching Contest)ThSa"
+        ]
+      }
+    },
+    "124": {
+      "gold": {
+        "locations": [
+          "ice path 1f",
+          "ice path b1f",
+          "ice path b2f",
+          "ice path b3f"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "ice path 1f",
+          "ice path b1f",
+          "ice path b2f",
+          "ice path b3f"
+        ]
+      },
+      "crystal": {
+        "locations": [
+          "ice path b1f",
+          "ice path b2f",
+          "ice path b3f"
+        ]
+      }
+    },
+    "125": {
+      "gold": {
+        "locations": [
+          "kanto route 10 area"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "kanto route 10 area"
+        ]
+      },
+      "crystal": {
+        "locations": [
+          "kanto route 10 area"
+        ]
+      }
+    },
+    "126": {
+      "gold": {
+        "locations": [
+          "burned tower b1f"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "burned tower b1f"
+        ]
+      },
+      "crystal": {
+        "locations": [
+          "mt silver 1f"
+        ]
+      }
+    },
+    "127": {
+      "gold": {
+        "locations": [
+          "National Park (Bug-Catching Contest)ThSa"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "National Park (Bug-Catching Contest)ThSa"
+        ]
+      },
+      "crystal": {
+        "locations": [
+          "National Park (Bug-Catching Contest)ThSa"
+        ]
+      }
+    },
+    "128": {
+      "gold": {
+        "locations": [
+          "johto route 38 area",
+          "johto route 39 area"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "johto route 38 area",
+          "johto route 39 area"
+        ]
+      },
+      "crystal": {
+        "locations": [
+          "johto route 38 area",
+          "johto route 39 area"
+        ]
+      }
+    },
+    "129": {
+      "gold": {
+        "locations": [
+          "new bark town area",
+          "cherrygrove city area",
+          "johto route 30 area",
+          "johto route 31 area",
+          "violet city area",
+          "johto route 32 area",
+          "ruins of alph outside",
+          "union cave 1f",
+          "union cave b1f",
+          "union cave b2f",
+          "slowpoke well 1f",
+          "slowpoke well b1f",
+          "ilex forest area",
+          "johto route 34 area",
+          "johto route 35 area",
+          "ecruteak city area",
+          "olivine city area",
+          "johto sea route 40 area",
+          "johto sea route 41 area",
+          "whirl islands 1f",
+          "whirl islands b2f",
+          "whirl islands b3f",
+          "cianwood city area",
+          "johto route 42 area",
+          "mt mortar 1f",
+          "mt mortar upper cave",
+          "mt mortar b1f",
+          "johto route 43 area",
+          "lake of rage area",
+          "johto route 44 area",
+          "blackthorn city area",
+          "dragons den area",
+          "johto route 45 area",
+          "dark cave violet city entrance",
+          "dark cave blackthorn city entrance",
+          "mt silver 2f",
+          "mt silver outside",
+          "kanto route 12 area",
+          "kanto sea route 19 area",
+          "kanto sea route 20 area",
+          "cinnabar island area",
+          "cerulean city area",
+          "vermilion city area",
+          "fuchsia city area",
+          "pallet town area",
+          "kanto route 26 area",
+          "kanto route 27 area",
+          "kanto route 28 area",
+          "kanto route 6 area",
+          "kanto route 9 area",
+          "kanto route 10 area",
+          "kanto route 13 area",
+          "kanto sea route 21 area",
+          "kanto route 22 area",
+          "kanto route 24 area",
+          "kanto route 25 area",
+          "tohjo falls area",
+          "vermilion city ss anne dock"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "new bark town area",
+          "cherrygrove city area",
+          "johto route 30 area",
+          "johto route 31 area",
+          "violet city area",
+          "johto route 32 area",
+          "ruins of alph outside",
+          "union cave 1f",
+          "union cave b1f",
+          "union cave b2f",
+          "slowpoke well 1f",
+          "slowpoke well b1f",
+          "ilex forest area",
+          "johto route 34 area",
+          "johto route 35 area",
+          "ecruteak city area",
+          "olivine city area",
+          "johto sea route 40 area",
+          "johto sea route 41 area",
+          "whirl islands 1f",
+          "whirl islands b2f",
+          "whirl islands b3f",
+          "cianwood city area",
+          "johto route 42 area",
+          "mt mortar 1f",
+          "mt mortar upper cave",
+          "mt mortar b1f",
+          "johto route 43 area",
+          "lake of rage area",
+          "johto route 44 area",
+          "blackthorn city area",
+          "dragons den area",
+          "johto route 45 area",
+          "dark cave violet city entrance",
+          "dark cave blackthorn city entrance",
+          "mt silver 2f",
+          "mt silver outside",
+          "kanto route 12 area",
+          "kanto sea route 19 area",
+          "kanto sea route 20 area",
+          "cinnabar island area",
+          "cerulean city area",
+          "vermilion city area",
+          "fuchsia city area",
+          "pallet town area",
+          "kanto route 26 area",
+          "kanto route 27 area",
+          "kanto route 28 area",
+          "kanto route 6 area",
+          "kanto route 9 area",
+          "kanto route 10 area",
+          "kanto route 13 area",
+          "kanto sea route 21 area",
+          "kanto route 22 area",
+          "kanto route 24 area",
+          "kanto route 25 area",
+          "tohjo falls area",
+          "vermilion city ss anne dock"
+        ]
+      },
+      "crystal": {
+        "locations": [
+          "new bark town area",
+          "cherrygrove city area",
+          "johto route 30 area",
+          "johto route 31 area",
+          "violet city area",
+          "johto route 32 area",
+          "ruins of alph outside",
+          "union cave 1f",
+          "union cave b1f",
+          "union cave b2f",
+          "slowpoke well 1f",
+          "slowpoke well b1f",
+          "ilex forest area",
+          "johto route 34 area",
+          "johto route 35 area",
+          "ecruteak city area",
+          "olivine city area",
+          "johto sea route 40 area",
+          "johto sea route 41 area",
+          "whirl islands 1f",
+          "whirl islands b2f",
+          "whirl islands b3f",
+          "cianwood city area",
+          "johto route 42 area",
+          "mt mortar 1f",
+          "mt mortar upper cave",
+          "mt mortar b1f",
+          "johto route 43 area",
+          "lake of rage area",
+          "johto route 44 area",
+          "blackthorn city area",
+          "dragons den area",
+          "johto route 45 area",
+          "dark cave violet city entrance",
+          "dark cave blackthorn city entrance",
+          "mt silver 2f",
+          "mt silver outside",
+          "kanto route 12 area",
+          "kanto sea route 19 area",
+          "kanto sea route 20 area",
+          "cinnabar island area",
+          "cerulean city area",
+          "vermilion city area",
+          "fuchsia city area",
+          "pallet town area",
+          "kanto route 26 area",
+          "kanto route 27 area",
+          "kanto route 28 area",
+          "kanto route 6 area",
+          "kanto route 9 area",
+          "kanto route 10 area",
+          "kanto route 13 area",
+          "kanto sea route 21 area",
+          "kanto route 22 area",
+          "kanto route 24 area",
+          "kanto route 25 area",
+          "tohjo falls area",
+          "vermilion city ss anne dock"
+        ]
+      }
+    },
+    "130": {
+      "gold": {
+        "locations": [
+          "lake of rage area",
+          "fuchsia city area"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "lake of rage area",
+          "fuchsia city area"
+        ]
+      },
+      "crystal": {
+        "locations": [
+          "lake of rage area",
+          "fuchsia city area"
+        ]
+      }
+    },
+    "131": {
+      "gold": {
+        "locations": [
+          "union cave b2f"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "union cave b2f"
+        ]
+      },
+      "crystal": {
+        "locations": [
+          "union cave b2f"
+        ]
+      }
+    },
+    "132": {
+      "gold": {
+        "locations": [
+          "johto route 34 area",
+          "johto route 35 area"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "johto route 34 area",
+          "johto route 35 area"
+        ]
+      },
+      "crystal": {
+        "locations": [
+          "johto route 34 area",
+          "johto route 35 area"
+        ]
+      }
+    },
+    "133": {
+      "gold": {
+        "locations": [
+          "goldenrod city bills house",
+          "celadon city prize corner"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "goldenrod city bills house",
+          "celadon city prize corner"
+        ]
+      },
+      "crystal": {
+        "locations": [
+          "goldenrod city bills house"
+        ]
+      }
+    },
+    "134": {
+      "gold": {
+        "locations": [
+          "Evolve Eevee"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "Evolve Eevee"
+        ]
+      },
+      "crystal": {
+        "locations": [
+          "Evolve Eevee"
+        ]
+      }
+    },
+    "135": {
+      "gold": {
+        "locations": [
+          "Evolve Eevee"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "Evolve Eevee"
+        ]
+      },
+      "crystal": {
+        "locations": [
+          "Evolve Eevee"
+        ]
+      }
+    },
+    "136": {
+      "gold": {
+        "locations": [
+          "Evolve Eevee"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "Evolve Eevee"
+        ]
+      },
+      "crystal": {
+        "locations": [
+          "Evolve Eevee"
+        ]
+      }
+    },
+    "137": {
+      "gold": {
+        "locations": [
+          "celadon city prize corner"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "celadon city prize corner"
+        ]
+      },
+      "crystal": {
+        "locations": [
+          "celadon city prize corner"
+        ]
+      }
+    },
+    "138": {
+      "gold": {
+        "locations": [
+          "Time Capsule, Event"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "Time Capsule, Event"
+        ]
+      },
+      "crystal": {
+        "locations": [
+          "Time Capsule, Event"
+        ]
+      }
+    },
+    "139": {
+      "gold": {
+        "locations": [
+          "Time Capsule"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "Time Capsule"
+        ]
+      },
+      "crystal": {
+        "locations": [
+          "Time Capsule"
+        ]
+      }
+    },
+    "140": {
+      "gold": {
+        "locations": [
+          "Time Capsule, Event"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "Time Capsule, Event"
+        ]
+      },
+      "crystal": {
+        "locations": [
+          "Time Capsule, Event"
+        ]
+      }
+    },
+    "141": {
+      "gold": {
+        "locations": [
+          "Time Capsule"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "Time Capsule"
+        ]
+      },
+      "crystal": {
+        "locations": [
+          "Time Capsule"
+        ]
+      }
+    },
+    "142": {
+      "gold": {
+        "locations": [
+          "kanto route 14 area"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "kanto route 14 area"
+        ]
+      },
+      "crystal": {
+        "locations": [
+          "kanto route 14 area"
+        ]
+      }
+    },
+    "143": {
+      "gold": {
+        "locations": [
+          "vermilion city area"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "vermilion city area"
+        ]
+      },
+      "crystal": {
+        "locations": [
+          "vermilion city area"
+        ]
+      }
+    },
+    "144": {
+      "gold": {
+        "locations": [
+          "Time Capsule, Event"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "Time Capsule, Event"
+        ]
+      },
+      "crystal": {
+        "locations": [
+          "Time Capsule, Event"
+        ]
+      }
+    },
+    "145": {
+      "gold": {
+        "locations": [
+          "Time Capsule, Event"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "Time Capsule, Event"
+        ]
+      },
+      "crystal": {
+        "locations": [
+          "Time Capsule, Event"
+        ]
+      }
+    },
+    "146": {
+      "gold": {
+        "locations": [
+          "Time Capsule, Event"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "Time Capsule, Event"
+        ]
+      },
+      "crystal": {
+        "locations": [
+          "Time Capsule, Event"
+        ]
+      }
+    },
+    "147": {
+      "gold": {
+        "locations": [
+          "dragons den area",
+          "johto route 45 area",
+          "goldenrod city game corner"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "dragons den area",
+          "johto route 45 area",
+          "goldenrod city game corner"
+        ]
+      },
+      "crystal": {
+        "locations": [
+          "dragons den area",
+          "johto route 45 area"
+        ]
+      }
+    },
+    "148": {
+      "gold": {
+        "locations": [
+          "dragons den area",
+          "johto route 45 area"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "dragons den area",
+          "johto route 45 area"
+        ]
+      },
+      "crystal": {
+        "locations": [
+          "dragons den area",
+          "johto route 45 area"
+        ]
+      }
+    },
+    "149": {
+      "gold": {
+        "locations": [
+          "Evolve Dragonair"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "Evolve Dragonair"
+        ]
+      },
+      "crystal": {
+        "locations": [
+          "Evolve Dragonair"
+        ]
+      }
+    },
+    "150": {
+      "gold": {
+        "locations": [
+          "Time Capsule, Event"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "Time Capsule, Event"
+        ]
+      },
+      "crystal": {
+        "locations": [
+          "Time Capsule, Event"
+        ]
+      }
+    },
+    "151": {
+      "gold": {
+        "locations": [
+          "Event"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "Event"
+        ]
+      },
+      "crystal": {
+        "locations": [
+          "Event"
         ]
       }
     },
@@ -1476,6 +5523,1905 @@
       "crystal": {
         "locations": [
           "Evolve Croconaw"
+        ]
+      }
+    },
+    "161": {
+      "gold": {
+        "locations": [
+          "johto route 29 area",
+          "kanto route 1 area"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "johto route 29 area",
+          "kanto route 1 area"
+        ]
+      },
+      "crystal": {
+        "locations": [
+          "johto route 29 area",
+          "johto route 43 area",
+          "kanto route 1 area"
+        ]
+      }
+    },
+    "162": {
+      "crystal": {
+        "locations": [
+          "johto route 43 area",
+          "kanto route 1 area"
+        ]
+      },
+      "gold": {
+        "locations": [
+          "kanto route 1 area"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "kanto route 1 area"
+        ]
+      }
+    },
+    "163": {
+      "gold": {
+        "locations": [
+          "johto route 29 area",
+          "johto route 30 area",
+          "johto route 31 area",
+          "johto route 35 area",
+          "national park area",
+          "johto route 36 area",
+          "johto route 37 area",
+          "kanto route 1 area",
+          "kanto route 2 south towards viridian city"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "johto route 29 area",
+          "johto route 30 area",
+          "johto route 31 area",
+          "johto route 35 area",
+          "national park area",
+          "johto route 36 area",
+          "johto route 37 area",
+          "kanto route 1 area",
+          "kanto route 2 south towards viridian city"
+        ]
+      },
+      "crystal": {
+        "locations": [
+          "johto route 29 area",
+          "johto route 30 area",
+          "johto route 31 area",
+          "johto route 32 area",
+          "ilex forest area",
+          "johto route 34 area",
+          "johto route 35 area",
+          "national park area",
+          "johto route 36 area",
+          "johto route 37 area",
+          "johto route 38 area",
+          "johto route 39 area",
+          "johto route 43 area",
+          "lake of rage area",
+          "kanto route 26 area",
+          "kanto route 27 area",
+          "kanto route 1 area",
+          "kanto route 2 south towards viridian city",
+          "kanto route 5 area",
+          "kanto route 25 area"
+        ]
+      }
+    },
+    "164": {
+      "crystal": {
+        "locations": [
+          "ilex forest area",
+          "johto route 37 area",
+          "johto route 38 area",
+          "johto route 39 area",
+          "kanto route 26 area",
+          "kanto route 27 area",
+          "kanto route 2 south towards viridian city",
+          "kanto route 5 area",
+          "kanto route 8 area",
+          "kanto route 11 area",
+          "kanto route 13 area",
+          "kanto route 14 area",
+          "kanto route 15 area",
+          "kanto route 25 area"
+        ]
+      },
+      "gold": {
+        "locations": [
+          "johto route 43 area",
+          "kanto route 2 south towards viridian city",
+          "kanto route 8 area",
+          "kanto route 13 area",
+          "kanto route 14 area",
+          "kanto route 15 area"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "johto route 43 area",
+          "kanto route 2 south towards viridian city",
+          "kanto route 8 area",
+          "kanto route 13 area",
+          "kanto route 14 area",
+          "kanto route 15 area"
+        ]
+      }
+    },
+    "165": {
+      "crystal": {
+        "locations": [
+          "johto route 29 area",
+          "johto route 30 area",
+          "johto route 31 area",
+          "johto route 34 area",
+          "johto route 35 area",
+          "national park area",
+          "johto route 36 area",
+          "johto route 37 area",
+          "johto route 38 area",
+          "johto route 39 area",
+          "kanto route 2 south towards viridian city"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "johto route 30 area",
+          "johto route 31 area",
+          "johto route 37 area",
+          "kanto route 2 south towards viridian city"
+        ]
+      }
+    },
+    "166": {
+      "silver": {
+        "locations": [
+          "kanto route 2 south towards viridian city"
+        ]
+      },
+      "crystal": {
+        "locations": [
+          "kanto route 2 south towards viridian city"
+        ]
+      }
+    },
+    "167": {
+      "crystal": {
+        "locations": [
+          "johto route 29 area",
+          "johto route 30 area",
+          "johto route 31 area",
+          "johto route 34 area",
+          "johto route 35 area",
+          "national park area",
+          "johto route 36 area",
+          "johto route 37 area",
+          "johto route 38 area",
+          "johto route 39 area",
+          "kanto route 2 south towards viridian city"
+        ]
+      },
+      "gold": {
+        "locations": [
+          "johto route 30 area",
+          "johto route 31 area",
+          "johto route 37 area",
+          "kanto route 2 south towards viridian city"
+        ]
+      }
+    },
+    "168": {
+      "crystal": {
+        "locations": [
+          "johto route 37 area",
+          "kanto route 2 south towards viridian city"
+        ]
+      },
+      "gold": {
+        "locations": [
+          "kanto route 2 south towards viridian city"
+        ]
+      }
+    },
+    "169": {
+      "gold": {
+        "locations": [
+          "Evolve Golbat"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "Evolve Golbat"
+        ]
+      },
+      "crystal": {
+        "locations": [
+          "Evolve Golbat"
+        ]
+      }
+    },
+    "170": {
+      "gold": {
+        "locations": [
+          "new bark town area",
+          "johto sea route 41 area",
+          "kanto sea route 20 area",
+          "cinnabar island area",
+          "vermilion city area",
+          "pallet town area",
+          "kanto route 26 area",
+          "kanto route 27 area",
+          "kanto sea route 21 area",
+          "vermilion city ss anne dock"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "new bark town area",
+          "johto sea route 41 area",
+          "kanto sea route 20 area",
+          "cinnabar island area",
+          "vermilion city area",
+          "pallet town area",
+          "kanto route 26 area",
+          "kanto route 27 area",
+          "kanto sea route 21 area",
+          "vermilion city ss anne dock"
+        ]
+      },
+      "crystal": {
+        "locations": [
+          "new bark town area",
+          "johto sea route 41 area",
+          "kanto sea route 20 area",
+          "cinnabar island area",
+          "vermilion city area",
+          "pallet town area",
+          "kanto route 26 area",
+          "kanto route 27 area",
+          "kanto sea route 21 area",
+          "vermilion city ss anne dock"
+        ]
+      }
+    },
+    "171": {
+      "gold": {
+        "locations": [
+          "new bark town area",
+          "johto sea route 41 area",
+          "kanto sea route 20 area",
+          "cinnabar island area",
+          "vermilion city area",
+          "pallet town area",
+          "kanto route 26 area",
+          "kanto route 27 area",
+          "kanto sea route 21 area",
+          "vermilion city ss anne dock"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "new bark town area",
+          "johto sea route 41 area",
+          "kanto sea route 20 area",
+          "cinnabar island area",
+          "vermilion city area",
+          "pallet town area",
+          "kanto route 26 area",
+          "kanto route 27 area",
+          "kanto sea route 21 area",
+          "vermilion city ss anne dock"
+        ]
+      },
+      "crystal": {
+        "locations": [
+          "new bark town area",
+          "johto sea route 41 area",
+          "kanto sea route 20 area",
+          "cinnabar island area",
+          "vermilion city area",
+          "pallet town area",
+          "kanto route 26 area",
+          "kanto route 27 area",
+          "kanto sea route 21 area",
+          "vermilion city ss anne dock"
+        ]
+      }
+    },
+    "172": {
+      "crystal": {
+        "locations": [
+          "johto route 34 area"
+        ]
+      },
+      "gold": {
+        "locations": [
+          "Breed Raichu"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "Breed Raichu"
+        ]
+      }
+    },
+    "173": {
+      "crystal": {
+        "locations": [
+          "johto route 34 area"
+        ]
+      },
+      "gold": {
+        "locations": [
+          "Breed Clefable"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "Breed Clefable"
+        ]
+      }
+    },
+    "174": {
+      "crystal": {
+        "locations": [
+          "johto route 34 area"
+        ]
+      },
+      "gold": {
+        "locations": [
+          "Breed Wigglytuff"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "Breed Wigglytuff"
+        ]
+      }
+    },
+    "175": {
+      "gold": {
+        "locations": [
+          "violet city area"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "violet city area"
+        ]
+      },
+      "crystal": {
+        "locations": [
+          "violet city area"
+        ]
+      }
+    },
+    "176": {
+      "gold": {
+        "locations": [
+          "Evolve Togepi"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "Evolve Togepi"
+        ]
+      },
+      "crystal": {
+        "locations": [
+          "Evolve Togepi"
+        ]
+      }
+    },
+    "177": {
+      "gold": {
+        "locations": [
+          "ruins of alph outside"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "ruins of alph outside"
+        ]
+      },
+      "crystal": {
+        "locations": [
+          "ruins of alph outside"
+        ]
+      }
+    },
+    "178": {
+      "crystal": {
+        "locations": [
+          "pewter city area"
+        ]
+      },
+      "gold": {
+        "locations": [
+          "Evolve Natu"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "Evolve Natu"
+        ]
+      }
+    },
+    "179": {
+      "gold": {
+        "locations": [
+          "johto route 32 area",
+          "johto route 42 area",
+          "johto route 43 area"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "johto route 32 area",
+          "johto route 42 area",
+          "johto route 43 area"
+        ]
+      }
+    },
+    "180": {
+      "gold": {
+        "locations": [
+          "johto route 42 area",
+          "johto route 43 area"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "johto route 42 area",
+          "johto route 43 area"
+        ]
+      }
+    },
+    "181": {
+      "gold": {
+        "locations": [
+          "Evolve Flaaffy"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "Evolve Flaaffy"
+        ]
+      }
+    },
+    "182": {
+      "gold": {
+        "locations": [
+          "Evolve Gloom"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "Evolve Gloom"
+        ]
+      },
+      "crystal": {
+        "locations": [
+          "Evolve Gloom"
+        ]
+      }
+    },
+    "183": {
+      "crystal": {
+        "locations": [
+          "johto route 42 area",
+          "mt mortar 1f",
+          "mt mortar lower cave",
+          "mt mortar upper cave",
+          "mt mortar b1f"
+        ]
+      },
+      "gold": {
+        "locations": [
+          "mt mortar 1f"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "mt mortar 1f"
+        ]
+      }
+    },
+    "184": {
+      "gold": {
+        "locations": [
+          "Evolve Marill"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "Evolve Marill"
+        ]
+      },
+      "crystal": {
+        "locations": [
+          "Evolve Marill"
+        ]
+      }
+    },
+    "185": {
+      "gold": {
+        "locations": [
+          "johto route 36 area"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "johto route 36 area"
+        ]
+      },
+      "crystal": {
+        "locations": [
+          "johto route 36 area"
+        ]
+      }
+    },
+    "186": {
+      "gold": {
+        "locations": [
+          "Evolve Poliwhirl"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "Evolve Poliwhirl"
+        ]
+      },
+      "crystal": {
+        "locations": [
+          "Evolve Poliwhirl"
+        ]
+      }
+    },
+    "187": {
+      "crystal": {
+        "locations": [
+          "johto route 29 area",
+          "johto route 30 area",
+          "johto route 31 area",
+          "johto route 32 area",
+          "johto route 33 area",
+          "kanto route 11 area",
+          "kanto route 13 area",
+          "kanto route 14 area",
+          "kanto route 15 area"
+        ]
+      },
+      "gold": {
+        "locations": [
+          "johto route 32 area",
+          "johto route 33 area",
+          "kanto route 13 area",
+          "kanto route 14 area",
+          "kanto route 15 area"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "johto route 32 area",
+          "johto route 33 area",
+          "kanto route 13 area",
+          "kanto route 14 area",
+          "kanto route 15 area"
+        ]
+      }
+    },
+    "188": {
+      "gold": {
+        "locations": [
+          "kanto route 14 area"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "kanto route 14 area"
+        ]
+      },
+      "crystal": {
+        "locations": [
+          "kanto route 14 area"
+        ]
+      }
+    },
+    "189": {
+      "gold": {
+        "locations": [
+          "Evolve Skiploom"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "Evolve Skiploom"
+        ]
+      },
+      "crystal": {
+        "locations": [
+          "Evolve Skiploom"
+        ]
+      }
+    },
+    "190": {
+      "gold": {
+        "locations": [
+          "johto route 29 area",
+          "johto route 30 area",
+          "johto route 31 area",
+          "johto route 32 area",
+          "johto route 33 area",
+          "johto route 42 area",
+          "johto route 43 area",
+          "johto route 44 area",
+          "johto route 45 area",
+          "johto route 46 area"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "johto route 29 area",
+          "johto route 30 area",
+          "johto route 31 area",
+          "johto route 32 area",
+          "johto route 33 area",
+          "johto route 42 area",
+          "johto route 43 area",
+          "johto route 44 area",
+          "johto route 45 area",
+          "johto route 46 area"
+        ]
+      },
+      "crystal": {
+        "locations": [
+          "johto route 33 area",
+          "johto route 42 area",
+          "johto route 44 area",
+          "johto route 45 area",
+          "johto route 46 area",
+          "azalea town area"
+        ]
+      }
+    },
+    "191": {
+      "gold": {
+        "locations": [
+          "national park area",
+          "kanto route 24 area"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "national park area",
+          "kanto route 24 area"
+        ]
+      },
+      "crystal": {
+        "locations": [
+          "national park area",
+          "kanto route 24 area"
+        ]
+      }
+    },
+    "192": {
+      "gold": {
+        "locations": [
+          "Evolve Sunkern"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "Evolve Sunkern"
+        ]
+      },
+      "crystal": {
+        "locations": [
+          "Evolve Sunkern"
+        ]
+      }
+    },
+    "193": {
+      "gold": {
+        "locations": [
+          "johto route 35 area"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "johto route 35 area"
+        ]
+      },
+      "crystal": {
+        "locations": [
+          "johto route 35 area"
+        ]
+      }
+    },
+    "194": {
+      "gold": {
+        "locations": [
+          "johto route 32 area",
+          "ruins of alph outside",
+          "union cave 1f",
+          "union cave b1f"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "johto route 32 area",
+          "ruins of alph outside",
+          "union cave 1f",
+          "union cave b1f"
+        ]
+      },
+      "crystal": {
+        "locations": [
+          "johto route 32 area",
+          "ruins of alph outside",
+          "union cave 1f",
+          "union cave b1f"
+        ]
+      }
+    },
+    "195": {
+      "gold": {
+        "locations": [
+          "johto route 32 area",
+          "ruins of alph outside",
+          "union cave 1f",
+          "union cave b1f",
+          "union cave b2f",
+          "mt silver 2f",
+          "kanto route 12 area",
+          "kanto route 26 area",
+          "kanto route 27 area",
+          "kanto route 10 area",
+          "kanto route 13 area",
+          "kanto route 14 area",
+          "kanto route 15 area"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "johto route 32 area",
+          "ruins of alph outside",
+          "union cave 1f",
+          "union cave b1f",
+          "union cave b2f",
+          "mt silver 2f",
+          "kanto route 12 area",
+          "kanto route 26 area",
+          "kanto route 27 area",
+          "kanto route 10 area",
+          "kanto route 13 area",
+          "kanto route 14 area",
+          "kanto route 15 area"
+        ]
+      },
+      "crystal": {
+        "locations": [
+          "johto route 32 area",
+          "ruins of alph outside",
+          "union cave 1f",
+          "union cave b1f",
+          "union cave b2f",
+          "mt silver 2f",
+          "kanto route 12 area",
+          "kanto route 26 area",
+          "kanto route 27 area",
+          "kanto route 13 area",
+          "kanto route 14 area",
+          "kanto route 15 area"
+        ]
+      }
+    },
+    "196": {
+      "gold": {
+        "locations": [
+          "Evolve Eevee"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "Evolve Eevee"
+        ]
+      },
+      "crystal": {
+        "locations": [
+          "Evolve Eevee"
+        ]
+      }
+    },
+    "197": {
+      "gold": {
+        "locations": [
+          "Evolve Eevee"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "Evolve Eevee"
+        ]
+      },
+      "crystal": {
+        "locations": [
+          "Evolve Eevee"
+        ]
+      }
+    },
+    "198": {
+      "gold": {
+        "locations": [
+          "kanto route 7 area",
+          "kanto route 16 area",
+          "kanto route 18 area"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "kanto route 7 area",
+          "kanto route 16 area",
+          "kanto route 18 area"
+        ]
+      },
+      "crystal": {
+        "locations": [
+          "kanto route 7 area",
+          "kanto route 16 area"
+        ]
+      }
+    },
+    "199": {
+      "gold": {
+        "locations": [
+          "Evolve Slowpoke"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "Evolve Slowpoke"
+        ]
+      },
+      "crystal": {
+        "locations": [
+          "Evolve Slowpoke"
+        ]
+      }
+    },
+    "200": {
+      "gold": {
+        "locations": [
+          "mt silver 2f"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "mt silver 2f"
+        ]
+      },
+      "crystal": {
+        "locations": [
+          "mt silver 2f"
+        ]
+      }
+    },
+    "201": {
+      "gold": {
+        "locations": [
+          "ruins of alph interior a",
+          "ruins of alph interior b",
+          "ruins of alph interior c",
+          "ruins of alph interior d"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "ruins of alph interior a",
+          "ruins of alph interior b",
+          "ruins of alph interior c",
+          "ruins of alph interior d"
+        ]
+      },
+      "crystal": {
+        "locations": [
+          "ruins of alph interior a",
+          "ruins of alph interior b",
+          "ruins of alph interior c",
+          "ruins of alph interior d"
+        ]
+      }
+    },
+    "202": {
+      "gold": {
+        "locations": [
+          "dark cave blackthorn city entrance"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "dark cave blackthorn city entrance"
+        ]
+      },
+      "crystal": {
+        "locations": [
+          "dark cave blackthorn city entrance",
+          "goldenrod city game corner"
+        ]
+      }
+    },
+    "203": {
+      "gold": {
+        "locations": [
+          "johto route 43 area"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "johto route 43 area"
+        ]
+      }
+    },
+    "204": {
+      "crystal": {
+        "locations": [
+          "johto route 29 area",
+          "johto route 30 area",
+          "johto route 31 area",
+          "johto route 32 area",
+          "ilex forest area",
+          "johto route 34 area",
+          "johto route 35 area",
+          "johto route 36 area",
+          "johto route 37 area",
+          "johto route 38 area",
+          "johto route 39 area",
+          "johto route 43 area",
+          "lake of rage area",
+          "kanto route 26 area",
+          "kanto route 27 area"
+        ]
+      },
+      "gold": {
+        "locations": [
+          "ilex forest area",
+          "johto route 34 area",
+          "johto route 35 area",
+          "johto route 36 area",
+          "johto route 37 area",
+          "johto route 38 area",
+          "johto route 39 area",
+          "lake of rage area",
+          "kanto route 26 area",
+          "kanto route 27 area",
+          "azalea town area"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "ilex forest area",
+          "johto route 34 area",
+          "johto route 35 area",
+          "johto route 36 area",
+          "johto route 37 area",
+          "johto route 38 area",
+          "johto route 39 area",
+          "lake of rage area",
+          "kanto route 26 area",
+          "kanto route 27 area",
+          "azalea town area"
+        ]
+      }
+    },
+    "205": {
+      "gold": {
+        "locations": [
+          "Evolve Pineco"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "Evolve Pineco"
+        ]
+      },
+      "crystal": {
+        "locations": [
+          "Evolve Pineco"
+        ]
+      }
+    },
+    "206": {
+      "gold": {
+        "locations": [
+          "dark cave violet city entrance"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "dark cave violet city entrance"
+        ]
+      },
+      "crystal": {
+        "locations": [
+          "dark cave violet city entrance"
+        ]
+      }
+    },
+    "207": {
+      "gold": {
+        "locations": [
+          "johto route 45 area"
+        ]
+      },
+      "crystal": {
+        "locations": [
+          "johto route 45 area"
+        ]
+      }
+    },
+    "208": {
+      "gold": {
+        "locations": [
+          "Evolve Onix"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "Evolve Onix"
+        ]
+      },
+      "crystal": {
+        "locations": [
+          "Evolve Onix"
+        ]
+      }
+    },
+    "209": {
+      "crystal": {
+        "locations": [
+          "johto route 34 area",
+          "johto route 35 area",
+          "kanto route 5 area",
+          "kanto route 6 area",
+          "kanto route 7 area",
+          "kanto route 8 area"
+        ]
+      },
+      "gold": {
+        "locations": [
+          "johto route 38 area"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "johto route 38 area"
+        ]
+      }
+    },
+    "210": {
+      "crystal": {
+        "locations": [
+          "kanto route 6 area"
+        ]
+      },
+      "gold": {
+        "locations": [
+          "Evolve Snubbull"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "Evolve Snubbull"
+        ]
+      }
+    },
+    "211": {
+      "gold": {
+        "locations": [
+          "johto route 32 area",
+          "kanto route 12 area",
+          "kanto route 13 area"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "johto route 32 area",
+          "kanto route 12 area",
+          "kanto route 13 area"
+        ]
+      },
+      "crystal": {
+        "locations": [
+          "johto route 32 area",
+          "kanto route 12 area",
+          "kanto route 13 area"
+        ]
+      }
+    },
+    "212": {
+      "gold": {
+        "locations": [
+          "Evolve Scyther"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "Evolve Scyther"
+        ]
+      },
+      "crystal": {
+        "locations": [
+          "Evolve Scyther"
+        ]
+      }
+    },
+    "213": {
+      "gold": {
+        "locations": [
+          "johto sea route 40 area",
+          "cianwood city area",
+          "dark cave violet city entrance",
+          "cianwood city manias house"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "johto sea route 40 area",
+          "cianwood city area",
+          "dark cave violet city entrance",
+          "cianwood city manias house"
+        ]
+      },
+      "crystal": {
+        "locations": [
+          "johto sea route 40 area",
+          "cianwood city area",
+          "dark cave violet city entrance",
+          "cianwood city manias house"
+        ]
+      }
+    },
+    "214": {
+      "gold": {
+        "locations": [
+          "johto route 29 area",
+          "johto route 30 area",
+          "johto route 31 area",
+          "johto route 32 area",
+          "johto route 33 area",
+          "johto route 42 area",
+          "johto route 43 area",
+          "johto route 44 area",
+          "johto route 45 area",
+          "johto route 46 area"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "johto route 29 area",
+          "johto route 30 area",
+          "johto route 31 area",
+          "johto route 32 area",
+          "johto route 33 area",
+          "johto route 42 area",
+          "johto route 43 area",
+          "johto route 44 area",
+          "johto route 45 area",
+          "johto route 46 area"
+        ]
+      },
+      "crystal": {
+        "locations": [
+          "johto route 33 area",
+          "johto route 42 area",
+          "johto route 44 area",
+          "johto route 45 area",
+          "johto route 46 area",
+          "azalea town area"
+        ]
+      }
+    },
+    "215": {
+      "crystal": {
+        "locations": [
+          "ice path b1f",
+          "ice path b2f",
+          "ice path b3f"
+        ]
+      },
+      "gold": {
+        "locations": [
+          "mt silver outside",
+          "kanto route 28 area"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "mt silver outside",
+          "kanto route 28 area"
+        ]
+      }
+    },
+    "216": {
+      "gold": {
+        "locations": [
+          "johto route 45 area"
+        ]
+      },
+      "crystal": {
+        "locations": [
+          "dark cave violet city entrance",
+          "dark cave blackthorn city entrance"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "Trade, Event"
+        ]
+      }
+    },
+    "217": {
+      "crystal": {
+        "locations": [
+          "dark cave blackthorn city entrance",
+          "mt silver 2f",
+          "mt silver 1f",
+          "mt silver top"
+        ]
+      },
+      "gold": {
+        "locations": [
+          "mt silver 2f",
+          "mt silver outside",
+          "mt silver 1f",
+          "mt silver top",
+          "kanto route 28 area",
+          "kanto victory road 1 1f",
+          "kanto victory road 1 2f",
+          "kanto victory road 1 3f"
+        ]
+      }
+    },
+    "218": {
+      "gold": {
+        "locations": [
+          "kanto route 16 area",
+          "kanto route 17 area",
+          "kanto route 18 area"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "kanto route 16 area",
+          "kanto route 17 area",
+          "kanto route 18 area"
+        ]
+      },
+      "crystal": {
+        "locations": [
+          "kanto route 16 area",
+          "kanto route 17 area",
+          "kanto route 18 area"
+        ]
+      }
+    },
+    "219": {
+      "gold": {
+        "locations": [
+          "Evolve Slugma"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "Evolve Slugma"
+        ]
+      },
+      "crystal": {
+        "locations": [
+          "Evolve Slugma"
+        ]
+      }
+    },
+    "220": {
+      "gold": {
+        "locations": [
+          "ice path 1f",
+          "ice path b1f",
+          "ice path b2f",
+          "ice path b3f"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "ice path 1f",
+          "ice path b1f",
+          "ice path b2f",
+          "ice path b3f"
+        ]
+      },
+      "crystal": {
+        "locations": [
+          "ice path 1f",
+          "ice path b1f",
+          "ice path b2f",
+          "ice path b3f"
+        ]
+      }
+    },
+    "221": {
+      "gold": {
+        "locations": [
+          "Evolve Swinub"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "Evolve Swinub"
+        ]
+      },
+      "crystal": {
+        "locations": [
+          "Evolve Swinub"
+        ]
+      }
+    },
+    "222": {
+      "gold": {
+        "locations": [
+          "cherrygrove city area",
+          "union cave b2f",
+          "johto route 34 area",
+          "olivine city area",
+          "johto sea route 40 area",
+          "cianwood city area",
+          "kanto sea route 19 area"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "cherrygrove city area",
+          "union cave b2f",
+          "johto route 34 area",
+          "olivine city area",
+          "johto sea route 40 area",
+          "cianwood city area",
+          "kanto sea route 19 area"
+        ]
+      },
+      "crystal": {
+        "locations": [
+          "cherrygrove city area",
+          "union cave b2f",
+          "johto route 34 area",
+          "olivine city area",
+          "johto sea route 40 area",
+          "cianwood city area",
+          "kanto sea route 19 area"
+        ]
+      }
+    },
+    "223": {
+      "gold": {
+        "locations": [
+          "johto route 44 area"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "johto route 44 area"
+        ]
+      },
+      "crystal": {
+        "locations": [
+          "Trade, Event"
+        ]
+      }
+    },
+    "224": {
+      "gold": {
+        "locations": [
+          "Evolve Remoraid"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "Evolve Remoraid"
+        ]
+      }
+    },
+    "225": {
+      "silver": {
+        "locations": [
+          "ice path 1f",
+          "ice path b1f",
+          "ice path b2f",
+          "ice path b3f"
+        ]
+      },
+      "crystal": {
+        "locations": [
+          "ice path 1f",
+          "ice path b1f",
+          "ice path b2f",
+          "ice path b3f"
+        ]
+      },
+      "gold": {
+        "locations": [
+          "Trade, Event"
+        ]
+      }
+    },
+    "226": {
+      "gold": {
+        "locations": [
+          "johto sea route 41 area"
+        ]
+      },
+      "crystal": {
+        "locations": [
+          "johto sea route 41 area"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "Trade, Event"
+        ]
+      }
+    },
+    "227": {
+      "silver": {
+        "locations": [
+          "johto route 45 area"
+        ]
+      },
+      "crystal": {
+        "locations": [
+          "johto route 45 area"
+        ]
+      },
+      "gold": {
+        "locations": [
+          "Trade, Event"
+        ]
+      }
+    },
+    "228": {
+      "gold": {
+        "locations": [
+          "kanto route 7 area"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "kanto route 7 area"
+        ]
+      },
+      "crystal": {
+        "locations": [
+          "kanto route 7 area"
+        ]
+      }
+    },
+    "229": {
+      "gold": {
+        "locations": [
+          "Evolve Houndour"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "Evolve Houndour"
+        ]
+      },
+      "crystal": {
+        "locations": [
+          "Evolve Houndour"
+        ]
+      }
+    },
+    "230": {
+      "gold": {
+        "locations": [
+          "Evolve Seadra"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "Evolve Seadra"
+        ]
+      },
+      "crystal": {
+        "locations": [
+          "Evolve Seadra"
+        ]
+      }
+    },
+    "231": {
+      "silver": {
+        "locations": [
+          "johto route 45 area"
+        ]
+      },
+      "crystal": {
+        "locations": [
+          "johto route 45 area",
+          "johto route 46 area"
+        ]
+      },
+      "gold": {
+        "locations": [
+          "Trade, Event"
+        ]
+      }
+    },
+    "232": {
+      "crystal": {
+        "locations": [
+          "johto route 45 area"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "mt silver 2f",
+          "mt silver outside",
+          "mt silver 1f",
+          "mt silver top",
+          "kanto route 28 area",
+          "kanto victory road 1 1f",
+          "kanto victory road 1 2f",
+          "kanto victory road 1 3f"
+        ]
+      },
+      "gold": {
+        "locations": [
+          "Trade, Evolve Event Phanpy"
+        ]
+      }
+    },
+    "233": {
+      "gold": {
+        "locations": [
+          "Evolve Porygon"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "Evolve Porygon"
+        ]
+      },
+      "crystal": {
+        "locations": [
+          "Evolve Porygon"
+        ]
+      }
+    },
+    "234": {
+      "gold": {
+        "locations": [
+          "johto route 36 area",
+          "johto route 37 area"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "johto route 36 area",
+          "johto route 37 area"
+        ]
+      },
+      "crystal": {
+        "locations": [
+          "johto route 37 area"
+        ]
+      }
+    },
+    "235": {
+      "gold": {
+        "locations": [
+          "ruins of alph outside"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "ruins of alph outside"
+        ]
+      },
+      "crystal": {
+        "locations": [
+          "ruins of alph outside"
+        ]
+      }
+    },
+    "236": {
+      "crystal": {
+        "locations": [
+          "johto route 34 area",
+          "mt mortar b1f"
+        ]
+      },
+      "gold": {
+        "locations": [
+          "mt mortar b1f"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "mt mortar b1f"
+        ]
+      }
+    },
+    "237": {
+      "gold": {
+        "locations": [
+          "Evolve Tyrogue"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "Evolve Tyrogue"
+        ]
+      },
+      "crystal": {
+        "locations": [
+          "Evolve Tyrogue"
+        ]
+      }
+    },
+    "238": {
+      "crystal": {
+        "locations": [
+          "johto route 34 area"
+        ]
+      },
+      "gold": {
+        "locations": [
+          "Breed Jynx"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "Breed Jynx"
+        ]
+      }
+    },
+    "239": {
+      "crystal": {
+        "locations": [
+          "johto route 34 area"
+        ]
+      },
+      "gold": {
+        "locations": [
+          "Breed Electabuzz"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "Breed Electabuzz"
+        ]
+      }
+    },
+    "240": {
+      "crystal": {
+        "locations": [
+          "johto route 34 area"
+        ]
+      },
+      "gold": {
+        "locations": [
+          "Breed Magmar"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "Breed Magmar"
+        ]
+      }
+    },
+    "241": {
+      "gold": {
+        "locations": [
+          "johto route 38 area",
+          "johto route 39 area"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "johto route 38 area",
+          "johto route 39 area"
+        ]
+      },
+      "crystal": {
+        "locations": [
+          "johto route 38 area",
+          "johto route 39 area"
+        ]
+      }
+    },
+    "242": {
+      "gold": {
+        "locations": [
+          "Evolve Chansey"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "Evolve Chansey"
+        ]
+      },
+      "crystal": {
+        "locations": [
+          "Evolve Chansey"
+        ]
+      }
+    },
+    "243": {
+      "gold": {
+        "locations": [
+          "roaming johto area"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "roaming johto area"
+        ]
+      },
+      "crystal": {
+        "locations": [
+          "roaming johto area"
+        ]
+      }
+    },
+    "244": {
+      "gold": {
+        "locations": [
+          "roaming johto area"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "roaming johto area"
+        ]
+      },
+      "crystal": {
+        "locations": [
+          "roaming johto area"
+        ]
+      }
+    },
+    "245": {
+      "gold": {
+        "locations": [
+          "roaming johto area"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "roaming johto area"
+        ]
+      },
+      "crystal": {
+        "locations": [
+          "bell tower 1f"
+        ]
+      }
+    },
+    "246": {
+      "gold": {
+        "locations": [
+          "mt silver 2f",
+          "mt silver 1f",
+          "mt silver top"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "mt silver 2f",
+          "mt silver 1f",
+          "mt silver top"
+        ]
+      },
+      "crystal": {
+        "locations": [
+          "mt silver 2f",
+          "mt silver 1f",
+          "mt silver top",
+          "celadon city prize corner"
+        ]
+      }
+    },
+    "247": {
+      "crystal": {
+        "locations": [
+          "mt silver top"
+        ]
+      },
+      "gold": {
+        "locations": [
+          "Evolve Larvitar"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "Evolve Larvitar"
+        ]
+      }
+    },
+    "248": {
+      "gold": {
+        "locations": [
+          "Evolve Pupitar"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "Evolve Pupitar"
+        ]
+      },
+      "crystal": {
+        "locations": [
+          "Evolve Pupitar"
+        ]
+      }
+    },
+    "249": {
+      "gold": {
+        "locations": [
+          "whirl islands b2f"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "whirl islands b2f"
+        ]
+      },
+      "crystal": {
+        "locations": [
+          "whirl islands b2f"
+        ]
+      }
+    },
+    "250": {
+      "gold": {
+        "locations": [
+          "bell tower roof"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "bell tower roof"
+        ]
+      },
+      "crystal": {
+        "locations": [
+          "bell tower roof"
+        ]
+      }
+    },
+    "251": {
+      "crystal": {
+        "locations": [
+          "ilex forest area"
+        ]
+      },
+      "gold": {
+        "locations": [
+          "Trade, Event"
+        ]
+      },
+      "silver": {
+        "locations": [
+          "Trade, Event"
         ]
       }
     }

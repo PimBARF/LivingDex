@@ -10,10 +10,11 @@
   ],
   "sections": [
     {
-      "id": "base",
-      "title": "Regional Pokédex",
+      "id": "hoenn",
+      "title": "Hoenn Pokédex",
       "type": "base",
       "optional": false,
+      "defaultEnabled": false,
       "entries": [
         {
           "speciesId": 252,
@@ -1029,6 +1030,1680 @@
     }
   ],
   "encounters": {
+    "25": {
+      "ruby": {
+        "locations": [
+          "hoenn safari zone sw",
+          "hoenn safari zone se",
+          "hoenn pokecenter area"
+        ]
+      },
+      "sapphire": {
+        "locations": [
+          "hoenn safari zone sw",
+          "hoenn safari zone se",
+          "hoenn pokecenter area"
+        ]
+      },
+      "emerald": {
+        "locations": [
+          "hoenn safari zone sw",
+          "hoenn safari zone se",
+          "hoenn pokecenter area"
+        ]
+      }
+    },
+    "26": {
+      "ruby": {
+        "locations": [
+          "Evolve Pikachu"
+        ]
+      },
+      "sapphire": {
+        "locations": [
+          "Evolve Pikachu"
+        ]
+      },
+      "emerald": {
+        "locations": [
+          "Evolve Pikachu"
+        ]
+      }
+    },
+    "27": {
+      "ruby": {
+        "locations": [
+          "hoenn route 111 area",
+          "hoenn route 113 area"
+        ]
+      },
+      "sapphire": {
+        "locations": [
+          "hoenn route 111 area",
+          "hoenn route 113 area"
+        ]
+      },
+      "emerald": {
+        "locations": [
+          "hoenn route 111 area",
+          "mirage tower area"
+        ]
+      }
+    },
+    "28": {
+      "ruby": {
+        "locations": [
+          "Evolve Sandshrew"
+        ]
+      },
+      "sapphire": {
+        "locations": [
+          "Evolve Sandshrew"
+        ]
+      },
+      "emerald": {
+        "locations": [
+          "Evolve Sandshrew"
+        ]
+      }
+    },
+    "37": {
+      "ruby": {
+        "locations": [
+          "mt pyre outside"
+        ]
+      },
+      "sapphire": {
+        "locations": [
+          "mt pyre outside"
+        ]
+      },
+      "emerald": {
+        "locations": [
+          "mt pyre outside"
+        ]
+      }
+    },
+    "38": {
+      "ruby": {
+        "locations": [
+          "Evolve Vulpix"
+        ]
+      },
+      "sapphire": {
+        "locations": [
+          "Evolve Vulpix"
+        ]
+      },
+      "emerald": {
+        "locations": [
+          "Evolve Vulpix"
+        ]
+      }
+    },
+    "39": {
+      "ruby": {
+        "locations": [
+          "hoenn route 115 area"
+        ]
+      },
+      "sapphire": {
+        "locations": [
+          "hoenn route 115 area"
+        ]
+      },
+      "emerald": {
+        "locations": [
+          "hoenn route 115 area"
+        ]
+      }
+    },
+    "40": {
+      "ruby": {
+        "locations": [
+          "Evolve Jigglypuff"
+        ]
+      },
+      "sapphire": {
+        "locations": [
+          "Evolve Jigglypuff"
+        ]
+      },
+      "emerald": {
+        "locations": [
+          "Evolve Jigglypuff"
+        ]
+      }
+    },
+    "41": {
+      "ruby": {
+        "locations": [
+          "meteor falls area",
+          "granite cave 1f",
+          "granite cave b1f",
+          "granite cave b2f",
+          "granite cave 1fsmall room",
+          "seafloor cavern area",
+          "cave of origin entrance",
+          "cave of origin 1f",
+          "cave of origin b1f",
+          "cave of origin b2f",
+          "cave of origin b3f",
+          "hoenn victory road 1f",
+          "shoal cave high tide",
+          "shoal cave b1f",
+          "shoal cave low tide",
+          "shoal cave b2f",
+          "shoal cave b3f"
+        ]
+      },
+      "sapphire": {
+        "locations": [
+          "meteor falls area",
+          "granite cave 1f",
+          "granite cave b1f",
+          "granite cave b2f",
+          "granite cave 1fsmall room",
+          "seafloor cavern area",
+          "cave of origin entrance",
+          "cave of origin 1f",
+          "cave of origin b1f",
+          "cave of origin b2f",
+          "cave of origin b3f",
+          "hoenn victory road 1f",
+          "shoal cave high tide",
+          "shoal cave b1f",
+          "shoal cave low tide",
+          "shoal cave b2f",
+          "shoal cave b3f"
+        ]
+      },
+      "emerald": {
+        "locations": [
+          "meteor falls area",
+          "granite cave 1f",
+          "granite cave b1f",
+          "granite cave b2f",
+          "granite cave 1fsmall room",
+          "seafloor cavern area",
+          "cave of origin entrance",
+          "cave of origin 1f",
+          "cave of origin b1f",
+          "cave of origin b2f",
+          "cave of origin b3f",
+          "hoenn victory road 1f",
+          "shoal cave high tide",
+          "shoal cave b1f",
+          "hoenn altering cave area",
+          "shoal cave low tide",
+          "shoal cave b2f",
+          "shoal cave b3f"
+        ]
+      }
+    },
+    "42": {
+      "ruby": {
+        "locations": [
+          "meteor falls back",
+          "meteor falls b1f",
+          "meteor falls backsmall room",
+          "seafloor cavern area",
+          "cave of origin entrance",
+          "cave of origin 1f",
+          "cave of origin b1f",
+          "cave of origin b2f",
+          "cave of origin b3f",
+          "hoenn victory road 1f",
+          "hoenn victory road b1f",
+          "hoenn victory road b2f",
+          "shoal cave high tide",
+          "shoal cave b1f",
+          "sky pillar 1f",
+          "sky pillar 3f",
+          "sky pillar 5f",
+          "shoal cave low tide",
+          "shoal cave b2f",
+          "shoal cave b3f"
+        ]
+      },
+      "sapphire": {
+        "locations": [
+          "meteor falls back",
+          "meteor falls b1f",
+          "meteor falls backsmall room",
+          "seafloor cavern area",
+          "cave of origin entrance",
+          "cave of origin 1f",
+          "cave of origin b1f",
+          "cave of origin b2f",
+          "cave of origin b3f",
+          "hoenn victory road 1f",
+          "hoenn victory road b1f",
+          "hoenn victory road b2f",
+          "shoal cave high tide",
+          "shoal cave b1f",
+          "sky pillar 1f",
+          "sky pillar 3f",
+          "sky pillar 5f",
+          "shoal cave low tide",
+          "shoal cave b2f",
+          "shoal cave b3f"
+        ]
+      },
+      "emerald": {
+        "locations": [
+          "meteor falls back",
+          "meteor falls b1f",
+          "meteor falls backsmall room",
+          "seafloor cavern area",
+          "cave of origin entrance",
+          "cave of origin 1f",
+          "cave of origin b1f",
+          "cave of origin b2f",
+          "cave of origin b3f",
+          "hoenn victory road 1f",
+          "hoenn victory road b1f",
+          "hoenn victory road b2f",
+          "shoal cave high tide",
+          "shoal cave b1f",
+          "sky pillar 1f",
+          "sky pillar 3f",
+          "sky pillar 5f",
+          "shoal cave low tide",
+          "shoal cave b2f",
+          "shoal cave b3f"
+        ]
+      }
+    },
+    "43": {
+      "ruby": {
+        "locations": [
+          "hoenn route 110 area",
+          "hoenn route 117 area",
+          "hoenn route 119 area",
+          "hoenn route 120 area",
+          "hoenn route 121 area",
+          "hoenn route 123 area",
+          "hoenn safari zone nwmach bike area",
+          "hoenn safari zone neacro bike area",
+          "hoenn safari zone sw",
+          "hoenn safari zone se"
+        ]
+      },
+      "sapphire": {
+        "locations": [
+          "hoenn route 110 area",
+          "hoenn route 117 area",
+          "hoenn route 119 area",
+          "hoenn route 120 area",
+          "hoenn route 121 area",
+          "hoenn route 123 area",
+          "hoenn safari zone nwmach bike area",
+          "hoenn safari zone neacro bike area",
+          "hoenn safari zone sw",
+          "hoenn safari zone se"
+        ]
+      },
+      "emerald": {
+        "locations": [
+          "hoenn route 110 area",
+          "hoenn route 117 area",
+          "hoenn route 119 area",
+          "hoenn route 120 area",
+          "hoenn route 121 area",
+          "hoenn route 123 area",
+          "hoenn safari zone nwmach bike area",
+          "hoenn safari zone neacro bike area",
+          "hoenn safari zone sw",
+          "hoenn safari zone se"
+        ]
+      }
+    },
+    "44": {
+      "ruby": {
+        "locations": [
+          "hoenn route 121 area",
+          "hoenn route 123 area",
+          "hoenn safari zone nwmach bike area",
+          "hoenn safari zone neacro bike area",
+          "hoenn safari zone sw",
+          "hoenn safari zone se"
+        ]
+      },
+      "sapphire": {
+        "locations": [
+          "hoenn route 121 area",
+          "hoenn route 123 area",
+          "hoenn safari zone nwmach bike area",
+          "hoenn safari zone neacro bike area",
+          "hoenn safari zone sw",
+          "hoenn safari zone se"
+        ]
+      },
+      "emerald": {
+        "locations": [
+          "hoenn route 121 area",
+          "hoenn route 123 area",
+          "hoenn safari zone nwmach bike area",
+          "hoenn safari zone neacro bike area",
+          "hoenn safari zone sw",
+          "hoenn safari zone se"
+        ]
+      }
+    },
+    "45": {
+      "ruby": {
+        "locations": [
+          "Evolve Gloom"
+        ]
+      },
+      "sapphire": {
+        "locations": [
+          "Evolve Gloom"
+        ]
+      },
+      "emerald": {
+        "locations": [
+          "Evolve Gloom"
+        ]
+      }
+    },
+    "54": {
+      "ruby": {
+        "locations": [
+          "hoenn safari zone nwmach bike area",
+          "hoenn safari zone sw"
+        ]
+      },
+      "sapphire": {
+        "locations": [
+          "hoenn safari zone nwmach bike area",
+          "hoenn safari zone sw"
+        ]
+      },
+      "emerald": {
+        "locations": [
+          "hoenn safari zone nwmach bike area",
+          "hoenn safari zone sw"
+        ]
+      }
+    },
+    "55": {
+      "ruby": {
+        "locations": [
+          "hoenn safari zone nwmach bike area"
+        ]
+      },
+      "sapphire": {
+        "locations": [
+          "hoenn safari zone nwmach bike area"
+        ]
+      },
+      "emerald": {
+        "locations": [
+          "hoenn safari zone nwmach bike area"
+        ]
+      }
+    },
+    "63": {
+      "ruby": {
+        "locations": [
+          "granite cave 1f",
+          "granite cave b1f",
+          "granite cave b2f",
+          "granite cave 1fsmall room"
+        ]
+      },
+      "sapphire": {
+        "locations": [
+          "granite cave 1f",
+          "granite cave b1f",
+          "granite cave b2f",
+          "granite cave 1fsmall room"
+        ]
+      },
+      "emerald": {
+        "locations": [
+          "granite cave 1f",
+          "granite cave b1f",
+          "granite cave b2f",
+          "granite cave 1fsmall room",
+          "hoenn route 116 area"
+        ]
+      }
+    },
+    "64": {
+      "ruby": {
+        "locations": [
+          "Evolve Abra"
+        ]
+      },
+      "sapphire": {
+        "locations": [
+          "Evolve Abra"
+        ]
+      },
+      "emerald": {
+        "locations": [
+          "Evolve Abra"
+        ]
+      }
+    },
+    "65": {
+      "ruby": {
+        "locations": [
+          "Evolve Kadabra"
+        ]
+      },
+      "sapphire": {
+        "locations": [
+          "Evolve Kadabra"
+        ]
+      },
+      "emerald": {
+        "locations": [
+          "Evolve Kadabra"
+        ]
+      }
+    },
+    "66": {
+      "ruby": {
+        "locations": [
+          "jagged pass area",
+          "fiery path area",
+          "hoenn route 112 area"
+        ]
+      },
+      "sapphire": {
+        "locations": [
+          "jagged pass area",
+          "fiery path area",
+          "hoenn route 112 area"
+        ]
+      },
+      "emerald": {
+        "locations": [
+          "jagged pass area",
+          "fiery path area"
+        ]
+      }
+    },
+    "67": {
+      "ruby": {
+        "locations": [
+          "Evolve Machop"
+        ]
+      },
+      "sapphire": {
+        "locations": [
+          "Evolve Machop"
+        ]
+      },
+      "emerald": {
+        "locations": [
+          "Evolve Machop"
+        ]
+      }
+    },
+    "68": {
+      "ruby": {
+        "locations": [
+          "Evolve Machoke"
+        ]
+      },
+      "sapphire": {
+        "locations": [
+          "Evolve Machoke"
+        ]
+      },
+      "emerald": {
+        "locations": [
+          "Evolve Machoke"
+        ]
+      }
+    },
+    "72": {
+      "ruby": {
+        "locations": [
+          "slateport city area",
+          "lilycove city area",
+          "mossdeep city area",
+          "ever grande city area",
+          "seafloor cavern area",
+          "shoal cave high tide",
+          "abandoned ship area",
+          "hoenn route 103 area",
+          "hoenn route 105 area",
+          "hoenn route 106 area",
+          "hoenn route 107 area",
+          "hoenn route 108 area",
+          "hoenn route 109 area",
+          "hoenn route 110 area",
+          "hoenn route 115 area",
+          "hoenn route 118 area",
+          "hoenn route 119 area",
+          "hoenn route 121 area",
+          "hoenn route 122 area",
+          "hoenn route 123 area",
+          "hoenn route 124 area",
+          "hoenn route 125 area",
+          "hoenn route 126 area",
+          "hoenn route 127 area",
+          "hoenn route 128 area",
+          "hoenn route 129 area",
+          "hoenn route 130 area",
+          "hoenn route 131 area",
+          "hoenn route 132 area",
+          "hoenn route 133 area",
+          "hoenn route 134 area",
+          "dewford town area",
+          "pacifidlog town area"
+        ]
+      },
+      "sapphire": {
+        "locations": [
+          "slateport city area",
+          "lilycove city area",
+          "mossdeep city area",
+          "sootopolis city area",
+          "ever grande city area",
+          "seafloor cavern area",
+          "shoal cave high tide",
+          "abandoned ship area",
+          "hoenn route 103 area",
+          "hoenn route 105 area",
+          "hoenn route 106 area",
+          "hoenn route 107 area",
+          "hoenn route 108 area",
+          "hoenn route 109 area",
+          "hoenn route 110 area",
+          "hoenn route 115 area",
+          "hoenn route 118 area",
+          "hoenn route 119 area",
+          "hoenn route 121 area",
+          "hoenn route 122 area",
+          "hoenn route 123 area",
+          "hoenn route 124 area",
+          "hoenn route 125 area",
+          "hoenn route 126 area",
+          "hoenn route 127 area",
+          "hoenn route 128 area",
+          "hoenn route 129 area",
+          "hoenn route 130 area",
+          "hoenn route 131 area",
+          "hoenn route 132 area",
+          "hoenn route 133 area",
+          "hoenn route 134 area",
+          "dewford town area",
+          "pacifidlog town area"
+        ]
+      },
+      "emerald": {
+        "locations": [
+          "slateport city area",
+          "lilycove city area",
+          "mossdeep city area",
+          "sootopolis city area",
+          "ever grande city area",
+          "seafloor cavern area",
+          "shoal cave high tide",
+          "abandoned ship area",
+          "hoenn route 103 area",
+          "hoenn route 105 area",
+          "hoenn route 106 area",
+          "hoenn route 107 area",
+          "hoenn route 108 area",
+          "hoenn route 109 area",
+          "hoenn route 110 area",
+          "hoenn route 115 area",
+          "hoenn route 118 area",
+          "hoenn route 119 area",
+          "hoenn route 121 area",
+          "hoenn route 122 area",
+          "hoenn route 123 area",
+          "hoenn route 124 area",
+          "hoenn route 125 area",
+          "hoenn route 126 area",
+          "hoenn route 127 area",
+          "hoenn route 128 area",
+          "hoenn route 129 area",
+          "hoenn route 130 area",
+          "hoenn route 131 area",
+          "hoenn route 132 area",
+          "hoenn route 133 area",
+          "hoenn route 134 area",
+          "dewford town area",
+          "pacifidlog town area"
+        ]
+      }
+    },
+    "73": {
+      "ruby": {
+        "locations": [
+          "abandoned ship area"
+        ]
+      },
+      "sapphire": {
+        "locations": [
+          "abandoned ship area"
+        ]
+      },
+      "emerald": {
+        "locations": [
+          "abandoned ship area"
+        ]
+      }
+    },
+    "74": {
+      "ruby": {
+        "locations": [
+          "granite cave 1f",
+          "granite cave b2f",
+          "hoenn victory road b1f",
+          "hoenn route 111 area",
+          "hoenn route 114 area",
+          "hoenn safari zone neacro bike area"
+        ]
+      },
+      "sapphire": {
+        "locations": [
+          "granite cave 1f",
+          "granite cave b2f",
+          "hoenn victory road b1f",
+          "hoenn route 111 area",
+          "hoenn route 114 area",
+          "hoenn safari zone neacro bike area"
+        ]
+      },
+      "emerald": {
+        "locations": [
+          "granite cave 1f",
+          "granite cave b2f",
+          "hoenn victory road b1f",
+          "hoenn route 111 area",
+          "hoenn route 114 area",
+          "hoenn safari zone neacro bike area",
+          "magma hideout area"
+        ]
+      }
+    },
+    "75": {
+      "ruby": {
+        "locations": [
+          "hoenn victory road b1f"
+        ]
+      },
+      "sapphire": {
+        "locations": [
+          "hoenn victory road b1f"
+        ]
+      },
+      "emerald": {
+        "locations": [
+          "hoenn victory road b1f",
+          "magma hideout area"
+        ]
+      }
+    },
+    "76": {
+      "ruby": {
+        "locations": [
+          "Evolve Graveler"
+        ]
+      },
+      "sapphire": {
+        "locations": [
+          "Evolve Graveler"
+        ]
+      },
+      "emerald": {
+        "locations": [
+          "Evolve Graveler"
+        ]
+      }
+    },
+    "81": {
+      "ruby": {
+        "locations": [
+          "new mauville entrance",
+          "new mauville area"
+        ]
+      },
+      "sapphire": {
+        "locations": [
+          "new mauville entrance",
+          "new mauville area"
+        ]
+      },
+      "emerald": {
+        "locations": [
+          "new mauville entrance",
+          "new mauville area"
+        ]
+      }
+    },
+    "82": {
+      "ruby": {
+        "locations": [
+          "new mauville area"
+        ]
+      },
+      "sapphire": {
+        "locations": [
+          "new mauville area"
+        ]
+      },
+      "emerald": {
+        "locations": [
+          "new mauville area"
+        ]
+      }
+    },
+    "84": {
+      "ruby": {
+        "locations": [
+          "hoenn safari zone nwmach bike area",
+          "hoenn safari zone sw",
+          "hoenn safari zone se"
+        ]
+      },
+      "sapphire": {
+        "locations": [
+          "hoenn safari zone nwmach bike area",
+          "hoenn safari zone sw",
+          "hoenn safari zone se"
+        ]
+      },
+      "emerald": {
+        "locations": [
+          "hoenn safari zone nwmach bike area",
+          "hoenn safari zone sw",
+          "hoenn safari zone se"
+        ]
+      }
+    },
+    "85": {
+      "ruby": {
+        "locations": [
+          "hoenn safari zone nwmach bike area"
+        ]
+      },
+      "sapphire": {
+        "locations": [
+          "hoenn safari zone nwmach bike area"
+        ]
+      },
+      "emerald": {
+        "locations": [
+          "hoenn safari zone nwmach bike area"
+        ]
+      }
+    },
+    "88": {
+      "ruby": {
+        "locations": [
+          "fiery path area"
+        ]
+      },
+      "sapphire": {
+        "locations": [
+          "fiery path area"
+        ]
+      },
+      "emerald": {
+        "locations": [
+          "fiery path area"
+        ]
+      }
+    },
+    "89": {
+      "ruby": {
+        "locations": [
+          "Evolve Grimer"
+        ]
+      },
+      "sapphire": {
+        "locations": [
+          "Evolve Grimer"
+        ]
+      },
+      "emerald": {
+        "locations": [
+          "Evolve Grimer"
+        ]
+      }
+    },
+    "100": {
+      "ruby": {
+        "locations": [
+          "new mauville entrance",
+          "new mauville area"
+        ]
+      },
+      "sapphire": {
+        "locations": [
+          "new mauville entrance",
+          "new mauville area"
+        ]
+      },
+      "emerald": {
+        "locations": [
+          "new mauville entrance",
+          "new mauville area"
+        ]
+      }
+    },
+    "101": {
+      "ruby": {
+        "locations": [
+          "new mauville area",
+          "team magma hideout area"
+        ]
+      },
+      "sapphire": {
+        "locations": [
+          "new mauville area",
+          "team aqua hideout area",
+          "team magma hideout area"
+        ]
+      },
+      "emerald": {
+        "locations": [
+          "new mauville area",
+          "team aqua hideout area",
+          "team magma hideout area"
+        ]
+      }
+    },
+    "109": {
+      "ruby": {
+        "locations": [
+          "fiery path area"
+        ]
+      },
+      "sapphire": {
+        "locations": [
+          "fiery path area"
+        ]
+      },
+      "emerald": {
+        "locations": [
+          "fiery path area"
+        ]
+      }
+    },
+    "110": {
+      "ruby": {
+        "locations": [
+          "Evolve Koffing"
+        ]
+      },
+      "sapphire": {
+        "locations": [
+          "Evolve Koffing"
+        ]
+      },
+      "emerald": {
+        "locations": [
+          "Evolve Koffing"
+        ]
+      }
+    },
+    "111": {
+      "ruby": {
+        "locations": [
+          "hoenn safari zone nwmach bike area"
+        ]
+      },
+      "sapphire": {
+        "locations": [
+          "hoenn safari zone nwmach bike area"
+        ]
+      },
+      "emerald": {
+        "locations": [
+          "hoenn safari zone nwmach bike area"
+        ]
+      }
+    },
+    "112": {
+      "ruby": {
+        "locations": [
+          "Evolve Rhyhorn"
+        ]
+      },
+      "sapphire": {
+        "locations": [
+          "Evolve Rhyhorn"
+        ]
+      },
+      "emerald": {
+        "locations": [
+          "Evolve Rhyhorn"
+        ]
+      }
+    },
+    "116": {
+      "ruby": {
+        "locations": [
+          "hoenn route 132 area",
+          "hoenn route 133 area",
+          "hoenn route 134 area"
+        ]
+      },
+      "sapphire": {
+        "locations": [
+          "hoenn route 132 area",
+          "hoenn route 133 area",
+          "hoenn route 134 area"
+        ]
+      },
+      "emerald": {
+        "locations": [
+          "hoenn route 132 area",
+          "hoenn route 133 area",
+          "hoenn route 134 area",
+          "pacifidlog town area"
+        ]
+      }
+    },
+    "117": {
+      "ruby": {
+        "locations": [
+          "Evolve Horsea"
+        ]
+      },
+      "sapphire": {
+        "locations": [
+          "Evolve Horsea"
+        ]
+      },
+      "emerald": {
+        "locations": [
+          "Evolve Horsea"
+        ]
+      }
+    },
+    "118": {
+      "ruby": {
+        "locations": [
+          "petalburg city area",
+          "meteor falls area",
+          "meteor falls back",
+          "meteor falls b1f",
+          "meteor falls backsmall room",
+          "hoenn victory road b2f",
+          "hoenn route 102 area",
+          "hoenn route 111 area",
+          "hoenn route 114 area",
+          "hoenn route 117 area",
+          "hoenn route 120 area",
+          "hoenn safari zone nwmach bike area",
+          "hoenn safari zone sw"
+        ]
+      },
+      "sapphire": {
+        "locations": [
+          "petalburg city area",
+          "meteor falls area",
+          "meteor falls back",
+          "meteor falls b1f",
+          "meteor falls backsmall room",
+          "hoenn victory road b2f",
+          "hoenn route 102 area",
+          "hoenn route 111 area",
+          "hoenn route 114 area",
+          "hoenn route 117 area",
+          "hoenn route 120 area",
+          "hoenn safari zone nwmach bike area",
+          "hoenn safari zone sw"
+        ]
+      },
+      "emerald": {
+        "locations": [
+          "petalburg city area",
+          "meteor falls area",
+          "meteor falls back",
+          "meteor falls b1f",
+          "meteor falls backsmall room",
+          "hoenn victory road b2f",
+          "hoenn route 102 area",
+          "hoenn route 111 area",
+          "hoenn route 114 area",
+          "hoenn route 117 area",
+          "hoenn route 120 area",
+          "hoenn safari zone nwmach bike area",
+          "hoenn safari zone sw",
+          "hoenn safari zone expansion south"
+        ]
+      }
+    },
+    "119": {
+      "ruby": {
+        "locations": [
+          "hoenn safari zone nwmach bike area",
+          "hoenn safari zone sw"
+        ]
+      },
+      "sapphire": {
+        "locations": [
+          "hoenn safari zone nwmach bike area",
+          "hoenn safari zone sw"
+        ]
+      },
+      "emerald": {
+        "locations": [
+          "hoenn safari zone nwmach bike area",
+          "hoenn safari zone sw"
+        ]
+      }
+    },
+    "120": {
+      "ruby": {
+        "locations": [
+          "lilycove city area"
+        ]
+      },
+      "sapphire": {
+        "locations": [
+          "lilycove city area"
+        ]
+      },
+      "emerald": {
+        "locations": [
+          "lilycove city area"
+        ]
+      }
+    },
+    "121": {
+      "ruby": {
+        "locations": [
+          "Evolve Staryu"
+        ]
+      },
+      "sapphire": {
+        "locations": [
+          "Evolve Staryu"
+        ]
+      },
+      "emerald": {
+        "locations": [
+          "Evolve Staryu"
+        ]
+      }
+    },
+    "127": {
+      "ruby": {
+        "locations": [
+          "hoenn safari zone nwmach bike area"
+        ]
+      },
+      "sapphire": {
+        "locations": [
+          "hoenn safari zone nwmach bike area"
+        ]
+      },
+      "emerald": {
+        "locations": [
+          "hoenn safari zone nwmach bike area"
+        ]
+      }
+    },
+    "129": {
+      "ruby": {
+        "locations": [
+          "petalburg city area",
+          "slateport city area",
+          "lilycove city area",
+          "mossdeep city area",
+          "sootopolis city area",
+          "ever grande city area",
+          "meteor falls area",
+          "meteor falls back",
+          "meteor falls b1f",
+          "meteor falls backsmall room",
+          "seafloor cavern area",
+          "hoenn victory road b2f",
+          "shoal cave high tide",
+          "abandoned ship area",
+          "hoenn route 102 area",
+          "hoenn route 103 area",
+          "hoenn route 104 area",
+          "hoenn route 105 area",
+          "hoenn route 106 area",
+          "hoenn route 107 area",
+          "hoenn route 108 area",
+          "hoenn route 109 area",
+          "hoenn route 110 area",
+          "hoenn route 111 area",
+          "hoenn route 114 area",
+          "hoenn route 115 area",
+          "hoenn route 117 area",
+          "hoenn route 118 area",
+          "hoenn route 119 area",
+          "hoenn route 120 area",
+          "hoenn route 121 area",
+          "hoenn route 122 area",
+          "hoenn route 123 area",
+          "hoenn route 124 area",
+          "hoenn route 125 area",
+          "hoenn route 126 area",
+          "hoenn route 127 area",
+          "hoenn route 128 area",
+          "hoenn route 129 area",
+          "hoenn route 130 area",
+          "hoenn route 131 area",
+          "hoenn route 132 area",
+          "hoenn route 133 area",
+          "hoenn route 134 area",
+          "hoenn safari zone nwmach bike area",
+          "hoenn safari zone sw",
+          "dewford town area",
+          "pacifidlog town area"
+        ]
+      },
+      "sapphire": {
+        "locations": [
+          "petalburg city area",
+          "slateport city area",
+          "lilycove city area",
+          "mossdeep city area",
+          "sootopolis city area",
+          "ever grande city area",
+          "meteor falls area",
+          "meteor falls back",
+          "meteor falls b1f",
+          "meteor falls backsmall room",
+          "seafloor cavern area",
+          "hoenn victory road b2f",
+          "shoal cave high tide",
+          "abandoned ship area",
+          "hoenn route 102 area",
+          "hoenn route 103 area",
+          "hoenn route 104 area",
+          "hoenn route 105 area",
+          "hoenn route 106 area",
+          "hoenn route 107 area",
+          "hoenn route 108 area",
+          "hoenn route 109 area",
+          "hoenn route 110 area",
+          "hoenn route 111 area",
+          "hoenn route 114 area",
+          "hoenn route 115 area",
+          "hoenn route 117 area",
+          "hoenn route 118 area",
+          "hoenn route 119 area",
+          "hoenn route 120 area",
+          "hoenn route 121 area",
+          "hoenn route 122 area",
+          "hoenn route 123 area",
+          "hoenn route 124 area",
+          "hoenn route 125 area",
+          "hoenn route 126 area",
+          "hoenn route 127 area",
+          "hoenn route 128 area",
+          "hoenn route 129 area",
+          "hoenn route 130 area",
+          "hoenn route 131 area",
+          "hoenn route 132 area",
+          "hoenn route 133 area",
+          "hoenn route 134 area",
+          "hoenn safari zone nwmach bike area",
+          "hoenn safari zone sw",
+          "dewford town area",
+          "pacifidlog town area"
+        ]
+      },
+      "emerald": {
+        "locations": [
+          "petalburg city area",
+          "slateport city area",
+          "lilycove city area",
+          "mossdeep city area",
+          "sootopolis city area",
+          "ever grande city area",
+          "meteor falls area",
+          "meteor falls back",
+          "meteor falls b1f",
+          "meteor falls backsmall room",
+          "seafloor cavern area",
+          "hoenn victory road b2f",
+          "shoal cave high tide",
+          "abandoned ship area",
+          "hoenn route 102 area",
+          "hoenn route 103 area",
+          "hoenn route 104 area",
+          "hoenn route 105 area",
+          "hoenn route 106 area",
+          "hoenn route 107 area",
+          "hoenn route 108 area",
+          "hoenn route 109 area",
+          "hoenn route 110 area",
+          "hoenn route 111 area",
+          "hoenn route 114 area",
+          "hoenn route 115 area",
+          "hoenn route 117 area",
+          "hoenn route 118 area",
+          "hoenn route 119 area",
+          "hoenn route 120 area",
+          "hoenn route 121 area",
+          "hoenn route 122 area",
+          "hoenn route 123 area",
+          "hoenn route 124 area",
+          "hoenn route 125 area",
+          "hoenn route 126 area",
+          "hoenn route 127 area",
+          "hoenn route 128 area",
+          "hoenn route 129 area",
+          "hoenn route 130 area",
+          "hoenn route 131 area",
+          "hoenn route 132 area",
+          "hoenn route 133 area",
+          "hoenn route 134 area",
+          "hoenn safari zone nwmach bike area",
+          "hoenn safari zone sw",
+          "dewford town area",
+          "pacifidlog town area",
+          "hoenn safari zone expansion south"
+        ]
+      }
+    },
+    "130": {
+      "ruby": {
+        "locations": [
+          "sootopolis city area"
+        ]
+      },
+      "sapphire": {
+        "locations": [
+          "sootopolis city area"
+        ]
+      },
+      "emerald": {
+        "locations": [
+          "sootopolis city area"
+        ]
+      }
+    },
+    "169": {
+      "ruby": {
+        "locations": [
+          "Evolve Golbat"
+        ]
+      },
+      "sapphire": {
+        "locations": [
+          "Evolve Golbat"
+        ]
+      },
+      "emerald": {
+        "locations": [
+          "Evolve Golbat"
+        ]
+      }
+    },
+    "170": {
+      "ruby": {
+        "locations": [
+          "hoenn route 124 underwater",
+          "hoenn route 126 underwater"
+        ]
+      },
+      "sapphire": {
+        "locations": [
+          "hoenn route 124 underwater",
+          "hoenn route 126 underwater"
+        ]
+      },
+      "emerald": {
+        "locations": [
+          "hoenn route 124 underwater",
+          "hoenn route 126 underwater"
+        ]
+      }
+    },
+    "171": {
+      "ruby": {
+        "locations": [
+          "Evolve Chinchou"
+        ]
+      },
+      "sapphire": {
+        "locations": [
+          "Evolve Chinchou"
+        ]
+      },
+      "emerald": {
+        "locations": [
+          "Evolve Chinchou"
+        ]
+      }
+    },
+    "172": {
+      "ruby": {
+        "locations": [
+          "Breed Raichu"
+        ]
+      },
+      "sapphire": {
+        "locations": [
+          "Breed Raichu"
+        ]
+      },
+      "emerald": {
+        "locations": [
+          "Breed Raichu"
+        ]
+      }
+    },
+    "174": {
+      "ruby": {
+        "locations": [
+          "Breed Wigglytuff"
+        ]
+      },
+      "sapphire": {
+        "locations": [
+          "Breed Wigglytuff"
+        ]
+      },
+      "emerald": {
+        "locations": [
+          "Breed Wigglytuff"
+        ]
+      }
+    },
+    "177": {
+      "ruby": {
+        "locations": [
+          "hoenn safari zone neacro bike area",
+          "hoenn safari zone sw",
+          "hoenn safari zone se"
+        ]
+      },
+      "sapphire": {
+        "locations": [
+          "hoenn safari zone neacro bike area",
+          "hoenn safari zone sw",
+          "hoenn safari zone se"
+        ]
+      },
+      "emerald": {
+        "locations": [
+          "hoenn safari zone neacro bike area",
+          "hoenn safari zone sw",
+          "hoenn safari zone se"
+        ]
+      }
+    },
+    "178": {
+      "ruby": {
+        "locations": [
+          "hoenn safari zone neacro bike area"
+        ]
+      },
+      "sapphire": {
+        "locations": [
+          "hoenn safari zone neacro bike area"
+        ]
+      },
+      "emerald": {
+        "locations": [
+          "hoenn safari zone neacro bike area"
+        ]
+      }
+    },
+    "182": {
+      "ruby": {
+        "locations": [
+          "Evolve Gloom"
+        ]
+      },
+      "sapphire": {
+        "locations": [
+          "Evolve Gloom"
+        ]
+      },
+      "emerald": {
+        "locations": [
+          "Evolve Gloom"
+        ]
+      }
+    },
+    "183": {
+      "ruby": {
+        "locations": [
+          "petalburg city area",
+          "hoenn route 102 area",
+          "hoenn route 111 area",
+          "hoenn route 114 area",
+          "hoenn route 117 area",
+          "hoenn route 120 area"
+        ]
+      },
+      "sapphire": {
+        "locations": [
+          "petalburg city area",
+          "hoenn route 102 area",
+          "hoenn route 111 area",
+          "hoenn route 114 area",
+          "hoenn route 117 area",
+          "hoenn route 120 area"
+        ]
+      },
+      "emerald": {
+        "locations": [
+          "petalburg city area",
+          "hoenn route 102 area",
+          "hoenn route 104 area",
+          "hoenn route 111 area",
+          "hoenn route 112 area",
+          "hoenn route 114 area",
+          "hoenn route 117 area",
+          "hoenn route 120 area",
+          "hoenn safari zone expansion south"
+        ]
+      }
+    },
+    "184": {
+      "ruby": {
+        "locations": [
+          "Evolve Marill"
+        ]
+      },
+      "sapphire": {
+        "locations": [
+          "Evolve Marill"
+        ]
+      },
+      "emerald": {
+        "locations": [
+          "Evolve Marill"
+        ]
+      }
+    },
+    "202": {
+      "ruby": {
+        "locations": [
+          "hoenn safari zone sw",
+          "hoenn safari zone se"
+        ]
+      },
+      "sapphire": {
+        "locations": [
+          "hoenn safari zone sw",
+          "hoenn safari zone se"
+        ]
+      },
+      "emerald": {
+        "locations": [
+          "hoenn safari zone sw",
+          "hoenn safari zone se"
+        ]
+      }
+    },
+    "203": {
+      "ruby": {
+        "locations": [
+          "hoenn safari zone sw",
+          "hoenn safari zone se"
+        ]
+      },
+      "sapphire": {
+        "locations": [
+          "hoenn safari zone sw",
+          "hoenn safari zone se"
+        ]
+      },
+      "emerald": {
+        "locations": [
+          "hoenn safari zone sw",
+          "hoenn safari zone se"
+        ]
+      }
+    },
+    "214": {
+      "ruby": {
+        "locations": [
+          "hoenn safari zone neacro bike area"
+        ]
+      },
+      "sapphire": {
+        "locations": [
+          "hoenn safari zone neacro bike area"
+        ]
+      },
+      "emerald": {
+        "locations": [
+          "hoenn safari zone neacro bike area"
+        ]
+      }
+    },
+    "218": {
+      "ruby": {
+        "locations": [
+          "fiery path area"
+        ]
+      },
+      "sapphire": {
+        "locations": [
+          "fiery path area"
+        ]
+      },
+      "emerald": {
+        "locations": [
+          "fiery path area",
+          "hoenn route 113 area"
+        ]
+      }
+    },
+    "219": {
+      "ruby": {
+        "locations": [
+          "Evolve Slugma"
+        ]
+      },
+      "sapphire": {
+        "locations": [
+          "Evolve Slugma"
+        ]
+      },
+      "emerald": {
+        "locations": [
+          "Evolve Slugma"
+        ]
+      }
+    },
+    "222": {
+      "ruby": {
+        "locations": [
+          "ever grande city area",
+          "hoenn route 128 area",
+          "pacifidlog town area"
+        ]
+      },
+      "sapphire": {
+        "locations": [
+          "ever grande city area",
+          "hoenn route 128 area",
+          "pacifidlog town area"
+        ]
+      },
+      "emerald": {
+        "locations": [
+          "ever grande city area",
+          "hoenn route 128 area"
+        ]
+      }
+    },
+    "227": {
+      "ruby": {
+        "locations": [
+          "hoenn route 113 area"
+        ]
+      },
+      "sapphire": {
+        "locations": [
+          "hoenn route 113 area"
+        ]
+      },
+      "emerald": {
+        "locations": [
+          "hoenn route 113 area"
+        ]
+      }
+    },
+    "230": {
+      "ruby": {
+        "locations": [
+          "Evolve Seadra"
+        ]
+      },
+      "sapphire": {
+        "locations": [
+          "Evolve Seadra"
+        ]
+      },
+      "emerald": {
+        "locations": [
+          "Evolve Seadra"
+        ]
+      }
+    },
+    "231": {
+      "ruby": {
+        "locations": [
+          "hoenn safari zone neacro bike area"
+        ]
+      },
+      "sapphire": {
+        "locations": [
+          "hoenn safari zone neacro bike area"
+        ]
+      },
+      "emerald": {
+        "locations": [
+          "hoenn safari zone neacro bike area"
+        ]
+      }
+    },
+    "232": {
+      "ruby": {
+        "locations": [
+          "Evolve Phanpy"
+        ]
+      },
+      "sapphire": {
+        "locations": [
+          "Evolve Phanpy"
+        ]
+      },
+      "emerald": {
+        "locations": [
+          "Evolve Phanpy"
+        ]
+      }
+    },
     "252": {
       "ruby": {
         "locations": [
@@ -1210,6 +2885,2710 @@
           "hoenn route 101 area",
           "hoenn route 102 area",
           "hoenn route 103 area"
+        ]
+      }
+    },
+    "262": {
+      "emerald": {
+        "locations": [
+          "hoenn route 120 area",
+          "hoenn route 121 area",
+          "hoenn route 123 area"
+        ]
+      },
+      "ruby": {
+        "locations": [
+          "Evolve Poochyena"
+        ]
+      },
+      "sapphire": {
+        "locations": [
+          "Evolve Poochyena"
+        ]
+      }
+    },
+    "263": {
+      "ruby": {
+        "locations": [
+          "petalburg woods area",
+          "hoenn route 101 area",
+          "hoenn route 102 area",
+          "hoenn route 103 area",
+          "hoenn route 104 area",
+          "hoenn route 110 area",
+          "hoenn route 116 area",
+          "hoenn route 117 area",
+          "hoenn route 118 area",
+          "hoenn route 119 area",
+          "hoenn route 120 area",
+          "hoenn route 121 area",
+          "hoenn route 123 area"
+        ]
+      },
+      "sapphire": {
+        "locations": [
+          "petalburg woods area",
+          "hoenn route 101 area",
+          "hoenn route 102 area",
+          "hoenn route 103 area",
+          "hoenn route 104 area",
+          "hoenn route 110 area",
+          "hoenn route 116 area",
+          "hoenn route 117 area",
+          "hoenn route 118 area",
+          "hoenn route 119 area",
+          "hoenn route 120 area",
+          "hoenn route 121 area",
+          "hoenn route 123 area"
+        ]
+      },
+      "emerald": {
+        "locations": [
+          "hoenn route 101 area",
+          "hoenn route 102 area",
+          "hoenn route 103 area",
+          "hoenn route 118 area",
+          "hoenn route 119 area"
+        ]
+      }
+    },
+    "264": {
+      "ruby": {
+        "locations": [
+          "hoenn route 118 area",
+          "hoenn route 119 area",
+          "hoenn route 120 area",
+          "hoenn route 121 area",
+          "hoenn route 123 area"
+        ]
+      },
+      "sapphire": {
+        "locations": [
+          "hoenn route 118 area",
+          "hoenn route 119 area",
+          "hoenn route 120 area",
+          "hoenn route 121 area",
+          "hoenn route 123 area"
+        ]
+      },
+      "emerald": {
+        "locations": [
+          "hoenn route 118 area",
+          "hoenn route 119 area"
+        ]
+      }
+    },
+    "265": {
+      "ruby": {
+        "locations": [
+          "petalburg woods area",
+          "hoenn route 101 area",
+          "hoenn route 102 area",
+          "hoenn route 104 area"
+        ]
+      },
+      "sapphire": {
+        "locations": [
+          "petalburg woods area",
+          "hoenn route 101 area",
+          "hoenn route 102 area",
+          "hoenn route 104 area"
+        ]
+      },
+      "emerald": {
+        "locations": [
+          "petalburg woods area",
+          "hoenn route 101 area",
+          "hoenn route 102 area",
+          "hoenn route 104 area"
+        ]
+      }
+    },
+    "266": {
+      "ruby": {
+        "locations": [
+          "petalburg woods area"
+        ]
+      },
+      "sapphire": {
+        "locations": [
+          "petalburg woods area"
+        ]
+      },
+      "emerald": {
+        "locations": [
+          "petalburg woods area"
+        ]
+      }
+    },
+    "267": {
+      "ruby": {
+        "locations": [
+          "Evolve Silcoon"
+        ]
+      },
+      "sapphire": {
+        "locations": [
+          "Evolve Silcoon"
+        ]
+      },
+      "emerald": {
+        "locations": [
+          "Evolve Silcoon"
+        ]
+      }
+    },
+    "268": {
+      "ruby": {
+        "locations": [
+          "petalburg woods area"
+        ]
+      },
+      "sapphire": {
+        "locations": [
+          "petalburg woods area"
+        ]
+      },
+      "emerald": {
+        "locations": [
+          "petalburg woods area"
+        ]
+      }
+    },
+    "269": {
+      "ruby": {
+        "locations": [
+          "Evolve Cascoon"
+        ]
+      },
+      "sapphire": {
+        "locations": [
+          "Evolve Cascoon"
+        ]
+      },
+      "emerald": {
+        "locations": [
+          "Evolve Cascoon"
+        ]
+      }
+    },
+    "270": {
+      "sapphire": {
+        "locations": [
+          "hoenn route 102 area",
+          "hoenn route 114 area"
+        ]
+      },
+      "emerald": {
+        "locations": [
+          "hoenn route 102 area",
+          "hoenn route 114 area"
+        ]
+      },
+      "ruby": {
+        "locations": [
+          "Trade, Event"
+        ]
+      }
+    },
+    "271": {
+      "sapphire": {
+        "locations": [
+          "hoenn route 114 area"
+        ]
+      },
+      "emerald": {
+        "locations": [
+          "hoenn route 114 area"
+        ]
+      }
+    },
+    "272": {
+      "sapphire": {
+        "locations": [
+          "Evolve Lombre"
+        ]
+      },
+      "emerald": {
+        "locations": [
+          "Evolve Lombre"
+        ]
+      }
+    },
+    "273": {
+      "ruby": {
+        "locations": [
+          "hoenn route 102 area",
+          "hoenn route 114 area"
+        ]
+      },
+      "emerald": {
+        "locations": [
+          "hoenn route 102 area",
+          "hoenn route 117 area",
+          "hoenn route 120 area",
+          "rustboro city area"
+        ]
+      },
+      "sapphire": {
+        "locations": [
+          "Routes Hoenn, Hoenn, and Hoenn (Swarm",
+          "after mixing records with Emerald)"
+        ]
+      }
+    },
+    "274": {
+      "ruby": {
+        "locations": [
+          "hoenn route 114 area"
+        ]
+      },
+      "emerald": {
+        "locations": [
+          "hoenn route 114 area"
+        ]
+      },
+      "sapphire": {
+        "locations": [
+          "Hoenn (Swarm",
+          "after mixing records with Emerald)"
+        ]
+      }
+    },
+    "275": {
+      "ruby": {
+        "locations": [
+          "Evolve Nuzleaf"
+        ]
+      },
+      "sapphire": {
+        "locations": [
+          "Trade, Event"
+        ]
+      },
+      "emerald": {
+        "locations": [
+          "Evolve Nuzleaf"
+        ]
+      }
+    },
+    "276": {
+      "ruby": {
+        "locations": [
+          "petalburg woods area",
+          "hoenn route 104 area",
+          "hoenn route 115 area",
+          "hoenn route 116 area"
+        ]
+      },
+      "sapphire": {
+        "locations": [
+          "petalburg woods area",
+          "hoenn route 104 area",
+          "hoenn route 115 area",
+          "hoenn route 116 area"
+        ]
+      },
+      "emerald": {
+        "locations": [
+          "petalburg woods area",
+          "hoenn route 104 area",
+          "hoenn route 115 area",
+          "hoenn route 116 area"
+        ]
+      }
+    },
+    "277": {
+      "ruby": {
+        "locations": [
+          "hoenn route 115 area"
+        ]
+      },
+      "sapphire": {
+        "locations": [
+          "hoenn route 115 area"
+        ]
+      },
+      "emerald": {
+        "locations": [
+          "hoenn route 115 area"
+        ]
+      }
+    },
+    "278": {
+      "ruby": {
+        "locations": [
+          "slateport city area",
+          "lilycove city area",
+          "mossdeep city area",
+          "ever grande city area",
+          "mt pyre outside",
+          "hoenn route 103 area",
+          "hoenn route 104 area",
+          "hoenn route 105 area",
+          "hoenn route 106 area",
+          "hoenn route 107 area",
+          "hoenn route 108 area",
+          "hoenn route 109 area",
+          "hoenn route 110 area",
+          "hoenn route 115 area",
+          "hoenn route 118 area",
+          "hoenn route 119 area",
+          "hoenn route 121 area",
+          "hoenn route 122 area",
+          "hoenn route 123 area",
+          "hoenn route 124 area",
+          "hoenn route 125 area",
+          "hoenn route 126 area",
+          "hoenn route 127 area",
+          "hoenn route 128 area",
+          "hoenn route 129 area",
+          "hoenn route 130 area",
+          "hoenn route 131 area",
+          "hoenn route 132 area",
+          "hoenn route 133 area",
+          "hoenn route 134 area",
+          "dewford town area",
+          "pacifidlog town area"
+        ]
+      },
+      "sapphire": {
+        "locations": [
+          "slateport city area",
+          "lilycove city area",
+          "mossdeep city area",
+          "ever grande city area",
+          "mt pyre outside",
+          "hoenn route 103 area",
+          "hoenn route 104 area",
+          "hoenn route 105 area",
+          "hoenn route 106 area",
+          "hoenn route 107 area",
+          "hoenn route 108 area",
+          "hoenn route 109 area",
+          "hoenn route 110 area",
+          "hoenn route 115 area",
+          "hoenn route 118 area",
+          "hoenn route 119 area",
+          "hoenn route 121 area",
+          "hoenn route 122 area",
+          "hoenn route 123 area",
+          "hoenn route 124 area",
+          "hoenn route 125 area",
+          "hoenn route 126 area",
+          "hoenn route 127 area",
+          "hoenn route 128 area",
+          "hoenn route 129 area",
+          "hoenn route 130 area",
+          "hoenn route 131 area",
+          "hoenn route 132 area",
+          "hoenn route 133 area",
+          "hoenn route 134 area",
+          "dewford town area",
+          "pacifidlog town area"
+        ]
+      },
+      "emerald": {
+        "locations": [
+          "slateport city area",
+          "lilycove city area",
+          "mossdeep city area",
+          "ever grande city area",
+          "mt pyre outside",
+          "hoenn route 103 area",
+          "hoenn route 104 area",
+          "hoenn route 105 area",
+          "hoenn route 106 area",
+          "hoenn route 107 area",
+          "hoenn route 108 area",
+          "hoenn route 109 area",
+          "hoenn route 110 area",
+          "hoenn route 115 area",
+          "hoenn route 118 area",
+          "hoenn route 119 area",
+          "hoenn route 121 area",
+          "hoenn route 122 area",
+          "hoenn route 123 area",
+          "hoenn route 124 area",
+          "hoenn route 125 area",
+          "hoenn route 126 area",
+          "hoenn route 127 area",
+          "hoenn route 128 area",
+          "hoenn route 129 area",
+          "hoenn route 130 area",
+          "hoenn route 131 area",
+          "hoenn route 132 area",
+          "hoenn route 133 area",
+          "hoenn route 134 area",
+          "dewford town area",
+          "pacifidlog town area"
+        ]
+      }
+    },
+    "279": {
+      "ruby": {
+        "locations": [
+          "slateport city area",
+          "lilycove city area",
+          "mossdeep city area",
+          "ever grande city area",
+          "hoenn route 103 area",
+          "hoenn route 104 area",
+          "hoenn route 105 area",
+          "hoenn route 106 area",
+          "hoenn route 107 area",
+          "hoenn route 108 area",
+          "hoenn route 109 area",
+          "hoenn route 110 area",
+          "hoenn route 115 area",
+          "hoenn route 118 area",
+          "hoenn route 119 area",
+          "hoenn route 121 area",
+          "hoenn route 122 area",
+          "hoenn route 123 area",
+          "hoenn route 124 area",
+          "hoenn route 125 area",
+          "hoenn route 126 area",
+          "hoenn route 127 area",
+          "hoenn route 128 area",
+          "hoenn route 129 area",
+          "hoenn route 130 area",
+          "hoenn route 131 area",
+          "hoenn route 132 area",
+          "hoenn route 133 area",
+          "hoenn route 134 area",
+          "dewford town area",
+          "pacifidlog town area"
+        ]
+      },
+      "sapphire": {
+        "locations": [
+          "slateport city area",
+          "lilycove city area",
+          "mossdeep city area",
+          "ever grande city area",
+          "hoenn route 103 area",
+          "hoenn route 104 area",
+          "hoenn route 105 area",
+          "hoenn route 106 area",
+          "hoenn route 107 area",
+          "hoenn route 108 area",
+          "hoenn route 109 area",
+          "hoenn route 110 area",
+          "hoenn route 115 area",
+          "hoenn route 118 area",
+          "hoenn route 119 area",
+          "hoenn route 121 area",
+          "hoenn route 122 area",
+          "hoenn route 123 area",
+          "hoenn route 124 area",
+          "hoenn route 125 area",
+          "hoenn route 126 area",
+          "hoenn route 127 area",
+          "hoenn route 128 area",
+          "hoenn route 129 area",
+          "hoenn route 130 area",
+          "hoenn route 131 area",
+          "hoenn route 132 area",
+          "hoenn route 133 area",
+          "hoenn route 134 area",
+          "dewford town area",
+          "pacifidlog town area"
+        ]
+      },
+      "emerald": {
+        "locations": [
+          "slateport city area",
+          "lilycove city area",
+          "mossdeep city area",
+          "ever grande city area",
+          "hoenn route 103 area",
+          "hoenn route 104 area",
+          "hoenn route 105 area",
+          "hoenn route 106 area",
+          "hoenn route 107 area",
+          "hoenn route 108 area",
+          "hoenn route 109 area",
+          "hoenn route 110 area",
+          "hoenn route 115 area",
+          "hoenn route 118 area",
+          "hoenn route 119 area",
+          "hoenn route 121 area",
+          "hoenn route 122 area",
+          "hoenn route 123 area",
+          "hoenn route 124 area",
+          "hoenn route 125 area",
+          "hoenn route 126 area",
+          "hoenn route 127 area",
+          "hoenn route 128 area",
+          "hoenn route 129 area",
+          "hoenn route 130 area",
+          "hoenn route 131 area",
+          "hoenn route 132 area",
+          "hoenn route 133 area",
+          "hoenn route 134 area",
+          "dewford town area",
+          "pacifidlog town area"
+        ]
+      }
+    },
+    "280": {
+      "ruby": {
+        "locations": [
+          "hoenn route 102 area"
+        ]
+      },
+      "sapphire": {
+        "locations": [
+          "hoenn route 102 area"
+        ]
+      },
+      "emerald": {
+        "locations": [
+          "hoenn route 102 area"
+        ]
+      }
+    },
+    "281": {
+      "ruby": {
+        "locations": [
+          "Evolve Ralts"
+        ]
+      },
+      "sapphire": {
+        "locations": [
+          "Evolve Ralts"
+        ]
+      },
+      "emerald": {
+        "locations": [
+          "Evolve Ralts"
+        ]
+      }
+    },
+    "282": {
+      "ruby": {
+        "locations": [
+          "Evolve Kirlia"
+        ]
+      },
+      "sapphire": {
+        "locations": [
+          "Evolve Kirlia"
+        ]
+      },
+      "emerald": {
+        "locations": [
+          "Evolve Kirlia"
+        ]
+      }
+    },
+    "283": {
+      "ruby": {
+        "locations": [
+          "hoenn route 102 area",
+          "hoenn route 111 area",
+          "hoenn route 114 area",
+          "hoenn route 117 area",
+          "hoenn route 120 area"
+        ]
+      },
+      "sapphire": {
+        "locations": [
+          "hoenn route 102 area",
+          "hoenn route 111 area",
+          "hoenn route 114 area",
+          "hoenn route 117 area",
+          "hoenn route 120 area"
+        ]
+      },
+      "emerald": {
+        "locations": [
+          "Routes Hoenn, Hoenn, Hoenn, and Hoenn (Swarm",
+          "after mixing records with Ruby or Sapphire)"
+        ]
+      }
+    },
+    "284": {
+      "ruby": {
+        "locations": [
+          "Evolve Surskit"
+        ]
+      },
+      "sapphire": {
+        "locations": [
+          "Evolve Surskit"
+        ]
+      },
+      "emerald": {
+        "locations": [
+          "Evolve swarm *|After mixing records with Pokémon Ruby or Sapphire"
+        ]
+      }
+    },
+    "285": {
+      "ruby": {
+        "locations": [
+          "petalburg woods area"
+        ]
+      },
+      "sapphire": {
+        "locations": [
+          "petalburg woods area"
+        ]
+      },
+      "emerald": {
+        "locations": [
+          "petalburg woods area"
+        ]
+      }
+    },
+    "286": {
+      "ruby": {
+        "locations": [
+          "Evolve Shroomish"
+        ]
+      },
+      "sapphire": {
+        "locations": [
+          "Evolve Shroomish"
+        ]
+      },
+      "emerald": {
+        "locations": [
+          "Evolve Shroomish"
+        ]
+      }
+    },
+    "287": {
+      "ruby": {
+        "locations": [
+          "petalburg woods area"
+        ]
+      },
+      "sapphire": {
+        "locations": [
+          "petalburg woods area"
+        ]
+      },
+      "emerald": {
+        "locations": [
+          "petalburg woods area"
+        ]
+      }
+    },
+    "288": {
+      "ruby": {
+        "locations": [
+          "Evolve Slakoth"
+        ]
+      },
+      "sapphire": {
+        "locations": [
+          "Evolve Slakoth"
+        ]
+      },
+      "emerald": {
+        "locations": [
+          "Evolve Slakoth"
+        ]
+      }
+    },
+    "289": {
+      "ruby": {
+        "locations": [
+          "Evolve Vigoroth"
+        ]
+      },
+      "sapphire": {
+        "locations": [
+          "Evolve Vigoroth"
+        ]
+      },
+      "emerald": {
+        "locations": [
+          "Evolve Vigoroth"
+        ]
+      }
+    },
+    "290": {
+      "ruby": {
+        "locations": [
+          "hoenn route 116 area"
+        ]
+      },
+      "sapphire": {
+        "locations": [
+          "hoenn route 116 area"
+        ]
+      },
+      "emerald": {
+        "locations": [
+          "hoenn route 116 area"
+        ]
+      }
+    },
+    "291": {
+      "ruby": {
+        "locations": [
+          "Evolve Nincada"
+        ]
+      },
+      "sapphire": {
+        "locations": [
+          "Evolve Nincada"
+        ]
+      },
+      "emerald": {
+        "locations": [
+          "Evolve Nincada"
+        ]
+      }
+    },
+    "292": {
+      "ruby": {
+        "locations": [
+          "Evolve Nincada with extra slot in party"
+        ]
+      },
+      "sapphire": {
+        "locations": [
+          "Evolve Nincada with extra slot in party"
+        ]
+      },
+      "emerald": {
+        "locations": [
+          "Evolve Nincada with extra slot in party"
+        ]
+      }
+    },
+    "293": {
+      "ruby": {
+        "locations": [
+          "rusturf tunnel area",
+          "hoenn victory road 1f",
+          "hoenn route 116 area"
+        ]
+      },
+      "sapphire": {
+        "locations": [
+          "rusturf tunnel area",
+          "hoenn victory road 1f",
+          "hoenn route 116 area"
+        ]
+      },
+      "emerald": {
+        "locations": [
+          "rusturf tunnel area",
+          "hoenn victory road 1f",
+          "hoenn route 116 area",
+          "desert underpass area"
+        ]
+      }
+    },
+    "294": {
+      "ruby": {
+        "locations": [
+          "hoenn victory road 1f"
+        ]
+      },
+      "sapphire": {
+        "locations": [
+          "hoenn victory road 1f"
+        ]
+      },
+      "emerald": {
+        "locations": [
+          "hoenn victory road 1f",
+          "desert underpass area"
+        ]
+      }
+    },
+    "295": {
+      "ruby": {
+        "locations": [
+          "Evolve Loudred"
+        ]
+      },
+      "sapphire": {
+        "locations": [
+          "Evolve Loudred"
+        ]
+      },
+      "emerald": {
+        "locations": [
+          "Evolve Loudred"
+        ]
+      }
+    },
+    "296": {
+      "ruby": {
+        "locations": [
+          "granite cave 1f",
+          "granite cave b1f",
+          "granite cave 1fsmall room",
+          "hoenn victory road 1f",
+          "rustboro city area"
+        ]
+      },
+      "sapphire": {
+        "locations": [
+          "granite cave 1f",
+          "granite cave b1f",
+          "granite cave 1fsmall room",
+          "hoenn victory road 1f",
+          "rustboro city area"
+        ]
+      },
+      "emerald": {
+        "locations": [
+          "granite cave 1f",
+          "granite cave b1f",
+          "granite cave 1fsmall room",
+          "hoenn victory road 1f"
+        ]
+      }
+    },
+    "297": {
+      "ruby": {
+        "locations": [
+          "hoenn victory road 1f",
+          "hoenn victory road b1f"
+        ]
+      },
+      "sapphire": {
+        "locations": [
+          "hoenn victory road 1f",
+          "hoenn victory road b1f"
+        ]
+      },
+      "emerald": {
+        "locations": [
+          "hoenn victory road 1f",
+          "hoenn victory road b1f"
+        ]
+      }
+    },
+    "298": {
+      "ruby": {
+        "locations": [
+          "Breed Azumarill holding a Sea Incense"
+        ]
+      },
+      "sapphire": {
+        "locations": [
+          "Breed Azumarill holding a Sea Incense"
+        ]
+      },
+      "emerald": {
+        "locations": [
+          "Breed Azumarill holding a Sea Incense"
+        ]
+      }
+    },
+    "299": {
+      "ruby": {
+        "locations": [
+          "granite cave b2f"
+        ]
+      },
+      "sapphire": {
+        "locations": [
+          "granite cave b2f"
+        ]
+      },
+      "emerald": {
+        "locations": [
+          "granite cave b2f"
+        ]
+      }
+    },
+    "300": {
+      "ruby": {
+        "locations": [
+          "hoenn route 116 area",
+          "fortree city area"
+        ]
+      },
+      "sapphire": {
+        "locations": [
+          "hoenn route 116 area",
+          "fortree city area"
+        ]
+      },
+      "emerald": {
+        "locations": [
+          "hoenn route 116 area"
+        ]
+      }
+    },
+    "301": {
+      "ruby": {
+        "locations": [
+          "Evolve Skitty"
+        ]
+      },
+      "sapphire": {
+        "locations": [
+          "Evolve Skitty"
+        ]
+      },
+      "emerald": {
+        "locations": [
+          "Evolve Skitty"
+        ]
+      }
+    },
+    "302": {
+      "sapphire": {
+        "locations": [
+          "granite cave b1f",
+          "granite cave b2f",
+          "cave of origin 1f",
+          "cave of origin b1f",
+          "cave of origin b2f",
+          "cave of origin b3f",
+          "hoenn victory road b2f",
+          "sky pillar 1f",
+          "sky pillar 3f",
+          "sky pillar 5f"
+        ]
+      },
+      "emerald": {
+        "locations": [
+          "granite cave b1f",
+          "granite cave b2f",
+          "cave of origin 1f",
+          "cave of origin b1f",
+          "cave of origin b2f",
+          "cave of origin b3f",
+          "hoenn victory road b2f",
+          "sky pillar 1f",
+          "sky pillar 3f",
+          "sky pillar 5f"
+        ]
+      },
+      "ruby": {
+        "locations": [
+          "Trade, Event"
+        ]
+      }
+    },
+    "303": {
+      "ruby": {
+        "locations": [
+          "granite cave b1f",
+          "granite cave b2f",
+          "cave of origin 1f",
+          "cave of origin b1f",
+          "cave of origin b2f",
+          "cave of origin b3f",
+          "hoenn victory road b2f",
+          "sky pillar 1f",
+          "sky pillar 3f",
+          "sky pillar 5f"
+        ]
+      },
+      "emerald": {
+        "locations": [
+          "hoenn victory road b1f",
+          "hoenn victory road b2f"
+        ]
+      },
+      "sapphire": {
+        "locations": [
+          "Trade, Event"
+        ]
+      }
+    },
+    "304": {
+      "ruby": {
+        "locations": [
+          "granite cave b1f",
+          "granite cave b2f",
+          "granite cave 1fsmall room",
+          "hoenn victory road 1f"
+        ]
+      },
+      "sapphire": {
+        "locations": [
+          "granite cave b1f",
+          "granite cave b2f",
+          "granite cave 1fsmall room",
+          "hoenn victory road 1f"
+        ]
+      },
+      "emerald": {
+        "locations": [
+          "granite cave b1f",
+          "granite cave b2f",
+          "granite cave 1fsmall room",
+          "hoenn victory road 1f"
+        ]
+      }
+    },
+    "305": {
+      "ruby": {
+        "locations": [
+          "hoenn victory road 1f",
+          "hoenn victory road b1f",
+          "hoenn victory road b2f"
+        ]
+      },
+      "sapphire": {
+        "locations": [
+          "hoenn victory road 1f",
+          "hoenn victory road b1f",
+          "hoenn victory road b2f"
+        ]
+      },
+      "emerald": {
+        "locations": [
+          "hoenn victory road 1f",
+          "hoenn victory road b1f",
+          "hoenn victory road b2f"
+        ]
+      }
+    },
+    "306": {
+      "ruby": {
+        "locations": [
+          "Evolve Lairon"
+        ]
+      },
+      "sapphire": {
+        "locations": [
+          "Evolve Lairon"
+        ]
+      },
+      "emerald": {
+        "locations": [
+          "Evolve Lairon"
+        ]
+      }
+    },
+    "307": {
+      "ruby": {
+        "locations": [
+          "mt pyre outside",
+          "hoenn victory road b1f"
+        ]
+      },
+      "sapphire": {
+        "locations": [
+          "mt pyre outside",
+          "hoenn victory road b1f"
+        ]
+      },
+      "emerald": {
+        "locations": [
+          "Trade, Event"
+        ]
+      }
+    },
+    "308": {
+      "ruby": {
+        "locations": [
+          "hoenn victory road b1f",
+          "hoenn victory road b2f"
+        ]
+      },
+      "sapphire": {
+        "locations": [
+          "hoenn victory road b1f",
+          "hoenn victory road b2f"
+        ]
+      }
+    },
+    "309": {
+      "ruby": {
+        "locations": [
+          "hoenn route 110 area",
+          "hoenn route 118 area"
+        ]
+      },
+      "sapphire": {
+        "locations": [
+          "hoenn route 110 area",
+          "hoenn route 118 area"
+        ]
+      },
+      "emerald": {
+        "locations": [
+          "hoenn route 110 area",
+          "hoenn route 118 area"
+        ]
+      }
+    },
+    "310": {
+      "ruby": {
+        "locations": [
+          "hoenn route 118 area"
+        ]
+      },
+      "sapphire": {
+        "locations": [
+          "hoenn route 118 area"
+        ]
+      },
+      "emerald": {
+        "locations": [
+          "hoenn route 118 area"
+        ]
+      }
+    },
+    "311": {
+      "ruby": {
+        "locations": [
+          "hoenn route 110 area"
+        ]
+      },
+      "sapphire": {
+        "locations": [
+          "hoenn route 110 area"
+        ]
+      },
+      "emerald": {
+        "locations": [
+          "hoenn route 110 area",
+          "fortree city area"
+        ]
+      }
+    },
+    "312": {
+      "ruby": {
+        "locations": [
+          "hoenn route 110 area"
+        ]
+      },
+      "sapphire": {
+        "locations": [
+          "hoenn route 110 area"
+        ]
+      },
+      "emerald": {
+        "locations": [
+          "hoenn route 110 area"
+        ]
+      }
+    },
+    "313": {
+      "ruby": {
+        "locations": [
+          "hoenn route 117 area"
+        ]
+      },
+      "sapphire": {
+        "locations": [
+          "hoenn route 117 area"
+        ]
+      },
+      "emerald": {
+        "locations": [
+          "hoenn route 117 area"
+        ]
+      }
+    },
+    "314": {
+      "ruby": {
+        "locations": [
+          "hoenn route 117 area"
+        ]
+      },
+      "sapphire": {
+        "locations": [
+          "hoenn route 117 area"
+        ]
+      },
+      "emerald": {
+        "locations": [
+          "hoenn route 117 area"
+        ]
+      }
+    },
+    "315": {
+      "ruby": {
+        "locations": [
+          "hoenn route 117 area"
+        ]
+      },
+      "sapphire": {
+        "locations": [
+          "hoenn route 117 area"
+        ]
+      },
+      "emerald": {
+        "locations": [
+          "Trade, Event"
+        ]
+      }
+    },
+    "316": {
+      "ruby": {
+        "locations": [
+          "hoenn route 110 area"
+        ]
+      },
+      "sapphire": {
+        "locations": [
+          "hoenn route 110 area"
+        ]
+      },
+      "emerald": {
+        "locations": [
+          "hoenn route 110 area"
+        ]
+      }
+    },
+    "317": {
+      "ruby": {
+        "locations": [
+          "Evolve Gulpin"
+        ]
+      },
+      "sapphire": {
+        "locations": [
+          "Evolve Gulpin"
+        ]
+      },
+      "emerald": {
+        "locations": [
+          "Evolve Gulpin"
+        ]
+      }
+    },
+    "318": {
+      "ruby": {
+        "locations": [
+          "hoenn route 118 area",
+          "hoenn route 119 area"
+        ]
+      },
+      "sapphire": {
+        "locations": [
+          "hoenn route 118 area",
+          "hoenn route 119 area"
+        ]
+      },
+      "emerald": {
+        "locations": [
+          "hoenn route 118 area",
+          "hoenn route 119 area"
+        ]
+      }
+    },
+    "319": {
+      "ruby": {
+        "locations": [
+          "mossdeep city area",
+          "hoenn route 103 area",
+          "hoenn route 118 area",
+          "hoenn route 122 area",
+          "hoenn route 124 area",
+          "hoenn route 125 area",
+          "hoenn route 126 area",
+          "hoenn route 127 area",
+          "hoenn route 129 area",
+          "hoenn route 130 area",
+          "hoenn route 131 area",
+          "hoenn route 132 area",
+          "hoenn route 133 area",
+          "hoenn route 134 area",
+          "pacifidlog town area"
+        ]
+      },
+      "sapphire": {
+        "locations": [
+          "mossdeep city area",
+          "hoenn route 103 area",
+          "hoenn route 118 area",
+          "hoenn route 122 area",
+          "hoenn route 124 area",
+          "hoenn route 125 area",
+          "hoenn route 126 area",
+          "hoenn route 127 area",
+          "hoenn route 129 area",
+          "hoenn route 130 area",
+          "hoenn route 131 area",
+          "hoenn route 132 area",
+          "hoenn route 133 area",
+          "hoenn route 134 area",
+          "pacifidlog town area"
+        ]
+      },
+      "emerald": {
+        "locations": [
+          "mossdeep city area",
+          "hoenn route 103 area",
+          "hoenn route 118 area",
+          "hoenn route 122 area",
+          "hoenn route 124 area",
+          "hoenn route 125 area",
+          "hoenn route 126 area",
+          "hoenn route 127 area",
+          "hoenn route 129 area",
+          "hoenn route 130 area",
+          "hoenn route 131 area",
+          "hoenn route 132 area",
+          "hoenn route 133 area",
+          "hoenn route 134 area",
+          "pacifidlog town area"
+        ]
+      }
+    },
+    "320": {
+      "ruby": {
+        "locations": [
+          "slateport city area",
+          "lilycove city area",
+          "mossdeep city area",
+          "ever grande city area",
+          "seafloor cavern area",
+          "shoal cave high tide",
+          "hoenn route 103 area",
+          "hoenn route 105 area",
+          "hoenn route 106 area",
+          "hoenn route 107 area",
+          "hoenn route 108 area",
+          "hoenn route 109 area",
+          "hoenn route 110 area",
+          "hoenn route 115 area",
+          "hoenn route 121 area",
+          "hoenn route 122 area",
+          "hoenn route 123 area",
+          "hoenn route 124 area",
+          "hoenn route 125 area",
+          "hoenn route 126 area",
+          "hoenn route 127 area",
+          "hoenn route 128 area",
+          "hoenn route 129 area",
+          "hoenn route 130 area",
+          "hoenn route 131 area",
+          "hoenn route 132 area",
+          "hoenn route 133 area",
+          "hoenn route 134 area",
+          "dewford town area",
+          "pacifidlog town area"
+        ]
+      },
+      "sapphire": {
+        "locations": [
+          "slateport city area",
+          "lilycove city area",
+          "mossdeep city area",
+          "ever grande city area",
+          "seafloor cavern area",
+          "shoal cave high tide",
+          "hoenn route 103 area",
+          "hoenn route 105 area",
+          "hoenn route 106 area",
+          "hoenn route 107 area",
+          "hoenn route 108 area",
+          "hoenn route 109 area",
+          "hoenn route 110 area",
+          "hoenn route 115 area",
+          "hoenn route 121 area",
+          "hoenn route 122 area",
+          "hoenn route 123 area",
+          "hoenn route 124 area",
+          "hoenn route 125 area",
+          "hoenn route 126 area",
+          "hoenn route 127 area",
+          "hoenn route 128 area",
+          "hoenn route 129 area",
+          "hoenn route 130 area",
+          "hoenn route 131 area",
+          "hoenn route 132 area",
+          "hoenn route 133 area",
+          "hoenn route 134 area",
+          "dewford town area",
+          "pacifidlog town area"
+        ]
+      },
+      "emerald": {
+        "locations": [
+          "slateport city area",
+          "lilycove city area",
+          "mossdeep city area",
+          "ever grande city area",
+          "seafloor cavern area",
+          "shoal cave high tide",
+          "hoenn route 103 area",
+          "hoenn route 105 area",
+          "hoenn route 106 area",
+          "hoenn route 107 area",
+          "hoenn route 108 area",
+          "hoenn route 109 area",
+          "hoenn route 110 area",
+          "hoenn route 115 area",
+          "hoenn route 121 area",
+          "hoenn route 122 area",
+          "hoenn route 123 area",
+          "hoenn route 124 area",
+          "hoenn route 125 area",
+          "hoenn route 126 area",
+          "hoenn route 127 area",
+          "hoenn route 128 area",
+          "hoenn route 129 area",
+          "hoenn route 130 area",
+          "hoenn route 131 area",
+          "hoenn route 132 area",
+          "hoenn route 133 area",
+          "hoenn route 134 area",
+          "dewford town area",
+          "pacifidlog town area"
+        ]
+      }
+    },
+    "321": {
+      "ruby": {
+        "locations": [
+          "hoenn route 129 area"
+        ]
+      },
+      "sapphire": {
+        "locations": [
+          "hoenn route 129 area"
+        ]
+      },
+      "emerald": {
+        "locations": [
+          "hoenn route 129 area"
+        ]
+      }
+    },
+    "322": {
+      "ruby": {
+        "locations": [
+          "jagged pass area",
+          "fiery path area",
+          "hoenn route 112 area"
+        ]
+      },
+      "sapphire": {
+        "locations": [
+          "jagged pass area",
+          "fiery path area",
+          "hoenn route 112 area"
+        ]
+      },
+      "emerald": {
+        "locations": [
+          "jagged pass area",
+          "fiery path area",
+          "hoenn route 112 area"
+        ]
+      }
+    },
+    "323": {
+      "ruby": {
+        "locations": [
+          "Evolve Numel"
+        ]
+      },
+      "sapphire": {
+        "locations": [
+          "Evolve Numel"
+        ]
+      },
+      "emerald": {
+        "locations": [
+          "Evolve Numel"
+        ]
+      }
+    },
+    "324": {
+      "ruby": {
+        "locations": [
+          "fiery path area"
+        ]
+      },
+      "sapphire": {
+        "locations": [
+          "fiery path area"
+        ]
+      },
+      "emerald": {
+        "locations": [
+          "fiery path area",
+          "magma hideout area"
+        ]
+      }
+    },
+    "325": {
+      "ruby": {
+        "locations": [
+          "jagged pass area"
+        ]
+      },
+      "sapphire": {
+        "locations": [
+          "jagged pass area"
+        ]
+      },
+      "emerald": {
+        "locations": [
+          "jagged pass area"
+        ]
+      }
+    },
+    "326": {
+      "ruby": {
+        "locations": [
+          "Evolve Spoink"
+        ]
+      },
+      "sapphire": {
+        "locations": [
+          "Evolve Spoink"
+        ]
+      },
+      "emerald": {
+        "locations": [
+          "Evolve Spoink"
+        ]
+      }
+    },
+    "327": {
+      "ruby": {
+        "locations": [
+          "hoenn route 113 area"
+        ]
+      },
+      "sapphire": {
+        "locations": [
+          "hoenn route 113 area"
+        ]
+      },
+      "emerald": {
+        "locations": [
+          "hoenn route 113 area"
+        ]
+      }
+    },
+    "328": {
+      "ruby": {
+        "locations": [
+          "hoenn route 111 area"
+        ]
+      },
+      "sapphire": {
+        "locations": [
+          "hoenn route 111 area"
+        ]
+      },
+      "emerald": {
+        "locations": [
+          "hoenn route 111 area",
+          "mirage tower area"
+        ]
+      }
+    },
+    "329": {
+      "ruby": {
+        "locations": [
+          "Evolve Trapinch"
+        ]
+      },
+      "sapphire": {
+        "locations": [
+          "Evolve Trapinch"
+        ]
+      },
+      "emerald": {
+        "locations": [
+          "Evolve Trapinch"
+        ]
+      }
+    },
+    "330": {
+      "ruby": {
+        "locations": [
+          "Evolve Vibrava"
+        ]
+      },
+      "sapphire": {
+        "locations": [
+          "Evolve Vibrava"
+        ]
+      },
+      "emerald": {
+        "locations": [
+          "Evolve Vibrava"
+        ]
+      }
+    },
+    "331": {
+      "ruby": {
+        "locations": [
+          "hoenn route 111 area"
+        ]
+      },
+      "sapphire": {
+        "locations": [
+          "hoenn route 111 area"
+        ]
+      },
+      "emerald": {
+        "locations": [
+          "hoenn route 111 area"
+        ]
+      }
+    },
+    "332": {
+      "ruby": {
+        "locations": [
+          "Evolve Cacnea"
+        ]
+      },
+      "sapphire": {
+        "locations": [
+          "Evolve Cacnea"
+        ]
+      },
+      "emerald": {
+        "locations": [
+          "Evolve Cacnea"
+        ]
+      }
+    },
+    "333": {
+      "ruby": {
+        "locations": [
+          "hoenn route 114 area",
+          "hoenn route 115 area"
+        ]
+      },
+      "sapphire": {
+        "locations": [
+          "hoenn route 114 area",
+          "hoenn route 115 area"
+        ]
+      },
+      "emerald": {
+        "locations": [
+          "hoenn route 114 area",
+          "hoenn route 115 area"
+        ]
+      }
+    },
+    "334": {
+      "ruby": {
+        "locations": [
+          "sky pillar 5f"
+        ]
+      },
+      "sapphire": {
+        "locations": [
+          "sky pillar 5f"
+        ]
+      },
+      "emerald": {
+        "locations": [
+          "sky pillar 5f"
+        ]
+      }
+    },
+    "335": {
+      "ruby": {
+        "locations": [
+          "hoenn route 114 area"
+        ]
+      },
+      "sapphire": {
+        "locations": [
+          "Trade, Event"
+        ]
+      },
+      "emerald": {
+        "locations": [
+          "Trade, Event"
+        ]
+      }
+    },
+    "336": {
+      "sapphire": {
+        "locations": [
+          "hoenn route 114 area"
+        ]
+      },
+      "emerald": {
+        "locations": [
+          "hoenn route 114 area"
+        ]
+      }
+    },
+    "337": {
+      "sapphire": {
+        "locations": [
+          "meteor falls area",
+          "meteor falls back",
+          "meteor falls b1f",
+          "meteor falls backsmall room"
+        ]
+      },
+      "ruby": {
+        "locations": [
+          "Trade, Event"
+        ]
+      },
+      "emerald": {
+        "locations": [
+          "Trade, Event"
+        ]
+      }
+    },
+    "338": {
+      "ruby": {
+        "locations": [
+          "meteor falls area",
+          "meteor falls back",
+          "meteor falls b1f",
+          "meteor falls backsmall room"
+        ]
+      },
+      "emerald": {
+        "locations": [
+          "meteor falls area",
+          "meteor falls back",
+          "meteor falls b1f",
+          "meteor falls backsmall room"
+        ]
+      },
+      "sapphire": {
+        "locations": [
+          "Trade, Event"
+        ]
+      }
+    },
+    "339": {
+      "ruby": {
+        "locations": [
+          "meteor falls area",
+          "meteor falls back",
+          "meteor falls b1f",
+          "meteor falls backsmall room",
+          "hoenn victory road b2f",
+          "hoenn route 111 area",
+          "hoenn route 114 area",
+          "hoenn route 120 area"
+        ]
+      },
+      "sapphire": {
+        "locations": [
+          "meteor falls area",
+          "meteor falls back",
+          "meteor falls b1f",
+          "meteor falls backsmall room",
+          "hoenn victory road b2f",
+          "hoenn route 111 area",
+          "hoenn route 114 area",
+          "hoenn route 120 area"
+        ]
+      },
+      "emerald": {
+        "locations": [
+          "meteor falls area",
+          "meteor falls back",
+          "meteor falls b1f",
+          "meteor falls backsmall room",
+          "hoenn victory road b2f",
+          "hoenn route 111 area",
+          "hoenn route 114 area",
+          "hoenn route 120 area"
+        ]
+      }
+    },
+    "340": {
+      "ruby": {
+        "locations": [
+          "meteor falls back",
+          "meteor falls b1f",
+          "meteor falls backsmall room",
+          "hoenn victory road b2f"
+        ]
+      },
+      "sapphire": {
+        "locations": [
+          "meteor falls back",
+          "meteor falls b1f",
+          "meteor falls backsmall room",
+          "hoenn victory road b2f"
+        ]
+      },
+      "emerald": {
+        "locations": [
+          "meteor falls back",
+          "meteor falls b1f",
+          "meteor falls backsmall room",
+          "hoenn victory road b2f"
+        ]
+      }
+    },
+    "341": {
+      "ruby": {
+        "locations": [
+          "petalburg city area",
+          "hoenn route 102 area",
+          "hoenn route 117 area"
+        ]
+      },
+      "sapphire": {
+        "locations": [
+          "petalburg city area",
+          "hoenn route 102 area",
+          "hoenn route 117 area"
+        ]
+      },
+      "emerald": {
+        "locations": [
+          "petalburg city area",
+          "hoenn route 102 area",
+          "hoenn route 117 area"
+        ]
+      }
+    },
+    "342": {
+      "ruby": {
+        "locations": [
+          "Evolve Corphish"
+        ]
+      },
+      "sapphire": {
+        "locations": [
+          "Evolve Corphish"
+        ]
+      },
+      "emerald": {
+        "locations": [
+          "Evolve Corphish"
+        ]
+      }
+    },
+    "343": {
+      "ruby": {
+        "locations": [
+          "hoenn route 111 area"
+        ]
+      },
+      "sapphire": {
+        "locations": [
+          "hoenn route 111 area"
+        ]
+      },
+      "emerald": {
+        "locations": [
+          "hoenn route 111 area"
+        ]
+      }
+    },
+    "344": {
+      "ruby": {
+        "locations": [
+          "sky pillar 1f",
+          "sky pillar 3f",
+          "sky pillar 5f"
+        ]
+      },
+      "sapphire": {
+        "locations": [
+          "sky pillar 1f",
+          "sky pillar 3f",
+          "sky pillar 5f"
+        ]
+      },
+      "emerald": {
+        "locations": [
+          "sky pillar 1f",
+          "sky pillar 3f",
+          "sky pillar 5f"
+        ]
+      }
+    },
+    "345": {
+      "ruby": {
+        "locations": [
+          "rustboro city area"
+        ]
+      },
+      "sapphire": {
+        "locations": [
+          "rustboro city area"
+        ]
+      },
+      "emerald": {
+        "locations": [
+          "rustboro city area"
+        ]
+      }
+    },
+    "346": {
+      "ruby": {
+        "locations": [
+          "Evolve Lileep"
+        ]
+      },
+      "sapphire": {
+        "locations": [
+          "Evolve Lileep"
+        ]
+      },
+      "emerald": {
+        "locations": [
+          "Evolve Lileep"
+        ]
+      }
+    },
+    "347": {
+      "ruby": {
+        "locations": [
+          "rustboro city area"
+        ]
+      },
+      "sapphire": {
+        "locations": [
+          "rustboro city area"
+        ]
+      },
+      "emerald": {
+        "locations": [
+          "rustboro city area"
+        ]
+      }
+    },
+    "348": {
+      "ruby": {
+        "locations": [
+          "Evolve Anorith"
+        ]
+      },
+      "sapphire": {
+        "locations": [
+          "Evolve Anorith"
+        ]
+      },
+      "emerald": {
+        "locations": [
+          "Evolve Anorith"
+        ]
+      }
+    },
+    "349": {
+      "ruby": {
+        "locations": [
+          "hoenn route 119 area"
+        ]
+      },
+      "sapphire": {
+        "locations": [
+          "hoenn route 119 area"
+        ]
+      },
+      "emerald": {
+        "locations": [
+          "hoenn route 119 area"
+        ]
+      }
+    },
+    "350": {
+      "ruby": {
+        "locations": [
+          "Evolve Feebas"
+        ]
+      },
+      "sapphire": {
+        "locations": [
+          "Evolve Feebas"
+        ]
+      },
+      "emerald": {
+        "locations": [
+          "Evolve Feebas"
+        ]
+      }
+    },
+    "351": {
+      "ruby": {
+        "locations": [
+          "hoenn route 119 weather institute"
+        ]
+      },
+      "sapphire": {
+        "locations": [
+          "hoenn route 119 weather institute"
+        ]
+      },
+      "emerald": {
+        "locations": [
+          "hoenn route 119 weather institute"
+        ]
+      }
+    },
+    "352": {
+      "ruby": {
+        "locations": [
+          "hoenn route 118 area",
+          "hoenn route 119 area",
+          "hoenn route 120 area",
+          "hoenn route 121 area",
+          "hoenn route 123 area"
+        ]
+      },
+      "sapphire": {
+        "locations": [
+          "hoenn route 118 area",
+          "hoenn route 119 area",
+          "hoenn route 120 area",
+          "hoenn route 121 area",
+          "hoenn route 123 area"
+        ]
+      },
+      "emerald": {
+        "locations": [
+          "hoenn route 118 area",
+          "hoenn route 119 area",
+          "hoenn route 120 area",
+          "hoenn route 121 area",
+          "hoenn route 123 area"
+        ]
+      }
+    },
+    "353": {
+      "sapphire": {
+        "locations": [
+          "mt pyre 1f",
+          "mt pyre 2f",
+          "mt pyre 3f",
+          "mt pyre 4f",
+          "mt pyre 5f",
+          "mt pyre 6f",
+          "mt pyre outside",
+          "mt pyre summit",
+          "hoenn route 121 area",
+          "hoenn route 123 area"
+        ]
+      },
+      "emerald": {
+        "locations": [
+          "mt pyre 1f",
+          "mt pyre 2f",
+          "mt pyre 3f",
+          "mt pyre 4f",
+          "mt pyre 5f",
+          "mt pyre 6f",
+          "mt pyre outside",
+          "mt pyre summit",
+          "hoenn route 121 area",
+          "hoenn route 123 area"
+        ]
+      },
+      "ruby": {
+        "locations": [
+          "mt pyre 4f",
+          "mt pyre 5f",
+          "mt pyre 6f",
+          "mt pyre summit"
+        ]
+      }
+    },
+    "354": {
+      "sapphire": {
+        "locations": [
+          "sky pillar 1f",
+          "sky pillar 3f",
+          "sky pillar 5f"
+        ]
+      },
+      "emerald": {
+        "locations": [
+          "sky pillar 1f",
+          "sky pillar 3f",
+          "sky pillar 5f"
+        ]
+      },
+      "ruby": {
+        "locations": [
+          "Evolve Shuppet"
+        ]
+      }
+    },
+    "355": {
+      "ruby": {
+        "locations": [
+          "mt pyre 1f",
+          "mt pyre 2f",
+          "mt pyre 3f",
+          "mt pyre 4f",
+          "mt pyre 5f",
+          "mt pyre 6f",
+          "mt pyre outside",
+          "mt pyre summit",
+          "hoenn route 121 area",
+          "hoenn route 123 area"
+        ]
+      },
+      "sapphire": {
+        "locations": [
+          "mt pyre 4f",
+          "mt pyre 5f",
+          "mt pyre 6f",
+          "mt pyre summit"
+        ]
+      },
+      "emerald": {
+        "locations": [
+          "mt pyre 4f",
+          "mt pyre 5f",
+          "mt pyre 6f",
+          "mt pyre summit"
+        ]
+      }
+    },
+    "356": {
+      "ruby": {
+        "locations": [
+          "sky pillar 1f",
+          "sky pillar 3f",
+          "sky pillar 5f"
+        ]
+      },
+      "sapphire": {
+        "locations": [
+          "Evolve Duskull"
+        ]
+      },
+      "emerald": {
+        "locations": [
+          "Evolve Duskull"
+        ]
+      }
+    },
+    "357": {
+      "ruby": {
+        "locations": [
+          "hoenn route 119 area"
+        ]
+      },
+      "sapphire": {
+        "locations": [
+          "hoenn route 119 area"
+        ]
+      },
+      "emerald": {
+        "locations": [
+          "hoenn route 119 area"
+        ]
+      }
+    },
+    "358": {
+      "ruby": {
+        "locations": [
+          "mt pyre summit"
+        ]
+      },
+      "sapphire": {
+        "locations": [
+          "mt pyre summit"
+        ]
+      },
+      "emerald": {
+        "locations": [
+          "mt pyre summit"
+        ]
+      }
+    },
+    "359": {
+      "ruby": {
+        "locations": [
+          "hoenn route 120 area"
+        ]
+      },
+      "sapphire": {
+        "locations": [
+          "hoenn route 120 area"
+        ]
+      },
+      "emerald": {
+        "locations": [
+          "hoenn route 120 area"
+        ]
+      }
+    },
+    "360": {
+      "ruby": {
+        "locations": [
+          "hoenn route 130 area",
+          "lavaridge town area",
+          "mirage island area"
+        ]
+      },
+      "sapphire": {
+        "locations": [
+          "hoenn route 130 area",
+          "lavaridge town area",
+          "mirage island area"
+        ]
+      },
+      "emerald": {
+        "locations": [
+          "hoenn route 130 area",
+          "lavaridge town area",
+          "mirage island area"
+        ]
+      }
+    },
+    "361": {
+      "ruby": {
+        "locations": [
+          "shoal cave b3f"
+        ]
+      },
+      "sapphire": {
+        "locations": [
+          "shoal cave b3f"
+        ]
+      },
+      "emerald": {
+        "locations": [
+          "shoal cave b3f"
+        ]
+      }
+    },
+    "362": {
+      "ruby": {
+        "locations": [
+          "Evolve Snorunt"
+        ]
+      },
+      "sapphire": {
+        "locations": [
+          "Evolve Snorunt"
+        ]
+      },
+      "emerald": {
+        "locations": [
+          "Evolve Snorunt"
+        ]
+      }
+    },
+    "363": {
+      "ruby": {
+        "locations": [
+          "shoal cave high tide",
+          "shoal cave b1f",
+          "shoal cave low tide",
+          "shoal cave b2f",
+          "shoal cave b3f"
+        ]
+      },
+      "sapphire": {
+        "locations": [
+          "shoal cave high tide",
+          "shoal cave b1f",
+          "shoal cave low tide",
+          "shoal cave b2f",
+          "shoal cave b3f"
+        ]
+      },
+      "emerald": {
+        "locations": [
+          "shoal cave high tide",
+          "shoal cave b1f",
+          "shoal cave low tide",
+          "shoal cave b2f",
+          "shoal cave b3f"
+        ]
+      }
+    },
+    "364": {
+      "ruby": {
+        "locations": [
+          "Evolve Spheal"
+        ]
+      },
+      "sapphire": {
+        "locations": [
+          "Evolve Spheal"
+        ]
+      },
+      "emerald": {
+        "locations": [
+          "Evolve Spheal"
+        ]
+      }
+    },
+    "365": {
+      "ruby": {
+        "locations": [
+          "Evolve Sealeo"
+        ]
+      },
+      "sapphire": {
+        "locations": [
+          "Evolve Sealeo"
+        ]
+      },
+      "emerald": {
+        "locations": [
+          "Evolve Sealeo"
+        ]
+      }
+    },
+    "366": {
+      "ruby": {
+        "locations": [
+          "hoenn route 124 underwater",
+          "hoenn route 126 underwater"
+        ]
+      },
+      "sapphire": {
+        "locations": [
+          "hoenn route 124 underwater",
+          "hoenn route 126 underwater"
+        ]
+      },
+      "emerald": {
+        "locations": [
+          "hoenn route 124 underwater",
+          "hoenn route 126 underwater"
+        ]
+      }
+    },
+    "367": {
+      "ruby": {
+        "locations": [
+          "Evolve Clamperl"
+        ]
+      },
+      "sapphire": {
+        "locations": [
+          "Evolve Clamperl"
+        ]
+      },
+      "emerald": {
+        "locations": [
+          "Evolve Clamperl"
+        ]
+      }
+    },
+    "368": {
+      "ruby": {
+        "locations": [
+          "Evolve Clamperl"
+        ]
+      },
+      "sapphire": {
+        "locations": [
+          "Evolve Clamperl"
+        ]
+      },
+      "emerald": {
+        "locations": [
+          "Evolve Clamperl"
+        ]
+      }
+    },
+    "369": {
+      "ruby": {
+        "locations": [
+          "hoenn route 124 underwater",
+          "hoenn route 126 underwater"
+        ]
+      },
+      "sapphire": {
+        "locations": [
+          "hoenn route 124 underwater",
+          "hoenn route 126 underwater"
+        ]
+      },
+      "emerald": {
+        "locations": [
+          "hoenn route 124 underwater",
+          "hoenn route 126 underwater"
+        ]
+      }
+    },
+    "370": {
+      "ruby": {
+        "locations": [
+          "ever grande city area",
+          "hoenn route 128 area"
+        ]
+      },
+      "sapphire": {
+        "locations": [
+          "ever grande city area",
+          "hoenn route 128 area"
+        ]
+      },
+      "emerald": {
+        "locations": [
+          "ever grande city area",
+          "hoenn route 128 area"
+        ]
+      }
+    },
+    "371": {
+      "ruby": {
+        "locations": [
+          "meteor falls backsmall room"
+        ]
+      },
+      "sapphire": {
+        "locations": [
+          "meteor falls backsmall room"
+        ]
+      },
+      "emerald": {
+        "locations": [
+          "meteor falls backsmall room"
+        ]
+      }
+    },
+    "372": {
+      "ruby": {
+        "locations": [
+          "Evolve Bagon"
+        ]
+      },
+      "sapphire": {
+        "locations": [
+          "Evolve Bagon"
+        ]
+      },
+      "emerald": {
+        "locations": [
+          "Evolve Bagon"
+        ]
+      }
+    },
+    "373": {
+      "ruby": {
+        "locations": [
+          "Evolve Shelgon"
+        ]
+      },
+      "sapphire": {
+        "locations": [
+          "Evolve Shelgon"
+        ]
+      },
+      "emerald": {
+        "locations": [
+          "Evolve Shelgon"
+        ]
+      }
+    },
+    "374": {
+      "ruby": {
+        "locations": [
+          "mossdeep city stevens house"
+        ]
+      },
+      "sapphire": {
+        "locations": [
+          "mossdeep city stevens house"
+        ]
+      },
+      "emerald": {
+        "locations": [
+          "mossdeep city stevens house"
+        ]
+      }
+    },
+    "375": {
+      "ruby": {
+        "locations": [
+          "Evolve Beldum"
+        ]
+      },
+      "sapphire": {
+        "locations": [
+          "Evolve Beldum"
+        ]
+      },
+      "emerald": {
+        "locations": [
+          "Evolve Beldum"
+        ]
+      }
+    },
+    "376": {
+      "ruby": {
+        "locations": [
+          "Evolve Metang"
+        ]
+      },
+      "sapphire": {
+        "locations": [
+          "Evolve Metang"
+        ]
+      },
+      "emerald": {
+        "locations": [
+          "Evolve Metang"
+        ]
+      }
+    },
+    "377": {
+      "ruby": {
+        "locations": [
+          "desert ruins area"
+        ]
+      },
+      "sapphire": {
+        "locations": [
+          "desert ruins area"
+        ]
+      },
+      "emerald": {
+        "locations": [
+          "desert ruins area"
+        ]
+      }
+    },
+    "378": {
+      "ruby": {
+        "locations": [
+          "island cave area"
+        ]
+      },
+      "sapphire": {
+        "locations": [
+          "island cave area"
+        ]
+      },
+      "emerald": {
+        "locations": [
+          "island cave area"
+        ]
+      }
+    },
+    "379": {
+      "ruby": {
+        "locations": [
+          "ancient tomb area"
+        ]
+      },
+      "sapphire": {
+        "locations": [
+          "ancient tomb area"
+        ]
+      },
+      "emerald": {
+        "locations": [
+          "ancient tomb area"
+        ]
+      }
+    },
+    "380": {
+      "ruby": {
+        "locations": [
+          "southern island area"
+        ]
+      },
+      "emerald": {
+        "locations": [
+          "southern island area",
+          "roaming hoenn area"
+        ]
+      },
+      "sapphire": {
+        "locations": [
+          "roaming hoenn area"
+        ]
+      }
+    },
+    "381": {
+      "sapphire": {
+        "locations": [
+          "southern island area"
+        ]
+      },
+      "emerald": {
+        "locations": [
+          "southern island area",
+          "roaming hoenn area"
+        ]
+      },
+      "ruby": {
+        "locations": [
+          "roaming hoenn area"
+        ]
+      }
+    },
+    "382": {
+      "sapphire": {
+        "locations": [
+          "cave of origin b4f"
+        ]
+      },
+      "emerald": {
+        "locations": [
+          "marine cave area"
+        ]
+      }
+    },
+    "383": {
+      "ruby": {
+        "locations": [
+          "cave of origin b4f"
+        ]
+      },
+      "emerald": {
+        "locations": [
+          "terra cave area"
+        ]
+      }
+    },
+    "384": {
+      "ruby": {
+        "locations": [
+          "sky pillar apex"
+        ]
+      },
+      "sapphire": {
+        "locations": [
+          "sky pillar apex"
+        ]
+      },
+      "emerald": {
+        "locations": [
+          "sky pillar apex"
+        ]
+      }
+    },
+    "385": {
+      "ruby": {
+        "locations": [
+          "hoenn pokecenter area"
+        ]
+      },
+      "sapphire": {
+        "locations": [
+          "hoenn pokecenter area"
+        ]
+      },
+      "emerald": {
+        "locations": [
+          "Trade, Event"
+        ]
+      }
+    },
+    "386": {
+      "emerald": {
+        "locations": [
+          "birth island area"
+        ]
+      },
+      "ruby": {
+        "locations": [
+          "Trade, Event"
+        ]
+      },
+      "sapphire": {
+        "locations": [
+          "Trade, Event"
         ]
       }
     }

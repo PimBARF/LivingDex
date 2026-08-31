@@ -9,10 +9,11 @@
   ],
   "sections": [
     {
-      "id": "base",
-      "title": "Regional Pokédex",
+      "id": "unova",
+      "title": "Unova Pokédex",
       "type": "base",
       "optional": false,
+      "defaultEnabled": false,
       "entries": [
         {
           "speciesId": 494,
@@ -915,6 +916,2330 @@
       "white": {
         "locations": [
           "Evolve Dewott"
+        ]
+      }
+    },
+    "504": {
+      "black": {
+        "locations": [
+          "dreamyard area",
+          "unova route 1 area",
+          "unova route 2 area",
+          "unova route 3 area"
+        ]
+      },
+      "white": {
+        "locations": [
+          "dreamyard area",
+          "unova route 1 area",
+          "unova route 2 area",
+          "unova route 3 area"
+        ]
+      }
+    },
+    "505": {
+      "black": {
+        "locations": [
+          "dreamyard area",
+          "p2 laboratory area",
+          "unova route 1 area",
+          "unova route 7 area",
+          "unova route 15 area",
+          "unova route 18 area"
+        ]
+      },
+      "white": {
+        "locations": [
+          "dreamyard area",
+          "p2 laboratory area",
+          "unova route 1 area",
+          "unova route 7 area",
+          "unova route 15 area",
+          "unova route 18 area"
+        ]
+      }
+    },
+    "506": {
+      "black": {
+        "locations": [
+          "unova route 1 area",
+          "unova route 2 area",
+          "unova route 3 area"
+        ]
+      },
+      "white": {
+        "locations": [
+          "unova route 1 area",
+          "unova route 2 area",
+          "unova route 3 area"
+        ]
+      }
+    },
+    "507": {
+      "black": {
+        "locations": [
+          "cold storage area",
+          "p2 laboratory area",
+          "unova route 1 area",
+          "unova route 10 area",
+          "unova route 10 victory road gate"
+        ]
+      },
+      "white": {
+        "locations": [
+          "cold storage area",
+          "p2 laboratory area",
+          "unova route 1 area",
+          "unova route 10 area",
+          "unova route 10 victory road gate"
+        ]
+      }
+    },
+    "508": {
+      "black": {
+        "locations": [
+          "cold storage area",
+          "p2 laboratory area",
+          "unova route 10 area",
+          "unova route 10 victory road gate"
+        ]
+      },
+      "white": {
+        "locations": [
+          "cold storage area",
+          "p2 laboratory area",
+          "unova route 10 area",
+          "unova route 10 victory road gate"
+        ]
+      }
+    },
+    "509": {
+      "black": {
+        "locations": [
+          "dreamyard area",
+          "unova route 2 area",
+          "unova route 3 area"
+        ]
+      },
+      "white": {
+        "locations": [
+          "dreamyard area",
+          "unova route 2 area",
+          "unova route 3 area"
+        ]
+      }
+    },
+    "510": {
+      "black": {
+        "locations": [
+          "dreamyard area",
+          "unova route 5 area",
+          "unova route 9 area",
+          "unova route 16 area"
+        ]
+      },
+      "white": {
+        "locations": [
+          "dreamyard area",
+          "unova route 5 area",
+          "unova route 9 area",
+          "unova route 16 area"
+        ]
+      }
+    },
+    "511": {
+      "black": {
+        "locations": [
+          "dreamyard area",
+          "pinwheel forest inside",
+          "lostlorn forest area"
+        ]
+      },
+      "white": {
+        "locations": [
+          "dreamyard area",
+          "pinwheel forest inside",
+          "lostlorn forest area"
+        ]
+      }
+    },
+    "512": {
+      "black": {
+        "locations": [
+          "Evolve Pansage"
+        ]
+      },
+      "white": {
+        "locations": [
+          "Evolve Pansage"
+        ]
+      }
+    },
+    "513": {
+      "black": {
+        "locations": [
+          "dreamyard area",
+          "pinwheel forest inside",
+          "lostlorn forest area"
+        ]
+      },
+      "white": {
+        "locations": [
+          "dreamyard area",
+          "pinwheel forest inside",
+          "lostlorn forest area"
+        ]
+      }
+    },
+    "514": {
+      "black": {
+        "locations": [
+          "Evolve Pansear"
+        ]
+      },
+      "white": {
+        "locations": [
+          "Evolve Pansear"
+        ]
+      }
+    },
+    "515": {
+      "black": {
+        "locations": [
+          "dreamyard area",
+          "pinwheel forest inside",
+          "lostlorn forest area"
+        ]
+      },
+      "white": {
+        "locations": [
+          "dreamyard area",
+          "pinwheel forest inside",
+          "lostlorn forest area"
+        ]
+      }
+    },
+    "516": {
+      "black": {
+        "locations": [
+          "Evolve Panpour"
+        ]
+      },
+      "white": {
+        "locations": [
+          "Evolve Panpour"
+        ]
+      }
+    },
+    "517": {
+      "black": {
+        "locations": [
+          "dreamyard area",
+          "dreamyard b1f"
+        ]
+      },
+      "white": {
+        "locations": [
+          "dreamyard area",
+          "dreamyard b1f"
+        ]
+      }
+    },
+    "518": {
+      "black": {
+        "locations": [
+          "dreamyard area",
+          "dreamyard b1f"
+        ]
+      },
+      "white": {
+        "locations": [
+          "dreamyard area",
+          "dreamyard b1f"
+        ]
+      }
+    },
+    "519": {
+      "black": {
+        "locations": [
+          "pinwheel forest outside",
+          "pinwheel forest inside",
+          "unova route 3 area"
+        ]
+      },
+      "white": {
+        "locations": [
+          "pinwheel forest outside",
+          "pinwheel forest inside",
+          "unova route 3 area"
+        ]
+      }
+    },
+    "520": {
+      "black": {
+        "locations": [
+          "pinwheel forest inside",
+          "dragonspiral tower entrance",
+          "dragonspiral tower outside",
+          "unova route 6 area",
+          "unova route 7 area",
+          "unova route 12 area",
+          "lostlorn forest area"
+        ]
+      },
+      "white": {
+        "locations": [
+          "pinwheel forest inside",
+          "dragonspiral tower entrance",
+          "dragonspiral tower outside",
+          "unova route 6 area",
+          "unova route 7 area",
+          "unova route 12 area",
+          "lostlorn forest area"
+        ]
+      }
+    },
+    "521": {
+      "black": {
+        "locations": [
+          "dragonspiral tower entrance",
+          "dragonspiral tower outside",
+          "unova route 6 area",
+          "unova route 7 area",
+          "unova route 12 area",
+          "lostlorn forest area"
+        ]
+      },
+      "white": {
+        "locations": [
+          "dragonspiral tower entrance",
+          "dragonspiral tower outside",
+          "unova route 6 area",
+          "unova route 7 area",
+          "unova route 12 area",
+          "lostlorn forest area"
+        ]
+      }
+    },
+    "522": {
+      "black": {
+        "locations": [
+          "unova route 3 area"
+        ]
+      },
+      "white": {
+        "locations": [
+          "unova route 3 area"
+        ]
+      }
+    },
+    "523": {
+      "black": {
+        "locations": [
+          "unova route 7 area"
+        ]
+      },
+      "white": {
+        "locations": [
+          "unova route 7 area"
+        ]
+      }
+    },
+    "524": {
+      "black": {
+        "locations": [
+          "wellspring cave area"
+        ]
+      },
+      "white": {
+        "locations": [
+          "wellspring cave area"
+        ]
+      }
+    },
+    "525": {
+      "black": {
+        "locations": [
+          "chargestone cave 1f",
+          "chargestone cave b1f",
+          "chargestone cave b2f",
+          "twist mountain b1f 3f",
+          "unova victory road unknown area 53",
+          "unova victory road unknown area 54",
+          "unova victory road unknown area 55",
+          "unova victory road 4f middle room",
+          "unova victory road unknown area 57",
+          "unova victory road 1f unknown room",
+          "unova victory road unknown area 59",
+          "unova victory road unknown area 60",
+          "unova victory road unknown area 61",
+          "unova victory road unknown area 62",
+          "unova victory road unknown area 63",
+          "unova victory road unknown area 64",
+          "unova victory road unknown area 65",
+          "unova victory road unknown area 66",
+          "trial chamber area",
+          "giant chasm area",
+          "giant chasm forest cave",
+          "mistralton cave area",
+          "guidance chamber area",
+          "challengers cave 1f",
+          "challengers cave b1f",
+          "challengers cave b2f"
+        ]
+      },
+      "white": {
+        "locations": [
+          "chargestone cave 1f",
+          "chargestone cave b1f",
+          "chargestone cave b2f",
+          "twist mountain b1f 3f",
+          "unova victory road unknown area 53",
+          "unova victory road unknown area 54",
+          "unova victory road unknown area 55",
+          "unova victory road 4f middle room",
+          "unova victory road unknown area 57",
+          "unova victory road 1f unknown room",
+          "unova victory road unknown area 59",
+          "unova victory road unknown area 60",
+          "unova victory road unknown area 61",
+          "unova victory road unknown area 62",
+          "unova victory road unknown area 63",
+          "unova victory road unknown area 64",
+          "unova victory road unknown area 65",
+          "unova victory road unknown area 66",
+          "trial chamber area",
+          "giant chasm area",
+          "giant chasm forest cave",
+          "mistralton cave area",
+          "guidance chamber area",
+          "challengers cave 1f",
+          "challengers cave b1f",
+          "challengers cave b2f"
+        ]
+      }
+    },
+    "526": {
+      "black": {
+        "locations": [
+          "Evolve Boldore"
+        ]
+      },
+      "white": {
+        "locations": [
+          "Evolve Boldore"
+        ]
+      }
+    },
+    "527": {
+      "black": {
+        "locations": [
+          "twist mountain b1f 3f",
+          "unova victory road unknown area 53",
+          "unova victory road unknown area 54",
+          "unova victory road unknown area 55",
+          "unova victory road 4f middle room",
+          "unova victory road unknown area 57",
+          "unova victory road 1f unknown room",
+          "unova victory road unknown area 59",
+          "unova victory road unknown area 60",
+          "unova victory road unknown area 61",
+          "unova victory road unknown area 62",
+          "unova victory road unknown area 63",
+          "unova victory road unknown area 64",
+          "unova victory road unknown area 65",
+          "unova victory road unknown area 66",
+          "trial chamber area",
+          "wellspring cave area",
+          "mistralton cave area",
+          "guidance chamber area",
+          "challengers cave 1f",
+          "challengers cave b1f",
+          "challengers cave b2f"
+        ]
+      },
+      "white": {
+        "locations": [
+          "twist mountain b1f 3f",
+          "unova victory road unknown area 53",
+          "unova victory road unknown area 54",
+          "unova victory road unknown area 55",
+          "unova victory road 4f middle room",
+          "unova victory road unknown area 57",
+          "unova victory road 1f unknown room",
+          "unova victory road unknown area 59",
+          "unova victory road unknown area 60",
+          "unova victory road unknown area 61",
+          "unova victory road unknown area 62",
+          "unova victory road unknown area 63",
+          "unova victory road unknown area 64",
+          "unova victory road unknown area 65",
+          "unova victory road unknown area 66",
+          "trial chamber area",
+          "wellspring cave area",
+          "mistralton cave area",
+          "guidance chamber area",
+          "challengers cave 1f",
+          "challengers cave b1f",
+          "challengers cave b2f"
+        ]
+      }
+    },
+    "528": {
+      "black": {
+        "locations": [
+          "Evolve Woobat"
+        ]
+      },
+      "white": {
+        "locations": [
+          "Evolve Woobat"
+        ]
+      }
+    },
+    "529": {
+      "black": {
+        "locations": [
+          "chargestone cave 1f",
+          "chargestone cave b1f",
+          "chargestone cave b2f",
+          "twist mountain b1f 3f",
+          "wellspring cave area",
+          "mistralton cave area",
+          "guidance chamber area"
+        ]
+      },
+      "white": {
+        "locations": [
+          "chargestone cave 1f",
+          "chargestone cave b1f",
+          "chargestone cave b2f",
+          "twist mountain b1f 3f",
+          "wellspring cave area",
+          "mistralton cave area",
+          "guidance chamber area"
+        ]
+      }
+    },
+    "530": {
+      "black": {
+        "locations": [
+          "unova victory road unknown area 53",
+          "unova victory road unknown area 54",
+          "unova victory road unknown area 55",
+          "unova victory road 4f middle room",
+          "unova victory road unknown area 57",
+          "unova victory road 1f unknown room",
+          "unova victory road unknown area 59",
+          "unova victory road unknown area 60",
+          "unova victory road unknown area 61",
+          "unova victory road unknown area 62",
+          "unova victory road unknown area 63",
+          "unova victory road unknown area 64",
+          "unova victory road unknown area 65",
+          "unova victory road unknown area 66",
+          "trial chamber area",
+          "giant chasm area",
+          "giant chasm forest cave",
+          "challengers cave 1f",
+          "challengers cave b1f",
+          "challengers cave b2f"
+        ]
+      },
+      "white": {
+        "locations": [
+          "unova victory road unknown area 53",
+          "unova victory road unknown area 54",
+          "unova victory road unknown area 55",
+          "unova victory road 4f middle room",
+          "unova victory road unknown area 57",
+          "unova victory road 1f unknown room",
+          "unova victory road unknown area 59",
+          "unova victory road unknown area 60",
+          "unova victory road unknown area 61",
+          "unova victory road unknown area 62",
+          "unova victory road unknown area 63",
+          "unova victory road unknown area 64",
+          "unova victory road unknown area 65",
+          "unova victory road unknown area 66",
+          "trial chamber area",
+          "giant chasm area",
+          "giant chasm forest cave",
+          "challengers cave 1f",
+          "challengers cave b1f",
+          "challengers cave b2f"
+        ]
+      }
+    },
+    "531": {
+      "black": {
+        "locations": [
+          "dreamyard area",
+          "pinwheel forest outside",
+          "pinwheel forest inside",
+          "cold storage area",
+          "dragonspiral tower entrance",
+          "dragonspiral tower outside",
+          "giant chasm outside",
+          "giant chasm forest",
+          "p2 laboratory area",
+          "village bridge area",
+          "unova route 1 area",
+          "unova route 2 area",
+          "unova route 3 area",
+          "unova route 5 area",
+          "unova route 6 area",
+          "unova route 7 area",
+          "unova route 9 area",
+          "unova route 10 area",
+          "unova route 10 victory road gate",
+          "unova route 11 area",
+          "unova route 12 area",
+          "unova route 13 area",
+          "unova route 14 area",
+          "abundant shrine area",
+          "unova route 15 area",
+          "unova route 16 area",
+          "lostlorn forest area",
+          "unova route 18 area"
+        ]
+      },
+      "white": {
+        "locations": [
+          "dreamyard area",
+          "pinwheel forest outside",
+          "pinwheel forest inside",
+          "cold storage area",
+          "dragonspiral tower entrance",
+          "dragonspiral tower outside",
+          "giant chasm outside",
+          "giant chasm forest",
+          "p2 laboratory area",
+          "village bridge area",
+          "unova route 1 area",
+          "unova route 2 area",
+          "unova route 3 area",
+          "unova route 5 area",
+          "unova route 6 area",
+          "unova route 7 area",
+          "unova route 9 area",
+          "unova route 10 area",
+          "unova route 10 victory road gate",
+          "unova route 11 area",
+          "unova route 12 area",
+          "unova route 13 area",
+          "unova route 14 area",
+          "abundant shrine area",
+          "unova route 15 area",
+          "unova route 16 area",
+          "lostlorn forest area",
+          "unova route 18 area"
+        ]
+      }
+    },
+    "532": {
+      "black": {
+        "locations": [
+          "pinwheel forest outside",
+          "cold storage area"
+        ]
+      },
+      "white": {
+        "locations": [
+          "pinwheel forest outside",
+          "cold storage area"
+        ]
+      }
+    },
+    "533": {
+      "black": {
+        "locations": [
+          "twist mountain b1f 3f"
+        ]
+      },
+      "white": {
+        "locations": [
+          "twist mountain b1f 3f"
+        ]
+      }
+    },
+    "534": {
+      "black": {
+        "locations": [
+          "Evolve Gurdurr"
+        ]
+      },
+      "white": {
+        "locations": [
+          "Evolve Gurdurr"
+        ]
+      }
+    },
+    "535": {
+      "black": {
+        "locations": [
+          "pinwheel forest outside"
+        ]
+      },
+      "white": {
+        "locations": [
+          "pinwheel forest outside"
+        ]
+      }
+    },
+    "536": {
+      "black": {
+        "locations": [
+          "icirrus city area",
+          "unova route 8 area",
+          "moor of icirrus area"
+        ]
+      },
+      "white": {
+        "locations": [
+          "icirrus city area",
+          "unova route 8 area",
+          "moor of icirrus area"
+        ]
+      }
+    },
+    "537": {
+      "black": {
+        "locations": [
+          "icirrus city area",
+          "unova route 8 area",
+          "moor of icirrus area"
+        ]
+      },
+      "white": {
+        "locations": [
+          "icirrus city area",
+          "unova route 8 area",
+          "moor of icirrus area"
+        ]
+      }
+    },
+    "538": {
+      "black": {
+        "locations": [
+          "pinwheel forest outside",
+          "unova route 10 area",
+          "unova route 10 victory road gate",
+          "unova route 15 area",
+          "unova route 18 area"
+        ]
+      },
+      "white": {
+        "locations": [
+          "pinwheel forest outside",
+          "unova route 10 area",
+          "unova route 10 victory road gate",
+          "unova route 15 area",
+          "unova route 18 area"
+        ]
+      }
+    },
+    "539": {
+      "black": {
+        "locations": [
+          "pinwheel forest outside",
+          "unova route 10 area",
+          "unova route 10 victory road gate",
+          "unova route 15 area",
+          "unova route 18 area"
+        ]
+      },
+      "white": {
+        "locations": [
+          "pinwheel forest outside",
+          "unova route 10 area",
+          "unova route 10 victory road gate",
+          "unova route 15 area",
+          "unova route 18 area"
+        ]
+      }
+    },
+    "540": {
+      "black": {
+        "locations": [
+          "pinwheel forest inside"
+        ]
+      },
+      "white": {
+        "locations": [
+          "pinwheel forest inside"
+        ]
+      }
+    },
+    "541": {
+      "black": {
+        "locations": [
+          "pinwheel forest inside",
+          "unova route 6 area",
+          "lostlorn forest area"
+        ]
+      },
+      "white": {
+        "locations": [
+          "pinwheel forest inside",
+          "unova route 6 area",
+          "lostlorn forest area"
+        ]
+      }
+    },
+    "542": {
+      "black": {
+        "locations": [
+          "unova route 6 area",
+          "lostlorn forest area"
+        ]
+      },
+      "white": {
+        "locations": [
+          "unova route 6 area",
+          "lostlorn forest area"
+        ]
+      }
+    },
+    "543": {
+      "black": {
+        "locations": [
+          "pinwheel forest inside",
+          "lostlorn forest area"
+        ]
+      },
+      "white": {
+        "locations": [
+          "pinwheel forest inside",
+          "lostlorn forest area"
+        ]
+      }
+    },
+    "544": {
+      "black": {
+        "locations": [
+          "pinwheel forest inside"
+        ]
+      },
+      "white": {
+        "locations": [
+          "pinwheel forest inside"
+        ]
+      }
+    },
+    "545": {
+      "black": {
+        "locations": [
+          "Evolve Whirlipede"
+        ]
+      },
+      "white": {
+        "locations": [
+          "Evolve Whirlipede"
+        ]
+      }
+    },
+    "546": {
+      "black": {
+        "locations": [
+          "pinwheel forest inside",
+          "abundant shrine area",
+          "lostlorn forest area"
+        ]
+      },
+      "white": {
+        "locations": [
+          "Trade Petilil in Nacrene City"
+        ]
+      }
+    },
+    "547": {
+      "black": {
+        "locations": [
+          "pinwheel forest inside",
+          "abundant shrine area",
+          "lostlorn forest area"
+        ]
+      },
+      "white": {
+        "locations": [
+          "Evolve Cottonee"
+        ]
+      }
+    },
+    "548": {
+      "white": {
+        "locations": [
+          "pinwheel forest inside",
+          "abundant shrine area",
+          "lostlorn forest area"
+        ]
+      },
+      "black": {
+        "locations": [
+          "Trade Cottonee in Nacrene City"
+        ]
+      }
+    },
+    "549": {
+      "white": {
+        "locations": [
+          "pinwheel forest inside",
+          "abundant shrine area",
+          "lostlorn forest area"
+        ]
+      },
+      "black": {
+        "locations": [
+          "Evolve Petilil"
+        ]
+      }
+    },
+    "550": {
+      "black": {
+        "locations": [
+          "striaton city area",
+          "pinwheel forest inside",
+          "dragonspiral tower outside",
+          "unova victory road unknown area 53",
+          "unova victory road 1f unknown room",
+          "giant chasm area",
+          "giant chasm forest cave",
+          "village bridge area",
+          "unova route 1 area",
+          "unova route 3 area",
+          "wellspring cave area",
+          "unova route 6 area",
+          "challengers cave b2f",
+          "unova route 11 area",
+          "unova route 14 area",
+          "abundant shrine area",
+          "lostlorn forest area"
+        ]
+      },
+      "white": {
+        "locations": [
+          "striaton city area",
+          "pinwheel forest inside",
+          "dragonspiral tower outside",
+          "unova victory road unknown area 53",
+          "unova victory road 1f unknown room",
+          "giant chasm area",
+          "giant chasm forest cave",
+          "village bridge area",
+          "unova route 1 area",
+          "unova route 3 area",
+          "wellspring cave area",
+          "unova route 6 area",
+          "challengers cave b2f",
+          "unova route 11 area",
+          "unova route 14 area",
+          "abundant shrine area",
+          "lostlorn forest area"
+        ]
+      }
+    },
+    "551": {
+      "black": {
+        "locations": [
+          "desert resort entrance",
+          "desert resort area",
+          "relic castle a",
+          "unova route 4 area"
+        ]
+      },
+      "white": {
+        "locations": [
+          "desert resort entrance",
+          "desert resort area",
+          "relic castle a",
+          "unova route 4 area"
+        ]
+      }
+    },
+    "552": {
+      "black": {
+        "locations": [
+          "relic castle b",
+          "relic castle c"
+        ]
+      },
+      "white": {
+        "locations": [
+          "relic castle b",
+          "relic castle c"
+        ]
+      }
+    },
+    "553": {
+      "black": {
+        "locations": [
+          "Evolve Krokorok"
+        ]
+      },
+      "white": {
+        "locations": [
+          "Evolve Krokorok"
+        ]
+      }
+    },
+    "554": {
+      "black": {
+        "locations": [
+          "desert resort entrance",
+          "desert resort area",
+          "unova route 4 area"
+        ]
+      },
+      "white": {
+        "locations": [
+          "desert resort entrance",
+          "desert resort area",
+          "unova route 4 area"
+        ]
+      }
+    },
+    "555": {
+      "black": {
+        "locations": [
+          "Desert Resort (Five)all have Zen Mode"
+        ]
+      },
+      "white": {
+        "locations": [
+          "Desert Resort (Five)all have Zen Mode"
+        ]
+      }
+    },
+    "556": {
+      "black": {
+        "locations": [
+          "desert resort entrance",
+          "desert resort area"
+        ]
+      },
+      "white": {
+        "locations": [
+          "desert resort entrance",
+          "desert resort area"
+        ]
+      }
+    },
+    "557": {
+      "black": {
+        "locations": [
+          "desert resort entrance",
+          "desert resort area",
+          "unova route 18 area"
+        ]
+      },
+      "white": {
+        "locations": [
+          "desert resort entrance",
+          "desert resort area",
+          "unova route 18 area"
+        ]
+      }
+    },
+    "558": {
+      "black": {
+        "locations": [
+          "unova route 18 area"
+        ]
+      },
+      "white": {
+        "locations": [
+          "unova route 18 area"
+        ]
+      }
+    },
+    "559": {
+      "black": {
+        "locations": [
+          "desert resort entrance",
+          "p2 laboratory area",
+          "unova route 1 area",
+          "unova route 4 area",
+          "unova route 18 area"
+        ]
+      },
+      "white": {
+        "locations": [
+          "desert resort entrance",
+          "p2 laboratory area",
+          "unova route 1 area",
+          "unova route 4 area",
+          "unova route 18 area"
+        ]
+      }
+    },
+    "560": {
+      "black": {
+        "locations": [
+          "Evolve Scraggy"
+        ]
+      },
+      "white": {
+        "locations": [
+          "Evolve Scraggy"
+        ]
+      }
+    },
+    "561": {
+      "black": {
+        "locations": [
+          "desert resort area"
+        ]
+      },
+      "white": {
+        "locations": [
+          "desert resort area"
+        ]
+      }
+    },
+    "562": {
+      "black": {
+        "locations": [
+          "relic castle a"
+        ]
+      },
+      "white": {
+        "locations": [
+          "relic castle a"
+        ]
+      }
+    },
+    "563": {
+      "black": {
+        "locations": [
+          "relic castle b",
+          "relic castle c"
+        ]
+      },
+      "white": {
+        "locations": [
+          "relic castle b",
+          "relic castle c"
+        ]
+      }
+    },
+    "564": {
+      "black": {
+        "locations": [
+          "nacrene city nacrene museum"
+        ]
+      },
+      "white": {
+        "locations": [
+          "nacrene city nacrene museum"
+        ]
+      }
+    },
+    "565": {
+      "black": {
+        "locations": [
+          "Evolve Tirtouga"
+        ]
+      },
+      "white": {
+        "locations": [
+          "Evolve Tirtouga"
+        ]
+      }
+    },
+    "566": {
+      "black": {
+        "locations": [
+          "nacrene city nacrene museum"
+        ]
+      },
+      "white": {
+        "locations": [
+          "nacrene city nacrene museum"
+        ]
+      }
+    },
+    "567": {
+      "black": {
+        "locations": [
+          "Evolve Archen"
+        ]
+      },
+      "white": {
+        "locations": [
+          "Evolve Archen"
+        ]
+      }
+    },
+    "568": {
+      "black": {
+        "locations": [
+          "unova route 5 area",
+          "unova route 16 area"
+        ]
+      },
+      "white": {
+        "locations": [
+          "unova route 5 area",
+          "unova route 16 area"
+        ]
+      }
+    },
+    "569": {
+      "black": {
+        "locations": [
+          "unova route 9 area"
+        ]
+      },
+      "white": {
+        "locations": [
+          "unova route 9 area"
+        ]
+      }
+    },
+    "570": {
+      "black": {
+        "locations": [
+          "castelia city game freak hq 1f"
+        ]
+      },
+      "white": {
+        "locations": [
+          "castelia city game freak hq 1f"
+        ]
+      }
+    },
+    "571": {
+      "black": {
+        "locations": [
+          "lostlorn forest area"
+        ]
+      },
+      "white": {
+        "locations": [
+          "lostlorn forest area"
+        ]
+      }
+    },
+    "572": {
+      "black": {
+        "locations": [
+          "cold storage area",
+          "unova route 5 area",
+          "unova route 9 area",
+          "unova route 16 area"
+        ]
+      },
+      "white": {
+        "locations": [
+          "cold storage area",
+          "unova route 5 area",
+          "unova route 9 area",
+          "unova route 16 area"
+        ]
+      }
+    },
+    "573": {
+      "black": {
+        "locations": [
+          "cold storage area",
+          "unova route 5 area",
+          "unova route 9 area",
+          "unova route 16 area"
+        ]
+      },
+      "white": {
+        "locations": [
+          "cold storage area",
+          "unova route 5 area",
+          "unova route 9 area",
+          "unova route 16 area"
+        ]
+      }
+    },
+    "574": {
+      "black": {
+        "locations": [
+          "unova route 5 area",
+          "unova route 16 area"
+        ]
+      }
+    },
+    "575": {
+      "black": {
+        "locations": [
+          "unova route 9 area"
+        ]
+      }
+    },
+    "576": {
+      "black": {
+        "locations": [
+          "unova route 9 area"
+        ]
+      }
+    },
+    "577": {
+      "white": {
+        "locations": [
+          "unova route 5 area",
+          "unova route 16 area"
+        ]
+      }
+    },
+    "578": {
+      "white": {
+        "locations": [
+          "unova route 9 area"
+        ]
+      }
+    },
+    "579": {
+      "white": {
+        "locations": [
+          "unova route 9 area"
+        ]
+      }
+    },
+    "580": {
+      "black": {
+        "locations": [
+          "driftveil drawbridge area"
+        ]
+      },
+      "white": {
+        "locations": [
+          "driftveil drawbridge area"
+        ]
+      }
+    },
+    "581": {
+      "black": {
+        "locations": [
+          "marvelous bridge area"
+        ]
+      },
+      "white": {
+        "locations": [
+          "marvelous bridge area"
+        ]
+      }
+    },
+    "582": {
+      "black": {
+        "locations": [
+          "cold storage area",
+          "dragonspiral tower entrance",
+          "dragonspiral tower outside",
+          "unova route 6 area"
+        ]
+      },
+      "white": {
+        "locations": [
+          "cold storage area",
+          "dragonspiral tower entrance",
+          "dragonspiral tower outside",
+          "unova route 6 area"
+        ]
+      }
+    },
+    "583": {
+      "black": {
+        "locations": [
+          "dragonspiral tower entrance",
+          "dragonspiral tower outside"
+        ]
+      },
+      "white": {
+        "locations": [
+          "dragonspiral tower entrance",
+          "dragonspiral tower outside"
+        ]
+      }
+    },
+    "584": {
+      "black": {
+        "locations": [
+          "Evolve Vanillish"
+        ]
+      },
+      "white": {
+        "locations": [
+          "Evolve Vanillish"
+        ]
+      }
+    },
+    "585": {
+      "black": {
+        "locations": [
+          "dragonspiral tower entrance",
+          "dragonspiral tower outside",
+          "unova route 6 area",
+          "unova route 7 area"
+        ]
+      },
+      "white": {
+        "locations": [
+          "dragonspiral tower entrance",
+          "dragonspiral tower outside",
+          "unova route 6 area",
+          "unova route 7 area"
+        ]
+      }
+    },
+    "586": {
+      "black": {
+        "locations": [
+          "dragonspiral tower entrance",
+          "dragonspiral tower outside"
+        ]
+      },
+      "white": {
+        "locations": [
+          "dragonspiral tower entrance",
+          "dragonspiral tower outside"
+        ]
+      }
+    },
+    "587": {
+      "black": {
+        "locations": [
+          "dragonspiral tower entrance",
+          "dragonspiral tower outside",
+          "giant chasm outside",
+          "village bridge area",
+          "unova route 5 area",
+          "unova route 6 area",
+          "unova route 7 area",
+          "unova route 9 area",
+          "unova route 10 area",
+          "unova route 10 victory road gate",
+          "unova route 11 area",
+          "unova route 12 area",
+          "unova route 13 area",
+          "unova route 14 area",
+          "abundant shrine area",
+          "unova route 15 area",
+          "unova route 16 area",
+          "lostlorn forest area"
+        ]
+      },
+      "white": {
+        "locations": [
+          "dragonspiral tower entrance",
+          "dragonspiral tower outside",
+          "giant chasm outside",
+          "village bridge area",
+          "unova route 5 area",
+          "unova route 6 area",
+          "unova route 7 area",
+          "unova route 9 area",
+          "unova route 10 area",
+          "unova route 10 victory road gate",
+          "unova route 11 area",
+          "unova route 12 area",
+          "unova route 13 area",
+          "unova route 14 area",
+          "abundant shrine area",
+          "unova route 15 area",
+          "unova route 16 area",
+          "lostlorn forest area"
+        ]
+      }
+    },
+    "588": {
+      "black": {
+        "locations": [
+          "unova route 6 area",
+          "unova route 11 area"
+        ]
+      },
+      "white": {
+        "locations": [
+          "unova route 6 area",
+          "unova route 11 area"
+        ]
+      }
+    },
+    "589": {
+      "black": {
+        "locations": [
+          "Evolve Karrablast"
+        ]
+      },
+      "white": {
+        "locations": [
+          "Evolve Karrablast"
+        ]
+      }
+    },
+    "590": {
+      "black": {
+        "locations": [
+          "unova route 6 area",
+          "unova route 7 area",
+          "unova route 10 area",
+          "unova route 10 victory road gate"
+        ]
+      },
+      "white": {
+        "locations": [
+          "unova route 6 area",
+          "unova route 7 area",
+          "unova route 10 area",
+          "unova route 10 victory road gate"
+        ]
+      }
+    },
+    "591": {
+      "black": {
+        "locations": [
+          "unova route 10 area",
+          "unova route 10 victory road gate",
+          "unova route 11 area"
+        ]
+      },
+      "white": {
+        "locations": [
+          "unova route 10 area",
+          "unova route 10 victory road gate",
+          "unova route 11 area"
+        ]
+      }
+    },
+    "592": {
+      "black": {
+        "locations": [
+          "driftveil city area",
+          "p2 laboratory area",
+          "unova route 4 area",
+          "unova route 18 area",
+          "unova route 17 area"
+        ]
+      },
+      "white": {
+        "locations": [
+          "driftveil city area",
+          "p2 laboratory area",
+          "unova route 4 area",
+          "unova route 18 area",
+          "unova route 17 area"
+        ]
+      }
+    },
+    "593": {
+      "black": {
+        "locations": [
+          "driftveil city area",
+          "p2 laboratory area",
+          "unova route 4 area",
+          "unova route 18 area",
+          "unova route 17 area"
+        ]
+      },
+      "white": {
+        "locations": [
+          "driftveil city area",
+          "p2 laboratory area",
+          "unova route 4 area",
+          "unova route 18 area",
+          "unova route 17 area"
+        ]
+      }
+    },
+    "594": {
+      "black": {
+        "locations": [
+          "driftveil city area",
+          "p2 laboratory area",
+          "unova route 4 area",
+          "unova route 18 area",
+          "unova route 17 area"
+        ]
+      },
+      "white": {
+        "locations": [
+          "driftveil city area",
+          "p2 laboratory area",
+          "unova route 4 area",
+          "unova route 18 area",
+          "unova route 17 area"
+        ]
+      }
+    },
+    "595": {
+      "black": {
+        "locations": [
+          "chargestone cave 1f",
+          "chargestone cave b1f",
+          "chargestone cave b2f"
+        ]
+      },
+      "white": {
+        "locations": [
+          "chargestone cave 1f",
+          "chargestone cave b1f",
+          "chargestone cave b2f"
+        ]
+      }
+    },
+    "596": {
+      "black": {
+        "locations": [
+          "Evolve Joltik"
+        ]
+      },
+      "white": {
+        "locations": [
+          "Evolve Joltik"
+        ]
+      }
+    },
+    "597": {
+      "black": {
+        "locations": [
+          "chargestone cave 1f",
+          "chargestone cave b1f",
+          "chargestone cave b2f"
+        ]
+      },
+      "white": {
+        "locations": [
+          "chargestone cave 1f",
+          "chargestone cave b1f",
+          "chargestone cave b2f"
+        ]
+      }
+    },
+    "598": {
+      "black": {
+        "locations": [
+          "Evolve Ferroseed"
+        ]
+      },
+      "white": {
+        "locations": [
+          "Evolve Ferroseed"
+        ]
+      }
+    },
+    "599": {
+      "black": {
+        "locations": [
+          "chargestone cave 1f",
+          "chargestone cave b1f",
+          "chargestone cave b2f",
+          "p2 laboratory area"
+        ]
+      },
+      "white": {
+        "locations": [
+          "chargestone cave 1f",
+          "chargestone cave b1f",
+          "chargestone cave b2f",
+          "p2 laboratory area"
+        ]
+      }
+    },
+    "600": {
+      "black": {
+        "locations": [
+          "Evolve Klink"
+        ]
+      },
+      "white": {
+        "locations": [
+          "Evolve Klink"
+        ]
+      }
+    },
+    "601": {
+      "black": {
+        "locations": [
+          "Evolve Klang"
+        ]
+      },
+      "white": {
+        "locations": [
+          "Evolve Klang"
+        ]
+      }
+    },
+    "602": {
+      "black": {
+        "locations": [
+          "chargestone cave 1f",
+          "chargestone cave b1f",
+          "chargestone cave b2f"
+        ]
+      },
+      "white": {
+        "locations": [
+          "chargestone cave 1f",
+          "chargestone cave b1f",
+          "chargestone cave b2f"
+        ]
+      }
+    },
+    "603": {
+      "black": {
+        "locations": [
+          "Evolve Tynamo"
+        ]
+      },
+      "white": {
+        "locations": [
+          "Evolve Tynamo"
+        ]
+      }
+    },
+    "604": {
+      "black": {
+        "locations": [
+          "Evolve Eelektrik"
+        ]
+      },
+      "white": {
+        "locations": [
+          "Evolve Eelektrik"
+        ]
+      }
+    },
+    "605": {
+      "black": {
+        "locations": [
+          "celestial tower 3f",
+          "celestial tower 4f",
+          "celestial tower 5f"
+        ]
+      },
+      "white": {
+        "locations": [
+          "celestial tower 3f",
+          "celestial tower 4f",
+          "celestial tower 5f"
+        ]
+      }
+    },
+    "606": {
+      "black": {
+        "locations": [
+          "unova route 14 area"
+        ]
+      },
+      "white": {
+        "locations": [
+          "unova route 14 area"
+        ]
+      }
+    },
+    "607": {
+      "black": {
+        "locations": [
+          "celestial tower 2f",
+          "celestial tower 3f",
+          "celestial tower 4f",
+          "celestial tower 5f"
+        ]
+      },
+      "white": {
+        "locations": [
+          "celestial tower 2f",
+          "celestial tower 3f",
+          "celestial tower 4f",
+          "celestial tower 5f"
+        ]
+      }
+    },
+    "608": {
+      "black": {
+        "locations": [
+          "Evolve Litwick"
+        ]
+      },
+      "white": {
+        "locations": [
+          "Evolve Litwick"
+        ]
+      }
+    },
+    "609": {
+      "black": {
+        "locations": [
+          "Evolve Lampent"
+        ]
+      },
+      "white": {
+        "locations": [
+          "Evolve Lampent"
+        ]
+      }
+    },
+    "610": {
+      "black": {
+        "locations": [
+          "mistralton cave area",
+          "guidance chamber area"
+        ]
+      },
+      "white": {
+        "locations": [
+          "mistralton cave area",
+          "guidance chamber area"
+        ]
+      }
+    },
+    "611": {
+      "black": {
+        "locations": [
+          "unova victory road outside"
+        ]
+      },
+      "white": {
+        "locations": [
+          "unova victory road outside"
+        ]
+      }
+    },
+    "612": {
+      "black": {
+        "locations": [
+          "Evolve Fraxure"
+        ]
+      },
+      "white": {
+        "locations": [
+          "Evolve Fraxure"
+        ]
+      }
+    },
+    "613": {
+      "black": {
+        "locations": [
+          "twist mountain b1f 3f",
+          "dragonspiral tower entrance",
+          "dragonspiral tower outside",
+          "unova route 7 area"
+        ]
+      },
+      "white": {
+        "locations": [
+          "twist mountain b1f 3f",
+          "dragonspiral tower entrance",
+          "dragonspiral tower outside",
+          "unova route 7 area"
+        ]
+      }
+    },
+    "614": {
+      "black": {
+        "locations": [
+          "dragonspiral tower entrance",
+          "dragonspiral tower outside"
+        ]
+      },
+      "white": {
+        "locations": [
+          "dragonspiral tower entrance",
+          "dragonspiral tower outside"
+        ]
+      }
+    },
+    "615": {
+      "black": {
+        "locations": [
+          "twist mountain b1f 3f"
+        ]
+      },
+      "white": {
+        "locations": [
+          "twist mountain b1f 3f"
+        ]
+      }
+    },
+    "616": {
+      "black": {
+        "locations": [
+          "icirrus city area",
+          "unova route 8 area",
+          "moor of icirrus area"
+        ]
+      },
+      "white": {
+        "locations": [
+          "icirrus city area",
+          "unova route 8 area",
+          "moor of icirrus area"
+        ]
+      }
+    },
+    "617": {
+      "black": {
+        "locations": [
+          "Evolve Shelmet"
+        ]
+      },
+      "white": {
+        "locations": [
+          "Evolve Shelmet"
+        ]
+      }
+    },
+    "618": {
+      "black": {
+        "locations": [
+          "icirrus city area",
+          "unova route 8 area",
+          "moor of icirrus area"
+        ]
+      },
+      "white": {
+        "locations": [
+          "icirrus city area",
+          "unova route 8 area",
+          "moor of icirrus area"
+        ]
+      }
+    },
+    "619": {
+      "black": {
+        "locations": [
+          "dragonspiral tower entrance",
+          "dragonspiral tower outside",
+          "dragonspiral tower 1f",
+          "unova victory road outside",
+          "unova victory road unknown area 53",
+          "unova victory road unknown area 54",
+          "unova victory road unknown area 55",
+          "unova victory road 4f middle room",
+          "unova victory road unknown area 57",
+          "unova victory road 1f unknown room",
+          "unova victory road unknown area 59",
+          "unova victory road unknown area 60",
+          "unova victory road unknown area 61",
+          "unova victory road unknown area 62",
+          "unova victory road unknown area 63",
+          "unova victory road unknown area 64",
+          "unova victory road unknown area 65",
+          "unova victory road unknown area 66",
+          "trial chamber area",
+          "unova route 14 area"
+        ]
+      },
+      "white": {
+        "locations": [
+          "dragonspiral tower entrance",
+          "dragonspiral tower outside",
+          "dragonspiral tower 1f",
+          "unova victory road outside",
+          "unova victory road unknown area 53",
+          "unova victory road unknown area 54",
+          "unova victory road unknown area 55",
+          "unova victory road 4f middle room",
+          "unova victory road unknown area 57",
+          "unova victory road 1f unknown room",
+          "unova victory road unknown area 59",
+          "unova victory road unknown area 60",
+          "unova victory road unknown area 61",
+          "unova victory road unknown area 62",
+          "unova victory road unknown area 63",
+          "unova victory road unknown area 64",
+          "unova victory road unknown area 65",
+          "unova victory road unknown area 66",
+          "trial chamber area",
+          "unova route 14 area"
+        ]
+      }
+    },
+    "620": {
+      "black": {
+        "locations": [
+          "unova route 14 area"
+        ]
+      },
+      "white": {
+        "locations": [
+          "unova route 14 area"
+        ]
+      }
+    },
+    "621": {
+      "black": {
+        "locations": [
+          "dragonspiral tower entrance",
+          "dragonspiral tower outside",
+          "dragonspiral tower 1f"
+        ]
+      },
+      "white": {
+        "locations": [
+          "dragonspiral tower entrance",
+          "dragonspiral tower outside",
+          "dragonspiral tower 1f"
+        ]
+      }
+    },
+    "622": {
+      "black": {
+        "locations": [
+          "dragonspiral tower 1f",
+          "dragonspiral tower 2f"
+        ]
+      },
+      "white": {
+        "locations": [
+          "dragonspiral tower 1f",
+          "dragonspiral tower 2f"
+        ]
+      }
+    },
+    "623": {
+      "black": {
+        "locations": [
+          "Evolve Golett"
+        ]
+      },
+      "white": {
+        "locations": [
+          "Evolve Golett"
+        ]
+      }
+    },
+    "624": {
+      "black": {
+        "locations": [
+          "unova route 9 area",
+          "unova route 11 area"
+        ]
+      },
+      "white": {
+        "locations": [
+          "unova route 9 area",
+          "unova route 11 area"
+        ]
+      }
+    },
+    "625": {
+      "black": {
+        "locations": [
+          "unova route 11 area"
+        ]
+      },
+      "white": {
+        "locations": [
+          "unova route 11 area"
+        ]
+      }
+    },
+    "626": {
+      "black": {
+        "locations": [
+          "unova route 10 area",
+          "unova route 10 victory road gate"
+        ]
+      },
+      "white": {
+        "locations": [
+          "unova route 10 area",
+          "unova route 10 victory road gate"
+        ]
+      }
+    },
+    "627": {
+      "white": {
+        "locations": [
+          "unova victory road outside",
+          "village bridge area",
+          "unova route 10 area",
+          "unova route 10 victory road gate",
+          "unova route 11 area"
+        ]
+      }
+    },
+    "628": {
+      "white": {
+        "locations": [
+          "village bridge area",
+          "unova route 11 area"
+        ]
+      }
+    },
+    "629": {
+      "black": {
+        "locations": [
+          "unova victory road outside",
+          "village bridge area",
+          "unova route 10 area",
+          "unova route 10 victory road gate",
+          "unova route 11 area"
+        ]
+      }
+    },
+    "630": {
+      "black": {
+        "locations": [
+          "village bridge area",
+          "unova route 11 area"
+        ]
+      }
+    },
+    "631": {
+      "black": {
+        "locations": [
+          "unova victory road outside"
+        ]
+      },
+      "white": {
+        "locations": [
+          "unova victory road outside"
+        ]
+      }
+    },
+    "632": {
+      "black": {
+        "locations": [
+          "unova victory road unknown area 53",
+          "unova victory road unknown area 54",
+          "unova victory road unknown area 55",
+          "unova victory road 4f middle room",
+          "unova victory road unknown area 57",
+          "unova victory road 1f unknown room",
+          "unova victory road unknown area 59",
+          "unova victory road unknown area 60",
+          "unova victory road unknown area 61",
+          "unova victory road unknown area 62",
+          "unova victory road unknown area 63",
+          "unova victory road unknown area 64",
+          "unova victory road unknown area 65",
+          "unova victory road unknown area 66",
+          "trial chamber area"
+        ]
+      },
+      "white": {
+        "locations": [
+          "unova victory road unknown area 53",
+          "unova victory road unknown area 54",
+          "unova victory road unknown area 55",
+          "unova victory road 4f middle room",
+          "unova victory road unknown area 57",
+          "unova victory road 1f unknown room",
+          "unova victory road unknown area 59",
+          "unova victory road unknown area 60",
+          "unova victory road unknown area 61",
+          "unova victory road unknown area 62",
+          "unova victory road unknown area 63",
+          "unova victory road unknown area 64",
+          "unova victory road unknown area 65",
+          "unova victory road unknown area 66",
+          "trial chamber area"
+        ]
+      }
+    },
+    "633": {
+      "black": {
+        "locations": [
+          "unova victory road unknown area 53",
+          "unova victory road 1f unknown room"
+        ]
+      },
+      "white": {
+        "locations": [
+          "unova victory road unknown area 53",
+          "unova victory road 1f unknown room"
+        ]
+      }
+    },
+    "634": {
+      "black": {
+        "locations": [
+          "Evolve Deino"
+        ]
+      },
+      "white": {
+        "locations": [
+          "Evolve Deino"
+        ]
+      }
+    },
+    "635": {
+      "black": {
+        "locations": [
+          "Evolve Zweilous"
+        ]
+      },
+      "white": {
+        "locations": [
+          "Evolve Zweilous"
+        ]
+      }
+    },
+    "636": {
+      "black": {
+        "locations": [
+          "unova route 18 area"
+        ]
+      },
+      "white": {
+        "locations": [
+          "unova route 18 area"
+        ]
+      }
+    },
+    "637": {
+      "black": {
+        "locations": [
+          "relic castle d"
+        ]
+      },
+      "white": {
+        "locations": [
+          "relic castle d"
+        ]
+      }
+    },
+    "638": {
+      "black": {
+        "locations": [
+          "mistralton cave area"
+        ]
+      },
+      "white": {
+        "locations": [
+          "mistralton cave area"
+        ]
+      }
+    },
+    "639": {
+      "black": {
+        "locations": [
+          "unova victory road 4f middle room"
+        ]
+      },
+      "white": {
+        "locations": [
+          "unova victory road 4f middle room"
+        ]
+      }
+    },
+    "640": {
+      "black": {
+        "locations": [
+          "pinwheel forest rumination field"
+        ]
+      },
+      "white": {
+        "locations": [
+          "pinwheel forest rumination field"
+        ]
+      }
+    },
+    "641": {
+      "black": {
+        "locations": [
+          "team flare secret hq area"
+        ]
+      },
+      "white": {
+        "locations": [
+          "Trade, Event"
+        ]
+      }
+    },
+    "642": {
+      "white": {
+        "locations": [
+          "team flare secret hq area"
+        ]
+      },
+      "black": {
+        "locations": [
+          "Trade, Event"
+        ]
+      }
+    },
+    "643": {
+      "black": {
+        "locations": [
+          "ns castle throne room",
+          "dragonspiral tower 7f"
+        ]
+      },
+      "white": {
+        "locations": [
+          "Trade, Event"
+        ]
+      }
+    },
+    "644": {
+      "white": {
+        "locations": [
+          "ns castle throne room",
+          "dragonspiral tower 7f"
+        ]
+      },
+      "black": {
+        "locations": [
+          "Trade, Event"
+        ]
+      }
+    },
+    "645": {
+      "black": {
+        "locations": [
+          "abundant shrine area"
+        ]
+      },
+      "white": {
+        "locations": [
+          "abundant shrine area"
+        ]
+      }
+    },
+    "646": {
+      "black": {
+        "locations": [
+          "giant chasm forest cave"
+        ]
+      },
+      "white": {
+        "locations": [
+          "giant chasm forest cave"
+        ]
+      }
+    },
+    "647": {
+      "black": {
+        "locations": [
+          "Event"
+        ]
+      },
+      "white": {
+        "locations": [
+          "Event"
+        ]
+      }
+    },
+    "648": {
+      "black": {
+        "locations": [
+          "Event"
+        ]
+      },
+      "white": {
+        "locations": [
+          "Event"
+        ]
+      }
+    },
+    "649": {
+      "black": {
+        "locations": [
+          "Event"
+        ]
+      },
+      "white": {
+        "locations": [
+          "Event"
         ]
       }
     }

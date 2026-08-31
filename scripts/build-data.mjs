@@ -3,11 +3,12 @@
 /**
  * build-data.mjs
  *
- * Automated data extraction and compilation pipeline for LivingDex.
+ * Automated multi-source data extraction and compilation pipeline for LivingDex.
  * Compiles master species metadata, evolution chains, multilingual names,
- * and game-specific Pokédexes & encounters into optimized static JSON files.
+ * traits, stats, cosmetic/gender forms, and game-specific Pokédexes & encounters
+ * into optimized static JSON files.
  *
- * Scrapes Bulbapedia & Serebii for games where PokéAPI has missing/incomplete encounter data.
+ * Multi-Source Fallback: PokéAPI -> Bulbapedia -> Serebii -> Local Overrides
  *
  * Usage:
  *   node scripts/build-data.mjs [--sample] [--species] [--evolutions] [--games] [--limit=N]
@@ -16,8 +17,15 @@
 import fs from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
-import { fetchBulbapediaEncounters } from "./scrapers/bulbapedia.mjs";
-import { fetchSerebiiSVEncounters } from "./scrapers/serebii.mjs";
+import {
+  fetchBulbapediaEncounters,
+  fetchBulbapediaDexRoster,
+} from "./scrapers/bulbapedia.mjs";
+import {
+  fetchSerebiiSVEncounters,
+  fetchSerebiiSwShEncounters,
+} from "./scrapers/serebii.mjs";
+import { fetchSerebiiDexRoster } from "./scrapers/serebii-dex.mjs";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -45,20 +53,17 @@ const POKEAPI_BASE = "https://pokeapi.co/api/v2";
 /**
  * Concurrency helper with exponential backoff and retry
  */
-async function fetchWithRetry(url, { retries = 3, backoff = 500 } = {}) {
+async function fetchWithRetry(url, { retries = 3, backoff = 300 } = {}) {
   for (let attempt = 1; attempt <= retries; attempt += 1) {
     try {
       const response = await fetch(url, {
-        headers: { "User-Agent": "LivingDex-DataBuilder/1.0" },
+        headers: { "User-Agent": "LivingDex-DataBuilder/2.0" },
       });
       if (response.status === 404) return null;
       if (!response.ok) throw new Error(`HTTP ${response.status} for ${url}`);
       return await response.json();
     } catch (err) {
       if (attempt === retries) {
-        console.warn(
-          `[WARN] Failed fetching ${url} after ${retries} attempts: ${err.message}`,
-        );
         return null;
       }
       await new Promise((resolve) =>
@@ -152,11 +157,11 @@ function prettifyName(name) {
 }
 
 /**
- * Build species and forms database
+ * Build species, stats, traits, and forms database
  */
 async function buildSpeciesData(totalSpecies) {
   console.log(
-    `\n📦 Building Species & Forms Database (1 to ${totalSpecies})...`,
+    `\n📦 Building Species, Stats & Forms Database (1 to ${totalSpecies})...`,
   );
   const speciesMap = {};
   const ids = Array.from({ length: totalSpecies }, (_, i) => i + 1);
@@ -185,24 +190,32 @@ async function buildSpeciesData(totalSpecies) {
         )
       : null;
 
-    // Extract default flavor text (English)
-    const flavorEntry = (speciesData.flavor_text_entries || []).find(
-      (e) => e.language?.name === "en",
-    );
-    const flavorText = flavorEntry
-      ? flavorEntry.flavor_text.replace(/[\f\n\r]/g, " ")
-      : "";
+    // Multi-language flavor text map
+    const flavorText = {};
+    for (const entry of speciesData.flavor_text_entries || []) {
+      const lang = entry.language?.name;
+      if (lang && !flavorText[lang]) {
+        flavorText[lang] = entry.flavor_text.replace(/[\f\n\r]/g, " ").trim();
+      }
+    }
 
-    // Gather all forms for this species
+    // Gather all forms and varieties
     const varieties = speciesData.varieties || [];
     const forms = [];
+    const seenFormIds = new Set();
+    let defaultPokemonData = null;
 
     for (const variety of varieties) {
       const pokemonRes = await cachedFetch(
         `pokemon/${variety.pokemon.name}`,
         "pokemon",
       );
-      if (!pokemonRes) continue;
+      if (!pokemonRes || seenFormIds.has(pokemonRes.id)) continue;
+      seenFormIds.add(pokemonRes.id);
+
+      if (variety.is_default || !defaultPokemonData) {
+        defaultPokemonData = pokemonRes;
+      }
 
       const isDefault = variety.is_default || false;
       const pokemonName = pokemonRes.name;
@@ -222,9 +235,24 @@ async function buildSpeciesData(totalSpecies) {
       else if (isHisuian) region = "hisui";
       else if (isPaldean) region = "paldea";
 
-      const formKey = pokemonName.replace(`${speciesData.name}-`, "");
+      let formType = "default";
+      if (isRegional) formType = "regional";
+      else if (isMega) formType = "mega";
+      else if (isGmax) formType = "gmax";
+      else if (
+        pokemonName.includes("-cap") ||
+        pokemonName.includes("-ash") ||
+        pokemonName.includes("-world")
+      )
+        formType = "event";
+      else if (pokemonName.includes("-female")) formType = "gender";
+      else if (!isDefault) formType = "battle";
 
-      // Types & Past Types
+      const formKey = isDefault
+        ? "default"
+        : pokemonName.replace(`${speciesData.name}-`, "");
+
+      // Current Types & Historical Types
       const currentTypes = (pokemonRes.types || []).map((t) => t.type.name);
       const pastTypes = {};
 
@@ -238,23 +266,111 @@ async function buildSpeciesData(totalSpecies) {
       forms.push({
         formId: pokemonRes.id,
         name: pokemonName,
-        formKey: isDefault ? "default" : formKey,
+        formKey,
+        formType,
         isDefault,
         isMega,
         isGmax,
         isRegional,
+        isGenderDifference: pokemonName.includes("-female"),
+        isCosmetic: false,
+        gender: pokemonName.includes("-female") ? "female" : null,
         region,
         types: currentTypes,
         pastTypes: Object.keys(pastTypes).length > 0 ? pastTypes : undefined,
       });
     }
 
+    // If species has sub-forms (e.g. Unown letters, Vivillon patterns)
+    if (defaultPokemonData?.forms && defaultPokemonData.forms.length > 1) {
+      for (const subFormRef of defaultPokemonData.forms) {
+        const subFormData = await cachedFetch(
+          `pokemon-form/${subFormRef.name}`,
+          "pokemon-form",
+        );
+        if (subFormData && !seenFormIds.has(subFormData.id)) {
+          seenFormIds.add(subFormData.id);
+          const fName = subFormData.form_name || subFormData.name;
+          const isCosmeticForm =
+            !subFormData.is_battle_only && !subFormData.is_mega;
+
+          forms.push({
+            formId: subFormData.id,
+            name: subFormData.name,
+            formKey: fName || "subform",
+            formType: isCosmeticForm ? "cosmetic" : "battle",
+            isDefault: subFormData.is_default || false,
+            isMega: subFormData.is_mega || false,
+            isGmax: false,
+            isRegional: false,
+            isGenderDifference: false,
+            isCosmetic: isCosmeticForm,
+            gender: null,
+            region: null,
+            types: (subFormData.types || [])
+              .map((t) => t.type.name)
+              .filter(Boolean),
+          });
+        }
+      }
+    }
+
+    // Base stats extraction
+    const baseStats = {
+      hp: 0,
+      attack: 0,
+      defense: 0,
+      specialAttack: 0,
+      specialDefense: 0,
+      speed: 0,
+      bst: 0,
+    };
+
+    if (defaultPokemonData?.stats) {
+      let bst = 0;
+      for (const statEntry of defaultPokemonData.stats) {
+        const val = statEntry.base_stat || 0;
+        bst += val;
+        const sName = statEntry.stat?.name;
+        if (sName === "hp") baseStats.hp = val;
+        else if (sName === "attack") baseStats.attack = val;
+        else if (sName === "defense") baseStats.defense = val;
+        else if (sName === "special-attack") baseStats.specialAttack = val;
+        else if (sName === "special-defense") baseStats.specialDefense = val;
+        else if (sName === "speed") baseStats.speed = val;
+      }
+      baseStats.bst = bst;
+    }
+
+    // Physical attributes & classification tags
+    const height = defaultPokemonData?.height
+      ? defaultPokemonData.height / 10
+      : null; // in meters
+    const weight = defaultPokemonData?.weight
+      ? defaultPokemonData.weight / 10
+      : null; // in kg
+    const color = speciesData.color?.name || null;
+    const shape = speciesData.shape?.name || null;
+    const isLegendary = speciesData.is_legendary || false;
+    const isMythical = speciesData.is_mythical || false;
+    const isBaby = speciesData.is_baby || false;
+    const hasGenderDifferences = speciesData.has_gender_differences || false;
+
     speciesMap[speciesId] = {
       speciesId,
       names,
       generation,
       evolutionChainId,
-      flavorText: flavorText ? { en: flavorText } : undefined,
+      flavorText: Object.keys(flavorText).length > 0 ? flavorText : undefined,
+      baseStats,
+      isLegendary,
+      isMythical,
+      isBaby,
+      hasGenderDifferences,
+      height,
+      weight,
+      color,
+      shape,
       forms,
     };
   });
@@ -298,6 +414,8 @@ function formatEvoCondition(detail) {
     parts.push(`With ${prettifyName(detail.party_species.name)} in party`);
   if (detail.needs_overworld_rain) parts.push("While raining");
   if (detail.turn_upside_down) parts.push("Console upside down");
+  if (detail.gender === 1) parts.push("Female only");
+  if (detail.gender === 2) parts.push("Male only");
 
   if (trigger === "trade" && !detail.held_item && !detail.trade_species) {
     parts.unshift("Trade");
@@ -309,10 +427,12 @@ function formatEvoCondition(detail) {
 }
 
 /**
- * Build evolution chains database
+ * Build evolution chains database with pre-calculated linear flowchart paths
  */
 async function buildEvolutionData(speciesMap) {
-  console.log(`\n🧬 Building Evolution Chains Database...`);
+  console.log(
+    `\n🧬 Building Evolution Chains Database & UI Flowchart Paths...`,
+  );
   const evolutionMap = {};
   const chainIds = Array.from(
     new Set(
@@ -403,11 +523,50 @@ async function buildEvolutionData(speciesMap) {
 
     traverse(evoData.chain);
 
+    // Build pre-computed linear flowchart paths
+    const paths = [];
+    const rootNode = nodes[0] || null;
+
+    if (rootNode) {
+      function buildPathsDfs(currentSpeciesId, currentPath) {
+        const outgoing = transitions.filter(
+          (t) => t.fromSpeciesId === currentSpeciesId,
+        );
+        if (outgoing.length === 0) {
+          if (currentPath.length > 0) {
+            paths.push({
+              root: { speciesId: rootNode.speciesId, name: rootNode.name },
+              steps: currentPath,
+            });
+          }
+          return;
+        }
+
+        for (const tr of outgoing) {
+          const toNode = nodes.find((n) => n.speciesId === tr.toSpeciesId);
+          const step = {
+            toSpeciesId: tr.toSpeciesId,
+            toName: toNode?.name || `Species #${tr.toSpeciesId}`,
+            description: tr.description,
+          };
+          if (evoData.baby_trigger_item?.name && rootNode.isBaby) {
+            step.reverseBreeding = {
+              itemName: evoData.baby_trigger_item.name,
+            };
+          }
+          buildPathsDfs(tr.toSpeciesId, [...currentPath, step]);
+        }
+      }
+
+      buildPathsDfs(rootNode.speciesId, []);
+    }
+
     evolutionMap[chainId] = {
       chainId,
       babyTriggerItem: evoData.baby_trigger_item?.name || null,
       nodes,
       transitions,
+      paths,
     };
   });
 
@@ -424,144 +583,459 @@ async function buildEvolutionData(speciesMap) {
 }
 
 /**
- * Game definitions mapping to compile game-specific dexes
+ * Regional form mappings for pokedex segments
+ */
+const REGIONAL_FORM_MAP = {
+  // Alolan forms
+  alola: {
+    19: 10091,
+    20: 10092,
+    26: 10100,
+    27: 10101,
+    28: 10102,
+    37: 10103,
+    38: 10104,
+    50: 10105,
+    51: 10106,
+    52: 10107,
+    53: 10108,
+    74: 10109,
+    75: 10110,
+    76: 10111,
+    88: 10112,
+    89: 10113,
+    103: 10114,
+    105: 10115,
+  },
+  // Galarian forms
+  galar: {
+    52: 10161,
+    77: 10162,
+    78: 10163,
+    79: 10164,
+    80: 10165,
+    83: 10166,
+    110: 10167,
+    122: 10168,
+    144: 10169,
+    145: 10170,
+    146: 10171,
+    199: 10172,
+    222: 10173,
+    263: 10174,
+    264: 10175,
+    554: 10176,
+    555: 10177,
+    562: 10179,
+    618: 10180,
+  },
+  // Hisuian forms
+  hisui: {
+    58: 10229,
+    59: 10230,
+    100: 10231,
+    101: 10232,
+    157: 10233,
+    211: 10234,
+    215: 10235,
+    503: 10236,
+    549: 10237,
+    570: 10238,
+    571: 10239,
+    628: 10240,
+    705: 10241,
+    706: 10242,
+    713: 10243,
+    724: 10244,
+  },
+  // Paldean forms
+  paldea: {
+    128: 10250,
+    194: 10253,
+  },
+};
+
+/**
+ * Gigantamax form IDs
+ */
+const GIGANTAMAX_FORM_IDS = [
+  10195, 10196, 10197, 10198, 10199, 10200, 10201, 10202, 10203, 10204, 10205,
+  10206, 10207, 10208, 10209, 10210, 10211, 10212, 10213, 10214, 10215, 10216,
+  10217, 10218, 10219, 10220, 10221, 10222, 10223, 10224, 10225, 10226, 10227,
+];
+
+/**
+ * Comprehensive 18-game configurations
  */
 const GAME_CONFIGS = [
+  {
+    gameId: "home",
+    title: "Pokémon HOME",
+    group: "special",
+    generation: 9,
+    versions: ["home"],
+    sections: [
+      {
+        id: "national",
+        title: "National Pokédex",
+        pokedexId: 1,
+        type: "base",
+        optional: false,
+      },
+    ],
+  },
   {
     gameId: "rby",
     title: "Red / Blue / Yellow",
     group: "gen1",
     generation: 1,
-    pokedexId: 2,
     versions: ["red", "blue", "yellow"],
+    sections: [
+      {
+        id: "kanto",
+        title: "Kanto Pokédex",
+        pokedexId: 2,
+        type: "base",
+        optional: false,
+      },
+    ],
   },
   {
     gameId: "gsc",
     title: "Gold / Silver / Crystal",
     group: "gen2",
     generation: 2,
-    pokedexId: 3,
     versions: ["gold", "silver", "crystal"],
+    sections: [
+      {
+        id: "johto",
+        title: "Johto Pokédex",
+        pokedexId: 3,
+        type: "base",
+        optional: false,
+      },
+    ],
   },
   {
     gameId: "rse",
     title: "Ruby / Sapphire / Emerald",
     group: "gen3",
     generation: 3,
-    pokedexId: 4,
     versions: ["ruby", "sapphire", "emerald"],
+    sections: [
+      {
+        id: "hoenn",
+        title: "Hoenn Pokédex",
+        pokedexId: 4,
+        type: "base",
+        optional: false,
+      },
+    ],
   },
   {
     gameId: "frlg",
     title: "FireRed / LeafGreen",
     group: "gen3",
     generation: 3,
-    pokedexId: 2,
     versions: ["firered", "leafgreen"],
+    sections: [
+      {
+        id: "kanto",
+        title: "Kanto Pokédex",
+        pokedexId: 2,
+        type: "base",
+        optional: false,
+      },
+    ],
   },
   {
     gameId: "dppt",
     title: "Diamond / Pearl / Platinum",
     group: "gen4",
     generation: 4,
-    pokedexId: 5,
     versions: ["diamond", "pearl", "platinum"],
+    sections: [
+      {
+        id: "sinnoh",
+        title: "Sinnoh Pokédex",
+        pokedexId: 5,
+        type: "base",
+        optional: false,
+      },
+      {
+        id: "sinnoh-extended",
+        title: "Extended Sinnoh Pokédex",
+        pokedexId: 6,
+        type: "base",
+        optional: false,
+        startEntry: 152,
+        endEntry: 210,
+      },
+    ],
   },
   {
     gameId: "hgss",
     title: "HeartGold / SoulSilver",
     group: "gen4",
     generation: 4,
-    pokedexId: 7,
     versions: ["heartgold", "soulsilver"],
+    sections: [
+      {
+        id: "johto-updated",
+        title: "Updated Johto Pokédex",
+        pokedexId: 7,
+        type: "base",
+        optional: false,
+      },
+    ],
   },
   {
     gameId: "bw",
     title: "Black / White",
     group: "gen5",
     generation: 5,
-    pokedexId: 8,
     versions: ["black", "white"],
+    sections: [
+      {
+        id: "unova",
+        title: "Unova Pokédex",
+        pokedexId: 8,
+        type: "base",
+        optional: false,
+      },
+    ],
   },
   {
     gameId: "b2w2",
     title: "Black 2 / White 2",
     group: "gen5",
     generation: 5,
-    pokedexId: 9,
     versions: ["black-2", "white-2"],
+    sections: [
+      {
+        id: "unova-updated",
+        title: "Updated Unova Pokédex",
+        pokedexId: 9,
+        type: "base",
+        optional: false,
+      },
+    ],
   },
   {
     gameId: "xy",
     title: "X / Y",
     group: "gen6",
     generation: 6,
-    pokedexId: 12,
     versions: ["x", "y"],
+    sections: [
+      {
+        id: "kalos-central",
+        title: "Kalos Central Pokédex",
+        pokedexId: 12,
+        type: "base",
+        optional: false,
+      },
+      {
+        id: "kalos-coastal",
+        title: "Kalos Coastal Pokédex",
+        pokedexId: 13,
+        type: "base",
+        optional: false,
+      },
+      {
+        id: "kalos-mountain",
+        title: "Kalos Mountain Pokédex",
+        pokedexId: 14,
+        type: "base",
+        optional: false,
+      },
+    ],
   },
   {
     gameId: "oras",
     title: "Omega Ruby / Alpha Sapphire",
     group: "gen6",
     generation: 6,
-    pokedexId: 15,
     versions: ["omega-ruby", "alpha-sapphire"],
+    sections: [
+      {
+        id: "hoenn-updated",
+        title: "Updated Hoenn Pokédex",
+        pokedexId: 15,
+        type: "base",
+        optional: false,
+      },
+    ],
   },
   {
     gameId: "sm",
     title: "Sun / Moon",
     group: "gen7",
     generation: 7,
-    pokedexId: 16,
     versions: ["sun", "moon"],
+    regionKey: "alola",
+    sections: [
+      {
+        id: "alola",
+        title: "Alola Pokédex",
+        pokedexId: 16,
+        type: "base",
+        optional: false,
+      },
+    ],
   },
   {
     gameId: "usum",
     title: "Ultra Sun / Ultra Moon",
     group: "gen7",
     generation: 7,
-    pokedexId: 21,
     versions: ["ultra-sun", "ultra-moon"],
+    regionKey: "alola",
+    sections: [
+      {
+        id: "alola",
+        title: "Alola Pokédex",
+        pokedexId: 21,
+        type: "base",
+        optional: false,
+      },
+    ],
   },
   {
     gameId: "lgpe",
-    title: "Let's Go Pikachu / Eevee",
+    title: "Let's Go Pikachu & Eevee",
     group: "gen7",
     generation: 7,
-    pokedexId: 26,
     versions: ["lets-go-pikachu", "lets-go-eevee"],
+    regionKey: "alola",
+    sections: [
+      {
+        id: "kanto",
+        title: "Kanto Pokédex",
+        pokedexId: 26,
+        type: "base",
+        optional: false,
+      },
+    ],
   },
   {
     gameId: "swsh",
     title: "Sword / Shield",
     group: "gen8",
     generation: 8,
-    pokedexId: 27,
     versions: ["sword", "shield"],
+    regionKey: "galar",
+    sections: [
+      {
+        id: "galar",
+        title: "Galar Pokédex",
+        pokedexId: 27,
+        type: "base",
+        optional: false,
+      },
+      {
+        id: "gigantamax-forms",
+        title: "Gigantamax Forms",
+        manualIds: GIGANTAMAX_FORM_IDS,
+        type: "forms",
+        optional: true,
+      },
+      {
+        id: "armor",
+        title: "Isle of Armor",
+        pokedexId: 28,
+        type: "dlc",
+        optional: true,
+      },
+      {
+        id: "tundra",
+        title: "Crown Tundra",
+        pokedexId: 29,
+        type: "dlc",
+        optional: true,
+      },
+    ],
   },
   {
     gameId: "bdsp",
     title: "Brilliant Diamond / Shining Pearl",
     group: "gen8",
     generation: 8,
-    pokedexId: 5,
     versions: ["brilliant-diamond", "shining-pearl"],
+    sections: [
+      {
+        id: "sinnoh",
+        title: "Sinnoh Pokédex",
+        pokedexId: 6,
+        type: "base",
+        optional: false,
+      },
+    ],
   },
   {
     gameId: "pla",
     title: "Legends: Arceus",
-    group: "gen8",
+    group: "special",
     generation: 8,
-    pokedexId: 30,
     versions: ["legends-arceus"],
+    regionKey: "hisui",
+    sections: [
+      {
+        id: "hisui",
+        title: "Hisui Pokédex",
+        pokedexId: 30,
+        type: "base",
+        optional: false,
+      },
+    ],
   },
   {
     gameId: "sv",
     title: "Scarlet / Violet",
     group: "gen9",
     generation: 9,
-    pokedexId: 31,
     versions: ["scarlet", "violet"],
+    regionKey: "paldea",
+    sections: [
+      {
+        id: "paldea",
+        title: "Paldea Pokédex",
+        pokedexId: 31,
+        type: "base",
+        optional: false,
+      },
+      {
+        id: "kitakami",
+        title: "The Teal Mask",
+        pokedexId: 32,
+        type: "dlc",
+        optional: true,
+      },
+      {
+        id: "blueberry",
+        title: "The Indigo Disk",
+        pokedexId: 33,
+        type: "dlc",
+        optional: true,
+      },
+    ],
+  },
+  {
+    gameId: "za",
+    title: "Legends: Z-A",
+    group: "special",
+    generation: 9,
+    versions: ["legends-z-a"],
+    sections: [
+      {
+        id: "lumiose-city",
+        title: "Lumiose Pokédex",
+        pokedexId: 34,
+        fallbackDexKey: "lumiose",
+        type: "base",
+        optional: false,
+      },
+    ],
   },
 ];
 
@@ -597,46 +1071,59 @@ async function resolveEncountersForSpecies(
     }
   }
 
-  // 2. Check if any target versions have missing encounters (common for SwSh, BDSP, PLA, SV)
+  // 2. Check missing target versions
   const missingVersions = targetVersions.filter(
     (v) => !result[v] || result[v].locations.length === 0,
   );
 
-  if (missingVersions.length > 0) {
-    let resolvedName = speciesName;
-    if (!resolvedName) {
-      const spec = await cachedFetch(`pokemon-species/${speciesId}`, "species");
-      resolvedName = spec?.name ? prettifyName(spec.name) : "";
+  if (missingVersions.length > 0 && speciesName) {
+    // 2a. Bulbapedia Fallback
+    const safeName = speciesName.replace(/[^a-zA-Z0-9_-]/g, "_");
+    const cachePath = path.join(CACHE_DIR, "bulbapedia", `${safeName}.json`);
+    let bulbEncounters = null;
+
+    try {
+      bulbEncounters = JSON.parse(await fs.readFile(cachePath, "utf-8"));
+    } catch {
+      bulbEncounters = await fetchBulbapediaEncounters(speciesName);
+      try {
+        await fs.mkdir(path.dirname(cachePath), { recursive: true });
+        await fs.writeFile(cachePath, JSON.stringify(bulbEncounters), "utf-8");
+      } catch {
+        /* ignore */
+      }
     }
 
-    if (resolvedName) {
-      // Check cached Bulbapedia response
-      const safeName = resolvedName.replace(/[^a-zA-Z0-9_-]/g, "_");
-      const cachePath = path.join(CACHE_DIR, "bulbapedia", `${safeName}.json`);
-      let bulbEncounters = null;
-
-      try {
-        bulbEncounters = JSON.parse(await fs.readFile(cachePath, "utf-8"));
-      } catch {
-        bulbEncounters = await fetchBulbapediaEncounters(resolvedName);
-        try {
-          await fs.mkdir(path.dirname(cachePath), { recursive: true });
-          await fs.writeFile(
-            cachePath,
-            JSON.stringify(bulbEncounters),
-            "utf-8",
-          );
-        } catch {
-          /* ignore */
+    if (bulbEncounters) {
+      for (const vName of missingVersions) {
+        if (bulbEncounters[vName] && bulbEncounters[vName].length > 0) {
+          if (!result[vName]) result[vName] = { locations: [] };
+          result[vName].locations.push(...bulbEncounters[vName]);
         }
       }
+    }
 
-      if (bulbEncounters) {
-        for (const vName of missingVersions) {
-          if (bulbEncounters[vName] && bulbEncounters[vName].length > 0) {
-            if (!result[vName]) result[vName] = { locations: [] };
-            result[vName].locations.push(...bulbEncounters[vName]);
-          }
+    // 2b. Serebii Fallback for SV / SwSh if still missing
+    const stillMissing = targetVersions.filter(
+      (v) => !result[v] || result[v].locations.length === 0,
+    );
+
+    if (stillMissing.some((v) => v === "scarlet" || v === "violet")) {
+      const serebiiSV = await fetchSerebiiSVEncounters(speciesName);
+      for (const v of ["scarlet", "violet"]) {
+        if (serebiiSV[v]?.length) {
+          if (!result[v]) result[v] = { locations: [] };
+          result[v].locations.push(...serebiiSV[v]);
+        }
+      }
+    }
+
+    if (stillMissing.some((v) => v === "sword" || v === "shield")) {
+      const serebiiSwSh = await fetchSerebiiSwShEncounters(speciesName);
+      for (const v of ["sword", "shield"]) {
+        if (serebiiSwSh[v]?.length) {
+          if (!result[v]) result[v] = { locations: [] };
+          result[v].locations.push(...serebiiSwSh[v]);
         }
       }
     }
@@ -646,7 +1133,7 @@ async function resolveEncountersForSpecies(
 }
 
 /**
- * Build game-specific files with dex entries and enriched encounters
+ * Build game-specific files with dex entries, DLC segments, and enriched encounters
  */
 async function buildGamesData(speciesMap = {}) {
   console.log(
@@ -657,43 +1144,108 @@ async function buildGamesData(speciesMap = {}) {
 
   for (const cfg of GAME_CONFIGS) {
     console.log(`  -> Processing ${cfg.title} (${cfg.gameId})...`);
-    let pokedexData = null;
-    if (cfg.pokedexId) {
-      pokedexData = await cachedFetch(`pokedex/${cfg.pokedexId}`, "pokedex");
-    }
+    const sections = [];
+    const encounters = {};
+    const regionalMap = cfg.regionKey
+      ? REGIONAL_FORM_MAP[cfg.regionKey] || {}
+      : {};
 
-    const entries = [];
-    if (pokedexData && pokedexData.pokemon_entries) {
-      for (const entry of pokedexData.pokemon_entries) {
-        const speciesId = Number(
-          entry.pokemon_species?.url?.match(/\/pokemon-species\/(\d+)\//)?.[1],
+    for (const seg of cfg.sections) {
+      let entries = [];
+
+      if (seg.manualIds && Array.isArray(seg.manualIds)) {
+        // Direct manual form IDs (e.g. Gigantamax)
+        entries = seg.manualIds.map((fId) => {
+          // Find matching species
+          const matchedSpecies = Object.values(speciesMap).find((s) =>
+            s.forms?.some((f) => f.formId === fId),
+          );
+          return {
+            speciesId: matchedSpecies?.speciesId || fId,
+            formId: fId,
+            dexNumber: null,
+          };
+        });
+      } else if (seg.pokedexId) {
+        let pokedexData = await cachedFetch(
+          `pokedex/${seg.pokedexId}`,
+          "pokedex",
         );
-        if (speciesId) {
-          entries.push({
-            speciesId,
-            formId: speciesId,
-            dexNumber: entry.entry_number || null,
-          });
+
+        // Fallback to Serebii / Bulbapedia dex roster if PokéAPI returns 404 or empty
+        if (!pokedexData && seg.fallbackDexKey) {
+          const serebiiRoster = await fetchSerebiiDexRoster(seg.fallbackDexKey);
+          if (serebiiRoster.length) {
+            entries = serebiiRoster
+              .map((r) => {
+                const matched = Object.values(speciesMap).find(
+                  (s) =>
+                    s.names?.en?.toLowerCase() === r.speciesName.toLowerCase(),
+                );
+                const speciesId = matched?.speciesId || 0;
+                const formId = regionalMap[speciesId] || speciesId;
+                return {
+                  speciesId,
+                  formId,
+                  dexNumber: r.dexNumber,
+                };
+              })
+              .filter((e) => e.speciesId > 0);
+          }
+        } else if (pokedexData?.pokemon_entries) {
+          let rawList = pokedexData.pokemon_entries;
+          if (seg.startEntry && seg.endEntry) {
+            rawList = rawList.filter(
+              (e) =>
+                (e.entry_number || 0) >= seg.startEntry &&
+                (e.entry_number || 0) <= seg.endEntry,
+            );
+          }
+
+          for (const entry of rawList) {
+            const speciesId = Number(
+              entry.pokemon_species?.url?.match(
+                /\/pokemon-species\/(\d+)\//,
+              )?.[1],
+            );
+            if (speciesId) {
+              const formId = regionalMap[speciesId] || speciesId;
+              entries.push({
+                speciesId,
+                formId,
+                dexNumber: entry.entry_number || null,
+              });
+            }
+          }
         }
       }
+
+      sections.push({
+        id: seg.id,
+        title: seg.title,
+        type: seg.type,
+        optional: seg.optional || false,
+        defaultEnabled: seg.defaultEnabled || false,
+        entries,
+      });
+
+      // Sample or full entries for encounters
+      const sampleEntries = isSample ? entries.slice(0, 10) : entries;
+
+      await mapConcurrent(sampleEntries, 6, async ({ speciesId, formId }) => {
+        if (encounters[speciesId]) return;
+        const speciesName = speciesMap[speciesId]?.names?.en || "";
+        const encs = await resolveEncountersForSpecies(
+          speciesId,
+          formId,
+          speciesName,
+          cfg.versions,
+        );
+        if (Object.keys(encs).length > 0) {
+          encounters[speciesId] = encs;
+        }
+      });
     }
-
-    // Encounters dictionary
-    const encounters = {};
-    const sampleEntries = isSample ? entries.slice(0, 10) : entries;
-
-    await mapConcurrent(sampleEntries, 6, async ({ speciesId, formId }) => {
-      const speciesName = speciesMap[speciesId]?.names?.en || "";
-      const encs = await resolveEncountersForSpecies(
-        speciesId,
-        formId,
-        speciesName,
-        cfg.versions,
-      );
-      if (Object.keys(encs).length > 0) {
-        encounters[speciesId] = encs;
-      }
-    });
 
     const gamePayload = {
       gameId: cfg.gameId,
@@ -701,15 +1253,7 @@ async function buildGamesData(speciesMap = {}) {
       group: cfg.group,
       generation: cfg.generation,
       versions: cfg.versions,
-      sections: [
-        {
-          id: "base",
-          title: "Regional Pokédex",
-          type: "base",
-          optional: false,
-          entries,
-        },
-      ],
+      sections,
       encounters,
     };
 

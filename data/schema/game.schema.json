@@ -45,7 +45,7 @@
           "title": { "type": "string" },
           "type": {
             "type": "string",
-            "enum": ["base", "dlc", "forms"]
+            "enum": ["base", "dlc", "forms", "gender", "cosmetic", "custom"]
           },
           "optional": { "type": "boolean" },
           "defaultEnabled": { "type": "boolean" },
@@ -58,7 +58,9 @@
               "properties": {
                 "speciesId": { "type": "integer", "minimum": 1 },
                 "formId": { "type": "integer", "minimum": 1 },
-                "dexNumber": { "type": ["integer", "null"] }
+                "dexNumber": { "type": ["integer", "null"] },
+                "formKey": { "type": ["string", "null"] },
+                "gender": { "type": ["string", "null"] }
               },
               "additionalProperties": true
             }

@@ -10,10 +10,11 @@
   ],
   "sections": [
     {
-      "id": "base",
-      "title": "Regional Pokédex",
+      "id": "sinnoh",
+      "title": "Sinnoh Pokédex",
       "type": "base",
       "optional": false,
+      "defaultEnabled": false,
       "entries": [
         {
           "speciesId": 387,
@@ -771,9 +772,4321 @@
           "dexNumber": 151
         }
       ]
+    },
+    {
+      "id": "sinnoh-extended",
+      "title": "Extended Sinnoh Pokédex",
+      "type": "base",
+      "optional": false,
+      "defaultEnabled": false,
+      "entries": [
+        {
+          "speciesId": 479,
+          "formId": 479,
+          "dexNumber": 152
+        },
+        {
+          "speciesId": 207,
+          "formId": 207,
+          "dexNumber": 153
+        },
+        {
+          "speciesId": 472,
+          "formId": 472,
+          "dexNumber": 154
+        },
+        {
+          "speciesId": 299,
+          "formId": 299,
+          "dexNumber": 155
+        },
+        {
+          "speciesId": 476,
+          "formId": 476,
+          "dexNumber": 156
+        },
+        {
+          "speciesId": 280,
+          "formId": 280,
+          "dexNumber": 157
+        },
+        {
+          "speciesId": 281,
+          "formId": 281,
+          "dexNumber": 158
+        },
+        {
+          "speciesId": 282,
+          "formId": 282,
+          "dexNumber": 159
+        },
+        {
+          "speciesId": 475,
+          "formId": 475,
+          "dexNumber": 160
+        },
+        {
+          "speciesId": 108,
+          "formId": 108,
+          "dexNumber": 161
+        },
+        {
+          "speciesId": 463,
+          "formId": 463,
+          "dexNumber": 162
+        },
+        {
+          "speciesId": 133,
+          "formId": 133,
+          "dexNumber": 163
+        },
+        {
+          "speciesId": 134,
+          "formId": 134,
+          "dexNumber": 164
+        },
+        {
+          "speciesId": 135,
+          "formId": 135,
+          "dexNumber": 165
+        },
+        {
+          "speciesId": 136,
+          "formId": 136,
+          "dexNumber": 166
+        },
+        {
+          "speciesId": 196,
+          "formId": 196,
+          "dexNumber": 167
+        },
+        {
+          "speciesId": 197,
+          "formId": 197,
+          "dexNumber": 168
+        },
+        {
+          "speciesId": 470,
+          "formId": 470,
+          "dexNumber": 169
+        },
+        {
+          "speciesId": 471,
+          "formId": 471,
+          "dexNumber": 170
+        },
+        {
+          "speciesId": 333,
+          "formId": 333,
+          "dexNumber": 171
+        },
+        {
+          "speciesId": 334,
+          "formId": 334,
+          "dexNumber": 172
+        },
+        {
+          "speciesId": 175,
+          "formId": 175,
+          "dexNumber": 173
+        },
+        {
+          "speciesId": 176,
+          "formId": 176,
+          "dexNumber": 174
+        },
+        {
+          "speciesId": 468,
+          "formId": 468,
+          "dexNumber": 175
+        },
+        {
+          "speciesId": 228,
+          "formId": 228,
+          "dexNumber": 176
+        },
+        {
+          "speciesId": 229,
+          "formId": 229,
+          "dexNumber": 177
+        },
+        {
+          "speciesId": 81,
+          "formId": 81,
+          "dexNumber": 178
+        },
+        {
+          "speciesId": 82,
+          "formId": 82,
+          "dexNumber": 179
+        },
+        {
+          "speciesId": 462,
+          "formId": 462,
+          "dexNumber": 180
+        },
+        {
+          "speciesId": 114,
+          "formId": 114,
+          "dexNumber": 181
+        },
+        {
+          "speciesId": 465,
+          "formId": 465,
+          "dexNumber": 182
+        },
+        {
+          "speciesId": 193,
+          "formId": 193,
+          "dexNumber": 183
+        },
+        {
+          "speciesId": 469,
+          "formId": 469,
+          "dexNumber": 184
+        },
+        {
+          "speciesId": 357,
+          "formId": 357,
+          "dexNumber": 185
+        },
+        {
+          "speciesId": 111,
+          "formId": 111,
+          "dexNumber": 186
+        },
+        {
+          "speciesId": 112,
+          "formId": 112,
+          "dexNumber": 187
+        },
+        {
+          "speciesId": 464,
+          "formId": 464,
+          "dexNumber": 188
+        },
+        {
+          "speciesId": 355,
+          "formId": 355,
+          "dexNumber": 189
+        },
+        {
+          "speciesId": 356,
+          "formId": 356,
+          "dexNumber": 190
+        },
+        {
+          "speciesId": 477,
+          "formId": 477,
+          "dexNumber": 191
+        },
+        {
+          "speciesId": 137,
+          "formId": 137,
+          "dexNumber": 192
+        },
+        {
+          "speciesId": 233,
+          "formId": 233,
+          "dexNumber": 193
+        },
+        {
+          "speciesId": 474,
+          "formId": 474,
+          "dexNumber": 194
+        },
+        {
+          "speciesId": 123,
+          "formId": 123,
+          "dexNumber": 195
+        },
+        {
+          "speciesId": 212,
+          "formId": 212,
+          "dexNumber": 196
+        },
+        {
+          "speciesId": 239,
+          "formId": 239,
+          "dexNumber": 197
+        },
+        {
+          "speciesId": 125,
+          "formId": 125,
+          "dexNumber": 198
+        },
+        {
+          "speciesId": 466,
+          "formId": 466,
+          "dexNumber": 199
+        },
+        {
+          "speciesId": 240,
+          "formId": 240,
+          "dexNumber": 200
+        },
+        {
+          "speciesId": 126,
+          "formId": 126,
+          "dexNumber": 201
+        },
+        {
+          "speciesId": 467,
+          "formId": 467,
+          "dexNumber": 202
+        },
+        {
+          "speciesId": 220,
+          "formId": 220,
+          "dexNumber": 203
+        },
+        {
+          "speciesId": 221,
+          "formId": 221,
+          "dexNumber": 204
+        },
+        {
+          "speciesId": 473,
+          "formId": 473,
+          "dexNumber": 205
+        },
+        {
+          "speciesId": 361,
+          "formId": 361,
+          "dexNumber": 206
+        },
+        {
+          "speciesId": 362,
+          "formId": 362,
+          "dexNumber": 207
+        },
+        {
+          "speciesId": 478,
+          "formId": 478,
+          "dexNumber": 208
+        },
+        {
+          "speciesId": 359,
+          "formId": 359,
+          "dexNumber": 209
+        },
+        {
+          "speciesId": 487,
+          "formId": 487,
+          "dexNumber": 210
+        }
+      ]
     }
   ],
   "encounters": {
+    "25": {
+      "diamond": {
+        "locations": [
+          "trophy garden area"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "trophy garden area"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "trophy garden area"
+        ]
+      }
+    },
+    "26": {
+      "diamond": {
+        "locations": [
+          "Evolve Pikachu"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Evolve Pikachu"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Evolve Pikachu"
+        ]
+      }
+    },
+    "35": {
+      "platinum": {
+        "locations": [
+          "mt coronet 1f route 207",
+          "mt coronet 2f",
+          "mt coronet 3f",
+          "mt coronet 4f",
+          "mt coronet 4f small room",
+          "mt coronet 5f",
+          "mt coronet 6f",
+          "mt coronet 1f from exterior",
+          "mt coronet 1f route 216",
+          "mt coronet b1f",
+          "trophy garden area"
+        ]
+      },
+      "diamond": {
+        "locations": [
+          "mt coronet 2f",
+          "mt coronet 3f",
+          "mt coronet exterior snowfall",
+          "mt coronet exterior blizzard",
+          "mt coronet 4f",
+          "mt coronet 4f small room",
+          "mt coronet 5f",
+          "mt coronet 6f",
+          "mt coronet 1f from exterior",
+          "mt coronet 1f route 216",
+          "mt coronet b1f",
+          "trophy garden area"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "mt coronet 2f",
+          "mt coronet 3f",
+          "mt coronet exterior snowfall",
+          "mt coronet exterior blizzard",
+          "mt coronet 4f",
+          "mt coronet 4f small room",
+          "mt coronet 5f",
+          "mt coronet 6f",
+          "mt coronet 1f from exterior",
+          "mt coronet 1f route 216",
+          "mt coronet b1f",
+          "trophy garden area"
+        ]
+      }
+    },
+    "36": {
+      "diamond": {
+        "locations": [
+          "Evolve Clefairy"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Evolve Clefairy"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Evolve Clefairy"
+        ]
+      }
+    },
+    "41": {
+      "diamond": {
+        "locations": [
+          "oreburgh mine 1f",
+          "oreburgh mine b1f",
+          "mt coronet 1f route 207",
+          "mt coronet 4f",
+          "mt coronet 1f route 211",
+          "mt coronet b1f",
+          "ravaged path area",
+          "oreburgh gate 1f",
+          "oreburgh gate b1f",
+          "wayward cave 1f",
+          "wayward cave b1f",
+          "iron island 1f",
+          "acuity lakefront area",
+          "sinnoh route 203 area",
+          "sinnoh route 204 south towards jubilife city",
+          "sinnoh route 204 north towards floaroma town",
+          "sinnoh route 206 area",
+          "sinnoh route 207 area",
+          "sinnoh route 208 area",
+          "sinnoh route 209 area",
+          "lost tower 1f",
+          "lost tower 2f",
+          "lost tower 3f",
+          "lost tower 4f",
+          "lost tower 5f",
+          "sinnoh route 211 west towards eterna city",
+          "sinnoh route 211 east towards celestic town",
+          "sinnoh route 216 area",
+          "sinnoh route 217 area"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "oreburgh mine 1f",
+          "oreburgh mine b1f",
+          "mt coronet 1f route 207",
+          "mt coronet 4f",
+          "mt coronet 1f route 211",
+          "mt coronet b1f",
+          "ravaged path area",
+          "oreburgh gate 1f",
+          "oreburgh gate b1f",
+          "wayward cave 1f",
+          "wayward cave b1f",
+          "iron island 1f",
+          "acuity lakefront area",
+          "sinnoh route 203 area",
+          "sinnoh route 204 south towards jubilife city",
+          "sinnoh route 204 north towards floaroma town",
+          "sinnoh route 206 area",
+          "sinnoh route 207 area",
+          "sinnoh route 208 area",
+          "sinnoh route 209 area",
+          "lost tower 1f",
+          "lost tower 2f",
+          "lost tower 3f",
+          "lost tower 4f",
+          "lost tower 5f",
+          "sinnoh route 211 west towards eterna city",
+          "sinnoh route 211 east towards celestic town",
+          "sinnoh route 216 area",
+          "sinnoh route 217 area"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "oreburgh mine 1f",
+          "oreburgh mine b1f",
+          "mt coronet 1f route 207",
+          "mt coronet 4f",
+          "mt coronet 1f route 211",
+          "mt coronet b1f",
+          "ravaged path area",
+          "oreburgh gate 1f",
+          "oreburgh gate b1f",
+          "wayward cave 1f",
+          "wayward cave b1f",
+          "iron island 1f",
+          "sinnoh route 203 area",
+          "sinnoh route 204 south towards jubilife city",
+          "sinnoh route 204 north towards floaroma town",
+          "sinnoh route 206 area",
+          "sinnoh route 207 area",
+          "sinnoh route 208 area",
+          "sinnoh route 209 area",
+          "lost tower 1f",
+          "lost tower 2f",
+          "lost tower 3f",
+          "lost tower 4f",
+          "lost tower 5f",
+          "sinnoh route 211 west towards eterna city",
+          "sinnoh route 211 east towards celestic town",
+          "sinnoh route 214 area",
+          "sinnoh route 216 area"
+        ]
+      }
+    },
+    "42": {
+      "diamond": {
+        "locations": [
+          "mt coronet 1f route 207",
+          "mt coronet 2f",
+          "mt coronet 3f",
+          "mt coronet exterior snowfall",
+          "mt coronet exterior blizzard",
+          "mt coronet 4f",
+          "mt coronet 4f small room",
+          "mt coronet 5f",
+          "mt coronet 6f",
+          "mt coronet 1f from exterior",
+          "mt coronet 1f route 216",
+          "mt coronet b1f",
+          "sinnoh victory road 1f",
+          "sinnoh victory road 2f",
+          "sinnoh victory road b1f",
+          "sinnoh victory road inside b1f",
+          "sinnoh victory road inside",
+          "sinnoh victory road inside exit",
+          "ravaged path area",
+          "oreburgh gate b1f",
+          "stark mountain area",
+          "stark mountain entrance",
+          "stark mountain inside",
+          "turnback cave pillar 1",
+          "turnback cave pillar 2",
+          "turnback cave pillar 3",
+          "turnback cave before pillar 1",
+          "turnback cave between pillars 1 and 2",
+          "turnback cave between pillars 2 and 3",
+          "turnback cave after pillar 3",
+          "snowpoint temple 1f",
+          "snowpoint temple b1f",
+          "snowpoint temple b2f",
+          "snowpoint temple b3f",
+          "snowpoint temple b4f",
+          "snowpoint temple b5f",
+          "iron island 1f",
+          "iron island b1f left",
+          "iron island b1f right",
+          "iron island b2f right",
+          "iron island b2f left",
+          "iron island b3f",
+          "lost tower 3f",
+          "lost tower 4f",
+          "lost tower 5f",
+          "sinnoh route 227 area"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "mt coronet 1f route 207",
+          "mt coronet 2f",
+          "mt coronet 3f",
+          "mt coronet exterior snowfall",
+          "mt coronet exterior blizzard",
+          "mt coronet 4f",
+          "mt coronet 4f small room",
+          "mt coronet 5f",
+          "mt coronet 6f",
+          "mt coronet 1f from exterior",
+          "mt coronet 1f route 216",
+          "mt coronet b1f",
+          "sinnoh victory road 1f",
+          "sinnoh victory road 2f",
+          "sinnoh victory road b1f",
+          "sinnoh victory road inside b1f",
+          "sinnoh victory road inside",
+          "sinnoh victory road inside exit",
+          "ravaged path area",
+          "oreburgh gate b1f",
+          "stark mountain area",
+          "stark mountain entrance",
+          "stark mountain inside",
+          "turnback cave pillar 1",
+          "turnback cave pillar 2",
+          "turnback cave pillar 3",
+          "turnback cave before pillar 1",
+          "turnback cave between pillars 1 and 2",
+          "turnback cave between pillars 2 and 3",
+          "turnback cave after pillar 3",
+          "snowpoint temple 1f",
+          "snowpoint temple b1f",
+          "snowpoint temple b2f",
+          "snowpoint temple b3f",
+          "snowpoint temple b4f",
+          "snowpoint temple b5f",
+          "iron island 1f",
+          "iron island b1f left",
+          "iron island b1f right",
+          "iron island b2f right",
+          "iron island b2f left",
+          "iron island b3f",
+          "lost tower 3f",
+          "lost tower 4f",
+          "lost tower 5f",
+          "sinnoh route 227 area"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "mt coronet 1f route 207",
+          "mt coronet 2f",
+          "mt coronet 3f",
+          "mt coronet exterior snowfall",
+          "mt coronet exterior blizzard",
+          "mt coronet 4f",
+          "mt coronet 4f small room",
+          "mt coronet 5f",
+          "mt coronet 6f",
+          "mt coronet 1f from exterior",
+          "mt coronet 1f route 216",
+          "mt coronet b1f",
+          "sinnoh victory road 1f",
+          "sinnoh victory road 2f",
+          "sinnoh victory road b1f",
+          "sinnoh victory road inside b1f",
+          "sinnoh victory road inside",
+          "sinnoh victory road inside exit",
+          "ravaged path area",
+          "oreburgh gate b1f",
+          "stark mountain area",
+          "stark mountain entrance",
+          "stark mountain inside",
+          "sendoff spring area",
+          "turnback cave pillar 1",
+          "turnback cave pillar 2",
+          "turnback cave pillar 3",
+          "turnback cave before pillar 1",
+          "turnback cave between pillars 1 and 2",
+          "turnback cave between pillars 2 and 3",
+          "turnback cave after pillar 3",
+          "snowpoint temple 1f",
+          "snowpoint temple b1f",
+          "snowpoint temple b2f",
+          "snowpoint temple b3f",
+          "snowpoint temple b4f",
+          "snowpoint temple b5f",
+          "iron island 1f",
+          "iron island b1f left",
+          "iron island b1f right",
+          "iron island b2f right",
+          "iron island b2f left",
+          "iron island b3f",
+          "lost tower 3f",
+          "lost tower 4f",
+          "lost tower 5f",
+          "sinnoh route 227 area"
+        ]
+      }
+    },
+    "54": {
+      "diamond": {
+        "locations": [
+          "eterna city area",
+          "great marsh area 1",
+          "great marsh area 2",
+          "great marsh area 3",
+          "great marsh area 4",
+          "great marsh area 6",
+          "ravaged path area",
+          "oreburgh gate b1f",
+          "lake verity before galactic intervention",
+          "lake verity after galactic intervention",
+          "lake valor area",
+          "lake acuity area",
+          "sinnoh route 203 area",
+          "sinnoh route 204 south towards jubilife city",
+          "sinnoh route 204 north towards floaroma town",
+          "sinnoh route 205 east towards eterna city",
+          "sinnoh route 208 area",
+          "sinnoh route 209 area",
+          "sinnoh route 210 west towards celestic town",
+          "sinnoh route 212 north towards hearthome city",
+          "sinnoh route 214 area",
+          "twinleaf town area",
+          "celestic town area"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "eterna city area",
+          "great marsh area 1",
+          "great marsh area 2",
+          "great marsh area 3",
+          "great marsh area 4",
+          "great marsh area 6",
+          "ravaged path area",
+          "oreburgh gate b1f",
+          "lake verity before galactic intervention",
+          "lake verity after galactic intervention",
+          "lake valor area",
+          "lake acuity area",
+          "sinnoh route 203 area",
+          "sinnoh route 204 south towards jubilife city",
+          "sinnoh route 204 north towards floaroma town",
+          "sinnoh route 205 east towards eterna city",
+          "sinnoh route 208 area",
+          "sinnoh route 209 area",
+          "sinnoh route 210 west towards celestic town",
+          "sinnoh route 212 north towards hearthome city",
+          "sinnoh route 214 area",
+          "twinleaf town area",
+          "celestic town area"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "eterna city area",
+          "ravaged path area",
+          "oreburgh gate 1f",
+          "oreburgh gate b1f",
+          "lake verity before galactic intervention",
+          "lake verity after galactic intervention",
+          "lake valor area",
+          "lake acuity area",
+          "sinnoh route 203 area",
+          "sinnoh route 204 south towards jubilife city",
+          "sinnoh route 204 north towards floaroma town",
+          "sinnoh route 205 east towards eterna city",
+          "sinnoh route 208 area",
+          "sinnoh route 209 area",
+          "sinnoh route 210 west towards celestic town",
+          "sinnoh route 212 north towards hearthome city",
+          "sinnoh route 214 area",
+          "sinnoh route 225 area",
+          "twinleaf town area",
+          "celestic town area",
+          "resort area area"
+        ]
+      }
+    },
+    "55": {
+      "diamond": {
+        "locations": [
+          "eterna city area",
+          "great marsh area 1",
+          "great marsh area 2",
+          "great marsh area 3",
+          "great marsh area 4",
+          "great marsh area 5",
+          "great marsh area 6",
+          "ravaged path area",
+          "oreburgh gate b1f",
+          "sendoff spring area",
+          "lake verity before galactic intervention",
+          "lake verity after galactic intervention",
+          "lake valor area",
+          "lake acuity area",
+          "sinnoh route 203 area",
+          "sinnoh route 204 south towards jubilife city",
+          "sinnoh route 204 north towards floaroma town",
+          "sinnoh route 205 east towards eterna city",
+          "sinnoh route 208 area",
+          "sinnoh route 209 area",
+          "sinnoh route 210 west towards celestic town",
+          "sinnoh route 212 north towards hearthome city",
+          "sinnoh route 214 area",
+          "sinnoh route 225 area",
+          "twinleaf town area",
+          "celestic town area",
+          "resort area area",
+          "sinnoh sea route 226 area",
+          "sinnoh sea route 230 area"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "eterna city area",
+          "great marsh area 1",
+          "great marsh area 2",
+          "great marsh area 3",
+          "great marsh area 4",
+          "great marsh area 5",
+          "great marsh area 6",
+          "ravaged path area",
+          "oreburgh gate b1f",
+          "sendoff spring area",
+          "lake verity before galactic intervention",
+          "lake verity after galactic intervention",
+          "lake valor area",
+          "lake acuity area",
+          "sinnoh route 203 area",
+          "sinnoh route 204 south towards jubilife city",
+          "sinnoh route 204 north towards floaroma town",
+          "sinnoh route 205 east towards eterna city",
+          "sinnoh route 208 area",
+          "sinnoh route 209 area",
+          "sinnoh route 210 west towards celestic town",
+          "sinnoh route 212 north towards hearthome city",
+          "sinnoh route 214 area",
+          "sinnoh route 225 area",
+          "twinleaf town area",
+          "celestic town area",
+          "resort area area",
+          "sinnoh sea route 226 area",
+          "sinnoh sea route 230 area"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "eterna city area",
+          "ravaged path area",
+          "oreburgh gate b1f",
+          "sendoff spring area",
+          "lake verity before galactic intervention",
+          "lake verity after galactic intervention",
+          "lake valor area",
+          "lake acuity area",
+          "sinnoh route 203 area",
+          "sinnoh route 204 south towards jubilife city",
+          "sinnoh route 204 north towards floaroma town",
+          "sinnoh route 205 east towards eterna city",
+          "sinnoh route 208 area",
+          "sinnoh route 209 area",
+          "sinnoh route 210 west towards celestic town",
+          "sinnoh route 212 north towards hearthome city",
+          "sinnoh route 214 area",
+          "sinnoh route 225 area",
+          "twinleaf town area",
+          "celestic town area",
+          "resort area area"
+        ]
+      }
+    },
+    "63": {
+      "diamond": {
+        "locations": [
+          "sinnoh route 203 area",
+          "sinnoh route 215 area",
+          "oreburgh city north west house"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "sinnoh route 203 area",
+          "sinnoh route 215 area",
+          "oreburgh city north west house"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "sinnoh route 203 area",
+          "sinnoh route 215 area",
+          "oreburgh city north west house"
+        ]
+      }
+    },
+    "64": {
+      "diamond": {
+        "locations": [
+          "sinnoh victory road 2f",
+          "sinnoh route 215 area"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "sinnoh victory road 2f",
+          "sinnoh route 215 area"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "sinnoh route 215 area"
+        ]
+      }
+    },
+    "65": {
+      "diamond": {
+        "locations": [
+          "Evolve Kadabra"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Evolve Kadabra"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Evolve Kadabra"
+        ]
+      }
+    },
+    "66": {
+      "diamond": {
+        "locations": [
+          "mt coronet 1f route 207",
+          "mt coronet 1f route 211",
+          "sinnoh route 207 area",
+          "sinnoh route 208 area",
+          "sinnoh route 210 west towards celestic town"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "mt coronet 1f route 207",
+          "mt coronet 1f route 211",
+          "sinnoh route 207 area",
+          "sinnoh route 208 area",
+          "sinnoh route 210 west towards celestic town"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "mt coronet 1f route 207",
+          "mt coronet 1f route 211",
+          "sinnoh route 206 area",
+          "sinnoh route 207 area",
+          "sinnoh route 210 west towards celestic town",
+          "sinnoh route 211 west towards eterna city"
+        ]
+      }
+    },
+    "67": {
+      "diamond": {
+        "locations": [
+          "mt coronet 2f",
+          "mt coronet 3f",
+          "mt coronet exterior snowfall",
+          "mt coronet exterior blizzard",
+          "mt coronet 4f",
+          "mt coronet 4f small room",
+          "mt coronet 5f",
+          "mt coronet 6f",
+          "mt coronet 1f from exterior",
+          "mt coronet 1f route 216",
+          "mt coronet b1f",
+          "sinnoh victory road 1f",
+          "sinnoh victory road b1f",
+          "sinnoh victory road inside b1f",
+          "sinnoh victory road inside",
+          "sinnoh victory road inside exit",
+          "stark mountain entrance",
+          "stark mountain inside",
+          "acuity lakefront area",
+          "sinnoh route 210 west towards celestic town",
+          "sinnoh route 211 east towards celestic town",
+          "sinnoh route 216 area",
+          "sinnoh route 217 area",
+          "sinnoh route 225 area",
+          "sinnoh sea route 226 area"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "mt coronet 2f",
+          "mt coronet 3f",
+          "mt coronet exterior snowfall",
+          "mt coronet exterior blizzard",
+          "mt coronet 4f",
+          "mt coronet 4f small room",
+          "mt coronet 5f",
+          "mt coronet 6f",
+          "mt coronet 1f from exterior",
+          "mt coronet 1f route 216",
+          "mt coronet b1f",
+          "sinnoh victory road 1f",
+          "sinnoh victory road b1f",
+          "sinnoh victory road inside b1f",
+          "sinnoh victory road inside",
+          "sinnoh victory road inside exit",
+          "stark mountain entrance",
+          "stark mountain inside",
+          "acuity lakefront area",
+          "sinnoh route 210 west towards celestic town",
+          "sinnoh route 211 east towards celestic town",
+          "sinnoh route 216 area",
+          "sinnoh route 217 area",
+          "sinnoh route 225 area",
+          "sinnoh sea route 226 area"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "mt coronet 2f",
+          "mt coronet 3f",
+          "mt coronet exterior snowfall",
+          "mt coronet exterior blizzard",
+          "mt coronet 4f",
+          "mt coronet 4f small room",
+          "mt coronet 5f",
+          "mt coronet 6f",
+          "mt coronet 1f from exterior",
+          "mt coronet 1f route 216",
+          "mt coronet b1f",
+          "sinnoh route 210 west towards celestic town",
+          "sinnoh route 211 east towards celestic town",
+          "sinnoh route 225 area",
+          "sinnoh sea route 226 area"
+        ]
+      }
+    },
+    "68": {
+      "diamond": {
+        "locations": [
+          "Evolve Machoke"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Evolve Machoke"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Evolve Machoke"
+        ]
+      }
+    },
+    "72": {
+      "diamond": {
+        "locations": [
+          "canalave city area",
+          "pastoria city area",
+          "valley windworks area",
+          "fuego ironworks area",
+          "iron island area",
+          "sinnoh route 205 south towards floaroma town",
+          "sinnoh route 213 area",
+          "sinnoh route 218 area",
+          "sinnoh route 219 area",
+          "sinnoh route 221 area",
+          "sinnoh route 222 area",
+          "sinnoh sea route 220 area"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "canalave city area",
+          "pastoria city area",
+          "valley windworks area",
+          "fuego ironworks area",
+          "iron island area",
+          "sinnoh route 205 south towards floaroma town",
+          "sinnoh route 213 area",
+          "sinnoh route 218 area",
+          "sinnoh route 219 area",
+          "sinnoh route 221 area",
+          "sinnoh route 222 area",
+          "sinnoh sea route 220 area"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "canalave city area",
+          "pastoria city area",
+          "sunyshore city area",
+          "valley windworks area",
+          "fuego ironworks area",
+          "iron island area",
+          "sinnoh route 205 south towards floaroma town",
+          "sinnoh route 212 east towards pastoria city",
+          "sinnoh route 213 area",
+          "sinnoh route 218 area",
+          "sinnoh route 219 area",
+          "sinnoh route 221 area",
+          "sinnoh route 222 area",
+          "sinnoh sea route 220 area"
+        ]
+      }
+    },
+    "73": {
+      "diamond": {
+        "locations": [
+          "canalave city area",
+          "pastoria city area",
+          "sunyshore city area",
+          "sinnoh pokemon league area",
+          "valley windworks area",
+          "fuego ironworks area",
+          "iron island area",
+          "sinnoh route 205 south towards floaroma town",
+          "sinnoh route 213 area",
+          "sinnoh route 218 area",
+          "sinnoh route 219 area",
+          "sinnoh route 221 area",
+          "sinnoh route 222 area",
+          "sinnoh route 224 area",
+          "sinnoh sea route 220 area",
+          "sinnoh sea route 223 area",
+          "sinnoh sea route 226 area",
+          "sinnoh sea route 230 area"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "canalave city area",
+          "pastoria city area",
+          "sunyshore city area",
+          "sinnoh pokemon league area",
+          "valley windworks area",
+          "fuego ironworks area",
+          "iron island area",
+          "sinnoh route 205 south towards floaroma town",
+          "sinnoh route 213 area",
+          "sinnoh route 218 area",
+          "sinnoh route 219 area",
+          "sinnoh route 221 area",
+          "sinnoh route 222 area",
+          "sinnoh route 224 area",
+          "sinnoh sea route 220 area",
+          "sinnoh sea route 223 area",
+          "sinnoh sea route 226 area",
+          "sinnoh sea route 230 area"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "canalave city area",
+          "pastoria city area",
+          "sunyshore city area",
+          "sinnoh pokemon league area",
+          "valley windworks area",
+          "fuego ironworks area",
+          "iron island area",
+          "sinnoh route 205 south towards floaroma town",
+          "sinnoh route 212 east towards pastoria city",
+          "sinnoh route 213 area",
+          "sinnoh route 218 area",
+          "sinnoh route 219 area",
+          "sinnoh route 221 area",
+          "sinnoh route 222 area",
+          "sinnoh route 224 area",
+          "sinnoh sea route 220 area",
+          "sinnoh sea route 223 area",
+          "sinnoh sea route 226 area",
+          "sinnoh sea route 230 area"
+        ]
+      }
+    },
+    "74": {
+      "diamond": {
+        "locations": [
+          "oreburgh mine 1f",
+          "oreburgh mine b1f",
+          "mt coronet 1f route 207",
+          "mt coronet 1f route 211",
+          "ravaged path area",
+          "oreburgh gate 1f",
+          "oreburgh gate b1f",
+          "stark mountain entrance",
+          "stark mountain inside",
+          "wayward cave 1f",
+          "wayward cave b1f",
+          "ruin maniac cave 0 9 different unown caught",
+          "ruin maniac cave 10 25 different unown caught",
+          "maniac tunnel 26 plus different unown caught",
+          "iron island 1f",
+          "iron island b1f left",
+          "iron island b1f right",
+          "iron island b2f right",
+          "iron island b2f left",
+          "iron island b3f",
+          "valor lakefront area",
+          "sinnoh route 206 area",
+          "sinnoh route 207 area",
+          "sinnoh route 210 south towards solaceon town",
+          "sinnoh route 211 west towards eterna city",
+          "sinnoh route 214 area",
+          "sinnoh route 215 area"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "oreburgh mine 1f",
+          "oreburgh mine b1f",
+          "mt coronet 1f route 207",
+          "mt coronet 1f route 211",
+          "ravaged path area",
+          "oreburgh gate 1f",
+          "oreburgh gate b1f",
+          "stark mountain entrance",
+          "stark mountain inside",
+          "wayward cave 1f",
+          "wayward cave b1f",
+          "ruin maniac cave 0 9 different unown caught",
+          "ruin maniac cave 10 25 different unown caught",
+          "maniac tunnel 26 plus different unown caught",
+          "iron island 1f",
+          "iron island b1f left",
+          "iron island b1f right",
+          "iron island b2f right",
+          "iron island b2f left",
+          "iron island b3f",
+          "valor lakefront area",
+          "sinnoh route 206 area",
+          "sinnoh route 207 area",
+          "sinnoh route 210 south towards solaceon town",
+          "sinnoh route 211 west towards eterna city",
+          "sinnoh route 214 area",
+          "sinnoh route 215 area"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "oreburgh mine 1f",
+          "oreburgh mine b1f",
+          "mt coronet 1f route 207",
+          "mt coronet 1f route 211",
+          "oreburgh gate 1f",
+          "oreburgh gate b1f",
+          "wayward cave 1f",
+          "wayward cave b1f",
+          "ruin maniac cave 0 9 different unown caught",
+          "ruin maniac cave 10 25 different unown caught",
+          "maniac tunnel 26 plus different unown caught",
+          "iron island 1f",
+          "sinnoh route 206 area",
+          "sinnoh route 207 area",
+          "sinnoh route 210 south towards solaceon town",
+          "sinnoh route 214 area"
+        ]
+      }
+    },
+    "75": {
+      "diamond": {
+        "locations": [
+          "mt coronet 2f",
+          "mt coronet 3f",
+          "mt coronet 4f",
+          "mt coronet 4f small room",
+          "mt coronet 5f",
+          "mt coronet 6f",
+          "mt coronet 1f from exterior",
+          "mt coronet 1f route 216",
+          "mt coronet b1f",
+          "sinnoh victory road 1f",
+          "sinnoh victory road 2f",
+          "sinnoh victory road inside",
+          "sinnoh victory road inside exit",
+          "stark mountain area",
+          "stark mountain entrance",
+          "stark mountain inside",
+          "snowpoint temple 1f",
+          "snowpoint temple b1f",
+          "snowpoint temple b2f",
+          "snowpoint temple b3f",
+          "snowpoint temple b4f",
+          "snowpoint temple b5f",
+          "iron island 1f",
+          "iron island b1f left",
+          "iron island b1f right",
+          "iron island b2f right",
+          "iron island b2f left",
+          "iron island b3f",
+          "valor lakefront area",
+          "sinnoh route 211 east towards celestic town",
+          "sinnoh route 214 area",
+          "sinnoh route 216 area",
+          "sinnoh route 227 area"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "mt coronet 2f",
+          "mt coronet 3f",
+          "mt coronet 4f",
+          "mt coronet 4f small room",
+          "mt coronet 5f",
+          "mt coronet 6f",
+          "mt coronet 1f from exterior",
+          "mt coronet 1f route 216",
+          "mt coronet b1f",
+          "sinnoh victory road 1f",
+          "sinnoh victory road 2f",
+          "sinnoh victory road inside",
+          "sinnoh victory road inside exit",
+          "stark mountain area",
+          "stark mountain entrance",
+          "stark mountain inside",
+          "snowpoint temple 1f",
+          "snowpoint temple b1f",
+          "snowpoint temple b2f",
+          "snowpoint temple b3f",
+          "snowpoint temple b4f",
+          "snowpoint temple b5f",
+          "iron island 1f",
+          "iron island b1f left",
+          "iron island b1f right",
+          "iron island b2f right",
+          "iron island b2f left",
+          "iron island b3f",
+          "valor lakefront area",
+          "sinnoh route 211 east towards celestic town",
+          "sinnoh route 214 area",
+          "sinnoh route 216 area",
+          "sinnoh route 227 area"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "mt coronet 2f",
+          "mt coronet 3f",
+          "mt coronet 4f",
+          "mt coronet 4f small room",
+          "mt coronet 5f",
+          "mt coronet 6f",
+          "mt coronet 1f from exterior",
+          "mt coronet 1f route 216",
+          "mt coronet b1f",
+          "sinnoh victory road 1f",
+          "sinnoh victory road 2f",
+          "sinnoh victory road b1f",
+          "sinnoh victory road inside b1f",
+          "sinnoh victory road inside",
+          "sinnoh victory road inside exit",
+          "stark mountain area",
+          "stark mountain entrance",
+          "stark mountain inside",
+          "sendoff spring area",
+          "iron island 1f",
+          "iron island b1f left",
+          "iron island b1f right",
+          "iron island b2f right",
+          "iron island b2f left",
+          "iron island b3f",
+          "sinnoh route 211 east towards celestic town",
+          "sinnoh route 214 area",
+          "sinnoh route 216 area",
+          "sinnoh route 225 area",
+          "sinnoh route 227 area",
+          "sinnoh sea route 226 area"
+        ]
+      }
+    },
+    "76": {
+      "diamond": {
+        "locations": [
+          "Evolve Graveler"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Evolve Graveler"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Evolve Graveler"
+        ]
+      }
+    },
+    "77": {
+      "diamond": {
+        "locations": [
+          "sinnoh route 206 area",
+          "sinnoh route 210 south towards solaceon town",
+          "sinnoh route 211 west towards eterna city",
+          "sinnoh route 211 east towards celestic town",
+          "sinnoh route 214 area",
+          "sinnoh route 215 area"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "sinnoh route 206 area",
+          "sinnoh route 210 south towards solaceon town",
+          "sinnoh route 211 west towards eterna city",
+          "sinnoh route 211 east towards celestic town",
+          "sinnoh route 214 area",
+          "sinnoh route 215 area"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "sinnoh route 206 area",
+          "sinnoh route 207 area",
+          "sinnoh route 210 south towards solaceon town"
+        ]
+      }
+    },
+    "78": {
+      "diamond": {
+        "locations": [
+          "Evolve Ponyta"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Evolve Ponyta"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Evolve Ponyta"
+        ]
+      }
+    },
+    "81": {
+      "diamond": {
+        "locations": [
+          "fuego ironworks area"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "fuego ironworks area"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "fuego ironworks area",
+          "sinnoh route 222 area"
+        ]
+      }
+    },
+    "82": {
+      "platinum": {
+        "locations": [
+          "sinnoh victory road 2f",
+          "sinnoh route 222 area"
+        ]
+      },
+      "diamond": {
+        "locations": [
+          "Evolve Magnemite"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Evolve Magnemite"
+        ]
+      }
+    },
+    "92": {
+      "platinum": {
+        "locations": [
+          "eterna forest area",
+          "turnback cave pillar 1",
+          "turnback cave before pillar 1",
+          "old chateau entrance",
+          "old chateau dining room",
+          "old chateau 2f private room",
+          "old chateau 2f",
+          "old chateau 2f leftmost room",
+          "old chateau 2f left room",
+          "old chateau 2f middle room",
+          "old chateau 2f right room",
+          "old chateau 2f rightmost room",
+          "lost tower 1f",
+          "lost tower 2f",
+          "lost tower 3f",
+          "lost tower 4f",
+          "lost tower 5f"
+        ]
+      },
+      "diamond": {
+        "locations": [
+          "old chateau entrance",
+          "old chateau dining room",
+          "old chateau 2f private room",
+          "old chateau 2f",
+          "old chateau 2f leftmost room",
+          "old chateau 2f left room",
+          "old chateau 2f middle room",
+          "old chateau 2f right room",
+          "old chateau 2f rightmost room",
+          "sinnoh route 209 area",
+          "lost tower 1f",
+          "lost tower 2f",
+          "lost tower 3f",
+          "lost tower 4f",
+          "lost tower 5f"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "old chateau entrance",
+          "old chateau dining room",
+          "old chateau 2f private room",
+          "old chateau 2f",
+          "old chateau 2f leftmost room",
+          "old chateau 2f left room",
+          "old chateau 2f middle room",
+          "old chateau 2f right room",
+          "old chateau 2f rightmost room",
+          "sinnoh route 209 area",
+          "lost tower 1f",
+          "lost tower 2f",
+          "lost tower 3f",
+          "lost tower 4f",
+          "lost tower 5f"
+        ]
+      }
+    },
+    "93": {
+      "diamond": {
+        "locations": [
+          "turnback cave pillar 1",
+          "turnback cave pillar 2",
+          "turnback cave pillar 3",
+          "turnback cave before pillar 1",
+          "turnback cave between pillars 1 and 2",
+          "turnback cave between pillars 2 and 3",
+          "turnback cave after pillar 3",
+          "old chateau entrance",
+          "old chateau dining room",
+          "old chateau 2f private room",
+          "old chateau 2f",
+          "old chateau 2f leftmost room",
+          "old chateau 2f left room",
+          "old chateau 2f middle room",
+          "old chateau 2f right room",
+          "old chateau 2f rightmost room",
+          "snowpoint city north west house"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "turnback cave pillar 1",
+          "turnback cave pillar 2",
+          "turnback cave pillar 3",
+          "turnback cave before pillar 1",
+          "turnback cave between pillars 1 and 2",
+          "turnback cave between pillars 2 and 3",
+          "turnback cave after pillar 3",
+          "old chateau entrance",
+          "old chateau dining room",
+          "old chateau 2f private room",
+          "old chateau 2f",
+          "old chateau 2f leftmost room",
+          "old chateau 2f left room",
+          "old chateau 2f middle room",
+          "old chateau 2f right room",
+          "old chateau 2f rightmost room",
+          "snowpoint city north west house"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "turnback cave pillar 2",
+          "turnback cave pillar 3",
+          "turnback cave between pillars 1 and 2",
+          "turnback cave between pillars 2 and 3",
+          "turnback cave after pillar 3",
+          "snowpoint city north west house"
+        ]
+      }
+    },
+    "94": {
+      "diamond": {
+        "locations": [
+          "old chateau 2f right room"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "old chateau 2f right room"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "old chateau 2f right room"
+        ]
+      }
+    },
+    "95": {
+      "diamond": {
+        "locations": [
+          "oreburgh mine 1f",
+          "oreburgh mine b1f",
+          "sinnoh victory road 1f",
+          "sinnoh victory road 2f",
+          "sinnoh victory road inside",
+          "sinnoh victory road inside exit",
+          "stark mountain entrance",
+          "stark mountain inside",
+          "snowpoint temple 1f",
+          "snowpoint temple b1f",
+          "snowpoint temple b2f",
+          "snowpoint temple b3f",
+          "iron island 1f",
+          "iron island b1f left",
+          "iron island b1f right",
+          "iron island b2f right",
+          "iron island b2f left",
+          "iron island b3f"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "oreburgh mine 1f",
+          "oreburgh mine b1f",
+          "sinnoh victory road 1f",
+          "sinnoh victory road 2f",
+          "sinnoh victory road inside",
+          "sinnoh victory road inside exit",
+          "stark mountain entrance",
+          "stark mountain inside",
+          "snowpoint temple 1f",
+          "snowpoint temple b1f",
+          "snowpoint temple b2f",
+          "snowpoint temple b3f",
+          "iron island 1f",
+          "iron island b1f left",
+          "iron island b1f right",
+          "iron island b2f right",
+          "iron island b2f left",
+          "iron island b3f"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "oreburgh mine 1f",
+          "oreburgh mine b1f",
+          "sinnoh victory road 1f",
+          "sinnoh victory road 2f",
+          "sinnoh victory road b1f",
+          "sinnoh victory road inside",
+          "sinnoh victory road inside exit",
+          "wayward cave 1f",
+          "wayward cave b1f",
+          "iron island 1f",
+          "iron island b1f left",
+          "iron island b1f right",
+          "iron island b2f right",
+          "iron island b2f left",
+          "iron island b3f"
+        ]
+      }
+    },
+    "108": {
+      "diamond": {
+        "locations": [
+          "lake valor area"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "lake valor area"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "sinnoh route 215 area"
+        ]
+      }
+    },
+    "111": {
+      "platinum": {
+        "locations": [
+          "sinnoh victory road 1f",
+          "stark mountain area",
+          "stark mountain entrance",
+          "sinnoh route 214 area",
+          "sinnoh route 227 area"
+        ]
+      },
+      "diamond": {
+        "locations": [
+          "stark mountain area",
+          "sinnoh route 227 area"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "stark mountain area",
+          "sinnoh route 227 area"
+        ]
+      }
+    },
+    "112": {
+      "platinum": {
+        "locations": [
+          "sinnoh victory road 1f",
+          "stark mountain area",
+          "stark mountain entrance",
+          "stark mountain inside",
+          "sinnoh route 227 area",
+          "sinnoh route 228 area"
+        ]
+      },
+      "diamond": {
+        "locations": [
+          "stark mountain area",
+          "sinnoh route 227 area",
+          "sinnoh route 228 area"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "stark mountain area",
+          "sinnoh route 227 area",
+          "sinnoh route 228 area"
+        ]
+      }
+    },
+    "113": {
+      "diamond": {
+        "locations": [
+          "trophy garden area",
+          "sinnoh route 209 area",
+          "sinnoh route 210 south towards solaceon town"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "trophy garden area",
+          "sinnoh route 209 area",
+          "sinnoh route 210 south towards solaceon town"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "trophy garden area",
+          "sinnoh route 209 area",
+          "sinnoh route 210 south towards solaceon town"
+        ]
+      }
+    },
+    "114": {
+      "platinum": {
+        "locations": [
+          "great marsh area 1",
+          "great marsh area 2",
+          "great marsh area 3",
+          "great marsh area 4",
+          "great marsh area 5",
+          "great marsh area 6"
+        ]
+      },
+      "diamond": {
+        "locations": [
+          "Trade, breed In events|event Tangrowth"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Trade, breed In events|event Tangrowth"
+        ]
+      }
+    },
+    "118": {
+      "diamond": {
+        "locations": [
+          "sendoff spring area",
+          "lake verity before galactic intervention",
+          "lake verity after galactic intervention",
+          "lake valor area",
+          "lake acuity area",
+          "sinnoh route 203 area",
+          "sinnoh route 204 south towards jubilife city",
+          "sinnoh route 204 north towards floaroma town",
+          "sinnoh route 209 area",
+          "sinnoh route 212 north towards hearthome city",
+          "sinnoh route 214 area",
+          "twinleaf town area",
+          "resort area area"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "sendoff spring area",
+          "lake verity before galactic intervention",
+          "lake verity after galactic intervention",
+          "lake valor area",
+          "lake acuity area",
+          "sinnoh route 203 area",
+          "sinnoh route 204 south towards jubilife city",
+          "sinnoh route 204 north towards floaroma town",
+          "sinnoh route 209 area",
+          "sinnoh route 212 north towards hearthome city",
+          "sinnoh route 214 area",
+          "twinleaf town area",
+          "resort area area"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "sendoff spring area",
+          "lake verity before galactic intervention",
+          "lake verity after galactic intervention",
+          "lake valor area",
+          "lake acuity area",
+          "sinnoh route 203 area",
+          "sinnoh route 204 south towards jubilife city",
+          "sinnoh route 204 north towards floaroma town",
+          "sinnoh route 208 area",
+          "sinnoh route 209 area",
+          "sinnoh route 212 north towards hearthome city",
+          "sinnoh route 214 area",
+          "sinnoh route 229 area",
+          "twinleaf town area",
+          "celestic town area"
+        ]
+      }
+    },
+    "119": {
+      "diamond": {
+        "locations": [
+          "sendoff spring area",
+          "lake verity before galactic intervention",
+          "lake verity after galactic intervention",
+          "lake valor area",
+          "lake acuity area",
+          "sinnoh route 203 area",
+          "sinnoh route 204 south towards jubilife city",
+          "sinnoh route 204 north towards floaroma town",
+          "sinnoh route 209 area",
+          "sinnoh route 212 north towards hearthome city",
+          "sinnoh route 214 area",
+          "twinleaf town area",
+          "resort area area"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "sendoff spring area",
+          "lake verity before galactic intervention",
+          "lake verity after galactic intervention",
+          "lake valor area",
+          "lake acuity area",
+          "sinnoh route 203 area",
+          "sinnoh route 204 south towards jubilife city",
+          "sinnoh route 204 north towards floaroma town",
+          "sinnoh route 209 area",
+          "sinnoh route 212 north towards hearthome city",
+          "sinnoh route 214 area",
+          "twinleaf town area",
+          "resort area area"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "sendoff spring area",
+          "lake verity before galactic intervention",
+          "lake verity after galactic intervention",
+          "lake valor area",
+          "lake acuity area",
+          "sinnoh route 203 area",
+          "sinnoh route 204 south towards jubilife city",
+          "sinnoh route 204 north towards floaroma town",
+          "sinnoh route 208 area",
+          "sinnoh route 209 area",
+          "sinnoh route 212 north towards hearthome city",
+          "sinnoh route 214 area",
+          "sinnoh route 229 area",
+          "twinleaf town area",
+          "celestic town area"
+        ]
+      }
+    },
+    "122": {
+      "diamond": {
+        "locations": [
+          "sinnoh route 218 area",
+          "sinnoh route 222 area"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "sinnoh route 218 area"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Evolve Mime Jr."
+        ]
+      }
+    },
+    "123": {
+      "platinum": {
+        "locations": [
+          "sinnoh route 210 south towards solaceon town",
+          "sinnoh route 210 west towards celestic town",
+          "sinnoh route 215 area"
+        ]
+      },
+      "diamond": {
+        "locations": [
+          "sinnoh route 229 area"
+        ]
+      }
+    },
+    "125": {
+      "platinum": {
+        "locations": [
+          "sinnoh route 222 area"
+        ]
+      },
+      "diamond": {
+        "locations": [
+          "Evolve Elekid"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Evolve Elekid"
+        ]
+      }
+    },
+    "126": {
+      "platinum": {
+        "locations": [
+          "fuego ironworks area"
+        ]
+      },
+      "diamond": {
+        "locations": [
+          "Evolve Magby"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Evolve Magby"
+        ]
+      }
+    },
+    "129": {
+      "diamond": {
+        "locations": [
+          "canalave city area",
+          "eterna city area",
+          "pastoria city area",
+          "sunyshore city area",
+          "sinnoh pokemon league area",
+          "valley windworks area",
+          "fuego ironworks area",
+          "mt coronet 1f route 207",
+          "mt coronet 4f",
+          "mt coronet b1f",
+          "great marsh area 1",
+          "great marsh area 2",
+          "great marsh area 3",
+          "great marsh area 4",
+          "great marsh area 6",
+          "sinnoh victory road b1f",
+          "sinnoh victory road inside b1f",
+          "ravaged path area",
+          "oreburgh gate b1f",
+          "sendoff spring area",
+          "iron island area",
+          "lake verity before galactic intervention",
+          "lake verity after galactic intervention",
+          "lake valor area",
+          "lake acuity area",
+          "sinnoh route 203 area",
+          "sinnoh route 204 south towards jubilife city",
+          "sinnoh route 204 north towards floaroma town",
+          "sinnoh route 205 south towards floaroma town",
+          "sinnoh route 205 east towards eterna city",
+          "sinnoh route 208 area",
+          "sinnoh route 209 area",
+          "sinnoh route 210 west towards celestic town",
+          "sinnoh route 212 north towards hearthome city",
+          "sinnoh route 212 east towards pastoria city",
+          "sinnoh route 213 area",
+          "sinnoh route 214 area",
+          "sinnoh route 218 area",
+          "sinnoh route 219 area",
+          "sinnoh route 221 area",
+          "sinnoh route 222 area",
+          "sinnoh route 224 area",
+          "sinnoh route 225 area",
+          "sinnoh route 227 area",
+          "sinnoh route 228 area",
+          "sinnoh route 229 area",
+          "twinleaf town area",
+          "celestic town area",
+          "resort area area",
+          "sinnoh sea route 220 area",
+          "sinnoh sea route 223 area",
+          "sinnoh sea route 226 area",
+          "sinnoh sea route 230 area",
+          "sinnoh sea route 226 island house"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "canalave city area",
+          "eterna city area",
+          "pastoria city area",
+          "sunyshore city area",
+          "sinnoh pokemon league area",
+          "valley windworks area",
+          "fuego ironworks area",
+          "mt coronet 1f route 207",
+          "mt coronet 4f",
+          "mt coronet b1f",
+          "great marsh area 1",
+          "great marsh area 2",
+          "great marsh area 3",
+          "great marsh area 4",
+          "great marsh area 6",
+          "sinnoh victory road b1f",
+          "sinnoh victory road inside b1f",
+          "ravaged path area",
+          "oreburgh gate b1f",
+          "sendoff spring area",
+          "iron island area",
+          "lake verity before galactic intervention",
+          "lake verity after galactic intervention",
+          "lake valor area",
+          "lake acuity area",
+          "sinnoh route 203 area",
+          "sinnoh route 204 south towards jubilife city",
+          "sinnoh route 204 north towards floaroma town",
+          "sinnoh route 205 south towards floaroma town",
+          "sinnoh route 205 east towards eterna city",
+          "sinnoh route 208 area",
+          "sinnoh route 209 area",
+          "sinnoh route 210 west towards celestic town",
+          "sinnoh route 212 north towards hearthome city",
+          "sinnoh route 212 east towards pastoria city",
+          "sinnoh route 213 area",
+          "sinnoh route 214 area",
+          "sinnoh route 218 area",
+          "sinnoh route 219 area",
+          "sinnoh route 221 area",
+          "sinnoh route 222 area",
+          "sinnoh route 224 area",
+          "sinnoh route 225 area",
+          "sinnoh route 227 area",
+          "sinnoh route 228 area",
+          "sinnoh route 229 area",
+          "twinleaf town area",
+          "celestic town area",
+          "resort area area",
+          "sinnoh sea route 220 area",
+          "sinnoh sea route 223 area",
+          "sinnoh sea route 226 area",
+          "sinnoh sea route 230 area",
+          "sinnoh sea route 226 island house"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "canalave city area",
+          "eterna city area",
+          "pastoria city area",
+          "sunyshore city area",
+          "sinnoh pokemon league area",
+          "valley windworks area",
+          "fuego ironworks area",
+          "mt coronet 1f route 207",
+          "mt coronet 4f",
+          "mt coronet b1f",
+          "great marsh area 1",
+          "great marsh area 2",
+          "great marsh area 3",
+          "great marsh area 4",
+          "great marsh area 5",
+          "great marsh area 6",
+          "sinnoh victory road b1f",
+          "sinnoh victory road inside b1f",
+          "ravaged path area",
+          "oreburgh gate b1f",
+          "sendoff spring area",
+          "iron island area",
+          "lake verity before galactic intervention",
+          "lake verity after galactic intervention",
+          "lake valor area",
+          "lake acuity area",
+          "sinnoh route 203 area",
+          "sinnoh route 204 south towards jubilife city",
+          "sinnoh route 204 north towards floaroma town",
+          "sinnoh route 205 south towards floaroma town",
+          "sinnoh route 205 east towards eterna city",
+          "sinnoh route 208 area",
+          "sinnoh route 209 area",
+          "sinnoh route 210 west towards celestic town",
+          "sinnoh route 212 north towards hearthome city",
+          "sinnoh route 212 east towards pastoria city",
+          "sinnoh route 213 area",
+          "sinnoh route 214 area",
+          "sinnoh route 218 area",
+          "sinnoh route 219 area",
+          "sinnoh route 221 area",
+          "sinnoh route 222 area",
+          "sinnoh route 224 area",
+          "sinnoh route 225 area",
+          "sinnoh route 227 area",
+          "sinnoh route 228 area",
+          "sinnoh route 229 area",
+          "twinleaf town area",
+          "celestic town area",
+          "resort area area",
+          "sinnoh sea route 220 area",
+          "sinnoh sea route 223 area",
+          "sinnoh sea route 226 area",
+          "sinnoh sea route 230 area",
+          "sinnoh sea route 226 island house"
+        ]
+      }
+    },
+    "130": {
+      "diamond": {
+        "locations": [
+          "canalave city area",
+          "eterna city area",
+          "pastoria city area",
+          "sunyshore city area",
+          "sinnoh pokemon league area",
+          "valley windworks area",
+          "fuego ironworks area",
+          "mt coronet 1f route 207",
+          "mt coronet 4f",
+          "mt coronet b1f",
+          "great marsh area 1",
+          "great marsh area 2",
+          "great marsh area 3",
+          "great marsh area 4",
+          "great marsh area 6",
+          "sinnoh victory road b1f",
+          "sinnoh victory road inside b1f",
+          "ravaged path area",
+          "oreburgh gate b1f",
+          "sendoff spring area",
+          "iron island area",
+          "lake verity before galactic intervention",
+          "lake verity after galactic intervention",
+          "lake valor area",
+          "lake acuity area",
+          "sinnoh route 203 area",
+          "sinnoh route 204 south towards jubilife city",
+          "sinnoh route 204 north towards floaroma town",
+          "sinnoh route 205 south towards floaroma town",
+          "sinnoh route 205 east towards eterna city",
+          "sinnoh route 208 area",
+          "sinnoh route 209 area",
+          "sinnoh route 210 west towards celestic town",
+          "sinnoh route 212 north towards hearthome city",
+          "sinnoh route 212 east towards pastoria city",
+          "sinnoh route 213 area",
+          "sinnoh route 214 area",
+          "sinnoh route 218 area",
+          "sinnoh route 219 area",
+          "sinnoh route 221 area",
+          "sinnoh route 222 area",
+          "sinnoh route 224 area",
+          "sinnoh route 225 area",
+          "sinnoh route 227 area",
+          "sinnoh route 228 area",
+          "sinnoh route 229 area",
+          "twinleaf town area",
+          "celestic town area",
+          "resort area area",
+          "sinnoh sea route 220 area",
+          "sinnoh sea route 223 area",
+          "sinnoh sea route 226 area",
+          "sinnoh sea route 230 area"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "canalave city area",
+          "eterna city area",
+          "pastoria city area",
+          "sunyshore city area",
+          "sinnoh pokemon league area",
+          "valley windworks area",
+          "fuego ironworks area",
+          "mt coronet 1f route 207",
+          "mt coronet 4f",
+          "mt coronet b1f",
+          "great marsh area 1",
+          "great marsh area 2",
+          "great marsh area 3",
+          "great marsh area 4",
+          "great marsh area 6",
+          "sinnoh victory road b1f",
+          "sinnoh victory road inside b1f",
+          "ravaged path area",
+          "oreburgh gate b1f",
+          "sendoff spring area",
+          "iron island area",
+          "lake verity before galactic intervention",
+          "lake verity after galactic intervention",
+          "lake valor area",
+          "lake acuity area",
+          "sinnoh route 203 area",
+          "sinnoh route 204 south towards jubilife city",
+          "sinnoh route 204 north towards floaroma town",
+          "sinnoh route 205 south towards floaroma town",
+          "sinnoh route 205 east towards eterna city",
+          "sinnoh route 208 area",
+          "sinnoh route 209 area",
+          "sinnoh route 210 west towards celestic town",
+          "sinnoh route 212 north towards hearthome city",
+          "sinnoh route 212 east towards pastoria city",
+          "sinnoh route 213 area",
+          "sinnoh route 214 area",
+          "sinnoh route 218 area",
+          "sinnoh route 219 area",
+          "sinnoh route 221 area",
+          "sinnoh route 222 area",
+          "sinnoh route 224 area",
+          "sinnoh route 225 area",
+          "sinnoh route 227 area",
+          "sinnoh route 228 area",
+          "sinnoh route 229 area",
+          "twinleaf town area",
+          "celestic town area",
+          "resort area area",
+          "sinnoh sea route 220 area",
+          "sinnoh sea route 223 area",
+          "sinnoh sea route 226 area",
+          "sinnoh sea route 230 area"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "canalave city area",
+          "eterna city area",
+          "pastoria city area",
+          "sunyshore city area",
+          "sinnoh pokemon league area",
+          "valley windworks area",
+          "fuego ironworks area",
+          "mt coronet 1f route 207",
+          "mt coronet 4f",
+          "mt coronet b1f",
+          "great marsh area 1",
+          "great marsh area 2",
+          "great marsh area 3",
+          "great marsh area 4",
+          "great marsh area 5",
+          "great marsh area 6",
+          "sinnoh victory road b1f",
+          "sinnoh victory road inside b1f",
+          "ravaged path area",
+          "oreburgh gate b1f",
+          "sendoff spring area",
+          "iron island area",
+          "lake verity before galactic intervention",
+          "lake verity after galactic intervention",
+          "lake valor area",
+          "lake acuity area",
+          "sinnoh route 203 area",
+          "sinnoh route 204 south towards jubilife city",
+          "sinnoh route 204 north towards floaroma town",
+          "sinnoh route 205 south towards floaroma town",
+          "sinnoh route 205 east towards eterna city",
+          "sinnoh route 208 area",
+          "sinnoh route 209 area",
+          "sinnoh route 210 west towards celestic town",
+          "sinnoh route 212 north towards hearthome city",
+          "sinnoh route 212 east towards pastoria city",
+          "sinnoh route 213 area",
+          "sinnoh route 214 area",
+          "sinnoh route 218 area",
+          "sinnoh route 219 area",
+          "sinnoh route 221 area",
+          "sinnoh route 222 area",
+          "sinnoh route 224 area",
+          "sinnoh route 225 area",
+          "sinnoh route 227 area",
+          "sinnoh route 228 area",
+          "sinnoh route 229 area",
+          "twinleaf town area",
+          "celestic town area",
+          "sinnoh sea route 220 area",
+          "sinnoh sea route 223 area",
+          "sinnoh sea route 226 area",
+          "sinnoh sea route 230 area"
+        ]
+      }
+    },
+    "133": {
+      "diamond": {
+        "locations": [
+          "trophy garden area",
+          "hearthome city area"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "trophy garden area",
+          "hearthome city area"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "trophy garden area",
+          "hearthome city area"
+        ]
+      }
+    },
+    "134": {
+      "diamond": {
+        "locations": [
+          "Evolve Eevee"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Evolve Eevee"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Evolve Eevee"
+        ]
+      }
+    },
+    "135": {
+      "diamond": {
+        "locations": [
+          "Evolve Eevee"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Evolve Eevee"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Evolve Eevee"
+        ]
+      }
+    },
+    "136": {
+      "diamond": {
+        "locations": [
+          "Evolve Eevee"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Evolve Eevee"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Evolve Eevee"
+        ]
+      }
+    },
+    "137": {
+      "diamond": {
+        "locations": [
+          "trophy garden area"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "trophy garden area"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "veilstone city area"
+        ]
+      }
+    },
+    "143": {
+      "diamond": {
+        "locations": [
+          "Evolve Munchlax"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Evolve Munchlax"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Evolve Munchlax"
+        ]
+      }
+    },
+    "163": {
+      "platinum": {
+        "locations": [
+          "eterna forest area",
+          "great marsh area 3",
+          "great marsh area 4",
+          "great marsh area 5",
+          "great marsh area 6",
+          "sinnoh route 205 east towards eterna city",
+          "sinnoh route 210 south towards solaceon town",
+          "sinnoh route 210 west towards celestic town",
+          "sinnoh route 211 west towards eterna city"
+        ]
+      },
+      "diamond": {
+        "locations": [
+          "great marsh area 1",
+          "great marsh area 2",
+          "great marsh area 3",
+          "great marsh area 4",
+          "great marsh area 5",
+          "great marsh area 6",
+          "sinnoh route 210 west towards celestic town",
+          "sinnoh route 211 west towards eterna city"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "great marsh area 1",
+          "great marsh area 2",
+          "great marsh area 3",
+          "great marsh area 4",
+          "great marsh area 5",
+          "great marsh area 6",
+          "sinnoh route 210 west towards celestic town",
+          "sinnoh route 211 west towards eterna city"
+        ]
+      }
+    },
+    "164": {
+      "diamond": {
+        "locations": [
+          "mt coronet exterior snowfall",
+          "mt coronet exterior blizzard",
+          "great marsh area 1",
+          "great marsh area 2",
+          "sendoff spring area",
+          "lake valor area",
+          "lake acuity area",
+          "acuity lakefront area",
+          "sinnoh route 210 west towards celestic town",
+          "sinnoh route 211 east towards celestic town",
+          "sinnoh route 216 area",
+          "sinnoh route 217 area"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "mt coronet exterior snowfall",
+          "mt coronet exterior blizzard",
+          "great marsh area 1",
+          "great marsh area 2",
+          "sendoff spring area",
+          "lake valor area",
+          "lake acuity area",
+          "acuity lakefront area",
+          "sinnoh route 210 west towards celestic town",
+          "sinnoh route 211 east towards celestic town",
+          "sinnoh route 216 area",
+          "sinnoh route 217 area"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "mt coronet exterior snowfall",
+          "mt coronet exterior blizzard",
+          "great marsh area 1",
+          "great marsh area 2",
+          "great marsh area 3",
+          "great marsh area 4",
+          "sinnoh route 210 south towards solaceon town",
+          "sinnoh route 210 west towards celestic town",
+          "sinnoh route 211 east towards celestic town"
+        ]
+      }
+    },
+    "169": {
+      "diamond": {
+        "locations": [
+          "Evolve Golbat"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Evolve Golbat"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Evolve Golbat"
+        ]
+      }
+    },
+    "172": {
+      "diamond": {
+        "locations": [
+          "trophy garden area"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "trophy garden area"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "trophy garden area"
+        ]
+      }
+    },
+    "173": {
+      "diamond": {
+        "locations": [
+          "mt coronet 1f route 207",
+          "mt coronet 1f route 211",
+          "trophy garden area"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "mt coronet 1f route 207",
+          "mt coronet 1f route 211",
+          "trophy garden area"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "mt coronet 1f route 211",
+          "trophy garden area"
+        ]
+      }
+    },
+    "175": {
+      "diamond": {
+        "locations": [
+          "sinnoh sea route 230 area"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "sinnoh sea route 230 area"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "sinnoh sea route 230 area",
+          "eterna city west gate"
+        ]
+      }
+    },
+    "176": {
+      "diamond": {
+        "locations": [
+          "Evolve Togepi"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Evolve Togepi"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Evolve Togepi"
+        ]
+      }
+    },
+    "183": {
+      "diamond": {
+        "locations": [
+          "great marsh area 1",
+          "great marsh area 2",
+          "great marsh area 3",
+          "great marsh area 4",
+          "great marsh area 5",
+          "great marsh area 6",
+          "trophy garden area"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "great marsh area 1",
+          "great marsh area 2",
+          "great marsh area 3",
+          "great marsh area 4",
+          "great marsh area 5",
+          "great marsh area 6",
+          "trophy garden area"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "trophy garden area",
+          "sinnoh route 212 north towards hearthome city",
+          "sinnoh route 215 area"
+        ]
+      }
+    },
+    "184": {
+      "platinum": {
+        "locations": [
+          "sinnoh victory road b1f",
+          "sinnoh victory road inside b1f"
+        ]
+      },
+      "diamond": {
+        "locations": [
+          "Evolve Marill"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Evolve Marill"
+        ]
+      }
+    },
+    "185": {
+      "pearl": {
+        "locations": [
+          "sinnoh route 214 area",
+          "sinnoh route 221 area"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "sinnoh route 221 area"
+        ]
+      },
+      "diamond": {
+        "locations": [
+          "Evolve Bonsly"
+        ]
+      }
+    },
+    "190": {
+      "diamond": {
+        "locations": [
+          "valley windworks area",
+          "eterna forest area",
+          "fuego ironworks area",
+          "sinnoh route 205 south towards floaroma town",
+          "sinnoh route 205 east towards eterna city",
+          "sinnoh route 206 area",
+          "sinnoh route 207 area",
+          "sinnoh route 208 area",
+          "sinnoh route 209 area",
+          "sinnoh route 210 south towards solaceon town",
+          "sinnoh route 210 west towards celestic town",
+          "sinnoh route 211 east towards celestic town",
+          "sinnoh route 212 north towards hearthome city",
+          "sinnoh route 212 east towards pastoria city",
+          "sinnoh route 213 area",
+          "sinnoh route 214 area",
+          "sinnoh route 215 area",
+          "sinnoh route 218 area",
+          "sinnoh route 221 area",
+          "sinnoh route 222 area",
+          "floaroma meadow area"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "valley windworks area",
+          "eterna forest area",
+          "fuego ironworks area",
+          "sinnoh route 205 south towards floaroma town",
+          "sinnoh route 205 east towards eterna city",
+          "sinnoh route 206 area",
+          "sinnoh route 207 area",
+          "sinnoh route 208 area",
+          "sinnoh route 209 area",
+          "sinnoh route 210 south towards solaceon town",
+          "sinnoh route 210 west towards celestic town",
+          "sinnoh route 211 east towards celestic town",
+          "sinnoh route 212 north towards hearthome city",
+          "sinnoh route 212 east towards pastoria city",
+          "sinnoh route 213 area",
+          "sinnoh route 214 area",
+          "sinnoh route 215 area",
+          "sinnoh route 218 area",
+          "sinnoh route 221 area",
+          "sinnoh route 222 area",
+          "floaroma meadow area"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "valley windworks area",
+          "eterna forest area",
+          "fuego ironworks area",
+          "sinnoh route 205 south towards floaroma town",
+          "sinnoh route 205 east towards eterna city",
+          "sinnoh route 206 area",
+          "sinnoh route 207 area",
+          "sinnoh route 208 area",
+          "sinnoh route 209 area",
+          "sinnoh route 210 south towards solaceon town",
+          "sinnoh route 210 west towards celestic town",
+          "sinnoh route 211 east towards celestic town",
+          "sinnoh route 212 north towards hearthome city",
+          "sinnoh route 212 east towards pastoria city",
+          "sinnoh route 213 area",
+          "sinnoh route 214 area",
+          "sinnoh route 215 area",
+          "sinnoh route 218 area",
+          "sinnoh route 221 area",
+          "sinnoh route 222 area",
+          "floaroma meadow area"
+        ]
+      }
+    },
+    "193": {
+      "diamond": {
+        "locations": [
+          "great marsh area 1",
+          "great marsh area 2",
+          "great marsh area 3",
+          "great marsh area 4",
+          "great marsh area 5",
+          "great marsh area 6"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "great marsh area 1",
+          "great marsh area 2",
+          "great marsh area 3",
+          "great marsh area 4",
+          "great marsh area 5",
+          "great marsh area 6"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "great marsh area 1",
+          "great marsh area 2",
+          "great marsh area 3",
+          "great marsh area 4",
+          "great marsh area 5",
+          "great marsh area 6"
+        ]
+      }
+    },
+    "194": {
+      "diamond": {
+        "locations": [
+          "great marsh area 1",
+          "great marsh area 2",
+          "great marsh area 3",
+          "great marsh area 4",
+          "great marsh area 5",
+          "great marsh area 6",
+          "sinnoh route 212 east towards pastoria city"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "great marsh area 1",
+          "great marsh area 2",
+          "great marsh area 3",
+          "great marsh area 4",
+          "great marsh area 5",
+          "great marsh area 6",
+          "sinnoh route 212 east towards pastoria city"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "great marsh area 1",
+          "great marsh area 2",
+          "great marsh area 3",
+          "great marsh area 4",
+          "great marsh area 5",
+          "great marsh area 6"
+        ]
+      }
+    },
+    "195": {
+      "diamond": {
+        "locations": [
+          "great marsh area 1",
+          "great marsh area 2",
+          "great marsh area 3",
+          "great marsh area 4",
+          "great marsh area 5",
+          "great marsh area 6",
+          "sinnoh route 212 east towards pastoria city"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "great marsh area 1",
+          "great marsh area 2",
+          "great marsh area 3",
+          "great marsh area 4",
+          "great marsh area 5",
+          "great marsh area 6",
+          "sinnoh route 212 east towards pastoria city"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "great marsh area 1",
+          "great marsh area 2",
+          "great marsh area 3",
+          "great marsh area 4",
+          "great marsh area 5",
+          "great marsh area 6",
+          "sinnoh route 212 east towards pastoria city"
+        ]
+      }
+    },
+    "196": {
+      "diamond": {
+        "locations": [
+          "Evolve Eevee"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Evolve Eevee"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Evolve Eevee"
+        ]
+      }
+    },
+    "197": {
+      "diamond": {
+        "locations": [
+          "Evolve Eevee"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Evolve Eevee"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Evolve Eevee"
+        ]
+      }
+    },
+    "198": {
+      "diamond": {
+        "locations": [
+          "eterna forest area",
+          "lost tower 1f",
+          "lost tower 2f",
+          "lost tower 3f",
+          "lost tower 4f",
+          "lost tower 5f"
+        ]
+      }
+    },
+    "200": {
+      "pearl": {
+        "locations": [
+          "eterna forest area",
+          "lost tower 1f",
+          "lost tower 2f",
+          "lost tower 3f",
+          "lost tower 4f",
+          "lost tower 5f"
+        ]
+      }
+    },
+    "201": {
+      "diamond": {
+        "locations": [
+          "solaceon ruins 2f",
+          "solaceon ruins 1f",
+          "solaceon ruins b1f a",
+          "solaceon ruins b1f b",
+          "solaceon ruins b1f c",
+          "solaceon ruins b2f a",
+          "solaceon ruins b2f b",
+          "solaceon ruins b2f c",
+          "solaceon ruins b3f a",
+          "solaceon ruins b3f b",
+          "solaceon ruins b3f c",
+          "solaceon ruins b3f d",
+          "solaceon ruins b3f e",
+          "solaceon ruins b4f a",
+          "solaceon ruins b4f b",
+          "solaceon ruins b4f c",
+          "solaceon ruins b4f d",
+          "solaceon ruins b5f"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "solaceon ruins 2f",
+          "solaceon ruins 1f",
+          "solaceon ruins b1f a",
+          "solaceon ruins b1f b",
+          "solaceon ruins b1f c",
+          "solaceon ruins b2f a",
+          "solaceon ruins b2f b",
+          "solaceon ruins b2f c",
+          "solaceon ruins b3f a",
+          "solaceon ruins b3f b",
+          "solaceon ruins b3f c",
+          "solaceon ruins b3f d",
+          "solaceon ruins b3f e",
+          "solaceon ruins b4f a",
+          "solaceon ruins b4f b",
+          "solaceon ruins b4f c",
+          "solaceon ruins b4f d",
+          "solaceon ruins b5f"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "solaceon ruins 2f",
+          "solaceon ruins 1f",
+          "solaceon ruins b1f a",
+          "solaceon ruins b1f b",
+          "solaceon ruins b1f c",
+          "solaceon ruins b2f a",
+          "solaceon ruins b2f b",
+          "solaceon ruins b2f c",
+          "solaceon ruins b3f a",
+          "solaceon ruins b3f b",
+          "solaceon ruins b3f c",
+          "solaceon ruins b3f d",
+          "solaceon ruins b3f e",
+          "solaceon ruins b4f a",
+          "solaceon ruins b4f b",
+          "solaceon ruins b4f c",
+          "solaceon ruins b4f d",
+          "solaceon ruins b5f"
+        ]
+      }
+    },
+    "203": {
+      "diamond": {
+        "locations": [
+          "valor lakefront area",
+          "sinnoh route 214 area"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "valor lakefront area",
+          "sinnoh route 214 area"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "valor lakefront area",
+          "sinnoh route 221 area"
+        ]
+      }
+    },
+    "207": {
+      "diamond": {
+        "locations": [
+          "stark mountain area",
+          "sinnoh route 206 area",
+          "sinnoh route 207 area",
+          "sinnoh route 214 area",
+          "sinnoh route 215 area",
+          "sinnoh route 227 area"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "stark mountain area",
+          "sinnoh route 206 area",
+          "sinnoh route 207 area",
+          "sinnoh route 214 area",
+          "sinnoh route 215 area",
+          "sinnoh route 227 area"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "sinnoh route 206 area"
+        ]
+      }
+    },
+    "208": {
+      "diamond": {
+        "locations": [
+          "sinnoh victory road 1f",
+          "sinnoh victory road 2f",
+          "sinnoh victory road b1f",
+          "sinnoh victory road inside b1f",
+          "sinnoh victory road inside",
+          "sinnoh victory road inside exit",
+          "snowpoint temple 1f",
+          "snowpoint temple b1f",
+          "snowpoint temple b2f",
+          "snowpoint temple b3f",
+          "snowpoint temple b4f",
+          "snowpoint temple b5f",
+          "iron island b2f left",
+          "iron island b3f"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "sinnoh victory road 1f",
+          "sinnoh victory road 2f",
+          "sinnoh victory road b1f",
+          "sinnoh victory road inside b1f",
+          "sinnoh victory road inside",
+          "sinnoh victory road inside exit",
+          "snowpoint temple 1f",
+          "snowpoint temple b1f",
+          "snowpoint temple b2f",
+          "snowpoint temple b3f",
+          "snowpoint temple b4f",
+          "snowpoint temple b5f",
+          "iron island b2f left",
+          "iron island b3f"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "sinnoh victory road 1f",
+          "sinnoh victory road 2f",
+          "sinnoh victory road b1f",
+          "sinnoh victory road inside",
+          "sinnoh victory road inside exit",
+          "iron island b2f right",
+          "iron island b2f left",
+          "iron island b3f"
+        ]
+      }
+    },
+    "212": {
+      "diamond": {
+        "locations": [
+          "Evolve Scyther"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Trade, Event"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Evolve Scyther"
+        ]
+      }
+    },
+    "214": {
+      "diamond": {
+        "locations": [
+          "valley windworks area",
+          "eterna forest area",
+          "fuego ironworks area",
+          "sinnoh route 205 south towards floaroma town",
+          "sinnoh route 205 east towards eterna city",
+          "sinnoh route 206 area",
+          "sinnoh route 207 area",
+          "sinnoh route 208 area",
+          "sinnoh route 209 area",
+          "sinnoh route 210 south towards solaceon town",
+          "sinnoh route 210 west towards celestic town",
+          "sinnoh route 211 east towards celestic town",
+          "sinnoh route 212 north towards hearthome city",
+          "sinnoh route 212 east towards pastoria city",
+          "sinnoh route 213 area",
+          "sinnoh route 214 area",
+          "sinnoh route 215 area",
+          "sinnoh route 218 area",
+          "sinnoh route 221 area",
+          "sinnoh route 222 area",
+          "floaroma meadow area"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "valley windworks area",
+          "eterna forest area",
+          "fuego ironworks area",
+          "sinnoh route 205 south towards floaroma town",
+          "sinnoh route 205 east towards eterna city",
+          "sinnoh route 206 area",
+          "sinnoh route 207 area",
+          "sinnoh route 208 area",
+          "sinnoh route 209 area",
+          "sinnoh route 210 south towards solaceon town",
+          "sinnoh route 210 west towards celestic town",
+          "sinnoh route 211 east towards celestic town",
+          "sinnoh route 212 north towards hearthome city",
+          "sinnoh route 212 east towards pastoria city",
+          "sinnoh route 213 area",
+          "sinnoh route 214 area",
+          "sinnoh route 215 area",
+          "sinnoh route 218 area",
+          "sinnoh route 221 area",
+          "sinnoh route 222 area",
+          "floaroma meadow area"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "valley windworks area",
+          "eterna forest area",
+          "fuego ironworks area",
+          "sinnoh route 205 south towards floaroma town",
+          "sinnoh route 205 east towards eterna city",
+          "sinnoh route 206 area",
+          "sinnoh route 207 area",
+          "sinnoh route 208 area",
+          "sinnoh route 209 area",
+          "sinnoh route 210 south towards solaceon town",
+          "sinnoh route 210 west towards celestic town",
+          "sinnoh route 211 east towards celestic town",
+          "sinnoh route 212 north towards hearthome city",
+          "sinnoh route 212 east towards pastoria city",
+          "sinnoh route 213 area",
+          "sinnoh route 214 area",
+          "sinnoh route 215 area",
+          "sinnoh route 218 area",
+          "sinnoh route 221 area",
+          "sinnoh route 222 area",
+          "floaroma meadow area"
+        ]
+      }
+    },
+    "215": {
+      "diamond": {
+        "locations": [
+          "snowpoint temple 1f",
+          "snowpoint temple b1f",
+          "snowpoint temple b2f",
+          "snowpoint temple b3f",
+          "snowpoint temple b4f",
+          "snowpoint temple b5f",
+          "lake acuity area",
+          "acuity lakefront area",
+          "sinnoh route 216 area",
+          "sinnoh route 217 area"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "snowpoint temple 1f",
+          "snowpoint temple b1f",
+          "snowpoint temple b2f",
+          "snowpoint temple b3f",
+          "snowpoint temple b4f",
+          "snowpoint temple b5f",
+          "lake acuity area",
+          "acuity lakefront area",
+          "sinnoh route 216 area",
+          "sinnoh route 217 area"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "snowpoint temple 1f",
+          "snowpoint temple b1f",
+          "snowpoint temple b2f",
+          "snowpoint temple b3f",
+          "snowpoint temple b4f",
+          "snowpoint temple b5f",
+          "lake acuity area",
+          "acuity lakefront area",
+          "sinnoh route 216 area",
+          "sinnoh route 217 area"
+        ]
+      }
+    },
+    "220": {
+      "platinum": {
+        "locations": [
+          "acuity lakefront area",
+          "sinnoh route 217 area"
+        ]
+      },
+      "diamond": {
+        "locations": [
+          "sinnoh route 217 area"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "sinnoh route 217 area"
+        ]
+      }
+    },
+    "221": {
+      "platinum": {
+        "locations": [
+          "sinnoh route 217 area"
+        ]
+      },
+      "diamond": {
+        "locations": [
+          "Evolve Swinub"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Evolve Swinub"
+        ]
+      }
+    },
+    "223": {
+      "diamond": {
+        "locations": [
+          "pastoria city area",
+          "sunyshore city area",
+          "sinnoh pokemon league area",
+          "sinnoh route 213 area",
+          "sinnoh route 222 area",
+          "sinnoh route 224 area",
+          "sinnoh sea route 223 area",
+          "sinnoh sea route 230 area"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "pastoria city area",
+          "sunyshore city area",
+          "sinnoh pokemon league area",
+          "sinnoh route 213 area",
+          "sinnoh route 222 area",
+          "sinnoh route 224 area",
+          "sinnoh sea route 223 area",
+          "sinnoh sea route 230 area"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "pastoria city area",
+          "sunyshore city area",
+          "sinnoh pokemon league area",
+          "sinnoh route 212 east towards pastoria city",
+          "sinnoh route 213 area",
+          "sinnoh route 222 area",
+          "sinnoh route 224 area",
+          "sinnoh sea route 223 area",
+          "sinnoh sea route 230 area"
+        ]
+      }
+    },
+    "224": {
+      "diamond": {
+        "locations": [
+          "pastoria city area",
+          "sunyshore city area",
+          "sinnoh pokemon league area",
+          "sinnoh route 213 area",
+          "sinnoh route 222 area",
+          "sinnoh route 224 area",
+          "sinnoh sea route 223 area",
+          "sinnoh sea route 230 area"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "pastoria city area",
+          "sunyshore city area",
+          "sinnoh pokemon league area",
+          "sinnoh route 213 area",
+          "sinnoh route 222 area",
+          "sinnoh route 224 area",
+          "sinnoh sea route 223 area",
+          "sinnoh sea route 230 area"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "pastoria city area",
+          "sunyshore city area",
+          "sinnoh pokemon league area",
+          "sinnoh route 212 east towards pastoria city",
+          "sinnoh route 213 area",
+          "sinnoh route 222 area",
+          "sinnoh route 224 area",
+          "sinnoh sea route 223 area",
+          "sinnoh sea route 230 area"
+        ]
+      }
+    },
+    "226": {
+      "diamond": {
+        "locations": [
+          "Evolve Mantyke"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Evolve Mantyke"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Evolve Mantyke"
+        ]
+      }
+    },
+    "228": {
+      "platinum": {
+        "locations": [
+          "valor lakefront area",
+          "sinnoh route 214 area"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Breed Houndoom"
+        ]
+      }
+    },
+    "229": {
+      "pearl": {
+        "locations": [
+          "sinnoh route 214 area",
+          "sinnoh route 215 area"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Evolve Houndour"
+        ]
+      }
+    },
+    "233": {
+      "diamond": {
+        "locations": [
+          "Evolve Porygon"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Evolve Porygon"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Evolve Porygon"
+        ]
+      }
+    },
+    "239": {
+      "diamond": {
+        "locations": [
+          "valley windworks area",
+          "sinnoh route 205 south towards floaroma town"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "valley windworks area",
+          "sinnoh route 205 south towards floaroma town"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Breed Electivire"
+        ]
+      }
+    },
+    "240": {
+      "diamond": {
+        "locations": [
+          "stark mountain area",
+          "stark mountain entrance",
+          "stark mountain inside",
+          "sinnoh route 227 area"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "stark mountain area",
+          "stark mountain entrance",
+          "stark mountain inside",
+          "sinnoh route 227 area"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Breed Magmortar"
+        ]
+      }
+    },
+    "242": {
+      "diamond": {
+        "locations": [
+          "Evolve Chansey"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Evolve Chansey"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Evolve Chansey"
+        ]
+      }
+    },
+    "265": {
+      "diamond": {
+        "locations": [
+          "valley windworks area",
+          "eterna forest area",
+          "fuego ironworks area",
+          "sinnoh route 205 south towards floaroma town",
+          "sinnoh route 205 east towards eterna city",
+          "sinnoh route 206 area",
+          "sinnoh route 207 area",
+          "sinnoh route 208 area",
+          "sinnoh route 209 area",
+          "sinnoh route 210 south towards solaceon town",
+          "sinnoh route 210 west towards celestic town",
+          "sinnoh route 211 east towards celestic town",
+          "sinnoh route 212 north towards hearthome city",
+          "sinnoh route 212 east towards pastoria city",
+          "sinnoh route 213 area",
+          "sinnoh route 214 area",
+          "sinnoh route 215 area",
+          "sinnoh route 218 area",
+          "sinnoh route 221 area",
+          "sinnoh route 222 area",
+          "floaroma meadow area"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "valley windworks area",
+          "eterna forest area",
+          "fuego ironworks area",
+          "sinnoh route 205 south towards floaroma town",
+          "sinnoh route 205 east towards eterna city",
+          "sinnoh route 206 area",
+          "sinnoh route 207 area",
+          "sinnoh route 208 area",
+          "sinnoh route 209 area",
+          "sinnoh route 210 south towards solaceon town",
+          "sinnoh route 210 west towards celestic town",
+          "sinnoh route 211 east towards celestic town",
+          "sinnoh route 212 north towards hearthome city",
+          "sinnoh route 212 east towards pastoria city",
+          "sinnoh route 213 area",
+          "sinnoh route 214 area",
+          "sinnoh route 215 area",
+          "sinnoh route 218 area",
+          "sinnoh route 221 area",
+          "sinnoh route 222 area",
+          "floaroma meadow area"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "valley windworks area",
+          "eterna forest area",
+          "fuego ironworks area",
+          "sinnoh route 204 south towards jubilife city",
+          "sinnoh route 204 north towards floaroma town",
+          "sinnoh route 205 south towards floaroma town",
+          "sinnoh route 205 east towards eterna city",
+          "sinnoh route 206 area",
+          "sinnoh route 207 area",
+          "sinnoh route 208 area",
+          "sinnoh route 209 area",
+          "sinnoh route 210 south towards solaceon town",
+          "sinnoh route 210 west towards celestic town",
+          "sinnoh route 211 east towards celestic town",
+          "sinnoh route 212 north towards hearthome city",
+          "sinnoh route 212 east towards pastoria city",
+          "sinnoh route 213 area",
+          "sinnoh route 214 area",
+          "sinnoh route 215 area",
+          "sinnoh route 218 area",
+          "sinnoh route 221 area",
+          "sinnoh route 222 area",
+          "floaroma meadow area"
+        ]
+      }
+    },
+    "266": {
+      "diamond": {
+        "locations": [
+          "valley windworks area",
+          "eterna forest area",
+          "fuego ironworks area",
+          "sinnoh route 205 south towards floaroma town",
+          "sinnoh route 205 east towards eterna city",
+          "sinnoh route 206 area",
+          "sinnoh route 207 area",
+          "sinnoh route 208 area",
+          "sinnoh route 209 area",
+          "sinnoh route 210 south towards solaceon town",
+          "sinnoh route 210 west towards celestic town",
+          "sinnoh route 211 east towards celestic town",
+          "sinnoh route 212 north towards hearthome city",
+          "sinnoh route 212 east towards pastoria city",
+          "sinnoh route 213 area",
+          "sinnoh route 214 area",
+          "sinnoh route 215 area",
+          "sinnoh route 218 area",
+          "sinnoh route 221 area",
+          "sinnoh route 222 area",
+          "floaroma meadow area"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "eterna forest area",
+          "sinnoh route 205 east towards eterna city"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Evolve Wurmple"
+        ]
+      }
+    },
+    "267": {
+      "diamond": {
+        "locations": [
+          "eterna forest area",
+          "sinnoh route 224 area",
+          "sinnoh sea route 230 area"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "eterna forest area",
+          "sinnoh route 205 east towards eterna city",
+          "sinnoh route 224 area",
+          "sinnoh route 229 area"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "sinnoh route 224 area"
+        ]
+      }
+    },
+    "268": {
+      "pearl": {
+        "locations": [
+          "valley windworks area",
+          "eterna forest area",
+          "fuego ironworks area",
+          "sinnoh route 205 south towards floaroma town",
+          "sinnoh route 205 east towards eterna city",
+          "sinnoh route 206 area",
+          "sinnoh route 207 area",
+          "sinnoh route 208 area",
+          "sinnoh route 209 area",
+          "sinnoh route 210 south towards solaceon town",
+          "sinnoh route 210 west towards celestic town",
+          "sinnoh route 211 east towards celestic town",
+          "sinnoh route 212 north towards hearthome city",
+          "sinnoh route 212 east towards pastoria city",
+          "sinnoh route 213 area",
+          "sinnoh route 214 area",
+          "sinnoh route 215 area",
+          "sinnoh route 218 area",
+          "sinnoh route 221 area",
+          "sinnoh route 222 area",
+          "floaroma meadow area"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "eterna forest area",
+          "sinnoh route 205 east towards eterna city"
+        ]
+      },
+      "diamond": {
+        "locations": [
+          "Evolve Wurmple"
+        ]
+      }
+    },
+    "269": {
+      "pearl": {
+        "locations": [
+          "eterna forest area",
+          "sinnoh sea route 230 area"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "eterna forest area",
+          "sinnoh route 205 east towards eterna city",
+          "sinnoh route 224 area",
+          "sinnoh route 229 area"
+        ]
+      },
+      "diamond": {
+        "locations": [
+          "Evolve Cascoon"
+        ]
+      }
+    },
+    "278": {
+      "diamond": {
+        "locations": [
+          "canalave city area",
+          "pastoria city area",
+          "valley windworks area",
+          "fuego ironworks area",
+          "iron island area",
+          "sinnoh route 205 south towards floaroma town",
+          "sinnoh route 213 area",
+          "sinnoh route 218 area",
+          "sinnoh route 219 area",
+          "sinnoh route 221 area",
+          "sinnoh route 222 area",
+          "sinnoh route 229 area",
+          "sinnoh sea route 220 area"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "canalave city area",
+          "pastoria city area",
+          "valley windworks area",
+          "fuego ironworks area",
+          "iron island area",
+          "sinnoh route 205 south towards floaroma town",
+          "sinnoh route 213 area",
+          "sinnoh route 218 area",
+          "sinnoh route 219 area",
+          "sinnoh route 221 area",
+          "sinnoh route 222 area",
+          "sinnoh route 229 area",
+          "sinnoh sea route 220 area"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "pastoria city area",
+          "sunyshore city area",
+          "sinnoh pokemon league area",
+          "iron island area",
+          "sinnoh route 213 area",
+          "sinnoh route 219 area",
+          "sinnoh route 221 area",
+          "sinnoh route 222 area",
+          "sinnoh sea route 220 area",
+          "sinnoh sea route 226 area",
+          "sinnoh sea route 230 area"
+        ]
+      }
+    },
+    "279": {
+      "diamond": {
+        "locations": [
+          "canalave city area",
+          "pastoria city area",
+          "sunyshore city area",
+          "sinnoh pokemon league area",
+          "valley windworks area",
+          "fuego ironworks area",
+          "iron island area",
+          "sinnoh route 205 south towards floaroma town",
+          "sinnoh route 213 area",
+          "sinnoh route 218 area",
+          "sinnoh route 219 area",
+          "sinnoh route 221 area",
+          "sinnoh route 222 area",
+          "sinnoh route 224 area",
+          "sinnoh route 229 area",
+          "sinnoh sea route 220 area",
+          "sinnoh sea route 223 area",
+          "sinnoh sea route 226 area",
+          "sinnoh sea route 230 area"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "canalave city area",
+          "pastoria city area",
+          "sunyshore city area",
+          "sinnoh pokemon league area",
+          "valley windworks area",
+          "fuego ironworks area",
+          "iron island area",
+          "sinnoh route 205 south towards floaroma town",
+          "sinnoh route 213 area",
+          "sinnoh route 218 area",
+          "sinnoh route 219 area",
+          "sinnoh route 221 area",
+          "sinnoh route 222 area",
+          "sinnoh route 224 area",
+          "sinnoh route 229 area",
+          "sinnoh sea route 220 area",
+          "sinnoh sea route 223 area",
+          "sinnoh sea route 226 area",
+          "sinnoh sea route 230 area"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "sunyshore city area",
+          "sinnoh pokemon league area",
+          "iron island area",
+          "sinnoh route 219 area",
+          "sinnoh route 221 area",
+          "sinnoh route 222 area",
+          "sinnoh route 224 area",
+          "sinnoh sea route 220 area",
+          "sinnoh sea route 223 area",
+          "sinnoh sea route 226 area",
+          "sinnoh sea route 230 area"
+        ]
+      }
+    },
+    "280": {
+      "diamond": {
+        "locations": [
+          "sinnoh route 203 area",
+          "sinnoh route 204 south towards jubilife city"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "sinnoh route 203 area",
+          "sinnoh route 204 south towards jubilife city"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "sinnoh route 208 area",
+          "sinnoh route 209 area",
+          "sinnoh route 212 north towards hearthome city"
+        ]
+      }
+    },
+    "281": {
+      "diamond": {
+        "locations": [
+          "sinnoh route 203 area",
+          "sinnoh route 204 south towards jubilife city"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "sinnoh route 203 area",
+          "sinnoh route 204 south towards jubilife city"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "sinnoh route 209 area",
+          "sinnoh route 212 north towards hearthome city"
+        ]
+      }
+    },
+    "282": {
+      "diamond": {
+        "locations": [
+          "Evolve Kirlia"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Evolve Kirlia"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Evolve Kirlia"
+        ]
+      }
+    },
+    "298": {
+      "diamond": {
+        "locations": [
+          "great marsh area 1",
+          "great marsh area 2",
+          "great marsh area 3",
+          "great marsh area 4",
+          "great marsh area 5",
+          "great marsh area 6",
+          "trophy garden area"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "great marsh area 1",
+          "great marsh area 2",
+          "great marsh area 3",
+          "great marsh area 4",
+          "great marsh area 5",
+          "great marsh area 6",
+          "trophy garden area"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "trophy garden area"
+        ]
+      }
+    },
+    "299": {
+      "platinum": {
+        "locations": [
+          "mt coronet 1f route 207",
+          "mt coronet 2f",
+          "mt coronet 3f",
+          "mt coronet exterior snowfall",
+          "mt coronet exterior blizzard",
+          "mt coronet 4f",
+          "mt coronet 4f small room",
+          "mt coronet 5f",
+          "mt coronet 6f",
+          "mt coronet 1f from exterior",
+          "mt coronet 1f route 216",
+          "mt coronet 1f route 211",
+          "mt coronet b1f"
+        ]
+      },
+      "diamond": {
+        "locations": [
+          "sinnoh route 206 area"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "sinnoh route 206 area"
+        ]
+      }
+    },
+    "307": {
+      "diamond": {
+        "locations": [
+          "mt coronet 1f route 207",
+          "mt coronet 1f route 216",
+          "mt coronet 1f route 211",
+          "mt coronet b1f",
+          "acuity lakefront area",
+          "sinnoh route 208 area",
+          "sinnoh route 210 west towards celestic town",
+          "sinnoh route 211 west towards eterna city",
+          "sinnoh route 211 east towards celestic town",
+          "sinnoh route 216 area",
+          "sinnoh route 217 area"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "mt coronet 1f route 207",
+          "mt coronet 1f route 216",
+          "mt coronet 1f route 211",
+          "mt coronet b1f",
+          "acuity lakefront area",
+          "sinnoh route 208 area",
+          "sinnoh route 210 west towards celestic town",
+          "sinnoh route 211 west towards eterna city",
+          "sinnoh route 211 east towards celestic town",
+          "sinnoh route 216 area",
+          "sinnoh route 217 area"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "mt coronet 1f route 207",
+          "mt coronet 1f route 216",
+          "mt coronet 1f route 211",
+          "mt coronet b1f",
+          "sinnoh route 210 west towards celestic town",
+          "sinnoh route 211 west towards eterna city",
+          "sinnoh route 211 east towards celestic town",
+          "sinnoh route 216 area"
+        ]
+      }
+    },
+    "308": {
+      "diamond": {
+        "locations": [
+          "mt coronet 2f",
+          "mt coronet 3f",
+          "mt coronet exterior snowfall",
+          "mt coronet exterior blizzard",
+          "mt coronet 4f",
+          "mt coronet 4f small room",
+          "mt coronet 5f",
+          "mt coronet 6f",
+          "mt coronet 1f from exterior",
+          "sinnoh victory road 1f",
+          "sinnoh victory road 2f",
+          "sinnoh victory road b1f",
+          "sinnoh victory road inside b1f",
+          "sinnoh victory road inside",
+          "sinnoh victory road inside exit",
+          "acuity lakefront area",
+          "sinnoh route 217 area"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "mt coronet 2f",
+          "mt coronet 3f",
+          "mt coronet exterior snowfall",
+          "mt coronet exterior blizzard",
+          "mt coronet 4f",
+          "mt coronet 4f small room",
+          "mt coronet 5f",
+          "mt coronet 6f",
+          "mt coronet 1f from exterior",
+          "sinnoh victory road 1f",
+          "sinnoh victory road 2f",
+          "sinnoh victory road b1f",
+          "sinnoh victory road inside b1f",
+          "sinnoh victory road inside",
+          "sinnoh victory road inside exit",
+          "acuity lakefront area",
+          "sinnoh route 217 area"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "mt coronet 2f",
+          "mt coronet 3f",
+          "mt coronet exterior snowfall",
+          "mt coronet exterior blizzard",
+          "mt coronet 4f",
+          "mt coronet 4f small room",
+          "mt coronet 5f",
+          "mt coronet 6f",
+          "mt coronet 1f from exterior"
+        ]
+      }
+    },
+    "315": {
+      "diamond": {
+        "locations": [
+          "great marsh area 1",
+          "great marsh area 2",
+          "great marsh area 3",
+          "great marsh area 4",
+          "great marsh area 5",
+          "great marsh area 6",
+          "trophy garden area",
+          "sinnoh route 212 north towards hearthome city",
+          "sinnoh route 212 east towards pastoria city",
+          "sinnoh route 221 area",
+          "sinnoh route 224 area",
+          "sinnoh route 225 area",
+          "sinnoh route 229 area"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "great marsh area 1",
+          "great marsh area 2",
+          "great marsh area 3",
+          "great marsh area 4",
+          "great marsh area 5",
+          "great marsh area 6",
+          "trophy garden area",
+          "sinnoh route 212 north towards hearthome city",
+          "sinnoh route 212 east towards pastoria city",
+          "sinnoh route 221 area",
+          "sinnoh route 224 area",
+          "sinnoh route 225 area"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "trophy garden area",
+          "sinnoh route 208 area",
+          "sinnoh route 209 area",
+          "sinnoh route 210 south towards solaceon town",
+          "sinnoh route 212 north towards hearthome city",
+          "sinnoh route 221 area",
+          "sinnoh route 224 area",
+          "sinnoh route 229 area",
+          "sinnoh sea route 230 area"
+        ]
+      }
+    },
+    "333": {
+      "platinum": {
+        "locations": [
+          "sinnoh route 210 west towards celestic town"
+        ]
+      },
+      "diamond": {
+        "locations": [
+          "sinnoh route 211 east towards celestic town"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "sinnoh route 211 east towards celestic town"
+        ]
+      }
+    },
+    "334": {
+      "diamond": {
+        "locations": [
+          "Evolve Swablu"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Evolve Swablu"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Evolve Swablu"
+        ]
+      }
+    },
+    "339": {
+      "diamond": {
+        "locations": [
+          "eterna city area",
+          "mt coronet 1f route 207",
+          "mt coronet 4f",
+          "mt coronet b1f",
+          "great marsh area 1",
+          "great marsh area 2",
+          "great marsh area 3",
+          "great marsh area 4",
+          "great marsh area 6",
+          "ravaged path area",
+          "oreburgh gate b1f",
+          "sinnoh route 205 east towards eterna city",
+          "sinnoh route 208 area",
+          "sinnoh route 210 west towards celestic town",
+          "sinnoh route 212 east towards pastoria city",
+          "sinnoh route 227 area",
+          "sinnoh route 228 area",
+          "celestic town area"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "eterna city area",
+          "mt coronet 1f route 207",
+          "mt coronet 4f",
+          "mt coronet b1f",
+          "great marsh area 1",
+          "great marsh area 2",
+          "great marsh area 3",
+          "great marsh area 4",
+          "great marsh area 6",
+          "ravaged path area",
+          "oreburgh gate b1f",
+          "sinnoh route 205 east towards eterna city",
+          "sinnoh route 208 area",
+          "sinnoh route 210 west towards celestic town",
+          "sinnoh route 212 east towards pastoria city",
+          "sinnoh route 227 area",
+          "sinnoh route 228 area",
+          "celestic town area"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "eterna city area",
+          "mt coronet 1f route 207",
+          "mt coronet 4f",
+          "mt coronet b1f",
+          "great marsh area 1",
+          "great marsh area 2",
+          "great marsh area 3",
+          "great marsh area 4",
+          "great marsh area 5",
+          "great marsh area 6",
+          "ravaged path area",
+          "oreburgh gate b1f",
+          "sinnoh route 205 east towards eterna city",
+          "sinnoh route 210 west towards celestic town",
+          "sinnoh route 225 area",
+          "sinnoh route 227 area",
+          "sinnoh route 228 area"
+        ]
+      }
+    },
+    "340": {
+      "diamond": {
+        "locations": [
+          "eterna city area",
+          "mt coronet 1f route 207",
+          "mt coronet b1f",
+          "great marsh area 1",
+          "great marsh area 2",
+          "great marsh area 3",
+          "great marsh area 4",
+          "great marsh area 6",
+          "ravaged path area",
+          "oreburgh gate b1f",
+          "sinnoh route 205 east towards eterna city",
+          "sinnoh route 208 area",
+          "sinnoh route 210 west towards celestic town",
+          "sinnoh route 212 east towards pastoria city",
+          "sinnoh route 227 area",
+          "sinnoh route 228 area",
+          "celestic town area"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "eterna city area",
+          "mt coronet 1f route 207",
+          "mt coronet b1f",
+          "great marsh area 1",
+          "great marsh area 2",
+          "great marsh area 3",
+          "great marsh area 4",
+          "great marsh area 6",
+          "ravaged path area",
+          "oreburgh gate b1f",
+          "sinnoh route 205 east towards eterna city",
+          "sinnoh route 208 area",
+          "sinnoh route 210 west towards celestic town",
+          "sinnoh route 212 east towards pastoria city",
+          "sinnoh route 227 area",
+          "sinnoh route 228 area",
+          "celestic town area"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "eterna city area",
+          "mt coronet 1f route 207",
+          "mt coronet 4f",
+          "mt coronet b1f",
+          "great marsh area 1",
+          "great marsh area 2",
+          "great marsh area 3",
+          "great marsh area 4",
+          "great marsh area 5",
+          "great marsh area 6",
+          "ravaged path area",
+          "oreburgh gate b1f",
+          "sinnoh route 205 east towards eterna city",
+          "sinnoh route 210 west towards celestic town",
+          "sinnoh route 225 area",
+          "sinnoh route 227 area",
+          "sinnoh route 228 area"
+        ]
+      }
+    },
+    "349": {
+      "diamond": {
+        "locations": [
+          "mt coronet b1f"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "mt coronet b1f"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "mt coronet b1f"
+        ]
+      }
+    },
+    "350": {
+      "diamond": {
+        "locations": [
+          "Evolve Feebas"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Evolve Feebas"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Evolve Feebas"
+        ]
+      }
+    },
+    "355": {
+      "platinum": {
+        "locations": [
+          "turnback cave pillar 1",
+          "turnback cave before pillar 1",
+          "turnback cave between pillars 1 and 2",
+          "sinnoh route 209 area",
+          "lost tower 1f",
+          "lost tower 2f",
+          "lost tower 3f",
+          "lost tower 4f",
+          "lost tower 5f"
+        ]
+      },
+      "diamond": {
+        "locations": [
+          "sinnoh route 224 area"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "sinnoh route 224 area"
+        ]
+      }
+    },
+    "356": {
+      "platinum": {
+        "locations": [
+          "sendoff spring area",
+          "turnback cave pillar 1",
+          "turnback cave pillar 2",
+          "turnback cave pillar 3",
+          "turnback cave before pillar 1",
+          "turnback cave between pillars 1 and 2",
+          "turnback cave between pillars 2 and 3",
+          "turnback cave after pillar 3"
+        ]
+      },
+      "diamond": {
+        "locations": [
+          "sinnoh route 224 area"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "sinnoh route 224 area"
+        ]
+      }
+    },
+    "357": {
+      "platinum": {
+        "locations": [
+          "great marsh area 1",
+          "great marsh area 2",
+          "great marsh area 3",
+          "great marsh area 4",
+          "great marsh area 5",
+          "great marsh area 6"
+        ]
+      }
+    },
+    "358": {
+      "diamond": {
+        "locations": [
+          "mt coronet 4f small room",
+          "mt coronet 5f",
+          "mt coronet 6f",
+          "sendoff spring area"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "mt coronet 4f small room",
+          "mt coronet 5f",
+          "mt coronet 6f",
+          "sendoff spring area"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "mt coronet 4f small room",
+          "mt coronet 5f",
+          "mt coronet 6f",
+          "turnback cave pillar 2",
+          "turnback cave pillar 3",
+          "turnback cave between pillars 1 and 2",
+          "turnback cave between pillars 2 and 3",
+          "turnback cave after pillar 3"
+        ]
+      }
+    },
+    "359": {
+      "platinum": {
+        "locations": [
+          "mt coronet exterior snowfall",
+          "mt coronet exterior blizzard"
+        ]
+      },
+      "diamond": {
+        "locations": [
+          "sinnoh route 213 area"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "sinnoh route 213 area"
+        ]
+      }
+    },
+    "361": {
+      "platinum": {
+        "locations": [
+          "lake acuity area",
+          "acuity lakefront area",
+          "sinnoh route 216 area",
+          "sinnoh route 217 area"
+        ]
+      },
+      "diamond": {
+        "locations": [
+          "acuity lakefront area",
+          "sinnoh route 216 area",
+          "sinnoh route 217 area"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "acuity lakefront area",
+          "sinnoh route 216 area",
+          "sinnoh route 217 area"
+        ]
+      }
+    },
+    "362": {
+      "diamond": {
+        "locations": [
+          "Evolve Snorunt"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Evolve Snorunt"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Evolve Snorunt"
+        ]
+      }
+    },
     "387": {
       "diamond": {
         "locations": [
@@ -975,6 +5288,2255 @@
           "sinnoh route 203 area",
           "sinnoh route 204 south towards jubilife city",
           "sinnoh route 204 north towards floaroma town"
+        ]
+      }
+    },
+    "397": {
+      "diamond": {
+        "locations": [
+          "great marsh area 1",
+          "great marsh area 2",
+          "great marsh area 3",
+          "great marsh area 4",
+          "great marsh area 5",
+          "great marsh area 6",
+          "sendoff spring area",
+          "trophy garden area",
+          "lake verity before galactic intervention",
+          "lake verity after galactic intervention",
+          "lake valor area",
+          "valor lakefront area",
+          "sinnoh route 209 area",
+          "sinnoh route 212 north towards hearthome city"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "great marsh area 1",
+          "great marsh area 2",
+          "great marsh area 3",
+          "great marsh area 4",
+          "great marsh area 5",
+          "great marsh area 6",
+          "sendoff spring area",
+          "trophy garden area",
+          "lake verity before galactic intervention",
+          "lake verity after galactic intervention",
+          "lake valor area",
+          "valor lakefront area",
+          "sinnoh route 209 area",
+          "sinnoh route 212 north towards hearthome city"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "sendoff spring area",
+          "trophy garden area",
+          "lake valor area",
+          "valor lakefront area",
+          "sinnoh route 209 area",
+          "sinnoh route 210 south towards solaceon town",
+          "sinnoh route 212 north towards hearthome city",
+          "sinnoh route 215 area"
+        ]
+      }
+    },
+    "398": {
+      "diamond": {
+        "locations": [
+          "Evolve Staravia"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Evolve Staravia"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Evolve Staravia"
+        ]
+      }
+    },
+    "399": {
+      "diamond": {
+        "locations": [
+          "valley windworks area",
+          "great marsh area 1",
+          "great marsh area 2",
+          "great marsh area 3",
+          "great marsh area 4",
+          "great marsh area 5",
+          "great marsh area 6",
+          "lake verity before galactic intervention",
+          "lake verity after galactic intervention",
+          "sinnoh route 201 area",
+          "sinnoh route 202 area",
+          "sinnoh route 203 area",
+          "sinnoh route 204 south towards jubilife city",
+          "sinnoh route 204 north towards floaroma town",
+          "sinnoh route 205 south towards floaroma town",
+          "sinnoh route 205 east towards eterna city",
+          "sinnoh route 208 area",
+          "sinnoh route 211 west towards eterna city"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "valley windworks area",
+          "great marsh area 1",
+          "great marsh area 2",
+          "great marsh area 3",
+          "great marsh area 4",
+          "great marsh area 5",
+          "great marsh area 6",
+          "lake verity before galactic intervention",
+          "lake verity after galactic intervention",
+          "sinnoh route 201 area",
+          "sinnoh route 202 area",
+          "sinnoh route 203 area",
+          "sinnoh route 204 south towards jubilife city",
+          "sinnoh route 204 north towards floaroma town",
+          "sinnoh route 205 south towards floaroma town",
+          "sinnoh route 205 east towards eterna city",
+          "sinnoh route 208 area",
+          "sinnoh route 211 west towards eterna city"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "eterna forest area",
+          "lake verity before galactic intervention",
+          "lake verity after galactic intervention",
+          "sinnoh route 201 area",
+          "sinnoh route 202 area",
+          "sinnoh route 203 area",
+          "sinnoh route 204 south towards jubilife city",
+          "sinnoh route 204 north towards floaroma town",
+          "sinnoh route 205 south towards floaroma town",
+          "sinnoh route 205 east towards eterna city",
+          "sinnoh route 208 area",
+          "sinnoh route 211 west towards eterna city"
+        ]
+      }
+    },
+    "400": {
+      "diamond": {
+        "locations": [
+          "great marsh area 1",
+          "great marsh area 2",
+          "great marsh area 3",
+          "great marsh area 4",
+          "great marsh area 5",
+          "great marsh area 6",
+          "sendoff spring area",
+          "lake verity before galactic intervention",
+          "lake verity after galactic intervention",
+          "lake valor area",
+          "lake acuity area",
+          "valor lakefront area",
+          "sinnoh route 208 area",
+          "sinnoh route 209 area",
+          "sinnoh route 210 west towards celestic town",
+          "sinnoh route 212 east towards pastoria city"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "great marsh area 1",
+          "great marsh area 2",
+          "great marsh area 3",
+          "great marsh area 4",
+          "great marsh area 5",
+          "great marsh area 6",
+          "sendoff spring area",
+          "lake verity before galactic intervention",
+          "lake verity after galactic intervention",
+          "lake valor area",
+          "lake acuity area",
+          "valor lakefront area",
+          "sinnoh route 208 area",
+          "sinnoh route 209 area",
+          "sinnoh route 210 west towards celestic town",
+          "sinnoh route 212 east towards pastoria city"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "great marsh area 1",
+          "great marsh area 2",
+          "great marsh area 3",
+          "great marsh area 4",
+          "great marsh area 5",
+          "great marsh area 6",
+          "sendoff spring area",
+          "lake valor area",
+          "lake acuity area",
+          "valor lakefront area",
+          "sinnoh route 208 area",
+          "sinnoh route 209 area",
+          "sinnoh route 210 west towards celestic town"
+        ]
+      }
+    },
+    "401": {
+      "platinum": {
+        "locations": [
+          "eterna forest area",
+          "sinnoh route 201 area",
+          "sinnoh route 202 area",
+          "sinnoh route 203 area",
+          "sinnoh route 204 south towards jubilife city",
+          "sinnoh route 204 north towards floaroma town",
+          "sinnoh route 205 east towards eterna city",
+          "sinnoh route 207 area"
+        ]
+      },
+      "diamond": {
+        "locations": [
+          "sinnoh route 202 area",
+          "sinnoh route 203 area",
+          "sinnoh route 204 south towards jubilife city",
+          "sinnoh route 204 north towards floaroma town",
+          "sinnoh route 206 area",
+          "sinnoh route 207 area"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "sinnoh route 202 area",
+          "sinnoh route 203 area",
+          "sinnoh route 204 south towards jubilife city",
+          "sinnoh route 204 north towards floaroma town",
+          "sinnoh route 206 area",
+          "sinnoh route 207 area"
+        ]
+      }
+    },
+    "402": {
+      "diamond": {
+        "locations": [
+          "trophy garden area",
+          "valor lakefront area",
+          "sinnoh route 206 area",
+          "sinnoh route 210 south towards solaceon town",
+          "sinnoh route 212 north towards hearthome city",
+          "sinnoh route 212 east towards pastoria city",
+          "sinnoh route 214 area",
+          "sinnoh route 215 area"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "trophy garden area",
+          "valor lakefront area",
+          "sinnoh route 206 area",
+          "sinnoh route 210 south towards solaceon town",
+          "sinnoh route 212 north towards hearthome city",
+          "sinnoh route 212 east towards pastoria city",
+          "sinnoh route 214 area",
+          "sinnoh route 215 area"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "trophy garden area",
+          "valor lakefront area",
+          "sinnoh route 206 area"
+        ]
+      }
+    },
+    "403": {
+      "platinum": {
+        "locations": [
+          "valley windworks area",
+          "sinnoh route 202 area",
+          "sinnoh route 203 area",
+          "sinnoh route 204 south towards jubilife city",
+          "sinnoh route 204 north towards floaroma town"
+        ]
+      },
+      "diamond": {
+        "locations": [
+          "fuego ironworks area",
+          "sinnoh route 202 area",
+          "sinnoh route 203 area",
+          "sinnoh route 204 south towards jubilife city",
+          "sinnoh route 204 north towards floaroma town"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "fuego ironworks area",
+          "sinnoh route 202 area",
+          "sinnoh route 203 area",
+          "sinnoh route 204 south towards jubilife city",
+          "sinnoh route 204 north towards floaroma town"
+        ]
+      }
+    },
+    "404": {
+      "diamond": {
+        "locations": [
+          "fuego ironworks area"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "fuego ironworks area"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "sinnoh route 222 area"
+        ]
+      }
+    },
+    "405": {
+      "diamond": {
+        "locations": [
+          "Evolve Luxio"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Evolve Luxio"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Evolve Luxio"
+        ]
+      }
+    },
+    "406": {
+      "diamond": {
+        "locations": [
+          "eterna forest area",
+          "great marsh area 1",
+          "great marsh area 2",
+          "great marsh area 3",
+          "great marsh area 4",
+          "great marsh area 5",
+          "great marsh area 6",
+          "sinnoh route 204 south towards jubilife city",
+          "sinnoh route 204 north towards floaroma town",
+          "sinnoh route 212 north towards hearthome city"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "eterna forest area",
+          "great marsh area 1",
+          "great marsh area 2",
+          "great marsh area 3",
+          "great marsh area 4",
+          "great marsh area 5",
+          "great marsh area 6",
+          "sinnoh route 204 south towards jubilife city",
+          "sinnoh route 204 north towards floaroma town",
+          "sinnoh route 212 north towards hearthome city"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "eterna forest area",
+          "sinnoh route 204 south towards jubilife city",
+          "sinnoh route 204 north towards floaroma town",
+          "sinnoh route 205 east towards eterna city",
+          "sinnoh route 208 area"
+        ]
+      }
+    },
+    "407": {
+      "diamond": {
+        "locations": [
+          "Evolve Roselia"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Evolve Roselia"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Evolve Roselia"
+        ]
+      }
+    },
+    "408": {
+      "diamond": {
+        "locations": [
+          "oreburgh city oreburgh mining museum"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "oreburgh city oreburgh mining museum"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "oreburgh city oreburgh mining museum"
+        ]
+      }
+    },
+    "409": {
+      "diamond": {
+        "locations": [
+          "Evolve Cranidos"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Trade",
+          "Evolve *|If the player's Trainer ID is an odd number"
+        ]
+      }
+    },
+    "410": {
+      "diamond": {
+        "locations": [
+          "oreburgh city oreburgh mining museum"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "oreburgh city oreburgh mining museum"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "oreburgh city oreburgh mining museum"
+        ]
+      }
+    },
+    "411": {
+      "pearl": {
+        "locations": [
+          "Evolve Shieldon"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Trade",
+          "Evolve *|If the player's Trainer ID is an even number"
+        ]
+      }
+    },
+    "412": {
+      "diamond": {
+        "locations": [
+          "valley windworks area",
+          "eterna forest area",
+          "fuego ironworks area",
+          "sinnoh route 205 south towards floaroma town",
+          "sinnoh route 205 east towards eterna city",
+          "sinnoh route 206 area",
+          "sinnoh route 207 area",
+          "sinnoh route 208 area",
+          "sinnoh route 209 area",
+          "sinnoh route 210 south towards solaceon town",
+          "sinnoh route 210 west towards celestic town",
+          "sinnoh route 211 east towards celestic town",
+          "sinnoh route 212 north towards hearthome city",
+          "sinnoh route 212 east towards pastoria city",
+          "sinnoh route 213 area",
+          "sinnoh route 214 area",
+          "sinnoh route 215 area",
+          "sinnoh route 218 area",
+          "sinnoh route 221 area",
+          "sinnoh route 222 area",
+          "floaroma meadow area"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "valley windworks area",
+          "eterna forest area",
+          "fuego ironworks area",
+          "sinnoh route 205 south towards floaroma town",
+          "sinnoh route 205 east towards eterna city",
+          "sinnoh route 206 area",
+          "sinnoh route 207 area",
+          "sinnoh route 208 area",
+          "sinnoh route 209 area",
+          "sinnoh route 210 south towards solaceon town",
+          "sinnoh route 210 west towards celestic town",
+          "sinnoh route 211 east towards celestic town",
+          "sinnoh route 212 north towards hearthome city",
+          "sinnoh route 212 east towards pastoria city",
+          "sinnoh route 213 area",
+          "sinnoh route 214 area",
+          "sinnoh route 215 area",
+          "sinnoh route 218 area",
+          "sinnoh route 221 area",
+          "sinnoh route 222 area",
+          "floaroma meadow area"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "valley windworks area",
+          "eterna forest area",
+          "fuego ironworks area",
+          "sinnoh route 205 south towards floaroma town",
+          "sinnoh route 205 east towards eterna city",
+          "sinnoh route 206 area",
+          "sinnoh route 207 area",
+          "sinnoh route 208 area",
+          "sinnoh route 209 area",
+          "sinnoh route 210 south towards solaceon town",
+          "sinnoh route 210 west towards celestic town",
+          "sinnoh route 211 east towards celestic town",
+          "sinnoh route 212 north towards hearthome city",
+          "sinnoh route 212 east towards pastoria city",
+          "sinnoh route 213 area",
+          "sinnoh route 214 area",
+          "sinnoh route 215 area",
+          "sinnoh route 218 area",
+          "sinnoh route 221 area",
+          "sinnoh route 222 area",
+          "floaroma meadow area"
+        ]
+      }
+    },
+    "413": {
+      "diamond": {
+        "locations": [
+          "Evolve Burmy♀"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Evolve Burmy♀"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Evolve Burmy♀"
+        ]
+      }
+    },
+    "414": {
+      "diamond": {
+        "locations": [
+          "Evolve Burmy♂"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Evolve Burmy♂"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Evolve Burmy♂"
+        ]
+      }
+    },
+    "415": {
+      "diamond": {
+        "locations": [
+          "valley windworks area",
+          "eterna forest area",
+          "fuego ironworks area",
+          "sinnoh route 205 south towards floaroma town",
+          "sinnoh route 205 east towards eterna city",
+          "sinnoh route 206 area",
+          "sinnoh route 207 area",
+          "sinnoh route 208 area",
+          "sinnoh route 209 area",
+          "sinnoh route 210 south towards solaceon town",
+          "sinnoh route 210 west towards celestic town",
+          "sinnoh route 211 east towards celestic town",
+          "sinnoh route 212 north towards hearthome city",
+          "sinnoh route 212 east towards pastoria city",
+          "sinnoh route 213 area",
+          "sinnoh route 214 area",
+          "sinnoh route 215 area",
+          "sinnoh route 218 area",
+          "sinnoh route 221 area",
+          "sinnoh route 222 area",
+          "floaroma meadow area"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "valley windworks area",
+          "eterna forest area",
+          "fuego ironworks area",
+          "sinnoh route 205 south towards floaroma town",
+          "sinnoh route 205 east towards eterna city",
+          "sinnoh route 206 area",
+          "sinnoh route 207 area",
+          "sinnoh route 208 area",
+          "sinnoh route 209 area",
+          "sinnoh route 210 south towards solaceon town",
+          "sinnoh route 210 west towards celestic town",
+          "sinnoh route 211 east towards celestic town",
+          "sinnoh route 212 north towards hearthome city",
+          "sinnoh route 212 east towards pastoria city",
+          "sinnoh route 213 area",
+          "sinnoh route 214 area",
+          "sinnoh route 215 area",
+          "sinnoh route 218 area",
+          "sinnoh route 221 area",
+          "sinnoh route 222 area",
+          "floaroma meadow area"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "valley windworks area",
+          "eterna forest area",
+          "fuego ironworks area",
+          "sinnoh route 205 south towards floaroma town",
+          "sinnoh route 205 east towards eterna city",
+          "sinnoh route 206 area",
+          "sinnoh route 207 area",
+          "sinnoh route 208 area",
+          "sinnoh route 209 area",
+          "sinnoh route 210 south towards solaceon town",
+          "sinnoh route 210 west towards celestic town",
+          "sinnoh route 211 east towards celestic town",
+          "sinnoh route 212 north towards hearthome city",
+          "sinnoh route 212 east towards pastoria city",
+          "sinnoh route 213 area",
+          "sinnoh route 214 area",
+          "sinnoh route 215 area",
+          "sinnoh route 218 area",
+          "sinnoh route 221 area",
+          "sinnoh route 222 area",
+          "floaroma meadow area"
+        ]
+      }
+    },
+    "416": {
+      "diamond": {
+        "locations": [
+          "Evolve Combeefemale"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Evolve Combeefemale"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Evolve Combeefemale"
+        ]
+      }
+    },
+    "417": {
+      "diamond": {
+        "locations": [
+          "valley windworks area",
+          "fuego ironworks area",
+          "sinnoh route 205 south towards floaroma town",
+          "sinnoh route 205 east towards eterna city"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "valley windworks area",
+          "fuego ironworks area",
+          "sinnoh route 205 south towards floaroma town",
+          "sinnoh route 205 east towards eterna city"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "valley windworks area",
+          "sinnoh route 205 south towards floaroma town"
+        ]
+      }
+    },
+    "418": {
+      "diamond": {
+        "locations": [
+          "valley windworks area",
+          "sinnoh route 205 south towards floaroma town",
+          "sinnoh route 205 east towards eterna city",
+          "sinnoh route 213 area",
+          "sinnoh route 224 area"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "valley windworks area",
+          "sinnoh route 205 south towards floaroma town",
+          "sinnoh route 205 east towards eterna city",
+          "sinnoh route 213 area",
+          "sinnoh route 224 area"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "valley windworks area",
+          "sinnoh route 205 south towards floaroma town",
+          "sinnoh route 212 east towards pastoria city",
+          "sinnoh route 213 area"
+        ]
+      }
+    },
+    "419": {
+      "diamond": {
+        "locations": [
+          "fuego ironworks area",
+          "sinnoh victory road b1f",
+          "sinnoh victory road inside b1f",
+          "sinnoh route 213 area",
+          "sinnoh route 218 area",
+          "sinnoh route 221 area",
+          "sinnoh route 222 area",
+          "sinnoh route 224 area",
+          "sinnoh sea route 230 area"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "fuego ironworks area",
+          "sinnoh victory road b1f",
+          "sinnoh victory road inside b1f",
+          "sinnoh route 213 area",
+          "sinnoh route 218 area",
+          "sinnoh route 221 area",
+          "sinnoh route 222 area",
+          "sinnoh route 224 area",
+          "sinnoh sea route 230 area"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "fuego ironworks area",
+          "sinnoh victory road b1f",
+          "sinnoh victory road inside b1f",
+          "sinnoh victory road inside",
+          "sinnoh victory road inside exit",
+          "sinnoh route 218 area",
+          "sinnoh route 221 area",
+          "sinnoh route 222 area",
+          "sinnoh route 224 area",
+          "sinnoh sea route 230 area"
+        ]
+      }
+    },
+    "420": {
+      "diamond": {
+        "locations": [
+          "valley windworks area",
+          "eterna forest area",
+          "fuego ironworks area",
+          "sinnoh route 205 south towards floaroma town",
+          "sinnoh route 205 east towards eterna city",
+          "sinnoh route 206 area",
+          "sinnoh route 207 area",
+          "sinnoh route 208 area",
+          "sinnoh route 209 area",
+          "sinnoh route 210 south towards solaceon town",
+          "sinnoh route 210 west towards celestic town",
+          "sinnoh route 211 east towards celestic town",
+          "sinnoh route 212 north towards hearthome city",
+          "sinnoh route 212 east towards pastoria city",
+          "sinnoh route 213 area",
+          "sinnoh route 214 area",
+          "sinnoh route 215 area",
+          "sinnoh route 218 area",
+          "sinnoh route 221 area",
+          "sinnoh route 222 area",
+          "floaroma meadow area"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "valley windworks area",
+          "eterna forest area",
+          "fuego ironworks area",
+          "sinnoh route 205 south towards floaroma town",
+          "sinnoh route 205 east towards eterna city",
+          "sinnoh route 206 area",
+          "sinnoh route 207 area",
+          "sinnoh route 208 area",
+          "sinnoh route 209 area",
+          "sinnoh route 210 south towards solaceon town",
+          "sinnoh route 210 west towards celestic town",
+          "sinnoh route 211 east towards celestic town",
+          "sinnoh route 212 north towards hearthome city",
+          "sinnoh route 212 east towards pastoria city",
+          "sinnoh route 213 area",
+          "sinnoh route 214 area",
+          "sinnoh route 215 area",
+          "sinnoh route 218 area",
+          "sinnoh route 221 area",
+          "sinnoh route 222 area",
+          "floaroma meadow area"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "valley windworks area",
+          "eterna forest area",
+          "fuego ironworks area",
+          "sinnoh route 205 south towards floaroma town",
+          "sinnoh route 205 east towards eterna city",
+          "sinnoh route 206 area",
+          "sinnoh route 207 area",
+          "sinnoh route 208 area",
+          "sinnoh route 209 area",
+          "sinnoh route 210 south towards solaceon town",
+          "sinnoh route 210 west towards celestic town",
+          "sinnoh route 211 east towards celestic town",
+          "sinnoh route 212 north towards hearthome city",
+          "sinnoh route 212 east towards pastoria city",
+          "sinnoh route 213 area",
+          "sinnoh route 214 area",
+          "sinnoh route 215 area",
+          "sinnoh route 218 area",
+          "sinnoh route 221 area",
+          "sinnoh route 222 area",
+          "floaroma meadow area"
+        ]
+      }
+    },
+    "421": {
+      "diamond": {
+        "locations": [
+          "Evolve Cherubi"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Evolve Cherubi"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Evolve Cherubi"
+        ]
+      }
+    },
+    "422": {
+      "platinum": {
+        "locations": [
+          "canalave city area",
+          "pastoria city area",
+          "valley windworks area",
+          "fuego ironworks area",
+          "sinnoh route 205 south towards floaroma town",
+          "sinnoh route 212 east towards pastoria city",
+          "sinnoh route 213 area",
+          "sinnoh route 218 area"
+        ]
+      },
+      "diamond": {
+        "locations": [
+          "valley windworks area",
+          "fuego ironworks area",
+          "sinnoh route 205 south towards floaroma town",
+          "sinnoh route 205 east towards eterna city",
+          "sinnoh route 213 area",
+          "sinnoh route 218 area",
+          "sinnoh route 221 area",
+          "sinnoh route 224 area"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "valley windworks area",
+          "fuego ironworks area",
+          "sinnoh route 205 south towards floaroma town",
+          "sinnoh route 205 east towards eterna city",
+          "sinnoh route 213 area",
+          "sinnoh route 218 area",
+          "sinnoh route 221 area",
+          "sinnoh route 224 area"
+        ]
+      }
+    },
+    "423": {
+      "platinum": {
+        "locations": [
+          "canalave city area",
+          "pastoria city area",
+          "valley windworks area",
+          "fuego ironworks area",
+          "sinnoh route 205 south towards floaroma town",
+          "sinnoh route 212 east towards pastoria city",
+          "sinnoh route 213 area",
+          "sinnoh route 218 area",
+          "sinnoh route 224 area"
+        ]
+      },
+      "diamond": {
+        "locations": [
+          "fuego ironworks area",
+          "sinnoh route 218 area",
+          "sinnoh route 221 area",
+          "sinnoh route 222 area",
+          "sinnoh route 224 area",
+          "sinnoh sea route 230 area"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "fuego ironworks area",
+          "sinnoh route 218 area",
+          "sinnoh route 221 area",
+          "sinnoh route 222 area",
+          "sinnoh route 224 area",
+          "sinnoh sea route 230 area"
+        ]
+      }
+    },
+    "424": {
+      "diamond": {
+        "locations": [
+          "Evolve Aipom"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Evolve Aipom"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Evolve Aipom"
+        ]
+      }
+    },
+    "425": {
+      "diamond": {
+        "locations": [
+          "valley windworks area"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "valley windworks area"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "valley windworks area"
+        ]
+      }
+    },
+    "426": {
+      "diamond": {
+        "locations": [
+          "Evolve Drifloon"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Evolve Drifloon"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Evolve Drifloon"
+        ]
+      }
+    },
+    "427": {
+      "diamond": {
+        "locations": [
+          "eterna forest area"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "eterna forest area"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "eterna forest area"
+        ]
+      }
+    },
+    "428": {
+      "diamond": {
+        "locations": [
+          "Evolve Buneary"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Evolve Buneary"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Evolve Buneary"
+        ]
+      }
+    },
+    "429": {
+      "pearl": {
+        "locations": [
+          "Evolve Misdreavus"
+        ]
+      }
+    },
+    "430": {
+      "diamond": {
+        "locations": [
+          "Evolve Murkrow"
+        ]
+      }
+    },
+    "431": {
+      "pearl": {
+        "locations": [
+          "sinnoh route 218 area",
+          "sinnoh route 222 area"
+        ]
+      }
+    },
+    "432": {
+      "pearl": {
+        "locations": [
+          "sinnoh route 222 area",
+          "sinnoh route 229 area"
+        ]
+      }
+    },
+    "433": {
+      "diamond": {
+        "locations": [
+          "mt coronet 1f route 207",
+          "mt coronet 2f",
+          "mt coronet 3f",
+          "mt coronet exterior snowfall",
+          "mt coronet exterior blizzard",
+          "mt coronet 4f",
+          "mt coronet 4f small room",
+          "mt coronet 1f from exterior",
+          "mt coronet 1f route 216",
+          "mt coronet 1f route 211",
+          "mt coronet b1f",
+          "lake valor area",
+          "lake acuity area",
+          "sinnoh route 211 west towards eterna city",
+          "sinnoh route 211 east towards celestic town"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "mt coronet 1f route 207",
+          "mt coronet 2f",
+          "mt coronet 3f",
+          "mt coronet exterior snowfall",
+          "mt coronet exterior blizzard",
+          "mt coronet 4f",
+          "mt coronet 4f small room",
+          "mt coronet 1f from exterior",
+          "mt coronet 1f route 216",
+          "mt coronet 1f route 211",
+          "mt coronet b1f",
+          "lake valor area",
+          "lake acuity area",
+          "sinnoh route 211 west towards eterna city",
+          "sinnoh route 211 east towards celestic town"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "mt coronet 1f route 207",
+          "mt coronet 2f",
+          "mt coronet 3f",
+          "mt coronet exterior snowfall",
+          "mt coronet exterior blizzard",
+          "mt coronet 4f",
+          "mt coronet 4f small room",
+          "mt coronet 5f",
+          "mt coronet 1f from exterior",
+          "mt coronet 1f route 216",
+          "mt coronet 1f route 211",
+          "mt coronet b1f",
+          "sendoff spring area",
+          "turnback cave pillar 1",
+          "turnback cave before pillar 1",
+          "turnback cave between pillars 1 and 2",
+          "sinnoh route 211 west towards eterna city",
+          "sinnoh route 211 east towards celestic town"
+        ]
+      }
+    },
+    "434": {
+      "diamond": {
+        "locations": [
+          "sinnoh route 206 area",
+          "sinnoh route 214 area",
+          "sinnoh route 221 area"
+        ]
+      }
+    },
+    "435": {
+      "diamond": {
+        "locations": [
+          "sinnoh route 221 area",
+          "sinnoh route 225 area"
+        ]
+      }
+    },
+    "436": {
+      "platinum": {
+        "locations": [
+          "mt coronet 1f route 207",
+          "mt coronet 1f route 216",
+          "mt coronet 1f route 211",
+          "mt coronet b1f",
+          "turnback cave pillar 1",
+          "turnback cave before pillar 1",
+          "turnback cave between pillars 1 and 2",
+          "wayward cave 1f",
+          "wayward cave b1f",
+          "sinnoh route 211 west towards eterna city",
+          "sinnoh route 211 east towards celestic town"
+        ]
+      },
+      "diamond": {
+        "locations": [
+          "mt coronet 2f",
+          "mt coronet 3f",
+          "turnback cave pillar 1",
+          "turnback cave pillar 2",
+          "turnback cave pillar 3",
+          "turnback cave before pillar 1",
+          "turnback cave between pillars 1 and 2",
+          "turnback cave between pillars 2 and 3",
+          "turnback cave after pillar 3",
+          "wayward cave 1f",
+          "wayward cave b1f",
+          "sinnoh route 206 area"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "mt coronet 2f",
+          "mt coronet 3f",
+          "turnback cave pillar 1",
+          "turnback cave pillar 2",
+          "turnback cave pillar 3",
+          "turnback cave before pillar 1",
+          "turnback cave between pillars 1 and 2",
+          "turnback cave between pillars 2 and 3",
+          "turnback cave after pillar 3",
+          "wayward cave 1f",
+          "wayward cave b1f",
+          "sinnoh route 206 area"
+        ]
+      }
+    },
+    "437": {
+      "diamond": {
+        "locations": [
+          "mt coronet 2f",
+          "mt coronet 3f",
+          "mt coronet exterior snowfall",
+          "mt coronet exterior blizzard",
+          "mt coronet 4f",
+          "mt coronet 4f small room",
+          "mt coronet 5f",
+          "mt coronet 6f",
+          "mt coronet 1f from exterior",
+          "turnback cave pillar 1",
+          "turnback cave pillar 2",
+          "turnback cave pillar 3",
+          "turnback cave before pillar 1",
+          "turnback cave between pillars 1 and 2",
+          "turnback cave between pillars 2 and 3",
+          "turnback cave after pillar 3"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "mt coronet 2f",
+          "mt coronet 3f",
+          "mt coronet exterior snowfall",
+          "mt coronet exterior blizzard",
+          "mt coronet 4f",
+          "mt coronet 4f small room",
+          "mt coronet 5f",
+          "mt coronet 6f",
+          "mt coronet 1f from exterior",
+          "turnback cave pillar 1",
+          "turnback cave pillar 2",
+          "turnback cave pillar 3",
+          "turnback cave before pillar 1",
+          "turnback cave between pillars 1 and 2",
+          "turnback cave between pillars 2 and 3",
+          "turnback cave after pillar 3"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "mt coronet 2f",
+          "mt coronet 3f",
+          "mt coronet 4f",
+          "mt coronet 4f small room",
+          "mt coronet 5f",
+          "mt coronet 6f",
+          "turnback cave pillar 2",
+          "turnback cave pillar 3",
+          "turnback cave between pillars 2 and 3",
+          "turnback cave after pillar 3"
+        ]
+      }
+    },
+    "438": {
+      "diamond": {
+        "locations": [
+          "trophy garden area"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "trophy garden area",
+          "sinnoh route 209 area",
+          "sinnoh route 210 south towards solaceon town"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "trophy garden area"
+        ]
+      }
+    },
+    "439": {
+      "diamond": {
+        "locations": [
+          "trophy garden area",
+          "sinnoh route 209 area",
+          "sinnoh route 210 south towards solaceon town"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "trophy garden area"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "trophy garden area"
+        ]
+      }
+    },
+    "440": {
+      "diamond": {
+        "locations": [
+          "trophy garden area",
+          "hearthome city west gate"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "trophy garden area",
+          "hearthome city west gate"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "trophy garden area"
+        ]
+      }
+    },
+    "441": {
+      "platinum": {
+        "locations": [
+          "sinnoh route 213 area",
+          "sinnoh route 218 area",
+          "sinnoh route 222 area",
+          "eterna city eterna condominiums"
+        ]
+      },
+      "diamond": {
+        "locations": [
+          "sinnoh route 222 area",
+          "sinnoh route 224 area",
+          "eterna city eterna condominiums"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "sinnoh route 222 area",
+          "sinnoh route 224 area",
+          "eterna city eterna condominiums"
+        ]
+      }
+    },
+    "442": {
+      "diamond": {
+        "locations": [
+          "sinnoh route 209 area"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "sinnoh route 209 area"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "sinnoh route 209 area"
+        ]
+      }
+    },
+    "443": {
+      "diamond": {
+        "locations": [
+          "wayward cave b1f"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "wayward cave b1f"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "wayward cave b1f"
+        ]
+      }
+    },
+    "444": {
+      "platinum": {
+        "locations": [
+          "sinnoh victory road 1f",
+          "sinnoh victory road 2f",
+          "sinnoh victory road b1f",
+          "sinnoh victory road inside b1f",
+          "sinnoh victory road inside",
+          "sinnoh victory road inside exit"
+        ]
+      },
+      "diamond": {
+        "locations": [
+          "Evolve Gible"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Evolve Gible"
+        ]
+      }
+    },
+    "445": {
+      "diamond": {
+        "locations": [
+          "Evolve Gabite"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Evolve Gabite"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Evolve Gabite"
+        ]
+      }
+    },
+    "446": {
+      "diamond": {
+        "locations": [
+          "valley windworks area",
+          "eterna forest area",
+          "fuego ironworks area",
+          "sinnoh route 205 south towards floaroma town",
+          "sinnoh route 205 east towards eterna city",
+          "sinnoh route 206 area",
+          "sinnoh route 207 area",
+          "sinnoh route 208 area",
+          "sinnoh route 209 area",
+          "sinnoh route 210 south towards solaceon town",
+          "sinnoh route 210 west towards celestic town",
+          "sinnoh route 211 east towards celestic town",
+          "sinnoh route 212 north towards hearthome city",
+          "sinnoh route 212 east towards pastoria city",
+          "sinnoh route 213 area",
+          "sinnoh route 214 area",
+          "sinnoh route 215 area",
+          "sinnoh route 218 area",
+          "sinnoh route 221 area",
+          "sinnoh route 222 area",
+          "floaroma meadow area"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "valley windworks area",
+          "eterna forest area",
+          "fuego ironworks area",
+          "sinnoh route 205 south towards floaroma town",
+          "sinnoh route 205 east towards eterna city",
+          "sinnoh route 206 area",
+          "sinnoh route 207 area",
+          "sinnoh route 208 area",
+          "sinnoh route 209 area",
+          "sinnoh route 210 south towards solaceon town",
+          "sinnoh route 210 west towards celestic town",
+          "sinnoh route 211 east towards celestic town",
+          "sinnoh route 212 north towards hearthome city",
+          "sinnoh route 212 east towards pastoria city",
+          "sinnoh route 213 area",
+          "sinnoh route 214 area",
+          "sinnoh route 215 area",
+          "sinnoh route 218 area",
+          "sinnoh route 221 area",
+          "sinnoh route 222 area",
+          "floaroma meadow area"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "valley windworks area",
+          "eterna forest area",
+          "fuego ironworks area",
+          "sinnoh route 205 south towards floaroma town",
+          "sinnoh route 205 east towards eterna city",
+          "sinnoh route 206 area",
+          "sinnoh route 207 area",
+          "sinnoh route 208 area",
+          "sinnoh route 209 area",
+          "sinnoh route 210 south towards solaceon town",
+          "sinnoh route 210 west towards celestic town",
+          "sinnoh route 211 east towards celestic town",
+          "sinnoh route 212 north towards hearthome city",
+          "sinnoh route 212 east towards pastoria city",
+          "sinnoh route 213 area",
+          "sinnoh route 214 area",
+          "sinnoh route 215 area",
+          "sinnoh route 218 area",
+          "sinnoh route 221 area",
+          "sinnoh route 222 area",
+          "floaroma meadow area"
+        ]
+      }
+    },
+    "447": {
+      "diamond": {
+        "locations": [
+          "iron island b2f left"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "iron island b2f left"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "iron island b2f left"
+        ]
+      }
+    },
+    "448": {
+      "diamond": {
+        "locations": [
+          "Evolve Riolu"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Evolve Riolu"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Evolve Riolu"
+        ]
+      }
+    },
+    "449": {
+      "diamond": {
+        "locations": [
+          "ruin maniac cave 0 9 different unown caught",
+          "ruin maniac cave 10 25 different unown caught",
+          "maniac tunnel 26 plus different unown caught"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "ruin maniac cave 0 9 different unown caught",
+          "ruin maniac cave 10 25 different unown caught",
+          "maniac tunnel 26 plus different unown caught"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "ruin maniac cave 0 9 different unown caught",
+          "ruin maniac cave 10 25 different unown caught",
+          "maniac tunnel 26 plus different unown caught"
+        ]
+      }
+    },
+    "450": {
+      "diamond": {
+        "locations": [
+          "sinnoh route 228 area"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "sinnoh route 228 area"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "sinnoh route 228 area"
+        ]
+      }
+    },
+    "451": {
+      "diamond": {
+        "locations": [
+          "great marsh area 1",
+          "great marsh area 2",
+          "great marsh area 3",
+          "great marsh area 4",
+          "great marsh area 5",
+          "great marsh area 6"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "great marsh area 1",
+          "great marsh area 2",
+          "great marsh area 3",
+          "great marsh area 4",
+          "great marsh area 5",
+          "great marsh area 6"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "great marsh area 1",
+          "great marsh area 2",
+          "great marsh area 3",
+          "great marsh area 4",
+          "great marsh area 5",
+          "great marsh area 6"
+        ]
+      }
+    },
+    "452": {
+      "diamond": {
+        "locations": [
+          "great marsh area 1",
+          "great marsh area 2",
+          "great marsh area 3",
+          "great marsh area 4",
+          "great marsh area 5",
+          "great marsh area 6"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "great marsh area 1",
+          "great marsh area 2",
+          "great marsh area 3",
+          "great marsh area 4",
+          "great marsh area 5",
+          "great marsh area 6"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "great marsh area 1",
+          "great marsh area 2",
+          "great marsh area 3",
+          "great marsh area 4",
+          "great marsh area 5",
+          "great marsh area 6"
+        ]
+      }
+    },
+    "453": {
+      "diamond": {
+        "locations": [
+          "great marsh area 1",
+          "great marsh area 2",
+          "great marsh area 3",
+          "great marsh area 4",
+          "great marsh area 5",
+          "great marsh area 6"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "great marsh area 1",
+          "great marsh area 2",
+          "great marsh area 3",
+          "great marsh area 4",
+          "great marsh area 5",
+          "great marsh area 6"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "great marsh area 1",
+          "great marsh area 2",
+          "great marsh area 3",
+          "great marsh area 4",
+          "great marsh area 5",
+          "great marsh area 6",
+          "sinnoh route 212 east towards pastoria city"
+        ]
+      }
+    },
+    "454": {
+      "diamond": {
+        "locations": [
+          "great marsh area 1",
+          "great marsh area 2",
+          "great marsh area 3",
+          "great marsh area 4",
+          "great marsh area 5",
+          "great marsh area 6"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "great marsh area 1",
+          "great marsh area 2",
+          "great marsh area 3",
+          "great marsh area 4",
+          "great marsh area 5",
+          "great marsh area 6"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "great marsh area 1",
+          "great marsh area 2",
+          "great marsh area 3",
+          "great marsh area 4",
+          "great marsh area 5",
+          "great marsh area 6"
+        ]
+      }
+    },
+    "455": {
+      "diamond": {
+        "locations": [
+          "great marsh area 1",
+          "great marsh area 2",
+          "great marsh area 3",
+          "great marsh area 4",
+          "great marsh area 5",
+          "great marsh area 6"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "great marsh area 1",
+          "great marsh area 2",
+          "great marsh area 3",
+          "great marsh area 4",
+          "great marsh area 5",
+          "great marsh area 6"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "great marsh area 1",
+          "great marsh area 2",
+          "great marsh area 3",
+          "great marsh area 4",
+          "great marsh area 5",
+          "great marsh area 6"
+        ]
+      }
+    },
+    "456": {
+      "diamond": {
+        "locations": [
+          "canalave city area",
+          "valley windworks area",
+          "fuego ironworks area",
+          "iron island area",
+          "sinnoh route 205 south towards floaroma town",
+          "sinnoh route 218 area",
+          "sinnoh route 219 area",
+          "sinnoh route 221 area",
+          "sinnoh sea route 220 area"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "canalave city area",
+          "valley windworks area",
+          "fuego ironworks area",
+          "iron island area",
+          "sinnoh route 205 south towards floaroma town",
+          "sinnoh route 218 area",
+          "sinnoh route 219 area",
+          "sinnoh route 221 area",
+          "sinnoh sea route 220 area"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "canalave city area",
+          "valley windworks area",
+          "fuego ironworks area",
+          "iron island area",
+          "sinnoh route 205 south towards floaroma town",
+          "sinnoh route 218 area",
+          "sinnoh route 219 area",
+          "sinnoh route 221 area",
+          "sinnoh sea route 220 area"
+        ]
+      }
+    },
+    "457": {
+      "diamond": {
+        "locations": [
+          "canalave city area",
+          "valley windworks area",
+          "fuego ironworks area",
+          "iron island area",
+          "sinnoh route 205 south towards floaroma town",
+          "sinnoh route 218 area",
+          "sinnoh route 219 area",
+          "sinnoh route 221 area",
+          "sinnoh sea route 220 area"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "canalave city area",
+          "valley windworks area",
+          "fuego ironworks area",
+          "iron island area",
+          "sinnoh route 205 south towards floaroma town",
+          "sinnoh route 218 area",
+          "sinnoh route 219 area",
+          "sinnoh route 221 area",
+          "sinnoh sea route 220 area"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "canalave city area",
+          "valley windworks area",
+          "fuego ironworks area",
+          "iron island area",
+          "sinnoh route 205 south towards floaroma town",
+          "sinnoh route 218 area",
+          "sinnoh route 219 area",
+          "sinnoh route 221 area",
+          "sinnoh sea route 220 area"
+        ]
+      }
+    },
+    "458": {
+      "diamond": {
+        "locations": [
+          "sunyshore city area",
+          "sinnoh sea route 223 area"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "sunyshore city area",
+          "sinnoh sea route 223 area"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "sinnoh sea route 223 area"
+        ]
+      }
+    },
+    "459": {
+      "diamond": {
+        "locations": [
+          "mt coronet exterior snowfall",
+          "mt coronet exterior blizzard",
+          "acuity lakefront area",
+          "sinnoh route 216 area",
+          "sinnoh route 217 area"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "mt coronet exterior snowfall",
+          "mt coronet exterior blizzard",
+          "acuity lakefront area",
+          "sinnoh route 216 area",
+          "sinnoh route 217 area"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "mt coronet exterior snowfall",
+          "mt coronet exterior blizzard",
+          "lake acuity area",
+          "acuity lakefront area",
+          "sinnoh route 216 area",
+          "sinnoh route 217 area"
+        ]
+      }
+    },
+    "460": {
+      "diamond": {
+        "locations": [
+          "mt coronet exterior snowfall",
+          "mt coronet exterior blizzard"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "mt coronet exterior snowfall",
+          "mt coronet exterior blizzard"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "mt coronet exterior snowfall",
+          "mt coronet exterior blizzard"
+        ]
+      }
+    },
+    "461": {
+      "diamond": {
+        "locations": [
+          "Evolve Sneasel"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Evolve Sneasel"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Evolve Sneasel"
+        ]
+      }
+    },
+    "462": {
+      "diamond": {
+        "locations": [
+          "Evolve Magneton"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Evolve Magneton"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Evolve Magneton"
+        ]
+      }
+    },
+    "463": {
+      "diamond": {
+        "locations": [
+          "Evolve Lickitung"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Evolve Lickitung"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Evolve Lickitung"
+        ]
+      }
+    },
+    "464": {
+      "diamond": {
+        "locations": [
+          "Evolve Rhydon"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Evolve Rhydon"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Evolve Rhydon"
+        ]
+      }
+    },
+    "465": {
+      "diamond": {
+        "locations": [
+          "Trade, Event"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Trade, Event"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Evolve Tangela"
+        ]
+      }
+    },
+    "466": {
+      "diamond": {
+        "locations": [
+          "Evolve Electabuzz"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Evolve Electabuzz"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Evolve Electabuzz"
+        ]
+      }
+    },
+    "467": {
+      "diamond": {
+        "locations": [
+          "Evolve Magmar"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Evolve Magmar"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Evolve Magmar"
+        ]
+      }
+    },
+    "468": {
+      "diamond": {
+        "locations": [
+          "Evolve Togetic"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Evolve Togetic"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Evolve Togetic"
+        ]
+      }
+    },
+    "469": {
+      "diamond": {
+        "locations": [
+          "Evolve Yanma"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Evolve Yanma"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Evolve Yanma"
+        ]
+      }
+    },
+    "470": {
+      "diamond": {
+        "locations": [
+          "Evolve Eevee"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Evolve Eevee"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Evolve Eevee"
+        ]
+      }
+    },
+    "471": {
+      "diamond": {
+        "locations": [
+          "Evolve Eevee"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Evolve Eevee"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Evolve Eevee"
+        ]
+      }
+    },
+    "472": {
+      "diamond": {
+        "locations": [
+          "Evolve Gligar"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Evolve Gligar"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Evolve Gligar"
+        ]
+      }
+    },
+    "473": {
+      "diamond": {
+        "locations": [
+          "Evolve Piloswine"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Evolve Piloswine"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Evolve Piloswine"
+        ]
+      }
+    },
+    "474": {
+      "diamond": {
+        "locations": [
+          "Evolve Porygon2"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Evolve Porygon2"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Evolve Porygon2"
+        ]
+      }
+    },
+    "475": {
+      "diamond": {
+        "locations": [
+          "Evolve Kirliamale"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Evolve Kirliamale"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Evolve Kirliamale"
+        ]
+      }
+    },
+    "476": {
+      "diamond": {
+        "locations": [
+          "Evolve Nosepass"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Evolve Nosepass"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Evolve Nosepass"
+        ]
+      }
+    },
+    "477": {
+      "diamond": {
+        "locations": [
+          "Evolve Dusclops"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Evolve Dusclops"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Evolve Dusclops"
+        ]
+      }
+    },
+    "478": {
+      "diamond": {
+        "locations": [
+          "Evolve Snoruntfemale"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Evolve Snoruntfemale"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Evolve Snoruntfemale"
+        ]
+      }
+    },
+    "479": {
+      "diamond": {
+        "locations": [
+          "old chateau 2f left room"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "old chateau 2f left room"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "old chateau 2f left room"
+        ]
+      }
+    },
+    "480": {
+      "diamond": {
+        "locations": [
+          "lake acuity cavern"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "lake acuity cavern"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "lake acuity cavern"
+        ]
+      }
+    },
+    "481": {
+      "diamond": {
+        "locations": [
+          "roaming sinnoh area"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "roaming sinnoh area"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "roaming sinnoh area"
+        ]
+      }
+    },
+    "482": {
+      "diamond": {
+        "locations": [
+          "lake valor cavern"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "lake valor cavern"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "lake valor cavern"
+        ]
+      }
+    },
+    "483": {
+      "diamond": {
+        "locations": [
+          "spear pillar area"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "spear pillar area"
+        ]
+      }
+    },
+    "484": {
+      "pearl": {
+        "locations": [
+          "spear pillar area"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "spear pillar area"
+        ]
+      }
+    },
+    "487": {
+      "platinum": {
+        "locations": [
+          "turnback cave after pillar 3",
+          "distortion world area"
+        ]
+      },
+      "diamond": {
+        "locations": [
+          "Turnback Cave (Only one) ('''Altered Forme''')"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Turnback Cave (Only one) ('''Altered Forme''')"
+        ]
+      }
+    },
+    "490": {
+      "diamond": {
+        "locations": [
+          "sinnoh pokemart area"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "sinnoh pokemart area"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "sinnoh pokemart area"
         ]
       }
     }
