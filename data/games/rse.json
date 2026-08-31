@@ -1046,6 +1046,40 @@
         ]
       }
     },
+    "253": {
+      "ruby": {
+        "locations": [
+          "Evolve Treecko"
+        ]
+      },
+      "sapphire": {
+        "locations": [
+          "Evolve Treecko"
+        ]
+      },
+      "emerald": {
+        "locations": [
+          "Evolve Treecko"
+        ]
+      }
+    },
+    "254": {
+      "ruby": {
+        "locations": [
+          "Evolve Grovyle"
+        ]
+      },
+      "sapphire": {
+        "locations": [
+          "Evolve Grovyle"
+        ]
+      },
+      "emerald": {
+        "locations": [
+          "Evolve Grovyle"
+        ]
+      }
+    },
     "255": {
       "ruby": {
         "locations": [
@@ -1063,6 +1097,40 @@
         ]
       }
     },
+    "256": {
+      "ruby": {
+        "locations": [
+          "Evolve Torchic"
+        ]
+      },
+      "sapphire": {
+        "locations": [
+          "Evolve Torchic"
+        ]
+      },
+      "emerald": {
+        "locations": [
+          "Evolve Torchic"
+        ]
+      }
+    },
+    "257": {
+      "ruby": {
+        "locations": [
+          "Evolve Combusken"
+        ]
+      },
+      "sapphire": {
+        "locations": [
+          "Evolve Combusken"
+        ]
+      },
+      "emerald": {
+        "locations": [
+          "Evolve Combusken"
+        ]
+      }
+    },
     "258": {
       "ruby": {
         "locations": [
@@ -1077,6 +1145,40 @@
       "emerald": {
         "locations": [
           "hoenn route 101 area"
+        ]
+      }
+    },
+    "259": {
+      "ruby": {
+        "locations": [
+          "Evolve Mudkip"
+        ]
+      },
+      "sapphire": {
+        "locations": [
+          "Evolve Mudkip"
+        ]
+      },
+      "emerald": {
+        "locations": [
+          "Evolve Mudkip"
+        ]
+      }
+    },
+    "260": {
+      "ruby": {
+        "locations": [
+          "Evolve Marshtomp"
+        ]
+      },
+      "sapphire": {
+        "locations": [
+          "Evolve Marshtomp"
+        ]
+      },
+      "emerald": {
+        "locations": [
+          "Evolve Marshtomp"
         ]
       }
     },
@@ -1108,477 +1210,6 @@
           "hoenn route 101 area",
           "hoenn route 102 area",
           "hoenn route 103 area"
-        ]
-      }
-    },
-    "262": {
-      "emerald": {
-        "locations": [
-          "hoenn route 120 area",
-          "hoenn route 121 area",
-          "hoenn route 123 area"
-        ]
-      }
-    },
-    "263": {
-      "ruby": {
-        "locations": [
-          "petalburg woods area",
-          "hoenn route 101 area",
-          "hoenn route 102 area",
-          "hoenn route 103 area",
-          "hoenn route 104 area",
-          "hoenn route 110 area",
-          "hoenn route 116 area",
-          "hoenn route 117 area",
-          "hoenn route 118 area",
-          "hoenn route 119 area",
-          "hoenn route 120 area",
-          "hoenn route 121 area",
-          "hoenn route 123 area"
-        ]
-      },
-      "sapphire": {
-        "locations": [
-          "petalburg woods area",
-          "hoenn route 101 area",
-          "hoenn route 102 area",
-          "hoenn route 103 area",
-          "hoenn route 104 area",
-          "hoenn route 110 area",
-          "hoenn route 116 area",
-          "hoenn route 117 area",
-          "hoenn route 118 area",
-          "hoenn route 119 area",
-          "hoenn route 120 area",
-          "hoenn route 121 area",
-          "hoenn route 123 area"
-        ]
-      },
-      "emerald": {
-        "locations": [
-          "hoenn route 101 area",
-          "hoenn route 102 area",
-          "hoenn route 103 area",
-          "hoenn route 118 area",
-          "hoenn route 119 area"
-        ]
-      }
-    },
-    "264": {
-      "ruby": {
-        "locations": [
-          "hoenn route 118 area",
-          "hoenn route 119 area",
-          "hoenn route 120 area",
-          "hoenn route 121 area",
-          "hoenn route 123 area"
-        ]
-      },
-      "sapphire": {
-        "locations": [
-          "hoenn route 118 area",
-          "hoenn route 119 area",
-          "hoenn route 120 area",
-          "hoenn route 121 area",
-          "hoenn route 123 area"
-        ]
-      },
-      "emerald": {
-        "locations": [
-          "hoenn route 118 area",
-          "hoenn route 119 area"
-        ]
-      }
-    },
-    "265": {
-      "ruby": {
-        "locations": [
-          "petalburg woods area",
-          "hoenn route 101 area",
-          "hoenn route 102 area",
-          "hoenn route 104 area"
-        ]
-      },
-      "sapphire": {
-        "locations": [
-          "petalburg woods area",
-          "hoenn route 101 area",
-          "hoenn route 102 area",
-          "hoenn route 104 area"
-        ]
-      },
-      "emerald": {
-        "locations": [
-          "petalburg woods area",
-          "hoenn route 101 area",
-          "hoenn route 102 area",
-          "hoenn route 104 area"
-        ]
-      }
-    },
-    "266": {
-      "ruby": {
-        "locations": [
-          "petalburg woods area"
-        ]
-      },
-      "sapphire": {
-        "locations": [
-          "petalburg woods area"
-        ]
-      },
-      "emerald": {
-        "locations": [
-          "petalburg woods area"
-        ]
-      }
-    },
-    "268": {
-      "ruby": {
-        "locations": [
-          "petalburg woods area"
-        ]
-      },
-      "sapphire": {
-        "locations": [
-          "petalburg woods area"
-        ]
-      },
-      "emerald": {
-        "locations": [
-          "petalburg woods area"
-        ]
-      }
-    },
-    "270": {
-      "sapphire": {
-        "locations": [
-          "hoenn route 102 area",
-          "hoenn route 114 area"
-        ]
-      },
-      "emerald": {
-        "locations": [
-          "hoenn route 102 area",
-          "hoenn route 114 area"
-        ]
-      }
-    },
-    "271": {
-      "sapphire": {
-        "locations": [
-          "hoenn route 114 area"
-        ]
-      },
-      "emerald": {
-        "locations": [
-          "hoenn route 114 area"
-        ]
-      }
-    },
-    "273": {
-      "ruby": {
-        "locations": [
-          "hoenn route 102 area",
-          "hoenn route 114 area"
-        ]
-      },
-      "emerald": {
-        "locations": [
-          "hoenn route 102 area",
-          "hoenn route 117 area",
-          "hoenn route 120 area",
-          "rustboro city area"
-        ]
-      }
-    },
-    "274": {
-      "ruby": {
-        "locations": [
-          "hoenn route 114 area"
-        ]
-      },
-      "emerald": {
-        "locations": [
-          "hoenn route 114 area"
-        ]
-      }
-    },
-    "276": {
-      "ruby": {
-        "locations": [
-          "petalburg woods area",
-          "hoenn route 104 area",
-          "hoenn route 115 area",
-          "hoenn route 116 area"
-        ]
-      },
-      "sapphire": {
-        "locations": [
-          "petalburg woods area",
-          "hoenn route 104 area",
-          "hoenn route 115 area",
-          "hoenn route 116 area"
-        ]
-      },
-      "emerald": {
-        "locations": [
-          "petalburg woods area",
-          "hoenn route 104 area",
-          "hoenn route 115 area",
-          "hoenn route 116 area"
-        ]
-      }
-    },
-    "277": {
-      "ruby": {
-        "locations": [
-          "hoenn route 115 area"
-        ]
-      },
-      "sapphire": {
-        "locations": [
-          "hoenn route 115 area"
-        ]
-      },
-      "emerald": {
-        "locations": [
-          "hoenn route 115 area"
-        ]
-      }
-    },
-    "278": {
-      "ruby": {
-        "locations": [
-          "slateport city area",
-          "lilycove city area",
-          "mossdeep city area",
-          "ever grande city area",
-          "mt pyre outside",
-          "hoenn route 103 area",
-          "hoenn route 104 area",
-          "hoenn route 105 area",
-          "hoenn route 106 area",
-          "hoenn route 107 area",
-          "hoenn route 108 area",
-          "hoenn route 109 area",
-          "hoenn route 110 area",
-          "hoenn route 115 area",
-          "hoenn route 118 area",
-          "hoenn route 119 area",
-          "hoenn route 121 area",
-          "hoenn route 122 area",
-          "hoenn route 123 area",
-          "hoenn route 124 area",
-          "hoenn route 125 area",
-          "hoenn route 126 area",
-          "hoenn route 127 area",
-          "hoenn route 128 area",
-          "hoenn route 129 area",
-          "hoenn route 130 area",
-          "hoenn route 131 area",
-          "hoenn route 132 area",
-          "hoenn route 133 area",
-          "hoenn route 134 area",
-          "dewford town area",
-          "pacifidlog town area"
-        ]
-      },
-      "sapphire": {
-        "locations": [
-          "slateport city area",
-          "lilycove city area",
-          "mossdeep city area",
-          "ever grande city area",
-          "mt pyre outside",
-          "hoenn route 103 area",
-          "hoenn route 104 area",
-          "hoenn route 105 area",
-          "hoenn route 106 area",
-          "hoenn route 107 area",
-          "hoenn route 108 area",
-          "hoenn route 109 area",
-          "hoenn route 110 area",
-          "hoenn route 115 area",
-          "hoenn route 118 area",
-          "hoenn route 119 area",
-          "hoenn route 121 area",
-          "hoenn route 122 area",
-          "hoenn route 123 area",
-          "hoenn route 124 area",
-          "hoenn route 125 area",
-          "hoenn route 126 area",
-          "hoenn route 127 area",
-          "hoenn route 128 area",
-          "hoenn route 129 area",
-          "hoenn route 130 area",
-          "hoenn route 131 area",
-          "hoenn route 132 area",
-          "hoenn route 133 area",
-          "hoenn route 134 area",
-          "dewford town area",
-          "pacifidlog town area"
-        ]
-      },
-      "emerald": {
-        "locations": [
-          "slateport city area",
-          "lilycove city area",
-          "mossdeep city area",
-          "ever grande city area",
-          "mt pyre outside",
-          "hoenn route 103 area",
-          "hoenn route 104 area",
-          "hoenn route 105 area",
-          "hoenn route 106 area",
-          "hoenn route 107 area",
-          "hoenn route 108 area",
-          "hoenn route 109 area",
-          "hoenn route 110 area",
-          "hoenn route 115 area",
-          "hoenn route 118 area",
-          "hoenn route 119 area",
-          "hoenn route 121 area",
-          "hoenn route 122 area",
-          "hoenn route 123 area",
-          "hoenn route 124 area",
-          "hoenn route 125 area",
-          "hoenn route 126 area",
-          "hoenn route 127 area",
-          "hoenn route 128 area",
-          "hoenn route 129 area",
-          "hoenn route 130 area",
-          "hoenn route 131 area",
-          "hoenn route 132 area",
-          "hoenn route 133 area",
-          "hoenn route 134 area",
-          "dewford town area",
-          "pacifidlog town area"
-        ]
-      }
-    },
-    "279": {
-      "ruby": {
-        "locations": [
-          "slateport city area",
-          "lilycove city area",
-          "mossdeep city area",
-          "ever grande city area",
-          "hoenn route 103 area",
-          "hoenn route 104 area",
-          "hoenn route 105 area",
-          "hoenn route 106 area",
-          "hoenn route 107 area",
-          "hoenn route 108 area",
-          "hoenn route 109 area",
-          "hoenn route 110 area",
-          "hoenn route 115 area",
-          "hoenn route 118 area",
-          "hoenn route 119 area",
-          "hoenn route 121 area",
-          "hoenn route 122 area",
-          "hoenn route 123 area",
-          "hoenn route 124 area",
-          "hoenn route 125 area",
-          "hoenn route 126 area",
-          "hoenn route 127 area",
-          "hoenn route 128 area",
-          "hoenn route 129 area",
-          "hoenn route 130 area",
-          "hoenn route 131 area",
-          "hoenn route 132 area",
-          "hoenn route 133 area",
-          "hoenn route 134 area",
-          "dewford town area",
-          "pacifidlog town area"
-        ]
-      },
-      "sapphire": {
-        "locations": [
-          "slateport city area",
-          "lilycove city area",
-          "mossdeep city area",
-          "ever grande city area",
-          "hoenn route 103 area",
-          "hoenn route 104 area",
-          "hoenn route 105 area",
-          "hoenn route 106 area",
-          "hoenn route 107 area",
-          "hoenn route 108 area",
-          "hoenn route 109 area",
-          "hoenn route 110 area",
-          "hoenn route 115 area",
-          "hoenn route 118 area",
-          "hoenn route 119 area",
-          "hoenn route 121 area",
-          "hoenn route 122 area",
-          "hoenn route 123 area",
-          "hoenn route 124 area",
-          "hoenn route 125 area",
-          "hoenn route 126 area",
-          "hoenn route 127 area",
-          "hoenn route 128 area",
-          "hoenn route 129 area",
-          "hoenn route 130 area",
-          "hoenn route 131 area",
-          "hoenn route 132 area",
-          "hoenn route 133 area",
-          "hoenn route 134 area",
-          "dewford town area",
-          "pacifidlog town area"
-        ]
-      },
-      "emerald": {
-        "locations": [
-          "slateport city area",
-          "lilycove city area",
-          "mossdeep city area",
-          "ever grande city area",
-          "hoenn route 103 area",
-          "hoenn route 104 area",
-          "hoenn route 105 area",
-          "hoenn route 106 area",
-          "hoenn route 107 area",
-          "hoenn route 108 area",
-          "hoenn route 109 area",
-          "hoenn route 110 area",
-          "hoenn route 115 area",
-          "hoenn route 118 area",
-          "hoenn route 119 area",
-          "hoenn route 121 area",
-          "hoenn route 122 area",
-          "hoenn route 123 area",
-          "hoenn route 124 area",
-          "hoenn route 125 area",
-          "hoenn route 126 area",
-          "hoenn route 127 area",
-          "hoenn route 128 area",
-          "hoenn route 129 area",
-          "hoenn route 130 area",
-          "hoenn route 131 area",
-          "hoenn route 132 area",
-          "hoenn route 133 area",
-          "hoenn route 134 area",
-          "dewford town area",
-          "pacifidlog town area"
-        ]
-      }
-    },
-    "280": {
-      "ruby": {
-        "locations": [
-          "hoenn route 102 area"
-        ]
-      },
-      "sapphire": {
-        "locations": [
-          "hoenn route 102 area"
-        ]
-      },
-      "emerald": {
-        "locations": [
-          "hoenn route 102 area"
         ]
       }
     }

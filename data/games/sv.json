@@ -2017,5 +2017,126 @@
       ]
     }
   ],
-  "encounters": {}
+  "encounters": {
+    "906": {
+      "scarlet": {
+        "locations": [
+          "First partner Pokémon from Clavell in Cabo Poco"
+        ]
+      },
+      "violet": {
+        "locations": [
+          "First partner Pokémon from Clavell in Cabo Poco"
+        ]
+      }
+    },
+    "907": {
+      "scarlet": {
+        "locations": [
+          "Evolve Sprigatito"
+        ]
+      },
+      "violet": {
+        "locations": [
+          "Evolve Sprigatito"
+        ]
+      }
+    },
+    "908": {
+      "scarlet": {
+        "locations": [
+          "Evolve Floragato"
+        ]
+      },
+      "violet": {
+        "locations": [
+          "Evolve Floragato"
+        ]
+      }
+    },
+    "909": {
+      "scarlet": {
+        "locations": [
+          "First partner Pokémon from Clavell in Cabo Poco"
+        ]
+      },
+      "violet": {
+        "locations": [
+          "First partner Pokémon from Clavell in Cabo Poco"
+        ]
+      }
+    },
+    "910": {
+      "scarlet": {
+        "locations": [
+          "Evolve Fuecoco"
+        ]
+      },
+      "violet": {
+        "locations": [
+          "Evolve Fuecoco"
+        ]
+      }
+    },
+    "911": {
+      "scarlet": {
+        "locations": [
+          "Evolve Crocalor"
+        ]
+      },
+      "violet": {
+        "locations": [
+          "Evolve Crocalor"
+        ]
+      }
+    },
+    "912": {
+      "scarlet": {
+        "locations": [
+          "First partner Pokémon from Clavell in Cabo Poco"
+        ]
+      },
+      "violet": {
+        "locations": [
+          "First partner Pokémon from Clavell in Cabo Poco"
+        ]
+      }
+    },
+    "913": {
+      "scarlet": {
+        "locations": [
+          "Evolve Quaxly"
+        ]
+      },
+      "violet": {
+        "locations": [
+          "Evolve Quaxly"
+        ]
+      }
+    },
+    "914": {
+      "scarlet": {
+        "locations": [
+          "Evolve Quaxwell"
+        ]
+      },
+      "violet": {
+        "locations": [
+          "Evolve Quaxwell"
+        ]
+      }
+    },
+    "915": {
+      "scarlet": {
+        "locations": [
+          "South Province: Area One, Area Two, Area Three, Area Four, Area Five, Poco Path, List of 1★ Tera Raid Battles (Paldea)|Lechonk|1★)"
+        ]
+      },
+      "violet": {
+        "locations": [
+          "South Province: Area One, Area Two, Area Three, Area Four, Area Five, Poco Path, List of 1★ Tera Raid Battles (Paldea)|Lechonk|1★)"
+        ]
+      }
+    }
+  }
 }

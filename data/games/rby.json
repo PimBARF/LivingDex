@@ -791,6 +791,40 @@
         ]
       }
     },
+    "2": {
+      "red": {
+        "locations": [
+          "Evolve Bulbasaur"
+        ]
+      },
+      "blue": {
+        "locations": [
+          "Evolve Bulbasaur"
+        ]
+      },
+      "yellow": {
+        "locations": [
+          "Evolve Bulbasaur"
+        ]
+      }
+    },
+    "3": {
+      "red": {
+        "locations": [
+          "Evolve Ivysaur"
+        ]
+      },
+      "blue": {
+        "locations": [
+          "Evolve Ivysaur"
+        ]
+      },
+      "yellow": {
+        "locations": [
+          "Evolve Ivysaur"
+        ]
+      }
+    },
     "4": {
       "red": {
         "locations": [
@@ -808,6 +842,40 @@
         ]
       }
     },
+    "5": {
+      "red": {
+        "locations": [
+          "Evolve Charmander"
+        ]
+      },
+      "blue": {
+        "locations": [
+          "Evolve Charmander"
+        ]
+      },
+      "yellow": {
+        "locations": [
+          "Evolve Charmander"
+        ]
+      }
+    },
+    "6": {
+      "red": {
+        "locations": [
+          "Evolve Charmeleon"
+        ]
+      },
+      "blue": {
+        "locations": [
+          "Evolve Charmeleon"
+        ]
+      },
+      "yellow": {
+        "locations": [
+          "Evolve Charmeleon"
+        ]
+      }
+    },
     "7": {
       "yellow": {
         "locations": [
@@ -822,6 +890,40 @@
       "blue": {
         "locations": [
           "pallet town area"
+        ]
+      }
+    },
+    "8": {
+      "red": {
+        "locations": [
+          "Evolve Squirtle"
+        ]
+      },
+      "blue": {
+        "locations": [
+          "Evolve Squirtle"
+        ]
+      },
+      "yellow": {
+        "locations": [
+          "Evolve Squirtle"
+        ]
+      }
+    },
+    "9": {
+      "red": {
+        "locations": [
+          "Evolve Wartortle"
+        ]
+      },
+      "blue": {
+        "locations": [
+          "Evolve Wartortle"
+        ]
+      },
+      "yellow": {
+        "locations": [
+          "Evolve Wartortle"
         ]
       }
     },
@@ -843,436 +945,6 @@
       "yellow": {
         "locations": [
           "viridian forest area"
-        ]
-      }
-    },
-    "11": {
-      "blue": {
-        "locations": [
-          "kanto route 24 area",
-          "kanto route 25 area",
-          "viridian forest area"
-        ]
-      },
-      "red": {
-        "locations": [
-          "kanto route 25 area",
-          "viridian forest area"
-        ]
-      },
-      "yellow": {
-        "locations": [
-          "viridian forest area"
-        ]
-      }
-    },
-    "13": {
-      "red": {
-        "locations": [
-          "kanto route 2 south towards viridian city",
-          "kanto route 24 area",
-          "kanto route 25 area",
-          "viridian forest area"
-        ]
-      },
-      "blue": {
-        "locations": [
-          "kanto route 25 area",
-          "viridian forest area"
-        ]
-      }
-    },
-    "14": {
-      "red": {
-        "locations": [
-          "kanto route 24 area",
-          "kanto route 25 area",
-          "viridian forest area"
-        ]
-      },
-      "blue": {
-        "locations": [
-          "kanto route 25 area",
-          "viridian forest area"
-        ]
-      }
-    },
-    "16": {
-      "red": {
-        "locations": [
-          "kanto route 12 area",
-          "kanto route 1 area",
-          "kanto route 2 south towards viridian city",
-          "kanto route 3 area",
-          "kanto route 5 area",
-          "kanto route 6 area",
-          "kanto route 7 area",
-          "kanto route 8 area",
-          "kanto route 13 area",
-          "kanto route 14 area",
-          "kanto route 15 area",
-          "kanto sea route 21 area",
-          "kanto route 24 area",
-          "kanto route 25 area"
-        ]
-      },
-      "blue": {
-        "locations": [
-          "kanto route 12 area",
-          "kanto route 1 area",
-          "kanto route 2 south towards viridian city",
-          "kanto route 3 area",
-          "kanto route 5 area",
-          "kanto route 6 area",
-          "kanto route 7 area",
-          "kanto route 8 area",
-          "kanto route 13 area",
-          "kanto route 14 area",
-          "kanto route 15 area",
-          "kanto sea route 21 area",
-          "kanto route 24 area",
-          "kanto route 25 area"
-        ]
-      },
-      "yellow": {
-        "locations": [
-          "kanto route 12 area",
-          "kanto route 1 area",
-          "kanto route 2 south towards viridian city",
-          "kanto route 5 area",
-          "kanto route 6 area",
-          "kanto route 7 area",
-          "kanto route 8 area",
-          "kanto route 11 area",
-          "kanto route 13 area",
-          "kanto sea route 21 area",
-          "kanto route 24 area",
-          "kanto route 25 area",
-          "viridian forest area"
-        ]
-      }
-    },
-    "17": {
-      "yellow": {
-        "locations": [
-          "kanto route 12 area",
-          "kanto route 5 area",
-          "kanto route 6 area",
-          "kanto route 7 area",
-          "kanto route 8 area",
-          "kanto route 11 area",
-          "kanto route 13 area",
-          "kanto route 14 area",
-          "kanto route 15 area",
-          "kanto sea route 21 area",
-          "kanto route 24 area",
-          "kanto route 25 area",
-          "viridian forest area"
-        ]
-      },
-      "red": {
-        "locations": [
-          "kanto route 14 area",
-          "kanto route 15 area",
-          "kanto sea route 21 area"
-        ]
-      },
-      "blue": {
-        "locations": [
-          "kanto route 14 area",
-          "kanto route 15 area",
-          "kanto sea route 21 area"
-        ]
-      }
-    },
-    "19": {
-      "red": {
-        "locations": [
-          "kanto route 1 area",
-          "kanto route 2 south towards viridian city",
-          "kanto route 4 area",
-          "kanto route 9 area",
-          "kanto route 16 area",
-          "kanto sea route 21 area",
-          "kanto route 22 area"
-        ]
-      },
-      "blue": {
-        "locations": [
-          "kanto route 1 area",
-          "kanto route 2 south towards viridian city",
-          "kanto route 4 area",
-          "kanto route 9 area",
-          "kanto route 16 area",
-          "kanto sea route 21 area",
-          "kanto route 22 area"
-        ]
-      },
-      "yellow": {
-        "locations": [
-          "kanto route 1 area",
-          "kanto route 2 south towards viridian city",
-          "kanto route 3 area",
-          "kanto route 4 area",
-          "kanto route 5 area",
-          "kanto route 6 area",
-          "kanto route 7 area",
-          "kanto route 8 area",
-          "kanto route 9 area",
-          "kanto route 10 area",
-          "kanto route 11 area",
-          "kanto route 16 area",
-          "kanto route 18 area",
-          "kanto sea route 21 area",
-          "kanto route 22 area",
-          "pokemon mansion 1f",
-          "pokemon mansion 2f",
-          "pokemon mansion 3f"
-        ]
-      }
-    },
-    "20": {
-      "yellow": {
-        "locations": [
-          "kanto route 9 area",
-          "kanto route 10 area",
-          "kanto route 11 area",
-          "kanto route 16 area",
-          "kanto route 18 area",
-          "kanto sea route 21 area",
-          "pokemon mansion 1f",
-          "pokemon mansion 2f",
-          "pokemon mansion 3f",
-          "pokemon mansion b1f"
-        ]
-      },
-      "red": {
-        "locations": [
-          "kanto route 16 area",
-          "kanto route 17 area",
-          "kanto route 18 area",
-          "kanto sea route 21 area"
-        ]
-      },
-      "blue": {
-        "locations": [
-          "kanto route 16 area",
-          "kanto route 17 area",
-          "kanto route 18 area",
-          "kanto sea route 21 area"
-        ]
-      }
-    },
-    "21": {
-      "red": {
-        "locations": [
-          "kanto route 3 area",
-          "kanto route 4 area",
-          "kanto route 9 area",
-          "kanto route 10 area",
-          "kanto route 11 area",
-          "kanto route 16 area",
-          "kanto route 17 area",
-          "kanto route 18 area",
-          "kanto route 22 area",
-          "kanto route 23 area"
-        ]
-      },
-      "blue": {
-        "locations": [
-          "kanto route 3 area",
-          "kanto route 4 area",
-          "kanto route 9 area",
-          "kanto route 10 area",
-          "kanto route 11 area",
-          "kanto route 16 area",
-          "kanto route 17 area",
-          "kanto route 18 area",
-          "kanto route 22 area",
-          "kanto route 23 area"
-        ]
-      },
-      "yellow": {
-        "locations": [
-          "kanto route 3 area",
-          "kanto route 4 area",
-          "kanto route 9 area",
-          "kanto route 16 area",
-          "kanto route 18 area",
-          "kanto route 22 area"
-        ]
-      }
-    },
-    "22": {
-      "yellow": {
-        "locations": [
-          "kanto route 9 area",
-          "kanto route 16 area",
-          "kanto route 17 area",
-          "kanto route 18 area",
-          "kanto route 23 area"
-        ]
-      },
-      "red": {
-        "locations": [
-          "kanto route 17 area",
-          "kanto route 18 area",
-          "kanto route 23 area"
-        ]
-      },
-      "blue": {
-        "locations": [
-          "kanto route 17 area",
-          "kanto route 18 area",
-          "kanto route 23 area"
-        ]
-      }
-    },
-    "23": {
-      "red": {
-        "locations": [
-          "kanto route 4 area",
-          "kanto route 8 area",
-          "kanto route 9 area",
-          "kanto route 10 area",
-          "kanto route 11 area",
-          "kanto route 23 area"
-        ]
-      }
-    },
-    "24": {
-      "red": {
-        "locations": [
-          "cerulean cave 1f",
-          "cerulean cave b1f",
-          "kanto route 23 area"
-        ]
-      }
-    },
-    "25": {
-      "yellow": {
-        "locations": [
-          "pallet town area"
-        ]
-      },
-      "red": {
-        "locations": [
-          "viridian forest area",
-          "kanto power plant area"
-        ]
-      },
-      "blue": {
-        "locations": [
-          "viridian forest area",
-          "kanto power plant area"
-        ]
-      }
-    },
-    "26": {
-      "red": {
-        "locations": [
-          "cerulean cave 1f",
-          "cerulean cave b1f"
-        ]
-      },
-      "blue": {
-        "locations": [
-          "cerulean cave 1f",
-          "cerulean cave b1f",
-          "kanto power plant area"
-        ]
-      }
-    },
-    "27": {
-      "yellow": {
-        "locations": [
-          "mt moon 1f",
-          "kanto route 3 area",
-          "kanto route 4 area"
-        ]
-      },
-      "blue": {
-        "locations": [
-          "kanto route 4 area",
-          "kanto route 8 area",
-          "kanto route 9 area",
-          "kanto route 10 area",
-          "kanto route 11 area",
-          "kanto route 23 area"
-        ]
-      }
-    },
-    "28": {
-      "blue": {
-        "locations": [
-          "cerulean cave 1f",
-          "cerulean cave b1f",
-          "kanto route 23 area"
-        ]
-      },
-      "yellow": {
-        "locations": [
-          "cerulean cave 1f",
-          "cerulean cave 2f"
-        ]
-      }
-    },
-    "29": {
-      "yellow": {
-        "locations": [
-          "kanto route 2 south towards viridian city",
-          "kanto route 9 area",
-          "kanto route 10 area",
-          "kanto route 22 area",
-          "kanto safari zone middle",
-          "kanto safari zone area 1 east",
-          "kanto safari zone area 2 north",
-          "kanto safari zone area 3 west"
-        ]
-      },
-      "red": {
-        "locations": [
-          "kanto route 22 area",
-          "kanto safari zone area 1 east",
-          "kanto safari zone area 3 west",
-          "kanto underground path area"
-        ]
-      },
-      "blue": {
-        "locations": [
-          "kanto route 22 area",
-          "kanto safari zone middle",
-          "kanto safari zone area 1 east",
-          "kanto safari zone area 2 north",
-          "kanto safari zone area 3 west",
-          "kanto underground path area"
-        ]
-      }
-    },
-    "30": {
-      "yellow": {
-        "locations": [
-          "kanto route 9 area",
-          "kanto route 23 area",
-          "kanto safari zone area 1 east",
-          "kanto safari zone area 2 north"
-        ]
-      },
-      "red": {
-        "locations": [
-          "kanto route 11 area",
-          "kanto safari zone middle",
-          "kanto safari zone area 2 north",
-          "celadon city prize corner"
-        ]
-      },
-      "blue": {
-        "locations": [
-          "kanto route 11 area",
-          "kanto safari zone middle",
-          "kanto safari zone area 1 east",
-          "kanto safari zone area 2 north",
-          "kanto safari zone area 3 west"
         ]
       }
     }

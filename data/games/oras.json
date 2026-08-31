@@ -1085,6 +1085,30 @@
         ]
       }
     },
+    "253": {
+      "omega-ruby": {
+        "locations": [
+          "Evolve Treecko"
+        ]
+      },
+      "alpha-sapphire": {
+        "locations": [
+          "Evolve Treecko"
+        ]
+      }
+    },
+    "254": {
+      "omega-ruby": {
+        "locations": [
+          "Evolve Grovyle"
+        ]
+      },
+      "alpha-sapphire": {
+        "locations": [
+          "Evolve Grovyle"
+        ]
+      }
+    },
     "255": {
       "omega-ruby": {
         "locations": [
@@ -1094,6 +1118,30 @@
       "alpha-sapphire": {
         "locations": [
           "hoenn route 101 area"
+        ]
+      }
+    },
+    "256": {
+      "omega-ruby": {
+        "locations": [
+          "Evolve Torchic"
+        ]
+      },
+      "alpha-sapphire": {
+        "locations": [
+          "Evolve Torchic"
+        ]
+      }
+    },
+    "257": {
+      "omega-ruby": {
+        "locations": [
+          "Evolve Combusken"
+        ]
+      },
+      "alpha-sapphire": {
+        "locations": [
+          "Evolve Combusken"
         ]
       }
     },
@@ -1109,6 +1157,30 @@
         ]
       }
     },
+    "259": {
+      "omega-ruby": {
+        "locations": [
+          "Evolve Mudkip"
+        ]
+      },
+      "alpha-sapphire": {
+        "locations": [
+          "Evolve Mudkip"
+        ]
+      }
+    },
+    "260": {
+      "omega-ruby": {
+        "locations": [
+          "Evolve Marshtomp"
+        ]
+      },
+      "alpha-sapphire": {
+        "locations": [
+          "Evolve Marshtomp"
+        ]
+      }
+    },
     "261": {
       "omega-ruby": {
         "locations": [
@@ -1120,104 +1192,6 @@
         "locations": [
           "hoenn route 101 area",
           "hoenn route 103 area"
-        ]
-      }
-    },
-    "263": {
-      "omega-ruby": {
-        "locations": [
-          "petalburg woods area",
-          "hoenn route 101 area",
-          "hoenn route 102 area",
-          "hoenn route 103 area",
-          "hoenn route 116 area",
-          "hoenn route 117 area",
-          "hoenn route 104 north oras",
-          "hoenn route 104 south oras"
-        ]
-      },
-      "alpha-sapphire": {
-        "locations": [
-          "petalburg woods area",
-          "hoenn route 101 area",
-          "hoenn route 102 area",
-          "hoenn route 103 area",
-          "hoenn route 116 area",
-          "hoenn route 117 area",
-          "hoenn route 104 north oras",
-          "hoenn route 104 south oras"
-        ]
-      }
-    },
-    "265": {
-      "omega-ruby": {
-        "locations": [
-          "petalburg woods area"
-        ]
-      },
-      "alpha-sapphire": {
-        "locations": [
-          "petalburg woods area"
-        ]
-      }
-    },
-    "270": {
-      "alpha-sapphire": {
-        "locations": [
-          "hoenn route 102 area",
-          "hoenn route 114 area"
-        ]
-      }
-    },
-    "273": {
-      "omega-ruby": {
-        "locations": [
-          "hoenn route 102 area",
-          "hoenn route 114 area"
-        ]
-      }
-    },
-    "276": {
-      "omega-ruby": {
-        "locations": [
-          "hoenn route 104 north oras"
-        ]
-      },
-      "alpha-sapphire": {
-        "locations": [
-          "hoenn route 104 north oras"
-        ]
-      }
-    },
-    "278": {
-      "omega-ruby": {
-        "locations": [
-          "hoenn route 103 area",
-          "hoenn route 118 area",
-          "hoenn route 121 area",
-          "hoenn route 123 area",
-          "hoenn route 104 south oras"
-        ]
-      },
-      "alpha-sapphire": {
-        "locations": [
-          "hoenn route 103 area",
-          "hoenn route 118 area",
-          "hoenn route 121 area",
-          "hoenn route 123 area",
-          "hoenn route 104 south oras"
-        ]
-      }
-    },
-    "280": {
-      "omega-ruby": {
-        "locations": [
-          "hoenn route 102 area"
-        ]
-      },
-      "alpha-sapphire": {
-        "locations": [
-          "hoenn route 102 area"
         ]
       }
     }

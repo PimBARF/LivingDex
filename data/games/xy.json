@@ -783,106 +783,6 @@
     }
   ],
   "encounters": {
-    "10": {
-      "y": {
-        "locations": [
-          "kalos route 2 area",
-          "santalune forest area"
-        ]
-      },
-      "x": {
-        "locations": [
-          "santalune forest area"
-        ]
-      }
-    },
-    "11": {
-      "y": {
-        "locations": [
-          "santalune forest area"
-        ]
-      }
-    },
-    "12": {
-      "x": {
-        "locations": [
-          "friend safari bug"
-        ]
-      },
-      "y": {
-        "locations": [
-          "friend safari bug"
-        ]
-      }
-    },
-    "13": {
-      "x": {
-        "locations": [
-          "kalos route 2 area",
-          "santalune forest area"
-        ]
-      },
-      "y": {
-        "locations": [
-          "santalune forest area"
-        ]
-      }
-    },
-    "14": {
-      "x": {
-        "locations": [
-          "santalune forest area",
-          "friend safari poison"
-        ]
-      },
-      "y": {
-        "locations": [
-          "friend safari poison"
-        ]
-      }
-    },
-    "16": {
-      "x": {
-        "locations": [
-          "kalos route 2 area",
-          "kalos route 3 area",
-          "friend safari flying"
-        ]
-      },
-      "y": {
-        "locations": [
-          "kalos route 2 area",
-          "kalos route 3 area",
-          "friend safari flying"
-        ]
-      }
-    },
-    "263": {
-      "x": {
-        "locations": [
-          "kalos route 2 area"
-        ]
-      },
-      "y": {
-        "locations": [
-          "kalos route 2 area"
-        ]
-      }
-    },
-    "511": {
-      "x": {
-        "locations": [
-          "santalune forest area",
-          "friend safari grass"
-        ]
-      },
-      "y": {
-        "locations": [
-          "santalune forest area",
-          "friend safari grass"
-        ]
-      }
-    },
     "650": {
       "x": {
         "locations": [
@@ -904,6 +804,18 @@
       "y": {
         "locations": [
           "friend safari grass"
+        ]
+      }
+    },
+    "652": {
+      "x": {
+        "locations": [
+          "Evolve Quilladin"
+        ]
+      },
+      "y": {
+        "locations": [
+          "Evolve Quilladin"
         ]
       }
     },
@@ -931,6 +843,18 @@
         ]
       }
     },
+    "655": {
+      "x": {
+        "locations": [
+          "Evolve Braixen"
+        ]
+      },
+      "y": {
+        "locations": [
+          "Evolve Braixen"
+        ]
+      }
+    },
     "656": {
       "x": {
         "locations": [
@@ -955,6 +879,18 @@
         ]
       }
     },
+    "658": {
+      "x": {
+        "locations": [
+          "Evolve Frogadier"
+        ]
+      },
+      "y": {
+        "locations": [
+          "Evolve Frogadier"
+        ]
+      }
+    },
     "659": {
       "x": {
         "locations": [
@@ -970,88 +906,6 @@
           "kalos route 3 area",
           "kalos route 5 area",
           "kalos route 22 area"
-        ]
-      }
-    },
-    "660": {
-      "x": {
-        "locations": [
-          "kalos route 22 area",
-          "friend safari ground"
-        ]
-      },
-      "y": {
-        "locations": [
-          "kalos route 22 area",
-          "friend safari ground"
-        ]
-      }
-    },
-    "661": {
-      "x": {
-        "locations": [
-          "kalos route 2 area",
-          "kalos route 3 area",
-          "santalune forest area"
-        ]
-      },
-      "y": {
-        "locations": [
-          "kalos route 2 area",
-          "kalos route 3 area",
-          "santalune forest area"
-        ]
-      }
-    },
-    "662": {
-      "x": {
-        "locations": [
-          "friend safari fire",
-          "friend safari flying"
-        ]
-      },
-      "y": {
-        "locations": [
-          "friend safari fire",
-          "friend safari flying"
-        ]
-      }
-    },
-    "664": {
-      "x": {
-        "locations": [
-          "kalos route 2 area",
-          "santalune forest area"
-        ]
-      },
-      "y": {
-        "locations": [
-          "kalos route 2 area",
-          "santalune forest area"
-        ]
-      }
-    },
-    "665": {
-      "x": {
-        "locations": [
-          "kalos berry fields area"
-        ]
-      },
-      "y": {
-        "locations": [
-          "kalos berry fields area"
-        ]
-      }
-    },
-    "666": {
-      "x": {
-        "locations": [
-          "friend safari bug"
-        ]
-      },
-      "y": {
-        "locations": [
-          "friend safari bug"
         ]
       }
     }

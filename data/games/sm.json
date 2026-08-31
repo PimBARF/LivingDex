@@ -1528,178 +1528,6 @@
     }
   ],
   "encounters": {
-    "10": {
-      "sun": {
-        "locations": [
-          "alola route 1 east",
-          "alola route 1 south",
-          "alola route 1 west",
-          "alola route 5 area",
-          "lush jungle south",
-          "melemele meadow area"
-        ]
-      },
-      "moon": {
-        "locations": [
-          "alola route 1 east",
-          "alola route 1 south",
-          "alola route 1 west",
-          "alola route 5 area",
-          "lush jungle south",
-          "melemele meadow area"
-        ]
-      }
-    },
-    "11": {
-      "sun": {
-        "locations": [
-          "alola route 1 south",
-          "alola route 1 west",
-          "alola route 5 area",
-          "lush jungle south",
-          "melemele meadow area"
-        ]
-      },
-      "moon": {
-        "locations": [
-          "alola route 1 south",
-          "alola route 1 west",
-          "alola route 5 area",
-          "lush jungle south",
-          "melemele meadow area"
-        ]
-      }
-    },
-    "12": {
-      "sun": {
-        "locations": [
-          "alola route 5 area",
-          "lush jungle south",
-          "melemele meadow area"
-        ]
-      },
-      "moon": {
-        "locations": [
-          "alola route 5 area",
-          "lush jungle south",
-          "melemele meadow area"
-        ]
-      }
-    },
-    "25": {
-      "sun": {
-        "locations": [
-          "alola route 1 west",
-          "hauoli city shopping district"
-        ]
-      },
-      "moon": {
-        "locations": [
-          "alola route 1 west",
-          "hauoli city shopping district"
-        ]
-      }
-    },
-    "165": {
-      "sun": {
-        "locations": [
-          "alola route 1 east",
-          "alola route 1 south",
-          "alola route 1 west"
-        ]
-      },
-      "moon": {
-        "locations": [
-          "alola route 1 east",
-          "alola route 1 south",
-          "alola route 1 west"
-        ]
-      }
-    },
-    "166": {
-      "sun": {
-        "locations": [
-          "alola route 10 area",
-          "alola route 11 area",
-          "alola route 17 west",
-          "malie garden area",
-          "ulaula meadow area"
-        ]
-      },
-      "moon": {
-        "locations": [
-          "alola route 10 area",
-          "alola route 11 area",
-          "alola route 17 west",
-          "malie garden area",
-          "ulaula meadow area"
-        ]
-      }
-    },
-    "167": {
-      "sun": {
-        "locations": [
-          "alola route 1 east",
-          "alola route 1 south",
-          "alola route 1 west"
-        ]
-      },
-      "moon": {
-        "locations": [
-          "alola route 1 east",
-          "alola route 1 south",
-          "alola route 1 west"
-        ]
-      }
-    },
-    "168": {
-      "sun": {
-        "locations": [
-          "alola route 10 area",
-          "alola route 11 area",
-          "alola route 17 west",
-          "malie garden area",
-          "ulaula meadow area"
-        ]
-      },
-      "moon": {
-        "locations": [
-          "alola route 10 area",
-          "alola route 11 area",
-          "alola route 17 west",
-          "malie garden area",
-          "ulaula meadow area"
-        ]
-      }
-    },
-    "172": {
-      "sun": {
-        "locations": [
-          "alola route 1 west",
-          "hauoli city shopping district"
-        ]
-      },
-      "moon": {
-        "locations": [
-          "alola route 1 west",
-          "hauoli city shopping district"
-        ]
-      }
-    },
-    "438": {
-      "sun": {
-        "locations": [
-          "alola route 1 south",
-          "lush jungle south"
-        ]
-      },
-      "moon": {
-        "locations": [
-          "alola route 1 south",
-          "lush jungle south"
-        ]
-      }
-    },
     "722": {
       "sun": {
         "locations": [
@@ -1709,6 +1537,30 @@
       "moon": {
         "locations": [
           "iki town area"
+        ]
+      }
+    },
+    "723": {
+      "sun": {
+        "locations": [
+          "Evolve Rowlet"
+        ]
+      },
+      "moon": {
+        "locations": [
+          "Evolve Rowlet"
+        ]
+      }
+    },
+    "724": {
+      "sun": {
+        "locations": [
+          "Evolve Dartrix"
+        ]
+      },
+      "moon": {
+        "locations": [
+          "Evolve Dartrix"
         ]
       }
     },
@@ -1724,6 +1576,30 @@
         ]
       }
     },
+    "726": {
+      "sun": {
+        "locations": [
+          "Evolve Litten"
+        ]
+      },
+      "moon": {
+        "locations": [
+          "Evolve Litten"
+        ]
+      }
+    },
+    "727": {
+      "sun": {
+        "locations": [
+          "Evolve Torracat"
+        ]
+      },
+      "moon": {
+        "locations": [
+          "Evolve Torracat"
+        ]
+      }
+    },
     "728": {
       "sun": {
         "locations": [
@@ -1733,6 +1609,30 @@
       "moon": {
         "locations": [
           "iki town area"
+        ]
+      }
+    },
+    "729": {
+      "sun": {
+        "locations": [
+          "Evolve Popplio"
+        ]
+      },
+      "moon": {
+        "locations": [
+          "Evolve Popplio"
+        ]
+      }
+    },
+    "730": {
+      "sun": {
+        "locations": [
+          "Evolve Brionne"
+        ]
+      },
+      "moon": {
+        "locations": [
+          "Evolve Brionne"
         ]
       }
     },
@@ -1765,152 +1665,6 @@
           "poke pelago poni island reached",
           "poke pelago ulaula island reached",
           "poke pelago elite four defeated"
-        ]
-      }
-    },
-    "732": {
-      "sun": {
-        "locations": [
-          "alola route 8 main",
-          "alola route 11 area",
-          "lush jungle north",
-          "lush jungle south",
-          "lush jungle west",
-          "poni grove area",
-          "poni plains center",
-          "poni plains east",
-          "poni plains north",
-          "poni plains west"
-        ]
-      },
-      "moon": {
-        "locations": [
-          "alola route 8 main",
-          "alola route 11 area",
-          "lush jungle north",
-          "lush jungle south",
-          "lush jungle west",
-          "poni grove area",
-          "poni plains center",
-          "poni plains east",
-          "poni plains north",
-          "poni plains west"
-        ]
-      }
-    },
-    "734": {
-      "sun": {
-        "locations": [
-          "alola route 1 east",
-          "alola route 1 hauoli outskirts",
-          "alola route 1 south",
-          "alola route 1 west",
-          "alola route 2 north",
-          "alola route 2 south",
-          "alola route 3 north",
-          "alola route 3 south",
-          "alola route 4 area",
-          "alola route 6 north",
-          "alola route 6 south",
-          "alola route 8 main",
-          "hauoli city shopping district",
-          "kalae bay area"
-        ]
-      },
-      "moon": {
-        "locations": [
-          "alola route 1 east",
-          "alola route 1 hauoli outskirts",
-          "alola route 1 south",
-          "alola route 1 west",
-          "alola route 2 north",
-          "alola route 2 south",
-          "alola route 3 north",
-          "alola route 3 south",
-          "alola route 4 area",
-          "alola route 6 north",
-          "alola route 6 south",
-          "alola route 8 main",
-          "hauoli city shopping district",
-          "kalae bay area"
-        ]
-      }
-    },
-    "735": {
-      "sun": {
-        "locations": [
-          "alola route 10 area",
-          "alola route 11 area",
-          "alola route 14 area",
-          "alola route 15 main",
-          "alola route 16 main",
-          "alola route 17 northeast",
-          "alola route 17 west",
-          "akala outskirts area",
-          "ancient poni path area",
-          "malie city outer cape",
-          "poni gauntlet area",
-          "poni grove area",
-          "poni plains center",
-          "poni plains east",
-          "poni plains north",
-          "poni plains west",
-          "poni wilds area",
-          "tapu village area"
-        ]
-      },
-      "moon": {
-        "locations": [
-          "alola route 10 area",
-          "alola route 11 area",
-          "alola route 14 area",
-          "alola route 15 main",
-          "alola route 16 main",
-          "alola route 17 northeast",
-          "alola route 17 west",
-          "akala outskirts area",
-          "ancient poni path area",
-          "malie city outer cape",
-          "poni gauntlet area",
-          "poni grove area",
-          "poni plains center",
-          "poni plains east",
-          "poni plains north",
-          "poni plains west",
-          "poni wilds area",
-          "tapu village area"
-        ]
-      }
-    },
-    "736": {
-      "sun": {
-        "locations": [
-          "alola route 1 west",
-          "alola route 4 area",
-          "alola route 5 area",
-          "alola route 6 north",
-          "alola route 6 south"
-        ]
-      },
-      "moon": {
-        "locations": [
-          "alola route 1 west",
-          "alola route 4 area",
-          "alola route 5 area",
-          "alola route 6 north",
-          "alola route 6 south"
-        ]
-      }
-    },
-    "737": {
-      "sun": {
-        "locations": [
-          "blush mountain area"
-        ]
-      },
-      "moon": {
-        "locations": [
-          "blush mountain area"
         ]
       }
     }

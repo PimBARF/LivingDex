@@ -1523,71 +1523,15 @@
     }
   ],
   "encounters": {
-    "54": {
+    "494": {
       "black-2": {
         "locations": [
-          "floccesy ranch inner"
+          "Trade, Event"
         ]
       },
       "white-2": {
         "locations": [
-          "floccesy ranch inner"
-        ]
-      }
-    },
-    "55": {
-      "black-2": {
-        "locations": [
-          "village bridge area",
-          "unova route 11 area",
-          "unova route 14 area",
-          "abundant shrine area",
-          "seaside cave 1f",
-          "seaside cave b1f",
-          "nature sanctuary area",
-          "unova route 22 area",
-          "unova route 23 area",
-          "unova route 23 hidden grotto",
-          "abundant shrine hidden grotto shrine"
-        ]
-      },
-      "white-2": {
-        "locations": [
-          "village bridge area",
-          "unova route 11 area",
-          "unova route 14 area",
-          "abundant shrine area",
-          "seaside cave 1f",
-          "seaside cave b1f",
-          "nature sanctuary area",
-          "unova route 22 area",
-          "unova route 23 area",
-          "unova route 23 hidden grotto",
-          "abundant shrine hidden grotto shrine"
-        ]
-      }
-    },
-    "179": {
-      "black-2": {
-        "locations": [
-          "floccesy ranch inner"
-        ]
-      },
-      "white-2": {
-        "locations": [
-          "floccesy ranch inner"
-        ]
-      }
-    },
-    "191": {
-      "black-2": {
-        "locations": [
-          "unova route 20 area"
-        ]
-      },
-      "white-2": {
-        "locations": [
-          "unova route 20 area"
+          "Trade, Event"
         ]
       }
     },
@@ -1603,6 +1547,30 @@
         ]
       }
     },
+    "496": {
+      "black-2": {
+        "locations": [
+          "Evolve Snivy"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Evolve Snivy"
+        ]
+      }
+    },
+    "497": {
+      "black-2": {
+        "locations": [
+          "Evolve Servine"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Evolve Servine"
+        ]
+      }
+    },
     "498": {
       "black-2": {
         "locations": [
@@ -1612,6 +1580,30 @@
       "white-2": {
         "locations": [
           "aspertia city area"
+        ]
+      }
+    },
+    "499": {
+      "black-2": {
+        "locations": [
+          "Evolve Tepig"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Evolve Tepig"
+        ]
+      }
+    },
+    "500": {
+      "black-2": {
+        "locations": [
+          "Evolve Pignite"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Evolve Pignite"
         ]
       }
     },
@@ -1627,263 +1619,27 @@
         ]
       }
     },
-    "504": {
+    "502": {
       "black-2": {
         "locations": [
-          "floccesy ranch inner",
-          "virbank complex outer",
-          "virbank complex inner",
-          "unova route 19 area",
-          "unova route 20 area"
+          "Evolve Oshawott"
         ]
       },
       "white-2": {
         "locations": [
-          "floccesy ranch inner",
-          "virbank complex outer",
-          "virbank complex inner",
-          "unova route 19 area",
-          "unova route 20 area"
+          "Evolve Oshawott"
         ]
       }
     },
-    "505": {
+    "503": {
       "black-2": {
         "locations": [
-          "dreamyard area",
-          "dreamyard b1f",
-          "p2 laboratory area",
-          "unova route 1 area",
-          "unova route 2 area",
-          "unova route 3 area",
-          "unova route 7 area",
-          "unova route 18 area",
-          "unova route 2 hidden grotto",
-          "unova route 7 hidden grotto"
+          "Evolve Dewott"
         ]
       },
       "white-2": {
         "locations": [
-          "dreamyard area",
-          "dreamyard b1f",
-          "p2 laboratory area",
-          "unova route 1 area",
-          "unova route 2 area",
-          "unova route 3 area",
-          "unova route 7 area",
-          "unova route 18 area",
-          "unova route 2 hidden grotto",
-          "unova route 7 hidden grotto"
-        ]
-      }
-    },
-    "506": {
-      "black-2": {
-        "locations": [
-          "floccesy ranch inner"
-        ]
-      },
-      "white-2": {
-        "locations": [
-          "floccesy ranch inner"
-        ]
-      }
-    },
-    "507": {
-      "black-2": {
-        "locations": [
-          "p2 laboratory area",
-          "unova route 1 area",
-          "unova route 2 area",
-          "unova route 3 area",
-          "floccesy ranch hidden grotto"
-        ]
-      },
-      "white-2": {
-        "locations": [
-          "p2 laboratory area",
-          "unova route 1 area",
-          "unova route 2 area",
-          "unova route 3 area",
-          "floccesy ranch hidden grotto"
-        ]
-      }
-    },
-    "508": {
-      "black-2": {
-        "locations": [
-          "p2 laboratory area",
-          "unova route 1 area",
-          "unova route 2 area",
-          "unova route 3 area"
-        ]
-      },
-      "white-2": {
-        "locations": [
-          "p2 laboratory area",
-          "unova route 1 area",
-          "unova route 2 area",
-          "unova route 3 area"
-        ]
-      }
-    },
-    "509": {
-      "black-2": {
-        "locations": [
-          "unova route 3 area",
-          "unova route 19 area",
-          "unova route 20 area"
-        ]
-      },
-      "white-2": {
-        "locations": [
-          "unova route 3 area",
-          "unova route 19 area",
-          "unova route 20 area"
-        ]
-      }
-    },
-    "510": {
-      "black-2": {
-        "locations": [
-          "dreamyard area",
-          "dreamyard b1f",
-          "unova route 2 area",
-          "unova route 5 area",
-          "unova route 9 area",
-          "unova route 16 area",
-          "unova route 5 hidden grotto",
-          "unova route 9 hidden grotto"
-        ]
-      },
-      "white-2": {
-        "locations": [
-          "dreamyard area",
-          "dreamyard b1f",
-          "unova route 2 area",
-          "unova route 5 area",
-          "unova route 9 area",
-          "unova route 16 area",
-          "unova route 5 hidden grotto",
-          "unova route 9 hidden grotto"
-        ]
-      }
-    },
-    "519": {
-      "black-2": {
-        "locations": [
-          "castelia city area",
-          "floccesy ranch inner",
-          "virbank complex outer",
-          "unova route 20 area"
-        ]
-      },
-      "white-2": {
-        "locations": [
-          "castelia city area",
-          "floccesy ranch inner",
-          "virbank complex outer",
-          "unova route 20 area"
-        ]
-      }
-    },
-    "520": {
-      "black-2": {
-        "locations": [
-          "dragonspiral tower entrance",
-          "dragonspiral tower outside",
-          "unova route 3 area",
-          "unova route 6 area",
-          "unova route 7 area",
-          "unova route 12 area",
-          "unova victory road 2 unknown area 73",
-          "unova victory road 2 unknown area 79"
-        ]
-      },
-      "white-2": {
-        "locations": [
-          "dragonspiral tower entrance",
-          "dragonspiral tower outside",
-          "unova route 3 area",
-          "unova route 6 area",
-          "unova route 7 area",
-          "unova route 12 area",
-          "unova victory road 2 unknown area 73",
-          "unova victory road 2 unknown area 79"
-        ]
-      }
-    },
-    "521": {
-      "black-2": {
-        "locations": [
-          "dragonspiral tower entrance",
-          "dragonspiral tower outside",
-          "unova route 3 area",
-          "unova route 6 area",
-          "unova route 7 area",
-          "unova route 12 area",
-          "unova victory road 2 unknown area 73",
-          "unova victory road 2 unknown area 79"
-        ]
-      },
-      "white-2": {
-        "locations": [
-          "dragonspiral tower entrance",
-          "dragonspiral tower outside",
-          "unova route 3 area",
-          "unova route 6 area",
-          "unova route 7 area",
-          "unova route 12 area",
-          "unova victory road 2 unknown area 73",
-          "unova victory road 2 unknown area 79"
-        ]
-      }
-    },
-    "540": {
-      "black-2": {
-        "locations": [
-          "unova route 12 area",
-          "unova route 20 area"
-        ]
-      },
-      "white-2": {
-        "locations": [
-          "unova route 12 area",
-          "unova route 20 area"
-        ]
-      }
-    },
-    "541": {
-      "black-2": {
-        "locations": [
-          "pinwheel forest inside",
-          "unova route 6 area",
-          "lostlorn forest area"
-        ]
-      },
-      "white-2": {
-        "locations": [
-          "pinwheel forest inside",
-          "unova route 6 area",
-          "lostlorn forest area"
-        ]
-      }
-    },
-    "542": {
-      "black-2": {
-        "locations": [
-          "unova route 6 area",
-          "unova route 12 area",
-          "lostlorn forest area",
-          "lostlorn forest hidden grotto"
-        ]
-      },
-      "white-2": {
-        "locations": [
-          "unova route 6 area",
-          "unova route 12 area",
-          "lostlorn forest area",
-          "lostlorn forest hidden grotto"
+          "Evolve Dewott"
         ]
       }
     }

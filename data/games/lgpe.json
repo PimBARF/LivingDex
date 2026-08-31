@@ -797,6 +797,30 @@
         ]
       }
     },
+    "2": {
+      "lets-go-pikachu": {
+        "locations": [
+          "Evolve Bulbasaur"
+        ]
+      },
+      "lets-go-eevee": {
+        "locations": [
+          "Evolve Bulbasaur"
+        ]
+      }
+    },
+    "3": {
+      "lets-go-pikachu": {
+        "locations": [
+          "Evolve Ivysaur"
+        ]
+      },
+      "lets-go-eevee": {
+        "locations": [
+          "Evolve Ivysaur"
+        ]
+      }
+    },
     "4": {
       "lets-go-pikachu": {
         "locations": [
@@ -814,6 +838,18 @@
           "kanto route 3 area",
           "kanto route 4 area",
           "kanto route 24 area"
+        ]
+      }
+    },
+    "5": {
+      "lets-go-pikachu": {
+        "locations": [
+          "Evolve Charmander"
+        ]
+      },
+      "lets-go-eevee": {
+        "locations": [
+          "Evolve Charmander"
         ]
       }
     },
@@ -903,6 +939,30 @@
         ]
       }
     },
+    "8": {
+      "lets-go-pikachu": {
+        "locations": [
+          "Evolve Squirtle"
+        ]
+      },
+      "lets-go-eevee": {
+        "locations": [
+          "Evolve Squirtle"
+        ]
+      }
+    },
+    "9": {
+      "lets-go-pikachu": {
+        "locations": [
+          "Evolve Wartortle"
+        ]
+      },
+      "lets-go-eevee": {
+        "locations": [
+          "Evolve Wartortle"
+        ]
+      }
+    },
     "10": {
       "lets-go-pikachu": {
         "locations": [
@@ -916,407 +976,6 @@
           "kanto route 2 south towards viridian city",
           "kanto route 2 north towards pewter city",
           "viridian forest area"
-        ]
-      }
-    },
-    "11": {
-      "lets-go-pikachu": {
-        "locations": [
-          "viridian forest area"
-        ]
-      },
-      "lets-go-eevee": {
-        "locations": [
-          "viridian forest area"
-        ]
-      }
-    },
-    "12": {
-      "lets-go-pikachu": {
-        "locations": [
-          "viridian forest area"
-        ]
-      }
-    },
-    "13": {
-      "lets-go-pikachu": {
-        "locations": [
-          "kanto route 2 south towards viridian city",
-          "kanto route 2 north towards pewter city",
-          "viridian forest area"
-        ]
-      },
-      "lets-go-eevee": {
-        "locations": [
-          "kanto route 2 south towards viridian city",
-          "kanto route 2 north towards pewter city",
-          "viridian forest area"
-        ]
-      }
-    },
-    "14": {
-      "lets-go-pikachu": {
-        "locations": [
-          "viridian forest area"
-        ]
-      },
-      "lets-go-eevee": {
-        "locations": [
-          "viridian forest area"
-        ]
-      }
-    },
-    "15": {
-      "lets-go-eevee": {
-        "locations": [
-          "viridian forest area"
-        ]
-      }
-    },
-    "16": {
-      "lets-go-pikachu": {
-        "locations": [
-          "kanto route 12 area",
-          "kanto sea route 19 area",
-          "kanto sea route 20 area",
-          "kanto route 1 area",
-          "kanto route 2 south towards viridian city",
-          "kanto route 5 area",
-          "kanto route 6 area",
-          "kanto route 7 area",
-          "kanto route 8 area",
-          "kanto route 11 area",
-          "kanto route 13 area",
-          "kanto route 14 area",
-          "kanto route 15 area",
-          "kanto route 16 area",
-          "kanto route 17 area",
-          "kanto route 18 area",
-          "kanto sea route 21 area",
-          "kanto route 24 area",
-          "kanto route 25 area",
-          "kanto route 2 north towards pewter city",
-          "viridian forest area"
-        ]
-      },
-      "lets-go-eevee": {
-        "locations": [
-          "kanto route 12 area",
-          "kanto sea route 19 area",
-          "kanto sea route 20 area",
-          "kanto route 1 area",
-          "kanto route 2 south towards viridian city",
-          "kanto route 5 area",
-          "kanto route 6 area",
-          "kanto route 7 area",
-          "kanto route 8 area",
-          "kanto route 11 area",
-          "kanto route 13 area",
-          "kanto route 14 area",
-          "kanto route 15 area",
-          "kanto route 16 area",
-          "kanto route 17 area",
-          "kanto route 18 area",
-          "kanto sea route 21 area",
-          "kanto route 24 area",
-          "kanto route 25 area",
-          "kanto route 2 north towards pewter city",
-          "viridian forest area"
-        ]
-      }
-    },
-    "17": {
-      "lets-go-pikachu": {
-        "locations": [
-          "kanto route 12 area",
-          "kanto sea route 19 area",
-          "kanto sea route 20 area",
-          "kanto route 1 area",
-          "kanto route 2 south towards viridian city",
-          "kanto route 5 area",
-          "kanto route 6 area",
-          "kanto route 7 area",
-          "kanto route 8 area",
-          "kanto route 11 area",
-          "kanto route 13 area",
-          "kanto route 14 area",
-          "kanto route 15 area",
-          "kanto route 16 area",
-          "kanto route 17 area",
-          "kanto route 18 area",
-          "kanto sea route 21 area",
-          "kanto route 24 area",
-          "kanto route 25 area",
-          "kanto route 2 north towards pewter city"
-        ]
-      },
-      "lets-go-eevee": {
-        "locations": [
-          "kanto route 12 area",
-          "kanto sea route 19 area",
-          "kanto sea route 20 area",
-          "kanto route 1 area",
-          "kanto route 2 south towards viridian city",
-          "kanto route 5 area",
-          "kanto route 6 area",
-          "kanto route 7 area",
-          "kanto route 8 area",
-          "kanto route 11 area",
-          "kanto route 13 area",
-          "kanto route 14 area",
-          "kanto route 15 area",
-          "kanto route 16 area",
-          "kanto route 17 area",
-          "kanto route 18 area",
-          "kanto sea route 21 area",
-          "kanto route 24 area",
-          "kanto route 25 area",
-          "kanto route 2 north towards pewter city"
-        ]
-      }
-    },
-    "18": {
-      "lets-go-pikachu": {
-        "locations": [
-          "kanto route 12 area",
-          "kanto sea route 19 area",
-          "kanto sea route 20 area",
-          "kanto route 1 area",
-          "kanto route 2 south towards viridian city",
-          "kanto route 5 area",
-          "kanto route 6 area",
-          "kanto route 7 area",
-          "kanto route 8 area",
-          "kanto route 11 area",
-          "kanto route 13 area",
-          "kanto route 14 area",
-          "kanto route 15 area",
-          "kanto route 16 area",
-          "kanto route 17 area",
-          "kanto route 18 area",
-          "kanto sea route 21 area",
-          "kanto route 24 area",
-          "kanto route 25 area",
-          "kanto route 2 north towards pewter city"
-        ]
-      },
-      "lets-go-eevee": {
-        "locations": [
-          "kanto route 12 area",
-          "kanto sea route 19 area",
-          "kanto sea route 20 area",
-          "kanto route 1 area",
-          "kanto route 2 south towards viridian city",
-          "kanto route 5 area",
-          "kanto route 6 area",
-          "kanto route 7 area",
-          "kanto route 8 area",
-          "kanto route 11 area",
-          "kanto route 13 area",
-          "kanto route 14 area",
-          "kanto route 15 area",
-          "kanto route 16 area",
-          "kanto route 17 area",
-          "kanto route 18 area",
-          "kanto sea route 21 area",
-          "kanto route 24 area",
-          "kanto route 25 area",
-          "kanto route 2 north towards pewter city"
-        ]
-      }
-    },
-    "19": {
-      "lets-go-pikachu": {
-        "locations": [
-          "kanto route 1 area",
-          "kanto route 2 south towards viridian city",
-          "kanto route 3 area",
-          "kanto route 4 area",
-          "kanto route 5 area",
-          "kanto route 6 area",
-          "kanto route 7 area",
-          "kanto route 8 area",
-          "kanto route 9 area",
-          "kanto route 10 area",
-          "kanto route 11 area",
-          "kanto route 16 area",
-          "kanto route 17 area",
-          "kanto route 18 area",
-          "kanto sea route 21 area",
-          "kanto route 22 area",
-          "kanto route 2 north towards pewter city",
-          "pokemon mansion 1f",
-          "pokemon mansion 2f",
-          "pokemon mansion 3f",
-          "pokemon mansion b1f"
-        ]
-      },
-      "lets-go-eevee": {
-        "locations": [
-          "kanto route 1 area",
-          "kanto route 2 south towards viridian city",
-          "kanto route 3 area",
-          "kanto route 4 area",
-          "kanto route 5 area",
-          "kanto route 6 area",
-          "kanto route 7 area",
-          "kanto route 8 area",
-          "kanto route 9 area",
-          "kanto route 10 area",
-          "kanto route 11 area",
-          "kanto route 16 area",
-          "kanto route 17 area",
-          "kanto route 18 area",
-          "kanto sea route 21 area",
-          "kanto route 22 area",
-          "kanto route 2 north towards pewter city",
-          "pokemon mansion 1f",
-          "pokemon mansion 2f",
-          "pokemon mansion 3f",
-          "pokemon mansion b1f"
-        ]
-      }
-    },
-    "20": {
-      "lets-go-pikachu": {
-        "locations": [
-          "kanto route 7 area",
-          "kanto route 8 area",
-          "kanto route 9 area",
-          "kanto route 10 area",
-          "kanto route 11 area",
-          "kanto route 16 area",
-          "kanto route 17 area",
-          "kanto route 18 area",
-          "kanto sea route 21 area",
-          "pokemon mansion 1f",
-          "pokemon mansion 2f",
-          "pokemon mansion 3f",
-          "pokemon mansion b1f"
-        ]
-      },
-      "lets-go-eevee": {
-        "locations": [
-          "kanto route 7 area",
-          "kanto route 8 area",
-          "kanto route 9 area",
-          "kanto route 10 area",
-          "kanto route 11 area",
-          "kanto route 16 area",
-          "kanto route 17 area",
-          "kanto route 18 area",
-          "kanto sea route 21 area",
-          "pokemon mansion 1f",
-          "pokemon mansion 2f",
-          "pokemon mansion 3f",
-          "pokemon mansion b1f"
-        ]
-      }
-    },
-    "21": {
-      "lets-go-pikachu": {
-        "locations": [
-          "kanto route 3 area",
-          "kanto route 4 area",
-          "kanto route 9 area",
-          "kanto route 10 area",
-          "kanto route 22 area",
-          "kanto route 23 area"
-        ]
-      },
-      "lets-go-eevee": {
-        "locations": [
-          "kanto route 3 area",
-          "kanto route 4 area",
-          "kanto route 9 area",
-          "kanto route 10 area",
-          "kanto route 22 area",
-          "kanto route 23 area"
-        ]
-      }
-    },
-    "22": {
-      "lets-go-pikachu": {
-        "locations": [
-          "kanto route 3 area",
-          "kanto route 4 area",
-          "kanto route 9 area",
-          "kanto route 10 area",
-          "kanto route 22 area",
-          "kanto route 23 area"
-        ]
-      },
-      "lets-go-eevee": {
-        "locations": [
-          "kanto route 3 area",
-          "kanto route 4 area",
-          "kanto route 9 area",
-          "kanto route 10 area",
-          "kanto route 22 area",
-          "kanto route 23 area"
-        ]
-      }
-    },
-    "23": {
-      "lets-go-eevee": {
-        "locations": [
-          "kanto route 3 area",
-          "kanto route 4 area"
-        ]
-      }
-    },
-    "25": {
-      "lets-go-pikachu": {
-        "locations": [
-          "pallet town area",
-          "viridian forest area"
-        ]
-      },
-      "lets-go-eevee": {
-        "locations": [
-          "viridian forest area"
-        ]
-      }
-    },
-    "27": {
-      "lets-go-pikachu": {
-        "locations": [
-          "kanto route 3 area",
-          "kanto route 4 area"
-        ]
-      }
-    },
-    "29": {
-      "lets-go-pikachu": {
-        "locations": [
-          "kanto route 9 area",
-          "kanto route 10 area",
-          "kanto route 22 area",
-          "kanto route 23 area"
-        ]
-      },
-      "lets-go-eevee": {
-        "locations": [
-          "kanto route 9 area",
-          "kanto route 10 area",
-          "kanto route 22 area",
-          "kanto route 23 area"
-        ]
-      }
-    },
-    "30": {
-      "lets-go-pikachu": {
-        "locations": [
-          "kanto route 9 area",
-          "kanto route 10 area",
-          "kanto route 23 area"
-        ]
-      },
-      "lets-go-eevee": {
-        "locations": [
-          "kanto route 9 area",
-          "kanto route 10 area",
-          "kanto route 23 area"
         ]
       }
     }

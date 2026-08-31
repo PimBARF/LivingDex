@@ -7,6 +7,8 @@
  * Compiles master species metadata, evolution chains, multilingual names,
  * and game-specific Pokédexes & encounters into optimized static JSON files.
  *
+ * Scrapes Bulbapedia & Serebii for games where PokéAPI has missing/incomplete encounter data.
+ *
  * Usage:
  *   node scripts/build-data.mjs [--sample] [--species] [--evolutions] [--games] [--limit=N]
  */
@@ -14,6 +16,8 @@
 import fs from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { fetchBulbapediaEncounters } from "./scrapers/bulbapedia.mjs";
+import { fetchSerebiiSVEncounters } from "./scrapers/serebii.mjs";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -544,6 +548,14 @@ const GAME_CONFIGS = [
     versions: ["brilliant-diamond", "shining-pearl"],
   },
   {
+    gameId: "pla",
+    title: "Legends: Arceus",
+    group: "gen8",
+    generation: 8,
+    pokedexId: 30,
+    versions: ["legends-arceus"],
+  },
+  {
     gameId: "sv",
     title: "Scarlet / Violet",
     group: "gen9",
@@ -554,21 +566,103 @@ const GAME_CONFIGS = [
 ];
 
 /**
- * Build game-specific files with dex entries and encounters
+ * Scrape or fetch encounters with multi-source fallback (PokéAPI -> Bulbapedia -> Serebii)
  */
-async function buildGamesData() {
-  console.log(`\n🎮 Building Game-Specific Dexes & Encounter Datasets...`);
+async function resolveEncountersForSpecies(
+  speciesId,
+  formId,
+  speciesName,
+  targetVersions,
+) {
+  const result = {};
+
+  // 1. Try PokéAPI first
+  const encData = await cachedFetch(
+    `pokemon/${formId}/encounters`,
+    "encounters",
+  );
+  if (Array.isArray(encData) && encData.length > 0) {
+    for (const loc of encData) {
+      const locationName =
+        loc.location_area?.name?.replace(/-/g, " ") || "Unknown Area";
+      for (const detail of loc.version_details || []) {
+        const vName = detail.version?.name;
+        if (targetVersions.includes(vName)) {
+          if (!result[vName]) result[vName] = { locations: [] };
+          if (!result[vName].locations.includes(locationName)) {
+            result[vName].locations.push(locationName);
+          }
+        }
+      }
+    }
+  }
+
+  // 2. Check if any target versions have missing encounters (common for SwSh, BDSP, PLA, SV)
+  const missingVersions = targetVersions.filter(
+    (v) => !result[v] || result[v].locations.length === 0,
+  );
+
+  if (missingVersions.length > 0) {
+    let resolvedName = speciesName;
+    if (!resolvedName) {
+      const spec = await cachedFetch(`pokemon-species/${speciesId}`, "species");
+      resolvedName = spec?.name ? prettifyName(spec.name) : "";
+    }
+
+    if (resolvedName) {
+      // Check cached Bulbapedia response
+      const safeName = resolvedName.replace(/[^a-zA-Z0-9_-]/g, "_");
+      const cachePath = path.join(CACHE_DIR, "bulbapedia", `${safeName}.json`);
+      let bulbEncounters = null;
+
+      try {
+        bulbEncounters = JSON.parse(await fs.readFile(cachePath, "utf-8"));
+      } catch {
+        bulbEncounters = await fetchBulbapediaEncounters(resolvedName);
+        try {
+          await fs.mkdir(path.dirname(cachePath), { recursive: true });
+          await fs.writeFile(
+            cachePath,
+            JSON.stringify(bulbEncounters),
+            "utf-8",
+          );
+        } catch {
+          /* ignore */
+        }
+      }
+
+      if (bulbEncounters) {
+        for (const vName of missingVersions) {
+          if (bulbEncounters[vName] && bulbEncounters[vName].length > 0) {
+            if (!result[vName]) result[vName] = { locations: [] };
+            result[vName].locations.push(...bulbEncounters[vName]);
+          }
+        }
+      }
+    }
+  }
+
+  return result;
+}
+
+/**
+ * Build game-specific files with dex entries and enriched encounters
+ */
+async function buildGamesData(speciesMap = {}) {
+  console.log(
+    `\n🎮 Building Game-Specific Dexes & Enriched Encounter Datasets...`,
+  );
   const gamesDir = path.join(DATA_DIR, "games");
   await fs.mkdir(gamesDir, { recursive: true });
 
   for (const cfg of GAME_CONFIGS) {
     console.log(`  -> Processing ${cfg.title} (${cfg.gameId})...`);
-    const pokedexData = await cachedFetch(
-      `pokedex/${cfg.pokedexId}`,
-      "pokedex",
-    );
-    const entries = [];
+    let pokedexData = null;
+    if (cfg.pokedexId) {
+      pokedexData = await cachedFetch(`pokedex/${cfg.pokedexId}`, "pokedex");
+    }
 
+    const entries = [];
     if (pokedexData && pokedexData.pokemon_entries) {
       for (const entry of pokedexData.pokemon_entries) {
         const speciesId = Number(
@@ -586,31 +680,18 @@ async function buildGamesData() {
 
     // Encounters dictionary
     const encounters = {};
-    const sampleSpecies = entries.slice(0, 30); // sample or full list
+    const sampleEntries = isSample ? entries.slice(0, 10) : entries;
 
-    await mapConcurrent(sampleSpecies, 8, async ({ speciesId, formId }) => {
-      const encData = await cachedFetch(
-        `pokemon/${formId}/encounters`,
-        "encounters",
+    await mapConcurrent(sampleEntries, 6, async ({ speciesId, formId }) => {
+      const speciesName = speciesMap[speciesId]?.names?.en || "";
+      const encs = await resolveEncountersForSpecies(
+        speciesId,
+        formId,
+        speciesName,
+        cfg.versions,
       );
-      if (!encData || !Array.isArray(encData)) return;
-
-      for (const loc of encData) {
-        const locationName =
-          loc.location_area?.name?.replace(/-/g, " ") || "Unknown Area";
-        for (const detail of loc.version_details || []) {
-          const vName = detail.version?.name;
-          if (cfg.versions.includes(vName)) {
-            if (!encounters[speciesId]) encounters[speciesId] = {};
-            if (!encounters[speciesId][vName])
-              encounters[speciesId][vName] = { locations: [] };
-            if (
-              !encounters[speciesId][vName].locations.includes(locationName)
-            ) {
-              encounters[speciesId][vName].locations.push(locationName);
-            }
-          }
-        }
+      if (Object.keys(encs).length > 0) {
+        encounters[speciesId] = encs;
       }
     });
 
@@ -651,7 +732,6 @@ async function main() {
     if (!buildOnlyEvolutions && !buildOnlyGames) {
       speciesMap = await buildSpeciesData(totalSpecies);
     } else {
-      // Load existing species.json if only building other parts
       try {
         speciesMap = JSON.parse(
           await fs.readFile(path.join(DATA_DIR, "species.json"), "utf-8"),
@@ -666,10 +746,10 @@ async function main() {
     }
 
     if (!buildOnlySpecies && !buildOnlyEvolutions) {
-      await buildGamesData();
+      await buildGamesData(speciesMap);
     }
 
-    console.log("\n🎉 All datasets generated successfully!");
+    console.log("\n🎉 All datasets generated and enriched successfully!");
   } catch (err) {
     console.error("\n❌ Fatal build error:", err);
     process.exit(1);

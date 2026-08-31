@@ -2018,340 +2018,6 @@
     }
   ],
   "encounters": {
-    "10": {
-      "sword": {
-        "locations": [
-          "galar route 1 area",
-          "rolling fields max den f",
-          "dappled grove max den b",
-          "south lake miloch max den a",
-          "bridge field max den h",
-          "bridge field max den i"
-        ]
-      },
-      "shield": {
-        "locations": [
-          "galar route 1 area",
-          "rolling fields max den f",
-          "dappled grove max den b",
-          "south lake miloch max den a",
-          "bridge field max den h",
-          "bridge field max den i"
-        ]
-      }
-    },
-    "11": {
-      "sword": {
-        "locations": [
-          "rolling fields main",
-          "rolling fields area 2",
-          "rolling fields max den f",
-          "dappled grove max den b",
-          "south lake miloch max den a",
-          "bridge field max den h",
-          "bridge field max den i"
-        ]
-      },
-      "shield": {
-        "locations": [
-          "rolling fields main",
-          "rolling fields area 2",
-          "rolling fields max den f",
-          "dappled grove max den b",
-          "south lake miloch max den a",
-          "bridge field max den h",
-          "bridge field max den i"
-        ]
-      }
-    },
-    "12": {
-      "sword": {
-        "locations": [
-          "east lake axewell area",
-          "giants mirror main",
-          "rolling fields main",
-          "slumbering weald deep",
-          "rolling fields max den f",
-          "dappled grove max den b",
-          "east lake axewell max den a",
-          "east lake axewell max den b",
-          "south lake miloch max den a",
-          "bridge field max den h",
-          "bridge field max den i",
-          "giants cap max den e",
-          "hammerlocke hills max den c"
-        ]
-      },
-      "shield": {
-        "locations": [
-          "east lake axewell area",
-          "giants mirror main",
-          "rolling fields main",
-          "slumbering weald deep",
-          "rolling fields max den f",
-          "dappled grove max den b",
-          "east lake axewell max den a",
-          "east lake axewell max den b",
-          "south lake miloch max den a",
-          "bridge field max den h",
-          "bridge field max den i",
-          "giants cap max den e",
-          "hammerlocke hills max den c"
-        ]
-      }
-    },
-    "163": {
-      "sword": {
-        "locations": [
-          "galar route 1 area",
-          "galar route 2 main",
-          "dappled grove area",
-          "giants cap area 2",
-          "slumbering weald main",
-          "rolling fields max den a",
-          "rolling fields max den e",
-          "rolling fields max den g",
-          "east lake axewell max den a",
-          "east lake axewell max den b",
-          "east lake axewell max den c",
-          "giants cap max den e",
-          "hammerlocke hills max den c"
-        ]
-      },
-      "shield": {
-        "locations": [
-          "galar route 1 area",
-          "galar route 2 main",
-          "dappled grove area",
-          "giants cap area 2",
-          "slumbering weald main",
-          "rolling fields max den a",
-          "rolling fields max den e",
-          "rolling fields max den g",
-          "east lake axewell max den a",
-          "east lake axewell max den b",
-          "east lake axewell max den c",
-          "giants cap max den e",
-          "hammerlocke hills max den c"
-        ]
-      }
-    },
-    "164": {
-      "sword": {
-        "locations": [
-          "bridge field area",
-          "giants cap main",
-          "motostoke outskirts area",
-          "motostoke riverbank area",
-          "rolling fields max den a",
-          "rolling fields max den e",
-          "rolling fields max den g",
-          "east lake axewell max den a",
-          "east lake axewell max den b",
-          "east lake axewell max den c",
-          "giants cap max den e",
-          "hammerlocke hills max den c"
-        ]
-      },
-      "shield": {
-        "locations": [
-          "bridge field area",
-          "giants cap main",
-          "motostoke outskirts area",
-          "motostoke riverbank area",
-          "rolling fields max den a",
-          "rolling fields max den e",
-          "rolling fields max den g",
-          "east lake axewell max den a",
-          "east lake axewell max den b",
-          "east lake axewell max den c",
-          "giants cap max den e",
-          "hammerlocke hills max den c"
-        ]
-      }
-    },
-    "519": {
-      "sword": {
-        "locations": [
-          "east lake axewell area",
-          "north lake miloch area",
-          "rolling fields main",
-          "watchtower ruins area",
-          "rolling fields max den a",
-          "rolling fields max den e",
-          "rolling fields max den g",
-          "east lake axewell max den a",
-          "east lake axewell max den b",
-          "east lake axewell max den c",
-          "motostoke riverbank max den a",
-          "bridge field max den e"
-        ]
-      },
-      "shield": {
-        "locations": [
-          "east lake axewell area",
-          "north lake miloch area",
-          "rolling fields main",
-          "watchtower ruins area",
-          "rolling fields max den a",
-          "rolling fields max den e",
-          "rolling fields max den g",
-          "east lake axewell max den a",
-          "east lake axewell max den b",
-          "east lake axewell max den c",
-          "motostoke riverbank max den a",
-          "bridge field max den e"
-        ]
-      }
-    },
-    "520": {
-      "sword": {
-        "locations": [
-          "bridge field area",
-          "giants mirror main",
-          "giants seat area",
-          "stony wilderness main",
-          "rolling fields max den a",
-          "rolling fields max den e",
-          "rolling fields max den g",
-          "east lake axewell max den a",
-          "east lake axewell max den b",
-          "east lake axewell max den c",
-          "motostoke riverbank max den a",
-          "bridge field max den e"
-        ]
-      },
-      "shield": {
-        "locations": [
-          "bridge field area",
-          "giants mirror main",
-          "giants seat area",
-          "stony wilderness main",
-          "rolling fields max den a",
-          "rolling fields max den e",
-          "rolling fields max den g",
-          "east lake axewell max den a",
-          "east lake axewell max den b",
-          "east lake axewell max den c",
-          "motostoke riverbank max den a",
-          "bridge field max den e"
-        ]
-      }
-    },
-    "521": {
-      "sword": {
-        "locations": [
-          "axews eye area",
-          "giants mirror main",
-          "hammerlocke hills area",
-          "stony wilderness main",
-          "rolling fields max den a",
-          "rolling fields max den e",
-          "rolling fields max den g",
-          "east lake axewell max den a",
-          "east lake axewell max den b",
-          "east lake axewell max den c",
-          "motostoke riverbank max den a",
-          "bridge field max den e"
-        ]
-      },
-      "shield": {
-        "locations": [
-          "axews eye area",
-          "giants mirror main",
-          "hammerlocke hills area",
-          "stony wilderness main",
-          "rolling fields max den a",
-          "rolling fields max den e",
-          "rolling fields max den g",
-          "east lake axewell max den a",
-          "east lake axewell max den b",
-          "east lake axewell max den c",
-          "motostoke riverbank max den a",
-          "bridge field max den e"
-        ]
-      }
-    },
-    "736": {
-      "sword": {
-        "locations": [
-          "galar route 1 area",
-          "dappled grove area",
-          "east lake axewell area",
-          "north lake miloch area",
-          "slumbering weald main",
-          "watchtower ruins area",
-          "rolling fields max den f",
-          "dappled grove max den b",
-          "bridge field max den h"
-        ]
-      },
-      "shield": {
-        "locations": [
-          "galar route 1 area",
-          "dappled grove area",
-          "east lake axewell area",
-          "north lake miloch area",
-          "slumbering weald main",
-          "watchtower ruins area",
-          "rolling fields max den f",
-          "dappled grove max den b",
-          "bridge field max den h"
-        ]
-      }
-    },
-    "737": {
-      "sword": {
-        "locations": [
-          "axews eye area",
-          "dusty bowl area",
-          "hammerlocke hills area",
-          "rolling fields max den f",
-          "dappled grove max den b",
-          "motostoke riverbank max den b",
-          "bridge field max den h",
-          "giants cap max den d"
-        ]
-      },
-      "shield": {
-        "locations": [
-          "axews eye area",
-          "dusty bowl area",
-          "hammerlocke hills area",
-          "rolling fields max den f",
-          "dappled grove max den b",
-          "motostoke riverbank max den b",
-          "bridge field max den h",
-          "giants cap max den d"
-        ]
-      }
-    },
-    "738": {
-      "sword": {
-        "locations": [
-          "giants mirror main",
-          "giants seat area",
-          "rolling fields max den f",
-          "dappled grove max den b",
-          "motostoke riverbank max den b",
-          "bridge field max den h",
-          "giants cap max den d",
-          "giants mirror max den c"
-        ]
-      },
-      "shield": {
-        "locations": [
-          "giants mirror main",
-          "giants seat area",
-          "rolling fields max den f",
-          "dappled grove max den b",
-          "motostoke riverbank max den b",
-          "bridge field max den h",
-          "giants cap max den d",
-          "giants mirror max den c"
-        ]
-      }
-    },
     "810": {
       "sword": {
         "locations": [
@@ -2361,6 +2027,30 @@
       "shield": {
         "locations": [
           "postwick area"
+        ]
+      }
+    },
+    "811": {
+      "sword": {
+        "locations": [
+          "Evolve Grookey"
+        ]
+      },
+      "shield": {
+        "locations": [
+          "Evolve Grookey"
+        ]
+      }
+    },
+    "812": {
+      "sword": {
+        "locations": [
+          "Evolve Thwackey"
+        ]
+      },
+      "shield": {
+        "locations": [
+          "Evolve Thwackey"
         ]
       }
     },
@@ -2376,6 +2066,30 @@
         ]
       }
     },
+    "814": {
+      "sword": {
+        "locations": [
+          "Evolve Scorbunny"
+        ]
+      },
+      "shield": {
+        "locations": [
+          "Evolve Scorbunny"
+        ]
+      }
+    },
+    "815": {
+      "sword": {
+        "locations": [
+          "Evolve Raboot"
+        ]
+      },
+      "shield": {
+        "locations": [
+          "Evolve Raboot"
+        ]
+      }
+    },
     "816": {
       "sword": {
         "locations": [
@@ -2388,179 +2102,27 @@
         ]
       }
     },
-    "819": {
+    "817": {
       "sword": {
         "locations": [
-          "galar route 1 area",
-          "galar route 2 main",
-          "galar route 3 east",
-          "galar route 4 area",
-          "galar route 5 area",
-          "dappled grove area",
-          "motostoke riverbank area",
-          "north lake miloch area",
-          "rolling fields main",
-          "slumbering weald main",
-          "watchtower ruins area",
-          "motostoke pokemon center",
-          "rolling fields max den a",
-          "east lake axewell max den c",
-          "motostoke riverbank max den a",
-          "bridge field max den e",
-          "stony wilderness max den a"
+          "Evolve Sobble"
         ]
       },
       "shield": {
         "locations": [
-          "galar route 1 area",
-          "galar route 2 main",
-          "galar route 3 east",
-          "galar route 4 area",
-          "galar route 5 area",
-          "dappled grove area",
-          "motostoke riverbank area",
-          "north lake miloch area",
-          "rolling fields main",
-          "slumbering weald main",
-          "watchtower ruins area",
-          "motostoke pokemon center",
-          "rolling fields max den a",
-          "east lake axewell max den c",
-          "motostoke riverbank max den a",
-          "bridge field max den e",
-          "stony wilderness max den a"
+          "Evolve Sobble"
         ]
       }
     },
-    "820": {
+    "818": {
       "sword": {
         "locations": [
-          "galar route 6 area",
-          "galar route 7 area",
-          "galar route 9 circhester bay",
-          "galar route 9 outer spikemuth",
-          "axews eye area",
-          "bridge field area",
-          "giants cap main",
-          "giants mirror main",
-          "giants seat area",
-          "hammerlocke hills area",
-          "lake of outrage area",
-          "motostoke riverbank area",
-          "motostoke riverbank max den a",
-          "bridge field max den e",
-          "stony wilderness max den a"
+          "Evolve Drizzile"
         ]
       },
       "shield": {
         "locations": [
-          "galar route 6 area",
-          "galar route 7 area",
-          "galar route 9 circhester bay",
-          "galar route 9 outer spikemuth",
-          "axews eye area",
-          "bridge field area",
-          "giants cap main",
-          "giants mirror main",
-          "giants seat area",
-          "hammerlocke hills area",
-          "lake of outrage area",
-          "motostoke riverbank area",
-          "motostoke riverbank max den a",
-          "bridge field max den e",
-          "stony wilderness max den a"
-        ]
-      }
-    },
-    "821": {
-      "sword": {
-        "locations": [
-          "galar route 1 area",
-          "galar route 2 main",
-          "galar route 3 east",
-          "motostoke riverbank area",
-          "slumbering weald main",
-          "east lake axewell max den a",
-          "east lake axewell max den b",
-          "giants cap max den e",
-          "hammerlocke hills max den c"
-        ]
-      },
-      "shield": {
-        "locations": [
-          "galar route 1 area",
-          "galar route 2 main",
-          "galar route 3 east",
-          "motostoke riverbank area",
-          "slumbering weald main",
-          "east lake axewell max den a",
-          "east lake axewell max den b",
-          "giants cap max den e",
-          "hammerlocke hills max den c"
-        ]
-      }
-    },
-    "822": {
-      "sword": {
-        "locations": [
-          "galar route 3 east",
-          "giants mirror main",
-          "hammerlocke hills area",
-          "motostoke riverbank area",
-          "east lake axewell max den a",
-          "east lake axewell max den b",
-          "giants cap max den e",
-          "hammerlocke hills max den c"
-        ]
-      },
-      "shield": {
-        "locations": [
-          "galar route 3 east",
-          "giants mirror main",
-          "hammerlocke hills area",
-          "motostoke riverbank area",
-          "east lake axewell max den a",
-          "east lake axewell max den b",
-          "giants cap max den e",
-          "hammerlocke hills max den c"
-        ]
-      }
-    },
-    "823": {
-      "sword": {
-        "locations": [
-          "galar route 7 area",
-          "dusty bowl area",
-          "giants cap main",
-          "hammerlocke hills area",
-          "lake of outrage area",
-          "motostoke riverbank area",
-          "north lake miloch area",
-          "watchtower ruins area",
-          "slumbering weald deep",
-          "galar wild area max dens area",
-          "east lake axewell max den a",
-          "east lake axewell max den b",
-          "giants cap max den e",
-          "hammerlocke hills max den c"
-        ]
-      },
-      "shield": {
-        "locations": [
-          "galar route 7 area",
-          "dusty bowl area",
-          "giants cap main",
-          "hammerlocke hills area",
-          "lake of outrage area",
-          "motostoke riverbank area",
-          "north lake miloch area",
-          "watchtower ruins area",
-          "slumbering weald deep",
-          "galar wild area max dens area",
-          "east lake axewell max den a",
-          "east lake axewell max den b",
-          "giants cap max den e",
-          "hammerlocke hills max den c"
+          "Evolve Drizzile"
         ]
       }
     },
@@ -2601,144 +2163,6 @@
           "bridge field max den b",
           "bridge field max den h",
           "bridge field max den i"
-        ]
-      }
-    },
-    "825": {
-      "sword": {
-        "locations": [
-          "galar route 5 area",
-          "giants cap main",
-          "giants cap area 2",
-          "giants mirror main",
-          "stony wilderness main",
-          "rolling fields max den e",
-          "rolling fields max den f",
-          "rolling fields max den g",
-          "dappled grove max den b",
-          "south lake miloch max den a",
-          "bridge field max den b",
-          "bridge field max den h",
-          "bridge field max den i"
-        ]
-      },
-      "shield": {
-        "locations": [
-          "galar route 5 area",
-          "giants cap main",
-          "giants cap area 2",
-          "giants mirror main",
-          "stony wilderness main",
-          "rolling fields max den e",
-          "rolling fields max den f",
-          "rolling fields max den g",
-          "dappled grove max den b",
-          "south lake miloch max den a",
-          "bridge field max den h",
-          "bridge field max den i"
-        ]
-      }
-    },
-    "826": {
-      "sword": {
-        "locations": [
-          "giants cap main",
-          "lake of outrage area",
-          "slumbering weald deep",
-          "galar wild area max dens area",
-          "rolling fields max den e",
-          "rolling fields max den f",
-          "rolling fields max den g",
-          "dappled grove max den b",
-          "south lake miloch max den a",
-          "bridge field max den b",
-          "bridge field max den h",
-          "bridge field max den i"
-        ]
-      },
-      "shield": {
-        "locations": [
-          "giants cap main",
-          "lake of outrage area",
-          "slumbering weald deep",
-          "galar wild area max dens area",
-          "rolling fields max den e",
-          "rolling fields max den f",
-          "rolling fields max den g",
-          "dappled grove max den b",
-          "south lake miloch max den a",
-          "bridge field max den h",
-          "bridge field max den i"
-        ]
-      }
-    },
-    "827": {
-      "sword": {
-        "locations": [
-          "galar route 1 area",
-          "galar route 2 main",
-          "dusty bowl area",
-          "giants mirror main",
-          "stony wilderness main",
-          "stony wilderness area 2",
-          "stony wilderness area 3",
-          "galar route 2 lakeside",
-          "giants mirror area 2",
-          "west lake axewell max den d",
-          "bridge field max den f",
-          "stony wilderness max den i",
-          "dusty bowl max den b",
-          "giants mirror max den d"
-        ]
-      },
-      "shield": {
-        "locations": [
-          "galar route 1 area",
-          "galar route 2 main",
-          "dusty bowl area",
-          "giants mirror main",
-          "stony wilderness main",
-          "stony wilderness area 2",
-          "stony wilderness area 3",
-          "galar route 2 lakeside",
-          "giants mirror area 2",
-          "west lake axewell max den d",
-          "bridge field max den f",
-          "stony wilderness max den i",
-          "dusty bowl max den b",
-          "giants mirror max den d"
-        ]
-      }
-    },
-    "828": {
-      "sword": {
-        "locations": [
-          "galar route 7 area",
-          "galar route 9 outer spikemuth",
-          "bridge field area",
-          "hammerlocke hills area",
-          "south lake miloch main",
-          "stony wilderness main",
-          "west lake axewell max den d",
-          "bridge field max den f",
-          "stony wilderness max den i",
-          "dusty bowl max den b",
-          "giants mirror max den d"
-        ]
-      },
-      "shield": {
-        "locations": [
-          "galar route 7 area",
-          "galar route 9 outer spikemuth",
-          "bridge field area",
-          "hammerlocke hills area",
-          "south lake miloch main",
-          "stony wilderness main",
-          "west lake axewell max den d",
-          "bridge field max den f",
-          "stony wilderness max den i",
-          "dusty bowl max den b",
-          "giants mirror max den d"
         ]
       }
     }

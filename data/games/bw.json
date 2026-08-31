@@ -822,6 +822,30 @@
         ]
       }
     },
+    "496": {
+      "black": {
+        "locations": [
+          "Evolve Snivy"
+        ]
+      },
+      "white": {
+        "locations": [
+          "Evolve Snivy"
+        ]
+      }
+    },
+    "497": {
+      "black": {
+        "locations": [
+          "Evolve Servine"
+        ]
+      },
+      "white": {
+        "locations": [
+          "Evolve Servine"
+        ]
+      }
+    },
     "498": {
       "black": {
         "locations": [
@@ -831,6 +855,30 @@
       "white": {
         "locations": [
           "nuvema town area"
+        ]
+      }
+    },
+    "499": {
+      "black": {
+        "locations": [
+          "Evolve Tepig"
+        ]
+      },
+      "white": {
+        "locations": [
+          "Evolve Tepig"
+        ]
+      }
+    },
+    "500": {
+      "black": {
+        "locations": [
+          "Evolve Pignite"
+        ]
+      },
+      "white": {
+        "locations": [
+          "Evolve Pignite"
         ]
       }
     },
@@ -846,293 +894,27 @@
         ]
       }
     },
-    "504": {
+    "502": {
       "black": {
         "locations": [
-          "dreamyard area",
-          "unova route 1 area",
-          "unova route 2 area",
-          "unova route 3 area"
+          "Evolve Oshawott"
         ]
       },
       "white": {
         "locations": [
-          "dreamyard area",
-          "unova route 1 area",
-          "unova route 2 area",
-          "unova route 3 area"
+          "Evolve Oshawott"
         ]
       }
     },
-    "505": {
+    "503": {
       "black": {
         "locations": [
-          "dreamyard area",
-          "p2 laboratory area",
-          "unova route 1 area",
-          "unova route 7 area",
-          "unova route 15 area",
-          "unova route 18 area"
+          "Evolve Dewott"
         ]
       },
       "white": {
         "locations": [
-          "dreamyard area",
-          "p2 laboratory area",
-          "unova route 1 area",
-          "unova route 7 area",
-          "unova route 15 area",
-          "unova route 18 area"
-        ]
-      }
-    },
-    "506": {
-      "black": {
-        "locations": [
-          "unova route 1 area",
-          "unova route 2 area",
-          "unova route 3 area"
-        ]
-      },
-      "white": {
-        "locations": [
-          "unova route 1 area",
-          "unova route 2 area",
-          "unova route 3 area"
-        ]
-      }
-    },
-    "507": {
-      "black": {
-        "locations": [
-          "cold storage area",
-          "p2 laboratory area",
-          "unova route 1 area",
-          "unova route 10 area",
-          "unova route 10 victory road gate"
-        ]
-      },
-      "white": {
-        "locations": [
-          "cold storage area",
-          "p2 laboratory area",
-          "unova route 1 area",
-          "unova route 10 area",
-          "unova route 10 victory road gate"
-        ]
-      }
-    },
-    "508": {
-      "black": {
-        "locations": [
-          "cold storage area",
-          "p2 laboratory area",
-          "unova route 10 area",
-          "unova route 10 victory road gate"
-        ]
-      },
-      "white": {
-        "locations": [
-          "cold storage area",
-          "p2 laboratory area",
-          "unova route 10 area",
-          "unova route 10 victory road gate"
-        ]
-      }
-    },
-    "509": {
-      "black": {
-        "locations": [
-          "dreamyard area",
-          "unova route 2 area",
-          "unova route 3 area"
-        ]
-      },
-      "white": {
-        "locations": [
-          "dreamyard area",
-          "unova route 2 area",
-          "unova route 3 area"
-        ]
-      }
-    },
-    "510": {
-      "black": {
-        "locations": [
-          "dreamyard area",
-          "unova route 5 area",
-          "unova route 9 area",
-          "unova route 16 area"
-        ]
-      },
-      "white": {
-        "locations": [
-          "dreamyard area",
-          "unova route 5 area",
-          "unova route 9 area",
-          "unova route 16 area"
-        ]
-      }
-    },
-    "511": {
-      "black": {
-        "locations": [
-          "dreamyard area",
-          "pinwheel forest inside",
-          "lostlorn forest area"
-        ]
-      },
-      "white": {
-        "locations": [
-          "dreamyard area",
-          "pinwheel forest inside",
-          "lostlorn forest area"
-        ]
-      }
-    },
-    "513": {
-      "black": {
-        "locations": [
-          "dreamyard area",
-          "pinwheel forest inside",
-          "lostlorn forest area"
-        ]
-      },
-      "white": {
-        "locations": [
-          "dreamyard area",
-          "pinwheel forest inside",
-          "lostlorn forest area"
-        ]
-      }
-    },
-    "515": {
-      "black": {
-        "locations": [
-          "dreamyard area",
-          "pinwheel forest inside",
-          "lostlorn forest area"
-        ]
-      },
-      "white": {
-        "locations": [
-          "dreamyard area",
-          "pinwheel forest inside",
-          "lostlorn forest area"
-        ]
-      }
-    },
-    "517": {
-      "black": {
-        "locations": [
-          "dreamyard area",
-          "dreamyard b1f"
-        ]
-      },
-      "white": {
-        "locations": [
-          "dreamyard area",
-          "dreamyard b1f"
-        ]
-      }
-    },
-    "518": {
-      "black": {
-        "locations": [
-          "dreamyard area",
-          "dreamyard b1f"
-        ]
-      },
-      "white": {
-        "locations": [
-          "dreamyard area",
-          "dreamyard b1f"
-        ]
-      }
-    },
-    "519": {
-      "black": {
-        "locations": [
-          "pinwheel forest outside",
-          "pinwheel forest inside",
-          "unova route 3 area"
-        ]
-      },
-      "white": {
-        "locations": [
-          "pinwheel forest outside",
-          "pinwheel forest inside",
-          "unova route 3 area"
-        ]
-      }
-    },
-    "520": {
-      "black": {
-        "locations": [
-          "pinwheel forest inside",
-          "dragonspiral tower entrance",
-          "dragonspiral tower outside",
-          "unova route 6 area",
-          "unova route 7 area",
-          "unova route 12 area",
-          "lostlorn forest area"
-        ]
-      },
-      "white": {
-        "locations": [
-          "pinwheel forest inside",
-          "dragonspiral tower entrance",
-          "dragonspiral tower outside",
-          "unova route 6 area",
-          "unova route 7 area",
-          "unova route 12 area",
-          "lostlorn forest area"
-        ]
-      }
-    },
-    "521": {
-      "black": {
-        "locations": [
-          "dragonspiral tower entrance",
-          "dragonspiral tower outside",
-          "unova route 6 area",
-          "unova route 7 area",
-          "unova route 12 area",
-          "lostlorn forest area"
-        ]
-      },
-      "white": {
-        "locations": [
-          "dragonspiral tower entrance",
-          "dragonspiral tower outside",
-          "unova route 6 area",
-          "unova route 7 area",
-          "unova route 12 area",
-          "lostlorn forest area"
-        ]
-      }
-    },
-    "522": {
-      "black": {
-        "locations": [
-          "unova route 3 area"
-        ]
-      },
-      "white": {
-        "locations": [
-          "unova route 3 area"
-        ]
-      }
-    },
-    "523": {
-      "black": {
-        "locations": [
-          "unova route 7 area"
-        ]
-      },
-      "white": {
-        "locations": [
-          "unova route 7 area"
+          "Evolve Dewott"
         ]
       }
     }

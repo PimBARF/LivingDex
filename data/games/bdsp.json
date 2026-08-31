@@ -772,5 +772,132 @@
       ]
     }
   ],
-  "encounters": {}
+  "encounters": {
+    "387": {
+      "brilliant-diamond": {
+        "locations": [
+          "First partner Pokémon from Professor Rowan's briefcase at Lake Verity",
+          "Grand Underground - Grassland Cave, Sunlit Cavern, Riverbank Cave, Still-Water Cavern (after obtaining the National Pokédex)"
+        ]
+      },
+      "shining-pearl": {
+        "locations": [
+          "First partner Pokémon from Professor Rowan's briefcase at Lake Verity",
+          "Grand Underground - Grassland Cave, Sunlit Cavern, Riverbank Cave, Still-Water Cavern (after obtaining the National Pokédex)"
+        ]
+      }
+    },
+    "388": {
+      "brilliant-diamond": {
+        "locations": [
+          "Evolve Turtwig"
+        ]
+      },
+      "shining-pearl": {
+        "locations": [
+          "Evolve Turtwig"
+        ]
+      }
+    },
+    "389": {
+      "brilliant-diamond": {
+        "locations": [
+          "Evolve Grotle"
+        ]
+      },
+      "shining-pearl": {
+        "locations": [
+          "Evolve Grotle"
+        ]
+      }
+    },
+    "390": {
+      "brilliant-diamond": {
+        "locations": [
+          "First partner Pokémon from Professor Rowan's briefcase at Lake Verity",
+          "Grand Underground - Sandsear Cave, Typhlo Cavern, Volcanic Cave (after obtaining the National Pokédex)"
+        ]
+      },
+      "shining-pearl": {
+        "locations": [
+          "First partner Pokémon from Professor Rowan's briefcase at Lake Verity",
+          "Grand Underground - Sandsear Cave, Typhlo Cavern, Volcanic Cave (after obtaining the National Pokédex)"
+        ]
+      }
+    },
+    "391": {
+      "brilliant-diamond": {
+        "locations": [
+          "Evolve Chimchar"
+        ]
+      },
+      "shining-pearl": {
+        "locations": [
+          "Evolve Chimchar"
+        ]
+      }
+    },
+    "392": {
+      "brilliant-diamond": {
+        "locations": [
+          "Evolve Monferno"
+        ]
+      },
+      "shining-pearl": {
+        "locations": [
+          "Evolve Monferno"
+        ]
+      }
+    },
+    "393": {
+      "brilliant-diamond": {
+        "locations": [
+          "First partner Pokémon from Professor Rowan's briefcase at Lake Verity",
+          "Grand Underground - Fountainspring Cave, Riverbank Cave, Still-Water Cavern (after obtaining the National Pokédex)"
+        ]
+      },
+      "shining-pearl": {
+        "locations": [
+          "First partner Pokémon from Professor Rowan's briefcase at Lake Verity",
+          "Grand Underground - Fountainspring Cave, Riverbank Cave, Still-Water Cavern (after obtaining the National Pokédex)"
+        ]
+      }
+    },
+    "394": {
+      "brilliant-diamond": {
+        "locations": [
+          "Evolve Piplup"
+        ]
+      },
+      "shining-pearl": {
+        "locations": [
+          "Evolve Piplup"
+        ]
+      }
+    },
+    "395": {
+      "brilliant-diamond": {
+        "locations": [
+          "Evolve Prinplup"
+        ]
+      },
+      "shining-pearl": {
+        "locations": [
+          "Evolve Prinplup"
+        ]
+      }
+    },
+    "396": {
+      "brilliant-diamond": {
+        "locations": [
+          "Routes Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, and Sinnoh, Lake Verity, Great Marsh"
+        ]
+      },
+      "shining-pearl": {
+        "locations": [
+          "Routes Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, and Sinnoh, Lake Verity, Great Marsh"
+        ]
+      }
+    }
+  }
 }

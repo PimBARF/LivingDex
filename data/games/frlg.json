@@ -785,6 +785,30 @@
         ]
       }
     },
+    "2": {
+      "firered": {
+        "locations": [
+          "Evolve Bulbasaur"
+        ]
+      },
+      "leafgreen": {
+        "locations": [
+          "Evolve Bulbasaur"
+        ]
+      }
+    },
+    "3": {
+      "firered": {
+        "locations": [
+          "Evolve Ivysaur"
+        ]
+      },
+      "leafgreen": {
+        "locations": [
+          "Evolve Ivysaur"
+        ]
+      }
+    },
     "4": {
       "firered": {
         "locations": [
@@ -797,6 +821,30 @@
         ]
       }
     },
+    "5": {
+      "firered": {
+        "locations": [
+          "Evolve Charmander"
+        ]
+      },
+      "leafgreen": {
+        "locations": [
+          "Evolve Charmander"
+        ]
+      }
+    },
+    "6": {
+      "firered": {
+        "locations": [
+          "Evolve Charmeleon"
+        ]
+      },
+      "leafgreen": {
+        "locations": [
+          "Evolve Charmeleon"
+        ]
+      }
+    },
     "7": {
       "firered": {
         "locations": [
@@ -806,6 +854,30 @@
       "leafgreen": {
         "locations": [
           "pallet town area"
+        ]
+      }
+    },
+    "8": {
+      "firered": {
+        "locations": [
+          "Evolve Squirtle"
+        ]
+      },
+      "leafgreen": {
+        "locations": [
+          "Evolve Squirtle"
+        ]
+      }
+    },
+    "9": {
+      "firered": {
+        "locations": [
+          "Evolve Wartortle"
+        ]
+      },
+      "leafgreen": {
+        "locations": [
+          "Evolve Wartortle"
         ]
       }
     },
@@ -826,356 +898,6 @@
           "kanto route 25 area",
           "viridian forest area",
           "pattern bush area"
-        ]
-      }
-    },
-    "11": {
-      "firered": {
-        "locations": [
-          "kanto route 24 area",
-          "kanto route 25 area",
-          "viridian forest area",
-          "pattern bush area"
-        ]
-      },
-      "leafgreen": {
-        "locations": [
-          "kanto route 24 area",
-          "kanto route 25 area",
-          "viridian forest area",
-          "pattern bush area"
-        ]
-      }
-    },
-    "13": {
-      "firered": {
-        "locations": [
-          "kanto route 2 south towards viridian city",
-          "kanto route 24 area",
-          "kanto route 25 area",
-          "viridian forest area",
-          "pattern bush area"
-        ]
-      },
-      "leafgreen": {
-        "locations": [
-          "kanto route 2 south towards viridian city",
-          "kanto route 24 area",
-          "kanto route 25 area",
-          "viridian forest area",
-          "pattern bush area"
-        ]
-      }
-    },
-    "14": {
-      "firered": {
-        "locations": [
-          "kanto route 24 area",
-          "kanto route 25 area",
-          "viridian forest area",
-          "pattern bush area"
-        ]
-      },
-      "leafgreen": {
-        "locations": [
-          "kanto route 24 area",
-          "kanto route 25 area",
-          "viridian forest area",
-          "pattern bush area"
-        ]
-      }
-    },
-    "16": {
-      "firered": {
-        "locations": [
-          "kanto route 12 area",
-          "kanto route 1 area",
-          "kanto route 2 south towards viridian city",
-          "kanto route 3 area",
-          "kanto route 5 area",
-          "kanto route 6 area",
-          "kanto route 7 area",
-          "kanto route 8 area",
-          "kanto route 13 area",
-          "kanto route 14 area",
-          "kanto route 15 area",
-          "kanto route 24 area",
-          "kanto route 25 area",
-          "berry forest area",
-          "bond bridge area",
-          "five isle meadow area"
-        ]
-      },
-      "leafgreen": {
-        "locations": [
-          "kanto route 12 area",
-          "kanto route 1 area",
-          "kanto route 2 south towards viridian city",
-          "kanto route 3 area",
-          "kanto route 5 area",
-          "kanto route 6 area",
-          "kanto route 7 area",
-          "kanto route 8 area",
-          "kanto route 13 area",
-          "kanto route 14 area",
-          "kanto route 15 area",
-          "kanto route 24 area",
-          "kanto route 25 area",
-          "berry forest area",
-          "bond bridge area",
-          "five isle meadow area"
-        ]
-      }
-    },
-    "17": {
-      "firered": {
-        "locations": [
-          "kanto route 13 area",
-          "kanto route 14 area",
-          "kanto route 15 area",
-          "berry forest area",
-          "bond bridge area",
-          "five isle meadow area"
-        ]
-      },
-      "leafgreen": {
-        "locations": [
-          "kanto route 13 area",
-          "kanto route 14 area",
-          "kanto route 15 area",
-          "berry forest area",
-          "bond bridge area",
-          "five isle meadow area"
-        ]
-      }
-    },
-    "19": {
-      "firered": {
-        "locations": [
-          "kanto route 1 area",
-          "kanto route 2 south towards viridian city",
-          "kanto route 4 area",
-          "kanto route 9 area",
-          "kanto route 16 area",
-          "kanto route 17 area",
-          "kanto route 18 area",
-          "kanto route 22 area",
-          "pokemon mansion 1f",
-          "pokemon mansion 2f",
-          "pokemon mansion 3f",
-          "pokemon mansion b1f"
-        ]
-      },
-      "leafgreen": {
-        "locations": [
-          "kanto route 1 area",
-          "kanto route 2 south towards viridian city",
-          "kanto route 4 area",
-          "kanto route 9 area",
-          "kanto route 16 area",
-          "kanto route 17 area",
-          "kanto route 18 area",
-          "kanto route 22 area",
-          "pokemon mansion 1f",
-          "pokemon mansion 2f",
-          "pokemon mansion 3f",
-          "pokemon mansion b1f"
-        ]
-      }
-    },
-    "20": {
-      "firered": {
-        "locations": [
-          "kanto route 16 area",
-          "kanto route 17 area",
-          "kanto route 18 area",
-          "pokemon mansion 1f",
-          "pokemon mansion 2f",
-          "pokemon mansion 3f",
-          "pokemon mansion b1f"
-        ]
-      },
-      "leafgreen": {
-        "locations": [
-          "kanto route 16 area",
-          "kanto route 17 area",
-          "kanto route 18 area",
-          "pokemon mansion 1f",
-          "pokemon mansion 2f",
-          "pokemon mansion 3f",
-          "pokemon mansion b1f"
-        ]
-      }
-    },
-    "21": {
-      "firered": {
-        "locations": [
-          "kanto route 3 area",
-          "kanto route 4 area",
-          "kanto route 9 area",
-          "kanto route 10 area",
-          "kanto route 11 area",
-          "kanto route 16 area",
-          "kanto route 17 area",
-          "kanto route 18 area",
-          "kanto route 22 area",
-          "kanto route 23 area",
-          "mt ember area",
-          "kindle road area",
-          "treasure beach area",
-          "cape brink area",
-          "water path area",
-          "ruin valley area",
-          "canyon entrance area"
-        ]
-      },
-      "leafgreen": {
-        "locations": [
-          "kanto route 3 area",
-          "kanto route 4 area",
-          "kanto route 9 area",
-          "kanto route 10 area",
-          "kanto route 11 area",
-          "kanto route 16 area",
-          "kanto route 17 area",
-          "kanto route 18 area",
-          "kanto route 22 area",
-          "kanto route 23 area",
-          "mt ember area",
-          "kindle road area",
-          "treasure beach area",
-          "cape brink area",
-          "water path area",
-          "ruin valley area",
-          "canyon entrance area"
-        ]
-      }
-    },
-    "22": {
-      "firered": {
-        "locations": [
-          "kanto route 17 area",
-          "kanto route 18 area",
-          "kanto route 23 area",
-          "mt ember area",
-          "kindle road area",
-          "treasure beach area",
-          "cape brink area",
-          "water path area",
-          "ruin valley area",
-          "canyon entrance area",
-          "sevault canyon area"
-        ]
-      },
-      "leafgreen": {
-        "locations": [
-          "kanto route 17 area",
-          "kanto route 18 area",
-          "kanto route 23 area",
-          "mt ember area",
-          "kindle road area",
-          "treasure beach area",
-          "cape brink area",
-          "water path area",
-          "ruin valley area",
-          "canyon entrance area",
-          "sevault canyon area"
-        ]
-      }
-    },
-    "23": {
-      "firered": {
-        "locations": [
-          "kanto route 4 area",
-          "kanto route 8 area",
-          "kanto route 9 area",
-          "kanto route 10 area",
-          "kanto route 11 area",
-          "kanto route 23 area"
-        ]
-      }
-    },
-    "24": {
-      "firered": {
-        "locations": [
-          "kanto route 23 area",
-          "kanto victory road 2 1f",
-          "kanto victory road 2 2f",
-          "kanto victory road 2 3f"
-        ]
-      }
-    },
-    "25": {
-      "firered": {
-        "locations": [
-          "viridian forest area",
-          "kanto power plant area",
-          "kanto pokecenter area"
-        ]
-      },
-      "leafgreen": {
-        "locations": [
-          "viridian forest area",
-          "kanto power plant area",
-          "kanto pokecenter area"
-        ]
-      }
-    },
-    "27": {
-      "leafgreen": {
-        "locations": [
-          "kanto route 4 area",
-          "kanto route 8 area",
-          "kanto route 9 area",
-          "kanto route 10 area",
-          "kanto route 11 area",
-          "kanto route 23 area"
-        ]
-      }
-    },
-    "28": {
-      "leafgreen": {
-        "locations": [
-          "kanto route 23 area",
-          "kanto victory road 2 1f",
-          "kanto victory road 2 2f",
-          "kanto victory road 2 3f"
-        ]
-      }
-    },
-    "29": {
-      "firered": {
-        "locations": [
-          "kanto route 3 area",
-          "kanto safari zone area 1 east",
-          "kanto safari zone area 3 west",
-          "kanto underground path area"
-        ]
-      },
-      "leafgreen": {
-        "locations": [
-          "kanto route 3 area",
-          "kanto safari zone middle",
-          "kanto safari zone area 1 east",
-          "kanto safari zone area 2 north",
-          "kanto safari zone area 3 west"
-        ]
-      }
-    },
-    "30": {
-      "firered": {
-        "locations": [
-          "kanto route 11 area",
-          "kanto safari zone middle",
-          "kanto safari zone area 2 north"
-        ]
-      },
-      "leafgreen": {
-        "locations": [
-          "kanto safari zone middle",
-          "kanto safari zone area 1 east",
-          "kanto safari zone area 2 north",
-          "kanto safari zone area 3 west"
         ]
       }
     }

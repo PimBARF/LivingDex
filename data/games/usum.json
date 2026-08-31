@@ -2033,241 +2033,6 @@
     }
   ],
   "encounters": {
-    "10": {
-      "ultra-sun": {
-        "locations": [
-          "alola route 1 east",
-          "alola route 1 west",
-          "alola route 5 area",
-          "lush jungle north",
-          "lush jungle south",
-          "lush jungle west",
-          "melemele meadow area"
-        ]
-      },
-      "ultra-moon": {
-        "locations": [
-          "alola route 1 east",
-          "alola route 1 west",
-          "alola route 5 area",
-          "lush jungle north",
-          "lush jungle south",
-          "lush jungle west",
-          "melemele meadow area"
-        ]
-      }
-    },
-    "11": {
-      "ultra-sun": {
-        "locations": [
-          "alola route 5 area",
-          "lush jungle north",
-          "lush jungle south",
-          "lush jungle west",
-          "melemele meadow area"
-        ]
-      },
-      "ultra-moon": {
-        "locations": [
-          "alola route 5 area",
-          "lush jungle north",
-          "lush jungle south",
-          "lush jungle west",
-          "melemele meadow area"
-        ]
-      }
-    },
-    "12": {
-      "ultra-sun": {
-        "locations": [
-          "alola route 5 area",
-          "lush jungle north",
-          "lush jungle south",
-          "lush jungle west",
-          "melemele meadow area"
-        ]
-      },
-      "ultra-moon": {
-        "locations": [
-          "alola route 5 area",
-          "lush jungle north",
-          "lush jungle south",
-          "lush jungle west",
-          "melemele meadow area"
-        ]
-      }
-    },
-    "19": {
-      "ultra-sun": {
-        "locations": [
-          "alola route 1 south"
-        ]
-      },
-      "ultra-moon": {
-        "locations": [
-          "alola route 1 south"
-        ]
-      }
-    },
-    "20": {
-      "ultra-moon": {
-        "locations": [
-          "heahea beach area"
-        ]
-      }
-    },
-    "165": {
-      "ultra-sun": {
-        "locations": [
-          "alola route 1 east"
-        ]
-      },
-      "ultra-moon": {
-        "locations": [
-          "alola route 1 east"
-        ]
-      }
-    },
-    "166": {
-      "ultra-sun": {
-        "locations": [
-          "alola route 10 area",
-          "alola route 11 area",
-          "alola route 17 west",
-          "malie garden area",
-          "ulaula meadow area"
-        ]
-      },
-      "ultra-moon": {
-        "locations": [
-          "alola route 10 area",
-          "alola route 11 area",
-          "alola route 17 west",
-          "malie garden area",
-          "ulaula meadow area"
-        ]
-      }
-    },
-    "167": {
-      "ultra-sun": {
-        "locations": [
-          "alola route 1 east"
-        ]
-      },
-      "ultra-moon": {
-        "locations": [
-          "alola route 1 east"
-        ]
-      }
-    },
-    "168": {
-      "ultra-sun": {
-        "locations": [
-          "alola route 10 area",
-          "alola route 11 area",
-          "alola route 17 west",
-          "malie garden area",
-          "ulaula meadow area"
-        ]
-      },
-      "ultra-moon": {
-        "locations": [
-          "alola route 10 area",
-          "alola route 11 area",
-          "alola route 17 west",
-          "malie garden area",
-          "ulaula meadow area"
-        ]
-      }
-    },
-    "427": {
-      "ultra-sun": {
-        "locations": [
-          "alola route 1 east",
-          "alola route 1 west",
-          "poni grove area"
-        ]
-      },
-      "ultra-moon": {
-        "locations": [
-          "alola route 1 east",
-          "alola route 1 west",
-          "poni grove area"
-        ]
-      }
-    },
-    "428": {
-      "ultra-sun": {
-        "locations": [
-          "poni grove area"
-        ]
-      },
-      "ultra-moon": {
-        "locations": [
-          "poni grove area"
-        ]
-      }
-    },
-    "570": {
-      "ultra-sun": {
-        "locations": [
-          "alola route 1 trainers school"
-        ]
-      },
-      "ultra-moon": {
-        "locations": [
-          "alola route 1 trainers school"
-        ]
-      }
-    },
-    "571": {
-      "ultra-sun": {
-        "locations": [
-          "poni grove area"
-        ]
-      },
-      "ultra-moon": {
-        "locations": [
-          "poni grove area"
-        ]
-      }
-    },
-    "676": {
-      "ultra-sun": {
-        "locations": [
-          "alola route 2 south",
-          "ancient poni path area",
-          "hauoli city shopping district",
-          "poni wilds area"
-        ]
-      },
-      "ultra-moon": {
-        "locations": [
-          "alola route 2 south",
-          "ancient poni path area",
-          "hauoli city shopping district",
-          "poni wilds area"
-        ]
-      }
-    },
-    "686": {
-      "ultra-sun": {
-        "locations": [
-          "alola route 1 hauoli outskirts",
-          "ancient poni path area",
-          "poni gauntlet area",
-          "poni wilds area"
-        ]
-      },
-      "ultra-moon": {
-        "locations": [
-          "alola route 1 hauoli outskirts",
-          "ancient poni path area",
-          "poni gauntlet area",
-          "poni wilds area"
-        ]
-      }
-    },
     "722": {
       "ultra-sun": {
         "locations": [
@@ -2277,6 +2042,30 @@
       "ultra-moon": {
         "locations": [
           "alola route 1 west"
+        ]
+      }
+    },
+    "723": {
+      "ultra-sun": {
+        "locations": [
+          "Evolve Rowlet"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Evolve Rowlet"
+        ]
+      }
+    },
+    "724": {
+      "ultra-sun": {
+        "locations": [
+          "Evolve Dartrix"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Evolve Dartrix"
         ]
       }
     },
@@ -2292,6 +2081,30 @@
         ]
       }
     },
+    "726": {
+      "ultra-sun": {
+        "locations": [
+          "Evolve Litten"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Evolve Litten"
+        ]
+      }
+    },
+    "727": {
+      "ultra-sun": {
+        "locations": [
+          "Evolve Torracat"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Evolve Torracat"
+        ]
+      }
+    },
     "728": {
       "ultra-sun": {
         "locations": [
@@ -2301,6 +2114,30 @@
       "ultra-moon": {
         "locations": [
           "alola route 1 west"
+        ]
+      }
+    },
+    "729": {
+      "ultra-sun": {
+        "locations": [
+          "Evolve Popplio"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Evolve Popplio"
+        ]
+      }
+    },
+    "730": {
+      "ultra-sun": {
+        "locations": [
+          "Evolve Brionne"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Evolve Brionne"
         ]
       }
     },
@@ -2329,130 +2166,6 @@
           "poke pelago poni island reached",
           "poke pelago ulaula island reached",
           "poke pelago elite four defeated"
-        ]
-      }
-    },
-    "732": {
-      "ultra-sun": {
-        "locations": [
-          "alola route 8 main",
-          "alola route 11 area",
-          "lush jungle north",
-          "lush jungle south",
-          "lush jungle west",
-          "poni grove area",
-          "poni plains center",
-          "poni plains east",
-          "poni plains north",
-          "poni plains west"
-        ]
-      },
-      "ultra-moon": {
-        "locations": [
-          "alola route 8 main",
-          "alola route 11 area",
-          "lush jungle north",
-          "lush jungle south",
-          "lush jungle west",
-          "poni grove area",
-          "poni plains center",
-          "poni plains east",
-          "poni plains north",
-          "poni plains west"
-        ]
-      }
-    },
-    "733": {
-      "ultra-sun": {
-        "locations": [
-          "alola route 11 area",
-          "poni grove area",
-          "poni plains center",
-          "poni plains east",
-          "poni plains north",
-          "poni plains west"
-        ]
-      },
-      "ultra-moon": {
-        "locations": [
-          "alola route 11 area",
-          "poni grove area",
-          "poni plains center",
-          "poni plains east",
-          "poni plains north",
-          "poni plains west"
-        ]
-      }
-    },
-    "734": {
-      "ultra-sun": {
-        "locations": [
-          "alola route 1 east",
-          "alola route 1 south",
-          "alola route 1 west",
-          "alola route 2 north",
-          "alola route 2 south",
-          "alola route 4 area",
-          "alola route 6 north",
-          "alola route 6 south",
-          "alola route 8 main",
-          "kalae bay area",
-          "verdant cavern trial site"
-        ]
-      },
-      "ultra-moon": {
-        "locations": [
-          "alola route 1 east",
-          "alola route 1 south",
-          "alola route 1 west",
-          "alola route 2 north",
-          "alola route 2 south",
-          "alola route 4 area",
-          "alola route 6 north",
-          "alola route 6 south",
-          "alola route 8 main",
-          "kalae bay area"
-        ]
-      }
-    },
-    "735": {
-      "ultra-sun": {
-        "locations": [
-          "alola route 8 main",
-          "alola route 10 area",
-          "alola route 14 area",
-          "alola route 15 main",
-          "alola route 16 east",
-          "alola route 16 west",
-          "alola route 17 northeast",
-          "alola route 17 west",
-          "akala outskirts area",
-          "heahea beach area",
-          "mount lanakila base",
-          "poni plains center",
-          "poni plains east",
-          "poni plains north",
-          "poni plains west",
-          "tapu village area"
-        ]
-      },
-      "ultra-moon": {
-        "locations": [
-          "alola route 8 main",
-          "alola route 10 area",
-          "alola route 14 area",
-          "alola route 15 main",
-          "alola route 16 east",
-          "alola route 16 west",
-          "alola route 17 northeast",
-          "alola route 17 west",
-          "akala outskirts area",
-          "mount lanakila base",
-          "poni plains center",
-          "poni plains east",
-          "poni plains north",
-          "poni plains west",
-          "tapu village area"
         ]
       }
     }
