@@ -1,0 +1,6095 @@
+{
+  "gameId": "b2w2",
+  "title": "Black 2 / White 2",
+  "group": "gen5",
+  "generation": 5,
+  "versions": [
+    "black-2",
+    "white-2"
+  ],
+  "sections": [
+    {
+      "id": "unova-updated",
+      "title": "Updated Unova Pokédex",
+      "type": "base",
+      "optional": false,
+      "defaultEnabled": false,
+      "startIndex": 1,
+      "entries": [
+        {
+          "speciesId": 494,
+          "formId": 494,
+          "dexNumber": null
+        },
+        {
+          "speciesId": 495,
+          "formId": 495,
+          "dexNumber": 1
+        },
+        {
+          "speciesId": 496,
+          "formId": 496,
+          "dexNumber": 2
+        },
+        {
+          "speciesId": 497,
+          "formId": 497,
+          "dexNumber": 3
+        },
+        {
+          "speciesId": 498,
+          "formId": 498,
+          "dexNumber": 4
+        },
+        {
+          "speciesId": 499,
+          "formId": 499,
+          "dexNumber": 5
+        },
+        {
+          "speciesId": 500,
+          "formId": 500,
+          "dexNumber": 6
+        },
+        {
+          "speciesId": 501,
+          "formId": 501,
+          "dexNumber": 7
+        },
+        {
+          "speciesId": 502,
+          "formId": 502,
+          "dexNumber": 8
+        },
+        {
+          "speciesId": 503,
+          "formId": 503,
+          "dexNumber": 9
+        },
+        {
+          "speciesId": 504,
+          "formId": 504,
+          "dexNumber": 10
+        },
+        {
+          "speciesId": 505,
+          "formId": 505,
+          "dexNumber": 11
+        },
+        {
+          "speciesId": 509,
+          "formId": 509,
+          "dexNumber": 12
+        },
+        {
+          "speciesId": 510,
+          "formId": 510,
+          "dexNumber": 13
+        },
+        {
+          "speciesId": 519,
+          "formId": 519,
+          "dexNumber": 14
+        },
+        {
+          "speciesId": 520,
+          "formId": 520,
+          "dexNumber": 15
+        },
+        {
+          "speciesId": 521,
+          "formId": 521,
+          "dexNumber": 16
+        },
+        {
+          "speciesId": 540,
+          "formId": 540,
+          "dexNumber": 17
+        },
+        {
+          "speciesId": 541,
+          "formId": 541,
+          "dexNumber": 18
+        },
+        {
+          "speciesId": 542,
+          "formId": 542,
+          "dexNumber": 19
+        },
+        {
+          "speciesId": 191,
+          "formId": 191,
+          "dexNumber": 20
+        },
+        {
+          "speciesId": 192,
+          "formId": 192,
+          "dexNumber": 21
+        },
+        {
+          "speciesId": 506,
+          "formId": 506,
+          "dexNumber": 22
+        },
+        {
+          "speciesId": 507,
+          "formId": 507,
+          "dexNumber": 23
+        },
+        {
+          "speciesId": 508,
+          "formId": 508,
+          "dexNumber": 24
+        },
+        {
+          "speciesId": 179,
+          "formId": 179,
+          "dexNumber": 25
+        },
+        {
+          "speciesId": 180,
+          "formId": 180,
+          "dexNumber": 26
+        },
+        {
+          "speciesId": 181,
+          "formId": 181,
+          "dexNumber": 27
+        },
+        {
+          "speciesId": 54,
+          "formId": 54,
+          "dexNumber": 28
+        },
+        {
+          "speciesId": 55,
+          "formId": 55,
+          "dexNumber": 29
+        },
+        {
+          "speciesId": 298,
+          "formId": 298,
+          "dexNumber": 30
+        },
+        {
+          "speciesId": 183,
+          "formId": 183,
+          "dexNumber": 31
+        },
+        {
+          "speciesId": 184,
+          "formId": 184,
+          "dexNumber": 32
+        },
+        {
+          "speciesId": 447,
+          "formId": 447,
+          "dexNumber": 33
+        },
+        {
+          "speciesId": 448,
+          "formId": 448,
+          "dexNumber": 34
+        },
+        {
+          "speciesId": 206,
+          "formId": 206,
+          "dexNumber": 35
+        },
+        {
+          "speciesId": 531,
+          "formId": 531,
+          "dexNumber": 36
+        },
+        {
+          "speciesId": 511,
+          "formId": 511,
+          "dexNumber": 37
+        },
+        {
+          "speciesId": 512,
+          "formId": 512,
+          "dexNumber": 38
+        },
+        {
+          "speciesId": 513,
+          "formId": 513,
+          "dexNumber": 39
+        },
+        {
+          "speciesId": 514,
+          "formId": 514,
+          "dexNumber": 40
+        },
+        {
+          "speciesId": 515,
+          "formId": 515,
+          "dexNumber": 41
+        },
+        {
+          "speciesId": 516,
+          "formId": 516,
+          "dexNumber": 42
+        },
+        {
+          "speciesId": 543,
+          "formId": 543,
+          "dexNumber": 43
+        },
+        {
+          "speciesId": 544,
+          "formId": 544,
+          "dexNumber": 44
+        },
+        {
+          "speciesId": 545,
+          "formId": 545,
+          "dexNumber": 45
+        },
+        {
+          "speciesId": 109,
+          "formId": 109,
+          "dexNumber": 46
+        },
+        {
+          "speciesId": 110,
+          "formId": 110,
+          "dexNumber": 47
+        },
+        {
+          "speciesId": 81,
+          "formId": 81,
+          "dexNumber": 48
+        },
+        {
+          "speciesId": 82,
+          "formId": 82,
+          "dexNumber": 49
+        },
+        {
+          "speciesId": 462,
+          "formId": 462,
+          "dexNumber": 50
+        },
+        {
+          "speciesId": 58,
+          "formId": 58,
+          "dexNumber": 51
+        },
+        {
+          "speciesId": 59,
+          "formId": 59,
+          "dexNumber": 52
+        },
+        {
+          "speciesId": 240,
+          "formId": 240,
+          "dexNumber": 53
+        },
+        {
+          "speciesId": 126,
+          "formId": 126,
+          "dexNumber": 54
+        },
+        {
+          "speciesId": 467,
+          "formId": 467,
+          "dexNumber": 55
+        },
+        {
+          "speciesId": 239,
+          "formId": 239,
+          "dexNumber": 56
+        },
+        {
+          "speciesId": 125,
+          "formId": 125,
+          "dexNumber": 57
+        },
+        {
+          "speciesId": 466,
+          "formId": 466,
+          "dexNumber": 58
+        },
+        {
+          "speciesId": 19,
+          "formId": 19,
+          "dexNumber": 59
+        },
+        {
+          "speciesId": 20,
+          "formId": 20,
+          "dexNumber": 60
+        },
+        {
+          "speciesId": 41,
+          "formId": 41,
+          "dexNumber": 61
+        },
+        {
+          "speciesId": 42,
+          "formId": 42,
+          "dexNumber": 62
+        },
+        {
+          "speciesId": 169,
+          "formId": 169,
+          "dexNumber": 63
+        },
+        {
+          "speciesId": 88,
+          "formId": 88,
+          "dexNumber": 64
+        },
+        {
+          "speciesId": 89,
+          "formId": 89,
+          "dexNumber": 65
+        },
+        {
+          "speciesId": 527,
+          "formId": 527,
+          "dexNumber": 66
+        },
+        {
+          "speciesId": 528,
+          "formId": 528,
+          "dexNumber": 67
+        },
+        {
+          "speciesId": 524,
+          "formId": 524,
+          "dexNumber": 68
+        },
+        {
+          "speciesId": 525,
+          "formId": 525,
+          "dexNumber": 69
+        },
+        {
+          "speciesId": 526,
+          "formId": 526,
+          "dexNumber": 70
+        },
+        {
+          "speciesId": 95,
+          "formId": 95,
+          "dexNumber": 71
+        },
+        {
+          "speciesId": 208,
+          "formId": 208,
+          "dexNumber": 72
+        },
+        {
+          "speciesId": 532,
+          "formId": 532,
+          "dexNumber": 73
+        },
+        {
+          "speciesId": 533,
+          "formId": 533,
+          "dexNumber": 74
+        },
+        {
+          "speciesId": 534,
+          "formId": 534,
+          "dexNumber": 75
+        },
+        {
+          "speciesId": 529,
+          "formId": 529,
+          "dexNumber": 76
+        },
+        {
+          "speciesId": 530,
+          "formId": 530,
+          "dexNumber": 77
+        },
+        {
+          "speciesId": 300,
+          "formId": 300,
+          "dexNumber": 78
+        },
+        {
+          "speciesId": 301,
+          "formId": 301,
+          "dexNumber": 79
+        },
+        {
+          "speciesId": 427,
+          "formId": 427,
+          "dexNumber": 80
+        },
+        {
+          "speciesId": 428,
+          "formId": 428,
+          "dexNumber": 81
+        },
+        {
+          "speciesId": 546,
+          "formId": 546,
+          "dexNumber": 82
+        },
+        {
+          "speciesId": 547,
+          "formId": 547,
+          "dexNumber": 83
+        },
+        {
+          "speciesId": 548,
+          "formId": 548,
+          "dexNumber": 84
+        },
+        {
+          "speciesId": 549,
+          "formId": 549,
+          "dexNumber": 85
+        },
+        {
+          "speciesId": 517,
+          "formId": 517,
+          "dexNumber": 86
+        },
+        {
+          "speciesId": 518,
+          "formId": 518,
+          "dexNumber": 87
+        },
+        {
+          "speciesId": 173,
+          "formId": 173,
+          "dexNumber": 88
+        },
+        {
+          "speciesId": 35,
+          "formId": 35,
+          "dexNumber": 89
+        },
+        {
+          "speciesId": 36,
+          "formId": 36,
+          "dexNumber": 90
+        },
+        {
+          "speciesId": 133,
+          "formId": 133,
+          "dexNumber": 91
+        },
+        {
+          "speciesId": 134,
+          "formId": 134,
+          "dexNumber": 92
+        },
+        {
+          "speciesId": 135,
+          "formId": 135,
+          "dexNumber": 93
+        },
+        {
+          "speciesId": 136,
+          "formId": 136,
+          "dexNumber": 94
+        },
+        {
+          "speciesId": 196,
+          "formId": 196,
+          "dexNumber": 95
+        },
+        {
+          "speciesId": 197,
+          "formId": 197,
+          "dexNumber": 96
+        },
+        {
+          "speciesId": 470,
+          "formId": 470,
+          "dexNumber": 97
+        },
+        {
+          "speciesId": 471,
+          "formId": 471,
+          "dexNumber": 98
+        },
+        {
+          "speciesId": 551,
+          "formId": 551,
+          "dexNumber": 99
+        },
+        {
+          "speciesId": 552,
+          "formId": 552,
+          "dexNumber": 100
+        },
+        {
+          "speciesId": 553,
+          "formId": 553,
+          "dexNumber": 101
+        },
+        {
+          "speciesId": 554,
+          "formId": 554,
+          "dexNumber": 102
+        },
+        {
+          "speciesId": 555,
+          "formId": 555,
+          "dexNumber": 103
+        },
+        {
+          "speciesId": 550,
+          "formId": 550,
+          "dexNumber": 104
+        },
+        {
+          "speciesId": 568,
+          "formId": 568,
+          "dexNumber": 105
+        },
+        {
+          "speciesId": 569,
+          "formId": 569,
+          "dexNumber": 106
+        },
+        {
+          "speciesId": 572,
+          "formId": 572,
+          "dexNumber": 107
+        },
+        {
+          "speciesId": 573,
+          "formId": 573,
+          "dexNumber": 108
+        },
+        {
+          "speciesId": 627,
+          "formId": 627,
+          "dexNumber": 109
+        },
+        {
+          "speciesId": 628,
+          "formId": 628,
+          "dexNumber": 110
+        },
+        {
+          "speciesId": 629,
+          "formId": 629,
+          "dexNumber": 111
+        },
+        {
+          "speciesId": 630,
+          "formId": 630,
+          "dexNumber": 112
+        },
+        {
+          "speciesId": 27,
+          "formId": 27,
+          "dexNumber": 113
+        },
+        {
+          "speciesId": 28,
+          "formId": 28,
+          "dexNumber": 114
+        },
+        {
+          "speciesId": 557,
+          "formId": 557,
+          "dexNumber": 115
+        },
+        {
+          "speciesId": 558,
+          "formId": 558,
+          "dexNumber": 116
+        },
+        {
+          "speciesId": 559,
+          "formId": 559,
+          "dexNumber": 117
+        },
+        {
+          "speciesId": 560,
+          "formId": 560,
+          "dexNumber": 118
+        },
+        {
+          "speciesId": 556,
+          "formId": 556,
+          "dexNumber": 119
+        },
+        {
+          "speciesId": 561,
+          "formId": 561,
+          "dexNumber": 120
+        },
+        {
+          "speciesId": 328,
+          "formId": 328,
+          "dexNumber": 121
+        },
+        {
+          "speciesId": 329,
+          "formId": 329,
+          "dexNumber": 122
+        },
+        {
+          "speciesId": 330,
+          "formId": 330,
+          "dexNumber": 123
+        },
+        {
+          "speciesId": 562,
+          "formId": 562,
+          "dexNumber": 124
+        },
+        {
+          "speciesId": 563,
+          "formId": 563,
+          "dexNumber": 125
+        },
+        {
+          "speciesId": 564,
+          "formId": 564,
+          "dexNumber": 126
+        },
+        {
+          "speciesId": 565,
+          "formId": 565,
+          "dexNumber": 127
+        },
+        {
+          "speciesId": 566,
+          "formId": 566,
+          "dexNumber": 128
+        },
+        {
+          "speciesId": 567,
+          "formId": 567,
+          "dexNumber": 129
+        },
+        {
+          "speciesId": 599,
+          "formId": 599,
+          "dexNumber": 130
+        },
+        {
+          "speciesId": 600,
+          "formId": 600,
+          "dexNumber": 131
+        },
+        {
+          "speciesId": 601,
+          "formId": 601,
+          "dexNumber": 132
+        },
+        {
+          "speciesId": 406,
+          "formId": 406,
+          "dexNumber": 133
+        },
+        {
+          "speciesId": 315,
+          "formId": 315,
+          "dexNumber": 134
+        },
+        {
+          "speciesId": 407,
+          "formId": 407,
+          "dexNumber": 135
+        },
+        {
+          "speciesId": 574,
+          "formId": 574,
+          "dexNumber": 136
+        },
+        {
+          "speciesId": 575,
+          "formId": 575,
+          "dexNumber": 137
+        },
+        {
+          "speciesId": 576,
+          "formId": 576,
+          "dexNumber": 138
+        },
+        {
+          "speciesId": 577,
+          "formId": 577,
+          "dexNumber": 139
+        },
+        {
+          "speciesId": 578,
+          "formId": 578,
+          "dexNumber": 140
+        },
+        {
+          "speciesId": 579,
+          "formId": 579,
+          "dexNumber": 141
+        },
+        {
+          "speciesId": 415,
+          "formId": 415,
+          "dexNumber": 142
+        },
+        {
+          "speciesId": 416,
+          "formId": 416,
+          "dexNumber": 143
+        },
+        {
+          "speciesId": 587,
+          "formId": 587,
+          "dexNumber": 144
+        },
+        {
+          "speciesId": 214,
+          "formId": 214,
+          "dexNumber": 145
+        },
+        {
+          "speciesId": 127,
+          "formId": 127,
+          "dexNumber": 146
+        },
+        {
+          "speciesId": 522,
+          "formId": 522,
+          "dexNumber": 147
+        },
+        {
+          "speciesId": 523,
+          "formId": 523,
+          "dexNumber": 148
+        },
+        {
+          "speciesId": 418,
+          "formId": 418,
+          "dexNumber": 149
+        },
+        {
+          "speciesId": 419,
+          "formId": 419,
+          "dexNumber": 150
+        },
+        {
+          "speciesId": 570,
+          "formId": 570,
+          "dexNumber": 151
+        },
+        {
+          "speciesId": 571,
+          "formId": 571,
+          "dexNumber": 152
+        },
+        {
+          "speciesId": 580,
+          "formId": 580,
+          "dexNumber": 153
+        },
+        {
+          "speciesId": 581,
+          "formId": 581,
+          "dexNumber": 154
+        },
+        {
+          "speciesId": 588,
+          "formId": 588,
+          "dexNumber": 155
+        },
+        {
+          "speciesId": 589,
+          "formId": 589,
+          "dexNumber": 156
+        },
+        {
+          "speciesId": 616,
+          "formId": 616,
+          "dexNumber": 157
+        },
+        {
+          "speciesId": 617,
+          "formId": 617,
+          "dexNumber": 158
+        },
+        {
+          "speciesId": 585,
+          "formId": 585,
+          "dexNumber": 159
+        },
+        {
+          "speciesId": 586,
+          "formId": 586,
+          "dexNumber": 160
+        },
+        {
+          "speciesId": 590,
+          "formId": 590,
+          "dexNumber": 161
+        },
+        {
+          "speciesId": 591,
+          "formId": 591,
+          "dexNumber": 162
+        },
+        {
+          "speciesId": 351,
+          "formId": 351,
+          "dexNumber": 163
+        },
+        {
+          "speciesId": 299,
+          "formId": 299,
+          "dexNumber": 164
+        },
+        {
+          "speciesId": 476,
+          "formId": 476,
+          "dexNumber": 165
+        },
+        {
+          "speciesId": 304,
+          "formId": 304,
+          "dexNumber": 166
+        },
+        {
+          "speciesId": 305,
+          "formId": 305,
+          "dexNumber": 167
+        },
+        {
+          "speciesId": 306,
+          "formId": 306,
+          "dexNumber": 168
+        },
+        {
+          "speciesId": 343,
+          "formId": 343,
+          "dexNumber": 169
+        },
+        {
+          "speciesId": 344,
+          "formId": 344,
+          "dexNumber": 170
+        },
+        {
+          "speciesId": 636,
+          "formId": 636,
+          "dexNumber": 171
+        },
+        {
+          "speciesId": 637,
+          "formId": 637,
+          "dexNumber": 172
+        },
+        {
+          "speciesId": 595,
+          "formId": 595,
+          "dexNumber": 173
+        },
+        {
+          "speciesId": 596,
+          "formId": 596,
+          "dexNumber": 174
+        },
+        {
+          "speciesId": 597,
+          "formId": 597,
+          "dexNumber": 175
+        },
+        {
+          "speciesId": 598,
+          "formId": 598,
+          "dexNumber": 176
+        },
+        {
+          "speciesId": 602,
+          "formId": 602,
+          "dexNumber": 177
+        },
+        {
+          "speciesId": 603,
+          "formId": 603,
+          "dexNumber": 178
+        },
+        {
+          "speciesId": 604,
+          "formId": 604,
+          "dexNumber": 179
+        },
+        {
+          "speciesId": 592,
+          "formId": 592,
+          "dexNumber": 180
+        },
+        {
+          "speciesId": 593,
+          "formId": 593,
+          "dexNumber": 181
+        },
+        {
+          "speciesId": 594,
+          "formId": 594,
+          "dexNumber": 182
+        },
+        {
+          "speciesId": 610,
+          "formId": 610,
+          "dexNumber": 183
+        },
+        {
+          "speciesId": 611,
+          "formId": 611,
+          "dexNumber": 184
+        },
+        {
+          "speciesId": 612,
+          "formId": 612,
+          "dexNumber": 185
+        },
+        {
+          "speciesId": 335,
+          "formId": 335,
+          "dexNumber": 186
+        },
+        {
+          "speciesId": 336,
+          "formId": 336,
+          "dexNumber": 187
+        },
+        {
+          "speciesId": 605,
+          "formId": 605,
+          "dexNumber": 188
+        },
+        {
+          "speciesId": 606,
+          "formId": 606,
+          "dexNumber": 189
+        },
+        {
+          "speciesId": 607,
+          "formId": 607,
+          "dexNumber": 190
+        },
+        {
+          "speciesId": 608,
+          "formId": 608,
+          "dexNumber": 191
+        },
+        {
+          "speciesId": 609,
+          "formId": 609,
+          "dexNumber": 192
+        },
+        {
+          "speciesId": 631,
+          "formId": 631,
+          "dexNumber": 193
+        },
+        {
+          "speciesId": 632,
+          "formId": 632,
+          "dexNumber": 194
+        },
+        {
+          "speciesId": 613,
+          "formId": 613,
+          "dexNumber": 195
+        },
+        {
+          "speciesId": 614,
+          "formId": 614,
+          "dexNumber": 196
+        },
+        {
+          "speciesId": 615,
+          "formId": 615,
+          "dexNumber": 197
+        },
+        {
+          "speciesId": 641,
+          "formId": 641,
+          "dexNumber": 198
+        },
+        {
+          "speciesId": 642,
+          "formId": 642,
+          "dexNumber": 199
+        },
+        {
+          "speciesId": 645,
+          "formId": 645,
+          "dexNumber": 200
+        },
+        {
+          "speciesId": 451,
+          "formId": 451,
+          "dexNumber": 201
+        },
+        {
+          "speciesId": 452,
+          "formId": 452,
+          "dexNumber": 202
+        },
+        {
+          "speciesId": 227,
+          "formId": 227,
+          "dexNumber": 203
+        },
+        {
+          "speciesId": 322,
+          "formId": 322,
+          "dexNumber": 204
+        },
+        {
+          "speciesId": 323,
+          "formId": 323,
+          "dexNumber": 205
+        },
+        {
+          "speciesId": 325,
+          "formId": 325,
+          "dexNumber": 206
+        },
+        {
+          "speciesId": 326,
+          "formId": 326,
+          "dexNumber": 207
+        },
+        {
+          "speciesId": 425,
+          "formId": 425,
+          "dexNumber": 208
+        },
+        {
+          "speciesId": 426,
+          "formId": 426,
+          "dexNumber": 209
+        },
+        {
+          "speciesId": 353,
+          "formId": 353,
+          "dexNumber": 210
+        },
+        {
+          "speciesId": 354,
+          "formId": 354,
+          "dexNumber": 211
+        },
+        {
+          "speciesId": 278,
+          "formId": 278,
+          "dexNumber": 212
+        },
+        {
+          "speciesId": 279,
+          "formId": 279,
+          "dexNumber": 213
+        },
+        {
+          "speciesId": 337,
+          "formId": 337,
+          "dexNumber": 214
+        },
+        {
+          "speciesId": 338,
+          "formId": 338,
+          "dexNumber": 215
+        },
+        {
+          "speciesId": 359,
+          "formId": 359,
+          "dexNumber": 216
+        },
+        {
+          "speciesId": 114,
+          "formId": 114,
+          "dexNumber": 217
+        },
+        {
+          "speciesId": 465,
+          "formId": 465,
+          "dexNumber": 218
+        },
+        {
+          "speciesId": 619,
+          "formId": 619,
+          "dexNumber": 219
+        },
+        {
+          "speciesId": 620,
+          "formId": 620,
+          "dexNumber": 220
+        },
+        {
+          "speciesId": 207,
+          "formId": 207,
+          "dexNumber": 221
+        },
+        {
+          "speciesId": 472,
+          "formId": 472,
+          "dexNumber": 222
+        },
+        {
+          "speciesId": 624,
+          "formId": 624,
+          "dexNumber": 223
+        },
+        {
+          "speciesId": 625,
+          "formId": 625,
+          "dexNumber": 224
+        },
+        {
+          "speciesId": 638,
+          "formId": 638,
+          "dexNumber": 225
+        },
+        {
+          "speciesId": 639,
+          "formId": 639,
+          "dexNumber": 226
+        },
+        {
+          "speciesId": 640,
+          "formId": 640,
+          "dexNumber": 227
+        },
+        {
+          "speciesId": 535,
+          "formId": 535,
+          "dexNumber": 228
+        },
+        {
+          "speciesId": 536,
+          "formId": 536,
+          "dexNumber": 229
+        },
+        {
+          "speciesId": 537,
+          "formId": 537,
+          "dexNumber": 230
+        },
+        {
+          "speciesId": 618,
+          "formId": 618,
+          "dexNumber": 231
+        },
+        {
+          "speciesId": 213,
+          "formId": 213,
+          "dexNumber": 232
+        },
+        {
+          "speciesId": 458,
+          "formId": 458,
+          "dexNumber": 233
+        },
+        {
+          "speciesId": 226,
+          "formId": 226,
+          "dexNumber": 234
+        },
+        {
+          "speciesId": 223,
+          "formId": 223,
+          "dexNumber": 235
+        },
+        {
+          "speciesId": 224,
+          "formId": 224,
+          "dexNumber": 236
+        },
+        {
+          "speciesId": 222,
+          "formId": 222,
+          "dexNumber": 237
+        },
+        {
+          "speciesId": 120,
+          "formId": 120,
+          "dexNumber": 238
+        },
+        {
+          "speciesId": 121,
+          "formId": 121,
+          "dexNumber": 239
+        },
+        {
+          "speciesId": 320,
+          "formId": 320,
+          "dexNumber": 240
+        },
+        {
+          "speciesId": 321,
+          "formId": 321,
+          "dexNumber": 241
+        },
+        {
+          "speciesId": 131,
+          "formId": 131,
+          "dexNumber": 242
+        },
+        {
+          "speciesId": 363,
+          "formId": 363,
+          "dexNumber": 243
+        },
+        {
+          "speciesId": 364,
+          "formId": 364,
+          "dexNumber": 244
+        },
+        {
+          "speciesId": 365,
+          "formId": 365,
+          "dexNumber": 245
+        },
+        {
+          "speciesId": 333,
+          "formId": 333,
+          "dexNumber": 246
+        },
+        {
+          "speciesId": 334,
+          "formId": 334,
+          "dexNumber": 247
+        },
+        {
+          "speciesId": 37,
+          "formId": 37,
+          "dexNumber": 248
+        },
+        {
+          "speciesId": 38,
+          "formId": 38,
+          "dexNumber": 249
+        },
+        {
+          "speciesId": 436,
+          "formId": 436,
+          "dexNumber": 250
+        },
+        {
+          "speciesId": 437,
+          "formId": 437,
+          "dexNumber": 251
+        },
+        {
+          "speciesId": 215,
+          "formId": 215,
+          "dexNumber": 252
+        },
+        {
+          "speciesId": 461,
+          "formId": 461,
+          "dexNumber": 253
+        },
+        {
+          "speciesId": 225,
+          "formId": 225,
+          "dexNumber": 254
+        },
+        {
+          "speciesId": 582,
+          "formId": 582,
+          "dexNumber": 255
+        },
+        {
+          "speciesId": 583,
+          "formId": 583,
+          "dexNumber": 256
+        },
+        {
+          "speciesId": 584,
+          "formId": 584,
+          "dexNumber": 257
+        },
+        {
+          "speciesId": 220,
+          "formId": 220,
+          "dexNumber": 258
+        },
+        {
+          "speciesId": 221,
+          "formId": 221,
+          "dexNumber": 259
+        },
+        {
+          "speciesId": 473,
+          "formId": 473,
+          "dexNumber": 260
+        },
+        {
+          "speciesId": 132,
+          "formId": 132,
+          "dexNumber": 261
+        },
+        {
+          "speciesId": 374,
+          "formId": 374,
+          "dexNumber": 262
+        },
+        {
+          "speciesId": 375,
+          "formId": 375,
+          "dexNumber": 263
+        },
+        {
+          "speciesId": 376,
+          "formId": 376,
+          "dexNumber": 264
+        },
+        {
+          "speciesId": 86,
+          "formId": 86,
+          "dexNumber": 265
+        },
+        {
+          "speciesId": 87,
+          "formId": 87,
+          "dexNumber": 266
+        },
+        {
+          "speciesId": 538,
+          "formId": 538,
+          "dexNumber": 267
+        },
+        {
+          "speciesId": 539,
+          "formId": 539,
+          "dexNumber": 268
+        },
+        {
+          "speciesId": 626,
+          "formId": 626,
+          "dexNumber": 269
+        },
+        {
+          "speciesId": 621,
+          "formId": 621,
+          "dexNumber": 270
+        },
+        {
+          "speciesId": 622,
+          "formId": 622,
+          "dexNumber": 271
+        },
+        {
+          "speciesId": 623,
+          "formId": 623,
+          "dexNumber": 272
+        },
+        {
+          "speciesId": 633,
+          "formId": 633,
+          "dexNumber": 273
+        },
+        {
+          "speciesId": 634,
+          "formId": 634,
+          "dexNumber": 274
+        },
+        {
+          "speciesId": 635,
+          "formId": 635,
+          "dexNumber": 275
+        },
+        {
+          "speciesId": 287,
+          "formId": 287,
+          "dexNumber": 276
+        },
+        {
+          "speciesId": 288,
+          "formId": 288,
+          "dexNumber": 277
+        },
+        {
+          "speciesId": 289,
+          "formId": 289,
+          "dexNumber": 278
+        },
+        {
+          "speciesId": 341,
+          "formId": 341,
+          "dexNumber": 279
+        },
+        {
+          "speciesId": 342,
+          "formId": 342,
+          "dexNumber": 280
+        },
+        {
+          "speciesId": 174,
+          "formId": 174,
+          "dexNumber": 281
+        },
+        {
+          "speciesId": 39,
+          "formId": 39,
+          "dexNumber": 282
+        },
+        {
+          "speciesId": 40,
+          "formId": 40,
+          "dexNumber": 283
+        },
+        {
+          "speciesId": 108,
+          "formId": 108,
+          "dexNumber": 284
+        },
+        {
+          "speciesId": 463,
+          "formId": 463,
+          "dexNumber": 285
+        },
+        {
+          "speciesId": 193,
+          "formId": 193,
+          "dexNumber": 286
+        },
+        {
+          "speciesId": 469,
+          "formId": 469,
+          "dexNumber": 287
+        },
+        {
+          "speciesId": 357,
+          "formId": 357,
+          "dexNumber": 288
+        },
+        {
+          "speciesId": 455,
+          "formId": 455,
+          "dexNumber": 289
+        },
+        {
+          "speciesId": 453,
+          "formId": 453,
+          "dexNumber": 290
+        },
+        {
+          "speciesId": 454,
+          "formId": 454,
+          "dexNumber": 291
+        },
+        {
+          "speciesId": 246,
+          "formId": 246,
+          "dexNumber": 292
+        },
+        {
+          "speciesId": 247,
+          "formId": 247,
+          "dexNumber": 293
+        },
+        {
+          "speciesId": 248,
+          "formId": 248,
+          "dexNumber": 294
+        },
+        {
+          "speciesId": 643,
+          "formId": 643,
+          "dexNumber": 295
+        },
+        {
+          "speciesId": 644,
+          "formId": 644,
+          "dexNumber": 296
+        },
+        {
+          "speciesId": 646,
+          "formId": 646,
+          "dexNumber": 297
+        },
+        {
+          "speciesId": 647,
+          "formId": 647,
+          "dexNumber": 298
+        },
+        {
+          "speciesId": 648,
+          "formId": 648,
+          "dexNumber": 299
+        },
+        {
+          "speciesId": 649,
+          "formId": 649,
+          "dexNumber": 300
+        }
+      ]
+    }
+  ],
+  "encounters": {
+    "19": {
+      "black-2": {
+        "locations": [
+          "Castelia City",
+          "Castelia Sewers",
+          "Castelia Sewers Unknown Area",
+          "Relic Passage Castelia Sewers Entrance"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Castelia City",
+          "Castelia Sewers",
+          "Castelia Sewers Unknown Area",
+          "Relic Passage Castelia Sewers Entrance"
+        ]
+      }
+    },
+    "20": {
+      "black-2": {
+        "locations": [
+          "Dreamyard",
+          "Dreamyard (B1F)",
+          "Strange House (1F)",
+          "Strange House (B1F)",
+          "Relic Passage Relic Castle Entrance"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Dreamyard",
+          "Dreamyard (B1F)",
+          "Strange House (1F)",
+          "Strange House (B1F)",
+          "Relic Passage Relic Castle Entrance"
+        ]
+      }
+    },
+    "27": {
+      "black-2": {
+        "locations": [
+          "Desert Resort Entrance",
+          "Desert Resort",
+          "Relic Castle A"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Desert Resort Entrance",
+          "Desert Resort",
+          "Relic Castle A"
+        ]
+      }
+    },
+    "28": {
+      "black-2": {
+        "locations": [
+          "Relic Castle C",
+          "Route 15"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Relic Castle C",
+          "Route 15"
+        ]
+      }
+    },
+    "35": {
+      "black-2": {
+        "locations": [
+          "Giant Chasm Outside",
+          "Giant Chasm",
+          "Giant Chasm Forest",
+          "Giant Chasm Forest Cave",
+          "Giant Chasm Hidden Grotto"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Giant Chasm Outside",
+          "Giant Chasm",
+          "Giant Chasm Forest",
+          "Giant Chasm Forest Cave",
+          "Giant Chasm Hidden Grotto"
+        ]
+      }
+    },
+    "36": {
+      "black-2": {
+        "locations": [
+          "Giant Chasm Outside",
+          "Giant Chasm Forest",
+          "Giant Chasm Forest Cave"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Giant Chasm Outside",
+          "Giant Chasm Forest",
+          "Giant Chasm Forest Cave"
+        ]
+      }
+    },
+    "37": {
+      "black-2": {
+        "locations": [
+          "Abundant Shrine",
+          "Abundant Shrine Hidden Grotto Near Youngster"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Abundant Shrine",
+          "Abundant Shrine Hidden Grotto Near Youngster"
+        ]
+      }
+    },
+    "38": {
+      "black-2": {
+        "locations": [
+          "Abundant Shrine"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Abundant Shrine"
+        ]
+      }
+    },
+    "39": {
+      "black-2": {
+        "locations": [
+          "Dreamyard",
+          "Dreamyard (B1F)",
+          "Route 1",
+          "Route 2"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Dreamyard",
+          "Dreamyard (B1F)",
+          "Route 1",
+          "Route 2"
+        ]
+      }
+    },
+    "40": {
+      "black-2": {
+        "locations": [
+          "Dreamyard",
+          "Route 1",
+          "Route 2"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Dreamyard",
+          "Route 1",
+          "Route 2"
+        ]
+      }
+    },
+    "41": {
+      "black-2": {
+        "locations": [
+          "Castelia Sewers",
+          "Castelia Sewers Unknown Area"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Castelia Sewers",
+          "Castelia Sewers Unknown Area"
+        ]
+      }
+    },
+    "42": {
+      "black-2": {
+        "locations": [
+          "Dreamyard",
+          "Dreamyard (B1F)",
+          "Celestial Tower (3F)",
+          "Celestial Tower (4F)",
+          "Celestial Tower (5F)",
+          "Strange House (1F)",
+          "Strange House (B1F)"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Dreamyard",
+          "Dreamyard (B1F)",
+          "Celestial Tower (3F)",
+          "Celestial Tower (4F)",
+          "Celestial Tower (5F)",
+          "Strange House (1F)",
+          "Strange House (B1F)"
+        ]
+      }
+    },
+    "54": {
+      "black-2": {
+        "locations": [
+          "Floccesy Ranch Inner"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Floccesy Ranch Inner"
+        ]
+      }
+    },
+    "55": {
+      "black-2": {
+        "locations": [
+          "Village Bridge",
+          "Route 11",
+          "Route 14",
+          "Abundant Shrine",
+          "Seaside Cave (1F)",
+          "Seaside Cave (B1F)",
+          "Nature Sanctuary",
+          "Route 22",
+          "Route 23",
+          "Route 23 Hidden Grotto",
+          "Abundant Shrine Hidden Grotto Shrine"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Village Bridge",
+          "Route 11",
+          "Route 14",
+          "Abundant Shrine",
+          "Seaside Cave (1F)",
+          "Seaside Cave (B1F)",
+          "Nature Sanctuary",
+          "Route 22",
+          "Route 23",
+          "Route 23 Hidden Grotto",
+          "Abundant Shrine Hidden Grotto Shrine"
+        ]
+      }
+    },
+    "58": {
+      "black-2": {
+        "locations": [
+          "Virbank Complex Inner"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Virbank Complex Inner"
+        ]
+      }
+    },
+    "59": {
+      "black-2": {
+        "locations": [
+          "Evolve Growlithe"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Evolve Growlithe"
+        ]
+      }
+    },
+    "81": {
+      "black-2": {
+        "locations": [
+          "Virbank Complex Outer",
+          "Virbank Complex Inner"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Virbank Complex Outer",
+          "Virbank Complex Inner"
+        ]
+      }
+    },
+    "82": {
+      "black-2": {
+        "locations": [
+          "P2 Laboratory"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "P2 Laboratory"
+        ]
+      }
+    },
+    "86": {
+      "black-2": {
+        "locations": [
+          "Giant Chasm",
+          "Seaside Cave (1F)"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Giant Chasm",
+          "Seaside Cave (1F)"
+        ]
+      }
+    },
+    "87": {
+      "black-2": {
+        "locations": [
+          "Giant Chasm",
+          "Seaside Cave (1F)"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Giant Chasm",
+          "Seaside Cave (1F)"
+        ]
+      }
+    },
+    "88": {
+      "black-2": {
+        "locations": [
+          "Castelia Sewers",
+          "Castelia Sewers Unknown Area"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Castelia Sewers",
+          "Castelia Sewers Unknown Area"
+        ]
+      }
+    },
+    "89": {
+      "black-2": {
+        "locations": [
+          "Route 9",
+          "Castelia Sewers",
+          "Castelia Sewers Unknown Area",
+          "Route 9 Hidden Grotto"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Route 9",
+          "Castelia Sewers",
+          "Castelia Sewers Unknown Area",
+          "Route 9 Hidden Grotto"
+        ]
+      }
+    },
+    "95": {
+      "black-2": {
+        "locations": [
+          "Twist Mountain (B1F) (3F)",
+          "Victory Road 2 Unknown Area",
+          "Relic Passage Castelia Sewers Entrance",
+          "Relic Passage Relic Castle Entrance",
+          "Relic Passage Pwt Entrance",
+          "Clay Tunnel",
+          "Underground Ruins",
+          "Rocky Mountain Room",
+          "Glacier Room",
+          "Iron Room"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Twist Mountain (B1F) (3F)",
+          "Victory Road 2 Unknown Area",
+          "Relic Passage Castelia Sewers Entrance",
+          "Relic Passage Relic Castle Entrance",
+          "Relic Passage Pwt Entrance",
+          "Clay Tunnel",
+          "Underground Ruins",
+          "Rocky Mountain Room",
+          "Glacier Room",
+          "Iron Room"
+        ]
+      }
+    },
+    "108": {
+      "black-2": {
+        "locations": [
+          "Route 2"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Route 2"
+        ]
+      }
+    },
+    "109": {
+      "black-2": {
+        "locations": [
+          "Virbank Complex Inner"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Virbank Complex Inner"
+        ]
+      }
+    },
+    "110": {
+      "black-2": {
+        "locations": [
+          "P2 Laboratory"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "P2 Laboratory"
+        ]
+      }
+    },
+    "114": {
+      "black-2": {
+        "locations": [
+          "Giant Chasm Outside",
+          "Route 13",
+          "Route 13 Hidden Grotto Giant Chasm"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Giant Chasm Outside",
+          "Route 13",
+          "Route 13 Hidden Grotto Giant Chasm"
+        ]
+      }
+    },
+    "120": {
+      "black-2": {
+        "locations": [
+          "Route 13",
+          "Undella Town",
+          "Humilau City"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Route 13",
+          "Undella Town",
+          "Humilau City"
+        ]
+      }
+    },
+    "121": {
+      "black-2": {
+        "locations": [
+          "Route 13",
+          "Undella Town",
+          "Humilau City"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Route 13",
+          "Undella Town",
+          "Humilau City"
+        ]
+      }
+    },
+    "125": {
+      "white-2": {
+        "locations": [
+          "Evolve Elekid"
+        ]
+      }
+    },
+    "126": {
+      "black-2": {
+        "locations": [
+          "Evolve Magby"
+        ]
+      }
+    },
+    "127": {
+      "white-2": {
+        "locations": [
+          "Route 12",
+          "Lostlorn Forest",
+          "Lostlorn Forest Hidden Grotto"
+        ]
+      },
+      "black-2": {
+        "locations": [
+          "Lostlorn Forest Hidden Grotto"
+        ]
+      }
+    },
+    "131": {
+      "black-2": {
+        "locations": [
+          "Village Bridge"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Village Bridge"
+        ]
+      }
+    },
+    "132": {
+      "black-2": {
+        "locations": [
+          "Giant Chasm Forest",
+          "Giant Chasm Forest Cave",
+          "Giant Chasm Hidden Grotto"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Giant Chasm Forest",
+          "Giant Chasm Forest Cave",
+          "Giant Chasm Hidden Grotto"
+        ]
+      }
+    },
+    "133": {
+      "black-2": {
+        "locations": [
+          "Castelia City"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Castelia City"
+        ]
+      }
+    },
+    "134": {
+      "black-2": {
+        "locations": [
+          "Evolve Eevee"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Evolve Eevee"
+        ]
+      }
+    },
+    "135": {
+      "black-2": {
+        "locations": [
+          "Evolve Eevee"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Evolve Eevee"
+        ]
+      }
+    },
+    "136": {
+      "black-2": {
+        "locations": [
+          "Evolve Eevee"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Evolve Eevee"
+        ]
+      }
+    },
+    "169": {
+      "black-2": {
+        "locations": [
+          "Dreamyard"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Dreamyard"
+        ]
+      }
+    },
+    "173": {
+      "black-2": {
+        "locations": [
+          "Breed Clefairy or Clefable"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Breed Clefairy or Clefable"
+        ]
+      }
+    },
+    "174": {
+      "black-2": {
+        "locations": [
+          "Breed Jigglypuff or Wigglytuff",
+          "Transfer from Dream Radar"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Breed Jigglypuff or Wigglytuff",
+          "Transfer from Dream Radar"
+        ]
+      }
+    },
+    "179": {
+      "black-2": {
+        "locations": [
+          "Floccesy Ranch Inner"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Floccesy Ranch Inner"
+        ]
+      }
+    },
+    "180": {
+      "black-2": {
+        "locations": [
+          "Evolve Mareep"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Evolve Mareep"
+        ]
+      }
+    },
+    "181": {
+      "black-2": {
+        "locations": [
+          "Evolve Flaaffy"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Evolve Flaaffy"
+        ]
+      }
+    },
+    "183": {
+      "black-2": {
+        "locations": [
+          "Pinwheel Forest Inside",
+          "Village Bridge",
+          "Route 6",
+          "Route 11",
+          "Abundant Shrine",
+          "Victory Road 2 Unknown Area",
+          "Floccesy Ranch Outer",
+          "Floccesy Ranch Inner",
+          "Relic Passage Relic Castle Entrance",
+          "Route 20",
+          "Route 22",
+          "Floccesy Ranch Hidden Grotto"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Pinwheel Forest Inside",
+          "Village Bridge",
+          "Route 6",
+          "Route 11",
+          "Abundant Shrine",
+          "Victory Road 2 Unknown Area",
+          "Floccesy Ranch Outer",
+          "Floccesy Ranch Inner",
+          "Relic Passage Relic Castle Entrance",
+          "Route 20",
+          "Route 22",
+          "Floccesy Ranch Hidden Grotto"
+        ]
+      }
+    },
+    "184": {
+      "black-2": {
+        "locations": [
+          "Pinwheel Forest Inside",
+          "Village Bridge",
+          "Route 6",
+          "Route 11",
+          "Abundant Shrine",
+          "Victory Road 2 Unknown Area",
+          "Floccesy Ranch Outer",
+          "Floccesy Ranch Inner",
+          "Relic Passage Relic Castle Entrance",
+          "Route 20",
+          "Route 22"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Pinwheel Forest Inside",
+          "Village Bridge",
+          "Route 6",
+          "Route 11",
+          "Abundant Shrine",
+          "Victory Road 2 Unknown Area",
+          "Floccesy Ranch Outer",
+          "Floccesy Ranch Inner",
+          "Relic Passage Relic Castle Entrance",
+          "Route 20",
+          "Route 22"
+        ]
+      }
+    },
+    "191": {
+      "black-2": {
+        "locations": [
+          "Route 20"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Route 20"
+        ]
+      }
+    },
+    "192": {
+      "black-2": {
+        "locations": [
+          "Evolve Sunkern"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Evolve Sunkern"
+        ]
+      }
+    },
+    "193": {
+      "black-2": {
+        "locations": [
+          "Pinwheel Forest Outside",
+          "Route 3"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Pinwheel Forest Outside",
+          "Route 3"
+        ]
+      }
+    },
+    "196": {
+      "black-2": {
+        "locations": [
+          "Evolve Eevee"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Evolve Eevee"
+        ]
+      }
+    },
+    "197": {
+      "black-2": {
+        "locations": [
+          "Evolve Eevee"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Evolve Eevee"
+        ]
+      }
+    },
+    "206": {
+      "black-2": {
+        "locations": [
+          "Dreamyard",
+          "Village Bridge",
+          "Route 1",
+          "Route 2",
+          "Route 6",
+          "Route 12",
+          "Route 18",
+          "Victory Road 2 Unknown Area",
+          "Floccesy Ranch Inner",
+          "Nature Sanctuary",
+          "Route 20",
+          "Route 6 Hidden Grotto Near Pokemon Breeder",
+          "Floccesy Ranch Hidden Grotto"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Dreamyard",
+          "Village Bridge",
+          "Route 1",
+          "Route 2",
+          "Route 6",
+          "Route 12",
+          "Route 18",
+          "Victory Road 2 Unknown Area",
+          "Floccesy Ranch Inner",
+          "Nature Sanctuary",
+          "Route 20",
+          "Route 6 Hidden Grotto Near Pokemon Breeder",
+          "Floccesy Ranch Hidden Grotto"
+        ]
+      }
+    },
+    "207": {
+      "black-2": {
+        "locations": [
+          "Route 11",
+          "Route 15",
+          "Route 23",
+          "Route 23 Hidden Grotto"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Route 11",
+          "Route 15",
+          "Route 23",
+          "Route 23 Hidden Grotto"
+        ]
+      }
+    },
+    "208": {
+      "black-2": {
+        "locations": [
+          "Twist Mountain (B1F) (3F)",
+          "Clay Tunnel",
+          "Underground Ruins",
+          "Rocky Mountain Room",
+          "Glacier Room",
+          "Iron Room"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Twist Mountain (B1F) (3F)",
+          "Clay Tunnel",
+          "Underground Ruins",
+          "Rocky Mountain Room",
+          "Glacier Room",
+          "Iron Room"
+        ]
+      }
+    },
+    "213": {
+      "black-2": {
+        "locations": [
+          "Seaside Cave (B1F)"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Seaside Cave (B1F)"
+        ]
+      }
+    },
+    "214": {
+      "black-2": {
+        "locations": [
+          "Route 12",
+          "Lostlorn Forest",
+          "Lostlorn Forest Hidden Grotto"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Lostlorn Forest Hidden Grotto"
+        ]
+      }
+    },
+    "215": {
+      "black-2": {
+        "locations": [
+          "Giant Chasm",
+          "Giant Chasm Hidden Grotto"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Giant Chasm",
+          "Giant Chasm Hidden Grotto"
+        ]
+      }
+    },
+    "220": {
+      "black-2": {
+        "locations": [
+          "Breed Piloswine or Mamoswine"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Breed Piloswine or Mamoswine"
+        ]
+      }
+    },
+    "221": {
+      "black-2": {
+        "locations": [
+          "Giant Chasm",
+          "Giant Chasm Forest",
+          "Giant Chasm Forest Cave"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Giant Chasm",
+          "Giant Chasm Forest",
+          "Giant Chasm Forest Cave"
+        ]
+      }
+    },
+    "222": {
+      "black-2": {
+        "locations": [
+          "Route 18",
+          "Humilau City",
+          "Route 18 Hidden Grotto"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Route 18",
+          "Humilau City",
+          "Route 18 Hidden Grotto"
+        ]
+      }
+    },
+    "223": {
+      "black-2": {
+        "locations": [
+          "Undella Bay",
+          "Route 21"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Undella Bay",
+          "Route 21"
+        ]
+      }
+    },
+    "224": {
+      "black-2": {
+        "locations": [
+          "Undella Bay",
+          "Route 21"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Undella Bay",
+          "Route 21"
+        ]
+      }
+    },
+    "225": {
+      "black-2": {
+        "locations": [
+          "Giant Chasm Outside",
+          "Giant Chasm",
+          "Giant Chasm Forest",
+          "Giant Chasm Forest Cave",
+          "Route 22"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Giant Chasm Outside",
+          "Giant Chasm",
+          "Giant Chasm Forest",
+          "Giant Chasm Forest Cave",
+          "Route 22"
+        ]
+      }
+    },
+    "226": {
+      "black-2": {
+        "locations": [
+          "Undella Bay",
+          "Route 21"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Undella Bay",
+          "Route 21"
+        ]
+      }
+    },
+    "227": {
+      "black-2": {
+        "locations": [
+          "Reversal Mountain Unknown Area"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Reversal Mountain Unknown Area"
+        ]
+      }
+    },
+    "239": {
+      "white-2": {
+        "locations": [
+          "Virbank Complex Outer",
+          "Virbank Complex Inner"
+        ]
+      }
+    },
+    "240": {
+      "black-2": {
+        "locations": [
+          "Virbank Complex Outer",
+          "Virbank Complex Inner"
+        ]
+      }
+    },
+    "246": {
+      "black-2": {
+        "locations": [
+          "Breed Pupitar or Tyranitar"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Breed Pupitar or Tyranitar"
+        ]
+      }
+    },
+    "247": {
+      "black-2": {
+        "locations": [
+          "Route 15"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Route 15"
+        ]
+      }
+    },
+    "248": {
+      "black-2": {
+        "locations": [
+          "Route 15"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Route 15"
+        ]
+      }
+    },
+    "278": {
+      "black-2": {
+        "locations": [
+          "Breed Pelipper"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Breed Pelipper"
+        ]
+      }
+    },
+    "279": {
+      "black-2": {
+        "locations": [
+          "Giant Chasm Outside",
+          "Route 13",
+          "Route 22",
+          "Route 22 Hidden Grotto"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Giant Chasm Outside",
+          "Route 13",
+          "Route 22",
+          "Route 22 Hidden Grotto"
+        ]
+      }
+    },
+    "287": {
+      "black-2": {
+        "locations": [
+          "Breed Vigoroth or Slaking"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Breed Vigoroth or Slaking"
+        ]
+      }
+    },
+    "288": {
+      "black-2": {
+        "locations": [
+          "Pinwheel Forest Inside"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Pinwheel Forest Inside"
+        ]
+      }
+    },
+    "289": {
+      "black-2": {
+        "locations": [
+          "Pinwheel Forest Inside"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Pinwheel Forest Inside"
+        ]
+      }
+    },
+    "298": {
+      "black-2": {
+        "locations": [
+          "Floccesy Ranch Outer",
+          "Floccesy Ranch Inner",
+          "Route 20"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Floccesy Ranch Outer",
+          "Floccesy Ranch Inner",
+          "Route 20"
+        ]
+      }
+    },
+    "299": {
+      "black-2": {
+        "locations": [
+          "Chargestone Cave (1F)",
+          "Chargestone Cave (B1F)",
+          "Chargestone Cave (B2F)",
+          "Clay Tunnel",
+          "Underground Ruins",
+          "Rocky Mountain Room",
+          "Glacier Room",
+          "Iron Room",
+          "Route 6 Hidden Grotto Mistralton Cave"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Chargestone Cave (1F)",
+          "Chargestone Cave (B1F)",
+          "Chargestone Cave (B2F)",
+          "Clay Tunnel",
+          "Underground Ruins",
+          "Rocky Mountain Room",
+          "Glacier Room",
+          "Iron Room",
+          "Route 6 Hidden Grotto Mistralton Cave"
+        ]
+      }
+    },
+    "300": {
+      "white-2": {
+        "locations": [
+          "Castelia City"
+        ]
+      }
+    },
+    "301": {
+      "white-2": {
+        "locations": [
+          "Castelia City"
+        ]
+      }
+    },
+    "304": {
+      "black-2": {
+        "locations": [
+          "Mistralton Cave",
+          "Guidance Chamber"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Mistralton Cave",
+          "Guidance Chamber"
+        ]
+      }
+    },
+    "305": {
+      "black-2": {
+        "locations": [
+          "Clay Tunnel",
+          "Underground Ruins",
+          "Rocky Mountain Room",
+          "Glacier Room",
+          "Iron Room"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Clay Tunnel",
+          "Underground Ruins",
+          "Rocky Mountain Room",
+          "Glacier Room",
+          "Iron Room"
+        ]
+      }
+    },
+    "306": {
+      "black-2": {
+        "locations": [
+          "Evolve Lairon"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Evolve Lairon"
+        ]
+      }
+    },
+    "315": {
+      "black-2": {
+        "locations": [
+          "Route 12",
+          "Lostlorn Forest",
+          "Victory Road 2 Unknown Area"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Route 12",
+          "Lostlorn Forest",
+          "Victory Road 2 Unknown Area"
+        ]
+      }
+    },
+    "320": {
+      "black-2": {
+        "locations": [
+          "Undella Bay"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Undella Bay"
+        ]
+      }
+    },
+    "321": {
+      "black-2": {
+        "locations": [
+          "Undella Bay"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Undella Bay"
+        ]
+      }
+    },
+    "322": {
+      "white-2": {
+        "locations": [
+          "Reversal Mountain Unknown Area"
+        ]
+      }
+    },
+    "323": {
+      "white-2": {
+        "locations": [
+          "Reversal Mountain Unknown Area"
+        ]
+      }
+    },
+    "325": {
+      "black-2": {
+        "locations": [
+          "Reversal Mountain Unknown Area"
+        ]
+      }
+    },
+    "326": {
+      "black-2": {
+        "locations": [
+          "Reversal Mountain Unknown Area"
+        ]
+      }
+    },
+    "328": {
+      "black-2": {
+        "locations": [
+          "Desert Resort",
+          "Reversal Mountain Unknown Area"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Desert Resort",
+          "Reversal Mountain Unknown Area"
+        ]
+      }
+    },
+    "329": {
+      "black-2": {
+        "locations": [
+          "Reversal Mountain Unknown Area"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Reversal Mountain Unknown Area"
+        ]
+      }
+    },
+    "330": {
+      "black-2": {
+        "locations": [
+          "Evolve Vibrava"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Evolve Vibrava"
+        ]
+      }
+    },
+    "333": {
+      "black-2": {
+        "locations": [
+          "Route 14",
+          "Abundant Shrine",
+          "Abundant Shrine Hidden Grotto Shrine"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Route 14",
+          "Abundant Shrine",
+          "Abundant Shrine Hidden Grotto Shrine"
+        ]
+      }
+    },
+    "334": {
+      "black-2": {
+        "locations": [
+          "Route 14",
+          "Abundant Shrine",
+          "Victory Road 2 Unknown Area",
+          "Nature Sanctuary"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Route 14",
+          "Abundant Shrine",
+          "Victory Road 2 Unknown Area",
+          "Nature Sanctuary"
+        ]
+      }
+    },
+    "335": {
+      "black-2": {
+        "locations": [
+          "Village Bridge",
+          "Route 7",
+          "Route 11",
+          "Route 7 Hidden Grotto",
+          "Route 23 Hidden Grotto"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Village Bridge",
+          "Route 7",
+          "Route 11",
+          "Route 7 Hidden Grotto",
+          "Route 23 Hidden Grotto"
+        ]
+      }
+    },
+    "336": {
+      "black-2": {
+        "locations": [
+          "Village Bridge",
+          "Route 7",
+          "Route 11",
+          "Route 7 Hidden Grotto",
+          "Route 23 Hidden Grotto"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Village Bridge",
+          "Route 7",
+          "Route 11",
+          "Route 7 Hidden Grotto",
+          "Route 23 Hidden Grotto"
+        ]
+      }
+    },
+    "337": {
+      "black-2": {
+        "locations": [
+          "Giant Chasm Outside",
+          "Giant Chasm",
+          "Giant Chasm Forest",
+          "Giant Chasm Forest Cave",
+          "Route 13",
+          "Route 22"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Giant Chasm Outside",
+          "Giant Chasm",
+          "Giant Chasm Forest",
+          "Giant Chasm Forest Cave",
+          "Route 13",
+          "Route 22"
+        ]
+      }
+    },
+    "338": {
+      "black-2": {
+        "locations": [
+          "Giant Chasm Outside",
+          "Giant Chasm",
+          "Giant Chasm Forest",
+          "Giant Chasm Forest Cave",
+          "Route 13",
+          "Route 22"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Giant Chasm Outside",
+          "Giant Chasm",
+          "Giant Chasm Forest",
+          "Giant Chasm Forest Cave",
+          "Route 13",
+          "Route 22"
+        ]
+      }
+    },
+    "341": {
+      "black-2": {
+        "locations": [
+          "Striaton City",
+          "Route 3"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Striaton City",
+          "Route 3"
+        ]
+      }
+    },
+    "342": {
+      "black-2": {
+        "locations": [
+          "Striaton City",
+          "Route 3"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Striaton City",
+          "Route 3"
+        ]
+      }
+    },
+    "343": {
+      "black-2": {
+        "locations": [
+          "Relic Castle D"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Relic Castle D"
+        ]
+      }
+    },
+    "344": {
+      "black-2": {
+        "locations": [
+          "Evolve Baltoy"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Evolve Baltoy"
+        ]
+      }
+    },
+    "351": {
+      "black-2": {
+        "locations": [
+          "Route 6"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Route 6"
+        ]
+      }
+    },
+    "353": {
+      "black-2": {
+        "locations": [
+          "Breed Banette"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Breed Banette"
+        ]
+      }
+    },
+    "354": {
+      "black-2": {
+        "locations": [
+          "Victory Road 2 Unknown Area",
+          "Strange House (1F)",
+          "Strange House (B1F)"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Victory Road 2 Unknown Area",
+          "Strange House (1F)",
+          "Strange House (B1F)"
+        ]
+      }
+    },
+    "357": {
+      "black-2": {
+        "locations": [
+          "Route 18"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Route 18"
+        ]
+      }
+    },
+    "359": {
+      "black-2": {
+        "locations": [
+          "Route 13",
+          "Route 14",
+          "Route 23 Hidden Grotto"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Route 13",
+          "Route 14",
+          "Route 23 Hidden Grotto"
+        ]
+      }
+    },
+    "363": {
+      "black-2": {
+        "locations": [
+          "Undella Bay",
+          "Route 13 Hidden Grotto Stairs"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Undella Bay",
+          "Route 13 Hidden Grotto Stairs"
+        ]
+      }
+    },
+    "364": {
+      "black-2": {
+        "locations": [
+          "Undella Bay"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Undella Bay"
+        ]
+      }
+    },
+    "365": {
+      "black-2": {
+        "locations": [
+          "Undella Bay"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Undella Bay"
+        ]
+      }
+    },
+    "374": {
+      "black-2": {
+        "locations": [
+          "Breed Metang or Metagross",
+          "Transfer from Dream Radar"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Breed Metang or Metagross",
+          "Transfer from Dream Radar"
+        ]
+      }
+    },
+    "375": {
+      "black-2": {
+        "locations": [
+          "Giant Chasm Forest",
+          "Giant Chasm Forest Cave",
+          "Giant Chasm Hidden Grotto"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Giant Chasm Forest",
+          "Giant Chasm Forest Cave",
+          "Giant Chasm Hidden Grotto"
+        ]
+      }
+    },
+    "376": {
+      "black-2": {
+        "locations": [
+          "Giant Chasm Forest",
+          "Giant Chasm Forest Cave"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Giant Chasm Forest",
+          "Giant Chasm Forest Cave"
+        ]
+      }
+    },
+    "406": {
+      "black-2": {
+        "locations": [
+          "Breed Roselia or Roserade holding a Rose Incense"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Breed Roselia or Roserade holding a Rose Incense"
+        ]
+      }
+    },
+    "407": {
+      "black-2": {
+        "locations": [
+          "Route 12",
+          "Lostlorn Forest",
+          "Victory Road 2 Unknown Area"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Route 12",
+          "Lostlorn Forest",
+          "Victory Road 2 Unknown Area"
+        ]
+      }
+    },
+    "415": {
+      "black-2": {
+        "locations": [
+          "Route 12",
+          "Lostlorn Forest",
+          "Lostlorn Forest Hidden Grotto"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Route 12",
+          "Lostlorn Forest",
+          "Lostlorn Forest Hidden Grotto"
+        ]
+      }
+    },
+    "416": {
+      "black-2": {
+        "locations": [
+          "Route 12",
+          "Lostlorn Forest"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Route 12",
+          "Lostlorn Forest"
+        ]
+      }
+    },
+    "418": {
+      "black-2": {
+        "locations": [
+          "Route 11",
+          "Route 14",
+          "Lostlorn Forest",
+          "Victory Road 2 Unknown Area",
+          "Nature Sanctuary",
+          "Route 23"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Route 11",
+          "Route 14",
+          "Lostlorn Forest",
+          "Victory Road 2 Unknown Area",
+          "Nature Sanctuary",
+          "Route 23"
+        ]
+      }
+    },
+    "419": {
+      "black-2": {
+        "locations": [
+          "Route 11",
+          "Route 14",
+          "Lostlorn Forest",
+          "Victory Road 2 Unknown Area",
+          "Nature Sanctuary",
+          "Route 23"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Route 11",
+          "Route 14",
+          "Lostlorn Forest",
+          "Victory Road 2 Unknown Area",
+          "Nature Sanctuary",
+          "Route 23"
+        ]
+      }
+    },
+    "425": {
+      "black-2": {
+        "locations": [
+          "Route 13 Hidden Grotto Stairs"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Route 13 Hidden Grotto Stairs"
+        ]
+      }
+    },
+    "426": {
+      "black-2": {
+        "locations": [
+          "Route 13",
+          "Route 14",
+          "Reversal Mountain Unknown Area"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Route 13",
+          "Route 14",
+          "Reversal Mountain Unknown Area"
+        ]
+      }
+    },
+    "427": {
+      "black-2": {
+        "locations": [
+          "Castelia City"
+        ]
+      }
+    },
+    "428": {
+      "black-2": {
+        "locations": [
+          "Castelia City"
+        ]
+      }
+    },
+    "436": {
+      "black-2": {
+        "locations": [
+          "Abundant Shrine",
+          "Abundant Shrine Hidden Grotto Near Youngster"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Abundant Shrine",
+          "Abundant Shrine Hidden Grotto Near Youngster"
+        ]
+      }
+    },
+    "437": {
+      "black-2": {
+        "locations": [
+          "Abundant Shrine"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Abundant Shrine"
+        ]
+      }
+    },
+    "447": {
+      "black-2": {
+        "locations": [
+          "Floccesy Ranch Inner"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Floccesy Ranch Inner"
+        ]
+      }
+    },
+    "448": {
+      "black-2": {
+        "locations": [
+          "Evolve Riolu"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Evolve Riolu"
+        ]
+      }
+    },
+    "451": {
+      "black-2": {
+        "locations": [
+          "Reversal Mountain Unknown Area",
+          "Route 13 Hidden Grotto Giant Chasm"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Reversal Mountain Unknown Area",
+          "Route 13 Hidden Grotto Giant Chasm"
+        ]
+      }
+    },
+    "452": {
+      "black-2": {
+        "locations": [
+          "Evolve Skorupi"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Evolve Skorupi"
+        ]
+      }
+    },
+    "453": {
+      "black-2": {
+        "locations": [
+          "Icirrus City",
+          "Route 8",
+          "Moor Of Icirrus"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Icirrus City",
+          "Route 8",
+          "Moor Of Icirrus"
+        ]
+      }
+    },
+    "454": {
+      "black-2": {
+        "locations": [
+          "Pinwheel Forest Outside"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Pinwheel Forest Outside"
+        ]
+      }
+    },
+    "455": {
+      "black-2": {
+        "locations": [
+          "Route 18"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Route 18"
+        ]
+      }
+    },
+    "458": {
+      "black-2": {
+        "locations": [
+          "Undella Bay",
+          "Route 21"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Undella Bay",
+          "Route 21"
+        ]
+      }
+    },
+    "461": {
+      "black-2": {
+        "locations": [
+          "Evolve Sneasel"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Evolve Sneasel"
+        ]
+      }
+    },
+    "462": {
+      "black-2": {
+        "locations": [
+          "P2 Laboratory"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "P2 Laboratory"
+        ]
+      }
+    },
+    "463": {
+      "black-2": {
+        "locations": [
+          "Route 2"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Route 2"
+        ]
+      }
+    },
+    "465": {
+      "black-2": {
+        "locations": [
+          "Giant Chasm Outside",
+          "Route 13",
+          "Humilau City"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Giant Chasm Outside",
+          "Route 13",
+          "Humilau City"
+        ]
+      }
+    },
+    "466": {
+      "white-2": {
+        "locations": [
+          "Evolve Electabuzz"
+        ]
+      }
+    },
+    "467": {
+      "black-2": {
+        "locations": [
+          "Evolve Magmar"
+        ]
+      }
+    },
+    "469": {
+      "black-2": {
+        "locations": [
+          "Pinwheel Forest Outside",
+          "Route 3"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Pinwheel Forest Outside",
+          "Route 3"
+        ]
+      }
+    },
+    "470": {
+      "black-2": {
+        "locations": [
+          "Evolve Eevee"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Evolve Eevee"
+        ]
+      }
+    },
+    "471": {
+      "black-2": {
+        "locations": [
+          "Evolve Eevee"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Evolve Eevee"
+        ]
+      }
+    },
+    "472": {
+      "black-2": {
+        "locations": [
+          "Route 11",
+          "Route 15",
+          "Route 23"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Route 11",
+          "Route 15",
+          "Route 23"
+        ]
+      }
+    },
+    "473": {
+      "black-2": {
+        "locations": [
+          "Giant Chasm Forest",
+          "Giant Chasm Forest Cave"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Giant Chasm Forest",
+          "Giant Chasm Forest Cave"
+        ]
+      }
+    },
+    "476": {
+      "black-2": {
+        "locations": [
+          "Evolve Nosepass"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Evolve Nosepass"
+        ]
+      }
+    },
+    "494": {
+      "black-2": {
+        "locations": [
+          "Trade",
+          "Event"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Trade",
+          "Event"
+        ]
+      }
+    },
+    "495": {
+      "black-2": {
+        "locations": [
+          "Aspertia City"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Aspertia City"
+        ]
+      }
+    },
+    "496": {
+      "black-2": {
+        "locations": [
+          "Evolve Snivy"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Evolve Snivy"
+        ]
+      }
+    },
+    "497": {
+      "black-2": {
+        "locations": [
+          "Evolve Servine"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Evolve Servine"
+        ]
+      }
+    },
+    "498": {
+      "black-2": {
+        "locations": [
+          "Aspertia City"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Aspertia City"
+        ]
+      }
+    },
+    "499": {
+      "black-2": {
+        "locations": [
+          "Evolve Tepig"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Evolve Tepig"
+        ]
+      }
+    },
+    "500": {
+      "black-2": {
+        "locations": [
+          "Evolve Pignite"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Evolve Pignite"
+        ]
+      }
+    },
+    "501": {
+      "black-2": {
+        "locations": [
+          "Aspertia City"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Aspertia City"
+        ]
+      }
+    },
+    "502": {
+      "black-2": {
+        "locations": [
+          "Evolve Oshawott"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Evolve Oshawott"
+        ]
+      }
+    },
+    "503": {
+      "black-2": {
+        "locations": [
+          "Evolve Dewott"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Evolve Dewott"
+        ]
+      }
+    },
+    "504": {
+      "black-2": {
+        "locations": [
+          "Floccesy Ranch Inner",
+          "Virbank Complex Outer",
+          "Virbank Complex Inner",
+          "Route 19",
+          "Route 20"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Floccesy Ranch Inner",
+          "Virbank Complex Outer",
+          "Virbank Complex Inner",
+          "Route 19",
+          "Route 20"
+        ]
+      }
+    },
+    "505": {
+      "black-2": {
+        "locations": [
+          "Dreamyard",
+          "Dreamyard (B1F)",
+          "P2 Laboratory",
+          "Route 1",
+          "Route 2",
+          "Route 3",
+          "Route 7",
+          "Route 18",
+          "Route 2 Hidden Grotto",
+          "Route 7 Hidden Grotto"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Dreamyard",
+          "Dreamyard (B1F)",
+          "P2 Laboratory",
+          "Route 1",
+          "Route 2",
+          "Route 3",
+          "Route 7",
+          "Route 18",
+          "Route 2 Hidden Grotto",
+          "Route 7 Hidden Grotto"
+        ]
+      }
+    },
+    "506": {
+      "black-2": {
+        "locations": [
+          "Floccesy Ranch Inner"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Floccesy Ranch Inner"
+        ]
+      }
+    },
+    "507": {
+      "black-2": {
+        "locations": [
+          "P2 Laboratory",
+          "Route 1",
+          "Route 2",
+          "Route 3",
+          "Floccesy Ranch Hidden Grotto"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "P2 Laboratory",
+          "Route 1",
+          "Route 2",
+          "Route 3",
+          "Floccesy Ranch Hidden Grotto"
+        ]
+      }
+    },
+    "508": {
+      "black-2": {
+        "locations": [
+          "P2 Laboratory",
+          "Route 1",
+          "Route 2",
+          "Route 3"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "P2 Laboratory",
+          "Route 1",
+          "Route 2",
+          "Route 3"
+        ]
+      }
+    },
+    "509": {
+      "black-2": {
+        "locations": [
+          "Route 3",
+          "Route 19",
+          "Route 20"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Route 3",
+          "Route 19",
+          "Route 20"
+        ]
+      }
+    },
+    "510": {
+      "black-2": {
+        "locations": [
+          "Dreamyard",
+          "Dreamyard (B1F)",
+          "Route 2",
+          "Route 5",
+          "Route 9",
+          "Route 16",
+          "Route 5 Hidden Grotto",
+          "Route 9 Hidden Grotto"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Dreamyard",
+          "Dreamyard (B1F)",
+          "Route 2",
+          "Route 5",
+          "Route 9",
+          "Route 16",
+          "Route 5 Hidden Grotto",
+          "Route 9 Hidden Grotto"
+        ]
+      }
+    },
+    "511": {
+      "black-2": {
+        "locations": [
+          "Pinwheel Forest Inside",
+          "Lostlorn Forest"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Pinwheel Forest Inside",
+          "Lostlorn Forest"
+        ]
+      }
+    },
+    "512": {
+      "black-2": {
+        "locations": [
+          "Evolve Pansage"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Evolve Pansage"
+        ]
+      }
+    },
+    "513": {
+      "black-2": {
+        "locations": [
+          "Pinwheel Forest Inside",
+          "Lostlorn Forest"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Pinwheel Forest Inside",
+          "Lostlorn Forest"
+        ]
+      }
+    },
+    "514": {
+      "black-2": {
+        "locations": [
+          "Evolve Pansear"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Evolve Pansear"
+        ]
+      }
+    },
+    "515": {
+      "black-2": {
+        "locations": [
+          "Pinwheel Forest Inside",
+          "Lostlorn Forest"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Pinwheel Forest Inside",
+          "Lostlorn Forest"
+        ]
+      }
+    },
+    "516": {
+      "black-2": {
+        "locations": [
+          "Evolve Panpour"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Evolve Panpour"
+        ]
+      }
+    },
+    "517": {
+      "black-2": {
+        "locations": [
+          "Dreamyard",
+          "Dreamyard (B1F)"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Dreamyard",
+          "Dreamyard (B1F)"
+        ]
+      }
+    },
+    "518": {
+      "black-2": {
+        "locations": [
+          "Dreamyard"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Dreamyard"
+        ]
+      }
+    },
+    "519": {
+      "black-2": {
+        "locations": [
+          "Castelia City",
+          "Floccesy Ranch Inner",
+          "Virbank Complex Outer",
+          "Route 20"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Castelia City",
+          "Floccesy Ranch Inner",
+          "Virbank Complex Outer",
+          "Route 20"
+        ]
+      }
+    },
+    "520": {
+      "black-2": {
+        "locations": [
+          "Dragonspiral Tower Entrance",
+          "Dragonspiral Tower Outside",
+          "Route 3",
+          "Route 6",
+          "Route 7",
+          "Route 12",
+          "Victory Road 2 Unknown Area"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Dragonspiral Tower Entrance",
+          "Dragonspiral Tower Outside",
+          "Route 3",
+          "Route 6",
+          "Route 7",
+          "Route 12",
+          "Victory Road 2 Unknown Area"
+        ]
+      }
+    },
+    "521": {
+      "black-2": {
+        "locations": [
+          "Dragonspiral Tower Entrance",
+          "Dragonspiral Tower Outside",
+          "Route 3",
+          "Route 6",
+          "Route 7",
+          "Route 12",
+          "Victory Road 2 Unknown Area"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Dragonspiral Tower Entrance",
+          "Dragonspiral Tower Outside",
+          "Route 3",
+          "Route 6",
+          "Route 7",
+          "Route 12",
+          "Victory Road 2 Unknown Area"
+        ]
+      }
+    },
+    "522": {
+      "black-2": {
+        "locations": [
+          "Breed Zebstrika"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Breed Zebstrika"
+        ]
+      }
+    },
+    "523": {
+      "black-2": {
+        "locations": [
+          "Route 3",
+          "Route 7",
+          "Route 3 Hidden Grotto Dark Grass"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Route 3",
+          "Route 7",
+          "Route 3 Hidden Grotto Dark Grass"
+        ]
+      }
+    },
+    "524": {
+      "black-2": {
+        "locations": [
+          "Relic Passage Castelia Sewers Entrance"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Relic Passage Castelia Sewers Entrance"
+        ]
+      }
+    },
+    "525": {
+      "black-2": {
+        "locations": [
+          "Chargestone Cave (1F)",
+          "Chargestone Cave (B1F)",
+          "Chargestone Cave (B2F)",
+          "Twist Mountain (B1F) (3F)",
+          "Wellspring Cave",
+          "Mistralton Cave",
+          "Guidance Chamber",
+          "Victory Road (7F)",
+          "Victory Road 2 Unknown Area",
+          "Reversal Mountain Unknown Area",
+          "Relic Passage Relic Castle Entrance",
+          "Relic Passage Pwt Entrance",
+          "Clay Tunnel",
+          "Underground Ruins",
+          "Rocky Mountain Room",
+          "Glacier Room",
+          "Iron Room",
+          "Seaside Cave (1F)",
+          "Seaside Cave (B1F)"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Chargestone Cave (1F)",
+          "Chargestone Cave (B1F)",
+          "Chargestone Cave (B2F)",
+          "Twist Mountain (B1F) (3F)",
+          "Wellspring Cave",
+          "Mistralton Cave",
+          "Guidance Chamber",
+          "Victory Road (7F)",
+          "Victory Road 2 Unknown Area",
+          "Reversal Mountain Unknown Area",
+          "Relic Passage Relic Castle Entrance",
+          "Relic Passage Pwt Entrance",
+          "Clay Tunnel",
+          "Underground Ruins",
+          "Rocky Mountain Room",
+          "Glacier Room",
+          "Iron Room",
+          "Seaside Cave (1F)",
+          "Seaside Cave (B1F)"
+        ]
+      }
+    },
+    "526": {
+      "black-2": {
+        "locations": [
+          "Route 7"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Route 7"
+        ]
+      }
+    },
+    "527": {
+      "black-2": {
+        "locations": [
+          "Twist Mountain (B1F) (3F)",
+          "Wellspring Cave",
+          "Mistralton Cave",
+          "Guidance Chamber",
+          "Reversal Mountain Unknown Area",
+          "Relic Passage Castelia Sewers Entrance",
+          "Relic Passage Relic Castle Entrance",
+          "Relic Passage Pwt Entrance",
+          "Clay Tunnel",
+          "Underground Ruins",
+          "Rocky Mountain Room",
+          "Glacier Room",
+          "Iron Room",
+          "Seaside Cave (1F)",
+          "Seaside Cave (B1F)",
+          "Route 6 Hidden Grotto Near Pokemon Breeder",
+          "Route 6 Hidden Grotto Mistralton Cave"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Twist Mountain (B1F) (3F)",
+          "Wellspring Cave",
+          "Mistralton Cave",
+          "Guidance Chamber",
+          "Reversal Mountain Unknown Area",
+          "Relic Passage Castelia Sewers Entrance",
+          "Relic Passage Relic Castle Entrance",
+          "Relic Passage Pwt Entrance",
+          "Clay Tunnel",
+          "Underground Ruins",
+          "Rocky Mountain Room",
+          "Glacier Room",
+          "Iron Room",
+          "Seaside Cave (1F)",
+          "Seaside Cave (B1F)",
+          "Route 6 Hidden Grotto Near Pokemon Breeder",
+          "Route 6 Hidden Grotto Mistralton Cave"
+        ]
+      }
+    },
+    "528": {
+      "black-2": {
+        "locations": [
+          "Evolve Woobat"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Evolve Woobat"
+        ]
+      }
+    },
+    "529": {
+      "black-2": {
+        "locations": [
+          "Chargestone Cave (1F)",
+          "Chargestone Cave (B1F)",
+          "Chargestone Cave (B2F)",
+          "Mistralton Cave",
+          "Guidance Chamber",
+          "Relic Passage Castelia Sewers Entrance",
+          "Relic Passage Relic Castle Entrance",
+          "Relic Passage Pwt Entrance"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Chargestone Cave (1F)",
+          "Chargestone Cave (B1F)",
+          "Chargestone Cave (B2F)",
+          "Mistralton Cave",
+          "Guidance Chamber",
+          "Relic Passage Castelia Sewers Entrance",
+          "Relic Passage Relic Castle Entrance",
+          "Relic Passage Pwt Entrance"
+        ]
+      }
+    },
+    "530": {
+      "black-2": {
+        "locations": [
+          "Twist Mountain (B1F) (3F)",
+          "Giant Chasm",
+          "Wellspring Cave",
+          "Victory Road (7F)",
+          "Victory Road 2 Unknown Area",
+          "Reversal Mountain Unknown Area",
+          "Clay Tunnel",
+          "Underground Ruins",
+          "Rocky Mountain Room",
+          "Glacier Room",
+          "Iron Room",
+          "Seaside Cave (1F)",
+          "Seaside Cave (B1F)"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Twist Mountain (B1F) (3F)",
+          "Giant Chasm",
+          "Wellspring Cave",
+          "Victory Road (7F)",
+          "Victory Road 2 Unknown Area",
+          "Reversal Mountain Unknown Area",
+          "Clay Tunnel",
+          "Underground Ruins",
+          "Rocky Mountain Room",
+          "Glacier Room",
+          "Iron Room",
+          "Seaside Cave (1F)",
+          "Seaside Cave (B1F)"
+        ]
+      }
+    },
+    "531": {
+      "black-2": {
+        "locations": [
+          "Dreamyard",
+          "Pinwheel Forest Outside",
+          "Pinwheel Forest Inside",
+          "Dragonspiral Tower Entrance",
+          "Dragonspiral Tower Outside",
+          "Giant Chasm Outside",
+          "Giant Chasm Forest",
+          "Giant Chasm Forest Cave",
+          "P2 Laboratory",
+          "Village Bridge",
+          "Route 1",
+          "Route 2",
+          "Route 3",
+          "Route 5",
+          "Route 6",
+          "Route 7",
+          "Route 9",
+          "Route 11",
+          "Route 12",
+          "Route 13",
+          "Route 14",
+          "Abundant Shrine",
+          "Route 15",
+          "Route 16",
+          "Lostlorn Forest",
+          "Route 18",
+          "Castelia City",
+          "Victory Road 2 Unknown Area",
+          "Floccesy Ranch Inner",
+          "Virbank Complex Outer",
+          "Virbank Complex Inner",
+          "Reversal Mountain Unknown Area",
+          "Nature Sanctuary",
+          "Route 20",
+          "Route 22",
+          "Route 23"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Dreamyard",
+          "Pinwheel Forest Outside",
+          "Pinwheel Forest Inside",
+          "Dragonspiral Tower Entrance",
+          "Dragonspiral Tower Outside",
+          "Giant Chasm Outside",
+          "Giant Chasm Forest",
+          "Giant Chasm Forest Cave",
+          "P2 Laboratory",
+          "Village Bridge",
+          "Route 1",
+          "Route 2",
+          "Route 3",
+          "Route 5",
+          "Route 6",
+          "Route 7",
+          "Route 9",
+          "Route 11",
+          "Route 12",
+          "Route 13",
+          "Route 14",
+          "Abundant Shrine",
+          "Route 15",
+          "Route 16",
+          "Lostlorn Forest",
+          "Route 18",
+          "Castelia City",
+          "Victory Road 2 Unknown Area",
+          "Floccesy Ranch Inner",
+          "Virbank Complex Outer",
+          "Virbank Complex Inner",
+          "Reversal Mountain Unknown Area",
+          "Nature Sanctuary",
+          "Route 20",
+          "Route 22",
+          "Route 23"
+        ]
+      }
+    },
+    "532": {
+      "black-2": {
+        "locations": [
+          "Relic Passage Castelia Sewers Entrance"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Relic Passage Castelia Sewers Entrance"
+        ]
+      }
+    },
+    "533": {
+      "black-2": {
+        "locations": [
+          "Pinwheel Forest Outside",
+          "Twist Mountain (B1F) (3F)",
+          "Victory Road 2 Unknown Area",
+          "Relic Passage Relic Castle Entrance",
+          "Relic Passage Pwt Entrance"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Pinwheel Forest Outside",
+          "Twist Mountain (B1F) (3F)",
+          "Victory Road 2 Unknown Area",
+          "Relic Passage Relic Castle Entrance",
+          "Relic Passage Pwt Entrance"
+        ]
+      }
+    },
+    "534": {
+      "black-2": {
+        "locations": [
+          "Evolve Gurdurr"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Evolve Gurdurr"
+        ]
+      }
+    },
+    "535": {
+      "black-2": {
+        "locations": [
+          "Pinwheel Forest (outside) (N's Pokémon)"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Pinwheel Forest (outside) (N's Pokémon)"
+        ]
+      }
+    },
+    "536": {
+      "black-2": {
+        "locations": [
+          "Icirrus City",
+          "Pinwheel Forest Outside",
+          "Route 8",
+          "Moor Of Icirrus"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Icirrus City",
+          "Pinwheel Forest Outside",
+          "Route 8",
+          "Moor Of Icirrus"
+        ]
+      }
+    },
+    "537": {
+      "black-2": {
+        "locations": [
+          "Icirrus City",
+          "Pinwheel Forest Outside",
+          "Route 8",
+          "Moor Of Icirrus"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Icirrus City",
+          "Pinwheel Forest Outside",
+          "Route 8",
+          "Moor Of Icirrus"
+        ]
+      }
+    },
+    "538": {
+      "black-2": {
+        "locations": [
+          "Pinwheel Forest Outside",
+          "Route 15",
+          "Route 18",
+          "Victory Road 2 Unknown Area",
+          "Route 23"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Pinwheel Forest Outside",
+          "Route 15",
+          "Route 18",
+          "Victory Road 2 Unknown Area",
+          "Route 23"
+        ]
+      }
+    },
+    "539": {
+      "black-2": {
+        "locations": [
+          "Pinwheel Forest Outside",
+          "Route 15",
+          "Route 18",
+          "Victory Road 2 Unknown Area",
+          "Route 23"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Pinwheel Forest Outside",
+          "Route 15",
+          "Route 18",
+          "Victory Road 2 Unknown Area",
+          "Route 23"
+        ]
+      }
+    },
+    "540": {
+      "black-2": {
+        "locations": [
+          "Route 12",
+          "Route 20"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Route 12",
+          "Route 20"
+        ]
+      }
+    },
+    "541": {
+      "black-2": {
+        "locations": [
+          "Pinwheel Forest Inside",
+          "Route 6",
+          "Lostlorn Forest"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Pinwheel Forest Inside",
+          "Route 6",
+          "Lostlorn Forest"
+        ]
+      }
+    },
+    "542": {
+      "black-2": {
+        "locations": [
+          "Route 6",
+          "Route 12",
+          "Lostlorn Forest",
+          "Lostlorn Forest Hidden Grotto"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Route 6",
+          "Route 12",
+          "Lostlorn Forest",
+          "Lostlorn Forest Hidden Grotto"
+        ]
+      }
+    },
+    "543": {
+      "black-2": {
+        "locations": [
+          "Lostlorn Forest",
+          "Route 20"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Lostlorn Forest",
+          "Route 20"
+        ]
+      }
+    },
+    "544": {
+      "black-2": {
+        "locations": [
+          "Pinwheel Forest Inside",
+          "Lostlorn Forest"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Pinwheel Forest Inside",
+          "Lostlorn Forest"
+        ]
+      }
+    },
+    "545": {
+      "black-2": {
+        "locations": [
+          "Pinwheel Forest Inside"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Pinwheel Forest Inside"
+        ]
+      }
+    },
+    "546": {
+      "black-2": {
+        "locations": [
+          "Pinwheel Forest Inside",
+          "Abundant Shrine",
+          "Lostlorn Forest",
+          "Castelia City",
+          "Victory Road 2 Unknown Area"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Route 4"
+        ]
+      }
+    },
+    "547": {
+      "black-2": {
+        "locations": [
+          "Pinwheel Forest Inside",
+          "Abundant Shrine",
+          "Lostlorn Forest",
+          "Castelia City",
+          "Victory Road 2 Unknown Area"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Evolve Cottonee"
+        ]
+      }
+    },
+    "548": {
+      "white-2": {
+        "locations": [
+          "Pinwheel Forest Inside",
+          "Abundant Shrine",
+          "Lostlorn Forest",
+          "Castelia City",
+          "Victory Road 2 Unknown Area"
+        ]
+      },
+      "black-2": {
+        "locations": [
+          "Route 4"
+        ]
+      }
+    },
+    "549": {
+      "white-2": {
+        "locations": [
+          "Pinwheel Forest Inside",
+          "Abundant Shrine",
+          "Lostlorn Forest",
+          "Castelia City",
+          "Victory Road 2 Unknown Area"
+        ]
+      },
+      "black-2": {
+        "locations": [
+          "Evolve Petilil"
+        ]
+      }
+    },
+    "550": {
+      "black-2": {
+        "locations": [
+          "Striaton City",
+          "Pinwheel Forest Inside",
+          "Dragonspiral Tower Outside",
+          "Giant Chasm",
+          "Village Bridge",
+          "Route 1",
+          "Route 3",
+          "Wellspring Cave",
+          "Route 6",
+          "Route 11",
+          "Route 13",
+          "Route 14",
+          "Abundant Shrine",
+          "Lostlorn Forest",
+          "Undella Town",
+          "Aspertia City",
+          "Humilau City",
+          "Victory Road 2 Unknown Area",
+          "Floccesy Ranch Outer",
+          "Floccesy Ranch Inner",
+          "Relic Passage Relic Castle Entrance",
+          "Clay Tunnel",
+          "Nature Sanctuary",
+          "Route 19",
+          "Route 20",
+          "Route 22",
+          "Route 23"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Striaton City",
+          "Pinwheel Forest Inside",
+          "Dragonspiral Tower Outside",
+          "Giant Chasm",
+          "Village Bridge",
+          "Route 1",
+          "Route 3",
+          "Wellspring Cave",
+          "Route 6",
+          "Route 11",
+          "Route 13",
+          "Route 14",
+          "Abundant Shrine",
+          "Lostlorn Forest",
+          "Undella Town",
+          "Aspertia City",
+          "Humilau City",
+          "Victory Road 2 Unknown Area",
+          "Floccesy Ranch Outer",
+          "Floccesy Ranch Inner",
+          "Relic Passage Relic Castle Entrance",
+          "Clay Tunnel",
+          "Nature Sanctuary",
+          "Route 19",
+          "Route 20",
+          "Route 22",
+          "Route 23"
+        ]
+      }
+    },
+    "551": {
+      "black-2": {
+        "locations": [
+          "Desert Resort Entrance",
+          "Desert Resort",
+          "Relic Castle A",
+          "Relic Castle C",
+          "Route 4"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Desert Resort Entrance",
+          "Desert Resort",
+          "Relic Castle A",
+          "Relic Castle C",
+          "Route 4"
+        ]
+      }
+    },
+    "552": {
+      "black-2": {
+        "locations": [
+          "Relic Castle C"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Relic Castle C"
+        ]
+      }
+    },
+    "553": {
+      "black-2": {
+        "locations": [
+          "Evolve Krokorok"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Evolve Krokorok"
+        ]
+      }
+    },
+    "554": {
+      "black-2": {
+        "locations": [
+          "Desert Resort Entrance",
+          "Desert Resort",
+          "Route 4"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Desert Resort Entrance",
+          "Desert Resort",
+          "Route 4"
+        ]
+      }
+    },
+    "555": {
+      "black-2": {
+        "locations": [
+          "Desert Resort (N's Pokémon)"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Desert Resort (N's Pokémon)"
+        ]
+      }
+    },
+    "556": {
+      "black-2": {
+        "locations": [
+          "Desert Resort Entrance",
+          "Desert Resort"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Desert Resort Entrance",
+          "Desert Resort"
+        ]
+      }
+    },
+    "557": {
+      "black-2": {
+        "locations": [
+          "Desert Resort Entrance",
+          "Desert Resort"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Desert Resort Entrance",
+          "Desert Resort"
+        ]
+      }
+    },
+    "558": {
+      "black-2": {
+        "locations": [
+          "Route 18",
+          "Seaside Cave (1F)"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Route 18",
+          "Seaside Cave (1F)"
+        ]
+      }
+    },
+    "559": {
+      "black-2": {
+        "locations": [
+          "Desert Resort Entrance",
+          "Route 4"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Desert Resort Entrance",
+          "Route 4"
+        ]
+      }
+    },
+    "560": {
+      "black-2": {
+        "locations": [
+          "P2 Laboratory",
+          "Route 1",
+          "Route 15",
+          "Route 18"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "P2 Laboratory",
+          "Route 1",
+          "Route 15",
+          "Route 18"
+        ]
+      }
+    },
+    "561": {
+      "black-2": {
+        "locations": [
+          "Desert Resort"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Desert Resort"
+        ]
+      }
+    },
+    "562": {
+      "black-2": {
+        "locations": [
+          "Relic Castle A",
+          "Relic Castle C"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Relic Castle A",
+          "Relic Castle C"
+        ]
+      }
+    },
+    "563": {
+      "black-2": {
+        "locations": [
+          "Evolve Yamask"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Evolve Yamask"
+        ]
+      }
+    },
+    "564": {
+      "black-2": {
+        "locations": [
+          "Nacrene City Nacrene Museum"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Nacrene City Nacrene Museum"
+        ]
+      }
+    },
+    "565": {
+      "black-2": {
+        "locations": [
+          "Evolve Tirtouga"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Evolve Tirtouga"
+        ]
+      }
+    },
+    "566": {
+      "black-2": {
+        "locations": [
+          "Nacrene City Nacrene Museum"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Nacrene City Nacrene Museum"
+        ]
+      }
+    },
+    "567": {
+      "black-2": {
+        "locations": [
+          "Evolve Archen"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Evolve Archen"
+        ]
+      }
+    },
+    "568": {
+      "black-2": {
+        "locations": [
+          "Route 4",
+          "Route 5",
+          "Route 16"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Route 5",
+          "Route 16"
+        ]
+      }
+    },
+    "569": {
+      "black-2": {
+        "locations": [
+          "Route 9",
+          "Route 9 Hidden Grotto"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Route 9",
+          "Route 9 Hidden Grotto"
+        ]
+      }
+    },
+    "570": {
+      "black-2": {
+        "locations": [
+          "Driftveil City"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Driftveil City"
+        ]
+      }
+    },
+    "571": {
+      "black-2": {
+        "locations": [
+          "Evolve N's Zorua"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Evolve N's Zorua"
+        ]
+      }
+    },
+    "572": {
+      "white-2": {
+        "locations": [
+          "Route 4",
+          "Route 5",
+          "Route 9",
+          "Route 16",
+          "Route 5 Hidden Grotto"
+        ]
+      },
+      "black-2": {
+        "locations": [
+          "Route 5",
+          "Route 9",
+          "Route 16",
+          "Route 5 Hidden Grotto"
+        ]
+      }
+    },
+    "573": {
+      "black-2": {
+        "locations": [
+          "Route 5",
+          "Route 9",
+          "Route 16"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Route 5",
+          "Route 9",
+          "Route 16"
+        ]
+      }
+    },
+    "574": {
+      "black-2": {
+        "locations": [
+          "Route 5",
+          "Route 16",
+          "Strange House (1F)",
+          "Strange House (B1F)"
+        ]
+      }
+    },
+    "575": {
+      "black-2": {
+        "locations": [
+          "Route 9",
+          "Strange House (1F)",
+          "Strange House (B1F)"
+        ]
+      }
+    },
+    "576": {
+      "black-2": {
+        "locations": [
+          "Route 9"
+        ]
+      }
+    },
+    "577": {
+      "white-2": {
+        "locations": [
+          "Route 5",
+          "Route 16",
+          "Strange House (1F)",
+          "Strange House (B1F)"
+        ]
+      }
+    },
+    "578": {
+      "white-2": {
+        "locations": [
+          "Route 9",
+          "Strange House (1F)",
+          "Strange House (B1F)"
+        ]
+      }
+    },
+    "579": {
+      "white-2": {
+        "locations": [
+          "Route 9"
+        ]
+      }
+    },
+    "580": {
+      "black-2": {
+        "locations": [
+          "Driftveil Drawbridge"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Driftveil Drawbridge"
+        ]
+      }
+    },
+    "581": {
+      "black-2": {
+        "locations": [
+          "Marvelous Bridge"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Marvelous Bridge"
+        ]
+      }
+    },
+    "582": {
+      "black-2": {
+        "locations": [
+          "Breed Vanillish or Vanilluxe"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Breed Vanillish or Vanilluxe"
+        ]
+      }
+    },
+    "583": {
+      "black-2": {
+        "locations": [
+          "Dragonspiral Tower Entrance",
+          "Dragonspiral Tower Outside",
+          "Giant Chasm Outside",
+          "Giant Chasm"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Dragonspiral Tower Entrance",
+          "Dragonspiral Tower Outside",
+          "Giant Chasm Outside",
+          "Giant Chasm"
+        ]
+      }
+    },
+    "584": {
+      "black-2": {
+        "locations": [
+          "Dragonspiral Tower Entrance",
+          "Dragonspiral Tower Outside",
+          "Giant Chasm Outside"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Dragonspiral Tower Entrance",
+          "Dragonspiral Tower Outside",
+          "Giant Chasm Outside"
+        ]
+      }
+    },
+    "585": {
+      "black-2": {
+        "locations": [
+          "Route 6",
+          "Route 7",
+          "Route 6 Weather Institute"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Route 6",
+          "Route 7",
+          "Route 6 Weather Institute"
+        ]
+      }
+    },
+    "586": {
+      "black-2": {
+        "locations": [
+          "Dragonspiral Tower Entrance",
+          "Dragonspiral Tower Outside"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Dragonspiral Tower Entrance",
+          "Dragonspiral Tower Outside"
+        ]
+      }
+    },
+    "587": {
+      "black-2": {
+        "locations": [
+          "Dragonspiral Tower Entrance",
+          "Dragonspiral Tower Outside",
+          "Village Bridge",
+          "Route 5",
+          "Route 6",
+          "Route 7",
+          "Route 9",
+          "Route 11",
+          "Route 12",
+          "Route 13",
+          "Route 14",
+          "Abundant Shrine",
+          "Route 15",
+          "Route 16",
+          "Lostlorn Forest",
+          "Route 22",
+          "Route 23"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Dragonspiral Tower Entrance",
+          "Dragonspiral Tower Outside",
+          "Village Bridge",
+          "Route 5",
+          "Route 6",
+          "Route 7",
+          "Route 9",
+          "Route 11",
+          "Route 12",
+          "Route 13",
+          "Route 14",
+          "Abundant Shrine",
+          "Route 15",
+          "Route 16",
+          "Lostlorn Forest",
+          "Route 22",
+          "Route 23"
+        ]
+      }
+    },
+    "588": {
+      "black-2": {
+        "locations": [
+          "Icirrus City",
+          "Route 6",
+          "Route 8",
+          "Moor Of Icirrus",
+          "Route 11"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Icirrus City",
+          "Route 6",
+          "Route 8",
+          "Moor Of Icirrus",
+          "Route 11"
+        ]
+      }
+    },
+    "589": {
+      "black-2": {
+        "locations": [
+          "Evolve Karrablast"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Evolve Karrablast"
+        ]
+      }
+    },
+    "590": {
+      "black-2": {
+        "locations": [
+          "Route 6",
+          "Route 7",
+          "Route 5 Hidden Grotto",
+          "Route 6 Hidden Grotto Near Pokemon Breeder",
+          "Route 6 Hidden Grotto Mistralton Cave",
+          "Route 13 Hidden Grotto Giant Chasm",
+          "Route 13 Hidden Grotto Stairs"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Route 6",
+          "Route 7",
+          "Route 5 Hidden Grotto",
+          "Route 6 Hidden Grotto Near Pokemon Breeder",
+          "Route 6 Hidden Grotto Mistralton Cave",
+          "Route 13 Hidden Grotto Giant Chasm",
+          "Route 13 Hidden Grotto Stairs"
+        ]
+      }
+    },
+    "591": {
+      "black-2": {
+        "locations": [
+          "Route 11",
+          "Route 22",
+          "Route 23",
+          "Route 22 Hidden Grotto",
+          "Abundant Shrine Hidden Grotto Near Youngster",
+          "Abundant Shrine Hidden Grotto Shrine",
+          "Pinwheel Forest Hidden Grotto Inner"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Route 11",
+          "Route 22",
+          "Route 23",
+          "Route 22 Hidden Grotto",
+          "Abundant Shrine Hidden Grotto Near Youngster",
+          "Abundant Shrine Hidden Grotto Shrine",
+          "Pinwheel Forest Hidden Grotto Inner"
+        ]
+      }
+    },
+    "592": {
+      "black-2": {
+        "locations": [
+          "P2 Laboratory",
+          "Undella Bay",
+          "Route 4",
+          "Route 13",
+          "Route 18",
+          "Undella Town",
+          "Route 17",
+          "Virbank City",
+          "Humilau City",
+          "Virbank Complex Outer",
+          "Seaside Cave (1F)",
+          "Route 21"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "P2 Laboratory",
+          "Undella Bay",
+          "Route 4",
+          "Route 13",
+          "Route 18",
+          "Undella Town",
+          "Route 17",
+          "Virbank City",
+          "Humilau City",
+          "Virbank Complex Outer",
+          "Seaside Cave (1F)",
+          "Route 21"
+        ]
+      }
+    },
+    "593": {
+      "black-2": {
+        "locations": [
+          "P2 Laboratory",
+          "Undella Bay",
+          "Route 4",
+          "Route 13",
+          "Route 18",
+          "Undella Town",
+          "Route 17",
+          "Virbank City",
+          "Humilau City",
+          "Virbank Complex Outer",
+          "Seaside Cave (1F)",
+          "Route 21"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "P2 Laboratory",
+          "Undella Bay",
+          "Route 4",
+          "Route 13",
+          "Route 18",
+          "Undella Town",
+          "Route 17",
+          "Virbank City",
+          "Humilau City",
+          "Virbank Complex Outer",
+          "Seaside Cave (1F)",
+          "Route 21"
+        ]
+      }
+    },
+    "594": {
+      "black-2": {
+        "locations": [
+          "P2 Laboratory",
+          "Route 4",
+          "Route 18",
+          "Route 17",
+          "Virbank City",
+          "Virbank Complex Outer",
+          "Route 21"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "P2 Laboratory",
+          "Route 4",
+          "Route 18",
+          "Route 17",
+          "Virbank City",
+          "Virbank Complex Outer",
+          "Route 21"
+        ]
+      }
+    },
+    "595": {
+      "black-2": {
+        "locations": [
+          "Chargestone Cave (1F)",
+          "Chargestone Cave (B1F)",
+          "Chargestone Cave (B2F)"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Chargestone Cave (1F)",
+          "Chargestone Cave (B1F)",
+          "Chargestone Cave (B2F)"
+        ]
+      }
+    },
+    "596": {
+      "black-2": {
+        "locations": [
+          "Evolve Joltik"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Evolve Joltik"
+        ]
+      }
+    },
+    "597": {
+      "black-2": {
+        "locations": [
+          "Chargestone Cave (1F)",
+          "Chargestone Cave (B1F)",
+          "Chargestone Cave (B2F)"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Chargestone Cave (1F)",
+          "Chargestone Cave (B1F)",
+          "Chargestone Cave (B2F)"
+        ]
+      }
+    },
+    "598": {
+      "black-2": {
+        "locations": [
+          "Evolve Ferroseed"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Evolve Ferroseed"
+        ]
+      }
+    },
+    "599": {
+      "black-2": {
+        "locations": [
+          "Chargestone Cave (1F)",
+          "Chargestone Cave (B1F)",
+          "Chargestone Cave (B2F)"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Chargestone Cave (1F)",
+          "Chargestone Cave (B1F)",
+          "Chargestone Cave (B2F)"
+        ]
+      }
+    },
+    "600": {
+      "black-2": {
+        "locations": [
+          "P2 Laboratory"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "P2 Laboratory"
+        ]
+      }
+    },
+    "601": {
+      "black-2": {
+        "locations": [
+          "P2 Laboratory"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "P2 Laboratory"
+        ]
+      }
+    },
+    "602": {
+      "black-2": {
+        "locations": [
+          "Chargestone Cave (1F)",
+          "Chargestone Cave (B1F)",
+          "Chargestone Cave (B2F)",
+          "Seaside Cave (1F)"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Chargestone Cave (1F)",
+          "Chargestone Cave (B1F)",
+          "Chargestone Cave (B2F)",
+          "Seaside Cave (1F)"
+        ]
+      }
+    },
+    "603": {
+      "black-2": {
+        "locations": [
+          "Seaside Cave (B1F)"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Seaside Cave (B1F)"
+        ]
+      }
+    },
+    "604": {
+      "black-2": {
+        "locations": [
+          "Evolve Eelektrik"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Evolve Eelektrik"
+        ]
+      }
+    },
+    "605": {
+      "black-2": {
+        "locations": [
+          "Celestial Tower (3F)",
+          "Celestial Tower (4F)",
+          "Celestial Tower (5F)"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Celestial Tower (3F)",
+          "Celestial Tower (4F)",
+          "Celestial Tower (5F)"
+        ]
+      }
+    },
+    "606": {
+      "black-2": {
+        "locations": [
+          "Evolve Elgyem"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Evolve Elgyem"
+        ]
+      }
+    },
+    "607": {
+      "black-2": {
+        "locations": [
+          "Celestial Tower (2F)",
+          "Celestial Tower (3F)",
+          "Celestial Tower (4F)",
+          "Celestial Tower (5F)",
+          "Strange House (1F)",
+          "Strange House (B1F)"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Celestial Tower (2F)",
+          "Celestial Tower (3F)",
+          "Celestial Tower (4F)",
+          "Celestial Tower (5F)",
+          "Strange House (1F)",
+          "Strange House (B1F)"
+        ]
+      }
+    },
+    "608": {
+      "black-2": {
+        "locations": [
+          "Evolve Litwick"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Evolve Litwick"
+        ]
+      }
+    },
+    "609": {
+      "black-2": {
+        "locations": [
+          "Evolve Lampent"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Evolve Lampent"
+        ]
+      }
+    },
+    "610": {
+      "black-2": {
+        "locations": [
+          "Mistralton Cave",
+          "Guidance Chamber"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Mistralton Cave",
+          "Guidance Chamber"
+        ]
+      }
+    },
+    "611": {
+      "black-2": {
+        "locations": [
+          "Nature Sanctuary"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Nature Sanctuary"
+        ]
+      }
+    },
+    "612": {
+      "black-2": {
+        "locations": [
+          "Nature Sanctuary"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Nature Sanctuary"
+        ]
+      }
+    },
+    "613": {
+      "black-2": {
+        "locations": [
+          "Route 7",
+          "Route 7 Hidden Grotto"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Route 7",
+          "Route 7 Hidden Grotto"
+        ]
+      }
+    },
+    "614": {
+      "black-2": {
+        "locations": [
+          "Twist Mountain (B1F) (3F)",
+          "Dragonspiral Tower Entrance",
+          "Dragonspiral Tower Outside"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Twist Mountain (B1F) (3F)",
+          "Dragonspiral Tower Entrance",
+          "Dragonspiral Tower Outside"
+        ]
+      }
+    },
+    "615": {
+      "black-2": {
+        "locations": [
+          "Twist Mountain (B1F) (3F)"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Twist Mountain (B1F) (3F)"
+        ]
+      }
+    },
+    "616": {
+      "black-2": {
+        "locations": [
+          "Icirrus City",
+          "Route 6",
+          "Route 8",
+          "Moor Of Icirrus",
+          "Route 11"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Icirrus City",
+          "Route 6",
+          "Route 8",
+          "Moor Of Icirrus",
+          "Route 11"
+        ]
+      }
+    },
+    "617": {
+      "black-2": {
+        "locations": [
+          "Evolve Shelmet"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Evolve Shelmet"
+        ]
+      }
+    },
+    "618": {
+      "black-2": {
+        "locations": [
+          "Icirrus City",
+          "Route 8",
+          "Moor Of Icirrus"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Icirrus City",
+          "Route 8",
+          "Moor Of Icirrus"
+        ]
+      }
+    },
+    "619": {
+      "black-2": {
+        "locations": [
+          "Dragonspiral Tower Entrance",
+          "Route 14",
+          "Route 22",
+          "Route 23",
+          "Route 22 Hidden Grotto"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Dragonspiral Tower Entrance",
+          "Route 14",
+          "Route 22",
+          "Route 23",
+          "Route 22 Hidden Grotto"
+        ]
+      }
+    },
+    "620": {
+      "black-2": {
+        "locations": [
+          "Dragonspiral Tower Entrance",
+          "Dragonspiral Tower Outside",
+          "Dragonspiral Tower (1F)",
+          "Route 23"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Dragonspiral Tower Entrance",
+          "Dragonspiral Tower Outside",
+          "Dragonspiral Tower (1F)",
+          "Route 23"
+        ]
+      }
+    },
+    "621": {
+      "black-2": {
+        "locations": [
+          "Dragonspiral Tower Entrance",
+          "Dragonspiral Tower Outside",
+          "Dragonspiral Tower (1F)",
+          "Victory Road 2 Unknown Area"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Dragonspiral Tower Entrance",
+          "Dragonspiral Tower Outside",
+          "Dragonspiral Tower (1F)",
+          "Victory Road 2 Unknown Area"
+        ]
+      }
+    },
+    "622": {
+      "black-2": {
+        "locations": [
+          "Breed Golurk"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Breed Golurk"
+        ]
+      }
+    },
+    "623": {
+      "black-2": {
+        "locations": [
+          "Dragonspiral Tower (1F)",
+          "Dragonspiral Tower (2F)",
+          "Victory Road 2 Unknown Area"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Dragonspiral Tower (1F)",
+          "Dragonspiral Tower (2F)",
+          "Victory Road 2 Unknown Area"
+        ]
+      }
+    },
+    "624": {
+      "black-2": {
+        "locations": [
+          "Route 9"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Route 9"
+        ]
+      }
+    },
+    "625": {
+      "black-2": {
+        "locations": [
+          "Evolve Pawniard"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Evolve Pawniard"
+        ]
+      }
+    },
+    "626": {
+      "black-2": {
+        "locations": [
+          "Route 23",
+          "Route 9 Hidden Grotto"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Route 23",
+          "Route 9 Hidden Grotto"
+        ]
+      }
+    },
+    "627": {
+      "white-2": {
+        "locations": [
+          "Route 23"
+        ]
+      }
+    },
+    "628": {
+      "white-2": {
+        "locations": [
+          "Route 4"
+        ]
+      }
+    },
+    "629": {
+      "black-2": {
+        "locations": [
+          "Route 23"
+        ]
+      }
+    },
+    "630": {
+      "black-2": {
+        "locations": [
+          "Route 4"
+        ]
+      }
+    },
+    "631": {
+      "black-2": {
+        "locations": [
+          "Twist Mountain (B1F) (3F)"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Twist Mountain (B1F) (3F)"
+        ]
+      }
+    },
+    "632": {
+      "black-2": {
+        "locations": [
+          "Twist Mountain (B1F) (3F)",
+          "Clay Tunnel",
+          "Underground Ruins",
+          "Rocky Mountain Room",
+          "Glacier Room",
+          "Iron Room"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Twist Mountain (B1F) (3F)",
+          "Clay Tunnel",
+          "Underground Ruins",
+          "Rocky Mountain Room",
+          "Glacier Room",
+          "Iron Room"
+        ]
+      }
+    },
+    "633": {
+      "black-2": {
+        "locations": [
+          "Breed Zweilous or Hydreigon"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Breed Zweilous or Hydreigon"
+        ]
+      }
+    },
+    "634": {
+      "black-2": {
+        "locations": [
+          "Victory Road 2 Unknown Area"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Victory Road 2 Unknown Area"
+        ]
+      }
+    },
+    "635": {
+      "black-2": {
+        "locations": [
+          "Evolve Zweilous"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Evolve Zweilous"
+        ]
+      }
+    },
+    "636": {
+      "black-2": {
+        "locations": [
+          "Breed Volcarona"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Breed Volcarona"
+        ]
+      }
+    },
+    "637": {
+      "black-2": {
+        "locations": [
+          "Relic Castle D"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Relic Castle D"
+        ]
+      }
+    },
+    "638": {
+      "black-2": {
+        "locations": [
+          "Route 13"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Route 13"
+        ]
+      }
+    },
+    "639": {
+      "black-2": {
+        "locations": [
+          "Route 22"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Route 22"
+        ]
+      }
+    },
+    "640": {
+      "black-2": {
+        "locations": [
+          "Route 11"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Route 11"
+        ]
+      }
+    },
+    "641": {
+      "black-2": {
+        "locations": [
+          "Transfer from Dream Radar (Therian Forme)"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Transfer from Dream Radar (Therian Forme)"
+        ]
+      }
+    },
+    "642": {
+      "black-2": {
+        "locations": [
+          "Transfer from Dream Radar (Therian Forme)"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Transfer from Dream Radar (Therian Forme)"
+        ]
+      }
+    },
+    "643": {
+      "white-2": {
+        "locations": [
+          "Dragonspiral Tower (7F)"
+        ]
+      }
+    },
+    "644": {
+      "black-2": {
+        "locations": [
+          "Dragonspiral Tower (7F)"
+        ]
+      }
+    },
+    "645": {
+      "black-2": {
+        "locations": [
+          "Transfer from Dream Radar (Therian Forme)"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Transfer from Dream Radar (Therian Forme)"
+        ]
+      }
+    },
+    "646": {
+      "black-2": {
+        "locations": [
+          "Giant Chasm Forest Cave"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Giant Chasm Forest Cave"
+        ]
+      }
+    },
+    "647": {
+      "black-2": {
+        "locations": [
+          "Event"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Event"
+        ]
+      }
+    },
+    "648": {
+      "black-2": {
+        "locations": [
+          "Event"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Event"
+        ]
+      }
+    },
+    "649": {
+      "black-2": {
+        "locations": [
+          "Event"
+        ]
+      },
+      "white-2": {
+        "locations": [
+          "Event"
+        ]
+      }
+    }
+  }
+}

@@ -1,4 +1,4 @@
-import { buildActiveDexSections, loadSpeciesNames } from "./api.js";
+import { buildActiveDexSections, loadSpeciesNames } from "./db.js";
 
 import {
   loadSettings,
@@ -33,6 +33,8 @@ import {
   registerBoxControls,
   applySpriteStyleToCells,
 } from "./ui/dom-render.js";
+
+import { initPwa } from "./pwa.js";
 
 /**
  * Array of Pokémon species IDs in display order for the active game and enabled segments.
@@ -345,37 +347,27 @@ export function setGameTitles() {
  * Automatically executes upon script load to initialize the application and
  * gracefully handles/displays top-level startup errors in the UI if initialization fails.
  */
-(async function bootstrapLivingDex() {
-  try {
-    await initializeLivingDexApp();
-  } catch (err) {
-    console.error("LivingDex startup failed:", err);
-    const app = document.getElementById("app");
-    if (app) {
-      app.innerHTML = `
-        <section class="box app-empty-state" role="status" aria-live="polite">
-          <h2>LivingDex could not finish loading</h2>
-          <p>Please refresh the page or check your connection, then try again.</p>
-        </section>
-      `;
+if (typeof window !== "undefined" && typeof document !== "undefined") {
+  (async function bootstrapLivingDex() {
+    try {
+      await initializeLivingDexApp();
+    } catch (err) {
+      console.error("LivingDex startup failed:", err);
+      const app = document.getElementById("app");
+      if (app) {
+        app.innerHTML = `
+          <section class="box app-empty-state" role="status" aria-live="polite">
+            <h2>LivingDex could not finish loading</h2>
+            <p>Please refresh the page or check your connection, then try again.</p>
+          </section>
+        `;
+      }
+      showToast("LivingDex startup encountered a loading problem.", "warning");
     }
-    showToast("LivingDex startup encountered a loading problem.", "warning");
-  }
-})();
+  })();
 
-// Register Service Worker for PWA installability and offline support
-if ("serviceWorker" in navigator) {
+  // Initialize PWA Service Worker & update lifecycle handlers
   window.addEventListener("load", () => {
-    navigator.serviceWorker
-      .register("/sw.js")
-      .then((registration) => {
-        console.log(
-          "ServiceWorker registration successful with scope: ",
-          registration.scope,
-        );
-      })
-      .catch((err) => {
-        console.log("ServiceWorker registration failed: ", err);
-      });
+    initPwa();
   });
 }

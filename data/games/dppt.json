@@ -1,0 +1,7551 @@
+{
+  "gameId": "dppt",
+  "title": "Diamond / Pearl / Platinum",
+  "group": "gen4",
+  "generation": 4,
+  "versions": [
+    "diamond",
+    "pearl",
+    "platinum"
+  ],
+  "sections": [
+    {
+      "id": "sinnoh",
+      "title": "Sinnoh Pokédex",
+      "type": "base",
+      "optional": false,
+      "defaultEnabled": false,
+      "startIndex": 1,
+      "entries": [
+        {
+          "speciesId": 387,
+          "formId": 387,
+          "dexNumber": 1
+        },
+        {
+          "speciesId": 388,
+          "formId": 388,
+          "dexNumber": 2
+        },
+        {
+          "speciesId": 389,
+          "formId": 389,
+          "dexNumber": 3
+        },
+        {
+          "speciesId": 390,
+          "formId": 390,
+          "dexNumber": 4
+        },
+        {
+          "speciesId": 391,
+          "formId": 391,
+          "dexNumber": 5
+        },
+        {
+          "speciesId": 392,
+          "formId": 392,
+          "dexNumber": 6
+        },
+        {
+          "speciesId": 393,
+          "formId": 393,
+          "dexNumber": 7
+        },
+        {
+          "speciesId": 394,
+          "formId": 394,
+          "dexNumber": 8
+        },
+        {
+          "speciesId": 395,
+          "formId": 395,
+          "dexNumber": 9
+        },
+        {
+          "speciesId": 396,
+          "formId": 396,
+          "dexNumber": 10
+        },
+        {
+          "speciesId": 397,
+          "formId": 397,
+          "dexNumber": 11
+        },
+        {
+          "speciesId": 398,
+          "formId": 398,
+          "dexNumber": 12
+        },
+        {
+          "speciesId": 399,
+          "formId": 399,
+          "dexNumber": 13
+        },
+        {
+          "speciesId": 400,
+          "formId": 400,
+          "dexNumber": 14
+        },
+        {
+          "speciesId": 401,
+          "formId": 401,
+          "dexNumber": 15
+        },
+        {
+          "speciesId": 402,
+          "formId": 402,
+          "dexNumber": 16
+        },
+        {
+          "speciesId": 403,
+          "formId": 403,
+          "dexNumber": 17
+        },
+        {
+          "speciesId": 404,
+          "formId": 404,
+          "dexNumber": 18
+        },
+        {
+          "speciesId": 405,
+          "formId": 405,
+          "dexNumber": 19
+        },
+        {
+          "speciesId": 63,
+          "formId": 63,
+          "dexNumber": 20
+        },
+        {
+          "speciesId": 64,
+          "formId": 64,
+          "dexNumber": 21
+        },
+        {
+          "speciesId": 65,
+          "formId": 65,
+          "dexNumber": 22
+        },
+        {
+          "speciesId": 129,
+          "formId": 129,
+          "dexNumber": 23
+        },
+        {
+          "speciesId": 130,
+          "formId": 130,
+          "dexNumber": 24
+        },
+        {
+          "speciesId": 406,
+          "formId": 406,
+          "dexNumber": 25
+        },
+        {
+          "speciesId": 315,
+          "formId": 315,
+          "dexNumber": 26
+        },
+        {
+          "speciesId": 407,
+          "formId": 407,
+          "dexNumber": 27
+        },
+        {
+          "speciesId": 41,
+          "formId": 41,
+          "dexNumber": 28
+        },
+        {
+          "speciesId": 42,
+          "formId": 42,
+          "dexNumber": 29
+        },
+        {
+          "speciesId": 169,
+          "formId": 169,
+          "dexNumber": 30
+        },
+        {
+          "speciesId": 74,
+          "formId": 74,
+          "dexNumber": 31
+        },
+        {
+          "speciesId": 75,
+          "formId": 75,
+          "dexNumber": 32
+        },
+        {
+          "speciesId": 76,
+          "formId": 76,
+          "dexNumber": 33
+        },
+        {
+          "speciesId": 95,
+          "formId": 95,
+          "dexNumber": 34
+        },
+        {
+          "speciesId": 208,
+          "formId": 208,
+          "dexNumber": 35
+        },
+        {
+          "speciesId": 408,
+          "formId": 408,
+          "dexNumber": 36
+        },
+        {
+          "speciesId": 409,
+          "formId": 409,
+          "dexNumber": 37
+        },
+        {
+          "speciesId": 410,
+          "formId": 410,
+          "dexNumber": 38
+        },
+        {
+          "speciesId": 411,
+          "formId": 411,
+          "dexNumber": 39
+        },
+        {
+          "speciesId": 66,
+          "formId": 66,
+          "dexNumber": 40
+        },
+        {
+          "speciesId": 67,
+          "formId": 67,
+          "dexNumber": 41
+        },
+        {
+          "speciesId": 68,
+          "formId": 68,
+          "dexNumber": 42
+        },
+        {
+          "speciesId": 54,
+          "formId": 54,
+          "dexNumber": 43
+        },
+        {
+          "speciesId": 55,
+          "formId": 55,
+          "dexNumber": 44
+        },
+        {
+          "speciesId": 412,
+          "formId": 412,
+          "dexNumber": 45
+        },
+        {
+          "speciesId": 413,
+          "formId": 413,
+          "dexNumber": 46
+        },
+        {
+          "speciesId": 414,
+          "formId": 414,
+          "dexNumber": 47
+        },
+        {
+          "speciesId": 265,
+          "formId": 265,
+          "dexNumber": 48
+        },
+        {
+          "speciesId": 266,
+          "formId": 266,
+          "dexNumber": 49
+        },
+        {
+          "speciesId": 267,
+          "formId": 267,
+          "dexNumber": 50
+        },
+        {
+          "speciesId": 268,
+          "formId": 268,
+          "dexNumber": 51
+        },
+        {
+          "speciesId": 269,
+          "formId": 269,
+          "dexNumber": 52
+        },
+        {
+          "speciesId": 415,
+          "formId": 415,
+          "dexNumber": 53
+        },
+        {
+          "speciesId": 416,
+          "formId": 416,
+          "dexNumber": 54
+        },
+        {
+          "speciesId": 417,
+          "formId": 417,
+          "dexNumber": 55
+        },
+        {
+          "speciesId": 418,
+          "formId": 418,
+          "dexNumber": 56
+        },
+        {
+          "speciesId": 419,
+          "formId": 419,
+          "dexNumber": 57
+        },
+        {
+          "speciesId": 420,
+          "formId": 420,
+          "dexNumber": 58
+        },
+        {
+          "speciesId": 421,
+          "formId": 421,
+          "dexNumber": 59
+        },
+        {
+          "speciesId": 422,
+          "formId": 422,
+          "dexNumber": 60
+        },
+        {
+          "speciesId": 423,
+          "formId": 423,
+          "dexNumber": 61
+        },
+        {
+          "speciesId": 214,
+          "formId": 214,
+          "dexNumber": 62
+        },
+        {
+          "speciesId": 190,
+          "formId": 190,
+          "dexNumber": 63
+        },
+        {
+          "speciesId": 424,
+          "formId": 424,
+          "dexNumber": 64
+        },
+        {
+          "speciesId": 425,
+          "formId": 425,
+          "dexNumber": 65
+        },
+        {
+          "speciesId": 426,
+          "formId": 426,
+          "dexNumber": 66
+        },
+        {
+          "speciesId": 427,
+          "formId": 427,
+          "dexNumber": 67
+        },
+        {
+          "speciesId": 428,
+          "formId": 428,
+          "dexNumber": 68
+        },
+        {
+          "speciesId": 92,
+          "formId": 92,
+          "dexNumber": 69
+        },
+        {
+          "speciesId": 93,
+          "formId": 93,
+          "dexNumber": 70
+        },
+        {
+          "speciesId": 94,
+          "formId": 94,
+          "dexNumber": 71
+        },
+        {
+          "speciesId": 200,
+          "formId": 200,
+          "dexNumber": 72
+        },
+        {
+          "speciesId": 429,
+          "formId": 429,
+          "dexNumber": 73
+        },
+        {
+          "speciesId": 198,
+          "formId": 198,
+          "dexNumber": 74
+        },
+        {
+          "speciesId": 430,
+          "formId": 430,
+          "dexNumber": 75
+        },
+        {
+          "speciesId": 431,
+          "formId": 431,
+          "dexNumber": 76
+        },
+        {
+          "speciesId": 432,
+          "formId": 432,
+          "dexNumber": 77
+        },
+        {
+          "speciesId": 118,
+          "formId": 118,
+          "dexNumber": 78
+        },
+        {
+          "speciesId": 119,
+          "formId": 119,
+          "dexNumber": 79
+        },
+        {
+          "speciesId": 339,
+          "formId": 339,
+          "dexNumber": 80
+        },
+        {
+          "speciesId": 340,
+          "formId": 340,
+          "dexNumber": 81
+        },
+        {
+          "speciesId": 433,
+          "formId": 433,
+          "dexNumber": 82
+        },
+        {
+          "speciesId": 358,
+          "formId": 358,
+          "dexNumber": 83
+        },
+        {
+          "speciesId": 434,
+          "formId": 434,
+          "dexNumber": 84
+        },
+        {
+          "speciesId": 435,
+          "formId": 435,
+          "dexNumber": 85
+        },
+        {
+          "speciesId": 307,
+          "formId": 307,
+          "dexNumber": 86
+        },
+        {
+          "speciesId": 308,
+          "formId": 308,
+          "dexNumber": 87
+        },
+        {
+          "speciesId": 436,
+          "formId": 436,
+          "dexNumber": 88
+        },
+        {
+          "speciesId": 437,
+          "formId": 437,
+          "dexNumber": 89
+        },
+        {
+          "speciesId": 77,
+          "formId": 77,
+          "dexNumber": 90
+        },
+        {
+          "speciesId": 78,
+          "formId": 78,
+          "dexNumber": 91
+        },
+        {
+          "speciesId": 438,
+          "formId": 438,
+          "dexNumber": 92
+        },
+        {
+          "speciesId": 185,
+          "formId": 185,
+          "dexNumber": 93
+        },
+        {
+          "speciesId": 439,
+          "formId": 439,
+          "dexNumber": 94
+        },
+        {
+          "speciesId": 122,
+          "formId": 122,
+          "dexNumber": 95
+        },
+        {
+          "speciesId": 440,
+          "formId": 440,
+          "dexNumber": 96
+        },
+        {
+          "speciesId": 113,
+          "formId": 113,
+          "dexNumber": 97
+        },
+        {
+          "speciesId": 242,
+          "formId": 242,
+          "dexNumber": 98
+        },
+        {
+          "speciesId": 173,
+          "formId": 173,
+          "dexNumber": 99
+        },
+        {
+          "speciesId": 35,
+          "formId": 35,
+          "dexNumber": 100
+        },
+        {
+          "speciesId": 36,
+          "formId": 36,
+          "dexNumber": 101
+        },
+        {
+          "speciesId": 441,
+          "formId": 441,
+          "dexNumber": 102
+        },
+        {
+          "speciesId": 172,
+          "formId": 172,
+          "dexNumber": 103
+        },
+        {
+          "speciesId": 25,
+          "formId": 25,
+          "dexNumber": 104
+        },
+        {
+          "speciesId": 26,
+          "formId": 26,
+          "dexNumber": 105
+        },
+        {
+          "speciesId": 163,
+          "formId": 163,
+          "dexNumber": 106
+        },
+        {
+          "speciesId": 164,
+          "formId": 164,
+          "dexNumber": 107
+        },
+        {
+          "speciesId": 442,
+          "formId": 442,
+          "dexNumber": 108
+        },
+        {
+          "speciesId": 443,
+          "formId": 443,
+          "dexNumber": 109
+        },
+        {
+          "speciesId": 444,
+          "formId": 444,
+          "dexNumber": 110
+        },
+        {
+          "speciesId": 445,
+          "formId": 445,
+          "dexNumber": 111
+        },
+        {
+          "speciesId": 446,
+          "formId": 446,
+          "dexNumber": 112
+        },
+        {
+          "speciesId": 143,
+          "formId": 143,
+          "dexNumber": 113
+        },
+        {
+          "speciesId": 201,
+          "formId": 201,
+          "dexNumber": 114
+        },
+        {
+          "speciesId": 447,
+          "formId": 447,
+          "dexNumber": 115
+        },
+        {
+          "speciesId": 448,
+          "formId": 448,
+          "dexNumber": 116
+        },
+        {
+          "speciesId": 194,
+          "formId": 194,
+          "dexNumber": 117
+        },
+        {
+          "speciesId": 195,
+          "formId": 195,
+          "dexNumber": 118
+        },
+        {
+          "speciesId": 278,
+          "formId": 278,
+          "dexNumber": 119
+        },
+        {
+          "speciesId": 279,
+          "formId": 279,
+          "dexNumber": 120
+        },
+        {
+          "speciesId": 203,
+          "formId": 203,
+          "dexNumber": 121
+        },
+        {
+          "speciesId": 449,
+          "formId": 449,
+          "dexNumber": 122
+        },
+        {
+          "speciesId": 450,
+          "formId": 450,
+          "dexNumber": 123
+        },
+        {
+          "speciesId": 298,
+          "formId": 298,
+          "dexNumber": 124
+        },
+        {
+          "speciesId": 183,
+          "formId": 183,
+          "dexNumber": 125
+        },
+        {
+          "speciesId": 184,
+          "formId": 184,
+          "dexNumber": 126
+        },
+        {
+          "speciesId": 451,
+          "formId": 451,
+          "dexNumber": 127
+        },
+        {
+          "speciesId": 452,
+          "formId": 452,
+          "dexNumber": 128
+        },
+        {
+          "speciesId": 453,
+          "formId": 453,
+          "dexNumber": 129
+        },
+        {
+          "speciesId": 454,
+          "formId": 454,
+          "dexNumber": 130
+        },
+        {
+          "speciesId": 455,
+          "formId": 455,
+          "dexNumber": 131
+        },
+        {
+          "speciesId": 223,
+          "formId": 223,
+          "dexNumber": 132
+        },
+        {
+          "speciesId": 224,
+          "formId": 224,
+          "dexNumber": 133
+        },
+        {
+          "speciesId": 456,
+          "formId": 456,
+          "dexNumber": 134
+        },
+        {
+          "speciesId": 457,
+          "formId": 457,
+          "dexNumber": 135
+        },
+        {
+          "speciesId": 72,
+          "formId": 72,
+          "dexNumber": 136
+        },
+        {
+          "speciesId": 73,
+          "formId": 73,
+          "dexNumber": 137
+        },
+        {
+          "speciesId": 349,
+          "formId": 349,
+          "dexNumber": 138
+        },
+        {
+          "speciesId": 350,
+          "formId": 350,
+          "dexNumber": 139
+        },
+        {
+          "speciesId": 458,
+          "formId": 458,
+          "dexNumber": 140
+        },
+        {
+          "speciesId": 226,
+          "formId": 226,
+          "dexNumber": 141
+        },
+        {
+          "speciesId": 459,
+          "formId": 459,
+          "dexNumber": 142
+        },
+        {
+          "speciesId": 460,
+          "formId": 460,
+          "dexNumber": 143
+        },
+        {
+          "speciesId": 215,
+          "formId": 215,
+          "dexNumber": 144
+        },
+        {
+          "speciesId": 461,
+          "formId": 461,
+          "dexNumber": 145
+        },
+        {
+          "speciesId": 480,
+          "formId": 480,
+          "dexNumber": 146
+        },
+        {
+          "speciesId": 481,
+          "formId": 481,
+          "dexNumber": 147
+        },
+        {
+          "speciesId": 482,
+          "formId": 482,
+          "dexNumber": 148
+        },
+        {
+          "speciesId": 483,
+          "formId": 483,
+          "dexNumber": 149
+        },
+        {
+          "speciesId": 484,
+          "formId": 484,
+          "dexNumber": 150
+        },
+        {
+          "speciesId": 490,
+          "formId": 490,
+          "dexNumber": 151
+        }
+      ]
+    },
+    {
+      "id": "sinnoh-extended",
+      "title": "Extended Sinnoh Pokédex",
+      "type": "base",
+      "optional": false,
+      "defaultEnabled": false,
+      "startIndex": 152,
+      "entries": [
+        {
+          "speciesId": 479,
+          "formId": 479,
+          "dexNumber": 152
+        },
+        {
+          "speciesId": 207,
+          "formId": 207,
+          "dexNumber": 153
+        },
+        {
+          "speciesId": 472,
+          "formId": 472,
+          "dexNumber": 154
+        },
+        {
+          "speciesId": 299,
+          "formId": 299,
+          "dexNumber": 155
+        },
+        {
+          "speciesId": 476,
+          "formId": 476,
+          "dexNumber": 156
+        },
+        {
+          "speciesId": 280,
+          "formId": 280,
+          "dexNumber": 157
+        },
+        {
+          "speciesId": 281,
+          "formId": 281,
+          "dexNumber": 158
+        },
+        {
+          "speciesId": 282,
+          "formId": 282,
+          "dexNumber": 159
+        },
+        {
+          "speciesId": 475,
+          "formId": 475,
+          "dexNumber": 160
+        },
+        {
+          "speciesId": 108,
+          "formId": 108,
+          "dexNumber": 161
+        },
+        {
+          "speciesId": 463,
+          "formId": 463,
+          "dexNumber": 162
+        },
+        {
+          "speciesId": 133,
+          "formId": 133,
+          "dexNumber": 163
+        },
+        {
+          "speciesId": 134,
+          "formId": 134,
+          "dexNumber": 164
+        },
+        {
+          "speciesId": 135,
+          "formId": 135,
+          "dexNumber": 165
+        },
+        {
+          "speciesId": 136,
+          "formId": 136,
+          "dexNumber": 166
+        },
+        {
+          "speciesId": 196,
+          "formId": 196,
+          "dexNumber": 167
+        },
+        {
+          "speciesId": 197,
+          "formId": 197,
+          "dexNumber": 168
+        },
+        {
+          "speciesId": 470,
+          "formId": 470,
+          "dexNumber": 169
+        },
+        {
+          "speciesId": 471,
+          "formId": 471,
+          "dexNumber": 170
+        },
+        {
+          "speciesId": 333,
+          "formId": 333,
+          "dexNumber": 171
+        },
+        {
+          "speciesId": 334,
+          "formId": 334,
+          "dexNumber": 172
+        },
+        {
+          "speciesId": 175,
+          "formId": 175,
+          "dexNumber": 173
+        },
+        {
+          "speciesId": 176,
+          "formId": 176,
+          "dexNumber": 174
+        },
+        {
+          "speciesId": 468,
+          "formId": 468,
+          "dexNumber": 175
+        },
+        {
+          "speciesId": 228,
+          "formId": 228,
+          "dexNumber": 176
+        },
+        {
+          "speciesId": 229,
+          "formId": 229,
+          "dexNumber": 177
+        },
+        {
+          "speciesId": 81,
+          "formId": 81,
+          "dexNumber": 178
+        },
+        {
+          "speciesId": 82,
+          "formId": 82,
+          "dexNumber": 179
+        },
+        {
+          "speciesId": 462,
+          "formId": 462,
+          "dexNumber": 180
+        },
+        {
+          "speciesId": 114,
+          "formId": 114,
+          "dexNumber": 181
+        },
+        {
+          "speciesId": 465,
+          "formId": 465,
+          "dexNumber": 182
+        },
+        {
+          "speciesId": 193,
+          "formId": 193,
+          "dexNumber": 183
+        },
+        {
+          "speciesId": 469,
+          "formId": 469,
+          "dexNumber": 184
+        },
+        {
+          "speciesId": 357,
+          "formId": 357,
+          "dexNumber": 185
+        },
+        {
+          "speciesId": 111,
+          "formId": 111,
+          "dexNumber": 186
+        },
+        {
+          "speciesId": 112,
+          "formId": 112,
+          "dexNumber": 187
+        },
+        {
+          "speciesId": 464,
+          "formId": 464,
+          "dexNumber": 188
+        },
+        {
+          "speciesId": 355,
+          "formId": 355,
+          "dexNumber": 189
+        },
+        {
+          "speciesId": 356,
+          "formId": 356,
+          "dexNumber": 190
+        },
+        {
+          "speciesId": 477,
+          "formId": 477,
+          "dexNumber": 191
+        },
+        {
+          "speciesId": 137,
+          "formId": 137,
+          "dexNumber": 192
+        },
+        {
+          "speciesId": 233,
+          "formId": 233,
+          "dexNumber": 193
+        },
+        {
+          "speciesId": 474,
+          "formId": 474,
+          "dexNumber": 194
+        },
+        {
+          "speciesId": 123,
+          "formId": 123,
+          "dexNumber": 195
+        },
+        {
+          "speciesId": 212,
+          "formId": 212,
+          "dexNumber": 196
+        },
+        {
+          "speciesId": 239,
+          "formId": 239,
+          "dexNumber": 197
+        },
+        {
+          "speciesId": 125,
+          "formId": 125,
+          "dexNumber": 198
+        },
+        {
+          "speciesId": 466,
+          "formId": 466,
+          "dexNumber": 199
+        },
+        {
+          "speciesId": 240,
+          "formId": 240,
+          "dexNumber": 200
+        },
+        {
+          "speciesId": 126,
+          "formId": 126,
+          "dexNumber": 201
+        },
+        {
+          "speciesId": 467,
+          "formId": 467,
+          "dexNumber": 202
+        },
+        {
+          "speciesId": 220,
+          "formId": 220,
+          "dexNumber": 203
+        },
+        {
+          "speciesId": 221,
+          "formId": 221,
+          "dexNumber": 204
+        },
+        {
+          "speciesId": 473,
+          "formId": 473,
+          "dexNumber": 205
+        },
+        {
+          "speciesId": 361,
+          "formId": 361,
+          "dexNumber": 206
+        },
+        {
+          "speciesId": 362,
+          "formId": 362,
+          "dexNumber": 207
+        },
+        {
+          "speciesId": 478,
+          "formId": 478,
+          "dexNumber": 208
+        },
+        {
+          "speciesId": 359,
+          "formId": 359,
+          "dexNumber": 209
+        },
+        {
+          "speciesId": 487,
+          "formId": 487,
+          "dexNumber": 210
+        }
+      ]
+    }
+  ],
+  "encounters": {
+    "25": {
+      "diamond": {
+        "locations": [
+          "Trophy Garden"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Trophy Garden"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Trophy Garden"
+        ]
+      }
+    },
+    "26": {
+      "diamond": {
+        "locations": [
+          "Evolve Pikachu"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Evolve Pikachu"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Evolve Pikachu"
+        ]
+      }
+    },
+    "35": {
+      "platinum": {
+        "locations": [
+          "Mt. Coronet (1F) Route 207",
+          "Mt. Coronet (2F)",
+          "Mt. Coronet (3F)",
+          "Mt. Coronet (4F)",
+          "Mt. Coronet (4F) Small Room",
+          "Mt. Coronet (5F)",
+          "Mt. Coronet (6F)",
+          "Mt. Coronet (1F) From Exterior",
+          "Mt. Coronet (1F) Route 216",
+          "Mt. Coronet (B1F)",
+          "Trophy Garden"
+        ]
+      },
+      "diamond": {
+        "locations": [
+          "Mt. Coronet (2F)",
+          "Mt. Coronet (3F)",
+          "Mt. Coronet Exterior Snowfall",
+          "Mt. Coronet Exterior Blizzard",
+          "Mt. Coronet (4F)",
+          "Mt. Coronet (4F) Small Room",
+          "Mt. Coronet (5F)",
+          "Mt. Coronet (6F)",
+          "Mt. Coronet (1F) From Exterior",
+          "Mt. Coronet (1F) Route 216",
+          "Mt. Coronet (B1F)",
+          "Trophy Garden"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Mt. Coronet (2F)",
+          "Mt. Coronet (3F)",
+          "Mt. Coronet Exterior Snowfall",
+          "Mt. Coronet Exterior Blizzard",
+          "Mt. Coronet (4F)",
+          "Mt. Coronet (4F) Small Room",
+          "Mt. Coronet (5F)",
+          "Mt. Coronet (6F)",
+          "Mt. Coronet (1F) From Exterior",
+          "Mt. Coronet (1F) Route 216",
+          "Mt. Coronet (B1F)",
+          "Trophy Garden"
+        ]
+      }
+    },
+    "36": {
+      "diamond": {
+        "locations": [
+          "Evolve Clefairy"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Evolve Clefairy"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Evolve Clefairy"
+        ]
+      }
+    },
+    "41": {
+      "diamond": {
+        "locations": [
+          "Oreburgh Mine (1F)",
+          "Oreburgh Mine (B1F)",
+          "Mt. Coronet (1F) Route 207",
+          "Mt. Coronet (4F)",
+          "Mt. Coronet (1F) Route 211",
+          "Mt. Coronet (B1F)",
+          "Ravaged Path",
+          "Oreburgh Gate (1F)",
+          "Oreburgh Gate (B1F)",
+          "Wayward Cave (1F)",
+          "Wayward Cave (B1F)",
+          "Iron Island (1F)",
+          "Acuity Lakefront",
+          "Route 203",
+          "Route 204 South Towards Jubilife City",
+          "Route 204 North Towards Floaroma Town",
+          "Route 206",
+          "Route 207",
+          "Route 208",
+          "Route 209",
+          "Lost Tower (1F)",
+          "Lost Tower (2F)",
+          "Lost Tower (3F)",
+          "Lost Tower (4F)",
+          "Lost Tower (5F)",
+          "Route 211 West Towards Eterna City",
+          "Route 211 East Towards Celestic Town",
+          "Route 216",
+          "Route 217"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Oreburgh Mine (1F)",
+          "Oreburgh Mine (B1F)",
+          "Mt. Coronet (1F) Route 207",
+          "Mt. Coronet (4F)",
+          "Mt. Coronet (1F) Route 211",
+          "Mt. Coronet (B1F)",
+          "Ravaged Path",
+          "Oreburgh Gate (1F)",
+          "Oreburgh Gate (B1F)",
+          "Wayward Cave (1F)",
+          "Wayward Cave (B1F)",
+          "Iron Island (1F)",
+          "Acuity Lakefront",
+          "Route 203",
+          "Route 204 South Towards Jubilife City",
+          "Route 204 North Towards Floaroma Town",
+          "Route 206",
+          "Route 207",
+          "Route 208",
+          "Route 209",
+          "Lost Tower (1F)",
+          "Lost Tower (2F)",
+          "Lost Tower (3F)",
+          "Lost Tower (4F)",
+          "Lost Tower (5F)",
+          "Route 211 West Towards Eterna City",
+          "Route 211 East Towards Celestic Town",
+          "Route 216",
+          "Route 217"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Oreburgh Mine (1F)",
+          "Oreburgh Mine (B1F)",
+          "Mt. Coronet (1F) Route 207",
+          "Mt. Coronet (4F)",
+          "Mt. Coronet (1F) Route 211",
+          "Mt. Coronet (B1F)",
+          "Ravaged Path",
+          "Oreburgh Gate (1F)",
+          "Oreburgh Gate (B1F)",
+          "Wayward Cave (1F)",
+          "Wayward Cave (B1F)",
+          "Iron Island (1F)",
+          "Route 203",
+          "Route 204 South Towards Jubilife City",
+          "Route 204 North Towards Floaroma Town",
+          "Route 206",
+          "Route 207",
+          "Route 208",
+          "Route 209",
+          "Lost Tower (1F)",
+          "Lost Tower (2F)",
+          "Lost Tower (3F)",
+          "Lost Tower (4F)",
+          "Lost Tower (5F)",
+          "Route 211 West Towards Eterna City",
+          "Route 211 East Towards Celestic Town",
+          "Route 214",
+          "Route 216"
+        ]
+      }
+    },
+    "42": {
+      "diamond": {
+        "locations": [
+          "Mt. Coronet (1F) Route 207",
+          "Mt. Coronet (2F)",
+          "Mt. Coronet (3F)",
+          "Mt. Coronet Exterior Snowfall",
+          "Mt. Coronet Exterior Blizzard",
+          "Mt. Coronet (4F)",
+          "Mt. Coronet (4F) Small Room",
+          "Mt. Coronet (5F)",
+          "Mt. Coronet (6F)",
+          "Mt. Coronet (1F) From Exterior",
+          "Mt. Coronet (1F) Route 216",
+          "Mt. Coronet (B1F)",
+          "Victory Road (1F)",
+          "Victory Road (2F)",
+          "Victory Road (B1F)",
+          "Victory Road Inside (B1F)",
+          "Victory Road Inside",
+          "Victory Road Inside Exit",
+          "Ravaged Path",
+          "Oreburgh Gate (B1F)",
+          "Stark Mountain",
+          "Stark Mountain Entrance",
+          "Stark Mountain Inside",
+          "Turnback Cave Pillar 1",
+          "Turnback Cave Pillar 2",
+          "Turnback Cave Pillar 3",
+          "Turnback Cave Before Pillar 1",
+          "Turnback Cave Between Pillars 1 And 2",
+          "Turnback Cave Between Pillars 2 And 3",
+          "Turnback Cave After Pillar 3",
+          "Snowpoint Temple (1F)",
+          "Snowpoint Temple (B1F)",
+          "Snowpoint Temple (B2F)",
+          "Snowpoint Temple (B3F)",
+          "Snowpoint Temple (B4F)",
+          "Snowpoint Temple (B5F)",
+          "Iron Island (1F)",
+          "Iron Island (B1F) Left",
+          "Iron Island (B1F) Right",
+          "Iron Island (B2F) Right",
+          "Iron Island (B2F) Left",
+          "Iron Island (B3F)",
+          "Lost Tower (3F)",
+          "Lost Tower (4F)",
+          "Lost Tower (5F)",
+          "Route 227"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Mt. Coronet (1F) Route 207",
+          "Mt. Coronet (2F)",
+          "Mt. Coronet (3F)",
+          "Mt. Coronet Exterior Snowfall",
+          "Mt. Coronet Exterior Blizzard",
+          "Mt. Coronet (4F)",
+          "Mt. Coronet (4F) Small Room",
+          "Mt. Coronet (5F)",
+          "Mt. Coronet (6F)",
+          "Mt. Coronet (1F) From Exterior",
+          "Mt. Coronet (1F) Route 216",
+          "Mt. Coronet (B1F)",
+          "Victory Road (1F)",
+          "Victory Road (2F)",
+          "Victory Road (B1F)",
+          "Victory Road Inside (B1F)",
+          "Victory Road Inside",
+          "Victory Road Inside Exit",
+          "Ravaged Path",
+          "Oreburgh Gate (B1F)",
+          "Stark Mountain",
+          "Stark Mountain Entrance",
+          "Stark Mountain Inside",
+          "Turnback Cave Pillar 1",
+          "Turnback Cave Pillar 2",
+          "Turnback Cave Pillar 3",
+          "Turnback Cave Before Pillar 1",
+          "Turnback Cave Between Pillars 1 And 2",
+          "Turnback Cave Between Pillars 2 And 3",
+          "Turnback Cave After Pillar 3",
+          "Snowpoint Temple (1F)",
+          "Snowpoint Temple (B1F)",
+          "Snowpoint Temple (B2F)",
+          "Snowpoint Temple (B3F)",
+          "Snowpoint Temple (B4F)",
+          "Snowpoint Temple (B5F)",
+          "Iron Island (1F)",
+          "Iron Island (B1F) Left",
+          "Iron Island (B1F) Right",
+          "Iron Island (B2F) Right",
+          "Iron Island (B2F) Left",
+          "Iron Island (B3F)",
+          "Lost Tower (3F)",
+          "Lost Tower (4F)",
+          "Lost Tower (5F)",
+          "Route 227"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Mt. Coronet (1F) Route 207",
+          "Mt. Coronet (2F)",
+          "Mt. Coronet (3F)",
+          "Mt. Coronet Exterior Snowfall",
+          "Mt. Coronet Exterior Blizzard",
+          "Mt. Coronet (4F)",
+          "Mt. Coronet (4F) Small Room",
+          "Mt. Coronet (5F)",
+          "Mt. Coronet (6F)",
+          "Mt. Coronet (1F) From Exterior",
+          "Mt. Coronet (1F) Route 216",
+          "Mt. Coronet (B1F)",
+          "Victory Road (1F)",
+          "Victory Road (2F)",
+          "Victory Road (B1F)",
+          "Victory Road Inside (B1F)",
+          "Victory Road Inside",
+          "Victory Road Inside Exit",
+          "Ravaged Path",
+          "Oreburgh Gate (B1F)",
+          "Stark Mountain",
+          "Stark Mountain Entrance",
+          "Stark Mountain Inside",
+          "Sendoff Spring",
+          "Turnback Cave Pillar 1",
+          "Turnback Cave Pillar 2",
+          "Turnback Cave Pillar 3",
+          "Turnback Cave Before Pillar 1",
+          "Turnback Cave Between Pillars 1 And 2",
+          "Turnback Cave Between Pillars 2 And 3",
+          "Turnback Cave After Pillar 3",
+          "Snowpoint Temple (1F)",
+          "Snowpoint Temple (B1F)",
+          "Snowpoint Temple (B2F)",
+          "Snowpoint Temple (B3F)",
+          "Snowpoint Temple (B4F)",
+          "Snowpoint Temple (B5F)",
+          "Iron Island (1F)",
+          "Iron Island (B1F) Left",
+          "Iron Island (B1F) Right",
+          "Iron Island (B2F) Right",
+          "Iron Island (B2F) Left",
+          "Iron Island (B3F)",
+          "Lost Tower (3F)",
+          "Lost Tower (4F)",
+          "Lost Tower (5F)",
+          "Route 227"
+        ]
+      }
+    },
+    "54": {
+      "diamond": {
+        "locations": [
+          "Eterna City",
+          "Great Marsh Area 1",
+          "Great Marsh Area 2",
+          "Great Marsh Area 3",
+          "Great Marsh Area 4",
+          "Great Marsh Area 6",
+          "Ravaged Path",
+          "Oreburgh Gate (B1F)",
+          "Lake Verity Before Galactic Intervention",
+          "Lake Verity After Galactic Intervention",
+          "Lake Valor",
+          "Lake Acuity",
+          "Route 203",
+          "Route 204 South Towards Jubilife City",
+          "Route 204 North Towards Floaroma Town",
+          "Route 205 East Towards Eterna City",
+          "Route 208",
+          "Route 209",
+          "Route 210 West Towards Celestic Town",
+          "Route 212 North Towards Hearthome City",
+          "Route 214",
+          "Twinleaf Town",
+          "Celestic Town"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Eterna City",
+          "Great Marsh Area 1",
+          "Great Marsh Area 2",
+          "Great Marsh Area 3",
+          "Great Marsh Area 4",
+          "Great Marsh Area 6",
+          "Ravaged Path",
+          "Oreburgh Gate (B1F)",
+          "Lake Verity Before Galactic Intervention",
+          "Lake Verity After Galactic Intervention",
+          "Lake Valor",
+          "Lake Acuity",
+          "Route 203",
+          "Route 204 South Towards Jubilife City",
+          "Route 204 North Towards Floaroma Town",
+          "Route 205 East Towards Eterna City",
+          "Route 208",
+          "Route 209",
+          "Route 210 West Towards Celestic Town",
+          "Route 212 North Towards Hearthome City",
+          "Route 214",
+          "Twinleaf Town",
+          "Celestic Town"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Eterna City",
+          "Ravaged Path",
+          "Oreburgh Gate (1F)",
+          "Oreburgh Gate (B1F)",
+          "Lake Verity Before Galactic Intervention",
+          "Lake Verity After Galactic Intervention",
+          "Lake Valor",
+          "Lake Acuity",
+          "Route 203",
+          "Route 204 South Towards Jubilife City",
+          "Route 204 North Towards Floaroma Town",
+          "Route 205 East Towards Eterna City",
+          "Route 208",
+          "Route 209",
+          "Route 210 West Towards Celestic Town",
+          "Route 212 North Towards Hearthome City",
+          "Route 214",
+          "Route 225",
+          "Twinleaf Town",
+          "Celestic Town",
+          "Resort Area"
+        ]
+      }
+    },
+    "55": {
+      "diamond": {
+        "locations": [
+          "Eterna City",
+          "Great Marsh Area 1",
+          "Great Marsh Area 2",
+          "Great Marsh Area 3",
+          "Great Marsh Area 4",
+          "Great Marsh Area 5",
+          "Great Marsh Area 6",
+          "Ravaged Path",
+          "Oreburgh Gate (B1F)",
+          "Sendoff Spring",
+          "Lake Verity Before Galactic Intervention",
+          "Lake Verity After Galactic Intervention",
+          "Lake Valor",
+          "Lake Acuity",
+          "Route 203",
+          "Route 204 South Towards Jubilife City",
+          "Route 204 North Towards Floaroma Town",
+          "Route 205 East Towards Eterna City",
+          "Route 208",
+          "Route 209",
+          "Route 210 West Towards Celestic Town",
+          "Route 212 North Towards Hearthome City",
+          "Route 214",
+          "Route 225",
+          "Twinleaf Town",
+          "Celestic Town",
+          "Resort Area",
+          "Sea Route 226",
+          "Sea Route 230"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Eterna City",
+          "Great Marsh Area 1",
+          "Great Marsh Area 2",
+          "Great Marsh Area 3",
+          "Great Marsh Area 4",
+          "Great Marsh Area 5",
+          "Great Marsh Area 6",
+          "Ravaged Path",
+          "Oreburgh Gate (B1F)",
+          "Sendoff Spring",
+          "Lake Verity Before Galactic Intervention",
+          "Lake Verity After Galactic Intervention",
+          "Lake Valor",
+          "Lake Acuity",
+          "Route 203",
+          "Route 204 South Towards Jubilife City",
+          "Route 204 North Towards Floaroma Town",
+          "Route 205 East Towards Eterna City",
+          "Route 208",
+          "Route 209",
+          "Route 210 West Towards Celestic Town",
+          "Route 212 North Towards Hearthome City",
+          "Route 214",
+          "Route 225",
+          "Twinleaf Town",
+          "Celestic Town",
+          "Resort Area",
+          "Sea Route 226",
+          "Sea Route 230"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Eterna City",
+          "Ravaged Path",
+          "Oreburgh Gate (B1F)",
+          "Sendoff Spring",
+          "Lake Verity Before Galactic Intervention",
+          "Lake Verity After Galactic Intervention",
+          "Lake Valor",
+          "Lake Acuity",
+          "Route 203",
+          "Route 204 South Towards Jubilife City",
+          "Route 204 North Towards Floaroma Town",
+          "Route 205 East Towards Eterna City",
+          "Route 208",
+          "Route 209",
+          "Route 210 West Towards Celestic Town",
+          "Route 212 North Towards Hearthome City",
+          "Route 214",
+          "Route 225",
+          "Twinleaf Town",
+          "Celestic Town",
+          "Resort Area"
+        ]
+      }
+    },
+    "63": {
+      "diamond": {
+        "locations": [
+          "Route 203",
+          "Route 215",
+          "Oreburgh City North West House"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Route 203",
+          "Route 215",
+          "Oreburgh City North West House"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Route 203",
+          "Route 215",
+          "Oreburgh City North West House"
+        ]
+      }
+    },
+    "64": {
+      "diamond": {
+        "locations": [
+          "Victory Road (2F)",
+          "Route 215"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Victory Road (2F)",
+          "Route 215"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Route 215"
+        ]
+      }
+    },
+    "65": {
+      "diamond": {
+        "locations": [
+          "Evolve Kadabra"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Evolve Kadabra"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Evolve Kadabra"
+        ]
+      }
+    },
+    "66": {
+      "diamond": {
+        "locations": [
+          "Mt. Coronet (1F) Route 207",
+          "Mt. Coronet (1F) Route 211",
+          "Route 207",
+          "Route 208",
+          "Route 210 West Towards Celestic Town"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Mt. Coronet (1F) Route 207",
+          "Mt. Coronet (1F) Route 211",
+          "Route 207",
+          "Route 208",
+          "Route 210 West Towards Celestic Town"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Mt. Coronet (1F) Route 207",
+          "Mt. Coronet (1F) Route 211",
+          "Route 206",
+          "Route 207",
+          "Route 210 West Towards Celestic Town",
+          "Route 211 West Towards Eterna City"
+        ]
+      }
+    },
+    "67": {
+      "diamond": {
+        "locations": [
+          "Mt. Coronet (2F)",
+          "Mt. Coronet (3F)",
+          "Mt. Coronet Exterior Snowfall",
+          "Mt. Coronet Exterior Blizzard",
+          "Mt. Coronet (4F)",
+          "Mt. Coronet (4F) Small Room",
+          "Mt. Coronet (5F)",
+          "Mt. Coronet (6F)",
+          "Mt. Coronet (1F) From Exterior",
+          "Mt. Coronet (1F) Route 216",
+          "Mt. Coronet (B1F)",
+          "Victory Road (1F)",
+          "Victory Road (B1F)",
+          "Victory Road Inside (B1F)",
+          "Victory Road Inside",
+          "Victory Road Inside Exit",
+          "Stark Mountain Entrance",
+          "Stark Mountain Inside",
+          "Acuity Lakefront",
+          "Route 210 West Towards Celestic Town",
+          "Route 211 East Towards Celestic Town",
+          "Route 216",
+          "Route 217",
+          "Route 225",
+          "Sea Route 226"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Mt. Coronet (2F)",
+          "Mt. Coronet (3F)",
+          "Mt. Coronet Exterior Snowfall",
+          "Mt. Coronet Exterior Blizzard",
+          "Mt. Coronet (4F)",
+          "Mt. Coronet (4F) Small Room",
+          "Mt. Coronet (5F)",
+          "Mt. Coronet (6F)",
+          "Mt. Coronet (1F) From Exterior",
+          "Mt. Coronet (1F) Route 216",
+          "Mt. Coronet (B1F)",
+          "Victory Road (1F)",
+          "Victory Road (B1F)",
+          "Victory Road Inside (B1F)",
+          "Victory Road Inside",
+          "Victory Road Inside Exit",
+          "Stark Mountain Entrance",
+          "Stark Mountain Inside",
+          "Acuity Lakefront",
+          "Route 210 West Towards Celestic Town",
+          "Route 211 East Towards Celestic Town",
+          "Route 216",
+          "Route 217",
+          "Route 225",
+          "Sea Route 226"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Mt. Coronet (2F)",
+          "Mt. Coronet (3F)",
+          "Mt. Coronet Exterior Snowfall",
+          "Mt. Coronet Exterior Blizzard",
+          "Mt. Coronet (4F)",
+          "Mt. Coronet (4F) Small Room",
+          "Mt. Coronet (5F)",
+          "Mt. Coronet (6F)",
+          "Mt. Coronet (1F) From Exterior",
+          "Mt. Coronet (1F) Route 216",
+          "Mt. Coronet (B1F)",
+          "Route 210 West Towards Celestic Town",
+          "Route 211 East Towards Celestic Town",
+          "Route 225",
+          "Sea Route 226"
+        ]
+      }
+    },
+    "68": {
+      "diamond": {
+        "locations": [
+          "Evolve Machoke"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Evolve Machoke"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Evolve Machoke"
+        ]
+      }
+    },
+    "72": {
+      "diamond": {
+        "locations": [
+          "Canalave City",
+          "Pastoria City",
+          "Valley Windworks",
+          "Fuego Ironworks",
+          "Iron Island",
+          "Route 205 South Towards Floaroma Town",
+          "Route 213",
+          "Route 218",
+          "Route 219",
+          "Route 221",
+          "Route 222",
+          "Sea Route 220"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Canalave City",
+          "Pastoria City",
+          "Valley Windworks",
+          "Fuego Ironworks",
+          "Iron Island",
+          "Route 205 South Towards Floaroma Town",
+          "Route 213",
+          "Route 218",
+          "Route 219",
+          "Route 221",
+          "Route 222",
+          "Sea Route 220"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Canalave City",
+          "Pastoria City",
+          "Sunyshore City",
+          "Valley Windworks",
+          "Fuego Ironworks",
+          "Iron Island",
+          "Route 205 South Towards Floaroma Town",
+          "Route 212 East Towards Pastoria City",
+          "Route 213",
+          "Route 218",
+          "Route 219",
+          "Route 221",
+          "Route 222",
+          "Sea Route 220"
+        ]
+      }
+    },
+    "73": {
+      "diamond": {
+        "locations": [
+          "Canalave City",
+          "Pastoria City",
+          "Sunyshore City",
+          "Pokemon League",
+          "Valley Windworks",
+          "Fuego Ironworks",
+          "Iron Island",
+          "Route 205 South Towards Floaroma Town",
+          "Route 213",
+          "Route 218",
+          "Route 219",
+          "Route 221",
+          "Route 222",
+          "Route 224",
+          "Sea Route 220",
+          "Sea Route 223",
+          "Sea Route 226",
+          "Sea Route 230"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Canalave City",
+          "Pastoria City",
+          "Sunyshore City",
+          "Pokemon League",
+          "Valley Windworks",
+          "Fuego Ironworks",
+          "Iron Island",
+          "Route 205 South Towards Floaroma Town",
+          "Route 213",
+          "Route 218",
+          "Route 219",
+          "Route 221",
+          "Route 222",
+          "Route 224",
+          "Sea Route 220",
+          "Sea Route 223",
+          "Sea Route 226",
+          "Sea Route 230"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Canalave City",
+          "Pastoria City",
+          "Sunyshore City",
+          "Pokemon League",
+          "Valley Windworks",
+          "Fuego Ironworks",
+          "Iron Island",
+          "Route 205 South Towards Floaroma Town",
+          "Route 212 East Towards Pastoria City",
+          "Route 213",
+          "Route 218",
+          "Route 219",
+          "Route 221",
+          "Route 222",
+          "Route 224",
+          "Sea Route 220",
+          "Sea Route 223",
+          "Sea Route 226",
+          "Sea Route 230"
+        ]
+      }
+    },
+    "74": {
+      "diamond": {
+        "locations": [
+          "Oreburgh Mine (1F)",
+          "Oreburgh Mine (B1F)",
+          "Mt. Coronet (1F) Route 207",
+          "Mt. Coronet (1F) Route 211",
+          "Ravaged Path",
+          "Oreburgh Gate (1F)",
+          "Oreburgh Gate (B1F)",
+          "Stark Mountain Entrance",
+          "Stark Mountain Inside",
+          "Wayward Cave (1F)",
+          "Wayward Cave (B1F)",
+          "Ruin Maniac Cave 0 9 Different Unown Caught",
+          "Ruin Maniac Cave 10 25 Different Unown Caught",
+          "Maniac Tunnel 26 Plus Different Unown Caught",
+          "Iron Island (1F)",
+          "Iron Island (B1F) Left",
+          "Iron Island (B1F) Right",
+          "Iron Island (B2F) Right",
+          "Iron Island (B2F) Left",
+          "Iron Island (B3F)",
+          "Valor Lakefront",
+          "Route 206",
+          "Route 207",
+          "Route 210 South Towards Solaceon Town",
+          "Route 211 West Towards Eterna City",
+          "Route 214",
+          "Route 215"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Oreburgh Mine (1F)",
+          "Oreburgh Mine (B1F)",
+          "Mt. Coronet (1F) Route 207",
+          "Mt. Coronet (1F) Route 211",
+          "Ravaged Path",
+          "Oreburgh Gate (1F)",
+          "Oreburgh Gate (B1F)",
+          "Stark Mountain Entrance",
+          "Stark Mountain Inside",
+          "Wayward Cave (1F)",
+          "Wayward Cave (B1F)",
+          "Ruin Maniac Cave 0 9 Different Unown Caught",
+          "Ruin Maniac Cave 10 25 Different Unown Caught",
+          "Maniac Tunnel 26 Plus Different Unown Caught",
+          "Iron Island (1F)",
+          "Iron Island (B1F) Left",
+          "Iron Island (B1F) Right",
+          "Iron Island (B2F) Right",
+          "Iron Island (B2F) Left",
+          "Iron Island (B3F)",
+          "Valor Lakefront",
+          "Route 206",
+          "Route 207",
+          "Route 210 South Towards Solaceon Town",
+          "Route 211 West Towards Eterna City",
+          "Route 214",
+          "Route 215"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Oreburgh Mine (1F)",
+          "Oreburgh Mine (B1F)",
+          "Mt. Coronet (1F) Route 207",
+          "Mt. Coronet (1F) Route 211",
+          "Oreburgh Gate (1F)",
+          "Oreburgh Gate (B1F)",
+          "Wayward Cave (1F)",
+          "Wayward Cave (B1F)",
+          "Ruin Maniac Cave 0 9 Different Unown Caught",
+          "Ruin Maniac Cave 10 25 Different Unown Caught",
+          "Maniac Tunnel 26 Plus Different Unown Caught",
+          "Iron Island (1F)",
+          "Route 206",
+          "Route 207",
+          "Route 210 South Towards Solaceon Town",
+          "Route 214"
+        ]
+      }
+    },
+    "75": {
+      "diamond": {
+        "locations": [
+          "Mt. Coronet (2F)",
+          "Mt. Coronet (3F)",
+          "Mt. Coronet (4F)",
+          "Mt. Coronet (4F) Small Room",
+          "Mt. Coronet (5F)",
+          "Mt. Coronet (6F)",
+          "Mt. Coronet (1F) From Exterior",
+          "Mt. Coronet (1F) Route 216",
+          "Mt. Coronet (B1F)",
+          "Victory Road (1F)",
+          "Victory Road (2F)",
+          "Victory Road Inside",
+          "Victory Road Inside Exit",
+          "Stark Mountain",
+          "Stark Mountain Entrance",
+          "Stark Mountain Inside",
+          "Snowpoint Temple (1F)",
+          "Snowpoint Temple (B1F)",
+          "Snowpoint Temple (B2F)",
+          "Snowpoint Temple (B3F)",
+          "Snowpoint Temple (B4F)",
+          "Snowpoint Temple (B5F)",
+          "Iron Island (1F)",
+          "Iron Island (B1F) Left",
+          "Iron Island (B1F) Right",
+          "Iron Island (B2F) Right",
+          "Iron Island (B2F) Left",
+          "Iron Island (B3F)",
+          "Valor Lakefront",
+          "Route 211 East Towards Celestic Town",
+          "Route 214",
+          "Route 216",
+          "Route 227"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Mt. Coronet (2F)",
+          "Mt. Coronet (3F)",
+          "Mt. Coronet (4F)",
+          "Mt. Coronet (4F) Small Room",
+          "Mt. Coronet (5F)",
+          "Mt. Coronet (6F)",
+          "Mt. Coronet (1F) From Exterior",
+          "Mt. Coronet (1F) Route 216",
+          "Mt. Coronet (B1F)",
+          "Victory Road (1F)",
+          "Victory Road (2F)",
+          "Victory Road Inside",
+          "Victory Road Inside Exit",
+          "Stark Mountain",
+          "Stark Mountain Entrance",
+          "Stark Mountain Inside",
+          "Snowpoint Temple (1F)",
+          "Snowpoint Temple (B1F)",
+          "Snowpoint Temple (B2F)",
+          "Snowpoint Temple (B3F)",
+          "Snowpoint Temple (B4F)",
+          "Snowpoint Temple (B5F)",
+          "Iron Island (1F)",
+          "Iron Island (B1F) Left",
+          "Iron Island (B1F) Right",
+          "Iron Island (B2F) Right",
+          "Iron Island (B2F) Left",
+          "Iron Island (B3F)",
+          "Valor Lakefront",
+          "Route 211 East Towards Celestic Town",
+          "Route 214",
+          "Route 216",
+          "Route 227"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Mt. Coronet (2F)",
+          "Mt. Coronet (3F)",
+          "Mt. Coronet (4F)",
+          "Mt. Coronet (4F) Small Room",
+          "Mt. Coronet (5F)",
+          "Mt. Coronet (6F)",
+          "Mt. Coronet (1F) From Exterior",
+          "Mt. Coronet (1F) Route 216",
+          "Mt. Coronet (B1F)",
+          "Victory Road (1F)",
+          "Victory Road (2F)",
+          "Victory Road (B1F)",
+          "Victory Road Inside (B1F)",
+          "Victory Road Inside",
+          "Victory Road Inside Exit",
+          "Stark Mountain",
+          "Stark Mountain Entrance",
+          "Stark Mountain Inside",
+          "Sendoff Spring",
+          "Iron Island (1F)",
+          "Iron Island (B1F) Left",
+          "Iron Island (B1F) Right",
+          "Iron Island (B2F) Right",
+          "Iron Island (B2F) Left",
+          "Iron Island (B3F)",
+          "Route 211 East Towards Celestic Town",
+          "Route 214",
+          "Route 216",
+          "Route 225",
+          "Route 227",
+          "Sea Route 226"
+        ]
+      }
+    },
+    "76": {
+      "diamond": {
+        "locations": [
+          "Evolve Graveler"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Evolve Graveler"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Evolve Graveler"
+        ]
+      }
+    },
+    "77": {
+      "diamond": {
+        "locations": [
+          "Route 206",
+          "Route 210 South Towards Solaceon Town",
+          "Route 211 West Towards Eterna City",
+          "Route 211 East Towards Celestic Town",
+          "Route 214",
+          "Route 215"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Route 206",
+          "Route 210 South Towards Solaceon Town",
+          "Route 211 West Towards Eterna City",
+          "Route 211 East Towards Celestic Town",
+          "Route 214",
+          "Route 215"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Route 206",
+          "Route 207",
+          "Route 210 South Towards Solaceon Town"
+        ]
+      }
+    },
+    "78": {
+      "diamond": {
+        "locations": [
+          "Evolve Ponyta"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Evolve Ponyta"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Evolve Ponyta"
+        ]
+      }
+    },
+    "81": {
+      "diamond": {
+        "locations": [
+          "Fuego Ironworks"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Fuego Ironworks"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Fuego Ironworks",
+          "Route 222"
+        ]
+      }
+    },
+    "82": {
+      "platinum": {
+        "locations": [
+          "Victory Road (2F)",
+          "Route 222"
+        ]
+      },
+      "diamond": {
+        "locations": [
+          "Evolve Magnemite"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Evolve Magnemite"
+        ]
+      }
+    },
+    "92": {
+      "platinum": {
+        "locations": [
+          "Eterna Forest",
+          "Turnback Cave Pillar 1",
+          "Turnback Cave Before Pillar 1",
+          "Old Chateau Entrance",
+          "Old Chateau Dining Room",
+          "Old Chateau (2F) Private Room",
+          "Old Chateau (2F)",
+          "Old Chateau (2F) Leftmost Room",
+          "Old Chateau (2F) Left Room",
+          "Old Chateau (2F) Middle Room",
+          "Old Chateau (2F) Right Room",
+          "Old Chateau (2F) Rightmost Room",
+          "Lost Tower (1F)",
+          "Lost Tower (2F)",
+          "Lost Tower (3F)",
+          "Lost Tower (4F)",
+          "Lost Tower (5F)"
+        ]
+      },
+      "diamond": {
+        "locations": [
+          "Old Chateau Entrance",
+          "Old Chateau Dining Room",
+          "Old Chateau (2F) Private Room",
+          "Old Chateau (2F)",
+          "Old Chateau (2F) Leftmost Room",
+          "Old Chateau (2F) Left Room",
+          "Old Chateau (2F) Middle Room",
+          "Old Chateau (2F) Right Room",
+          "Old Chateau (2F) Rightmost Room",
+          "Route 209",
+          "Lost Tower (1F)",
+          "Lost Tower (2F)",
+          "Lost Tower (3F)",
+          "Lost Tower (4F)",
+          "Lost Tower (5F)"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Old Chateau Entrance",
+          "Old Chateau Dining Room",
+          "Old Chateau (2F) Private Room",
+          "Old Chateau (2F)",
+          "Old Chateau (2F) Leftmost Room",
+          "Old Chateau (2F) Left Room",
+          "Old Chateau (2F) Middle Room",
+          "Old Chateau (2F) Right Room",
+          "Old Chateau (2F) Rightmost Room",
+          "Route 209",
+          "Lost Tower (1F)",
+          "Lost Tower (2F)",
+          "Lost Tower (3F)",
+          "Lost Tower (4F)",
+          "Lost Tower (5F)"
+        ]
+      }
+    },
+    "93": {
+      "diamond": {
+        "locations": [
+          "Turnback Cave Pillar 1",
+          "Turnback Cave Pillar 2",
+          "Turnback Cave Pillar 3",
+          "Turnback Cave Before Pillar 1",
+          "Turnback Cave Between Pillars 1 And 2",
+          "Turnback Cave Between Pillars 2 And 3",
+          "Turnback Cave After Pillar 3",
+          "Old Chateau Entrance",
+          "Old Chateau Dining Room",
+          "Old Chateau (2F) Private Room",
+          "Old Chateau (2F)",
+          "Old Chateau (2F) Leftmost Room",
+          "Old Chateau (2F) Left Room",
+          "Old Chateau (2F) Middle Room",
+          "Old Chateau (2F) Right Room",
+          "Old Chateau (2F) Rightmost Room",
+          "Snowpoint City North West House"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Turnback Cave Pillar 1",
+          "Turnback Cave Pillar 2",
+          "Turnback Cave Pillar 3",
+          "Turnback Cave Before Pillar 1",
+          "Turnback Cave Between Pillars 1 And 2",
+          "Turnback Cave Between Pillars 2 And 3",
+          "Turnback Cave After Pillar 3",
+          "Old Chateau Entrance",
+          "Old Chateau Dining Room",
+          "Old Chateau (2F) Private Room",
+          "Old Chateau (2F)",
+          "Old Chateau (2F) Leftmost Room",
+          "Old Chateau (2F) Left Room",
+          "Old Chateau (2F) Middle Room",
+          "Old Chateau (2F) Right Room",
+          "Old Chateau (2F) Rightmost Room",
+          "Snowpoint City North West House"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Turnback Cave Pillar 2",
+          "Turnback Cave Pillar 3",
+          "Turnback Cave Between Pillars 1 And 2",
+          "Turnback Cave Between Pillars 2 And 3",
+          "Turnback Cave After Pillar 3",
+          "Snowpoint City North West House"
+        ]
+      }
+    },
+    "94": {
+      "diamond": {
+        "locations": [
+          "Old Chateau (2F) Right Room"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Old Chateau (2F) Right Room"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Old Chateau (2F) Right Room"
+        ]
+      }
+    },
+    "95": {
+      "diamond": {
+        "locations": [
+          "Oreburgh Mine (1F)",
+          "Oreburgh Mine (B1F)",
+          "Victory Road (1F)",
+          "Victory Road (2F)",
+          "Victory Road Inside",
+          "Victory Road Inside Exit",
+          "Stark Mountain Entrance",
+          "Stark Mountain Inside",
+          "Snowpoint Temple (1F)",
+          "Snowpoint Temple (B1F)",
+          "Snowpoint Temple (B2F)",
+          "Snowpoint Temple (B3F)",
+          "Iron Island (1F)",
+          "Iron Island (B1F) Left",
+          "Iron Island (B1F) Right",
+          "Iron Island (B2F) Right",
+          "Iron Island (B2F) Left",
+          "Iron Island (B3F)"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Oreburgh Mine (1F)",
+          "Oreburgh Mine (B1F)",
+          "Victory Road (1F)",
+          "Victory Road (2F)",
+          "Victory Road Inside",
+          "Victory Road Inside Exit",
+          "Stark Mountain Entrance",
+          "Stark Mountain Inside",
+          "Snowpoint Temple (1F)",
+          "Snowpoint Temple (B1F)",
+          "Snowpoint Temple (B2F)",
+          "Snowpoint Temple (B3F)",
+          "Iron Island (1F)",
+          "Iron Island (B1F) Left",
+          "Iron Island (B1F) Right",
+          "Iron Island (B2F) Right",
+          "Iron Island (B2F) Left",
+          "Iron Island (B3F)"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Oreburgh Mine (1F)",
+          "Oreburgh Mine (B1F)",
+          "Victory Road (1F)",
+          "Victory Road (2F)",
+          "Victory Road (B1F)",
+          "Victory Road Inside",
+          "Victory Road Inside Exit",
+          "Wayward Cave (1F)",
+          "Wayward Cave (B1F)",
+          "Iron Island (1F)",
+          "Iron Island (B1F) Left",
+          "Iron Island (B1F) Right",
+          "Iron Island (B2F) Right",
+          "Iron Island (B2F) Left",
+          "Iron Island (B3F)"
+        ]
+      }
+    },
+    "108": {
+      "diamond": {
+        "locations": [
+          "Lake Valor"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Lake Valor"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Route 215"
+        ]
+      }
+    },
+    "111": {
+      "platinum": {
+        "locations": [
+          "Victory Road (1F)",
+          "Stark Mountain",
+          "Stark Mountain Entrance",
+          "Route 214",
+          "Route 227"
+        ]
+      },
+      "diamond": {
+        "locations": [
+          "Stark Mountain",
+          "Route 227"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Stark Mountain",
+          "Route 227"
+        ]
+      }
+    },
+    "112": {
+      "platinum": {
+        "locations": [
+          "Victory Road (1F)",
+          "Stark Mountain",
+          "Stark Mountain Entrance",
+          "Stark Mountain Inside",
+          "Route 227",
+          "Route 228"
+        ]
+      },
+      "diamond": {
+        "locations": [
+          "Stark Mountain",
+          "Route 227",
+          "Route 228"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Stark Mountain",
+          "Route 227",
+          "Route 228"
+        ]
+      }
+    },
+    "113": {
+      "diamond": {
+        "locations": [
+          "Trophy Garden",
+          "Route 209",
+          "Route 210 South Towards Solaceon Town"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Trophy Garden",
+          "Route 209",
+          "Route 210 South Towards Solaceon Town"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Trophy Garden",
+          "Route 209",
+          "Route 210 South Towards Solaceon Town"
+        ]
+      }
+    },
+    "114": {
+      "platinum": {
+        "locations": [
+          "Great Marsh Area 1",
+          "Great Marsh Area 2",
+          "Great Marsh Area 3",
+          "Great Marsh Area 4",
+          "Great Marsh Area 5",
+          "Great Marsh Area 6"
+        ]
+      },
+      "diamond": {
+        "locations": [
+          "Trade",
+          "breed event Tangrowth"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Trade",
+          "breed event Tangrowth"
+        ]
+      }
+    },
+    "118": {
+      "diamond": {
+        "locations": [
+          "Sendoff Spring",
+          "Lake Verity Before Galactic Intervention",
+          "Lake Verity After Galactic Intervention",
+          "Lake Valor",
+          "Lake Acuity",
+          "Route 203",
+          "Route 204 South Towards Jubilife City",
+          "Route 204 North Towards Floaroma Town",
+          "Route 209",
+          "Route 212 North Towards Hearthome City",
+          "Route 214",
+          "Twinleaf Town",
+          "Resort Area"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Sendoff Spring",
+          "Lake Verity Before Galactic Intervention",
+          "Lake Verity After Galactic Intervention",
+          "Lake Valor",
+          "Lake Acuity",
+          "Route 203",
+          "Route 204 South Towards Jubilife City",
+          "Route 204 North Towards Floaroma Town",
+          "Route 209",
+          "Route 212 North Towards Hearthome City",
+          "Route 214",
+          "Twinleaf Town",
+          "Resort Area"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Sendoff Spring",
+          "Lake Verity Before Galactic Intervention",
+          "Lake Verity After Galactic Intervention",
+          "Lake Valor",
+          "Lake Acuity",
+          "Route 203",
+          "Route 204 South Towards Jubilife City",
+          "Route 204 North Towards Floaroma Town",
+          "Route 208",
+          "Route 209",
+          "Route 212 North Towards Hearthome City",
+          "Route 214",
+          "Route 229",
+          "Twinleaf Town",
+          "Celestic Town"
+        ]
+      }
+    },
+    "119": {
+      "diamond": {
+        "locations": [
+          "Sendoff Spring",
+          "Lake Verity Before Galactic Intervention",
+          "Lake Verity After Galactic Intervention",
+          "Lake Valor",
+          "Lake Acuity",
+          "Route 203",
+          "Route 204 South Towards Jubilife City",
+          "Route 204 North Towards Floaroma Town",
+          "Route 209",
+          "Route 212 North Towards Hearthome City",
+          "Route 214",
+          "Twinleaf Town",
+          "Resort Area"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Sendoff Spring",
+          "Lake Verity Before Galactic Intervention",
+          "Lake Verity After Galactic Intervention",
+          "Lake Valor",
+          "Lake Acuity",
+          "Route 203",
+          "Route 204 South Towards Jubilife City",
+          "Route 204 North Towards Floaroma Town",
+          "Route 209",
+          "Route 212 North Towards Hearthome City",
+          "Route 214",
+          "Twinleaf Town",
+          "Resort Area"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Sendoff Spring",
+          "Lake Verity Before Galactic Intervention",
+          "Lake Verity After Galactic Intervention",
+          "Lake Valor",
+          "Lake Acuity",
+          "Route 203",
+          "Route 204 South Towards Jubilife City",
+          "Route 204 North Towards Floaroma Town",
+          "Route 208",
+          "Route 209",
+          "Route 212 North Towards Hearthome City",
+          "Route 214",
+          "Route 229",
+          "Twinleaf Town",
+          "Celestic Town"
+        ]
+      }
+    },
+    "122": {
+      "diamond": {
+        "locations": [
+          "Route 218",
+          "Route 222"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Route 218"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Evolve Mime Jr."
+        ]
+      }
+    },
+    "123": {
+      "platinum": {
+        "locations": [
+          "Route 210 South Towards Solaceon Town",
+          "Route 210 West Towards Celestic Town",
+          "Route 215"
+        ]
+      },
+      "diamond": {
+        "locations": [
+          "Route 229"
+        ]
+      }
+    },
+    "125": {
+      "platinum": {
+        "locations": [
+          "Route 222"
+        ]
+      },
+      "diamond": {
+        "locations": [
+          "Evolve Elekid"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Evolve Elekid"
+        ]
+      }
+    },
+    "126": {
+      "platinum": {
+        "locations": [
+          "Fuego Ironworks"
+        ]
+      },
+      "diamond": {
+        "locations": [
+          "Evolve Magby"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Evolve Magby"
+        ]
+      }
+    },
+    "129": {
+      "diamond": {
+        "locations": [
+          "Canalave City",
+          "Eterna City",
+          "Pastoria City",
+          "Sunyshore City",
+          "Pokemon League",
+          "Valley Windworks",
+          "Fuego Ironworks",
+          "Mt. Coronet (1F) Route 207",
+          "Mt. Coronet (4F)",
+          "Mt. Coronet (B1F)",
+          "Great Marsh Area 1",
+          "Great Marsh Area 2",
+          "Great Marsh Area 3",
+          "Great Marsh Area 4",
+          "Great Marsh Area 6",
+          "Victory Road (B1F)",
+          "Victory Road Inside (B1F)",
+          "Ravaged Path",
+          "Oreburgh Gate (B1F)",
+          "Sendoff Spring",
+          "Iron Island",
+          "Lake Verity Before Galactic Intervention",
+          "Lake Verity After Galactic Intervention",
+          "Lake Valor",
+          "Lake Acuity",
+          "Route 203",
+          "Route 204 South Towards Jubilife City",
+          "Route 204 North Towards Floaroma Town",
+          "Route 205 South Towards Floaroma Town",
+          "Route 205 East Towards Eterna City",
+          "Route 208",
+          "Route 209",
+          "Route 210 West Towards Celestic Town",
+          "Route 212 North Towards Hearthome City",
+          "Route 212 East Towards Pastoria City",
+          "Route 213",
+          "Route 214",
+          "Route 218",
+          "Route 219",
+          "Route 221",
+          "Route 222",
+          "Route 224",
+          "Route 225",
+          "Route 227",
+          "Route 228",
+          "Route 229",
+          "Twinleaf Town",
+          "Celestic Town",
+          "Resort Area",
+          "Sea Route 220",
+          "Sea Route 223",
+          "Sea Route 226",
+          "Sea Route 230",
+          "Sea Route 226 Island House"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Canalave City",
+          "Eterna City",
+          "Pastoria City",
+          "Sunyshore City",
+          "Pokemon League",
+          "Valley Windworks",
+          "Fuego Ironworks",
+          "Mt. Coronet (1F) Route 207",
+          "Mt. Coronet (4F)",
+          "Mt. Coronet (B1F)",
+          "Great Marsh Area 1",
+          "Great Marsh Area 2",
+          "Great Marsh Area 3",
+          "Great Marsh Area 4",
+          "Great Marsh Area 6",
+          "Victory Road (B1F)",
+          "Victory Road Inside (B1F)",
+          "Ravaged Path",
+          "Oreburgh Gate (B1F)",
+          "Sendoff Spring",
+          "Iron Island",
+          "Lake Verity Before Galactic Intervention",
+          "Lake Verity After Galactic Intervention",
+          "Lake Valor",
+          "Lake Acuity",
+          "Route 203",
+          "Route 204 South Towards Jubilife City",
+          "Route 204 North Towards Floaroma Town",
+          "Route 205 South Towards Floaroma Town",
+          "Route 205 East Towards Eterna City",
+          "Route 208",
+          "Route 209",
+          "Route 210 West Towards Celestic Town",
+          "Route 212 North Towards Hearthome City",
+          "Route 212 East Towards Pastoria City",
+          "Route 213",
+          "Route 214",
+          "Route 218",
+          "Route 219",
+          "Route 221",
+          "Route 222",
+          "Route 224",
+          "Route 225",
+          "Route 227",
+          "Route 228",
+          "Route 229",
+          "Twinleaf Town",
+          "Celestic Town",
+          "Resort Area",
+          "Sea Route 220",
+          "Sea Route 223",
+          "Sea Route 226",
+          "Sea Route 230",
+          "Sea Route 226 Island House"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Canalave City",
+          "Eterna City",
+          "Pastoria City",
+          "Sunyshore City",
+          "Pokemon League",
+          "Valley Windworks",
+          "Fuego Ironworks",
+          "Mt. Coronet (1F) Route 207",
+          "Mt. Coronet (4F)",
+          "Mt. Coronet (B1F)",
+          "Great Marsh Area 1",
+          "Great Marsh Area 2",
+          "Great Marsh Area 3",
+          "Great Marsh Area 4",
+          "Great Marsh Area 5",
+          "Great Marsh Area 6",
+          "Victory Road (B1F)",
+          "Victory Road Inside (B1F)",
+          "Ravaged Path",
+          "Oreburgh Gate (B1F)",
+          "Sendoff Spring",
+          "Iron Island",
+          "Lake Verity Before Galactic Intervention",
+          "Lake Verity After Galactic Intervention",
+          "Lake Valor",
+          "Lake Acuity",
+          "Route 203",
+          "Route 204 South Towards Jubilife City",
+          "Route 204 North Towards Floaroma Town",
+          "Route 205 South Towards Floaroma Town",
+          "Route 205 East Towards Eterna City",
+          "Route 208",
+          "Route 209",
+          "Route 210 West Towards Celestic Town",
+          "Route 212 North Towards Hearthome City",
+          "Route 212 East Towards Pastoria City",
+          "Route 213",
+          "Route 214",
+          "Route 218",
+          "Route 219",
+          "Route 221",
+          "Route 222",
+          "Route 224",
+          "Route 225",
+          "Route 227",
+          "Route 228",
+          "Route 229",
+          "Twinleaf Town",
+          "Celestic Town",
+          "Resort Area",
+          "Sea Route 220",
+          "Sea Route 223",
+          "Sea Route 226",
+          "Sea Route 230",
+          "Sea Route 226 Island House"
+        ]
+      }
+    },
+    "130": {
+      "diamond": {
+        "locations": [
+          "Canalave City",
+          "Eterna City",
+          "Pastoria City",
+          "Sunyshore City",
+          "Pokemon League",
+          "Valley Windworks",
+          "Fuego Ironworks",
+          "Mt. Coronet (1F) Route 207",
+          "Mt. Coronet (4F)",
+          "Mt. Coronet (B1F)",
+          "Great Marsh Area 1",
+          "Great Marsh Area 2",
+          "Great Marsh Area 3",
+          "Great Marsh Area 4",
+          "Great Marsh Area 6",
+          "Victory Road (B1F)",
+          "Victory Road Inside (B1F)",
+          "Ravaged Path",
+          "Oreburgh Gate (B1F)",
+          "Sendoff Spring",
+          "Iron Island",
+          "Lake Verity Before Galactic Intervention",
+          "Lake Verity After Galactic Intervention",
+          "Lake Valor",
+          "Lake Acuity",
+          "Route 203",
+          "Route 204 South Towards Jubilife City",
+          "Route 204 North Towards Floaroma Town",
+          "Route 205 South Towards Floaroma Town",
+          "Route 205 East Towards Eterna City",
+          "Route 208",
+          "Route 209",
+          "Route 210 West Towards Celestic Town",
+          "Route 212 North Towards Hearthome City",
+          "Route 212 East Towards Pastoria City",
+          "Route 213",
+          "Route 214",
+          "Route 218",
+          "Route 219",
+          "Route 221",
+          "Route 222",
+          "Route 224",
+          "Route 225",
+          "Route 227",
+          "Route 228",
+          "Route 229",
+          "Twinleaf Town",
+          "Celestic Town",
+          "Resort Area",
+          "Sea Route 220",
+          "Sea Route 223",
+          "Sea Route 226",
+          "Sea Route 230"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Canalave City",
+          "Eterna City",
+          "Pastoria City",
+          "Sunyshore City",
+          "Pokemon League",
+          "Valley Windworks",
+          "Fuego Ironworks",
+          "Mt. Coronet (1F) Route 207",
+          "Mt. Coronet (4F)",
+          "Mt. Coronet (B1F)",
+          "Great Marsh Area 1",
+          "Great Marsh Area 2",
+          "Great Marsh Area 3",
+          "Great Marsh Area 4",
+          "Great Marsh Area 6",
+          "Victory Road (B1F)",
+          "Victory Road Inside (B1F)",
+          "Ravaged Path",
+          "Oreburgh Gate (B1F)",
+          "Sendoff Spring",
+          "Iron Island",
+          "Lake Verity Before Galactic Intervention",
+          "Lake Verity After Galactic Intervention",
+          "Lake Valor",
+          "Lake Acuity",
+          "Route 203",
+          "Route 204 South Towards Jubilife City",
+          "Route 204 North Towards Floaroma Town",
+          "Route 205 South Towards Floaroma Town",
+          "Route 205 East Towards Eterna City",
+          "Route 208",
+          "Route 209",
+          "Route 210 West Towards Celestic Town",
+          "Route 212 North Towards Hearthome City",
+          "Route 212 East Towards Pastoria City",
+          "Route 213",
+          "Route 214",
+          "Route 218",
+          "Route 219",
+          "Route 221",
+          "Route 222",
+          "Route 224",
+          "Route 225",
+          "Route 227",
+          "Route 228",
+          "Route 229",
+          "Twinleaf Town",
+          "Celestic Town",
+          "Resort Area",
+          "Sea Route 220",
+          "Sea Route 223",
+          "Sea Route 226",
+          "Sea Route 230"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Canalave City",
+          "Eterna City",
+          "Pastoria City",
+          "Sunyshore City",
+          "Pokemon League",
+          "Valley Windworks",
+          "Fuego Ironworks",
+          "Mt. Coronet (1F) Route 207",
+          "Mt. Coronet (4F)",
+          "Mt. Coronet (B1F)",
+          "Great Marsh Area 1",
+          "Great Marsh Area 2",
+          "Great Marsh Area 3",
+          "Great Marsh Area 4",
+          "Great Marsh Area 5",
+          "Great Marsh Area 6",
+          "Victory Road (B1F)",
+          "Victory Road Inside (B1F)",
+          "Ravaged Path",
+          "Oreburgh Gate (B1F)",
+          "Sendoff Spring",
+          "Iron Island",
+          "Lake Verity Before Galactic Intervention",
+          "Lake Verity After Galactic Intervention",
+          "Lake Valor",
+          "Lake Acuity",
+          "Route 203",
+          "Route 204 South Towards Jubilife City",
+          "Route 204 North Towards Floaroma Town",
+          "Route 205 South Towards Floaroma Town",
+          "Route 205 East Towards Eterna City",
+          "Route 208",
+          "Route 209",
+          "Route 210 West Towards Celestic Town",
+          "Route 212 North Towards Hearthome City",
+          "Route 212 East Towards Pastoria City",
+          "Route 213",
+          "Route 214",
+          "Route 218",
+          "Route 219",
+          "Route 221",
+          "Route 222",
+          "Route 224",
+          "Route 225",
+          "Route 227",
+          "Route 228",
+          "Route 229",
+          "Twinleaf Town",
+          "Celestic Town",
+          "Sea Route 220",
+          "Sea Route 223",
+          "Sea Route 226",
+          "Sea Route 230"
+        ]
+      }
+    },
+    "133": {
+      "diamond": {
+        "locations": [
+          "Trophy Garden",
+          "Hearthome City"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Trophy Garden",
+          "Hearthome City"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Trophy Garden",
+          "Hearthome City"
+        ]
+      }
+    },
+    "134": {
+      "diamond": {
+        "locations": [
+          "Evolve Eevee"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Evolve Eevee"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Evolve Eevee"
+        ]
+      }
+    },
+    "135": {
+      "diamond": {
+        "locations": [
+          "Evolve Eevee"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Evolve Eevee"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Evolve Eevee"
+        ]
+      }
+    },
+    "136": {
+      "diamond": {
+        "locations": [
+          "Evolve Eevee"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Evolve Eevee"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Evolve Eevee"
+        ]
+      }
+    },
+    "137": {
+      "diamond": {
+        "locations": [
+          "Trophy Garden"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Trophy Garden"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Veilstone City"
+        ]
+      }
+    },
+    "143": {
+      "diamond": {
+        "locations": [
+          "Evolve Munchlax"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Evolve Munchlax"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Evolve Munchlax"
+        ]
+      }
+    },
+    "163": {
+      "platinum": {
+        "locations": [
+          "Eterna Forest",
+          "Great Marsh Area 3",
+          "Great Marsh Area 4",
+          "Great Marsh Area 5",
+          "Great Marsh Area 6",
+          "Route 205 East Towards Eterna City",
+          "Route 210 South Towards Solaceon Town",
+          "Route 210 West Towards Celestic Town",
+          "Route 211 West Towards Eterna City"
+        ]
+      },
+      "diamond": {
+        "locations": [
+          "Great Marsh Area 1",
+          "Great Marsh Area 2",
+          "Great Marsh Area 3",
+          "Great Marsh Area 4",
+          "Great Marsh Area 5",
+          "Great Marsh Area 6",
+          "Route 210 West Towards Celestic Town",
+          "Route 211 West Towards Eterna City"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Great Marsh Area 1",
+          "Great Marsh Area 2",
+          "Great Marsh Area 3",
+          "Great Marsh Area 4",
+          "Great Marsh Area 5",
+          "Great Marsh Area 6",
+          "Route 210 West Towards Celestic Town",
+          "Route 211 West Towards Eterna City"
+        ]
+      }
+    },
+    "164": {
+      "diamond": {
+        "locations": [
+          "Mt. Coronet Exterior Snowfall",
+          "Mt. Coronet Exterior Blizzard",
+          "Great Marsh Area 1",
+          "Great Marsh Area 2",
+          "Sendoff Spring",
+          "Lake Valor",
+          "Lake Acuity",
+          "Acuity Lakefront",
+          "Route 210 West Towards Celestic Town",
+          "Route 211 East Towards Celestic Town",
+          "Route 216",
+          "Route 217"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Mt. Coronet Exterior Snowfall",
+          "Mt. Coronet Exterior Blizzard",
+          "Great Marsh Area 1",
+          "Great Marsh Area 2",
+          "Sendoff Spring",
+          "Lake Valor",
+          "Lake Acuity",
+          "Acuity Lakefront",
+          "Route 210 West Towards Celestic Town",
+          "Route 211 East Towards Celestic Town",
+          "Route 216",
+          "Route 217"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Mt. Coronet Exterior Snowfall",
+          "Mt. Coronet Exterior Blizzard",
+          "Great Marsh Area 1",
+          "Great Marsh Area 2",
+          "Great Marsh Area 3",
+          "Great Marsh Area 4",
+          "Route 210 South Towards Solaceon Town",
+          "Route 210 West Towards Celestic Town",
+          "Route 211 East Towards Celestic Town"
+        ]
+      }
+    },
+    "169": {
+      "diamond": {
+        "locations": [
+          "Evolve Golbat"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Evolve Golbat"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Evolve Golbat"
+        ]
+      }
+    },
+    "172": {
+      "diamond": {
+        "locations": [
+          "Trophy Garden"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Trophy Garden"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Trophy Garden"
+        ]
+      }
+    },
+    "173": {
+      "diamond": {
+        "locations": [
+          "Mt. Coronet (1F) Route 207",
+          "Mt. Coronet (1F) Route 211",
+          "Trophy Garden"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Mt. Coronet (1F) Route 207",
+          "Mt. Coronet (1F) Route 211",
+          "Trophy Garden"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Mt. Coronet (1F) Route 211",
+          "Trophy Garden"
+        ]
+      }
+    },
+    "175": {
+      "diamond": {
+        "locations": [
+          "Sea Route 230"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Sea Route 230"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Sea Route 230",
+          "Eterna City West Gate"
+        ]
+      }
+    },
+    "176": {
+      "diamond": {
+        "locations": [
+          "Evolve Togepi"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Evolve Togepi"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Evolve Togepi"
+        ]
+      }
+    },
+    "183": {
+      "diamond": {
+        "locations": [
+          "Great Marsh Area 1",
+          "Great Marsh Area 2",
+          "Great Marsh Area 3",
+          "Great Marsh Area 4",
+          "Great Marsh Area 5",
+          "Great Marsh Area 6",
+          "Trophy Garden"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Great Marsh Area 1",
+          "Great Marsh Area 2",
+          "Great Marsh Area 3",
+          "Great Marsh Area 4",
+          "Great Marsh Area 5",
+          "Great Marsh Area 6",
+          "Trophy Garden"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Trophy Garden",
+          "Route 212 North Towards Hearthome City",
+          "Route 215"
+        ]
+      }
+    },
+    "184": {
+      "platinum": {
+        "locations": [
+          "Victory Road (B1F)",
+          "Victory Road Inside (B1F)"
+        ]
+      },
+      "diamond": {
+        "locations": [
+          "Evolve Marill"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Evolve Marill"
+        ]
+      }
+    },
+    "185": {
+      "pearl": {
+        "locations": [
+          "Route 214",
+          "Route 221"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Route 221"
+        ]
+      },
+      "diamond": {
+        "locations": [
+          "Evolve Bonsly"
+        ]
+      }
+    },
+    "190": {
+      "diamond": {
+        "locations": [
+          "Valley Windworks",
+          "Eterna Forest",
+          "Fuego Ironworks",
+          "Route 205 South Towards Floaroma Town",
+          "Route 205 East Towards Eterna City",
+          "Route 206",
+          "Route 207",
+          "Route 208",
+          "Route 209",
+          "Route 210 South Towards Solaceon Town",
+          "Route 210 West Towards Celestic Town",
+          "Route 211 East Towards Celestic Town",
+          "Route 212 North Towards Hearthome City",
+          "Route 212 East Towards Pastoria City",
+          "Route 213",
+          "Route 214",
+          "Route 215",
+          "Route 218",
+          "Route 221",
+          "Route 222",
+          "Floaroma Meadow"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Valley Windworks",
+          "Eterna Forest",
+          "Fuego Ironworks",
+          "Route 205 South Towards Floaroma Town",
+          "Route 205 East Towards Eterna City",
+          "Route 206",
+          "Route 207",
+          "Route 208",
+          "Route 209",
+          "Route 210 South Towards Solaceon Town",
+          "Route 210 West Towards Celestic Town",
+          "Route 211 East Towards Celestic Town",
+          "Route 212 North Towards Hearthome City",
+          "Route 212 East Towards Pastoria City",
+          "Route 213",
+          "Route 214",
+          "Route 215",
+          "Route 218",
+          "Route 221",
+          "Route 222",
+          "Floaroma Meadow"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Valley Windworks",
+          "Eterna Forest",
+          "Fuego Ironworks",
+          "Route 205 South Towards Floaroma Town",
+          "Route 205 East Towards Eterna City",
+          "Route 206",
+          "Route 207",
+          "Route 208",
+          "Route 209",
+          "Route 210 South Towards Solaceon Town",
+          "Route 210 West Towards Celestic Town",
+          "Route 211 East Towards Celestic Town",
+          "Route 212 North Towards Hearthome City",
+          "Route 212 East Towards Pastoria City",
+          "Route 213",
+          "Route 214",
+          "Route 215",
+          "Route 218",
+          "Route 221",
+          "Route 222",
+          "Floaroma Meadow"
+        ]
+      }
+    },
+    "193": {
+      "diamond": {
+        "locations": [
+          "Great Marsh Area 1",
+          "Great Marsh Area 2",
+          "Great Marsh Area 3",
+          "Great Marsh Area 4",
+          "Great Marsh Area 5",
+          "Great Marsh Area 6"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Great Marsh Area 1",
+          "Great Marsh Area 2",
+          "Great Marsh Area 3",
+          "Great Marsh Area 4",
+          "Great Marsh Area 5",
+          "Great Marsh Area 6"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Great Marsh Area 1",
+          "Great Marsh Area 2",
+          "Great Marsh Area 3",
+          "Great Marsh Area 4",
+          "Great Marsh Area 5",
+          "Great Marsh Area 6"
+        ]
+      }
+    },
+    "194": {
+      "diamond": {
+        "locations": [
+          "Great Marsh Area 1",
+          "Great Marsh Area 2",
+          "Great Marsh Area 3",
+          "Great Marsh Area 4",
+          "Great Marsh Area 5",
+          "Great Marsh Area 6",
+          "Route 212 East Towards Pastoria City"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Great Marsh Area 1",
+          "Great Marsh Area 2",
+          "Great Marsh Area 3",
+          "Great Marsh Area 4",
+          "Great Marsh Area 5",
+          "Great Marsh Area 6",
+          "Route 212 East Towards Pastoria City"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Great Marsh Area 1",
+          "Great Marsh Area 2",
+          "Great Marsh Area 3",
+          "Great Marsh Area 4",
+          "Great Marsh Area 5",
+          "Great Marsh Area 6"
+        ]
+      }
+    },
+    "195": {
+      "diamond": {
+        "locations": [
+          "Great Marsh Area 1",
+          "Great Marsh Area 2",
+          "Great Marsh Area 3",
+          "Great Marsh Area 4",
+          "Great Marsh Area 5",
+          "Great Marsh Area 6",
+          "Route 212 East Towards Pastoria City"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Great Marsh Area 1",
+          "Great Marsh Area 2",
+          "Great Marsh Area 3",
+          "Great Marsh Area 4",
+          "Great Marsh Area 5",
+          "Great Marsh Area 6",
+          "Route 212 East Towards Pastoria City"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Great Marsh Area 1",
+          "Great Marsh Area 2",
+          "Great Marsh Area 3",
+          "Great Marsh Area 4",
+          "Great Marsh Area 5",
+          "Great Marsh Area 6",
+          "Route 212 East Towards Pastoria City"
+        ]
+      }
+    },
+    "196": {
+      "diamond": {
+        "locations": [
+          "Evolve Eevee"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Evolve Eevee"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Evolve Eevee"
+        ]
+      }
+    },
+    "197": {
+      "diamond": {
+        "locations": [
+          "Evolve Eevee"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Evolve Eevee"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Evolve Eevee"
+        ]
+      }
+    },
+    "198": {
+      "diamond": {
+        "locations": [
+          "Eterna Forest",
+          "Lost Tower (1F)",
+          "Lost Tower (2F)",
+          "Lost Tower (3F)",
+          "Lost Tower (4F)",
+          "Lost Tower (5F)"
+        ]
+      }
+    },
+    "200": {
+      "pearl": {
+        "locations": [
+          "Eterna Forest",
+          "Lost Tower (1F)",
+          "Lost Tower (2F)",
+          "Lost Tower (3F)",
+          "Lost Tower (4F)",
+          "Lost Tower (5F)"
+        ]
+      }
+    },
+    "201": {
+      "diamond": {
+        "locations": [
+          "Solaceon Ruins (2F)",
+          "Solaceon Ruins (1F)",
+          "Solaceon Ruins (B1F) A",
+          "Solaceon Ruins (B1F) B",
+          "Solaceon Ruins (B1F) C",
+          "Solaceon Ruins (B2F) A",
+          "Solaceon Ruins (B2F) B",
+          "Solaceon Ruins (B2F) C",
+          "Solaceon Ruins (B3F) A",
+          "Solaceon Ruins (B3F) B",
+          "Solaceon Ruins (B3F) C",
+          "Solaceon Ruins (B3F) D",
+          "Solaceon Ruins (B3F) E",
+          "Solaceon Ruins (B4F) A",
+          "Solaceon Ruins (B4F) B",
+          "Solaceon Ruins (B4F) C",
+          "Solaceon Ruins (B4F) D",
+          "Solaceon Ruins (B5F)"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Solaceon Ruins (2F)",
+          "Solaceon Ruins (1F)",
+          "Solaceon Ruins (B1F) A",
+          "Solaceon Ruins (B1F) B",
+          "Solaceon Ruins (B1F) C",
+          "Solaceon Ruins (B2F) A",
+          "Solaceon Ruins (B2F) B",
+          "Solaceon Ruins (B2F) C",
+          "Solaceon Ruins (B3F) A",
+          "Solaceon Ruins (B3F) B",
+          "Solaceon Ruins (B3F) C",
+          "Solaceon Ruins (B3F) D",
+          "Solaceon Ruins (B3F) E",
+          "Solaceon Ruins (B4F) A",
+          "Solaceon Ruins (B4F) B",
+          "Solaceon Ruins (B4F) C",
+          "Solaceon Ruins (B4F) D",
+          "Solaceon Ruins (B5F)"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Solaceon Ruins (2F)",
+          "Solaceon Ruins (1F)",
+          "Solaceon Ruins (B1F) A",
+          "Solaceon Ruins (B1F) B",
+          "Solaceon Ruins (B1F) C",
+          "Solaceon Ruins (B2F) A",
+          "Solaceon Ruins (B2F) B",
+          "Solaceon Ruins (B2F) C",
+          "Solaceon Ruins (B3F) A",
+          "Solaceon Ruins (B3F) B",
+          "Solaceon Ruins (B3F) C",
+          "Solaceon Ruins (B3F) D",
+          "Solaceon Ruins (B3F) E",
+          "Solaceon Ruins (B4F) A",
+          "Solaceon Ruins (B4F) B",
+          "Solaceon Ruins (B4F) C",
+          "Solaceon Ruins (B4F) D",
+          "Solaceon Ruins (B5F)"
+        ]
+      }
+    },
+    "203": {
+      "diamond": {
+        "locations": [
+          "Valor Lakefront",
+          "Route 214"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Valor Lakefront",
+          "Route 214"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Valor Lakefront",
+          "Route 221"
+        ]
+      }
+    },
+    "207": {
+      "diamond": {
+        "locations": [
+          "Stark Mountain",
+          "Route 206",
+          "Route 207",
+          "Route 214",
+          "Route 215",
+          "Route 227"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Stark Mountain",
+          "Route 206",
+          "Route 207",
+          "Route 214",
+          "Route 215",
+          "Route 227"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Route 206"
+        ]
+      }
+    },
+    "208": {
+      "diamond": {
+        "locations": [
+          "Victory Road (1F)",
+          "Victory Road (2F)",
+          "Victory Road (B1F)",
+          "Victory Road Inside (B1F)",
+          "Victory Road Inside",
+          "Victory Road Inside Exit",
+          "Snowpoint Temple (1F)",
+          "Snowpoint Temple (B1F)",
+          "Snowpoint Temple (B2F)",
+          "Snowpoint Temple (B3F)",
+          "Snowpoint Temple (B4F)",
+          "Snowpoint Temple (B5F)",
+          "Iron Island (B2F) Left",
+          "Iron Island (B3F)"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Victory Road (1F)",
+          "Victory Road (2F)",
+          "Victory Road (B1F)",
+          "Victory Road Inside (B1F)",
+          "Victory Road Inside",
+          "Victory Road Inside Exit",
+          "Snowpoint Temple (1F)",
+          "Snowpoint Temple (B1F)",
+          "Snowpoint Temple (B2F)",
+          "Snowpoint Temple (B3F)",
+          "Snowpoint Temple (B4F)",
+          "Snowpoint Temple (B5F)",
+          "Iron Island (B2F) Left",
+          "Iron Island (B3F)"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Victory Road (1F)",
+          "Victory Road (2F)",
+          "Victory Road (B1F)",
+          "Victory Road Inside",
+          "Victory Road Inside Exit",
+          "Iron Island (B2F) Right",
+          "Iron Island (B2F) Left",
+          "Iron Island (B3F)"
+        ]
+      }
+    },
+    "212": {
+      "diamond": {
+        "locations": [
+          "Evolve Scyther"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Trade",
+          "Event"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Evolve Scyther"
+        ]
+      }
+    },
+    "214": {
+      "diamond": {
+        "locations": [
+          "Valley Windworks",
+          "Eterna Forest",
+          "Fuego Ironworks",
+          "Route 205 South Towards Floaroma Town",
+          "Route 205 East Towards Eterna City",
+          "Route 206",
+          "Route 207",
+          "Route 208",
+          "Route 209",
+          "Route 210 South Towards Solaceon Town",
+          "Route 210 West Towards Celestic Town",
+          "Route 211 East Towards Celestic Town",
+          "Route 212 North Towards Hearthome City",
+          "Route 212 East Towards Pastoria City",
+          "Route 213",
+          "Route 214",
+          "Route 215",
+          "Route 218",
+          "Route 221",
+          "Route 222",
+          "Floaroma Meadow"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Valley Windworks",
+          "Eterna Forest",
+          "Fuego Ironworks",
+          "Route 205 South Towards Floaroma Town",
+          "Route 205 East Towards Eterna City",
+          "Route 206",
+          "Route 207",
+          "Route 208",
+          "Route 209",
+          "Route 210 South Towards Solaceon Town",
+          "Route 210 West Towards Celestic Town",
+          "Route 211 East Towards Celestic Town",
+          "Route 212 North Towards Hearthome City",
+          "Route 212 East Towards Pastoria City",
+          "Route 213",
+          "Route 214",
+          "Route 215",
+          "Route 218",
+          "Route 221",
+          "Route 222",
+          "Floaroma Meadow"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Valley Windworks",
+          "Eterna Forest",
+          "Fuego Ironworks",
+          "Route 205 South Towards Floaroma Town",
+          "Route 205 East Towards Eterna City",
+          "Route 206",
+          "Route 207",
+          "Route 208",
+          "Route 209",
+          "Route 210 South Towards Solaceon Town",
+          "Route 210 West Towards Celestic Town",
+          "Route 211 East Towards Celestic Town",
+          "Route 212 North Towards Hearthome City",
+          "Route 212 East Towards Pastoria City",
+          "Route 213",
+          "Route 214",
+          "Route 215",
+          "Route 218",
+          "Route 221",
+          "Route 222",
+          "Floaroma Meadow"
+        ]
+      }
+    },
+    "215": {
+      "diamond": {
+        "locations": [
+          "Snowpoint Temple (1F)",
+          "Snowpoint Temple (B1F)",
+          "Snowpoint Temple (B2F)",
+          "Snowpoint Temple (B3F)",
+          "Snowpoint Temple (B4F)",
+          "Snowpoint Temple (B5F)",
+          "Lake Acuity",
+          "Acuity Lakefront",
+          "Route 216",
+          "Route 217"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Snowpoint Temple (1F)",
+          "Snowpoint Temple (B1F)",
+          "Snowpoint Temple (B2F)",
+          "Snowpoint Temple (B3F)",
+          "Snowpoint Temple (B4F)",
+          "Snowpoint Temple (B5F)",
+          "Lake Acuity",
+          "Acuity Lakefront",
+          "Route 216",
+          "Route 217"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Snowpoint Temple (1F)",
+          "Snowpoint Temple (B1F)",
+          "Snowpoint Temple (B2F)",
+          "Snowpoint Temple (B3F)",
+          "Snowpoint Temple (B4F)",
+          "Snowpoint Temple (B5F)",
+          "Lake Acuity",
+          "Acuity Lakefront",
+          "Route 216",
+          "Route 217"
+        ]
+      }
+    },
+    "220": {
+      "platinum": {
+        "locations": [
+          "Acuity Lakefront",
+          "Route 217"
+        ]
+      },
+      "diamond": {
+        "locations": [
+          "Route 217"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Route 217"
+        ]
+      }
+    },
+    "221": {
+      "platinum": {
+        "locations": [
+          "Route 217"
+        ]
+      },
+      "diamond": {
+        "locations": [
+          "Evolve Swinub"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Evolve Swinub"
+        ]
+      }
+    },
+    "223": {
+      "diamond": {
+        "locations": [
+          "Pastoria City",
+          "Sunyshore City",
+          "Pokemon League",
+          "Route 213",
+          "Route 222",
+          "Route 224",
+          "Sea Route 223",
+          "Sea Route 230"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Pastoria City",
+          "Sunyshore City",
+          "Pokemon League",
+          "Route 213",
+          "Route 222",
+          "Route 224",
+          "Sea Route 223",
+          "Sea Route 230"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Pastoria City",
+          "Sunyshore City",
+          "Pokemon League",
+          "Route 212 East Towards Pastoria City",
+          "Route 213",
+          "Route 222",
+          "Route 224",
+          "Sea Route 223",
+          "Sea Route 230"
+        ]
+      }
+    },
+    "224": {
+      "diamond": {
+        "locations": [
+          "Pastoria City",
+          "Sunyshore City",
+          "Pokemon League",
+          "Route 213",
+          "Route 222",
+          "Route 224",
+          "Sea Route 223",
+          "Sea Route 230"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Pastoria City",
+          "Sunyshore City",
+          "Pokemon League",
+          "Route 213",
+          "Route 222",
+          "Route 224",
+          "Sea Route 223",
+          "Sea Route 230"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Pastoria City",
+          "Sunyshore City",
+          "Pokemon League",
+          "Route 212 East Towards Pastoria City",
+          "Route 213",
+          "Route 222",
+          "Route 224",
+          "Sea Route 223",
+          "Sea Route 230"
+        ]
+      }
+    },
+    "226": {
+      "diamond": {
+        "locations": [
+          "Evolve Mantyke"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Evolve Mantyke"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Evolve Mantyke"
+        ]
+      }
+    },
+    "228": {
+      "platinum": {
+        "locations": [
+          "Valor Lakefront",
+          "Route 214"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Breed Houndoom"
+        ]
+      }
+    },
+    "229": {
+      "pearl": {
+        "locations": [
+          "Route 214",
+          "Route 215"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Evolve Houndour"
+        ]
+      }
+    },
+    "233": {
+      "diamond": {
+        "locations": [
+          "Evolve Porygon"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Evolve Porygon"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Evolve Porygon"
+        ]
+      }
+    },
+    "239": {
+      "diamond": {
+        "locations": [
+          "Valley Windworks",
+          "Route 205 South Towards Floaroma Town"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Valley Windworks",
+          "Route 205 South Towards Floaroma Town"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Breed Electabuzz or Electivire"
+        ]
+      }
+    },
+    "240": {
+      "diamond": {
+        "locations": [
+          "Stark Mountain",
+          "Stark Mountain Entrance",
+          "Stark Mountain Inside",
+          "Route 227"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Stark Mountain",
+          "Stark Mountain Entrance",
+          "Stark Mountain Inside",
+          "Route 227"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Breed Magmar or Magmortar"
+        ]
+      }
+    },
+    "242": {
+      "diamond": {
+        "locations": [
+          "Evolve Chansey"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Evolve Chansey"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Evolve Chansey"
+        ]
+      }
+    },
+    "265": {
+      "diamond": {
+        "locations": [
+          "Valley Windworks",
+          "Eterna Forest",
+          "Fuego Ironworks",
+          "Route 205 South Towards Floaroma Town",
+          "Route 205 East Towards Eterna City",
+          "Route 206",
+          "Route 207",
+          "Route 208",
+          "Route 209",
+          "Route 210 South Towards Solaceon Town",
+          "Route 210 West Towards Celestic Town",
+          "Route 211 East Towards Celestic Town",
+          "Route 212 North Towards Hearthome City",
+          "Route 212 East Towards Pastoria City",
+          "Route 213",
+          "Route 214",
+          "Route 215",
+          "Route 218",
+          "Route 221",
+          "Route 222",
+          "Floaroma Meadow"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Valley Windworks",
+          "Eterna Forest",
+          "Fuego Ironworks",
+          "Route 205 South Towards Floaroma Town",
+          "Route 205 East Towards Eterna City",
+          "Route 206",
+          "Route 207",
+          "Route 208",
+          "Route 209",
+          "Route 210 South Towards Solaceon Town",
+          "Route 210 West Towards Celestic Town",
+          "Route 211 East Towards Celestic Town",
+          "Route 212 North Towards Hearthome City",
+          "Route 212 East Towards Pastoria City",
+          "Route 213",
+          "Route 214",
+          "Route 215",
+          "Route 218",
+          "Route 221",
+          "Route 222",
+          "Floaroma Meadow"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Valley Windworks",
+          "Eterna Forest",
+          "Fuego Ironworks",
+          "Route 204 South Towards Jubilife City",
+          "Route 204 North Towards Floaroma Town",
+          "Route 205 South Towards Floaroma Town",
+          "Route 205 East Towards Eterna City",
+          "Route 206",
+          "Route 207",
+          "Route 208",
+          "Route 209",
+          "Route 210 South Towards Solaceon Town",
+          "Route 210 West Towards Celestic Town",
+          "Route 211 East Towards Celestic Town",
+          "Route 212 North Towards Hearthome City",
+          "Route 212 East Towards Pastoria City",
+          "Route 213",
+          "Route 214",
+          "Route 215",
+          "Route 218",
+          "Route 221",
+          "Route 222",
+          "Floaroma Meadow"
+        ]
+      }
+    },
+    "266": {
+      "diamond": {
+        "locations": [
+          "Valley Windworks",
+          "Eterna Forest",
+          "Fuego Ironworks",
+          "Route 205 South Towards Floaroma Town",
+          "Route 205 East Towards Eterna City",
+          "Route 206",
+          "Route 207",
+          "Route 208",
+          "Route 209",
+          "Route 210 South Towards Solaceon Town",
+          "Route 210 West Towards Celestic Town",
+          "Route 211 East Towards Celestic Town",
+          "Route 212 North Towards Hearthome City",
+          "Route 212 East Towards Pastoria City",
+          "Route 213",
+          "Route 214",
+          "Route 215",
+          "Route 218",
+          "Route 221",
+          "Route 222",
+          "Floaroma Meadow"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Eterna Forest",
+          "Route 205 East Towards Eterna City"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Evolve Wurmple"
+        ]
+      }
+    },
+    "267": {
+      "diamond": {
+        "locations": [
+          "Eterna Forest",
+          "Route 224",
+          "Sea Route 230"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Eterna Forest",
+          "Route 205 East Towards Eterna City",
+          "Route 224",
+          "Route 229"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Route 224"
+        ]
+      }
+    },
+    "268": {
+      "pearl": {
+        "locations": [
+          "Valley Windworks",
+          "Eterna Forest",
+          "Fuego Ironworks",
+          "Route 205 South Towards Floaroma Town",
+          "Route 205 East Towards Eterna City",
+          "Route 206",
+          "Route 207",
+          "Route 208",
+          "Route 209",
+          "Route 210 South Towards Solaceon Town",
+          "Route 210 West Towards Celestic Town",
+          "Route 211 East Towards Celestic Town",
+          "Route 212 North Towards Hearthome City",
+          "Route 212 East Towards Pastoria City",
+          "Route 213",
+          "Route 214",
+          "Route 215",
+          "Route 218",
+          "Route 221",
+          "Route 222",
+          "Floaroma Meadow"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Eterna Forest",
+          "Route 205 East Towards Eterna City"
+        ]
+      },
+      "diamond": {
+        "locations": [
+          "Evolve Wurmple"
+        ]
+      }
+    },
+    "269": {
+      "pearl": {
+        "locations": [
+          "Eterna Forest",
+          "Sea Route 230"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Eterna Forest",
+          "Route 205 East Towards Eterna City",
+          "Route 224",
+          "Route 229"
+        ]
+      },
+      "diamond": {
+        "locations": [
+          "Evolve Cascoon"
+        ]
+      }
+    },
+    "278": {
+      "diamond": {
+        "locations": [
+          "Canalave City",
+          "Pastoria City",
+          "Valley Windworks",
+          "Fuego Ironworks",
+          "Iron Island",
+          "Route 205 South Towards Floaroma Town",
+          "Route 213",
+          "Route 218",
+          "Route 219",
+          "Route 221",
+          "Route 222",
+          "Route 229",
+          "Sea Route 220"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Canalave City",
+          "Pastoria City",
+          "Valley Windworks",
+          "Fuego Ironworks",
+          "Iron Island",
+          "Route 205 South Towards Floaroma Town",
+          "Route 213",
+          "Route 218",
+          "Route 219",
+          "Route 221",
+          "Route 222",
+          "Route 229",
+          "Sea Route 220"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Pastoria City",
+          "Sunyshore City",
+          "Pokemon League",
+          "Iron Island",
+          "Route 213",
+          "Route 219",
+          "Route 221",
+          "Route 222",
+          "Sea Route 220",
+          "Sea Route 226",
+          "Sea Route 230"
+        ]
+      }
+    },
+    "279": {
+      "diamond": {
+        "locations": [
+          "Canalave City",
+          "Pastoria City",
+          "Sunyshore City",
+          "Pokemon League",
+          "Valley Windworks",
+          "Fuego Ironworks",
+          "Iron Island",
+          "Route 205 South Towards Floaroma Town",
+          "Route 213",
+          "Route 218",
+          "Route 219",
+          "Route 221",
+          "Route 222",
+          "Route 224",
+          "Route 229",
+          "Sea Route 220",
+          "Sea Route 223",
+          "Sea Route 226",
+          "Sea Route 230"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Canalave City",
+          "Pastoria City",
+          "Sunyshore City",
+          "Pokemon League",
+          "Valley Windworks",
+          "Fuego Ironworks",
+          "Iron Island",
+          "Route 205 South Towards Floaroma Town",
+          "Route 213",
+          "Route 218",
+          "Route 219",
+          "Route 221",
+          "Route 222",
+          "Route 224",
+          "Route 229",
+          "Sea Route 220",
+          "Sea Route 223",
+          "Sea Route 226",
+          "Sea Route 230"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Sunyshore City",
+          "Pokemon League",
+          "Iron Island",
+          "Route 219",
+          "Route 221",
+          "Route 222",
+          "Route 224",
+          "Sea Route 220",
+          "Sea Route 223",
+          "Sea Route 226",
+          "Sea Route 230"
+        ]
+      }
+    },
+    "280": {
+      "diamond": {
+        "locations": [
+          "Route 203",
+          "Route 204 South Towards Jubilife City"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Route 203",
+          "Route 204 South Towards Jubilife City"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Route 208",
+          "Route 209",
+          "Route 212 North Towards Hearthome City"
+        ]
+      }
+    },
+    "281": {
+      "diamond": {
+        "locations": [
+          "Route 203",
+          "Route 204 South Towards Jubilife City"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Route 203",
+          "Route 204 South Towards Jubilife City"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Route 209",
+          "Route 212 North Towards Hearthome City"
+        ]
+      }
+    },
+    "282": {
+      "diamond": {
+        "locations": [
+          "Evolve Kirlia"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Evolve Kirlia"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Evolve Kirlia"
+        ]
+      }
+    },
+    "298": {
+      "diamond": {
+        "locations": [
+          "Great Marsh Area 1",
+          "Great Marsh Area 2",
+          "Great Marsh Area 3",
+          "Great Marsh Area 4",
+          "Great Marsh Area 5",
+          "Great Marsh Area 6",
+          "Trophy Garden"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Great Marsh Area 1",
+          "Great Marsh Area 2",
+          "Great Marsh Area 3",
+          "Great Marsh Area 4",
+          "Great Marsh Area 5",
+          "Great Marsh Area 6",
+          "Trophy Garden"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Trophy Garden"
+        ]
+      }
+    },
+    "299": {
+      "platinum": {
+        "locations": [
+          "Mt. Coronet (1F) Route 207",
+          "Mt. Coronet (2F)",
+          "Mt. Coronet (3F)",
+          "Mt. Coronet Exterior Snowfall",
+          "Mt. Coronet Exterior Blizzard",
+          "Mt. Coronet (4F)",
+          "Mt. Coronet (4F) Small Room",
+          "Mt. Coronet (5F)",
+          "Mt. Coronet (6F)",
+          "Mt. Coronet (1F) From Exterior",
+          "Mt. Coronet (1F) Route 216",
+          "Mt. Coronet (1F) Route 211",
+          "Mt. Coronet (B1F)"
+        ]
+      },
+      "diamond": {
+        "locations": [
+          "Route 206"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Route 206"
+        ]
+      }
+    },
+    "307": {
+      "diamond": {
+        "locations": [
+          "Mt. Coronet (1F) Route 207",
+          "Mt. Coronet (1F) Route 216",
+          "Mt. Coronet (1F) Route 211",
+          "Mt. Coronet (B1F)",
+          "Acuity Lakefront",
+          "Route 208",
+          "Route 210 West Towards Celestic Town",
+          "Route 211 West Towards Eterna City",
+          "Route 211 East Towards Celestic Town",
+          "Route 216",
+          "Route 217"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Mt. Coronet (1F) Route 207",
+          "Mt. Coronet (1F) Route 216",
+          "Mt. Coronet (1F) Route 211",
+          "Mt. Coronet (B1F)",
+          "Acuity Lakefront",
+          "Route 208",
+          "Route 210 West Towards Celestic Town",
+          "Route 211 West Towards Eterna City",
+          "Route 211 East Towards Celestic Town",
+          "Route 216",
+          "Route 217"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Mt. Coronet (1F) Route 207",
+          "Mt. Coronet (1F) Route 216",
+          "Mt. Coronet (1F) Route 211",
+          "Mt. Coronet (B1F)",
+          "Route 210 West Towards Celestic Town",
+          "Route 211 West Towards Eterna City",
+          "Route 211 East Towards Celestic Town",
+          "Route 216"
+        ]
+      }
+    },
+    "308": {
+      "diamond": {
+        "locations": [
+          "Mt. Coronet (2F)",
+          "Mt. Coronet (3F)",
+          "Mt. Coronet Exterior Snowfall",
+          "Mt. Coronet Exterior Blizzard",
+          "Mt. Coronet (4F)",
+          "Mt. Coronet (4F) Small Room",
+          "Mt. Coronet (5F)",
+          "Mt. Coronet (6F)",
+          "Mt. Coronet (1F) From Exterior",
+          "Victory Road (1F)",
+          "Victory Road (2F)",
+          "Victory Road (B1F)",
+          "Victory Road Inside (B1F)",
+          "Victory Road Inside",
+          "Victory Road Inside Exit",
+          "Acuity Lakefront",
+          "Route 217"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Mt. Coronet (2F)",
+          "Mt. Coronet (3F)",
+          "Mt. Coronet Exterior Snowfall",
+          "Mt. Coronet Exterior Blizzard",
+          "Mt. Coronet (4F)",
+          "Mt. Coronet (4F) Small Room",
+          "Mt. Coronet (5F)",
+          "Mt. Coronet (6F)",
+          "Mt. Coronet (1F) From Exterior",
+          "Victory Road (1F)",
+          "Victory Road (2F)",
+          "Victory Road (B1F)",
+          "Victory Road Inside (B1F)",
+          "Victory Road Inside",
+          "Victory Road Inside Exit",
+          "Acuity Lakefront",
+          "Route 217"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Mt. Coronet (2F)",
+          "Mt. Coronet (3F)",
+          "Mt. Coronet Exterior Snowfall",
+          "Mt. Coronet Exterior Blizzard",
+          "Mt. Coronet (4F)",
+          "Mt. Coronet (4F) Small Room",
+          "Mt. Coronet (5F)",
+          "Mt. Coronet (6F)",
+          "Mt. Coronet (1F) From Exterior"
+        ]
+      }
+    },
+    "315": {
+      "diamond": {
+        "locations": [
+          "Great Marsh Area 1",
+          "Great Marsh Area 2",
+          "Great Marsh Area 3",
+          "Great Marsh Area 4",
+          "Great Marsh Area 5",
+          "Great Marsh Area 6",
+          "Trophy Garden",
+          "Route 212 North Towards Hearthome City",
+          "Route 212 East Towards Pastoria City",
+          "Route 221",
+          "Route 224",
+          "Route 225",
+          "Route 229"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Great Marsh Area 1",
+          "Great Marsh Area 2",
+          "Great Marsh Area 3",
+          "Great Marsh Area 4",
+          "Great Marsh Area 5",
+          "Great Marsh Area 6",
+          "Trophy Garden",
+          "Route 212 North Towards Hearthome City",
+          "Route 212 East Towards Pastoria City",
+          "Route 221",
+          "Route 224",
+          "Route 225"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Trophy Garden",
+          "Route 208",
+          "Route 209",
+          "Route 210 South Towards Solaceon Town",
+          "Route 212 North Towards Hearthome City",
+          "Route 221",
+          "Route 224",
+          "Route 229",
+          "Sea Route 230"
+        ]
+      }
+    },
+    "333": {
+      "platinum": {
+        "locations": [
+          "Route 210 West Towards Celestic Town"
+        ]
+      },
+      "diamond": {
+        "locations": [
+          "Route 211 East Towards Celestic Town"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Route 211 East Towards Celestic Town"
+        ]
+      }
+    },
+    "334": {
+      "diamond": {
+        "locations": [
+          "Evolve Swablu"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Evolve Swablu"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Evolve Swablu"
+        ]
+      }
+    },
+    "339": {
+      "diamond": {
+        "locations": [
+          "Eterna City",
+          "Mt. Coronet (1F) Route 207",
+          "Mt. Coronet (4F)",
+          "Mt. Coronet (B1F)",
+          "Great Marsh Area 1",
+          "Great Marsh Area 2",
+          "Great Marsh Area 3",
+          "Great Marsh Area 4",
+          "Great Marsh Area 6",
+          "Ravaged Path",
+          "Oreburgh Gate (B1F)",
+          "Route 205 East Towards Eterna City",
+          "Route 208",
+          "Route 210 West Towards Celestic Town",
+          "Route 212 East Towards Pastoria City",
+          "Route 227",
+          "Route 228",
+          "Celestic Town"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Eterna City",
+          "Mt. Coronet (1F) Route 207",
+          "Mt. Coronet (4F)",
+          "Mt. Coronet (B1F)",
+          "Great Marsh Area 1",
+          "Great Marsh Area 2",
+          "Great Marsh Area 3",
+          "Great Marsh Area 4",
+          "Great Marsh Area 6",
+          "Ravaged Path",
+          "Oreburgh Gate (B1F)",
+          "Route 205 East Towards Eterna City",
+          "Route 208",
+          "Route 210 West Towards Celestic Town",
+          "Route 212 East Towards Pastoria City",
+          "Route 227",
+          "Route 228",
+          "Celestic Town"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Eterna City",
+          "Mt. Coronet (1F) Route 207",
+          "Mt. Coronet (4F)",
+          "Mt. Coronet (B1F)",
+          "Great Marsh Area 1",
+          "Great Marsh Area 2",
+          "Great Marsh Area 3",
+          "Great Marsh Area 4",
+          "Great Marsh Area 5",
+          "Great Marsh Area 6",
+          "Ravaged Path",
+          "Oreburgh Gate (B1F)",
+          "Route 205 East Towards Eterna City",
+          "Route 210 West Towards Celestic Town",
+          "Route 225",
+          "Route 227",
+          "Route 228"
+        ]
+      }
+    },
+    "340": {
+      "diamond": {
+        "locations": [
+          "Eterna City",
+          "Mt. Coronet (1F) Route 207",
+          "Mt. Coronet (B1F)",
+          "Great Marsh Area 1",
+          "Great Marsh Area 2",
+          "Great Marsh Area 3",
+          "Great Marsh Area 4",
+          "Great Marsh Area 6",
+          "Ravaged Path",
+          "Oreburgh Gate (B1F)",
+          "Route 205 East Towards Eterna City",
+          "Route 208",
+          "Route 210 West Towards Celestic Town",
+          "Route 212 East Towards Pastoria City",
+          "Route 227",
+          "Route 228",
+          "Celestic Town"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Eterna City",
+          "Mt. Coronet (1F) Route 207",
+          "Mt. Coronet (B1F)",
+          "Great Marsh Area 1",
+          "Great Marsh Area 2",
+          "Great Marsh Area 3",
+          "Great Marsh Area 4",
+          "Great Marsh Area 6",
+          "Ravaged Path",
+          "Oreburgh Gate (B1F)",
+          "Route 205 East Towards Eterna City",
+          "Route 208",
+          "Route 210 West Towards Celestic Town",
+          "Route 212 East Towards Pastoria City",
+          "Route 227",
+          "Route 228",
+          "Celestic Town"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Eterna City",
+          "Mt. Coronet (1F) Route 207",
+          "Mt. Coronet (4F)",
+          "Mt. Coronet (B1F)",
+          "Great Marsh Area 1",
+          "Great Marsh Area 2",
+          "Great Marsh Area 3",
+          "Great Marsh Area 4",
+          "Great Marsh Area 5",
+          "Great Marsh Area 6",
+          "Ravaged Path",
+          "Oreburgh Gate (B1F)",
+          "Route 205 East Towards Eterna City",
+          "Route 210 West Towards Celestic Town",
+          "Route 225",
+          "Route 227",
+          "Route 228"
+        ]
+      }
+    },
+    "349": {
+      "diamond": {
+        "locations": [
+          "Mt. Coronet (B1F)"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Mt. Coronet (B1F)"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Mt. Coronet (B1F)"
+        ]
+      }
+    },
+    "350": {
+      "diamond": {
+        "locations": [
+          "Evolve Feebas"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Evolve Feebas"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Evolve Feebas"
+        ]
+      }
+    },
+    "355": {
+      "platinum": {
+        "locations": [
+          "Turnback Cave Pillar 1",
+          "Turnback Cave Before Pillar 1",
+          "Turnback Cave Between Pillars 1 And 2",
+          "Route 209",
+          "Lost Tower (1F)",
+          "Lost Tower (2F)",
+          "Lost Tower (3F)",
+          "Lost Tower (4F)",
+          "Lost Tower (5F)"
+        ]
+      },
+      "diamond": {
+        "locations": [
+          "Route 224"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Route 224"
+        ]
+      }
+    },
+    "356": {
+      "platinum": {
+        "locations": [
+          "Sendoff Spring",
+          "Turnback Cave Pillar 1",
+          "Turnback Cave Pillar 2",
+          "Turnback Cave Pillar 3",
+          "Turnback Cave Before Pillar 1",
+          "Turnback Cave Between Pillars 1 And 2",
+          "Turnback Cave Between Pillars 2 And 3",
+          "Turnback Cave After Pillar 3"
+        ]
+      },
+      "diamond": {
+        "locations": [
+          "Route 224"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Route 224"
+        ]
+      }
+    },
+    "357": {
+      "platinum": {
+        "locations": [
+          "Great Marsh Area 1",
+          "Great Marsh Area 2",
+          "Great Marsh Area 3",
+          "Great Marsh Area 4",
+          "Great Marsh Area 5",
+          "Great Marsh Area 6"
+        ]
+      }
+    },
+    "358": {
+      "diamond": {
+        "locations": [
+          "Mt. Coronet (4F) Small Room",
+          "Mt. Coronet (5F)",
+          "Mt. Coronet (6F)",
+          "Sendoff Spring"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Mt. Coronet (4F) Small Room",
+          "Mt. Coronet (5F)",
+          "Mt. Coronet (6F)",
+          "Sendoff Spring"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Mt. Coronet (4F) Small Room",
+          "Mt. Coronet (5F)",
+          "Mt. Coronet (6F)",
+          "Turnback Cave Pillar 2",
+          "Turnback Cave Pillar 3",
+          "Turnback Cave Between Pillars 1 And 2",
+          "Turnback Cave Between Pillars 2 And 3",
+          "Turnback Cave After Pillar 3"
+        ]
+      }
+    },
+    "359": {
+      "platinum": {
+        "locations": [
+          "Mt. Coronet Exterior Snowfall",
+          "Mt. Coronet Exterior Blizzard"
+        ]
+      },
+      "diamond": {
+        "locations": [
+          "Route 213"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Route 213"
+        ]
+      }
+    },
+    "361": {
+      "platinum": {
+        "locations": [
+          "Lake Acuity",
+          "Acuity Lakefront",
+          "Route 216",
+          "Route 217"
+        ]
+      },
+      "diamond": {
+        "locations": [
+          "Acuity Lakefront",
+          "Route 216",
+          "Route 217"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Acuity Lakefront",
+          "Route 216",
+          "Route 217"
+        ]
+      }
+    },
+    "362": {
+      "diamond": {
+        "locations": [
+          "Evolve Snorunt"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Evolve Snorunt"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Evolve Snorunt"
+        ]
+      }
+    },
+    "387": {
+      "diamond": {
+        "locations": [
+          "Lake Verity Before Galactic Intervention"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Lake Verity Before Galactic Intervention"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Route 201"
+        ]
+      }
+    },
+    "388": {
+      "diamond": {
+        "locations": [
+          "Evolve Turtwig"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Evolve Turtwig"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Evolve Turtwig"
+        ]
+      }
+    },
+    "389": {
+      "diamond": {
+        "locations": [
+          "Evolve Grotle"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Evolve Grotle"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Evolve Grotle"
+        ]
+      }
+    },
+    "390": {
+      "diamond": {
+        "locations": [
+          "Lake Verity Before Galactic Intervention"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Lake Verity Before Galactic Intervention"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Route 201"
+        ]
+      }
+    },
+    "391": {
+      "diamond": {
+        "locations": [
+          "Evolve Chimchar"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Evolve Chimchar"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Evolve Chimchar"
+        ]
+      }
+    },
+    "392": {
+      "diamond": {
+        "locations": [
+          "Evolve Monferno"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Evolve Monferno"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Evolve Monferno"
+        ]
+      }
+    },
+    "393": {
+      "diamond": {
+        "locations": [
+          "Lake Verity Before Galactic Intervention"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Lake Verity Before Galactic Intervention"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Route 201"
+        ]
+      }
+    },
+    "394": {
+      "diamond": {
+        "locations": [
+          "Evolve Piplup"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Evolve Piplup"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Evolve Piplup"
+        ]
+      }
+    },
+    "395": {
+      "diamond": {
+        "locations": [
+          "Evolve Prinplup"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Evolve Prinplup"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Evolve Prinplup"
+        ]
+      }
+    },
+    "396": {
+      "diamond": {
+        "locations": [
+          "Great Marsh Area 1",
+          "Great Marsh Area 2",
+          "Great Marsh Area 3",
+          "Great Marsh Area 4",
+          "Great Marsh Area 5",
+          "Great Marsh Area 6",
+          "Lake Verity Before Galactic Intervention",
+          "Lake Verity After Galactic Intervention",
+          "Route 201",
+          "Route 202",
+          "Route 203",
+          "Route 204 South Towards Jubilife City",
+          "Route 204 North Towards Floaroma Town",
+          "Route 209",
+          "Route 212 North Towards Hearthome City"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Great Marsh Area 1",
+          "Great Marsh Area 2",
+          "Great Marsh Area 3",
+          "Great Marsh Area 4",
+          "Great Marsh Area 5",
+          "Great Marsh Area 6",
+          "Lake Verity Before Galactic Intervention",
+          "Lake Verity After Galactic Intervention",
+          "Route 201",
+          "Route 202",
+          "Route 203",
+          "Route 204 South Towards Jubilife City",
+          "Route 204 North Towards Floaroma Town",
+          "Route 209",
+          "Route 212 North Towards Hearthome City"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Lake Verity Before Galactic Intervention",
+          "Lake Verity After Galactic Intervention",
+          "Route 201",
+          "Route 202",
+          "Route 203",
+          "Route 204 South Towards Jubilife City",
+          "Route 204 North Towards Floaroma Town"
+        ]
+      }
+    },
+    "397": {
+      "diamond": {
+        "locations": [
+          "Great Marsh Area 1",
+          "Great Marsh Area 2",
+          "Great Marsh Area 3",
+          "Great Marsh Area 4",
+          "Great Marsh Area 5",
+          "Great Marsh Area 6",
+          "Sendoff Spring",
+          "Trophy Garden",
+          "Lake Verity Before Galactic Intervention",
+          "Lake Verity After Galactic Intervention",
+          "Lake Valor",
+          "Valor Lakefront",
+          "Route 209",
+          "Route 212 North Towards Hearthome City"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Great Marsh Area 1",
+          "Great Marsh Area 2",
+          "Great Marsh Area 3",
+          "Great Marsh Area 4",
+          "Great Marsh Area 5",
+          "Great Marsh Area 6",
+          "Sendoff Spring",
+          "Trophy Garden",
+          "Lake Verity Before Galactic Intervention",
+          "Lake Verity After Galactic Intervention",
+          "Lake Valor",
+          "Valor Lakefront",
+          "Route 209",
+          "Route 212 North Towards Hearthome City"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Sendoff Spring",
+          "Trophy Garden",
+          "Lake Valor",
+          "Valor Lakefront",
+          "Route 209",
+          "Route 210 South Towards Solaceon Town",
+          "Route 212 North Towards Hearthome City",
+          "Route 215"
+        ]
+      }
+    },
+    "398": {
+      "diamond": {
+        "locations": [
+          "Evolve Staravia"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Evolve Staravia"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Evolve Staravia"
+        ]
+      }
+    },
+    "399": {
+      "diamond": {
+        "locations": [
+          "Valley Windworks",
+          "Great Marsh Area 1",
+          "Great Marsh Area 2",
+          "Great Marsh Area 3",
+          "Great Marsh Area 4",
+          "Great Marsh Area 5",
+          "Great Marsh Area 6",
+          "Lake Verity Before Galactic Intervention",
+          "Lake Verity After Galactic Intervention",
+          "Route 201",
+          "Route 202",
+          "Route 203",
+          "Route 204 South Towards Jubilife City",
+          "Route 204 North Towards Floaroma Town",
+          "Route 205 South Towards Floaroma Town",
+          "Route 205 East Towards Eterna City",
+          "Route 208",
+          "Route 211 West Towards Eterna City"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Valley Windworks",
+          "Great Marsh Area 1",
+          "Great Marsh Area 2",
+          "Great Marsh Area 3",
+          "Great Marsh Area 4",
+          "Great Marsh Area 5",
+          "Great Marsh Area 6",
+          "Lake Verity Before Galactic Intervention",
+          "Lake Verity After Galactic Intervention",
+          "Route 201",
+          "Route 202",
+          "Route 203",
+          "Route 204 South Towards Jubilife City",
+          "Route 204 North Towards Floaroma Town",
+          "Route 205 South Towards Floaroma Town",
+          "Route 205 East Towards Eterna City",
+          "Route 208",
+          "Route 211 West Towards Eterna City"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Eterna Forest",
+          "Lake Verity Before Galactic Intervention",
+          "Lake Verity After Galactic Intervention",
+          "Route 201",
+          "Route 202",
+          "Route 203",
+          "Route 204 South Towards Jubilife City",
+          "Route 204 North Towards Floaroma Town",
+          "Route 205 South Towards Floaroma Town",
+          "Route 205 East Towards Eterna City",
+          "Route 208",
+          "Route 211 West Towards Eterna City"
+        ]
+      }
+    },
+    "400": {
+      "diamond": {
+        "locations": [
+          "Great Marsh Area 1",
+          "Great Marsh Area 2",
+          "Great Marsh Area 3",
+          "Great Marsh Area 4",
+          "Great Marsh Area 5",
+          "Great Marsh Area 6",
+          "Sendoff Spring",
+          "Lake Verity Before Galactic Intervention",
+          "Lake Verity After Galactic Intervention",
+          "Lake Valor",
+          "Lake Acuity",
+          "Valor Lakefront",
+          "Route 208",
+          "Route 209",
+          "Route 210 West Towards Celestic Town",
+          "Route 212 East Towards Pastoria City"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Great Marsh Area 1",
+          "Great Marsh Area 2",
+          "Great Marsh Area 3",
+          "Great Marsh Area 4",
+          "Great Marsh Area 5",
+          "Great Marsh Area 6",
+          "Sendoff Spring",
+          "Lake Verity Before Galactic Intervention",
+          "Lake Verity After Galactic Intervention",
+          "Lake Valor",
+          "Lake Acuity",
+          "Valor Lakefront",
+          "Route 208",
+          "Route 209",
+          "Route 210 West Towards Celestic Town",
+          "Route 212 East Towards Pastoria City"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Great Marsh Area 1",
+          "Great Marsh Area 2",
+          "Great Marsh Area 3",
+          "Great Marsh Area 4",
+          "Great Marsh Area 5",
+          "Great Marsh Area 6",
+          "Sendoff Spring",
+          "Lake Valor",
+          "Lake Acuity",
+          "Valor Lakefront",
+          "Route 208",
+          "Route 209",
+          "Route 210 West Towards Celestic Town"
+        ]
+      }
+    },
+    "401": {
+      "platinum": {
+        "locations": [
+          "Eterna Forest",
+          "Route 201",
+          "Route 202",
+          "Route 203",
+          "Route 204 South Towards Jubilife City",
+          "Route 204 North Towards Floaroma Town",
+          "Route 205 East Towards Eterna City",
+          "Route 207"
+        ]
+      },
+      "diamond": {
+        "locations": [
+          "Route 202",
+          "Route 203",
+          "Route 204 South Towards Jubilife City",
+          "Route 204 North Towards Floaroma Town",
+          "Route 206",
+          "Route 207"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Route 202",
+          "Route 203",
+          "Route 204 South Towards Jubilife City",
+          "Route 204 North Towards Floaroma Town",
+          "Route 206",
+          "Route 207"
+        ]
+      }
+    },
+    "402": {
+      "diamond": {
+        "locations": [
+          "Trophy Garden",
+          "Valor Lakefront",
+          "Route 206",
+          "Route 210 South Towards Solaceon Town",
+          "Route 212 North Towards Hearthome City",
+          "Route 212 East Towards Pastoria City",
+          "Route 214",
+          "Route 215"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Trophy Garden",
+          "Valor Lakefront",
+          "Route 206",
+          "Route 210 South Towards Solaceon Town",
+          "Route 212 North Towards Hearthome City",
+          "Route 212 East Towards Pastoria City",
+          "Route 214",
+          "Route 215"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Trophy Garden",
+          "Valor Lakefront",
+          "Route 206"
+        ]
+      }
+    },
+    "403": {
+      "platinum": {
+        "locations": [
+          "Valley Windworks",
+          "Route 202",
+          "Route 203",
+          "Route 204 South Towards Jubilife City",
+          "Route 204 North Towards Floaroma Town"
+        ]
+      },
+      "diamond": {
+        "locations": [
+          "Fuego Ironworks",
+          "Route 202",
+          "Route 203",
+          "Route 204 South Towards Jubilife City",
+          "Route 204 North Towards Floaroma Town"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Fuego Ironworks",
+          "Route 202",
+          "Route 203",
+          "Route 204 South Towards Jubilife City",
+          "Route 204 North Towards Floaroma Town"
+        ]
+      }
+    },
+    "404": {
+      "diamond": {
+        "locations": [
+          "Fuego Ironworks"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Fuego Ironworks"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Route 222"
+        ]
+      }
+    },
+    "405": {
+      "diamond": {
+        "locations": [
+          "Evolve Luxio"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Evolve Luxio"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Evolve Luxio"
+        ]
+      }
+    },
+    "406": {
+      "diamond": {
+        "locations": [
+          "Eterna Forest",
+          "Great Marsh Area 1",
+          "Great Marsh Area 2",
+          "Great Marsh Area 3",
+          "Great Marsh Area 4",
+          "Great Marsh Area 5",
+          "Great Marsh Area 6",
+          "Route 204 South Towards Jubilife City",
+          "Route 204 North Towards Floaroma Town",
+          "Route 212 North Towards Hearthome City"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Eterna Forest",
+          "Great Marsh Area 1",
+          "Great Marsh Area 2",
+          "Great Marsh Area 3",
+          "Great Marsh Area 4",
+          "Great Marsh Area 5",
+          "Great Marsh Area 6",
+          "Route 204 South Towards Jubilife City",
+          "Route 204 North Towards Floaroma Town",
+          "Route 212 North Towards Hearthome City"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Eterna Forest",
+          "Route 204 South Towards Jubilife City",
+          "Route 204 North Towards Floaroma Town",
+          "Route 205 East Towards Eterna City",
+          "Route 208"
+        ]
+      }
+    },
+    "407": {
+      "diamond": {
+        "locations": [
+          "Evolve Roselia"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Evolve Roselia"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Evolve Roselia"
+        ]
+      }
+    },
+    "408": {
+      "diamond": {
+        "locations": [
+          "Oreburgh City Oreburgh Mining Museum"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Oreburgh City Oreburgh Mining Museum"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Oreburgh City Oreburgh Mining Museum"
+        ]
+      }
+    },
+    "409": {
+      "diamond": {
+        "locations": [
+          "Evolve Cranidos"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Trade",
+          "Evolve CranidosIf the player's Trainer ID is an odd number"
+        ]
+      }
+    },
+    "410": {
+      "diamond": {
+        "locations": [
+          "Oreburgh City Oreburgh Mining Museum"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Oreburgh City Oreburgh Mining Museum"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Oreburgh City Oreburgh Mining Museum"
+        ]
+      }
+    },
+    "411": {
+      "pearl": {
+        "locations": [
+          "Evolve Shieldon"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Trade",
+          "Evolve ShieldonIf the player's Trainer ID is an even number"
+        ]
+      }
+    },
+    "412": {
+      "diamond": {
+        "locations": [
+          "Valley Windworks",
+          "Eterna Forest",
+          "Fuego Ironworks",
+          "Route 205 South Towards Floaroma Town",
+          "Route 205 East Towards Eterna City",
+          "Route 206",
+          "Route 207",
+          "Route 208",
+          "Route 209",
+          "Route 210 South Towards Solaceon Town",
+          "Route 210 West Towards Celestic Town",
+          "Route 211 East Towards Celestic Town",
+          "Route 212 North Towards Hearthome City",
+          "Route 212 East Towards Pastoria City",
+          "Route 213",
+          "Route 214",
+          "Route 215",
+          "Route 218",
+          "Route 221",
+          "Route 222",
+          "Floaroma Meadow"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Valley Windworks",
+          "Eterna Forest",
+          "Fuego Ironworks",
+          "Route 205 South Towards Floaroma Town",
+          "Route 205 East Towards Eterna City",
+          "Route 206",
+          "Route 207",
+          "Route 208",
+          "Route 209",
+          "Route 210 South Towards Solaceon Town",
+          "Route 210 West Towards Celestic Town",
+          "Route 211 East Towards Celestic Town",
+          "Route 212 North Towards Hearthome City",
+          "Route 212 East Towards Pastoria City",
+          "Route 213",
+          "Route 214",
+          "Route 215",
+          "Route 218",
+          "Route 221",
+          "Route 222",
+          "Floaroma Meadow"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Valley Windworks",
+          "Eterna Forest",
+          "Fuego Ironworks",
+          "Route 205 South Towards Floaroma Town",
+          "Route 205 East Towards Eterna City",
+          "Route 206",
+          "Route 207",
+          "Route 208",
+          "Route 209",
+          "Route 210 South Towards Solaceon Town",
+          "Route 210 West Towards Celestic Town",
+          "Route 211 East Towards Celestic Town",
+          "Route 212 North Towards Hearthome City",
+          "Route 212 East Towards Pastoria City",
+          "Route 213",
+          "Route 214",
+          "Route 215",
+          "Route 218",
+          "Route 221",
+          "Route 222",
+          "Floaroma Meadow"
+        ]
+      }
+    },
+    "413": {
+      "diamond": {
+        "locations": [
+          "Evolve Burmy♀"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Evolve Burmy♀"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Evolve Burmy♀"
+        ]
+      }
+    },
+    "414": {
+      "diamond": {
+        "locations": [
+          "Evolve Burmy♂"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Evolve Burmy♂"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Evolve Burmy♂"
+        ]
+      }
+    },
+    "415": {
+      "diamond": {
+        "locations": [
+          "Valley Windworks",
+          "Eterna Forest",
+          "Fuego Ironworks",
+          "Route 205 South Towards Floaroma Town",
+          "Route 205 East Towards Eterna City",
+          "Route 206",
+          "Route 207",
+          "Route 208",
+          "Route 209",
+          "Route 210 South Towards Solaceon Town",
+          "Route 210 West Towards Celestic Town",
+          "Route 211 East Towards Celestic Town",
+          "Route 212 North Towards Hearthome City",
+          "Route 212 East Towards Pastoria City",
+          "Route 213",
+          "Route 214",
+          "Route 215",
+          "Route 218",
+          "Route 221",
+          "Route 222",
+          "Floaroma Meadow"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Valley Windworks",
+          "Eterna Forest",
+          "Fuego Ironworks",
+          "Route 205 South Towards Floaroma Town",
+          "Route 205 East Towards Eterna City",
+          "Route 206",
+          "Route 207",
+          "Route 208",
+          "Route 209",
+          "Route 210 South Towards Solaceon Town",
+          "Route 210 West Towards Celestic Town",
+          "Route 211 East Towards Celestic Town",
+          "Route 212 North Towards Hearthome City",
+          "Route 212 East Towards Pastoria City",
+          "Route 213",
+          "Route 214",
+          "Route 215",
+          "Route 218",
+          "Route 221",
+          "Route 222",
+          "Floaroma Meadow"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Valley Windworks",
+          "Eterna Forest",
+          "Fuego Ironworks",
+          "Route 205 South Towards Floaroma Town",
+          "Route 205 East Towards Eterna City",
+          "Route 206",
+          "Route 207",
+          "Route 208",
+          "Route 209",
+          "Route 210 South Towards Solaceon Town",
+          "Route 210 West Towards Celestic Town",
+          "Route 211 East Towards Celestic Town",
+          "Route 212 North Towards Hearthome City",
+          "Route 212 East Towards Pastoria City",
+          "Route 213",
+          "Route 214",
+          "Route 215",
+          "Route 218",
+          "Route 221",
+          "Route 222",
+          "Floaroma Meadow"
+        ]
+      }
+    },
+    "416": {
+      "diamond": {
+        "locations": [
+          "Evolve Combee"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Evolve Combee"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Evolve Combee"
+        ]
+      }
+    },
+    "417": {
+      "diamond": {
+        "locations": [
+          "Valley Windworks",
+          "Fuego Ironworks",
+          "Route 205 South Towards Floaroma Town",
+          "Route 205 East Towards Eterna City"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Valley Windworks",
+          "Fuego Ironworks",
+          "Route 205 South Towards Floaroma Town",
+          "Route 205 East Towards Eterna City"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Valley Windworks",
+          "Route 205 South Towards Floaroma Town"
+        ]
+      }
+    },
+    "418": {
+      "diamond": {
+        "locations": [
+          "Valley Windworks",
+          "Route 205 South Towards Floaroma Town",
+          "Route 205 East Towards Eterna City",
+          "Route 213",
+          "Route 224"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Valley Windworks",
+          "Route 205 South Towards Floaroma Town",
+          "Route 205 East Towards Eterna City",
+          "Route 213",
+          "Route 224"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Valley Windworks",
+          "Route 205 South Towards Floaroma Town",
+          "Route 212 East Towards Pastoria City",
+          "Route 213"
+        ]
+      }
+    },
+    "419": {
+      "diamond": {
+        "locations": [
+          "Fuego Ironworks",
+          "Victory Road (B1F)",
+          "Victory Road Inside (B1F)",
+          "Route 213",
+          "Route 218",
+          "Route 221",
+          "Route 222",
+          "Route 224",
+          "Sea Route 230"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Fuego Ironworks",
+          "Victory Road (B1F)",
+          "Victory Road Inside (B1F)",
+          "Route 213",
+          "Route 218",
+          "Route 221",
+          "Route 222",
+          "Route 224",
+          "Sea Route 230"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Fuego Ironworks",
+          "Victory Road (B1F)",
+          "Victory Road Inside (B1F)",
+          "Victory Road Inside",
+          "Victory Road Inside Exit",
+          "Route 218",
+          "Route 221",
+          "Route 222",
+          "Route 224",
+          "Sea Route 230"
+        ]
+      }
+    },
+    "420": {
+      "diamond": {
+        "locations": [
+          "Valley Windworks",
+          "Eterna Forest",
+          "Fuego Ironworks",
+          "Route 205 South Towards Floaroma Town",
+          "Route 205 East Towards Eterna City",
+          "Route 206",
+          "Route 207",
+          "Route 208",
+          "Route 209",
+          "Route 210 South Towards Solaceon Town",
+          "Route 210 West Towards Celestic Town",
+          "Route 211 East Towards Celestic Town",
+          "Route 212 North Towards Hearthome City",
+          "Route 212 East Towards Pastoria City",
+          "Route 213",
+          "Route 214",
+          "Route 215",
+          "Route 218",
+          "Route 221",
+          "Route 222",
+          "Floaroma Meadow"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Valley Windworks",
+          "Eterna Forest",
+          "Fuego Ironworks",
+          "Route 205 South Towards Floaroma Town",
+          "Route 205 East Towards Eterna City",
+          "Route 206",
+          "Route 207",
+          "Route 208",
+          "Route 209",
+          "Route 210 South Towards Solaceon Town",
+          "Route 210 West Towards Celestic Town",
+          "Route 211 East Towards Celestic Town",
+          "Route 212 North Towards Hearthome City",
+          "Route 212 East Towards Pastoria City",
+          "Route 213",
+          "Route 214",
+          "Route 215",
+          "Route 218",
+          "Route 221",
+          "Route 222",
+          "Floaroma Meadow"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Valley Windworks",
+          "Eterna Forest",
+          "Fuego Ironworks",
+          "Route 205 South Towards Floaroma Town",
+          "Route 205 East Towards Eterna City",
+          "Route 206",
+          "Route 207",
+          "Route 208",
+          "Route 209",
+          "Route 210 South Towards Solaceon Town",
+          "Route 210 West Towards Celestic Town",
+          "Route 211 East Towards Celestic Town",
+          "Route 212 North Towards Hearthome City",
+          "Route 212 East Towards Pastoria City",
+          "Route 213",
+          "Route 214",
+          "Route 215",
+          "Route 218",
+          "Route 221",
+          "Route 222",
+          "Floaroma Meadow"
+        ]
+      }
+    },
+    "421": {
+      "diamond": {
+        "locations": [
+          "Evolve Cherubi"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Evolve Cherubi"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Evolve Cherubi"
+        ]
+      }
+    },
+    "422": {
+      "platinum": {
+        "locations": [
+          "Canalave City",
+          "Pastoria City",
+          "Valley Windworks",
+          "Fuego Ironworks",
+          "Route 205 South Towards Floaroma Town",
+          "Route 212 East Towards Pastoria City",
+          "Route 213",
+          "Route 218"
+        ]
+      },
+      "diamond": {
+        "locations": [
+          "Valley Windworks",
+          "Fuego Ironworks",
+          "Route 205 South Towards Floaroma Town",
+          "Route 205 East Towards Eterna City",
+          "Route 213",
+          "Route 218",
+          "Route 221",
+          "Route 224"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Valley Windworks",
+          "Fuego Ironworks",
+          "Route 205 South Towards Floaroma Town",
+          "Route 205 East Towards Eterna City",
+          "Route 213",
+          "Route 218",
+          "Route 221",
+          "Route 224"
+        ]
+      }
+    },
+    "423": {
+      "platinum": {
+        "locations": [
+          "Canalave City",
+          "Pastoria City",
+          "Valley Windworks",
+          "Fuego Ironworks",
+          "Route 205 South Towards Floaroma Town",
+          "Route 212 East Towards Pastoria City",
+          "Route 213",
+          "Route 218",
+          "Route 224"
+        ]
+      },
+      "diamond": {
+        "locations": [
+          "Fuego Ironworks",
+          "Route 218",
+          "Route 221",
+          "Route 222",
+          "Route 224",
+          "Sea Route 230"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Fuego Ironworks",
+          "Route 218",
+          "Route 221",
+          "Route 222",
+          "Route 224",
+          "Sea Route 230"
+        ]
+      }
+    },
+    "424": {
+      "diamond": {
+        "locations": [
+          "Evolve Aipom"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Evolve Aipom"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Evolve Aipom"
+        ]
+      }
+    },
+    "425": {
+      "diamond": {
+        "locations": [
+          "Valley Windworks"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Valley Windworks"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Valley Windworks"
+        ]
+      }
+    },
+    "426": {
+      "diamond": {
+        "locations": [
+          "Evolve Drifloon"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Evolve Drifloon"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Evolve Drifloon"
+        ]
+      }
+    },
+    "427": {
+      "diamond": {
+        "locations": [
+          "Eterna Forest"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Eterna Forest"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Eterna Forest"
+        ]
+      }
+    },
+    "428": {
+      "diamond": {
+        "locations": [
+          "Evolve Buneary"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Evolve Buneary"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Evolve Buneary"
+        ]
+      }
+    },
+    "429": {
+      "pearl": {
+        "locations": [
+          "Evolve Misdreavus"
+        ]
+      }
+    },
+    "430": {
+      "diamond": {
+        "locations": [
+          "Evolve Murkrow"
+        ]
+      }
+    },
+    "431": {
+      "pearl": {
+        "locations": [
+          "Route 218",
+          "Route 222"
+        ]
+      }
+    },
+    "432": {
+      "pearl": {
+        "locations": [
+          "Route 222",
+          "Route 229"
+        ]
+      }
+    },
+    "433": {
+      "diamond": {
+        "locations": [
+          "Mt. Coronet (1F) Route 207",
+          "Mt. Coronet (2F)",
+          "Mt. Coronet (3F)",
+          "Mt. Coronet Exterior Snowfall",
+          "Mt. Coronet Exterior Blizzard",
+          "Mt. Coronet (4F)",
+          "Mt. Coronet (4F) Small Room",
+          "Mt. Coronet (1F) From Exterior",
+          "Mt. Coronet (1F) Route 216",
+          "Mt. Coronet (1F) Route 211",
+          "Mt. Coronet (B1F)",
+          "Lake Valor",
+          "Lake Acuity",
+          "Route 211 West Towards Eterna City",
+          "Route 211 East Towards Celestic Town"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Mt. Coronet (1F) Route 207",
+          "Mt. Coronet (2F)",
+          "Mt. Coronet (3F)",
+          "Mt. Coronet Exterior Snowfall",
+          "Mt. Coronet Exterior Blizzard",
+          "Mt. Coronet (4F)",
+          "Mt. Coronet (4F) Small Room",
+          "Mt. Coronet (1F) From Exterior",
+          "Mt. Coronet (1F) Route 216",
+          "Mt. Coronet (1F) Route 211",
+          "Mt. Coronet (B1F)",
+          "Lake Valor",
+          "Lake Acuity",
+          "Route 211 West Towards Eterna City",
+          "Route 211 East Towards Celestic Town"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Mt. Coronet (1F) Route 207",
+          "Mt. Coronet (2F)",
+          "Mt. Coronet (3F)",
+          "Mt. Coronet Exterior Snowfall",
+          "Mt. Coronet Exterior Blizzard",
+          "Mt. Coronet (4F)",
+          "Mt. Coronet (4F) Small Room",
+          "Mt. Coronet (5F)",
+          "Mt. Coronet (1F) From Exterior",
+          "Mt. Coronet (1F) Route 216",
+          "Mt. Coronet (1F) Route 211",
+          "Mt. Coronet (B1F)",
+          "Sendoff Spring",
+          "Turnback Cave Pillar 1",
+          "Turnback Cave Before Pillar 1",
+          "Turnback Cave Between Pillars 1 And 2",
+          "Route 211 West Towards Eterna City",
+          "Route 211 East Towards Celestic Town"
+        ]
+      }
+    },
+    "434": {
+      "diamond": {
+        "locations": [
+          "Route 206",
+          "Route 214",
+          "Route 221"
+        ]
+      }
+    },
+    "435": {
+      "diamond": {
+        "locations": [
+          "Route 221",
+          "Route 225"
+        ]
+      }
+    },
+    "436": {
+      "platinum": {
+        "locations": [
+          "Mt. Coronet (1F) Route 207",
+          "Mt. Coronet (1F) Route 216",
+          "Mt. Coronet (1F) Route 211",
+          "Mt. Coronet (B1F)",
+          "Turnback Cave Pillar 1",
+          "Turnback Cave Before Pillar 1",
+          "Turnback Cave Between Pillars 1 And 2",
+          "Wayward Cave (1F)",
+          "Wayward Cave (B1F)",
+          "Route 211 West Towards Eterna City",
+          "Route 211 East Towards Celestic Town"
+        ]
+      },
+      "diamond": {
+        "locations": [
+          "Mt. Coronet (2F)",
+          "Mt. Coronet (3F)",
+          "Turnback Cave Pillar 1",
+          "Turnback Cave Pillar 2",
+          "Turnback Cave Pillar 3",
+          "Turnback Cave Before Pillar 1",
+          "Turnback Cave Between Pillars 1 And 2",
+          "Turnback Cave Between Pillars 2 And 3",
+          "Turnback Cave After Pillar 3",
+          "Wayward Cave (1F)",
+          "Wayward Cave (B1F)",
+          "Route 206"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Mt. Coronet (2F)",
+          "Mt. Coronet (3F)",
+          "Turnback Cave Pillar 1",
+          "Turnback Cave Pillar 2",
+          "Turnback Cave Pillar 3",
+          "Turnback Cave Before Pillar 1",
+          "Turnback Cave Between Pillars 1 And 2",
+          "Turnback Cave Between Pillars 2 And 3",
+          "Turnback Cave After Pillar 3",
+          "Wayward Cave (1F)",
+          "Wayward Cave (B1F)",
+          "Route 206"
+        ]
+      }
+    },
+    "437": {
+      "diamond": {
+        "locations": [
+          "Mt. Coronet (2F)",
+          "Mt. Coronet (3F)",
+          "Mt. Coronet Exterior Snowfall",
+          "Mt. Coronet Exterior Blizzard",
+          "Mt. Coronet (4F)",
+          "Mt. Coronet (4F) Small Room",
+          "Mt. Coronet (5F)",
+          "Mt. Coronet (6F)",
+          "Mt. Coronet (1F) From Exterior",
+          "Turnback Cave Pillar 1",
+          "Turnback Cave Pillar 2",
+          "Turnback Cave Pillar 3",
+          "Turnback Cave Before Pillar 1",
+          "Turnback Cave Between Pillars 1 And 2",
+          "Turnback Cave Between Pillars 2 And 3",
+          "Turnback Cave After Pillar 3"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Mt. Coronet (2F)",
+          "Mt. Coronet (3F)",
+          "Mt. Coronet Exterior Snowfall",
+          "Mt. Coronet Exterior Blizzard",
+          "Mt. Coronet (4F)",
+          "Mt. Coronet (4F) Small Room",
+          "Mt. Coronet (5F)",
+          "Mt. Coronet (6F)",
+          "Mt. Coronet (1F) From Exterior",
+          "Turnback Cave Pillar 1",
+          "Turnback Cave Pillar 2",
+          "Turnback Cave Pillar 3",
+          "Turnback Cave Before Pillar 1",
+          "Turnback Cave Between Pillars 1 And 2",
+          "Turnback Cave Between Pillars 2 And 3",
+          "Turnback Cave After Pillar 3"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Mt. Coronet (2F)",
+          "Mt. Coronet (3F)",
+          "Mt. Coronet (4F)",
+          "Mt. Coronet (4F) Small Room",
+          "Mt. Coronet (5F)",
+          "Mt. Coronet (6F)",
+          "Turnback Cave Pillar 2",
+          "Turnback Cave Pillar 3",
+          "Turnback Cave Between Pillars 2 And 3",
+          "Turnback Cave After Pillar 3"
+        ]
+      }
+    },
+    "438": {
+      "diamond": {
+        "locations": [
+          "Trophy Garden"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Trophy Garden",
+          "Route 209",
+          "Route 210 South Towards Solaceon Town"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Trophy Garden"
+        ]
+      }
+    },
+    "439": {
+      "diamond": {
+        "locations": [
+          "Trophy Garden",
+          "Route 209",
+          "Route 210 South Towards Solaceon Town"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Trophy Garden"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Trophy Garden"
+        ]
+      }
+    },
+    "440": {
+      "diamond": {
+        "locations": [
+          "Trophy Garden",
+          "Hearthome City West Gate"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Trophy Garden",
+          "Hearthome City West Gate"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Trophy Garden"
+        ]
+      }
+    },
+    "441": {
+      "platinum": {
+        "locations": [
+          "Route 213",
+          "Route 218",
+          "Route 222",
+          "Eterna City Eterna Condominiums"
+        ]
+      },
+      "diamond": {
+        "locations": [
+          "Route 222",
+          "Route 224",
+          "Eterna City Eterna Condominiums"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Route 222",
+          "Route 224",
+          "Eterna City Eterna Condominiums"
+        ]
+      }
+    },
+    "442": {
+      "diamond": {
+        "locations": [
+          "Route 209"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Route 209"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Route 209"
+        ]
+      }
+    },
+    "443": {
+      "diamond": {
+        "locations": [
+          "Wayward Cave (B1F)"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Wayward Cave (B1F)"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Wayward Cave (B1F)"
+        ]
+      }
+    },
+    "444": {
+      "platinum": {
+        "locations": [
+          "Victory Road (1F)",
+          "Victory Road (2F)",
+          "Victory Road (B1F)",
+          "Victory Road Inside (B1F)",
+          "Victory Road Inside",
+          "Victory Road Inside Exit"
+        ]
+      },
+      "diamond": {
+        "locations": [
+          "Evolve Gible"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Evolve Gible"
+        ]
+      }
+    },
+    "445": {
+      "diamond": {
+        "locations": [
+          "Evolve Gabite"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Evolve Gabite"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Evolve Gabite"
+        ]
+      }
+    },
+    "446": {
+      "diamond": {
+        "locations": [
+          "Valley Windworks",
+          "Eterna Forest",
+          "Fuego Ironworks",
+          "Route 205 South Towards Floaroma Town",
+          "Route 205 East Towards Eterna City",
+          "Route 206",
+          "Route 207",
+          "Route 208",
+          "Route 209",
+          "Route 210 South Towards Solaceon Town",
+          "Route 210 West Towards Celestic Town",
+          "Route 211 East Towards Celestic Town",
+          "Route 212 North Towards Hearthome City",
+          "Route 212 East Towards Pastoria City",
+          "Route 213",
+          "Route 214",
+          "Route 215",
+          "Route 218",
+          "Route 221",
+          "Route 222",
+          "Floaroma Meadow"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Valley Windworks",
+          "Eterna Forest",
+          "Fuego Ironworks",
+          "Route 205 South Towards Floaroma Town",
+          "Route 205 East Towards Eterna City",
+          "Route 206",
+          "Route 207",
+          "Route 208",
+          "Route 209",
+          "Route 210 South Towards Solaceon Town",
+          "Route 210 West Towards Celestic Town",
+          "Route 211 East Towards Celestic Town",
+          "Route 212 North Towards Hearthome City",
+          "Route 212 East Towards Pastoria City",
+          "Route 213",
+          "Route 214",
+          "Route 215",
+          "Route 218",
+          "Route 221",
+          "Route 222",
+          "Floaroma Meadow"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Valley Windworks",
+          "Eterna Forest",
+          "Fuego Ironworks",
+          "Route 205 South Towards Floaroma Town",
+          "Route 205 East Towards Eterna City",
+          "Route 206",
+          "Route 207",
+          "Route 208",
+          "Route 209",
+          "Route 210 South Towards Solaceon Town",
+          "Route 210 West Towards Celestic Town",
+          "Route 211 East Towards Celestic Town",
+          "Route 212 North Towards Hearthome City",
+          "Route 212 East Towards Pastoria City",
+          "Route 213",
+          "Route 214",
+          "Route 215",
+          "Route 218",
+          "Route 221",
+          "Route 222",
+          "Floaroma Meadow"
+        ]
+      }
+    },
+    "447": {
+      "diamond": {
+        "locations": [
+          "Iron Island (B2F) Left"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Iron Island (B2F) Left"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Iron Island (B2F) Left"
+        ]
+      }
+    },
+    "448": {
+      "diamond": {
+        "locations": [
+          "Evolve Riolu"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Evolve Riolu"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Evolve Riolu"
+        ]
+      }
+    },
+    "449": {
+      "diamond": {
+        "locations": [
+          "Ruin Maniac Cave 0 9 Different Unown Caught",
+          "Ruin Maniac Cave 10 25 Different Unown Caught",
+          "Maniac Tunnel 26 Plus Different Unown Caught"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Ruin Maniac Cave 0 9 Different Unown Caught",
+          "Ruin Maniac Cave 10 25 Different Unown Caught",
+          "Maniac Tunnel 26 Plus Different Unown Caught"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Ruin Maniac Cave 0 9 Different Unown Caught",
+          "Ruin Maniac Cave 10 25 Different Unown Caught",
+          "Maniac Tunnel 26 Plus Different Unown Caught"
+        ]
+      }
+    },
+    "450": {
+      "diamond": {
+        "locations": [
+          "Route 228"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Route 228"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Route 228"
+        ]
+      }
+    },
+    "451": {
+      "diamond": {
+        "locations": [
+          "Great Marsh Area 1",
+          "Great Marsh Area 2",
+          "Great Marsh Area 3",
+          "Great Marsh Area 4",
+          "Great Marsh Area 5",
+          "Great Marsh Area 6"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Great Marsh Area 1",
+          "Great Marsh Area 2",
+          "Great Marsh Area 3",
+          "Great Marsh Area 4",
+          "Great Marsh Area 5",
+          "Great Marsh Area 6"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Great Marsh Area 1",
+          "Great Marsh Area 2",
+          "Great Marsh Area 3",
+          "Great Marsh Area 4",
+          "Great Marsh Area 5",
+          "Great Marsh Area 6"
+        ]
+      }
+    },
+    "452": {
+      "diamond": {
+        "locations": [
+          "Great Marsh Area 1",
+          "Great Marsh Area 2",
+          "Great Marsh Area 3",
+          "Great Marsh Area 4",
+          "Great Marsh Area 5",
+          "Great Marsh Area 6"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Great Marsh Area 1",
+          "Great Marsh Area 2",
+          "Great Marsh Area 3",
+          "Great Marsh Area 4",
+          "Great Marsh Area 5",
+          "Great Marsh Area 6"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Great Marsh Area 1",
+          "Great Marsh Area 2",
+          "Great Marsh Area 3",
+          "Great Marsh Area 4",
+          "Great Marsh Area 5",
+          "Great Marsh Area 6"
+        ]
+      }
+    },
+    "453": {
+      "diamond": {
+        "locations": [
+          "Great Marsh Area 1",
+          "Great Marsh Area 2",
+          "Great Marsh Area 3",
+          "Great Marsh Area 4",
+          "Great Marsh Area 5",
+          "Great Marsh Area 6"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Great Marsh Area 1",
+          "Great Marsh Area 2",
+          "Great Marsh Area 3",
+          "Great Marsh Area 4",
+          "Great Marsh Area 5",
+          "Great Marsh Area 6"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Great Marsh Area 1",
+          "Great Marsh Area 2",
+          "Great Marsh Area 3",
+          "Great Marsh Area 4",
+          "Great Marsh Area 5",
+          "Great Marsh Area 6",
+          "Route 212 East Towards Pastoria City"
+        ]
+      }
+    },
+    "454": {
+      "diamond": {
+        "locations": [
+          "Great Marsh Area 1",
+          "Great Marsh Area 2",
+          "Great Marsh Area 3",
+          "Great Marsh Area 4",
+          "Great Marsh Area 5",
+          "Great Marsh Area 6"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Great Marsh Area 1",
+          "Great Marsh Area 2",
+          "Great Marsh Area 3",
+          "Great Marsh Area 4",
+          "Great Marsh Area 5",
+          "Great Marsh Area 6"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Great Marsh Area 1",
+          "Great Marsh Area 2",
+          "Great Marsh Area 3",
+          "Great Marsh Area 4",
+          "Great Marsh Area 5",
+          "Great Marsh Area 6"
+        ]
+      }
+    },
+    "455": {
+      "diamond": {
+        "locations": [
+          "Great Marsh Area 1",
+          "Great Marsh Area 2",
+          "Great Marsh Area 3",
+          "Great Marsh Area 4",
+          "Great Marsh Area 5",
+          "Great Marsh Area 6"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Great Marsh Area 1",
+          "Great Marsh Area 2",
+          "Great Marsh Area 3",
+          "Great Marsh Area 4",
+          "Great Marsh Area 5",
+          "Great Marsh Area 6"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Great Marsh Area 1",
+          "Great Marsh Area 2",
+          "Great Marsh Area 3",
+          "Great Marsh Area 4",
+          "Great Marsh Area 5",
+          "Great Marsh Area 6"
+        ]
+      }
+    },
+    "456": {
+      "diamond": {
+        "locations": [
+          "Canalave City",
+          "Valley Windworks",
+          "Fuego Ironworks",
+          "Iron Island",
+          "Route 205 South Towards Floaroma Town",
+          "Route 218",
+          "Route 219",
+          "Route 221",
+          "Sea Route 220"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Canalave City",
+          "Valley Windworks",
+          "Fuego Ironworks",
+          "Iron Island",
+          "Route 205 South Towards Floaroma Town",
+          "Route 218",
+          "Route 219",
+          "Route 221",
+          "Sea Route 220"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Canalave City",
+          "Valley Windworks",
+          "Fuego Ironworks",
+          "Iron Island",
+          "Route 205 South Towards Floaroma Town",
+          "Route 218",
+          "Route 219",
+          "Route 221",
+          "Sea Route 220"
+        ]
+      }
+    },
+    "457": {
+      "diamond": {
+        "locations": [
+          "Canalave City",
+          "Valley Windworks",
+          "Fuego Ironworks",
+          "Iron Island",
+          "Route 205 South Towards Floaroma Town",
+          "Route 218",
+          "Route 219",
+          "Route 221",
+          "Sea Route 220"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Canalave City",
+          "Valley Windworks",
+          "Fuego Ironworks",
+          "Iron Island",
+          "Route 205 South Towards Floaroma Town",
+          "Route 218",
+          "Route 219",
+          "Route 221",
+          "Sea Route 220"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Canalave City",
+          "Valley Windworks",
+          "Fuego Ironworks",
+          "Iron Island",
+          "Route 205 South Towards Floaroma Town",
+          "Route 218",
+          "Route 219",
+          "Route 221",
+          "Sea Route 220"
+        ]
+      }
+    },
+    "458": {
+      "diamond": {
+        "locations": [
+          "Sunyshore City",
+          "Sea Route 223"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Sunyshore City",
+          "Sea Route 223"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Sea Route 223"
+        ]
+      }
+    },
+    "459": {
+      "diamond": {
+        "locations": [
+          "Mt. Coronet Exterior Snowfall",
+          "Mt. Coronet Exterior Blizzard",
+          "Acuity Lakefront",
+          "Route 216",
+          "Route 217"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Mt. Coronet Exterior Snowfall",
+          "Mt. Coronet Exterior Blizzard",
+          "Acuity Lakefront",
+          "Route 216",
+          "Route 217"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Mt. Coronet Exterior Snowfall",
+          "Mt. Coronet Exterior Blizzard",
+          "Lake Acuity",
+          "Acuity Lakefront",
+          "Route 216",
+          "Route 217"
+        ]
+      }
+    },
+    "460": {
+      "diamond": {
+        "locations": [
+          "Mt. Coronet Exterior Snowfall",
+          "Mt. Coronet Exterior Blizzard"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Mt. Coronet Exterior Snowfall",
+          "Mt. Coronet Exterior Blizzard"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Mt. Coronet Exterior Snowfall",
+          "Mt. Coronet Exterior Blizzard"
+        ]
+      }
+    },
+    "461": {
+      "diamond": {
+        "locations": [
+          "Evolve Sneasel"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Evolve Sneasel"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Evolve Sneasel"
+        ]
+      }
+    },
+    "462": {
+      "diamond": {
+        "locations": [
+          "Evolve Magneton"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Evolve Magneton"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Evolve Magneton"
+        ]
+      }
+    },
+    "463": {
+      "diamond": {
+        "locations": [
+          "Evolve Lickitung"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Evolve Lickitung"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Evolve Lickitung"
+        ]
+      }
+    },
+    "464": {
+      "diamond": {
+        "locations": [
+          "Evolve Rhydon"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Evolve Rhydon"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Evolve Rhydon"
+        ]
+      }
+    },
+    "465": {
+      "diamond": {
+        "locations": [
+          "Trade",
+          "Event"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Trade",
+          "Event"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Evolve Tangela"
+        ]
+      }
+    },
+    "466": {
+      "diamond": {
+        "locations": [
+          "Evolve Electabuzz"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Evolve Electabuzz"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Evolve Electabuzz"
+        ]
+      }
+    },
+    "467": {
+      "diamond": {
+        "locations": [
+          "Evolve Magmar"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Evolve Magmar"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Evolve Magmar"
+        ]
+      }
+    },
+    "468": {
+      "diamond": {
+        "locations": [
+          "Evolve Togetic"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Evolve Togetic"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Evolve Togetic"
+        ]
+      }
+    },
+    "469": {
+      "diamond": {
+        "locations": [
+          "Evolve Yanma"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Evolve Yanma"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Evolve Yanma"
+        ]
+      }
+    },
+    "470": {
+      "diamond": {
+        "locations": [
+          "Evolve Eevee"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Evolve Eevee"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Evolve Eevee"
+        ]
+      }
+    },
+    "471": {
+      "diamond": {
+        "locations": [
+          "Evolve Eevee"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Evolve Eevee"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Evolve Eevee"
+        ]
+      }
+    },
+    "472": {
+      "diamond": {
+        "locations": [
+          "Evolve Gligar"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Evolve Gligar"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Evolve Gligar"
+        ]
+      }
+    },
+    "473": {
+      "diamond": {
+        "locations": [
+          "Evolve Piloswine"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Evolve Piloswine"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Evolve Piloswine"
+        ]
+      }
+    },
+    "474": {
+      "diamond": {
+        "locations": [
+          "Evolve Porygon2"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Evolve Porygon2"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Evolve Porygon2"
+        ]
+      }
+    },
+    "475": {
+      "diamond": {
+        "locations": [
+          "Evolve Kirlia"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Evolve Kirlia"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Evolve Kirlia"
+        ]
+      }
+    },
+    "476": {
+      "diamond": {
+        "locations": [
+          "Evolve Nosepass"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Evolve Nosepass"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Evolve Nosepass"
+        ]
+      }
+    },
+    "477": {
+      "diamond": {
+        "locations": [
+          "Evolve Dusclops"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Evolve Dusclops"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Evolve Dusclops"
+        ]
+      }
+    },
+    "478": {
+      "diamond": {
+        "locations": [
+          "Evolve Snorunt"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Evolve Snorunt"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Evolve Snorunt"
+        ]
+      }
+    },
+    "479": {
+      "diamond": {
+        "locations": [
+          "Old Chateau (2F) Left Room"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Old Chateau (2F) Left Room"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Old Chateau (2F) Left Room"
+        ]
+      }
+    },
+    "480": {
+      "diamond": {
+        "locations": [
+          "Lake Acuity Cavern"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Lake Acuity Cavern"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Lake Acuity Cavern"
+        ]
+      }
+    },
+    "481": {
+      "diamond": {
+        "locations": [
+          "Roaming Sinnoh"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Roaming Sinnoh"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Roaming Sinnoh"
+        ]
+      }
+    },
+    "482": {
+      "diamond": {
+        "locations": [
+          "Lake Valor Cavern"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Lake Valor Cavern"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Lake Valor Cavern"
+        ]
+      }
+    },
+    "483": {
+      "diamond": {
+        "locations": [
+          "Spear Pillar"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Spear Pillar"
+        ]
+      }
+    },
+    "484": {
+      "pearl": {
+        "locations": [
+          "Spear Pillar"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Spear Pillar"
+        ]
+      }
+    },
+    "487": {
+      "platinum": {
+        "locations": [
+          "Turnback Cave After Pillar 3",
+          "Distortion World"
+        ]
+      },
+      "diamond": {
+        "locations": [
+          "Turnback Cave (Only one) (Altered Forme)"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Turnback Cave (Only one) (Altered Forme)"
+        ]
+      }
+    },
+    "490": {
+      "diamond": {
+        "locations": [
+          "Pokemart"
+        ]
+      },
+      "pearl": {
+        "locations": [
+          "Pokemart"
+        ]
+      },
+      "platinum": {
+        "locations": [
+          "Pokemart"
+        ]
+      }
+    }
+  }
+}

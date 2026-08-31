@@ -23,6 +23,7 @@ import { updateProgressBar, isShinyMode } from "../state.js";
  * @param {string} sectionTitle - Human-readable section title displayed in the header.
  * @param {number} slotsInSection - Total count of slots in this section.
  * @param {number} startGlobalSlot - Starting 1-based global slot index for this section.
+ * @param {number} [startLocalIndex=1] - Starting 1-based local dex numbering index for this section.
  * @returns {void}
  */
 export function renderDexSectionBoxes(
@@ -31,6 +32,7 @@ export function renderDexSectionBoxes(
   sectionTitle,
   slotsInSection,
   startGlobalSlot,
+  startLocalIndex = 1,
 ) {
   // Heading for section
   const heading = document.createElement("h2");
@@ -40,11 +42,14 @@ export function renderDexSectionBoxes(
 
   const boxCount = Math.ceil(slotsInSection / BOX_CAPACITY);
   for (let boxIndex = 0; boxIndex < boxCount; boxIndex += 1) {
-    const localStart = boxIndex * BOX_CAPACITY + 1;
-    const localEnd = Math.min((boxIndex + 1) * BOX_CAPACITY, slotsInSection);
+    const localStart = startLocalIndex + boxIndex * BOX_CAPACITY;
+    const localEnd = Math.min(
+      startLocalIndex + (boxIndex + 1) * BOX_CAPACITY - 1,
+      startLocalIndex + slotsInSection - 1,
+    );
     const globalStart = startGlobalSlot + boxIndex * BOX_CAPACITY;
     const globalEnd = Math.min(
-      startGlobalSlot + localEnd - 1,
+      startGlobalSlot + (boxIndex + 1) * BOX_CAPACITY - 1,
       startGlobalSlot + slotsInSection - 1,
     );
     const section = document.createElement("section");
@@ -93,7 +98,7 @@ export function createDexSlot(
   const spriteStyle = loadSettings().spriteStyle || "pokesprites";
   button.innerHTML = `
     <div class="index">${displayIndex}</div>
-    <img class="sprite" src="${spriteUrlForSpecies(formId, spriteStyle, isShinyMode)}" alt="${name}" loading="lazy" onerror="this.style.opacity=.2"/>
+    <img class="sprite" src="${spriteUrlForSpecies(formId, spriteStyle, isShinyMode)}" alt="${name}" loading="lazy" decoding="async" crossorigin="anonymous" onerror="this.style.opacity=.2"/>
     <div class="label">${name}</div>
     <span class="cell-info-btn" role="button" aria-label="View info for ${name}" tabindex="0">i</span>
   `;
@@ -115,6 +120,9 @@ export function applySpriteStyleToCells() {
       const formId = cell?.dataset.form;
       if (!formId) return;
       img.style.opacity = "";
+      img.onerror = function onSpriteError() {
+        this.style.opacity = ".2";
+      };
       img.src = spriteUrlForSpecies(formId, spriteStyle, isShinyMode);
     });
 }
@@ -156,10 +164,11 @@ export function populateDexSlots(sections, slotCount) {
     let slotsPlacedInCurrentBox = 0;
 
     entries.forEach((entry) => {
-      const { speciesId, formId } = entry;
+      const { speciesId, formId, dexNumber } = entry;
       const speciesName =
         window.__livingDexNames?.[speciesId] || `#${speciesId}`;
-      const displayIndex = String(localIndex + 1).padStart(3, "0");
+      const num = dexNumber != null ? dexNumber : localIndex + 1;
+      const displayIndex = String(num).padStart(3, "0");
       const cell = createDexSlot(
         globalSlotIndex,
         speciesId,

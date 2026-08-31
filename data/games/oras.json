@@ -1,0 +1,4049 @@
+{
+  "gameId": "oras",
+  "title": "Omega Ruby / Alpha Sapphire",
+  "group": "gen6",
+  "generation": 6,
+  "versions": [
+    "omega-ruby",
+    "alpha-sapphire"
+  ],
+  "sections": [
+    {
+      "id": "hoenn-updated",
+      "title": "Updated Hoenn Pokédex",
+      "type": "base",
+      "optional": false,
+      "defaultEnabled": false,
+      "startIndex": 1,
+      "entries": [
+        {
+          "speciesId": 252,
+          "formId": 252,
+          "dexNumber": 1
+        },
+        {
+          "speciesId": 253,
+          "formId": 253,
+          "dexNumber": 2
+        },
+        {
+          "speciesId": 254,
+          "formId": 254,
+          "dexNumber": 3
+        },
+        {
+          "speciesId": 255,
+          "formId": 255,
+          "dexNumber": 4
+        },
+        {
+          "speciesId": 256,
+          "formId": 256,
+          "dexNumber": 5
+        },
+        {
+          "speciesId": 257,
+          "formId": 257,
+          "dexNumber": 6
+        },
+        {
+          "speciesId": 258,
+          "formId": 258,
+          "dexNumber": 7
+        },
+        {
+          "speciesId": 259,
+          "formId": 259,
+          "dexNumber": 8
+        },
+        {
+          "speciesId": 260,
+          "formId": 260,
+          "dexNumber": 9
+        },
+        {
+          "speciesId": 261,
+          "formId": 261,
+          "dexNumber": 10
+        },
+        {
+          "speciesId": 262,
+          "formId": 262,
+          "dexNumber": 11
+        },
+        {
+          "speciesId": 263,
+          "formId": 263,
+          "dexNumber": 12
+        },
+        {
+          "speciesId": 264,
+          "formId": 264,
+          "dexNumber": 13
+        },
+        {
+          "speciesId": 265,
+          "formId": 265,
+          "dexNumber": 14
+        },
+        {
+          "speciesId": 266,
+          "formId": 266,
+          "dexNumber": 15
+        },
+        {
+          "speciesId": 267,
+          "formId": 267,
+          "dexNumber": 16
+        },
+        {
+          "speciesId": 268,
+          "formId": 268,
+          "dexNumber": 17
+        },
+        {
+          "speciesId": 269,
+          "formId": 269,
+          "dexNumber": 18
+        },
+        {
+          "speciesId": 270,
+          "formId": 270,
+          "dexNumber": 19
+        },
+        {
+          "speciesId": 271,
+          "formId": 271,
+          "dexNumber": 20
+        },
+        {
+          "speciesId": 272,
+          "formId": 272,
+          "dexNumber": 21
+        },
+        {
+          "speciesId": 273,
+          "formId": 273,
+          "dexNumber": 22
+        },
+        {
+          "speciesId": 274,
+          "formId": 274,
+          "dexNumber": 23
+        },
+        {
+          "speciesId": 275,
+          "formId": 275,
+          "dexNumber": 24
+        },
+        {
+          "speciesId": 276,
+          "formId": 276,
+          "dexNumber": 25
+        },
+        {
+          "speciesId": 277,
+          "formId": 277,
+          "dexNumber": 26
+        },
+        {
+          "speciesId": 278,
+          "formId": 278,
+          "dexNumber": 27
+        },
+        {
+          "speciesId": 279,
+          "formId": 279,
+          "dexNumber": 28
+        },
+        {
+          "speciesId": 280,
+          "formId": 280,
+          "dexNumber": 29
+        },
+        {
+          "speciesId": 281,
+          "formId": 281,
+          "dexNumber": 30
+        },
+        {
+          "speciesId": 282,
+          "formId": 282,
+          "dexNumber": 31
+        },
+        {
+          "speciesId": 475,
+          "formId": 475,
+          "dexNumber": 32
+        },
+        {
+          "speciesId": 283,
+          "formId": 283,
+          "dexNumber": 33
+        },
+        {
+          "speciesId": 284,
+          "formId": 284,
+          "dexNumber": 34
+        },
+        {
+          "speciesId": 285,
+          "formId": 285,
+          "dexNumber": 35
+        },
+        {
+          "speciesId": 286,
+          "formId": 286,
+          "dexNumber": 36
+        },
+        {
+          "speciesId": 287,
+          "formId": 287,
+          "dexNumber": 37
+        },
+        {
+          "speciesId": 288,
+          "formId": 288,
+          "dexNumber": 38
+        },
+        {
+          "speciesId": 289,
+          "formId": 289,
+          "dexNumber": 39
+        },
+        {
+          "speciesId": 63,
+          "formId": 63,
+          "dexNumber": 40
+        },
+        {
+          "speciesId": 64,
+          "formId": 64,
+          "dexNumber": 41
+        },
+        {
+          "speciesId": 65,
+          "formId": 65,
+          "dexNumber": 42
+        },
+        {
+          "speciesId": 290,
+          "formId": 290,
+          "dexNumber": 43
+        },
+        {
+          "speciesId": 291,
+          "formId": 291,
+          "dexNumber": 44
+        },
+        {
+          "speciesId": 292,
+          "formId": 292,
+          "dexNumber": 45
+        },
+        {
+          "speciesId": 293,
+          "formId": 293,
+          "dexNumber": 46
+        },
+        {
+          "speciesId": 294,
+          "formId": 294,
+          "dexNumber": 47
+        },
+        {
+          "speciesId": 295,
+          "formId": 295,
+          "dexNumber": 48
+        },
+        {
+          "speciesId": 296,
+          "formId": 296,
+          "dexNumber": 49
+        },
+        {
+          "speciesId": 297,
+          "formId": 297,
+          "dexNumber": 50
+        },
+        {
+          "speciesId": 118,
+          "formId": 118,
+          "dexNumber": 51
+        },
+        {
+          "speciesId": 119,
+          "formId": 119,
+          "dexNumber": 52
+        },
+        {
+          "speciesId": 129,
+          "formId": 129,
+          "dexNumber": 53
+        },
+        {
+          "speciesId": 130,
+          "formId": 130,
+          "dexNumber": 54
+        },
+        {
+          "speciesId": 298,
+          "formId": 298,
+          "dexNumber": 55
+        },
+        {
+          "speciesId": 183,
+          "formId": 183,
+          "dexNumber": 56
+        },
+        {
+          "speciesId": 184,
+          "formId": 184,
+          "dexNumber": 57
+        },
+        {
+          "speciesId": 74,
+          "formId": 74,
+          "dexNumber": 58
+        },
+        {
+          "speciesId": 75,
+          "formId": 75,
+          "dexNumber": 59
+        },
+        {
+          "speciesId": 76,
+          "formId": 76,
+          "dexNumber": 60
+        },
+        {
+          "speciesId": 299,
+          "formId": 299,
+          "dexNumber": 61
+        },
+        {
+          "speciesId": 476,
+          "formId": 476,
+          "dexNumber": 62
+        },
+        {
+          "speciesId": 300,
+          "formId": 300,
+          "dexNumber": 63
+        },
+        {
+          "speciesId": 301,
+          "formId": 301,
+          "dexNumber": 64
+        },
+        {
+          "speciesId": 41,
+          "formId": 41,
+          "dexNumber": 65
+        },
+        {
+          "speciesId": 42,
+          "formId": 42,
+          "dexNumber": 66
+        },
+        {
+          "speciesId": 169,
+          "formId": 169,
+          "dexNumber": 67
+        },
+        {
+          "speciesId": 72,
+          "formId": 72,
+          "dexNumber": 68
+        },
+        {
+          "speciesId": 73,
+          "formId": 73,
+          "dexNumber": 69
+        },
+        {
+          "speciesId": 302,
+          "formId": 302,
+          "dexNumber": 70
+        },
+        {
+          "speciesId": 303,
+          "formId": 303,
+          "dexNumber": 71
+        },
+        {
+          "speciesId": 304,
+          "formId": 304,
+          "dexNumber": 72
+        },
+        {
+          "speciesId": 305,
+          "formId": 305,
+          "dexNumber": 73
+        },
+        {
+          "speciesId": 306,
+          "formId": 306,
+          "dexNumber": 74
+        },
+        {
+          "speciesId": 66,
+          "formId": 66,
+          "dexNumber": 75
+        },
+        {
+          "speciesId": 67,
+          "formId": 67,
+          "dexNumber": 76
+        },
+        {
+          "speciesId": 68,
+          "formId": 68,
+          "dexNumber": 77
+        },
+        {
+          "speciesId": 307,
+          "formId": 307,
+          "dexNumber": 78
+        },
+        {
+          "speciesId": 308,
+          "formId": 308,
+          "dexNumber": 79
+        },
+        {
+          "speciesId": 309,
+          "formId": 309,
+          "dexNumber": 80
+        },
+        {
+          "speciesId": 310,
+          "formId": 310,
+          "dexNumber": 81
+        },
+        {
+          "speciesId": 311,
+          "formId": 311,
+          "dexNumber": 82
+        },
+        {
+          "speciesId": 312,
+          "formId": 312,
+          "dexNumber": 83
+        },
+        {
+          "speciesId": 81,
+          "formId": 81,
+          "dexNumber": 84
+        },
+        {
+          "speciesId": 82,
+          "formId": 82,
+          "dexNumber": 85
+        },
+        {
+          "speciesId": 462,
+          "formId": 462,
+          "dexNumber": 86
+        },
+        {
+          "speciesId": 100,
+          "formId": 100,
+          "dexNumber": 87
+        },
+        {
+          "speciesId": 101,
+          "formId": 101,
+          "dexNumber": 88
+        },
+        {
+          "speciesId": 313,
+          "formId": 313,
+          "dexNumber": 89
+        },
+        {
+          "speciesId": 314,
+          "formId": 314,
+          "dexNumber": 90
+        },
+        {
+          "speciesId": 43,
+          "formId": 43,
+          "dexNumber": 91
+        },
+        {
+          "speciesId": 44,
+          "formId": 44,
+          "dexNumber": 92
+        },
+        {
+          "speciesId": 45,
+          "formId": 45,
+          "dexNumber": 93
+        },
+        {
+          "speciesId": 182,
+          "formId": 182,
+          "dexNumber": 94
+        },
+        {
+          "speciesId": 84,
+          "formId": 84,
+          "dexNumber": 95
+        },
+        {
+          "speciesId": 85,
+          "formId": 85,
+          "dexNumber": 96
+        },
+        {
+          "speciesId": 406,
+          "formId": 406,
+          "dexNumber": 97
+        },
+        {
+          "speciesId": 315,
+          "formId": 315,
+          "dexNumber": 98
+        },
+        {
+          "speciesId": 407,
+          "formId": 407,
+          "dexNumber": 99
+        },
+        {
+          "speciesId": 316,
+          "formId": 316,
+          "dexNumber": 100
+        },
+        {
+          "speciesId": 317,
+          "formId": 317,
+          "dexNumber": 101
+        },
+        {
+          "speciesId": 318,
+          "formId": 318,
+          "dexNumber": 102
+        },
+        {
+          "speciesId": 319,
+          "formId": 319,
+          "dexNumber": 103
+        },
+        {
+          "speciesId": 320,
+          "formId": 320,
+          "dexNumber": 104
+        },
+        {
+          "speciesId": 321,
+          "formId": 321,
+          "dexNumber": 105
+        },
+        {
+          "speciesId": 322,
+          "formId": 322,
+          "dexNumber": 106
+        },
+        {
+          "speciesId": 323,
+          "formId": 323,
+          "dexNumber": 107
+        },
+        {
+          "speciesId": 218,
+          "formId": 218,
+          "dexNumber": 108
+        },
+        {
+          "speciesId": 219,
+          "formId": 219,
+          "dexNumber": 109
+        },
+        {
+          "speciesId": 324,
+          "formId": 324,
+          "dexNumber": 110
+        },
+        {
+          "speciesId": 88,
+          "formId": 88,
+          "dexNumber": 111
+        },
+        {
+          "speciesId": 89,
+          "formId": 89,
+          "dexNumber": 112
+        },
+        {
+          "speciesId": 109,
+          "formId": 109,
+          "dexNumber": 113
+        },
+        {
+          "speciesId": 110,
+          "formId": 110,
+          "dexNumber": 114
+        },
+        {
+          "speciesId": 325,
+          "formId": 325,
+          "dexNumber": 115
+        },
+        {
+          "speciesId": 326,
+          "formId": 326,
+          "dexNumber": 116
+        },
+        {
+          "speciesId": 27,
+          "formId": 27,
+          "dexNumber": 117
+        },
+        {
+          "speciesId": 28,
+          "formId": 28,
+          "dexNumber": 118
+        },
+        {
+          "speciesId": 327,
+          "formId": 327,
+          "dexNumber": 119
+        },
+        {
+          "speciesId": 227,
+          "formId": 227,
+          "dexNumber": 120
+        },
+        {
+          "speciesId": 328,
+          "formId": 328,
+          "dexNumber": 121
+        },
+        {
+          "speciesId": 329,
+          "formId": 329,
+          "dexNumber": 122
+        },
+        {
+          "speciesId": 330,
+          "formId": 330,
+          "dexNumber": 123
+        },
+        {
+          "speciesId": 331,
+          "formId": 331,
+          "dexNumber": 124
+        },
+        {
+          "speciesId": 332,
+          "formId": 332,
+          "dexNumber": 125
+        },
+        {
+          "speciesId": 333,
+          "formId": 333,
+          "dexNumber": 126
+        },
+        {
+          "speciesId": 334,
+          "formId": 334,
+          "dexNumber": 127
+        },
+        {
+          "speciesId": 335,
+          "formId": 335,
+          "dexNumber": 128
+        },
+        {
+          "speciesId": 336,
+          "formId": 336,
+          "dexNumber": 129
+        },
+        {
+          "speciesId": 337,
+          "formId": 337,
+          "dexNumber": 130
+        },
+        {
+          "speciesId": 338,
+          "formId": 338,
+          "dexNumber": 131
+        },
+        {
+          "speciesId": 339,
+          "formId": 339,
+          "dexNumber": 132
+        },
+        {
+          "speciesId": 340,
+          "formId": 340,
+          "dexNumber": 133
+        },
+        {
+          "speciesId": 341,
+          "formId": 341,
+          "dexNumber": 134
+        },
+        {
+          "speciesId": 342,
+          "formId": 342,
+          "dexNumber": 135
+        },
+        {
+          "speciesId": 343,
+          "formId": 343,
+          "dexNumber": 136
+        },
+        {
+          "speciesId": 344,
+          "formId": 344,
+          "dexNumber": 137
+        },
+        {
+          "speciesId": 345,
+          "formId": 345,
+          "dexNumber": 138
+        },
+        {
+          "speciesId": 346,
+          "formId": 346,
+          "dexNumber": 139
+        },
+        {
+          "speciesId": 347,
+          "formId": 347,
+          "dexNumber": 140
+        },
+        {
+          "speciesId": 348,
+          "formId": 348,
+          "dexNumber": 141
+        },
+        {
+          "speciesId": 174,
+          "formId": 174,
+          "dexNumber": 142
+        },
+        {
+          "speciesId": 39,
+          "formId": 39,
+          "dexNumber": 143
+        },
+        {
+          "speciesId": 40,
+          "formId": 40,
+          "dexNumber": 144
+        },
+        {
+          "speciesId": 349,
+          "formId": 349,
+          "dexNumber": 145
+        },
+        {
+          "speciesId": 350,
+          "formId": 350,
+          "dexNumber": 146
+        },
+        {
+          "speciesId": 351,
+          "formId": 351,
+          "dexNumber": 147
+        },
+        {
+          "speciesId": 120,
+          "formId": 120,
+          "dexNumber": 148
+        },
+        {
+          "speciesId": 121,
+          "formId": 121,
+          "dexNumber": 149
+        },
+        {
+          "speciesId": 352,
+          "formId": 352,
+          "dexNumber": 150
+        },
+        {
+          "speciesId": 353,
+          "formId": 353,
+          "dexNumber": 151
+        },
+        {
+          "speciesId": 354,
+          "formId": 354,
+          "dexNumber": 152
+        },
+        {
+          "speciesId": 355,
+          "formId": 355,
+          "dexNumber": 153
+        },
+        {
+          "speciesId": 356,
+          "formId": 356,
+          "dexNumber": 154
+        },
+        {
+          "speciesId": 477,
+          "formId": 477,
+          "dexNumber": 155
+        },
+        {
+          "speciesId": 357,
+          "formId": 357,
+          "dexNumber": 156
+        },
+        {
+          "speciesId": 433,
+          "formId": 433,
+          "dexNumber": 157
+        },
+        {
+          "speciesId": 358,
+          "formId": 358,
+          "dexNumber": 158
+        },
+        {
+          "speciesId": 359,
+          "formId": 359,
+          "dexNumber": 159
+        },
+        {
+          "speciesId": 37,
+          "formId": 37,
+          "dexNumber": 160
+        },
+        {
+          "speciesId": 38,
+          "formId": 38,
+          "dexNumber": 161
+        },
+        {
+          "speciesId": 172,
+          "formId": 172,
+          "dexNumber": 162
+        },
+        {
+          "speciesId": 25,
+          "formId": 25,
+          "dexNumber": 163
+        },
+        {
+          "speciesId": 26,
+          "formId": 26,
+          "dexNumber": 164
+        },
+        {
+          "speciesId": 54,
+          "formId": 54,
+          "dexNumber": 165
+        },
+        {
+          "speciesId": 55,
+          "formId": 55,
+          "dexNumber": 166
+        },
+        {
+          "speciesId": 360,
+          "formId": 360,
+          "dexNumber": 167
+        },
+        {
+          "speciesId": 202,
+          "formId": 202,
+          "dexNumber": 168
+        },
+        {
+          "speciesId": 177,
+          "formId": 177,
+          "dexNumber": 169
+        },
+        {
+          "speciesId": 178,
+          "formId": 178,
+          "dexNumber": 170
+        },
+        {
+          "speciesId": 203,
+          "formId": 203,
+          "dexNumber": 171
+        },
+        {
+          "speciesId": 231,
+          "formId": 231,
+          "dexNumber": 172
+        },
+        {
+          "speciesId": 232,
+          "formId": 232,
+          "dexNumber": 173
+        },
+        {
+          "speciesId": 127,
+          "formId": 127,
+          "dexNumber": 174
+        },
+        {
+          "speciesId": 214,
+          "formId": 214,
+          "dexNumber": 175
+        },
+        {
+          "speciesId": 111,
+          "formId": 111,
+          "dexNumber": 176
+        },
+        {
+          "speciesId": 112,
+          "formId": 112,
+          "dexNumber": 177
+        },
+        {
+          "speciesId": 464,
+          "formId": 464,
+          "dexNumber": 178
+        },
+        {
+          "speciesId": 361,
+          "formId": 361,
+          "dexNumber": 179
+        },
+        {
+          "speciesId": 362,
+          "formId": 362,
+          "dexNumber": 180
+        },
+        {
+          "speciesId": 478,
+          "formId": 478,
+          "dexNumber": 181
+        },
+        {
+          "speciesId": 363,
+          "formId": 363,
+          "dexNumber": 182
+        },
+        {
+          "speciesId": 364,
+          "formId": 364,
+          "dexNumber": 183
+        },
+        {
+          "speciesId": 365,
+          "formId": 365,
+          "dexNumber": 184
+        },
+        {
+          "speciesId": 366,
+          "formId": 366,
+          "dexNumber": 185
+        },
+        {
+          "speciesId": 367,
+          "formId": 367,
+          "dexNumber": 186
+        },
+        {
+          "speciesId": 368,
+          "formId": 368,
+          "dexNumber": 187
+        },
+        {
+          "speciesId": 369,
+          "formId": 369,
+          "dexNumber": 188
+        },
+        {
+          "speciesId": 222,
+          "formId": 222,
+          "dexNumber": 189
+        },
+        {
+          "speciesId": 170,
+          "formId": 170,
+          "dexNumber": 190
+        },
+        {
+          "speciesId": 171,
+          "formId": 171,
+          "dexNumber": 191
+        },
+        {
+          "speciesId": 370,
+          "formId": 370,
+          "dexNumber": 192
+        },
+        {
+          "speciesId": 116,
+          "formId": 116,
+          "dexNumber": 193
+        },
+        {
+          "speciesId": 117,
+          "formId": 117,
+          "dexNumber": 194
+        },
+        {
+          "speciesId": 230,
+          "formId": 230,
+          "dexNumber": 195
+        },
+        {
+          "speciesId": 371,
+          "formId": 371,
+          "dexNumber": 196
+        },
+        {
+          "speciesId": 372,
+          "formId": 372,
+          "dexNumber": 197
+        },
+        {
+          "speciesId": 373,
+          "formId": 373,
+          "dexNumber": 198
+        },
+        {
+          "speciesId": 374,
+          "formId": 374,
+          "dexNumber": 199
+        },
+        {
+          "speciesId": 375,
+          "formId": 375,
+          "dexNumber": 200
+        },
+        {
+          "speciesId": 376,
+          "formId": 376,
+          "dexNumber": 201
+        },
+        {
+          "speciesId": 377,
+          "formId": 377,
+          "dexNumber": 202
+        },
+        {
+          "speciesId": 378,
+          "formId": 378,
+          "dexNumber": 203
+        },
+        {
+          "speciesId": 379,
+          "formId": 379,
+          "dexNumber": 204
+        },
+        {
+          "speciesId": 380,
+          "formId": 380,
+          "dexNumber": 205
+        },
+        {
+          "speciesId": 381,
+          "formId": 381,
+          "dexNumber": 206
+        },
+        {
+          "speciesId": 382,
+          "formId": 382,
+          "dexNumber": 207
+        },
+        {
+          "speciesId": 383,
+          "formId": 383,
+          "dexNumber": 208
+        },
+        {
+          "speciesId": 384,
+          "formId": 384,
+          "dexNumber": 209
+        },
+        {
+          "speciesId": 385,
+          "formId": 385,
+          "dexNumber": 210
+        },
+        {
+          "speciesId": 386,
+          "formId": 386,
+          "dexNumber": 211
+        }
+      ]
+    }
+  ],
+  "encounters": {
+    "25": {
+      "omega-ruby": {
+        "locations": [
+          "Slateport City Contest Hall",
+          "Verdanturf Town Contest Hall",
+          "Fallarbor Town Contest Hall",
+          "Lilycove City Contest Hall"
+        ]
+      },
+      "alpha-sapphire": {
+        "locations": [
+          "Slateport City Contest Hall",
+          "Verdanturf Town Contest Hall",
+          "Fallarbor Town Contest Hall",
+          "Lilycove City Contest Hall"
+        ]
+      }
+    },
+    "26": {
+      "omega-ruby": {
+        "locations": [
+          "Evolve Pikachu"
+        ]
+      },
+      "alpha-sapphire": {
+        "locations": [
+          "Evolve Pikachu"
+        ]
+      }
+    },
+    "27": {
+      "omega-ruby": {
+        "locations": [
+          "Route 111"
+        ]
+      },
+      "alpha-sapphire": {
+        "locations": [
+          "Route 111"
+        ]
+      }
+    },
+    "28": {
+      "omega-ruby": {
+        "locations": [
+          "Evolve Sandshrew"
+        ]
+      },
+      "alpha-sapphire": {
+        "locations": [
+          "Evolve Sandshrew"
+        ]
+      }
+    },
+    "37": {
+      "omega-ruby": {
+        "locations": [
+          "Mt. Pyre Outside",
+          "Mt. Pyre Summit",
+          "Mirage Spot Forest North Of Route 124"
+        ]
+      },
+      "alpha-sapphire": {
+        "locations": [
+          "Mt. Pyre Outside",
+          "Mt. Pyre Summit",
+          "Mirage Spot Forest North Of Route 124"
+        ]
+      }
+    },
+    "38": {
+      "omega-ruby": {
+        "locations": [
+          "Evolve Vulpix"
+        ]
+      },
+      "alpha-sapphire": {
+        "locations": [
+          "Evolve Vulpix"
+        ]
+      }
+    },
+    "39": {
+      "omega-ruby": {
+        "locations": [
+          "Route 115"
+        ]
+      },
+      "alpha-sapphire": {
+        "locations": [
+          "Route 115"
+        ]
+      }
+    },
+    "40": {
+      "omega-ruby": {
+        "locations": [
+          "Evolve Jigglypuff"
+        ]
+      },
+      "alpha-sapphire": {
+        "locations": [
+          "Evolve Jigglypuff"
+        ]
+      }
+    },
+    "41": {
+      "omega-ruby": {
+        "locations": [
+          "Meteor Falls",
+          "Meteor Falls Back",
+          "Meteor Falls (B1F)",
+          "Meteor Falls Backsmall Room",
+          "Granite Cave (1F)",
+          "Granite Cave (B1F)",
+          "Granite Cave (B2F)",
+          "Seafloor Cavern",
+          "Cave Of Origin Entrance",
+          "Cave Of Origin (1F)",
+          "Cave Of Origin (B1F)",
+          "Cave Of Origin (B2F)",
+          "Cave Of Origin (B3F)",
+          "Victory Road (1F)",
+          "Victory Road (B1F)",
+          "Shoal Cave High Tide",
+          "Shoal Cave (B1F)",
+          "Scorched Slab (B1F)",
+          "Scorched Slab (B2F)",
+          "Scorched Slab (B3F)",
+          "Shoal Cave Low Tide",
+          "Shoal Cave (B2F)",
+          "Shoal Cave (B3F)"
+        ]
+      },
+      "alpha-sapphire": {
+        "locations": [
+          "Meteor Falls",
+          "Meteor Falls Back",
+          "Meteor Falls (B1F)",
+          "Meteor Falls Backsmall Room",
+          "Granite Cave (1F)",
+          "Granite Cave (B1F)",
+          "Granite Cave (B2F)",
+          "Seafloor Cavern",
+          "Cave Of Origin Entrance",
+          "Cave Of Origin (1F)",
+          "Cave Of Origin (B1F)",
+          "Cave Of Origin (B2F)",
+          "Cave Of Origin (B3F)",
+          "Victory Road (1F)",
+          "Victory Road (B1F)",
+          "Shoal Cave High Tide",
+          "Shoal Cave (B1F)",
+          "Scorched Slab (B1F)",
+          "Scorched Slab (B2F)",
+          "Scorched Slab (B3F)",
+          "Shoal Cave Low Tide",
+          "Shoal Cave (B2F)",
+          "Shoal Cave (B3F)"
+        ]
+      }
+    },
+    "42": {
+      "omega-ruby": {
+        "locations": [
+          "Sky Pillar (1F)",
+          "Sky Pillar (3F)",
+          "Sky Pillar (5F)"
+        ]
+      },
+      "alpha-sapphire": {
+        "locations": [
+          "Sky Pillar (1F)",
+          "Sky Pillar (3F)",
+          "Sky Pillar (5F)"
+        ]
+      }
+    },
+    "43": {
+      "omega-ruby": {
+        "locations": [
+          "Route 117",
+          "Route 119",
+          "Route 120",
+          "Safari Zone Nwmach Bike",
+          "Safari Zone Neacro Bike",
+          "Safari Zone Sw",
+          "Safari Zone Se"
+        ]
+      },
+      "alpha-sapphire": {
+        "locations": [
+          "Route 117",
+          "Route 119",
+          "Route 120",
+          "Safari Zone Nwmach Bike",
+          "Safari Zone Neacro Bike",
+          "Safari Zone Sw",
+          "Safari Zone Se"
+        ]
+      }
+    },
+    "44": {
+      "omega-ruby": {
+        "locations": [
+          "Routes Hoenn",
+          "Hoenn",
+          "and Hoenn"
+        ]
+      },
+      "alpha-sapphire": {
+        "locations": [
+          "Routes Hoenn",
+          "Hoenn",
+          "and Hoenn"
+        ]
+      }
+    },
+    "45": {
+      "omega-ruby": {
+        "locations": [
+          "Evolve Gloom"
+        ]
+      },
+      "alpha-sapphire": {
+        "locations": [
+          "Evolve Gloom"
+        ]
+      }
+    },
+    "54": {
+      "omega-ruby": {
+        "locations": [
+          "Safari Zone Nwmach Bike",
+          "Safari Zone Neacro Bike",
+          "Safari Zone Sw",
+          "Safari Zone Se"
+        ]
+      },
+      "alpha-sapphire": {
+        "locations": [
+          "Safari Zone Nwmach Bike",
+          "Safari Zone Neacro Bike",
+          "Safari Zone Sw",
+          "Safari Zone Se"
+        ]
+      }
+    },
+    "55": {
+      "omega-ruby": {
+        "locations": [
+          "Evolve Psyduck"
+        ]
+      },
+      "alpha-sapphire": {
+        "locations": [
+          "Evolve Psyduck"
+        ]
+      }
+    },
+    "63": {
+      "omega-ruby": {
+        "locations": [
+          "Granite Cave"
+        ]
+      },
+      "alpha-sapphire": {
+        "locations": [
+          "Granite Cave"
+        ]
+      }
+    },
+    "64": {
+      "omega-ruby": {
+        "locations": [
+          "Evolve Abra"
+        ]
+      },
+      "alpha-sapphire": {
+        "locations": [
+          "Evolve Abra"
+        ]
+      }
+    },
+    "65": {
+      "omega-ruby": {
+        "locations": [
+          "Evolve Kadabra"
+        ]
+      },
+      "alpha-sapphire": {
+        "locations": [
+          "Evolve Kadabra"
+        ]
+      }
+    },
+    "66": {
+      "omega-ruby": {
+        "locations": [
+          "Jagged Pass",
+          "Route 112"
+        ]
+      },
+      "alpha-sapphire": {
+        "locations": [
+          "Jagged Pass",
+          "Route 112"
+        ]
+      }
+    },
+    "67": {
+      "omega-ruby": {
+        "locations": [
+          "Evolve Machop"
+        ]
+      },
+      "alpha-sapphire": {
+        "locations": [
+          "Evolve Machop"
+        ]
+      }
+    },
+    "68": {
+      "omega-ruby": {
+        "locations": [
+          "Evolve Machoke"
+        ]
+      },
+      "alpha-sapphire": {
+        "locations": [
+          "Evolve Machoke"
+        ]
+      }
+    },
+    "72": {
+      "omega-ruby": {
+        "locations": [
+          "Route 120",
+          "Seafloor Cavern",
+          "Battle Resort (Old Rod or Good Rod)",
+          "Routes Hoenn and Hoenn",
+          "Victory Road",
+          "Ever Grande City (Old Rod or Surfing)",
+          "Routes Hoenn",
+          "Hoenn",
+          "and Hoenn",
+          "Sea Mauville",
+          "Dewford Town",
+          "Slateport City",
+          "Lilycove City",
+          "Mossdeep City",
+          "Shoal Cave",
+          "Pacifidlog Town",
+          "Sealed Chamber",
+          "Team Magma Hideout (Old Rod, Good Rod, or Surfing)"
+        ]
+      },
+      "alpha-sapphire": {
+        "locations": [
+          "Route 120",
+          "Seafloor Cavern",
+          "Battle Resort (Old Rod or Good Rod)",
+          "Routes Hoenn and Hoenn",
+          "Victory Road",
+          "Ever Grande City (Old Rod or Surfing)",
+          "Routes Hoenn",
+          "Hoenn",
+          "and Hoenn",
+          "Sea Mauville",
+          "Dewford Town",
+          "Slateport City",
+          "Lilycove City",
+          "Mossdeep City",
+          "Shoal Cave",
+          "Pacifidlog Town",
+          "Sealed Chamber",
+          "Team Aqua Hideout (Old Rod, Good Rod, or Surfing)"
+        ]
+      }
+    },
+    "73": {
+      "omega-ruby": {
+        "locations": [
+          "Routes Hoenn",
+          "Hoenn",
+          "and Hoenn",
+          "Mossdeep City",
+          "Pacifidlog Town",
+          "Ever Grande City",
+          "Shoal Cave",
+          "Seafloor Cavern",
+          "Victory Road",
+          "Battle Resort (Surfing)"
+        ]
+      },
+      "alpha-sapphire": {
+        "locations": [
+          "Routes Hoenn",
+          "Hoenn",
+          "and Hoenn",
+          "Mossdeep City",
+          "Pacifidlog Town",
+          "Ever Grande City",
+          "Shoal Cave",
+          "Seafloor Cavern",
+          "Victory Road",
+          "Battle Resort (Surfing)"
+        ]
+      }
+    },
+    "74": {
+      "omega-ruby": {
+        "locations": [
+          "Granite Cave (1F)"
+        ]
+      },
+      "alpha-sapphire": {
+        "locations": [
+          "Granite Cave (1F)"
+        ]
+      }
+    },
+    "75": {
+      "omega-ruby": {
+        "locations": [
+          "Mirage Spot Island South Of Route 134",
+          "Mirage Spot Island South Of Pacifidlog",
+          "Mirage Spot Forest West Of Route 105",
+          "Mirage Spot Cave South East Of Route 129",
+          "Mirage Spot Cave North Of Route 124",
+          "Mirage Spot Cave West Of Rustburo",
+          "Mirage Spot Mountain South East Of Route 129"
+        ]
+      },
+      "alpha-sapphire": {
+        "locations": [
+          "Mirage Spot Island South Of Route 134",
+          "Mirage Spot Island South Of Pacifidlog",
+          "Mirage Spot Forest West Of Route 105",
+          "Mirage Spot Cave South East Of Route 129",
+          "Mirage Spot Cave North Of Route 124",
+          "Mirage Spot Cave West Of Rustburo",
+          "Mirage Spot Mountain South East Of Route 129"
+        ]
+      }
+    },
+    "76": {
+      "omega-ruby": {
+        "locations": [
+          "Evolve Graveler"
+        ]
+      },
+      "alpha-sapphire": {
+        "locations": [
+          "Evolve Graveler"
+        ]
+      }
+    },
+    "81": {
+      "omega-ruby": {
+        "locations": [
+          "New Mauville",
+          "Route 110"
+        ]
+      },
+      "alpha-sapphire": {
+        "locations": [
+          "New Mauville",
+          "Route 110"
+        ]
+      }
+    },
+    "82": {
+      "omega-ruby": {
+        "locations": [
+          "Evolve Magnemite"
+        ]
+      },
+      "alpha-sapphire": {
+        "locations": [
+          "Evolve Magnemite"
+        ]
+      }
+    },
+    "84": {
+      "omega-ruby": {
+        "locations": [
+          "Safari Zone Nwmach Bike",
+          "Safari Zone Neacro Bike",
+          "Safari Zone Sw",
+          "Safari Zone Se"
+        ]
+      },
+      "alpha-sapphire": {
+        "locations": [
+          "Safari Zone Nwmach Bike",
+          "Safari Zone Neacro Bike",
+          "Safari Zone Sw",
+          "Safari Zone Se"
+        ]
+      }
+    },
+    "85": {
+      "omega-ruby": {
+        "locations": [
+          "Evolve Doduo"
+        ]
+      },
+      "alpha-sapphire": {
+        "locations": [
+          "Evolve Doduo"
+        ]
+      }
+    },
+    "88": {
+      "alpha-sapphire": {
+        "locations": [
+          "Fiery Path"
+        ]
+      },
+      "omega-ruby": {
+        "locations": [
+          "Fiery Path"
+        ]
+      }
+    },
+    "89": {
+      "omega-ruby": {
+        "locations": [
+          "Evolve Grimer"
+        ]
+      },
+      "alpha-sapphire": {
+        "locations": [
+          "Evolve Grimer"
+        ]
+      }
+    },
+    "100": {
+      "omega-ruby": {
+        "locations": [
+          "New Mauville"
+        ]
+      },
+      "alpha-sapphire": {
+        "locations": [
+          "New Mauville"
+        ]
+      }
+    },
+    "101": {
+      "alpha-sapphire": {
+        "locations": [
+          "Team Aqua Hideout"
+        ]
+      },
+      "omega-ruby": {
+        "locations": [
+          "Team Magma Hideout"
+        ]
+      }
+    },
+    "109": {
+      "omega-ruby": {
+        "locations": [
+          "Fiery Path"
+        ]
+      },
+      "alpha-sapphire": {
+        "locations": [
+          "Fiery Path"
+        ]
+      }
+    },
+    "110": {
+      "omega-ruby": {
+        "locations": [
+          "Evolve Koffing"
+        ]
+      },
+      "alpha-sapphire": {
+        "locations": [
+          "Evolve Koffing"
+        ]
+      }
+    },
+    "111": {
+      "omega-ruby": {
+        "locations": [
+          "Hoenn (Zone 3, tall grass)"
+        ]
+      },
+      "alpha-sapphire": {
+        "locations": [
+          "Hoenn (Zone 3, tall grass)"
+        ]
+      }
+    },
+    "112": {
+      "omega-ruby": {
+        "locations": [
+          "Evolve Rhyhorn"
+        ]
+      },
+      "alpha-sapphire": {
+        "locations": [
+          "Evolve Rhyhorn"
+        ]
+      }
+    },
+    "116": {
+      "omega-ruby": {
+        "locations": [
+          "Routes Hoenn",
+          "Hoenn",
+          "and Hoenn",
+          "Sealed Chamber (Super Rod)"
+        ]
+      },
+      "alpha-sapphire": {
+        "locations": [
+          "Routes Hoenn",
+          "Hoenn",
+          "and Hoenn",
+          "Sealed Chamber (Super Rod)"
+        ]
+      }
+    },
+    "117": {
+      "omega-ruby": {
+        "locations": [
+          "Routes Hoenn",
+          "Hoenn",
+          "and Hoenn (Super Rod)"
+        ]
+      },
+      "alpha-sapphire": {
+        "locations": [
+          "Routes Hoenn",
+          "Hoenn",
+          "and Hoenn (Super Rod)"
+        ]
+      }
+    },
+    "118": {
+      "omega-ruby": {
+        "locations": [
+          "Routes Hoenn",
+          "Hoenn",
+          "Petalburg City",
+          "Meteor Falls",
+          "Scorched Slab",
+          "Victory Road (Old Rod and Good Rod)"
+        ]
+      },
+      "alpha-sapphire": {
+        "locations": [
+          "Routes Hoenn",
+          "Hoenn",
+          "Petalburg City",
+          "Meteor Falls",
+          "Scorched Slab",
+          "Victory Road (Old Rod and Good Rod)"
+        ]
+      }
+    },
+    "119": {
+      "omega-ruby": {
+        "locations": [
+          "Hoenn (Super Rod)"
+        ]
+      },
+      "alpha-sapphire": {
+        "locations": [
+          "Hoenn (Super Rod)"
+        ]
+      }
+    },
+    "120": {
+      "omega-ruby": {
+        "locations": [
+          "Lilycove City",
+          "Team Magma Hideout (Super Rod)"
+        ]
+      },
+      "alpha-sapphire": {
+        "locations": [
+          "Lilycove City",
+          "Team Aqua Hideout (Super Rod)"
+        ]
+      }
+    },
+    "121": {
+      "omega-ruby": {
+        "locations": [
+          "Evolve Staryu"
+        ]
+      },
+      "alpha-sapphire": {
+        "locations": [
+          "Evolve Staryu"
+        ]
+      }
+    },
+    "127": {
+      "omega-ruby": {
+        "locations": [
+          "Hoenn (Zone 4, long grass)"
+        ]
+      },
+      "alpha-sapphire": {
+        "locations": [
+          "Hoenn (Zone 4, long grass)"
+        ]
+      }
+    },
+    "129": {
+      "omega-ruby": {
+        "locations": [
+          "Routes Hoenn",
+          "Hoenn",
+          "Sea Mauville",
+          "Petalburg City",
+          "Meteor Falls",
+          "Dewford Town",
+          "Mossdeep City",
+          "Lilycove City",
+          "Slateport City",
+          "Team Magma HideoutOR",
+          "Team Aqua HideoutAS",
+          "Sealed Chamber",
+          "Victory Road",
+          "Ever Grande City",
+          "Pacifidlog Town",
+          "Scorched Slab",
+          "Shoal Cave",
+          "Seafloor Cavern",
+          "Battle Resort (Old Rod or Good Rod)",
+          "Route 104 (fishing)",
+          "Sootopolis City (Surfing and fishing)"
+        ]
+      },
+      "alpha-sapphire": {
+        "locations": [
+          "Routes Hoenn",
+          "Hoenn",
+          "Sea Mauville",
+          "Petalburg City",
+          "Meteor Falls",
+          "Dewford Town",
+          "Mossdeep City",
+          "Lilycove City",
+          "Slateport City",
+          "Team Magma HideoutOR",
+          "Team Aqua HideoutAS",
+          "Sealed Chamber",
+          "Victory Road",
+          "Ever Grande City",
+          "Pacifidlog Town",
+          "Scorched Slab",
+          "Shoal Cave",
+          "Seafloor Cavern",
+          "Battle Resort (Old Rod or Good Rod)",
+          "Route 104 (fishing)",
+          "Sootopolis City (Surfing and fishing)"
+        ]
+      }
+    },
+    "130": {
+      "omega-ruby": {
+        "locations": [
+          "Sootopolis City (Super Rod)"
+        ]
+      },
+      "alpha-sapphire": {
+        "locations": [
+          "Sootopolis City (Super Rod)"
+        ]
+      }
+    },
+    "169": {
+      "omega-ruby": {
+        "locations": [
+          "Evolve Golbat"
+        ]
+      },
+      "alpha-sapphire": {
+        "locations": [
+          "Evolve Golbat"
+        ]
+      }
+    },
+    "170": {
+      "omega-ruby": {
+        "locations": [
+          "Routes Hoenn",
+          "Hoenn",
+          "and Hoenn (Underwater)"
+        ]
+      },
+      "alpha-sapphire": {
+        "locations": [
+          "Routes Hoenn",
+          "Hoenn",
+          "and Hoenn (Underwater)"
+        ]
+      }
+    },
+    "171": {
+      "omega-ruby": {
+        "locations": [
+          "Routes Hoenn",
+          "Hoenn",
+          "and Hoenn (Underwater)"
+        ]
+      },
+      "alpha-sapphire": {
+        "locations": [
+          "Routes Hoenn",
+          "Hoenn",
+          "and Hoenn (Underwater)"
+        ]
+      }
+    },
+    "172": {
+      "omega-ruby": {
+        "locations": [
+          "Breed Pikachu or Raichu"
+        ]
+      },
+      "alpha-sapphire": {
+        "locations": [
+          "Breed Pikachu or Raichu"
+        ]
+      }
+    },
+    "174": {
+      "omega-ruby": {
+        "locations": [
+          "Breed Jigglypuff or Wigglytuff"
+        ]
+      },
+      "alpha-sapphire": {
+        "locations": [
+          "Breed Jigglypuff or Wigglytuff"
+        ]
+      }
+    },
+    "177": {
+      "omega-ruby": {
+        "locations": [
+          "Breed Xatu"
+        ]
+      },
+      "alpha-sapphire": {
+        "locations": [
+          "Breed Xatu"
+        ]
+      }
+    },
+    "178": {
+      "omega-ruby": {
+        "locations": [
+          "Mirage Spot Island West Of Dewford Town",
+          "Mirage Spot Island West Of Route 104",
+          "Mirage Spot Island Route 124",
+          "Mirage Spot Island South Of Route 134",
+          "Mirage Spot Island South Of Pacifidlog",
+          "Mirage Spot Mountain South East Of Route 129"
+        ]
+      },
+      "alpha-sapphire": {
+        "locations": [
+          "Mirage Spot Island West Of Dewford Town",
+          "Mirage Spot Island West Of Route 104",
+          "Mirage Spot Island Route 124",
+          "Mirage Spot Island South Of Route 134",
+          "Mirage Spot Island South Of Pacifidlog",
+          "Mirage Spot Mountain South East Of Route 129"
+        ]
+      }
+    },
+    "182": {
+      "omega-ruby": {
+        "locations": [
+          "Evolve Gloom"
+        ]
+      },
+      "alpha-sapphire": {
+        "locations": [
+          "Evolve Gloom"
+        ]
+      }
+    },
+    "183": {
+      "omega-ruby": {
+        "locations": [
+          "Route 117",
+          "Route 120"
+        ]
+      },
+      "alpha-sapphire": {
+        "locations": [
+          "Route 117",
+          "Route 120"
+        ]
+      }
+    },
+    "184": {
+      "omega-ruby": {
+        "locations": [
+          "Routes Hoenn",
+          "Hoenn",
+          "and Hoenn",
+          "Petalburg City (Surfing)"
+        ]
+      },
+      "alpha-sapphire": {
+        "locations": [
+          "Routes Hoenn",
+          "Hoenn",
+          "and Hoenn",
+          "Petalburg City (Surfing)"
+        ]
+      }
+    },
+    "202": {
+      "omega-ruby": {
+        "locations": [
+          "Hoenn (Zone 2, long grass)"
+        ]
+      },
+      "alpha-sapphire": {
+        "locations": [
+          "Hoenn (Zone 2, long grass)"
+        ]
+      }
+    },
+    "203": {
+      "omega-ruby": {
+        "locations": [
+          "Mirage Spot Mountain South Of Route 131"
+        ]
+      },
+      "alpha-sapphire": {
+        "locations": [
+          "Mirage Spot Mountain South Of Route 131"
+        ]
+      }
+    },
+    "214": {
+      "omega-ruby": {
+        "locations": [
+          "Hoenn (Zone 3, Long Grass)"
+        ]
+      },
+      "alpha-sapphire": {
+        "locations": [
+          "Hoenn (Zone 3, Long Grass)"
+        ]
+      }
+    },
+    "218": {
+      "omega-ruby": {
+        "locations": [
+          "Fiery Path"
+        ]
+      },
+      "alpha-sapphire": {
+        "locations": [
+          "Fiery Path"
+        ]
+      }
+    },
+    "219": {
+      "omega-ruby": {
+        "locations": [
+          "Evolve Slugma"
+        ]
+      },
+      "alpha-sapphire": {
+        "locations": [
+          "Evolve Slugma"
+        ]
+      }
+    },
+    "222": {
+      "omega-ruby": {
+        "locations": [
+          "Route 128 (Super Rod and underwater)",
+          "Ever Grande City (Super Rod)",
+          "Trade Bellossom in Pacifidlog Town"
+        ]
+      },
+      "alpha-sapphire": {
+        "locations": [
+          "Route 128 (Super Rod and underwater)",
+          "Ever Grande City (Super Rod)",
+          "Trade Bellossom in Pacifidlog Town"
+        ]
+      }
+    },
+    "227": {
+      "omega-ruby": {
+        "locations": [
+          "Route 113"
+        ]
+      },
+      "alpha-sapphire": {
+        "locations": [
+          "Route 113"
+        ]
+      }
+    },
+    "230": {
+      "omega-ruby": {
+        "locations": [
+          "Evolve Seadra"
+        ]
+      },
+      "alpha-sapphire": {
+        "locations": [
+          "Evolve Seadra"
+        ]
+      }
+    },
+    "231": {
+      "omega-ruby": {
+        "locations": [
+          "Breed Donphan"
+        ]
+      },
+      "alpha-sapphire": {
+        "locations": [
+          "Breed Donphan"
+        ]
+      }
+    },
+    "232": {
+      "omega-ruby": {
+        "locations": [
+          "Mirage Spot Mountain North Of Lilycove",
+          "Mirage Spot Mountain West Of Route 104",
+          "Mirage Spot Mountain South Of Route 131",
+          "Mirage Spot Mountain North East Of Route 125"
+        ]
+      },
+      "alpha-sapphire": {
+        "locations": [
+          "Mirage Spot Mountain North Of Lilycove",
+          "Mirage Spot Mountain West Of Route 104",
+          "Mirage Spot Mountain South Of Route 131",
+          "Mirage Spot Mountain North East Of Route 125"
+        ]
+      }
+    },
+    "252": {
+      "omega-ruby": {
+        "locations": [
+          "Route 101"
+        ]
+      },
+      "alpha-sapphire": {
+        "locations": [
+          "Route 101"
+        ]
+      }
+    },
+    "253": {
+      "omega-ruby": {
+        "locations": [
+          "Evolve Treecko"
+        ]
+      },
+      "alpha-sapphire": {
+        "locations": [
+          "Evolve Treecko"
+        ]
+      }
+    },
+    "254": {
+      "omega-ruby": {
+        "locations": [
+          "Evolve Grovyle"
+        ]
+      },
+      "alpha-sapphire": {
+        "locations": [
+          "Evolve Grovyle"
+        ]
+      }
+    },
+    "255": {
+      "omega-ruby": {
+        "locations": [
+          "Route 101"
+        ]
+      },
+      "alpha-sapphire": {
+        "locations": [
+          "Route 101"
+        ]
+      }
+    },
+    "256": {
+      "omega-ruby": {
+        "locations": [
+          "Evolve Torchic"
+        ]
+      },
+      "alpha-sapphire": {
+        "locations": [
+          "Evolve Torchic"
+        ]
+      }
+    },
+    "257": {
+      "omega-ruby": {
+        "locations": [
+          "Evolve Combusken"
+        ]
+      },
+      "alpha-sapphire": {
+        "locations": [
+          "Evolve Combusken"
+        ]
+      }
+    },
+    "258": {
+      "omega-ruby": {
+        "locations": [
+          "Route 101"
+        ]
+      },
+      "alpha-sapphire": {
+        "locations": [
+          "Route 101"
+        ]
+      }
+    },
+    "259": {
+      "omega-ruby": {
+        "locations": [
+          "Evolve Mudkip"
+        ]
+      },
+      "alpha-sapphire": {
+        "locations": [
+          "Evolve Mudkip"
+        ]
+      }
+    },
+    "260": {
+      "omega-ruby": {
+        "locations": [
+          "Evolve Marshtomp"
+        ]
+      },
+      "alpha-sapphire": {
+        "locations": [
+          "Evolve Marshtomp"
+        ]
+      }
+    },
+    "261": {
+      "omega-ruby": {
+        "locations": [
+          "Route 101",
+          "Route 103"
+        ]
+      },
+      "alpha-sapphire": {
+        "locations": [
+          "Route 101",
+          "Route 103"
+        ]
+      }
+    },
+    "262": {
+      "omega-ruby": {
+        "locations": [
+          "Evolve Poochyena"
+        ]
+      },
+      "alpha-sapphire": {
+        "locations": [
+          "Evolve Poochyena"
+        ]
+      }
+    },
+    "263": {
+      "omega-ruby": {
+        "locations": [
+          "Petalburg Woods",
+          "Route 101",
+          "Route 102",
+          "Route 103",
+          "Route 116",
+          "Route 117",
+          "Route 104 North Oras",
+          "Route 104 South Oras"
+        ]
+      },
+      "alpha-sapphire": {
+        "locations": [
+          "Petalburg Woods",
+          "Route 101",
+          "Route 102",
+          "Route 103",
+          "Route 116",
+          "Route 117",
+          "Route 104 North Oras",
+          "Route 104 South Oras"
+        ]
+      }
+    },
+    "264": {
+      "omega-ruby": {
+        "locations": [
+          "Routes Hoenn",
+          "Hoenn",
+          "and Hoenn"
+        ]
+      },
+      "alpha-sapphire": {
+        "locations": [
+          "Routes Hoenn",
+          "Hoenn",
+          "and Hoenn"
+        ]
+      }
+    },
+    "265": {
+      "omega-ruby": {
+        "locations": [
+          "Petalburg Woods"
+        ]
+      },
+      "alpha-sapphire": {
+        "locations": [
+          "Petalburg Woods"
+        ]
+      }
+    },
+    "266": {
+      "omega-ruby": {
+        "locations": [
+          "Petalburg Woods"
+        ]
+      },
+      "alpha-sapphire": {
+        "locations": [
+          "Petalburg Woods"
+        ]
+      }
+    },
+    "267": {
+      "omega-ruby": {
+        "locations": [
+          "Evolve Silcoon"
+        ]
+      },
+      "alpha-sapphire": {
+        "locations": [
+          "Evolve Silcoon"
+        ]
+      }
+    },
+    "268": {
+      "omega-ruby": {
+        "locations": [
+          "Petalburg Woods"
+        ]
+      },
+      "alpha-sapphire": {
+        "locations": [
+          "Petalburg Woods"
+        ]
+      }
+    },
+    "269": {
+      "omega-ruby": {
+        "locations": [
+          "Evolve Cascoon"
+        ]
+      },
+      "alpha-sapphire": {
+        "locations": [
+          "Evolve Cascoon"
+        ]
+      }
+    },
+    "270": {
+      "alpha-sapphire": {
+        "locations": [
+          "Route 102",
+          "Route 114"
+        ]
+      },
+      "omega-ruby": {
+        "locations": [
+          "Trade",
+          "Event"
+        ]
+      }
+    },
+    "271": {
+      "alpha-sapphire": {
+        "locations": [
+          "Route 114"
+        ]
+      },
+      "omega-ruby": {
+        "locations": [
+          "Route 114"
+        ]
+      }
+    },
+    "272": {
+      "omega-ruby": {
+        "locations": [
+          "Trade"
+        ]
+      },
+      "alpha-sapphire": {
+        "locations": [
+          "Evolve Lombre"
+        ]
+      }
+    },
+    "273": {
+      "omega-ruby": {
+        "locations": [
+          "Route 102",
+          "Route 114"
+        ]
+      },
+      "alpha-sapphire": {
+        "locations": [
+          "Routes Hoenn",
+          "Hoenn",
+          "and Hoenn (Swarm",
+          "after mixing records with Emerald)"
+        ]
+      }
+    },
+    "274": {
+      "omega-ruby": {
+        "locations": [
+          "Route 114"
+        ]
+      },
+      "alpha-sapphire": {
+        "locations": [
+          "Route 114 (Swarm",
+          "after mixing records with Emerald)"
+        ]
+      }
+    },
+    "275": {
+      "omega-ruby": {
+        "locations": [
+          "Evolve Nuzleaf"
+        ]
+      },
+      "alpha-sapphire": {
+        "locations": [
+          "Trade",
+          "Event"
+        ]
+      }
+    },
+    "276": {
+      "omega-ruby": {
+        "locations": [
+          "Route 104 North Oras"
+        ]
+      },
+      "alpha-sapphire": {
+        "locations": [
+          "Route 104 North Oras"
+        ]
+      }
+    },
+    "277": {
+      "omega-ruby": {
+        "locations": [
+          "Evolve Taillow"
+        ]
+      },
+      "alpha-sapphire": {
+        "locations": [
+          "Evolve Taillow"
+        ]
+      }
+    },
+    "278": {
+      "omega-ruby": {
+        "locations": [
+          "Route 103",
+          "Route 118",
+          "Route 121",
+          "Route 123",
+          "Route 104 South Oras"
+        ]
+      },
+      "alpha-sapphire": {
+        "locations": [
+          "Route 103",
+          "Route 118",
+          "Route 121",
+          "Route 123",
+          "Route 104 South Oras"
+        ]
+      }
+    },
+    "279": {
+      "omega-ruby": {
+        "locations": [
+          "Routes Hoenn",
+          "Hoenn",
+          "Dewford Town",
+          "Ever Grande City",
+          "Mossdeep City",
+          "Pacifidlog Town",
+          "Slateport City",
+          "Sea Mauville",
+          "Lilycove City",
+          "Battle Resort (Surfing)",
+          "and Hoenn (Grass)",
+          "Soaring in the sky"
+        ]
+      },
+      "alpha-sapphire": {
+        "locations": [
+          "Routes Hoenn",
+          "Hoenn",
+          "Dewford Town",
+          "Ever Grande City",
+          "Mossdeep City",
+          "Pacifidlog Town",
+          "Slateport City",
+          "Sea Mauville",
+          "Lilycove City",
+          "Battle Resort (Surfing)",
+          "and Hoenn (Grass)",
+          "Soaring in the sky"
+        ]
+      }
+    },
+    "280": {
+      "omega-ruby": {
+        "locations": [
+          "Route 102"
+        ]
+      },
+      "alpha-sapphire": {
+        "locations": [
+          "Route 102"
+        ]
+      }
+    },
+    "281": {
+      "omega-ruby": {
+        "locations": [
+          "Evolve Ralts"
+        ]
+      },
+      "alpha-sapphire": {
+        "locations": [
+          "Evolve Ralts"
+        ]
+      }
+    },
+    "282": {
+      "omega-ruby": {
+        "locations": [
+          "Evolve Kirlia"
+        ]
+      },
+      "alpha-sapphire": {
+        "locations": [
+          "Evolve Kirlia"
+        ]
+      }
+    },
+    "283": {
+      "omega-ruby": {
+        "locations": [
+          "Routes Hoenn",
+          "Hoenn",
+          "and Hoenn",
+          "and Petalburg City (Surfing)"
+        ]
+      },
+      "alpha-sapphire": {
+        "locations": [
+          "Routes Hoenn",
+          "Hoenn",
+          "and Hoenn",
+          "and Petalburg City (Surfing)"
+        ]
+      }
+    },
+    "284": {
+      "omega-ruby": {
+        "locations": [
+          "Routes Hoenn",
+          "Hoenn",
+          "and Petalburg City (Surfing)"
+        ]
+      },
+      "alpha-sapphire": {
+        "locations": [
+          "Routes Hoenn",
+          "Hoenn",
+          "and Petalburg City (Surfing)"
+        ]
+      }
+    },
+    "285": {
+      "omega-ruby": {
+        "locations": [
+          "Petalburg Woods"
+        ]
+      },
+      "alpha-sapphire": {
+        "locations": [
+          "Petalburg Woods"
+        ]
+      }
+    },
+    "286": {
+      "omega-ruby": {
+        "locations": [
+          "Evolve Shroomish"
+        ]
+      },
+      "alpha-sapphire": {
+        "locations": [
+          "Evolve Shroomish"
+        ]
+      }
+    },
+    "287": {
+      "omega-ruby": {
+        "locations": [
+          "Petalburg Woods"
+        ]
+      },
+      "alpha-sapphire": {
+        "locations": [
+          "Petalburg Woods"
+        ]
+      }
+    },
+    "288": {
+      "omega-ruby": {
+        "locations": [
+          "Evolve Slakoth"
+        ]
+      },
+      "alpha-sapphire": {
+        "locations": [
+          "Evolve Slakoth"
+        ]
+      }
+    },
+    "289": {
+      "omega-ruby": {
+        "locations": [
+          "Evolve Vigoroth"
+        ]
+      },
+      "alpha-sapphire": {
+        "locations": [
+          "Evolve Vigoroth"
+        ]
+      }
+    },
+    "290": {
+      "omega-ruby": {
+        "locations": [
+          "Route 116"
+        ]
+      },
+      "alpha-sapphire": {
+        "locations": [
+          "Route 116"
+        ]
+      }
+    },
+    "291": {
+      "omega-ruby": {
+        "locations": [
+          "Evolve Nincada"
+        ]
+      },
+      "alpha-sapphire": {
+        "locations": [
+          "Evolve Nincada"
+        ]
+      }
+    },
+    "292": {
+      "omega-ruby": {
+        "locations": [
+          "Evolve Nincada with extra slot in party and spare Poké Ball"
+        ]
+      },
+      "alpha-sapphire": {
+        "locations": [
+          "Evolve Nincada with extra slot in party and spare Poké Ball"
+        ]
+      }
+    },
+    "293": {
+      "omega-ruby": {
+        "locations": [
+          "Rusturf Tunnel"
+        ]
+      },
+      "alpha-sapphire": {
+        "locations": [
+          "Rusturf Tunnel"
+        ]
+      }
+    },
+    "294": {
+      "omega-ruby": {
+        "locations": [
+          "Victory Road (1F)",
+          "Victory Road (B1F)"
+        ]
+      },
+      "alpha-sapphire": {
+        "locations": [
+          "Victory Road (1F)",
+          "Victory Road (B1F)"
+        ]
+      }
+    },
+    "295": {
+      "omega-ruby": {
+        "locations": [
+          "Evolve Loudred"
+        ]
+      },
+      "alpha-sapphire": {
+        "locations": [
+          "Evolve Loudred"
+        ]
+      }
+    },
+    "296": {
+      "omega-ruby": {
+        "locations": [
+          "Granite Cave (1F)"
+        ]
+      },
+      "alpha-sapphire": {
+        "locations": [
+          "Granite Cave (1F)"
+        ]
+      }
+    },
+    "297": {
+      "omega-ruby": {
+        "locations": [
+          "Victory Road"
+        ]
+      },
+      "alpha-sapphire": {
+        "locations": [
+          "Victory Road"
+        ]
+      }
+    },
+    "298": {
+      "omega-ruby": {
+        "locations": [
+          "Breed Marill or Azumarill holding a Sea Incense"
+        ]
+      },
+      "alpha-sapphire": {
+        "locations": [
+          "Breed Marill or Azumarill holding a Sea Incense"
+        ]
+      }
+    },
+    "299": {
+      "omega-ruby": {
+        "locations": [
+          "Granite Cave (Rock Smash)"
+        ]
+      },
+      "alpha-sapphire": {
+        "locations": [
+          "Granite Cave (Rock Smash)"
+        ]
+      }
+    },
+    "300": {
+      "omega-ruby": {
+        "locations": [
+          "Route 116"
+        ]
+      },
+      "alpha-sapphire": {
+        "locations": [
+          "Route 116"
+        ]
+      }
+    },
+    "301": {
+      "omega-ruby": {
+        "locations": [
+          "Evolve Skitty"
+        ]
+      },
+      "alpha-sapphire": {
+        "locations": [
+          "Evolve Skitty"
+        ]
+      }
+    },
+    "302": {
+      "alpha-sapphire": {
+        "locations": [
+          "Granite Cave (B2F)"
+        ]
+      },
+      "omega-ruby": {
+        "locations": [
+          "Trade",
+          "Event"
+        ]
+      }
+    },
+    "303": {
+      "omega-ruby": {
+        "locations": [
+          "Granite Cave (B2F)"
+        ]
+      },
+      "alpha-sapphire": {
+        "locations": [
+          "Trade",
+          "Event"
+        ]
+      }
+    },
+    "304": {
+      "omega-ruby": {
+        "locations": [
+          "Granite Cave (B1F)",
+          "Granite Cave (B2F)",
+          "Victory Road (1F)",
+          "Victory Road (B1F)"
+        ]
+      },
+      "alpha-sapphire": {
+        "locations": [
+          "Granite Cave (B1F)",
+          "Granite Cave (B2F)",
+          "Victory Road (1F)",
+          "Victory Road (B1F)"
+        ]
+      }
+    },
+    "305": {
+      "omega-ruby": {
+        "locations": [
+          "Victory Road"
+        ]
+      },
+      "alpha-sapphire": {
+        "locations": [
+          "Victory Road"
+        ]
+      }
+    },
+    "306": {
+      "omega-ruby": {
+        "locations": [
+          "Evolve Lairon"
+        ]
+      },
+      "alpha-sapphire": {
+        "locations": [
+          "Evolve Lairon"
+        ]
+      }
+    },
+    "307": {
+      "omega-ruby": {
+        "locations": [
+          "Mt. Pyre Outside",
+          "Mt. Pyre Summit"
+        ]
+      },
+      "alpha-sapphire": {
+        "locations": [
+          "Mt. Pyre Outside",
+          "Mt. Pyre Summit"
+        ]
+      }
+    },
+    "308": {
+      "omega-ruby": {
+        "locations": [
+          "Victory Road"
+        ]
+      },
+      "alpha-sapphire": {
+        "locations": [
+          "Victory Road"
+        ]
+      }
+    },
+    "309": {
+      "omega-ruby": {
+        "locations": [
+          "Route 118"
+        ]
+      },
+      "alpha-sapphire": {
+        "locations": [
+          "Route 118"
+        ]
+      }
+    },
+    "310": {
+      "omega-ruby": {
+        "locations": [
+          "Evolve Electrike"
+        ]
+      },
+      "alpha-sapphire": {
+        "locations": [
+          "Evolve Electrike"
+        ]
+      }
+    },
+    "311": {
+      "omega-ruby": {
+        "locations": [
+          "Route 110"
+        ]
+      },
+      "alpha-sapphire": {
+        "locations": [
+          "Route 110"
+        ]
+      }
+    },
+    "312": {
+      "omega-ruby": {
+        "locations": [
+          "Route 110"
+        ]
+      },
+      "alpha-sapphire": {
+        "locations": [
+          "Route 110"
+        ]
+      }
+    },
+    "313": {
+      "omega-ruby": {
+        "locations": [
+          "Route 117"
+        ]
+      },
+      "alpha-sapphire": {
+        "locations": [
+          "Route 117"
+        ]
+      }
+    },
+    "314": {
+      "omega-ruby": {
+        "locations": [
+          "Route 117"
+        ]
+      },
+      "alpha-sapphire": {
+        "locations": [
+          "Route 117"
+        ]
+      }
+    },
+    "315": {
+      "omega-ruby": {
+        "locations": [
+          "Route 117"
+        ]
+      },
+      "alpha-sapphire": {
+        "locations": [
+          "Route 117"
+        ]
+      }
+    },
+    "316": {
+      "omega-ruby": {
+        "locations": [
+          "Route 110"
+        ]
+      },
+      "alpha-sapphire": {
+        "locations": [
+          "Route 110"
+        ]
+      }
+    },
+    "317": {
+      "omega-ruby": {
+        "locations": [
+          "Evolve Gulpin"
+        ]
+      },
+      "alpha-sapphire": {
+        "locations": [
+          "Evolve Gulpin"
+        ]
+      }
+    },
+    "318": {
+      "omega-ruby": {
+        "locations": [
+          "Routes Hoenn and Hoenn (Good Rod or Super Rod)"
+        ]
+      },
+      "alpha-sapphire": {
+        "locations": [
+          "Routes Hoenn and Hoenn (Good Rod or Super Rod)"
+        ]
+      }
+    },
+    "319": {
+      "omega-ruby": {
+        "locations": [
+          "Battle Resort"
+        ]
+      },
+      "alpha-sapphire": {
+        "locations": [
+          "Battle Resort"
+        ]
+      }
+    },
+    "320": {
+      "omega-ruby": {
+        "locations": [
+          "Routes Hoenn",
+          "Hoenn",
+          "and Hoenn",
+          "Dewford Town",
+          "Ever Grande City",
+          "Lilycove City",
+          "Mossdeep City",
+          "Pacifidlog Town",
+          "Sea Mauville",
+          "Seafloor Cavern",
+          "Sealed Chamber",
+          "Shoal Cave",
+          "Slateport City",
+          "Team Magma Hideout",
+          "Victory Road (Good Rod or Super Rod)"
+        ]
+      },
+      "alpha-sapphire": {
+        "locations": [
+          "Routes Hoenn",
+          "Hoenn",
+          "and Hoenn",
+          "Dewford Town",
+          "Ever Grande City",
+          "Lilycove City",
+          "Mossdeep City",
+          "Pacifidlog Town",
+          "Sea Mauville",
+          "Seafloor Cavern",
+          "Sealed Chamber",
+          "Shoal Cave",
+          "Slateport City",
+          "Team Aqua Hideout",
+          "Victory Road (Good Rod or Super Rod)"
+        ]
+      }
+    },
+    "321": {
+      "omega-ruby": {
+        "locations": [
+          "Evolve Wailmer"
+        ]
+      },
+      "alpha-sapphire": {
+        "locations": [
+          "Evolve Wailmer"
+        ]
+      }
+    },
+    "322": {
+      "omega-ruby": {
+        "locations": [
+          "Fiery Path",
+          "Route 112"
+        ]
+      },
+      "alpha-sapphire": {
+        "locations": [
+          "Fiery Path",
+          "Route 112"
+        ]
+      }
+    },
+    "323": {
+      "omega-ruby": {
+        "locations": [
+          "Battle Resort"
+        ]
+      },
+      "alpha-sapphire": {
+        "locations": [
+          "Battle Resort"
+        ]
+      }
+    },
+    "324": {
+      "omega-ruby": {
+        "locations": [
+          "Fiery Path"
+        ]
+      },
+      "alpha-sapphire": {
+        "locations": [
+          "Fiery Path"
+        ]
+      }
+    },
+    "325": {
+      "omega-ruby": {
+        "locations": [
+          "Jagged Pass"
+        ]
+      },
+      "alpha-sapphire": {
+        "locations": [
+          "Jagged Pass"
+        ]
+      }
+    },
+    "326": {
+      "omega-ruby": {
+        "locations": [
+          "Evolve Spoink"
+        ]
+      },
+      "alpha-sapphire": {
+        "locations": [
+          "Evolve Spoink"
+        ]
+      }
+    },
+    "327": {
+      "omega-ruby": {
+        "locations": [
+          "Route 113"
+        ]
+      },
+      "alpha-sapphire": {
+        "locations": [
+          "Route 113"
+        ]
+      }
+    },
+    "328": {
+      "omega-ruby": {
+        "locations": [
+          "Route 111"
+        ]
+      },
+      "alpha-sapphire": {
+        "locations": [
+          "Route 111"
+        ]
+      }
+    },
+    "329": {
+      "omega-ruby": {
+        "locations": [
+          "Evolve Trapinch"
+        ]
+      },
+      "alpha-sapphire": {
+        "locations": [
+          "Evolve Trapinch"
+        ]
+      }
+    },
+    "330": {
+      "omega-ruby": {
+        "locations": [
+          "Evolve Vibrava"
+        ]
+      },
+      "alpha-sapphire": {
+        "locations": [
+          "Evolve Vibrava"
+        ]
+      }
+    },
+    "331": {
+      "omega-ruby": {
+        "locations": [
+          "Route 111"
+        ]
+      },
+      "alpha-sapphire": {
+        "locations": [
+          "Route 111"
+        ]
+      }
+    },
+    "332": {
+      "omega-ruby": {
+        "locations": [
+          "Evolve Cacnea"
+        ]
+      },
+      "alpha-sapphire": {
+        "locations": [
+          "Evolve Cacnea"
+        ]
+      }
+    },
+    "333": {
+      "omega-ruby": {
+        "locations": [
+          "Sky Pillar (1F)",
+          "Sky Pillar (3F)",
+          "Sky Pillar (5F)",
+          "Route 114",
+          "Route 115"
+        ]
+      },
+      "alpha-sapphire": {
+        "locations": [
+          "Sky Pillar (1F)",
+          "Sky Pillar (3F)",
+          "Sky Pillar (5F)",
+          "Route 114",
+          "Route 115"
+        ]
+      }
+    },
+    "334": {
+      "omega-ruby": {
+        "locations": [
+          "Evolve Swablu"
+        ]
+      },
+      "alpha-sapphire": {
+        "locations": [
+          "Evolve Swablu"
+        ]
+      }
+    },
+    "335": {
+      "omega-ruby": {
+        "locations": [
+          "Route 114"
+        ]
+      },
+      "alpha-sapphire": {
+        "locations": [
+          "Trade"
+        ]
+      }
+    },
+    "336": {
+      "omega-ruby": {
+        "locations": [
+          "Trade"
+        ]
+      },
+      "alpha-sapphire": {
+        "locations": [
+          "Route 114"
+        ]
+      }
+    },
+    "337": {
+      "alpha-sapphire": {
+        "locations": [
+          "Meteor Falls"
+        ]
+      },
+      "omega-ruby": {
+        "locations": [
+          "Trade",
+          "Event"
+        ]
+      }
+    },
+    "338": {
+      "omega-ruby": {
+        "locations": [
+          "Meteor Falls"
+        ]
+      },
+      "alpha-sapphire": {
+        "locations": [
+          "Trade",
+          "Event"
+        ]
+      }
+    },
+    "339": {
+      "omega-ruby": {
+        "locations": [
+          "Routes Hoenn",
+          "Hoenn",
+          "Meteor Falls",
+          "Victory Road",
+          "Scorched Slab (Good Rod or Super Rod)"
+        ]
+      },
+      "alpha-sapphire": {
+        "locations": [
+          "Routes Hoenn",
+          "Hoenn",
+          "Meteor Falls",
+          "Victory Road",
+          "Scorched Slab (Good Rod or Super Rod)"
+        ]
+      }
+    },
+    "340": {
+      "omega-ruby": {
+        "locations": [
+          "Meteor Falls (Super Rod)"
+        ]
+      },
+      "alpha-sapphire": {
+        "locations": [
+          "Meteor Falls (Super Rod)"
+        ]
+      }
+    },
+    "341": {
+      "omega-ruby": {
+        "locations": [
+          "Routes Hoenn",
+          "Hoenn",
+          "and Hoenn",
+          "Petalburg City (Good Rod or Super Rod)"
+        ]
+      },
+      "alpha-sapphire": {
+        "locations": [
+          "Routes Hoenn",
+          "Hoenn",
+          "and Hoenn",
+          "Petalburg City (Good Rod or Super Rod)"
+        ]
+      }
+    },
+    "342": {
+      "omega-ruby": {
+        "locations": [
+          "Routes Hoenn and Hoenn (Super Rod)"
+        ]
+      },
+      "alpha-sapphire": {
+        "locations": [
+          "Routes Hoenn and Hoenn (Super Rod)"
+        ]
+      }
+    },
+    "343": {
+      "omega-ruby": {
+        "locations": [
+          "Route 111"
+        ]
+      },
+      "alpha-sapphire": {
+        "locations": [
+          "Route 111"
+        ]
+      }
+    },
+    "344": {
+      "omega-ruby": {
+        "locations": [
+          "Sky Pillar"
+        ]
+      },
+      "alpha-sapphire": {
+        "locations": [
+          "Sky Pillar"
+        ]
+      }
+    },
+    "345": {
+      "omega-ruby": {
+        "locations": [
+          "Revive from Root Fossil at the Devon Corporation in Rustboro City"
+        ]
+      },
+      "alpha-sapphire": {
+        "locations": [
+          "Revive from Root Fossil at the Devon Corporation in Rustboro City"
+        ]
+      }
+    },
+    "346": {
+      "omega-ruby": {
+        "locations": [
+          "Evolve Lileep"
+        ]
+      },
+      "alpha-sapphire": {
+        "locations": [
+          "Evolve Lileep"
+        ]
+      }
+    },
+    "347": {
+      "omega-ruby": {
+        "locations": [
+          "Revive from Claw Fossil at the Devon Corporation in Rustboro City"
+        ]
+      },
+      "alpha-sapphire": {
+        "locations": [
+          "Revive from Claw Fossil at the Devon Corporation in Rustboro City"
+        ]
+      }
+    },
+    "348": {
+      "omega-ruby": {
+        "locations": [
+          "Evolve Anorith"
+        ]
+      },
+      "alpha-sapphire": {
+        "locations": [
+          "Evolve Anorith"
+        ]
+      }
+    },
+    "349": {
+      "omega-ruby": {
+        "locations": [
+          "Route 119 (Fishing)"
+        ]
+      },
+      "alpha-sapphire": {
+        "locations": [
+          "Route 119 (Fishing)"
+        ]
+      }
+    },
+    "350": {
+      "omega-ruby": {
+        "locations": [
+          "Evolve Feebas"
+        ]
+      },
+      "alpha-sapphire": {
+        "locations": [
+          "Evolve Feebas"
+        ]
+      }
+    },
+    "351": {
+      "omega-ruby": {
+        "locations": [
+          "Route 119 Weather Institute"
+        ]
+      },
+      "alpha-sapphire": {
+        "locations": [
+          "Route 119 Weather Institute"
+        ]
+      }
+    },
+    "352": {
+      "omega-ruby": {
+        "locations": [
+          "Route 118",
+          "Route 119",
+          "Route 120",
+          "Route 121",
+          "Route 123",
+          "Lavaridge Town",
+          "Mossdeep Space Center"
+        ]
+      },
+      "alpha-sapphire": {
+        "locations": [
+          "Route 118",
+          "Route 119",
+          "Route 120",
+          "Route 121",
+          "Route 123",
+          "Lavaridge Town",
+          "Mossdeep Space Center"
+        ]
+      }
+    },
+    "353": {
+      "omega-ruby": {
+        "locations": [
+          "Mt. Pyre (1F)",
+          "Mt. Pyre (2F)",
+          "Mt. Pyre (3F)",
+          "Mt. Pyre (4F)",
+          "Mt. Pyre Outside",
+          "Mt. Pyre Summit",
+          "Route 121",
+          "Route 123"
+        ]
+      },
+      "alpha-sapphire": {
+        "locations": [
+          "Mt. Pyre (1F)",
+          "Mt. Pyre (2F)",
+          "Mt. Pyre (3F)",
+          "Mt. Pyre (4F)",
+          "Mt. Pyre Outside",
+          "Mt. Pyre Summit",
+          "Route 121",
+          "Route 123"
+        ]
+      }
+    },
+    "354": {
+      "omega-ruby": {
+        "locations": [
+          "Evolve Shuppet"
+        ]
+      },
+      "alpha-sapphire": {
+        "locations": [
+          "Evolve Shuppet"
+        ]
+      }
+    },
+    "355": {
+      "omega-ruby": {
+        "locations": [
+          "Mt. Pyre"
+        ]
+      },
+      "alpha-sapphire": {
+        "locations": [
+          "Mt. Pyre"
+        ]
+      }
+    },
+    "356": {
+      "omega-ruby": {
+        "locations": [
+          "Evolve Duskull"
+        ]
+      },
+      "alpha-sapphire": {
+        "locations": [
+          "Evolve Duskull"
+        ]
+      }
+    },
+    "357": {
+      "omega-ruby": {
+        "locations": [
+          "Routes Hoenn and Hoenn"
+        ]
+      },
+      "alpha-sapphire": {
+        "locations": [
+          "Routes Hoenn and Hoenn"
+        ]
+      }
+    },
+    "358": {
+      "omega-ruby": {
+        "locations": [
+          "Top of Mt. Pyre"
+        ]
+      },
+      "alpha-sapphire": {
+        "locations": [
+          "Top of Mt. Pyre"
+        ]
+      }
+    },
+    "359": {
+      "omega-ruby": {
+        "locations": [
+          "Route 120"
+        ]
+      },
+      "alpha-sapphire": {
+        "locations": [
+          "Route 120"
+        ]
+      }
+    },
+    "360": {
+      "omega-ruby": {
+        "locations": [
+          "Lavaridge Town"
+        ]
+      },
+      "alpha-sapphire": {
+        "locations": [
+          "Lavaridge Town"
+        ]
+      }
+    },
+    "361": {
+      "omega-ruby": {
+        "locations": [
+          "Shoal Cave (B3F)"
+        ]
+      },
+      "alpha-sapphire": {
+        "locations": [
+          "Shoal Cave (B3F)"
+        ]
+      }
+    },
+    "362": {
+      "omega-ruby": {
+        "locations": [
+          "Evolve Snorunt",
+          "Event: transfer from Pokémon Omega Ruby and Pokémon Alpha Sapphire Special Demo Version (international)"
+        ]
+      },
+      "alpha-sapphire": {
+        "locations": [
+          "Evolve Snorunt",
+          "Event: transfer from Pokémon Omega Ruby and Pokémon Alpha Sapphire Special Demo Version (international)"
+        ]
+      }
+    },
+    "363": {
+      "omega-ruby": {
+        "locations": [
+          "Shoal Cave High Tide",
+          "Shoal Cave (B1F)",
+          "Shoal Cave Low Tide",
+          "Shoal Cave (B2F)",
+          "Shoal Cave (B3F)"
+        ]
+      },
+      "alpha-sapphire": {
+        "locations": [
+          "Shoal Cave High Tide",
+          "Shoal Cave (B1F)",
+          "Shoal Cave Low Tide",
+          "Shoal Cave (B2F)",
+          "Shoal Cave (B3F)"
+        ]
+      }
+    },
+    "364": {
+      "omega-ruby": {
+        "locations": [
+          "Shoal Cave"
+        ]
+      },
+      "alpha-sapphire": {
+        "locations": [
+          "Shoal Cave"
+        ]
+      }
+    },
+    "365": {
+      "omega-ruby": {
+        "locations": [
+          "Evolve Sealeo"
+        ]
+      },
+      "alpha-sapphire": {
+        "locations": [
+          "Evolve Sealeo"
+        ]
+      }
+    },
+    "366": {
+      "omega-ruby": {
+        "locations": [
+          "Routes Hoenn",
+          "Hoenn",
+          "Hoenn (Underwater)"
+        ]
+      },
+      "alpha-sapphire": {
+        "locations": [
+          "Routes Hoenn",
+          "Hoenn",
+          "Hoenn (Underwater)"
+        ]
+      }
+    },
+    "367": {
+      "omega-ruby": {
+        "locations": [
+          "Evolve Clamperl"
+        ]
+      },
+      "alpha-sapphire": {
+        "locations": [
+          "Evolve Clamperl"
+        ]
+      }
+    },
+    "368": {
+      "omega-ruby": {
+        "locations": [
+          "Evolve Clamperl"
+        ]
+      },
+      "alpha-sapphire": {
+        "locations": [
+          "Evolve Clamperl"
+        ]
+      }
+    },
+    "369": {
+      "omega-ruby": {
+        "locations": [
+          "Routes Hoenn",
+          "Hoenn",
+          "and Hoenn (Underwater)"
+        ]
+      },
+      "alpha-sapphire": {
+        "locations": [
+          "Routes Hoenn",
+          "Hoenn",
+          "and Hoenn (Underwater)"
+        ]
+      }
+    },
+    "370": {
+      "omega-ruby": {
+        "locations": [
+          "Route 128",
+          "Ever Grande City",
+          "Victory Road (Good Rod or Super Rod)"
+        ]
+      },
+      "alpha-sapphire": {
+        "locations": [
+          "Route 128",
+          "Ever Grande City",
+          "Victory Road (Good Rod or Super Rod)"
+        ]
+      }
+    },
+    "371": {
+      "omega-ruby": {
+        "locations": [
+          "Meteor Falls Backsmall Room"
+        ]
+      },
+      "alpha-sapphire": {
+        "locations": [
+          "Meteor Falls Backsmall Room"
+        ]
+      }
+    },
+    "372": {
+      "omega-ruby": {
+        "locations": [
+          "Evolve Bagon"
+        ]
+      },
+      "alpha-sapphire": {
+        "locations": [
+          "Evolve Bagon"
+        ]
+      }
+    },
+    "373": {
+      "omega-ruby": {
+        "locations": [
+          "Evolve Shelgon"
+        ]
+      },
+      "alpha-sapphire": {
+        "locations": [
+          "Evolve Shelgon"
+        ]
+      }
+    },
+    "374": {
+      "omega-ruby": {
+        "locations": [
+          "Mossdeep City Stevens House"
+        ]
+      },
+      "alpha-sapphire": {
+        "locations": [
+          "Mossdeep City Stevens House"
+        ]
+      }
+    },
+    "375": {
+      "omega-ruby": {
+        "locations": [
+          "Evolve Beldum"
+        ]
+      },
+      "alpha-sapphire": {
+        "locations": [
+          "Evolve Beldum"
+        ]
+      }
+    },
+    "376": {
+      "omega-ruby": {
+        "locations": [
+          "Evolve Metang"
+        ]
+      },
+      "alpha-sapphire": {
+        "locations": [
+          "Evolve Metang"
+        ]
+      }
+    },
+    "377": {
+      "omega-ruby": {
+        "locations": [
+          "Desert Ruins"
+        ]
+      },
+      "alpha-sapphire": {
+        "locations": [
+          "Desert Ruins"
+        ]
+      }
+    },
+    "378": {
+      "omega-ruby": {
+        "locations": [
+          "Island Cave"
+        ]
+      },
+      "alpha-sapphire": {
+        "locations": [
+          "Island Cave"
+        ]
+      }
+    },
+    "379": {
+      "omega-ruby": {
+        "locations": [
+          "Ancient Tomb"
+        ]
+      },
+      "alpha-sapphire": {
+        "locations": [
+          "Ancient Tomb"
+        ]
+      }
+    },
+    "380": {
+      "omega-ruby": {
+        "locations": [
+          "Southern Island"
+        ]
+      },
+      "alpha-sapphire": {
+        "locations": [
+          "Southern Island"
+        ]
+      }
+    },
+    "381": {
+      "omega-ruby": {
+        "locations": [
+          "Southern Island"
+        ]
+      },
+      "alpha-sapphire": {
+        "locations": [
+          "Southern Island"
+        ]
+      }
+    },
+    "382": {
+      "alpha-sapphire": {
+        "locations": [
+          "Cave Of Origin (B4F)"
+        ]
+      },
+      "omega-ruby": {
+        "locations": [
+          "Trade",
+          "Event"
+        ]
+      }
+    },
+    "383": {
+      "omega-ruby": {
+        "locations": [
+          "Cave Of Origin (B4F)"
+        ]
+      },
+      "alpha-sapphire": {
+        "locations": [
+          "Trade",
+          "Event"
+        ]
+      }
+    },
+    "384": {
+      "omega-ruby": {
+        "locations": [
+          "Sky Pillar Apex"
+        ]
+      },
+      "alpha-sapphire": {
+        "locations": [
+          "Sky Pillar Apex"
+        ]
+      }
+    },
+    "385": {
+      "omega-ruby": {
+        "locations": [
+          "Poké Transporter",
+          "Event"
+        ]
+      },
+      "alpha-sapphire": {
+        "locations": [
+          "Poké Transporter",
+          "Event"
+        ]
+      }
+    },
+    "386": {
+      "omega-ruby": {
+        "locations": [
+          "Sky Pillar Apex"
+        ]
+      },
+      "alpha-sapphire": {
+        "locations": [
+          "Sky Pillar Apex"
+        ]
+      }
+    },
+    "406": {
+      "omega-ruby": {
+        "locations": [
+          "Breed Roselia or Roserade holding a Rose Incense"
+        ]
+      },
+      "alpha-sapphire": {
+        "locations": [
+          "Breed Roselia or Roserade holding a Rose Incense"
+        ]
+      }
+    },
+    "407": {
+      "omega-ruby": {
+        "locations": [
+          "Evolve Roselia"
+        ]
+      },
+      "alpha-sapphire": {
+        "locations": [
+          "Evolve Roselia"
+        ]
+      }
+    },
+    "433": {
+      "omega-ruby": {
+        "locations": [
+          "Breed Chimecho holding a Pure Incense"
+        ]
+      },
+      "alpha-sapphire": {
+        "locations": [
+          "Breed Chimecho holding a Pure Incense"
+        ]
+      }
+    },
+    "462": {
+      "omega-ruby": {
+        "locations": [
+          "Evolve Magneton"
+        ]
+      },
+      "alpha-sapphire": {
+        "locations": [
+          "Evolve Magneton"
+        ]
+      }
+    },
+    "464": {
+      "omega-ruby": {
+        "locations": [
+          "Evolve Rhydon"
+        ]
+      },
+      "alpha-sapphire": {
+        "locations": [
+          "Evolve Rhydon"
+        ]
+      }
+    },
+    "475": {
+      "omega-ruby": {
+        "locations": [
+          "Evolve Kirlia"
+        ]
+      },
+      "alpha-sapphire": {
+        "locations": [
+          "Evolve Kirlia"
+        ]
+      }
+    },
+    "476": {
+      "omega-ruby": {
+        "locations": [
+          "Evolve Nosepass"
+        ]
+      },
+      "alpha-sapphire": {
+        "locations": [
+          "Evolve Nosepass"
+        ]
+      }
+    },
+    "477": {
+      "omega-ruby": {
+        "locations": [
+          "Evolve Dusclops"
+        ]
+      },
+      "alpha-sapphire": {
+        "locations": [
+          "Evolve Dusclops"
+        ]
+      }
+    },
+    "478": {
+      "omega-ruby": {
+        "locations": [
+          "Evolve Snorunt"
+        ]
+      },
+      "alpha-sapphire": {
+        "locations": [
+          "Evolve Snorunt"
+        ]
+      }
+    }
+  }
+}

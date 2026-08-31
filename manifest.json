@@ -1,21 +1,28 @@
 {
+  "id": "/?source=pwa",
   "name": "LivingDex.app - Living Pokédex Tracker",
   "short_name": "LivingDex",
-  "description": "A fast, modern Living Pokédex tracker.",
+  "description": "A fast, modern Living Pokédex tracker for all Pokémon games, with complete offline support.",
   "start_url": "/?source=pwa",
+  "scope": "/",
   "display": "standalone",
+  "orientation": "any",
   "background_color": "#4285f4",
   "theme_color": "#4285f4",
+  "categories": ["games", "entertainment", "utilities"],
+  "prefer_related_applications": false,
   "icons": [
     {
       "src": "assets/icon-192.png",
       "type": "image/png",
-      "sizes": "192x192"
+      "sizes": "192x192",
+      "purpose": "any maskable"
     },
     {
       "src": "assets/icon-512.png",
       "type": "image/png",
-      "sizes": "512x512"
+      "sizes": "512x512",
+      "purpose": "any maskable"
     }
   ]
 }

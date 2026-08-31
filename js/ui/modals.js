@@ -15,8 +15,8 @@ import {
 import { GAMES, getOrderedGameEntries } from "../config.js";
 
 import { resetDexProgress } from "../state.js";
-
 import { applyPersistedViewSettings } from "../main.js";
+import { refreshOfflineDataAndCaches } from "../pwa.js";
 
 /**
  * Attach common modal accessibility and event handlers including opening, closing,
@@ -357,6 +357,7 @@ export function registerSettingsControls() {
   const exportBtn = document.getElementById("settingsExportData");
   const importBtn = document.getElementById("settingsImportData");
   const importInput = document.getElementById("settingsImportFile");
+  const refreshCacheBtn = document.getElementById("settingsRefreshCache");
   const clearCacheBtn = document.getElementById("settingsClearSpeciesCache");
   const clearAllBtn = document.getElementById("settingsClearAllData");
   const defaultGameModeSelect = document.getElementById(
@@ -656,6 +657,20 @@ export function registerSettingsControls() {
   }
 
   /**
+   * Refresh the offline data and caches from the network.
+   */
+  async function refreshCacheAction() {
+    showToast("Refreshing offline data...", "warning");
+    const res = await refreshOfflineDataAndCaches();
+    showToast(res.message, res.success ? "success" : "danger");
+    if (res.success) {
+      setTimeout(() => {
+        window.location.reload();
+      }, 1000);
+    }
+  }
+
+  /**
    * Clear the cached Pokémon species names from localStorage.
    */
   function clearSpeciesCacheAction() {
@@ -762,6 +777,7 @@ export function registerSettingsControls() {
     importAllData(event.target.files?.[0]),
   );
   confirmImportBtn?.addEventListener("click", applySelectedImport);
+  refreshCacheBtn?.addEventListener("click", refreshCacheAction);
   clearCacheBtn?.addEventListener("click", clearSpeciesCacheAction);
   clearAllBtn?.addEventListener("click", clearAllDataAction);
   aboutBtn?.addEventListener("click", openAboutModal);

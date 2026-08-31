@@ -1,0 +1,7828 @@
+{
+  "gameId": "usum",
+  "title": "Ultra Sun / Ultra Moon",
+  "group": "gen7",
+  "generation": 7,
+  "versions": [
+    "ultra-sun",
+    "ultra-moon"
+  ],
+  "sections": [
+    {
+      "id": "alola",
+      "title": "Alola Pokédex",
+      "type": "base",
+      "optional": false,
+      "defaultEnabled": false,
+      "startIndex": 1,
+      "entries": [
+        {
+          "speciesId": 722,
+          "formId": 722,
+          "dexNumber": 1
+        },
+        {
+          "speciesId": 723,
+          "formId": 723,
+          "dexNumber": 2
+        },
+        {
+          "speciesId": 724,
+          "formId": 724,
+          "dexNumber": 3
+        },
+        {
+          "speciesId": 725,
+          "formId": 725,
+          "dexNumber": 4
+        },
+        {
+          "speciesId": 726,
+          "formId": 726,
+          "dexNumber": 5
+        },
+        {
+          "speciesId": 727,
+          "formId": 727,
+          "dexNumber": 6
+        },
+        {
+          "speciesId": 728,
+          "formId": 728,
+          "dexNumber": 7
+        },
+        {
+          "speciesId": 729,
+          "formId": 729,
+          "dexNumber": 8
+        },
+        {
+          "speciesId": 730,
+          "formId": 730,
+          "dexNumber": 9
+        },
+        {
+          "speciesId": 731,
+          "formId": 731,
+          "dexNumber": 10
+        },
+        {
+          "speciesId": 732,
+          "formId": 732,
+          "dexNumber": 11
+        },
+        {
+          "speciesId": 733,
+          "formId": 733,
+          "dexNumber": 12
+        },
+        {
+          "speciesId": 734,
+          "formId": 734,
+          "dexNumber": 13
+        },
+        {
+          "speciesId": 735,
+          "formId": 735,
+          "dexNumber": 14
+        },
+        {
+          "speciesId": 19,
+          "formId": 10091,
+          "dexNumber": 15
+        },
+        {
+          "speciesId": 20,
+          "formId": 10092,
+          "dexNumber": 16
+        },
+        {
+          "speciesId": 10,
+          "formId": 10,
+          "dexNumber": 17
+        },
+        {
+          "speciesId": 11,
+          "formId": 11,
+          "dexNumber": 18
+        },
+        {
+          "speciesId": 12,
+          "formId": 12,
+          "dexNumber": 19
+        },
+        {
+          "speciesId": 165,
+          "formId": 165,
+          "dexNumber": 20
+        },
+        {
+          "speciesId": 166,
+          "formId": 166,
+          "dexNumber": 21
+        },
+        {
+          "speciesId": 167,
+          "formId": 167,
+          "dexNumber": 22
+        },
+        {
+          "speciesId": 168,
+          "formId": 168,
+          "dexNumber": 23
+        },
+        {
+          "speciesId": 427,
+          "formId": 427,
+          "dexNumber": 24
+        },
+        {
+          "speciesId": 428,
+          "formId": 428,
+          "dexNumber": 25
+        },
+        {
+          "speciesId": 686,
+          "formId": 686,
+          "dexNumber": 26
+        },
+        {
+          "speciesId": 687,
+          "formId": 687,
+          "dexNumber": 27
+        },
+        {
+          "speciesId": 570,
+          "formId": 570,
+          "dexNumber": 28
+        },
+        {
+          "speciesId": 571,
+          "formId": 571,
+          "dexNumber": 29
+        },
+        {
+          "speciesId": 676,
+          "formId": 676,
+          "dexNumber": 30
+        },
+        {
+          "speciesId": 172,
+          "formId": 172,
+          "dexNumber": 31
+        },
+        {
+          "speciesId": 25,
+          "formId": 25,
+          "dexNumber": 32
+        },
+        {
+          "speciesId": 26,
+          "formId": 10100,
+          "dexNumber": 33
+        },
+        {
+          "speciesId": 736,
+          "formId": 736,
+          "dexNumber": 34
+        },
+        {
+          "speciesId": 737,
+          "formId": 737,
+          "dexNumber": 35
+        },
+        {
+          "speciesId": 738,
+          "formId": 738,
+          "dexNumber": 36
+        },
+        {
+          "speciesId": 438,
+          "formId": 438,
+          "dexNumber": 37
+        },
+        {
+          "speciesId": 185,
+          "formId": 185,
+          "dexNumber": 38
+        },
+        {
+          "speciesId": 440,
+          "formId": 440,
+          "dexNumber": 39
+        },
+        {
+          "speciesId": 113,
+          "formId": 113,
+          "dexNumber": 40
+        },
+        {
+          "speciesId": 242,
+          "formId": 242,
+          "dexNumber": 41
+        },
+        {
+          "speciesId": 446,
+          "formId": 446,
+          "dexNumber": 42
+        },
+        {
+          "speciesId": 143,
+          "formId": 143,
+          "dexNumber": 43
+        },
+        {
+          "speciesId": 79,
+          "formId": 79,
+          "dexNumber": 44
+        },
+        {
+          "speciesId": 80,
+          "formId": 80,
+          "dexNumber": 45
+        },
+        {
+          "speciesId": 199,
+          "formId": 199,
+          "dexNumber": 46
+        },
+        {
+          "speciesId": 278,
+          "formId": 278,
+          "dexNumber": 47
+        },
+        {
+          "speciesId": 279,
+          "formId": 279,
+          "dexNumber": 48
+        },
+        {
+          "speciesId": 63,
+          "formId": 63,
+          "dexNumber": 49
+        },
+        {
+          "speciesId": 64,
+          "formId": 64,
+          "dexNumber": 50
+        },
+        {
+          "speciesId": 65,
+          "formId": 65,
+          "dexNumber": 51
+        },
+        {
+          "speciesId": 52,
+          "formId": 10107,
+          "dexNumber": 52
+        },
+        {
+          "speciesId": 53,
+          "formId": 10108,
+          "dexNumber": 53
+        },
+        {
+          "speciesId": 81,
+          "formId": 81,
+          "dexNumber": 54
+        },
+        {
+          "speciesId": 82,
+          "formId": 82,
+          "dexNumber": 55
+        },
+        {
+          "speciesId": 462,
+          "formId": 462,
+          "dexNumber": 56
+        },
+        {
+          "speciesId": 88,
+          "formId": 10112,
+          "dexNumber": 57
+        },
+        {
+          "speciesId": 89,
+          "formId": 10113,
+          "dexNumber": 58
+        },
+        {
+          "speciesId": 439,
+          "formId": 439,
+          "dexNumber": 59
+        },
+        {
+          "speciesId": 122,
+          "formId": 122,
+          "dexNumber": 60
+        },
+        {
+          "speciesId": 23,
+          "formId": 23,
+          "dexNumber": 61
+        },
+        {
+          "speciesId": 24,
+          "formId": 24,
+          "dexNumber": 62
+        },
+        {
+          "speciesId": 206,
+          "formId": 206,
+          "dexNumber": 63
+        },
+        {
+          "speciesId": 58,
+          "formId": 58,
+          "dexNumber": 64
+        },
+        {
+          "speciesId": 59,
+          "formId": 59,
+          "dexNumber": 65
+        },
+        {
+          "speciesId": 96,
+          "formId": 96,
+          "dexNumber": 66
+        },
+        {
+          "speciesId": 97,
+          "formId": 97,
+          "dexNumber": 67
+        },
+        {
+          "speciesId": 296,
+          "formId": 296,
+          "dexNumber": 68
+        },
+        {
+          "speciesId": 297,
+          "formId": 297,
+          "dexNumber": 69
+        },
+        {
+          "speciesId": 235,
+          "formId": 235,
+          "dexNumber": 70
+        },
+        {
+          "speciesId": 739,
+          "formId": 739,
+          "dexNumber": 71
+        },
+        {
+          "speciesId": 740,
+          "formId": 740,
+          "dexNumber": 72
+        },
+        {
+          "speciesId": 92,
+          "formId": 92,
+          "dexNumber": 73
+        },
+        {
+          "speciesId": 93,
+          "formId": 93,
+          "dexNumber": 74
+        },
+        {
+          "speciesId": 94,
+          "formId": 94,
+          "dexNumber": 75
+        },
+        {
+          "speciesId": 425,
+          "formId": 425,
+          "dexNumber": 76
+        },
+        {
+          "speciesId": 426,
+          "formId": 426,
+          "dexNumber": 77
+        },
+        {
+          "speciesId": 198,
+          "formId": 198,
+          "dexNumber": 78
+        },
+        {
+          "speciesId": 430,
+          "formId": 430,
+          "dexNumber": 79
+        },
+        {
+          "speciesId": 41,
+          "formId": 41,
+          "dexNumber": 80
+        },
+        {
+          "speciesId": 42,
+          "formId": 42,
+          "dexNumber": 81
+        },
+        {
+          "speciesId": 169,
+          "formId": 169,
+          "dexNumber": 82
+        },
+        {
+          "speciesId": 714,
+          "formId": 714,
+          "dexNumber": 83
+        },
+        {
+          "speciesId": 715,
+          "formId": 715,
+          "dexNumber": 84
+        },
+        {
+          "speciesId": 50,
+          "formId": 10105,
+          "dexNumber": 85
+        },
+        {
+          "speciesId": 51,
+          "formId": 10106,
+          "dexNumber": 86
+        },
+        {
+          "speciesId": 21,
+          "formId": 21,
+          "dexNumber": 87
+        },
+        {
+          "speciesId": 22,
+          "formId": 22,
+          "dexNumber": 88
+        },
+        {
+          "speciesId": 627,
+          "formId": 627,
+          "dexNumber": 89
+        },
+        {
+          "speciesId": 628,
+          "formId": 628,
+          "dexNumber": 90
+        },
+        {
+          "speciesId": 629,
+          "formId": 629,
+          "dexNumber": 91
+        },
+        {
+          "speciesId": 630,
+          "formId": 630,
+          "dexNumber": 92
+        },
+        {
+          "speciesId": 56,
+          "formId": 56,
+          "dexNumber": 93
+        },
+        {
+          "speciesId": 57,
+          "formId": 57,
+          "dexNumber": 94
+        },
+        {
+          "speciesId": 225,
+          "formId": 225,
+          "dexNumber": 95
+        },
+        {
+          "speciesId": 701,
+          "formId": 701,
+          "dexNumber": 96
+        },
+        {
+          "speciesId": 741,
+          "formId": 741,
+          "dexNumber": 97
+        },
+        {
+          "speciesId": 742,
+          "formId": 742,
+          "dexNumber": 98
+        },
+        {
+          "speciesId": 743,
+          "formId": 743,
+          "dexNumber": 99
+        },
+        {
+          "speciesId": 669,
+          "formId": 669,
+          "dexNumber": 100
+        },
+        {
+          "speciesId": 670,
+          "formId": 670,
+          "dexNumber": 101
+        },
+        {
+          "speciesId": 671,
+          "formId": 671,
+          "dexNumber": 102
+        },
+        {
+          "speciesId": 548,
+          "formId": 548,
+          "dexNumber": 103
+        },
+        {
+          "speciesId": 549,
+          "formId": 549,
+          "dexNumber": 104
+        },
+        {
+          "speciesId": 546,
+          "formId": 546,
+          "dexNumber": 105
+        },
+        {
+          "speciesId": 547,
+          "formId": 547,
+          "dexNumber": 106
+        },
+        {
+          "speciesId": 54,
+          "formId": 54,
+          "dexNumber": 107
+        },
+        {
+          "speciesId": 55,
+          "formId": 55,
+          "dexNumber": 108
+        },
+        {
+          "speciesId": 238,
+          "formId": 238,
+          "dexNumber": 109
+        },
+        {
+          "speciesId": 124,
+          "formId": 124,
+          "dexNumber": 110
+        },
+        {
+          "speciesId": 129,
+          "formId": 129,
+          "dexNumber": 111
+        },
+        {
+          "speciesId": 130,
+          "formId": 130,
+          "dexNumber": 112
+        },
+        {
+          "speciesId": 339,
+          "formId": 339,
+          "dexNumber": 113
+        },
+        {
+          "speciesId": 340,
+          "formId": 340,
+          "dexNumber": 114
+        },
+        {
+          "speciesId": 86,
+          "formId": 86,
+          "dexNumber": 115
+        },
+        {
+          "speciesId": 87,
+          "formId": 87,
+          "dexNumber": 116
+        },
+        {
+          "speciesId": 66,
+          "formId": 66,
+          "dexNumber": 117
+        },
+        {
+          "speciesId": 67,
+          "formId": 67,
+          "dexNumber": 118
+        },
+        {
+          "speciesId": 68,
+          "formId": 68,
+          "dexNumber": 119
+        },
+        {
+          "speciesId": 524,
+          "formId": 524,
+          "dexNumber": 120
+        },
+        {
+          "speciesId": 525,
+          "formId": 525,
+          "dexNumber": 121
+        },
+        {
+          "speciesId": 526,
+          "formId": 526,
+          "dexNumber": 122
+        },
+        {
+          "speciesId": 703,
+          "formId": 703,
+          "dexNumber": 123
+        },
+        {
+          "speciesId": 302,
+          "formId": 302,
+          "dexNumber": 124
+        },
+        {
+          "speciesId": 303,
+          "formId": 303,
+          "dexNumber": 125
+        },
+        {
+          "speciesId": 744,
+          "formId": 744,
+          "dexNumber": 126
+        },
+        {
+          "speciesId": 745,
+          "formId": 745,
+          "dexNumber": 127
+        },
+        {
+          "speciesId": 327,
+          "formId": 327,
+          "dexNumber": 128
+        },
+        {
+          "speciesId": 72,
+          "formId": 72,
+          "dexNumber": 129
+        },
+        {
+          "speciesId": 73,
+          "formId": 73,
+          "dexNumber": 130
+        },
+        {
+          "speciesId": 456,
+          "formId": 456,
+          "dexNumber": 131
+        },
+        {
+          "speciesId": 457,
+          "formId": 457,
+          "dexNumber": 132
+        },
+        {
+          "speciesId": 746,
+          "formId": 746,
+          "dexNumber": 133
+        },
+        {
+          "speciesId": 370,
+          "formId": 370,
+          "dexNumber": 134
+        },
+        {
+          "speciesId": 222,
+          "formId": 222,
+          "dexNumber": 135
+        },
+        {
+          "speciesId": 747,
+          "formId": 747,
+          "dexNumber": 136
+        },
+        {
+          "speciesId": 748,
+          "formId": 748,
+          "dexNumber": 137
+        },
+        {
+          "speciesId": 90,
+          "formId": 90,
+          "dexNumber": 138
+        },
+        {
+          "speciesId": 91,
+          "formId": 91,
+          "dexNumber": 139
+        },
+        {
+          "speciesId": 366,
+          "formId": 366,
+          "dexNumber": 140
+        },
+        {
+          "speciesId": 367,
+          "formId": 367,
+          "dexNumber": 141
+        },
+        {
+          "speciesId": 368,
+          "formId": 368,
+          "dexNumber": 142
+        },
+        {
+          "speciesId": 223,
+          "formId": 223,
+          "dexNumber": 143
+        },
+        {
+          "speciesId": 224,
+          "formId": 224,
+          "dexNumber": 144
+        },
+        {
+          "speciesId": 458,
+          "formId": 458,
+          "dexNumber": 145
+        },
+        {
+          "speciesId": 226,
+          "formId": 226,
+          "dexNumber": 146
+        },
+        {
+          "speciesId": 371,
+          "formId": 371,
+          "dexNumber": 147
+        },
+        {
+          "speciesId": 372,
+          "formId": 372,
+          "dexNumber": 148
+        },
+        {
+          "speciesId": 373,
+          "formId": 373,
+          "dexNumber": 149
+        },
+        {
+          "speciesId": 506,
+          "formId": 506,
+          "dexNumber": 150
+        },
+        {
+          "speciesId": 507,
+          "formId": 507,
+          "dexNumber": 151
+        },
+        {
+          "speciesId": 508,
+          "formId": 508,
+          "dexNumber": 152
+        },
+        {
+          "speciesId": 133,
+          "formId": 133,
+          "dexNumber": 153
+        },
+        {
+          "speciesId": 134,
+          "formId": 134,
+          "dexNumber": 154
+        },
+        {
+          "speciesId": 135,
+          "formId": 135,
+          "dexNumber": 155
+        },
+        {
+          "speciesId": 136,
+          "formId": 136,
+          "dexNumber": 156
+        },
+        {
+          "speciesId": 196,
+          "formId": 196,
+          "dexNumber": 157
+        },
+        {
+          "speciesId": 197,
+          "formId": 197,
+          "dexNumber": 158
+        },
+        {
+          "speciesId": 470,
+          "formId": 470,
+          "dexNumber": 159
+        },
+        {
+          "speciesId": 471,
+          "formId": 471,
+          "dexNumber": 160
+        },
+        {
+          "speciesId": 700,
+          "formId": 700,
+          "dexNumber": 161
+        },
+        {
+          "speciesId": 179,
+          "formId": 179,
+          "dexNumber": 162
+        },
+        {
+          "speciesId": 180,
+          "formId": 180,
+          "dexNumber": 163
+        },
+        {
+          "speciesId": 181,
+          "formId": 181,
+          "dexNumber": 164
+        },
+        {
+          "speciesId": 749,
+          "formId": 749,
+          "dexNumber": 165
+        },
+        {
+          "speciesId": 750,
+          "formId": 750,
+          "dexNumber": 166
+        },
+        {
+          "speciesId": 174,
+          "formId": 174,
+          "dexNumber": 167
+        },
+        {
+          "speciesId": 39,
+          "formId": 39,
+          "dexNumber": 168
+        },
+        {
+          "speciesId": 40,
+          "formId": 40,
+          "dexNumber": 169
+        },
+        {
+          "speciesId": 128,
+          "formId": 128,
+          "dexNumber": 170
+        },
+        {
+          "speciesId": 241,
+          "formId": 241,
+          "dexNumber": 171
+        },
+        {
+          "speciesId": 283,
+          "formId": 283,
+          "dexNumber": 172
+        },
+        {
+          "speciesId": 284,
+          "formId": 284,
+          "dexNumber": 173
+        },
+        {
+          "speciesId": 751,
+          "formId": 751,
+          "dexNumber": 174
+        },
+        {
+          "speciesId": 752,
+          "formId": 752,
+          "dexNumber": 175
+        },
+        {
+          "speciesId": 753,
+          "formId": 753,
+          "dexNumber": 176
+        },
+        {
+          "speciesId": 754,
+          "formId": 754,
+          "dexNumber": 177
+        },
+        {
+          "speciesId": 755,
+          "formId": 755,
+          "dexNumber": 178
+        },
+        {
+          "speciesId": 756,
+          "formId": 756,
+          "dexNumber": 179
+        },
+        {
+          "speciesId": 46,
+          "formId": 46,
+          "dexNumber": 180
+        },
+        {
+          "speciesId": 47,
+          "formId": 47,
+          "dexNumber": 181
+        },
+        {
+          "speciesId": 60,
+          "formId": 60,
+          "dexNumber": 182
+        },
+        {
+          "speciesId": 61,
+          "formId": 61,
+          "dexNumber": 183
+        },
+        {
+          "speciesId": 62,
+          "formId": 62,
+          "dexNumber": 184
+        },
+        {
+          "speciesId": 186,
+          "formId": 186,
+          "dexNumber": 185
+        },
+        {
+          "speciesId": 118,
+          "formId": 118,
+          "dexNumber": 186
+        },
+        {
+          "speciesId": 119,
+          "formId": 119,
+          "dexNumber": 187
+        },
+        {
+          "speciesId": 550,
+          "formId": 550,
+          "dexNumber": 188
+        },
+        {
+          "speciesId": 349,
+          "formId": 349,
+          "dexNumber": 189
+        },
+        {
+          "speciesId": 350,
+          "formId": 350,
+          "dexNumber": 190
+        },
+        {
+          "speciesId": 594,
+          "formId": 594,
+          "dexNumber": 191
+        },
+        {
+          "speciesId": 661,
+          "formId": 661,
+          "dexNumber": 192
+        },
+        {
+          "speciesId": 662,
+          "formId": 662,
+          "dexNumber": 193
+        },
+        {
+          "speciesId": 663,
+          "formId": 663,
+          "dexNumber": 194
+        },
+        {
+          "speciesId": 757,
+          "formId": 757,
+          "dexNumber": 195
+        },
+        {
+          "speciesId": 758,
+          "formId": 758,
+          "dexNumber": 196
+        },
+        {
+          "speciesId": 104,
+          "formId": 104,
+          "dexNumber": 197
+        },
+        {
+          "speciesId": 105,
+          "formId": 10115,
+          "dexNumber": 198
+        },
+        {
+          "speciesId": 115,
+          "formId": 115,
+          "dexNumber": 199
+        },
+        {
+          "speciesId": 240,
+          "formId": 240,
+          "dexNumber": 200
+        },
+        {
+          "speciesId": 126,
+          "formId": 126,
+          "dexNumber": 201
+        },
+        {
+          "speciesId": 467,
+          "formId": 467,
+          "dexNumber": 202
+        },
+        {
+          "speciesId": 636,
+          "formId": 636,
+          "dexNumber": 203
+        },
+        {
+          "speciesId": 637,
+          "formId": 637,
+          "dexNumber": 204
+        },
+        {
+          "speciesId": 759,
+          "formId": 759,
+          "dexNumber": 205
+        },
+        {
+          "speciesId": 760,
+          "formId": 760,
+          "dexNumber": 206
+        },
+        {
+          "speciesId": 761,
+          "formId": 761,
+          "dexNumber": 207
+        },
+        {
+          "speciesId": 762,
+          "formId": 762,
+          "dexNumber": 208
+        },
+        {
+          "speciesId": 763,
+          "formId": 763,
+          "dexNumber": 209
+        },
+        {
+          "speciesId": 764,
+          "formId": 764,
+          "dexNumber": 210
+        },
+        {
+          "speciesId": 127,
+          "formId": 127,
+          "dexNumber": 211
+        },
+        {
+          "speciesId": 163,
+          "formId": 163,
+          "dexNumber": 212
+        },
+        {
+          "speciesId": 164,
+          "formId": 164,
+          "dexNumber": 213
+        },
+        {
+          "speciesId": 352,
+          "formId": 352,
+          "dexNumber": 214
+        },
+        {
+          "speciesId": 765,
+          "formId": 765,
+          "dexNumber": 215
+        },
+        {
+          "speciesId": 766,
+          "formId": 766,
+          "dexNumber": 216
+        },
+        {
+          "speciesId": 704,
+          "formId": 704,
+          "dexNumber": 217
+        },
+        {
+          "speciesId": 705,
+          "formId": 705,
+          "dexNumber": 218
+        },
+        {
+          "speciesId": 706,
+          "formId": 706,
+          "dexNumber": 219
+        },
+        {
+          "speciesId": 351,
+          "formId": 351,
+          "dexNumber": 220
+        },
+        {
+          "speciesId": 767,
+          "formId": 767,
+          "dexNumber": 221
+        },
+        {
+          "speciesId": 768,
+          "formId": 768,
+          "dexNumber": 222
+        },
+        {
+          "speciesId": 120,
+          "formId": 120,
+          "dexNumber": 223
+        },
+        {
+          "speciesId": 121,
+          "formId": 121,
+          "dexNumber": 224
+        },
+        {
+          "speciesId": 769,
+          "formId": 769,
+          "dexNumber": 225
+        },
+        {
+          "speciesId": 770,
+          "formId": 770,
+          "dexNumber": 226
+        },
+        {
+          "speciesId": 138,
+          "formId": 138,
+          "dexNumber": 227
+        },
+        {
+          "speciesId": 139,
+          "formId": 139,
+          "dexNumber": 228
+        },
+        {
+          "speciesId": 140,
+          "formId": 140,
+          "dexNumber": 229
+        },
+        {
+          "speciesId": 141,
+          "formId": 141,
+          "dexNumber": 230
+        },
+        {
+          "speciesId": 345,
+          "formId": 345,
+          "dexNumber": 231
+        },
+        {
+          "speciesId": 346,
+          "formId": 346,
+          "dexNumber": 232
+        },
+        {
+          "speciesId": 347,
+          "formId": 347,
+          "dexNumber": 233
+        },
+        {
+          "speciesId": 348,
+          "formId": 348,
+          "dexNumber": 234
+        },
+        {
+          "speciesId": 408,
+          "formId": 408,
+          "dexNumber": 235
+        },
+        {
+          "speciesId": 409,
+          "formId": 409,
+          "dexNumber": 236
+        },
+        {
+          "speciesId": 410,
+          "formId": 410,
+          "dexNumber": 237
+        },
+        {
+          "speciesId": 411,
+          "formId": 411,
+          "dexNumber": 238
+        },
+        {
+          "speciesId": 566,
+          "formId": 566,
+          "dexNumber": 239
+        },
+        {
+          "speciesId": 567,
+          "formId": 567,
+          "dexNumber": 240
+        },
+        {
+          "speciesId": 564,
+          "formId": 564,
+          "dexNumber": 241
+        },
+        {
+          "speciesId": 565,
+          "formId": 565,
+          "dexNumber": 242
+        },
+        {
+          "speciesId": 696,
+          "formId": 696,
+          "dexNumber": 243
+        },
+        {
+          "speciesId": 697,
+          "formId": 697,
+          "dexNumber": 244
+        },
+        {
+          "speciesId": 698,
+          "formId": 698,
+          "dexNumber": 245
+        },
+        {
+          "speciesId": 699,
+          "formId": 699,
+          "dexNumber": 246
+        },
+        {
+          "speciesId": 246,
+          "formId": 246,
+          "dexNumber": 247
+        },
+        {
+          "speciesId": 247,
+          "formId": 247,
+          "dexNumber": 248
+        },
+        {
+          "speciesId": 248,
+          "formId": 248,
+          "dexNumber": 249
+        },
+        {
+          "speciesId": 708,
+          "formId": 708,
+          "dexNumber": 250
+        },
+        {
+          "speciesId": 709,
+          "formId": 709,
+          "dexNumber": 251
+        },
+        {
+          "speciesId": 177,
+          "formId": 177,
+          "dexNumber": 252
+        },
+        {
+          "speciesId": 178,
+          "formId": 178,
+          "dexNumber": 253
+        },
+        {
+          "speciesId": 299,
+          "formId": 299,
+          "dexNumber": 254
+        },
+        {
+          "speciesId": 476,
+          "formId": 476,
+          "dexNumber": 255
+        },
+        {
+          "speciesId": 771,
+          "formId": 771,
+          "dexNumber": 256
+        },
+        {
+          "speciesId": 170,
+          "formId": 170,
+          "dexNumber": 257
+        },
+        {
+          "speciesId": 171,
+          "formId": 171,
+          "dexNumber": 258
+        },
+        {
+          "speciesId": 772,
+          "formId": 772,
+          "dexNumber": 259
+        },
+        {
+          "speciesId": 773,
+          "formId": 773,
+          "dexNumber": 260
+        },
+        {
+          "speciesId": 803,
+          "formId": 803,
+          "dexNumber": 261
+        },
+        {
+          "speciesId": 804,
+          "formId": 804,
+          "dexNumber": 262
+        },
+        {
+          "speciesId": 718,
+          "formId": 718,
+          "dexNumber": 263
+        },
+        {
+          "speciesId": 568,
+          "formId": 568,
+          "dexNumber": 264
+        },
+        {
+          "speciesId": 569,
+          "formId": 569,
+          "dexNumber": 265
+        },
+        {
+          "speciesId": 572,
+          "formId": 572,
+          "dexNumber": 266
+        },
+        {
+          "speciesId": 573,
+          "formId": 573,
+          "dexNumber": 267
+        },
+        {
+          "speciesId": 204,
+          "formId": 204,
+          "dexNumber": 268
+        },
+        {
+          "speciesId": 205,
+          "formId": 205,
+          "dexNumber": 269
+        },
+        {
+          "speciesId": 227,
+          "formId": 227,
+          "dexNumber": 270
+        },
+        {
+          "speciesId": 132,
+          "formId": 132,
+          "dexNumber": 271
+        },
+        {
+          "speciesId": 173,
+          "formId": 173,
+          "dexNumber": 272
+        },
+        {
+          "speciesId": 35,
+          "formId": 35,
+          "dexNumber": 273
+        },
+        {
+          "speciesId": 36,
+          "formId": 36,
+          "dexNumber": 274
+        },
+        {
+          "speciesId": 605,
+          "formId": 605,
+          "dexNumber": 275
+        },
+        {
+          "speciesId": 606,
+          "formId": 606,
+          "dexNumber": 276
+        },
+        {
+          "speciesId": 774,
+          "formId": 774,
+          "dexNumber": 277
+        },
+        {
+          "speciesId": 374,
+          "formId": 374,
+          "dexNumber": 278
+        },
+        {
+          "speciesId": 375,
+          "formId": 375,
+          "dexNumber": 279
+        },
+        {
+          "speciesId": 376,
+          "formId": 376,
+          "dexNumber": 280
+        },
+        {
+          "speciesId": 137,
+          "formId": 137,
+          "dexNumber": 281
+        },
+        {
+          "speciesId": 233,
+          "formId": 233,
+          "dexNumber": 282
+        },
+        {
+          "speciesId": 474,
+          "formId": 474,
+          "dexNumber": 283
+        },
+        {
+          "speciesId": 674,
+          "formId": 674,
+          "dexNumber": 284
+        },
+        {
+          "speciesId": 675,
+          "formId": 675,
+          "dexNumber": 285
+        },
+        {
+          "speciesId": 775,
+          "formId": 775,
+          "dexNumber": 286
+        },
+        {
+          "speciesId": 324,
+          "formId": 324,
+          "dexNumber": 287
+        },
+        {
+          "speciesId": 776,
+          "formId": 776,
+          "dexNumber": 288
+        },
+        {
+          "speciesId": 228,
+          "formId": 228,
+          "dexNumber": 289
+        },
+        {
+          "speciesId": 229,
+          "formId": 229,
+          "dexNumber": 290
+        },
+        {
+          "speciesId": 702,
+          "formId": 702,
+          "dexNumber": 291
+        },
+        {
+          "speciesId": 777,
+          "formId": 777,
+          "dexNumber": 292
+        },
+        {
+          "speciesId": 309,
+          "formId": 309,
+          "dexNumber": 293
+        },
+        {
+          "speciesId": 310,
+          "formId": 310,
+          "dexNumber": 294
+        },
+        {
+          "speciesId": 239,
+          "formId": 239,
+          "dexNumber": 295
+        },
+        {
+          "speciesId": 125,
+          "formId": 125,
+          "dexNumber": 296
+        },
+        {
+          "speciesId": 466,
+          "formId": 466,
+          "dexNumber": 297
+        },
+        {
+          "speciesId": 74,
+          "formId": 10109,
+          "dexNumber": 298
+        },
+        {
+          "speciesId": 75,
+          "formId": 10110,
+          "dexNumber": 299
+        },
+        {
+          "speciesId": 76,
+          "formId": 10111,
+          "dexNumber": 300
+        },
+        {
+          "speciesId": 551,
+          "formId": 551,
+          "dexNumber": 301
+        },
+        {
+          "speciesId": 552,
+          "formId": 552,
+          "dexNumber": 302
+        },
+        {
+          "speciesId": 553,
+          "formId": 553,
+          "dexNumber": 303
+        },
+        {
+          "speciesId": 328,
+          "formId": 328,
+          "dexNumber": 304
+        },
+        {
+          "speciesId": 329,
+          "formId": 329,
+          "dexNumber": 305
+        },
+        {
+          "speciesId": 330,
+          "formId": 330,
+          "dexNumber": 306
+        },
+        {
+          "speciesId": 443,
+          "formId": 443,
+          "dexNumber": 307
+        },
+        {
+          "speciesId": 444,
+          "formId": 444,
+          "dexNumber": 308
+        },
+        {
+          "speciesId": 445,
+          "formId": 445,
+          "dexNumber": 309
+        },
+        {
+          "speciesId": 343,
+          "formId": 343,
+          "dexNumber": 310
+        },
+        {
+          "speciesId": 344,
+          "formId": 344,
+          "dexNumber": 311
+        },
+        {
+          "speciesId": 622,
+          "formId": 622,
+          "dexNumber": 312
+        },
+        {
+          "speciesId": 623,
+          "formId": 623,
+          "dexNumber": 313
+        },
+        {
+          "speciesId": 707,
+          "formId": 707,
+          "dexNumber": 314
+        },
+        {
+          "speciesId": 778,
+          "formId": 778,
+          "dexNumber": 315
+        },
+        {
+          "speciesId": 353,
+          "formId": 353,
+          "dexNumber": 316
+        },
+        {
+          "speciesId": 354,
+          "formId": 354,
+          "dexNumber": 317
+        },
+        {
+          "speciesId": 592,
+          "formId": 592,
+          "dexNumber": 318
+        },
+        {
+          "speciesId": 593,
+          "formId": 593,
+          "dexNumber": 319
+        },
+        {
+          "speciesId": 779,
+          "formId": 779,
+          "dexNumber": 320
+        },
+        {
+          "speciesId": 780,
+          "formId": 780,
+          "dexNumber": 321
+        },
+        {
+          "speciesId": 359,
+          "formId": 359,
+          "dexNumber": 322
+        },
+        {
+          "speciesId": 361,
+          "formId": 361,
+          "dexNumber": 323
+        },
+        {
+          "speciesId": 362,
+          "formId": 362,
+          "dexNumber": 324
+        },
+        {
+          "speciesId": 478,
+          "formId": 478,
+          "dexNumber": 325
+        },
+        {
+          "speciesId": 215,
+          "formId": 215,
+          "dexNumber": 326
+        },
+        {
+          "speciesId": 461,
+          "formId": 461,
+          "dexNumber": 327
+        },
+        {
+          "speciesId": 27,
+          "formId": 10101,
+          "dexNumber": 328
+        },
+        {
+          "speciesId": 28,
+          "formId": 10102,
+          "dexNumber": 329
+        },
+        {
+          "speciesId": 37,
+          "formId": 10103,
+          "dexNumber": 330
+        },
+        {
+          "speciesId": 38,
+          "formId": 10104,
+          "dexNumber": 331
+        },
+        {
+          "speciesId": 582,
+          "formId": 582,
+          "dexNumber": 332
+        },
+        {
+          "speciesId": 583,
+          "formId": 583,
+          "dexNumber": 333
+        },
+        {
+          "speciesId": 584,
+          "formId": 584,
+          "dexNumber": 334
+        },
+        {
+          "speciesId": 559,
+          "formId": 559,
+          "dexNumber": 335
+        },
+        {
+          "speciesId": 560,
+          "formId": 560,
+          "dexNumber": 336
+        },
+        {
+          "speciesId": 624,
+          "formId": 624,
+          "dexNumber": 337
+        },
+        {
+          "speciesId": 625,
+          "formId": 625,
+          "dexNumber": 338
+        },
+        {
+          "speciesId": 209,
+          "formId": 209,
+          "dexNumber": 339
+        },
+        {
+          "speciesId": 210,
+          "formId": 210,
+          "dexNumber": 340
+        },
+        {
+          "speciesId": 422,
+          "formId": 422,
+          "dexNumber": 341
+        },
+        {
+          "speciesId": 423,
+          "formId": 423,
+          "dexNumber": 342
+        },
+        {
+          "speciesId": 369,
+          "formId": 369,
+          "dexNumber": 343
+        },
+        {
+          "speciesId": 781,
+          "formId": 781,
+          "dexNumber": 344
+        },
+        {
+          "speciesId": 318,
+          "formId": 318,
+          "dexNumber": 345
+        },
+        {
+          "speciesId": 319,
+          "formId": 319,
+          "dexNumber": 346
+        },
+        {
+          "speciesId": 690,
+          "formId": 690,
+          "dexNumber": 347
+        },
+        {
+          "speciesId": 691,
+          "formId": 691,
+          "dexNumber": 348
+        },
+        {
+          "speciesId": 692,
+          "formId": 692,
+          "dexNumber": 349
+        },
+        {
+          "speciesId": 693,
+          "formId": 693,
+          "dexNumber": 350
+        },
+        {
+          "speciesId": 320,
+          "formId": 320,
+          "dexNumber": 351
+        },
+        {
+          "speciesId": 321,
+          "formId": 321,
+          "dexNumber": 352
+        },
+        {
+          "speciesId": 131,
+          "formId": 131,
+          "dexNumber": 353
+        },
+        {
+          "speciesId": 357,
+          "formId": 357,
+          "dexNumber": 354
+        },
+        {
+          "speciesId": 102,
+          "formId": 102,
+          "dexNumber": 355
+        },
+        {
+          "speciesId": 103,
+          "formId": 10114,
+          "dexNumber": 356
+        },
+        {
+          "speciesId": 341,
+          "formId": 341,
+          "dexNumber": 357
+        },
+        {
+          "speciesId": 342,
+          "formId": 342,
+          "dexNumber": 358
+        },
+        {
+          "speciesId": 619,
+          "formId": 619,
+          "dexNumber": 359
+        },
+        {
+          "speciesId": 620,
+          "formId": 620,
+          "dexNumber": 360
+        },
+        {
+          "speciesId": 782,
+          "formId": 782,
+          "dexNumber": 361
+        },
+        {
+          "speciesId": 783,
+          "formId": 783,
+          "dexNumber": 362
+        },
+        {
+          "speciesId": 784,
+          "formId": 784,
+          "dexNumber": 363
+        },
+        {
+          "speciesId": 587,
+          "formId": 587,
+          "dexNumber": 364
+        },
+        {
+          "speciesId": 123,
+          "formId": 123,
+          "dexNumber": 365
+        },
+        {
+          "speciesId": 212,
+          "formId": 212,
+          "dexNumber": 366
+        },
+        {
+          "speciesId": 214,
+          "formId": 214,
+          "dexNumber": 367
+        },
+        {
+          "speciesId": 190,
+          "formId": 190,
+          "dexNumber": 368
+        },
+        {
+          "speciesId": 424,
+          "formId": 424,
+          "dexNumber": 369
+        },
+        {
+          "speciesId": 667,
+          "formId": 667,
+          "dexNumber": 370
+        },
+        {
+          "speciesId": 668,
+          "formId": 668,
+          "dexNumber": 371
+        },
+        {
+          "speciesId": 200,
+          "formId": 200,
+          "dexNumber": 372
+        },
+        {
+          "speciesId": 429,
+          "formId": 429,
+          "dexNumber": 373
+        },
+        {
+          "speciesId": 621,
+          "formId": 621,
+          "dexNumber": 374
+        },
+        {
+          "speciesId": 108,
+          "formId": 108,
+          "dexNumber": 375
+        },
+        {
+          "speciesId": 463,
+          "formId": 463,
+          "dexNumber": 376
+        },
+        {
+          "speciesId": 447,
+          "formId": 447,
+          "dexNumber": 377
+        },
+        {
+          "speciesId": 448,
+          "formId": 448,
+          "dexNumber": 378
+        },
+        {
+          "speciesId": 147,
+          "formId": 147,
+          "dexNumber": 379
+        },
+        {
+          "speciesId": 148,
+          "formId": 148,
+          "dexNumber": 380
+        },
+        {
+          "speciesId": 149,
+          "formId": 149,
+          "dexNumber": 381
+        },
+        {
+          "speciesId": 142,
+          "formId": 142,
+          "dexNumber": 382
+        },
+        {
+          "speciesId": 785,
+          "formId": 785,
+          "dexNumber": 383
+        },
+        {
+          "speciesId": 786,
+          "formId": 786,
+          "dexNumber": 384
+        },
+        {
+          "speciesId": 787,
+          "formId": 787,
+          "dexNumber": 385
+        },
+        {
+          "speciesId": 788,
+          "formId": 788,
+          "dexNumber": 386
+        },
+        {
+          "speciesId": 789,
+          "formId": 789,
+          "dexNumber": 387
+        },
+        {
+          "speciesId": 790,
+          "formId": 790,
+          "dexNumber": 388
+        },
+        {
+          "speciesId": 791,
+          "formId": 791,
+          "dexNumber": 389
+        },
+        {
+          "speciesId": 792,
+          "formId": 792,
+          "dexNumber": 390
+        },
+        {
+          "speciesId": 793,
+          "formId": 793,
+          "dexNumber": 391
+        },
+        {
+          "speciesId": 805,
+          "formId": 805,
+          "dexNumber": 392
+        },
+        {
+          "speciesId": 806,
+          "formId": 806,
+          "dexNumber": 393
+        },
+        {
+          "speciesId": 794,
+          "formId": 794,
+          "dexNumber": 394
+        },
+        {
+          "speciesId": 795,
+          "formId": 795,
+          "dexNumber": 395
+        },
+        {
+          "speciesId": 796,
+          "formId": 796,
+          "dexNumber": 396
+        },
+        {
+          "speciesId": 797,
+          "formId": 797,
+          "dexNumber": 397
+        },
+        {
+          "speciesId": 798,
+          "formId": 798,
+          "dexNumber": 398
+        },
+        {
+          "speciesId": 799,
+          "formId": 799,
+          "dexNumber": 399
+        },
+        {
+          "speciesId": 800,
+          "formId": 800,
+          "dexNumber": 400
+        },
+        {
+          "speciesId": 801,
+          "formId": 801,
+          "dexNumber": 401
+        },
+        {
+          "speciesId": 802,
+          "formId": 802,
+          "dexNumber": 402
+        },
+        {
+          "speciesId": 807,
+          "formId": 807,
+          "dexNumber": 403
+        }
+      ]
+    }
+  ],
+  "encounters": {
+    "10": {
+      "ultra-sun": {
+        "locations": [
+          "Route 1 East",
+          "Route 1 West",
+          "Route 5",
+          "Lush Jungle North",
+          "Lush Jungle South",
+          "Lush Jungle West",
+          "Melemele Meadow"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Route 1 East",
+          "Route 1 West",
+          "Route 5",
+          "Lush Jungle North",
+          "Lush Jungle South",
+          "Lush Jungle West",
+          "Melemele Meadow"
+        ]
+      }
+    },
+    "11": {
+      "ultra-sun": {
+        "locations": [
+          "Route 5",
+          "Lush Jungle North",
+          "Lush Jungle South",
+          "Lush Jungle West",
+          "Melemele Meadow"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Route 5",
+          "Lush Jungle North",
+          "Lush Jungle South",
+          "Lush Jungle West",
+          "Melemele Meadow"
+        ]
+      }
+    },
+    "12": {
+      "ultra-sun": {
+        "locations": [
+          "Route 5",
+          "Lush Jungle North",
+          "Lush Jungle South",
+          "Lush Jungle West",
+          "Melemele Meadow"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Route 5",
+          "Lush Jungle North",
+          "Lush Jungle South",
+          "Lush Jungle West",
+          "Melemele Meadow"
+        ]
+      }
+    },
+    "19": {
+      "ultra-sun": {
+        "locations": [
+          "Route 1 East",
+          "Route 1 West",
+          "Route 2 North",
+          "Route 2 South",
+          "Route 4",
+          "Route 6 North",
+          "Route 6 South",
+          "Route 8 Main",
+          "Kalae Bay"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Route 1 East",
+          "Route 1 West",
+          "Route 2 North",
+          "Route 2 South",
+          "Route 4",
+          "Route 6 North",
+          "Route 6 South",
+          "Route 8 Main",
+          "Kalae Bay",
+          "Verdant Cavern Trial Site"
+        ]
+      }
+    },
+    "20": {
+      "ultra-sun": {
+        "locations": [
+          "Route 8 Main",
+          "Route 10",
+          "Route 14",
+          "Route 15 Main",
+          "Route 16 East",
+          "Route 16 West",
+          "Route 17 Northeast",
+          "Route 17 West",
+          "Akala Outskirts",
+          "Mount Lanakila Base",
+          "Poni Plains Center",
+          "Poni Plains East",
+          "Poni Plains North",
+          "Poni Plains West",
+          "Tapu Village"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Route 8 Main",
+          "Route 10",
+          "Route 14",
+          "Route 15 Main",
+          "Route 16 East",
+          "Route 16 West",
+          "Route 17 Northeast",
+          "Route 17 West",
+          "Akala Outskirts",
+          "Mount Lanakila Base",
+          "Poni Plains Center",
+          "Poni Plains East",
+          "Poni Plains North",
+          "Poni Plains West",
+          "Tapu Village"
+        ]
+      }
+    },
+    "21": {
+      "ultra-sun": {
+        "locations": [
+          "Route 2 North",
+          "Route 3 North",
+          "Route 3 South"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Route 2 North",
+          "Route 3 North",
+          "Route 3 South"
+        ]
+      }
+    },
+    "22": {
+      "ultra-sun": {
+        "locations": [
+          "Route 10",
+          "Route 17 Northeast",
+          "Route 17 West",
+          "Mount Hokulani West",
+          "Poni Plains North",
+          "Poni Plains West"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Route 10",
+          "Route 17 Northeast",
+          "Route 17 West",
+          "Mount Hokulani West",
+          "Poni Plains North",
+          "Poni Plains West"
+        ]
+      }
+    },
+    "23": {
+      "ultra-sun": {
+        "locations": [
+          "Route 2 North",
+          "Route 2 South"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Route 2 North",
+          "Route 2 South"
+        ]
+      }
+    },
+    "24": {
+      "ultra-sun": {
+        "locations": [
+          "Route 8 Main"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Route 8 Main"
+        ]
+      }
+    },
+    "25": {
+      "ultra-sun": {
+        "locations": [
+          "Route 1 East",
+          "Heahea City Surf Association"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Route 1 East",
+          "Heahea City Surf Association"
+        ]
+      }
+    },
+    "26": {
+      "ultra-sun": {
+        "locations": [
+          "Evolve Pikachu in Ultra Space (Kantonian Form)",
+          "Evolve Pikachu (Alolan Form)"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Evolve Pikachu in Ultra Space (Kantonian Form)",
+          "Evolve Pikachu (Alolan Form)"
+        ]
+      }
+    },
+    "27": {
+      "ultra-moon": {
+        "locations": [
+          "Route 14",
+          "Mount Lanakila Base",
+          "Mount Lanakila Outside",
+          "Tapu Village"
+        ]
+      },
+      "ultra-sun": {
+        "locations": [
+          "Trade",
+          "Pokémon Bank"
+        ]
+      }
+    },
+    "28": {
+      "ultra-sun": {
+        "locations": [
+          "Trade",
+          "Pokémon Bank"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Evolve Sandshrew (Alolan Form)",
+          "Pokémon Bank (Kantonian Form)"
+        ]
+      }
+    },
+    "35": {
+      "ultra-sun": {
+        "locations": [
+          "Mount Hokulani East",
+          "Mount Hokulani West"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Mount Hokulani East",
+          "Mount Hokulani West"
+        ]
+      }
+    },
+    "36": {
+      "ultra-sun": {
+        "locations": [
+          "Evolve Clefairy"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Evolve Clefairy"
+        ]
+      }
+    },
+    "37": {
+      "ultra-sun": {
+        "locations": [
+          "Route 14",
+          "Mount Lanakila Base",
+          "Mount Lanakila Outside",
+          "Tapu Village"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Trade",
+          "Pokémon Bank"
+        ]
+      }
+    },
+    "38": {
+      "ultra-sun": {
+        "locations": [
+          "Evolve Vulpix (Alolan Form)",
+          "Pokémon Bank (Kantonian Form)"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Trade",
+          "Pokémon Bank"
+        ]
+      }
+    },
+    "39": {
+      "ultra-sun": {
+        "locations": [
+          "Route 4",
+          "Route 6 North",
+          "Route 6 South"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Route 4",
+          "Route 6 North",
+          "Route 6 South"
+        ]
+      }
+    },
+    "40": {
+      "ultra-sun": {
+        "locations": [
+          "Evolve Jigglypuff"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Evolve Jigglypuff"
+        ]
+      }
+    },
+    "41": {
+      "ultra-sun": {
+        "locations": [
+          "Digletts Tunnel",
+          "Hauoli Cemetery",
+          "Memorial Hill",
+          "Sandy Cave",
+          "Seaward Cave",
+          "Ten Carat Hill Inside",
+          "Verdant Cavern Trial Site",
+          "Poke Pelago Poni Island Reached",
+          "Poke Pelago Ulaula Island Reached",
+          "Poke Pelago Elite Four Defeated"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Digletts Tunnel",
+          "Hauoli Cemetery",
+          "Memorial Hill",
+          "Sandy Cave",
+          "Seaward Cave",
+          "Ten Carat Hill Inside",
+          "Verdant Cavern Trial Site",
+          "Poke Pelago Poni Island Reached",
+          "Poke Pelago Ulaula Island Reached",
+          "Poke Pelago Elite Four Defeated"
+        ]
+      }
+    },
+    "42": {
+      "ultra-sun": {
+        "locations": [
+          "Digletts Tunnel",
+          "Lush Jungle East Cave",
+          "Memorial Hill",
+          "Mount Lanakila Cave",
+          "Resolution Cave",
+          "Thrifty Megamart Abandoned Site",
+          "Vast Poni Canyon Inside",
+          "Vast Poni Canyon Northwest"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Digletts Tunnel",
+          "Lush Jungle East Cave",
+          "Memorial Hill",
+          "Mount Lanakila Cave",
+          "Resolution Cave",
+          "Thrifty Megamart Abandoned Site",
+          "Vast Poni Canyon Inside",
+          "Vast Poni Canyon Northwest"
+        ]
+      }
+    },
+    "46": {
+      "ultra-sun": {
+        "locations": [
+          "Brooklet Hill North",
+          "Brooklet Hill South",
+          "Lush Jungle North",
+          "Lush Jungle South",
+          "Lush Jungle West"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Brooklet Hill North",
+          "Brooklet Hill South",
+          "Lush Jungle North",
+          "Lush Jungle South",
+          "Lush Jungle West"
+        ]
+      }
+    },
+    "47": {
+      "ultra-sun": {
+        "locations": [
+          "Route 11"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Route 11"
+        ]
+      }
+    },
+    "50": {
+      "ultra-sun": {
+        "locations": [
+          "Route 5",
+          "Route 7",
+          "Digletts Tunnel",
+          "Verdant Cavern Trial Site"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Route 5",
+          "Route 7",
+          "Digletts Tunnel",
+          "Verdant Cavern Trial Site"
+        ]
+      }
+    },
+    "51": {
+      "ultra-sun": {
+        "locations": [
+          "Haina Desert",
+          "Poni Coast",
+          "Resolution Cave",
+          "Vast Poni Canyon Inside",
+          "Vast Poni Canyon Northwest"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Haina Desert",
+          "Poni Coast",
+          "Resolution Cave",
+          "Vast Poni Canyon Inside",
+          "Vast Poni Canyon Northwest"
+        ]
+      }
+    },
+    "52": {
+      "ultra-sun": {
+        "locations": [
+          "Route 1 Trainers School",
+          "Route 2 South",
+          "Hauoli City Shopping District",
+          "Malie Garden"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Route 1 Trainers School",
+          "Route 2 South",
+          "Hauoli City Shopping District",
+          "Malie Garden"
+        ]
+      }
+    },
+    "53": {
+      "ultra-sun": {
+        "locations": [
+          "Malie Garden"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Malie Garden"
+        ]
+      }
+    },
+    "54": {
+      "ultra-sun": {
+        "locations": [
+          "Brooklet Hill North",
+          "Brooklet Hill South",
+          "Malie Garden",
+          "Sandy Cave",
+          "Seaward Cave",
+          "Ten Carat Hill Inside"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Brooklet Hill North",
+          "Brooklet Hill South",
+          "Malie Garden",
+          "Sandy Cave",
+          "Seaward Cave",
+          "Ten Carat Hill Inside"
+        ]
+      }
+    },
+    "55": {
+      "ultra-sun": {
+        "locations": [
+          "Poni Gauntlet",
+          "Vast Poni Canyon Northwest"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Poni Gauntlet",
+          "Vast Poni Canyon Northwest"
+        ]
+      }
+    },
+    "56": {
+      "ultra-sun": {
+        "locations": [
+          "Route 3 North",
+          "Route 3 South"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Route 3 North",
+          "Route 3 South"
+        ]
+      }
+    },
+    "57": {
+      "ultra-sun": {
+        "locations": [
+          "Poni Plains West"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Poni Plains West"
+        ]
+      }
+    },
+    "58": {
+      "ultra-sun": {
+        "locations": [
+          "Route 2 North"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Route 2 North"
+        ]
+      }
+    },
+    "59": {
+      "ultra-sun": {
+        "locations": [
+          "Evolve Growlithe"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Evolve Growlithe"
+        ]
+      }
+    },
+    "60": {
+      "ultra-sun": {
+        "locations": [
+          "Brooklet Hill North",
+          "Brooklet Hill South"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Brooklet Hill North",
+          "Brooklet Hill South"
+        ]
+      }
+    },
+    "61": {
+      "ultra-sun": {
+        "locations": [
+          "Malie Garden"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Malie Garden"
+        ]
+      }
+    },
+    "62": {
+      "ultra-sun": {
+        "locations": [
+          "Malie Garden"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Malie Garden"
+        ]
+      }
+    },
+    "63": {
+      "ultra-sun": {
+        "locations": [
+          "Route 2 South",
+          "Hauoli City Shopping District"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Route 2 South",
+          "Hauoli City Shopping District"
+        ]
+      }
+    },
+    "64": {
+      "ultra-sun": {
+        "locations": [
+          "Evolve Abra"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Evolve Abra"
+        ]
+      }
+    },
+    "65": {
+      "ultra-sun": {
+        "locations": [
+          "Evolve Kadabra"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Evolve Kadabra"
+        ]
+      }
+    },
+    "66": {
+      "ultra-sun": {
+        "locations": [
+          "Ten Carat Hill Farthest Hollow"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Ten Carat Hill Farthest Hollow"
+        ]
+      }
+    },
+    "67": {
+      "ultra-sun": {
+        "locations": [
+          "Vast Poni Canyon Outside"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Vast Poni Canyon Outside"
+        ]
+      }
+    },
+    "68": {
+      "ultra-sun": {
+        "locations": [
+          "Evolve Machoke"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Evolve Machoke"
+        ]
+      }
+    },
+    "72": {
+      "ultra-sun": {
+        "locations": [
+          "Route 7",
+          "Brooklet Hill Totems Den",
+          "Hano Beach",
+          "Hauoli City Beachfront",
+          "Kalae Bay",
+          "Melemele Sea"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Route 7",
+          "Brooklet Hill Totems Den",
+          "Hano Beach",
+          "Hauoli City Beachfront",
+          "Kalae Bay",
+          "Melemele Sea"
+        ]
+      }
+    },
+    "73": {
+      "ultra-sun": {
+        "locations": [
+          "Route 14",
+          "Route 15 Main",
+          "Ancient Poni Path",
+          "Poni Breaker Coast"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Route 14",
+          "Route 15 Main",
+          "Ancient Poni Path",
+          "Poni Breaker Coast"
+        ]
+      }
+    },
+    "74": {
+      "ultra-sun": {
+        "locations": [
+          "Breed Graveler or Golem (Alolan Form)",
+          "Pokémon Bank (Kantonian Form)"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Breed Graveler or Golem (Alolan Form)",
+          "Pokémon Bank (Kantonian Form)"
+        ]
+      }
+    },
+    "75": {
+      "ultra-sun": {
+        "locations": [
+          "Route 12",
+          "Route 17 Northeast",
+          "Blush Mountain"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Route 12",
+          "Route 17 Northeast",
+          "Blush Mountain"
+        ]
+      }
+    },
+    "76": {
+      "ultra-sun": {
+        "locations": [
+          "Evolve Graveler (Alolan Form)",
+          "Pokémon Bank (Kantonian Form)"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Evolve Graveler (Alolan Form)",
+          "Pokémon Bank (Kantonian Form)"
+        ]
+      }
+    },
+    "79": {
+      "ultra-sun": {
+        "locations": [
+          "Route 1 Hauoli Outskirts",
+          "Route 15 Main",
+          "Route 16 East",
+          "Route 16 West",
+          "Kalae Bay",
+          "Poke Pelago Poni Island Reached",
+          "Poke Pelago Ulaula Island Reached",
+          "Poke Pelago Elite Four Defeated"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Route 1 Hauoli Outskirts",
+          "Route 15 Main",
+          "Route 16 East",
+          "Route 16 West",
+          "Kalae Bay",
+          "Poke Pelago Poni Island Reached",
+          "Poke Pelago Ulaula Island Reached",
+          "Poke Pelago Elite Four Defeated"
+        ]
+      }
+    },
+    "80": {
+      "ultra-sun": {
+        "locations": [
+          "Kalae Bay"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Kalae Bay"
+        ]
+      }
+    },
+    "81": {
+      "ultra-sun": {
+        "locations": [
+          "Route 1 Trainers School",
+          "Hauoli City Shopping District",
+          "Malie City Outer Cape"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Route 1 Trainers School",
+          "Hauoli City Shopping District",
+          "Malie City Outer Cape"
+        ]
+      }
+    },
+    "82": {
+      "ultra-sun": {
+        "locations": [
+          "Evolve Magnemite"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Evolve Magnemite"
+        ]
+      }
+    },
+    "86": {
+      "ultra-sun": {
+        "locations": [
+          "Seaward Cave",
+          "Poke Pelago Poni Island Reached",
+          "Poke Pelago Ulaula Island Reached",
+          "Poke Pelago Elite Four Defeated"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Seaward Cave",
+          "Poke Pelago Poni Island Reached",
+          "Poke Pelago Ulaula Island Reached",
+          "Poke Pelago Elite Four Defeated"
+        ]
+      }
+    },
+    "87": {
+      "ultra-sun": {
+        "locations": [
+          "Evolve Seel"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Evolve Seel"
+        ]
+      }
+    },
+    "88": {
+      "ultra-sun": {
+        "locations": [
+          "Route 1 Trainers School",
+          "Hauoli City Shopping District",
+          "Malie City Outer Cape"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Route 1 Trainers School",
+          "Hauoli City Shopping District",
+          "Malie City Outer Cape"
+        ]
+      }
+    },
+    "89": {
+      "ultra-sun": {
+        "locations": [
+          "Evolve Grimer (Alolan Form)",
+          "Pokémon Bank (Kantonian Form)"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Evolve Grimer (Alolan Form)",
+          "Pokémon Bank (Kantonian Form)"
+        ]
+      }
+    },
+    "90": {
+      "ultra-sun": {
+        "locations": [
+          "Kalae Bay"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Kalae Bay"
+        ]
+      }
+    },
+    "91": {
+      "ultra-sun": {
+        "locations": [
+          "Evolve Shellder"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Evolve Shellder"
+        ]
+      }
+    },
+    "92": {
+      "ultra-sun": {
+        "locations": [
+          "Route 1 Trainers School",
+          "Hauoli Cemetery",
+          "Memorial Hill",
+          "Trainers School"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Route 1 Trainers School",
+          "Hauoli Cemetery",
+          "Memorial Hill",
+          "Trainers School"
+        ]
+      }
+    },
+    "93": {
+      "ultra-sun": {
+        "locations": [
+          "Thrifty Megamart Abandoned Site"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Thrifty Megamart Abandoned Site"
+        ]
+      }
+    },
+    "94": {
+      "ultra-sun": {
+        "locations": [
+          "Thrifty Megamart Abandoned Site"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Thrifty Megamart Abandoned Site"
+        ]
+      }
+    },
+    "96": {
+      "ultra-sun": {
+        "locations": [
+          "Route 2 North",
+          "Route 2 South"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Route 2 North",
+          "Route 2 South"
+        ]
+      }
+    },
+    "97": {
+      "ultra-sun": {
+        "locations": [
+          "Hauoli City Main",
+          "Hauoli City Shopping District",
+          "Poni Plains North"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Hauoli City Main",
+          "Hauoli City Shopping District",
+          "Poni Plains North"
+        ]
+      }
+    },
+    "102": {
+      "ultra-sun": {
+        "locations": [
+          "Exeggutor Island"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Exeggutor Island"
+        ]
+      }
+    },
+    "103": {
+      "ultra-sun": {
+        "locations": [
+          "Exeggutor Island"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Exeggutor Island"
+        ]
+      }
+    },
+    "104": {
+      "ultra-sun": {
+        "locations": [
+          "Wela Volcano Park"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Wela Volcano Park"
+        ]
+      }
+    },
+    "105": {
+      "ultra-sun": {
+        "locations": [
+          "Evolve Cubone in Ultra Space (Kantonian Form)",
+          "Evolve Cubone (Alolan Form)",
+          "Received From Samson Oak At Heahea Beachrequires 40 Totem Stickers (totem Sized",
+          "Alolan Form)"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Evolve Cubone in Ultra Space (Kantonian Form)",
+          "Evolve Cubone (Alolan Form)"
+        ]
+      }
+    },
+    "108": {
+      "ultra-sun": {
+        "locations": [
+          "Poni Gauntlet"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Poni Gauntlet"
+        ]
+      }
+    },
+    "113": {
+      "ultra-sun": {
+        "locations": [
+          "Poni Plains Center"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Poni Plains Center"
+        ]
+      }
+    },
+    "115": {
+      "ultra-sun": {
+        "locations": [
+          "Wela Volcano Park"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Wela Volcano Park"
+        ]
+      }
+    },
+    "118": {
+      "ultra-sun": {
+        "locations": [
+          "Brooklet Hill North",
+          "Brooklet Hill South",
+          "Malie Garden"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Brooklet Hill North",
+          "Brooklet Hill South",
+          "Malie Garden"
+        ]
+      }
+    },
+    "119": {
+      "ultra-sun": {
+        "locations": [
+          "Brooklet Hill North",
+          "Brooklet Hill South",
+          "Malie Garden"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Brooklet Hill North",
+          "Brooklet Hill South",
+          "Malie Garden"
+        ]
+      }
+    },
+    "120": {
+      "ultra-sun": {
+        "locations": [
+          "Route 7",
+          "Hano Beach",
+          "Poke Pelago Poni Island Reached",
+          "Poke Pelago Ulaula Island Reached",
+          "Poke Pelago Elite Four Defeated"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Route 7",
+          "Hano Beach",
+          "Poke Pelago Poni Island Reached",
+          "Poke Pelago Ulaula Island Reached",
+          "Poke Pelago Elite Four Defeated"
+        ]
+      }
+    },
+    "121": {
+      "ultra-sun": {
+        "locations": [
+          "Route 7",
+          "Hano Beach"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Route 7",
+          "Hano Beach"
+        ]
+      }
+    },
+    "122": {
+      "ultra-sun": {
+        "locations": [
+          "Hauoli City Shopping District",
+          "Poke Pelago Poni Island Reached",
+          "Poke Pelago Ulaula Island Reached",
+          "Poke Pelago Elite Four Defeated"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Hauoli City Shopping District",
+          "Poke Pelago Poni Island Reached",
+          "Poke Pelago Ulaula Island Reached",
+          "Poke Pelago Elite Four Defeated"
+        ]
+      }
+    },
+    "123": {
+      "ultra-sun": {
+        "locations": [
+          "Poni Plains Center"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Poni Plains Center"
+        ]
+      }
+    },
+    "124": {
+      "ultra-sun": {
+        "locations": [
+          "Seaward Cave",
+          "Poke Pelago Poni Island Reached",
+          "Poke Pelago Ulaula Island Reached",
+          "Poke Pelago Elite Four Defeated"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Seaward Cave",
+          "Poke Pelago Poni Island Reached",
+          "Poke Pelago Ulaula Island Reached",
+          "Poke Pelago Elite Four Defeated"
+        ]
+      }
+    },
+    "125": {
+      "ultra-sun": {
+        "locations": [
+          "Blush Mountain",
+          "Mount Hokulani West"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Blush Mountain",
+          "Mount Hokulani West"
+        ]
+      }
+    },
+    "126": {
+      "ultra-sun": {
+        "locations": [
+          "Wela Volcano Park"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Wela Volcano Park"
+        ]
+      }
+    },
+    "127": {
+      "ultra-sun": {
+        "locations": [
+          "Exeggutor Island",
+          "Lush Jungle North",
+          "Lush Jungle South",
+          "Lush Jungle West",
+          "Poni Grove",
+          "Poke Pelago Poni Island Reached",
+          "Poke Pelago Ulaula Island Reached",
+          "Poke Pelago Elite Four Defeated"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Exeggutor Island",
+          "Lush Jungle North",
+          "Lush Jungle South",
+          "Lush Jungle West",
+          "Poni Grove",
+          "Poke Pelago Poni Island Reached",
+          "Poke Pelago Ulaula Island Reached",
+          "Poke Pelago Elite Four Defeated"
+        ]
+      }
+    },
+    "128": {
+      "ultra-sun": {
+        "locations": [
+          "Paniola Ranch",
+          "Poni Gauntlet",
+          "Poni Plains Center",
+          "Poni Plains East",
+          "Poni Plains North",
+          "Poni Plains West"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Paniola Ranch",
+          "Poni Gauntlet",
+          "Poni Plains Center",
+          "Poni Plains East",
+          "Poni Plains North",
+          "Poni Plains West"
+        ]
+      }
+    },
+    "129": {
+      "ultra-sun": {
+        "locations": [
+          "Route 7",
+          "Route 8 Main",
+          "Route 9 Main",
+          "Route 13",
+          "Route 14",
+          "Route 15 Main",
+          "Akala Outskirts",
+          "Ancient Poni Path",
+          "Brooklet Hill North",
+          "Brooklet Hill South",
+          "Brooklet Hill Totems Den",
+          "Hauoli City Beachfront",
+          "Kalae Bay",
+          "Malie Garden",
+          "Melemele Sea",
+          "Paniola Town",
+          "Poni Breaker Coast",
+          "Poni Gauntlet",
+          "Poni Meadow",
+          "Seafolk Village Main",
+          "Seaward Cave",
+          "Tapu Village",
+          "Vast Poni Canyon Northwest"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Route 7",
+          "Route 8 Main",
+          "Route 9 Main",
+          "Route 13",
+          "Route 14",
+          "Route 15 Main",
+          "Akala Outskirts",
+          "Ancient Poni Path",
+          "Brooklet Hill North",
+          "Brooklet Hill South",
+          "Brooklet Hill Totems Den",
+          "Hauoli City Beachfront",
+          "Kalae Bay",
+          "Malie Garden",
+          "Melemele Sea",
+          "Paniola Town",
+          "Poni Breaker Coast",
+          "Poni Gauntlet",
+          "Poni Meadow",
+          "Seafolk Village Main",
+          "Seaward Cave",
+          "Tapu Village",
+          "Vast Poni Canyon Northwest"
+        ]
+      }
+    },
+    "130": {
+      "ultra-sun": {
+        "locations": [
+          "Route 7",
+          "Route 8 Main",
+          "Route 9 Main",
+          "Route 13",
+          "Route 14",
+          "Route 15 Main",
+          "Akala Outskirts",
+          "Ancient Poni Path",
+          "Brooklet Hill North",
+          "Brooklet Hill South",
+          "Brooklet Hill Totems Den",
+          "Hauoli City Beachfront",
+          "Kalae Bay",
+          "Malie Garden",
+          "Melemele Sea",
+          "Paniola Town",
+          "Poni Breaker Coast",
+          "Poni Gauntlet",
+          "Poni Meadow",
+          "Seafolk Village Main",
+          "Seaward Cave",
+          "Tapu Village",
+          "Vast Poni Canyon Northwest"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Route 7",
+          "Route 8 Main",
+          "Route 9 Main",
+          "Route 13",
+          "Route 14",
+          "Route 15 Main",
+          "Akala Outskirts",
+          "Ancient Poni Path",
+          "Brooklet Hill North",
+          "Brooklet Hill South",
+          "Brooklet Hill Totems Den",
+          "Hauoli City Beachfront",
+          "Kalae Bay",
+          "Malie Garden",
+          "Melemele Sea",
+          "Paniola Town",
+          "Poni Breaker Coast",
+          "Poni Gauntlet",
+          "Poni Meadow",
+          "Seafolk Village Main",
+          "Seaward Cave",
+          "Tapu Village",
+          "Vast Poni Canyon Northwest"
+        ]
+      }
+    },
+    "131": {
+      "ultra-sun": {
+        "locations": [
+          "Ancient Poni Path",
+          "Poni Breaker Coast",
+          "Poke Pelago Poni Island Reached",
+          "Poke Pelago Elite Four Defeated"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Ancient Poni Path",
+          "Poni Breaker Coast",
+          "Poke Pelago Poni Island Reached",
+          "Poke Pelago Elite Four Defeated"
+        ]
+      }
+    },
+    "132": {
+      "ultra-sun": {
+        "locations": [
+          "Route 9 Main",
+          "Route 9 Police Station",
+          "Konikoni City",
+          "Mount Hokulani East",
+          "Mount Hokulani West"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Route 9 Main",
+          "Route 9 Police Station",
+          "Konikoni City",
+          "Mount Hokulani East",
+          "Mount Hokulani West"
+        ]
+      }
+    },
+    "133": {
+      "ultra-sun": {
+        "locations": [
+          "Route 4",
+          "Route 6 North",
+          "Route 6 South",
+          "Paniola Ranch"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Route 4",
+          "Route 6 North",
+          "Route 6 South",
+          "Paniola Ranch"
+        ]
+      }
+    },
+    "134": {
+      "ultra-sun": {
+        "locations": [
+          "Evolve Eevee"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Evolve Eevee"
+        ]
+      }
+    },
+    "135": {
+      "ultra-sun": {
+        "locations": [
+          "Evolve Eevee"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Evolve Eevee"
+        ]
+      }
+    },
+    "136": {
+      "ultra-sun": {
+        "locations": [
+          "Evolve Eevee"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Evolve Eevee"
+        ]
+      }
+    },
+    "137": {
+      "ultra-sun": {
+        "locations": [
+          "Route 15 Aether House"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Route 15 Aether House"
+        ]
+      }
+    },
+    "138": {
+      "ultra-sun": {
+        "locations": [
+          "Route 8 Fossil Restoration Center"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Route 8 Fossil Restoration Center"
+        ]
+      }
+    },
+    "139": {
+      "ultra-sun": {
+        "locations": [
+          "Evolve Omanyte"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Evolve Omanyte"
+        ]
+      }
+    },
+    "140": {
+      "ultra-sun": {
+        "locations": [
+          "Route 8 Fossil Restoration Center"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Route 8 Fossil Restoration Center"
+        ]
+      }
+    },
+    "141": {
+      "ultra-sun": {
+        "locations": [
+          "Evolve Kabuto"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Evolve Kabuto"
+        ]
+      }
+    },
+    "142": {
+      "ultra-sun": {
+        "locations": [
+          "Seafolk Village Huntail Boat"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Seafolk Village Huntail Boat"
+        ]
+      }
+    },
+    "143": {
+      "ultra-sun": {
+        "locations": [
+          "Route 1 (SOS Battle)"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Route 1 (SOS Battle)"
+        ]
+      }
+    },
+    "147": {
+      "ultra-sun": {
+        "locations": [
+          "Poni Gauntlet",
+          "Poni Meadow"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Poni Gauntlet",
+          "Poni Meadow"
+        ]
+      }
+    },
+    "148": {
+      "ultra-sun": {
+        "locations": [
+          "Poni Gauntlet",
+          "Poni Meadow"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Poni Gauntlet",
+          "Poni Meadow"
+        ]
+      }
+    },
+    "149": {
+      "ultra-sun": {
+        "locations": [
+          "Poni Gauntlet"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Poni Gauntlet"
+        ]
+      }
+    },
+    "163": {
+      "ultra-sun": {
+        "locations": [
+          "Lush Jungle North",
+          "Lush Jungle South",
+          "Lush Jungle West",
+          "Poke Pelago Poni Island Reached",
+          "Poke Pelago Ulaula Island Reached",
+          "Poke Pelago Elite Four Defeated"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Lush Jungle North",
+          "Lush Jungle South",
+          "Lush Jungle West",
+          "Poke Pelago Poni Island Reached",
+          "Poke Pelago Ulaula Island Reached",
+          "Poke Pelago Elite Four Defeated"
+        ]
+      }
+    },
+    "164": {
+      "ultra-sun": {
+        "locations": [
+          "Lush Jungle North",
+          "Lush Jungle South",
+          "Lush Jungle West"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Lush Jungle North",
+          "Lush Jungle South",
+          "Lush Jungle West"
+        ]
+      }
+    },
+    "165": {
+      "ultra-sun": {
+        "locations": [
+          "Route 1 East"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Route 1 East"
+        ]
+      }
+    },
+    "166": {
+      "ultra-sun": {
+        "locations": [
+          "Route 10",
+          "Route 11",
+          "Route 17 West",
+          "Malie Garden",
+          "Ulaula Meadow"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Route 10",
+          "Route 11",
+          "Route 17 West",
+          "Malie Garden",
+          "Ulaula Meadow"
+        ]
+      }
+    },
+    "167": {
+      "ultra-sun": {
+        "locations": [
+          "Route 1 East"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Route 1 East"
+        ]
+      }
+    },
+    "168": {
+      "ultra-sun": {
+        "locations": [
+          "Route 10",
+          "Route 11",
+          "Route 17 West",
+          "Malie Garden",
+          "Ulaula Meadow"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Route 10",
+          "Route 11",
+          "Route 17 West",
+          "Malie Garden",
+          "Ulaula Meadow"
+        ]
+      }
+    },
+    "169": {
+      "ultra-sun": {
+        "locations": [
+          "Lush Jungle East Cave",
+          "Resolution Cave"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Lush Jungle East Cave",
+          "Resolution Cave"
+        ]
+      }
+    },
+    "170": {
+      "ultra-sun": {
+        "locations": [
+          "Route 8 Main",
+          "Akala Outskirts"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Route 8 Main",
+          "Akala Outskirts"
+        ]
+      }
+    },
+    "171": {
+      "ultra-sun": {
+        "locations": [
+          "Route 8 Main",
+          "Akala Outskirts"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Route 8 Main",
+          "Akala Outskirts"
+        ]
+      }
+    },
+    "172": {
+      "ultra-sun": {
+        "locations": [
+          "Route 1 East"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Route 1 East"
+        ]
+      }
+    },
+    "173": {
+      "ultra-sun": {
+        "locations": [
+          "Mount Hokulani East",
+          "Mount Hokulani West"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Mount Hokulani East",
+          "Mount Hokulani West"
+        ]
+      }
+    },
+    "174": {
+      "ultra-sun": {
+        "locations": [
+          "Route 4",
+          "Route 6 North",
+          "Route 6 South"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Route 4",
+          "Route 6 North",
+          "Route 6 South"
+        ]
+      }
+    },
+    "177": {
+      "ultra-sun": {
+        "locations": [
+          "Akala Outskirts",
+          "Poke Pelago Poni Island Reached",
+          "Poke Pelago Ulaula Island Reached",
+          "Poke Pelago Elite Four Defeated"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Akala Outskirts",
+          "Poke Pelago Poni Island Reached",
+          "Poke Pelago Ulaula Island Reached",
+          "Poke Pelago Elite Four Defeated"
+        ]
+      }
+    },
+    "178": {
+      "ultra-sun": {
+        "locations": [
+          "Akala Outskirts"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Akala Outskirts"
+        ]
+      }
+    },
+    "179": {
+      "ultra-sun": {
+        "locations": [
+          "Paniola Ranch"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Paniola Ranch"
+        ]
+      }
+    },
+    "180": {
+      "ultra-sun": {
+        "locations": [
+          "Poke Pelago Poni Island Reached",
+          "Poke Pelago Ulaula Island Reached",
+          "Poke Pelago Elite Four Defeated"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Poke Pelago Poni Island Reached",
+          "Poke Pelago Ulaula Island Reached",
+          "Poke Pelago Elite Four Defeated"
+        ]
+      }
+    },
+    "181": {
+      "ultra-sun": {
+        "locations": [
+          "Evolve Flaaffy"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Evolve Flaaffy"
+        ]
+      }
+    },
+    "185": {
+      "ultra-sun": {
+        "locations": [
+          "Lush Jungle North",
+          "Lush Jungle South",
+          "Lush Jungle West"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Lush Jungle North",
+          "Lush Jungle South",
+          "Lush Jungle West"
+        ]
+      }
+    },
+    "186": {
+      "ultra-sun": {
+        "locations": [
+          "Malie Garden"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Malie Garden"
+        ]
+      }
+    },
+    "190": {
+      "ultra-sun": {
+        "locations": [
+          "Poni Plains West"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Poni Plains West"
+        ]
+      }
+    },
+    "196": {
+      "ultra-sun": {
+        "locations": [
+          "Route 4",
+          "Route 6 North",
+          "Route 6 South"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Route 4",
+          "Route 6 North",
+          "Route 6 South"
+        ]
+      }
+    },
+    "197": {
+      "ultra-sun": {
+        "locations": [
+          "Route 4",
+          "Route 6 North",
+          "Route 6 South"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Route 4",
+          "Route 6 North",
+          "Route 6 South"
+        ]
+      }
+    },
+    "198": {
+      "ultra-sun": {
+        "locations": [
+          "Hauoli Cemetery"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Hauoli Cemetery"
+        ]
+      }
+    },
+    "199": {
+      "ultra-sun": {
+        "locations": [
+          "Kalae Bay"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Kalae Bay"
+        ]
+      }
+    },
+    "200": {
+      "ultra-sun": {
+        "locations": [
+          "Poni Meadow",
+          "Poke Pelago Poni Island Reached",
+          "Poke Pelago Elite Four Defeated"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Poni Meadow",
+          "Poke Pelago Poni Island Reached",
+          "Poke Pelago Elite Four Defeated"
+        ]
+      }
+    },
+    "204": {
+      "ultra-sun": {
+        "locations": [
+          "Route 10"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Route 10"
+        ]
+      }
+    },
+    "205": {
+      "ultra-sun": {
+        "locations": [
+          "Evolve Pineco"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Evolve Pineco"
+        ]
+      }
+    },
+    "206": {
+      "ultra-sun": {
+        "locations": [
+          "Route 2 North",
+          "Route 2 South"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Route 2 North",
+          "Route 2 South"
+        ]
+      }
+    },
+    "209": {
+      "ultra-sun": {
+        "locations": [
+          "Poke Pelago Elite Four Defeated"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Poke Pelago Elite Four Defeated"
+        ]
+      }
+    },
+    "210": {
+      "ultra-sun": {
+        "locations": [
+          "Ancient Poni Path",
+          "Poni Gauntlet",
+          "Poni Wilds"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Ancient Poni Path",
+          "Poni Gauntlet",
+          "Poni Wilds"
+        ]
+      }
+    },
+    "212": {
+      "ultra-sun": {
+        "locations": [
+          "Evolve Scyther"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Evolve Scyther"
+        ]
+      }
+    },
+    "214": {
+      "ultra-sun": {
+        "locations": [
+          "Poni Grove"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Poni Grove"
+        ]
+      }
+    },
+    "215": {
+      "ultra-sun": {
+        "locations": [
+          "Mount Lanakila Cave",
+          "Mount Lanakila Outside"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Mount Lanakila Cave",
+          "Mount Lanakila Outside"
+        ]
+      }
+    },
+    "222": {
+      "ultra-sun": {
+        "locations": [
+          "Route 9 Main",
+          "Hauoli City Beachfront",
+          "Melemele Sea",
+          "Poke Pelago Poni Island Reached",
+          "Poke Pelago Ulaula Island Reached",
+          "Poke Pelago Elite Four Defeated"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Route 9 Main",
+          "Hauoli City Beachfront",
+          "Melemele Sea",
+          "Poke Pelago Poni Island Reached",
+          "Poke Pelago Ulaula Island Reached",
+          "Poke Pelago Elite Four Defeated"
+        ]
+      }
+    },
+    "223": {
+      "ultra-sun": {
+        "locations": [
+          "Route 8 Main",
+          "Hauoli City Beachfront",
+          "Kalae Bay",
+          "Melemele Sea"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Route 8 Main",
+          "Hauoli City Beachfront",
+          "Kalae Bay",
+          "Melemele Sea"
+        ]
+      }
+    },
+    "224": {
+      "ultra-sun": {
+        "locations": [
+          "Route 8 Main",
+          "Hauoli City Beachfront",
+          "Kalae Bay",
+          "Melemele Sea"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Route 8 Main",
+          "Hauoli City Beachfront",
+          "Kalae Bay",
+          "Melemele Sea"
+        ]
+      }
+    },
+    "225": {
+      "ultra-sun": {
+        "locations": [
+          "Seaward Cave"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Seaward Cave"
+        ]
+      }
+    },
+    "226": {
+      "ultra-sun": {
+        "locations": [
+          "Evolve Mantyke"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Evolve Mantyke"
+        ]
+      }
+    },
+    "227": {
+      "ultra-sun": {
+        "locations": [
+          "Route 10",
+          "Route 17 Northeast",
+          "Mount Hokulani West",
+          "Vast Poni Canyon Outside"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Route 10",
+          "Route 17 Northeast",
+          "Mount Hokulani West",
+          "Vast Poni Canyon Outside"
+        ]
+      }
+    },
+    "228": {
+      "ultra-sun": {
+        "locations": [
+          "Poke Pelago Poni Island Reached",
+          "Poke Pelago Elite Four Defeated"
+        ]
+      }
+    },
+    "229": {
+      "ultra-sun": {
+        "locations": [
+          "Route 12"
+        ]
+      }
+    },
+    "233": {
+      "ultra-sun": {
+        "locations": [
+          "Evolve Porygon"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Evolve Porygon"
+        ]
+      }
+    },
+    "235": {
+      "ultra-sun": {
+        "locations": [
+          "Route 2 North",
+          "Route 2 South"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Route 2 North",
+          "Route 2 South"
+        ]
+      }
+    },
+    "238": {
+      "ultra-sun": {
+        "locations": [
+          "Seaward Cave"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Seaward Cave"
+        ]
+      }
+    },
+    "239": {
+      "ultra-sun": {
+        "locations": [
+          "Blush Mountain",
+          "Mount Hokulani West"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Blush Mountain",
+          "Mount Hokulani West"
+        ]
+      }
+    },
+    "240": {
+      "ultra-sun": {
+        "locations": [
+          "Wela Volcano Park"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Wela Volcano Park"
+        ]
+      }
+    },
+    "241": {
+      "ultra-sun": {
+        "locations": [
+          "Paniola Ranch",
+          "Poni Plains Center",
+          "Poni Plains East",
+          "Poni Plains North",
+          "Poni Plains West"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Paniola Ranch",
+          "Poni Plains Center",
+          "Poni Plains East",
+          "Poni Plains North",
+          "Poni Plains West"
+        ]
+      }
+    },
+    "242": {
+      "ultra-sun": {
+        "locations": [
+          "Poni Plains Center"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Poni Plains Center"
+        ]
+      }
+    },
+    "246": {
+      "ultra-sun": {
+        "locations": [
+          "Digletts Tunnel"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Digletts Tunnel"
+        ]
+      }
+    },
+    "247": {
+      "ultra-sun": {
+        "locations": [
+          "Evolve Larvitar"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Evolve Larvitar"
+        ]
+      }
+    },
+    "248": {
+      "ultra-sun": {
+        "locations": [
+          "Evolve Pupitar"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Evolve Pupitar"
+        ]
+      }
+    },
+    "278": {
+      "ultra-sun": {
+        "locations": [
+          "Route 1 Hauoli Outskirts",
+          "Route 7",
+          "Akala Outskirts",
+          "Brooklet Hill North",
+          "Brooklet Hill South",
+          "Brooklet Hill Totems Den",
+          "Hano Beach",
+          "Hauoli City Shopping District",
+          "Hauoli City Beachfront",
+          "Kalae Bay",
+          "Melemele Sea",
+          "Poke Pelago Poni Island Reached",
+          "Poke Pelago Ulaula Island Reached",
+          "Poke Pelago Elite Four Defeated"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Route 1 Hauoli Outskirts",
+          "Route 7",
+          "Akala Outskirts",
+          "Brooklet Hill North",
+          "Brooklet Hill South",
+          "Brooklet Hill Totems Den",
+          "Hano Beach",
+          "Hauoli City Shopping District",
+          "Hauoli City Beachfront",
+          "Kalae Bay",
+          "Melemele Sea",
+          "Poke Pelago Poni Island Reached",
+          "Poke Pelago Ulaula Island Reached",
+          "Poke Pelago Elite Four Defeated"
+        ]
+      }
+    },
+    "279": {
+      "ultra-sun": {
+        "locations": [
+          "Route 14",
+          "Route 15 Main",
+          "Route 16 East",
+          "Route 16 West",
+          "Ancient Poni Path",
+          "Exeggutor Island",
+          "Poni Breaker Coast",
+          "Poni Gauntlet",
+          "Poni Plains East",
+          "Poni Wilds",
+          "Tapu Village"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Route 14",
+          "Route 15 Main",
+          "Route 16 East",
+          "Route 16 West",
+          "Ancient Poni Path",
+          "Exeggutor Island",
+          "Poni Breaker Coast",
+          "Poni Gauntlet",
+          "Poni Plains East",
+          "Poni Wilds",
+          "Tapu Village"
+        ]
+      }
+    },
+    "283": {
+      "ultra-sun": {
+        "locations": [
+          "Brooklet Hill North",
+          "Brooklet Hill South"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Brooklet Hill North",
+          "Brooklet Hill South"
+        ]
+      }
+    },
+    "284": {
+      "ultra-sun": {
+        "locations": [
+          "Malie Garden"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Malie Garden"
+        ]
+      }
+    },
+    "296": {
+      "ultra-sun": {
+        "locations": [
+          "Route 2 North",
+          "Route 2 South"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Route 2 North",
+          "Route 2 South"
+        ]
+      }
+    },
+    "297": {
+      "ultra-sun": {
+        "locations": [
+          "Poni Plains North"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Poni Plains North"
+        ]
+      }
+    },
+    "299": {
+      "ultra-sun": {
+        "locations": [
+          "Akala Outskirts"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Akala Outskirts"
+        ]
+      }
+    },
+    "302": {
+      "ultra-sun": {
+        "locations": [
+          "Ten Carat Hill Inside",
+          "Vast Poni Canyon Inside",
+          "Vast Poni Canyon Northwest"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Ten Carat Hill Inside",
+          "Vast Poni Canyon Inside",
+          "Vast Poni Canyon Northwest"
+        ]
+      }
+    },
+    "303": {
+      "ultra-sun": {
+        "locations": [
+          "Ten Carat Hill Inside"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Ten Carat Hill Inside"
+        ]
+      }
+    },
+    "309": {
+      "ultra-moon": {
+        "locations": [
+          "Poke Pelago Poni Island Reached",
+          "Poke Pelago Elite Four Defeated"
+        ]
+      }
+    },
+    "310": {
+      "ultra-moon": {
+        "locations": [
+          "Route 12"
+        ]
+      }
+    },
+    "318": {
+      "ultra-sun": {
+        "locations": [
+          "Ancient Poni Path",
+          "Poni Breaker Coast"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Ancient Poni Path",
+          "Poni Breaker Coast"
+        ]
+      }
+    },
+    "319": {
+      "ultra-sun": {
+        "locations": [
+          "Ancient Poni Path",
+          "Poni Breaker Coast"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Ancient Poni Path",
+          "Poni Breaker Coast"
+        ]
+      }
+    },
+    "320": {
+      "ultra-sun": {
+        "locations": [
+          "Ancient Poni Path",
+          "Poni Breaker Coast",
+          "Seafolk Village Main"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Ancient Poni Path",
+          "Poni Breaker Coast",
+          "Seafolk Village Main"
+        ]
+      }
+    },
+    "321": {
+      "ultra-sun": {
+        "locations": [
+          "Ancient Poni Path",
+          "Poni Breaker Coast",
+          "Seafolk Village Main"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Ancient Poni Path",
+          "Poni Breaker Coast",
+          "Seafolk Village Main"
+        ]
+      }
+    },
+    "324": {
+      "ultra-sun": {
+        "locations": [
+          "Route 12",
+          "Blush Mountain"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Route 12",
+          "Blush Mountain"
+        ]
+      }
+    },
+    "327": {
+      "ultra-sun": {
+        "locations": [
+          "Ten Carat Hill Farthest Hollow"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Ten Carat Hill Farthest Hollow"
+        ]
+      }
+    },
+    "328": {
+      "ultra-sun": {
+        "locations": [
+          "Haina Desert"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Haina Desert"
+        ]
+      }
+    },
+    "329": {
+      "ultra-sun": {
+        "locations": [
+          "Evolve Trapinch"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Evolve Trapinch"
+        ]
+      }
+    },
+    "330": {
+      "ultra-sun": {
+        "locations": [
+          "Evolve Vibrava"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Evolve Vibrava"
+        ]
+      }
+    },
+    "339": {
+      "ultra-sun": {
+        "locations": [
+          "Paniola Town",
+          "Poni Gauntlet",
+          "Poni Meadow",
+          "Royal Avenue",
+          "Seaward Cave",
+          "Vast Poni Canyon Northwest"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Paniola Town",
+          "Poni Gauntlet",
+          "Poni Meadow",
+          "Royal Avenue",
+          "Seaward Cave",
+          "Vast Poni Canyon Northwest"
+        ]
+      }
+    },
+    "340": {
+      "ultra-sun": {
+        "locations": [
+          "Paniola Town",
+          "Poni Gauntlet",
+          "Poni Meadow",
+          "Seaward Cave",
+          "Vast Poni Canyon Northwest"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Paniola Town",
+          "Poni Gauntlet",
+          "Poni Meadow",
+          "Seaward Cave",
+          "Vast Poni Canyon Northwest"
+        ]
+      }
+    },
+    "341": {
+      "ultra-sun": {
+        "locations": [
+          "Vast Poni Canyon Northwest"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Vast Poni Canyon Northwest"
+        ]
+      }
+    },
+    "342": {
+      "ultra-sun": {
+        "locations": [
+          "Vast Poni Canyon Northwest"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Vast Poni Canyon Northwest"
+        ]
+      }
+    },
+    "343": {
+      "ultra-moon": {
+        "locations": [
+          "Haina Desert"
+        ]
+      }
+    },
+    "344": {
+      "ultra-moon": {
+        "locations": [
+          "Evolve Baltoy"
+        ]
+      }
+    },
+    "345": {
+      "ultra-sun": {
+        "locations": [
+          "Route 8 Fossil Restoration Center"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Route 8 Fossil Restoration Center"
+        ]
+      }
+    },
+    "346": {
+      "ultra-sun": {
+        "locations": [
+          "Evolve Lileep"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Evolve Lileep"
+        ]
+      }
+    },
+    "347": {
+      "ultra-sun": {
+        "locations": [
+          "Route 8 Fossil Restoration Center"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Route 8 Fossil Restoration Center"
+        ]
+      }
+    },
+    "348": {
+      "ultra-sun": {
+        "locations": [
+          "Evolve Anorith"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Evolve Anorith"
+        ]
+      }
+    },
+    "349": {
+      "ultra-sun": {
+        "locations": [
+          "Brooklet Hill North",
+          "Brooklet Hill South"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Brooklet Hill North",
+          "Brooklet Hill South"
+        ]
+      }
+    },
+    "350": {
+      "ultra-sun": {
+        "locations": [
+          "Evolve Feebas"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Evolve Feebas"
+        ]
+      }
+    },
+    "351": {
+      "ultra-sun": {
+        "locations": [
+          "Route 17 Northeast",
+          "Route 17 West",
+          "Exeggutor Island",
+          "Haina Desert",
+          "Lush Jungle North",
+          "Lush Jungle South",
+          "Lush Jungle West",
+          "Malie Garden",
+          "Mount Lanakila Base",
+          "Mount Lanakila Outside",
+          "Tapu Village"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Route 17 Northeast",
+          "Route 17 West",
+          "Exeggutor Island",
+          "Haina Desert",
+          "Lush Jungle North",
+          "Lush Jungle South",
+          "Lush Jungle West",
+          "Malie Garden",
+          "Mount Lanakila Base",
+          "Mount Lanakila Outside",
+          "Tapu Village"
+        ]
+      }
+    },
+    "352": {
+      "ultra-sun": {
+        "locations": [
+          "Dividing Peak Tunnel"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Dividing Peak Tunnel"
+        ]
+      }
+    },
+    "353": {
+      "ultra-sun": {
+        "locations": [
+          "Thrifty Megamart Abandoned Site"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Thrifty Megamart Abandoned Site"
+        ]
+      }
+    },
+    "354": {
+      "ultra-sun": {
+        "locations": [
+          "Poke Pelago Poni Island Reached",
+          "Poke Pelago Elite Four Defeated"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Poke Pelago Poni Island Reached",
+          "Poke Pelago Elite Four Defeated"
+        ]
+      }
+    },
+    "357": {
+      "ultra-sun": {
+        "locations": [
+          "Exeggutor Island",
+          "Poke Pelago Elite Four Defeated"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Exeggutor Island",
+          "Poke Pelago Elite Four Defeated"
+        ]
+      }
+    },
+    "359": {
+      "ultra-sun": {
+        "locations": [
+          "Route 14",
+          "Mount Lanakila Base",
+          "Mount Lanakila Cave",
+          "Mount Lanakila Outside",
+          "Tapu Village"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Route 14",
+          "Mount Lanakila Base",
+          "Mount Lanakila Cave",
+          "Mount Lanakila Outside",
+          "Tapu Village"
+        ]
+      }
+    },
+    "361": {
+      "ultra-sun": {
+        "locations": [
+          "Route 14",
+          "Mount Lanakila Base",
+          "Tapu Village"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Route 14",
+          "Mount Lanakila Base",
+          "Tapu Village"
+        ]
+      }
+    },
+    "362": {
+      "ultra-sun": {
+        "locations": [
+          "Mount Lanakila Cave",
+          "Mount Lanakila Outside"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Mount Lanakila Cave",
+          "Mount Lanakila Outside"
+        ]
+      }
+    },
+    "366": {
+      "ultra-sun": {
+        "locations": [
+          "Route 15 Main",
+          "Hauoli City Beachfront",
+          "Melemele Sea"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Route 15 Main",
+          "Hauoli City Beachfront",
+          "Melemele Sea"
+        ]
+      }
+    },
+    "367": {
+      "ultra-sun": {
+        "locations": [
+          "Route 15 Main",
+          "Hauoli City Beachfront",
+          "Melemele Sea"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Route 15 Main",
+          "Hauoli City Beachfront",
+          "Melemele Sea"
+        ]
+      }
+    },
+    "368": {
+      "ultra-sun": {
+        "locations": [
+          "Route 15 Main",
+          "Hauoli City Beachfront",
+          "Melemele Sea"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Route 15 Main",
+          "Hauoli City Beachfront",
+          "Melemele Sea"
+        ]
+      }
+    },
+    "369": {
+      "ultra-sun": {
+        "locations": [
+          "Ancient Poni Path",
+          "Poni Breaker Coast"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Ancient Poni Path",
+          "Poni Breaker Coast"
+        ]
+      }
+    },
+    "370": {
+      "ultra-sun": {
+        "locations": [
+          "Route 9 Main",
+          "Hauoli City Beachfront",
+          "Melemele Sea"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Route 9 Main",
+          "Hauoli City Beachfront",
+          "Melemele Sea"
+        ]
+      }
+    },
+    "371": {
+      "ultra-sun": {
+        "locations": [
+          "Route 3 South",
+          "Kalae Bay"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Route 3 South",
+          "Kalae Bay"
+        ]
+      }
+    },
+    "372": {
+      "ultra-sun": {
+        "locations": [
+          "Kalae Bay"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Kalae Bay"
+        ]
+      }
+    },
+    "373": {
+      "ultra-sun": {
+        "locations": [
+          "Route 3 South"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Route 3 South"
+        ]
+      }
+    },
+    "374": {
+      "ultra-sun": {
+        "locations": [
+          "Mount Hokulani East",
+          "Mount Hokulani West"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Mount Hokulani East",
+          "Mount Hokulani West"
+        ]
+      }
+    },
+    "375": {
+      "ultra-sun": {
+        "locations": [
+          "Evolve Beldum"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Evolve Beldum"
+        ]
+      }
+    },
+    "376": {
+      "ultra-sun": {
+        "locations": [
+          "Evolve Metang"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Evolve Metang"
+        ]
+      }
+    },
+    "408": {
+      "ultra-sun": {
+        "locations": [
+          "Route 8 Fossil Restoration Center"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Route 8 Fossil Restoration Center"
+        ]
+      }
+    },
+    "409": {
+      "ultra-sun": {
+        "locations": [
+          "Evolve Cranidos"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Evolve Cranidos"
+        ]
+      }
+    },
+    "410": {
+      "ultra-sun": {
+        "locations": [
+          "Route 8 Fossil Restoration Center"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Route 8 Fossil Restoration Center"
+        ]
+      }
+    },
+    "411": {
+      "ultra-sun": {
+        "locations": [
+          "Evolve Shieldon"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Evolve Shieldon"
+        ]
+      }
+    },
+    "422": {
+      "ultra-sun": {
+        "locations": [
+          "Seafolk Village Main"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Seafolk Village Main"
+        ]
+      }
+    },
+    "423": {
+      "ultra-sun": {
+        "locations": [
+          "Ancient Poni Path",
+          "Exeggutor Island",
+          "Poni Breaker Coast",
+          "Poni Wilds"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Ancient Poni Path",
+          "Exeggutor Island",
+          "Poni Breaker Coast",
+          "Poni Wilds"
+        ]
+      }
+    },
+    "424": {
+      "ultra-sun": {
+        "locations": [
+          "Poni Plains West"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Poni Plains West"
+        ]
+      }
+    },
+    "425": {
+      "ultra-sun": {
+        "locations": [
+          "Route 1 Trainers School",
+          "Hauoli Cemetery",
+          "Trainers School"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Route 1 Trainers School",
+          "Hauoli Cemetery",
+          "Trainers School"
+        ]
+      }
+    },
+    "426": {
+      "ultra-sun": {
+        "locations": [
+          "Evolve Drifloon"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Evolve Drifloon"
+        ]
+      }
+    },
+    "427": {
+      "ultra-sun": {
+        "locations": [
+          "Route 1 East",
+          "Route 1 West",
+          "Poni Grove"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Route 1 East",
+          "Route 1 West",
+          "Poni Grove"
+        ]
+      }
+    },
+    "428": {
+      "ultra-sun": {
+        "locations": [
+          "Poni Grove"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Poni Grove"
+        ]
+      }
+    },
+    "429": {
+      "ultra-sun": {
+        "locations": [
+          "Evolve Misdreavus"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Evolve Misdreavus"
+        ]
+      }
+    },
+    "430": {
+      "ultra-sun": {
+        "locations": [
+          "Poke Pelago Elite Four Defeated"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Poke Pelago Elite Four Defeated"
+        ]
+      }
+    },
+    "438": {
+      "ultra-sun": {
+        "locations": [
+          "Route 1 South",
+          "Lush Jungle North",
+          "Lush Jungle South",
+          "Lush Jungle West"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Route 1 South",
+          "Lush Jungle North",
+          "Lush Jungle South",
+          "Lush Jungle West"
+        ]
+      }
+    },
+    "439": {
+      "ultra-sun": {
+        "locations": [
+          "Hauoli City Shopping District"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Hauoli City Shopping District"
+        ]
+      }
+    },
+    "440": {
+      "ultra-sun": {
+        "locations": [
+          "Route 1 East",
+          "Route 4",
+          "Route 6 North",
+          "Route 6 South",
+          "Blush Mountain",
+          "Hauoli City Shopping District",
+          "Lush Jungle North",
+          "Lush Jungle South",
+          "Lush Jungle West",
+          "Mount Hokulani East",
+          "Mount Hokulani West",
+          "Poni Grove",
+          "Seaward Cave",
+          "Wela Volcano Park"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Route 1 East",
+          "Route 4",
+          "Route 6 North",
+          "Route 6 South",
+          "Blush Mountain",
+          "Hauoli City Shopping District",
+          "Lush Jungle North",
+          "Lush Jungle South",
+          "Lush Jungle West",
+          "Mount Hokulani East",
+          "Mount Hokulani West",
+          "Poni Grove",
+          "Seaward Cave",
+          "Wela Volcano Park"
+        ]
+      }
+    },
+    "443": {
+      "ultra-sun": {
+        "locations": [
+          "Breed Gabite or Garchomp"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Breed Gabite or Garchomp"
+        ]
+      }
+    },
+    "444": {
+      "ultra-sun": {
+        "locations": [
+          "Haina Desert"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Haina Desert"
+        ]
+      }
+    },
+    "445": {
+      "ultra-sun": {
+        "locations": [
+          "Evolve Gabite"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Evolve Gabite"
+        ]
+      }
+    },
+    "446": {
+      "ultra-sun": {
+        "locations": [
+          "Route 1 South"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Route 1 South"
+        ]
+      }
+    },
+    "447": {
+      "ultra-sun": {
+        "locations": [
+          "Poni Grove"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Poni Grove"
+        ]
+      }
+    },
+    "448": {
+      "ultra-sun": {
+        "locations": [
+          "Poni Grove"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Poni Grove"
+        ]
+      }
+    },
+    "456": {
+      "ultra-sun": {
+        "locations": [
+          "Route 7",
+          "Route 14",
+          "Route 15 Main",
+          "Brooklet Hill Totems Den",
+          "Hano Beach",
+          "Hauoli City Beachfront",
+          "Kalae Bay",
+          "Melemele Sea"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Route 7",
+          "Route 14",
+          "Route 15 Main",
+          "Brooklet Hill Totems Den",
+          "Hano Beach",
+          "Hauoli City Beachfront",
+          "Kalae Bay",
+          "Melemele Sea"
+        ]
+      }
+    },
+    "457": {
+      "ultra-sun": {
+        "locations": [
+          "Route 15 Main",
+          "Ancient Poni Path",
+          "Poni Breaker Coast"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Route 15 Main",
+          "Ancient Poni Path",
+          "Poni Breaker Coast"
+        ]
+      }
+    },
+    "458": {
+      "ultra-sun": {
+        "locations": [
+          "Hauoli City Beachfront",
+          "Kalae Bay",
+          "Melemele Sea"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Hauoli City Beachfront",
+          "Kalae Bay",
+          "Melemele Sea"
+        ]
+      }
+    },
+    "461": {
+      "ultra-sun": {
+        "locations": [
+          "Evolve Sneasel"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Evolve Sneasel"
+        ]
+      }
+    },
+    "462": {
+      "ultra-sun": {
+        "locations": [
+          "Evolve Magneton"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Evolve Magneton"
+        ]
+      }
+    },
+    "463": {
+      "ultra-sun": {
+        "locations": [
+          "Evolve Lickitung"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Evolve Lickitung"
+        ]
+      }
+    },
+    "466": {
+      "ultra-sun": {
+        "locations": [
+          "Evolve Electabuzz"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Evolve Electabuzz"
+        ]
+      }
+    },
+    "467": {
+      "ultra-sun": {
+        "locations": [
+          "Evolve Magmar"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Evolve Magmar"
+        ]
+      }
+    },
+    "470": {
+      "ultra-sun": {
+        "locations": [
+          "Evolve Eevee"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Evolve Eevee"
+        ]
+      }
+    },
+    "471": {
+      "ultra-sun": {
+        "locations": [
+          "Evolve Eevee"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Evolve Eevee"
+        ]
+      }
+    },
+    "474": {
+      "ultra-sun": {
+        "locations": [
+          "Evolve Porygon2"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Evolve Porygon2"
+        ]
+      }
+    },
+    "476": {
+      "ultra-sun": {
+        "locations": [
+          "Evolve Nosepass"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Evolve Nosepass"
+        ]
+      }
+    },
+    "478": {
+      "ultra-sun": {
+        "locations": [
+          "Evolve Snorunt"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Evolve Snorunt"
+        ]
+      }
+    },
+    "506": {
+      "ultra-sun": {
+        "locations": [
+          "Route 4",
+          "Route 5",
+          "Route 6 North",
+          "Route 6 South",
+          "Paniola Ranch"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Route 4",
+          "Route 5",
+          "Route 6 North",
+          "Route 6 South",
+          "Paniola Ranch"
+        ]
+      }
+    },
+    "507": {
+      "ultra-sun": {
+        "locations": [
+          "Evolve Lillipup"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Evolve Lillipup"
+        ]
+      }
+    },
+    "508": {
+      "ultra-sun": {
+        "locations": [
+          "Evolve Herdier"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Evolve Herdier"
+        ]
+      }
+    },
+    "524": {
+      "ultra-sun": {
+        "locations": [
+          "Ten Carat Hill Farthest Hollow",
+          "Ten Carat Hill Inside"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Ten Carat Hill Farthest Hollow",
+          "Ten Carat Hill Inside"
+        ]
+      }
+    },
+    "525": {
+      "ultra-sun": {
+        "locations": [
+          "Vast Poni Canyon Inside",
+          "Vast Poni Canyon Northwest",
+          "Vast Poni Canyon Outside"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Vast Poni Canyon Inside",
+          "Vast Poni Canyon Northwest",
+          "Vast Poni Canyon Outside"
+        ]
+      }
+    },
+    "526": {
+      "ultra-sun": {
+        "locations": [
+          "Evolve Boldore"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Evolve Boldore"
+        ]
+      }
+    },
+    "546": {
+      "ultra-sun": {
+        "locations": [
+          "Malie Garden",
+          "Melemele Meadow",
+          "Poni Meadow",
+          "Poni Plains Center",
+          "Poni Plains East",
+          "Poni Plains North",
+          "Poni Plains West",
+          "Ulaula Meadow"
+        ]
+      }
+    },
+    "547": {
+      "ultra-sun": {
+        "locations": [
+          "Evolve Cottonee"
+        ]
+      }
+    },
+    "548": {
+      "ultra-moon": {
+        "locations": [
+          "Malie Garden",
+          "Melemele Meadow",
+          "Poni Meadow",
+          "Poni Plains Center",
+          "Poni Plains East",
+          "Poni Plains North",
+          "Poni Plains West",
+          "Ulaula Meadow"
+        ]
+      }
+    },
+    "549": {
+      "ultra-moon": {
+        "locations": [
+          "Evolve Petilil"
+        ]
+      }
+    },
+    "550": {
+      "ultra-sun": {
+        "locations": [
+          "Brooklet Hill North",
+          "Brooklet Hill South",
+          "Malie Garden",
+          "Vast Poni Canyon Northwest"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Brooklet Hill North",
+          "Brooklet Hill South",
+          "Malie Garden",
+          "Vast Poni Canyon Northwest"
+        ]
+      }
+    },
+    "551": {
+      "ultra-sun": {
+        "locations": [
+          "Breed Krokorok or Krookodile"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Breed Krokorok or Krookodile"
+        ]
+      }
+    },
+    "552": {
+      "ultra-sun": {
+        "locations": [
+          "Haina Desert"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Haina Desert"
+        ]
+      }
+    },
+    "553": {
+      "ultra-sun": {
+        "locations": [
+          "Evolve Krokorok"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Evolve Krokorok"
+        ]
+      }
+    },
+    "559": {
+      "ultra-sun": {
+        "locations": [
+          "Route 16 West",
+          "Route 17 Northeast",
+          "Route 17 West"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Route 16 West",
+          "Route 17 Northeast",
+          "Route 17 West"
+        ]
+      }
+    },
+    "560": {
+      "ultra-sun": {
+        "locations": [
+          "Evolve Scraggy"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Evolve Scraggy"
+        ]
+      }
+    },
+    "564": {
+      "ultra-sun": {
+        "locations": [
+          "Route 8 Fossil Restoration Center"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Route 8 Fossil Restoration Center"
+        ]
+      }
+    },
+    "565": {
+      "ultra-sun": {
+        "locations": [
+          "Evolve Tirtouga"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Evolve Tirtouga"
+        ]
+      }
+    },
+    "566": {
+      "ultra-sun": {
+        "locations": [
+          "Route 8 Fossil Restoration Center"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Route 8 Fossil Restoration Center"
+        ]
+      }
+    },
+    "567": {
+      "ultra-sun": {
+        "locations": [
+          "Evolve Archen"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Evolve Archen"
+        ]
+      }
+    },
+    "568": {
+      "ultra-sun": {
+        "locations": [
+          "Malie City Outer Cape"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Malie City Outer Cape"
+        ]
+      }
+    },
+    "569": {
+      "ultra-sun": {
+        "locations": [
+          "Evolve Trubbish"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Evolve Trubbish"
+        ]
+      }
+    },
+    "570": {
+      "ultra-sun": {
+        "locations": [
+          "Route 1 Trainers School"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Route 1 Trainers School"
+        ]
+      }
+    },
+    "571": {
+      "ultra-sun": {
+        "locations": [
+          "Poni Grove"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Poni Grove"
+        ]
+      }
+    },
+    "572": {
+      "ultra-sun": {
+        "locations": [
+          "Malie City Outer Cape"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Malie City Outer Cape"
+        ]
+      }
+    },
+    "573": {
+      "ultra-sun": {
+        "locations": [
+          "Evolve Minccino"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Evolve Minccino"
+        ]
+      }
+    },
+    "582": {
+      "ultra-sun": {
+        "locations": [
+          "Mount Lanakila Base",
+          "Tapu Village"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Mount Lanakila Base",
+          "Tapu Village"
+        ]
+      }
+    },
+    "583": {
+      "ultra-sun": {
+        "locations": [
+          "Mount Lanakila Outside"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Mount Lanakila Outside"
+        ]
+      }
+    },
+    "584": {
+      "ultra-sun": {
+        "locations": [
+          "Mount Lanakila Outside"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Mount Lanakila Outside"
+        ]
+      }
+    },
+    "587": {
+      "ultra-sun": {
+        "locations": [
+          "Poni Plains West"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Poni Plains West"
+        ]
+      }
+    },
+    "592": {
+      "ultra-sun": {
+        "locations": [
+          "Route 14"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Route 14"
+        ]
+      }
+    },
+    "593": {
+      "ultra-sun": {
+        "locations": [
+          "Evolve Frillish"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Evolve Frillish"
+        ]
+      }
+    },
+    "594": {
+      "ultra-sun": {
+        "locations": [
+          "Brooklet Hill Totems Den"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Brooklet Hill Totems Den"
+        ]
+      }
+    },
+    "605": {
+      "ultra-sun": {
+        "locations": [
+          "Mount Hokulani East",
+          "Mount Hokulani West"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Mount Hokulani East",
+          "Mount Hokulani West"
+        ]
+      }
+    },
+    "606": {
+      "ultra-sun": {
+        "locations": [
+          "Evolve Elgyem"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Evolve Elgyem"
+        ]
+      }
+    },
+    "619": {
+      "ultra-sun": {
+        "locations": [
+          "Vast Poni Canyon Outside"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Vast Poni Canyon Outside"
+        ]
+      }
+    },
+    "620": {
+      "ultra-sun": {
+        "locations": [
+          "Evolve Mienfoo"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Evolve Mienfoo"
+        ]
+      }
+    },
+    "621": {
+      "ultra-sun": {
+        "locations": [
+          "Resolution Cave"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Resolution Cave"
+        ]
+      }
+    },
+    "622": {
+      "ultra-sun": {
+        "locations": [
+          "Haina Desert"
+        ]
+      }
+    },
+    "623": {
+      "ultra-sun": {
+        "locations": [
+          "Evolve Golett"
+        ]
+      }
+    },
+    "624": {
+      "ultra-sun": {
+        "locations": [
+          "Route 17 Northeast"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Route 17 Northeast"
+        ]
+      }
+    },
+    "625": {
+      "ultra-sun": {
+        "locations": [
+          "Route 17 Northeast"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Route 17 Northeast"
+        ]
+      }
+    },
+    "627": {
+      "ultra-sun": {
+        "locations": [
+          "Route 3 North"
+        ]
+      }
+    },
+    "628": {
+      "ultra-sun": {
+        "locations": [
+          "Poni Plains North"
+        ]
+      }
+    },
+    "629": {
+      "ultra-moon": {
+        "locations": [
+          "Route 3 North"
+        ]
+      }
+    },
+    "630": {
+      "ultra-moon": {
+        "locations": [
+          "Poni Plains North"
+        ]
+      }
+    },
+    "636": {
+      "ultra-sun": {
+        "locations": [
+          "Lush Jungle East Cave"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Lush Jungle East Cave"
+        ]
+      }
+    },
+    "637": {
+      "ultra-sun": {
+        "locations": [
+          "Lush Jungle East Cave"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Lush Jungle East Cave"
+        ]
+      }
+    },
+    "661": {
+      "ultra-sun": {
+        "locations": [
+          "Route 8 Main",
+          "Wela Volcano Park"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Route 8 Main",
+          "Wela Volcano Park"
+        ]
+      }
+    },
+    "662": {
+      "ultra-sun": {
+        "locations": [
+          "Route 8 Main",
+          "Wela Volcano Park"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Route 8 Main",
+          "Wela Volcano Park"
+        ]
+      }
+    },
+    "663": {
+      "ultra-sun": {
+        "locations": [
+          "Evolve Fletchinder"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Evolve Fletchinder"
+        ]
+      }
+    },
+    "667": {
+      "ultra-sun": {
+        "locations": [
+          "Poke Pelago Elite Four Defeated"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Poke Pelago Elite Four Defeated"
+        ]
+      }
+    },
+    "668": {
+      "ultra-sun": {
+        "locations": [
+          "Poni Plains Center"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Poni Plains Center"
+        ]
+      }
+    },
+    "669": {
+      "ultra-sun": {
+        "locations": [
+          "Melemele Meadow"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Melemele Meadow"
+        ]
+      }
+    },
+    "670": {
+      "ultra-sun": {
+        "locations": [
+          "Poni Meadow",
+          "Ulaula Meadow"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Poni Meadow",
+          "Ulaula Meadow"
+        ]
+      }
+    },
+    "671": {
+      "ultra-sun": {
+        "locations": [
+          "Evolve Floette"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Evolve Floette"
+        ]
+      }
+    },
+    "674": {
+      "ultra-sun": {
+        "locations": [
+          "Route 10",
+          "Route 11"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Route 10",
+          "Route 11"
+        ]
+      }
+    },
+    "675": {
+      "ultra-sun": {
+        "locations": [
+          "Route 10",
+          "Route 11"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Route 10",
+          "Route 11"
+        ]
+      }
+    },
+    "676": {
+      "ultra-sun": {
+        "locations": [
+          "Route 2 South",
+          "Ancient Poni Path",
+          "Hauoli City Shopping District",
+          "Poni Wilds"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Route 2 South",
+          "Ancient Poni Path",
+          "Hauoli City Shopping District",
+          "Poni Wilds"
+        ]
+      }
+    },
+    "686": {
+      "ultra-sun": {
+        "locations": [
+          "Route 1 Hauoli Outskirts",
+          "Ancient Poni Path",
+          "Poni Gauntlet",
+          "Poni Wilds"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Route 1 Hauoli Outskirts",
+          "Ancient Poni Path",
+          "Poni Gauntlet",
+          "Poni Wilds"
+        ]
+      }
+    },
+    "687": {
+      "ultra-sun": {
+        "locations": [
+          "Evolve Inkay"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Evolve Inkay"
+        ]
+      }
+    },
+    "690": {
+      "ultra-moon": {
+        "locations": [
+          "Breed Dragalge"
+        ]
+      }
+    },
+    "691": {
+      "ultra-moon": {
+        "locations": [
+          "Poni Breaker Coast"
+        ]
+      }
+    },
+    "692": {
+      "ultra-sun": {
+        "locations": [
+          "Breed Clawitzer"
+        ]
+      }
+    },
+    "693": {
+      "ultra-sun": {
+        "locations": [
+          "Poni Breaker Coast"
+        ]
+      }
+    },
+    "696": {
+      "ultra-sun": {
+        "locations": [
+          "Route 8 Fossil Restoration Center"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Route 8 Fossil Restoration Center"
+        ]
+      }
+    },
+    "697": {
+      "ultra-sun": {
+        "locations": [
+          "Evolve Tyrunt"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Evolve Tyrunt"
+        ]
+      }
+    },
+    "698": {
+      "ultra-sun": {
+        "locations": [
+          "Route 8 Fossil Restoration Center"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Route 8 Fossil Restoration Center"
+        ]
+      }
+    },
+    "699": {
+      "ultra-sun": {
+        "locations": [
+          "Evolve Amaura"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Evolve Amaura"
+        ]
+      }
+    },
+    "700": {
+      "ultra-sun": {
+        "locations": [
+          "Evolve Eevee"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Evolve Eevee"
+        ]
+      }
+    },
+    "701": {
+      "ultra-sun": {
+        "locations": [
+          "Route 2 Main",
+          "Route 3 North",
+          "Route 3 South",
+          "Poke Pelago Poni Island Reached",
+          "Poke Pelago Ulaula Island Reached",
+          "Poke Pelago Elite Four Defeated"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Route 2 Main",
+          "Route 3 North",
+          "Route 3 South",
+          "Poke Pelago Poni Island Reached",
+          "Poke Pelago Ulaula Island Reached",
+          "Poke Pelago Elite Four Defeated"
+        ]
+      }
+    },
+    "702": {
+      "ultra-sun": {
+        "locations": [
+          "Blush Mountain"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Blush Mountain"
+        ]
+      }
+    },
+    "703": {
+      "ultra-sun": {
+        "locations": [
+          "Ten Carat Hill Farthest Hollow",
+          "Ten Carat Hill Inside",
+          "Vast Poni Canyon Inside",
+          "Vast Poni Canyon Northwest",
+          "Vast Poni Canyon Outside"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Ten Carat Hill Farthest Hollow",
+          "Ten Carat Hill Inside",
+          "Vast Poni Canyon Inside",
+          "Vast Poni Canyon Northwest",
+          "Vast Poni Canyon Outside"
+        ]
+      }
+    },
+    "704": {
+      "ultra-sun": {
+        "locations": [
+          "Route 17 Northeast",
+          "Route 17 West",
+          "Lush Jungle North",
+          "Lush Jungle South",
+          "Lush Jungle West"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Route 17 Northeast",
+          "Route 17 West",
+          "Lush Jungle North",
+          "Lush Jungle South",
+          "Lush Jungle West"
+        ]
+      }
+    },
+    "705": {
+      "ultra-sun": {
+        "locations": [
+          "Exeggutor Island"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Exeggutor Island"
+        ]
+      }
+    },
+    "706": {
+      "ultra-sun": {
+        "locations": [
+          "Evolve Sliggoo"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Evolve Sliggoo"
+        ]
+      }
+    },
+    "707": {
+      "ultra-sun": {
+        "locations": [
+          "Thrifty Megamart Abandoned Site"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Thrifty Megamart Abandoned Site"
+        ]
+      }
+    },
+    "708": {
+      "ultra-sun": {
+        "locations": [
+          "Memorial Hill",
+          "Tapu Village"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Memorial Hill",
+          "Tapu Village"
+        ]
+      }
+    },
+    "709": {
+      "ultra-sun": {
+        "locations": [
+          "Trade Phantump in Tapu Village"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Trade Phantump in Tapu Village"
+        ]
+      }
+    },
+    "714": {
+      "ultra-sun": {
+        "locations": [
+          "Route 5",
+          "Verdant Cavern Trial Site"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Route 5",
+          "Verdant Cavern Trial Site"
+        ]
+      }
+    },
+    "715": {
+      "ultra-sun": {
+        "locations": [
+          "Resolution Cave"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Resolution Cave"
+        ]
+      }
+    },
+    "718": {
+      "ultra-sun": {
+        "locations": [
+          "Resolution Cave"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Resolution Cave"
+        ]
+      }
+    },
+    "722": {
+      "ultra-sun": {
+        "locations": [
+          "Route 1 West"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Route 1 West"
+        ]
+      }
+    },
+    "723": {
+      "ultra-sun": {
+        "locations": [
+          "Evolve Rowlet"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Evolve Rowlet"
+        ]
+      }
+    },
+    "724": {
+      "ultra-sun": {
+        "locations": [
+          "Evolve Dartrix"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Evolve Dartrix"
+        ]
+      }
+    },
+    "725": {
+      "ultra-sun": {
+        "locations": [
+          "Route 1 West"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Route 1 West"
+        ]
+      }
+    },
+    "726": {
+      "ultra-sun": {
+        "locations": [
+          "Evolve Litten"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Evolve Litten"
+        ]
+      }
+    },
+    "727": {
+      "ultra-sun": {
+        "locations": [
+          "Evolve Torracat"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Evolve Torracat"
+        ]
+      }
+    },
+    "728": {
+      "ultra-sun": {
+        "locations": [
+          "Route 1 West"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Route 1 West"
+        ]
+      }
+    },
+    "729": {
+      "ultra-sun": {
+        "locations": [
+          "Evolve Popplio"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Evolve Popplio"
+        ]
+      }
+    },
+    "730": {
+      "ultra-sun": {
+        "locations": [
+          "Evolve Brionne"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Evolve Brionne"
+        ]
+      }
+    },
+    "731": {
+      "ultra-sun": {
+        "locations": [
+          "Route 1 East",
+          "Route 1 South",
+          "Route 4",
+          "Route 5",
+          "Route 6 North",
+          "Route 6 South",
+          "Poke Pelago Poni Island Reached",
+          "Poke Pelago Ulaula Island Reached",
+          "Poke Pelago Elite Four Defeated"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Route 1 East",
+          "Route 1 South",
+          "Route 4",
+          "Route 5",
+          "Route 6 North",
+          "Route 6 South",
+          "Poke Pelago Poni Island Reached",
+          "Poke Pelago Ulaula Island Reached",
+          "Poke Pelago Elite Four Defeated"
+        ]
+      }
+    },
+    "732": {
+      "ultra-sun": {
+        "locations": [
+          "Route 8 Main",
+          "Route 11",
+          "Lush Jungle North",
+          "Lush Jungle South",
+          "Lush Jungle West",
+          "Poni Grove",
+          "Poni Plains Center",
+          "Poni Plains East",
+          "Poni Plains North",
+          "Poni Plains West"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Route 8 Main",
+          "Route 11",
+          "Lush Jungle North",
+          "Lush Jungle South",
+          "Lush Jungle West",
+          "Poni Grove",
+          "Poni Plains Center",
+          "Poni Plains East",
+          "Poni Plains North",
+          "Poni Plains West"
+        ]
+      }
+    },
+    "733": {
+      "ultra-sun": {
+        "locations": [
+          "Route 11",
+          "Poni Grove",
+          "Poni Plains Center",
+          "Poni Plains East",
+          "Poni Plains North",
+          "Poni Plains West"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Route 11",
+          "Poni Grove",
+          "Poni Plains Center",
+          "Poni Plains East",
+          "Poni Plains North",
+          "Poni Plains West"
+        ]
+      }
+    },
+    "734": {
+      "ultra-sun": {
+        "locations": [
+          "Route 1 East",
+          "Route 1 South",
+          "Route 1 West",
+          "Route 2 North",
+          "Route 2 South",
+          "Route 4",
+          "Route 6 North",
+          "Route 6 South",
+          "Route 8 Main",
+          "Kalae Bay",
+          "Verdant Cavern Trial Site"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Route 1 East",
+          "Route 1 South",
+          "Route 1 West",
+          "Route 2 North",
+          "Route 2 South",
+          "Route 4",
+          "Route 6 North",
+          "Route 6 South",
+          "Route 8 Main",
+          "Kalae Bay"
+        ]
+      }
+    },
+    "735": {
+      "ultra-sun": {
+        "locations": [
+          "Route 8 Main",
+          "Route 10",
+          "Route 14",
+          "Route 15 Main",
+          "Route 16 East",
+          "Route 16 West",
+          "Route 17 Northeast",
+          "Route 17 West",
+          "Akala Outskirts",
+          "Heahea Beach",
+          "Mount Lanakila Base",
+          "Poni Plains Center",
+          "Poni Plains East",
+          "Poni Plains North",
+          "Poni Plains West",
+          "Tapu Village"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Route 8 Main",
+          "Route 10",
+          "Route 14",
+          "Route 15 Main",
+          "Route 16 East",
+          "Route 16 West",
+          "Route 17 Northeast",
+          "Route 17 West",
+          "Akala Outskirts",
+          "Mount Lanakila Base",
+          "Poni Plains Center",
+          "Poni Plains East",
+          "Poni Plains North",
+          "Poni Plains West",
+          "Tapu Village"
+        ]
+      }
+    },
+    "736": {
+      "ultra-sun": {
+        "locations": [
+          "Route 1 East",
+          "Route 4",
+          "Route 5",
+          "Route 6 North",
+          "Route 6 South",
+          "Blush Mountain"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Route 1 East",
+          "Route 4",
+          "Route 5",
+          "Route 6 North",
+          "Route 6 South",
+          "Blush Mountain"
+        ]
+      }
+    },
+    "737": {
+      "ultra-sun": {
+        "locations": [
+          "Blush Mountain"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Blush Mountain"
+        ]
+      }
+    },
+    "738": {
+      "ultra-sun": {
+        "locations": [
+          "Blush Mountain",
+          "Heahea Beach"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Blush Mountain"
+        ]
+      }
+    },
+    "739": {
+      "ultra-sun": {
+        "locations": [
+          "Route 2 South",
+          "Route 3 South",
+          "Route 4",
+          "Route 5",
+          "Route 8 Main",
+          "Route 10",
+          "Route 16 Main",
+          "Route 17 West",
+          "Berry Fields",
+          "Poni Plains West",
+          "Poni Wilds",
+          "Ulaula Beach"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Route 2 South",
+          "Route 3 South",
+          "Route 4",
+          "Route 5",
+          "Route 8 Main",
+          "Route 10",
+          "Route 16 Main",
+          "Route 17 West",
+          "Berry Fields",
+          "Poni Plains West",
+          "Poni Wilds",
+          "Ulaula Beach"
+        ]
+      }
+    },
+    "740": {
+      "ultra-sun": {
+        "locations": [
+          "Evolve Crabrawler"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Evolve Crabrawler"
+        ]
+      }
+    },
+    "741": {
+      "ultra-sun": {
+        "locations": [
+          "Ulaula Meadow"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Ulaula Meadow"
+        ]
+      }
+    },
+    "742": {
+      "ultra-sun": {
+        "locations": [
+          "Route 2 North",
+          "Route 3 North",
+          "Route 3 South",
+          "Melemele Meadow",
+          "Poke Pelago Poni Island Reached",
+          "Poke Pelago Ulaula Island Reached",
+          "Poke Pelago Elite Four Defeated"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Route 2 North",
+          "Route 3 North",
+          "Route 3 South",
+          "Melemele Meadow",
+          "Poke Pelago Poni Island Reached",
+          "Poke Pelago Ulaula Island Reached",
+          "Poke Pelago Elite Four Defeated"
+        ]
+      }
+    },
+    "743": {
+      "ultra-sun": {
+        "locations": [
+          "Heahea Beach",
+          "Poni Meadow",
+          "Ulaula Meadow"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Poni Meadow",
+          "Ulaula Meadow"
+        ]
+      }
+    },
+    "744": {
+      "ultra-sun": {
+        "locations": [
+          "Route 1 South",
+          "Ten Carat Hill Farthest Hollow"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Route 1 South",
+          "Ten Carat Hill Farthest Hollow"
+        ]
+      }
+    },
+    "745": {
+      "ultra-sun": {
+        "locations": [
+          "Vast Poni Canyon Outside"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Vast Poni Canyon Outside"
+        ]
+      }
+    },
+    "746": {
+      "ultra-sun": {
+        "locations": [
+          "Route 7",
+          "Route 8 Main",
+          "Route 9 Main",
+          "Route 13",
+          "Route 14",
+          "Route 15 Main",
+          "Akala Outskirts",
+          "Brooklet Hill Totems Den",
+          "Hauoli City Beachfront",
+          "Kalae Bay",
+          "Melemele Sea",
+          "Tapu Village"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Route 7",
+          "Route 8 Main",
+          "Route 9 Main",
+          "Route 13",
+          "Route 14",
+          "Route 15 Main",
+          "Akala Outskirts",
+          "Brooklet Hill Totems Den",
+          "Hauoli City Beachfront",
+          "Kalae Bay",
+          "Melemele Sea",
+          "Tapu Village"
+        ]
+      }
+    },
+    "747": {
+      "ultra-sun": {
+        "locations": [
+          "Route 9 Main",
+          "Hauoli City Beachfront",
+          "Melemele Sea"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Route 9 Main",
+          "Hauoli City Beachfront",
+          "Melemele Sea"
+        ]
+      }
+    },
+    "748": {
+      "ultra-sun": {
+        "locations": [
+          "Evolve Mareanie"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Evolve Mareanie"
+        ]
+      }
+    },
+    "749": {
+      "ultra-sun": {
+        "locations": [
+          "Route 4",
+          "Route 6 North",
+          "Route 12",
+          "Blush Mountain",
+          "Paniola Ranch"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Route 4",
+          "Route 6 North",
+          "Route 12",
+          "Blush Mountain",
+          "Paniola Ranch"
+        ]
+      }
+    },
+    "750": {
+      "ultra-sun": {
+        "locations": [
+          "Route 12",
+          "Blush Mountain",
+          "Poni Plains West"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Route 12",
+          "Blush Mountain",
+          "Poni Plains West"
+        ]
+      }
+    },
+    "751": {
+      "ultra-sun": {
+        "locations": [
+          "Brooklet Hill North",
+          "Brooklet Hill South"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Brooklet Hill North",
+          "Brooklet Hill South"
+        ]
+      }
+    },
+    "752": {
+      "ultra-moon": {
+        "locations": [
+          "Heahea Beach",
+          "Malie Garden"
+        ]
+      },
+      "ultra-sun": {
+        "locations": [
+          "Malie Garden"
+        ]
+      }
+    },
+    "753": {
+      "ultra-sun": {
+        "locations": [
+          "Route 5",
+          "Lush Jungle North",
+          "Lush Jungle South",
+          "Lush Jungle West"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Route 5",
+          "Lush Jungle North",
+          "Lush Jungle South",
+          "Lush Jungle West"
+        ]
+      }
+    },
+    "754": {
+      "ultra-sun": {
+        "locations": [
+          "Heahea Beach"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Evolve Fomantis"
+        ]
+      }
+    },
+    "755": {
+      "ultra-sun": {
+        "locations": [
+          "Brooklet Hill North",
+          "Brooklet Hill South",
+          "Lush Jungle North",
+          "Lush Jungle South",
+          "Lush Jungle West"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Brooklet Hill North",
+          "Brooklet Hill South",
+          "Lush Jungle North",
+          "Lush Jungle South",
+          "Lush Jungle West"
+        ]
+      }
+    },
+    "756": {
+      "ultra-sun": {
+        "locations": [
+          "Route 11"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Route 11"
+        ]
+      }
+    },
+    "757": {
+      "ultra-sun": {
+        "locations": [
+          "Route 8 Main",
+          "Lush Jungle East Cave",
+          "Wela Volcano Park"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Route 8 Main",
+          "Lush Jungle East Cave",
+          "Wela Volcano Park"
+        ]
+      }
+    },
+    "758": {
+      "ultra-moon": {
+        "locations": [
+          "Heahea Beach",
+          "Lush Jungle East Cave",
+          "Wela Volcano Park"
+        ]
+      },
+      "ultra-sun": {
+        "locations": [
+          "Lush Jungle East Cave",
+          "Wela Volcano Park"
+        ]
+      }
+    },
+    "759": {
+      "ultra-sun": {
+        "locations": [
+          "Route 8 Main",
+          "Akala Outskirts"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Route 8 Main",
+          "Akala Outskirts"
+        ]
+      }
+    },
+    "760": {
+      "ultra-sun": {
+        "locations": [
+          "Hauoli City Main",
+          "Hauoli City Shopping District",
+          "Poni Gauntlet"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Hauoli City Main",
+          "Hauoli City Shopping District",
+          "Poni Gauntlet"
+        ]
+      }
+    },
+    "761": {
+      "ultra-sun": {
+        "locations": [
+          "Breed Steenee or Tsareena"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Breed Steenee or Tsareena"
+        ]
+      }
+    },
+    "762": {
+      "ultra-sun": {
+        "locations": [
+          "Lush Jungle North",
+          "Lush Jungle South",
+          "Lush Jungle West"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Lush Jungle North",
+          "Lush Jungle South",
+          "Lush Jungle West"
+        ]
+      }
+    },
+    "763": {
+      "ultra-sun": {
+        "locations": [
+          "Evolve Steenee"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Evolve Steenee"
+        ]
+      }
+    },
+    "764": {
+      "ultra-sun": {
+        "locations": [
+          "Lush Jungle North",
+          "Lush Jungle South",
+          "Lush Jungle West",
+          "Poke Pelago Poni Island Reached",
+          "Poke Pelago Ulaula Island Reached",
+          "Poke Pelago Elite Four Defeated"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Lush Jungle North",
+          "Lush Jungle South",
+          "Lush Jungle West",
+          "Poke Pelago Poni Island Reached",
+          "Poke Pelago Ulaula Island Reached",
+          "Poke Pelago Elite Four Defeated"
+        ]
+      }
+    },
+    "765": {
+      "ultra-moon": {
+        "locations": [
+          "Lush Jungle North",
+          "Lush Jungle South",
+          "Lush Jungle West"
+        ]
+      },
+      "ultra-sun": {
+        "locations": [
+          "Trade",
+          "Event"
+        ]
+      }
+    },
+    "766": {
+      "ultra-sun": {
+        "locations": [
+          "Lush Jungle North",
+          "Lush Jungle South",
+          "Lush Jungle West"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Trade",
+          "Event"
+        ]
+      }
+    },
+    "767": {
+      "ultra-sun": {
+        "locations": [
+          "Route 8 Main",
+          "Dividing Peak Tunnel",
+          "Poni Breaker Coast"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Route 8 Main",
+          "Dividing Peak Tunnel",
+          "Poni Breaker Coast"
+        ]
+      }
+    },
+    "768": {
+      "ultra-sun": {
+        "locations": [
+          "Evolve Wimpod"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Evolve Wimpod"
+        ]
+      }
+    },
+    "769": {
+      "ultra-moon": {
+        "locations": [
+          "Route 15 Main",
+          "Hano Beach"
+        ]
+      },
+      "ultra-sun": {
+        "locations": [
+          "Hano Beach"
+        ]
+      }
+    },
+    "770": {
+      "ultra-sun": {
+        "locations": [
+          "Evolve Sandygast"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Evolve Sandygast"
+        ]
+      }
+    },
+    "771": {
+      "ultra-sun": {
+        "locations": [
+          "Route 7",
+          "Hano Beach",
+          "Poke Pelago Poni Island Reached",
+          "Poke Pelago Ulaula Island Reached",
+          "Poke Pelago Elite Four Defeated"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Route 7",
+          "Hano Beach",
+          "Poke Pelago Poni Island Reached",
+          "Poke Pelago Ulaula Island Reached",
+          "Poke Pelago Elite Four Defeated"
+        ]
+      }
+    },
+    "772": {
+      "ultra-sun": {
+        "locations": [
+          "Ancient Poni Path"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Ancient Poni Path"
+        ]
+      }
+    },
+    "773": {
+      "ultra-sun": {
+        "locations": [
+          "Evolve Type: Null"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Evolve Type: Null"
+        ]
+      }
+    },
+    "774": {
+      "ultra-sun": {
+        "locations": [
+          "Mount Hokulani East",
+          "Mount Hokulani West"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Mount Hokulani East",
+          "Mount Hokulani West"
+        ]
+      }
+    },
+    "775": {
+      "ultra-sun": {
+        "locations": [
+          "Route 11"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Route 11"
+        ]
+      }
+    },
+    "776": {
+      "ultra-sun": {
+        "locations": [
+          "Blush Mountain"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Trade"
+        ]
+      }
+    },
+    "777": {
+      "ultra-sun": {
+        "locations": [
+          "Blush Mountain"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Blush Mountain",
+          "Heahea Beach"
+        ]
+      }
+    },
+    "778": {
+      "ultra-sun": {
+        "locations": [
+          "Heahea Beach",
+          "Thrifty Megamart Abandoned Site"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Heahea Beach",
+          "Thrifty Megamart Abandoned Site"
+        ]
+      }
+    },
+    "779": {
+      "ultra-sun": {
+        "locations": [
+          "Route 13",
+          "Route 14",
+          "Route 15 Main",
+          "Tapu Village"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Route 13",
+          "Route 14",
+          "Route 15 Main",
+          "Tapu Village"
+        ]
+      }
+    },
+    "780": {
+      "ultra-moon": {
+        "locations": [
+          "Mount Lanakila Cave"
+        ]
+      }
+    },
+    "781": {
+      "ultra-sun": {
+        "locations": [
+          "Seafolk Village Main"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Seafolk Village Main"
+        ]
+      }
+    },
+    "782": {
+      "ultra-sun": {
+        "locations": [
+          "Vast Poni Canyon Outside"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Vast Poni Canyon Outside"
+        ]
+      }
+    },
+    "783": {
+      "ultra-sun": {
+        "locations": [
+          "Vast Poni Canyon Outside"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Vast Poni Canyon Outside"
+        ]
+      }
+    },
+    "784": {
+      "ultra-moon": {
+        "locations": [
+          "Heahea Beach",
+          "Vast Poni Canyon Outside"
+        ]
+      },
+      "ultra-sun": {
+        "locations": [
+          "Vast Poni Canyon Outside"
+        ]
+      }
+    },
+    "785": {
+      "ultra-sun": {
+        "locations": [
+          "Ruins Of Conflict"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Ruins Of Conflict"
+        ]
+      }
+    },
+    "786": {
+      "ultra-sun": {
+        "locations": [
+          "Ruins Of Life"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Ruins Of Life"
+        ]
+      }
+    },
+    "787": {
+      "ultra-sun": {
+        "locations": [
+          "Ruins Of Abundance"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Ruins Of Abundance"
+        ]
+      }
+    },
+    "788": {
+      "ultra-sun": {
+        "locations": [
+          "Ruins Of Hope"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Ruins Of Hope"
+        ]
+      }
+    },
+    "789": {
+      "ultra-moon": {
+        "locations": [
+          "Lake Of The Moone"
+        ]
+      },
+      "ultra-sun": {
+        "locations": [
+          "Lake Of The Sunne"
+        ]
+      }
+    },
+    "790": {
+      "ultra-sun": {
+        "locations": [
+          "Evolve Cosmog"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Evolve Cosmog"
+        ]
+      }
+    },
+    "791": {
+      "ultra-sun": {
+        "locations": [
+          "Mahalo Trail"
+        ]
+      }
+    },
+    "792": {
+      "ultra-moon": {
+        "locations": [
+          "Mahalo Trail"
+        ]
+      }
+    },
+    "793": {
+      "ultra-sun": {
+        "locations": [
+          "Ultra Space Ultra Deep Sea"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Ultra Space Ultra Deep Sea"
+        ]
+      }
+    },
+    "794": {
+      "ultra-sun": {
+        "locations": [
+          "Ultra Space Ultra Jungle"
+        ]
+      }
+    },
+    "795": {
+      "ultra-moon": {
+        "locations": [
+          "Ultra Space Ultra Desert"
+        ]
+      }
+    },
+    "796": {
+      "ultra-sun": {
+        "locations": [
+          "Ultra Space Ultra Plant"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Ultra Space Ultra Plant"
+        ]
+      }
+    },
+    "797": {
+      "ultra-moon": {
+        "locations": [
+          "Ultra Space Ultra Crater"
+        ]
+      }
+    },
+    "798": {
+      "ultra-sun": {
+        "locations": [
+          "Ultra Space Ultra Forest"
+        ]
+      }
+    },
+    "799": {
+      "ultra-sun": {
+        "locations": [
+          "Ultra Space Ultra Ruin"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Ultra Space Ultra Ruin"
+        ]
+      }
+    },
+    "800": {
+      "ultra-sun": {
+        "locations": [
+          "Mount Lanakila Crater"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Mount Lanakila Crater"
+        ]
+      }
+    },
+    "801": {
+      "ultra-sun": {
+        "locations": [
+          "Hauoli City Main"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Hauoli City Main"
+        ]
+      }
+    },
+    "803": {
+      "ultra-sun": {
+        "locations": [
+          "Ultra Megalopolis"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Ultra Megalopolis"
+        ]
+      }
+    },
+    "804": {
+      "ultra-sun": {
+        "locations": [
+          "Evolve Poipole"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Evolve Poipole"
+        ]
+      }
+    },
+    "805": {
+      "ultra-moon": {
+        "locations": [
+          "Poni Grove"
+        ]
+      }
+    },
+    "806": {
+      "ultra-sun": {
+        "locations": [
+          "Poni Grove"
+        ]
+      }
+    },
+    "807": {
+      "ultra-sun": {
+        "locations": [
+          "Event"
+        ]
+      },
+      "ultra-moon": {
+        "locations": [
+          "Event"
+        ]
+      }
+    }
+  }
+}

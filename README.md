@@ -35,16 +35,18 @@ Then open http://localhost:8080 in your browser.
 - Works with search and filtering
 - Includes dark mode and light mode
 - Uses local browser storage, so your progress stays on your device
-- Pulls Pokémon data from PokeAPI and caches it locally
+- Uses pre-compiled local JSON datasets for instant, offline-first loading and zero external API dependencies
 
 ## Project structure
 
 - `index.html` — app shell and UI
 - `styles.css` — layout and styling
-- `manifest.json` & `sw.js` - Progressive Web App (PWA) offline caching
+- `manifest.json` & `sw.js` — Progressive Web App (PWA) offline caching
+- `data/` — pre-compiled game, species, and evolution datasets
 - `js/` — app logic
-  - `config.js` — game and dex definitions
-  - `api.js` — PokeAPI requests and local caching
+  - `config.js` — game, segment, and dex definitions
+  - `db.js` — local dataset queries and data access
+  - `pwa.js` — PWA service worker registration and sprite caching controls
   - `state.js` — data management and UI synchronization
   - `storage.js` — browser storage helpers and data encoding
   - `ui/` — modular DOM rendering, modals, and user interactions

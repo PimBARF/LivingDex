@@ -1,0 +1,136 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "PokemonSpeciesDatabase",
+  "description": "Schema for the master Pokémon species, multilingual names, traits, and forms database",
+  "type": "object",
+  "patternProperties": {
+    "^[0-9]+$": {
+      "type": "object",
+      "required": ["speciesId", "names", "generation", "forms"],
+      "properties": {
+        "speciesId": {
+          "type": "integer",
+          "minimum": 1,
+          "description": "National Pokédex species ID"
+        },
+        "names": {
+          "type": "object",
+          "description": "Localized Pokémon species names",
+          "properties": {
+            "en": { "type": "string" },
+            "ja": { "type": "string" },
+            "fr": { "type": "string" },
+            "de": { "type": "string" },
+            "es": { "type": "string" },
+            "it": { "type": "string" },
+            "ko": { "type": "string" },
+            "zh-Hans": { "type": "string" },
+            "zh-Hant": { "type": "string" }
+          },
+          "required": ["en"],
+          "additionalProperties": { "type": "string" }
+        },
+        "generation": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 9,
+          "description": "Introduction generation number (1-9)"
+        },
+        "evolutionChainId": {
+          "type": ["integer", "null"],
+          "description": "Identifier linking to evolutions.json"
+        },
+        "flavorText": {
+          "type": "object",
+          "description": "Multi-language species Pokédex flavor text",
+          "additionalProperties": { "type": "string" }
+        },
+        "baseStats": {
+          "type": "object",
+          "description": "Base stats and Base Stat Total (BST)",
+          "properties": {
+            "hp": { "type": "integer" },
+            "attack": { "type": "integer" },
+            "defense": { "type": "integer" },
+            "specialAttack": { "type": "integer" },
+            "specialDefense": { "type": "integer" },
+            "speed": { "type": "integer" },
+            "bst": { "type": "integer" }
+          }
+        },
+        "isLegendary": { "type": "boolean" },
+        "isMythical": { "type": "boolean" },
+        "isBaby": { "type": "boolean" },
+        "hasGenderDifferences": { "type": "boolean" },
+        "height": { "type": ["number", "null"], "description": "Height in meters" },
+        "weight": { "type": ["number", "null"], "description": "Weight in kilograms" },
+        "color": { "type": ["string", "null"] },
+        "shape": { "type": ["string", "null"] },
+        "forms": {
+          "type": "array",
+          "description": "List of distinct battle, regional, gender, or cosmetic forms for this species",
+          "items": {
+            "type": "object",
+            "required": ["formId", "name", "isDefault", "types"],
+            "properties": {
+              "formId": {
+                "type": "integer",
+                "minimum": 1,
+                "description": "Form ID or unique Pokémon resource ID"
+              },
+              "name": {
+                "type": "string",
+                "description": "Form identifier name (e.g. 'pikachu-alola', 'unown-b', 'meowstic-female')"
+              },
+              "formKey": {
+                "type": "string",
+                "description": "Short form key suffix (e.g. 'default', 'alola', 'female', 'cap-original')"
+              },
+              "formType": {
+                "type": "string",
+                "enum": ["default", "regional", "gender", "cosmetic", "mega", "gmax", "battle", "event", "other"],
+                "description": "Form category classification"
+              },
+              "isDefault": { "type": "boolean" },
+              "isMega": { "type": "boolean" },
+              "isGmax": { "type": "boolean" },
+              "isRegional": { "type": "boolean" },
+              "isGenderDifference": { "type": "boolean" },
+              "isCosmetic": { "type": "boolean" },
+              "gender": {
+                "type": ["string", "null"],
+                "enum": ["male", "female", null]
+              },
+              "region": {
+                "type": ["string", "null"],
+                "description": "Region name for regional forms (e.g. 'alola', 'galar', 'hisui', 'paldea')"
+              },
+              "types": {
+                "type": "array",
+                "items": { "type": "string" },
+                "minItems": 1,
+                "maxItems": 2,
+                "description": "Current standard types for this form (e.g. ['grass', 'poison'])"
+              },
+              "pastTypes": {
+                "type": "object",
+                "description": "Historical types prior to generation changes",
+                "patternProperties": {
+                  "^[1-9]$": {
+                    "type": "array",
+                    "items": { "type": "string" },
+                    "minItems": 1,
+                    "maxItems": 2
+                  }
+                }
+              }
+            },
+            "additionalProperties": true
+          }
+        }
+      },
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": false
+}

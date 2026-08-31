@@ -6,7 +6,7 @@ import {
 import { applyTheme, isMotionReduced } from "./theme.js";
 import { showToast } from "./modals.js";
 import { isShinyMode, setShinyMode, rebuildDexView } from "../state.js";
-import { buildActiveDexSections } from "../api.js";
+import { buildActiveDexSections } from "../db.js";
 
 /**
  * Toggles the visibility of caught Pokémon slots based on the filter checkbox state.
