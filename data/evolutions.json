@@ -1,0 +1,605 @@
+{
+  "1": {
+    "chainId": 1,
+    "babyTriggerItem": null,
+    "nodes": [
+      {
+        "speciesId": 1,
+        "name": "bulbasaur",
+        "generation": 1,
+        "isBaby": false
+      },
+      {
+        "speciesId": 2,
+        "name": "ivysaur",
+        "generation": 1,
+        "isBaby": false
+      },
+      {
+        "speciesId": 3,
+        "name": "venusaur",
+        "generation": 1,
+        "isBaby": false
+      }
+    ],
+    "transitions": [
+      {
+        "fromSpeciesId": 1,
+        "fromForm": null,
+        "toSpeciesId": 2,
+        "toForm": null,
+        "trigger": "level-up",
+        "minLevel": 16,
+        "item": null,
+        "heldItem": null,
+        "knownMove": null,
+        "knownMoveType": null,
+        "happiness": null,
+        "timeOfDay": null,
+        "location": null,
+        "tradeSpeciesId": null,
+        "partySpeciesId": null,
+        "gender": null,
+        "description": "Level 16"
+      },
+      {
+        "fromSpeciesId": 2,
+        "fromForm": null,
+        "toSpeciesId": 3,
+        "toForm": null,
+        "trigger": "level-up",
+        "minLevel": 32,
+        "item": null,
+        "heldItem": null,
+        "knownMove": null,
+        "knownMoveType": null,
+        "happiness": null,
+        "timeOfDay": null,
+        "location": null,
+        "tradeSpeciesId": null,
+        "partySpeciesId": null,
+        "gender": null,
+        "description": "Level 32"
+      }
+    ]
+  },
+  "2": {
+    "chainId": 2,
+    "babyTriggerItem": null,
+    "nodes": [
+      {
+        "speciesId": 4,
+        "name": "charmander",
+        "generation": 1,
+        "isBaby": false
+      },
+      {
+        "speciesId": 5,
+        "name": "charmeleon",
+        "generation": 1,
+        "isBaby": false
+      },
+      {
+        "speciesId": 6,
+        "name": "charizard",
+        "generation": 1,
+        "isBaby": false
+      }
+    ],
+    "transitions": [
+      {
+        "fromSpeciesId": 4,
+        "fromForm": null,
+        "toSpeciesId": 5,
+        "toForm": null,
+        "trigger": "level-up",
+        "minLevel": 16,
+        "item": null,
+        "heldItem": null,
+        "knownMove": null,
+        "knownMoveType": null,
+        "happiness": null,
+        "timeOfDay": null,
+        "location": null,
+        "tradeSpeciesId": null,
+        "partySpeciesId": null,
+        "gender": null,
+        "description": "Level 16"
+      },
+      {
+        "fromSpeciesId": 5,
+        "fromForm": null,
+        "toSpeciesId": 6,
+        "toForm": null,
+        "trigger": "level-up",
+        "minLevel": 36,
+        "item": null,
+        "heldItem": null,
+        "knownMove": null,
+        "knownMoveType": null,
+        "happiness": null,
+        "timeOfDay": null,
+        "location": null,
+        "tradeSpeciesId": null,
+        "partySpeciesId": null,
+        "gender": null,
+        "description": "Level 36"
+      }
+    ]
+  },
+  "3": {
+    "chainId": 3,
+    "babyTriggerItem": null,
+    "nodes": [
+      {
+        "speciesId": 7,
+        "name": "squirtle",
+        "generation": 1,
+        "isBaby": false
+      },
+      {
+        "speciesId": 8,
+        "name": "wartortle",
+        "generation": 1,
+        "isBaby": false
+      },
+      {
+        "speciesId": 9,
+        "name": "blastoise",
+        "generation": 1,
+        "isBaby": false
+      }
+    ],
+    "transitions": [
+      {
+        "fromSpeciesId": 7,
+        "fromForm": null,
+        "toSpeciesId": 8,
+        "toForm": null,
+        "trigger": "level-up",
+        "minLevel": 16,
+        "item": null,
+        "heldItem": null,
+        "knownMove": null,
+        "knownMoveType": null,
+        "happiness": null,
+        "timeOfDay": null,
+        "location": null,
+        "tradeSpeciesId": null,
+        "partySpeciesId": null,
+        "gender": null,
+        "description": "Level 16"
+      },
+      {
+        "fromSpeciesId": 8,
+        "fromForm": null,
+        "toSpeciesId": 9,
+        "toForm": null,
+        "trigger": "level-up",
+        "minLevel": 36,
+        "item": null,
+        "heldItem": null,
+        "knownMove": null,
+        "knownMoveType": null,
+        "happiness": null,
+        "timeOfDay": null,
+        "location": null,
+        "tradeSpeciesId": null,
+        "partySpeciesId": null,
+        "gender": null,
+        "description": "Level 36"
+      }
+    ]
+  },
+  "4": {
+    "chainId": 4,
+    "babyTriggerItem": null,
+    "nodes": [
+      {
+        "speciesId": 10,
+        "name": "caterpie",
+        "generation": 1,
+        "isBaby": false
+      },
+      {
+        "speciesId": 11,
+        "name": "metapod",
+        "generation": 1,
+        "isBaby": false
+      },
+      {
+        "speciesId": 12,
+        "name": "butterfree",
+        "generation": 1,
+        "isBaby": false
+      }
+    ],
+    "transitions": [
+      {
+        "fromSpeciesId": 10,
+        "fromForm": null,
+        "toSpeciesId": 11,
+        "toForm": null,
+        "trigger": "level-up",
+        "minLevel": 7,
+        "item": null,
+        "heldItem": null,
+        "knownMove": null,
+        "knownMoveType": null,
+        "happiness": null,
+        "timeOfDay": null,
+        "location": null,
+        "tradeSpeciesId": null,
+        "partySpeciesId": null,
+        "gender": null,
+        "description": "Level 7"
+      },
+      {
+        "fromSpeciesId": 11,
+        "fromForm": null,
+        "toSpeciesId": 12,
+        "toForm": null,
+        "trigger": "level-up",
+        "minLevel": 10,
+        "item": null,
+        "heldItem": null,
+        "knownMove": null,
+        "knownMoveType": null,
+        "happiness": null,
+        "timeOfDay": null,
+        "location": null,
+        "tradeSpeciesId": null,
+        "partySpeciesId": null,
+        "gender": null,
+        "description": "Level 10"
+      }
+    ]
+  },
+  "5": {
+    "chainId": 5,
+    "babyTriggerItem": null,
+    "nodes": [
+      {
+        "speciesId": 13,
+        "name": "weedle",
+        "generation": 1,
+        "isBaby": false
+      },
+      {
+        "speciesId": 14,
+        "name": "kakuna",
+        "generation": 1,
+        "isBaby": false
+      },
+      {
+        "speciesId": 15,
+        "name": "beedrill",
+        "generation": 1,
+        "isBaby": false
+      }
+    ],
+    "transitions": [
+      {
+        "fromSpeciesId": 13,
+        "fromForm": null,
+        "toSpeciesId": 14,
+        "toForm": null,
+        "trigger": "level-up",
+        "minLevel": 7,
+        "item": null,
+        "heldItem": null,
+        "knownMove": null,
+        "knownMoveType": null,
+        "happiness": null,
+        "timeOfDay": null,
+        "location": null,
+        "tradeSpeciesId": null,
+        "partySpeciesId": null,
+        "gender": null,
+        "description": "Level 7"
+      },
+      {
+        "fromSpeciesId": 14,
+        "fromForm": null,
+        "toSpeciesId": 15,
+        "toForm": null,
+        "trigger": "level-up",
+        "minLevel": 10,
+        "item": null,
+        "heldItem": null,
+        "knownMove": null,
+        "knownMoveType": null,
+        "happiness": null,
+        "timeOfDay": null,
+        "location": null,
+        "tradeSpeciesId": null,
+        "partySpeciesId": null,
+        "gender": null,
+        "description": "Level 10"
+      }
+    ]
+  },
+  "6": {
+    "chainId": 6,
+    "babyTriggerItem": null,
+    "nodes": [
+      {
+        "speciesId": 16,
+        "name": "pidgey",
+        "generation": 1,
+        "isBaby": false
+      },
+      {
+        "speciesId": 17,
+        "name": "pidgeotto",
+        "generation": 1,
+        "isBaby": false
+      },
+      {
+        "speciesId": 18,
+        "name": "pidgeot",
+        "generation": 1,
+        "isBaby": false
+      }
+    ],
+    "transitions": [
+      {
+        "fromSpeciesId": 16,
+        "fromForm": null,
+        "toSpeciesId": 17,
+        "toForm": null,
+        "trigger": "level-up",
+        "minLevel": 18,
+        "item": null,
+        "heldItem": null,
+        "knownMove": null,
+        "knownMoveType": null,
+        "happiness": null,
+        "timeOfDay": null,
+        "location": null,
+        "tradeSpeciesId": null,
+        "partySpeciesId": null,
+        "gender": null,
+        "description": "Level 18"
+      },
+      {
+        "fromSpeciesId": 17,
+        "fromForm": null,
+        "toSpeciesId": 18,
+        "toForm": null,
+        "trigger": "level-up",
+        "minLevel": 36,
+        "item": null,
+        "heldItem": null,
+        "knownMove": null,
+        "knownMoveType": null,
+        "happiness": null,
+        "timeOfDay": null,
+        "location": null,
+        "tradeSpeciesId": null,
+        "partySpeciesId": null,
+        "gender": null,
+        "description": "Level 36"
+      }
+    ]
+  },
+  "7": {
+    "chainId": 7,
+    "babyTriggerItem": null,
+    "nodes": [
+      {
+        "speciesId": 19,
+        "name": "rattata",
+        "generation": 1,
+        "isBaby": false
+      },
+      {
+        "speciesId": 20,
+        "name": "raticate",
+        "generation": 1,
+        "isBaby": false
+      }
+    ],
+    "transitions": [
+      {
+        "fromSpeciesId": 19,
+        "fromForm": null,
+        "toSpeciesId": 20,
+        "toForm": null,
+        "trigger": "level-up",
+        "minLevel": 20,
+        "item": null,
+        "heldItem": null,
+        "knownMove": null,
+        "knownMoveType": null,
+        "happiness": null,
+        "timeOfDay": null,
+        "location": null,
+        "tradeSpeciesId": null,
+        "partySpeciesId": null,
+        "gender": null,
+        "description": "Level 20"
+      },
+      {
+        "fromSpeciesId": 19,
+        "fromForm": null,
+        "toSpeciesId": 20,
+        "toForm": null,
+        "trigger": "level-up",
+        "minLevel": 20,
+        "item": null,
+        "heldItem": null,
+        "knownMove": null,
+        "knownMoveType": null,
+        "happiness": null,
+        "timeOfDay": "night",
+        "location": null,
+        "tradeSpeciesId": null,
+        "partySpeciesId": null,
+        "gender": null,
+        "description": "Level 20, during Night"
+      }
+    ]
+  },
+  "8": {
+    "chainId": 8,
+    "babyTriggerItem": null,
+    "nodes": [
+      {
+        "speciesId": 21,
+        "name": "spearow",
+        "generation": 1,
+        "isBaby": false
+      },
+      {
+        "speciesId": 22,
+        "name": "fearow",
+        "generation": 1,
+        "isBaby": false
+      }
+    ],
+    "transitions": [
+      {
+        "fromSpeciesId": 21,
+        "fromForm": null,
+        "toSpeciesId": 22,
+        "toForm": null,
+        "trigger": "level-up",
+        "minLevel": 20,
+        "item": null,
+        "heldItem": null,
+        "knownMove": null,
+        "knownMoveType": null,
+        "happiness": null,
+        "timeOfDay": null,
+        "location": null,
+        "tradeSpeciesId": null,
+        "partySpeciesId": null,
+        "gender": null,
+        "description": "Level 20"
+      }
+    ]
+  },
+  "9": {
+    "chainId": 9,
+    "babyTriggerItem": null,
+    "nodes": [
+      {
+        "speciesId": 23,
+        "name": "ekans",
+        "generation": 1,
+        "isBaby": false
+      },
+      {
+        "speciesId": 24,
+        "name": "arbok",
+        "generation": 1,
+        "isBaby": false
+      }
+    ],
+    "transitions": [
+      {
+        "fromSpeciesId": 23,
+        "fromForm": null,
+        "toSpeciesId": 24,
+        "toForm": null,
+        "trigger": "level-up",
+        "minLevel": 22,
+        "item": null,
+        "heldItem": null,
+        "knownMove": null,
+        "knownMoveType": null,
+        "happiness": null,
+        "timeOfDay": null,
+        "location": null,
+        "tradeSpeciesId": null,
+        "partySpeciesId": null,
+        "gender": null,
+        "description": "Level 22"
+      }
+    ]
+  },
+  "10": {
+    "chainId": 10,
+    "babyTriggerItem": null,
+    "nodes": [
+      {
+        "speciesId": 172,
+        "name": "pichu",
+        "generation": 1,
+        "isBaby": true
+      },
+      {
+        "speciesId": 25,
+        "name": "pikachu",
+        "generation": 1,
+        "isBaby": false
+      },
+      {
+        "speciesId": 26,
+        "name": "raichu",
+        "generation": 1,
+        "isBaby": false
+      }
+    ],
+    "transitions": [
+      {
+        "fromSpeciesId": 172,
+        "fromForm": null,
+        "toSpeciesId": 25,
+        "toForm": null,
+        "trigger": "level-up",
+        "minLevel": null,
+        "item": null,
+        "heldItem": null,
+        "knownMove": null,
+        "knownMoveType": null,
+        "happiness": 220,
+        "timeOfDay": null,
+        "location": null,
+        "tradeSpeciesId": null,
+        "partySpeciesId": null,
+        "gender": null,
+        "description": "Friendship 220+"
+      },
+      {
+        "fromSpeciesId": 25,
+        "fromForm": null,
+        "toSpeciesId": 26,
+        "toForm": null,
+        "trigger": "use-item",
+        "minLevel": null,
+        "item": "thunder-stone",
+        "heldItem": null,
+        "knownMove": null,
+        "knownMoveType": null,
+        "happiness": null,
+        "timeOfDay": null,
+        "location": null,
+        "tradeSpeciesId": null,
+        "partySpeciesId": null,
+        "gender": null,
+        "description": "Use Thunder Stone"
+      },
+      {
+        "fromSpeciesId": 25,
+        "fromForm": null,
+        "toSpeciesId": 26,
+        "toForm": null,
+        "trigger": "use-item",
+        "minLevel": null,
+        "item": "thunder-stone",
+        "heldItem": null,
+        "knownMove": null,
+        "knownMoveType": null,
+        "happiness": null,
+        "timeOfDay": null,
+        "location": null,
+        "tradeSpeciesId": null,
+        "partySpeciesId": null,
+        "gender": null,
+        "description": "Use Thunder Stone"
+      }
+    ]
+  }
+}

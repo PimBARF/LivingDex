@@ -1,0 +1,2021 @@
+{
+  "gameId": "sv",
+  "title": "Scarlet / Violet",
+  "group": "gen9",
+  "generation": 9,
+  "versions": [
+    "scarlet",
+    "violet"
+  ],
+  "sections": [
+    {
+      "id": "base",
+      "title": "Regional Pokédex",
+      "type": "base",
+      "optional": false,
+      "entries": [
+        {
+          "speciesId": 906,
+          "formId": 906,
+          "dexNumber": 1
+        },
+        {
+          "speciesId": 907,
+          "formId": 907,
+          "dexNumber": 2
+        },
+        {
+          "speciesId": 908,
+          "formId": 908,
+          "dexNumber": 3
+        },
+        {
+          "speciesId": 909,
+          "formId": 909,
+          "dexNumber": 4
+        },
+        {
+          "speciesId": 910,
+          "formId": 910,
+          "dexNumber": 5
+        },
+        {
+          "speciesId": 911,
+          "formId": 911,
+          "dexNumber": 6
+        },
+        {
+          "speciesId": 912,
+          "formId": 912,
+          "dexNumber": 7
+        },
+        {
+          "speciesId": 913,
+          "formId": 913,
+          "dexNumber": 8
+        },
+        {
+          "speciesId": 914,
+          "formId": 914,
+          "dexNumber": 9
+        },
+        {
+          "speciesId": 915,
+          "formId": 915,
+          "dexNumber": 10
+        },
+        {
+          "speciesId": 916,
+          "formId": 916,
+          "dexNumber": 11
+        },
+        {
+          "speciesId": 917,
+          "formId": 917,
+          "dexNumber": 12
+        },
+        {
+          "speciesId": 918,
+          "formId": 918,
+          "dexNumber": 13
+        },
+        {
+          "speciesId": 919,
+          "formId": 919,
+          "dexNumber": 14
+        },
+        {
+          "speciesId": 920,
+          "formId": 920,
+          "dexNumber": 15
+        },
+        {
+          "speciesId": 187,
+          "formId": 187,
+          "dexNumber": 16
+        },
+        {
+          "speciesId": 188,
+          "formId": 188,
+          "dexNumber": 17
+        },
+        {
+          "speciesId": 189,
+          "formId": 189,
+          "dexNumber": 18
+        },
+        {
+          "speciesId": 661,
+          "formId": 661,
+          "dexNumber": 19
+        },
+        {
+          "speciesId": 662,
+          "formId": 662,
+          "dexNumber": 20
+        },
+        {
+          "speciesId": 663,
+          "formId": 663,
+          "dexNumber": 21
+        },
+        {
+          "speciesId": 921,
+          "formId": 921,
+          "dexNumber": 22
+        },
+        {
+          "speciesId": 922,
+          "formId": 922,
+          "dexNumber": 23
+        },
+        {
+          "speciesId": 923,
+          "formId": 923,
+          "dexNumber": 24
+        },
+        {
+          "speciesId": 228,
+          "formId": 228,
+          "dexNumber": 25
+        },
+        {
+          "speciesId": 229,
+          "formId": 229,
+          "dexNumber": 26
+        },
+        {
+          "speciesId": 734,
+          "formId": 734,
+          "dexNumber": 27
+        },
+        {
+          "speciesId": 735,
+          "formId": 735,
+          "dexNumber": 28
+        },
+        {
+          "speciesId": 819,
+          "formId": 819,
+          "dexNumber": 29
+        },
+        {
+          "speciesId": 820,
+          "formId": 820,
+          "dexNumber": 30
+        },
+        {
+          "speciesId": 191,
+          "formId": 191,
+          "dexNumber": 31
+        },
+        {
+          "speciesId": 192,
+          "formId": 192,
+          "dexNumber": 32
+        },
+        {
+          "speciesId": 401,
+          "formId": 401,
+          "dexNumber": 33
+        },
+        {
+          "speciesId": 402,
+          "formId": 402,
+          "dexNumber": 34
+        },
+        {
+          "speciesId": 664,
+          "formId": 664,
+          "dexNumber": 35
+        },
+        {
+          "speciesId": 665,
+          "formId": 665,
+          "dexNumber": 36
+        },
+        {
+          "speciesId": 666,
+          "formId": 666,
+          "dexNumber": 37
+        },
+        {
+          "speciesId": 415,
+          "formId": 415,
+          "dexNumber": 38
+        },
+        {
+          "speciesId": 416,
+          "formId": 416,
+          "dexNumber": 39
+        },
+        {
+          "speciesId": 821,
+          "formId": 821,
+          "dexNumber": 40
+        },
+        {
+          "speciesId": 822,
+          "formId": 822,
+          "dexNumber": 41
+        },
+        {
+          "speciesId": 823,
+          "formId": 823,
+          "dexNumber": 42
+        },
+        {
+          "speciesId": 440,
+          "formId": 440,
+          "dexNumber": 43
+        },
+        {
+          "speciesId": 113,
+          "formId": 113,
+          "dexNumber": 44
+        },
+        {
+          "speciesId": 242,
+          "formId": 242,
+          "dexNumber": 45
+        },
+        {
+          "speciesId": 298,
+          "formId": 298,
+          "dexNumber": 46
+        },
+        {
+          "speciesId": 183,
+          "formId": 183,
+          "dexNumber": 47
+        },
+        {
+          "speciesId": 184,
+          "formId": 184,
+          "dexNumber": 48
+        },
+        {
+          "speciesId": 283,
+          "formId": 283,
+          "dexNumber": 49
+        },
+        {
+          "speciesId": 284,
+          "formId": 284,
+          "dexNumber": 50
+        },
+        {
+          "speciesId": 418,
+          "formId": 418,
+          "dexNumber": 51
+        },
+        {
+          "speciesId": 419,
+          "formId": 419,
+          "dexNumber": 52
+        },
+        {
+          "speciesId": 194,
+          "formId": 194,
+          "dexNumber": 53
+        },
+        {
+          "speciesId": 980,
+          "formId": 980,
+          "dexNumber": 54
+        },
+        {
+          "speciesId": 54,
+          "formId": 54,
+          "dexNumber": 55
+        },
+        {
+          "speciesId": 55,
+          "formId": 55,
+          "dexNumber": 56
+        },
+        {
+          "speciesId": 833,
+          "formId": 833,
+          "dexNumber": 57
+        },
+        {
+          "speciesId": 834,
+          "formId": 834,
+          "dexNumber": 58
+        },
+        {
+          "speciesId": 174,
+          "formId": 174,
+          "dexNumber": 59
+        },
+        {
+          "speciesId": 39,
+          "formId": 39,
+          "dexNumber": 60
+        },
+        {
+          "speciesId": 40,
+          "formId": 40,
+          "dexNumber": 61
+        },
+        {
+          "speciesId": 280,
+          "formId": 280,
+          "dexNumber": 62
+        },
+        {
+          "speciesId": 281,
+          "formId": 281,
+          "dexNumber": 63
+        },
+        {
+          "speciesId": 282,
+          "formId": 282,
+          "dexNumber": 64
+        },
+        {
+          "speciesId": 475,
+          "formId": 475,
+          "dexNumber": 65
+        },
+        {
+          "speciesId": 96,
+          "formId": 96,
+          "dexNumber": 66
+        },
+        {
+          "speciesId": 97,
+          "formId": 97,
+          "dexNumber": 67
+        },
+        {
+          "speciesId": 92,
+          "formId": 92,
+          "dexNumber": 68
+        },
+        {
+          "speciesId": 93,
+          "formId": 93,
+          "dexNumber": 69
+        },
+        {
+          "speciesId": 94,
+          "formId": 94,
+          "dexNumber": 70
+        },
+        {
+          "speciesId": 924,
+          "formId": 924,
+          "dexNumber": 71
+        },
+        {
+          "speciesId": 925,
+          "formId": 925,
+          "dexNumber": 72
+        },
+        {
+          "speciesId": 172,
+          "formId": 172,
+          "dexNumber": 73
+        },
+        {
+          "speciesId": 25,
+          "formId": 25,
+          "dexNumber": 74
+        },
+        {
+          "speciesId": 26,
+          "formId": 26,
+          "dexNumber": 75
+        },
+        {
+          "speciesId": 926,
+          "formId": 926,
+          "dexNumber": 76
+        },
+        {
+          "speciesId": 927,
+          "formId": 927,
+          "dexNumber": 77
+        },
+        {
+          "speciesId": 287,
+          "formId": 287,
+          "dexNumber": 78
+        },
+        {
+          "speciesId": 288,
+          "formId": 288,
+          "dexNumber": 79
+        },
+        {
+          "speciesId": 289,
+          "formId": 289,
+          "dexNumber": 80
+        },
+        {
+          "speciesId": 761,
+          "formId": 761,
+          "dexNumber": 81
+        },
+        {
+          "speciesId": 762,
+          "formId": 762,
+          "dexNumber": 82
+        },
+        {
+          "speciesId": 763,
+          "formId": 763,
+          "dexNumber": 83
+        },
+        {
+          "speciesId": 928,
+          "formId": 928,
+          "dexNumber": 84
+        },
+        {
+          "speciesId": 929,
+          "formId": 929,
+          "dexNumber": 85
+        },
+        {
+          "speciesId": 930,
+          "formId": 930,
+          "dexNumber": 86
+        },
+        {
+          "speciesId": 438,
+          "formId": 438,
+          "dexNumber": 87
+        },
+        {
+          "speciesId": 185,
+          "formId": 185,
+          "dexNumber": 88
+        },
+        {
+          "speciesId": 744,
+          "formId": 744,
+          "dexNumber": 89
+        },
+        {
+          "speciesId": 745,
+          "formId": 745,
+          "dexNumber": 90
+        },
+        {
+          "speciesId": 837,
+          "formId": 837,
+          "dexNumber": 91
+        },
+        {
+          "speciesId": 838,
+          "formId": 838,
+          "dexNumber": 92
+        },
+        {
+          "speciesId": 839,
+          "formId": 839,
+          "dexNumber": 93
+        },
+        {
+          "speciesId": 403,
+          "formId": 403,
+          "dexNumber": 94
+        },
+        {
+          "speciesId": 404,
+          "formId": 404,
+          "dexNumber": 95
+        },
+        {
+          "speciesId": 405,
+          "formId": 405,
+          "dexNumber": 96
+        },
+        {
+          "speciesId": 396,
+          "formId": 396,
+          "dexNumber": 97
+        },
+        {
+          "speciesId": 397,
+          "formId": 397,
+          "dexNumber": 98
+        },
+        {
+          "speciesId": 398,
+          "formId": 398,
+          "dexNumber": 99
+        },
+        {
+          "speciesId": 741,
+          "formId": 741,
+          "dexNumber": 100
+        },
+        {
+          "speciesId": 179,
+          "formId": 179,
+          "dexNumber": 101
+        },
+        {
+          "speciesId": 180,
+          "formId": 180,
+          "dexNumber": 102
+        },
+        {
+          "speciesId": 181,
+          "formId": 181,
+          "dexNumber": 103
+        },
+        {
+          "speciesId": 548,
+          "formId": 548,
+          "dexNumber": 104
+        },
+        {
+          "speciesId": 549,
+          "formId": 549,
+          "dexNumber": 105
+        },
+        {
+          "speciesId": 285,
+          "formId": 285,
+          "dexNumber": 106
+        },
+        {
+          "speciesId": 286,
+          "formId": 286,
+          "dexNumber": 107
+        },
+        {
+          "speciesId": 840,
+          "formId": 840,
+          "dexNumber": 108
+        },
+        {
+          "speciesId": 841,
+          "formId": 841,
+          "dexNumber": 109
+        },
+        {
+          "speciesId": 842,
+          "formId": 842,
+          "dexNumber": 110
+        },
+        {
+          "speciesId": 325,
+          "formId": 325,
+          "dexNumber": 111
+        },
+        {
+          "speciesId": 326,
+          "formId": 326,
+          "dexNumber": 112
+        },
+        {
+          "speciesId": 931,
+          "formId": 931,
+          "dexNumber": 113
+        },
+        {
+          "speciesId": 200,
+          "formId": 200,
+          "dexNumber": 114
+        },
+        {
+          "speciesId": 429,
+          "formId": 429,
+          "dexNumber": 115
+        },
+        {
+          "speciesId": 296,
+          "formId": 296,
+          "dexNumber": 116
+        },
+        {
+          "speciesId": 297,
+          "formId": 297,
+          "dexNumber": 117
+        },
+        {
+          "speciesId": 739,
+          "formId": 739,
+          "dexNumber": 118
+        },
+        {
+          "speciesId": 740,
+          "formId": 740,
+          "dexNumber": 119
+        },
+        {
+          "speciesId": 757,
+          "formId": 757,
+          "dexNumber": 120
+        },
+        {
+          "speciesId": 758,
+          "formId": 758,
+          "dexNumber": 121
+        },
+        {
+          "speciesId": 231,
+          "formId": 231,
+          "dexNumber": 122
+        },
+        {
+          "speciesId": 232,
+          "formId": 232,
+          "dexNumber": 123
+        },
+        {
+          "speciesId": 878,
+          "formId": 878,
+          "dexNumber": 124
+        },
+        {
+          "speciesId": 879,
+          "formId": 879,
+          "dexNumber": 125
+        },
+        {
+          "speciesId": 443,
+          "formId": 443,
+          "dexNumber": 126
+        },
+        {
+          "speciesId": 444,
+          "formId": 444,
+          "dexNumber": 127
+        },
+        {
+          "speciesId": 445,
+          "formId": 445,
+          "dexNumber": 128
+        },
+        {
+          "speciesId": 932,
+          "formId": 932,
+          "dexNumber": 129
+        },
+        {
+          "speciesId": 933,
+          "formId": 933,
+          "dexNumber": 130
+        },
+        {
+          "speciesId": 934,
+          "formId": 934,
+          "dexNumber": 131
+        },
+        {
+          "speciesId": 278,
+          "formId": 278,
+          "dexNumber": 132
+        },
+        {
+          "speciesId": 279,
+          "formId": 279,
+          "dexNumber": 133
+        },
+        {
+          "speciesId": 129,
+          "formId": 129,
+          "dexNumber": 134
+        },
+        {
+          "speciesId": 130,
+          "formId": 130,
+          "dexNumber": 135
+        },
+        {
+          "speciesId": 846,
+          "formId": 846,
+          "dexNumber": 136
+        },
+        {
+          "speciesId": 847,
+          "formId": 847,
+          "dexNumber": 137
+        },
+        {
+          "speciesId": 550,
+          "formId": 550,
+          "dexNumber": 138
+        },
+        {
+          "speciesId": 316,
+          "formId": 316,
+          "dexNumber": 139
+        },
+        {
+          "speciesId": 317,
+          "formId": 317,
+          "dexNumber": 140
+        },
+        {
+          "speciesId": 52,
+          "formId": 52,
+          "dexNumber": 141
+        },
+        {
+          "speciesId": 53,
+          "formId": 53,
+          "dexNumber": 142
+        },
+        {
+          "speciesId": 425,
+          "formId": 425,
+          "dexNumber": 143
+        },
+        {
+          "speciesId": 426,
+          "formId": 426,
+          "dexNumber": 144
+        },
+        {
+          "speciesId": 669,
+          "formId": 669,
+          "dexNumber": 145
+        },
+        {
+          "speciesId": 670,
+          "formId": 670,
+          "dexNumber": 146
+        },
+        {
+          "speciesId": 671,
+          "formId": 671,
+          "dexNumber": 147
+        },
+        {
+          "speciesId": 50,
+          "formId": 50,
+          "dexNumber": 148
+        },
+        {
+          "speciesId": 51,
+          "formId": 51,
+          "dexNumber": 149
+        },
+        {
+          "speciesId": 324,
+          "formId": 324,
+          "dexNumber": 150
+        },
+        {
+          "speciesId": 322,
+          "formId": 322,
+          "dexNumber": 151
+        },
+        {
+          "speciesId": 323,
+          "formId": 323,
+          "dexNumber": 152
+        },
+        {
+          "speciesId": 436,
+          "formId": 436,
+          "dexNumber": 153
+        },
+        {
+          "speciesId": 437,
+          "formId": 437,
+          "dexNumber": 154
+        },
+        {
+          "speciesId": 610,
+          "formId": 610,
+          "dexNumber": 155
+        },
+        {
+          "speciesId": 611,
+          "formId": 611,
+          "dexNumber": 156
+        },
+        {
+          "speciesId": 612,
+          "formId": 612,
+          "dexNumber": 157
+        },
+        {
+          "speciesId": 56,
+          "formId": 56,
+          "dexNumber": 158
+        },
+        {
+          "speciesId": 57,
+          "formId": 57,
+          "dexNumber": 159
+        },
+        {
+          "speciesId": 979,
+          "formId": 979,
+          "dexNumber": 160
+        },
+        {
+          "speciesId": 307,
+          "formId": 307,
+          "dexNumber": 161
+        },
+        {
+          "speciesId": 308,
+          "formId": 308,
+          "dexNumber": 162
+        },
+        {
+          "speciesId": 447,
+          "formId": 447,
+          "dexNumber": 163
+        },
+        {
+          "speciesId": 448,
+          "formId": 448,
+          "dexNumber": 164
+        },
+        {
+          "speciesId": 935,
+          "formId": 935,
+          "dexNumber": 165
+        },
+        {
+          "speciesId": 936,
+          "formId": 936,
+          "dexNumber": 166
+        },
+        {
+          "speciesId": 937,
+          "formId": 937,
+          "dexNumber": 167
+        },
+        {
+          "speciesId": 339,
+          "formId": 339,
+          "dexNumber": 168
+        },
+        {
+          "speciesId": 340,
+          "formId": 340,
+          "dexNumber": 169
+        },
+        {
+          "speciesId": 938,
+          "formId": 938,
+          "dexNumber": 170
+        },
+        {
+          "speciesId": 939,
+          "formId": 939,
+          "dexNumber": 171
+        },
+        {
+          "speciesId": 704,
+          "formId": 704,
+          "dexNumber": 172
+        },
+        {
+          "speciesId": 705,
+          "formId": 705,
+          "dexNumber": 173
+        },
+        {
+          "speciesId": 706,
+          "formId": 706,
+          "dexNumber": 174
+        },
+        {
+          "speciesId": 453,
+          "formId": 453,
+          "dexNumber": 175
+        },
+        {
+          "speciesId": 454,
+          "formId": 454,
+          "dexNumber": 176
+        },
+        {
+          "speciesId": 940,
+          "formId": 940,
+          "dexNumber": 177
+        },
+        {
+          "speciesId": 941,
+          "formId": 941,
+          "dexNumber": 178
+        },
+        {
+          "speciesId": 133,
+          "formId": 133,
+          "dexNumber": 179
+        },
+        {
+          "speciesId": 134,
+          "formId": 134,
+          "dexNumber": 180
+        },
+        {
+          "speciesId": 135,
+          "formId": 135,
+          "dexNumber": 181
+        },
+        {
+          "speciesId": 136,
+          "formId": 136,
+          "dexNumber": 182
+        },
+        {
+          "speciesId": 196,
+          "formId": 196,
+          "dexNumber": 183
+        },
+        {
+          "speciesId": 197,
+          "formId": 197,
+          "dexNumber": 184
+        },
+        {
+          "speciesId": 470,
+          "formId": 470,
+          "dexNumber": 185
+        },
+        {
+          "speciesId": 471,
+          "formId": 471,
+          "dexNumber": 186
+        },
+        {
+          "speciesId": 700,
+          "formId": 700,
+          "dexNumber": 187
+        },
+        {
+          "speciesId": 206,
+          "formId": 206,
+          "dexNumber": 188
+        },
+        {
+          "speciesId": 982,
+          "formId": 982,
+          "dexNumber": 189
+        },
+        {
+          "speciesId": 585,
+          "formId": 585,
+          "dexNumber": 190
+        },
+        {
+          "speciesId": 586,
+          "formId": 586,
+          "dexNumber": 191
+        },
+        {
+          "speciesId": 203,
+          "formId": 203,
+          "dexNumber": 192
+        },
+        {
+          "speciesId": 981,
+          "formId": 981,
+          "dexNumber": 193
+        },
+        {
+          "speciesId": 88,
+          "formId": 88,
+          "dexNumber": 194
+        },
+        {
+          "speciesId": 89,
+          "formId": 89,
+          "dexNumber": 195
+        },
+        {
+          "speciesId": 942,
+          "formId": 942,
+          "dexNumber": 196
+        },
+        {
+          "speciesId": 943,
+          "formId": 943,
+          "dexNumber": 197
+        },
+        {
+          "speciesId": 848,
+          "formId": 848,
+          "dexNumber": 198
+        },
+        {
+          "speciesId": 849,
+          "formId": 849,
+          "dexNumber": 199
+        },
+        {
+          "speciesId": 702,
+          "formId": 702,
+          "dexNumber": 200
+        },
+        {
+          "speciesId": 417,
+          "formId": 417,
+          "dexNumber": 201
+        },
+        {
+          "speciesId": 944,
+          "formId": 944,
+          "dexNumber": 202
+        },
+        {
+          "speciesId": 945,
+          "formId": 945,
+          "dexNumber": 203
+        },
+        {
+          "speciesId": 234,
+          "formId": 234,
+          "dexNumber": 204
+        },
+        {
+          "speciesId": 590,
+          "formId": 590,
+          "dexNumber": 205
+        },
+        {
+          "speciesId": 591,
+          "formId": 591,
+          "dexNumber": 206
+        },
+        {
+          "speciesId": 100,
+          "formId": 100,
+          "dexNumber": 207
+        },
+        {
+          "speciesId": 101,
+          "formId": 101,
+          "dexNumber": 208
+        },
+        {
+          "speciesId": 81,
+          "formId": 81,
+          "dexNumber": 209
+        },
+        {
+          "speciesId": 82,
+          "formId": 82,
+          "dexNumber": 210
+        },
+        {
+          "speciesId": 462,
+          "formId": 462,
+          "dexNumber": 211
+        },
+        {
+          "speciesId": 132,
+          "formId": 132,
+          "dexNumber": 212
+        },
+        {
+          "speciesId": 58,
+          "formId": 58,
+          "dexNumber": 213
+        },
+        {
+          "speciesId": 59,
+          "formId": 59,
+          "dexNumber": 214
+        },
+        {
+          "speciesId": 216,
+          "formId": 216,
+          "dexNumber": 215
+        },
+        {
+          "speciesId": 217,
+          "formId": 217,
+          "dexNumber": 216
+        },
+        {
+          "speciesId": 335,
+          "formId": 335,
+          "dexNumber": 217
+        },
+        {
+          "speciesId": 336,
+          "formId": 336,
+          "dexNumber": 218
+        },
+        {
+          "speciesId": 333,
+          "formId": 333,
+          "dexNumber": 219
+        },
+        {
+          "speciesId": 334,
+          "formId": 334,
+          "dexNumber": 220
+        },
+        {
+          "speciesId": 672,
+          "formId": 672,
+          "dexNumber": 221
+        },
+        {
+          "speciesId": 673,
+          "formId": 673,
+          "dexNumber": 222
+        },
+        {
+          "speciesId": 128,
+          "formId": 128,
+          "dexNumber": 223
+        },
+        {
+          "speciesId": 667,
+          "formId": 667,
+          "dexNumber": 224
+        },
+        {
+          "speciesId": 668,
+          "formId": 668,
+          "dexNumber": 225
+        },
+        {
+          "speciesId": 434,
+          "formId": 434,
+          "dexNumber": 226
+        },
+        {
+          "speciesId": 435,
+          "formId": 435,
+          "dexNumber": 227
+        },
+        {
+          "speciesId": 570,
+          "formId": 570,
+          "dexNumber": 228
+        },
+        {
+          "speciesId": 571,
+          "formId": 571,
+          "dexNumber": 229
+        },
+        {
+          "speciesId": 215,
+          "formId": 215,
+          "dexNumber": 230
+        },
+        {
+          "speciesId": 461,
+          "formId": 461,
+          "dexNumber": 231
+        },
+        {
+          "speciesId": 198,
+          "formId": 198,
+          "dexNumber": 232
+        },
+        {
+          "speciesId": 430,
+          "formId": 430,
+          "dexNumber": 233
+        },
+        {
+          "speciesId": 574,
+          "formId": 574,
+          "dexNumber": 234
+        },
+        {
+          "speciesId": 575,
+          "formId": 575,
+          "dexNumber": 235
+        },
+        {
+          "speciesId": 576,
+          "formId": 576,
+          "dexNumber": 236
+        },
+        {
+          "speciesId": 854,
+          "formId": 854,
+          "dexNumber": 237
+        },
+        {
+          "speciesId": 855,
+          "formId": 855,
+          "dexNumber": 238
+        },
+        {
+          "speciesId": 778,
+          "formId": 778,
+          "dexNumber": 239
+        },
+        {
+          "speciesId": 707,
+          "formId": 707,
+          "dexNumber": 240
+        },
+        {
+          "speciesId": 876,
+          "formId": 876,
+          "dexNumber": 241
+        },
+        {
+          "speciesId": 946,
+          "formId": 946,
+          "dexNumber": 242
+        },
+        {
+          "speciesId": 947,
+          "formId": 947,
+          "dexNumber": 243
+        },
+        {
+          "speciesId": 948,
+          "formId": 948,
+          "dexNumber": 244
+        },
+        {
+          "speciesId": 949,
+          "formId": 949,
+          "dexNumber": 245
+        },
+        {
+          "speciesId": 357,
+          "formId": 357,
+          "dexNumber": 246
+        },
+        {
+          "speciesId": 753,
+          "formId": 753,
+          "dexNumber": 247
+        },
+        {
+          "speciesId": 754,
+          "formId": 754,
+          "dexNumber": 248
+        },
+        {
+          "speciesId": 950,
+          "formId": 950,
+          "dexNumber": 249
+        },
+        {
+          "speciesId": 951,
+          "formId": 951,
+          "dexNumber": 250
+        },
+        {
+          "speciesId": 952,
+          "formId": 952,
+          "dexNumber": 251
+        },
+        {
+          "speciesId": 331,
+          "formId": 331,
+          "dexNumber": 252
+        },
+        {
+          "speciesId": 332,
+          "formId": 332,
+          "dexNumber": 253
+        },
+        {
+          "speciesId": 953,
+          "formId": 953,
+          "dexNumber": 254
+        },
+        {
+          "speciesId": 954,
+          "formId": 954,
+          "dexNumber": 255
+        },
+        {
+          "speciesId": 48,
+          "formId": 48,
+          "dexNumber": 256
+        },
+        {
+          "speciesId": 49,
+          "formId": 49,
+          "dexNumber": 257
+        },
+        {
+          "speciesId": 204,
+          "formId": 204,
+          "dexNumber": 258
+        },
+        {
+          "speciesId": 205,
+          "formId": 205,
+          "dexNumber": 259
+        },
+        {
+          "speciesId": 123,
+          "formId": 123,
+          "dexNumber": 260
+        },
+        {
+          "speciesId": 212,
+          "formId": 212,
+          "dexNumber": 261
+        },
+        {
+          "speciesId": 214,
+          "formId": 214,
+          "dexNumber": 262
+        },
+        {
+          "speciesId": 955,
+          "formId": 955,
+          "dexNumber": 263
+        },
+        {
+          "speciesId": 956,
+          "formId": 956,
+          "dexNumber": 264
+        },
+        {
+          "speciesId": 449,
+          "formId": 449,
+          "dexNumber": 265
+        },
+        {
+          "speciesId": 450,
+          "formId": 450,
+          "dexNumber": 266
+        },
+        {
+          "speciesId": 551,
+          "formId": 551,
+          "dexNumber": 267
+        },
+        {
+          "speciesId": 552,
+          "formId": 552,
+          "dexNumber": 268
+        },
+        {
+          "speciesId": 553,
+          "formId": 553,
+          "dexNumber": 269
+        },
+        {
+          "speciesId": 843,
+          "formId": 843,
+          "dexNumber": 270
+        },
+        {
+          "speciesId": 844,
+          "formId": 844,
+          "dexNumber": 271
+        },
+        {
+          "speciesId": 749,
+          "formId": 749,
+          "dexNumber": 272
+        },
+        {
+          "speciesId": 750,
+          "formId": 750,
+          "dexNumber": 273
+        },
+        {
+          "speciesId": 636,
+          "formId": 636,
+          "dexNumber": 274
+        },
+        {
+          "speciesId": 637,
+          "formId": 637,
+          "dexNumber": 275
+        },
+        {
+          "speciesId": 371,
+          "formId": 371,
+          "dexNumber": 276
+        },
+        {
+          "speciesId": 372,
+          "formId": 372,
+          "dexNumber": 277
+        },
+        {
+          "speciesId": 373,
+          "formId": 373,
+          "dexNumber": 278
+        },
+        {
+          "speciesId": 957,
+          "formId": 957,
+          "dexNumber": 279
+        },
+        {
+          "speciesId": 958,
+          "formId": 958,
+          "dexNumber": 280
+        },
+        {
+          "speciesId": 959,
+          "formId": 959,
+          "dexNumber": 281
+        },
+        {
+          "speciesId": 856,
+          "formId": 856,
+          "dexNumber": 282
+        },
+        {
+          "speciesId": 857,
+          "formId": 857,
+          "dexNumber": 283
+        },
+        {
+          "speciesId": 858,
+          "formId": 858,
+          "dexNumber": 284
+        },
+        {
+          "speciesId": 859,
+          "formId": 859,
+          "dexNumber": 285
+        },
+        {
+          "speciesId": 860,
+          "formId": 860,
+          "dexNumber": 286
+        },
+        {
+          "speciesId": 861,
+          "formId": 861,
+          "dexNumber": 287
+        },
+        {
+          "speciesId": 960,
+          "formId": 960,
+          "dexNumber": 288
+        },
+        {
+          "speciesId": 961,
+          "formId": 961,
+          "dexNumber": 289
+        },
+        {
+          "speciesId": 962,
+          "formId": 962,
+          "dexNumber": 290
+        },
+        {
+          "speciesId": 963,
+          "formId": 963,
+          "dexNumber": 291
+        },
+        {
+          "speciesId": 964,
+          "formId": 964,
+          "dexNumber": 292
+        },
+        {
+          "speciesId": 965,
+          "formId": 965,
+          "dexNumber": 293
+        },
+        {
+          "speciesId": 966,
+          "formId": 966,
+          "dexNumber": 294
+        },
+        {
+          "speciesId": 967,
+          "formId": 967,
+          "dexNumber": 295
+        },
+        {
+          "speciesId": 968,
+          "formId": 968,
+          "dexNumber": 296
+        },
+        {
+          "speciesId": 302,
+          "formId": 302,
+          "dexNumber": 297
+        },
+        {
+          "speciesId": 353,
+          "formId": 353,
+          "dexNumber": 298
+        },
+        {
+          "speciesId": 354,
+          "formId": 354,
+          "dexNumber": 299
+        },
+        {
+          "speciesId": 870,
+          "formId": 870,
+          "dexNumber": 300
+        },
+        {
+          "speciesId": 701,
+          "formId": 701,
+          "dexNumber": 301
+        },
+        {
+          "speciesId": 442,
+          "formId": 442,
+          "dexNumber": 302
+        },
+        {
+          "speciesId": 714,
+          "formId": 714,
+          "dexNumber": 303
+        },
+        {
+          "speciesId": 715,
+          "formId": 715,
+          "dexNumber": 304
+        },
+        {
+          "speciesId": 885,
+          "formId": 885,
+          "dexNumber": 305
+        },
+        {
+          "speciesId": 886,
+          "formId": 886,
+          "dexNumber": 306
+        },
+        {
+          "speciesId": 887,
+          "formId": 887,
+          "dexNumber": 307
+        },
+        {
+          "speciesId": 969,
+          "formId": 969,
+          "dexNumber": 308
+        },
+        {
+          "speciesId": 970,
+          "formId": 970,
+          "dexNumber": 309
+        },
+        {
+          "speciesId": 479,
+          "formId": 479,
+          "dexNumber": 310
+        },
+        {
+          "speciesId": 971,
+          "formId": 971,
+          "dexNumber": 311
+        },
+        {
+          "speciesId": 972,
+          "formId": 972,
+          "dexNumber": 312
+        },
+        {
+          "speciesId": 765,
+          "formId": 765,
+          "dexNumber": 313
+        },
+        {
+          "speciesId": 766,
+          "formId": 766,
+          "dexNumber": 314
+        },
+        {
+          "speciesId": 775,
+          "formId": 775,
+          "dexNumber": 315
+        },
+        {
+          "speciesId": 246,
+          "formId": 246,
+          "dexNumber": 316
+        },
+        {
+          "speciesId": 247,
+          "formId": 247,
+          "dexNumber": 317
+        },
+        {
+          "speciesId": 248,
+          "formId": 248,
+          "dexNumber": 318
+        },
+        {
+          "speciesId": 874,
+          "formId": 874,
+          "dexNumber": 319
+        },
+        {
+          "speciesId": 875,
+          "formId": 875,
+          "dexNumber": 320
+        },
+        {
+          "speciesId": 871,
+          "formId": 871,
+          "dexNumber": 321
+        },
+        {
+          "speciesId": 769,
+          "formId": 769,
+          "dexNumber": 322
+        },
+        {
+          "speciesId": 770,
+          "formId": 770,
+          "dexNumber": 323
+        },
+        {
+          "speciesId": 79,
+          "formId": 79,
+          "dexNumber": 324
+        },
+        {
+          "speciesId": 80,
+          "formId": 80,
+          "dexNumber": 325
+        },
+        {
+          "speciesId": 199,
+          "formId": 199,
+          "dexNumber": 326
+        },
+        {
+          "speciesId": 422,
+          "formId": 422,
+          "dexNumber": 327
+        },
+        {
+          "speciesId": 423,
+          "formId": 423,
+          "dexNumber": 328
+        },
+        {
+          "speciesId": 90,
+          "formId": 90,
+          "dexNumber": 329
+        },
+        {
+          "speciesId": 91,
+          "formId": 91,
+          "dexNumber": 330
+        },
+        {
+          "speciesId": 211,
+          "formId": 211,
+          "dexNumber": 331
+        },
+        {
+          "speciesId": 370,
+          "formId": 370,
+          "dexNumber": 332
+        },
+        {
+          "speciesId": 456,
+          "formId": 456,
+          "dexNumber": 333
+        },
+        {
+          "speciesId": 457,
+          "formId": 457,
+          "dexNumber": 334
+        },
+        {
+          "speciesId": 779,
+          "formId": 779,
+          "dexNumber": 335
+        },
+        {
+          "speciesId": 594,
+          "formId": 594,
+          "dexNumber": 336
+        },
+        {
+          "speciesId": 690,
+          "formId": 690,
+          "dexNumber": 337
+        },
+        {
+          "speciesId": 691,
+          "formId": 691,
+          "dexNumber": 338
+        },
+        {
+          "speciesId": 692,
+          "formId": 692,
+          "dexNumber": 339
+        },
+        {
+          "speciesId": 693,
+          "formId": 693,
+          "dexNumber": 340
+        },
+        {
+          "speciesId": 602,
+          "formId": 602,
+          "dexNumber": 341
+        },
+        {
+          "speciesId": 603,
+          "formId": 603,
+          "dexNumber": 342
+        },
+        {
+          "speciesId": 604,
+          "formId": 604,
+          "dexNumber": 343
+        },
+        {
+          "speciesId": 747,
+          "formId": 747,
+          "dexNumber": 344
+        },
+        {
+          "speciesId": 748,
+          "formId": 748,
+          "dexNumber": 345
+        },
+        {
+          "speciesId": 973,
+          "formId": 973,
+          "dexNumber": 346
+        },
+        {
+          "speciesId": 147,
+          "formId": 147,
+          "dexNumber": 347
+        },
+        {
+          "speciesId": 148,
+          "formId": 148,
+          "dexNumber": 348
+        },
+        {
+          "speciesId": 149,
+          "formId": 149,
+          "dexNumber": 349
+        },
+        {
+          "speciesId": 872,
+          "formId": 872,
+          "dexNumber": 350
+        },
+        {
+          "speciesId": 873,
+          "formId": 873,
+          "dexNumber": 351
+        },
+        {
+          "speciesId": 459,
+          "formId": 459,
+          "dexNumber": 352
+        },
+        {
+          "speciesId": 460,
+          "formId": 460,
+          "dexNumber": 353
+        },
+        {
+          "speciesId": 225,
+          "formId": 225,
+          "dexNumber": 354
+        },
+        {
+          "speciesId": 613,
+          "formId": 613,
+          "dexNumber": 355
+        },
+        {
+          "speciesId": 614,
+          "formId": 614,
+          "dexNumber": 356
+        },
+        {
+          "speciesId": 361,
+          "formId": 361,
+          "dexNumber": 357
+        },
+        {
+          "speciesId": 362,
+          "formId": 362,
+          "dexNumber": 358
+        },
+        {
+          "speciesId": 478,
+          "formId": 478,
+          "dexNumber": 359
+        },
+        {
+          "speciesId": 615,
+          "formId": 615,
+          "dexNumber": 360
+        },
+        {
+          "speciesId": 974,
+          "formId": 974,
+          "dexNumber": 361
+        },
+        {
+          "speciesId": 975,
+          "formId": 975,
+          "dexNumber": 362
+        },
+        {
+          "speciesId": 712,
+          "formId": 712,
+          "dexNumber": 363
+        },
+        {
+          "speciesId": 713,
+          "formId": 713,
+          "dexNumber": 364
+        },
+        {
+          "speciesId": 627,
+          "formId": 627,
+          "dexNumber": 365
+        },
+        {
+          "speciesId": 628,
+          "formId": 628,
+          "dexNumber": 366
+        },
+        {
+          "speciesId": 624,
+          "formId": 624,
+          "dexNumber": 367
+        },
+        {
+          "speciesId": 625,
+          "formId": 625,
+          "dexNumber": 368
+        },
+        {
+          "speciesId": 983,
+          "formId": 983,
+          "dexNumber": 369
+        },
+        {
+          "speciesId": 633,
+          "formId": 633,
+          "dexNumber": 370
+        },
+        {
+          "speciesId": 634,
+          "formId": 634,
+          "dexNumber": 371
+        },
+        {
+          "speciesId": 635,
+          "formId": 635,
+          "dexNumber": 372
+        },
+        {
+          "speciesId": 976,
+          "formId": 976,
+          "dexNumber": 373
+        },
+        {
+          "speciesId": 977,
+          "formId": 977,
+          "dexNumber": 374
+        },
+        {
+          "speciesId": 978,
+          "formId": 978,
+          "dexNumber": 375
+        },
+        {
+          "speciesId": 984,
+          "formId": 984,
+          "dexNumber": 376
+        },
+        {
+          "speciesId": 985,
+          "formId": 985,
+          "dexNumber": 377
+        },
+        {
+          "speciesId": 986,
+          "formId": 986,
+          "dexNumber": 378
+        },
+        {
+          "speciesId": 987,
+          "formId": 987,
+          "dexNumber": 379
+        },
+        {
+          "speciesId": 988,
+          "formId": 988,
+          "dexNumber": 380
+        },
+        {
+          "speciesId": 989,
+          "formId": 989,
+          "dexNumber": 381
+        },
+        {
+          "speciesId": 990,
+          "formId": 990,
+          "dexNumber": 382
+        },
+        {
+          "speciesId": 991,
+          "formId": 991,
+          "dexNumber": 383
+        },
+        {
+          "speciesId": 992,
+          "formId": 992,
+          "dexNumber": 384
+        },
+        {
+          "speciesId": 993,
+          "formId": 993,
+          "dexNumber": 385
+        },
+        {
+          "speciesId": 994,
+          "formId": 994,
+          "dexNumber": 386
+        },
+        {
+          "speciesId": 995,
+          "formId": 995,
+          "dexNumber": 387
+        },
+        {
+          "speciesId": 996,
+          "formId": 996,
+          "dexNumber": 388
+        },
+        {
+          "speciesId": 997,
+          "formId": 997,
+          "dexNumber": 389
+        },
+        {
+          "speciesId": 998,
+          "formId": 998,
+          "dexNumber": 390
+        },
+        {
+          "speciesId": 999,
+          "formId": 999,
+          "dexNumber": 391
+        },
+        {
+          "speciesId": 1000,
+          "formId": 1000,
+          "dexNumber": 392
+        },
+        {
+          "speciesId": 1001,
+          "formId": 1001,
+          "dexNumber": 393
+        },
+        {
+          "speciesId": 1002,
+          "formId": 1002,
+          "dexNumber": 394
+        },
+        {
+          "speciesId": 1003,
+          "formId": 1003,
+          "dexNumber": 395
+        },
+        {
+          "speciesId": 1004,
+          "formId": 1004,
+          "dexNumber": 396
+        },
+        {
+          "speciesId": 1005,
+          "formId": 1005,
+          "dexNumber": 397
+        },
+        {
+          "speciesId": 1006,
+          "formId": 1006,
+          "dexNumber": 398
+        },
+        {
+          "speciesId": 1007,
+          "formId": 1007,
+          "dexNumber": 399
+        },
+        {
+          "speciesId": 1008,
+          "formId": 1008,
+          "dexNumber": 400
+        }
+      ]
+    }
+  ],
+  "encounters": {}
+}

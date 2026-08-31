@@ -1,0 +1,113 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "PokemonSpeciesDatabase",
+  "description": "Schema for the master Pokémon species, multilingual names, and forms database",
+  "type": "object",
+  "patternProperties": {
+    "^[0-9]+$": {
+      "type": "object",
+      "required": ["speciesId", "names", "generation", "forms"],
+      "properties": {
+        "speciesId": {
+          "type": "integer",
+          "minimum": 1,
+          "description": "National Pokédex species ID"
+        },
+        "names": {
+          "type": "object",
+          "description": "Localized Pokémon species names",
+          "properties": {
+            "en": { "type": "string" },
+            "ja": { "type": "string" },
+            "fr": { "type": "string" },
+            "de": { "type": "string" },
+            "es": { "type": "string" },
+            "it": { "type": "string" },
+            "ko": { "type": "string" },
+            "zh-Hans": { "type": "string" },
+            "zh-Hant": { "type": "string" }
+          },
+          "required": ["en"],
+          "additionalProperties": { "type": "string" }
+        },
+        "generation": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 9,
+          "description": "Introduction generation number (1-9)"
+        },
+        "evolutionChainId": {
+          "type": ["integer", "null"],
+          "description": "Identifier linking to evolutions.json"
+        },
+        "flavorText": {
+          "type": "object",
+          "description": "Default or multi-language species Pokédex flavor text",
+          "additionalProperties": { "type": "string" }
+        },
+        "forms": {
+          "type": "array",
+          "description": "List of distinct battle/regional/visual forms for this species",
+          "items": {
+            "type": "object",
+            "required": ["formId", "name", "isDefault", "types"],
+            "properties": {
+              "formId": {
+                "type": "integer",
+                "minimum": 1,
+                "description": "Form ID or unique Pokémon resource ID"
+              },
+              "name": {
+                "type": "string",
+                "description": "Form identifier name (e.g., 'pikachu-alola', 'rattata-alola')"
+              },
+              "formKey": {
+                "type": "string",
+                "description": "Short form key suffix (e.g. 'alola', 'galar', 'gmax', 'mega')"
+              },
+              "isDefault": {
+                "type": "boolean",
+                "description": "Whether this is the base/canonical form"
+              },
+              "isMega": {
+                "type": "boolean"
+              },
+              "isGmax": {
+                "type": "boolean"
+              },
+              "isRegional": {
+                "type": "boolean"
+              },
+              "region": {
+                "type": ["string", "null"],
+                "description": "Region name for regional forms (e.g. 'alola', 'galar', 'hisui', 'paldea')"
+              },
+              "types": {
+                "type": "array",
+                "items": { "type": "string" },
+                "minItems": 1,
+                "maxItems": 2,
+                "description": "Current standard types for this form (e.g. ['grass', 'poison'])"
+              },
+              "pastTypes": {
+                "type": "object",
+                "description": "Historical types prior to generation changes (e.g. '1': ['normal'] for Clefairy)",
+                "patternProperties": {
+                  "^[1-9]$": {
+                    "type": "array",
+                    "items": { "type": "string" },
+                    "minItems": 1,
+                    "maxItems": 2
+                  }
+                }
+              }
+            },
+            "additionalProperties": true
+          }
+        }
+      },
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": false
+}

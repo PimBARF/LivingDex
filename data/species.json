@@ -1,0 +1,1328 @@
+{
+  "1": {
+    "speciesId": 1,
+    "names": {
+      "ja-hrkt": "フシギダネ",
+      "ja-roma": "Fushigidane",
+      "ko": "이상해씨",
+      "zh-hant": "妙蛙種子",
+      "fr": "Bulbizarre",
+      "de": "Bisasam",
+      "es": "Bulbasaur",
+      "it": "Bulbasaur",
+      "en": "Bulbasaur",
+      "ja": "フシギダネ",
+      "zh-hans": "妙蛙种子",
+      "es-419": "Bulbasaur"
+    },
+    "generation": 1,
+    "evolutionChainId": 1,
+    "flavorText": {
+      "en": "A strange seed was planted on its back at birth. The plant sprouts and grows with this POKéMON."
+    },
+    "forms": [
+      {
+        "formId": 1,
+        "name": "bulbasaur",
+        "formKey": "default",
+        "isDefault": true,
+        "isMega": false,
+        "isGmax": false,
+        "isRegional": false,
+        "region": null,
+        "types": [
+          "grass",
+          "poison"
+        ]
+      }
+    ]
+  },
+  "2": {
+    "speciesId": 2,
+    "names": {
+      "ja-hrkt": "フシギソウ",
+      "ja-roma": "Fushigisou",
+      "ko": "이상해풀",
+      "zh-hant": "妙蛙草",
+      "fr": "Herbizarre",
+      "de": "Bisaknosp",
+      "es": "Ivysaur",
+      "it": "Ivysaur",
+      "en": "Ivysaur",
+      "ja": "フシギソウ",
+      "zh-hans": "妙蛙草",
+      "es-419": "Ivysaur"
+    },
+    "generation": 1,
+    "evolutionChainId": 1,
+    "flavorText": {
+      "en": "When the bulb on its back grows large, it appears to lose the ability to stand on its hind legs."
+    },
+    "forms": [
+      {
+        "formId": 2,
+        "name": "ivysaur",
+        "formKey": "default",
+        "isDefault": true,
+        "isMega": false,
+        "isGmax": false,
+        "isRegional": false,
+        "region": null,
+        "types": [
+          "grass",
+          "poison"
+        ]
+      }
+    ]
+  },
+  "3": {
+    "speciesId": 3,
+    "names": {
+      "ja-hrkt": "フシギバナ",
+      "ja-roma": "Fushigibana",
+      "ko": "이상해꽃",
+      "zh-hant": "妙蛙花",
+      "fr": "Florizarre",
+      "de": "Bisaflor",
+      "es": "Venusaur",
+      "it": "Venusaur",
+      "en": "Venusaur",
+      "ja": "フシギバナ",
+      "zh-hans": "妙蛙花",
+      "es-419": "Venusaur"
+    },
+    "generation": 1,
+    "evolutionChainId": 1,
+    "flavorText": {
+      "en": "The plant blooms when it is absorbing solar energy. It stays on the move to seek sunlight."
+    },
+    "forms": [
+      {
+        "formId": 3,
+        "name": "venusaur",
+        "formKey": "default",
+        "isDefault": true,
+        "isMega": false,
+        "isGmax": false,
+        "isRegional": false,
+        "region": null,
+        "types": [
+          "grass",
+          "poison"
+        ]
+      },
+      {
+        "formId": 10033,
+        "name": "venusaur-mega",
+        "formKey": "mega",
+        "isDefault": false,
+        "isMega": true,
+        "isGmax": false,
+        "isRegional": false,
+        "region": null,
+        "types": [
+          "grass",
+          "poison"
+        ]
+      },
+      {
+        "formId": 10195,
+        "name": "venusaur-gmax",
+        "formKey": "gmax",
+        "isDefault": false,
+        "isMega": false,
+        "isGmax": true,
+        "isRegional": false,
+        "region": null,
+        "types": [
+          "grass",
+          "poison"
+        ]
+      }
+    ]
+  },
+  "4": {
+    "speciesId": 4,
+    "names": {
+      "ja-hrkt": "ヒトカゲ",
+      "ja-roma": "Hitokage",
+      "ko": "파이리",
+      "zh-hant": "小火龍",
+      "fr": "Salamèche",
+      "de": "Glumanda",
+      "es": "Charmander",
+      "it": "Charmander",
+      "en": "Charmander",
+      "ja": "ヒトカゲ",
+      "zh-hans": "小火龙",
+      "es-419": "Charmander"
+    },
+    "generation": 1,
+    "evolutionChainId": 2,
+    "flavorText": {
+      "en": "Obviously prefers hot places. When it rains, steam is said to spout from the tip of its tail."
+    },
+    "forms": [
+      {
+        "formId": 4,
+        "name": "charmander",
+        "formKey": "default",
+        "isDefault": true,
+        "isMega": false,
+        "isGmax": false,
+        "isRegional": false,
+        "region": null,
+        "types": [
+          "fire"
+        ]
+      }
+    ]
+  },
+  "5": {
+    "speciesId": 5,
+    "names": {
+      "ja-hrkt": "リザード",
+      "ja-roma": "Lizardo",
+      "ko": "리자드",
+      "zh-hant": "火恐龍",
+      "fr": "Reptincel",
+      "de": "Glutexo",
+      "es": "Charmeleon",
+      "it": "Charmeleon",
+      "en": "Charmeleon",
+      "ja": "リザード",
+      "zh-hans": "火恐龙",
+      "es-419": "Charmeleon"
+    },
+    "generation": 1,
+    "evolutionChainId": 2,
+    "flavorText": {
+      "en": "When it swings its burning tail, it elevates the temperature to unbearably high levels."
+    },
+    "forms": [
+      {
+        "formId": 5,
+        "name": "charmeleon",
+        "formKey": "default",
+        "isDefault": true,
+        "isMega": false,
+        "isGmax": false,
+        "isRegional": false,
+        "region": null,
+        "types": [
+          "fire"
+        ]
+      }
+    ]
+  },
+  "6": {
+    "speciesId": 6,
+    "names": {
+      "ja-hrkt": "リザードン",
+      "ja-roma": "Lizardon",
+      "ko": "리자몽",
+      "zh-hant": "噴火龍",
+      "fr": "Dracaufeu",
+      "de": "Glurak",
+      "es": "Charizard",
+      "it": "Charizard",
+      "en": "Charizard",
+      "ja": "リザードン",
+      "zh-hans": "喷火龙",
+      "es-419": "Charizard"
+    },
+    "generation": 1,
+    "evolutionChainId": 2,
+    "flavorText": {
+      "en": "Spits fire that is hot enough to melt boulders. Known to cause forest fires unintentionally."
+    },
+    "forms": [
+      {
+        "formId": 6,
+        "name": "charizard",
+        "formKey": "default",
+        "isDefault": true,
+        "isMega": false,
+        "isGmax": false,
+        "isRegional": false,
+        "region": null,
+        "types": [
+          "fire",
+          "flying"
+        ]
+      },
+      {
+        "formId": 10034,
+        "name": "charizard-mega-x",
+        "formKey": "mega-x",
+        "isDefault": false,
+        "isMega": true,
+        "isGmax": false,
+        "isRegional": false,
+        "region": null,
+        "types": [
+          "fire",
+          "dragon"
+        ]
+      },
+      {
+        "formId": 10035,
+        "name": "charizard-mega-y",
+        "formKey": "mega-y",
+        "isDefault": false,
+        "isMega": true,
+        "isGmax": false,
+        "isRegional": false,
+        "region": null,
+        "types": [
+          "fire",
+          "flying"
+        ]
+      },
+      {
+        "formId": 10196,
+        "name": "charizard-gmax",
+        "formKey": "gmax",
+        "isDefault": false,
+        "isMega": false,
+        "isGmax": true,
+        "isRegional": false,
+        "region": null,
+        "types": [
+          "fire",
+          "flying"
+        ]
+      }
+    ]
+  },
+  "7": {
+    "speciesId": 7,
+    "names": {
+      "ja-hrkt": "ゼニガメ",
+      "ja-roma": "Zenigame",
+      "ko": "꼬부기",
+      "zh-hant": "傑尼龜",
+      "fr": "Carapuce",
+      "de": "Schiggy",
+      "es": "Squirtle",
+      "it": "Squirtle",
+      "en": "Squirtle",
+      "ja": "ゼニガメ",
+      "zh-hans": "杰尼龟",
+      "es-419": "Squirtle"
+    },
+    "generation": 1,
+    "evolutionChainId": 3,
+    "flavorText": {
+      "en": "After birth, its back swells and hardens into a shell. Powerfully sprays foam from its mouth."
+    },
+    "forms": [
+      {
+        "formId": 7,
+        "name": "squirtle",
+        "formKey": "default",
+        "isDefault": true,
+        "isMega": false,
+        "isGmax": false,
+        "isRegional": false,
+        "region": null,
+        "types": [
+          "water"
+        ]
+      }
+    ]
+  },
+  "8": {
+    "speciesId": 8,
+    "names": {
+      "ja-hrkt": "カメール",
+      "ja-roma": "Kameil",
+      "ko": "어니부기",
+      "zh-hant": "卡咪龜",
+      "fr": "Carabaffe",
+      "de": "Schillok",
+      "es": "Wartortle",
+      "it": "Wartortle",
+      "en": "Wartortle",
+      "ja": "カメール",
+      "zh-hans": "卡咪龟",
+      "es-419": "Wartortle"
+    },
+    "generation": 1,
+    "evolutionChainId": 3,
+    "flavorText": {
+      "en": "Often hides in water to stalk unwary prey. For swimming fast, it moves its ears to maintain balance."
+    },
+    "forms": [
+      {
+        "formId": 8,
+        "name": "wartortle",
+        "formKey": "default",
+        "isDefault": true,
+        "isMega": false,
+        "isGmax": false,
+        "isRegional": false,
+        "region": null,
+        "types": [
+          "water"
+        ]
+      }
+    ]
+  },
+  "9": {
+    "speciesId": 9,
+    "names": {
+      "ja-hrkt": "カメックス",
+      "ja-roma": "Kamex",
+      "ko": "거북왕",
+      "zh-hant": "水箭龜",
+      "fr": "Tortank",
+      "de": "Turtok",
+      "es": "Blastoise",
+      "it": "Blastoise",
+      "en": "Blastoise",
+      "ja": "カメックス",
+      "zh-hans": "水箭龟",
+      "es-419": "Blastoise"
+    },
+    "generation": 1,
+    "evolutionChainId": 3,
+    "flavorText": {
+      "en": "A brutal POKéMON with pressurized water jets on its shell. They are used for high speed tackles."
+    },
+    "forms": [
+      {
+        "formId": 9,
+        "name": "blastoise",
+        "formKey": "default",
+        "isDefault": true,
+        "isMega": false,
+        "isGmax": false,
+        "isRegional": false,
+        "region": null,
+        "types": [
+          "water"
+        ]
+      },
+      {
+        "formId": 10036,
+        "name": "blastoise-mega",
+        "formKey": "mega",
+        "isDefault": false,
+        "isMega": true,
+        "isGmax": false,
+        "isRegional": false,
+        "region": null,
+        "types": [
+          "water"
+        ]
+      },
+      {
+        "formId": 10197,
+        "name": "blastoise-gmax",
+        "formKey": "gmax",
+        "isDefault": false,
+        "isMega": false,
+        "isGmax": true,
+        "isRegional": false,
+        "region": null,
+        "types": [
+          "water"
+        ]
+      }
+    ]
+  },
+  "10": {
+    "speciesId": 10,
+    "names": {
+      "ja-hrkt": "キャタピー",
+      "ja-roma": "Caterpie",
+      "ko": "캐터피",
+      "zh-hant": "綠毛蟲",
+      "fr": "Chenipan",
+      "de": "Raupy",
+      "es": "Caterpie",
+      "it": "Caterpie",
+      "en": "Caterpie",
+      "ja": "キャタピー",
+      "zh-hans": "绿毛虫",
+      "es-419": "Caterpie"
+    },
+    "generation": 1,
+    "evolutionChainId": 4,
+    "flavorText": {
+      "en": "Its short feet are tipped with suction pads that enable it to tirelessly climb slopes and walls."
+    },
+    "forms": [
+      {
+        "formId": 10,
+        "name": "caterpie",
+        "formKey": "default",
+        "isDefault": true,
+        "isMega": false,
+        "isGmax": false,
+        "isRegional": false,
+        "region": null,
+        "types": [
+          "bug"
+        ]
+      }
+    ]
+  },
+  "11": {
+    "speciesId": 11,
+    "names": {
+      "ja-hrkt": "トランセル",
+      "ja-roma": "Transel",
+      "ko": "단데기",
+      "zh-hant": "鐵甲蛹",
+      "fr": "Chrysacier",
+      "de": "Safcon",
+      "es": "Metapod",
+      "it": "Metapod",
+      "en": "Metapod",
+      "ja": "トランセル",
+      "zh-hans": "铁甲蛹",
+      "es-419": "Metapod"
+    },
+    "generation": 1,
+    "evolutionChainId": 4,
+    "flavorText": {
+      "en": "This POKéMON is vulnerable to attack while its shell is soft, exposing its weak and tender body."
+    },
+    "forms": [
+      {
+        "formId": 11,
+        "name": "metapod",
+        "formKey": "default",
+        "isDefault": true,
+        "isMega": false,
+        "isGmax": false,
+        "isRegional": false,
+        "region": null,
+        "types": [
+          "bug"
+        ]
+      }
+    ]
+  },
+  "12": {
+    "speciesId": 12,
+    "names": {
+      "ja-hrkt": "バタフリー",
+      "ja-roma": "Butterfree",
+      "ko": "버터플",
+      "zh-hant": "巴大蝶",
+      "fr": "Papilusion",
+      "de": "Smettbo",
+      "es": "Butterfree",
+      "it": "Butterfree",
+      "en": "Butterfree",
+      "ja": "バタフリー",
+      "zh-hans": "巴大蝶",
+      "es-419": "Butterfree"
+    },
+    "generation": 1,
+    "evolutionChainId": 4,
+    "flavorText": {
+      "en": "In battle, it flaps its wings at high speed to release highly toxic dust into the air."
+    },
+    "forms": [
+      {
+        "formId": 12,
+        "name": "butterfree",
+        "formKey": "default",
+        "isDefault": true,
+        "isMega": false,
+        "isGmax": false,
+        "isRegional": false,
+        "region": null,
+        "types": [
+          "bug",
+          "flying"
+        ]
+      },
+      {
+        "formId": 10198,
+        "name": "butterfree-gmax",
+        "formKey": "gmax",
+        "isDefault": false,
+        "isMega": false,
+        "isGmax": true,
+        "isRegional": false,
+        "region": null,
+        "types": [
+          "bug",
+          "flying"
+        ]
+      }
+    ]
+  },
+  "13": {
+    "speciesId": 13,
+    "names": {
+      "ja-hrkt": "ビードル",
+      "ja-roma": "Beedle",
+      "ko": "뿔충이",
+      "zh-hant": "獨角蟲",
+      "fr": "Aspicot",
+      "de": "Hornliu",
+      "es": "Weedle",
+      "it": "Weedle",
+      "en": "Weedle",
+      "ja": "ビードル",
+      "zh-hans": "独角虫",
+      "es-419": "Weedle"
+    },
+    "generation": 1,
+    "evolutionChainId": 5,
+    "flavorText": {
+      "en": "Often found in forests, eating leaves. It has a sharp venomous stinger on its head."
+    },
+    "forms": [
+      {
+        "formId": 13,
+        "name": "weedle",
+        "formKey": "default",
+        "isDefault": true,
+        "isMega": false,
+        "isGmax": false,
+        "isRegional": false,
+        "region": null,
+        "types": [
+          "bug",
+          "poison"
+        ]
+      }
+    ]
+  },
+  "14": {
+    "speciesId": 14,
+    "names": {
+      "ja-hrkt": "コクーン",
+      "ja-roma": "Cocoon",
+      "ko": "딱충이",
+      "zh-hant": "鐵殼蛹",
+      "fr": "Coconfort",
+      "de": "Kokuna",
+      "es": "Kakuna",
+      "it": "Kakuna",
+      "en": "Kakuna",
+      "ja": "コクーン",
+      "zh-hans": "铁壳蛹",
+      "es-419": "Kakuna"
+    },
+    "generation": 1,
+    "evolutionChainId": 5,
+    "flavorText": {
+      "en": "Almost incapable of moving, this POKéMON can only harden its shell to protect itself from predators."
+    },
+    "forms": [
+      {
+        "formId": 14,
+        "name": "kakuna",
+        "formKey": "default",
+        "isDefault": true,
+        "isMega": false,
+        "isGmax": false,
+        "isRegional": false,
+        "region": null,
+        "types": [
+          "bug",
+          "poison"
+        ]
+      }
+    ]
+  },
+  "15": {
+    "speciesId": 15,
+    "names": {
+      "ja-hrkt": "スピアー",
+      "ja-roma": "Spear",
+      "ko": "독침붕",
+      "zh-hant": "大針蜂",
+      "fr": "Dardargnan",
+      "de": "Bibor",
+      "es": "Beedrill",
+      "it": "Beedrill",
+      "en": "Beedrill",
+      "ja": "スピアー",
+      "zh-hans": "大针蜂",
+      "es-419": "Beedrill"
+    },
+    "generation": 1,
+    "evolutionChainId": 5,
+    "flavorText": {
+      "en": "Flies at high speed and attacks using its large venomous stingers on its forelegs and tail."
+    },
+    "forms": [
+      {
+        "formId": 15,
+        "name": "beedrill",
+        "formKey": "default",
+        "isDefault": true,
+        "isMega": false,
+        "isGmax": false,
+        "isRegional": false,
+        "region": null,
+        "types": [
+          "bug",
+          "poison"
+        ]
+      },
+      {
+        "formId": 10090,
+        "name": "beedrill-mega",
+        "formKey": "mega",
+        "isDefault": false,
+        "isMega": true,
+        "isGmax": false,
+        "isRegional": false,
+        "region": null,
+        "types": [
+          "bug",
+          "poison"
+        ]
+      }
+    ]
+  },
+  "16": {
+    "speciesId": 16,
+    "names": {
+      "ja-hrkt": "ポッポ",
+      "ja-roma": "Poppo",
+      "ko": "구구",
+      "zh-hant": "波波",
+      "fr": "Roucool",
+      "de": "Taubsi",
+      "es": "Pidgey",
+      "it": "Pidgey",
+      "en": "Pidgey",
+      "ja": "ポッポ",
+      "zh-hans": "波波",
+      "es-419": "Pidgey"
+    },
+    "generation": 1,
+    "evolutionChainId": 6,
+    "flavorText": {
+      "en": "A common sight in forests and woods. It flaps its wings at ground level to kick up blinding sand."
+    },
+    "forms": [
+      {
+        "formId": 16,
+        "name": "pidgey",
+        "formKey": "default",
+        "isDefault": true,
+        "isMega": false,
+        "isGmax": false,
+        "isRegional": false,
+        "region": null,
+        "types": [
+          "normal",
+          "flying"
+        ]
+      }
+    ]
+  },
+  "17": {
+    "speciesId": 17,
+    "names": {
+      "ja-hrkt": "ピジョン",
+      "ja-roma": "Pigeon",
+      "ko": "피죤",
+      "zh-hant": "比比鳥",
+      "fr": "Roucoups",
+      "de": "Tauboga",
+      "es": "Pidgeotto",
+      "it": "Pidgeotto",
+      "en": "Pidgeotto",
+      "ja": "ピジョン",
+      "zh-hans": "比比鸟",
+      "es-419": "Pidgeotto"
+    },
+    "generation": 1,
+    "evolutionChainId": 6,
+    "flavorText": {
+      "en": "Very protective of its sprawling territorial area, this POKéMON will fiercely peck at any intruder."
+    },
+    "forms": [
+      {
+        "formId": 17,
+        "name": "pidgeotto",
+        "formKey": "default",
+        "isDefault": true,
+        "isMega": false,
+        "isGmax": false,
+        "isRegional": false,
+        "region": null,
+        "types": [
+          "normal",
+          "flying"
+        ]
+      }
+    ]
+  },
+  "18": {
+    "speciesId": 18,
+    "names": {
+      "ja-hrkt": "ピジョット",
+      "ja-roma": "Pigeot",
+      "ko": "피죤투",
+      "zh-hant": "大比鳥",
+      "fr": "Roucarnage",
+      "de": "Tauboss",
+      "es": "Pidgeot",
+      "it": "Pidgeot",
+      "en": "Pidgeot",
+      "ja": "ピジョット",
+      "zh-hans": "大比鸟",
+      "es-419": "Pidgeot"
+    },
+    "generation": 1,
+    "evolutionChainId": 6,
+    "flavorText": {
+      "en": "When hunting, it skims the surface of water at high speed to pick off unwary prey such as MAGIKARP."
+    },
+    "forms": [
+      {
+        "formId": 18,
+        "name": "pidgeot",
+        "formKey": "default",
+        "isDefault": true,
+        "isMega": false,
+        "isGmax": false,
+        "isRegional": false,
+        "region": null,
+        "types": [
+          "normal",
+          "flying"
+        ]
+      },
+      {
+        "formId": 10073,
+        "name": "pidgeot-mega",
+        "formKey": "mega",
+        "isDefault": false,
+        "isMega": true,
+        "isGmax": false,
+        "isRegional": false,
+        "region": null,
+        "types": [
+          "normal",
+          "flying"
+        ]
+      }
+    ]
+  },
+  "19": {
+    "speciesId": 19,
+    "names": {
+      "ja-hrkt": "コラッタ",
+      "ja-roma": "Koratta",
+      "ko": "꼬렛",
+      "zh-hant": "小拉達",
+      "fr": "Rattata",
+      "de": "Rattfratz",
+      "es": "Rattata",
+      "it": "Rattata",
+      "en": "Rattata",
+      "ja": "コラッタ",
+      "zh-hans": "小拉达",
+      "es-419": "Rattata"
+    },
+    "generation": 1,
+    "evolutionChainId": 7,
+    "flavorText": {
+      "en": "Bites anything when it attacks. Small and very quick, it is a common sight in many places."
+    },
+    "forms": [
+      {
+        "formId": 19,
+        "name": "rattata",
+        "formKey": "default",
+        "isDefault": true,
+        "isMega": false,
+        "isGmax": false,
+        "isRegional": false,
+        "region": null,
+        "types": [
+          "normal"
+        ]
+      },
+      {
+        "formId": 10091,
+        "name": "rattata-alola",
+        "formKey": "alola",
+        "isDefault": false,
+        "isMega": false,
+        "isGmax": false,
+        "isRegional": true,
+        "region": "alola",
+        "types": [
+          "dark",
+          "normal"
+        ]
+      }
+    ]
+  },
+  "20": {
+    "speciesId": 20,
+    "names": {
+      "ja-hrkt": "ラッタ",
+      "ja-roma": "Ratta",
+      "ko": "레트라",
+      "zh-hant": "拉達",
+      "fr": "Rattatac",
+      "de": "Rattikarl",
+      "es": "Raticate",
+      "it": "Raticate",
+      "en": "Raticate",
+      "ja": "ラッタ",
+      "zh-hans": "拉达",
+      "es-419": "Raticate"
+    },
+    "generation": 1,
+    "evolutionChainId": 7,
+    "flavorText": {
+      "en": "It uses its whis­ kers to maintain its balance. It apparently slows down if they are cut off."
+    },
+    "forms": [
+      {
+        "formId": 20,
+        "name": "raticate",
+        "formKey": "default",
+        "isDefault": true,
+        "isMega": false,
+        "isGmax": false,
+        "isRegional": false,
+        "region": null,
+        "types": [
+          "normal"
+        ]
+      },
+      {
+        "formId": 10092,
+        "name": "raticate-alola",
+        "formKey": "alola",
+        "isDefault": false,
+        "isMega": false,
+        "isGmax": false,
+        "isRegional": true,
+        "region": "alola",
+        "types": [
+          "dark",
+          "normal"
+        ]
+      },
+      {
+        "formId": 10093,
+        "name": "raticate-totem-alola",
+        "formKey": "totem-alola",
+        "isDefault": false,
+        "isMega": false,
+        "isGmax": false,
+        "isRegional": true,
+        "region": "alola",
+        "types": [
+          "dark",
+          "normal"
+        ]
+      }
+    ]
+  },
+  "21": {
+    "speciesId": 21,
+    "names": {
+      "ja-hrkt": "オニスズメ",
+      "ja-roma": "Onisuzume",
+      "ko": "깨비참",
+      "zh-hant": "烈雀",
+      "fr": "Piafabec",
+      "de": "Habitak",
+      "es": "Spearow",
+      "it": "Spearow",
+      "en": "Spearow",
+      "ja": "オニスズメ",
+      "zh-hans": "烈雀",
+      "es-419": "Spearow"
+    },
+    "generation": 1,
+    "evolutionChainId": 8,
+    "flavorText": {
+      "en": "Eats bugs in grassy areas. It has to flap its short wings at high speed to stay airborne."
+    },
+    "forms": [
+      {
+        "formId": 21,
+        "name": "spearow",
+        "formKey": "default",
+        "isDefault": true,
+        "isMega": false,
+        "isGmax": false,
+        "isRegional": false,
+        "region": null,
+        "types": [
+          "normal",
+          "flying"
+        ]
+      }
+    ]
+  },
+  "22": {
+    "speciesId": 22,
+    "names": {
+      "ja-hrkt": "オニドリル",
+      "ja-roma": "Onidrill",
+      "ko": "깨비드릴조",
+      "zh-hant": "大嘴雀",
+      "fr": "Rapasdepic",
+      "de": "Ibitak",
+      "es": "Fearow",
+      "it": "Fearow",
+      "en": "Fearow",
+      "ja": "オニドリル",
+      "zh-hans": "大嘴雀",
+      "es-419": "Fearow"
+    },
+    "generation": 1,
+    "evolutionChainId": 8,
+    "flavorText": {
+      "en": "With its huge and magnificent wings, it can keep aloft without ever having to land for rest."
+    },
+    "forms": [
+      {
+        "formId": 22,
+        "name": "fearow",
+        "formKey": "default",
+        "isDefault": true,
+        "isMega": false,
+        "isGmax": false,
+        "isRegional": false,
+        "region": null,
+        "types": [
+          "normal",
+          "flying"
+        ]
+      }
+    ]
+  },
+  "23": {
+    "speciesId": 23,
+    "names": {
+      "ja-hrkt": "アーボ",
+      "ja-roma": "Arbo",
+      "ko": "아보",
+      "zh-hant": "阿柏蛇",
+      "fr": "Abo",
+      "de": "Rettan",
+      "es": "Ekans",
+      "it": "Ekans",
+      "en": "Ekans",
+      "ja": "アーボ",
+      "zh-hans": "阿柏蛇",
+      "es-419": "Ekans"
+    },
+    "generation": 1,
+    "evolutionChainId": 9,
+    "flavorText": {
+      "en": "Moves silently and stealthily. Eats the eggs of birds, such as PIDGEY and SPEAROW, whole."
+    },
+    "forms": [
+      {
+        "formId": 23,
+        "name": "ekans",
+        "formKey": "default",
+        "isDefault": true,
+        "isMega": false,
+        "isGmax": false,
+        "isRegional": false,
+        "region": null,
+        "types": [
+          "poison"
+        ]
+      }
+    ]
+  },
+  "24": {
+    "speciesId": 24,
+    "names": {
+      "ja-hrkt": "アーボック",
+      "ja-roma": "Arbok",
+      "ko": "아보크",
+      "zh-hant": "阿柏怪",
+      "fr": "Arbok",
+      "de": "Arbok",
+      "es": "Arbok",
+      "it": "Arbok",
+      "en": "Arbok",
+      "ja": "アーボック",
+      "zh-hans": "阿柏怪",
+      "es-419": "Arbok"
+    },
+    "generation": 1,
+    "evolutionChainId": 9,
+    "flavorText": {
+      "en": "It is rumored that the ferocious warning markings on its belly differ from area to area."
+    },
+    "forms": [
+      {
+        "formId": 24,
+        "name": "arbok",
+        "formKey": "default",
+        "isDefault": true,
+        "isMega": false,
+        "isGmax": false,
+        "isRegional": false,
+        "region": null,
+        "types": [
+          "poison"
+        ]
+      }
+    ]
+  },
+  "25": {
+    "speciesId": 25,
+    "names": {
+      "ja-hrkt": "ピカチュウ",
+      "ja-roma": "Pikachu",
+      "ko": "피카츄",
+      "zh-hant": "皮卡丘",
+      "fr": "Pikachu",
+      "de": "Pikachu",
+      "es": "Pikachu",
+      "it": "Pikachu",
+      "en": "Pikachu",
+      "ja": "ピカチュウ",
+      "zh-hans": "皮卡丘",
+      "es-419": "Pikachu"
+    },
+    "generation": 1,
+    "evolutionChainId": 10,
+    "flavorText": {
+      "en": "When several of these POKéMON gather, their electricity could build and cause lightning storms."
+    },
+    "forms": [
+      {
+        "formId": 25,
+        "name": "pikachu",
+        "formKey": "default",
+        "isDefault": true,
+        "isMega": false,
+        "isGmax": false,
+        "isRegional": false,
+        "region": null,
+        "types": [
+          "electric"
+        ]
+      },
+      {
+        "formId": 10080,
+        "name": "pikachu-rock-star",
+        "formKey": "rock-star",
+        "isDefault": false,
+        "isMega": false,
+        "isGmax": false,
+        "isRegional": false,
+        "region": null,
+        "types": [
+          "electric"
+        ]
+      },
+      {
+        "formId": 10081,
+        "name": "pikachu-belle",
+        "formKey": "belle",
+        "isDefault": false,
+        "isMega": false,
+        "isGmax": false,
+        "isRegional": false,
+        "region": null,
+        "types": [
+          "electric"
+        ]
+      },
+      {
+        "formId": 10082,
+        "name": "pikachu-pop-star",
+        "formKey": "pop-star",
+        "isDefault": false,
+        "isMega": false,
+        "isGmax": false,
+        "isRegional": false,
+        "region": null,
+        "types": [
+          "electric"
+        ]
+      },
+      {
+        "formId": 10083,
+        "name": "pikachu-phd",
+        "formKey": "phd",
+        "isDefault": false,
+        "isMega": false,
+        "isGmax": false,
+        "isRegional": false,
+        "region": null,
+        "types": [
+          "electric"
+        ]
+      },
+      {
+        "formId": 10084,
+        "name": "pikachu-libre",
+        "formKey": "libre",
+        "isDefault": false,
+        "isMega": false,
+        "isGmax": false,
+        "isRegional": false,
+        "region": null,
+        "types": [
+          "electric"
+        ]
+      },
+      {
+        "formId": 10085,
+        "name": "pikachu-cosplay",
+        "formKey": "cosplay",
+        "isDefault": false,
+        "isMega": false,
+        "isGmax": false,
+        "isRegional": false,
+        "region": null,
+        "types": [
+          "electric"
+        ]
+      },
+      {
+        "formId": 10094,
+        "name": "pikachu-original-cap",
+        "formKey": "original-cap",
+        "isDefault": false,
+        "isMega": false,
+        "isGmax": false,
+        "isRegional": false,
+        "region": null,
+        "types": [
+          "electric"
+        ]
+      },
+      {
+        "formId": 10095,
+        "name": "pikachu-hoenn-cap",
+        "formKey": "hoenn-cap",
+        "isDefault": false,
+        "isMega": false,
+        "isGmax": false,
+        "isRegional": false,
+        "region": null,
+        "types": [
+          "electric"
+        ]
+      },
+      {
+        "formId": 10096,
+        "name": "pikachu-sinnoh-cap",
+        "formKey": "sinnoh-cap",
+        "isDefault": false,
+        "isMega": false,
+        "isGmax": false,
+        "isRegional": false,
+        "region": null,
+        "types": [
+          "electric"
+        ]
+      },
+      {
+        "formId": 10097,
+        "name": "pikachu-unova-cap",
+        "formKey": "unova-cap",
+        "isDefault": false,
+        "isMega": false,
+        "isGmax": false,
+        "isRegional": false,
+        "region": null,
+        "types": [
+          "electric"
+        ]
+      },
+      {
+        "formId": 10098,
+        "name": "pikachu-kalos-cap",
+        "formKey": "kalos-cap",
+        "isDefault": false,
+        "isMega": false,
+        "isGmax": false,
+        "isRegional": false,
+        "region": null,
+        "types": [
+          "electric"
+        ]
+      },
+      {
+        "formId": 10099,
+        "name": "pikachu-alola-cap",
+        "formKey": "alola-cap",
+        "isDefault": false,
+        "isMega": false,
+        "isGmax": false,
+        "isRegional": true,
+        "region": "alola",
+        "types": [
+          "electric"
+        ]
+      },
+      {
+        "formId": 10148,
+        "name": "pikachu-partner-cap",
+        "formKey": "partner-cap",
+        "isDefault": false,
+        "isMega": false,
+        "isGmax": false,
+        "isRegional": false,
+        "region": null,
+        "types": [
+          "electric"
+        ]
+      },
+      {
+        "formId": 10158,
+        "name": "pikachu-starter",
+        "formKey": "starter",
+        "isDefault": false,
+        "isMega": false,
+        "isGmax": false,
+        "isRegional": false,
+        "region": null,
+        "types": [
+          "electric"
+        ]
+      },
+      {
+        "formId": 10160,
+        "name": "pikachu-world-cap",
+        "formKey": "world-cap",
+        "isDefault": false,
+        "isMega": false,
+        "isGmax": false,
+        "isRegional": false,
+        "region": null,
+        "types": [
+          "electric"
+        ]
+      },
+      {
+        "formId": 10199,
+        "name": "pikachu-gmax",
+        "formKey": "gmax",
+        "isDefault": false,
+        "isMega": false,
+        "isGmax": true,
+        "isRegional": false,
+        "region": null,
+        "types": [
+          "electric"
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,99 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "PokemonGameDatabase",
+  "description": "Schema for game-specific Pokédexes, sections, entries, and encounter tables",
+  "type": "object",
+  "required": [
+    "gameId",
+    "title",
+    "group",
+    "generation",
+    "sections",
+    "encounters"
+  ],
+  "properties": {
+    "gameId": {
+      "type": "string",
+      "description": "Unique internal game key (e.g. 'rby', 'gsc', 'swsh', 'sv')"
+    },
+    "title": {
+      "type": "string",
+      "description": "Game display title"
+    },
+    "group": {
+      "type": "string",
+      "description": "Game generation or special group (e.g. 'gen1', 'special')"
+    },
+    "generation": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 9
+    },
+    "versions": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Sub-versions for this game release (e.g. ['red', 'blue', 'yellow'])"
+    },
+    "sections": {
+      "type": "array",
+      "description": "Pokédex segments configured for this game",
+      "items": {
+        "type": "object",
+        "required": ["id", "title", "type", "entries"],
+        "properties": {
+          "id": { "type": "string" },
+          "title": { "type": "string" },
+          "type": {
+            "type": "string",
+            "enum": ["base", "dlc", "forms"]
+          },
+          "optional": { "type": "boolean" },
+          "defaultEnabled": { "type": "boolean" },
+          "entries": {
+            "type": "array",
+            "description": "Ordered entries in this Pokédex segment",
+            "items": {
+              "type": "object",
+              "required": ["speciesId", "formId"],
+              "properties": {
+                "speciesId": { "type": "integer", "minimum": 1 },
+                "formId": { "type": "integer", "minimum": 1 },
+                "dexNumber": { "type": ["integer", "null"] }
+              },
+              "additionalProperties": true
+            }
+          }
+        },
+        "additionalProperties": true
+      }
+    },
+    "encounters": {
+      "type": "object",
+      "description": "Encounter notes keyed by species or form ID",
+      "patternProperties": {
+        "^[0-9]+$": {
+          "type": "object",
+          "description": "Keyed by game version name or 'all'",
+          "additionalProperties": {
+            "type": "object",
+            "properties": {
+              "locations": {
+                "type": "array",
+                "items": { "type": "string" }
+              },
+              "method": { "type": ["string", "null"] },
+              "evolveFrom": { "type": ["string", "null"] },
+              "tradeFrom": {
+                "type": "array",
+                "items": { "type": "string" }
+              }
+            },
+            "additionalProperties": true
+          }
+        }
+      },
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": true
+}

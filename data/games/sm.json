@@ -1,0 +1,1918 @@
+{
+  "gameId": "sm",
+  "title": "Sun / Moon",
+  "group": "gen7",
+  "generation": 7,
+  "versions": [
+    "sun",
+    "moon"
+  ],
+  "sections": [
+    {
+      "id": "base",
+      "title": "Regional Pokédex",
+      "type": "base",
+      "optional": false,
+      "entries": [
+        {
+          "speciesId": 722,
+          "formId": 722,
+          "dexNumber": 1
+        },
+        {
+          "speciesId": 723,
+          "formId": 723,
+          "dexNumber": 2
+        },
+        {
+          "speciesId": 724,
+          "formId": 724,
+          "dexNumber": 3
+        },
+        {
+          "speciesId": 725,
+          "formId": 725,
+          "dexNumber": 4
+        },
+        {
+          "speciesId": 726,
+          "formId": 726,
+          "dexNumber": 5
+        },
+        {
+          "speciesId": 727,
+          "formId": 727,
+          "dexNumber": 6
+        },
+        {
+          "speciesId": 728,
+          "formId": 728,
+          "dexNumber": 7
+        },
+        {
+          "speciesId": 729,
+          "formId": 729,
+          "dexNumber": 8
+        },
+        {
+          "speciesId": 730,
+          "formId": 730,
+          "dexNumber": 9
+        },
+        {
+          "speciesId": 731,
+          "formId": 731,
+          "dexNumber": 10
+        },
+        {
+          "speciesId": 732,
+          "formId": 732,
+          "dexNumber": 11
+        },
+        {
+          "speciesId": 733,
+          "formId": 733,
+          "dexNumber": 12
+        },
+        {
+          "speciesId": 734,
+          "formId": 734,
+          "dexNumber": 13
+        },
+        {
+          "speciesId": 735,
+          "formId": 735,
+          "dexNumber": 14
+        },
+        {
+          "speciesId": 19,
+          "formId": 19,
+          "dexNumber": 15
+        },
+        {
+          "speciesId": 20,
+          "formId": 20,
+          "dexNumber": 16
+        },
+        {
+          "speciesId": 10,
+          "formId": 10,
+          "dexNumber": 17
+        },
+        {
+          "speciesId": 11,
+          "formId": 11,
+          "dexNumber": 18
+        },
+        {
+          "speciesId": 12,
+          "formId": 12,
+          "dexNumber": 19
+        },
+        {
+          "speciesId": 165,
+          "formId": 165,
+          "dexNumber": 20
+        },
+        {
+          "speciesId": 166,
+          "formId": 166,
+          "dexNumber": 21
+        },
+        {
+          "speciesId": 167,
+          "formId": 167,
+          "dexNumber": 22
+        },
+        {
+          "speciesId": 168,
+          "formId": 168,
+          "dexNumber": 23
+        },
+        {
+          "speciesId": 172,
+          "formId": 172,
+          "dexNumber": 24
+        },
+        {
+          "speciesId": 25,
+          "formId": 25,
+          "dexNumber": 25
+        },
+        {
+          "speciesId": 26,
+          "formId": 26,
+          "dexNumber": 26
+        },
+        {
+          "speciesId": 736,
+          "formId": 736,
+          "dexNumber": 27
+        },
+        {
+          "speciesId": 737,
+          "formId": 737,
+          "dexNumber": 28
+        },
+        {
+          "speciesId": 738,
+          "formId": 738,
+          "dexNumber": 29
+        },
+        {
+          "speciesId": 438,
+          "formId": 438,
+          "dexNumber": 30
+        },
+        {
+          "speciesId": 185,
+          "formId": 185,
+          "dexNumber": 31
+        },
+        {
+          "speciesId": 440,
+          "formId": 440,
+          "dexNumber": 32
+        },
+        {
+          "speciesId": 113,
+          "formId": 113,
+          "dexNumber": 33
+        },
+        {
+          "speciesId": 242,
+          "formId": 242,
+          "dexNumber": 34
+        },
+        {
+          "speciesId": 446,
+          "formId": 446,
+          "dexNumber": 35
+        },
+        {
+          "speciesId": 143,
+          "formId": 143,
+          "dexNumber": 36
+        },
+        {
+          "speciesId": 79,
+          "formId": 79,
+          "dexNumber": 37
+        },
+        {
+          "speciesId": 80,
+          "formId": 80,
+          "dexNumber": 38
+        },
+        {
+          "speciesId": 199,
+          "formId": 199,
+          "dexNumber": 39
+        },
+        {
+          "speciesId": 278,
+          "formId": 278,
+          "dexNumber": 40
+        },
+        {
+          "speciesId": 279,
+          "formId": 279,
+          "dexNumber": 41
+        },
+        {
+          "speciesId": 63,
+          "formId": 63,
+          "dexNumber": 42
+        },
+        {
+          "speciesId": 64,
+          "formId": 64,
+          "dexNumber": 43
+        },
+        {
+          "speciesId": 65,
+          "formId": 65,
+          "dexNumber": 44
+        },
+        {
+          "speciesId": 52,
+          "formId": 52,
+          "dexNumber": 45
+        },
+        {
+          "speciesId": 53,
+          "formId": 53,
+          "dexNumber": 46
+        },
+        {
+          "speciesId": 81,
+          "formId": 81,
+          "dexNumber": 47
+        },
+        {
+          "speciesId": 82,
+          "formId": 82,
+          "dexNumber": 48
+        },
+        {
+          "speciesId": 462,
+          "formId": 462,
+          "dexNumber": 49
+        },
+        {
+          "speciesId": 88,
+          "formId": 88,
+          "dexNumber": 50
+        },
+        {
+          "speciesId": 89,
+          "formId": 89,
+          "dexNumber": 51
+        },
+        {
+          "speciesId": 58,
+          "formId": 58,
+          "dexNumber": 52
+        },
+        {
+          "speciesId": 59,
+          "formId": 59,
+          "dexNumber": 53
+        },
+        {
+          "speciesId": 96,
+          "formId": 96,
+          "dexNumber": 54
+        },
+        {
+          "speciesId": 97,
+          "formId": 97,
+          "dexNumber": 55
+        },
+        {
+          "speciesId": 296,
+          "formId": 296,
+          "dexNumber": 56
+        },
+        {
+          "speciesId": 297,
+          "formId": 297,
+          "dexNumber": 57
+        },
+        {
+          "speciesId": 235,
+          "formId": 235,
+          "dexNumber": 58
+        },
+        {
+          "speciesId": 739,
+          "formId": 739,
+          "dexNumber": 59
+        },
+        {
+          "speciesId": 740,
+          "formId": 740,
+          "dexNumber": 60
+        },
+        {
+          "speciesId": 92,
+          "formId": 92,
+          "dexNumber": 61
+        },
+        {
+          "speciesId": 93,
+          "formId": 93,
+          "dexNumber": 62
+        },
+        {
+          "speciesId": 94,
+          "formId": 94,
+          "dexNumber": 63
+        },
+        {
+          "speciesId": 425,
+          "formId": 425,
+          "dexNumber": 64
+        },
+        {
+          "speciesId": 426,
+          "formId": 426,
+          "dexNumber": 65
+        },
+        {
+          "speciesId": 200,
+          "formId": 200,
+          "dexNumber": 66
+        },
+        {
+          "speciesId": 429,
+          "formId": 429,
+          "dexNumber": 67
+        },
+        {
+          "speciesId": 41,
+          "formId": 41,
+          "dexNumber": 68
+        },
+        {
+          "speciesId": 42,
+          "formId": 42,
+          "dexNumber": 69
+        },
+        {
+          "speciesId": 169,
+          "formId": 169,
+          "dexNumber": 70
+        },
+        {
+          "speciesId": 50,
+          "formId": 50,
+          "dexNumber": 71
+        },
+        {
+          "speciesId": 51,
+          "formId": 51,
+          "dexNumber": 72
+        },
+        {
+          "speciesId": 21,
+          "formId": 21,
+          "dexNumber": 73
+        },
+        {
+          "speciesId": 22,
+          "formId": 22,
+          "dexNumber": 74
+        },
+        {
+          "speciesId": 627,
+          "formId": 627,
+          "dexNumber": 75
+        },
+        {
+          "speciesId": 628,
+          "formId": 628,
+          "dexNumber": 76
+        },
+        {
+          "speciesId": 629,
+          "formId": 629,
+          "dexNumber": 77
+        },
+        {
+          "speciesId": 630,
+          "formId": 630,
+          "dexNumber": 78
+        },
+        {
+          "speciesId": 56,
+          "formId": 56,
+          "dexNumber": 79
+        },
+        {
+          "speciesId": 57,
+          "formId": 57,
+          "dexNumber": 80
+        },
+        {
+          "speciesId": 225,
+          "formId": 225,
+          "dexNumber": 81
+        },
+        {
+          "speciesId": 741,
+          "formId": 741,
+          "dexNumber": 82
+        },
+        {
+          "speciesId": 742,
+          "formId": 742,
+          "dexNumber": 83
+        },
+        {
+          "speciesId": 743,
+          "formId": 743,
+          "dexNumber": 84
+        },
+        {
+          "speciesId": 548,
+          "formId": 548,
+          "dexNumber": 85
+        },
+        {
+          "speciesId": 549,
+          "formId": 549,
+          "dexNumber": 86
+        },
+        {
+          "speciesId": 546,
+          "formId": 546,
+          "dexNumber": 87
+        },
+        {
+          "speciesId": 547,
+          "formId": 547,
+          "dexNumber": 88
+        },
+        {
+          "speciesId": 54,
+          "formId": 54,
+          "dexNumber": 89
+        },
+        {
+          "speciesId": 55,
+          "formId": 55,
+          "dexNumber": 90
+        },
+        {
+          "speciesId": 129,
+          "formId": 129,
+          "dexNumber": 91
+        },
+        {
+          "speciesId": 130,
+          "formId": 130,
+          "dexNumber": 92
+        },
+        {
+          "speciesId": 339,
+          "formId": 339,
+          "dexNumber": 93
+        },
+        {
+          "speciesId": 340,
+          "formId": 340,
+          "dexNumber": 94
+        },
+        {
+          "speciesId": 66,
+          "formId": 66,
+          "dexNumber": 95
+        },
+        {
+          "speciesId": 67,
+          "formId": 67,
+          "dexNumber": 96
+        },
+        {
+          "speciesId": 68,
+          "formId": 68,
+          "dexNumber": 97
+        },
+        {
+          "speciesId": 524,
+          "formId": 524,
+          "dexNumber": 98
+        },
+        {
+          "speciesId": 525,
+          "formId": 525,
+          "dexNumber": 99
+        },
+        {
+          "speciesId": 526,
+          "formId": 526,
+          "dexNumber": 100
+        },
+        {
+          "speciesId": 703,
+          "formId": 703,
+          "dexNumber": 101
+        },
+        {
+          "speciesId": 302,
+          "formId": 302,
+          "dexNumber": 102
+        },
+        {
+          "speciesId": 744,
+          "formId": 744,
+          "dexNumber": 103
+        },
+        {
+          "speciesId": 745,
+          "formId": 745,
+          "dexNumber": 104
+        },
+        {
+          "speciesId": 327,
+          "formId": 327,
+          "dexNumber": 105
+        },
+        {
+          "speciesId": 72,
+          "formId": 72,
+          "dexNumber": 106
+        },
+        {
+          "speciesId": 73,
+          "formId": 73,
+          "dexNumber": 107
+        },
+        {
+          "speciesId": 456,
+          "formId": 456,
+          "dexNumber": 108
+        },
+        {
+          "speciesId": 457,
+          "formId": 457,
+          "dexNumber": 109
+        },
+        {
+          "speciesId": 746,
+          "formId": 746,
+          "dexNumber": 110
+        },
+        {
+          "speciesId": 370,
+          "formId": 370,
+          "dexNumber": 111
+        },
+        {
+          "speciesId": 222,
+          "formId": 222,
+          "dexNumber": 112
+        },
+        {
+          "speciesId": 747,
+          "formId": 747,
+          "dexNumber": 113
+        },
+        {
+          "speciesId": 748,
+          "formId": 748,
+          "dexNumber": 114
+        },
+        {
+          "speciesId": 90,
+          "formId": 90,
+          "dexNumber": 115
+        },
+        {
+          "speciesId": 91,
+          "formId": 91,
+          "dexNumber": 116
+        },
+        {
+          "speciesId": 371,
+          "formId": 371,
+          "dexNumber": 117
+        },
+        {
+          "speciesId": 372,
+          "formId": 372,
+          "dexNumber": 118
+        },
+        {
+          "speciesId": 373,
+          "formId": 373,
+          "dexNumber": 119
+        },
+        {
+          "speciesId": 506,
+          "formId": 506,
+          "dexNumber": 120
+        },
+        {
+          "speciesId": 507,
+          "formId": 507,
+          "dexNumber": 121
+        },
+        {
+          "speciesId": 508,
+          "formId": 508,
+          "dexNumber": 122
+        },
+        {
+          "speciesId": 133,
+          "formId": 133,
+          "dexNumber": 123
+        },
+        {
+          "speciesId": 134,
+          "formId": 134,
+          "dexNumber": 124
+        },
+        {
+          "speciesId": 135,
+          "formId": 135,
+          "dexNumber": 125
+        },
+        {
+          "speciesId": 136,
+          "formId": 136,
+          "dexNumber": 126
+        },
+        {
+          "speciesId": 196,
+          "formId": 196,
+          "dexNumber": 127
+        },
+        {
+          "speciesId": 197,
+          "formId": 197,
+          "dexNumber": 128
+        },
+        {
+          "speciesId": 470,
+          "formId": 470,
+          "dexNumber": 129
+        },
+        {
+          "speciesId": 471,
+          "formId": 471,
+          "dexNumber": 130
+        },
+        {
+          "speciesId": 700,
+          "formId": 700,
+          "dexNumber": 131
+        },
+        {
+          "speciesId": 749,
+          "formId": 749,
+          "dexNumber": 132
+        },
+        {
+          "speciesId": 750,
+          "formId": 750,
+          "dexNumber": 133
+        },
+        {
+          "speciesId": 174,
+          "formId": 174,
+          "dexNumber": 134
+        },
+        {
+          "speciesId": 39,
+          "formId": 39,
+          "dexNumber": 135
+        },
+        {
+          "speciesId": 40,
+          "formId": 40,
+          "dexNumber": 136
+        },
+        {
+          "speciesId": 128,
+          "formId": 128,
+          "dexNumber": 137
+        },
+        {
+          "speciesId": 241,
+          "formId": 241,
+          "dexNumber": 138
+        },
+        {
+          "speciesId": 283,
+          "formId": 283,
+          "dexNumber": 139
+        },
+        {
+          "speciesId": 284,
+          "formId": 284,
+          "dexNumber": 140
+        },
+        {
+          "speciesId": 751,
+          "formId": 751,
+          "dexNumber": 141
+        },
+        {
+          "speciesId": 752,
+          "formId": 752,
+          "dexNumber": 142
+        },
+        {
+          "speciesId": 753,
+          "formId": 753,
+          "dexNumber": 143
+        },
+        {
+          "speciesId": 754,
+          "formId": 754,
+          "dexNumber": 144
+        },
+        {
+          "speciesId": 755,
+          "formId": 755,
+          "dexNumber": 145
+        },
+        {
+          "speciesId": 756,
+          "formId": 756,
+          "dexNumber": 146
+        },
+        {
+          "speciesId": 46,
+          "formId": 46,
+          "dexNumber": 147
+        },
+        {
+          "speciesId": 47,
+          "formId": 47,
+          "dexNumber": 148
+        },
+        {
+          "speciesId": 60,
+          "formId": 60,
+          "dexNumber": 149
+        },
+        {
+          "speciesId": 61,
+          "formId": 61,
+          "dexNumber": 150
+        },
+        {
+          "speciesId": 62,
+          "formId": 62,
+          "dexNumber": 151
+        },
+        {
+          "speciesId": 186,
+          "formId": 186,
+          "dexNumber": 152
+        },
+        {
+          "speciesId": 118,
+          "formId": 118,
+          "dexNumber": 153
+        },
+        {
+          "speciesId": 119,
+          "formId": 119,
+          "dexNumber": 154
+        },
+        {
+          "speciesId": 349,
+          "formId": 349,
+          "dexNumber": 155
+        },
+        {
+          "speciesId": 350,
+          "formId": 350,
+          "dexNumber": 156
+        },
+        {
+          "speciesId": 594,
+          "formId": 594,
+          "dexNumber": 157
+        },
+        {
+          "speciesId": 661,
+          "formId": 661,
+          "dexNumber": 158
+        },
+        {
+          "speciesId": 662,
+          "formId": 662,
+          "dexNumber": 159
+        },
+        {
+          "speciesId": 663,
+          "formId": 663,
+          "dexNumber": 160
+        },
+        {
+          "speciesId": 757,
+          "formId": 757,
+          "dexNumber": 161
+        },
+        {
+          "speciesId": 758,
+          "formId": 758,
+          "dexNumber": 162
+        },
+        {
+          "speciesId": 104,
+          "formId": 104,
+          "dexNumber": 163
+        },
+        {
+          "speciesId": 105,
+          "formId": 105,
+          "dexNumber": 164
+        },
+        {
+          "speciesId": 115,
+          "formId": 115,
+          "dexNumber": 165
+        },
+        {
+          "speciesId": 240,
+          "formId": 240,
+          "dexNumber": 166
+        },
+        {
+          "speciesId": 126,
+          "formId": 126,
+          "dexNumber": 167
+        },
+        {
+          "speciesId": 467,
+          "formId": 467,
+          "dexNumber": 168
+        },
+        {
+          "speciesId": 759,
+          "formId": 759,
+          "dexNumber": 169
+        },
+        {
+          "speciesId": 760,
+          "formId": 760,
+          "dexNumber": 170
+        },
+        {
+          "speciesId": 761,
+          "formId": 761,
+          "dexNumber": 171
+        },
+        {
+          "speciesId": 762,
+          "formId": 762,
+          "dexNumber": 172
+        },
+        {
+          "speciesId": 763,
+          "formId": 763,
+          "dexNumber": 173
+        },
+        {
+          "speciesId": 764,
+          "formId": 764,
+          "dexNumber": 174
+        },
+        {
+          "speciesId": 127,
+          "formId": 127,
+          "dexNumber": 175
+        },
+        {
+          "speciesId": 765,
+          "formId": 765,
+          "dexNumber": 176
+        },
+        {
+          "speciesId": 766,
+          "formId": 766,
+          "dexNumber": 177
+        },
+        {
+          "speciesId": 704,
+          "formId": 704,
+          "dexNumber": 178
+        },
+        {
+          "speciesId": 705,
+          "formId": 705,
+          "dexNumber": 179
+        },
+        {
+          "speciesId": 706,
+          "formId": 706,
+          "dexNumber": 180
+        },
+        {
+          "speciesId": 351,
+          "formId": 351,
+          "dexNumber": 181
+        },
+        {
+          "speciesId": 767,
+          "formId": 767,
+          "dexNumber": 182
+        },
+        {
+          "speciesId": 768,
+          "formId": 768,
+          "dexNumber": 183
+        },
+        {
+          "speciesId": 120,
+          "formId": 120,
+          "dexNumber": 184
+        },
+        {
+          "speciesId": 121,
+          "formId": 121,
+          "dexNumber": 185
+        },
+        {
+          "speciesId": 769,
+          "formId": 769,
+          "dexNumber": 186
+        },
+        {
+          "speciesId": 770,
+          "formId": 770,
+          "dexNumber": 187
+        },
+        {
+          "speciesId": 408,
+          "formId": 408,
+          "dexNumber": 188
+        },
+        {
+          "speciesId": 409,
+          "formId": 409,
+          "dexNumber": 189
+        },
+        {
+          "speciesId": 410,
+          "formId": 410,
+          "dexNumber": 190
+        },
+        {
+          "speciesId": 411,
+          "formId": 411,
+          "dexNumber": 191
+        },
+        {
+          "speciesId": 566,
+          "formId": 566,
+          "dexNumber": 192
+        },
+        {
+          "speciesId": 567,
+          "formId": 567,
+          "dexNumber": 193
+        },
+        {
+          "speciesId": 564,
+          "formId": 564,
+          "dexNumber": 194
+        },
+        {
+          "speciesId": 565,
+          "formId": 565,
+          "dexNumber": 195
+        },
+        {
+          "speciesId": 708,
+          "formId": 708,
+          "dexNumber": 196
+        },
+        {
+          "speciesId": 709,
+          "formId": 709,
+          "dexNumber": 197
+        },
+        {
+          "speciesId": 299,
+          "formId": 299,
+          "dexNumber": 198
+        },
+        {
+          "speciesId": 476,
+          "formId": 476,
+          "dexNumber": 199
+        },
+        {
+          "speciesId": 771,
+          "formId": 771,
+          "dexNumber": 200
+        },
+        {
+          "speciesId": 170,
+          "formId": 170,
+          "dexNumber": 201
+        },
+        {
+          "speciesId": 171,
+          "formId": 171,
+          "dexNumber": 202
+        },
+        {
+          "speciesId": 772,
+          "formId": 772,
+          "dexNumber": 203
+        },
+        {
+          "speciesId": 773,
+          "formId": 773,
+          "dexNumber": 204
+        },
+        {
+          "speciesId": 718,
+          "formId": 718,
+          "dexNumber": 205
+        },
+        {
+          "speciesId": 568,
+          "formId": 568,
+          "dexNumber": 206
+        },
+        {
+          "speciesId": 569,
+          "formId": 569,
+          "dexNumber": 207
+        },
+        {
+          "speciesId": 227,
+          "formId": 227,
+          "dexNumber": 208
+        },
+        {
+          "speciesId": 132,
+          "formId": 132,
+          "dexNumber": 209
+        },
+        {
+          "speciesId": 173,
+          "formId": 173,
+          "dexNumber": 210
+        },
+        {
+          "speciesId": 35,
+          "formId": 35,
+          "dexNumber": 211
+        },
+        {
+          "speciesId": 36,
+          "formId": 36,
+          "dexNumber": 212
+        },
+        {
+          "speciesId": 774,
+          "formId": 774,
+          "dexNumber": 213
+        },
+        {
+          "speciesId": 374,
+          "formId": 374,
+          "dexNumber": 214
+        },
+        {
+          "speciesId": 375,
+          "formId": 375,
+          "dexNumber": 215
+        },
+        {
+          "speciesId": 376,
+          "formId": 376,
+          "dexNumber": 216
+        },
+        {
+          "speciesId": 137,
+          "formId": 137,
+          "dexNumber": 217
+        },
+        {
+          "speciesId": 233,
+          "formId": 233,
+          "dexNumber": 218
+        },
+        {
+          "speciesId": 474,
+          "formId": 474,
+          "dexNumber": 219
+        },
+        {
+          "speciesId": 674,
+          "formId": 674,
+          "dexNumber": 220
+        },
+        {
+          "speciesId": 675,
+          "formId": 675,
+          "dexNumber": 221
+        },
+        {
+          "speciesId": 775,
+          "formId": 775,
+          "dexNumber": 222
+        },
+        {
+          "speciesId": 324,
+          "formId": 324,
+          "dexNumber": 223
+        },
+        {
+          "speciesId": 776,
+          "formId": 776,
+          "dexNumber": 224
+        },
+        {
+          "speciesId": 777,
+          "formId": 777,
+          "dexNumber": 225
+        },
+        {
+          "speciesId": 239,
+          "formId": 239,
+          "dexNumber": 226
+        },
+        {
+          "speciesId": 125,
+          "formId": 125,
+          "dexNumber": 227
+        },
+        {
+          "speciesId": 466,
+          "formId": 466,
+          "dexNumber": 228
+        },
+        {
+          "speciesId": 74,
+          "formId": 74,
+          "dexNumber": 229
+        },
+        {
+          "speciesId": 75,
+          "formId": 75,
+          "dexNumber": 230
+        },
+        {
+          "speciesId": 76,
+          "formId": 76,
+          "dexNumber": 231
+        },
+        {
+          "speciesId": 551,
+          "formId": 551,
+          "dexNumber": 232
+        },
+        {
+          "speciesId": 552,
+          "formId": 552,
+          "dexNumber": 233
+        },
+        {
+          "speciesId": 553,
+          "formId": 553,
+          "dexNumber": 234
+        },
+        {
+          "speciesId": 328,
+          "formId": 328,
+          "dexNumber": 235
+        },
+        {
+          "speciesId": 329,
+          "formId": 329,
+          "dexNumber": 236
+        },
+        {
+          "speciesId": 330,
+          "formId": 330,
+          "dexNumber": 237
+        },
+        {
+          "speciesId": 443,
+          "formId": 443,
+          "dexNumber": 238
+        },
+        {
+          "speciesId": 444,
+          "formId": 444,
+          "dexNumber": 239
+        },
+        {
+          "speciesId": 445,
+          "formId": 445,
+          "dexNumber": 240
+        },
+        {
+          "speciesId": 707,
+          "formId": 707,
+          "dexNumber": 241
+        },
+        {
+          "speciesId": 778,
+          "formId": 778,
+          "dexNumber": 242
+        },
+        {
+          "speciesId": 779,
+          "formId": 779,
+          "dexNumber": 243
+        },
+        {
+          "speciesId": 780,
+          "formId": 780,
+          "dexNumber": 244
+        },
+        {
+          "speciesId": 359,
+          "formId": 359,
+          "dexNumber": 245
+        },
+        {
+          "speciesId": 361,
+          "formId": 361,
+          "dexNumber": 246
+        },
+        {
+          "speciesId": 362,
+          "formId": 362,
+          "dexNumber": 247
+        },
+        {
+          "speciesId": 478,
+          "formId": 478,
+          "dexNumber": 248
+        },
+        {
+          "speciesId": 215,
+          "formId": 215,
+          "dexNumber": 249
+        },
+        {
+          "speciesId": 461,
+          "formId": 461,
+          "dexNumber": 250
+        },
+        {
+          "speciesId": 27,
+          "formId": 27,
+          "dexNumber": 251
+        },
+        {
+          "speciesId": 28,
+          "formId": 28,
+          "dexNumber": 252
+        },
+        {
+          "speciesId": 37,
+          "formId": 37,
+          "dexNumber": 253
+        },
+        {
+          "speciesId": 38,
+          "formId": 38,
+          "dexNumber": 254
+        },
+        {
+          "speciesId": 582,
+          "formId": 582,
+          "dexNumber": 255
+        },
+        {
+          "speciesId": 583,
+          "formId": 583,
+          "dexNumber": 256
+        },
+        {
+          "speciesId": 584,
+          "formId": 584,
+          "dexNumber": 257
+        },
+        {
+          "speciesId": 209,
+          "formId": 209,
+          "dexNumber": 258
+        },
+        {
+          "speciesId": 210,
+          "formId": 210,
+          "dexNumber": 259
+        },
+        {
+          "speciesId": 422,
+          "formId": 422,
+          "dexNumber": 260
+        },
+        {
+          "speciesId": 423,
+          "formId": 423,
+          "dexNumber": 261
+        },
+        {
+          "speciesId": 369,
+          "formId": 369,
+          "dexNumber": 262
+        },
+        {
+          "speciesId": 781,
+          "formId": 781,
+          "dexNumber": 263
+        },
+        {
+          "speciesId": 318,
+          "formId": 318,
+          "dexNumber": 264
+        },
+        {
+          "speciesId": 319,
+          "formId": 319,
+          "dexNumber": 265
+        },
+        {
+          "speciesId": 320,
+          "formId": 320,
+          "dexNumber": 266
+        },
+        {
+          "speciesId": 321,
+          "formId": 321,
+          "dexNumber": 267
+        },
+        {
+          "speciesId": 131,
+          "formId": 131,
+          "dexNumber": 268
+        },
+        {
+          "speciesId": 102,
+          "formId": 102,
+          "dexNumber": 269
+        },
+        {
+          "speciesId": 103,
+          "formId": 103,
+          "dexNumber": 270
+        },
+        {
+          "speciesId": 782,
+          "formId": 782,
+          "dexNumber": 271
+        },
+        {
+          "speciesId": 783,
+          "formId": 783,
+          "dexNumber": 272
+        },
+        {
+          "speciesId": 784,
+          "formId": 784,
+          "dexNumber": 273
+        },
+        {
+          "speciesId": 587,
+          "formId": 587,
+          "dexNumber": 274
+        },
+        {
+          "speciesId": 123,
+          "formId": 123,
+          "dexNumber": 275
+        },
+        {
+          "speciesId": 212,
+          "formId": 212,
+          "dexNumber": 276
+        },
+        {
+          "speciesId": 198,
+          "formId": 198,
+          "dexNumber": 277
+        },
+        {
+          "speciesId": 430,
+          "formId": 430,
+          "dexNumber": 278
+        },
+        {
+          "speciesId": 447,
+          "formId": 447,
+          "dexNumber": 279
+        },
+        {
+          "speciesId": 448,
+          "formId": 448,
+          "dexNumber": 280
+        },
+        {
+          "speciesId": 147,
+          "formId": 147,
+          "dexNumber": 281
+        },
+        {
+          "speciesId": 148,
+          "formId": 148,
+          "dexNumber": 282
+        },
+        {
+          "speciesId": 149,
+          "formId": 149,
+          "dexNumber": 283
+        },
+        {
+          "speciesId": 142,
+          "formId": 142,
+          "dexNumber": 284
+        },
+        {
+          "speciesId": 785,
+          "formId": 785,
+          "dexNumber": 285
+        },
+        {
+          "speciesId": 786,
+          "formId": 786,
+          "dexNumber": 286
+        },
+        {
+          "speciesId": 787,
+          "formId": 787,
+          "dexNumber": 287
+        },
+        {
+          "speciesId": 788,
+          "formId": 788,
+          "dexNumber": 288
+        },
+        {
+          "speciesId": 789,
+          "formId": 789,
+          "dexNumber": 289
+        },
+        {
+          "speciesId": 790,
+          "formId": 790,
+          "dexNumber": 290
+        },
+        {
+          "speciesId": 791,
+          "formId": 791,
+          "dexNumber": 291
+        },
+        {
+          "speciesId": 792,
+          "formId": 792,
+          "dexNumber": 292
+        },
+        {
+          "speciesId": 793,
+          "formId": 793,
+          "dexNumber": 293
+        },
+        {
+          "speciesId": 794,
+          "formId": 794,
+          "dexNumber": 294
+        },
+        {
+          "speciesId": 795,
+          "formId": 795,
+          "dexNumber": 295
+        },
+        {
+          "speciesId": 796,
+          "formId": 796,
+          "dexNumber": 296
+        },
+        {
+          "speciesId": 797,
+          "formId": 797,
+          "dexNumber": 297
+        },
+        {
+          "speciesId": 798,
+          "formId": 798,
+          "dexNumber": 298
+        },
+        {
+          "speciesId": 799,
+          "formId": 799,
+          "dexNumber": 299
+        },
+        {
+          "speciesId": 800,
+          "formId": 800,
+          "dexNumber": 300
+        },
+        {
+          "speciesId": 801,
+          "formId": 801,
+          "dexNumber": 301
+        },
+        {
+          "speciesId": 802,
+          "formId": 802,
+          "dexNumber": 302
+        }
+      ]
+    }
+  ],
+  "encounters": {
+    "10": {
+      "sun": {
+        "locations": [
+          "alola route 1 east",
+          "alola route 1 south",
+          "alola route 1 west",
+          "alola route 5 area",
+          "lush jungle south",
+          "melemele meadow area"
+        ]
+      },
+      "moon": {
+        "locations": [
+          "alola route 1 east",
+          "alola route 1 south",
+          "alola route 1 west",
+          "alola route 5 area",
+          "lush jungle south",
+          "melemele meadow area"
+        ]
+      }
+    },
+    "11": {
+      "sun": {
+        "locations": [
+          "alola route 1 south",
+          "alola route 1 west",
+          "alola route 5 area",
+          "lush jungle south",
+          "melemele meadow area"
+        ]
+      },
+      "moon": {
+        "locations": [
+          "alola route 1 south",
+          "alola route 1 west",
+          "alola route 5 area",
+          "lush jungle south",
+          "melemele meadow area"
+        ]
+      }
+    },
+    "12": {
+      "sun": {
+        "locations": [
+          "alola route 5 area",
+          "lush jungle south",
+          "melemele meadow area"
+        ]
+      },
+      "moon": {
+        "locations": [
+          "alola route 5 area",
+          "lush jungle south",
+          "melemele meadow area"
+        ]
+      }
+    },
+    "25": {
+      "sun": {
+        "locations": [
+          "alola route 1 west",
+          "hauoli city shopping district"
+        ]
+      },
+      "moon": {
+        "locations": [
+          "alola route 1 west",
+          "hauoli city shopping district"
+        ]
+      }
+    },
+    "165": {
+      "sun": {
+        "locations": [
+          "alola route 1 east",
+          "alola route 1 south",
+          "alola route 1 west"
+        ]
+      },
+      "moon": {
+        "locations": [
+          "alola route 1 east",
+          "alola route 1 south",
+          "alola route 1 west"
+        ]
+      }
+    },
+    "166": {
+      "sun": {
+        "locations": [
+          "alola route 10 area",
+          "alola route 11 area",
+          "alola route 17 west",
+          "malie garden area",
+          "ulaula meadow area"
+        ]
+      },
+      "moon": {
+        "locations": [
+          "alola route 10 area",
+          "alola route 11 area",
+          "alola route 17 west",
+          "malie garden area",
+          "ulaula meadow area"
+        ]
+      }
+    },
+    "167": {
+      "sun": {
+        "locations": [
+          "alola route 1 east",
+          "alola route 1 south",
+          "alola route 1 west"
+        ]
+      },
+      "moon": {
+        "locations": [
+          "alola route 1 east",
+          "alola route 1 south",
+          "alola route 1 west"
+        ]
+      }
+    },
+    "168": {
+      "sun": {
+        "locations": [
+          "alola route 10 area",
+          "alola route 11 area",
+          "alola route 17 west",
+          "malie garden area",
+          "ulaula meadow area"
+        ]
+      },
+      "moon": {
+        "locations": [
+          "alola route 10 area",
+          "alola route 11 area",
+          "alola route 17 west",
+          "malie garden area",
+          "ulaula meadow area"
+        ]
+      }
+    },
+    "172": {
+      "sun": {
+        "locations": [
+          "alola route 1 west",
+          "hauoli city shopping district"
+        ]
+      },
+      "moon": {
+        "locations": [
+          "alola route 1 west",
+          "hauoli city shopping district"
+        ]
+      }
+    },
+    "438": {
+      "sun": {
+        "locations": [
+          "alola route 1 south",
+          "lush jungle south"
+        ]
+      },
+      "moon": {
+        "locations": [
+          "alola route 1 south",
+          "lush jungle south"
+        ]
+      }
+    },
+    "722": {
+      "sun": {
+        "locations": [
+          "iki town area"
+        ]
+      },
+      "moon": {
+        "locations": [
+          "iki town area"
+        ]
+      }
+    },
+    "725": {
+      "sun": {
+        "locations": [
+          "iki town area"
+        ]
+      },
+      "moon": {
+        "locations": [
+          "iki town area"
+        ]
+      }
+    },
+    "728": {
+      "sun": {
+        "locations": [
+          "iki town area"
+        ]
+      },
+      "moon": {
+        "locations": [
+          "iki town area"
+        ]
+      }
+    },
+    "731": {
+      "sun": {
+        "locations": [
+          "alola route 1 east",
+          "alola route 1 south",
+          "alola route 1 west",
+          "alola route 4 area",
+          "alola route 5 area",
+          "alola route 6 north",
+          "alola route 6 south",
+          "alola route 8 main",
+          "poke pelago poni island reached",
+          "poke pelago ulaula island reached",
+          "poke pelago elite four defeated"
+        ]
+      },
+      "moon": {
+        "locations": [
+          "alola route 1 east",
+          "alola route 1 south",
+          "alola route 1 west",
+          "alola route 4 area",
+          "alola route 5 area",
+          "alola route 6 north",
+          "alola route 6 south",
+          "alola route 8 main",
+          "poke pelago poni island reached",
+          "poke pelago ulaula island reached",
+          "poke pelago elite four defeated"
+        ]
+      }
+    },
+    "732": {
+      "sun": {
+        "locations": [
+          "alola route 8 main",
+          "alola route 11 area",
+          "lush jungle north",
+          "lush jungle south",
+          "lush jungle west",
+          "poni grove area",
+          "poni plains center",
+          "poni plains east",
+          "poni plains north",
+          "poni plains west"
+        ]
+      },
+      "moon": {
+        "locations": [
+          "alola route 8 main",
+          "alola route 11 area",
+          "lush jungle north",
+          "lush jungle south",
+          "lush jungle west",
+          "poni grove area",
+          "poni plains center",
+          "poni plains east",
+          "poni plains north",
+          "poni plains west"
+        ]
+      }
+    },
+    "734": {
+      "sun": {
+        "locations": [
+          "alola route 1 east",
+          "alola route 1 hauoli outskirts",
+          "alola route 1 south",
+          "alola route 1 west",
+          "alola route 2 north",
+          "alola route 2 south",
+          "alola route 3 north",
+          "alola route 3 south",
+          "alola route 4 area",
+          "alola route 6 north",
+          "alola route 6 south",
+          "alola route 8 main",
+          "hauoli city shopping district",
+          "kalae bay area"
+        ]
+      },
+      "moon": {
+        "locations": [
+          "alola route 1 east",
+          "alola route 1 hauoli outskirts",
+          "alola route 1 south",
+          "alola route 1 west",
+          "alola route 2 north",
+          "alola route 2 south",
+          "alola route 3 north",
+          "alola route 3 south",
+          "alola route 4 area",
+          "alola route 6 north",
+          "alola route 6 south",
+          "alola route 8 main",
+          "hauoli city shopping district",
+          "kalae bay area"
+        ]
+      }
+    },
+    "735": {
+      "sun": {
+        "locations": [
+          "alola route 10 area",
+          "alola route 11 area",
+          "alola route 14 area",
+          "alola route 15 main",
+          "alola route 16 main",
+          "alola route 17 northeast",
+          "alola route 17 west",
+          "akala outskirts area",
+          "ancient poni path area",
+          "malie city outer cape",
+          "poni gauntlet area",
+          "poni grove area",
+          "poni plains center",
+          "poni plains east",
+          "poni plains north",
+          "poni plains west",
+          "poni wilds area",
+          "tapu village area"
+        ]
+      },
+      "moon": {
+        "locations": [
+          "alola route 10 area",
+          "alola route 11 area",
+          "alola route 14 area",
+          "alola route 15 main",
+          "alola route 16 main",
+          "alola route 17 northeast",
+          "alola route 17 west",
+          "akala outskirts area",
+          "ancient poni path area",
+          "malie city outer cape",
+          "poni gauntlet area",
+          "poni grove area",
+          "poni plains center",
+          "poni plains east",
+          "poni plains north",
+          "poni plains west",
+          "poni wilds area",
+          "tapu village area"
+        ]
+      }
+    },
+    "736": {
+      "sun": {
+        "locations": [
+          "alola route 1 west",
+          "alola route 4 area",
+          "alola route 5 area",
+          "alola route 6 north",
+          "alola route 6 south"
+        ]
+      },
+      "moon": {
+        "locations": [
+          "alola route 1 west",
+          "alola route 4 area",
+          "alola route 5 area",
+          "alola route 6 north",
+          "alola route 6 south"
+        ]
+      }
+    },
+    "737": {
+      "sun": {
+        "locations": [
+          "blush mountain area"
+        ]
+      },
+      "moon": {
+        "locations": [
+          "blush mountain area"
+        ]
+      }
+    }
+  }
+}

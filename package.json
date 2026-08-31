@@ -1,0 +1,16 @@
+{
+  "name": "livingdex",
+  "version": "1.0.0",
+  "description": "Living Pokédex Tracker with pre-compiled data",
+  "type": "module",
+  "scripts": {
+    "build:data": "node scripts/build-data.mjs",
+    "validate:data": "node scripts/validate-data.mjs"
+  },
+  "keywords": [
+    "pokemon",
+    "livingdex",
+    "pokedex"
+  ],
+  "license": "MIT"
+}
