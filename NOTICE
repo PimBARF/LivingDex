@@ -3,6 +3,7 @@ LivingDex.app — Notices and Attributions
 This project’s source code is licensed under the MIT License (see LICENSE).
 
 Third-party data and assets:
+
 - LivingDex.app retrieves Pokémon data and sprites from external sources such as PokéAPI (https://pokeapi.co/).
 - These resources are not included in this repository and are not covered by the MIT License.
 - Cached data or images stored locally on the user’s computer remain subject to their original licenses.

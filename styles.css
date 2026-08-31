@@ -1235,27 +1235,62 @@ body.is-scrolled #progressWrap {
   display: flex;
   flex-direction: column;
   gap: 12px;
+  overflow-y: auto;
+  font-size: 14px;
+  line-height: 1.5;
 }
 
 .about-body p {
   margin: 0;
   color: var(--text);
+  font-size: 14px;
+  line-height: 1.5;
 }
 
 .about-section {
-  padding-top: 8px;
+  padding-top: 10px;
   border-top: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.about-section h4 {
+  margin: 0;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  color: var(--muted);
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.about-section h4::before {
+  content: "";
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--accent-2);
+  flex-shrink: 0;
 }
 
 .about-features {
-  margin: 6px 0 0;
-  padding-left: 18px;
-  font-size: 0.9em;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 14px;
+  line-height: 1.5;
 }
 
-.about-credits {
+.about-credits p {
   color: var(--muted);
-  font-size: 0.85em;
+  font-size: 14px;
+  line-height: 1.5;
 }
 
 /* --- Mobile Modal Layout Adjustments (max-width: 520px) --- */

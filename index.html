@@ -119,9 +119,6 @@
   </main>
 
   <footer>
-    Data and sprites via
-    <a href="https://pokeapi.co/" target="_blank" rel="noreferrer">PokeAPI</a>.
-    &nbsp;•&nbsp;
     <a class="btn support-btn" href="https://ko-fi.com/pimbarf" target="_blank" rel="noreferrer"
       aria-label="Donate to LivingDex on Ko-fi">
       ☕ Donate
@@ -347,54 +344,55 @@
 
   <!-- About modal -->
   <div id="modalAbout" class="modal" role="dialog" aria-modal="true" aria-labelledby="aboutTitle" aria-describedby="aboutDesc" hidden>
-  <div class="modal-backdrop" data-close></div>
-  <div class="modal-card" role="document">
-    <h3 id="aboutTitle">About LivingDex.app</h3>
-    
-    <div id="aboutDesc" class="about-body">
-      <p>
-        <strong>LivingDex.app</strong> is a fast, privacy-first, client-side tracker for building and sharing your living Pokédex progress across supported Pokémon games.
-      </p>
+    <div class="modal-backdrop" data-close></div>
+    <div class="modal-card" role="document">
+      <h3 id="aboutTitle">About LivingDex.app</h3>
+      
+      <div id="aboutDesc" class="about-body">
+        <p>
+          <strong>LivingDex.app</strong> is a fast, privacy-first, client-side tracker for building and sharing your living Pokédex progress across supported Pokémon games.
+        </p>
 
-      <div class="about-section">
-        <strong>Features</strong>
-        <ul class="about-features">
-          <li>🔒 <strong>Privacy First:</strong> Progress stays in your browser (no account required).</li>
-          <li>📱 <strong>PWA Ready:</strong> Works offline and can be installed as an app.</li>
-          <li>⚡ <strong>Lightweight:</strong> Fast load times with instant search and filtering.</li>
-        </ul>
+        <div class="about-section">
+          <h4>Features</h4>
+          <ul class="about-features">
+            <li>🔒 <strong>Privacy First:</strong> Progress stays in your browser (no account required).</li>
+            <li>📱 <strong>PWA Ready:</strong> Works offline and can be installed as an app.</li>
+            <li>⚡ <strong>Lightweight:</strong> Fast load times with instant search and filtering.</li>
+          </ul>
+        </div>
+
+        <div class="about-section">
+          <h4>Links &amp; Support</h4>
+          <p>
+            Found a bug or have a suggestion? 
+            <a href="https://github.com/PimBARF/LivingDex/issues" target="_blank" rel="noopener noreferrer">Report an issue on GitHub</a>
+          </p>
+          <p>
+            Support development on 
+            <a href="https://ko-fi.com/pimbarf" target="_blank" rel="noopener noreferrer">Ko-fi ☕</a>
+          </p>
+        </div>
+
+        <div class="about-section about-credits">
+          <h4>Credits &amp; Data</h4>
+          <p>
+            Built and maintained by <strong>PimBARF</strong>. Open-source under the MIT License.
+          </p>
+          <p>
+            Data and sprites sourced from <a href="https://pokeapi.co/" target="_blank" rel="noopener noreferrer">PokéAPI</a>, <a href="https://bulbapedia.bulbagarden.net/" target="_blank" rel="noopener noreferrer">Bulbapedia</a> &amp; <a href="https://www.serebii.net/" target="_blank" rel="noopener noreferrer">Serebii</a>.
+          </p>
+          <p class="about-version">
+            Source code: <a href="https://github.com/PimBARF/LivingDex" target="_blank" rel="noopener noreferrer">github.com/PimBARF/LivingDex</a>
+          </p>
+        </div>
       </div>
 
-      <div class="about-section">
-        <strong>Links & Support</strong>
-        <p>
-           Found a bug or have a suggestion? 
-          <a href="https://github.com/PimBARF/LivingDex/issues" target="_blank" rel="noopener noreferrer">Report an issue on GitHub</a>
-        </p>
-        <p>
-          Support development on 
-          <a href="https://ko-fi.com/pimbarf" target="_blank" rel="noopener noreferrer">Ko-fi ☕</a>
-        </p>
+      <div class="modal-actions">
+        <button id="closeAbout" class="btn" type="button" aria-label="Close about dialog">Close</button>
       </div>
-
-      <div class="about-section about-credits">
-        <p>
-          Built and maintained by <strong>PimBARF</strong>. Open-source under the MIT License.
-        </p>
-        <p>
-          Data and sprites provided by <a href="https://pokeapi.co/" target="_blank" rel="noopener noreferrer">PokeAPI</a>.
-        </p>
-        <p class="about-version">
-          <small>Source code: <a href="https://github.com/PimBARF/LivingDex" target="_blank" rel="noopener noreferrer">github.com/PimBARF/LivingDex</a></small>
-        </p>
-      </div>
-    </div>
-
-    <div class="modal-actions">
-      <button id="closeAbout" class="btn" type="button" aria-label="Close about dialog">Close</button>
     </div>
   </div>
-</div>
 
   <!-- Shared link warning modal -->
   <div id="modalSharedLink" class="modal" role="dialog" aria-modal="true" aria-labelledby="sharedLinkTitle"
