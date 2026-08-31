@@ -5,6 +5,8 @@
   "type": "module",
   "scripts": {
     "build:data": "node scripts/build-data.mjs",
+    "download:sprites": "node scripts/download-sprites.mjs",
+    "download:sprites:all": "node scripts/download-sprites.mjs --style=all",
     "validate:data": "node scripts/validate-data.mjs"
   },
   "keywords": [

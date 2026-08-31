@@ -17,6 +17,7 @@
 import fs from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { fork } from "node:child_process";
 import {
   fetchBulbapediaEncounters,
   fetchBulbapediaDexRoster,
@@ -39,6 +40,7 @@ const isSample = args.includes("--sample");
 const buildOnlySpecies = args.includes("--species");
 const buildOnlyEvolutions = args.includes("--evolutions");
 const buildOnlyGames = args.includes("--games");
+const shouldDownloadSprites = args.includes("--download-sprites");
 const limitArg = args.find((a) => a.startsWith("--limit="));
 const maxLimit = limitArg
   ? Number(limitArg.split("=")[1])
@@ -1722,6 +1724,19 @@ async function main() {
 
     if (!buildOnlySpecies && !buildOnlyEvolutions) {
       await buildGamesData(speciesMap);
+    }
+
+    if (shouldDownloadSprites) {
+      console.log("\n⬇️  Launching Sprite Downloader Subprocess...");
+      const downloaderScript = path.join(__dirname, "download-sprites.mjs");
+      const forwardArgs = args.filter((a) => a !== "--download-sprites");
+      await new Promise((resolve, reject) => {
+        const child = fork(downloaderScript, forwardArgs);
+        child.on("exit", (code) => {
+          if (code === 0) resolve();
+          else reject(new Error(`Sprite downloader exited with code ${code}`));
+        });
+      });
     }
 
     console.log("\n🎉 All datasets generated and enriched successfully!");

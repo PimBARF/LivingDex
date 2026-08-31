@@ -762,26 +762,70 @@ export const prefersReducedMotion =
     : false;
 
 // Utility functions for sprite URLs and species name formatting
-const SPRITE_BASE =
+const SPRITE_REMOTE_BASE =
   "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon";
 
-/**
- * Map of sprite style keys to generator functions that produce image URLs.
- * @type {Record<string, (id: number|string, isShiny: boolean) => string>}
- */
-const SPRITE_STYLE_URLS = {
-  "official-artwork": (id, isShiny) =>
-    `${SPRITE_BASE}/other/official-artwork/${isShiny ? "shiny/" : ""}${id}.png`,
-  home: (id, isShiny) =>
-    `${SPRITE_BASE}/other/home/${isShiny ? "shiny/" : ""}${id}.png`,
-  showdown: (id, isShiny) =>
-    `${SPRITE_BASE}/other/showdown/${isShiny ? "shiny/" : ""}${id}.gif`,
-  pokesprites: (id, isShiny) =>
-    `${SPRITE_BASE}/${isShiny ? "shiny/" : ""}${id}.png`,
+const SPRITE_EXTENSIONS = {
+  "official-artwork": "png",
+  home: "png",
+  showdown: "gif",
+  pokesprites: "png",
 };
 
 /**
- * Generates the image/sprite URL for a given Pokémon ID, sprite style, and shiny state.
+ * Remote PokeAPI sprite URL generators.
+ * @type {Record<string, (id: number|string, isShiny: boolean) => string>}
+ */
+const SPRITE_REMOTE_STYLE_URLS = {
+  "official-artwork": (id, isShiny) =>
+    `${SPRITE_REMOTE_BASE}/other/official-artwork/${isShiny ? "shiny/" : ""}${id}.png`,
+  home: (id, isShiny) =>
+    `${SPRITE_REMOTE_BASE}/other/home/${isShiny ? "shiny/" : ""}${id}.png`,
+  showdown: (id, isShiny) =>
+    `${SPRITE_REMOTE_BASE}/other/showdown/${isShiny ? "shiny/" : ""}${id}.gif`,
+  pokesprites: (id, isShiny) =>
+    `${SPRITE_REMOTE_BASE}/${isShiny ? "shiny/" : ""}${id}.png`,
+};
+
+/**
+ * Generates the remote PokeAPI CDN URL for a sprite.
+ *
+ * @param {number|string} id - The Pokémon species or form ID.
+ * @param {string} [style="pokesprites"] - Visual sprite style.
+ * @param {boolean} [isShiny=false] - Whether to return the shiny variant.
+ * @returns {string} Remote URL.
+ */
+export const remoteSpriteUrlForSpecies = (
+  id,
+  style = "pokesprites",
+  isShiny = false,
+) =>
+  (SPRITE_REMOTE_STYLE_URLS[style] || SPRITE_REMOTE_STYLE_URLS["pokesprites"])(
+    id,
+    isShiny,
+  );
+
+/**
+ * Generates the local asset path for a sprite.
+ *
+ * @param {number|string} id - The Pokémon species or form ID.
+ * @param {string} [style="pokesprites"] - Visual sprite style.
+ * @param {boolean} [isShiny=false] - Whether to return the shiny variant.
+ * @returns {string} Local relative path.
+ */
+export const localSpriteUrlForSpecies = (
+  id,
+  style = "pokesprites",
+  isShiny = false,
+) => {
+  const normStyle = SPRITE_EXTENSIONS[style] ? style : "pokesprites";
+  const ext = SPRITE_EXTENSIONS[normStyle];
+  return `assets/sprites/${normStyle}/${isShiny ? "shiny/" : ""}${id}.${ext}`;
+};
+
+/**
+ * Generates the primary sprite URL for a given Pokémon ID, sprite style, and shiny state.
+ * Points to local assets path by default, with automatic remote fallback handled by image onerror.
  *
  * @param {number|string} id - The Pokémon species or form ID.
  * @param {'pokesprites'|'official-artwork'|'home'|'showdown'|string} [style="pokesprites"] - Visual sprite style.
@@ -792,8 +836,7 @@ export const spriteUrlForSpecies = (
   id,
   style = "pokesprites",
   isShiny = false,
-) =>
-  (SPRITE_STYLE_URLS[style] || SPRITE_STYLE_URLS["pokesprites"])(id, isShiny);
+) => localSpriteUrlForSpecies(id, style, isShiny);
 
 /**
  * Normalizes a hyphenated Pokémon or form name into a title-cased, space-separated display name.

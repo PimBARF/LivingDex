@@ -17,6 +17,9 @@
   <meta property="og:url" content="https://livingdex.app/" />
   <link rel="icon" type="image/x-icon" href="https://livingdex.app/assets/favicon.ico">
   <link rel="manifest" href="manifest.json">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
   <meta name="theme-color" content="#f5f7fa" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="#181a1b" media="(prefers-color-scheme: dark)">
   
@@ -132,6 +135,21 @@
   <input id="settingsImportFile" type="file" accept="application/json" aria-label="Import settings file" hidden />
   <div id="toast" class="toast alert alert-success">Link copied to clipboard!</div>
 
+  <!-- Update available banner -->
+  <aside id="updateBanner" class="update-banner" role="alert" aria-live="assertive" hidden>
+    <div class="update-banner-content">
+      <span class="update-banner-icon">🚀</span>
+      <div class="update-banner-text">
+        <strong>Update Available</strong>
+        <span>A new version of LivingDex is available with fresh data.</span>
+      </div>
+    </div>
+    <div class="update-banner-actions">
+      <button id="btnUpdateApp" class="btn btn-primary" type="button">Update now</button>
+      <button id="btnDismissUpdate" class="btn btn-ghost" type="button" aria-label="Dismiss update notification">✕</button>
+    </div>
+  </aside>
+
   <!-- Scroll to top button -->
   <button id="scrollTop" class="btn scroll-top" type="button" aria-label="Scroll back to top">
     ⬆
@@ -241,6 +259,12 @@
           <p id="settingsImportHelp" class="settings-help">
             Importing will replace your saved settings and progress for matching games on this device.
           </p>
+
+          <div class="settings-row">
+            <button type="button" id="settingsRefreshCache" class="btn">
+              Refresh offline data & cache 🔄
+            </button>
+          </div>
 
           <div class="settings-row">
             <button type="button" id="settingsClearSpeciesCache" class="btn">

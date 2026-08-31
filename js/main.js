@@ -34,6 +34,8 @@ import {
   applySpriteStyleToCells,
 } from "./ui/dom-render.js";
 
+import { initPwa } from "./pwa.js";
+
 /**
  * Array of Pokémon species IDs in display order for the active game and enabled segments.
  * Derived dynamically after loading Pokédex sections from API or cache.
@@ -364,13 +366,8 @@ if (typeof window !== "undefined" && typeof document !== "undefined") {
     }
   })();
 
-  // Register Service Worker for PWA installability and offline support
-  if (typeof navigator !== "undefined" && "serviceWorker" in navigator) {
-    window.addEventListener("load", () => {
-      navigator.serviceWorker
-        .register("/sw.js")
-        .then((reg) => console.log("SW registered:", reg.scope))
-        .catch((err) => console.warn("SW registration failed:", err));
-    });
-  }
+  // Initialize PWA Service Worker & update lifecycle handlers
+  window.addEventListener("load", () => {
+    initPwa();
+  });
 }

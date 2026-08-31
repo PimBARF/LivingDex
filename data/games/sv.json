@@ -10784,6 +10784,46 @@
         ]
       }
     },
+    "670": {
+      "scarlet": {
+        "locations": [
+          "East Paldean Sea",
+          "North Province Area One",
+          "North Province Area Two",
+          "North Province Area Three",
+          "South Province Area Five",
+          "South Province Area Four",
+          "South Province Area Six",
+          "West Province Area OneWhite Flower Only: Area ZeroFixed: East Province Area One",
+          "This Pokémon draws forth what power is left in withered flowers to make them healthy again. It holds a red flower.",
+          "This Pokémon can draw forth the power hidden within yellow flowers. This power then becomes the moves Floette uses to protect itself.",
+          "This Pokémon can draw forth the most power when in sync with orange flowers",
+          "Compared To Flowers Of Other Colors.",
+          "Whenever this Pokémon finds flowering plants that are withering",
+          "It Will Bring Them Back To Its Territory And Care For Them Until They Are Healthy.",
+          "Floette that are fond of white flowers can also easily sync with flowers of other colors."
+        ]
+      },
+      "violet": {
+        "locations": [
+          "East Paldean Sea",
+          "North Province Area One",
+          "North Province Area Two",
+          "North Province Area Three",
+          "South Province Area Five",
+          "South Province Area Four",
+          "South Province Area Six",
+          "West Province Area OneWhite Flower Only: Area ZeroFixed: East Province Area One",
+          "This Pokémon uses red wavelengths of light to pour its own energy into flowers and draw forth their latent potential.",
+          "Floette Can Draw Forth The Latent Capabilities Of Grass Type Pokémon. It Syncs With Yellow Flowers.",
+          "This Pokémon cannot use moves on its own. When it syncs with flowers",
+          "It Becomes Able To Use Grass Type Moves.",
+          "It exchanges power with flowers via wavelengths of visible light. This form of Floette can sync with the wavelength that produces the color blue.",
+          "If it finds someone messing up a flower bed",
+          "it will attack them without mercy. This Floette takes particularly good care of white flowers."
+        ]
+      }
+    },
     "671": {
       "scarlet": {
         "locations": [
