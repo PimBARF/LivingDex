@@ -17,6 +17,13 @@ import { updateProgressBar, isShinyMode } from "../state.js";
 /**
  * Create shell sections that mirror in-game storage boxes.
  * Each box contains up to BOX_CAPACITY slots.
+ *
+ * @param {HTMLElement} container - The container element to append box sections and headings into.
+ * @param {string} sectionKey - Identifier/key for the dex section (set as data-section).
+ * @param {string} sectionTitle - Human-readable section title displayed in the header.
+ * @param {number} slotsInSection - Total count of slots in this section.
+ * @param {number} startGlobalSlot - Starting 1-based global slot index for this section.
+ * @returns {void}
  */
 export function renderDexSectionBoxes(
   container,
@@ -57,13 +64,15 @@ export function renderDexSectionBoxes(
 }
 
 /**
- * Generate an interactive cell representing a single dex slot.
- * Includes sprite, name label, and slot index.
- * @param {number} slotIndex - Global slot index for storage
- * @param {number} speciesId - Species ID for name lookup
- * @param {number} formId - Form ID for sprite (may differ from speciesId for regional forms)
- * @param {string} name - Display name
- * @param {string} displayIndex - Formatted index to show in cell
+ * Generate an interactive cell button representing a single dex slot.
+ * Includes sprite, name label, slot index badge, and info button trigger.
+ *
+ * @param {number} slotIndex - Global slot index for storage and dataset tracking.
+ * @param {number} speciesId - National Pokédex species ID for lookup and modal info.
+ * @param {number|string} formId - Form ID for sprite lookup (may differ from speciesId for regional/alternate forms).
+ * @param {string} name - Display name of the Pokémon.
+ * @param {string} displayIndex - Formatted index string to show in cell badge (e.g. "001").
+ * @returns {HTMLButtonElement} The generated interactive dex slot button element.
  */
 export function createDexSlot(
   slotIndex,
@@ -92,8 +101,10 @@ export function createDexSlot(
 }
 
 /**
- * Refresh the `src` of every rendered sprite image to match the currently
- * selected sprite style setting, without re-building the whole DOM.
+ * Refresh the `src` and opacity of every rendered sprite image to match the currently
+ * selected sprite style setting and shiny mode, without re-building the whole DOM.
+ *
+ * @returns {void}
  */
 export function applySpriteStyleToCells() {
   const spriteStyle = loadSettings().spriteStyle || "pokesprites";
@@ -109,8 +120,26 @@ export function applySpriteStyleToCells() {
 }
 
 /**
+ * @typedef {Object} DexSectionEntry
+ * @property {number} speciesId - National Pokédex species ID.
+ * @property {number|string} formId - Form ID for sprite lookup.
+ */
+
+/**
+ * @typedef {Object} DexSection
+ * @property {string} key - Section identifier key matching box dataset.
+ * @property {DexSectionEntry[]} entries - List of Pokémon slot entries in this section.
+ * @property {number} [startIndex] - Optional starting local index offset (defaults to 1).
+ */
+
+/**
  * Populate all boxes with cells following the configured living dex order.
- * Applies caught state from storage and sets up click handlers.
+ * Applies caught state from storage, registers click handlers, sets up info modal triggers,
+ * and appends placeholder cells for partially filled trailing boxes.
+ *
+ * @param {DexSection[]} sections - Array of section configuration objects.
+ * @param {number} slotCount - Total number of dex slots across all sections (used for progress tracking).
+ * @returns {void}
  */
 export function populateDexSlots(sections, slotCount) {
   const caught = isShinyMode ? loadShinyCaughtSlots() : loadCaughtSlots();
@@ -165,6 +194,10 @@ export function populateDexSlots(sections, slotCount) {
       // Info button: open info modal without toggling caught state
       const infoBtn = cell.querySelector(".cell-info-btn");
       if (infoBtn) {
+        /**
+         * Event handler to open the Pokémon info modal without toggling caught state.
+         * @param {MouseEvent|KeyboardEvent} event - The click or keydown event.
+         */
         const handleInfo = (event) => {
           event.stopPropagation();
           const latestName =
@@ -215,6 +248,9 @@ export function populateDexSlots(sections, slotCount) {
 /**
  * Register per-box controls (Mark all caught, Clear box).
  * These buttons enable bulk operations on entire boxes.
+ *
+ * @param {number} slotCount - Total number of dex slots across all sections (passed to progress updates).
+ * @returns {void}
  */
 export function registerBoxControls(slotCount) {
   document.querySelectorAll(".box").forEach((box) => {
@@ -222,10 +258,18 @@ export function registerBoxControls(slotCount) {
     const toggleBtn = box.querySelector(".box-toggle");
     if (!toggleBtn) return;
 
+    /**
+     * Retrieve all non-placeholder interactive cells within this box.
+     * @returns {HTMLElement[]} Array of interactive cell elements.
+     */
     function interactiveCells() {
       return Array.from(grid.querySelectorAll(".cell:not(.is-placeholder)"));
     }
 
+    /**
+     * Update the box toggle button label and aria-label according to the caught state of its cells.
+     * @returns {void}
+     */
     function updateToggleBtnLabel() {
       const caught = loadCaughtSlots();
       const cells = interactiveCells();
@@ -263,6 +307,8 @@ export function registerBoxControls(slotCount) {
 /**
  * Update species name display on all cells.
  * Applies names from window.__livingDexNames to cell labels and tooltips.
+ *
+ * @returns {void}
  */
 export function applyNamesToCells() {
   document.querySelectorAll(".cell:not(.is-placeholder)").forEach((cell) => {

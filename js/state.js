@@ -13,15 +13,27 @@ import {
 } from "./ui/dom-render.js";
 
 /**
- * Global state to track if the user is viewing a shiny dex or a normal dex.
+ * Global state to track whether the user is viewing a shiny Pokédex or a normal Pokédex.
+ * @type {boolean}
  */
 export let isShinyMode = false;
+
+/**
+ * Update the active shiny mode state.
+ *
+ * @param {boolean} active - `true` to enable shiny mode, `false` for normal mode.
+ * @returns {void}
+ */
 export function setShinyMode(active) {
   isShinyMode = active;
 }
 
 /**
  * Count how many slots in the living dex have been caught.
+ * Reads caught data from either normal or shiny storage depending on the active shiny mode.
+ *
+ * @param {number} slotCount - The total number of living dex slots to evaluate.
+ * @returns {number} The total count of caught slots.
  */
 export function countCaughtSlots(slotCount) {
   const caught = isShinyMode ? loadShinyCaughtSlots() : loadCaughtSlots();
@@ -33,7 +45,11 @@ export function countCaughtSlots(slotCount) {
 }
 
 /**
- * Update progress bar text, width, and page title to reflect current caught total.
+ * Update progress bar text, width, and page title to reflect the current caught total.
+ * Calculates completion percentage and adjusts UI progress elements and document title.
+ *
+ * @param {number} slotCount - The total number of living dex slots.
+ * @returns {void}
  */
 export function updateProgressBar(slotCount) {
   const safeSlotCount =
@@ -57,7 +73,12 @@ export function updateProgressBar(slotCount) {
 
 /**
  * Sync caught state to storage, UI, and filters.
- * Ensures consistency across all representations.
+ * Ensures consistency across all representations (local storage, DOM cell
+ * classes/attributes, progress bar, and active visibility filters).
+ *
+ * @param {Record<number, boolean>} caught - Map of slot indices (1-based) to caught boolean flags.
+ * @param {number} slotCount - Total number of living dex slots.
+ * @returns {void}
  */
 export function syncCaughtState(caught, slotCount) {
   if (!caught) return;
@@ -83,7 +104,11 @@ export function syncCaughtState(caught, slotCount) {
 
 /**
  * Clear all caught slots and reset progress to empty state.
- * Also clears any shared hash state from the URL.
+ * Resets storage, removes caught styling and ARIA attributes from cells,
+ * and clears any shared hash state from the URL.
+ *
+ * @param {number} slotCount - Total number of living dex slots to reset progress for.
+ * @returns {void}
  */
 export function resetDexProgress(slotCount) {
   const empty = {};
@@ -105,7 +130,13 @@ export function resetDexProgress(slotCount) {
 
 /**
  * Rebuild the dex grid for the current game/segment selection.
- * Centralizes the app render flow so it can be reused in multiple actions.
+ * Centralizes the app render flow so it can be reused across multiple actions
+ * (e.g., initial load, segment toggle, game switch).
+ *
+ * @param {Object} params - The parameters for rebuilding the dex view.
+ * @param {Array<{ key: string, title: string, entries: Array<{ speciesId: number, formId: number }>, startIndex?: number }>} params.sections - Array of Pokédex section definitions to render.
+ * @param {number} params.slotCount - Total number of slots across all rendered sections.
+ * @returns {void}
  */
 export function rebuildDexView({ sections, slotCount }) {
   const app = document.getElementById("app");

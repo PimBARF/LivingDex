@@ -34,13 +34,35 @@ import {
   applySpriteStyleToCells,
 } from "./ui/dom-render.js";
 
-// Derived (set later after we load the Pokédex from API/localStorage)
+/**
+ * Array of Pokémon species IDs in display order for the active game and enabled segments.
+ * Derived dynamically after loading Pokédex sections from API or cache.
+ * @type {number[]}
+ */
 let LIVING_DEX_SPECIES_ORDER = [];
+
+/**
+ * Total count of living dex slots across all active dex sections.
+ * Derived dynamically after loading Pokédex sections.
+ * @type {number}
+ */
 let LIVING_DEX_SLOT_COUNT = 0;
 
 /**
- * Main initialization function.
- * Sets up UI, loads data, registers event listeners, and handles shared state.
+ * Main initialization function for the LivingDex application.
+ *
+ * Orchestrates the full startup flow:
+ * 1. Sets header and document titles and renders the game selector and info toggle controls.
+ * 2. Loads persisted UI preferences (theme, reduced motion) and applies them.
+ * 3. Registers UI control event handlers and modal listeners.
+ * 4. Fetches active dex sections and species data, then builds the visual Pokédex box layout.
+ * 5. Asynchronously fetches localized Pokémon species names.
+ * 6. Applies saved filter and sprite preferences to the rendered cells.
+ * 7. Updates the progress bar with current caught counts.
+ * 8. Evaluates URL hash state for shared caught checklists and registers hashchange listeners.
+ *
+ * @async
+ * @returns {Promise<void>} Resolves when application initialization completes.
  */
 async function initializeLivingDexApp() {
   setGameTitles();
@@ -94,6 +116,10 @@ async function initializeLivingDexApp() {
   updateProgressBar(LIVING_DEX_SLOT_COUNT);
 
   // Handle shared state from URL hash
+  /**
+   * Helper function to retrieve the currently enabled dex segment IDs as an array.
+   * @returns {string[]} List of enabled segment identifiers.
+   */
   const getShareSegments = () => Array.from(loadEnabledSegments());
   const sharedState = decodeCaughtState(
     location.hash,
@@ -140,9 +166,16 @@ async function initializeLivingDexApp() {
 }
 
 /**
- * Apply persisted view preferences that affect the rendered dex grid.
+ * Applies persisted view preferences that affect the rendered dex grid.
+ *
  * Keeps the hide-caught toggle and sprite style in sync with storage, and
- * refreshes localized names when the selected language changes.
+ * refreshes localized species names when the selected language changes.
+ *
+ * @async
+ * @param {Object} [options={}] - Options object for updating view settings.
+ * @param {number[]} [options.speciesOrder=[]] - Ordered array of species IDs to re-fetch names for if language changed.
+ * @param {string} [options.previousLanguage] - The previously configured language code to compare against the current setting.
+ * @returns {Promise<void>} Resolves when view settings and potential name refreshes have been applied.
  */
 export async function applyPersistedViewSettings({
   speciesOrder = [],
@@ -170,7 +203,13 @@ export async function applyPersistedViewSettings({
 }
 
 /**
- * Populate the game info section with title and segment toggles.
+ * Populates the game info section with the active game title and segment toggle checkboxes.
+ *
+ * Creates interactive checkboxes for optional Pokédex segments. When a user toggles
+ * a segment, this updates persistent storage, recalculates active Pokédex sections,
+ * rebuilds the box grid view, and fetches species names for the updated slot list.
+ *
+ * @returns {void}
  */
 export function renderGameInfo() {
   const titleEl = document.getElementById("gameTitle");
@@ -241,7 +280,12 @@ export function renderGameInfo() {
 }
 
 /**
- * Populate the dex selector dropdown with available games.
+ * Populates the dex selector dropdown with all available games grouped by category/generation.
+ *
+ * Generates `<optgroup>` elements for generations and special games, selects the currently
+ * active game option, and attaches a change listener to switch games by updating the URL parameter.
+ *
+ * @returns {void}
  */
 export function renderGameSelector() {
   const selector = document.getElementById("dexSelector");
@@ -286,7 +330,9 @@ export function renderGameSelector() {
 }
 
 /**
- * Set page titles from active dex config.
+ * Sets document and page header titles from the active Pokédex configuration.
+ *
+ * @returns {void}
  */
 export function setGameTitles() {
   const docTitle = document.getElementById("docTitle");
@@ -294,7 +340,10 @@ export function setGameTitles() {
 }
 
 /**
- * Bootstrap the application once the DOM is ready.
+ * Top-level application bootstrap IIFE.
+ *
+ * Automatically executes upon script load to initialize the application and
+ * gracefully handles/displays top-level startup errors in the UI if initialization fails.
  */
 (async function bootstrapLivingDex() {
   try {
@@ -314,7 +363,7 @@ export function setGameTitles() {
   }
 })();
 
-// Register Service Worker for PWA installability
+// Register Service Worker for PWA installability and offline support
 if ("serviceWorker" in navigator) {
   window.addEventListener("load", () => {
     navigator.serviceWorker

@@ -19,8 +19,19 @@ import { resetDexProgress } from "../state.js";
 import { applyPersistedViewSettings } from "../main.js";
 
 /**
- * Show the shared link warning modal and run a callback on confirm.
- * On either confirm or cancel, the URL hash is cleared to avoid re-prompting.
+ * Attach common modal accessibility and event handlers including opening, closing,
+ * backdrop click dismissal, Escape key closing, and Tab key focus trapping.
+ *
+ * @param {Object} options - Configuration options for modal handling.
+ * @param {HTMLElement|null} options.modal - The modal container element.
+ * @param {HTMLElement|null} [options.openBtn] - Optional button that opens the modal on click.
+ * @param {HTMLElement|null} [options.closeBtn] - Optional button that closes the modal on click.
+ * @param {HTMLElement|null} [options.backdrop] - Optional backdrop element that closes the modal on click.
+ * @param {((lastFocus: HTMLElement|null) => void)|null} [options.onOpen] - Optional callback triggered when modal opens.
+ * @param {(() => void)|null} [options.onClose] - Optional callback triggered when modal closes.
+ * @param {((event: KeyboardEvent, closeModal: () => void) => void)|null} [options.onKeydown] - Optional custom keydown handler.
+ * @param {string} [options.focusSelector] - Optional CSS selector of the element to focus upon opening.
+ * @returns {{ openModal: () => void, closeModal: () => void }} Object containing functions to programmatically open or close the modal.
  */
 export function attachModalHandlers({
   modal,
@@ -36,6 +47,9 @@ export function attachModalHandlers({
 
   let lastFocus = null;
 
+  /**
+   * Close the modal, clean up listeners, trigger onClose callback, and restore focus.
+   */
   function closeModal() {
     modal.hidden = true;
     modal._cleanup?.();
@@ -43,6 +57,9 @@ export function attachModalHandlers({
     lastFocus?.focus();
   }
 
+  /**
+   * Open the modal, track previous active element, set initial focus, and bind key listeners.
+   */
   function openModal() {
     lastFocus = document.activeElement;
     modal.hidden = false;
@@ -57,6 +74,10 @@ export function attachModalHandlers({
       modal.querySelector("button, [href], input, select, textarea");
     fallbackTarget?.focus();
 
+    /**
+     * Keydown handler to manage Escape key dismissal and Tab focus trapping.
+     * @param {KeyboardEvent} event - The keyboard event.
+     */
     function handleKeydown(event) {
       if (event.key === "Escape") {
         closeModal();
@@ -95,6 +116,12 @@ export function attachModalHandlers({
   return { openModal, closeModal };
 }
 
+/**
+ * Show the shared link warning modal when a shared URL hash is detected and run a callback on confirm.
+ * On either confirm or cancel, the URL hash is cleared to avoid re-prompting.
+ *
+ * @param {() => void} [onConfirm] - Callback function executed if the user confirms importing the shared progress.
+ */
 export function showSharedLinkWarningModal(onConfirm) {
   const modal = document.getElementById("modalSharedLink");
   const confirmBtn = document.getElementById("confirmSharedLink");
@@ -108,6 +135,9 @@ export function showSharedLinkWarningModal(onConfirm) {
     return;
   }
 
+  /**
+   * Clear the URL hash from the browser history without triggering a reload.
+   */
   function clearHash() {
     if (location.hash) {
       history.replaceState(null, "", location.pathname + location.search);
@@ -148,8 +178,10 @@ export function showSharedLinkWarningModal(onConfirm) {
 }
 
 /**
- * Register reset confirmation modal with focus trap and keyboard navigation.
+ * Register reset confirmation modal handlers, focus management, and confirm button action.
  * Supports: click confirm/cancel, Escape key, Tab focus wrapping.
+ *
+ * @param {number} slotCount - Total number of dex slots to reset in the active game.
  */
 export function registerResetControls(slotCount) {
   const openBtn = document.getElementById("resetDex");
@@ -174,10 +206,23 @@ export function registerResetControls(slotCount) {
   });
 }
 
+/**
+ * Check whether a value is a non-null, non-array object.
+ *
+ * @param {*} value - The value to check.
+ * @returns {boolean} True if the value is a plain object, false otherwise.
+ */
 function isPlainObject(value) {
   return !!value && typeof value === "object" && !Array.isArray(value);
 }
 
+/**
+ * Read and JSON-parse an object from localStorage by key with a fallback.
+ *
+ * @param {string} key - The localStorage key to read.
+ * @param {*} [fallback=null] - Fallback value if key is not found or parsing fails.
+ * @returns {Object|*} Parsed plain object or fallback value.
+ */
 function readStoredObject(key, fallback = null) {
   try {
     const raw = localStorage.getItem(key);
@@ -189,10 +234,31 @@ function readStoredObject(key, fallback = null) {
   }
 }
 
+/**
+ * Count the number of own enumerable keys in a plain object.
+ *
+ * @param {*} value - The object to count keys from.
+ * @returns {number} The count of keys, or 0 if value is not a plain object.
+ */
 function countObjectEntries(value) {
   return isPlainObject(value) ? Object.keys(value).length : 0;
 }
 
+/**
+ * Build the full application export payload including settings and per-game progress.
+ *
+ * @returns {{
+ *   exportedAt: string,
+ *   schemaVersion: number,
+ *   settings: Object,
+ *   games: Object<string, {
+ *     caught: Object,
+ *     segments: Object|null,
+ *     speciesCache: Object|null,
+ *     speciesCacheMeta: Object|null
+ *   }>
+ * }} Structured export data payload.
+ */
 function buildExportPayload() {
   return {
     exportedAt: new Date().toISOString(),
@@ -219,6 +285,18 @@ function buildExportPayload() {
   };
 }
 
+/**
+ * Validate and normalize a raw payload from an imported backup file.
+ *
+ * @param {*} rawPayload - The parsed JSON data from the imported file.
+ * @returns {{
+ *   exportedAt: string|null,
+ *   schemaVersion: number|null,
+ *   settings: Object|null,
+ *   games: Object<string, Object>
+ * }} Validated import payload.
+ * @throws {Error} If the payload is not a plain object or contains neither valid settings nor games.
+ */
 function normalizeImportPayload(rawPayload) {
   if (!isPlainObject(rawPayload)) {
     throw new Error("Invalid payload");
@@ -265,7 +343,11 @@ function normalizeImportPayload(rawPayload) {
 }
 
 /**
- * Settings modal for enabling/disabling optional segments (DLC, forms) per game.
+ * Register all settings modal controls, submodals (About, Import Review), and data actions.
+ * Handles theme, reduced motion, hide-caught default, language, sprite style, default game,
+ * data export/import, and cache resets.
+ *
+ * @returns {{ closeModal: () => void }} Object containing function to close the settings modal.
  */
 export function registerSettingsControls() {
   const openBtn = document.getElementById("settingsBtn");
@@ -297,6 +379,9 @@ export function registerSettingsControls() {
   let pendingImportPayload = null;
   let pendingImportFileName = "";
 
+  /**
+   * Synchronize modal form input controls with current persisted settings.
+   */
   function syncSettingsControls() {
     const settings = loadSettings();
     const reducedMotion = document.getElementById("settingsReducedMotion");
@@ -304,6 +389,10 @@ export function registerSettingsControls() {
     const language = document.getElementById("settingsLanguage");
     const spriteStyle = document.getElementById("settingsSpriteStyle");
 
+    /**
+     * Build HTML optgroup and option markup for the default game select dropdown.
+     * @returns {string} Option markup HTML string.
+     */
     const buildGameSelectMarkup = () => {
       const groups = new Map();
       for (const [key, config] of getOrderedGameEntries()) {
@@ -349,6 +438,10 @@ export function registerSettingsControls() {
     }
   }
 
+  /**
+   * Read settings from DOM inputs, save them to storage, apply UI updates, and refresh view settings.
+   * @returns {Promise<void>}
+   */
   async function persistSettingsFromControls() {
     const settings = loadSettings();
     const previousLanguage = settings.language;
@@ -386,6 +479,9 @@ export function registerSettingsControls() {
     await applyPersistedViewSettings({ speciesOrder, previousLanguage });
   }
 
+  /**
+   * Export all user data and settings as a downloadable JSON file.
+   */
   function exportAllData() {
     const payload = buildExportPayload();
     const blob = new Blob([JSON.stringify(payload, null, 2)], {
@@ -400,6 +496,10 @@ export function registerSettingsControls() {
     showToast("Data exported.", "success");
   }
 
+  /**
+   * Render the review checklist modal for selecting which items to import.
+   * @param {Object} payload - The normalized import payload.
+   */
   function renderImportReview(payload) {
     if (!importSummary || !importOptions) return;
 
@@ -426,14 +526,14 @@ export function registerSettingsControls() {
       importOptions.appendChild(row);
     }
 
-    for (const [gameKey, gameState] of gameEntries) {
+    for (const [gameKey, gamePayload] of gameEntries) {
       const config = GAMES[gameKey];
       if (!config) continue;
 
-      const caughtCount = countObjectEntries(gameState.caught);
-      const segmentCount = countObjectEntries(gameState.segments);
-      const cacheCount = countObjectEntries(gameState.speciesCache);
-      const hasMeta = isPlainObject(gameState.speciesCacheMeta);
+      const caughtCount = countObjectEntries(gamePayload.caught);
+      const segmentCount = countObjectEntries(gamePayload.segments);
+      const cacheCount = countObjectEntries(gamePayload.speciesCache);
+      const hasMeta = isPlainObject(gamePayload.speciesCacheMeta);
 
       const row = document.createElement("label");
       row.className = "import-option";
@@ -450,6 +550,9 @@ export function registerSettingsControls() {
     }
   }
 
+  /**
+   * Reset pending import state and clear import review modal elements.
+   */
   function resetImportReviewState() {
     pendingImportPayload = null;
     pendingImportFileName = "";
@@ -458,6 +561,11 @@ export function registerSettingsControls() {
     if (importInput) importInput.value = "";
   }
 
+  /**
+   * Open the import review modal with the given payload and filename.
+   * @param {Object} payload - The normalized import payload.
+   * @param {string} [fileName] - The name of the imported file.
+   */
   function openImportReviewModal(payload, fileName) {
     pendingImportPayload = payload;
     pendingImportFileName = fileName || "";
@@ -465,6 +573,9 @@ export function registerSettingsControls() {
     openImportReviewDialog();
   }
 
+  /**
+   * Apply selected settings and game data from the pending import payload to localStorage.
+   */
   function applySelectedImport() {
     if (!pendingImportPayload) return;
     const importSettingsChecked = document.getElementById(
@@ -522,6 +633,10 @@ export function registerSettingsControls() {
     window.location.reload();
   }
 
+  /**
+   * Read and parse an uploaded JSON file, validating its payload and opening the import review dialog.
+   * @param {File} [file] - The uploaded file object.
+   */
   function importAllData(file) {
     if (!file) return;
 
@@ -540,11 +655,17 @@ export function registerSettingsControls() {
     reader.readAsText(file);
   }
 
+  /**
+   * Clear the cached Pokémon species names from localStorage.
+   */
   function clearSpeciesCacheAction() {
     clearSpeciesCache();
     showToast("Species cache cleared.", "success");
   }
 
+  /**
+   * Prompt user for confirmation before wiping all stored progress and settings.
+   */
   function clearAllDataAction() {
     if (
       !window.confirm(
@@ -556,6 +677,9 @@ export function registerSettingsControls() {
     window.location.reload();
   }
 
+  /**
+   * Attach change listeners to theme radio inputs to immediately persist and apply selections.
+   */
   function attachThemeSettingsHandlers() {
     const radios = modal?.querySelectorAll('input[name="settingsTheme"]');
     if (!radios || !radios.length) return;
@@ -647,8 +771,9 @@ export function registerSettingsControls() {
 
 /**
  * Display a toast notification with automatic dismissal.
- * @param {string} message - The message to display
- * @param {string} type - The toast type: 'success', 'warning', or 'danger'
+ *
+ * @param {string} message - The message to display.
+ * @param {'success'|'warning'|'danger'} [type="success"] - The toast type for styling.
  */
 export function showToast(message, type = "success") {
   const toast = document.getElementById("toast");

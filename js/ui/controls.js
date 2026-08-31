@@ -9,7 +9,10 @@ import { isShinyMode, setShinyMode, rebuildDexView } from "../state.js";
 import { buildActiveDexSections } from "../api.js";
 
 /**
- * Toggle visibility of caught slots based on filter checkbox state.
+ * Toggles the visibility of caught Pokémon slots based on the filter checkbox state.
+ * Adds or removes the `hide-caught` CSS class on `document.body`.
+ *
+ * @returns {void}
  */
 export function applyHideCaughtFilter() {
   const toggle = document.getElementById("toggleUncaught");
@@ -22,9 +25,12 @@ export function applyHideCaughtFilter() {
 // =============================================================================
 
 /**
- * Apply search filter to cells based on query.
- * Supports searching by number (#42, 42) or by name.
- * Highlights matches and dims non-matches.
+ * Filters and highlights Pokémon cells based on a search query.
+ * Supports searching by regional or national Pokédex number (e.g. "#42", "42") or by Pokémon name.
+ * Highlights matching cells, dims non-matching cells, and scrolls the first match into view.
+ *
+ * @param {string} query - The search query string entered by the user.
+ * @returns {void}
  */
 export function applySearchFilter(query) {
   const trimmed = query.trim().toLowerCase();
@@ -72,8 +78,12 @@ export function applySearchFilter(query) {
 }
 
 /**
- * Register all header control event listeners.
- * Includes: search, filter, theme toggle, and share button.
+ * Registers all header control event listeners and initializes their UI state.
+ * Handles search input, uncaught toggle, hide caught button, theme toggle,
+ * shiny mode toggle, share URL generation, and mobile search bar collapse on scroll.
+ *
+ * @param {number} [slotCount] - Total number of slots in the active Pokédex used as a fallback for share link encoding.
+ * @returns {void}
  */
 export function registerHeaderControls(slotCount) {
   const searchInput = document.getElementById("search");
@@ -83,6 +93,11 @@ export function registerHeaderControls(slotCount) {
   const shinyToggle = document.getElementById("shinyToggle");
   const hideCaughtBtn = document.getElementById("hideCaughtBtn");
 
+  /**
+   * Synchronizes the hide/show caught button text and ARIA state with the checkbox state.
+   *
+   * @returns {void}
+   */
   const updateHideCaughtUi = () => {
     if (!hideCaughtBtn || !uncaughtToggle) return;
     const checked = !!uncaughtToggle.checked;
@@ -171,9 +186,20 @@ export function registerHeaderControls(slotCount) {
   updateHideCaughtUi();
 
   // Mobile: collapse the search bar after scrolling down a bit
+  /**
+   * Determines if the viewport matches mobile screen dimensions (<= 640px).
+   *
+   * @returns {boolean} True if the screen is mobile-sized, false otherwise.
+   */
   const isMobile = () => window.matchMedia("(max-width: 640px)").matches;
   const COLLAPSE_Y = 120; // px scrolled to collapse
   const EXPAND_Y = 60; // px to expand again (hysteresis)
+
+  /**
+   * Updates header scroll and collapsed search bar CSS classes based on vertical scroll offset and device width.
+   *
+   * @returns {void}
+   */
   const updateSearchCollapse = () => {
     document.body.classList.toggle("is-scrolled", window.scrollY > COLLAPSE_Y);
     if (!isMobile()) {
@@ -199,8 +225,10 @@ export function registerHeaderControls(slotCount) {
 }
 
 /**
- * Register scroll-to-top button behavior.
- * Shows the button after scrolling down a bit and scrolls back smoothly.
+ * Registers event listeners for the "scroll to top" button.
+ * Shows the button after scrolling down past a threshold and scrolls back smoothly when clicked.
+ *
+ * @returns {void}
  */
 export function registerScrollToTopButton() {
   const button = document.getElementById("scrollTop");
@@ -208,6 +236,11 @@ export function registerScrollToTopButton() {
 
   const threshold = 320; // px
 
+  /**
+   * Toggles the visible class on the scroll button when page scroll exceeds the threshold.
+   *
+   * @returns {void}
+   */
   function onScroll() {
     if (window.scrollY > threshold) {
       button.classList.add("is-visible");

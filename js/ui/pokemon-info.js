@@ -7,20 +7,35 @@ import { isShinyMode } from "../state.js";
 // POKÉMON INFO MODAL
 // =============================================================================
 
-/** In-memory cache for fetched Pokémon info, keyed by speciesId + selected generation. */
+/** In-memory cache for fetched Pokémon info, keyed by speciesId + formId + selected generation. */
 const _pokemonInfoCache = {};
+
+/** In-memory cache for species introduction generation numbers, keyed by species ID. */
 const _speciesGenerationCache = {};
+
+/** In-memory cache for form-specific Pokémon IDs, keyed by normalized form name. */
 const _pokemonFormIdByNameCache = {};
 
-/** One-time setup state for the info modal. */
+/** One-time setup state for the info modal handlers. */
 let _infoModalHandlers = null;
 
+/**
+ * Retrieves the generation number of the currently active game.
+ *
+ * @returns {number|null} The generation number (1-9), or `null` if not generation-based.
+ */
 function getSelectedGenerationNumber() {
   const group = ACTIVE_GAME?.group || "special";
   if (!group.startsWith("gen")) return null;
   return Number(group.replace("gen", ""));
 }
 
+/**
+ * Converts a PokeAPI generation identifier (e.g., "generation-i" or "ix") to an integer.
+ *
+ * @param {string|null|undefined} name - The generation resource identifier or roman numeral string.
+ * @returns {number|null} The integer generation number (1-9), or `null` if unparseable.
+ */
 function getGenerationNumberFromName(name) {
   const key = String(name || "").replace(/^generation-/, "");
   const map = {
@@ -37,6 +52,14 @@ function getGenerationNumberFromName(name) {
   return map[key] ?? null;
 }
 
+/**
+ * Constructs a cache key for Pokémon info modal data.
+ *
+ * @param {number|string} speciesId - National Pokédex species ID.
+ * @param {number|string} formId - Pokémon form ID or sprite ID.
+ * @param {number|null} [generationNumber=getSelectedGenerationNumber()] - Generation number scope.
+ * @returns {string} Cache key string.
+ */
 function getInfoCacheKey(
   speciesId,
   formId,
@@ -45,6 +68,13 @@ function getInfoCacheKey(
   return `${speciesId}:${formId}:${generationNumber ?? "all"}`;
 }
 
+/**
+ * Resolves the active type names for a Pokémon in a specific generation by applying past type changes.
+ *
+ * @param {Object} pokemonData - Raw Pokémon data payload from PokeAPI.
+ * @param {number|null} generationNumber - Selected generation number (1-9), or `null` for latest types.
+ * @returns {string[]} Array of lowercase type names (e.g. `["grass", "poison"]`).
+ */
 function resolveTypeNamesForGeneration(pokemonData, generationNumber) {
   const currentTypes = (pokemonData?.types || [])
     .map((typeEntry) => typeEntry?.type?.name)
@@ -85,6 +115,12 @@ function resolveTypeNamesForGeneration(pokemonData, generationNumber) {
     .filter(Boolean);
 }
 
+/**
+ * Fetches and caches the introduction generation number for a Pokémon species from PokeAPI.
+ *
+ * @param {number|string} speciesId - National Pokédex species ID.
+ * @returns {Promise<number|null>} Generation number (1-9) or `null` if fetch failed.
+ */
 async function fetchSpeciesGenerationNumber(speciesId) {
   if (_speciesGenerationCache[speciesId] !== undefined)
     return _speciesGenerationCache[speciesId];
@@ -109,6 +145,11 @@ async function fetchSpeciesGenerationNumber(speciesId) {
   }
 }
 
+/**
+ * Lazily initializes and returns the modal dialog open/close handlers for the info modal.
+ *
+ * @returns {{ openModal: () => void, closeModal: () => void }} Modal controller methods.
+ */
 function getInfoModalHandlers() {
   if (_infoModalHandlers) return _infoModalHandlers;
   const modal = document.getElementById("modalPokemonInfo");
@@ -126,11 +167,21 @@ function getInfoModalHandlers() {
   return _infoModalHandlers;
 }
 
+/**
+ * Parses numeric species ID from a PokeAPI resource URL.
+ *
+ * @param {string|null|undefined} url - Resource URL (e.g. "https://pokeapi.co/api/v2/pokemon-species/25/").
+ * @returns {number|null} Numeric species ID, or `null` if not matched.
+ */
 function parseSpeciesIdFromUrl(url) {
   const match = String(url || "").match(/\/pokemon-species\/(\d+)\//);
   return match ? Number(match[1]) : null;
 }
 
+/**
+ * Mapping of internal game IDs to their PokeAPI version identifiers.
+ * @type {Record<string, string[]>}
+ */
 const GAME_VERSION_GROUPS = {
   rby: ["red", "blue", "yellow"],
   gsc: ["gold", "silver", "crystal"],
@@ -150,6 +201,12 @@ const GAME_VERSION_GROUPS = {
   sv: ["scarlet", "violet"],
 };
 
+/**
+ * Converts kebab-case PokeAPI resource names to title-cased words.
+ *
+ * @param {string|null|undefined} name - Hyphenated identifier (e.g. "thunder-stone").
+ * @returns {string} Formatted title-cased string (e.g. "Thunder Stone").
+ */
 function prettifyResourceName(name) {
   return String(name || "")
     .replace(/-/g, " ")
@@ -157,12 +214,24 @@ function prettifyResourceName(name) {
     .trim();
 }
 
+/**
+ * Normalizes encounter location area names by removing redundant prefixes/suffixes.
+ *
+ * @param {string|null|undefined} name - Raw location area name.
+ * @returns {string} Cleaned display location name.
+ */
 function normalizeEncounterLocationName(name) {
   return prettifyResourceName(name)
     .replace(/^[A-Z][a-z]+ Route /, "Route ")
     .replace(/\s+Area$/, "");
 }
 
+/**
+ * Formats a game version name for user display, capitalizing roman numerals properly.
+ *
+ * @param {string|null|undefined} name - Raw version identifier (e.g. "omega-ruby" or "x").
+ * @returns {string} Formatted version display name (e.g. "Omega Ruby" or "X").
+ */
 function prettifyVersionName(name) {
   return String(name || "")
     .split("-")
@@ -173,10 +242,22 @@ function prettifyVersionName(name) {
     .trim();
 }
 
+/**
+ * Gets the array of PokeAPI version identifiers corresponding to the currently active game.
+ *
+ * @returns {string[]} List of game version names.
+ */
 function getEncounterVersionNames() {
   return GAME_VERSION_GROUPS[ACTIVE_GAME_ID] || [];
 }
 
+/**
+ * Extracts and sorts unique encounter location area names for a specific game version.
+ *
+ * @param {string} versionName - PokeAPI version identifier.
+ * @param {Array<Object>} encounterData - Raw encounter data array from PokeAPI.
+ * @returns {string[]} Sorted unique encounter area names.
+ */
 function buildEncounterEntriesForVersion(versionName, encounterData) {
   const entries = new Set();
 
@@ -198,6 +279,12 @@ function buildEncounterEntriesForVersion(versionName, encounterData) {
   return Array.from(entries).sort((left, right) => left.localeCompare(right));
 }
 
+/**
+ * Joins a list of version names into a formatted slash-separated string.
+ *
+ * @param {string[]} versions - Array of version identifiers.
+ * @returns {string} Formatted version list (e.g. "Red / Blue / Yellow").
+ */
 function joinVersionNames(versions) {
   const names = versions.map(prettifyVersionName).filter(Boolean);
   if (!names.length) return "";
@@ -206,6 +293,12 @@ function joinVersionNames(versions) {
   return `${names.slice(0, -1).join(" / ")} / ${names[names.length - 1]}`;
 }
 
+/**
+ * Formats a list of trade source versions into a readable string.
+ *
+ * @param {string[]} versions - Array of version identifiers.
+ * @returns {string} Trade instruction text (e.g. "Trade from Scarlet or Violet").
+ */
 function formatTradeSourceList(versions) {
   const names = versions.map(prettifyVersionName).filter(Boolean);
   if (!names.length) return "";
@@ -214,6 +307,14 @@ function formatTradeSourceList(versions) {
   return `Trade from ${names.slice(0, -1).join(", ")} or ${names[names.length - 1]}`;
 }
 
+/**
+ * Creates an encounter location list DOM element with a toggle button if entries exceed `maxVisible`.
+ *
+ * @param {string[]} entries - List of location names.
+ * @param {Object} [options] - Configuration options.
+ * @param {number} [options.maxVisible=5] - Maximum number of items shown before collapsing.
+ * @returns {HTMLUListElement|null} The created `<ul>` element, or `null` if entries is empty.
+ */
 function createEncounterList(entries, { maxVisible = 5 } = {}) {
   if (!entries.length) {
     return null;
@@ -268,6 +369,13 @@ function createEncounterList(entries, { maxVisible = 5 } = {}) {
   return list;
 }
 
+/**
+ * Finds the pre-evolution species display name from a list of transitions.
+ *
+ * @param {Array<Object>} transitions - List of evolution transition objects.
+ * @param {number|string} speciesId - Target Pokémon species ID.
+ * @returns {string} Display name of pre-evolution species, or empty string.
+ */
 function getPreEvolutionNameFromTransitions(transitions, speciesId) {
   if (!Array.isArray(transitions) || !transitions.length) return "";
 
@@ -286,6 +394,11 @@ function getPreEvolutionNameFromTransitions(transitions, speciesId) {
   return names[0] || "";
 }
 
+/**
+ * Determines whether encounter details should be rendered for the active game.
+ *
+ * @returns {boolean} `true` if encounters are supported, `false` for HOME or Legends spin-offs.
+ */
 function shouldShowEncounterDetails() {
   return (
     ACTIVE_GAME_ID !== "home" &&
@@ -294,6 +407,15 @@ function shouldShowEncounterDetails() {
   );
 }
 
+/**
+ * Renders game encounter details, evolution notes, or trade instructions into the encounter container.
+ *
+ * @param {HTMLElement} encounterEl - Container DOM element for encounter details.
+ * @param {Array<Object>} encounterData - Raw encounter data array from PokeAPI.
+ * @param {Object} [options] - Rendering options.
+ * @param {string} [options.preEvolutionName=""] - Name of pre-evolution if obtainable only through evolution.
+ * @returns {void}
+ */
 function renderEncounterDetails(
   encounterEl,
   encounterData,
@@ -413,10 +535,24 @@ function renderEncounterDetails(
   });
 }
 
+/**
+ * Resolves localized display name for a species from the global cache, with fallbacks.
+ *
+ * @param {number|string} speciesId - National Pokédex species ID.
+ * @param {string} [fallbackName=""] - Fallback name if species name is not found in cache.
+ * @returns {string} Resolved species display name.
+ */
 function resolveSpeciesDisplayName(speciesId, fallbackName = "") {
   return window.__livingDexNames?.[speciesId] || fallbackName || "Unknown";
 }
 
+/**
+ * Recursively traverses an evolution chain node and collects all species entries.
+ *
+ * @param {Object|null} chainNode - PokeAPI evolution chain node.
+ * @param {Array<{ speciesId: number, name: string }>} [species=[]] - Accumulator array.
+ * @returns {Array<{ speciesId: number, name: string }>} Array of collected species entries.
+ */
 function collectEvolutionSpecies(chainNode, species = []) {
   if (!chainNode) return species;
   const speciesId = parseSpeciesIdFromUrl(chainNode.species?.url);
@@ -428,6 +564,12 @@ function collectEvolutionSpecies(chainNode, species = []) {
   return species;
 }
 
+/**
+ * Deduplicates species entries by species ID.
+ *
+ * @param {Array<{ speciesId: number, name: string }>} entries - Array of species entries.
+ * @returns {Array<{ speciesId: number, name: string }>} Deduplicated array.
+ */
 function dedupeSpeciesEntries(entries) {
   const seen = new Set();
   const result = [];
@@ -439,6 +581,14 @@ function dedupeSpeciesEntries(entries) {
   return result;
 }
 
+/**
+ * Recursively collects valid evolution transitions from an evolution chain node, filtering by allowed species IDs.
+ *
+ * @param {Object|null} chainNode - PokeAPI evolution chain node.
+ * @param {Set<number>} allowedSpeciesIds - Set of species IDs allowed in the current context/generation.
+ * @param {Array<Object>} [transitions=[]] - Accumulator array of transition objects.
+ * @returns {Array<{ fromSpeciesId: number, fromName: string, toSpeciesId: number, toName: string, details: Array<Object> }>} Collected transitions.
+ */
 function collectEvolutionTransitions(
   chainNode,
   allowedSpeciesIds,
@@ -476,6 +626,12 @@ function collectEvolutionTransitions(
   return transitions;
 }
 
+/**
+ * Converts a single PokeAPI evolution details object into a human-readable condition string.
+ *
+ * @param {Object|null} detail - PokeAPI evolution detail object.
+ * @returns {string|null} Formatted evolution condition string, or `null` if invalid.
+ */
 function formatEvolutionDetail(detail) {
   if (!detail || typeof detail !== "object") return null;
   const trigger = detail.trigger?.name || "";
@@ -576,6 +732,12 @@ function formatEvolutionDetail(detail) {
   return methodText.trim();
 }
 
+/**
+ * Formats an array of evolution detail objects into a deduplicated list of method strings.
+ *
+ * @param {Array<Object>} details - Array of evolution detail objects.
+ * @returns {string[]} Array of formatted evolution method strings.
+ */
 function getEvolutionMethodLines(details) {
   const methods = (Array.isArray(details) ? details : [])
     .map(formatEvolutionDetail)
@@ -584,6 +746,16 @@ function getEvolutionMethodLines(details) {
   return Array.from(new Set(methods));
 }
 
+/**
+ * Creates a DOM member card element for a species in an evolution chain view.
+ *
+ * @param {Object} options - Member options.
+ * @param {number} options.speciesId - National Pokédex species ID.
+ * @param {number} [options.spriteId=options.speciesId] - Sprite/form ID to display.
+ * @param {string} [options.fallbackName] - Fallback name if localized name is unavailable.
+ * @param {string} [options.spriteStyle] - Sprite style preference key.
+ * @returns {HTMLDivElement} Member container element.
+ */
 function createEvolutionMember({
   speciesId,
   spriteId = speciesId,
@@ -611,12 +783,24 @@ function createEvolutionMember({
   return member;
 }
 
+/**
+ * Normalizes a Pokémon form name for case-insensitive matching.
+ *
+ * @param {string|null|undefined} name - Form name string.
+ * @returns {string} Trimmed, lowercased form name.
+ */
 function normalizeFormName(name) {
   return String(name || "")
     .trim()
     .toLowerCase();
 }
 
+/**
+ * Fetches and caches the numeric Pokémon ID corresponding to a specific form name from PokeAPI.
+ *
+ * @param {string} formName - Form name (e.g. "pikachu-alola", "rattata-alola").
+ * @returns {Promise<number|null>} Numeric Pokémon ID, or `null` if not found.
+ */
 async function fetchPokemonIdByName(formName) {
   const normalizedName = normalizeFormName(formName);
   if (!normalizedName) return null;
@@ -644,6 +828,16 @@ async function fetchPokemonIdByName(formName) {
   }
 }
 
+/**
+ * Filters evolution details matching specific base or evolved form names and default flags.
+ *
+ * @param {Array<Object>} details - Array of evolution detail objects.
+ * @param {string} [fromFormName=""] - Base species form name to match against `base_form`.
+ * @param {string} [toFormName=""] - Target species form name to match against `evolved_form`.
+ * @param {boolean} [fromIsDefault] - Optional filter for default form flag on the source Pokémon.
+ * @param {boolean} [toIsDefault] - Optional filter for default form flag on the evolved Pokémon.
+ * @returns {Array<Object>} Filtered evolution details array.
+ */
 function filterEvolutionDetailsForForms(
   details,
   fromFormName = "",
@@ -709,6 +903,16 @@ function filterEvolutionDetailsForForms(
   return filtered;
 }
 
+/**
+ * Propagates preferred form names and default flags across connected evolution transitions.
+ *
+ * @param {Object} context - Inference input parameters.
+ * @param {Array<Object>} context.transitions - List of evolution transition objects.
+ * @param {number} [context.selectedSpeciesId] - Currently selected species ID.
+ * @param {string} [context.selectedFormName] - Currently selected form name.
+ * @param {boolean} [context.selectedIsDefault] - Whether the selected form is default.
+ * @returns {{ preferredForms: Map<number, string>, preferredDefaults: Map<number, boolean> }} Inferred form preferences.
+ */
 function inferPreferredEvolutionContext({
   transitions,
   selectedSpeciesId,
@@ -805,6 +1009,15 @@ function inferPreferredEvolutionContext({
   return { preferredForms, preferredDefaults };
 }
 
+/**
+ * Applies inferred form preferences to filter evolution details across all transitions in a chain.
+ *
+ * @param {Array<Object>} transitions - Array of evolution transitions.
+ * @param {Object} context - Preferred forms and default flags maps.
+ * @param {Map<number, string>} context.preferredForms - Map of species ID to preferred form name.
+ * @param {Map<number, boolean>} context.preferredDefaults - Map of species ID to default flag.
+ * @returns {Array<Object>} Transitions with form-filtered details.
+ */
 function applyFormContextToTransitions(
   transitions,
   { preferredForms, preferredDefaults },
@@ -831,6 +1044,16 @@ function applyFormContextToTransitions(
   });
 }
 
+/**
+ * Resolves form-specific sprite/pokemon IDs for species in an evolution chain.
+ *
+ * @param {Object} context - Context object.
+ * @param {number} [context.selectedSpeciesId] - Currently selected species ID.
+ * @param {number} [context.selectedFormId] - Currently selected form/sprite ID.
+ * @param {Map<number, string>} context.preferredForms - Map of species ID to preferred form name.
+ * @param {number[]} [context.speciesIds=[]] - Array of species IDs in the chain.
+ * @returns {Promise<Record<number, number>>} Map of species ID to resolved sprite ID.
+ */
 async function resolveEvolutionSpriteMap({
   selectedSpeciesId,
   selectedFormId,
@@ -865,6 +1088,13 @@ async function resolveEvolutionSpriteMap({
   return spriteMap;
 }
 
+/**
+ * Builds linear branching root-to-leaf paths from evolution transition links.
+ *
+ * @param {{ speciesId: number, name?: string }|null} base - Base species in chain.
+ * @param {Array<Object>} transitions - Evolution transition objects.
+ * @returns {Array<{ root: { speciesId: number, name: string }, chain: Array<Object> }>} Linear evolution paths.
+ */
 function buildEvolutionPaths(base, transitions) {
   if (!Array.isArray(transitions) || !transitions.length) return [];
 
@@ -921,6 +1151,16 @@ function buildEvolutionPaths(base, transitions) {
   return paths.filter((path) => path.chain.length > 0);
 }
 
+/**
+ * Creates a DOM connector element with forward and optional reverse evolution arrows and method condition labels.
+ *
+ * @param {Object} options - Connector options.
+ * @param {string} options.arrowSymbol - Primary forward arrow symbol (e.g. "→").
+ * @param {string[]} options.methods - Array of method description strings.
+ * @param {string} [options.reverseArrowSymbol=""] - Optional reverse arrow symbol (e.g. "←").
+ * @param {string[]} [options.reverseMethods=[]] - Array of reverse method strings (e.g. incense breeding).
+ * @returns {HTMLDivElement} Connector element.
+ */
 function createEvolutionConnector({
   arrowSymbol,
   methods,
@@ -967,6 +1207,18 @@ function createEvolutionConnector({
   return connector;
 }
 
+/**
+ * Renders evolution flowchart paths, member cards, and connectors into the evolution container.
+ *
+ * @param {HTMLElement} evoEl - Evolution container DOM element.
+ * @param {Object} data - Evolution rendering data.
+ * @param {{ speciesId: number, name?: string }|null} data.base - Base species info.
+ * @param {Array<Object>} data.transitions - Evolution transition objects.
+ * @param {Object|null} data.breeding - Incense breeding information, if applicable.
+ * @param {Record<number, number>} data.speciesSpriteMap - Mapping of species ID to sprite/form ID.
+ * @param {string} [data.spriteStyle] - Sprite style preference key.
+ * @returns {void}
+ */
 function renderEvolutionDetails(
   evoEl,
   { base, transitions, breeding, speciesSpriteMap, spriteStyle },
@@ -1063,6 +1315,11 @@ function renderEvolutionDetails(
 /**
  * Fetch and display info for a Pokémon in the info modal.
  * Uses a simple in-memory cache to avoid redundant API calls.
+ *
+ * @param {number} speciesId - National Pokédex species ID.
+ * @param {number} formId - Pokémon form ID or sprite ID.
+ * @param {string} name - Species/form display name.
+ * @returns {Promise<void>}
  */
 export async function openPokemonInfoModal(speciesId, formId, name) {
   const modal = document.getElementById("modalPokemonInfo");

@@ -17,14 +17,72 @@ import {
 
 import { applyNamesToCells } from "./ui/dom-render.js";
 
+/**
+ * @typedef {Object} PokedexEntry
+ * @property {number} speciesId - The National Pokédex species ID.
+ * @property {number} formId - The specific Pokémon form ID or variant ID (defaults to speciesId).
+ */
+
+/**
+ * @typedef {Object} DexSection
+ * @property {string} key - Unique identifier for the dex segment.
+ * @property {string} title - Human-readable display title for the section.
+ * @property {string} kind - Segment type (e.g. 'base', 'dlc', 'forms').
+ * @property {PokedexEntry[]} entries - List of Pokédex entries in this section.
+ * @property {number} startIndex - Starting box entry / index number for numbering offset.
+ */
+
+/**
+ * @typedef {Object} SectionWarning
+ * @property {string} segmentId - ID of the segment that failed to load.
+ * @property {string} title - Title of the segment.
+ * @property {string} error - Error message string describing the failure.
+ */
+
+/**
+ * @typedef {Object} ActiveDexResult
+ * @property {DexSection[]} sections - Array of resolved sections in display order.
+ * @property {SectionWarning[]} warnings - Array of warning objects for sections that failed to load.
+ */
+
+/**
+ * @typedef {Object} SpeciesNameLoadResult
+ * @property {"missing" | "language" | "mismatch" | "stale" | "fresh"} cacheState - Cache validation status indicator.
+ * @property {number[]} failedIds - Array of species/form IDs that could not be fetched.
+ */
+
+/**
+ * @typedef {Object} PokeApiNameEntry
+ * @property {string} name - The localized name.
+ * @property {{ name: string, url: string }} language - Language metadata object.
+ */
+
+/**
+ * @typedef {Object} PokeApiSpeciesPayload
+ * @property {string} [name] - Fallback identifier name.
+ * @property {PokeApiNameEntry[]} [names] - List of localized name entries.
+ */
+
 // Local cache for resolving pokemon (form) IDs -> species IDs
 const POKEMON_TO_SPECIES_CACHE_KEY = `${ACTIVE_GAME.storagePrefix}-pokemon-to-species-v1`;
 const NAME_FALLBACK_PREFIX = "Name unavailable";
 
+/**
+ * Validates whether a value is a positive integer (> 0).
+ *
+ * @param {*} value - The value to test.
+ * @returns {boolean} `true` if the value is a positive integer, `false` otherwise.
+ */
 function isPositiveInteger(value) {
   return Number.isInteger(value) && value > 0;
 }
 
+/**
+ * Sanitizes and deduplicates an array of species IDs, discarding any non-positive integers.
+ *
+ * @param {Array<number|string>|unknown} speciesOrder - Array of species IDs to normalize.
+ * @returns {number[]} Deduplicated array of positive integer species IDs.
+ */
 function normalizeSpeciesOrder(speciesOrder) {
   return Array.from(
     new Set(
@@ -35,6 +93,13 @@ function normalizeSpeciesOrder(speciesOrder) {
   );
 }
 
+/**
+ * Normalizes a raw species name cache object by ensuring keys are numeric
+ * and values are non-empty trimmed strings.
+ *
+ * @param {Record<string|number, unknown>|null|undefined} rawCache - Raw cache object from storage.
+ * @returns {Record<number, string>} Sanitized dictionary mapping positive species IDs to names.
+ */
 function normalizeSpeciesNameCache(rawCache) {
   if (!rawCache || typeof rawCache !== "object") return {};
   return Object.fromEntries(
@@ -49,6 +114,12 @@ function normalizeSpeciesNameCache(rawCache) {
   );
 }
 
+/**
+ * Normalizes a list of raw Pokédex entry objects, validating and casting IDs to positive integers.
+ *
+ * @param {Array<{ speciesId?: unknown, formId?: unknown }>|unknown} entries - Raw array of entry objects.
+ * @returns {PokedexEntry[]} Validated Pokédex entry objects with positive integer IDs.
+ */
 function normalizePokedexEntries(entries) {
   if (!Array.isArray(entries)) return [];
   return entries
@@ -62,6 +133,18 @@ function normalizePokedexEntries(entries) {
     );
 }
 
+/**
+ * Evaluates the current freshness and validity state of the persisted species name cache metadata.
+ *
+ * @param {number[]} speciesOrder - Ordered array of species IDs to validate against the cached hash.
+ * @param {string} [language="en"] - Target language code to compare with the cached language.
+ * @returns {"missing" | "language" | "mismatch" | "stale" | "fresh"} Cache state descriptor:
+ *   - `"missing"`: No metadata found in storage.
+ *   - `"language"`: Cached language differs from requested language.
+ *   - `"mismatch"`: Cached ID hash does not match current species list hash.
+ *   - `"stale"`: Cache exceeds time-to-live threshold.
+ *   - `"fresh"`: Cache is valid, current, and matches the requested configuration.
+ */
 function getSpeciesCacheState(speciesOrder, language = "en") {
   const meta = readSpeciesCacheMeta();
   if (!meta) return "missing";
@@ -71,10 +154,21 @@ function getSpeciesCacheState(speciesOrder, language = "en") {
   return "fresh";
 }
 
+/**
+ * Generates a fallback display string when a localized species name cannot be retrieved.
+ *
+ * @param {number|string} id - The species or form ID.
+ * @returns {string} Fallback label formatted as "Name unavailable #<id>".
+ */
 function buildNameFallback(id) {
   return `${NAME_FALLBACK_PREFIX} #${id}`;
 }
 
+/**
+ * Retrieves the local cache mapping Pokémon form resource IDs to base species IDs from localStorage.
+ *
+ * @returns {Record<number, number>} Map of Pokémon/form IDs to base species IDs.
+ */
 function loadPokemonToSpeciesMapCache() {
   try {
     const parsed =
@@ -92,6 +186,12 @@ function loadPokemonToSpeciesMapCache() {
   }
 }
 
+/**
+ * Persists the Pokémon form ID to base species ID mapping dictionary into localStorage.
+ *
+ * @param {Record<number, number>} map - Map of Pokémon/form IDs to base species IDs.
+ * @returns {void}
+ */
 function savePokemonToSpeciesMapCache(map) {
   try {
     localStorage.setItem(POKEMON_TO_SPECIES_CACHE_KEY, JSON.stringify(map));
@@ -101,8 +201,12 @@ function savePokemonToSpeciesMapCache(map) {
 }
 
 /**
- * Resolve a pokemon resource id (which may represent a regional form) to its base species id.
- * Uses localStorage-backed cache to minimize API traffic.
+ * Resolves a Pokémon resource ID (which may represent a regional or special form) to its base species ID.
+ * Queries PokeAPI `/pokemon/` or `/pokemon-form/` endpoints and utilizes a localStorage-backed cache to minimize API traffic.
+ *
+ * @param {number|string} pokemonId - Pokémon resource or form ID to resolve.
+ * @returns {Promise<number>} Resolves to the base species ID.
+ * @throws {Error} If species resolution fails across all lookup endpoints.
  */
 async function getSpeciesIdForPokemon(pokemonId) {
   const cache = loadPokemonToSpeciesMapCache();
@@ -152,10 +256,13 @@ async function getSpeciesIdForPokemon(pokemonId) {
 }
 
 /**
- * Fetch and cache a specific PokeAPI Pokédex by numeric id.
- * Uses a per-segment cache key to avoid collisions between games/segments.
- * Returns array of objects with { speciesId, formId } where formId is the
- * regional variant if applicable, otherwise same as speciesId.
+ * Fetches and caches Pokédex entries for a specific PokeAPI Pokédex by numeric ID.
+ * Uses a per-segment cache key to avoid collisions between games and segments.
+ * Applies regional form mappings configured for the Pokédex and returns an array of entry objects.
+ *
+ * @param {number|string} pokedexId - PokeAPI Pokédex ID.
+ * @returns {Promise<PokedexEntry[]>} Array of Pokédex entry objects containing `speciesId` and `formId`.
+ * @throws {Error} If the Pokédex cannot be fetched from PokeAPI.
  */
 export async function loadPokedexEntries(pokedexId) {
   const cacheKey = `${ACTIVE_GAME.storagePrefix}-pokedex-${pokedexId}-v3`;
@@ -196,9 +303,13 @@ export async function loadPokedexEntries(pokedexId) {
 }
 
 /**
- * Compute active sections for current dex based on configuration and user settings.
- * Returns { sections, warnings } where sections is an array of
- * { key, title, kind, entries } in render order.
+ * Computes active Pokédex sections for the currently selected game based on game configuration
+ * and user-enabled segment settings.
+ *
+ * Handles both API-driven Pokédexes and manual ID lists (such as regional form and Gigantamax segments),
+ * resolving form IDs to base species IDs where necessary.
+ *
+ * @returns {Promise<ActiveDexResult>} Object containing an array of active sections and any warnings encountered.
  */
 export async function buildActiveDexSections() {
   const enabled = loadEnabledSegments();
@@ -266,6 +377,14 @@ export async function buildActiveDexSections() {
   return { sections, warnings };
 }
 
+/**
+ * Extracts a localized species name from a PokeAPI species payload.
+ * Attempts to match the requested language, falls back to English, and finally to normalized default name.
+ *
+ * @param {PokeApiSpeciesPayload} payload - PokeAPI pokemon-species response payload.
+ * @param {string} language - Target language code (e.g., "en", "ja", "fr", "de").
+ * @returns {string} The localized or fallback species name.
+ */
 function pickLocalizedSpeciesName(payload, language) {
   return (
     payload.names?.find((entry) => entry.language?.name === language)?.name ||
@@ -275,8 +394,14 @@ function pickLocalizedSpeciesName(payload, language) {
 }
 
 /**
- * Fetch a localized species name from PokeAPI.
- * Falls back to English/default name if the requested locale is unavailable.
+ * Fetches the localized species name for a given species or form ID from PokeAPI.
+ * If direct species lookup fails, attempts resolving the ID as a Pokémon/form ID before fetching.
+ * Falls back to English or normalized default name if the requested locale is unavailable.
+ *
+ * @param {number|string} id - Species or Pokémon form ID.
+ * @param {string} [language="en"] - Target language code.
+ * @returns {Promise<string>} Resolves with the localized species name.
+ * @throws {Error} If the name cannot be resolved from PokeAPI.
  */
 export async function fetchSpeciesName(id, language = "en") {
   // First try assuming the id is a species id
@@ -300,8 +425,15 @@ export async function fetchSpeciesName(id, language = "en") {
 }
 
 /**
- * Concurrency-limited map function for rate-limited API calls.
- * Distributes work across multiple workers to respect rate limits.
+ * Executes an asynchronous mapping task over an array with bounded concurrency.
+ * Distributes work across multiple workers to respect API rate limits.
+ *
+ * @template T, R
+ * @param {T[]} list - Items to process.
+ * @param {function(T, number): Promise<R>} task - Async callback executed for each item with (item, index).
+ * @param {Object} [options={}] - Configuration options.
+ * @param {number} [options.concurrency=6] - Maximum number of concurrent tasks running simultaneously.
+ * @returns {Promise<R[]>} Array of results maintaining the original order of `list`.
  */
 export async function mapWithConcurrency(list, task, { concurrency = 6 } = {}) {
   const results = new Array(list.length);
@@ -322,10 +454,16 @@ export async function mapWithConcurrency(list, task, { concurrency = 6 } = {}) {
 }
 
 /**
- * Download missing species names from PokeAPI with smart caching.
- * - Loads cached names immediately to reduce visual flicker
- * - Fetches only missing names with retries and concurrency control
- * - Merges results and updates cache for future sessions
+ * Downloads missing species names from PokeAPI with multi-layer caching and progressive DOM updates.
+ *
+ * Workflow:
+ * 1. Applies cached names immediately to the DOM to eliminate visual delay.
+ * 2. Identifies missing species names based on cache validity and current configuration.
+ * 3. Fetches missing names with exponential backoff retries and concurrency limiting.
+ * 4. Persists the updated dictionary into localStorage and applies fallback labels for failed requests.
+ *
+ * @param {Array<number|string>} speciesOrder - Ordered array of species IDs to load names for.
+ * @returns {Promise<SpeciesNameLoadResult>} Object containing cache validation state and list of failed IDs.
  */
 export async function loadSpeciesNames(speciesOrder) {
   const allIds = normalizeSpeciesOrder(speciesOrder);
@@ -402,3 +540,4 @@ export async function loadSpeciesNames(speciesOrder) {
   applyNamesToCells();
   return { cacheState, failedIds };
 }
+

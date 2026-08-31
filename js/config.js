@@ -1,13 +1,24 @@
 /**
- * Configuration object for different Pokémon games and their Pokédexes.
- * title: Display name of the game
- * storagePrefix: Prefix for (local)Storage keys
- * dexes: Array of Pokédexes within the game
- *   id: Unique identifier for the Pokédex
- *   title: Display name of the Pokédex
- *   pokedexId: ID used to fetch data from PokéAPI
- *   type: Type of Pokédex (e.g., 'base', 'dlc', 'forms')
- *   optional: Whether the Pokédex is optional to include
+ * Configuration module for Pokémon games, Pokédex definitions, regional forms,
+ * storage keys, and sprite URL utilities.
+ *
+ * @typedef {Object} PokedexSegment
+ * @property {string} id - Unique identifier for the Pokédex segment.
+ * @property {string} title - Display name of the Pokédex segment.
+ * @property {number} [pokedexId] - ID used to fetch data from PokéAPI.
+ * @property {'base'|'dlc'|'forms'} type - Type of Pokédex segment (e.g., 'base', 'dlc', 'forms').
+ * @property {boolean} optional - Whether the Pokédex segment is optional to include.
+ * @property {boolean} [defaultEnabled] - Whether an optional segment is enabled by default.
+ * @property {number} [startEntry] - Starting entry index for partial dexes.
+ * @property {number} [endEntry] - Ending entry index for partial dexes.
+ * @property {number[]} [manualIds] - Explicit list of Pokémon form/species IDs for manual dexes.
+ *
+ * @typedef {Object} GameConfig
+ * @property {string} title - Display name of the game.
+ * @property {string} storagePrefix - Prefix for (local)Storage keys.
+ * @property {string} group - Group identifier for sorting (e.g., 'gen1', 'special').
+ * @property {number} order - Display ordering index within the group.
+ * @property {PokedexSegment[]} dexes - Array of Pokédexes/segments within the game.
  */
 
 const HOME_REGIONAL_FORM_IDS = [
@@ -34,6 +45,13 @@ const GALARIAN_FORM_IDS = [
   10172, 10173, 10174, 10175, 10176, 10177, 10179, 10180,
 ];
 
+/**
+ * Returns a Set of default enabled Pokédex segment IDs for a given game.
+ * Non-optional segments and optional segments with `defaultEnabled: true` are included.
+ *
+ * @param {GameConfig} [game=ACTIVE_GAME] - The game configuration to extract enabled segment IDs from.
+ * @returns {Set<string>} Set of enabled Pokédex segment IDs.
+ */
 export function getDefaultEnabledSegments(game = ACTIVE_GAME) {
   return new Set(
     game.dexes
@@ -61,6 +79,11 @@ const GIGANTAMAX_FORM_IDS = [
   10217, 10218, 10219, 10220, 10221, 10222, 10223, 10224, 10225, 10226, 10227,
 ];
 
+/**
+ * Display sort order priority for Pokémon game groups / generations.
+ * Lower numerical values appear earlier in navigation and menus.
+ * @type {Record<string, number>}
+ */
 export const GAME_GROUP_ORDER = {
   special: 0,
   gen1: 10,
@@ -74,6 +97,11 @@ export const GAME_GROUP_ORDER = {
   gen9: 90,
 };
 
+/**
+ * Returns game entries sorted primarily by generation/group order and secondarily by game order.
+ *
+ * @returns {Array<[string, GameConfig]>} Sorted array of `[gameKey, gameConfig]` entries.
+ */
 export function getOrderedGameEntries() {
   return Object.entries(GAMES).sort(([, left], [, right]) => {
     const leftGroup = GAME_GROUP_ORDER[left.group] ?? 999;
@@ -83,6 +111,10 @@ export function getOrderedGameEntries() {
   });
 }
 
+/**
+ * Master configuration map of all supported Pokémon games and their Pokédex segments.
+ * @type {Record<string, GameConfig>}
+ */
 export const GAMES = {
   // Pokémon Home, only includes National Dex
   home: {
@@ -466,8 +498,11 @@ export const GAMES = {
   },
 };
 
-// Regional form mappings: species ID -> form ID for specific dexes
-// Maps species to their regional form variants that should appear in regional dexes
+/**
+ * Regional form mappings: maps Pokédex API ID -> (base species ID -> regional form ID).
+ * Maps species to their regional form variants that should appear in regional dexes.
+ * @type {Record<number, Record<number, number>>}
+ */
 export const REGIONAL_FORM_MAPPINGS = {
   // Alola Pokédex (16) - Sun/Moon - Alolan forms
   16: {
@@ -666,6 +701,11 @@ export const REGIONAL_FORM_MAPPINGS = {
   },
 };
 
+/**
+ * Reads and parses saved user settings from localStorage.
+ *
+ * @returns {Record<string, *>} Parsed settings object, or an empty object on error or if absent.
+ */
 function readSavedSettings() {
   try {
     const raw = localStorage.getItem("settings-v1");
@@ -677,6 +717,12 @@ function readSavedSettings() {
   }
 }
 
+/**
+ * Resolves the active game ID based on URL query parameters, saved user settings, or default fallback.
+ *
+ * @param {string} [search=location.search] - Query string to parse for the `game` parameter.
+ * @returns {string} The resolved game identifier (e.g., 'home', 'sv', 'swsh').
+ */
 export function resolveActiveGameId(search = location.search) {
   const params = new URLSearchParams(search);
   const urlGame = params.get("game");
@@ -715,6 +761,11 @@ export const prefersReducedMotion = window.matchMedia(
 // Utility functions for sprite URLs and species name formatting
 const SPRITE_BASE =
   "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon";
+
+/**
+ * Map of sprite style keys to generator functions that produce image URLs.
+ * @type {Record<string, (id: number|string, isShiny: boolean) => string>}
+ */
 const SPRITE_STYLE_URLS = {
   "official-artwork": (id, isShiny) =>
     `${SPRITE_BASE}/other/official-artwork/${isShiny ? "shiny/" : ""}${id}.png`,
@@ -725,11 +776,28 @@ const SPRITE_STYLE_URLS = {
   pokesprites: (id, isShiny) =>
     `${SPRITE_BASE}/${isShiny ? "shiny/" : ""}${id}.png`,
 };
+
+/**
+ * Generates the image/sprite URL for a given Pokémon ID, sprite style, and shiny state.
+ *
+ * @param {number|string} id - The Pokémon species or form ID.
+ * @param {'pokesprites'|'official-artwork'|'home'|'showdown'|string} [style="pokesprites"] - Visual sprite style.
+ * @param {boolean} [isShiny=false] - Whether to return the shiny variant sprite URL.
+ * @returns {string} URL pointing to the Pokémon sprite image.
+ */
 export const spriteUrlForSpecies = (
   id,
   style = "pokesprites",
   isShiny = false,
 ) =>
   (SPRITE_STYLE_URLS[style] || SPRITE_STYLE_URLS["pokesprites"])(id, isShiny);
+
+/**
+ * Normalizes a hyphenated Pokémon or form name into a title-cased, space-separated display name.
+ * E.g., 'tapu-koko' -> 'Tapu Koko'.
+ *
+ * @param {string} name - Raw hyphenated species or form name.
+ * @returns {string} Formatted display name.
+ */
 export const normalizeSpeciesName = (name) =>
   name.replace(/-/g, " ").replace(/\b\w/g, (value) => value.toUpperCase());
