@@ -13,6 +13,7 @@
       "type": "base",
       "optional": false,
       "defaultEnabled": false,
+      "startIndex": 1,
       "entries": [
         {
           "speciesId": 722,
@@ -1231,1522 +1232,2134 @@
     "25": {
       "legends-arceus": {
         "locations": [
-          "'''Obsidian Fieldlands:''' Nature's Pantry, massive mass outbreaks",
-          "'''Crimson Mirelands:''' near Golden Lowlands",
-          "'''Cobalt Coastlands:''' Windbreak Stand",
-          "'''Alabaster Icelands:''' Space-time distortions"
+          "Obsidian Fieldlands: Nature's Pantry",
+          "Massive Mass Outbreaks",
+          "Crimson Mirelands: near Golden Lowlands",
+          "Cobalt Coastlands: Windbreak Stand",
+          "Alabaster Icelands: Space Time Distortions"
         ]
       }
     },
     "35": {
       "legends-arceus": {
         "locations": [
-          "'''Cobalt Coastlands:''' massive mass outbreaks",
-          "'''Coronet Highlands:''' Fabled SpringN, massive mass outbreaks"
+          "Cobalt Coastlands: massive mass outbreaks",
+          "Coronet Highlands: Fabled SpringN",
+          "Massive Mass Outbreaks"
         ]
       }
     },
     "36": {
       "legends-arceus": {
         "locations": [
-          "'''Coronet Highlands:''' Fabled SpringN&nbsp",
-          "link=Alpha Pokémon|14px, massive mass outbreaks"
+          "Coronet Highlands: Fabled SpringN 14px",
+          "Massive Mass Outbreaks"
         ]
       }
     },
     "37": {
       "legends-arceus": {
         "locations": [
-          "'''Cobalt Coastlands:''' Veilstone Cape, massive mass outbreaks ('''Kantonian Form''')",
-          "'''Alabaster Icelands:''' massive mass outbreaks ('''Kantonian Form''')",
-          "'''Alabaster Icelands:''' Whiteout Valley (only one during Request 83) ('''Alolan Form''')"
+          "Cobalt Coastlands: Veilstone Cape",
+          "massive mass outbreaks (Kantonian Form)",
+          "Alabaster Icelands: massive mass outbreaks (Kantonian Form)",
+          "Alabaster Icelands: Whiteout Valley (only one during Request 83) (Alolan Form)"
         ]
       }
     },
     "38": {
       "legends-arceus": {
         "locations": [
-          "'''Cobalt Coastlands:''' Firespit Island&nbsp",
-          "link=Alpha Pokémon|14px, massive mass outbreaks ('''Kantonian Form''')",
-          "'''Alabaster Icelands:''' massive mass outbreaks ('''Kantonian Form''')",
-          "Evolve Vulpix ('''Alolan Form''')"
+          "Cobalt Coastlands: Firespit Island 14px",
+          "massive mass outbreaks (Kantonian Form)",
+          "Alabaster Icelands: massive mass outbreaks (Kantonian Form)",
+          "Evolve Alolan Vulpix (Alolan Form)"
         ]
       }
     },
     "41": {
       "legends-arceus": {
         "locations": [
-          "'''Obsidian Fieldlands:''' Worn BridgeN, Deertrack HeightsN, Nature's PantryN, The HeartwoodN, near Obsidian FallsN, near Diamond SettlementN, Bolderoll SlopeN, Wayward WoodN",
-          "'''Alabaster Icelands:''' Snowpoint Temple"
+          "Obsidian Fieldlands: Worn BridgeN",
+          "Deertrack PathN",
+          "Deertrack HeightsN",
+          "Windswept RunN",
+          "Nature's PantryN",
+          "Tidewater DamN",
+          "The HeartwoodN",
+          "Oreburrow TunnelN",
+          "near Obsidian FallsN",
+          "Massive Mass Outbreaks",
+          "Crimson Mirelands: Cloudpool RidgeN",
+          "near Diamond SettlementN",
+          "Diamond HeathN",
+          "Bolderoll SlopeN",
+          "Coronet Highlands: Heavenward LookoutN",
+          "Wayward WoodN",
+          "Wayward Cave",
+          "near Ancient QuarryN",
+          "Alabaster Icelands: Snowpoint Temple"
         ]
       }
     },
     "42": {
       "legends-arceus": {
         "locations": [
-          "'''Obsidian Fieldlands:''' Deertrack HeightsN, Nature's PantryN, The HeartwoodN and nearby (additional&nbsp",
-          "link=Alpha Pokémon|14pxN), near Obsidian FallsN, near Diamond SettlementN, Bolderoll SlopeN, Wayward WoodN",
-          "'''Alabaster Icelands:''' Snowpoint Temple"
+          "Obsidian Fieldlands: Deertrack HeightsN",
+          "Windswept RunN",
+          "Nature's PantryN",
+          "Tidewater DamN",
+          "The HeartwoodN",
+          "Oreburrow TunnelN and nearby (additional 14px (Day, Night)",
+          "near Obsidian FallsN",
+          "Massive Mass Outbreaks",
+          "Crimson Mirelands: Cloudpool RidgeN",
+          "near Diamond SettlementN",
+          "Diamond HeathN",
+          "Bolderoll SlopeN",
+          "Coronet Highlands: Heavenward LookoutN",
+          "Wayward WoodN",
+          "Wayward Cave",
+          "near Ancient QuarryN",
+          "Alabaster Icelands: Snowpoint Temple"
         ]
       }
     },
     "46": {
       "legends-arceus": {
         "locations": [
-          "'''Obsidian Fieldlands:''' Nature's Pantry, massive mass outbreaks",
-          "'''Crimson Mirelands:''' Golden Lowlands, near Ursa's Ring, near Cloudpool Ridge, Diamond Heath, near Cottonsedge Prairie, Droning Meadow, massive mass outbreaks",
-          "'''Cobalt Coastlands:''' near Windbreak Stand",
-          "'''Coronet Highlands:''' Heavenward Lookout, Wayward Wood"
+          "Obsidian Fieldlands: Nature's Pantry",
+          "Massive Mass Outbreaks",
+          "Crimson Mirelands: Golden Lowlands",
+          "near Ursa's Ring",
+          "near Cloudpool Ridge",
+          "Diamond Heath",
+          "near Cottonsedge Prairie",
+          "Droning Meadow",
+          "Cobalt Coastlands: near Windbreak Stand",
+          "Coronet Highlands: Heavenward Lookout",
+          "Wayward Wood"
         ]
       }
     },
     "47": {
       "legends-arceus": {
         "locations": [
-          "'''Obsidian Fieldlands:''' near Nature's Pantry&nbsp",
-          "link=Alpha Pokémon|14px (also mass outbreaks), massive mass outbreaks",
-          "'''Crimson Mirelands:''' Golden Lowlands, near Ursa's Ring, near Cloudpool Ridge, Diamond Heath, near Cottonsedge Prairie, Droning Meadow, massive mass outbreaks",
-          "'''Cobalt Coastlands:''' Windbreak Stand",
-          "'''Coronet Highlands:''' Heavenward Lookout, Wayward Wood"
+          "Obsidian Fieldlands: near Nature's Pantry 14px (also mass outbreaks)",
+          "Massive Mass Outbreaks",
+          "Crimson Mirelands: Golden Lowlands",
+          "near Ursa's Ring",
+          "near Cloudpool Ridge",
+          "Diamond Heath",
+          "near Cottonsedge Prairie",
+          "Droning Meadow",
+          "Cobalt Coastlands: Windbreak Stand",
+          "Coronet Highlands: Heavenward Lookout",
+          "Wayward Wood"
         ]
       }
     },
     "54": {
       "legends-arceus": {
         "locations": [
-          "'''Obsidian Fieldlands:''' The Heartwood",
-          "'''Crimson Mirelands:''' Golden Lowlands, Gapejaw Bog, Holm of Trials, massive mass outbreaks",
-          "'''Cobalt Coastlands:''' Bathers' Lagoon, massive mass outbreaks",
-          "'''Coronet Highlands:''' Wayward Wood, Lonely Spring"
+          "Obsidian Fieldlands: The Heartwood",
+          "Crimson Mirelands: Golden Lowlands",
+          "Gapejaw Bog",
+          "Holm of Trials",
+          "Massive Mass Outbreaks",
+          "Cobalt Coastlands: Bathers' Lagoon",
+          "Coronet Highlands: Wayward Wood",
+          "Lonely Spring"
         ]
       }
     },
     "55": {
       "legends-arceus": {
         "locations": [
-          "'''Obsidian Fieldlands:''' The Heartwood (mass outbreaks)",
-          "'''Crimson Mirelands:''' Golden Lowlands (mass outbreaks), Holm of Trials, massive mass outbreaks",
-          "'''Cobalt Coastlands:''' Bathers' Lagoon (additional&nbsp",
-          "link=Alpha Pokémon|14px), massive mass outbreaks",
-          "'''Coronet Highlands:''' Wayward Wood, Lonely Spring"
+          "Obsidian Fieldlands: The Heartwood (mass outbreaks)",
+          "Crimson Mirelands: Golden Lowlands (mass outbreaks)",
+          "Holm of Trials",
+          "Massive Mass Outbreaks",
+          "Cobalt Coastlands: Bathers' Lagoon (additional 14px)",
+          "Coronet Highlands: Wayward Wood",
+          "Lonely Spring"
         ]
       }
     },
     "63": {
       "legends-arceus": {
         "locations": [
-          "'''Obsidian Fieldlands:''' Windswept Run, Sandgem Flats, massive mass outbreaks",
-          "'''Alabaster Icelands:''' Lake Acuity, massive mass outbreaks"
+          "Obsidian Fieldlands: Windswept Run",
+          "Sandgem Flats",
+          "Massive Mass Outbreaks",
+          "Alabaster Icelands: Lake Acuity"
         ]
       }
     },
     "64": {
       "legends-arceus": {
         "locations": [
-          "'''Obsidian Fieldlands:''' Sandgem Flats, massive mass outbreaks",
-          "'''Cobalt Coastlands:''' Space-time distortions",
-          "'''Alabaster Icelands:''' Lake Acuity, massive mass outbreaks"
+          "Obsidian Fieldlands: Sandgem Flats",
+          "Massive Mass Outbreaks",
+          "Cobalt Coastlands: Space Time Distortions",
+          "Alabaster Icelands: Lake Acuity"
         ]
       }
     },
     "65": {
       "legends-arceus": {
         "locations": [
-          "'''Obsidian Fieldlands:''' Sandgem Flats&nbsp",
-          "link=Alpha Pokémon|14px, massive mass outbreaks",
-          "'''Cobalt Coastlands:''' Space-time distortions",
-          "'''Alabaster Icelands:''' Lake Acuity, massive mass outbreaks"
+          "Obsidian Fieldlands: Sandgem Flats 14px",
+          "Massive Mass Outbreaks",
+          "Cobalt Coastlands: Space Time Distortions",
+          "Alabaster Icelands: Lake Acuity"
         ]
       }
     },
     "66": {
       "legends-arceus": {
         "locations": [
-          "'''Obsidian Fieldlands:''' Oreburrow Tunnel, near Obsidian Falls",
-          "'''Cobalt Coastlands:''' near Ginkgo Landing, Castaway Shore",
-          "'''Coronet Highlands:''' Bolderoll Ravine, near Cloudcap Pass, massive mass outbreaks",
-          "'''Alabaster Icelands:''' Icebound Falls, Arena's Approach, Snowfall Hot Spring, massive mass outbreaks"
+          "Obsidian Fieldlands: Oreburrow Tunnel",
+          "near Obsidian Falls",
+          "Cobalt Coastlands: near Ginkgo Landing",
+          "Castaway Shore",
+          "Coronet Highlands: Bolderoll Ravine",
+          "near Cloudcap Pass",
+          "Massive Mass Outbreaks",
+          "Alabaster Icelands: Icebound Falls",
+          "Arena's Approach",
+          "Snowfall Hot Spring"
         ]
       }
     },
     "67": {
       "legends-arceus": {
         "locations": [
-          "'''Obsidian Fieldlands:''' near Obsidian Falls",
-          "'''Cobalt Coastlands:''' near Ginkgo Landing (additional&nbsp",
-          "link=Alpha Pokémon|14px), Castaway Shore",
-          "'''Coronet Highlands:''' Bolderoll Ravine, near Cloudcap Pass, massive mass outbreaks",
-          "'''Alabaster Icelands:''' Icebound Falls, Arena's Approach, Snowfall Hot Spring, massive mass outbreaks"
+          "Obsidian Fieldlands: near Obsidian Falls",
+          "Cobalt Coastlands: near Ginkgo Landing (additional 14px)",
+          "Castaway Shore",
+          "Coronet Highlands: Bolderoll Ravine",
+          "near Cloudcap Pass",
+          "Massive Mass Outbreaks",
+          "Alabaster Icelands: Icebound Falls",
+          "Arena's Approach",
+          "Snowfall Hot Spring"
         ]
       }
     },
     "68": {
       "legends-arceus": {
         "locations": [
-          "'''Coronet Highlands:''' massive mass outbreaks",
-          "'''Alabaster Icelands:''' Arena's Approach&nbsp",
-          "link=Alpha Pokémon|14px, massive mass outbreaks"
+          "Coronet Highlands: massive mass outbreaks",
+          "Alabaster Icelands: Arena's Approach 14px",
+          "Massive Mass Outbreaks"
         ]
       }
     },
     "72": {
       "legends-arceus": {
         "locations": [
-          "'''Cobalt Coastlands:''' near Islespy Shore, Lunker's Lair, Seagrass Haven, massive mass outbreaks"
+          "Cobalt Coastlands: near Islespy Shore",
+          "Lunker's Lair",
+          "Seagrass Haven",
+          "Massive Mass Outbreaks"
         ]
       }
     },
     "73": {
       "legends-arceus": {
         "locations": [
-          "'''Cobalt Coastlands:''' near Islespy Shore, Lunker's Lair (additional&nbsp",
-          "link=Alpha Pokémon|14px nearby), Seagrass Haven, massive mass outbreaks"
+          "Cobalt Coastlands: near Islespy Shore",
+          "Lunker's Lair (additional 14px nearby)",
+          "Seagrass Haven",
+          "Massive Mass Outbreaks"
         ]
       }
     },
     "81": {
       "legends-arceus": {
         "locations": [
-          "'''Cobalt Coastlands:''' Space-time distortions"
+          "Cobalt Coastlands: Space Time Distortions"
         ]
       }
     },
     "82": {
       "legends-arceus": {
         "locations": [
-          "'''Cobalt Coastlands:''' Space-time distortions"
+          "Cobalt Coastlands: Space Time Distortions"
         ]
       }
     },
     "92": {
       "legends-arceus": {
         "locations": [
-          "'''Crimson Mirelands:''' Golden LowlandsN, Holm of TrialsN, near Sludge MoundN, Shrouded RuinsDN, Droning MeadowN, massive mass outbreaks",
-          "'''Coronet Highlands:''' Clamberclaw CliffsN, Sacred PlazaN, massive mass outbreaks",
-          "'''Alabaster Icelands:''' Bonechill WastesDN, near Icepeak CavernN, massive mass outbreaks"
+          "Crimson Mirelands: Golden LowlandsN",
+          "Gapejaw BogN",
+          "Holm of TrialsN",
+          "Ursa's RingN",
+          "near Sludge MoundN",
+          "Scarlet BogN",
+          "Shrouded RuinsN (also (mass outbreaks) (Day, Night)",
+          "Cottonsedge PrairieN",
+          "Droning MeadowN",
+          "near Lake ValorN",
+          "Massive Mass Outbreaks",
+          "Coronet Highlands: Clamberclaw CliffsN",
+          "Celestica RuinsN",
+          "Sacred PlazaN",
+          "Bolderoll RavineN",
+          "Alabaster Icelands: Bonechill WastesN (also mass outbreaks (Day, Night)",
+          "near Avalugg's LegacyN",
+          "near Icepeak CavernN"
         ]
       }
     },
     "93": {
       "legends-arceus": {
         "locations": [
-          "'''Obsidian Fieldlands:''' Space-time distortions",
-          "'''Crimson Mirelands:''' near Golden LowlandsN, Holm of TrialsN, near Sludge MoundN, Shrouded RuinsDN, Droning MeadowN, massive mass outbreaks",
-          "'''Coronet Highlands:''' Clamberclaw CliffsN, Sacred PlazaN, massive mass outbreaks",
-          "'''Alabaster Icelands:''' Bonechill WastesDN, near Icepeak CavernN, massive mass outbreaks"
+          "Obsidian Fieldlands: Space Time Distortions",
+          "Crimson Mirelands: near Golden LowlandsN",
+          "Gapejaw BogN",
+          "Holm of TrialsN",
+          "Ursa's RingN",
+          "near Sludge MoundN",
+          "Scarlet BogN",
+          "Shrouded RuinsN (also mass outbreaks (Day, Night)",
+          "Cottonsedge PrairieN",
+          "Droning MeadowN",
+          "near Lake ValorN",
+          "Massive Mass Outbreaks",
+          "Coronet Highlands: Clamberclaw CliffsN",
+          "Celestica RuinsN",
+          "Sacred PlazaN",
+          "Bolderoll RavineN",
+          "Alabaster Icelands: Bonechill WastesN (also mass outbreaks (Day, Night)",
+          "near Avalugg's LegacyN",
+          "near Icepeak CavernN"
         ]
       }
     },
     "94": {
       "legends-arceus": {
         "locations": [
-          "'''Obsidian Fieldlands:''' Space-time distortions",
-          "'''Crimson Mirelands:''' massive mass outbreaks",
-          "'''Coronet Highlands:''' massive mass outbreaks",
-          "'''Alabaster Icelands:''' massive mass outbreaks"
+          "Obsidian Fieldlands: Space Time Distortions",
+          "Crimson Mirelands: massive mass outbreaks",
+          "Coronet Highlands: massive mass outbreaks",
+          "Alabaster Icelands: massive mass outbreaks"
         ]
       }
     },
     "95": {
       "legends-arceus": {
         "locations": [
-          "'''Obsidian Fieldlands:''' Space-time distortions",
-          "'''Crimson Mirelands:''' near Scarlet Bog, near Diamond Settlement&nbsp",
-          "link=Alpha Pokémon|14px, near Lake Valor, massive mass outbreaks",
-          "'''Cobalt Coastlands:''' massive mass outbreaks",
-          "'''Coronet Highlands:''' Celestica Trail"
+          "Obsidian Fieldlands: Space Time Distortions",
+          "Crimson Mirelands: near Scarlet Bog",
+          "near Diamond Settlement 14px",
+          "near Lake Valor",
+          "Massive Mass Outbreaks",
+          "Cobalt Coastlands: massive mass outbreaks",
+          "Coronet Highlands: Celestica Trail"
         ]
       }
     },
     "108": {
       "legends-arceus": {
         "locations": [
-          "'''Obsidian Fieldlands:''' Space-time distortions",
-          "'''Crimson Mirelands:''' Shrouded Ruins, near Diamond Settlement, massive mass outbreaks",
-          "'''Alabaster Icelands:''' Avalanche Slopes, Snowfall Hot Spring, massive mass outbreaks"
+          "Obsidian Fieldlands: Space Time Distortions",
+          "Crimson Mirelands: Shrouded Ruins",
+          "near Diamond Settlement",
+          "Massive Mass Outbreaks",
+          "Alabaster Icelands: Avalanche Slopes",
+          "Snowfall Hot Spring"
         ]
       }
     },
     "111": {
       "legends-arceus": {
         "locations": [
-          "'''Crimson Mirelands:''' Shrouded Ruins, Diamond Heath (additional&nbsp",
-          "link=Alpha Pokémon|14px), Bolderoll Slope, massive mass outbreaks",
-          "'''Coronet Highlands:''' Celestica Trail, Sacred Plaza, massive mass outbreaks"
+          "Crimson Mirelands: Shrouded Ruins",
+          "Diamond Heath (additional 14px)",
+          "Bolderoll Slope",
+          "Massive Mass Outbreaks",
+          "Coronet Highlands: Celestica Trail",
+          "Sacred Plaza"
         ]
       }
     },
     "112": {
       "legends-arceus": {
         "locations": [
-          "'''Crimson Mirelands:''' Bolderoll Slope, massive mass outbreaks",
-          "'''Cobalt Coastlands:''' Space-time distortions",
-          "'''Coronet Highlands:''' Celestica Trail, Sacred Plaza, massive mass outbreaks"
+          "Crimson Mirelands: Bolderoll Slope",
+          "Massive Mass Outbreaks",
+          "Cobalt Coastlands: Space Time Distortions",
+          "Coronet Highlands: Celestica Trail",
+          "Sacred Plaza"
         ]
       }
     },
     "113": {
       "legends-arceus": {
         "locations": [
-          "'''Obsidian Fieldlands:''' near Horseshoe Plains (mass outbreaks), near Obsidian Falls",
-          "'''Crimson Mirelands:''' Cottonsedge Prairie (mass outbreaks)",
-          "'''Cobalt Coastlands:''' Hideaway Bay, Tombolo Walk and nearby (additional&nbsp",
-          "link=Alpha Pokémon|14px), massive mass outbreaks",
-          "'''Coronet Highlands:''' Lonely Spring (mass outbreaks)",
-          "'''Alabaster Icelands:''' Avalanche Slopes"
+          "Obsidian Fieldlands: near Horseshoe Plains (mass outbreaks)",
+          "near Obsidian Falls",
+          "Crimson Mirelands: Cottonsedge Prairie (mass outbreaks)",
+          "Cobalt Coastlands: Hideaway Bay",
+          "Tombolo Walk and nearby (additional 14px)",
+          "Massive Mass Outbreaks",
+          "Coronet Highlands: Lonely Spring (mass outbreaks)",
+          "Alabaster Icelands: Avalanche Slopes"
         ]
       }
     },
     "114": {
       "legends-arceus": {
         "locations": [
-          "'''Crimson Mirelands:''' Gapejaw Bog and nearby, near Cottonsedge Prairie, massive mass outbreaks",
-          "'''Cobalt Coastlands:''' near Crossing Slope"
+          "Crimson Mirelands: Gapejaw Bog and nearby",
+          "near Cottonsedge Prairie",
+          "Massive Mass Outbreaks",
+          "Cobalt Coastlands: near Crossing Slope"
         ]
       }
     },
     "123": {
       "legends-arceus": {
         "locations": [
-          "'''Obsidian Fieldlands:''' The Heartwood, Grandtree Arena (additional&nbsp",
-          "link=Alpha Pokémon|14px nearby), massive mass outbreaks",
-          "'''Coronet Highlands:''' near Primeval Grotto",
-          "'''Alabaster Icelands:''' Space-time distortions"
+          "Obsidian Fieldlands: The Heartwood",
+          "Grandtree Arena (additional 14px nearby)",
+          "Massive Mass Outbreaks",
+          "Coronet Highlands: near Primeval Grotto",
+          "Alabaster Icelands: Space Time Distortions"
         ]
       }
     },
     "125": {
       "legends-arceus": {
         "locations": [
-          "'''Coronet Highlands:''' Cloudcap Pass, massive mass outbreaks",
-          "'''Alabaster Icelands:''' Icebound Falls, Arena's Approach, Space-time distortions"
+          "Coronet Highlands: Cloudcap Pass",
+          "Massive Mass Outbreaks",
+          "Alabaster Icelands: Icebound Falls",
+          "Arena's Approach",
+          "Space Time Distortions"
         ]
       }
     },
     "126": {
       "legends-arceus": {
         "locations": [
-          "'''Cobalt Coastlands:''' Firespit Island, massive mass outbreaks",
-          "'''Coronet Highlands:''' Space-time distortions"
+          "Cobalt Coastlands: Firespit Island",
+          "Massive Mass Outbreaks",
+          "Coronet Highlands: Space Time Distortions"
         ]
       }
     },
     "129": {
       "legends-arceus": {
         "locations": [
-          "'''Obsidian Fieldlands:''' Worn Bridge (mass outbreaks), near Oreburrow Tunnel&nbsp",
-          "link=Alpha Pokémon|14px, Obsidian Falls, Lake Verity",
-          "'''Cobalt Coastlands:''' massive mass outbreaks",
-          "'''Coronet Highlands:''' near Celestica Trail"
+          "Obsidian Fieldlands: Worn Bridge (mass outbreaks)",
+          "near Oreburrow Tunnel 14px",
+          "Obsidian Falls",
+          "Lake Verity",
+          "Cobalt Coastlands: massive mass outbreaks",
+          "Coronet Highlands: near Celestica Trail"
         ]
       }
     },
     "130": {
       "legends-arceus": {
         "locations": [
-          "'''Obsidian Fieldlands:''' Obsidian Falls, Lake Verity (additional&nbsp",
-          "link=Alpha Pokémon|14px)",
-          "'''Cobalt Coastlands:''' Sand's Reach and nearby (additional&nbsp",
-          "link=Alpha Pokémon|14px), massive mass outbreaks",
-          "'''Coronet Highlands:''' near Primeval Grotto"
+          "Obsidian Fieldlands: Obsidian Falls",
+          "Lake Verity (additional 14px)",
+          "Cobalt Coastlands: Sand's Reach and nearby (additional 14px)",
+          "Massive Mass Outbreaks",
+          "Coronet Highlands: near Primeval Grotto"
         ]
       }
     },
     "133": {
       "legends-arceus": {
         "locations": [
-          "'''Obsidian Fieldlands:''' Horseshoe Plains, Space-time distortions",
-          "'''Crimson Mirelands:''' Space-time distortions",
-          "'''Cobalt Coastlands:''' near Crossing Slope, Space-time distortions",
-          "'''Coronet Highlands:''' Space-time distortions",
-          "'''Alabaster Icelands:''' Space-time distortions"
+          "Obsidian Fieldlands: Horseshoe Plains",
+          "Space Time Distortions",
+          "Crimson Mirelands: Space Time Distortions",
+          "Cobalt Coastlands: near Crossing Slope",
+          "Coronet Highlands: Space Time Distortions",
+          "Alabaster Icelands: Space Time Distortions"
         ]
       }
     },
     "134": {
       "legends-arceus": {
         "locations": [
-          "'''Cobalt Coastlands:''' Space-time distortions"
+          "Cobalt Coastlands: Space Time Distortions"
         ]
       }
     },
     "135": {
       "legends-arceus": {
         "locations": [
-          "'''Coronet Highlands:''' Space-time distortions"
+          "Coronet Highlands: Space Time Distortions"
         ]
       }
     },
     "136": {
       "legends-arceus": {
         "locations": [
-          "'''Crimson Mirelands''' Space-time distortions",
-          "'''Cobalt Coastlands:''' Space-time distortions"
+          "Crimson Mirelands Space Time Distortions",
+          "Cobalt Coastlands: Space Time Distortions"
         ]
       }
     },
     "137": {
       "legends-arceus": {
         "locations": [
-          "'''Crimson Mirelands:''' Space-time distortions"
+          "Crimson Mirelands: Space Time Distortions"
         ]
       }
     },
     "143": {
       "legends-arceus": {
         "locations": [
-          "'''Obsidian Fieldlands:''' near Sandgem Flats&nbsp",
-          "link=Alpha Pokémon|14px, massive mass outbreaks",
-          "'''Crimson Mirelands:''' Space-time distortions",
-          "'''Alabaster Icelands:''' Snowfall Hot Spring"
+          "Obsidian Fieldlands: near Sandgem Flats 14px",
+          "Massive Mass Outbreaks",
+          "Crimson Mirelands: Space Time Distortions",
+          "Alabaster Icelands: Snowfall Hot Spring"
         ]
       }
     },
     "155": {
       "legends-arceus": {
         "locations": [
-          "'''Jubilife Village:''' First partner Pokémon from Professor Laventon, Received from Professor Laventon (after completing Mission 18, if the player did not choose Cyndaquil)",
-          "'''Crimson Mirelands:''' Space-time distortions (after completing Mission 18), massive mass outbreaks after completing Request 102)"
+          "Jubilife Village: First partner Pokémon from Professor Laventon",
+          "Received from Professor Laventon (after completing Mission 18, if the did not choose Cyndaquil)",
+          "Crimson Mirelands: Space Time Distortions (after Completing Mission 18)",
+          "massive mass outbreaks after completing Request 102)"
         ]
       }
     },
     "156": {
       "legends-arceus": {
         "locations": [
-          "'''Crimson Mirelands:''' Space-time distortions (after completing Mission 18), massive mass outbreaks (after completing Request 102)"
+          "Crimson Mirelands: Space Time Distortions (after Completing Mission 18)",
+          "massive mass outbreaks (after completing Request 102)"
         ]
       }
     },
     "169": {
       "legends-arceus": {
         "locations": [
-          "'''Obsidian Fieldlands:''' massive mass outbreaks",
-          "'''Coronet Highlands:''' Wayward Cave&nbsp",
-          "link=Alpha Pokémon|14px",
-          "'''Alabaster Icelands:''' Icebound Falls"
+          "Obsidian Fieldlands: massive mass outbreaks",
+          "Coronet Highlands: Wayward Cave 14px",
+          "Alabaster Icelands: Icebound Falls"
         ]
       }
     },
     "172": {
       "legends-arceus": {
         "locations": [
-          "'''Obsidian Fieldlands:''' near Aspiration Hill, Floaro Gardens, Nature's PantryD, massive mass outbreaks",
-          "'''Crimson Mirelands:''' near Golden Lowlands"
+          "Obsidian Fieldlands: near Aspiration Hill",
+          "Floaro Gardens",
+          "Nature's PantryD",
+          "Massive Mass Outbreaks",
+          "Crimson Mirelands: near Golden Lowlands"
         ]
       }
     },
     "173": {
       "legends-arceus": {
         "locations": [
-          "'''Cobalt Coastlands:''' massive mass outbreaks",
-          "'''Coronet Highlands:''' Fabled SpringN, massive mass outbreaks"
+          "Cobalt Coastlands: massive mass outbreaks",
+          "Coronet Highlands: Fabled SpringN",
+          "Massive Mass Outbreaks"
         ]
       }
     },
     "175": {
       "legends-arceus": {
         "locations": [
-          "'''Crimson Mirelands:''' Cottonsedge Prairie",
-          "'''Cobalt Coastlands:''' Bathers' LagoonDD, massive mass outbreaks"
+          "Crimson Mirelands: Cottonsedge Prairie",
+          "Cobalt Coastlands: Bathers' LagoonD (also mass outbreaks (Day, Night)",
+          "Tranquility CoveD",
+          "Massive Mass Outbreaks"
         ]
       }
     },
     "176": {
       "legends-arceus": {
         "locations": [
-          "'''Crimson Mirelands:''' near Bolderoll Slope, near Cottonsedge Prairie",
-          "'''Cobalt Coastlands:''' Tranquility CoveD, massive mass outbreaks"
+          "Crimson Mirelands: near Bolderoll Slope",
+          "near Cottonsedge Prairie",
+          "Cobalt Coastlands: Tranquility CoveD",
+          "Massive Mass Outbreaks"
         ]
       }
     },
     "185": {
       "legends-arceus": {
         "locations": [
-          "'''Crimson Mirelands:''' Cloudpool Ridge and nearby, massive mass outbreaks",
-          "'''Coronet Highlands:''' Celestica Ruins and nearby"
+          "Crimson Mirelands: Cloudpool Ridge and nearby",
+          "Massive Mass Outbreaks",
+          "Coronet Highlands: Celestica Ruins and nearby"
         ]
       }
     },
     "190": {
       "legends-arceus": {
         "locations": [
-          "'''Obsidian Fieldlands:''' Ramanas Island",
-          "'''Cobalt Coastlands:''' Aipom Hill (also shaking trees), Hideaway Bay, massive mass outbreaks",
-          "'''Alabaster Icelands:''' Avalanche Slopes, Whiteout Valley, Bonechill Wastes, near Icebound Falls, near Arena's Approach, near Avalugg's Legacy, Snowfall Hot Spring, Glacier Terrace, Heart's Crag, near Pearl Settlement, massive mass outbreaks"
+          "Obsidian Fieldlands: Ramanas Island",
+          "Cobalt Coastlands: Aipom Hill (also shaking trees)",
+          "Hideaway Bay",
+          "Massive Mass Outbreaks",
+          "Alabaster Icelands: Avalanche Slopes",
+          "Whiteout Valley",
+          "Bonechill Wastes",
+          "near Icebound Falls",
+          "near Arena's Approach",
+          "near Avalugg's Legacy",
+          "Snowfall Hot Spring",
+          "Glacier Terrace",
+          "Heart's Crag",
+          "near Pearl Settlement"
         ]
       }
     },
     "193": {
       "legends-arceus": {
         "locations": [
-          "'''Crimson Mirelands:''' Gapejaw Bog, Ursa's Ring, Droning Meadow, massive mass outbreaks",
-          "'''Coronet Highlands:''' Heavenward LookoutD, Heavenward Lookout (mass outbreaks), massive mass outbreaks"
+          "Crimson Mirelands: Gapejaw Bog",
+          "Ursa's Ring",
+          "Droning Meadow",
+          "Massive Mass Outbreaks",
+          "Coronet Highlands: Heavenward LookoutD",
+          "Heavenward Lookout (mass outbreaks)"
         ]
       }
     },
     "196": {
       "legends-arceus": {
         "locations": [
-          "'''Alabaster Icelands:''' Space-time distortions"
+          "Alabaster Icelands: Space Time Distortions"
         ]
       }
     },
     "197": {
       "legends-arceus": {
         "locations": [
-          "'''Crimson Mirelands:''' Space-time distortions"
+          "Crimson Mirelands: Space Time Distortions"
         ]
       }
     },
     "198": {
       "legends-arceus": {
         "locations": [
-          "'''Crimson Mirelands:''' Cloudpool RidgeDN, Ginkgo LandingN, Bathers' LagoonN, Castaway ShoreN, Spring PathN, Veilstone CapeN"
+          "Crimson Mirelands: Cloudpool RidgeN (also mass outbreaks nearby (Day, Night)",
+          "Massive Mass Outbreaks",
+          "Cobalt Coastlands: Crossing SlopeN",
+          "Ginkgo LandingN",
+          "Aipom HillN",
+          "Bathers' LagoonN",
+          "Hideaway BayN",
+          "Castaway ShoreN",
+          "Windbreak StandN",
+          "Spring PathN",
+          "Islespy ShoreN",
+          "Veilstone CapeN"
         ]
       }
     },
     "200": {
       "legends-arceus": {
         "locations": [
-          "'''Coronet Highlands:''' near Celestica RuinsN (also mass outbreaks nearbyN), Stonetooth RowsN and nearby (also mass outbreaksN), near Glacier Terrace, Icepeak Cavern, Ice Column Chamber, massive mass outbreaks"
+          "Coronet Highlands: near Celestica RuinsN",
+          "Sacred PlazaN (also mass outbreaks nearby (Day, Night)",
+          "Stonetooth RowsN",
+          "Massive Mass Outbreaks",
+          "Alabaster Icelands: Avalanche SlopesN and nearby (also mass outbreaks (Day, Night)",
+          "near Glacier Terrace",
+          "Icepeak Cavern",
+          "Ice Colu (Morning, Night) Chamber"
         ]
       }
     },
     "201": {
       "legends-arceus": {
         "locations": [
-          "'''Crimson Mirelands:''' Solaceon Ruins, massive mass outbreaks (all 28 forms appear after completing the Unown Research Notes)",
-          "'''All over Hisui:''' one of each form"
+          "Crimson Mirelands: Solaceon Ruins",
+          "massive mass outbreaks (all 28 forms appear after completing the Unown Research Notes)",
+          "All over Hisui: one of each form"
         ]
       }
     },
     "207": {
       "legends-arceus": {
         "locations": [
-          "'''Coronet Highlands:''' Clamberclaw Cliffs, Celestica Ruins and nearby (additional&nbsp",
-          "link=Alpha Pokémon|14px), near Primeval Grotto, near Cloudcap Pass, massive mass outbreaks",
-          "'''Alabaster Icelands:''' Arena's Approach, Glacier TerraceD, Glacier Terrace (mass outbreaks)"
+          "Coronet Highlands: Clamberclaw Cliffs",
+          "Celestica Ruins and nearby (additional 14px)",
+          "near Primeval Grotto",
+          "near Cloudcap Pass",
+          "Massive Mass Outbreaks",
+          "Alabaster Icelands: Arena's Approach",
+          "Glacier TerraceD",
+          "Glacier Terrace (mass outbreaks)"
         ]
       }
     },
     "208": {
       "legends-arceus": {
         "locations": [
-          "'''Obsidian Fieldlands:''' Space-time distortions",
-          "'''Coronet Highlands:''' Celestica Trail&nbsp",
-          "link=Alpha Pokémon|14px, massive mass outbreaks",
-          "'''Cobalt Coastlands:''' massive mass outbreaks"
+          "Obsidian Fieldlands: Space Time Distortions",
+          "Coronet Highlands: Celestica Trail 14px",
+          "Massive Mass Outbreaks",
+          "Cobalt Coastlands: massive mass outbreaks"
         ]
       }
     },
     "212": {
       "legends-arceus": {
         "locations": [
-          "'''Alabaster Icelands:''' Space-time distortions"
+          "Alabaster Icelands: Space Time Distortions"
         ]
       }
     },
     "214": {
       "legends-arceus": {
         "locations": [
-          "'''Obsidian Fieldlands:''' Grueling Grove&nbsp",
-          "link=Alpha Pokémon|14px",
-          "'''Crimson Mirelands:''' Space-time distortions",
-          "'''Coronet Highlands:''' Wayward WoodD, massive mass outbreaks '''Coronet Highlands:''' Wayward Wood, Sonorous Path"
+          "Obsidian Fieldlands: Grueling Grove 14px",
+          "Crimson Mirelands: Space Time Distortions",
+          "Coronet Highlands: Wayward WoodD",
+          "massive mass outbreaks Coronet Highlands: Wayward Wood",
+          "Sonorous Path"
         ]
       }
     },
     "215": {
       "legends-arceus": {
         "locations": [
-          "'''Obsidian Fieldlands:''' Space-time distortions ('''Johtonian Form''')",
-          "'''Coronet Highlands:''' near Celestica Trail, near Primeval Grotto, massive mass outbreaks ('''Hisuian Form''')",
-          "'''Alabaster Icelands:''' near Avalugg's Legacy (additional&nbsp",
-          "link=Alpha Pokémon|14px), Glacier Terrace, near Pearl Settlement ('''Hisuian Form''')"
+          "Obsidian Fieldlands: Space Time Distortions (johtonian Form)",
+          "Coronet Highlands: near Celestica Trail",
+          "near Primeval Grotto",
+          "massive mass outbreaks (Hisuian Form)",
+          "Alabaster Icelands: near Avalugg's Legacy (additional 14px)",
+          "Glacier Terrace",
+          "near Pearl Settlement (Hisuian Form)"
         ]
       }
     },
     "216": {
       "legends-arceus": {
         "locations": [
-          "'''Crimson Mirelands:''' near Golden Lowlands (mass outbreaks), Ursa's Ring, near Droning Meadow, massive mass outbreaks",
-          "'''Coronet Highlands:''' Sonorous Path"
+          "Crimson Mirelands: near Golden Lowlands (mass outbreaks)",
+          "Ursa's Ring",
+          "near Droning Meadow",
+          "Massive Mass Outbreaks",
+          "Coronet Highlands: Sonorous Path"
         ]
       }
     },
     "217": {
       "legends-arceus": {
         "locations": [
-          "'''Obsidian Fieldlands:''' Space-time distortions",
-          "'''Crimson Mirelands:''' near Gapejaw Bog&nbsp",
-          "link=Alpha Pokémon|14px, Ursa's Ring&nbsp",
-          "link=Alpha Pokémon|14px, near Droning Meadow, massive mass outbreaks",
-          "'''Coronet Highlands:''' Sonorous Path"
+          "Obsidian Fieldlands: Space Time Distortions",
+          "Crimson Mirelands: near Gapejaw Bog 14px",
+          "Ursa's Ring 14px",
+          "near Droning Meadow",
+          "Massive Mass Outbreaks",
+          "Coronet Highlands: Sonorous Path"
         ]
       }
     },
     "220": {
       "legends-arceus": {
         "locations": [
-          "'''Crimson Mirelands:''' massive mass outbreaks",
-          "'''Alabaster Icelands:''' Avalanche Slopes, Bonechill Wastes (additional&nbsp",
-          "link=Alpha Pokémon|14px nearby), near Arena's Approach, Avalugg's Legacy, massive mass outbreaks"
+          "Crimson Mirelands: massive mass outbreaks",
+          "Alabaster Icelands: Avalanche Slopes",
+          "Bonechill Wastes (additional 14px nearby)",
+          "near Arena's Approach",
+          "Avalugg's Legacy",
+          "Massive Mass Outbreaks"
         ]
       }
     },
     "221": {
       "legends-arceus": {
         "locations": [
-          "'''Crimson Mirelands:''' massive mass outbreaks",
-          "'''Alabaster Icelands:''' Avalanche Slopes, Bonechill Wastes, Arena's Approach and nearby (additional&nbsp",
-          "link=Alpha Pokémon|14px), Avalugg's Legacy, massive mass outbreaks"
+          "Crimson Mirelands: massive mass outbreaks",
+          "Alabaster Icelands: Avalanche Slopes",
+          "Bonechill Wastes",
+          "Arena's Approach and nearby (additional 14px)",
+          "Avalugg's Legacy",
+          "Massive Mass Outbreaks"
         ]
       }
     },
     "223": {
       "legends-arceus": {
         "locations": [
-          "'''Cobalt Coastlands:''' near Bathers' Lagoon, near Hideaway Bay, near Deadwood Haunt, near Tombolo Walk, Sand's Reach, Tranquility Cove, near Castaway Shore"
+          "Cobalt Coastlands: near Bathers' Lagoon",
+          "near Hideaway Bay",
+          "near Deadwood Haunt",
+          "near Tombolo Walk",
+          "Sand's Reach",
+          "Tranquility Cove",
+          "near Castaway Shore"
         ]
       }
     },
     "224": {
       "legends-arceus": {
         "locations": [
-          "'''Cobalt Coastlands:''' Castaway Shore&nbsp",
-          "link=Alpha Pokémon|14px (also mass outbreaks), near Islespy Shore, Seaside Hollow (after catching Manaphy during Request 66)",
-          "'''Coronet Highlands:''' Space-time distortions"
+          "Cobalt Coastlands: Castaway Shore 14px (also mass outbreaks)",
+          "near Islespy Shore",
+          "Seaside Hollow (after catching Manaphy during Request 66)",
+          "Coronet Highlands: Space Time Distortions"
         ]
       }
     },
     "226": {
       "legends-arceus": {
         "locations": [
-          "'''Cobalt Coastlands:''' Tranquility Cove (additional&nbsp",
-          "link=Alpha Pokémon|14px), massive mass outbreaks"
+          "Cobalt Coastlands: Tranquility Cove (additional 14px)",
+          "Massive Mass Outbreaks"
         ]
       }
     },
     "233": {
       "legends-arceus": {
         "locations": [
-          "'''Crimson Mirelands:''' Space-time distortions"
+          "Crimson Mirelands: Space Time Distortions"
         ]
       }
     },
     "234": {
       "legends-arceus": {
         "locations": [
-          "'''Obsidian Fieldlands:''' Deertrack Heights (additional&nbsp",
-          "link=Alpha Pokémon|14px), massive mass outbreaks",
-          "'''Cobalt Coastlands:''' Windbreak Stand",
-          "'''Coronet Highlands:''' Wayward Wood, near Glacier Terrace"
+          "Obsidian Fieldlands: Deertrack Heights (additional 14px)",
+          "Massive Mass Outbreaks",
+          "Cobalt Coastlands: Windbreak Stand",
+          "Coronet Highlands: Wayward Wood",
+          "near Glacier Terrace"
         ]
       }
     },
     "239": {
       "legends-arceus": {
         "locations": [
-          "'''Coronet Highlands:''' Cloudcap Pass, massive mass outbreaks",
-          "'''Alabaster Icelands:''' Icebound Falls, Arena's Approach"
+          "Coronet Highlands: Cloudcap Pass",
+          "Massive Mass Outbreaks",
+          "Alabaster Icelands: Icebound Falls",
+          "Arena's Approach"
         ]
       }
     },
     "240": {
       "legends-arceus": {
         "locations": [
-          "'''Cobalt Coastlands:''' Firespit Island, massive mass outbreaks"
+          "Cobalt Coastlands: Firespit Island",
+          "Massive Mass Outbreaks"
         ]
       }
     },
     "242": {
       "legends-arceus": {
         "locations": [
-          "'''Obsidian Fieldlands:''' near Obsidian Falls&nbsp",
-          "link=Alpha Pokémon|14px",
-          "'''Cobalt Coastlands:''' massive mass outbreaks",
-          "'''Alabaster Icelands:''' Avalanche Slopes"
+          "Obsidian Fieldlands: near Obsidian Falls 14px",
+          "Cobalt Coastlands: massive mass outbreaks",
+          "Alabaster Icelands: Avalanche Slopes"
         ]
       }
     },
     "265": {
       "legends-arceus": {
         "locations": [
-          "'''Obsidian Fieldlands:''' near Aspiration Hill, Floaro Gardens, Horseshoe Plains, The Heartwood, massive mass outbreaks"
+          "Obsidian Fieldlands: near Aspiration Hill",
+          "Floaro Gardens",
+          "Horseshoe Plains",
+          "The Heartwood",
+          "Massive Mass Outbreaks"
         ]
       }
     },
     "266": {
       "legends-arceus": {
         "locations": [
-          "'''Obsidian Fieldlands:''' Floaro GardensD&nbsp",
-          "link=Alpha Pokémon|14px, The HeartwoodD, massive mass outbreaks"
+          "Obsidian Fieldlands: Floaro GardensD",
+          "Horseshoe PlainsD 14px",
+          "The HeartwoodD",
+          "Massive Mass Outbreaks"
         ]
       }
     },
     "267": {
       "legends-arceus": {
         "locations": [
-          "'''Obsidian Fieldlands:''' Floaro GardensD, The HeartwoodD, Veilstone CapeD"
+          "Obsidian Fieldlands: Floaro GardensD",
+          "Grueling GroveD",
+          "The HeartwoodD",
+          "Massive Mass Outbreaks",
+          "Cobalt Coastlands: Bathers' LagoonD",
+          "Veilstone CapeD"
         ]
       }
     },
     "268": {
       "legends-arceus": {
         "locations": [
-          "'''Obsidian Fieldlands:''' Floaro GardensN, The HeartwoodN, massive mass outbreaks"
+          "Obsidian Fieldlands: Floaro GardensN",
+          "Horseshoe PlainsN",
+          "The HeartwoodN",
+          "Massive Mass Outbreaks"
         ]
       }
     },
     "269": {
       "legends-arceus": {
         "locations": [
-          "'''Obsidian Fieldlands:''' Floaro GardensN (mass outbreaks nearbyN), The HeartwoodN, Veilstone CapeN"
+          "Obsidian Fieldlands: Floaro GardensN",
+          "Grueling GroveN (mass outbreaks nearby (Day, Night)",
+          "The HeartwoodN",
+          "Massive Mass Outbreaks",
+          "Cobalt Coastlands: Bathers' LagoonN",
+          "Veilstone CapeN"
         ]
       }
     },
     "280": {
       "legends-arceus": {
         "locations": [
-          "'''Crimson Mirelands:''' Gapejaw Bog, Shrouded Ruins",
-          "'''Alabaster Icelands:''' Heart's CragD, Lake Acuity (mass outbreaks), Snowpoint Temple, massive mass outbreaks"
+          "Crimson Mirelands: Gapejaw Bog",
+          "Shrouded Ruins",
+          "Alabaster Icelands: Heart's CragD",
+          "Lake Acuity (mass outbreaks)",
+          "Snowpoint Temple",
+          "Massive Mass Outbreaks"
         ]
       }
     },
     "281": {
       "legends-arceus": {
         "locations": [
-          "'''Crimson Mirelands:''' Shrouded Ruins",
-          "'''Alabaster Icelands:''' Heart's CragD, Lake Acuity (mass outbreaks), Snowpoint Temple, massive mass outbreaks"
+          "Crimson Mirelands: Shrouded Ruins",
+          "Alabaster Icelands: Heart's CragD",
+          "Lake Acuity (mass outbreaks)",
+          "Snowpoint Temple",
+          "Massive Mass Outbreaks"
         ]
       }
     },
     "282": {
       "legends-arceus": {
         "locations": [
-          "'''Alabaster Icelands:''' Heart's CragD&nbsp",
-          "link=Alpha Pokémon|14px, Lake Acuity (mass outbreaks), massive mass outbreaks"
+          "Alabaster Icelands: Heart's CragD 14px",
+          "Lake Acuity (mass outbreaks)",
+          "Massive Mass Outbreaks"
         ]
       }
     },
     "299": {
       "legends-arceus": {
         "locations": [
-          "'''Coronet Highlands:''' Celestica Ruins, Primeval Grotto and nearby, massive mass outbreaks '''Coronet Highlands:''' Primeval Grotto, Sacred Plaza, Cloudcap Pass"
+          "Coronet Highlands: Celestica Ruins",
+          "Primeval Grotto and nearby",
+          "massive mass outbreaks Coronet Highlands: Primeval Grotto",
+          "Sacred Plaza",
+          "Cloudcap Pass"
         ]
       }
     },
     "315": {
       "legends-arceus": {
         "locations": [
-          "'''Crimson Mirelands:''' Gapejaw Bog, Cloudpool Ridge and nearby, near Cottonsedge Prairie, massive mass outbreaks",
-          "'''Coronet Highlands:''' Fabled Spring"
+          "Crimson Mirelands: Gapejaw Bog",
+          "Cloudpool Ridge and nearby",
+          "near Cottonsedge Prairie",
+          "Massive Mass Outbreaks",
+          "Coronet Highlands: Fabled Spring"
         ]
       }
     },
     "339": {
       "legends-arceus": {
         "locations": [
-          "'''Crimson Mirelands:''' Gapejaw Bog and nearby, near Ursa's Ring, near Droning Meadow, Lake Valor, massive mass outbreaks",
-          "'''Coronet Highlands:''' Wayward Cave"
+          "Crimson Mirelands: Gapejaw Bog and nearby",
+          "near Ursa's Ring",
+          "near Droning Meadow",
+          "Lake Valor",
+          "Massive Mass Outbreaks",
+          "Coronet Highlands: Wayward Cave"
         ]
       }
     },
     "340": {
       "legends-arceus": {
         "locations": [
-          "'''Crimson Mirelands:''' Gapejaw Bog and nearby, near Ursa's Ring, Scarlet Bog (mass outbreaks), near Droning Meadow, Lake Valor (additional&nbsp",
-          "link=Alpha Pokémon|14px), massive mass outbreaks",
-          "'''Coronet Highlands:''' Wayward Cave"
+          "Crimson Mirelands: Gapejaw Bog and nearby",
+          "near Ursa's Ring",
+          "Scarlet Bog (mass outbreaks)",
+          "near Droning Meadow",
+          "Lake Valor (additional 14px)",
+          "Massive Mass Outbreaks",
+          "Coronet Highlands: Wayward Cave"
         ]
       }
     },
     "355": {
       "legends-arceus": {
         "locations": [
-          "'''Cobalt Coastlands:''' Deadwood HauntN and nearby (also mass outbreaksN), Arena's ApproachN, Avalanche Slopes, massive mass outbreaks"
+          "Cobalt Coastlands: Deadwood HauntN",
+          "Coronet Highlands: massive mass outbreaks",
+          "Alabaster Icelands: Icebound FallsN and nearby (also mass outbreaks (Day, Night)",
+          "Arena's ApproachN",
+          "Avalanche Slopes",
+          "Massive Mass Outbreaks"
         ]
       }
     },
     "356": {
       "legends-arceus": {
         "locations": [
-          "'''Cobalt Coastlands:''' Deadwood HauntN and nearby (also mass outbreaksN), Arena's ApproachN, Avalanche Slopes, massive mass outbreaks"
+          "Cobalt Coastlands: Deadwood HauntN",
+          "Coronet Highlands: Space Time Distortions",
+          "Massive Mass Outbreaks",
+          "Alabaster Icelands: Icebound FallsN and nearby (also mass outbreaks (Day, Night)",
+          "Arena's ApproachN",
+          "Avalanche Slopes"
         ]
       }
     },
     "358": {
       "legends-arceus": {
         "locations": [
-          "'''Coronet Highlands:''' Celestica Trail, Primeval Grotto (mass outbreaks), Sacred Plaza, massive mass outbreaks",
-          "'''Alabaster Icelands:''' Lake Acuity (additional&nbsp",
-          "link=Alpha Pokémon|14px)"
+          "Coronet Highlands: Celestica Trail",
+          "Primeval Grotto (mass outbreaks)",
+          "Sacred Plaza",
+          "Massive Mass Outbreaks",
+          "Alabaster Icelands: Lake Acuity (additional 14px)"
         ]
       }
     },
     "361": {
       "legends-arceus": {
         "locations": [
-          "'''Alabaster Icelands:''' Avalanche Slopes, Whiteout Valley, Bonechill Wastes, near Pearl Settlement, massive mass outbreaks '''Alabaster Icelands:''' Avalanche Slopes, Bonechill Wastes, Icebound Falls, Arena's Approach, Glacier Terrace, Heart's Crag, Pearl Settlement"
+          "Alabaster Icelands: Avalanche Slopes",
+          "Whiteout Valley",
+          "Bonechill Wastes",
+          "near Pearl Settlement",
+          "massive mass outbreaks Alabaster Icelands: Avalanche Slopes",
+          "Icebound Falls",
+          "Arena's Approach",
+          "Glacier Terrace",
+          "Heart's Crag",
+          "Pearl Settlement"
         ]
       }
     },
     "362": {
       "legends-arceus": {
         "locations": [
-          "'''Alabaster Icelands:''' Avalanche Slopes, Bonechill Wastes (additional&nbsp",
-          "link=Alpha Pokémon|14px), Arena's Approach (only one during Request 86), Avalugg's Legacy, Snowpoint Temple, near Pearl Settlement, massive mass outbreaks '''Alabaster Icelands:''' Avalanche Slopes, Bonechill Wastes, Icebound Falls, Arena's Approach, Glacier Terrace, Heart's Crag, Pearl Settlement"
+          "Alabaster Icelands: Avalanche Slopes",
+          "Bonechill Wastes (additional 14px)",
+          "Arena's Approach (only one during Request 86)",
+          "Avalugg's Legacy",
+          "Snowpoint Temple",
+          "near Pearl Settlement",
+          "massive mass outbreaks Alabaster Icelands: Avalanche Slopes",
+          "Bonechill Wastes",
+          "Icebound Falls",
+          "Arena's Approach",
+          "Glacier Terrace",
+          "Heart's Crag",
+          "Pearl Settlement"
         ]
       }
     },
     "363": {
       "legends-arceus": {
         "locations": [
-          "'''Obsidian Fieldlands:''' massive mass outbreaks",
-          "'''Cobalt Coastlands:''' Ginkgo Landing, Hideaway Bay, massive mass outbreaks"
+          "Obsidian Fieldlands: massive mass outbreaks",
+          "Cobalt Coastlands: Ginkgo Landing",
+          "Hideaway Bay",
+          "Massive Mass Outbreaks"
         ]
       }
     },
     "364": {
       "legends-arceus": {
         "locations": [
-          "'''Obsidian Fieldlands:''' massive mass outbreaks",
-          "'''Cobalt Coastlands:''' Hideaway Bay, Islespy Shore, massive mass outbreaks"
+          "Obsidian Fieldlands: massive mass outbreaks",
+          "Cobalt Coastlands: Hideaway Bay",
+          "Islespy Shore",
+          "Massive Mass Outbreaks"
         ]
       }
     },
     "365": {
       "legends-arceus": {
         "locations": [
-          "'''Cobalt Coastlands:''' Ginkgo Landing&nbsp",
-          "link=Alpha Pokémon|14px, Hideaway Bay (mass outbreaks), Islespy Shore, massive mass outbreaks"
+          "Cobalt Coastlands: Ginkgo Landing 14px",
+          "Hideaway Bay (mass outbreaks)",
+          "Islespy Shore",
+          "Massive Mass Outbreaks"
         ]
       }
     },
     "387": {
       "legends-arceus": {
         "locations": [
-          "'''Crimson Mirelands:''' near Droning Meadow, massive mass outbreaks"
+          "Crimson Mirelands: near Droning Meadow",
+          "Massive Mass Outbreaks"
         ]
       }
     },
     "388": {
       "legends-arceus": {
         "locations": [
-          "'''Crimson Mirelands:''' near Droning Meadow, massive mass outbreaks"
+          "Crimson Mirelands: near Droning Meadow",
+          "Massive Mass Outbreaks"
         ]
       }
     },
     "389": {
       "legends-arceus": {
         "locations": [
-          "'''Crimson Mirelands:''' Holm of Trials&nbsp",
-          "link=Alpha Pokémon|14px, massive mass outbreaks"
+          "Crimson Mirelands: Holm of Trials 14px",
+          "Massive Mass Outbreaks"
         ]
       }
     },
     "390": {
       "legends-arceus": {
         "locations": [
-          "'''Obsidian Fieldlands:''' Deertrack Heights, Windswept Run (only one during Request 20), Ramanas Island, massive mass outbreaks"
+          "Obsidian Fieldlands: Deertrack Heights",
+          "Windswept Run (only one during Request 20)",
+          "Ramanas Island",
+          "Massive Mass Outbreaks"
         ]
       }
     },
     "391": {
       "legends-arceus": {
         "locations": [
-          "'''Obsidian Fieldlands:''' Deertrack Heights, Ramanas Island, massive mass outbreaks"
+          "Obsidian Fieldlands: Deertrack Heights",
+          "Ramanas Island",
+          "Massive Mass Outbreaks"
         ]
       }
     },
     "392": {
       "legends-arceus": {
         "locations": [
-          "'''Obsidian Fieldlands:''' Ramanas Island&nbsp",
-          "link=Alpha Pokémon|14px, massive mass outbreaks"
+          "Obsidian Fieldlands: Ramanas Island 14px",
+          "Massive Mass Outbreaks"
         ]
       }
     },
     "393": {
       "legends-arceus": {
         "locations": [
-          "'''Cobalt Coastlands:''' near Spring Path, near Islespy Shore (mass outbreaks), massive mass outbreaks"
+          "Cobalt Coastlands: near Spring Path",
+          "near Islespy Shore (mass outbreaks)",
+          "Massive Mass Outbreaks"
         ]
       }
     },
     "394": {
       "legends-arceus": {
         "locations": [
-          "'''Cobalt Coastlands:''' near Spring Path, near Islespy Shore (mass outbreaks), massive mass outbreaks"
+          "Cobalt Coastlands: near Spring Path",
+          "near Islespy Shore (mass outbreaks)",
+          "Massive Mass Outbreaks"
         ]
       }
     },
     "395": {
       "legends-arceus": {
         "locations": [
-          "'''Cobalt Coastlands:''' Islespy Shore&nbsp",
-          "link=Alpha Pokémon|14px, massive mass outbreaks"
+          "Cobalt Coastlands: Islespy Shore 14px",
+          "Massive Mass Outbreaks"
         ]
       }
     },
     "396": {
       "legends-arceus": {
         "locations": [
-          "'''Obsidian Fieldlands:''' Aspiration HillD, near Worn BridgeD, Deertrack HeightsD, Nature's PantryD, near Obsidian FallsD, massive mass outbreaks",
-          "'''Cobalt Coastlands:''' Crossing SlopeD, Deadwood HauntD, Tranquility CoveD, massive mass outbreaks"
+          "Obsidian Fieldlands: Aspiration HillD",
+          "Horseshoe PlainsD",
+          "near Worn BridgeD",
+          "Deertrack PathD",
+          "Deertrack HeightsD",
+          "Windswept RunD",
+          "Nature's PantryD",
+          "Tidewater DamD",
+          "near Obsidian FallsD",
+          "Ramanas IslandD",
+          "Massive Mass Outbreaks",
+          "Cobalt Coastlands: Crossing SlopeD",
+          "Bathers' LagoonD",
+          "Deadwood HauntD",
+          "Sand's ReachD",
+          "Tranquility CoveD",
+          "near Castaway ShoreD"
         ]
       }
     },
     "397": {
       "legends-arceus": {
         "locations": [
-          "'''Obsidian Fieldlands:''' Deertrack HeightsD (additional&nbsp",
-          "link=Alpha Pokémon|14pxN), Nature's PantryD, near Obsidian FallsD, Sandgem FlatsDD, Bathers' LagoonD (additional mass outbreaksN), Sand's ReachD, near Castaway ShoreD, massive mass outbreaks"
+          "Obsidian Fieldlands: Deertrack HeightsD",
+          "Windswept RunD (additional 14px (Day, Night)",
+          "Nature's PantryD",
+          "Tidewater DamD",
+          "near Obsidian FallsD",
+          "Ramanas IslandD",
+          "Sandgem FlatsD (mass outbreaks nearby (Day, Night)",
+          "Massive Mass Outbreaks",
+          "Cobalt Coastlands: Crossing SlopeD",
+          "Bathers' LagoonD",
+          "Deadwood HauntD (additional mass outbreaks (Day, Night)",
+          "Sand's ReachD",
+          "Tranquility CoveD",
+          "near Castaway ShoreD"
         ]
       }
     },
     "398": {
       "legends-arceus": {
         "locations": [
-          "'''Obsidian Fieldlands:''' near Nature's Pantry, near Lake VerityDD, Tranquility CoveD, massive mass outbreaks"
+          "Obsidian Fieldlands: near Nature's Pantry",
+          "near Lake VerityD (also mass outbreaks (Day, Night)",
+          "Massive Mass Outbreaks",
+          "Cobalt Coastlands: Deadwood HauntD",
+          "Tranquility CoveD",
+          "near Castaway Shore",
+          "Spring PathD"
         ]
       }
     },
     "399": {
       "legends-arceus": {
         "locations": [
-          "'''Obsidian Fieldlands:''' Aspiration Hill, Horseshoe Plains, Tidewater Dam and nearby, massive mass outbreaks",
-          "'''Crimson Mirelands:''' Gapejaw Bog, near Ursa's Ring, Droning Meadow",
-          "'''Alabaster Icelands:''' near Avalugg's Legacy, near Glacier Terrace, massive mass outbreaks"
+          "Obsidian Fieldlands: Aspiration Hill",
+          "Horseshoe Plains",
+          "Tidewater Dam and nearby",
+          "Massive Mass Outbreaks",
+          "Crimson Mirelands: Gapejaw Bog",
+          "near Ursa's Ring",
+          "Droning Meadow",
+          "Alabaster Icelands: near Avalugg's Legacy",
+          "near Glacier Terrace"
         ]
       }
     },
     "400": {
       "legends-arceus": {
         "locations": [
-          "'''Obsidian Fieldlands:''' Tidewater Dam and nearby (additional&nbsp",
-          "link=Alpha Pokémon|14px), massive mass outbreaks",
-          "'''Crimson Mirelands:''' Gapejaw Bog, near Ursa's Ring, Droning Meadow",
-          "'''Cobalt Coastlands:''' Spring Path",
-          "'''Alabaster Icelands:''' Avalugg's Legacy and nearby, near Glacier Terrace, massive mass outbreaks"
+          "Obsidian Fieldlands: Tidewater Dam and nearby (additional 14px)",
+          "Massive Mass Outbreaks",
+          "Crimson Mirelands: Gapejaw Bog",
+          "near Ursa's Ring",
+          "Droning Meadow",
+          "Cobalt Coastlands: Spring Path",
+          "Alabaster Icelands: Avalugg's Legacy and nearby",
+          "near Glacier Terrace"
         ]
       }
     },
     "401": {
       "legends-arceus": {
         "locations": [
-          "'''Obsidian Fieldlands:''' Deertrack Path and nearby, Windswept Run, Nature's Pantry, Tidewater Dam, massive mass outbreaks",
-          "'''Crimson Mirelands:''' Cloudpool Ridge, near Diamond Settlement, massive mass outbreaks"
+          "Obsidian Fieldlands: Deertrack Path and nearby",
+          "Windswept Run",
+          "Nature's Pantry",
+          "Tidewater Dam",
+          "Massive Mass Outbreaks",
+          "Crimson Mirelands: Cloudpool Ridge",
+          "near Diamond Settlement"
         ]
       }
     },
     "402": {
       "legends-arceus": {
         "locations": [
-          "'''Obsidian Fieldlands:''' Deertrack Heights&nbsp",
-          "link=Alpha Pokémon|14px (only one during Mission 5), Windswept Run, Nature's Pantry, Tidewater Dam (additional&nbsp",
-          "link=Alpha Pokémon|14px nearby), massive mass outbreaks",
-          "'''Crimson Mirelands:''' Cloudpool Ridge, near Diamond Settlement, massive mass outbreaks"
+          "Obsidian Fieldlands: Deertrack Heights 14px (only one during Mission 5)",
+          "Windswept Run",
+          "Nature's Pantry",
+          "Tidewater Dam (additional 14px nearby)",
+          "Massive Mass Outbreaks",
+          "Crimson Mirelands: Cloudpool Ridge",
+          "near Diamond Settlement"
         ]
       }
     },
     "403": {
       "legends-arceus": {
         "locations": [
-          "'''Obsidian Fieldlands:''' near Aspiration Hill, near Floaro Gardens, Deertrack Heights, near Oreburrow Tunnel, massive mass outbreaks",
-          "'''Coronet Highlands:''' Sonorous Path, Sacred Plaza, massive mass outbreaks"
+          "Obsidian Fieldlands: near Aspiration Hill",
+          "near Floaro Gardens",
+          "Deertrack Heights",
+          "near Oreburrow Tunnel",
+          "Massive Mass Outbreaks",
+          "Coronet Highlands: Sonorous Path",
+          "Sacred Plaza"
         ]
       }
     },
     "404": {
       "legends-arceus": {
         "locations": [
-          "'''Obsidian Fieldlands:''' Floaro Gardens&nbsp",
-          "link=Alpha Pokémon|14px, near Oreburrow Tunnel, Sandgem Flats, Lake Verity, massive mass outbreaks",
-          "'''Crimson Mirelands:''' Space-time distortions",
-          "'''Coronet Highlands:''' Heavenward Lookout, Sonorous Path, Sacred Plaza, Cloudcap Pass, massive mass outbreaks"
+          "Obsidian Fieldlands: Floaro Gardens 14px",
+          "near Oreburrow Tunnel",
+          "Sandgem Flats",
+          "Lake Verity",
+          "Massive Mass Outbreaks",
+          "Crimson Mirelands: Space Time Distortions",
+          "Coronet Highlands: Heavenward Lookout",
+          "Sonorous Path",
+          "Sacred Plaza",
+          "Cloudcap Pass"
         ]
       }
     },
     "405": {
       "legends-arceus": {
         "locations": [
-          "'''Obsidian Fieldlands:''' Sandgem Flats, Lake Verity, massive mass outbreaks",
-          "'''Crimson Mirelands:''' Space-time distortions",
-          "'''Coronet Highlands:''' Heavenward Lookout, Sonorous Path, Sacred Plaza (additional&nbsp",
-          "link=Alpha Pokémon|14px), Cloudcap Pass, massive mass outbreaks"
+          "Obsidian Fieldlands: Sandgem Flats",
+          "Lake Verity",
+          "Massive Mass Outbreaks",
+          "Crimson Mirelands: Space Time Distortions",
+          "Coronet Highlands: Heavenward Lookout",
+          "Sonorous Path",
+          "Sacred Plaza (additional 14px)",
+          "Cloudcap Pass"
         ]
       }
     },
     "406": {
       "legends-arceus": {
         "locations": [
-          "'''Crimson Mirelands:''' Golden LowlandsDN), Gapejaw Bog, near Cottonsedge Prairie, massive mass outbreaks",
-          "'''Coronet Highlands:''' Fabled Spring"
+          "Crimson Mirelands: Golden LowlandsD (also mass outbreaks (Day, Night)",
+          "Gapejaw Bog",
+          "near Cottonsedge Prairie",
+          "Massive Mass Outbreaks",
+          "Coronet Highlands: Fabled Spring"
         ]
       }
     },
     "407": {
       "legends-arceus": {
         "locations": [
-          "'''Crimson Mirelands:''' Cloudpool RidgeD&nbsp",
-          "link=Alpha Pokémon|14px, massive mass outbreaks"
+          "Crimson Mirelands: Cloudpool RidgeD 14px",
+          "Massive Mass Outbreaks"
         ]
       }
     },
     "408": {
       "legends-arceus": {
         "locations": [
-          "'''Coronet Highlands:''' Space-time distortions"
+          "Coronet Highlands: Space Time Distortions"
         ]
       }
     },
     "409": {
       "legends-arceus": {
         "locations": [
-          "'''Coronet Highlands:''' Space-time distortions"
+          "Coronet Highlands: Space Time Distortions"
         ]
       }
     },
     "410": {
       "legends-arceus": {
         "locations": [
-          "'''Coronet Highlands:''' Space-time distortions"
+          "Coronet Highlands: Space Time Distortions"
         ]
       }
     },
     "411": {
       "legends-arceus": {
         "locations": [
-          "'''Coronet Highlands:''' Space-time distortions"
+          "Coronet Highlands: Space Time Distortions"
         ]
       }
     },
     "412": {
       "legends-arceus": {
         "locations": [
-          "'''Obsidian Fieldlands:''' Grueling Grove, Worn Bridge, Deertrack Path, Deertrack Heights, Windswept Run, Nature's Pantry, Tidewater Dam, Obsidian Falls ('''Plant Cloak''')",
-          "'''Crimson Mirelands:''' Golden Lowlands, Gapejaw Bog, Holm of Trials, Ursa's Ring, near Scarlet Bog, near Cloudpool Ridge, Shrouded Ruins, near Diamond Settlement, near Diamond Heath, Bolderoll Slope, Cottonsedge Prairie, Droning Meadow, near Lake Valor ('''Sandy Cloak''')",
-          "'''Cobalt Coastlands:''' Crossing Slope, Ginkgo Landing, Aipom Hill, Bathers' Lagoon, Hideaway Bay, near Deadwood Haunt, Tombolo Walk, Sand's Reach, Tranquility Cove, Castaway Shore, near Windbreak Stand, Spring Path, near Islespy Shore, Veilstone Cape, Lunker's Lair, Seagrass Haven, near Firespit Island ('''Trash Cloak''')",
-          "'''Coronet Highlands:''' Heavenward Lookout, near Ancient Quarry, Clamberclaw Cliffs, Celestica Ruins, near Celestica Trail, Sacred Plaza, Stonetooth Rows, Fabled Spring, Cloudcap Pass ('''Sandy Cloak''')",
-          "'''Alabaster Icelands:''' Avalanche Slopes, Whiteout Valley, Bonechill Wastes, Bonechill Wastes, Icebound Falls, Arena's Approach, near Avalugg's Legacy, Glacier Terrace, Heart's Crag, Lake Acuity, near Pearl Settlement ('''Trash Cloak''')"
+          "Obsidian Fieldlands: Grueling Grove",
+          "Worn Bridge",
+          "Deertrack Path",
+          "Deertrack Heights",
+          "Windswept Run",
+          "Nature's Pantry",
+          "Tidewater Dam",
+          "Obsidian Falls (Plant Cloak)",
+          "Crimson Mirelands: Golden Lowlands",
+          "Gapejaw Bog",
+          "Holm of Trials",
+          "Ursa's Ring",
+          "near Scarlet Bog",
+          "near Cloudpool Ridge",
+          "Shrouded Ruins",
+          "near Diamond Settlement",
+          "near Diamond Heath",
+          "Bolderoll Slope",
+          "Cottonsedge Prairie",
+          "Droning Meadow",
+          "near Lake Valor (Sandy Cloak)",
+          "Cobalt Coastlands: Crossing Slope",
+          "Ginkgo Landing",
+          "Aipom Hill",
+          "Bathers' Lagoon",
+          "Hideaway Bay",
+          "near Deadwood Haunt",
+          "Tombolo Walk",
+          "Sand's Reach",
+          "Tranquility Cove",
+          "Castaway Shore",
+          "near Windbreak Stand",
+          "Spring Path",
+          "near Islespy Shore",
+          "Veilstone Cape",
+          "Lunker's Lair",
+          "Seagrass Haven",
+          "near Firespit Island (Trash Cloak)",
+          "Coronet Highlands: Heavenward Lookout",
+          "near Ancient Quarry",
+          "Clamberclaw Cliffs",
+          "Celestica Ruins",
+          "near Celestica Trail",
+          "Sacred Plaza",
+          "Stonetooth Rows",
+          "Fabled Spring",
+          "Cloudcap Pass (Sandy Cloak)",
+          "Alabaster Icelands: Avalanche Slopes",
+          "Whiteout Valley",
+          "Bonechill Wastes",
+          "Icebound Falls",
+          "Arena's Approach",
+          "near Avalugg's Legacy",
+          "Glacier Terrace",
+          "Heart's Crag",
+          "Lake Acuity",
+          "near Pearl Settlement (Trash Cloak)"
         ]
       }
     },
     "413": {
       "legends-arceus": {
         "locations": [
-          "'''Obsidian Fieldlands:''' near Floaro Gardens, Grueling Grove, Sandgem Flats, Lake Verity ('''Plant Cloak''')",
-          "'''Crimson Mirelands:''' near Golden Lowlands, near Gapejaw Bog ('''Sandy Cloak''')",
-          "'''Cobalt Coastlands:''' Crossing Slope, Ginkgo Landing, Aipom Hill, Bathers' Lagoon, Hideaway Bay, near Deadwood Haunt, Tombolo Walk, Sand's Reach, Tranquility Cove, Castaway Shore, Windbreak Stand, Spring Path, near Islespy Shore, Veilstone Cape, Lunker's Lair, Seagrass Haven, near Firespit Island ('''Trash Cloak''')",
-          "'''Coronet Highlands:''' Heavenward Lookout, near Ancient Quarry, Clamberclaw Cliffs, Celestica Ruins, near Celestica Trail, Sacred Plaza, Stonetooth Rows, Fabled Spring, Cloudcap Pass ('''Sandy Cloak''')",
-          "'''Alabaster Icelands:''' Avalanche Slopes, Whiteout Valley, Bonechill Wastes, Bonechill Wastes, Icebound Falls, Arena's Approach, near Avalugg's Legacy, Glacier Terrace, Heart's Crag, Lake Acuity, near Pearl Settlement ('''Trash Cloak''')"
+          "Obsidian Fieldlands: near Floaro Gardens",
+          "Grueling Grove",
+          "Sandgem Flats",
+          "Lake Verity (Plant Cloak)",
+          "Crimson Mirelands: near Golden Lowlands",
+          "near Gapejaw Bog (Sandy Cloak)",
+          "Cobalt Coastlands: Crossing Slope",
+          "Ginkgo Landing",
+          "Aipom Hill",
+          "Bathers' Lagoon",
+          "Hideaway Bay",
+          "near Deadwood Haunt",
+          "Tombolo Walk",
+          "Sand's Reach",
+          "Tranquility Cove",
+          "Castaway Shore",
+          "Windbreak Stand",
+          "Spring Path",
+          "near Islespy Shore",
+          "Veilstone Cape",
+          "Lunker's Lair",
+          "Seagrass Haven",
+          "near Firespit Island (Trash Cloak)",
+          "Coronet Highlands: Heavenward Lookout",
+          "near Ancient Quarry",
+          "Clamberclaw Cliffs",
+          "Celestica Ruins",
+          "near Celestica Trail",
+          "Sacred Plaza",
+          "Stonetooth Rows",
+          "Fabled Spring",
+          "Cloudcap Pass (Sandy Cloak)",
+          "Alabaster Icelands: Avalanche Slopes",
+          "Whiteout Valley",
+          "Bonechill Wastes",
+          "Icebound Falls",
+          "Arena's Approach",
+          "near Avalugg's Legacy",
+          "Glacier Terrace",
+          "Heart's Crag",
+          "Lake Acuity",
+          "near Pearl Settlement (Trash Cloak)"
         ]
       }
     },
     "414": {
       "legends-arceus": {
         "locations": [
-          "'''Obsidian Fieldlands:''' Grueling Grove",
-          "'''Cobalt Coastlands:''' near Crossing Slope, Aipom Hill, Spring Path (additional&nbsp",
-          "link=Alpha Pokémon|14px), Veilstone Cape, near Firespit Island",
-          "'''Coronet Highlands:''' Wayward Wood (additional&nbsp",
-          "link=Alpha Pokémon|14px), near Ancient Quarry"
+          "Obsidian Fieldlands: Grueling Grove",
+          "Cobalt Coastlands: near Crossing Slope",
+          "Aipom Hill",
+          "Spring Path (additional 14px)",
+          "Veilstone Cape",
+          "near Firespit Island",
+          "Coronet Highlands: Wayward Wood (additional 14px)",
+          "near Ancient Quarry"
         ]
       }
     },
     "415": {
       "legends-arceus": {
         "locations": [
-          "'''Obsidian Fieldlands:''' Grueling Grove, near The Heartwood, near Oreburrow Tunnel",
-          "'''Crimson Mirelands:''' Cloudpool Ridge, near Cottonsedge Prairie, near Droning Meadow, near Lake Valor",
-          "'''Cobalt Coastlands:''' Aipom Hill '''Obsidian Fieldlands:''' The Heartwood, near Grandtree Arena, near Oreburrow Tunnel, Ramanas Island",
-          "'''Crimson Mirelands:''' Cottonsedge Prairie, Droning Meadow",
-          "'''Cobalt Coastlands:''' Aipom Hill"
+          "Obsidian Fieldlands: Grueling Grove",
+          "near The Heartwood",
+          "near Oreburrow Tunnel",
+          "Crimson Mirelands: Cloudpool Ridge",
+          "near Cottonsedge Prairie",
+          "near Droning Meadow",
+          "near Lake Valor",
+          "Cobalt Coastlands: Aipom Hill Obsidian Fieldlands: The Heartwood",
+          "near Grandtree Arena",
+          "Ramanas Island",
+          "Crimson Mirelands: Cottonsedge Prairie",
+          "Droning Meadow",
+          "Cobalt Coastlands: Aipom Hill"
         ]
       }
     },
     "416": {
       "legends-arceus": {
         "locations": [
-          "'''Obsidian Fieldlands:''' Grueling Grove&nbsp",
-          "link=Alpha Pokémon|14px (only one during Mission 20)",
-          "'''Crimson Mirelands:''' near Cottonsedge Prairie (additional &nbsp",
-          "link=Alpha Pokémon|14px), near Droning Meadow, near Lake Valor '''Crimson Mirelands:''' Cottonsedge Prairie, Droning Meadow"
+          "Obsidian Fieldlands: Grueling Grove 14px (only one during Mission 20)",
+          "Crimson Mirelands: near Cottonsedge Prairie (additional 14px)",
+          "near Droning Meadow",
+          "near Lake Valor Crimson Mirelands: Cottonsedge Prairie",
+          "Droning Meadow"
         ]
       }
     },
     "417": {
       "legends-arceus": {
         "locations": [
-          "'''Crimson Mirelands:''' near Gapejaw Bog&nbsp",
-          "link=Alpha Pokémon|14px (also mass outbreaks), Cottonsedge Prairie, massive mass outbreaks",
-          "'''Alabaster Icelands:''' massive mass outbreaks '''Crimson Mirelands:''' near Golden Lowlands, Gapejaw Bog, Holm of Trials, Ursa's Ring, near Scarlet Bog, Cottonsedge Prairie, Droning Meadow"
+          "Crimson Mirelands: near Gapejaw Bog 14px (also mass outbreaks)",
+          "Cottonsedge Prairie",
+          "Massive Mass Outbreaks",
+          "Alabaster Icelands: massive mass outbreaks Crimson Mirelands: near Golden Lowlands",
+          "Gapejaw Bog",
+          "Holm of Trials",
+          "Ursa's Ring",
+          "near Scarlet Bog",
+          "Droning Meadow"
         ]
       }
     },
     "418": {
       "legends-arceus": {
         "locations": [
-          "'''Obsidian Fieldlands:''' Horseshoe Plains, near Worn Bridge, Windswept Run, massive mass outbreaks",
-          "'''Cobalt Coastlands:''' Ginkgo Landing, Aipom Hill, Bathers' Lagoon"
+          "Obsidian Fieldlands: Horseshoe Plains",
+          "near Worn Bridge",
+          "Windswept Run",
+          "Massive Mass Outbreaks",
+          "Cobalt Coastlands: Ginkgo Landing",
+          "Aipom Hill",
+          "Bathers' Lagoon"
         ]
       }
     },
     "419": {
       "legends-arceus": {
         "locations": [
-          "'''Obsidian Fieldlands:''' Horseshoe Plains (mass outbreaks), near Worn Bridge&nbsp",
-          "link=Alpha Pokémon|14px, Windswept Run, massive mass outbreaks",
-          "'''Crimson Mirelands:''' Space-time distortions",
-          "'''Cobalt Coastlands:''' Ginkgo Landing, Aipom Hill, Bathers' Lagoon"
+          "Obsidian Fieldlands: Horseshoe Plains (mass outbreaks)",
+          "near Worn Bridge 14px",
+          "Windswept Run",
+          "Massive Mass Outbreaks",
+          "Crimson Mirelands: Space Time Distortions",
+          "Cobalt Coastlands: Ginkgo Landing",
+          "Aipom Hill",
+          "Bathers' Lagoon"
         ]
       }
     },
     "420": {
       "legends-arceus": {
         "locations": [
-          "'''Obsidian Fieldlands:''' The Heartwood (mass outbreaks) '''Obsidian Fieldlands:''' The Heartwood",
-          "'''Crimson Mirelands:''' Gapejaw Bog",
-          "'''Coronet Highlands:''' Lonely Spring, near Primeval Grotto, Bolderoll Ravine"
+          "Obsidian Fieldlands: The Heartwood (mass outbreaks) Obsidian Fieldlands: The Heartwood",
+          "Crimson Mirelands: Gapejaw Bog",
+          "Coronet Highlands: Lonely Spring",
+          "near Primeval Grotto",
+          "Bolderoll Ravine"
         ]
       }
     },
     "421": {
       "legends-arceus": {
         "locations": [
-          "'''Obsidian Fieldlands:''' The Heartwood",
-          "'''Crimson Mirelands:''' Gapejaw Bog",
-          "'''Coronet Highlands:''' Lonely Spring, near Primeval Grotto, Bolderoll Ravine"
+          "Obsidian Fieldlands: The Heartwood",
+          "Crimson Mirelands: Gapejaw Bog",
+          "Coronet Highlands: Lonely Spring",
+          "near Primeval Grotto",
+          "Bolderoll Ravine"
         ]
       }
     },
     "422": {
       "legends-arceus": {
         "locations": [
-          "'''Obsidian Fieldlands:''' Ramanas Island, Sandgem Flats, massive mass outbreaks ('''West Sea''')",
-          "'''Cobalt Coastlands:''' Tranquility Cove, Seagrass Haven, massive mass outbreaks ('''East Sea''')"
+          "Obsidian Fieldlands: Ramanas Island",
+          "Sandgem Flats",
+          "massive mass outbreaks (West Sea)",
+          "Cobalt Coastlands: Tranquility Cove",
+          "Seagrass Haven",
+          "massive mass outbreaks (East Sea)"
         ]
       }
     },
     "423": {
       "legends-arceus": {
         "locations": [
-          "'''Obsidian Fieldlands:''' Ramanas Island, Sandgem Flats, massive mass outbreaks ('''West Sea''')",
-          "'''Cobalt Coastlands:''' Seagrass Haven (additional&nbsp",
-          "link=Alpha Pokémon|14px), massive mass outbreaks ('''East Sea''')"
+          "Obsidian Fieldlands: Ramanas Island",
+          "Sandgem Flats",
+          "massive mass outbreaks (West Sea)",
+          "Cobalt Coastlands: Seagrass Haven (additional 14px)",
+          "massive mass outbreaks (East Sea)"
         ]
       }
     },
     "424": {
       "legends-arceus": {
         "locations": [
-          "'''Cobalt Coastlands:''' Aipom Hill, Hideaway Bay&nbsp",
-          "link=Alpha Pokémon|14px, massive mass outbreaks",
-          "'''Coronet Highlands:''' Space-time distortions",
-          "'''Alabaster Icelands:''' Avalanche Slopes, near Icebound Falls, near Arena's Approach, near Avalugg's Legacy, Heart's Crag, massive mass outbreaks"
+          "Cobalt Coastlands: Aipom Hill",
+          "Hideaway Bay 14px",
+          "Massive Mass Outbreaks",
+          "Coronet Highlands: Space Time Distortions",
+          "Alabaster Icelands: Avalanche Slopes",
+          "near Icebound Falls",
+          "near Arena's Approach",
+          "near Avalugg's Legacy",
+          "Heart's Crag"
         ]
       }
     },
     "425": {
       "legends-arceus": {
         "locations": [
-          "'''Obsidian Fieldlands:''' Aspiration HillN, Horseshoe PlainsN, Deertrack PathN, Ramanas IslandN, Ginkgo Landing and nearbyN, Bathers' Lagoon and nearbyN, Deadwood HauntN, Sand's Reach and nearbyN, near Castaway ShoreN (mass outbreaks nearbyN), Lunker's LairN, Firespit IslandN, Avalugg's LegacyN (also mass outbreaksN), Heart's CragN, massive mass outbreaks"
+          "Obsidian Fieldlands: Aspiration HillN",
+          "Floaro GardensN",
+          "Horseshoe PlainsN",
+          "near Worn BridgeN",
+          "Deertrack PathN",
+          "Windswept RunN",
+          "Ramanas IslandN",
+          "Massive Mass Outbreaks",
+          "Cobalt Coastlands: Crossing SlopeN",
+          "Ginkgo Landing and nearbyN",
+          "near Aipom HillN",
+          "Bathers' Lagoon and nearbyN",
+          "near Hideaway BayN",
+          "Deadwood HauntN",
+          "near Tombolo WalkN",
+          "Sand's Reach and nearbyN",
+          "Tranquility CoveN",
+          "near Castaway ShoreN",
+          "near Islespy ShoreN (mass outbreaks nearby (Day, Night)",
+          "Lunker's LairN",
+          "Seagrass HavenN",
+          "Firespit IslandN",
+          "Alabaster Icelands: Bonechill WastesN",
+          "Avalugg's LegacyN",
+          "Glacier TerraceN (also mass outbreaks (Day, Night)",
+          "Heart's CragN"
         ]
       }
     },
     "426": {
       "legends-arceus": {
         "locations": [
-          "'''Obsidian Fieldlands:''' Ramanas IslandN, Lake Verity and nearbyN, near Ginkgo LandingN, Bathers' Lagoon and nearbyN, Deadwood HauntN, Sand's Reach and nearbyN, near Castaway ShoreN (mass outbreaks nearbyN), Lunker's LairN, Firespit IslandN, Avalugg's LegacyN (also mass outbreaksN), Heart's CragN, massive mass outbreaks"
+          "Obsidian Fieldlands: Ramanas IslandN",
+          "Sandgem FlatsN",
+          "Lake Verity and nearbyN",
+          "Massive Mass Outbreaks",
+          "Crimson Mirelands: Space Time Distortions",
+          "Cobalt Coastlands: Crossing SlopeN",
+          "near Ginkgo LandingN",
+          "near Aipom HillN",
+          "Bathers' Lagoon and nearbyN",
+          "near Hideaway BayN",
+          "Deadwood HauntN",
+          "near Tombolo WalkN",
+          "Sand's Reach and nearbyN",
+          "Tranquility CoveN",
+          "near Castaway ShoreN",
+          "near Islespy ShoreN (mass outbreaks nearby (Day, Night)",
+          "Lunker's LairN",
+          "Seagrass HavenN",
+          "Firespit IslandN",
+          "Alabaster Icelands: Bonechill WastesN",
+          "Avalugg's LegacyN",
+          "Glacier TerraceN (also mass outbreaks (Day, Night)",
+          "Heart's CragN"
         ]
       }
     },
     "427": {
       "legends-arceus": {
         "locations": [
-          "'''Obsidian Fieldlands:''' The Heartwood and nearby, massive mass outbreaks",
-          "'''Alabaster Icelands:''' Bonechill Wastes, Snowfall Hot Spring, massive mass outbreaks"
+          "Obsidian Fieldlands: The Heartwood and nearby",
+          "Massive Mass Outbreaks",
+          "Alabaster Icelands: Bonechill Wastes",
+          "Snowfall Hot Spring"
         ]
       }
     },
     "428": {
       "legends-arceus": {
         "locations": [
-          "'''Obsidian Fieldlands:''' near The Heartwood&nbsp",
-          "link=Alpha Pokémon|14px, massive mass outbreaks",
-          "'''Crimson Mirelands:''' Space-time distortions",
-          "'''Alabaster Icelands:''' Bonechill Wastes, Snowfall Hot Spring, massive mass outbreaks"
+          "Obsidian Fieldlands: near The Heartwood 14px",
+          "Massive Mass Outbreaks",
+          "Crimson Mirelands: Space Time Distortions",
+          "Alabaster Icelands: Bonechill Wastes",
+          "Snowfall Hot Spring"
         ]
       }
     },
     "429": {
       "legends-arceus": {
         "locations": [
-          "'''Coronet Highlands:''' Stonetooth RowsN&nbsp",
-          "link=Alpha Pokémon|14px, massive mass outbreaks",
-          "'''Alabaster Icelands:''' massive mass outbreaks"
+          "Coronet Highlands: Stonetooth RowsN 14px",
+          "Massive Mass Outbreaks",
+          "Alabaster Icelands: massive mass outbreaks"
         ]
       }
     },
     "430": {
       "legends-arceus": {
         "locations": [
-          "'''Crimson Mirelands:''' Cloudpool Ridge14px, massive mass outbreaks",
-          "'''Cobalt Coastlands:''' Bathers' LagoonSup/t|N"
+          "Crimson Mirelands: Cloudpool RidgeN 14px",
+          "Massive Mass Outbreaks",
+          "Cobalt Coastlands: Bathers' LagoonN"
         ]
       }
     },
     "431": {
       "legends-arceus": {
         "locations": [
-          "'''Cobalt Coastlands:''' Crossing Slope, Veilstone Cape, massive mass outbreaks",
-          "'''Alabaster Icelands:''' near Glacier Terrace, massive mass outbreaks"
+          "Cobalt Coastlands: Crossing Slope",
+          "Veilstone Cape",
+          "Massive Mass Outbreaks",
+          "Alabaster Icelands: near Glacier Terrace"
         ]
       }
     },
     "432": {
       "legends-arceus": {
         "locations": [
-          "'''Cobalt Coastlands:''' Crossing Slope, Veilstone Cape&nbsp",
-          "link=Alpha Pokémon|14px (also mass outbreaks), massive mass outbreaks",
-          "'''Alabaster Icelands:''' near Glacier Terrace, massive mass outbreaks"
+          "Cobalt Coastlands: Crossing Slope",
+          "Veilstone Cape 14px (also mass outbreaks)",
+          "Massive Mass Outbreaks",
+          "Alabaster Icelands: near Glacier Terrace"
         ]
       }
     },
     "433": {
       "legends-arceus": {
         "locations": [
-          "'''Coronet Highlands:''' Primeval Grotto (mass outbreaks), Sacred Plaza, massive mass outbreaks",
-          "'''Alabaster Icelands:''' Lake Acuity"
+          "Coronet Highlands: Primeval Grotto (mass outbreaks)",
+          "Sacred Plaza",
+          "Massive Mass Outbreaks",
+          "Alabaster Icelands: Lake Acuity"
         ]
       }
     },
     "434": {
       "legends-arceus": {
         "locations": [
-          "'''Crimson Mirelands:''' Scarlet Bog, massive mass outbreaks",
-          "'''Coronet Highlands:''' near Ancient Quarry, near Celestica Trail, massive mass outbreaks"
+          "Crimson Mirelands: Scarlet Bog",
+          "Massive Mass Outbreaks",
+          "Coronet Highlands: near Ancient Quarry",
+          "near Celestica Trail"
         ]
       }
     },
     "435": {
       "legends-arceus": {
         "locations": [
-          "'''Crimson Mirelands:''' Scarlet Bog (additional&nbsp",
-          "link=Alpha Pokémon|14px), massive mass outbreaks",
-          "'''Cobalt Coastlands:''' Space-time distortions",
-          "'''Coronet Highlands:''' near Ancient Quarry, near Celestica Trail, massive mass outbreaks"
+          "Crimson Mirelands: Scarlet Bog (additional 14px)",
+          "Massive Mass Outbreaks",
+          "Cobalt Coastlands: Space Time Distortions",
+          "Coronet Highlands: near Ancient Quarry",
+          "near Celestica Trail"
         ]
       }
     },
     "436": {
       "legends-arceus": {
         "locations": [
-          "'''Crimson Mirelands:''' massive mass outbreaks",
-          "'''Coronet Highlands:''' Ancient Quarry, near Clamberclaw Cliffs, near Celestica Ruins, near Primeval Grotto, Stonetooth RowsD, massive mass outbreaks",
-          "'''Alabaster Icelands:''' Lake Acuity, Snowpoint Temple, massive mass outbreaks '''Coronet Highlands:''' Wayward Wood, near Ancient Quarry, Sonorous Path, Lonely Spring, Clamberclaw Cliffs, Primeval Grotto",
-          "'''Alabaster Icelands:''' Lake Acuity"
+          "Crimson Mirelands: massive mass outbreaks",
+          "Coronet Highlands: Ancient Quarry",
+          "near Clamberclaw Cliffs",
+          "near Celestica Ruins",
+          "near Primeval Grotto",
+          "Stonetooth RowsD",
+          "Massive Mass Outbreaks",
+          "Alabaster Icelands: Lake Acuity",
+          "Snowpoint Temple",
+          "massive mass outbreaks Coronet Highlands: Wayward Wood",
+          "near Ancient Quarry",
+          "Sonorous Path",
+          "Lonely Spring",
+          "Clamberclaw Cliffs",
+          "Primeval Grotto"
         ]
       }
     },
     "437": {
       "legends-arceus": {
         "locations": [
-          "'''Crimson Mirelands:''' massive mass outbreaks",
-          "'''Coronet Highlands:''' Ancient Quarry, near Clamberclaw Cliffs (additional&nbsp",
-          "link=Alpha Pokémon|14px), near Celestica Ruins, near Primeval Grotto, Stonetooth RowsD, massive mass outbreaks",
-          "'''Alabaster Icelands:''' Lake Acuity, Snowpoint Temple, massive mass outbreaks"
+          "Crimson Mirelands: massive mass outbreaks",
+          "Coronet Highlands: Ancient Quarry",
+          "near Clamberclaw Cliffs (additional 14px)",
+          "near Celestica Ruins",
+          "near Primeval Grotto",
+          "Stonetooth RowsD",
+          "Massive Mass Outbreaks",
+          "Alabaster Icelands: Lake Acuity",
+          "Snowpoint Temple"
         ]
       }
     },
     "438": {
       "legends-arceus": {
         "locations": [
-          "'''Crimson Mirelands:''' Diamond Heath, Cloudpool Ridge and nearby, massive mass outbreaks",
-          "'''Coronet Highlands:''' Celestica Ruins, near Celestica Ruins (mass outbreaks)"
+          "Crimson Mirelands: Diamond Heath",
+          "Cloudpool Ridge and nearby",
+          "Massive Mass Outbreaks",
+          "Coronet Highlands: Celestica Ruins",
+          "near Celestica Ruins (mass outbreaks)"
         ]
       }
     },
     "439": {
       "legends-arceus": {
         "locations": [
-          "'''Obsidian Fieldlands:''' Horseshoe Plains, Sandgem Flats, massive mass outbreaks",
-          "'''Coronet Highlands:''' massive mass outbreaks"
+          "Obsidian Fieldlands: Horseshoe Plains",
+          "Sandgem Flats",
+          "Massive Mass Outbreaks",
+          "Coronet Highlands: massive mass outbreaks"
         ]
       }
     },
     "440": {
       "legends-arceus": {
         "locations": [
-          "'''Obsidian Fieldlands:''' near Horseshoe Plains (mass outbreaks), Oreburrow Tunnel, near Obsidian Falls",
-          "'''Crimson Mirelands:''' Cottonsedge Prairie (mass outbreaks)",
-          "'''Cobalt Coastlands:''' Hideaway Bay, Tombolo Walk and nearby, massive mass outbreaks",
-          "'''Coronet Highlands:''' Lonely Spring (mass outbreaks)",
-          "'''Alabaster Icelands:''' Avalanche Slopes"
+          "Obsidian Fieldlands: near Horseshoe Plains (mass outbreaks)",
+          "Oreburrow Tunnel",
+          "near Obsidian Falls",
+          "Crimson Mirelands: Cottonsedge Prairie (mass outbreaks)",
+          "Cobalt Coastlands: Hideaway Bay",
+          "Tombolo Walk and nearby",
+          "Massive Mass Outbreaks",
+          "Coronet Highlands: Lonely Spring (mass outbreaks)",
+          "Alabaster Icelands: Avalanche Slopes"
         ]
       }
     },
     "441": {
       "legends-arceus": {
         "locations": [
-          "'''Obsidian Fieldlands:''' massive mass outbreaks",
-          "'''Cobalt Coastlands:''' Deadwood HauntDN), massive mass outbreaks"
+          "Obsidian Fieldlands: massive mass outbreaks",
+          "Cobalt Coastlands: Deadwood HauntD (also mass outbreaks (Day, Night)",
+          "Massive Mass Outbreaks"
         ]
       }
     },
     "442": {
       "legends-arceus": {
         "locations": [
-          "'''Crimson Mirelands:''' Shrouded Ruins (additional&nbsp",
-          "link=Alpha Pokémon|14px), massive mass outbreaks (after completing Request 22)"
+          "Crimson Mirelands: Shrouded Ruins (additional 14px)",
+          "massive mass outbreaks (after completing Request 22)"
         ]
       }
     },
     "443": {
       "legends-arceus": {
         "locations": [
-          "'''Coronet Highlands:''' Wayward Cave, Clamberclaw Cliffs, massive mass outbreaks",
-          "'''Alabaster Icelands:''' Avalanche Slopes '''Coronet Highlands:''' Wayward Cave, Clamberclaw Cliffs",
-          "'''Alabaster Icelands:''' Avalanche Slopes"
+          "Coronet Highlands: Wayward Cave",
+          "Clamberclaw Cliffs",
+          "Massive Mass Outbreaks",
+          "Alabaster Icelands: Avalanche Slopes Coronet Highlands: Wayward Cave",
+          "Alabaster Icelands: Avalanche Slopes"
         ]
       }
     },
     "444": {
       "legends-arceus": {
         "locations": [
-          "'''Coronet Highlands:''' near Clamberclaw Cliffs&nbsp",
-          "link=Alpha Pokémon|14px, Clamberclaw Cliffs (mass outbreaks), massive mass outbreaks",
-          "'''Alabaster Icelands:''' Avalanche Slopes"
+          "Coronet Highlands: near Clamberclaw Cliffs 14px",
+          "Clamberclaw Cliffs (mass outbreaks)",
+          "Massive Mass Outbreaks",
+          "Alabaster Icelands: Avalanche Slopes"
         ]
       }
     },
     "445": {
       "legends-arceus": {
         "locations": [
-          "'''Coronet Highlands:''' Massive Mass outbreak",
-          "'''Alabaster Icelands:''' Avalanche Slopes&nbsp",
-          "link=Alpha Pokémon|14px"
+          "Coronet Highlands: Massive Mass outbreak",
+          "Alabaster Icelands: Avalanche Slopes 14px"
         ]
       }
     },
     "446": {
       "legends-arceus": {
         "locations": [
-          "'''Obsidian Fieldlands:''' Deertrack Path, massive mass outbreaks",
-          "'''Alabaster Icelands:''' Snowfall Hot Spring"
+          "Obsidian Fieldlands: Deertrack Path",
+          "Massive Mass Outbreaks",
+          "Alabaster Icelands: Snowfall Hot Spring"
         ]
       }
     },
     "447": {
       "legends-arceus": {
         "locations": [
-          "'''Cobalt Coastlands:''' massive mass outbreaks",
-          "'''Alabaster Icelands:''' Icebound Falls, Snowfall Hot Spring, massive mass outbreaks"
+          "Cobalt Coastlands: massive mass outbreaks",
+          "Alabaster Icelands: Icebound Falls",
+          "Snowfall Hot Spring",
+          "Massive Mass Outbreaks"
         ]
       }
     },
     "448": {
       "legends-arceus": {
         "locations": [
-          "'''Cobalt Coastlands:''' massive mass outbreaks",
-          "'''Alabaster Icelands:''' Icebound Falls (additional&nbsp",
-          "link=Alpha Pokémon|14px), Snowfall Hot Spring, massive mass outbreaks"
+          "Cobalt Coastlands: massive mass outbreaks",
+          "Alabaster Icelands: Icebound Falls (additional 14px)",
+          "Snowfall Hot Spring",
+          "Massive Mass Outbreaks"
         ]
       }
     },
     "449": {
       "legends-arceus": {
         "locations": [
-          "'''Crimson Mirelands:''' Gapejaw Bog, near Sludge Mound, Scarlet Bog, massive mass outbreaks",
-          "'''Coronet Highlands:''' Celestica Trail, massive mass outbreaks"
+          "Crimson Mirelands: Gapejaw Bog",
+          "near Sludge Mound",
+          "Scarlet Bog",
+          "Massive Mass Outbreaks",
+          "Coronet Highlands: Celestica Trail"
         ]
       }
     },
     "450": {
       "legends-arceus": {
         "locations": [
-          "'''Crimson Mirelands:''' Gapejaw Bog&nbsp",
-          "link=Alpha Pokémon|14px, Scarlet Bog and nearby, massive mass outbreaks",
-          "'''Coronet Highlands:''' Celestica Trail, massive mass outbreaks"
+          "Crimson Mirelands: Gapejaw Bog 14px",
+          "Scarlet Bog and nearby",
+          "Massive Mass Outbreaks",
+          "Coronet Highlands: Celestica Trail"
         ]
       }
     },
     "451": {
       "legends-arceus": {
         "locations": [
-          "'''Crimson Mirelands:''' massive mass outbreaks",
-          "'''Cobalt Coastlands:''' Ginkgo Landing, Castaway Shore, massive mass outbreaks"
+          "Crimson Mirelands: massive mass outbreaks",
+          "Cobalt Coastlands: Ginkgo Landing",
+          "Castaway Shore",
+          "Massive Mass Outbreaks"
         ]
       }
     },
     "452": {
       "legends-arceus": {
         "locations": [
-          "'''Crimson Mirelands:''' massive mass outbreaks",
-          "'''Cobalt Coastlands:''' Ginkgo Landing&nbsp",
-          "link=Alpha Pokémon|14px, Castaway Shore (mass outbreaks), massive mass outbreaks"
+          "Crimson Mirelands: massive mass outbreaks",
+          "Cobalt Coastlands: Ginkgo Landing 14px",
+          "Castaway Shore (mass outbreaks)",
+          "Massive Mass Outbreaks"
         ]
       }
     },
     "453": {
       "legends-arceus": {
         "locations": [
-          "'''Crimson Mirelands:''' Gapejaw Bog, Holm of Trials, near Sludge Mound, Scarlet Bog, massive mass outbreaks",
-          "'''Coronet Highlands:''' near Ancient Quarry"
+          "Crimson Mirelands: Gapejaw Bog",
+          "Holm of Trials",
+          "near Sludge Mound",
+          "Scarlet Bog",
+          "Massive Mass Outbreaks",
+          "Coronet Highlands: near Ancient Quarry"
         ]
       }
     },
     "454": {
       "legends-arceus": {
         "locations": [
-          "'''Obsidian Fieldlands:''' Space-time distortions",
-          "'''Crimson Mirelands:''' Holm of Trials (additional&nbsp",
-          "link=Alpha Pokémon|14px), massive mass outbreaks",
-          "'''Cobalt Coastlands:''' Spring Path",
-          "'''Coronet Highlands:''' near Ancient Quarry"
+          "Obsidian Fieldlands: Space Time Distortions",
+          "Crimson Mirelands: Holm of Trials (additional 14px)",
+          "Massive Mass Outbreaks",
+          "Cobalt Coastlands: Spring Path",
+          "Coronet Highlands: near Ancient Quarry"
         ]
       }
     },
     "455": {
       "legends-arceus": {
         "locations": [
-          "'''Crimson Mirelands:''' Golden Lowlands and nearby, Gapejaw Bog, Holm of Trials, Cloudpool Ridge, Shrouded Ruins, near Diamond Settlement, near Cottonsedge Prairie (additional&nbsp",
-          "link=Alpha Pokémon|14px), near Lake Valor, massive mass outbreaks",
-          "'''Cobalt Coastlands:''' Space-time distortions",
-          "'''Coronet Highlands:''' Lonely Spring (additional&nbsp",
-          "link=Alpha Pokémon|14px)"
+          "Crimson Mirelands: Golden Lowlands and nearby",
+          "Gapejaw Bog",
+          "Holm of Trials",
+          "Cloudpool Ridge",
+          "Shrouded Ruins",
+          "near Diamond Settlement",
+          "near Cottonsedge Prairie (additional 14px)",
+          "near Lake Valor",
+          "Massive Mass Outbreaks",
+          "Cobalt Coastlands: Space Time Distortions",
+          "Coronet Highlands: Lonely Spring (additional 14px)"
         ]
       }
     },
     "456": {
       "legends-arceus": {
         "locations": [
-          "'''Cobalt Coastlands:''' Seagrass Haven, massive mass outbreaks"
+          "Cobalt Coastlands: Seagrass Haven",
+          "Massive Mass Outbreaks"
         ]
       }
     },
     "457": {
       "legends-arceus": {
         "locations": [
-          "'''Cobalt Coastlands:''' Seagrass Haven and nearby (additional&nbsp",
-          "link=Alpha Pokémon|14px), massive mass outbreaks"
+          "Cobalt Coastlands: Seagrass Haven and nearby (additional 14px)",
+          "Massive Mass Outbreaks"
         ]
       }
     },
     "458": {
       "legends-arceus": {
         "locations": [
-          "'''Cobalt Coastlands:''' near Ginkgo Landing, near Aipom Hill, near Bathers' Lagoon, Tranquility Cove, near Castaway Shore, massive mass outbreaks"
+          "Cobalt Coastlands: near Ginkgo Landing",
+          "near Aipom Hill",
+          "near Bathers' Lagoon",
+          "Tranquility Cove",
+          "near Castaway Shore",
+          "Massive Mass Outbreaks"
         ]
       }
     },
     "459": {
       "legends-arceus": {
         "locations": [
-          "'''Coronet Highlands:''' massive mass outbreaks",
-          "'''Alabaster Icelands:''' Bonechill Wastes, near Arena's Approach, near Avalugg's Legacy, Glacier Terrace, massive mass outbreaks"
+          "Coronet Highlands: massive mass outbreaks",
+          "Alabaster Icelands: Bonechill Wastes",
+          "near Arena's Approach",
+          "near Avalugg's Legacy",
+          "Glacier Terrace",
+          "Massive Mass Outbreaks"
         ]
       }
     },
     "460": {
       "legends-arceus": {
         "locations": [
-          "'''Coronet Highlands:''' massive mass outbreaks",
-          "'''Alabaster Icelands:''' Bonechill Wastes (additional&nbsp",
-          "link=Alpha Pokémon|14px), near Arena's Approach, near Avalugg's Legacy, Glacier Terrace, massive mass outbreaks"
+          "Coronet Highlands: massive mass outbreaks",
+          "Alabaster Icelands: Bonechill Wastes (additional 14px)",
+          "near Arena's Approach",
+          "near Avalugg's Legacy",
+          "Glacier Terrace",
+          "Massive Mass Outbreaks"
         ]
       }
     },
     "461": {
       "legends-arceus": {
         "locations": [
-          "'''Obsidian Fieldlands:''' Space-time distortions"
+          "Obsidian Fieldlands: Space Time Distortions"
         ]
       }
     },
     "462": {
       "legends-arceus": {
         "locations": [
-          "'''Coronet Highlands:''' near Clamberclaw Cliffs, near Celestica Trail, near Fabled Spring, Space-time distortions"
+          "Coronet Highlands: near Clamberclaw Cliffs",
+          "near Celestica Trail",
+          "near Fabled Spring",
+          "Space Time Distortions"
         ]
       }
     },
     "463": {
       "legends-arceus": {
         "locations": [
-          "'''Obsidian Fieldlands:''' Space-time distortions",
-          "'''Crimson Mirelands:''' Shrouded Ruins&nbsp",
-          "link=Alpha Pokémon|14px (also mass outbreaks), massive mass outbreaks",
-          "'''Alabaster Icelands:''' Avalanche Slopes, massive mass outbreaks"
+          "Obsidian Fieldlands: Space Time Distortions",
+          "Crimson Mirelands: Shrouded Ruins 14px (also mass outbreaks)",
+          "Massive Mass Outbreaks",
+          "Alabaster Icelands: Avalanche Slopes"
         ]
       }
     },
     "464": {
       "legends-arceus": {
         "locations": [
-          "'''Crimson Mirelands:''' massive mass outbreaks",
-          "'''Cobalt Coastlands:''' Space-time distortions",
-          "'''Coronet Highlands:''' near Sacred Plaza&nbsp",
-          "link=Alpha Pokémon|14px, massive mass outbreaks"
+          "Crimson Mirelands: massive mass outbreaks",
+          "Cobalt Coastlands: Space Time Distortions",
+          "Coronet Highlands: near Sacred Plaza 14px",
+          "Massive Mass Outbreaks"
         ]
       }
     },
     "465": {
       "legends-arceus": {
         "locations": [
-          "'''Crimson Mirelands:''' Gapejaw Bog&nbsp",
-          "link=Alpha Pokémon|14px (also mass outbreaks nearby), massive mass outbreaks",
-          "'''Cobalt Coastlands:''' near Crossing Slope (mass outbreaks)",
-          "'''Alabaster Icelands:''' Space-time distortions"
+          "Crimson Mirelands: Gapejaw Bog 14px (also mass outbreaks nearby)",
+          "Massive Mass Outbreaks",
+          "Cobalt Coastlands: near Crossing Slope (mass outbreaks)",
+          "Alabaster Icelands: Space Time Distortions"
         ]
       }
     },
     "466": {
       "legends-arceus": {
         "locations": [
-          "'''Coronet Highlands:''' Cloudcap Pass&nbsp",
-          "link=Alpha Pokémon|14px, massive mass outbreaks",
-          "'''Alabaster Icelands:''' Space-time distortions"
+          "Coronet Highlands: Cloudcap Pass 14px",
+          "Massive Mass Outbreaks",
+          "Alabaster Icelands: Space Time Distortions"
         ]
       }
     },
     "467": {
       "legends-arceus": {
         "locations": [
-          "'''Cobalt Coastlands:''' massive mass outbreaks",
-          "'''Coronet Highlands:''' Space-time distortions"
+          "Cobalt Coastlands: massive mass outbreaks",
+          "Coronet Highlands: Space Time Distortions"
         ]
       }
     },
     "468": {
       "legends-arceus": {
         "locations": [
-          "'''Obsidian Fieldlands:''' Lake Verity",
-          "'''Cobalt Coastlands:''' massive mass outbreaks"
+          "Obsidian Fieldlands: Lake Verity",
+          "Cobalt Coastlands: massive mass outbreaks"
         ]
       }
     },
     "469": {
       "legends-arceus": {
         "locations": [
-          "'''Crimson Mirelands:''' Gapejaw Bog (mass outbreaks), Droning Meadow&nbsp",
-          "link=Alpha Pokémon|14px, massive mass outbreaks",
-          "'''Coronet Highlands:''' Heavenward LookoutDN), massive mass outbreaks"
+          "Crimson Mirelands: Gapejaw Bog (mass outbreaks)",
+          "Droning Meadow 14px",
+          "Massive Mass Outbreaks",
+          "Coronet Highlands: Heavenward LookoutD (also mass outbreaks (Day, Night)"
         ]
       }
     },
     "470": {
       "legends-arceus": {
         "locations": [
-          "'''Obsidian Fieldlands:''' Space-time distortions"
+          "Obsidian Fieldlands: Space Time Distortions"
         ]
       }
     },
     "471": {
       "legends-arceus": {
         "locations": [
-          "'''Alabaster Icelands:''' Space-time distortions",
+          "Alabaster Icelands: Space Time Distortions",
           "Evolve Eevee"
         ]
       }
@@ -2754,134 +3367,142 @@
     "472": {
       "legends-arceus": {
         "locations": [
-          "'''Coronet Highlands:''' near Primeval Grotto&nbsp",
-          "link=Alpha Pokémon|14px, massive mass outbreaks"
+          "Coronet Highlands: near Primeval Grotto 14px",
+          "Massive Mass Outbreaks"
         ]
       }
     },
     "473": {
       "legends-arceus": {
         "locations": [
-          "'''Alabaster Icelands:''' Avalanche Slopes (mass outbreaks), Avalugg's Legacy&nbsp",
-          "link=Alpha Pokémon|14px, massive mass outbreaks"
+          "Alabaster Icelands: Avalanche Slopes (mass outbreaks)",
+          "Avalugg's Legacy 14px",
+          "Massive Mass Outbreaks"
         ]
       }
     },
     "474": {
       "legends-arceus": {
         "locations": [
-          "'''Crimson Mirelands:''' Space-time distortions"
+          "Crimson Mirelands: Space Time Distortions"
         ]
       }
     },
     "475": {
       "legends-arceus": {
         "locations": [
-          "'''Alabaster Icelands:''' Snowpoint Temple&nbsp",
-          "link=Alpha Pokémon|14px, massive mass outbreaks"
+          "Alabaster Icelands: Snowpoint Temple 14px",
+          "Massive Mass Outbreaks"
         ]
       }
     },
     "476": {
       "legends-arceus": {
         "locations": [
-          "'''Coronet Highlands:''' near Primeval Grotto&nbsp",
-          "link=Alpha Pokémon|14px, massive mass outbreaks"
+          "Coronet Highlands: near Primeval Grotto 14px",
+          "Massive Mass Outbreaks"
         ]
       }
     },
     "477": {
       "legends-arceus": {
         "locations": [
-          "'''Cobalt Coastlands:''' Deadwood HauntN&nbsp",
-          "link=Alpha Pokémon|14px",
-          "'''Coronet Highlands:''' Space-time distortions, massive mass outbreaks",
-          "'''Alabaster Icelands:''' massive mass outbreaks"
+          "Cobalt Coastlands: Deadwood HauntN 14px",
+          "Coronet Highlands: Space Time Distortions",
+          "Massive Mass Outbreaks",
+          "Alabaster Icelands: massive mass outbreaks"
         ]
       }
     },
     "478": {
       "legends-arceus": {
         "locations": [
-          "'''Alabaster Icelands:''' Avalanche SlopesN, Avalugg's LegacyN, near Pearl SettlementN, Ice Column Chamber&nbsp",
-          "link=Alpha Pokémon|14px, massive mass outbreaks"
+          "Alabaster Icelands: Avalanche SlopesN",
+          "Bonechill WastesN",
+          "Avalugg's LegacyN",
+          "Snowpoint TempleN",
+          "near Pearl SettlementN",
+          "Ice Colu (Morning, Night) Chamber 14px",
+          "Massive Mass Outbreaks"
         ]
       }
     },
     "479": {
       "legends-arceus": {
         "locations": [
-          "'''Coronet Highlands:''' Celestica Ruins (in boxes), Sacred Plaza (in boxes), Stonetooth Rows"
+          "Coronet Highlands: Celestica Ruins (in boxes)",
+          "Sacred Plaza (in boxes)",
+          "Stonetooth Rows"
         ]
       }
     },
     "480": {
       "legends-arceus": {
         "locations": [
-          "'''Alabaster Icelands:''' Acuity Cavern (Only one)"
+          "Alabaster Icelands: Acuity Cavern (Only one)"
         ]
       }
     },
     "481": {
       "legends-arceus": {
         "locations": [
-          "'''Obsidian Fieldlands:''' Verity Cavern (Only one)"
+          "Obsidian Fieldlands: Verity Cavern (Only one)"
         ]
       }
     },
     "482": {
       "legends-arceus": {
         "locations": [
-          "'''Crimson Mirelands:''' Valor Cavern (Only one)"
+          "Crimson Mirelands: Valor Cavern (Only one)"
         ]
       }
     },
     "483": {
       "legends-arceus": {
         "locations": [
-          "'''Coronet Highlands:''' Temple of Sinnoh (Only one)"
+          "Coronet Highlands: Temple of Sinnoh (Only one)"
         ]
       }
     },
     "484": {
       "legends-arceus": {
         "locations": [
-          "'''Coronet Highlands:''' Temple of Sinnoh (Only one)"
+          "Coronet Highlands: Temple of Sinnoh (Only one)"
         ]
       }
     },
     "485": {
       "legends-arceus": {
         "locations": [
-          "'''Cobalt Coastlands:''' Lava Dome Sanctum (Only one)"
+          "Cobalt Coastlands: Lava Dome Sanctum (Only one)"
         ]
       }
     },
     "486": {
       "legends-arceus": {
         "locations": [
-          "'''Alabaster Icelands:''' Snowpoint Temple (requires the Stone, Icicle, and Iron Plates) (Only one)"
+          "Alabaster Icelands: Snowpoint Temple (requires the Stone, Icicle, and Iron Plates) (Only one)"
         ]
       }
     },
     "487": {
       "legends-arceus": {
         "locations": [
-          "'''Cobalt Coastlands:''' Turnback Cave (Only one) ('''Origin Forme''')"
+          "Cobalt Coastlands: Turnback Cave (Only one) (Origin Forme)"
         ]
       }
     },
     "488": {
       "legends-arceus": {
         "locations": [
-          "'''Coronet Highlands:''' Moonview Arena (Only one)"
+          "Coronet Highlands: Moonview Arena (Only one)"
         ]
       }
     },
     "489": {
       "legends-arceus": {
         "locations": [
-          "'''Cobalt Coastlands:''' Seaside Hollow (Three as part of Request 66",
+          "Cobalt Coastlands: Seaside Hollow (Three as part of Request 66",
           "unlimited after catching Manaphy)"
         ]
       }
@@ -2889,167 +3510,192 @@
     "490": {
       "legends-arceus": {
         "locations": [
-          "'''Cobalt Coastlands:''' Seaside Hollow (Only one) (During Request 66: \"The Sea's Legend\")"
+          "Cobalt Coastlands: Seaside Hollow (Only one) (During Request 66: \"The Sea's Legend\")"
         ]
       }
     },
     "491": {
       "legends-arceus": {
         "locations": [
-          "'''Coronet Highlands:''' near Clamberclaw Cliffs (Only oneRequires save data from Pokémon Brilliant Diamond or Shining Pearl)"
+          "Coronet Highlands: near Clamberclaw Cliffs (Only oneRequires save data from Pokémon Brilliant Diamond or Shining Pearl)"
         ]
       }
     },
     "492": {
       "legends-arceus": {
         "locations": [
-          "'''Obsidian Fieldlands:''' Floaro Gardens (Only one)requires save data from Pokémon Sword or Pokémon Shield"
+          "Obsidian Fieldlands: Floaro Gardens (Only one)requires save data from Pokémon Sword or Pokémon Shield"
         ]
       }
     },
     "493": {
       "legends-arceus": {
         "locations": [
-          "'''Coronet Highlands:''' Hall of Origin (Only one)"
+          "Coronet Highlands: Hall of Origin (Only one)"
         ]
       }
     },
     "501": {
       "legends-arceus": {
         "locations": [
-          "'''Jubilife Village:''' First partner Pokémon from Professor Laventon, Received from Professor Laventon (after completing Mission 18, if the player did not choose Oshawott)",
-          "'''Alabaster Icelands:''' (Space-time distortions (after completing Mission 18), massive mass outbreaks after completing Request 102)"
+          "Jubilife Village: First partner Pokémon from Professor Laventon",
+          "Received from Professor Laventon (after completing Mission 18, if the did not choose Oshawott)",
+          "Alabaster Icelands: (space Time Distortions (after Completing Mission 18), Massive Mass Outbreaks After Completing Request 102)"
         ]
       }
     },
     "502": {
       "legends-arceus": {
         "locations": [
-          "'''Alabaster Icelands:''' Space-time distortions (after completing Mission 18), massive mass outbreaks (after completing Request 102)"
+          "Alabaster Icelands: Space Time Distortions (after Completing Mission 18)",
+          "massive mass outbreaks (after completing Request 102)"
         ]
       }
     },
     "548": {
       "legends-arceus": {
         "locations": [
-          "'''Crimson Mirelands:''' Holm of Trials, Cottonsedge Prairie, massive mass outbreaks"
+          "Crimson Mirelands: Holm of Trials",
+          "Cottonsedge Prairie",
+          "Massive Mass Outbreaks"
         ]
       }
     },
     "627": {
       "legends-arceus": {
         "locations": [
-          "'''Alabaster Icelands:''' near Avalugg's Legacy, Heart's Crag, Lake Acuity, near Pearl Settlement, massive mass outbreaks"
+          "Alabaster Icelands: near Avalugg's Legacy",
+          "Heart's Crag",
+          "Lake Acuity",
+          "near Pearl Settlement",
+          "Massive Mass Outbreaks"
         ]
       }
     },
     "641": {
       "legends-arceus": {
         "locations": [
-          "'''Alabaster Icelands:''' Bonechill Wastes (Only one) ('''Incarnate Forme''')"
+          "Alabaster Icelands: Bonechill Wastes (Only one) (Incarnate Forme)"
         ]
       }
     },
     "642": {
       "legends-arceus": {
         "locations": [
-          "'''Cobalt Coastlands:''' between Sand's Reach and Lunker's Lair(Only one) ('''Incarnate Forme''')"
+          "Cobalt Coastlands: between Sand's Reach and Lunker's Lair(Only one) (Incarnate Forme)"
         ]
       }
     },
     "645": {
       "legends-arceus": {
         "locations": [
-          "'''Obsidian Fieldlands:''' Ramanas Island (Only one) ('''Incarnate Forme''')"
+          "Obsidian Fieldlands: Ramanas Island (Only one) (Incarnate Forme)"
         ]
       }
     },
     "700": {
       "legends-arceus": {
         "locations": [
-          "'''Obsidian Fieldlands:''' Space-time distortions",
-          "'''Coronet Highlands:''' Space-time distortions"
+          "Obsidian Fieldlands: Space Time Distortions",
+          "Coronet Highlands: Space Time Distortions"
         ]
       }
     },
     "704": {
       "legends-arceus": {
         "locations": [
-          "'''Crimson Mirelands:''' Holm of Trials, Ursa's Ring (mass outbreaks), massive mass outbreaks",
-          "'''Coronet Highlands:''' near Ancient Quarry"
+          "Crimson Mirelands: Holm of Trials",
+          "Ursa's Ring (mass outbreaks)",
+          "Massive Mass Outbreaks",
+          "Coronet Highlands: near Ancient Quarry"
         ]
       }
     },
     "712": {
       "legends-arceus": {
         "locations": [
-          "'''Alabaster Icelands:''' near Avalanche Slopes, near Whiteout Valley, Bonechill Wastes, Arena's Approach, Avalugg's Legacy, near Glacier Terrace, Crevasse Passage, Icepeak Cavern, Ice Column Chamber, massive mass outbreaks '''Alabaster Icelands:''' near Avalanche Slopes, Whiteout Valley, near Bonechill Wastes, Arena's Approach, Avalugg's Legacy, near Snowfall Hot Spring, Crevasse Passage, Secret Hollow, Icepeak Cavern, Ice Column Chamber"
+          "Alabaster Icelands: near Avalanche Slopes",
+          "near Whiteout Valley",
+          "Bonechill Wastes",
+          "Arena's Approach",
+          "Avalugg's Legacy",
+          "near Glacier Terrace",
+          "Crevasse Passage",
+          "Icepeak Cavern",
+          "Ice Colu (Morning, Night) Chamber",
+          "massive mass outbreaks Alabaster Icelands: near Avalanche Slopes",
+          "Whiteout Valley",
+          "near Bonechill Wastes",
+          "near Snowfall Hot Spring",
+          "Secret Hollow"
         ]
       }
     },
     "722": {
       "legends-arceus": {
         "locations": [
-          "'''Jubilife Village:''' First partner Pokémon from Professor Laventon, Received from Professor Laventon (after completing Mission 18, if the player did not choose Rowlet)",
-          "'''Coronet Highlands:''' Space-time distortions (after completing Mission 18), massive mass outbreaks (after completing Request 102)"
+          "Jubilife Village: First partner Pokémon from Professor Laventon",
+          "Received from Professor Laventon (after completing Mission 18, if the did not choose Rowlet)",
+          "Coronet Highlands: Space Time Distortions (after Completing Mission 18)",
+          "massive mass outbreaks (after completing Request 102)"
         ]
       }
     },
     "723": {
       "legends-arceus": {
         "locations": [
-          "'''Coronet Highlands:''' Space-time distortions (after completing Mission 18), massive mass outbreaks (after completing Request 102)"
+          "Coronet Highlands: Space Time Distortions (after Completing Mission 18)",
+          "massive mass outbreaks (after completing Request 102)"
         ]
       }
     },
     "899": {
       "legends-arceus": {
         "locations": [
-          "'''Obsidian Fieldlands:''' Massive Mass Outbreaks"
+          "Obsidian Fieldlands: Massive Mass Outbreaks"
         ]
       }
     },
     "900": {
       "legends-arceus": {
         "locations": [
-          "'''Obsidian Fieldlands:''' Massive Mass Outbreaks"
+          "Obsidian Fieldlands: Massive Mass Outbreaks"
         ]
       }
     },
     "901": {
       "legends-arceus": {
         "locations": [
-          "'''Crimson Mirelands:''' Massive Mass Outbreaks"
+          "Crimson Mirelands: Massive Mass Outbreaks"
         ]
       }
     },
     "902": {
       "legends-arceus": {
         "locations": [
-          "'''Cobalt Coastlands:''' Massive Mass Outbreaks"
+          "Cobalt Coastlands: Massive Mass Outbreaks"
         ]
       }
     },
     "903": {
       "legends-arceus": {
         "locations": [
-          "'''Coronet Highlands:''' Massive Mass Outbreaks"
+          "Coronet Highlands: Massive Mass Outbreaks"
         ]
       }
     },
     "904": {
       "legends-arceus": {
         "locations": [
-          "'''Crimson Mirelands:''' Lake Valor&nbsp",
-          "link=Alpha Pokémon|14px (only one during Mission 15)",
-          "'''Cobalt Coastlands:''' Massive Mass Outbreaks"
+          "Crimson Mirelands: Lake Valor 14px (only one during Mission 15)",
+          "Cobalt Coastlands: Massive Mass Outbreaks"
         ]
       }
     },
     "905": {
       "legends-arceus": {
         "locations": [
-          "'''Crimson Mirelands:''' Scarlet Bog (Only one) ('''Incarnate Forme''')"
+          "Crimson Mirelands: Scarlet Bog (Only one) (Incarnate Forme)"
         ]
       }
     }

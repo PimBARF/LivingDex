@@ -14,6 +14,7 @@
       "type": "base",
       "optional": false,
       "defaultEnabled": false,
+      "startIndex": 1,
       "entries": [
         {
           "speciesId": 252,
@@ -1077,18 +1078,18 @@
     "25": {
       "omega-ruby": {
         "locations": [
-          "slateport city contest hall",
-          "verdanturf town contest hall",
-          "fallarbor town contest hall",
-          "lilycove city contest hall"
+          "Slateport City Contest Hall",
+          "Verdanturf Town Contest Hall",
+          "Fallarbor Town Contest Hall",
+          "Lilycove City Contest Hall"
         ]
       },
       "alpha-sapphire": {
         "locations": [
-          "slateport city contest hall",
-          "verdanturf town contest hall",
-          "fallarbor town contest hall",
-          "lilycove city contest hall"
+          "Slateport City Contest Hall",
+          "Verdanturf Town Contest Hall",
+          "Fallarbor Town Contest Hall",
+          "Lilycove City Contest Hall"
         ]
       }
     },
@@ -1107,12 +1108,12 @@
     "27": {
       "omega-ruby": {
         "locations": [
-          "hoenn route 111 area"
+          "Route 111"
         ]
       },
       "alpha-sapphire": {
         "locations": [
-          "hoenn route 111 area"
+          "Route 111"
         ]
       }
     },
@@ -1131,16 +1132,16 @@
     "37": {
       "omega-ruby": {
         "locations": [
-          "mt pyre outside",
-          "mt pyre summit",
-          "mirage spot forest north of route 124"
+          "Mt. Pyre Outside",
+          "Mt. Pyre Summit",
+          "Mirage Spot Forest North Of Route 124"
         ]
       },
       "alpha-sapphire": {
         "locations": [
-          "mt pyre outside",
-          "mt pyre summit",
-          "mirage spot forest north of route 124"
+          "Mt. Pyre Outside",
+          "Mt. Pyre Summit",
+          "Mirage Spot Forest North Of Route 124"
         ]
       }
     },
@@ -1159,12 +1160,12 @@
     "39": {
       "omega-ruby": {
         "locations": [
-          "Hoenn"
+          "Route 115"
         ]
       },
       "alpha-sapphire": {
         "locations": [
-          "Hoenn"
+          "Route 115"
         ]
       }
     },
@@ -1183,108 +1184,112 @@
     "41": {
       "omega-ruby": {
         "locations": [
-          "meteor falls area",
-          "meteor falls back",
-          "meteor falls b1f",
-          "meteor falls backsmall room",
-          "granite cave 1f",
-          "granite cave b1f",
-          "granite cave b2f",
-          "seafloor cavern area",
-          "cave of origin entrance",
-          "cave of origin 1f",
-          "cave of origin b1f",
-          "cave of origin b2f",
-          "cave of origin b3f",
-          "hoenn victory road 1f",
-          "hoenn victory road b1f",
-          "shoal cave high tide",
-          "shoal cave b1f",
-          "scorched slab b1f",
-          "scorched slab b2f",
-          "scorched slab b3f",
-          "shoal cave low tide",
-          "shoal cave b2f",
-          "shoal cave b3f"
+          "Meteor Falls",
+          "Meteor Falls Back",
+          "Meteor Falls (B1F)",
+          "Meteor Falls Backsmall Room",
+          "Granite Cave (1F)",
+          "Granite Cave (B1F)",
+          "Granite Cave (B2F)",
+          "Seafloor Cavern",
+          "Cave Of Origin Entrance",
+          "Cave Of Origin (1F)",
+          "Cave Of Origin (B1F)",
+          "Cave Of Origin (B2F)",
+          "Cave Of Origin (B3F)",
+          "Victory Road (1F)",
+          "Victory Road (B1F)",
+          "Shoal Cave High Tide",
+          "Shoal Cave (B1F)",
+          "Scorched Slab (B1F)",
+          "Scorched Slab (B2F)",
+          "Scorched Slab (B3F)",
+          "Shoal Cave Low Tide",
+          "Shoal Cave (B2F)",
+          "Shoal Cave (B3F)"
         ]
       },
       "alpha-sapphire": {
         "locations": [
-          "meteor falls area",
-          "meteor falls back",
-          "meteor falls b1f",
-          "meteor falls backsmall room",
-          "granite cave 1f",
-          "granite cave b1f",
-          "granite cave b2f",
-          "seafloor cavern area",
-          "cave of origin entrance",
-          "cave of origin 1f",
-          "cave of origin b1f",
-          "cave of origin b2f",
-          "cave of origin b3f",
-          "hoenn victory road 1f",
-          "hoenn victory road b1f",
-          "shoal cave high tide",
-          "shoal cave b1f",
-          "scorched slab b1f",
-          "scorched slab b2f",
-          "scorched slab b3f",
-          "shoal cave low tide",
-          "shoal cave b2f",
-          "shoal cave b3f"
+          "Meteor Falls",
+          "Meteor Falls Back",
+          "Meteor Falls (B1F)",
+          "Meteor Falls Backsmall Room",
+          "Granite Cave (1F)",
+          "Granite Cave (B1F)",
+          "Granite Cave (B2F)",
+          "Seafloor Cavern",
+          "Cave Of Origin Entrance",
+          "Cave Of Origin (1F)",
+          "Cave Of Origin (B1F)",
+          "Cave Of Origin (B2F)",
+          "Cave Of Origin (B3F)",
+          "Victory Road (1F)",
+          "Victory Road (B1F)",
+          "Shoal Cave High Tide",
+          "Shoal Cave (B1F)",
+          "Scorched Slab (B1F)",
+          "Scorched Slab (B2F)",
+          "Scorched Slab (B3F)",
+          "Shoal Cave Low Tide",
+          "Shoal Cave (B2F)",
+          "Shoal Cave (B3F)"
         ]
       }
     },
     "42": {
       "omega-ruby": {
         "locations": [
-          "sky pillar 1f",
-          "sky pillar 3f",
-          "sky pillar 5f"
+          "Sky Pillar (1F)",
+          "Sky Pillar (3F)",
+          "Sky Pillar (5F)"
         ]
       },
       "alpha-sapphire": {
         "locations": [
-          "sky pillar 1f",
-          "sky pillar 3f",
-          "sky pillar 5f"
+          "Sky Pillar (1F)",
+          "Sky Pillar (3F)",
+          "Sky Pillar (5F)"
         ]
       }
     },
     "43": {
       "omega-ruby": {
         "locations": [
-          "hoenn route 117 area",
-          "hoenn route 119 area",
-          "hoenn route 120 area",
-          "hoenn safari zone nwmach bike area",
-          "hoenn safari zone neacro bike area",
-          "hoenn safari zone sw",
-          "hoenn safari zone se"
+          "Route 117",
+          "Route 119",
+          "Route 120",
+          "Safari Zone Nwmach Bike",
+          "Safari Zone Neacro Bike",
+          "Safari Zone Sw",
+          "Safari Zone Se"
         ]
       },
       "alpha-sapphire": {
         "locations": [
-          "hoenn route 117 area",
-          "hoenn route 119 area",
-          "hoenn route 120 area",
-          "hoenn safari zone nwmach bike area",
-          "hoenn safari zone neacro bike area",
-          "hoenn safari zone sw",
-          "hoenn safari zone se"
+          "Route 117",
+          "Route 119",
+          "Route 120",
+          "Safari Zone Nwmach Bike",
+          "Safari Zone Neacro Bike",
+          "Safari Zone Sw",
+          "Safari Zone Se"
         ]
       }
     },
     "44": {
       "omega-ruby": {
         "locations": [
-          "Routes Hoenn, Hoenn, Hoenn, and Hoenn, Hoenn"
+          "Routes Hoenn",
+          "Hoenn",
+          "and Hoenn"
         ]
       },
       "alpha-sapphire": {
         "locations": [
-          "Routes Hoenn, Hoenn, Hoenn, and Hoenn, Hoenn"
+          "Routes Hoenn",
+          "Hoenn",
+          "and Hoenn"
         ]
       }
     },
@@ -1303,18 +1308,18 @@
     "54": {
       "omega-ruby": {
         "locations": [
-          "hoenn safari zone nwmach bike area",
-          "hoenn safari zone neacro bike area",
-          "hoenn safari zone sw",
-          "hoenn safari zone se"
+          "Safari Zone Nwmach Bike",
+          "Safari Zone Neacro Bike",
+          "Safari Zone Sw",
+          "Safari Zone Se"
         ]
       },
       "alpha-sapphire": {
         "locations": [
-          "hoenn safari zone nwmach bike area",
-          "hoenn safari zone neacro bike area",
-          "hoenn safari zone sw",
-          "hoenn safari zone se"
+          "Safari Zone Nwmach Bike",
+          "Safari Zone Neacro Bike",
+          "Safari Zone Sw",
+          "Safari Zone Se"
         ]
       }
     },
@@ -1369,14 +1374,14 @@
     "66": {
       "omega-ruby": {
         "locations": [
-          "jagged pass area",
-          "hoenn route 112 area"
+          "Jagged Pass",
+          "Route 112"
         ]
       },
       "alpha-sapphire": {
         "locations": [
-          "jagged pass area",
-          "hoenn route 112 area"
+          "Jagged Pass",
+          "Route 112"
         ]
       }
     },
@@ -1407,64 +1412,112 @@
     "72": {
       "omega-ruby": {
         "locations": [
-          "Hoenn, Seafloor Cavern, Battle Resort (Old Rod or Good Rod)",
-          "Routes Hoenn and Hoenn, Surfing)",
-          "Routes Hoenn, Hoenn, Hoenn, Hoenn, Hoenn, Hoenn, Hoenn, Hoenn, Hoenn, Hoenn, Hoenn, Hoenn, Hoenn, Hoenn, Hoenn, Hoenn, Hoenn, Hoenn, Hoenn, and Hoenn, Sea Mauville, Dewford Town, Slateport City, Lilycove City, Mossdeep City, Shoal Cave, Pacifidlog Town, Sealed Chamber, Team Magma Hideout (Old Rod, Good Rod, or Surfing)"
+          "Route 120",
+          "Seafloor Cavern",
+          "Battle Resort (Old Rod or Good Rod)",
+          "Routes Hoenn and Hoenn",
+          "Victory Road",
+          "Ever Grande City (Old Rod or Surfing)",
+          "Routes Hoenn",
+          "Hoenn",
+          "and Hoenn",
+          "Sea Mauville",
+          "Dewford Town",
+          "Slateport City",
+          "Lilycove City",
+          "Mossdeep City",
+          "Shoal Cave",
+          "Pacifidlog Town",
+          "Sealed Chamber",
+          "Team Magma Hideout (Old Rod, Good Rod, or Surfing)"
         ]
       },
       "alpha-sapphire": {
         "locations": [
-          "Hoenn, Seafloor Cavern, Battle Resort (Old Rod or Good Rod)",
-          "Routes Hoenn and Hoenn, Surfing)",
-          "Routes Hoenn, Hoenn, Hoenn, Hoenn, Hoenn, Hoenn, Hoenn, Hoenn, Hoenn, Hoenn, Hoenn, Hoenn, Hoenn, Hoenn, Hoenn, Hoenn, Hoenn, Hoenn, Hoenn, and Hoenn, Sea Mauville, Dewford Town, Slateport City, Lilycove City, Mossdeep City, Shoal Cave, Pacifidlog Town, Sealed Chamber, Team Aqua Hideout (Old Rod, Good Rod, or Surfing)"
+          "Route 120",
+          "Seafloor Cavern",
+          "Battle Resort (Old Rod or Good Rod)",
+          "Routes Hoenn and Hoenn",
+          "Victory Road",
+          "Ever Grande City (Old Rod or Surfing)",
+          "Routes Hoenn",
+          "Hoenn",
+          "and Hoenn",
+          "Sea Mauville",
+          "Dewford Town",
+          "Slateport City",
+          "Lilycove City",
+          "Mossdeep City",
+          "Shoal Cave",
+          "Pacifidlog Town",
+          "Sealed Chamber",
+          "Team Aqua Hideout (Old Rod, Good Rod, or Surfing)"
         ]
       }
     },
     "73": {
       "omega-ruby": {
         "locations": [
-          "Routes Hoenn, Hoenn, Hoenn, Hoenn, Hoenn, Hoenn, Hoenn, Hoenn, Hoenn, and Hoenn, Mossdeep City, Pacifidlog Town, Ever Grande City, Shoal Cave, Seafloor Cavern, Surfing)"
+          "Routes Hoenn",
+          "Hoenn",
+          "and Hoenn",
+          "Mossdeep City",
+          "Pacifidlog Town",
+          "Ever Grande City",
+          "Shoal Cave",
+          "Seafloor Cavern",
+          "Victory Road",
+          "Battle Resort (Surfing)"
         ]
       },
       "alpha-sapphire": {
         "locations": [
-          "Routes Hoenn, Hoenn, Hoenn, Hoenn, Hoenn, Hoenn, Hoenn, Hoenn, Hoenn, and Hoenn, Mossdeep City, Pacifidlog Town, Ever Grande City, Shoal Cave, Seafloor Cavern, Surfing)"
+          "Routes Hoenn",
+          "Hoenn",
+          "and Hoenn",
+          "Mossdeep City",
+          "Pacifidlog Town",
+          "Ever Grande City",
+          "Shoal Cave",
+          "Seafloor Cavern",
+          "Victory Road",
+          "Battle Resort (Surfing)"
         ]
       }
     },
     "74": {
       "omega-ruby": {
         "locations": [
-          "granite cave 1f"
+          "Granite Cave (1F)"
         ]
       },
       "alpha-sapphire": {
         "locations": [
-          "granite cave 1f"
+          "Granite Cave (1F)"
         ]
       }
     },
     "75": {
       "omega-ruby": {
         "locations": [
-          "mirage spot island south of route 134",
-          "mirage spot island south of pacifidlog",
-          "mirage spot forest west of route 105",
-          "mirage spot cave south east of route 129",
-          "mirage spot cave north of route 124",
-          "mirage spot cave west of rustburo",
-          "mirage spot mountain south east of route 129"
+          "Mirage Spot Island South Of Route 134",
+          "Mirage Spot Island South Of Pacifidlog",
+          "Mirage Spot Forest West Of Route 105",
+          "Mirage Spot Cave South East Of Route 129",
+          "Mirage Spot Cave North Of Route 124",
+          "Mirage Spot Cave West Of Rustburo",
+          "Mirage Spot Mountain South East Of Route 129"
         ]
       },
       "alpha-sapphire": {
         "locations": [
-          "mirage spot island south of route 134",
-          "mirage spot island south of pacifidlog",
-          "mirage spot forest west of route 105",
-          "mirage spot cave south east of route 129",
-          "mirage spot cave north of route 124",
-          "mirage spot cave west of rustburo",
-          "mirage spot mountain south east of route 129"
+          "Mirage Spot Island South Of Route 134",
+          "Mirage Spot Island South Of Pacifidlog",
+          "Mirage Spot Forest West Of Route 105",
+          "Mirage Spot Cave South East Of Route 129",
+          "Mirage Spot Cave North Of Route 124",
+          "Mirage Spot Cave West Of Rustburo",
+          "Mirage Spot Mountain South East Of Route 129"
         ]
       }
     },
@@ -1483,14 +1536,14 @@
     "81": {
       "omega-ruby": {
         "locations": [
-          "new mauville area",
-          "hoenn route 110 area"
+          "New Mauville",
+          "Route 110"
         ]
       },
       "alpha-sapphire": {
         "locations": [
-          "new mauville area",
-          "hoenn route 110 area"
+          "New Mauville",
+          "Route 110"
         ]
       }
     },
@@ -1509,18 +1562,18 @@
     "84": {
       "omega-ruby": {
         "locations": [
-          "hoenn safari zone nwmach bike area",
-          "hoenn safari zone neacro bike area",
-          "hoenn safari zone sw",
-          "hoenn safari zone se"
+          "Safari Zone Nwmach Bike",
+          "Safari Zone Neacro Bike",
+          "Safari Zone Sw",
+          "Safari Zone Se"
         ]
       },
       "alpha-sapphire": {
         "locations": [
-          "hoenn safari zone nwmach bike area",
-          "hoenn safari zone neacro bike area",
-          "hoenn safari zone sw",
-          "hoenn safari zone se"
+          "Safari Zone Nwmach Bike",
+          "Safari Zone Neacro Bike",
+          "Safari Zone Sw",
+          "Safari Zone Se"
         ]
       }
     },
@@ -1539,7 +1592,7 @@
     "88": {
       "alpha-sapphire": {
         "locations": [
-          "fiery path area"
+          "Fiery Path"
         ]
       },
       "omega-ruby": {
@@ -1563,31 +1616,31 @@
     "100": {
       "omega-ruby": {
         "locations": [
-          "new mauville area"
+          "New Mauville"
         ]
       },
       "alpha-sapphire": {
         "locations": [
-          "new mauville area"
+          "New Mauville"
         ]
       }
     },
     "101": {
       "alpha-sapphire": {
         "locations": [
-          "team aqua hideout area"
+          "Team Aqua Hideout"
         ]
       },
       "omega-ruby": {
         "locations": [
-          "team magma hideout area"
+          "Team Magma Hideout"
         ]
       }
     },
     "109": {
       "omega-ruby": {
         "locations": [
-          "fiery path area"
+          "Fiery Path"
         ]
       },
       "alpha-sapphire": {
@@ -1635,36 +1688,56 @@
     "116": {
       "omega-ruby": {
         "locations": [
-          "Routes Hoenn, Hoenn, Hoenn, Hoenn, and Hoenn, Sealed Chamber (Super Rod)"
+          "Routes Hoenn",
+          "Hoenn",
+          "and Hoenn",
+          "Sealed Chamber (Super Rod)"
         ]
       },
       "alpha-sapphire": {
         "locations": [
-          "Routes Hoenn, Hoenn, Hoenn, Hoenn, and Hoenn, Sealed Chamber (Super Rod)"
+          "Routes Hoenn",
+          "Hoenn",
+          "and Hoenn",
+          "Sealed Chamber (Super Rod)"
         ]
       }
     },
     "117": {
       "omega-ruby": {
         "locations": [
-          "Routes Hoenn, Hoenn, Hoenn, Hoenn, and Hoenn (Super Rod)"
+          "Routes Hoenn",
+          "Hoenn",
+          "and Hoenn (Super Rod)"
         ]
       },
       "alpha-sapphire": {
         "locations": [
-          "Routes Hoenn, Hoenn, Hoenn, Hoenn, and Hoenn (Super Rod)"
+          "Routes Hoenn",
+          "Hoenn",
+          "and Hoenn (Super Rod)"
         ]
       }
     },
     "118": {
       "omega-ruby": {
         "locations": [
-          "Routes Hoenn, Hoenn, Hoenn, Hoenn, Hoenn, Hoenn, Petalburg City, Meteor Falls, Scorched Slab, Victory Road (Old Rod and Good Rod)"
+          "Routes Hoenn",
+          "Hoenn",
+          "Petalburg City",
+          "Meteor Falls",
+          "Scorched Slab",
+          "Victory Road (Old Rod and Good Rod)"
         ]
       },
       "alpha-sapphire": {
         "locations": [
-          "Routes Hoenn, Hoenn, Hoenn, Hoenn, Hoenn, Hoenn, Petalburg City, Meteor Falls, Scorched Slab, Victory Road (Old Rod and Good Rod)"
+          "Routes Hoenn",
+          "Hoenn",
+          "Petalburg City",
+          "Meteor Falls",
+          "Scorched Slab",
+          "Victory Road (Old Rod and Good Rod)"
         ]
       }
     },
@@ -1683,12 +1756,14 @@
     "120": {
       "omega-ruby": {
         "locations": [
-          "Lilycove City, Team Magma Hideout (Super Rod)"
+          "Lilycove City",
+          "Team Magma Hideout (Super Rod)"
         ]
       },
       "alpha-sapphire": {
         "locations": [
-          "Lilycove City, Team Aqua Hideout (Super Rod)"
+          "Lilycove City",
+          "Team Aqua Hideout (Super Rod)"
         ]
       }
     },
@@ -1707,27 +1782,63 @@
     "127": {
       "omega-ruby": {
         "locations": [
-          "Tall grass|long grass)"
+          "Hoenn (Zone 4, long grass)"
         ]
       },
       "alpha-sapphire": {
         "locations": [
-          "Tall grass|long grass)"
+          "Hoenn (Zone 4, long grass)"
         ]
       }
     },
     "129": {
       "omega-ruby": {
         "locations": [
-          "Routes Hoenn, Hoenn, Hoenn, Hoenn, Hoenn, Hoenn, Hoenn, Hoenn, Hoenn, Hoenn, Hoenn, Hoenn, Hoenn, Hoenn, Hoenn, Hoenn, Hoenn, Hoenn, Hoenn, Hoenn, Hoenn, Hoenn, Hoenn, Hoenn, Hoenn, Hoenn, Hoenn, Hoenn, Sea Mauville, Petalburg City, Meteor Falls, Dewford Town, Mossdeep City, Lilycove City, Slateport City, Team Magma HideoutAS, Sealed Chamber, Hoenn, Shoal Cave, Seafloor Cavern, Battle Resort (Old Rod or Good Rod)",
-          "Hoenn (fishing)",
+          "Routes Hoenn",
+          "Hoenn",
+          "Sea Mauville",
+          "Petalburg City",
+          "Meteor Falls",
+          "Dewford Town",
+          "Mossdeep City",
+          "Lilycove City",
+          "Slateport City",
+          "Team Magma HideoutOR",
+          "Team Aqua HideoutAS",
+          "Sealed Chamber",
+          "Victory Road",
+          "Ever Grande City",
+          "Pacifidlog Town",
+          "Scorched Slab",
+          "Shoal Cave",
+          "Seafloor Cavern",
+          "Battle Resort (Old Rod or Good Rod)",
+          "Route 104 (fishing)",
           "Sootopolis City (Surfing and fishing)"
         ]
       },
       "alpha-sapphire": {
         "locations": [
-          "Routes Hoenn, Hoenn, Hoenn, Hoenn, Hoenn, Hoenn, Hoenn, Hoenn, Hoenn, Hoenn, Hoenn, Hoenn, Hoenn, Hoenn, Hoenn, Hoenn, Hoenn, Hoenn, Hoenn, Hoenn, Hoenn, Hoenn, Hoenn, Hoenn, Hoenn, Hoenn, Hoenn, Hoenn, Sea Mauville, Petalburg City, Meteor Falls, Dewford Town, Mossdeep City, Lilycove City, Slateport City, Team Magma HideoutAS, Sealed Chamber, Hoenn, Shoal Cave, Seafloor Cavern, Battle Resort (Old Rod or Good Rod)",
-          "Hoenn (fishing)",
+          "Routes Hoenn",
+          "Hoenn",
+          "Sea Mauville",
+          "Petalburg City",
+          "Meteor Falls",
+          "Dewford Town",
+          "Mossdeep City",
+          "Lilycove City",
+          "Slateport City",
+          "Team Magma HideoutOR",
+          "Team Aqua HideoutAS",
+          "Sealed Chamber",
+          "Victory Road",
+          "Ever Grande City",
+          "Pacifidlog Town",
+          "Scorched Slab",
+          "Shoal Cave",
+          "Seafloor Cavern",
+          "Battle Resort (Old Rod or Good Rod)",
+          "Route 104 (fishing)",
           "Sootopolis City (Surfing and fishing)"
         ]
       }
@@ -1759,48 +1870,56 @@
     "170": {
       "omega-ruby": {
         "locations": [
-          "Routes Hoenn, Hoenn, Hoenn, Hoenn, Hoenn, and Hoenn (Underwater)"
+          "Routes Hoenn",
+          "Hoenn",
+          "and Hoenn (Underwater)"
         ]
       },
       "alpha-sapphire": {
         "locations": [
-          "Routes Hoenn, Hoenn, Hoenn, Hoenn, Hoenn, and Hoenn (Underwater)"
+          "Routes Hoenn",
+          "Hoenn",
+          "and Hoenn (Underwater)"
         ]
       }
     },
     "171": {
       "omega-ruby": {
         "locations": [
-          "Routes Hoenn, Hoenn, Hoenn, Hoenn, Hoenn, and Hoenn (Underwater)"
+          "Routes Hoenn",
+          "Hoenn",
+          "and Hoenn (Underwater)"
         ]
       },
       "alpha-sapphire": {
         "locations": [
-          "Routes Hoenn, Hoenn, Hoenn, Hoenn, Hoenn, and Hoenn (Underwater)"
+          "Routes Hoenn",
+          "Hoenn",
+          "and Hoenn (Underwater)"
         ]
       }
     },
     "172": {
       "omega-ruby": {
         "locations": [
-          "Breed Raichu"
+          "Breed Pikachu or Raichu"
         ]
       },
       "alpha-sapphire": {
         "locations": [
-          "Breed Raichu"
+          "Breed Pikachu or Raichu"
         ]
       }
     },
     "174": {
       "omega-ruby": {
         "locations": [
-          "Breed Wigglytuff"
+          "Breed Jigglypuff or Wigglytuff"
         ]
       },
       "alpha-sapphire": {
         "locations": [
-          "Breed Wigglytuff"
+          "Breed Jigglypuff or Wigglytuff"
         ]
       }
     },
@@ -1819,22 +1938,22 @@
     "178": {
       "omega-ruby": {
         "locations": [
-          "mirage spot island west of dewford town",
-          "mirage spot island west of route 104",
-          "mirage spot island route 124",
-          "mirage spot island south of route 134",
-          "mirage spot island south of pacifidlog",
-          "mirage spot mountain south east of route 129"
+          "Mirage Spot Island West Of Dewford Town",
+          "Mirage Spot Island West Of Route 104",
+          "Mirage Spot Island Route 124",
+          "Mirage Spot Island South Of Route 134",
+          "Mirage Spot Island South Of Pacifidlog",
+          "Mirage Spot Mountain South East Of Route 129"
         ]
       },
       "alpha-sapphire": {
         "locations": [
-          "mirage spot island west of dewford town",
-          "mirage spot island west of route 104",
-          "mirage spot island route 124",
-          "mirage spot island south of route 134",
-          "mirage spot island south of pacifidlog",
-          "mirage spot mountain south east of route 129"
+          "Mirage Spot Island West Of Dewford Town",
+          "Mirage Spot Island West Of Route 104",
+          "Mirage Spot Island Route 124",
+          "Mirage Spot Island South Of Route 134",
+          "Mirage Spot Island South Of Pacifidlog",
+          "Mirage Spot Mountain South East Of Route 129"
         ]
       }
     },
@@ -1853,74 +1972,80 @@
     "183": {
       "omega-ruby": {
         "locations": [
-          "hoenn route 117 area",
-          "hoenn route 120 area"
+          "Route 117",
+          "Route 120"
         ]
       },
       "alpha-sapphire": {
         "locations": [
-          "hoenn route 117 area",
-          "hoenn route 120 area"
+          "Route 117",
+          "Route 120"
         ]
       }
     },
     "184": {
       "omega-ruby": {
         "locations": [
-          "Routes Hoenn, Hoenn, Hoenn, Hoenn, Hoenn, and Hoenn, Petalburg City (Surfing)"
+          "Routes Hoenn",
+          "Hoenn",
+          "and Hoenn",
+          "Petalburg City (Surfing)"
         ]
       },
       "alpha-sapphire": {
         "locations": [
-          "Routes Hoenn, Hoenn, Hoenn, Hoenn, Hoenn, and Hoenn, Petalburg City (Surfing)"
+          "Routes Hoenn",
+          "Hoenn",
+          "and Hoenn",
+          "Petalburg City (Surfing)"
         ]
       }
     },
     "202": {
       "omega-ruby": {
         "locations": [
-          "Tall grass|long grass)"
+          "Hoenn (Zone 2, long grass)"
         ]
       },
       "alpha-sapphire": {
         "locations": [
-          "Tall grass|long grass)"
+          "Hoenn (Zone 2, long grass)"
         ]
       }
     },
     "203": {
       "omega-ruby": {
         "locations": [
-          "mirage spot mountain south of route 131"
+          "Mirage Spot Mountain South Of Route 131"
         ]
       },
       "alpha-sapphire": {
         "locations": [
-          "mirage spot mountain south of route 131"
+          "Mirage Spot Mountain South Of Route 131"
         ]
       }
     },
     "214": {
       "omega-ruby": {
         "locations": [
-          "Tall grass|Long Grass)"
+          "Hoenn (Zone 3, Long Grass)"
         ]
       },
       "alpha-sapphire": {
         "locations": [
-          "Tall grass|Long Grass)"
+          "Hoenn (Zone 3, Long Grass)"
         ]
       }
     },
     "218": {
       "omega-ruby": {
         "locations": [
-          "fiery path area"
+          "Fiery Path"
         ]
       },
       "alpha-sapphire": {
         "locations": [
-          "fiery path area"
+          "Fiery Path"
         ]
       }
     },
@@ -1939,14 +2064,14 @@
     "222": {
       "omega-ruby": {
         "locations": [
-          "Hoenn (Super Rod and underwater)",
+          "Route 128 (Super Rod and underwater)",
           "Ever Grande City (Super Rod)",
           "Trade Bellossom in Pacifidlog Town"
         ]
       },
       "alpha-sapphire": {
         "locations": [
-          "Hoenn (Super Rod and underwater)",
+          "Route 128 (Super Rod and underwater)",
           "Ever Grande City (Super Rod)",
           "Trade Bellossom in Pacifidlog Town"
         ]
@@ -1955,12 +2080,12 @@
     "227": {
       "omega-ruby": {
         "locations": [
-          "hoenn route 113 area"
+          "Route 113"
         ]
       },
       "alpha-sapphire": {
         "locations": [
-          "hoenn route 113 area"
+          "Route 113"
         ]
       }
     },
@@ -1991,30 +2116,30 @@
     "232": {
       "omega-ruby": {
         "locations": [
-          "mirage spot mountain north of lilycove",
-          "mirage spot mountain west of route 104",
-          "mirage spot mountain south of route 131",
-          "mirage spot mountain north east of route 125"
+          "Mirage Spot Mountain North Of Lilycove",
+          "Mirage Spot Mountain West Of Route 104",
+          "Mirage Spot Mountain South Of Route 131",
+          "Mirage Spot Mountain North East Of Route 125"
         ]
       },
       "alpha-sapphire": {
         "locations": [
-          "mirage spot mountain north of lilycove",
-          "mirage spot mountain west of route 104",
-          "mirage spot mountain south of route 131",
-          "mirage spot mountain north east of route 125"
+          "Mirage Spot Mountain North Of Lilycove",
+          "Mirage Spot Mountain West Of Route 104",
+          "Mirage Spot Mountain South Of Route 131",
+          "Mirage Spot Mountain North East Of Route 125"
         ]
       }
     },
     "252": {
       "omega-ruby": {
         "locations": [
-          "hoenn route 101 area"
+          "Route 101"
         ]
       },
       "alpha-sapphire": {
         "locations": [
-          "hoenn route 101 area"
+          "Route 101"
         ]
       }
     },
@@ -2045,12 +2170,12 @@
     "255": {
       "omega-ruby": {
         "locations": [
-          "hoenn route 101 area"
+          "Route 101"
         ]
       },
       "alpha-sapphire": {
         "locations": [
-          "hoenn route 101 area"
+          "Route 101"
         ]
       }
     },
@@ -2081,12 +2206,12 @@
     "258": {
       "omega-ruby": {
         "locations": [
-          "hoenn route 101 area"
+          "Route 101"
         ]
       },
       "alpha-sapphire": {
         "locations": [
-          "hoenn route 101 area"
+          "Route 101"
         ]
       }
     },
@@ -2117,14 +2242,14 @@
     "261": {
       "omega-ruby": {
         "locations": [
-          "hoenn route 101 area",
-          "hoenn route 103 area"
+          "Route 101",
+          "Route 103"
         ]
       },
       "alpha-sapphire": {
         "locations": [
-          "hoenn route 101 area",
-          "hoenn route 103 area"
+          "Route 101",
+          "Route 103"
         ]
       }
     },
@@ -2143,50 +2268,54 @@
     "263": {
       "omega-ruby": {
         "locations": [
-          "petalburg woods area",
-          "hoenn route 101 area",
-          "hoenn route 102 area",
-          "hoenn route 103 area",
-          "hoenn route 116 area",
-          "hoenn route 117 area",
-          "hoenn route 104 north oras",
-          "hoenn route 104 south oras"
+          "Petalburg Woods",
+          "Route 101",
+          "Route 102",
+          "Route 103",
+          "Route 116",
+          "Route 117",
+          "Route 104 North Oras",
+          "Route 104 South Oras"
         ]
       },
       "alpha-sapphire": {
         "locations": [
-          "petalburg woods area",
-          "hoenn route 101 area",
-          "hoenn route 102 area",
-          "hoenn route 103 area",
-          "hoenn route 116 area",
-          "hoenn route 117 area",
-          "hoenn route 104 north oras",
-          "hoenn route 104 south oras"
+          "Petalburg Woods",
+          "Route 101",
+          "Route 102",
+          "Route 103",
+          "Route 116",
+          "Route 117",
+          "Route 104 North Oras",
+          "Route 104 South Oras"
         ]
       }
     },
     "264": {
       "omega-ruby": {
         "locations": [
-          "Routes Hoenn, Hoenn, Hoenn, Hoenn, and Hoenn"
+          "Routes Hoenn",
+          "Hoenn",
+          "and Hoenn"
         ]
       },
       "alpha-sapphire": {
         "locations": [
-          "Routes Hoenn, Hoenn, Hoenn, Hoenn, and Hoenn"
+          "Routes Hoenn",
+          "Hoenn",
+          "and Hoenn"
         ]
       }
     },
     "265": {
       "omega-ruby": {
         "locations": [
-          "petalburg woods area"
+          "Petalburg Woods"
         ]
       },
       "alpha-sapphire": {
         "locations": [
-          "petalburg woods area"
+          "Petalburg Woods"
         ]
       }
     },
@@ -2241,15 +2370,26 @@
     "270": {
       "alpha-sapphire": {
         "locations": [
-          "hoenn route 102 area",
-          "hoenn route 114 area"
+          "Route 102",
+          "Route 114"
+        ]
+      },
+      "omega-ruby": {
+        "locations": [
+          "Trade",
+          "Event"
         ]
       }
     },
     "271": {
       "alpha-sapphire": {
         "locations": [
-          "Hoenn"
+          "Route 114"
+        ]
+      },
+      "omega-ruby": {
+        "locations": [
+          "Route 114"
         ]
       }
     },
@@ -2268,15 +2408,29 @@
     "273": {
       "omega-ruby": {
         "locations": [
-          "hoenn route 102 area",
-          "hoenn route 114 area"
+          "Route 102",
+          "Route 114"
+        ]
+      },
+      "alpha-sapphire": {
+        "locations": [
+          "Routes Hoenn",
+          "Hoenn",
+          "and Hoenn (Swarm",
+          "after mixing records with Emerald)"
         ]
       }
     },
     "274": {
       "omega-ruby": {
         "locations": [
-          "Hoenn"
+          "Route 114"
+        ]
+      },
+      "alpha-sapphire": {
+        "locations": [
+          "Route 114 (Swarm",
+          "after mixing records with Emerald)"
         ]
       }
     },
@@ -2285,17 +2439,23 @@
         "locations": [
           "Evolve Nuzleaf"
         ]
+      },
+      "alpha-sapphire": {
+        "locations": [
+          "Trade",
+          "Event"
+        ]
       }
     },
     "276": {
       "omega-ruby": {
         "locations": [
-          "hoenn route 104 north oras"
+          "Route 104 North Oras"
         ]
       },
       "alpha-sapphire": {
         "locations": [
-          "hoenn route 104 north oras"
+          "Route 104 North Oras"
         ]
       }
     },
@@ -2314,33 +2474,53 @@
     "278": {
       "omega-ruby": {
         "locations": [
-          "hoenn route 103 area",
-          "hoenn route 118 area",
-          "hoenn route 121 area",
-          "hoenn route 123 area",
-          "hoenn route 104 south oras"
+          "Route 103",
+          "Route 118",
+          "Route 121",
+          "Route 123",
+          "Route 104 South Oras"
         ]
       },
       "alpha-sapphire": {
         "locations": [
-          "hoenn route 103 area",
-          "hoenn route 118 area",
-          "hoenn route 121 area",
-          "hoenn route 123 area",
-          "hoenn route 104 south oras"
+          "Route 103",
+          "Route 118",
+          "Route 121",
+          "Route 123",
+          "Route 104 South Oras"
         ]
       }
     },
     "279": {
       "omega-ruby": {
         "locations": [
-          "Routes Hoenn, Hoenn, Hoenn, Hoenn, Hoenn, Hoenn, Hoenn, Hoenn, Hoenn, Hoenn, Hoenn, Hoenn, Hoenn, Hoenn, Hoenn, Hoenn, Hoenn, Hoenn, Hoenn, Hoenn, Hoenn, Hoenn, Hoenn, Dewford Town, Ever Grande City, Mossdeep City, Pacifidlog Town, Slateport City, Sea Mauville, Lilycove City, Battle Resort (118|Hoenn, Hoenn, and Hoenn (Grass)",
+          "Routes Hoenn",
+          "Hoenn",
+          "Dewford Town",
+          "Ever Grande City",
+          "Mossdeep City",
+          "Pacifidlog Town",
+          "Slateport City",
+          "Sea Mauville",
+          "Lilycove City",
+          "Battle Resort (Surfing)",
+          "and Hoenn (Grass)",
           "Soaring in the sky"
         ]
       },
       "alpha-sapphire": {
         "locations": [
-          "Routes Hoenn, Hoenn, Hoenn, Hoenn, Hoenn, Hoenn, Hoenn, Hoenn, Hoenn, Hoenn, Hoenn, Hoenn, Hoenn, Hoenn, Hoenn, Hoenn, Hoenn, Hoenn, Hoenn, Hoenn, Hoenn, Hoenn, Hoenn, Dewford Town, Ever Grande City, Mossdeep City, Pacifidlog Town, Slateport City, Sea Mauville, Lilycove City, Battle Resort (118|Hoenn, Hoenn, and Hoenn (Grass)",
+          "Routes Hoenn",
+          "Hoenn",
+          "Dewford Town",
+          "Ever Grande City",
+          "Mossdeep City",
+          "Pacifidlog Town",
+          "Slateport City",
+          "Sea Mauville",
+          "Lilycove City",
+          "Battle Resort (Surfing)",
+          "and Hoenn (Grass)",
           "Soaring in the sky"
         ]
       }
@@ -2348,12 +2528,12 @@
     "280": {
       "omega-ruby": {
         "locations": [
-          "hoenn route 102 area"
+          "Route 102"
         ]
       },
       "alpha-sapphire": {
         "locations": [
-          "hoenn route 102 area"
+          "Route 102"
         ]
       }
     },
@@ -2384,38 +2564,46 @@
     "283": {
       "omega-ruby": {
         "locations": [
-          "Routes Hoenn, Hoenn, and Hoenn",
-          "Routes Hoenn, Hoenn, Hoenn, and Petalburg City (Surfing)"
+          "Routes Hoenn",
+          "Hoenn",
+          "and Hoenn",
+          "and Petalburg City (Surfing)"
         ]
       },
       "alpha-sapphire": {
         "locations": [
-          "Routes Hoenn, Hoenn, and Hoenn",
-          "Routes Hoenn, Hoenn, Hoenn, and Petalburg City (Surfing)"
+          "Routes Hoenn",
+          "Hoenn",
+          "and Hoenn",
+          "and Petalburg City (Surfing)"
         ]
       }
     },
     "284": {
       "omega-ruby": {
         "locations": [
-          "Routes Hoenn, Hoenn, Hoenn, Hoenn, Hoenn, Hoenn, and Petalburg City (Surfing)"
+          "Routes Hoenn",
+          "Hoenn",
+          "and Petalburg City (Surfing)"
         ]
       },
       "alpha-sapphire": {
         "locations": [
-          "Routes Hoenn, Hoenn, Hoenn, Hoenn, Hoenn, Hoenn, and Petalburg City (Surfing)"
+          "Routes Hoenn",
+          "Hoenn",
+          "and Petalburg City (Surfing)"
         ]
       }
     },
     "285": {
       "omega-ruby": {
         "locations": [
-          "petalburg woods area"
+          "Petalburg Woods"
         ]
       },
       "alpha-sapphire": {
         "locations": [
-          "petalburg woods area"
+          "Petalburg Woods"
         ]
       }
     },
@@ -2470,12 +2658,12 @@
     "290": {
       "omega-ruby": {
         "locations": [
-          "hoenn route 116 area"
+          "Route 116"
         ]
       },
       "alpha-sapphire": {
         "locations": [
-          "hoenn route 116 area"
+          "Route 116"
         ]
       }
     },
@@ -2494,38 +2682,38 @@
     "292": {
       "omega-ruby": {
         "locations": [
-          "Evolve Poké Ball"
+          "Evolve Nincada with extra slot in party and spare Poké Ball"
         ]
       },
       "alpha-sapphire": {
         "locations": [
-          "Evolve Poké Ball"
+          "Evolve Nincada with extra slot in party and spare Poké Ball"
         ]
       }
     },
     "293": {
       "omega-ruby": {
         "locations": [
-          "rusturf tunnel area"
+          "Rusturf Tunnel"
         ]
       },
       "alpha-sapphire": {
         "locations": [
-          "rusturf tunnel area"
+          "Rusturf Tunnel"
         ]
       }
     },
     "294": {
       "omega-ruby": {
         "locations": [
-          "hoenn victory road 1f",
-          "hoenn victory road b1f"
+          "Victory Road (1F)",
+          "Victory Road (B1F)"
         ]
       },
       "alpha-sapphire": {
         "locations": [
-          "hoenn victory road 1f",
-          "hoenn victory road b1f"
+          "Victory Road (1F)",
+          "Victory Road (B1F)"
         ]
       }
     },
@@ -2544,12 +2732,12 @@
     "296": {
       "omega-ruby": {
         "locations": [
-          "granite cave 1f"
+          "Granite Cave (1F)"
         ]
       },
       "alpha-sapphire": {
         "locations": [
-          "granite cave 1f"
+          "Granite Cave (1F)"
         ]
       }
     },
@@ -2568,12 +2756,12 @@
     "298": {
       "omega-ruby": {
         "locations": [
-          "Breed Azumarill holding a Sea Incense"
+          "Breed Marill or Azumarill holding a Sea Incense"
         ]
       },
       "alpha-sapphire": {
         "locations": [
-          "Breed Azumarill holding a Sea Incense"
+          "Breed Marill or Azumarill holding a Sea Incense"
         ]
       }
     },
@@ -2592,12 +2780,12 @@
     "300": {
       "omega-ruby": {
         "locations": [
-          "hoenn route 116 area"
+          "Route 116"
         ]
       },
       "alpha-sapphire": {
         "locations": [
-          "hoenn route 116 area"
+          "Route 116"
         ]
       }
     },
@@ -2616,42 +2804,44 @@
     "302": {
       "alpha-sapphire": {
         "locations": [
-          "granite cave b2f"
+          "Granite Cave (B2F)"
         ]
       },
       "omega-ruby": {
         "locations": [
-          "Trade, Event"
+          "Trade",
+          "Event"
         ]
       }
     },
     "303": {
       "omega-ruby": {
         "locations": [
-          "granite cave b2f"
+          "Granite Cave (B2F)"
         ]
       },
       "alpha-sapphire": {
         "locations": [
-          "Trade, Event"
+          "Trade",
+          "Event"
         ]
       }
     },
     "304": {
       "omega-ruby": {
         "locations": [
-          "granite cave b1f",
-          "granite cave b2f",
-          "hoenn victory road 1f",
-          "hoenn victory road b1f"
+          "Granite Cave (B1F)",
+          "Granite Cave (B2F)",
+          "Victory Road (1F)",
+          "Victory Road (B1F)"
         ]
       },
       "alpha-sapphire": {
         "locations": [
-          "granite cave b1f",
-          "granite cave b2f",
-          "hoenn victory road 1f",
-          "hoenn victory road b1f"
+          "Granite Cave (B1F)",
+          "Granite Cave (B2F)",
+          "Victory Road (1F)",
+          "Victory Road (B1F)"
         ]
       }
     },
@@ -2682,14 +2872,14 @@
     "307": {
       "omega-ruby": {
         "locations": [
-          "mt pyre outside",
-          "mt pyre summit"
+          "Mt. Pyre Outside",
+          "Mt. Pyre Summit"
         ]
       },
       "alpha-sapphire": {
         "locations": [
-          "mt pyre outside",
-          "mt pyre summit"
+          "Mt. Pyre Outside",
+          "Mt. Pyre Summit"
         ]
       }
     },
@@ -2708,12 +2898,12 @@
     "309": {
       "omega-ruby": {
         "locations": [
-          "hoenn route 118 area"
+          "Route 118"
         ]
       },
       "alpha-sapphire": {
         "locations": [
-          "hoenn route 118 area"
+          "Route 118"
         ]
       }
     },
@@ -2732,72 +2922,72 @@
     "311": {
       "omega-ruby": {
         "locations": [
-          "hoenn route 110 area"
+          "Route 110"
         ]
       },
       "alpha-sapphire": {
         "locations": [
-          "hoenn route 110 area"
+          "Route 110"
         ]
       }
     },
     "312": {
       "omega-ruby": {
         "locations": [
-          "hoenn route 110 area"
+          "Route 110"
         ]
       },
       "alpha-sapphire": {
         "locations": [
-          "hoenn route 110 area"
+          "Route 110"
         ]
       }
     },
     "313": {
       "omega-ruby": {
         "locations": [
-          "Hoenn"
+          "Route 117"
         ]
       },
       "alpha-sapphire": {
         "locations": [
-          "Hoenn"
+          "Route 117"
         ]
       }
     },
     "314": {
       "omega-ruby": {
         "locations": [
-          "Hoenn"
+          "Route 117"
         ]
       },
       "alpha-sapphire": {
         "locations": [
-          "Hoenn"
+          "Route 117"
         ]
       }
     },
     "315": {
       "omega-ruby": {
         "locations": [
-          "hoenn route 117 area"
+          "Route 117"
         ]
       },
       "alpha-sapphire": {
         "locations": [
-          "hoenn route 117 area"
+          "Route 117"
         ]
       }
     },
     "316": {
       "omega-ruby": {
         "locations": [
-          "Hoenn"
+          "Route 110"
         ]
       },
       "alpha-sapphire": {
         "locations": [
-          "Hoenn"
+          "Route 110"
         ]
       }
     },
@@ -2828,24 +3018,52 @@
     "319": {
       "omega-ruby": {
         "locations": [
-          "battle resort area"
+          "Battle Resort"
         ]
       },
       "alpha-sapphire": {
         "locations": [
-          "battle resort area"
+          "Battle Resort"
         ]
       }
     },
     "320": {
       "omega-ruby": {
         "locations": [
-          "Routes Hoenn, Hoenn, Hoenn, Hoenn, Hoenn, Hoenn, Hoenn, Hoenn, Hoenn, Hoenn, Hoenn, Hoenn, Hoenn, Hoenn, Hoenn, Hoenn, Hoenn, Hoenn, Hoenn, and Hoenn, Dewford Town, Ever Grande City, Lilycove City, Mossdeep City, Pacifidlog Town, Sea Mauville, Seafloor Cavern, Sealed Chamber, Shoal Cave, Slateport City, Team Magma Hideout, Victory Road (Good Rod or Super Rod)"
+          "Routes Hoenn",
+          "Hoenn",
+          "and Hoenn",
+          "Dewford Town",
+          "Ever Grande City",
+          "Lilycove City",
+          "Mossdeep City",
+          "Pacifidlog Town",
+          "Sea Mauville",
+          "Seafloor Cavern",
+          "Sealed Chamber",
+          "Shoal Cave",
+          "Slateport City",
+          "Team Magma Hideout",
+          "Victory Road (Good Rod or Super Rod)"
         ]
       },
       "alpha-sapphire": {
         "locations": [
-          "Routes Hoenn, Hoenn, Hoenn, Hoenn, Hoenn, Hoenn, Hoenn, Hoenn, Hoenn, Hoenn, Hoenn, Hoenn, Hoenn, Hoenn, Hoenn, Hoenn, Hoenn, Hoenn, Hoenn, and Hoenn, Dewford Town, Ever Grande City, Lilycove City, Mossdeep City, Pacifidlog Town, Sea Mauville, Seafloor Cavern, Sealed Chamber, Shoal Cave, Slateport City, Team Aqua Hideout, Victory Road (Good Rod or Super Rod)"
+          "Routes Hoenn",
+          "Hoenn",
+          "and Hoenn",
+          "Dewford Town",
+          "Ever Grande City",
+          "Lilycove City",
+          "Mossdeep City",
+          "Pacifidlog Town",
+          "Sea Mauville",
+          "Seafloor Cavern",
+          "Sealed Chamber",
+          "Shoal Cave",
+          "Slateport City",
+          "Team Aqua Hideout",
+          "Victory Road (Good Rod or Super Rod)"
         ]
       }
     },
@@ -2864,26 +3082,26 @@
     "322": {
       "omega-ruby": {
         "locations": [
-          "fiery path area",
-          "hoenn route 112 area"
+          "Fiery Path",
+          "Route 112"
         ]
       },
       "alpha-sapphire": {
         "locations": [
-          "fiery path area",
-          "hoenn route 112 area"
+          "Fiery Path",
+          "Route 112"
         ]
       }
     },
     "323": {
       "omega-ruby": {
         "locations": [
-          "battle resort area"
+          "Battle Resort"
         ]
       },
       "alpha-sapphire": {
         "locations": [
-          "battle resort area"
+          "Battle Resort"
         ]
       }
     },
@@ -2902,12 +3120,12 @@
     "325": {
       "omega-ruby": {
         "locations": [
-          "jagged pass area"
+          "Jagged Pass"
         ]
       },
       "alpha-sapphire": {
         "locations": [
-          "jagged pass area"
+          "Jagged Pass"
         ]
       }
     },
@@ -2926,24 +3144,24 @@
     "327": {
       "omega-ruby": {
         "locations": [
-          "hoenn route 113 area"
+          "Route 113"
         ]
       },
       "alpha-sapphire": {
         "locations": [
-          "hoenn route 113 area"
+          "Route 113"
         ]
       }
     },
     "328": {
       "omega-ruby": {
         "locations": [
-          "Hoenn"
+          "Route 111"
         ]
       },
       "alpha-sapphire": {
         "locations": [
-          "Hoenn"
+          "Route 111"
         ]
       }
     },
@@ -2974,12 +3192,12 @@
     "331": {
       "omega-ruby": {
         "locations": [
-          "Hoenn"
+          "Route 111"
         ]
       },
       "alpha-sapphire": {
         "locations": [
-          "Hoenn"
+          "Route 111"
         ]
       }
     },
@@ -2998,20 +3216,20 @@
     "333": {
       "omega-ruby": {
         "locations": [
-          "sky pillar 1f",
-          "sky pillar 3f",
-          "sky pillar 5f",
-          "hoenn route 114 area",
-          "hoenn route 115 area"
+          "Sky Pillar (1F)",
+          "Sky Pillar (3F)",
+          "Sky Pillar (5F)",
+          "Route 114",
+          "Route 115"
         ]
       },
       "alpha-sapphire": {
         "locations": [
-          "sky pillar 1f",
-          "sky pillar 3f",
-          "sky pillar 5f",
-          "hoenn route 114 area",
-          "hoenn route 115 area"
+          "Sky Pillar (1F)",
+          "Sky Pillar (3F)",
+          "Sky Pillar (5F)",
+          "Route 114",
+          "Route 115"
         ]
       }
     },
@@ -3030,7 +3248,7 @@
     "335": {
       "omega-ruby": {
         "locations": [
-          "Hoenn"
+          "Route 114"
         ]
       },
       "alpha-sapphire": {
@@ -3047,7 +3265,7 @@
       },
       "alpha-sapphire": {
         "locations": [
-          "Hoenn"
+          "Route 114"
         ]
       }
     },
@@ -3056,6 +3274,12 @@
         "locations": [
           "Meteor Falls"
         ]
+      },
+      "omega-ruby": {
+        "locations": [
+          "Trade",
+          "Event"
+        ]
       }
     },
     "338": {
@@ -3063,17 +3287,31 @@
         "locations": [
           "Meteor Falls"
         ]
+      },
+      "alpha-sapphire": {
+        "locations": [
+          "Trade",
+          "Event"
+        ]
       }
     },
     "339": {
       "omega-ruby": {
         "locations": [
-          "Routes Hoenn, Hoenn, Hoenn, Meteor Falls, Victory Road, Scorched Slab (Good Rod or Super Rod)"
+          "Routes Hoenn",
+          "Hoenn",
+          "Meteor Falls",
+          "Victory Road",
+          "Scorched Slab (Good Rod or Super Rod)"
         ]
       },
       "alpha-sapphire": {
         "locations": [
-          "Routes Hoenn, Hoenn, Hoenn, Meteor Falls, Victory Road, Scorched Slab (Good Rod or Super Rod)"
+          "Routes Hoenn",
+          "Hoenn",
+          "Meteor Falls",
+          "Victory Road",
+          "Scorched Slab (Good Rod or Super Rod)"
         ]
       }
     },
@@ -3092,12 +3330,18 @@
     "341": {
       "omega-ruby": {
         "locations": [
-          "Routes Hoenn, Hoenn, and Hoenn, Petalburg City (Good Rod or Super Rod)"
+          "Routes Hoenn",
+          "Hoenn",
+          "and Hoenn",
+          "Petalburg City (Good Rod or Super Rod)"
         ]
       },
       "alpha-sapphire": {
         "locations": [
-          "Routes Hoenn, Hoenn, and Hoenn, Petalburg City (Good Rod or Super Rod)"
+          "Routes Hoenn",
+          "Hoenn",
+          "and Hoenn",
+          "Petalburg City (Good Rod or Super Rod)"
         ]
       }
     },
@@ -3116,12 +3360,12 @@
     "343": {
       "omega-ruby": {
         "locations": [
-          "Hoenn"
+          "Route 111"
         ]
       },
       "alpha-sapphire": {
         "locations": [
-          "Hoenn"
+          "Route 111"
         ]
       }
     },
@@ -3188,12 +3432,12 @@
     "349": {
       "omega-ruby": {
         "locations": [
-          "Hoenn (Fishing)"
+          "Route 119 (Fishing)"
         ]
       },
       "alpha-sapphire": {
         "locations": [
-          "Hoenn (Fishing)"
+          "Route 119 (Fishing)"
         ]
       }
     },
@@ -3212,62 +3456,62 @@
     "351": {
       "omega-ruby": {
         "locations": [
-          "hoenn route 119 weather institute"
+          "Route 119 Weather Institute"
         ]
       },
       "alpha-sapphire": {
         "locations": [
-          "hoenn route 119 weather institute"
+          "Route 119 Weather Institute"
         ]
       }
     },
     "352": {
       "omega-ruby": {
         "locations": [
-          "hoenn route 118 area",
-          "hoenn route 119 area",
-          "hoenn route 120 area",
-          "hoenn route 121 area",
-          "hoenn route 123 area",
-          "lavaridge town area",
-          "mossdeep space center area"
+          "Route 118",
+          "Route 119",
+          "Route 120",
+          "Route 121",
+          "Route 123",
+          "Lavaridge Town",
+          "Mossdeep Space Center"
         ]
       },
       "alpha-sapphire": {
         "locations": [
-          "hoenn route 118 area",
-          "hoenn route 119 area",
-          "hoenn route 120 area",
-          "hoenn route 121 area",
-          "hoenn route 123 area",
-          "lavaridge town area",
-          "mossdeep space center area"
+          "Route 118",
+          "Route 119",
+          "Route 120",
+          "Route 121",
+          "Route 123",
+          "Lavaridge Town",
+          "Mossdeep Space Center"
         ]
       }
     },
     "353": {
       "omega-ruby": {
         "locations": [
-          "mt pyre 1f",
-          "mt pyre 2f",
-          "mt pyre 3f",
-          "mt pyre 4f",
-          "mt pyre outside",
-          "mt pyre summit",
-          "hoenn route 121 area",
-          "hoenn route 123 area"
+          "Mt. Pyre (1F)",
+          "Mt. Pyre (2F)",
+          "Mt. Pyre (3F)",
+          "Mt. Pyre (4F)",
+          "Mt. Pyre Outside",
+          "Mt. Pyre Summit",
+          "Route 121",
+          "Route 123"
         ]
       },
       "alpha-sapphire": {
         "locations": [
-          "mt pyre 1f",
-          "mt pyre 2f",
-          "mt pyre 3f",
-          "mt pyre 4f",
-          "mt pyre outside",
-          "mt pyre summit",
-          "hoenn route 121 area",
-          "hoenn route 123 area"
+          "Mt. Pyre (1F)",
+          "Mt. Pyre (2F)",
+          "Mt. Pyre (3F)",
+          "Mt. Pyre (4F)",
+          "Mt. Pyre Outside",
+          "Mt. Pyre Summit",
+          "Route 121",
+          "Route 123"
         ]
       }
     },
@@ -3334,36 +3578,36 @@
     "359": {
       "omega-ruby": {
         "locations": [
-          "Hoenn"
+          "Route 120"
         ]
       },
       "alpha-sapphire": {
         "locations": [
-          "Hoenn"
+          "Route 120"
         ]
       }
     },
     "360": {
       "omega-ruby": {
         "locations": [
-          "lavaridge town area"
+          "Lavaridge Town"
         ]
       },
       "alpha-sapphire": {
         "locations": [
-          "lavaridge town area"
+          "Lavaridge Town"
         ]
       }
     },
     "361": {
       "omega-ruby": {
         "locations": [
-          "shoal cave b3f"
+          "Shoal Cave (B3F)"
         ]
       },
       "alpha-sapphire": {
         "locations": [
-          "shoal cave b3f"
+          "Shoal Cave (B3F)"
         ]
       }
     },
@@ -3384,20 +3628,20 @@
     "363": {
       "omega-ruby": {
         "locations": [
-          "shoal cave high tide",
-          "shoal cave b1f",
-          "shoal cave low tide",
-          "shoal cave b2f",
-          "shoal cave b3f"
+          "Shoal Cave High Tide",
+          "Shoal Cave (B1F)",
+          "Shoal Cave Low Tide",
+          "Shoal Cave (B2F)",
+          "Shoal Cave (B3F)"
         ]
       },
       "alpha-sapphire": {
         "locations": [
-          "shoal cave high tide",
-          "shoal cave b1f",
-          "shoal cave low tide",
-          "shoal cave b2f",
-          "shoal cave b3f"
+          "Shoal Cave High Tide",
+          "Shoal Cave (B1F)",
+          "Shoal Cave Low Tide",
+          "Shoal Cave (B2F)",
+          "Shoal Cave (B3F)"
         ]
       }
     },
@@ -3428,12 +3672,16 @@
     "366": {
       "omega-ruby": {
         "locations": [
-          "Routes Hoenn, Hoenn, Hoenn, Hoenn, Hoenn, Hoenn (Underwater)"
+          "Routes Hoenn",
+          "Hoenn",
+          "Hoenn (Underwater)"
         ]
       },
       "alpha-sapphire": {
         "locations": [
-          "Routes Hoenn, Hoenn, Hoenn, Hoenn, Hoenn, Hoenn (Underwater)"
+          "Routes Hoenn",
+          "Hoenn",
+          "Hoenn (Underwater)"
         ]
       }
     },
@@ -3464,36 +3712,44 @@
     "369": {
       "omega-ruby": {
         "locations": [
-          "Routes Hoenn, Hoenn, Hoenn, Hoenn, Hoenn, and Hoenn (Underwater)"
+          "Routes Hoenn",
+          "Hoenn",
+          "and Hoenn (Underwater)"
         ]
       },
       "alpha-sapphire": {
         "locations": [
-          "Routes Hoenn, Hoenn, Hoenn, Hoenn, Hoenn, and Hoenn (Underwater)"
+          "Routes Hoenn",
+          "Hoenn",
+          "and Hoenn (Underwater)"
         ]
       }
     },
     "370": {
       "omega-ruby": {
         "locations": [
-          "Hoenn, Ever Grande City, Victory Road (Good Rod or Super Rod)"
+          "Route 128",
+          "Ever Grande City",
+          "Victory Road (Good Rod or Super Rod)"
         ]
       },
       "alpha-sapphire": {
         "locations": [
-          "Hoenn, Ever Grande City, Victory Road (Good Rod or Super Rod)"
+          "Route 128",
+          "Ever Grande City",
+          "Victory Road (Good Rod or Super Rod)"
         ]
       }
     },
     "371": {
       "omega-ruby": {
         "locations": [
-          "meteor falls backsmall room"
+          "Meteor Falls Backsmall Room"
         ]
       },
       "alpha-sapphire": {
         "locations": [
-          "meteor falls backsmall room"
+          "Meteor Falls Backsmall Room"
         ]
       }
     },
@@ -3524,12 +3780,12 @@
     "374": {
       "omega-ruby": {
         "locations": [
-          "mossdeep city stevens house"
+          "Mossdeep City Stevens House"
         ]
       },
       "alpha-sapphire": {
         "locations": [
-          "mossdeep city stevens house"
+          "Mossdeep City Stevens House"
         ]
       }
     },
@@ -3560,132 +3816,136 @@
     "377": {
       "omega-ruby": {
         "locations": [
-          "desert ruins area"
+          "Desert Ruins"
         ]
       },
       "alpha-sapphire": {
         "locations": [
-          "desert ruins area"
+          "Desert Ruins"
         ]
       }
     },
     "378": {
       "omega-ruby": {
         "locations": [
-          "island cave area"
+          "Island Cave"
         ]
       },
       "alpha-sapphire": {
         "locations": [
-          "island cave area"
+          "Island Cave"
         ]
       }
     },
     "379": {
       "omega-ruby": {
         "locations": [
-          "ancient tomb area"
+          "Ancient Tomb"
         ]
       },
       "alpha-sapphire": {
         "locations": [
-          "ancient tomb area"
+          "Ancient Tomb"
         ]
       }
     },
     "380": {
       "omega-ruby": {
         "locations": [
-          "southern island area"
+          "Southern Island"
         ]
       },
       "alpha-sapphire": {
         "locations": [
-          "southern island area"
+          "Southern Island"
         ]
       }
     },
     "381": {
       "omega-ruby": {
         "locations": [
-          "southern island area"
+          "Southern Island"
         ]
       },
       "alpha-sapphire": {
         "locations": [
-          "southern island area"
+          "Southern Island"
         ]
       }
     },
     "382": {
       "alpha-sapphire": {
         "locations": [
-          "cave of origin b4f"
+          "Cave Of Origin (B4F)"
         ]
       },
       "omega-ruby": {
         "locations": [
-          "Trade, Event"
+          "Trade",
+          "Event"
         ]
       }
     },
     "383": {
       "omega-ruby": {
         "locations": [
-          "cave of origin b4f"
+          "Cave Of Origin (B4F)"
         ]
       },
       "alpha-sapphire": {
         "locations": [
-          "Trade, Event"
+          "Trade",
+          "Event"
         ]
       }
     },
     "384": {
       "omega-ruby": {
         "locations": [
-          "sky pillar apex"
+          "Sky Pillar Apex"
         ]
       },
       "alpha-sapphire": {
         "locations": [
-          "sky pillar apex"
+          "Sky Pillar Apex"
         ]
       }
     },
     "385": {
       "omega-ruby": {
         "locations": [
-          "Poké Transporter, Event"
+          "Poké Transporter",
+          "Event"
         ]
       },
       "alpha-sapphire": {
         "locations": [
-          "Poké Transporter, Event"
+          "Poké Transporter",
+          "Event"
         ]
       }
     },
     "386": {
       "omega-ruby": {
         "locations": [
-          "sky pillar apex"
+          "Sky Pillar Apex"
         ]
       },
       "alpha-sapphire": {
         "locations": [
-          "sky pillar apex"
+          "Sky Pillar Apex"
         ]
       }
     },
     "406": {
       "omega-ruby": {
         "locations": [
-          "Breed Roserade holding a Rose Incense"
+          "Breed Roselia or Roserade holding a Rose Incense"
         ]
       },
       "alpha-sapphire": {
         "locations": [
-          "Breed Roserade holding a Rose Incense"
+          "Breed Roselia or Roserade holding a Rose Incense"
         ]
       }
     },
@@ -3740,12 +4000,12 @@
     "475": {
       "omega-ruby": {
         "locations": [
-          "Evolve Kirliamale"
+          "Evolve Kirlia"
         ]
       },
       "alpha-sapphire": {
         "locations": [
-          "Evolve Kirliamale"
+          "Evolve Kirlia"
         ]
       }
     },
@@ -3776,12 +4036,12 @@
     "478": {
       "omega-ruby": {
         "locations": [
-          "Evolve Snoruntfemale"
+          "Evolve Snorunt"
         ]
       },
       "alpha-sapphire": {
         "locations": [
-          "Evolve Snoruntfemale"
+          "Evolve Snorunt"
         ]
       }
     }

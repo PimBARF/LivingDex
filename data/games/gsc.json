@@ -15,6 +15,7 @@
       "type": "base",
       "optional": false,
       "defaultEnabled": false,
+      "startIndex": 1,
       "entries": [
         {
           "speciesId": 152,
@@ -1278,17 +1279,20 @@
     "1": {
       "gold": {
         "locations": [
-          "Time Capsule, Event"
+          "Time Capsule",
+          "Event"
         ]
       },
       "silver": {
         "locations": [
-          "Time Capsule, Event"
+          "Time Capsule",
+          "Event"
         ]
       },
       "crystal": {
         "locations": [
-          "Time Capsule, Event"
+          "Time Capsule",
+          "Event"
         ]
       }
     },
@@ -1312,407 +1316,428 @@
     "3": {
       "gold": {
         "locations": [
-          "Time Capsule, Event"
+          "Time Capsule",
+          "Event"
         ]
       },
       "silver": {
         "locations": [
-          "Time Capsule, Event"
+          "Time Capsule",
+          "Event"
         ]
       },
       "crystal": {
         "locations": [
-          "Time Capsule, Event"
+          "Time Capsule",
+          "Event"
         ]
       }
     },
     "4": {
       "gold": {
         "locations": [
-          "Time Capsule, Event"
+          "Time Capsule",
+          "Event"
         ]
       },
       "silver": {
         "locations": [
-          "Time Capsule, Event"
+          "Time Capsule",
+          "Event"
         ]
       },
       "crystal": {
         "locations": [
-          "Time Capsule, Event"
+          "Time Capsule",
+          "Event"
         ]
       }
     },
     "5": {
       "gold": {
         "locations": [
-          "Time Capsule, Evolve Event Charmander"
+          "Time Capsule",
+          "Evolve Event Charmander"
         ]
       },
       "silver": {
         "locations": [
-          "Time Capsule, Evolve Event Charmander"
+          "Time Capsule",
+          "Evolve Event Charmander"
         ]
       },
       "crystal": {
         "locations": [
-          "Time Capsule, Evolve Event Charmander"
+          "Time Capsule",
+          "Evolve Event Charmander"
         ]
       }
     },
     "6": {
       "gold": {
         "locations": [
-          "Time Capsule, Event"
+          "Time Capsule",
+          "Event"
         ]
       },
       "silver": {
         "locations": [
-          "Time Capsule, Event"
+          "Time Capsule",
+          "Event"
         ]
       },
       "crystal": {
         "locations": [
-          "Time Capsule, Event"
+          "Time Capsule",
+          "Event"
         ]
       }
     },
     "7": {
       "gold": {
         "locations": [
-          "Time Capsule, Event"
+          "Time Capsule",
+          "Event"
         ]
       },
       "silver": {
         "locations": [
-          "Time Capsule, Event"
+          "Time Capsule",
+          "Event"
         ]
       },
       "crystal": {
         "locations": [
-          "Time Capsule, Event"
+          "Time Capsule",
+          "Event"
         ]
       }
     },
     "8": {
       "gold": {
         "locations": [
-          "Time Capsule, Evolve Event Squirtle"
+          "Time Capsule",
+          "Evolve Event Squirtle"
         ]
       },
       "silver": {
         "locations": [
-          "Time Capsule, Evolve Event Squirtle"
+          "Time Capsule",
+          "Evolve Event Squirtle"
         ]
       },
       "crystal": {
         "locations": [
-          "Time Capsule, Evolve Event Squirtle"
+          "Time Capsule",
+          "Evolve Event Squirtle"
         ]
       }
     },
     "9": {
       "gold": {
         "locations": [
-          "Time Capsule, Event"
+          "Time Capsule",
+          "Event"
         ]
       },
       "silver": {
         "locations": [
-          "Time Capsule, Event"
+          "Time Capsule",
+          "Event"
         ]
       },
       "crystal": {
         "locations": [
-          "Time Capsule, Event"
+          "Time Capsule",
+          "Event"
         ]
       }
     },
     "10": {
       "gold": {
         "locations": [
-          "johto route 30 area",
-          "johto route 31 area",
-          "ilex forest area",
-          "johto route 34 area",
-          "johto route 35 area",
-          "national park area",
-          "johto route 36 area",
-          "johto route 37 area",
-          "johto route 38 area",
-          "johto route 39 area",
-          "lake of rage area",
-          "kanto route 26 area",
-          "kanto route 27 area",
-          "kanto route 2 south towards viridian city",
-          "azalea town area"
+          "Route 30",
+          "Route 31",
+          "Ilex Forest",
+          "Route 34",
+          "Route 35",
+          "National Park",
+          "Route 36",
+          "Route 37",
+          "Route 38",
+          "Route 39",
+          "Lake Of Rage",
+          "Route 26",
+          "Route 27",
+          "Route 2 South Towards Viridian City",
+          "Azalea Town"
         ]
       },
       "crystal": {
         "locations": [
-          "johto route 30 area",
-          "johto route 31 area",
-          "ilex forest area",
-          "national park area",
-          "kanto route 2 south towards viridian city",
-          "kanto route 24 area",
-          "kanto route 25 area"
+          "Route 30",
+          "Route 31",
+          "Ilex Forest",
+          "National Park",
+          "Route 2 South Towards Viridian City",
+          "Route 24",
+          "Route 25"
         ]
       },
       "silver": {
         "locations": [
-          "National Park (Bug-Catching Contest)ThSa"
+          "National Park (bug Catching Contest Tue, Thu, Sat)"
         ]
       }
     },
     "11": {
       "gold": {
         "locations": [
-          "johto route 30 area",
-          "johto route 31 area",
-          "ilex forest area",
-          "johto route 34 area",
-          "johto route 35 area",
-          "national park area",
-          "johto route 36 area",
-          "johto route 37 area",
-          "johto route 38 area",
-          "johto route 39 area",
-          "lake of rage area",
-          "kanto route 26 area",
-          "kanto route 27 area",
-          "kanto route 2 south towards viridian city",
-          "azalea town area"
+          "Route 30",
+          "Route 31",
+          "Ilex Forest",
+          "Route 34",
+          "Route 35",
+          "National Park",
+          "Route 36",
+          "Route 37",
+          "Route 38",
+          "Route 39",
+          "Lake Of Rage",
+          "Route 26",
+          "Route 27",
+          "Route 2 South Towards Viridian City",
+          "Azalea Town"
         ]
       },
       "crystal": {
         "locations": [
-          "ilex forest area",
-          "kanto route 24 area",
-          "kanto route 25 area"
+          "Ilex Forest",
+          "Route 24",
+          "Route 25"
         ]
       },
       "silver": {
         "locations": [
-          "National Park (Bug-Catching Contest)ThSa"
+          "National Park (bug Catching Contest Tue, Thu, Sat)"
         ]
       }
     },
     "12": {
       "gold": {
         "locations": [
-          "ilex forest area",
-          "johto route 34 area",
-          "johto route 35 area",
-          "johto route 36 area",
-          "johto route 37 area",
-          "johto route 38 area",
-          "johto route 39 area",
-          "lake of rage area",
-          "kanto route 26 area",
-          "kanto route 27 area",
-          "kanto route 2 south towards viridian city",
-          "azalea town area"
+          "Ilex Forest",
+          "Route 34",
+          "Route 35",
+          "Route 36",
+          "Route 37",
+          "Route 38",
+          "Route 39",
+          "Lake Of Rage",
+          "Route 26",
+          "Route 27",
+          "Route 2 South Towards Viridian City",
+          "Azalea Town"
         ]
       },
       "crystal": {
         "locations": [
-          "ilex forest area",
-          "kanto route 2 south towards viridian city",
-          "kanto route 24 area",
-          "kanto route 25 area"
+          "Ilex Forest",
+          "Route 2 South Towards Viridian City",
+          "Route 24",
+          "Route 25"
         ]
       },
       "silver": {
         "locations": [
-          "National Park (Bug-Catching Contest)ThSa"
+          "National Park (bug Catching Contest Tue, Thu, Sat)"
         ]
       }
     },
     "13": {
       "silver": {
         "locations": [
-          "johto route 30 area",
-          "johto route 31 area",
-          "ilex forest area",
-          "johto route 34 area",
-          "johto route 35 area",
-          "national park area",
-          "johto route 36 area",
-          "johto route 37 area",
-          "johto route 38 area",
-          "johto route 39 area",
-          "lake of rage area",
-          "kanto route 26 area",
-          "kanto route 27 area",
-          "kanto route 2 south towards viridian city",
-          "azalea town area"
+          "Route 30",
+          "Route 31",
+          "Ilex Forest",
+          "Route 34",
+          "Route 35",
+          "National Park",
+          "Route 36",
+          "Route 37",
+          "Route 38",
+          "Route 39",
+          "Lake Of Rage",
+          "Route 26",
+          "Route 27",
+          "Route 2 South Towards Viridian City",
+          "Azalea Town"
         ]
       },
       "crystal": {
         "locations": [
-          "johto route 30 area",
-          "johto route 31 area",
-          "ilex forest area",
-          "national park area"
+          "Route 30",
+          "Route 31",
+          "Ilex Forest",
+          "National Park"
         ]
       },
       "gold": {
         "locations": [
-          "National Park (Bug-Catching Contest)ThSa"
+          "National Park (bug Catching Contest Tue, Thu, Sat)"
         ]
       }
     },
     "14": {
       "silver": {
         "locations": [
-          "johto route 30 area",
-          "johto route 31 area",
-          "ilex forest area",
-          "johto route 34 area",
-          "johto route 35 area",
-          "national park area",
-          "johto route 36 area",
-          "johto route 37 area",
-          "johto route 38 area",
-          "johto route 39 area",
-          "lake of rage area",
-          "kanto route 26 area",
-          "kanto route 27 area",
-          "kanto route 2 south towards viridian city",
-          "azalea town area"
+          "Route 30",
+          "Route 31",
+          "Ilex Forest",
+          "Route 34",
+          "Route 35",
+          "National Park",
+          "Route 36",
+          "Route 37",
+          "Route 38",
+          "Route 39",
+          "Lake Of Rage",
+          "Route 26",
+          "Route 27",
+          "Route 2 South Towards Viridian City",
+          "Azalea Town"
         ]
       },
       "crystal": {
         "locations": [
-          "ilex forest area"
+          "Ilex Forest"
         ]
       },
       "gold": {
         "locations": [
-          "National Park (Bug-Catching Contest)ThSa"
+          "National Park (bug Catching Contest Tue, Thu, Sat)"
         ]
       }
     },
     "15": {
       "silver": {
         "locations": [
-          "ilex forest area",
-          "johto route 34 area",
-          "johto route 35 area",
-          "johto route 36 area",
-          "johto route 37 area",
-          "johto route 38 area",
-          "johto route 39 area",
-          "lake of rage area",
-          "kanto route 26 area",
-          "kanto route 27 area",
-          "kanto route 2 south towards viridian city",
-          "azalea town area"
+          "Ilex Forest",
+          "Route 34",
+          "Route 35",
+          "Route 36",
+          "Route 37",
+          "Route 38",
+          "Route 39",
+          "Lake Of Rage",
+          "Route 26",
+          "Route 27",
+          "Route 2 South Towards Viridian City",
+          "Azalea Town"
         ]
       },
       "crystal": {
         "locations": [
-          "ilex forest area"
+          "Ilex Forest"
         ]
       },
       "gold": {
         "locations": [
-          "National Park (Bug-Catching Contest)ThSa"
+          "National Park (bug Catching Contest Tue, Thu, Sat)"
         ]
       }
     },
     "16": {
       "gold": {
         "locations": [
-          "johto route 29 area",
-          "johto route 30 area",
-          "johto route 31 area",
-          "johto route 35 area",
-          "national park area",
-          "johto route 36 area",
-          "johto route 37 area",
-          "kanto route 1 area",
-          "kanto route 2 south towards viridian city",
-          "kanto route 5 area",
-          "kanto route 6 area",
-          "kanto route 25 area"
+          "Route 29",
+          "Route 30",
+          "Route 31",
+          "Route 35",
+          "National Park",
+          "Route 36",
+          "Route 37",
+          "Route 1",
+          "Route 2 South Towards Viridian City",
+          "Route 5",
+          "Route 6",
+          "Route 25"
         ]
       },
       "silver": {
         "locations": [
-          "johto route 29 area",
-          "johto route 30 area",
-          "johto route 31 area",
-          "johto route 35 area",
-          "national park area",
-          "johto route 36 area",
-          "johto route 37 area",
-          "kanto route 1 area",
-          "kanto route 2 south towards viridian city",
-          "kanto route 5 area",
-          "kanto route 6 area",
-          "kanto route 25 area"
+          "Route 29",
+          "Route 30",
+          "Route 31",
+          "Route 35",
+          "National Park",
+          "Route 36",
+          "Route 37",
+          "Route 1",
+          "Route 2 South Towards Viridian City",
+          "Route 5",
+          "Route 6",
+          "Route 25"
         ]
       },
       "crystal": {
         "locations": [
-          "johto route 29 area",
-          "johto route 30 area",
-          "johto route 31 area",
-          "johto route 32 area",
-          "ilex forest area",
-          "johto route 34 area",
-          "johto route 35 area",
-          "national park area",
-          "johto route 36 area",
-          "johto route 37 area",
-          "kanto route 1 area",
-          "kanto route 2 south towards viridian city",
-          "kanto route 5 area",
-          "kanto route 25 area"
+          "Route 29",
+          "Route 30",
+          "Route 31",
+          "Route 32",
+          "Ilex Forest",
+          "Route 34",
+          "Route 35",
+          "National Park",
+          "Route 36",
+          "Route 37",
+          "Route 1",
+          "Route 2 South Towards Viridian City",
+          "Route 5",
+          "Route 25"
         ]
       }
     },
     "17": {
       "gold": {
         "locations": [
-          "johto route 37 area",
-          "johto route 43 area",
-          "kanto route 2 south towards viridian city",
-          "kanto route 8 area",
-          "kanto route 13 area",
-          "kanto route 14 area",
-          "kanto route 15 area",
-          "kanto route 25 area"
+          "Route 37",
+          "Route 43",
+          "Route 2 South Towards Viridian City",
+          "Route 8",
+          "Route 13",
+          "Route 14",
+          "Route 15",
+          "Route 25"
         ]
       },
       "silver": {
         "locations": [
-          "johto route 37 area",
-          "johto route 43 area",
-          "kanto route 2 south towards viridian city",
-          "kanto route 8 area",
-          "kanto route 13 area",
-          "kanto route 14 area",
-          "kanto route 15 area",
-          "kanto route 25 area"
+          "Route 37",
+          "Route 43",
+          "Route 2 South Towards Viridian City",
+          "Route 8",
+          "Route 13",
+          "Route 14",
+          "Route 15",
+          "Route 25"
         ]
       },
       "crystal": {
         "locations": [
-          "johto route 37 area",
-          "johto route 38 area",
-          "johto route 39 area",
-          "johto route 43 area",
-          "kanto route 2 south towards viridian city",
-          "kanto route 5 area",
-          "kanto route 8 area",
-          "kanto route 11 area",
-          "kanto route 13 area",
-          "kanto route 14 area",
-          "kanto route 15 area",
-          "kanto route 25 area"
+          "Route 37",
+          "Route 38",
+          "Route 39",
+          "Route 43",
+          "Route 2 South Towards Viridian City",
+          "Route 5",
+          "Route 8",
+          "Route 11",
+          "Route 13",
+          "Route 14",
+          "Route 15",
+          "Route 25"
         ]
       }
     },
@@ -1736,322 +1761,322 @@
     "19": {
       "gold": {
         "locations": [
-          "johto route 29 area",
-          "johto route 30 area",
-          "johto route 31 area",
-          "sprout tower 2f",
-          "sprout tower 3f",
-          "johto route 32 area",
-          "union cave 1f",
-          "union cave b1f",
-          "union cave b2f",
-          "johto route 33 area",
-          "johto route 34 area",
-          "burned tower 1f",
-          "burned tower b1f",
-          "bell tower 2f",
-          "bell tower 3f",
-          "bell tower 4f",
-          "bell tower 5f",
-          "bell tower 6f",
-          "bell tower 7f",
-          "bell tower 8f",
-          "bell tower 9f",
-          "johto route 38 area",
-          "johto route 39 area",
-          "mt mortar 1f",
-          "mt mortar lower cave",
-          "mt mortar b1f",
-          "johto route 46 area",
-          "kanto route 1 area",
-          "kanto route 3 area",
-          "kanto route 4 area",
-          "kanto route 7 area",
-          "kanto route 8 area",
-          "kanto route 9 area",
-          "kanto route 11 area",
-          "kanto route 22 area",
-          "tohjo falls area"
+          "Route 29",
+          "Route 30",
+          "Route 31",
+          "Sprout Tower (2F)",
+          "Sprout Tower (3F)",
+          "Route 32",
+          "Union Cave (1F)",
+          "Union Cave (B1F)",
+          "Union Cave (B2F)",
+          "Route 33",
+          "Route 34",
+          "Burned Tower (1F)",
+          "Burned Tower (B1F)",
+          "Bell Tower (2F)",
+          "Bell Tower (3F)",
+          "Bell Tower (4F)",
+          "Bell Tower (5F)",
+          "Bell Tower (6F)",
+          "Bell Tower (7F)",
+          "Bell Tower (8F)",
+          "Bell Tower (9F)",
+          "Route 38",
+          "Route 39",
+          "Mt. Mortar (1F)",
+          "Mt. Mortar Lower Cave",
+          "Mt. Mortar (B1F)",
+          "Route 46",
+          "Route 1",
+          "Route 3",
+          "Route 4",
+          "Route 7",
+          "Route 8",
+          "Route 9",
+          "Route 11",
+          "Route 22",
+          "Tohjo Falls"
         ]
       },
       "silver": {
         "locations": [
-          "johto route 29 area",
-          "johto route 30 area",
-          "johto route 31 area",
-          "sprout tower 2f",
-          "sprout tower 3f",
-          "johto route 32 area",
-          "union cave 1f",
-          "union cave b1f",
-          "union cave b2f",
-          "johto route 33 area",
-          "johto route 34 area",
-          "burned tower 1f",
-          "burned tower b1f",
-          "bell tower 2f",
-          "bell tower 3f",
-          "bell tower 4f",
-          "bell tower 5f",
-          "bell tower 6f",
-          "bell tower 7f",
-          "bell tower 8f",
-          "bell tower 9f",
-          "johto route 38 area",
-          "johto route 39 area",
-          "mt mortar 1f",
-          "mt mortar lower cave",
-          "mt mortar b1f",
-          "johto route 46 area",
-          "kanto route 1 area",
-          "kanto route 3 area",
-          "kanto route 4 area",
-          "kanto route 7 area",
-          "kanto route 8 area",
-          "kanto route 9 area",
-          "kanto route 11 area",
-          "kanto route 22 area",
-          "tohjo falls area"
+          "Route 29",
+          "Route 30",
+          "Route 31",
+          "Sprout Tower (2F)",
+          "Sprout Tower (3F)",
+          "Route 32",
+          "Union Cave (1F)",
+          "Union Cave (B1F)",
+          "Union Cave (B2F)",
+          "Route 33",
+          "Route 34",
+          "Burned Tower (1F)",
+          "Burned Tower (B1F)",
+          "Bell Tower (2F)",
+          "Bell Tower (3F)",
+          "Bell Tower (4F)",
+          "Bell Tower (5F)",
+          "Bell Tower (6F)",
+          "Bell Tower (7F)",
+          "Bell Tower (8F)",
+          "Bell Tower (9F)",
+          "Route 38",
+          "Route 39",
+          "Mt. Mortar (1F)",
+          "Mt. Mortar Lower Cave",
+          "Mt. Mortar (B1F)",
+          "Route 46",
+          "Route 1",
+          "Route 3",
+          "Route 4",
+          "Route 7",
+          "Route 8",
+          "Route 9",
+          "Route 11",
+          "Route 22",
+          "Tohjo Falls"
         ]
       },
       "crystal": {
         "locations": [
-          "johto route 29 area",
-          "sprout tower 2f",
-          "sprout tower 3f",
-          "johto route 32 area",
-          "union cave 1f",
-          "union cave b1f",
-          "johto route 33 area",
-          "johto route 34 area",
-          "burned tower 1f",
-          "burned tower b1f",
-          "bell tower 2f",
-          "bell tower 3f",
-          "bell tower 4f",
-          "bell tower 5f",
-          "bell tower 6f",
-          "bell tower 7f",
-          "bell tower 8f",
-          "bell tower 9f",
-          "johto route 38 area",
-          "johto route 39 area",
-          "johto route 42 area",
-          "mt mortar 1f",
-          "mt mortar lower cave",
-          "johto route 46 area",
-          "kanto route 1 area",
-          "kanto route 3 area",
-          "kanto route 4 area",
-          "kanto route 6 area",
-          "kanto route 7 area",
-          "kanto route 9 area",
-          "kanto route 11 area",
-          "kanto sea route 21 area",
-          "kanto route 22 area",
-          "tohjo falls area"
+          "Route 29",
+          "Sprout Tower (2F)",
+          "Sprout Tower (3F)",
+          "Route 32",
+          "Union Cave (1F)",
+          "Union Cave (B1F)",
+          "Route 33",
+          "Route 34",
+          "Burned Tower (1F)",
+          "Burned Tower (B1F)",
+          "Bell Tower (2F)",
+          "Bell Tower (3F)",
+          "Bell Tower (4F)",
+          "Bell Tower (5F)",
+          "Bell Tower (6F)",
+          "Bell Tower (7F)",
+          "Bell Tower (8F)",
+          "Bell Tower (9F)",
+          "Route 38",
+          "Route 39",
+          "Route 42",
+          "Mt. Mortar (1F)",
+          "Mt. Mortar Lower Cave",
+          "Route 46",
+          "Route 1",
+          "Route 3",
+          "Route 4",
+          "Route 6",
+          "Route 7",
+          "Route 9",
+          "Route 11",
+          "Sea Route 21",
+          "Route 22",
+          "Tohjo Falls"
         ]
       }
     },
     "20": {
       "gold": {
         "locations": [
-          "union cave b2f",
-          "burned tower 1f",
-          "johto route 38 area",
-          "johto route 39 area",
-          "mt mortar upper cave",
-          "mt mortar b1f",
-          "kanto route 26 area",
-          "kanto route 27 area",
-          "kanto route 7 area",
-          "kanto route 9 area",
-          "kanto route 10 area",
-          "tohjo falls area"
+          "Union Cave (B2F)",
+          "Burned Tower (1F)",
+          "Route 38",
+          "Route 39",
+          "Mt. Mortar Upper Cave",
+          "Mt. Mortar (B1F)",
+          "Route 26",
+          "Route 27",
+          "Route 7",
+          "Route 9",
+          "Route 10",
+          "Tohjo Falls"
         ]
       },
       "silver": {
         "locations": [
-          "union cave b2f",
-          "burned tower 1f",
-          "johto route 38 area",
-          "johto route 39 area",
-          "mt mortar upper cave",
-          "mt mortar b1f",
-          "kanto route 26 area",
-          "kanto route 27 area",
-          "kanto route 7 area",
-          "kanto route 9 area",
-          "kanto route 10 area",
-          "tohjo falls area"
+          "Union Cave (B2F)",
+          "Burned Tower (1F)",
+          "Route 38",
+          "Route 39",
+          "Mt. Mortar Upper Cave",
+          "Mt. Mortar (B1F)",
+          "Route 26",
+          "Route 27",
+          "Route 7",
+          "Route 9",
+          "Route 10",
+          "Tohjo Falls"
         ]
       },
       "crystal": {
         "locations": [
-          "union cave b2f",
-          "burned tower 1f",
-          "johto route 38 area",
-          "johto route 39 area",
-          "johto route 42 area",
-          "mt mortar 1f",
-          "mt mortar lower cave",
-          "mt mortar upper cave",
-          "mt mortar b1f",
-          "johto route 43 area",
-          "kanto route 26 area",
-          "kanto route 27 area",
-          "kanto route 1 area",
-          "kanto route 3 area",
-          "kanto route 4 area",
-          "kanto route 6 area",
-          "kanto route 7 area",
-          "kanto route 9 area",
-          "kanto route 10 area",
-          "kanto route 11 area",
-          "kanto sea route 21 area",
-          "tohjo falls area"
+          "Union Cave (B2F)",
+          "Burned Tower (1F)",
+          "Route 38",
+          "Route 39",
+          "Route 42",
+          "Mt. Mortar (1F)",
+          "Mt. Mortar Lower Cave",
+          "Mt. Mortar Upper Cave",
+          "Mt. Mortar (B1F)",
+          "Route 43",
+          "Route 26",
+          "Route 27",
+          "Route 1",
+          "Route 3",
+          "Route 4",
+          "Route 6",
+          "Route 7",
+          "Route 9",
+          "Route 10",
+          "Route 11",
+          "Sea Route 21",
+          "Tohjo Falls"
         ]
       }
     },
     "21": {
       "gold": {
         "locations": [
-          "johto route 29 area",
-          "johto route 30 area",
-          "johto route 31 area",
-          "johto route 32 area",
-          "johto route 33 area",
-          "johto route 42 area",
-          "johto route 43 area",
-          "johto route 44 area",
-          "johto route 45 area",
-          "johto route 46 area",
-          "kanto route 3 area",
-          "kanto route 4 area",
-          "kanto route 7 area",
-          "kanto route 9 area",
-          "kanto route 10 area",
-          "kanto route 22 area",
-          "goldenrod city north gate"
+          "Route 29",
+          "Route 30",
+          "Route 31",
+          "Route 32",
+          "Route 33",
+          "Route 42",
+          "Route 43",
+          "Route 44",
+          "Route 45",
+          "Route 46",
+          "Route 3",
+          "Route 4",
+          "Route 7",
+          "Route 9",
+          "Route 10",
+          "Route 22",
+          "Goldenrod City North Gate"
         ]
       },
       "silver": {
         "locations": [
-          "johto route 29 area",
-          "johto route 30 area",
-          "johto route 31 area",
-          "johto route 32 area",
-          "johto route 33 area",
-          "johto route 42 area",
-          "johto route 43 area",
-          "johto route 44 area",
-          "johto route 45 area",
-          "johto route 46 area",
-          "kanto route 3 area",
-          "kanto route 4 area",
-          "kanto route 7 area",
-          "kanto route 9 area",
-          "kanto route 10 area",
-          "kanto route 22 area",
-          "goldenrod city north gate"
+          "Route 29",
+          "Route 30",
+          "Route 31",
+          "Route 32",
+          "Route 33",
+          "Route 42",
+          "Route 43",
+          "Route 44",
+          "Route 45",
+          "Route 46",
+          "Route 3",
+          "Route 4",
+          "Route 7",
+          "Route 9",
+          "Route 10",
+          "Route 22",
+          "Goldenrod City North Gate"
         ]
       },
       "crystal": {
         "locations": [
-          "johto route 33 area",
-          "johto route 42 area",
-          "johto route 44 area",
-          "johto route 45 area",
-          "johto route 46 area",
-          "kanto route 3 area",
-          "kanto route 4 area",
-          "kanto route 7 area",
-          "kanto route 9 area",
-          "kanto route 10 area",
-          "kanto route 22 area",
-          "goldenrod city north gate",
-          "azalea town area"
+          "Route 33",
+          "Route 42",
+          "Route 44",
+          "Route 45",
+          "Route 46",
+          "Route 3",
+          "Route 4",
+          "Route 7",
+          "Route 9",
+          "Route 10",
+          "Route 22",
+          "Goldenrod City North Gate",
+          "Azalea Town"
         ]
       }
     },
     "22": {
       "crystal": {
         "locations": [
-          "johto route 42 area",
-          "kanto route 9 area",
-          "kanto route 10 area",
-          "kanto route 16 area",
-          "kanto route 17 area",
-          "kanto route 18 area",
-          "kanto route 22 area"
+          "Route 42",
+          "Route 9",
+          "Route 10",
+          "Route 16",
+          "Route 17",
+          "Route 18",
+          "Route 22"
         ]
       },
       "gold": {
         "locations": [
-          "kanto route 9 area",
-          "kanto route 10 area",
-          "kanto route 16 area",
-          "kanto route 17 area",
-          "kanto route 18 area",
-          "kanto route 22 area"
+          "Route 9",
+          "Route 10",
+          "Route 16",
+          "Route 17",
+          "Route 18",
+          "Route 22"
         ]
       },
       "silver": {
         "locations": [
-          "kanto route 9 area",
-          "kanto route 10 area",
-          "kanto route 16 area",
-          "kanto route 17 area",
-          "kanto route 18 area",
-          "kanto route 22 area"
+          "Route 9",
+          "Route 10",
+          "Route 16",
+          "Route 17",
+          "Route 18",
+          "Route 22"
         ]
       }
     },
     "23": {
       "silver": {
         "locations": [
-          "johto route 32 area",
-          "johto route 33 area",
-          "kanto route 3 area",
-          "kanto route 4 area"
+          "Route 32",
+          "Route 33",
+          "Route 3",
+          "Route 4"
         ]
       },
       "crystal": {
         "locations": [
-          "johto route 32 area",
-          "johto route 33 area",
-          "johto route 42 area",
-          "kanto route 26 area",
-          "kanto route 27 area",
-          "kanto route 3 area",
-          "kanto route 4 area",
-          "azalea town area"
+          "Route 32",
+          "Route 33",
+          "Route 42",
+          "Route 26",
+          "Route 27",
+          "Route 3",
+          "Route 4",
+          "Azalea Town"
         ]
       },
       "gold": {
         "locations": [
-          "goldenrod city game corner"
+          "Goldenrod City Game Corner"
         ]
       }
     },
     "24": {
       "crystal": {
         "locations": [
-          "johto route 42 area",
-          "mt silver outside",
-          "kanto route 26 area",
-          "kanto route 27 area",
-          "kanto route 28 area",
-          "kanto route 3 area",
-          "kanto route 4 area"
+          "Route 42",
+          "Mt. Silver Outside",
+          "Route 26",
+          "Route 27",
+          "Route 28",
+          "Route 3",
+          "Route 4"
         ]
       },
       "silver": {
         "locations": [
-          "kanto route 26 area",
-          "kanto route 27 area",
-          "kanto route 3 area",
-          "kanto route 4 area"
+          "Route 26",
+          "Route 27",
+          "Route 3",
+          "Route 4"
         ]
       },
       "gold": {
@@ -2063,18 +2088,18 @@
     "25": {
       "gold": {
         "locations": [
-          "kanto route 2 south towards viridian city"
+          "Route 2 South Towards Viridian City"
         ]
       },
       "silver": {
         "locations": [
-          "kanto route 2 south towards viridian city"
+          "Route 2 South Towards Viridian City"
         ]
       },
       "crystal": {
         "locations": [
-          "kanto route 2 south towards viridian city",
-          "celadon city prize corner"
+          "Route 2 South Towards Viridian City",
+          "Celadon City Prize Corner"
         ]
       }
     },
@@ -2098,37 +2123,37 @@
     "27": {
       "gold": {
         "locations": [
-          "union cave 1f",
-          "union cave b1f",
-          "mt moon 1f"
+          "Union Cave (1F)",
+          "Union Cave (B1F)",
+          "Mt. Moon (1F)"
         ]
       },
       "crystal": {
         "locations": [
-          "union cave 1f",
-          "mt moon 1f"
+          "Union Cave (1F)",
+          "Mt. Moon (1F)"
         ]
       },
       "silver": {
         "locations": [
-          "goldenrod city game corner"
+          "Goldenrod City Game Corner"
         ]
       }
     },
     "28": {
       "gold": {
         "locations": [
-          "kanto route 26 area",
-          "kanto route 27 area",
-          "mt moon 1f"
+          "Route 26",
+          "Route 27",
+          "Mt. Moon (1F)"
         ]
       },
       "crystal": {
         "locations": [
-          "kanto route 26 area",
-          "kanto victory road 1 1f",
-          "kanto victory road 1 2f",
-          "kanto victory road 1 3f"
+          "Route 26",
+          "Victory Road 1 (1F)",
+          "Victory Road 1 (2F)",
+          "Victory Road 1 (3F)"
         ]
       },
       "silver": {
@@ -2140,43 +2165,43 @@
     "29": {
       "gold": {
         "locations": [
-          "johto route 35 area",
-          "johto route 36 area"
+          "Route 35",
+          "Route 36"
         ]
       },
       "silver": {
         "locations": [
-          "johto route 35 area",
-          "johto route 36 area"
+          "Route 35",
+          "Route 36"
         ]
       },
       "crystal": {
         "locations": [
-          "johto route 35 area",
-          "national park area"
+          "Route 35",
+          "National Park"
         ]
       }
     },
     "30": {
       "gold": {
         "locations": [
-          "kanto route 13 area",
-          "kanto route 14 area",
-          "kanto route 15 area"
+          "Route 13",
+          "Route 14",
+          "Route 15"
         ]
       },
       "silver": {
         "locations": [
-          "kanto route 13 area",
-          "kanto route 14 area",
-          "kanto route 15 area"
+          "Route 13",
+          "Route 14",
+          "Route 15"
         ]
       },
       "crystal": {
         "locations": [
-          "kanto route 13 area",
-          "kanto route 14 area",
-          "kanto route 15 area"
+          "Route 13",
+          "Route 14",
+          "Route 15"
         ]
       }
     },
@@ -2200,43 +2225,43 @@
     "32": {
       "gold": {
         "locations": [
-          "johto route 35 area",
-          "johto route 36 area"
+          "Route 35",
+          "Route 36"
         ]
       },
       "silver": {
         "locations": [
-          "johto route 35 area",
-          "johto route 36 area"
+          "Route 35",
+          "Route 36"
         ]
       },
       "crystal": {
         "locations": [
-          "johto route 35 area",
-          "national park area"
+          "Route 35",
+          "National Park"
         ]
       }
     },
     "33": {
       "gold": {
         "locations": [
-          "kanto route 13 area",
-          "kanto route 14 area",
-          "kanto route 15 area"
+          "Route 13",
+          "Route 14",
+          "Route 15"
         ]
       },
       "silver": {
         "locations": [
-          "kanto route 13 area",
-          "kanto route 14 area",
-          "kanto route 15 area"
+          "Route 13",
+          "Route 14",
+          "Route 15"
         ]
       },
       "crystal": {
         "locations": [
-          "kanto route 13 area",
-          "kanto route 14 area",
-          "kanto route 15 area"
+          "Route 13",
+          "Route 14",
+          "Route 15"
         ]
       }
     },
@@ -2260,19 +2285,19 @@
     "35": {
       "gold": {
         "locations": [
-          "mt moon 1f"
+          "Mt. Moon (1F)"
         ]
       },
       "silver": {
         "locations": [
-          "mt moon 1f"
+          "Mt. Moon (1F)"
         ]
       },
       "crystal": {
         "locations": [
-          "mt moon 1f",
-          "kanto route 3 area",
-          "kanto route 4 area"
+          "Mt. Moon (1F)",
+          "Route 3",
+          "Route 4"
         ]
       }
     },
@@ -2296,10 +2321,10 @@
     "37": {
       "silver": {
         "locations": [
-          "johto route 36 area",
-          "johto route 37 area",
-          "kanto route 7 area",
-          "kanto route 8 area"
+          "Route 36",
+          "Route 37",
+          "Route 7",
+          "Route 8"
         ]
       }
     },
@@ -2313,26 +2338,26 @@
     "39": {
       "crystal": {
         "locations": [
-          "johto route 34 area",
-          "johto route 35 area",
-          "kanto route 5 area",
-          "kanto route 6 area",
-          "kanto route 7 area",
-          "kanto route 8 area"
+          "Route 34",
+          "Route 35",
+          "Route 5",
+          "Route 6",
+          "Route 7",
+          "Route 8"
         ]
       },
       "gold": {
         "locations": [
-          "johto route 46 area",
-          "kanto route 3 area",
-          "kanto route 4 area"
+          "Route 46",
+          "Route 3",
+          "Route 4"
         ]
       },
       "silver": {
         "locations": [
-          "johto route 46 area",
-          "kanto route 3 area",
-          "kanto route 4 area"
+          "Route 46",
+          "Route 3",
+          "Route 4"
         ]
       }
     },
@@ -2356,225 +2381,225 @@
     "41": {
       "crystal": {
         "locations": [
-          "johto route 30 area",
-          "johto route 31 area",
-          "johto route 32 area",
-          "union cave 1f",
-          "union cave b1f",
-          "union cave b2f",
-          "johto route 33 area",
-          "slowpoke well 1f",
-          "slowpoke well b1f",
-          "burned tower 1f",
-          "burned tower b1f",
-          "whirl islands 1f",
-          "whirl islands b1f",
-          "whirl islands b2f",
-          "whirl islands b3f",
-          "johto route 42 area",
-          "mt mortar 1f",
-          "mt mortar lower cave",
-          "mt mortar b1f",
-          "dark cave violet city entrance",
-          "dark cave blackthorn city entrance",
-          "mt moon 1f",
-          "rock tunnel 1f",
-          "rock tunnel b1f",
-          "kanto route 3 area",
-          "kanto route 4 area",
-          "kanto route 9 area",
-          "kanto route 10 area",
-          "tohjo falls area"
+          "Route 30",
+          "Route 31",
+          "Route 32",
+          "Union Cave (1F)",
+          "Union Cave (B1F)",
+          "Union Cave (B2F)",
+          "Route 33",
+          "Slowpoke Well (1F)",
+          "Slowpoke Well (B1F)",
+          "Burned Tower (1F)",
+          "Burned Tower (B1F)",
+          "Whirl Islands (1F)",
+          "Whirl Islands (B1F)",
+          "Whirl Islands (B2F)",
+          "Whirl Islands (B3F)",
+          "Route 42",
+          "Mt. Mortar (1F)",
+          "Mt. Mortar Lower Cave",
+          "Mt. Mortar (B1F)",
+          "Dark Cave Violet City Entrance",
+          "Dark Cave Blackthorn City Entrance",
+          "Mt. Moon (1F)",
+          "Rock Tunnel (1F)",
+          "Rock Tunnel (B1F)",
+          "Route 3",
+          "Route 4",
+          "Route 9",
+          "Route 10",
+          "Tohjo Falls"
         ]
       },
       "gold": {
         "locations": [
-          "johto route 32 area",
-          "union cave 1f",
-          "union cave b1f",
-          "union cave b2f",
-          "johto route 33 area",
-          "slowpoke well 1f",
-          "slowpoke well b1f",
-          "ilex forest area",
-          "burned tower 1f",
-          "burned tower b1f",
-          "whirl islands 1f",
-          "whirl islands b1f",
-          "whirl islands b2f",
-          "whirl islands b3f",
-          "johto route 42 area",
-          "mt mortar 1f",
-          "mt mortar lower cave",
-          "mt mortar b1f",
-          "ice path 1f",
-          "ice path b1f",
-          "ice path b2f",
-          "ice path b3f",
-          "dark cave violet city entrance",
-          "dark cave blackthorn city entrance",
-          "mt moon 1f",
-          "rock tunnel 1f",
-          "rock tunnel b1f",
-          "kanto route 3 area",
-          "kanto route 4 area",
-          "tohjo falls area"
+          "Route 32",
+          "Union Cave (1F)",
+          "Union Cave (B1F)",
+          "Union Cave (B2F)",
+          "Route 33",
+          "Slowpoke Well (1F)",
+          "Slowpoke Well (B1F)",
+          "Ilex Forest",
+          "Burned Tower (1F)",
+          "Burned Tower (B1F)",
+          "Whirl Islands (1F)",
+          "Whirl Islands (B1F)",
+          "Whirl Islands (B2F)",
+          "Whirl Islands (B3F)",
+          "Route 42",
+          "Mt. Mortar (1F)",
+          "Mt. Mortar Lower Cave",
+          "Mt. Mortar (B1F)",
+          "Ice Path (1F)",
+          "Ice Path (B1F)",
+          "Ice Path (B2F)",
+          "Ice Path (B3F)",
+          "Dark Cave Violet City Entrance",
+          "Dark Cave Blackthorn City Entrance",
+          "Mt. Moon (1F)",
+          "Rock Tunnel (1F)",
+          "Rock Tunnel (B1F)",
+          "Route 3",
+          "Route 4",
+          "Tohjo Falls"
         ]
       },
       "silver": {
         "locations": [
-          "johto route 32 area",
-          "union cave 1f",
-          "union cave b1f",
-          "union cave b2f",
-          "johto route 33 area",
-          "slowpoke well 1f",
-          "slowpoke well b1f",
-          "ilex forest area",
-          "burned tower 1f",
-          "burned tower b1f",
-          "whirl islands 1f",
-          "whirl islands b1f",
-          "whirl islands b2f",
-          "whirl islands b3f",
-          "johto route 42 area",
-          "mt mortar 1f",
-          "mt mortar lower cave",
-          "mt mortar b1f",
-          "ice path 1f",
-          "ice path b1f",
-          "ice path b2f",
-          "ice path b3f",
-          "dark cave violet city entrance",
-          "dark cave blackthorn city entrance",
-          "mt moon 1f",
-          "rock tunnel 1f",
-          "rock tunnel b1f",
-          "kanto route 3 area",
-          "kanto route 4 area",
-          "tohjo falls area"
+          "Route 32",
+          "Union Cave (1F)",
+          "Union Cave (B1F)",
+          "Union Cave (B2F)",
+          "Route 33",
+          "Slowpoke Well (1F)",
+          "Slowpoke Well (B1F)",
+          "Ilex Forest",
+          "Burned Tower (1F)",
+          "Burned Tower (B1F)",
+          "Whirl Islands (1F)",
+          "Whirl Islands (B1F)",
+          "Whirl Islands (B2F)",
+          "Whirl Islands (B3F)",
+          "Route 42",
+          "Mt. Mortar (1F)",
+          "Mt. Mortar Lower Cave",
+          "Mt. Mortar (B1F)",
+          "Ice Path (1F)",
+          "Ice Path (B1F)",
+          "Ice Path (B2F)",
+          "Ice Path (B3F)",
+          "Dark Cave Violet City Entrance",
+          "Dark Cave Blackthorn City Entrance",
+          "Mt. Moon (1F)",
+          "Rock Tunnel (1F)",
+          "Rock Tunnel (B1F)",
+          "Route 3",
+          "Route 4",
+          "Tohjo Falls"
         ]
       }
     },
     "42": {
       "gold": {
         "locations": [
-          "union cave b2f",
-          "slowpoke well b1f",
-          "whirl islands 1f",
-          "whirl islands b1f",
-          "whirl islands b2f",
-          "whirl islands b3f",
-          "mt mortar upper cave",
-          "ice path 1f",
-          "ice path b1f",
-          "ice path b2f",
-          "ice path b3f",
-          "dark cave blackthorn city entrance",
-          "mt silver 2f",
-          "mt silver 1f",
-          "mt silver top",
-          "kanto victory road 1 1f",
-          "tohjo falls area",
-          "kanto victory road 1 2f",
-          "kanto victory road 1 3f"
+          "Union Cave (B2F)",
+          "Slowpoke Well (B1F)",
+          "Whirl Islands (1F)",
+          "Whirl Islands (B1F)",
+          "Whirl Islands (B2F)",
+          "Whirl Islands (B3F)",
+          "Mt. Mortar Upper Cave",
+          "Ice Path (1F)",
+          "Ice Path (B1F)",
+          "Ice Path (B2F)",
+          "Ice Path (B3F)",
+          "Dark Cave Blackthorn City Entrance",
+          "Mt. Silver (2F)",
+          "Mt. Silver (1F)",
+          "Mt. Silver Top",
+          "Victory Road 1 (1F)",
+          "Tohjo Falls",
+          "Victory Road 1 (2F)",
+          "Victory Road 1 (3F)"
         ]
       },
       "silver": {
         "locations": [
-          "union cave b2f",
-          "slowpoke well b1f",
-          "whirl islands 1f",
-          "whirl islands b1f",
-          "whirl islands b2f",
-          "whirl islands b3f",
-          "mt mortar upper cave",
-          "ice path 1f",
-          "ice path b1f",
-          "ice path b2f",
-          "ice path b3f",
-          "dark cave blackthorn city entrance",
-          "mt silver 2f",
-          "mt silver 1f",
-          "mt silver top",
-          "kanto victory road 1 1f",
-          "tohjo falls area",
-          "kanto victory road 1 2f",
-          "kanto victory road 1 3f"
+          "Union Cave (B2F)",
+          "Slowpoke Well (B1F)",
+          "Whirl Islands (1F)",
+          "Whirl Islands (B1F)",
+          "Whirl Islands (B2F)",
+          "Whirl Islands (B3F)",
+          "Mt. Mortar Upper Cave",
+          "Ice Path (1F)",
+          "Ice Path (B1F)",
+          "Ice Path (B2F)",
+          "Ice Path (B3F)",
+          "Dark Cave Blackthorn City Entrance",
+          "Mt. Silver (2F)",
+          "Mt. Silver (1F)",
+          "Mt. Silver Top",
+          "Victory Road 1 (1F)",
+          "Tohjo Falls",
+          "Victory Road 1 (2F)",
+          "Victory Road 1 (3F)"
         ]
       },
       "crystal": {
         "locations": [
-          "union cave b2f",
-          "slowpoke well b1f",
-          "whirl islands 1f",
-          "whirl islands b1f",
-          "whirl islands b2f",
-          "whirl islands b3f",
-          "johto route 42 area",
-          "mt mortar 1f",
-          "mt mortar lower cave",
-          "mt mortar upper cave",
-          "mt mortar b1f",
-          "ice path 1f",
-          "ice path b1f",
-          "ice path b2f",
-          "ice path b3f",
-          "dark cave blackthorn city entrance",
-          "mt silver 2f",
-          "mt silver outside",
-          "mt silver 1f",
-          "mt silver top",
-          "kanto route 28 area",
-          "rock tunnel b1f",
-          "kanto victory road 1 1f",
-          "tohjo falls area",
-          "kanto victory road 1 2f",
-          "kanto victory road 1 3f"
+          "Union Cave (B2F)",
+          "Slowpoke Well (B1F)",
+          "Whirl Islands (1F)",
+          "Whirl Islands (B1F)",
+          "Whirl Islands (B2F)",
+          "Whirl Islands (B3F)",
+          "Route 42",
+          "Mt. Mortar (1F)",
+          "Mt. Mortar Lower Cave",
+          "Mt. Mortar Upper Cave",
+          "Mt. Mortar (B1F)",
+          "Ice Path (1F)",
+          "Ice Path (B1F)",
+          "Ice Path (B2F)",
+          "Ice Path (B3F)",
+          "Dark Cave Blackthorn City Entrance",
+          "Mt. Silver (2F)",
+          "Mt. Silver Outside",
+          "Mt. Silver (1F)",
+          "Mt. Silver Top",
+          "Route 28",
+          "Rock Tunnel (B1F)",
+          "Victory Road 1 (1F)",
+          "Tohjo Falls",
+          "Victory Road 1 (2F)",
+          "Victory Road 1 (3F)"
         ]
       }
     },
     "43": {
       "gold": {
         "locations": [
-          "ilex forest area",
-          "kanto route 5 area",
-          "kanto route 6 area",
-          "kanto route 24 area",
-          "kanto route 25 area"
+          "Ilex Forest",
+          "Route 5",
+          "Route 6",
+          "Route 24",
+          "Route 25"
         ]
       },
       "silver": {
         "locations": [
-          "ilex forest area",
-          "kanto route 5 area",
-          "kanto route 6 area",
-          "kanto route 24 area",
-          "kanto route 25 area"
+          "Ilex Forest",
+          "Route 5",
+          "Route 6",
+          "Route 24",
+          "Route 25"
         ]
       },
       "crystal": {
         "locations": [
-          "ilex forest area",
-          "kanto route 24 area",
-          "kanto route 25 area"
+          "Ilex Forest",
+          "Route 24",
+          "Route 25"
         ]
       }
     },
     "44": {
       "gold": {
         "locations": [
-          "kanto route 5 area"
+          "Route 5"
         ]
       },
       "silver": {
         "locations": [
-          "kanto route 5 area"
+          "Route 5"
         ]
       },
       "crystal": {
         "locations": [
-          "kanto route 24 area"
+          "Route 24"
         ]
       }
     },
@@ -2598,27 +2623,27 @@
     "46": {
       "gold": {
         "locations": [
-          "ilex forest area",
-          "mt moon 1f"
+          "Ilex Forest",
+          "Mt. Moon (1F)"
         ]
       },
       "silver": {
         "locations": [
-          "ilex forest area",
-          "mt moon 1f"
+          "Ilex Forest",
+          "Mt. Moon (1F)"
         ]
       },
       "crystal": {
         "locations": [
-          "ilex forest area",
-          "mt moon 1f"
+          "Ilex Forest",
+          "Mt. Moon (1F)"
         ]
       }
     },
     "47": {
       "crystal": {
         "locations": [
-          "mt silver 2f"
+          "Mt. Silver (2F)"
         ]
       },
       "gold": {
@@ -2635,211 +2660,211 @@
     "48": {
       "crystal": {
         "locations": [
-          "ilex forest area",
-          "national park area",
-          "johto route 43 area",
-          "lake of rage area",
-          "kanto route 9 area",
-          "kanto route 10 area",
-          "kanto route 13 area",
-          "kanto route 14 area",
-          "kanto route 15 area",
-          "kanto route 24 area",
-          "kanto route 25 area"
+          "Ilex Forest",
+          "National Park",
+          "Route 43",
+          "Lake Of Rage",
+          "Route 9",
+          "Route 10",
+          "Route 13",
+          "Route 14",
+          "Route 15",
+          "Route 24",
+          "Route 25"
         ]
       },
       "gold": {
         "locations": [
-          "johto route 43 area",
-          "kanto route 24 area",
-          "kanto route 25 area"
+          "Route 43",
+          "Route 24",
+          "Route 25"
         ]
       },
       "silver": {
         "locations": [
-          "johto route 43 area",
-          "kanto route 24 area",
-          "kanto route 25 area"
+          "Route 43",
+          "Route 24",
+          "Route 25"
         ]
       }
     },
     "49": {
       "crystal": {
         "locations": [
-          "johto route 43 area",
-          "kanto route 9 area",
-          "kanto route 10 area",
-          "kanto route 13 area",
-          "kanto route 14 area",
-          "kanto route 15 area"
+          "Route 43",
+          "Route 9",
+          "Route 10",
+          "Route 13",
+          "Route 14",
+          "Route 15"
         ]
       },
       "gold": {
         "locations": [
-          "kanto route 24 area",
-          "kanto route 25 area"
+          "Route 24",
+          "Route 25"
         ]
       },
       "silver": {
         "locations": [
-          "kanto route 24 area",
-          "kanto route 25 area"
+          "Route 24",
+          "Route 25"
         ]
       }
     },
     "50": {
       "gold": {
         "locations": [
-          "digletts cave area"
+          "Digletts Cave"
         ]
       },
       "silver": {
         "locations": [
-          "digletts cave area"
+          "Digletts Cave"
         ]
       },
       "crystal": {
         "locations": [
-          "digletts cave area"
+          "Digletts Cave"
         ]
       }
     },
     "51": {
       "gold": {
         "locations": [
-          "digletts cave area"
+          "Digletts Cave"
         ]
       },
       "silver": {
         "locations": [
-          "digletts cave area"
+          "Digletts Cave"
         ]
       },
       "crystal": {
         "locations": [
-          "digletts cave area"
+          "Digletts Cave"
         ]
       }
     },
     "52": {
       "crystal": {
         "locations": [
-          "johto route 35 area",
-          "johto route 38 area",
-          "johto route 39 area",
-          "kanto route 5 area",
-          "kanto route 6 area",
-          "kanto route 7 area",
-          "kanto route 8 area",
-          "kanto route 11 area"
+          "Route 35",
+          "Route 38",
+          "Route 39",
+          "Route 5",
+          "Route 6",
+          "Route 7",
+          "Route 8",
+          "Route 11"
         ]
       },
       "silver": {
         "locations": [
-          "johto route 38 area",
-          "johto route 39 area",
-          "kanto route 5 area",
-          "kanto route 6 area",
-          "kanto route 7 area",
-          "kanto route 8 area"
+          "Route 38",
+          "Route 39",
+          "Route 5",
+          "Route 6",
+          "Route 7",
+          "Route 8"
         ]
       }
     },
     "53": {
       "silver": {
         "locations": [
-          "kanto route 7 area"
+          "Route 7"
         ]
       },
       "crystal": {
         "locations": [
-          "kanto route 7 area"
+          "Route 7"
         ]
       }
     },
     "54": {
       "gold": {
         "locations": [
-          "ilex forest area",
-          "johto route 35 area",
-          "kanto route 6 area"
+          "Ilex Forest",
+          "Route 35",
+          "Route 6"
         ]
       },
       "silver": {
         "locations": [
-          "ilex forest area",
-          "johto route 35 area",
-          "kanto route 6 area"
+          "Ilex Forest",
+          "Route 35",
+          "Route 6"
         ]
       },
       "crystal": {
         "locations": [
-          "ilex forest area",
-          "johto route 35 area",
-          "national park area",
-          "kanto route 6 area"
+          "Ilex Forest",
+          "Route 35",
+          "National Park",
+          "Route 6"
         ]
       }
     },
     "55": {
       "gold": {
         "locations": [
-          "ilex forest area",
-          "johto route 35 area",
-          "mt silver 2f",
-          "mt silver top",
-          "kanto route 6 area"
+          "Ilex Forest",
+          "Route 35",
+          "Mt. Silver (2F)",
+          "Mt. Silver Top",
+          "Route 6"
         ]
       },
       "silver": {
         "locations": [
-          "ilex forest area",
-          "johto route 35 area",
-          "mt silver 2f",
-          "mt silver top",
-          "kanto route 6 area"
+          "Ilex Forest",
+          "Route 35",
+          "Mt. Silver (2F)",
+          "Mt. Silver Top",
+          "Route 6"
         ]
       },
       "crystal": {
         "locations": [
-          "ilex forest area",
-          "johto route 35 area",
-          "mt silver 2f",
-          "mt silver top",
-          "kanto route 6 area"
+          "Ilex Forest",
+          "Route 35",
+          "Mt. Silver (2F)",
+          "Mt. Silver Top",
+          "Route 6"
         ]
       }
     },
     "56": {
       "gold": {
         "locations": [
-          "johto route 42 area",
-          "kanto route 9 area"
+          "Route 42",
+          "Route 9"
         ]
       }
     },
     "57": {
       "gold": {
         "locations": [
-          "kanto route 9 area"
+          "Route 9"
         ]
       }
     },
     "58": {
       "crystal": {
         "locations": [
-          "johto route 35 area",
-          "johto route 36 area",
-          "johto route 37 area",
-          "kanto route 8 area"
+          "Route 35",
+          "Route 36",
+          "Route 37",
+          "Route 8"
         ]
       },
       "gold": {
         "locations": [
-          "johto route 36 area",
-          "johto route 37 area",
-          "kanto route 7 area",
-          "kanto route 8 area"
+          "Route 36",
+          "Route 37",
+          "Route 7",
+          "Route 8"
         ]
       }
     },
@@ -2858,100 +2883,100 @@
     "60": {
       "gold": {
         "locations": [
-          "johto route 30 area",
-          "johto route 31 area",
-          "violet city area",
-          "ruins of alph outside",
-          "ilex forest area",
-          "johto route 35 area",
-          "ecruteak city area",
-          "johto route 43 area",
-          "johto route 44 area",
-          "blackthorn city area",
-          "mt silver outside",
-          "viridian city area",
-          "kanto route 28 area",
-          "kanto route 6 area",
-          "kanto route 22 area"
+          "Route 30",
+          "Route 31",
+          "Violet City",
+          "Ruins Of Alph Outside",
+          "Ilex Forest",
+          "Route 35",
+          "Ecruteak City",
+          "Route 43",
+          "Route 44",
+          "Blackthorn City",
+          "Mt. Silver Outside",
+          "Viridian City",
+          "Route 28",
+          "Route 6",
+          "Route 22"
         ]
       },
       "silver": {
         "locations": [
-          "johto route 30 area",
-          "johto route 31 area",
-          "violet city area",
-          "ruins of alph outside",
-          "ilex forest area",
-          "johto route 35 area",
-          "ecruteak city area",
-          "johto route 43 area",
-          "johto route 44 area",
-          "blackthorn city area",
-          "mt silver outside",
-          "viridian city area",
-          "kanto route 28 area",
-          "kanto route 6 area",
-          "kanto route 22 area"
+          "Route 30",
+          "Route 31",
+          "Violet City",
+          "Ruins Of Alph Outside",
+          "Ilex Forest",
+          "Route 35",
+          "Ecruteak City",
+          "Route 43",
+          "Route 44",
+          "Blackthorn City",
+          "Mt. Silver Outside",
+          "Viridian City",
+          "Route 28",
+          "Route 6",
+          "Route 22"
         ]
       },
       "crystal": {
         "locations": [
-          "johto route 30 area",
-          "johto route 31 area",
-          "violet city area",
-          "ruins of alph outside",
-          "ilex forest area",
-          "johto route 35 area",
-          "ecruteak city area",
-          "johto route 43 area",
-          "johto route 44 area",
-          "blackthorn city area",
-          "mt silver outside",
-          "viridian city area",
-          "kanto route 28 area",
-          "kanto route 6 area",
-          "kanto route 22 area"
+          "Route 30",
+          "Route 31",
+          "Violet City",
+          "Ruins Of Alph Outside",
+          "Ilex Forest",
+          "Route 35",
+          "Ecruteak City",
+          "Route 43",
+          "Route 44",
+          "Blackthorn City",
+          "Mt. Silver Outside",
+          "Viridian City",
+          "Route 28",
+          "Route 6",
+          "Route 22"
         ]
       }
     },
     "61": {
       "gold": {
         "locations": [
-          "johto route 30 area",
-          "johto route 31 area",
-          "violet city area",
-          "ecruteak city area",
-          "johto route 44 area",
-          "mt silver outside",
-          "viridian city area",
-          "kanto route 28 area",
-          "kanto route 22 area"
+          "Route 30",
+          "Route 31",
+          "Violet City",
+          "Ecruteak City",
+          "Route 44",
+          "Mt. Silver Outside",
+          "Viridian City",
+          "Route 28",
+          "Route 22"
         ]
       },
       "silver": {
         "locations": [
-          "johto route 30 area",
-          "johto route 31 area",
-          "violet city area",
-          "ecruteak city area",
-          "johto route 44 area",
-          "mt silver outside",
-          "viridian city area",
-          "kanto route 28 area",
-          "kanto route 22 area"
+          "Route 30",
+          "Route 31",
+          "Violet City",
+          "Ecruteak City",
+          "Route 44",
+          "Mt. Silver Outside",
+          "Viridian City",
+          "Route 28",
+          "Route 22"
         ]
       },
       "crystal": {
         "locations": [
-          "johto route 30 area",
-          "johto route 31 area",
-          "violet city area",
-          "ecruteak city area",
-          "johto route 44 area",
-          "mt silver outside",
-          "viridian city area",
-          "kanto route 28 area",
-          "kanto route 22 area"
+          "Route 30",
+          "Route 31",
+          "Violet City",
+          "Ecruteak City",
+          "Route 44",
+          "Mt. Silver Outside",
+          "Viridian City",
+          "Route 28",
+          "Route 22"
         ]
       }
     },
@@ -2975,54 +3000,54 @@
     "63": {
       "gold": {
         "locations": [
-          "johto route 34 area",
-          "johto route 35 area",
-          "kanto route 5 area",
-          "kanto route 6 area",
-          "kanto route 8 area",
-          "kanto route 24 area",
-          "kanto route 25 area",
-          "goldenrod city game corner"
+          "Route 34",
+          "Route 35",
+          "Route 5",
+          "Route 6",
+          "Route 8",
+          "Route 24",
+          "Route 25",
+          "Goldenrod City Game Corner"
         ]
       },
       "silver": {
         "locations": [
-          "johto route 34 area",
-          "johto route 35 area",
-          "kanto route 5 area",
-          "kanto route 6 area",
-          "kanto route 8 area",
-          "kanto route 24 area",
-          "kanto route 25 area",
-          "goldenrod city game corner"
+          "Route 34",
+          "Route 35",
+          "Route 5",
+          "Route 6",
+          "Route 8",
+          "Route 24",
+          "Route 25",
+          "Goldenrod City Game Corner"
         ]
       },
       "crystal": {
         "locations": [
-          "johto route 34 area",
-          "johto route 35 area",
-          "kanto route 5 area",
-          "kanto route 7 area",
-          "kanto route 8 area",
-          "kanto route 24 area",
-          "goldenrod city game corner"
+          "Route 34",
+          "Route 35",
+          "Route 5",
+          "Route 7",
+          "Route 8",
+          "Route 24",
+          "Goldenrod City Game Corner"
         ]
       }
     },
     "64": {
       "gold": {
         "locations": [
-          "kanto route 8 area"
+          "Route 8"
         ]
       },
       "silver": {
         "locations": [
-          "kanto route 8 area"
+          "Route 8"
         ]
       },
       "crystal": {
         "locations": [
-          "kanto route 8 area"
+          "Route 8"
         ]
       }
     },
@@ -3046,53 +3071,53 @@
     "66": {
       "gold": {
         "locations": [
-          "mt mortar 1f",
-          "mt mortar lower cave",
-          "mt mortar upper cave",
-          "mt mortar b1f",
-          "rock tunnel 1f",
-          "goldenrod city department store 5f"
+          "Mt. Mortar (1F)",
+          "Mt. Mortar Lower Cave",
+          "Mt. Mortar Upper Cave",
+          "Mt. Mortar (B1F)",
+          "Rock Tunnel (1F)",
+          "Goldenrod City Department Store (5F)"
         ]
       },
       "silver": {
         "locations": [
-          "mt mortar 1f",
-          "mt mortar lower cave",
-          "mt mortar upper cave",
-          "mt mortar b1f",
-          "rock tunnel 1f",
-          "goldenrod city department store 5f"
+          "Mt. Mortar (1F)",
+          "Mt. Mortar Lower Cave",
+          "Mt. Mortar Upper Cave",
+          "Mt. Mortar (B1F)",
+          "Rock Tunnel (1F)",
+          "Goldenrod City Department Store (5F)"
         ]
       },
       "crystal": {
         "locations": [
-          "mt mortar 1f",
-          "mt mortar lower cave",
-          "mt mortar upper cave",
-          "mt mortar b1f",
-          "rock tunnel 1f",
-          "goldenrod city department store 5f"
+          "Mt. Mortar (1F)",
+          "Mt. Mortar Lower Cave",
+          "Mt. Mortar Upper Cave",
+          "Mt. Mortar (B1F)",
+          "Rock Tunnel (1F)",
+          "Goldenrod City Department Store (5F)"
         ]
       }
     },
     "67": {
       "gold": {
         "locations": [
-          "mt mortar upper cave",
-          "rock tunnel 1f"
+          "Mt. Mortar Upper Cave",
+          "Rock Tunnel (1F)"
         ]
       },
       "silver": {
         "locations": [
-          "mt mortar upper cave",
-          "rock tunnel 1f"
+          "Mt. Mortar Upper Cave",
+          "Rock Tunnel (1F)"
         ]
       },
       "crystal": {
         "locations": [
-          "mt mortar upper cave",
-          "mt silver 2f",
-          "rock tunnel 1f"
+          "Mt. Mortar Upper Cave",
+          "Mt. Silver (2F)",
+          "Rock Tunnel (1F)"
         ]
       }
     },
@@ -3116,55 +3141,55 @@
     "69": {
       "gold": {
         "locations": [
-          "johto route 31 area",
-          "johto route 32 area",
-          "johto route 44 area",
-          "kanto route 5 area",
-          "kanto route 6 area",
-          "kanto route 24 area",
-          "kanto route 25 area"
+          "Route 31",
+          "Route 32",
+          "Route 44",
+          "Route 5",
+          "Route 6",
+          "Route 24",
+          "Route 25"
         ]
       },
       "silver": {
         "locations": [
-          "johto route 31 area",
-          "johto route 32 area",
-          "johto route 44 area",
-          "kanto route 5 area",
-          "kanto route 6 area",
-          "kanto route 24 area",
-          "kanto route 25 area"
+          "Route 31",
+          "Route 32",
+          "Route 44",
+          "Route 5",
+          "Route 6",
+          "Route 24",
+          "Route 25"
         ]
       },
       "crystal": {
         "locations": [
-          "johto route 31 area",
-          "johto route 32 area",
-          "johto route 36 area",
-          "johto route 44 area",
-          "kanto route 24 area",
-          "kanto route 25 area"
+          "Route 31",
+          "Route 32",
+          "Route 36",
+          "Route 44",
+          "Route 24",
+          "Route 25"
         ]
       }
     },
     "70": {
       "gold": {
         "locations": [
-          "johto route 44 area",
-          "kanto route 24 area",
-          "kanto route 25 area"
+          "Route 44",
+          "Route 24",
+          "Route 25"
         ]
       },
       "silver": {
         "locations": [
-          "johto route 44 area",
-          "kanto route 24 area",
-          "kanto route 25 area"
+          "Route 44",
+          "Route 24",
+          "Route 25"
         ]
       },
       "crystal": {
         "locations": [
-          "johto route 44 area"
+          "Route 44"
         ]
       }
     },
@@ -3188,256 +3213,256 @@
     "72": {
       "gold": {
         "locations": [
-          "new bark town area",
-          "cherrygrove city area",
-          "johto route 32 area",
-          "union cave b2f",
-          "johto route 34 area",
-          "olivine city area",
-          "johto sea route 40 area",
-          "johto sea route 41 area",
-          "whirl islands 1f",
-          "cianwood city area",
-          "kanto route 12 area",
-          "kanto sea route 19 area",
-          "kanto sea route 20 area",
-          "cinnabar island area",
-          "vermilion city area",
-          "pallet town area",
-          "kanto route 26 area",
-          "kanto route 27 area",
-          "kanto route 13 area",
-          "kanto sea route 21 area",
-          "vermilion city ss anne dock"
+          "New Bark Town",
+          "Cherrygrove City",
+          "Route 32",
+          "Union Cave (B2F)",
+          "Route 34",
+          "Olivine City",
+          "Sea Route 40",
+          "Sea Route 41",
+          "Whirl Islands (1F)",
+          "Cianwood City",
+          "Route 12",
+          "Sea Route 19",
+          "Sea Route 20",
+          "Cinnabar Island",
+          "Vermilion City",
+          "Pallet Town",
+          "Route 26",
+          "Route 27",
+          "Route 13",
+          "Sea Route 21",
+          "Vermilion City Ss Anne Dock"
         ]
       },
       "silver": {
         "locations": [
-          "new bark town area",
-          "cherrygrove city area",
-          "johto route 32 area",
-          "union cave b2f",
-          "johto route 34 area",
-          "olivine city area",
-          "johto sea route 40 area",
-          "johto sea route 41 area",
-          "whirl islands 1f",
-          "cianwood city area",
-          "kanto route 12 area",
-          "kanto sea route 19 area",
-          "kanto sea route 20 area",
-          "cinnabar island area",
-          "vermilion city area",
-          "pallet town area",
-          "kanto route 26 area",
-          "kanto route 27 area",
-          "kanto route 13 area",
-          "kanto sea route 21 area",
-          "vermilion city ss anne dock"
+          "New Bark Town",
+          "Cherrygrove City",
+          "Route 32",
+          "Union Cave (B2F)",
+          "Route 34",
+          "Olivine City",
+          "Sea Route 40",
+          "Sea Route 41",
+          "Whirl Islands (1F)",
+          "Cianwood City",
+          "Route 12",
+          "Sea Route 19",
+          "Sea Route 20",
+          "Cinnabar Island",
+          "Vermilion City",
+          "Pallet Town",
+          "Route 26",
+          "Route 27",
+          "Route 13",
+          "Sea Route 21",
+          "Vermilion City Ss Anne Dock"
         ]
       },
       "crystal": {
         "locations": [
-          "new bark town area",
-          "cherrygrove city area",
-          "johto route 32 area",
-          "union cave b2f",
-          "johto route 34 area",
-          "olivine city area",
-          "johto sea route 40 area",
-          "johto sea route 41 area",
-          "whirl islands 1f",
-          "cianwood city area",
-          "kanto route 12 area",
-          "kanto sea route 19 area",
-          "kanto sea route 20 area",
-          "cinnabar island area",
-          "vermilion city area",
-          "pallet town area",
-          "kanto route 26 area",
-          "kanto route 27 area",
-          "kanto route 13 area",
-          "kanto sea route 21 area",
-          "vermilion city ss anne dock"
+          "New Bark Town",
+          "Cherrygrove City",
+          "Route 32",
+          "Union Cave (B2F)",
+          "Route 34",
+          "Olivine City",
+          "Sea Route 40",
+          "Sea Route 41",
+          "Whirl Islands (1F)",
+          "Cianwood City",
+          "Route 12",
+          "Sea Route 19",
+          "Sea Route 20",
+          "Cinnabar Island",
+          "Vermilion City",
+          "Pallet Town",
+          "Route 26",
+          "Route 27",
+          "Route 13",
+          "Sea Route 21",
+          "Vermilion City Ss Anne Dock"
         ]
       }
     },
     "73": {
       "gold": {
         "locations": [
-          "new bark town area",
-          "cherrygrove city area",
-          "johto route 32 area",
-          "union cave b2f",
-          "johto route 34 area",
-          "olivine city area",
-          "johto sea route 40 area",
-          "johto sea route 41 area",
-          "whirl islands 1f",
-          "whirl islands b2f",
-          "whirl islands b3f",
-          "cianwood city area",
-          "kanto route 12 area",
-          "kanto sea route 19 area",
-          "kanto sea route 20 area",
-          "cinnabar island area",
-          "vermilion city area",
-          "pallet town area",
-          "kanto route 26 area",
-          "kanto route 27 area",
-          "kanto route 13 area",
-          "kanto sea route 21 area",
-          "vermilion city ss anne dock"
+          "New Bark Town",
+          "Cherrygrove City",
+          "Route 32",
+          "Union Cave (B2F)",
+          "Route 34",
+          "Olivine City",
+          "Sea Route 40",
+          "Sea Route 41",
+          "Whirl Islands (1F)",
+          "Whirl Islands (B2F)",
+          "Whirl Islands (B3F)",
+          "Cianwood City",
+          "Route 12",
+          "Sea Route 19",
+          "Sea Route 20",
+          "Cinnabar Island",
+          "Vermilion City",
+          "Pallet Town",
+          "Route 26",
+          "Route 27",
+          "Route 13",
+          "Sea Route 21",
+          "Vermilion City Ss Anne Dock"
         ]
       },
       "silver": {
         "locations": [
-          "new bark town area",
-          "cherrygrove city area",
-          "johto route 32 area",
-          "union cave b2f",
-          "johto route 34 area",
-          "olivine city area",
-          "johto sea route 40 area",
-          "johto sea route 41 area",
-          "whirl islands 1f",
-          "whirl islands b2f",
-          "whirl islands b3f",
-          "cianwood city area",
-          "kanto route 12 area",
-          "kanto sea route 19 area",
-          "kanto sea route 20 area",
-          "cinnabar island area",
-          "vermilion city area",
-          "pallet town area",
-          "kanto route 26 area",
-          "kanto route 27 area",
-          "kanto route 13 area",
-          "kanto sea route 21 area",
-          "vermilion city ss anne dock"
+          "New Bark Town",
+          "Cherrygrove City",
+          "Route 32",
+          "Union Cave (B2F)",
+          "Route 34",
+          "Olivine City",
+          "Sea Route 40",
+          "Sea Route 41",
+          "Whirl Islands (1F)",
+          "Whirl Islands (B2F)",
+          "Whirl Islands (B3F)",
+          "Cianwood City",
+          "Route 12",
+          "Sea Route 19",
+          "Sea Route 20",
+          "Cinnabar Island",
+          "Vermilion City",
+          "Pallet Town",
+          "Route 26",
+          "Route 27",
+          "Route 13",
+          "Sea Route 21",
+          "Vermilion City Ss Anne Dock"
         ]
       },
       "crystal": {
         "locations": [
-          "new bark town area",
-          "cherrygrove city area",
-          "johto route 32 area",
-          "union cave b2f",
-          "johto route 34 area",
-          "olivine city area",
-          "johto sea route 40 area",
-          "johto sea route 41 area",
-          "whirl islands 1f",
-          "whirl islands b2f",
-          "whirl islands b3f",
-          "cianwood city area",
-          "kanto route 12 area",
-          "kanto sea route 19 area",
-          "kanto sea route 20 area",
-          "cinnabar island area",
-          "vermilion city area",
-          "pallet town area",
-          "kanto route 26 area",
-          "kanto route 27 area",
-          "kanto route 13 area",
-          "kanto sea route 21 area",
-          "vermilion city ss anne dock"
+          "New Bark Town",
+          "Cherrygrove City",
+          "Route 32",
+          "Union Cave (B2F)",
+          "Route 34",
+          "Olivine City",
+          "Sea Route 40",
+          "Sea Route 41",
+          "Whirl Islands (1F)",
+          "Whirl Islands (B2F)",
+          "Whirl Islands (B3F)",
+          "Cianwood City",
+          "Route 12",
+          "Sea Route 19",
+          "Sea Route 20",
+          "Cinnabar Island",
+          "Vermilion City",
+          "Pallet Town",
+          "Route 26",
+          "Route 27",
+          "Route 13",
+          "Sea Route 21",
+          "Vermilion City Ss Anne Dock"
         ]
       }
     },
     "74": {
       "gold": {
         "locations": [
-          "union cave 1f",
-          "union cave b1f",
-          "union cave b2f",
-          "mt mortar 1f",
-          "mt mortar lower cave",
-          "mt mortar upper cave",
-          "mt mortar b1f",
-          "johto route 45 area",
-          "johto route 46 area",
-          "dark cave violet city entrance",
-          "dark cave blackthorn city entrance",
-          "mt moon 1f",
-          "rock tunnel 1f",
-          "rock tunnel b1f",
-          "team rocket hq area"
+          "Union Cave (1F)",
+          "Union Cave (B1F)",
+          "Union Cave (B2F)",
+          "Mt. Mortar (1F)",
+          "Mt. Mortar Lower Cave",
+          "Mt. Mortar Upper Cave",
+          "Mt. Mortar (B1F)",
+          "Route 45",
+          "Route 46",
+          "Dark Cave Violet City Entrance",
+          "Dark Cave Blackthorn City Entrance",
+          "Mt. Moon (1F)",
+          "Rock Tunnel (1F)",
+          "Rock Tunnel (B1F)",
+          "Team Rocket Hq"
         ]
       },
       "silver": {
         "locations": [
-          "union cave 1f",
-          "union cave b1f",
-          "union cave b2f",
-          "mt mortar 1f",
-          "mt mortar lower cave",
-          "mt mortar upper cave",
-          "mt mortar b1f",
-          "johto route 45 area",
-          "johto route 46 area",
-          "dark cave violet city entrance",
-          "dark cave blackthorn city entrance",
-          "mt moon 1f",
-          "rock tunnel 1f",
-          "rock tunnel b1f",
-          "team rocket hq area"
+          "Union Cave (1F)",
+          "Union Cave (B1F)",
+          "Union Cave (B2F)",
+          "Mt. Mortar (1F)",
+          "Mt. Mortar Lower Cave",
+          "Mt. Mortar Upper Cave",
+          "Mt. Mortar (B1F)",
+          "Route 45",
+          "Route 46",
+          "Dark Cave Violet City Entrance",
+          "Dark Cave Blackthorn City Entrance",
+          "Mt. Moon (1F)",
+          "Rock Tunnel (1F)",
+          "Rock Tunnel (B1F)",
+          "Team Rocket Hq"
         ]
       },
       "crystal": {
         "locations": [
-          "union cave 1f",
-          "union cave b1f",
-          "union cave b2f",
-          "johto route 33 area",
-          "mt mortar 1f",
-          "mt mortar lower cave",
-          "mt mortar upper cave",
-          "mt mortar b1f",
-          "johto route 45 area",
-          "johto route 46 area",
-          "dark cave violet city entrance",
-          "dark cave blackthorn city entrance",
-          "mt moon 1f",
-          "rock tunnel 1f",
-          "rock tunnel b1f",
-          "team rocket hq area"
+          "Union Cave (1F)",
+          "Union Cave (B1F)",
+          "Union Cave (B2F)",
+          "Route 33",
+          "Mt. Mortar (1F)",
+          "Mt. Mortar Lower Cave",
+          "Mt. Mortar Upper Cave",
+          "Mt. Mortar (B1F)",
+          "Route 45",
+          "Route 46",
+          "Dark Cave Violet City Entrance",
+          "Dark Cave Blackthorn City Entrance",
+          "Mt. Moon (1F)",
+          "Rock Tunnel (1F)",
+          "Rock Tunnel (B1F)",
+          "Team Rocket Hq"
         ]
       }
     },
     "75": {
       "gold": {
         "locations": [
-          "mt mortar upper cave",
-          "johto route 45 area",
-          "dark cave blackthorn city entrance",
-          "mt silver 1f",
-          "kanto victory road 1 1f",
-          "kanto victory road 1 2f",
-          "kanto victory road 1 3f"
+          "Mt. Mortar Upper Cave",
+          "Route 45",
+          "Dark Cave Blackthorn City Entrance",
+          "Mt. Silver (1F)",
+          "Victory Road 1 (1F)",
+          "Victory Road 1 (2F)",
+          "Victory Road 1 (3F)"
         ]
       },
       "silver": {
         "locations": [
-          "mt mortar upper cave",
-          "johto route 45 area",
-          "dark cave blackthorn city entrance",
-          "mt silver 1f",
-          "kanto victory road 1 1f",
-          "kanto victory road 1 2f",
-          "kanto victory road 1 3f"
+          "Mt. Mortar Upper Cave",
+          "Route 45",
+          "Dark Cave Blackthorn City Entrance",
+          "Mt. Silver (1F)",
+          "Victory Road 1 (1F)",
+          "Victory Road 1 (2F)",
+          "Victory Road 1 (3F)"
         ]
       },
       "crystal": {
         "locations": [
-          "mt mortar upper cave",
-          "johto route 45 area",
-          "dark cave blackthorn city entrance",
-          "mt silver 1f",
-          "mt silver top",
-          "kanto victory road 1 1f",
-          "kanto victory road 1 2f",
-          "kanto victory road 1 3f"
+          "Mt. Mortar Upper Cave",
+          "Route 45",
+          "Dark Cave Blackthorn City Entrance",
+          "Mt. Silver (1F)",
+          "Mt. Silver Top",
+          "Victory Road 1 (1F)",
+          "Victory Road 1 (2F)",
+          "Victory Road 1 (3F)"
         ]
       }
     },
@@ -3461,124 +3486,124 @@
     "77": {
       "gold": {
         "locations": [
-          "mt silver outside",
-          "kanto route 26 area",
-          "kanto route 27 area",
-          "kanto route 28 area",
-          "kanto route 22 area"
+          "Mt. Silver Outside",
+          "Route 26",
+          "Route 27",
+          "Route 28",
+          "Route 22"
         ]
       },
       "silver": {
         "locations": [
-          "mt silver outside",
-          "kanto route 26 area",
-          "kanto route 27 area",
-          "kanto route 28 area",
-          "kanto route 22 area"
+          "Mt. Silver Outside",
+          "Route 26",
+          "Route 27",
+          "Route 28",
+          "Route 22"
         ]
       },
       "crystal": {
         "locations": [
-          "mt silver outside",
-          "kanto route 26 area",
-          "kanto route 27 area",
-          "kanto route 28 area",
-          "kanto route 22 area"
+          "Mt. Silver Outside",
+          "Route 26",
+          "Route 27",
+          "Route 28",
+          "Route 22"
         ]
       }
     },
     "78": {
       "gold": {
         "locations": [
-          "mt silver outside",
-          "kanto route 28 area",
-          "pewter city area"
+          "Mt. Silver Outside",
+          "Route 28",
+          "Pewter City"
         ]
       },
       "silver": {
         "locations": [
-          "mt silver outside",
-          "kanto route 28 area",
-          "pewter city area"
+          "Mt. Silver Outside",
+          "Route 28",
+          "Pewter City"
         ]
       },
       "crystal": {
         "locations": [
-          "mt silver outside",
-          "kanto route 28 area"
+          "Mt. Silver Outside",
+          "Route 28"
         ]
       }
     },
     "79": {
       "gold": {
         "locations": [
-          "slowpoke well 1f",
-          "slowpoke well b1f",
-          "tohjo falls area"
+          "Slowpoke Well (1F)",
+          "Slowpoke Well (B1F)",
+          "Tohjo Falls"
         ]
       },
       "silver": {
         "locations": [
-          "slowpoke well 1f",
-          "slowpoke well b1f",
-          "tohjo falls area"
+          "Slowpoke Well (1F)",
+          "Slowpoke Well (B1F)",
+          "Tohjo Falls"
         ]
       },
       "crystal": {
         "locations": [
-          "slowpoke well 1f",
-          "slowpoke well b1f",
-          "tohjo falls area"
+          "Slowpoke Well (1F)",
+          "Slowpoke Well (B1F)",
+          "Tohjo Falls"
         ]
       }
     },
     "80": {
       "gold": {
         "locations": [
-          "slowpoke well b1f"
+          "Slowpoke Well (B1F)"
         ]
       },
       "silver": {
         "locations": [
-          "slowpoke well b1f"
+          "Slowpoke Well (B1F)"
         ]
       },
       "crystal": {
         "locations": [
-          "slowpoke well b1f"
+          "Slowpoke Well (B1F)"
         ]
       }
     },
     "81": {
       "gold": {
         "locations": [
-          "johto route 38 area",
-          "johto route 39 area",
-          "kanto route 6 area",
-          "kanto route 11 area"
+          "Route 38",
+          "Route 39",
+          "Route 6",
+          "Route 11"
         ]
       },
       "silver": {
         "locations": [
-          "johto route 38 area",
-          "johto route 39 area",
-          "kanto route 6 area",
-          "kanto route 11 area"
+          "Route 38",
+          "Route 39",
+          "Route 6",
+          "Route 11"
         ]
       },
       "crystal": {
         "locations": [
-          "johto route 38 area",
-          "johto route 39 area",
-          "kanto route 6 area",
-          "kanto route 11 area"
+          "Route 38",
+          "Route 39",
+          "Route 6",
+          "Route 11"
         ]
       }
     },
     "82": {
       "crystal": {
         "locations": [
-          "kanto power plant area"
+          "Power Plant"
         ]
       },
       "gold": {
@@ -3595,98 +3620,98 @@
     "83": {
       "gold": {
         "locations": [
-          "johto route 38 area",
-          "johto route 39 area"
+          "Route 38",
+          "Route 39"
         ]
       },
       "silver": {
         "locations": [
-          "johto route 38 area",
-          "johto route 39 area"
+          "Route 38",
+          "Route 39"
         ]
       },
       "crystal": {
         "locations": [
-          "johto route 43 area"
+          "Route 43"
         ]
       }
     },
     "84": {
       "gold": {
         "locations": [
-          "mt silver outside",
-          "kanto route 26 area",
-          "kanto route 27 area",
-          "kanto route 28 area",
-          "kanto route 22 area"
+          "Mt. Silver Outside",
+          "Route 26",
+          "Route 27",
+          "Route 28",
+          "Route 22"
         ]
       },
       "silver": {
         "locations": [
-          "mt silver outside",
-          "kanto route 26 area",
-          "kanto route 27 area",
-          "kanto route 28 area",
-          "kanto route 22 area"
+          "Mt. Silver Outside",
+          "Route 26",
+          "Route 27",
+          "Route 28",
+          "Route 22"
         ]
       },
       "crystal": {
         "locations": [
-          "mt silver outside",
-          "kanto route 26 area",
-          "kanto route 27 area",
-          "kanto route 28 area",
-          "kanto route 22 area"
+          "Mt. Silver Outside",
+          "Route 26",
+          "Route 27",
+          "Route 28",
+          "Route 22"
         ]
       }
     },
     "85": {
       "crystal": {
         "locations": [
-          "blackthorn city area",
-          "mt silver outside",
-          "kanto route 27 area",
-          "kanto route 28 area"
+          "Blackthorn City",
+          "Mt. Silver Outside",
+          "Route 27",
+          "Route 28"
         ]
       },
       "gold": {
         "locations": [
-          "mt silver outside",
-          "kanto route 26 area",
-          "kanto route 28 area"
+          "Mt. Silver Outside",
+          "Route 26",
+          "Route 28"
         ]
       },
       "silver": {
         "locations": [
-          "mt silver outside",
-          "kanto route 27 area",
-          "kanto route 28 area"
+          "Mt. Silver Outside",
+          "Route 27",
+          "Route 28"
         ]
       }
     },
     "86": {
       "gold": {
         "locations": [
-          "whirl islands 1f",
-          "whirl islands b1f",
-          "whirl islands b2f",
-          "whirl islands b3f"
+          "Whirl Islands (1F)",
+          "Whirl Islands (B1F)",
+          "Whirl Islands (B2F)",
+          "Whirl Islands (B3F)"
         ]
       },
       "silver": {
         "locations": [
-          "whirl islands 1f",
-          "whirl islands b1f",
-          "whirl islands b2f",
-          "whirl islands b3f"
+          "Whirl Islands (1F)",
+          "Whirl Islands (B1F)",
+          "Whirl Islands (B2F)",
+          "Whirl Islands (B3F)"
         ]
       },
       "crystal": {
         "locations": [
-          "whirl islands 1f",
-          "whirl islands b1f",
-          "whirl islands b2f",
-          "whirl islands b3f"
+          "Whirl Islands (1F)",
+          "Whirl Islands (B1F)",
+          "Whirl Islands (B2F)",
+          "Whirl Islands (B3F)"
         ]
       }
     },
@@ -3710,96 +3735,96 @@
     "88": {
       "gold": {
         "locations": [
-          "celadon city area",
-          "kanto route 16 area",
-          "kanto route 17 area",
-          "kanto route 18 area"
+          "Celadon City",
+          "Route 16",
+          "Route 17",
+          "Route 18"
         ]
       },
       "silver": {
         "locations": [
-          "celadon city area",
-          "kanto route 16 area",
-          "kanto route 17 area",
-          "kanto route 18 area"
+          "Celadon City",
+          "Route 16",
+          "Route 17",
+          "Route 18"
         ]
       },
       "crystal": {
         "locations": [
-          "celadon city area",
-          "kanto route 16 area",
-          "kanto route 17 area",
-          "kanto route 18 area"
+          "Celadon City",
+          "Route 16",
+          "Route 17",
+          "Route 18"
         ]
       }
     },
     "89": {
       "gold": {
         "locations": [
-          "celadon city area",
-          "kanto route 16 area",
-          "kanto route 17 area",
-          "kanto route 18 area"
+          "Celadon City",
+          "Route 16",
+          "Route 17",
+          "Route 18"
         ]
       },
       "silver": {
         "locations": [
-          "celadon city area",
-          "kanto route 16 area",
-          "kanto route 17 area",
-          "kanto route 18 area"
+          "Celadon City",
+          "Route 16",
+          "Route 17",
+          "Route 18"
         ]
       },
       "crystal": {
         "locations": [
-          "celadon city area",
-          "kanto route 16 area",
-          "kanto route 17 area",
-          "kanto route 18 area"
+          "Celadon City",
+          "Route 16",
+          "Route 17",
+          "Route 18"
         ]
       }
     },
     "90": {
       "gold": {
         "locations": [
-          "new bark town area",
-          "johto sea route 41 area",
-          "kanto sea route 20 area",
-          "cinnabar island area",
-          "vermilion city area",
-          "pallet town area",
-          "kanto route 26 area",
-          "kanto route 27 area",
-          "kanto sea route 21 area",
-          "vermilion city ss anne dock"
+          "New Bark Town",
+          "Sea Route 41",
+          "Sea Route 20",
+          "Cinnabar Island",
+          "Vermilion City",
+          "Pallet Town",
+          "Route 26",
+          "Route 27",
+          "Sea Route 21",
+          "Vermilion City Ss Anne Dock"
         ]
       },
       "silver": {
         "locations": [
-          "new bark town area",
-          "johto sea route 41 area",
-          "kanto sea route 20 area",
-          "cinnabar island area",
-          "vermilion city area",
-          "pallet town area",
-          "kanto route 26 area",
-          "kanto route 27 area",
-          "kanto sea route 21 area",
-          "vermilion city ss anne dock"
+          "New Bark Town",
+          "Sea Route 41",
+          "Sea Route 20",
+          "Cinnabar Island",
+          "Vermilion City",
+          "Pallet Town",
+          "Route 26",
+          "Route 27",
+          "Sea Route 21",
+          "Vermilion City Ss Anne Dock"
         ]
       },
       "crystal": {
         "locations": [
-          "new bark town area",
-          "johto sea route 41 area",
-          "kanto sea route 20 area",
-          "cinnabar island area",
-          "vermilion city area",
-          "pallet town area",
-          "kanto route 26 area",
-          "kanto route 27 area",
-          "kanto sea route 21 area",
-          "vermilion city ss anne dock"
+          "New Bark Town",
+          "Sea Route 41",
+          "Sea Route 20",
+          "Cinnabar Island",
+          "Vermilion City",
+          "Pallet Town",
+          "Route 26",
+          "Route 27",
+          "Sea Route 21",
+          "Vermilion City Ss Anne Dock"
         ]
       }
     },
@@ -3823,66 +3848,66 @@
     "92": {
       "crystal": {
         "locations": [
-          "johto route 31 area",
-          "sprout tower 2f",
-          "sprout tower 3f",
-          "johto route 32 area",
-          "johto route 36 area",
-          "bell tower 2f",
-          "bell tower 3f",
-          "bell tower 4f",
-          "bell tower 5f",
-          "bell tower 6f",
-          "bell tower 7f",
-          "bell tower 8f",
-          "bell tower 9f"
+          "Route 31",
+          "Sprout Tower (2F)",
+          "Sprout Tower (3F)",
+          "Route 32",
+          "Route 36",
+          "Bell Tower (2F)",
+          "Bell Tower (3F)",
+          "Bell Tower (4F)",
+          "Bell Tower (5F)",
+          "Bell Tower (6F)",
+          "Bell Tower (7F)",
+          "Bell Tower (8F)",
+          "Bell Tower (9F)"
         ]
       },
       "gold": {
         "locations": [
-          "sprout tower 2f",
-          "sprout tower 3f",
-          "bell tower 2f",
-          "bell tower 3f",
-          "bell tower 4f",
-          "bell tower 5f",
-          "bell tower 6f",
-          "bell tower 7f",
-          "bell tower 8f",
-          "bell tower 9f"
+          "Sprout Tower (2F)",
+          "Sprout Tower (3F)",
+          "Bell Tower (2F)",
+          "Bell Tower (3F)",
+          "Bell Tower (4F)",
+          "Bell Tower (5F)",
+          "Bell Tower (6F)",
+          "Bell Tower (7F)",
+          "Bell Tower (8F)",
+          "Bell Tower (9F)"
         ]
       },
       "silver": {
         "locations": [
-          "sprout tower 2f",
-          "sprout tower 3f",
-          "bell tower 2f",
-          "bell tower 3f",
-          "bell tower 4f",
-          "bell tower 5f",
-          "bell tower 6f",
-          "bell tower 7f",
-          "bell tower 8f",
-          "bell tower 9f"
+          "Sprout Tower (2F)",
+          "Sprout Tower (3F)",
+          "Bell Tower (2F)",
+          "Bell Tower (3F)",
+          "Bell Tower (4F)",
+          "Bell Tower (5F)",
+          "Bell Tower (6F)",
+          "Bell Tower (7F)",
+          "Bell Tower (8F)",
+          "Bell Tower (9F)"
         ]
       }
     },
     "93": {
       "crystal": {
         "locations": [
-          "rock tunnel 1f",
-          "rock tunnel b1f",
-          "kanto route 8 area"
+          "Rock Tunnel (1F)",
+          "Rock Tunnel (B1F)",
+          "Route 8"
         ]
       },
       "gold": {
         "locations": [
-          "kanto route 8 area"
+          "Route 8"
         ]
       },
       "silver": {
         "locations": [
-          "kanto route 8 area"
+          "Route 8"
         ]
       }
     },
@@ -3906,269 +3931,269 @@
     "95": {
       "gold": {
         "locations": [
-          "union cave 1f",
-          "union cave b1f",
-          "union cave b2f",
-          "mt silver 1f",
-          "mt silver top",
-          "rock tunnel b1f",
-          "kanto victory road 1 1f",
-          "kanto victory road 1 2f",
-          "kanto victory road 1 3f",
-          "violet city southwest house"
+          "Union Cave (1F)",
+          "Union Cave (B1F)",
+          "Union Cave (B2F)",
+          "Mt. Silver (1F)",
+          "Mt. Silver Top",
+          "Rock Tunnel (B1F)",
+          "Victory Road 1 (1F)",
+          "Victory Road 1 (2F)",
+          "Victory Road 1 (3F)",
+          "Violet City Southwest House"
         ]
       },
       "silver": {
         "locations": [
-          "union cave 1f",
-          "union cave b1f",
-          "union cave b2f",
-          "mt silver 1f",
-          "mt silver top",
-          "rock tunnel b1f",
-          "kanto victory road 1 1f",
-          "kanto victory road 1 2f",
-          "kanto victory road 1 3f",
-          "violet city southwest house"
+          "Union Cave (1F)",
+          "Union Cave (B1F)",
+          "Union Cave (B2F)",
+          "Mt. Silver (1F)",
+          "Mt. Silver Top",
+          "Rock Tunnel (B1F)",
+          "Victory Road 1 (1F)",
+          "Victory Road 1 (2F)",
+          "Victory Road 1 (3F)",
+          "Violet City Southwest House"
         ]
       },
       "crystal": {
         "locations": [
-          "union cave 1f",
-          "union cave b1f",
-          "union cave b2f",
-          "mt silver 1f",
-          "mt silver top",
-          "rock tunnel b1f",
-          "kanto victory road 1 1f",
-          "kanto victory road 1 2f",
-          "kanto victory road 1 3f",
-          "violet city southwest house"
+          "Union Cave (1F)",
+          "Union Cave (B1F)",
+          "Union Cave (B2F)",
+          "Mt. Silver (1F)",
+          "Mt. Silver Top",
+          "Rock Tunnel (B1F)",
+          "Victory Road 1 (1F)",
+          "Victory Road 1 (2F)",
+          "Victory Road 1 (3F)",
+          "Violet City Southwest House"
         ]
       }
     },
     "96": {
       "gold": {
         "locations": [
-          "johto route 34 area",
-          "johto route 35 area",
-          "kanto route 11 area"
+          "Route 34",
+          "Route 35",
+          "Route 11"
         ]
       },
       "silver": {
         "locations": [
-          "johto route 34 area",
-          "johto route 35 area",
-          "kanto route 11 area"
+          "Route 34",
+          "Route 35",
+          "Route 11"
         ]
       },
       "crystal": {
         "locations": [
-          "johto route 34 area",
-          "johto route 35 area",
-          "kanto route 6 area",
-          "kanto route 11 area"
+          "Route 34",
+          "Route 35",
+          "Route 6",
+          "Route 11"
         ]
       }
     },
     "97": {
       "gold": {
         "locations": [
-          "kanto route 11 area"
+          "Route 11"
         ]
       },
       "silver": {
         "locations": [
-          "kanto route 11 area"
+          "Route 11"
         ]
       },
       "crystal": {
         "locations": [
-          "kanto route 11 area"
+          "Route 11"
         ]
       }
     },
     "98": {
       "gold": {
         "locations": [
-          "cherrygrove city area",
-          "union cave b2f",
-          "johto route 34 area",
-          "olivine city area",
-          "johto sea route 40 area",
-          "whirl islands 1f",
-          "whirl islands b1f",
-          "whirl islands b2f",
-          "whirl islands b3f",
-          "cianwood city area",
-          "dark cave violet city entrance",
-          "kanto sea route 19 area"
+          "Cherrygrove City",
+          "Union Cave (B2F)",
+          "Route 34",
+          "Olivine City",
+          "Sea Route 40",
+          "Whirl Islands (1F)",
+          "Whirl Islands (B1F)",
+          "Whirl Islands (B2F)",
+          "Whirl Islands (B3F)",
+          "Cianwood City",
+          "Dark Cave Violet City Entrance",
+          "Sea Route 19"
         ]
       },
       "silver": {
         "locations": [
-          "cherrygrove city area",
-          "union cave b2f",
-          "johto route 34 area",
-          "olivine city area",
-          "johto sea route 40 area",
-          "whirl islands 1f",
-          "whirl islands b1f",
-          "whirl islands b2f",
-          "whirl islands b3f",
-          "cianwood city area",
-          "dark cave violet city entrance",
-          "kanto sea route 19 area"
+          "Cherrygrove City",
+          "Union Cave (B2F)",
+          "Route 34",
+          "Olivine City",
+          "Sea Route 40",
+          "Whirl Islands (1F)",
+          "Whirl Islands (B1F)",
+          "Whirl Islands (B2F)",
+          "Whirl Islands (B3F)",
+          "Cianwood City",
+          "Dark Cave Violet City Entrance",
+          "Sea Route 19"
         ]
       },
       "crystal": {
         "locations": [
-          "cherrygrove city area",
-          "union cave b2f",
-          "johto route 34 area",
-          "olivine city area",
-          "johto sea route 40 area",
-          "whirl islands 1f",
-          "whirl islands b1f",
-          "whirl islands b2f",
-          "whirl islands b3f",
-          "cianwood city area",
-          "dark cave violet city entrance",
-          "kanto sea route 19 area"
+          "Cherrygrove City",
+          "Union Cave (B2F)",
+          "Route 34",
+          "Olivine City",
+          "Sea Route 40",
+          "Whirl Islands (1F)",
+          "Whirl Islands (B1F)",
+          "Whirl Islands (B2F)",
+          "Whirl Islands (B3F)",
+          "Cianwood City",
+          "Dark Cave Violet City Entrance",
+          "Sea Route 19"
         ]
       }
     },
     "99": {
       "gold": {
         "locations": [
-          "cherrygrove city area",
-          "union cave b2f",
-          "johto route 34 area",
-          "olivine city area",
-          "johto sea route 40 area",
-          "whirl islands 1f",
-          "whirl islands b2f",
-          "whirl islands b3f",
-          "cianwood city area",
-          "kanto sea route 19 area"
+          "Cherrygrove City",
+          "Union Cave (B2F)",
+          "Route 34",
+          "Olivine City",
+          "Sea Route 40",
+          "Whirl Islands (1F)",
+          "Whirl Islands (B2F)",
+          "Whirl Islands (B3F)",
+          "Cianwood City",
+          "Sea Route 19"
         ]
       },
       "silver": {
         "locations": [
-          "cherrygrove city area",
-          "union cave b2f",
-          "johto route 34 area",
-          "olivine city area",
-          "johto sea route 40 area",
-          "whirl islands 1f",
-          "whirl islands b2f",
-          "whirl islands b3f",
-          "cianwood city area",
-          "kanto sea route 19 area"
+          "Cherrygrove City",
+          "Union Cave (B2F)",
+          "Route 34",
+          "Olivine City",
+          "Sea Route 40",
+          "Whirl Islands (1F)",
+          "Whirl Islands (B2F)",
+          "Whirl Islands (B3F)",
+          "Cianwood City",
+          "Sea Route 19"
         ]
       },
       "crystal": {
         "locations": [
-          "cherrygrove city area",
-          "union cave b2f",
-          "johto route 34 area",
-          "olivine city area",
-          "johto sea route 40 area",
-          "whirl islands 1f",
-          "whirl islands b2f",
-          "whirl islands b3f",
-          "cianwood city area",
-          "kanto sea route 19 area"
+          "Cherrygrove City",
+          "Union Cave (B2F)",
+          "Route 34",
+          "Olivine City",
+          "Sea Route 40",
+          "Whirl Islands (1F)",
+          "Whirl Islands (B2F)",
+          "Whirl Islands (B3F)",
+          "Cianwood City",
+          "Sea Route 19"
         ]
       }
     },
     "100": {
       "gold": {
         "locations": [
-          "olivine city area",
-          "kanto route 10 area",
-          "team rocket hq area"
+          "Olivine City",
+          "Route 10",
+          "Team Rocket Hq"
         ]
       },
       "silver": {
         "locations": [
-          "olivine city area",
-          "kanto route 10 area",
-          "team rocket hq area"
+          "Olivine City",
+          "Route 10",
+          "Team Rocket Hq"
         ]
       },
       "crystal": {
         "locations": [
-          "olivine city area",
-          "kanto route 10 area",
-          "team rocket hq area"
+          "Olivine City",
+          "Route 10",
+          "Team Rocket Hq"
         ]
       }
     },
     "101": {
       "gold": {
         "locations": [
-          "team rocket hq area"
+          "Team Rocket Hq"
         ]
       },
       "silver": {
         "locations": [
-          "team rocket hq area"
+          "Team Rocket Hq"
         ]
       },
       "crystal": {
         "locations": [
-          "team rocket hq area"
+          "Team Rocket Hq"
         ]
       }
     },
     "102": {
       "crystal": {
         "locations": [
-          "johto route 29 area",
-          "johto route 30 area",
-          "johto route 31 area",
-          "johto route 32 area",
-          "johto route 34 area",
-          "johto route 35 area",
-          "johto route 36 area",
-          "johto route 37 area",
-          "johto route 38 area",
-          "johto route 39 area",
-          "johto route 43 area",
-          "lake of rage area",
-          "kanto route 26 area",
-          "kanto route 27 area"
+          "Route 29",
+          "Route 30",
+          "Route 31",
+          "Route 32",
+          "Route 34",
+          "Route 35",
+          "Route 36",
+          "Route 37",
+          "Route 38",
+          "Route 39",
+          "Route 43",
+          "Lake Of Rage",
+          "Route 26",
+          "Route 27"
         ]
       },
       "gold": {
         "locations": [
-          "ilex forest area",
-          "johto route 34 area",
-          "johto route 35 area",
-          "johto route 36 area",
-          "johto route 37 area",
-          "johto route 38 area",
-          "johto route 39 area",
-          "lake of rage area",
-          "kanto route 26 area",
-          "kanto route 27 area",
-          "azalea town area"
+          "Ilex Forest",
+          "Route 34",
+          "Route 35",
+          "Route 36",
+          "Route 37",
+          "Route 38",
+          "Route 39",
+          "Lake Of Rage",
+          "Route 26",
+          "Route 27",
+          "Azalea Town"
         ]
       },
       "silver": {
         "locations": [
-          "ilex forest area",
-          "johto route 34 area",
-          "johto route 35 area",
-          "johto route 36 area",
-          "johto route 37 area",
-          "johto route 38 area",
-          "johto route 39 area",
-          "lake of rage area",
-          "kanto route 26 area",
-          "kanto route 27 area",
-          "azalea town area"
+          "Ilex Forest",
+          "Route 34",
+          "Route 35",
+          "Route 36",
+          "Route 37",
+          "Route 38",
+          "Route 39",
+          "Lake Of Rage",
+          "Route 26",
+          "Route 27",
+          "Azalea Town"
         ]
       }
     },
@@ -4192,41 +4217,41 @@
     "104": {
       "gold": {
         "locations": [
-          "rock tunnel 1f",
-          "rock tunnel b1f"
+          "Rock Tunnel (1F)",
+          "Rock Tunnel (B1F)"
         ]
       },
       "silver": {
         "locations": [
-          "rock tunnel 1f",
-          "rock tunnel b1f"
+          "Rock Tunnel (1F)",
+          "Rock Tunnel (B1F)"
         ]
       },
       "crystal": {
         "locations": [
-          "rock tunnel 1f",
-          "rock tunnel b1f",
-          "goldenrod city game corner"
+          "Rock Tunnel (1F)",
+          "Rock Tunnel (B1F)",
+          "Goldenrod City Game Corner"
         ]
       }
     },
     "105": {
       "crystal": {
         "locations": [
-          "rock tunnel 1f",
-          "rock tunnel b1f",
-          "kanto route 9 area",
-          "kanto route 10 area"
+          "Rock Tunnel (1F)",
+          "Rock Tunnel (B1F)",
+          "Route 9",
+          "Route 10"
         ]
       },
       "gold": {
         "locations": [
-          "rock tunnel b1f"
+          "Rock Tunnel (B1F)"
         ]
       },
       "silver": {
         "locations": [
-          "rock tunnel b1f"
+          "Rock Tunnel (B1F)"
         ]
       }
     },
@@ -4267,47 +4292,47 @@
     "108": {
       "gold": {
         "locations": [
-          "johto route 44 area"
+          "Route 44"
         ]
       },
       "silver": {
         "locations": [
-          "johto route 44 area"
+          "Route 44"
         ]
       },
       "crystal": {
         "locations": [
-          "johto route 44 area"
+          "Route 44"
         ]
       }
     },
     "109": {
       "gold": {
         "locations": [
-          "burned tower 1f",
-          "burned tower b1f",
-          "team rocket hq area"
+          "Burned Tower (1F)",
+          "Burned Tower (B1F)",
+          "Team Rocket Hq"
         ]
       },
       "silver": {
         "locations": [
-          "burned tower 1f",
-          "burned tower b1f",
-          "team rocket hq area"
+          "Burned Tower (1F)",
+          "Burned Tower (B1F)",
+          "Team Rocket Hq"
         ]
       },
       "crystal": {
         "locations": [
-          "burned tower 1f",
-          "burned tower b1f",
-          "team rocket hq area"
+          "Burned Tower (1F)",
+          "Burned Tower (B1F)",
+          "Team Rocket Hq"
         ]
       }
     },
     "110": {
       "crystal": {
         "locations": [
-          "burned tower b1f"
+          "Burned Tower (B1F)"
         ]
       },
       "gold": {
@@ -4324,325 +4349,325 @@
     "111": {
       "gold": {
         "locations": [
-          "kanto victory road 1 1f",
-          "kanto victory road 1 2f",
-          "kanto victory road 1 3f"
+          "Victory Road 1 (1F)",
+          "Victory Road 1 (2F)",
+          "Victory Road 1 (3F)"
         ]
       },
       "silver": {
         "locations": [
-          "kanto victory road 1 1f",
-          "kanto victory road 1 2f",
-          "kanto victory road 1 3f"
+          "Victory Road 1 (1F)",
+          "Victory Road 1 (2F)",
+          "Victory Road 1 (3F)"
         ]
       },
       "crystal": {
         "locations": [
-          "kanto victory road 1 1f",
-          "kanto victory road 1 2f",
-          "kanto victory road 1 3f"
+          "Victory Road 1 (1F)",
+          "Victory Road 1 (2F)",
+          "Victory Road 1 (3F)"
         ]
       }
     },
     "112": {
       "gold": {
         "locations": [
-          "blackthorn city area"
+          "Blackthorn City"
         ]
       },
       "silver": {
         "locations": [
-          "blackthorn city area"
+          "Blackthorn City"
         ]
       },
       "crystal": {
         "locations": [
-          "kanto victory road 1 1f",
-          "kanto victory road 1 2f",
-          "kanto victory road 1 3f"
+          "Victory Road 1 (1F)",
+          "Victory Road 1 (2F)",
+          "Victory Road 1 (3F)"
         ]
       }
     },
     "113": {
       "gold": {
         "locations": [
-          "kanto route 13 area",
-          "kanto route 14 area",
-          "kanto route 15 area"
+          "Route 13",
+          "Route 14",
+          "Route 15"
         ]
       },
       "silver": {
         "locations": [
-          "kanto route 13 area",
-          "kanto route 14 area",
-          "kanto route 15 area"
+          "Route 13",
+          "Route 14",
+          "Route 15"
         ]
       },
       "crystal": {
         "locations": [
-          "kanto route 13 area",
-          "kanto route 14 area",
-          "kanto route 15 area"
+          "Route 13",
+          "Route 14",
+          "Route 15"
         ]
       }
     },
     "114": {
       "gold": {
         "locations": [
-          "johto route 44 area",
-          "mt silver outside",
-          "kanto route 28 area",
-          "kanto sea route 21 area"
+          "Route 44",
+          "Mt. Silver Outside",
+          "Route 28",
+          "Sea Route 21"
         ]
       },
       "silver": {
         "locations": [
-          "johto route 44 area",
-          "mt silver outside",
-          "kanto route 28 area",
-          "kanto sea route 21 area"
+          "Route 44",
+          "Mt. Silver Outside",
+          "Route 28",
+          "Sea Route 21"
         ]
       },
       "crystal": {
         "locations": [
-          "johto route 44 area",
-          "mt silver outside",
-          "kanto route 28 area",
-          "kanto sea route 21 area"
+          "Route 44",
+          "Mt. Silver Outside",
+          "Route 28",
+          "Sea Route 21"
         ]
       }
     },
     "115": {
       "gold": {
         "locations": [
-          "rock tunnel b1f"
+          "Rock Tunnel (B1F)"
         ]
       },
       "silver": {
         "locations": [
-          "rock tunnel b1f"
+          "Rock Tunnel (B1F)"
         ]
       },
       "crystal": {
         "locations": [
-          "rock tunnel b1f"
+          "Rock Tunnel (B1F)"
         ]
       }
     },
     "116": {
       "gold": {
         "locations": [
-          "whirl islands 1f",
-          "whirl islands b2f",
-          "whirl islands b3f"
+          "Whirl Islands (1F)",
+          "Whirl Islands (B2F)",
+          "Whirl Islands (B3F)"
         ]
       },
       "silver": {
         "locations": [
-          "whirl islands 1f",
-          "whirl islands b2f",
-          "whirl islands b3f"
+          "Whirl Islands (1F)",
+          "Whirl Islands (B2F)",
+          "Whirl Islands (B3F)"
         ]
       },
       "crystal": {
         "locations": [
-          "whirl islands 1f",
-          "whirl islands b2f",
-          "whirl islands b3f"
+          "Whirl Islands (1F)",
+          "Whirl Islands (B2F)",
+          "Whirl Islands (B3F)"
         ]
       }
     },
     "117": {
       "gold": {
         "locations": [
-          "whirl islands 1f",
-          "whirl islands b2f",
-          "whirl islands b3f"
+          "Whirl Islands (1F)",
+          "Whirl Islands (B2F)",
+          "Whirl Islands (B3F)"
         ]
       },
       "silver": {
         "locations": [
-          "whirl islands 1f",
-          "whirl islands b2f",
-          "whirl islands b3f"
+          "Whirl Islands (1F)",
+          "Whirl Islands (B2F)",
+          "Whirl Islands (B3F)"
         ]
       },
       "crystal": {
         "locations": [
-          "whirl islands 1f",
-          "whirl islands b2f",
-          "whirl islands b3f"
+          "Whirl Islands (1F)",
+          "Whirl Islands (B2F)",
+          "Whirl Islands (B3F)"
         ]
       }
     },
     "118": {
       "gold": {
         "locations": [
-          "union cave 1f",
-          "union cave b1f",
-          "slowpoke well 1f",
-          "slowpoke well b1f",
-          "johto route 42 area",
-          "mt mortar 1f",
-          "mt mortar upper cave",
-          "mt mortar b1f",
-          "dark cave violet city entrance",
-          "dark cave blackthorn city entrance",
-          "mt silver 2f",
-          "cerulean city area",
-          "kanto route 4 area",
-          "kanto route 9 area",
-          "kanto route 10 area",
-          "kanto route 24 area",
-          "kanto route 25 area",
-          "tohjo falls area"
+          "Union Cave (1F)",
+          "Union Cave (B1F)",
+          "Slowpoke Well (1F)",
+          "Slowpoke Well (B1F)",
+          "Route 42",
+          "Mt. Mortar (1F)",
+          "Mt. Mortar Upper Cave",
+          "Mt. Mortar (B1F)",
+          "Dark Cave Violet City Entrance",
+          "Dark Cave Blackthorn City Entrance",
+          "Mt. Silver (2F)",
+          "Cerulean City",
+          "Route 4",
+          "Route 9",
+          "Route 10",
+          "Route 24",
+          "Route 25",
+          "Tohjo Falls"
         ]
       },
       "silver": {
         "locations": [
-          "union cave 1f",
-          "union cave b1f",
-          "slowpoke well 1f",
-          "slowpoke well b1f",
-          "johto route 42 area",
-          "mt mortar 1f",
-          "mt mortar upper cave",
-          "mt mortar b1f",
-          "dark cave violet city entrance",
-          "dark cave blackthorn city entrance",
-          "mt silver 2f",
-          "cerulean city area",
-          "kanto route 4 area",
-          "kanto route 9 area",
-          "kanto route 10 area",
-          "kanto route 24 area",
-          "kanto route 25 area",
-          "tohjo falls area"
+          "Union Cave (1F)",
+          "Union Cave (B1F)",
+          "Slowpoke Well (1F)",
+          "Slowpoke Well (B1F)",
+          "Route 42",
+          "Mt. Mortar (1F)",
+          "Mt. Mortar Upper Cave",
+          "Mt. Mortar (B1F)",
+          "Dark Cave Violet City Entrance",
+          "Dark Cave Blackthorn City Entrance",
+          "Mt. Silver (2F)",
+          "Cerulean City",
+          "Route 4",
+          "Route 9",
+          "Route 10",
+          "Route 24",
+          "Route 25",
+          "Tohjo Falls"
         ]
       },
       "crystal": {
         "locations": [
-          "union cave 1f",
-          "union cave b1f",
-          "slowpoke well 1f",
-          "slowpoke well b1f",
-          "johto route 42 area",
-          "mt mortar 1f",
-          "mt mortar upper cave",
-          "mt mortar b1f",
-          "dark cave violet city entrance",
-          "dark cave blackthorn city entrance",
-          "mt silver 2f",
-          "cerulean city area",
-          "kanto route 4 area",
-          "kanto route 9 area",
-          "kanto route 10 area",
-          "kanto route 24 area",
-          "kanto route 25 area",
-          "tohjo falls area"
+          "Union Cave (1F)",
+          "Union Cave (B1F)",
+          "Slowpoke Well (1F)",
+          "Slowpoke Well (B1F)",
+          "Route 42",
+          "Mt. Mortar (1F)",
+          "Mt. Mortar Upper Cave",
+          "Mt. Mortar (B1F)",
+          "Dark Cave Violet City Entrance",
+          "Dark Cave Blackthorn City Entrance",
+          "Mt. Silver (2F)",
+          "Cerulean City",
+          "Route 4",
+          "Route 9",
+          "Route 10",
+          "Route 24",
+          "Route 25",
+          "Tohjo Falls"
         ]
       }
     },
     "119": {
       "gold": {
         "locations": [
-          "union cave 1f",
-          "union cave b1f",
-          "slowpoke well 1f",
-          "slowpoke well b1f",
-          "johto route 42 area",
-          "mt mortar 1f",
-          "mt mortar upper cave",
-          "mt mortar b1f",
-          "dark cave violet city entrance",
-          "dark cave blackthorn city entrance",
-          "mt silver 2f",
-          "cerulean city area",
-          "kanto route 4 area",
-          "kanto route 9 area",
-          "kanto route 10 area",
-          "kanto route 24 area",
-          "kanto route 25 area",
-          "tohjo falls area"
+          "Union Cave (1F)",
+          "Union Cave (B1F)",
+          "Slowpoke Well (1F)",
+          "Slowpoke Well (B1F)",
+          "Route 42",
+          "Mt. Mortar (1F)",
+          "Mt. Mortar Upper Cave",
+          "Mt. Mortar (B1F)",
+          "Dark Cave Violet City Entrance",
+          "Dark Cave Blackthorn City Entrance",
+          "Mt. Silver (2F)",
+          "Cerulean City",
+          "Route 4",
+          "Route 9",
+          "Route 10",
+          "Route 24",
+          "Route 25",
+          "Tohjo Falls"
         ]
       },
       "silver": {
         "locations": [
-          "union cave 1f",
-          "union cave b1f",
-          "slowpoke well 1f",
-          "slowpoke well b1f",
-          "johto route 42 area",
-          "mt mortar 1f",
-          "mt mortar upper cave",
-          "mt mortar b1f",
-          "dark cave violet city entrance",
-          "dark cave blackthorn city entrance",
-          "mt silver 2f",
-          "cerulean city area",
-          "kanto route 4 area",
-          "kanto route 9 area",
-          "kanto route 10 area",
-          "kanto route 24 area",
-          "kanto route 25 area",
-          "tohjo falls area"
+          "Union Cave (1F)",
+          "Union Cave (B1F)",
+          "Slowpoke Well (1F)",
+          "Slowpoke Well (B1F)",
+          "Route 42",
+          "Mt. Mortar (1F)",
+          "Mt. Mortar Upper Cave",
+          "Mt. Mortar (B1F)",
+          "Dark Cave Violet City Entrance",
+          "Dark Cave Blackthorn City Entrance",
+          "Mt. Silver (2F)",
+          "Cerulean City",
+          "Route 4",
+          "Route 9",
+          "Route 10",
+          "Route 24",
+          "Route 25",
+          "Tohjo Falls"
         ]
       },
       "crystal": {
         "locations": [
-          "union cave 1f",
-          "union cave b1f",
-          "slowpoke well 1f",
-          "slowpoke well b1f",
-          "johto route 42 area",
-          "mt mortar 1f",
-          "mt mortar upper cave",
-          "mt mortar b1f",
-          "dark cave violet city entrance",
-          "dark cave blackthorn city entrance",
-          "mt silver 2f",
-          "cerulean city area",
-          "kanto route 4 area",
-          "kanto route 9 area",
-          "kanto route 10 area",
-          "kanto route 24 area",
-          "kanto route 25 area",
-          "tohjo falls area"
+          "Union Cave (1F)",
+          "Union Cave (B1F)",
+          "Slowpoke Well (1F)",
+          "Slowpoke Well (B1F)",
+          "Route 42",
+          "Mt. Mortar (1F)",
+          "Mt. Mortar Upper Cave",
+          "Mt. Mortar (B1F)",
+          "Dark Cave Violet City Entrance",
+          "Dark Cave Blackthorn City Entrance",
+          "Mt. Silver (2F)",
+          "Cerulean City",
+          "Route 4",
+          "Route 9",
+          "Route 10",
+          "Route 24",
+          "Route 25",
+          "Tohjo Falls"
         ]
       }
     },
     "120": {
       "gold": {
         "locations": [
-          "cherrygrove city area",
-          "union cave b2f",
-          "johto route 34 area",
-          "olivine city area",
-          "johto sea route 40 area",
-          "cianwood city area",
-          "kanto sea route 19 area"
+          "Cherrygrove City",
+          "Union Cave (B2F)",
+          "Route 34",
+          "Olivine City",
+          "Sea Route 40",
+          "Cianwood City",
+          "Sea Route 19"
         ]
       },
       "silver": {
         "locations": [
-          "cherrygrove city area",
-          "union cave b2f",
-          "johto route 34 area",
-          "olivine city area",
-          "johto sea route 40 area",
-          "cianwood city area",
-          "kanto sea route 19 area"
+          "Cherrygrove City",
+          "Union Cave (B2F)",
+          "Route 34",
+          "Olivine City",
+          "Sea Route 40",
+          "Cianwood City",
+          "Sea Route 19"
         ]
       },
       "crystal": {
         "locations": [
-          "cherrygrove city area",
-          "union cave b2f",
-          "johto route 34 area",
-          "olivine city area",
-          "johto sea route 40 area",
-          "cianwood city area",
-          "kanto sea route 19 area"
+          "Cherrygrove City",
+          "Union Cave (B2F)",
+          "Route 34",
+          "Olivine City",
+          "Sea Route 40",
+          "Cianwood City",
+          "Sea Route 19"
         ]
       }
     },
@@ -4666,396 +4691,396 @@
     "122": {
       "gold": {
         "locations": [
-          "kanto sea route 21 area",
-          "celadon city prize corner"
+          "Sea Route 21",
+          "Celadon City Prize Corner"
         ]
       },
       "silver": {
         "locations": [
-          "kanto sea route 21 area",
-          "celadon city prize corner"
+          "Sea Route 21",
+          "Celadon City Prize Corner"
         ]
       },
       "crystal": {
         "locations": [
-          "kanto sea route 21 area"
+          "Sea Route 21"
         ]
       }
     },
     "123": {
       "gold": {
         "locations": [
-          "National Park (Bug-Catching Contest)ThSa"
+          "National Park (bug Catching Contest Tue, Thu, Sat)"
         ]
       },
       "silver": {
         "locations": [
-          "National Park (Bug-Catching Contest)ThSa"
+          "National Park (bug Catching Contest Tue, Thu, Sat)"
         ]
       },
       "crystal": {
         "locations": [
-          "National Park (Bug-Catching Contest)ThSa"
+          "National Park (bug Catching Contest Tue, Thu, Sat)"
         ]
       }
     },
     "124": {
       "gold": {
         "locations": [
-          "ice path 1f",
-          "ice path b1f",
-          "ice path b2f",
-          "ice path b3f"
+          "Ice Path (1F)",
+          "Ice Path (B1F)",
+          "Ice Path (B2F)",
+          "Ice Path (B3F)"
         ]
       },
       "silver": {
         "locations": [
-          "ice path 1f",
-          "ice path b1f",
-          "ice path b2f",
-          "ice path b3f"
+          "Ice Path (1F)",
+          "Ice Path (B1F)",
+          "Ice Path (B2F)",
+          "Ice Path (B3F)"
         ]
       },
       "crystal": {
         "locations": [
-          "ice path b1f",
-          "ice path b2f",
-          "ice path b3f"
+          "Ice Path (B1F)",
+          "Ice Path (B2F)",
+          "Ice Path (B3F)"
         ]
       }
     },
     "125": {
       "gold": {
         "locations": [
-          "kanto route 10 area"
+          "Route 10"
         ]
       },
       "silver": {
         "locations": [
-          "kanto route 10 area"
+          "Route 10"
         ]
       },
       "crystal": {
         "locations": [
-          "kanto route 10 area"
+          "Route 10"
         ]
       }
     },
     "126": {
       "gold": {
         "locations": [
-          "burned tower b1f"
+          "Burned Tower (B1F)"
         ]
       },
       "silver": {
         "locations": [
-          "burned tower b1f"
+          "Burned Tower (B1F)"
         ]
       },
       "crystal": {
         "locations": [
-          "mt silver 1f"
+          "Mt. Silver (1F)"
         ]
       }
     },
     "127": {
       "gold": {
         "locations": [
-          "National Park (Bug-Catching Contest)ThSa"
+          "National Park (bug Catching Contest Tue, Thu, Sat)"
         ]
       },
       "silver": {
         "locations": [
-          "National Park (Bug-Catching Contest)ThSa"
+          "National Park (bug Catching Contest Tue, Thu, Sat)"
         ]
       },
       "crystal": {
         "locations": [
-          "National Park (Bug-Catching Contest)ThSa"
+          "National Park (bug Catching Contest Tue, Thu, Sat)"
         ]
       }
     },
     "128": {
       "gold": {
         "locations": [
-          "johto route 38 area",
-          "johto route 39 area"
+          "Route 38",
+          "Route 39"
         ]
       },
       "silver": {
         "locations": [
-          "johto route 38 area",
-          "johto route 39 area"
+          "Route 38",
+          "Route 39"
         ]
       },
       "crystal": {
         "locations": [
-          "johto route 38 area",
-          "johto route 39 area"
+          "Route 38",
+          "Route 39"
         ]
       }
     },
     "129": {
       "gold": {
         "locations": [
-          "new bark town area",
-          "cherrygrove city area",
-          "johto route 30 area",
-          "johto route 31 area",
-          "violet city area",
-          "johto route 32 area",
-          "ruins of alph outside",
-          "union cave 1f",
-          "union cave b1f",
-          "union cave b2f",
-          "slowpoke well 1f",
-          "slowpoke well b1f",
-          "ilex forest area",
-          "johto route 34 area",
-          "johto route 35 area",
-          "ecruteak city area",
-          "olivine city area",
-          "johto sea route 40 area",
-          "johto sea route 41 area",
-          "whirl islands 1f",
-          "whirl islands b2f",
-          "whirl islands b3f",
-          "cianwood city area",
-          "johto route 42 area",
-          "mt mortar 1f",
-          "mt mortar upper cave",
-          "mt mortar b1f",
-          "johto route 43 area",
-          "lake of rage area",
-          "johto route 44 area",
-          "blackthorn city area",
-          "dragons den area",
-          "johto route 45 area",
-          "dark cave violet city entrance",
-          "dark cave blackthorn city entrance",
-          "mt silver 2f",
-          "mt silver outside",
-          "kanto route 12 area",
-          "kanto sea route 19 area",
-          "kanto sea route 20 area",
-          "cinnabar island area",
-          "cerulean city area",
-          "vermilion city area",
-          "fuchsia city area",
-          "pallet town area",
-          "kanto route 26 area",
-          "kanto route 27 area",
-          "kanto route 28 area",
-          "kanto route 6 area",
-          "kanto route 9 area",
-          "kanto route 10 area",
-          "kanto route 13 area",
-          "kanto sea route 21 area",
-          "kanto route 22 area",
-          "kanto route 24 area",
-          "kanto route 25 area",
-          "tohjo falls area",
-          "vermilion city ss anne dock"
+          "New Bark Town",
+          "Cherrygrove City",
+          "Route 30",
+          "Route 31",
+          "Violet City",
+          "Route 32",
+          "Ruins Of Alph Outside",
+          "Union Cave (1F)",
+          "Union Cave (B1F)",
+          "Union Cave (B2F)",
+          "Slowpoke Well (1F)",
+          "Slowpoke Well (B1F)",
+          "Ilex Forest",
+          "Route 34",
+          "Route 35",
+          "Ecruteak City",
+          "Olivine City",
+          "Sea Route 40",
+          "Sea Route 41",
+          "Whirl Islands (1F)",
+          "Whirl Islands (B2F)",
+          "Whirl Islands (B3F)",
+          "Cianwood City",
+          "Route 42",
+          "Mt. Mortar (1F)",
+          "Mt. Mortar Upper Cave",
+          "Mt. Mortar (B1F)",
+          "Route 43",
+          "Lake Of Rage",
+          "Route 44",
+          "Blackthorn City",
+          "Dragons Den",
+          "Route 45",
+          "Dark Cave Violet City Entrance",
+          "Dark Cave Blackthorn City Entrance",
+          "Mt. Silver (2F)",
+          "Mt. Silver Outside",
+          "Route 12",
+          "Sea Route 19",
+          "Sea Route 20",
+          "Cinnabar Island",
+          "Cerulean City",
+          "Vermilion City",
+          "Fuchsia City",
+          "Pallet Town",
+          "Route 26",
+          "Route 27",
+          "Route 28",
+          "Route 6",
+          "Route 9",
+          "Route 10",
+          "Route 13",
+          "Sea Route 21",
+          "Route 22",
+          "Route 24",
+          "Route 25",
+          "Tohjo Falls",
+          "Vermilion City Ss Anne Dock"
         ]
       },
       "silver": {
         "locations": [
-          "new bark town area",
-          "cherrygrove city area",
-          "johto route 30 area",
-          "johto route 31 area",
-          "violet city area",
-          "johto route 32 area",
-          "ruins of alph outside",
-          "union cave 1f",
-          "union cave b1f",
-          "union cave b2f",
-          "slowpoke well 1f",
-          "slowpoke well b1f",
-          "ilex forest area",
-          "johto route 34 area",
-          "johto route 35 area",
-          "ecruteak city area",
-          "olivine city area",
-          "johto sea route 40 area",
-          "johto sea route 41 area",
-          "whirl islands 1f",
-          "whirl islands b2f",
-          "whirl islands b3f",
-          "cianwood city area",
-          "johto route 42 area",
-          "mt mortar 1f",
-          "mt mortar upper cave",
-          "mt mortar b1f",
-          "johto route 43 area",
-          "lake of rage area",
-          "johto route 44 area",
-          "blackthorn city area",
-          "dragons den area",
-          "johto route 45 area",
-          "dark cave violet city entrance",
-          "dark cave blackthorn city entrance",
-          "mt silver 2f",
-          "mt silver outside",
-          "kanto route 12 area",
-          "kanto sea route 19 area",
-          "kanto sea route 20 area",
-          "cinnabar island area",
-          "cerulean city area",
-          "vermilion city area",
-          "fuchsia city area",
-          "pallet town area",
-          "kanto route 26 area",
-          "kanto route 27 area",
-          "kanto route 28 area",
-          "kanto route 6 area",
-          "kanto route 9 area",
-          "kanto route 10 area",
-          "kanto route 13 area",
-          "kanto sea route 21 area",
-          "kanto route 22 area",
-          "kanto route 24 area",
-          "kanto route 25 area",
-          "tohjo falls area",
-          "vermilion city ss anne dock"
+          "New Bark Town",
+          "Cherrygrove City",
+          "Route 30",
+          "Route 31",
+          "Violet City",
+          "Route 32",
+          "Ruins Of Alph Outside",
+          "Union Cave (1F)",
+          "Union Cave (B1F)",
+          "Union Cave (B2F)",
+          "Slowpoke Well (1F)",
+          "Slowpoke Well (B1F)",
+          "Ilex Forest",
+          "Route 34",
+          "Route 35",
+          "Ecruteak City",
+          "Olivine City",
+          "Sea Route 40",
+          "Sea Route 41",
+          "Whirl Islands (1F)",
+          "Whirl Islands (B2F)",
+          "Whirl Islands (B3F)",
+          "Cianwood City",
+          "Route 42",
+          "Mt. Mortar (1F)",
+          "Mt. Mortar Upper Cave",
+          "Mt. Mortar (B1F)",
+          "Route 43",
+          "Lake Of Rage",
+          "Route 44",
+          "Blackthorn City",
+          "Dragons Den",
+          "Route 45",
+          "Dark Cave Violet City Entrance",
+          "Dark Cave Blackthorn City Entrance",
+          "Mt. Silver (2F)",
+          "Mt. Silver Outside",
+          "Route 12",
+          "Sea Route 19",
+          "Sea Route 20",
+          "Cinnabar Island",
+          "Cerulean City",
+          "Vermilion City",
+          "Fuchsia City",
+          "Pallet Town",
+          "Route 26",
+          "Route 27",
+          "Route 28",
+          "Route 6",
+          "Route 9",
+          "Route 10",
+          "Route 13",
+          "Sea Route 21",
+          "Route 22",
+          "Route 24",
+          "Route 25",
+          "Tohjo Falls",
+          "Vermilion City Ss Anne Dock"
         ]
       },
       "crystal": {
         "locations": [
-          "new bark town area",
-          "cherrygrove city area",
-          "johto route 30 area",
-          "johto route 31 area",
-          "violet city area",
-          "johto route 32 area",
-          "ruins of alph outside",
-          "union cave 1f",
-          "union cave b1f",
-          "union cave b2f",
-          "slowpoke well 1f",
-          "slowpoke well b1f",
-          "ilex forest area",
-          "johto route 34 area",
-          "johto route 35 area",
-          "ecruteak city area",
-          "olivine city area",
-          "johto sea route 40 area",
-          "johto sea route 41 area",
-          "whirl islands 1f",
-          "whirl islands b2f",
-          "whirl islands b3f",
-          "cianwood city area",
-          "johto route 42 area",
-          "mt mortar 1f",
-          "mt mortar upper cave",
-          "mt mortar b1f",
-          "johto route 43 area",
-          "lake of rage area",
-          "johto route 44 area",
-          "blackthorn city area",
-          "dragons den area",
-          "johto route 45 area",
-          "dark cave violet city entrance",
-          "dark cave blackthorn city entrance",
-          "mt silver 2f",
-          "mt silver outside",
-          "kanto route 12 area",
-          "kanto sea route 19 area",
-          "kanto sea route 20 area",
-          "cinnabar island area",
-          "cerulean city area",
-          "vermilion city area",
-          "fuchsia city area",
-          "pallet town area",
-          "kanto route 26 area",
-          "kanto route 27 area",
-          "kanto route 28 area",
-          "kanto route 6 area",
-          "kanto route 9 area",
-          "kanto route 10 area",
-          "kanto route 13 area",
-          "kanto sea route 21 area",
-          "kanto route 22 area",
-          "kanto route 24 area",
-          "kanto route 25 area",
-          "tohjo falls area",
-          "vermilion city ss anne dock"
+          "New Bark Town",
+          "Cherrygrove City",
+          "Route 30",
+          "Route 31",
+          "Violet City",
+          "Route 32",
+          "Ruins Of Alph Outside",
+          "Union Cave (1F)",
+          "Union Cave (B1F)",
+          "Union Cave (B2F)",
+          "Slowpoke Well (1F)",
+          "Slowpoke Well (B1F)",
+          "Ilex Forest",
+          "Route 34",
+          "Route 35",
+          "Ecruteak City",
+          "Olivine City",
+          "Sea Route 40",
+          "Sea Route 41",
+          "Whirl Islands (1F)",
+          "Whirl Islands (B2F)",
+          "Whirl Islands (B3F)",
+          "Cianwood City",
+          "Route 42",
+          "Mt. Mortar (1F)",
+          "Mt. Mortar Upper Cave",
+          "Mt. Mortar (B1F)",
+          "Route 43",
+          "Lake Of Rage",
+          "Route 44",
+          "Blackthorn City",
+          "Dragons Den",
+          "Route 45",
+          "Dark Cave Violet City Entrance",
+          "Dark Cave Blackthorn City Entrance",
+          "Mt. Silver (2F)",
+          "Mt. Silver Outside",
+          "Route 12",
+          "Sea Route 19",
+          "Sea Route 20",
+          "Cinnabar Island",
+          "Cerulean City",
+          "Vermilion City",
+          "Fuchsia City",
+          "Pallet Town",
+          "Route 26",
+          "Route 27",
+          "Route 28",
+          "Route 6",
+          "Route 9",
+          "Route 10",
+          "Route 13",
+          "Sea Route 21",
+          "Route 22",
+          "Route 24",
+          "Route 25",
+          "Tohjo Falls",
+          "Vermilion City Ss Anne Dock"
         ]
       }
     },
     "130": {
       "gold": {
         "locations": [
-          "lake of rage area",
-          "fuchsia city area"
+          "Lake Of Rage",
+          "Fuchsia City"
         ]
       },
       "silver": {
         "locations": [
-          "lake of rage area",
-          "fuchsia city area"
+          "Lake Of Rage",
+          "Fuchsia City"
         ]
       },
       "crystal": {
         "locations": [
-          "lake of rage area",
-          "fuchsia city area"
+          "Lake Of Rage",
+          "Fuchsia City"
         ]
       }
     },
     "131": {
       "gold": {
         "locations": [
-          "union cave b2f"
+          "Union Cave (B2F)"
         ]
       },
       "silver": {
         "locations": [
-          "union cave b2f"
+          "Union Cave (B2F)"
         ]
       },
       "crystal": {
         "locations": [
-          "union cave b2f"
+          "Union Cave (B2F)"
         ]
       }
     },
     "132": {
       "gold": {
         "locations": [
-          "johto route 34 area",
-          "johto route 35 area"
+          "Route 34",
+          "Route 35"
         ]
       },
       "silver": {
         "locations": [
-          "johto route 34 area",
-          "johto route 35 area"
+          "Route 34",
+          "Route 35"
         ]
       },
       "crystal": {
         "locations": [
-          "johto route 34 area",
-          "johto route 35 area"
+          "Route 34",
+          "Route 35"
         ]
       }
     },
     "133": {
       "gold": {
         "locations": [
-          "goldenrod city bills house",
-          "celadon city prize corner"
+          "Goldenrod City Bills House",
+          "Celadon City Prize Corner"
         ]
       },
       "silver": {
         "locations": [
-          "goldenrod city bills house",
-          "celadon city prize corner"
+          "Goldenrod City Bills House",
+          "Celadon City Prize Corner"
         ]
       },
       "crystal": {
         "locations": [
-          "goldenrod city bills house"
+          "Goldenrod City Bills House"
         ]
       }
     },
@@ -5113,34 +5138,37 @@
     "137": {
       "gold": {
         "locations": [
-          "celadon city prize corner"
+          "Celadon City Prize Corner"
         ]
       },
       "silver": {
         "locations": [
-          "celadon city prize corner"
+          "Celadon City Prize Corner"
         ]
       },
       "crystal": {
         "locations": [
-          "celadon city prize corner"
+          "Celadon City Prize Corner"
         ]
       }
     },
     "138": {
       "gold": {
         "locations": [
-          "Time Capsule, Event"
+          "Time Capsule",
+          "Event"
         ]
       },
       "silver": {
         "locations": [
-          "Time Capsule, Event"
+          "Time Capsule",
+          "Event"
         ]
       },
       "crystal": {
         "locations": [
-          "Time Capsule, Event"
+          "Time Capsule",
+          "Event"
         ]
       }
     },
@@ -5164,17 +5192,20 @@
     "140": {
       "gold": {
         "locations": [
-          "Time Capsule, Event"
+          "Time Capsule",
+          "Event"
         ]
       },
       "silver": {
         "locations": [
-          "Time Capsule, Event"
+          "Time Capsule",
+          "Event"
         ]
       },
       "crystal": {
         "locations": [
-          "Time Capsule, Event"
+          "Time Capsule",
+          "Event"
         ]
       }
     },
@@ -5198,127 +5229,136 @@
     "142": {
       "gold": {
         "locations": [
-          "kanto route 14 area"
+          "Route 14"
         ]
       },
       "silver": {
         "locations": [
-          "kanto route 14 area"
+          "Route 14"
         ]
       },
       "crystal": {
         "locations": [
-          "kanto route 14 area"
+          "Route 14"
         ]
       }
     },
     "143": {
       "gold": {
         "locations": [
-          "vermilion city area"
+          "Vermilion City"
         ]
       },
       "silver": {
         "locations": [
-          "vermilion city area"
+          "Vermilion City"
         ]
       },
       "crystal": {
         "locations": [
-          "vermilion city area"
+          "Vermilion City"
         ]
       }
     },
     "144": {
       "gold": {
         "locations": [
-          "Time Capsule, Event"
+          "Time Capsule",
+          "Event"
         ]
       },
       "silver": {
         "locations": [
-          "Time Capsule, Event"
+          "Time Capsule",
+          "Event"
         ]
       },
       "crystal": {
         "locations": [
-          "Time Capsule, Event"
+          "Time Capsule",
+          "Event"
         ]
       }
     },
     "145": {
       "gold": {
         "locations": [
-          "Time Capsule, Event"
+          "Time Capsule",
+          "Event"
         ]
       },
       "silver": {
         "locations": [
-          "Time Capsule, Event"
+          "Time Capsule",
+          "Event"
         ]
       },
       "crystal": {
         "locations": [
-          "Time Capsule, Event"
+          "Time Capsule",
+          "Event"
         ]
       }
     },
     "146": {
       "gold": {
         "locations": [
-          "Time Capsule, Event"
+          "Time Capsule",
+          "Event"
         ]
       },
       "silver": {
         "locations": [
-          "Time Capsule, Event"
+          "Time Capsule",
+          "Event"
         ]
       },
       "crystal": {
         "locations": [
-          "Time Capsule, Event"
+          "Time Capsule",
+          "Event"
         ]
       }
     },
     "147": {
       "gold": {
         "locations": [
-          "dragons den area",
-          "johto route 45 area",
-          "goldenrod city game corner"
+          "Dragons Den",
+          "Route 45",
+          "Goldenrod City Game Corner"
         ]
       },
       "silver": {
         "locations": [
-          "dragons den area",
-          "johto route 45 area",
-          "goldenrod city game corner"
+          "Dragons Den",
+          "Route 45",
+          "Goldenrod City Game Corner"
         ]
       },
       "crystal": {
         "locations": [
-          "dragons den area",
-          "johto route 45 area"
+          "Dragons Den",
+          "Route 45"
         ]
       }
     },
     "148": {
       "gold": {
         "locations": [
-          "dragons den area",
-          "johto route 45 area"
+          "Dragons Den",
+          "Route 45"
         ]
       },
       "silver": {
         "locations": [
-          "dragons den area",
-          "johto route 45 area"
+          "Dragons Den",
+          "Route 45"
         ]
       },
       "crystal": {
         "locations": [
-          "dragons den area",
-          "johto route 45 area"
+          "Dragons Den",
+          "Route 45"
         ]
       }
     },
@@ -5342,17 +5382,20 @@
     "150": {
       "gold": {
         "locations": [
-          "Time Capsule, Event"
+          "Time Capsule",
+          "Event"
         ]
       },
       "silver": {
         "locations": [
-          "Time Capsule, Event"
+          "Time Capsule",
+          "Event"
         ]
       },
       "crystal": {
         "locations": [
-          "Time Capsule, Event"
+          "Time Capsule",
+          "Event"
         ]
       }
     },
@@ -5376,17 +5419,17 @@
     "152": {
       "gold": {
         "locations": [
-          "new bark town area"
+          "New Bark Town"
         ]
       },
       "silver": {
         "locations": [
-          "new bark town area"
+          "New Bark Town"
         ]
       },
       "crystal": {
         "locations": [
-          "new bark town area"
+          "New Bark Town"
         ]
       }
     },
@@ -5427,17 +5470,17 @@
     "155": {
       "gold": {
         "locations": [
-          "new bark town area"
+          "New Bark Town"
         ]
       },
       "silver": {
         "locations": [
-          "new bark town area"
+          "New Bark Town"
         ]
       },
       "crystal": {
         "locations": [
-          "new bark town area"
+          "New Bark Town"
         ]
       }
     },
@@ -5478,17 +5521,17 @@
     "158": {
       "gold": {
         "locations": [
-          "new bark town area"
+          "New Bark Town"
         ]
       },
       "silver": {
         "locations": [
-          "new bark town area"
+          "New Bark Town"
         ]
       },
       "crystal": {
         "locations": [
-          "new bark town area"
+          "New Bark Town"
         ]
       }
     },
@@ -5529,206 +5572,206 @@
     "161": {
       "gold": {
         "locations": [
-          "johto route 29 area",
-          "kanto route 1 area"
+          "Route 29",
+          "Route 1"
         ]
       },
       "silver": {
         "locations": [
-          "johto route 29 area",
-          "kanto route 1 area"
+          "Route 29",
+          "Route 1"
         ]
       },
       "crystal": {
         "locations": [
-          "johto route 29 area",
-          "johto route 43 area",
-          "kanto route 1 area"
+          "Route 29",
+          "Route 43",
+          "Route 1"
         ]
       }
     },
     "162": {
       "crystal": {
         "locations": [
-          "johto route 43 area",
-          "kanto route 1 area"
+          "Route 43",
+          "Route 1"
         ]
       },
       "gold": {
         "locations": [
-          "kanto route 1 area"
+          "Route 1"
         ]
       },
       "silver": {
         "locations": [
-          "kanto route 1 area"
+          "Route 1"
         ]
       }
     },
     "163": {
       "gold": {
         "locations": [
-          "johto route 29 area",
-          "johto route 30 area",
-          "johto route 31 area",
-          "johto route 35 area",
-          "national park area",
-          "johto route 36 area",
-          "johto route 37 area",
-          "kanto route 1 area",
-          "kanto route 2 south towards viridian city"
+          "Route 29",
+          "Route 30",
+          "Route 31",
+          "Route 35",
+          "National Park",
+          "Route 36",
+          "Route 37",
+          "Route 1",
+          "Route 2 South Towards Viridian City"
         ]
       },
       "silver": {
         "locations": [
-          "johto route 29 area",
-          "johto route 30 area",
-          "johto route 31 area",
-          "johto route 35 area",
-          "national park area",
-          "johto route 36 area",
-          "johto route 37 area",
-          "kanto route 1 area",
-          "kanto route 2 south towards viridian city"
+          "Route 29",
+          "Route 30",
+          "Route 31",
+          "Route 35",
+          "National Park",
+          "Route 36",
+          "Route 37",
+          "Route 1",
+          "Route 2 South Towards Viridian City"
         ]
       },
       "crystal": {
         "locations": [
-          "johto route 29 area",
-          "johto route 30 area",
-          "johto route 31 area",
-          "johto route 32 area",
-          "ilex forest area",
-          "johto route 34 area",
-          "johto route 35 area",
-          "national park area",
-          "johto route 36 area",
-          "johto route 37 area",
-          "johto route 38 area",
-          "johto route 39 area",
-          "johto route 43 area",
-          "lake of rage area",
-          "kanto route 26 area",
-          "kanto route 27 area",
-          "kanto route 1 area",
-          "kanto route 2 south towards viridian city",
-          "kanto route 5 area",
-          "kanto route 25 area"
+          "Route 29",
+          "Route 30",
+          "Route 31",
+          "Route 32",
+          "Ilex Forest",
+          "Route 34",
+          "Route 35",
+          "National Park",
+          "Route 36",
+          "Route 37",
+          "Route 38",
+          "Route 39",
+          "Route 43",
+          "Lake Of Rage",
+          "Route 26",
+          "Route 27",
+          "Route 1",
+          "Route 2 South Towards Viridian City",
+          "Route 5",
+          "Route 25"
         ]
       }
     },
     "164": {
       "crystal": {
         "locations": [
-          "ilex forest area",
-          "johto route 37 area",
-          "johto route 38 area",
-          "johto route 39 area",
-          "kanto route 26 area",
-          "kanto route 27 area",
-          "kanto route 2 south towards viridian city",
-          "kanto route 5 area",
-          "kanto route 8 area",
-          "kanto route 11 area",
-          "kanto route 13 area",
-          "kanto route 14 area",
-          "kanto route 15 area",
-          "kanto route 25 area"
+          "Ilex Forest",
+          "Route 37",
+          "Route 38",
+          "Route 39",
+          "Route 26",
+          "Route 27",
+          "Route 2 South Towards Viridian City",
+          "Route 5",
+          "Route 8",
+          "Route 11",
+          "Route 13",
+          "Route 14",
+          "Route 15",
+          "Route 25"
         ]
       },
       "gold": {
         "locations": [
-          "johto route 43 area",
-          "kanto route 2 south towards viridian city",
-          "kanto route 8 area",
-          "kanto route 13 area",
-          "kanto route 14 area",
-          "kanto route 15 area"
+          "Route 43",
+          "Route 2 South Towards Viridian City",
+          "Route 8",
+          "Route 13",
+          "Route 14",
+          "Route 15"
         ]
       },
       "silver": {
         "locations": [
-          "johto route 43 area",
-          "kanto route 2 south towards viridian city",
-          "kanto route 8 area",
-          "kanto route 13 area",
-          "kanto route 14 area",
-          "kanto route 15 area"
+          "Route 43",
+          "Route 2 South Towards Viridian City",
+          "Route 8",
+          "Route 13",
+          "Route 14",
+          "Route 15"
         ]
       }
     },
     "165": {
       "crystal": {
         "locations": [
-          "johto route 29 area",
-          "johto route 30 area",
-          "johto route 31 area",
-          "johto route 34 area",
-          "johto route 35 area",
-          "national park area",
-          "johto route 36 area",
-          "johto route 37 area",
-          "johto route 38 area",
-          "johto route 39 area",
-          "kanto route 2 south towards viridian city"
+          "Route 29",
+          "Route 30",
+          "Route 31",
+          "Route 34",
+          "Route 35",
+          "National Park",
+          "Route 36",
+          "Route 37",
+          "Route 38",
+          "Route 39",
+          "Route 2 South Towards Viridian City"
         ]
       },
       "silver": {
         "locations": [
-          "johto route 30 area",
-          "johto route 31 area",
-          "johto route 37 area",
-          "kanto route 2 south towards viridian city"
+          "Route 30",
+          "Route 31",
+          "Route 37",
+          "Route 2 South Towards Viridian City"
         ]
       }
     },
     "166": {
       "silver": {
         "locations": [
-          "kanto route 2 south towards viridian city"
+          "Route 2 South Towards Viridian City"
         ]
       },
       "crystal": {
         "locations": [
-          "kanto route 2 south towards viridian city"
+          "Route 2 South Towards Viridian City"
         ]
       }
     },
     "167": {
       "crystal": {
         "locations": [
-          "johto route 29 area",
-          "johto route 30 area",
-          "johto route 31 area",
-          "johto route 34 area",
-          "johto route 35 area",
-          "national park area",
-          "johto route 36 area",
-          "johto route 37 area",
-          "johto route 38 area",
-          "johto route 39 area",
-          "kanto route 2 south towards viridian city"
+          "Route 29",
+          "Route 30",
+          "Route 31",
+          "Route 34",
+          "Route 35",
+          "National Park",
+          "Route 36",
+          "Route 37",
+          "Route 38",
+          "Route 39",
+          "Route 2 South Towards Viridian City"
         ]
       },
       "gold": {
         "locations": [
-          "johto route 30 area",
-          "johto route 31 area",
-          "johto route 37 area",
-          "kanto route 2 south towards viridian city"
+          "Route 30",
+          "Route 31",
+          "Route 37",
+          "Route 2 South Towards Viridian City"
         ]
       }
     },
     "168": {
       "crystal": {
         "locations": [
-          "johto route 37 area",
-          "kanto route 2 south towards viridian city"
+          "Route 37",
+          "Route 2 South Towards Viridian City"
         ]
       },
       "gold": {
         "locations": [
-          "kanto route 2 south towards viridian city"
+          "Route 2 South Towards Viridian City"
         ]
       }
     },
@@ -5752,156 +5795,156 @@
     "170": {
       "gold": {
         "locations": [
-          "new bark town area",
-          "johto sea route 41 area",
-          "kanto sea route 20 area",
-          "cinnabar island area",
-          "vermilion city area",
-          "pallet town area",
-          "kanto route 26 area",
-          "kanto route 27 area",
-          "kanto sea route 21 area",
-          "vermilion city ss anne dock"
+          "New Bark Town",
+          "Sea Route 41",
+          "Sea Route 20",
+          "Cinnabar Island",
+          "Vermilion City",
+          "Pallet Town",
+          "Route 26",
+          "Route 27",
+          "Sea Route 21",
+          "Vermilion City Ss Anne Dock"
         ]
       },
       "silver": {
         "locations": [
-          "new bark town area",
-          "johto sea route 41 area",
-          "kanto sea route 20 area",
-          "cinnabar island area",
-          "vermilion city area",
-          "pallet town area",
-          "kanto route 26 area",
-          "kanto route 27 area",
-          "kanto sea route 21 area",
-          "vermilion city ss anne dock"
+          "New Bark Town",
+          "Sea Route 41",
+          "Sea Route 20",
+          "Cinnabar Island",
+          "Vermilion City",
+          "Pallet Town",
+          "Route 26",
+          "Route 27",
+          "Sea Route 21",
+          "Vermilion City Ss Anne Dock"
         ]
       },
       "crystal": {
         "locations": [
-          "new bark town area",
-          "johto sea route 41 area",
-          "kanto sea route 20 area",
-          "cinnabar island area",
-          "vermilion city area",
-          "pallet town area",
-          "kanto route 26 area",
-          "kanto route 27 area",
-          "kanto sea route 21 area",
-          "vermilion city ss anne dock"
+          "New Bark Town",
+          "Sea Route 41",
+          "Sea Route 20",
+          "Cinnabar Island",
+          "Vermilion City",
+          "Pallet Town",
+          "Route 26",
+          "Route 27",
+          "Sea Route 21",
+          "Vermilion City Ss Anne Dock"
         ]
       }
     },
     "171": {
       "gold": {
         "locations": [
-          "new bark town area",
-          "johto sea route 41 area",
-          "kanto sea route 20 area",
-          "cinnabar island area",
-          "vermilion city area",
-          "pallet town area",
-          "kanto route 26 area",
-          "kanto route 27 area",
-          "kanto sea route 21 area",
-          "vermilion city ss anne dock"
+          "New Bark Town",
+          "Sea Route 41",
+          "Sea Route 20",
+          "Cinnabar Island",
+          "Vermilion City",
+          "Pallet Town",
+          "Route 26",
+          "Route 27",
+          "Sea Route 21",
+          "Vermilion City Ss Anne Dock"
         ]
       },
       "silver": {
         "locations": [
-          "new bark town area",
-          "johto sea route 41 area",
-          "kanto sea route 20 area",
-          "cinnabar island area",
-          "vermilion city area",
-          "pallet town area",
-          "kanto route 26 area",
-          "kanto route 27 area",
-          "kanto sea route 21 area",
-          "vermilion city ss anne dock"
+          "New Bark Town",
+          "Sea Route 41",
+          "Sea Route 20",
+          "Cinnabar Island",
+          "Vermilion City",
+          "Pallet Town",
+          "Route 26",
+          "Route 27",
+          "Sea Route 21",
+          "Vermilion City Ss Anne Dock"
         ]
       },
       "crystal": {
         "locations": [
-          "new bark town area",
-          "johto sea route 41 area",
-          "kanto sea route 20 area",
-          "cinnabar island area",
-          "vermilion city area",
-          "pallet town area",
-          "kanto route 26 area",
-          "kanto route 27 area",
-          "kanto sea route 21 area",
-          "vermilion city ss anne dock"
+          "New Bark Town",
+          "Sea Route 41",
+          "Sea Route 20",
+          "Cinnabar Island",
+          "Vermilion City",
+          "Pallet Town",
+          "Route 26",
+          "Route 27",
+          "Sea Route 21",
+          "Vermilion City Ss Anne Dock"
         ]
       }
     },
     "172": {
       "crystal": {
         "locations": [
-          "johto route 34 area"
+          "Route 34"
         ]
       },
       "gold": {
         "locations": [
-          "Breed Raichu"
+          "Breed Pikachu or Raichu"
         ]
       },
       "silver": {
         "locations": [
-          "Breed Raichu"
+          "Breed Pikachu or Raichu"
         ]
       }
     },
     "173": {
       "crystal": {
         "locations": [
-          "johto route 34 area"
+          "Route 34"
         ]
       },
       "gold": {
         "locations": [
-          "Breed Clefable"
+          "Breed Clefairy or Clefable"
         ]
       },
       "silver": {
         "locations": [
-          "Breed Clefable"
+          "Breed Clefairy or Clefable"
         ]
       }
     },
     "174": {
       "crystal": {
         "locations": [
-          "johto route 34 area"
+          "Route 34"
         ]
       },
       "gold": {
         "locations": [
-          "Breed Wigglytuff"
+          "Breed Jigglypuff or Wigglytuff"
         ]
       },
       "silver": {
         "locations": [
-          "Breed Wigglytuff"
+          "Breed Jigglypuff or Wigglytuff"
         ]
       }
     },
     "175": {
       "gold": {
         "locations": [
-          "violet city area"
+          "Violet City"
         ]
       },
       "silver": {
         "locations": [
-          "violet city area"
+          "Violet City"
         ]
       },
       "crystal": {
         "locations": [
-          "violet city area"
+          "Violet City"
         ]
       }
     },
@@ -5925,24 +5968,24 @@
     "177": {
       "gold": {
         "locations": [
-          "ruins of alph outside"
+          "Ruins Of Alph Outside"
         ]
       },
       "silver": {
         "locations": [
-          "ruins of alph outside"
+          "Ruins Of Alph Outside"
         ]
       },
       "crystal": {
         "locations": [
-          "ruins of alph outside"
+          "Ruins Of Alph Outside"
         ]
       }
     },
     "178": {
       "crystal": {
         "locations": [
-          "pewter city area"
+          "Pewter City"
         ]
       },
       "gold": {
@@ -5959,30 +6002,30 @@
     "179": {
       "gold": {
         "locations": [
-          "johto route 32 area",
-          "johto route 42 area",
-          "johto route 43 area"
+          "Route 32",
+          "Route 42",
+          "Route 43"
         ]
       },
       "silver": {
         "locations": [
-          "johto route 32 area",
-          "johto route 42 area",
-          "johto route 43 area"
+          "Route 32",
+          "Route 42",
+          "Route 43"
         ]
       }
     },
     "180": {
       "gold": {
         "locations": [
-          "johto route 42 area",
-          "johto route 43 area"
+          "Route 42",
+          "Route 43"
         ]
       },
       "silver": {
         "locations": [
-          "johto route 42 area",
-          "johto route 43 area"
+          "Route 42",
+          "Route 43"
         ]
       }
     },
@@ -6018,21 +6061,21 @@
     "183": {
       "crystal": {
         "locations": [
-          "johto route 42 area",
-          "mt mortar 1f",
-          "mt mortar lower cave",
-          "mt mortar upper cave",
-          "mt mortar b1f"
+          "Route 42",
+          "Mt. Mortar (1F)",
+          "Mt. Mortar Lower Cave",
+          "Mt. Mortar Upper Cave",
+          "Mt. Mortar (B1F)"
         ]
       },
       "gold": {
         "locations": [
-          "mt mortar 1f"
+          "Mt. Mortar (1F)"
         ]
       },
       "silver": {
         "locations": [
-          "mt mortar 1f"
+          "Mt. Mortar (1F)"
         ]
       }
     },
@@ -6056,17 +6099,17 @@
     "185": {
       "gold": {
         "locations": [
-          "johto route 36 area"
+          "Route 36"
         ]
       },
       "silver": {
         "locations": [
-          "johto route 36 area"
+          "Route 36"
         ]
       },
       "crystal": {
         "locations": [
-          "johto route 36 area"
+          "Route 36"
         ]
       }
     },
@@ -6090,50 +6133,50 @@
     "187": {
       "crystal": {
         "locations": [
-          "johto route 29 area",
-          "johto route 30 area",
-          "johto route 31 area",
-          "johto route 32 area",
-          "johto route 33 area",
-          "kanto route 11 area",
-          "kanto route 13 area",
-          "kanto route 14 area",
-          "kanto route 15 area"
+          "Route 29",
+          "Route 30",
+          "Route 31",
+          "Route 32",
+          "Route 33",
+          "Route 11",
+          "Route 13",
+          "Route 14",
+          "Route 15"
         ]
       },
       "gold": {
         "locations": [
-          "johto route 32 area",
-          "johto route 33 area",
-          "kanto route 13 area",
-          "kanto route 14 area",
-          "kanto route 15 area"
+          "Route 32",
+          "Route 33",
+          "Route 13",
+          "Route 14",
+          "Route 15"
         ]
       },
       "silver": {
         "locations": [
-          "johto route 32 area",
-          "johto route 33 area",
-          "kanto route 13 area",
-          "kanto route 14 area",
-          "kanto route 15 area"
+          "Route 32",
+          "Route 33",
+          "Route 13",
+          "Route 14",
+          "Route 15"
         ]
       }
     },
     "188": {
       "gold": {
         "locations": [
-          "kanto route 14 area"
+          "Route 14"
         ]
       },
       "silver": {
         "locations": [
-          "kanto route 14 area"
+          "Route 14"
         ]
       },
       "crystal": {
         "locations": [
-          "kanto route 14 area"
+          "Route 14"
         ]
       }
     },
@@ -6157,60 +6200,60 @@
     "190": {
       "gold": {
         "locations": [
-          "johto route 29 area",
-          "johto route 30 area",
-          "johto route 31 area",
-          "johto route 32 area",
-          "johto route 33 area",
-          "johto route 42 area",
-          "johto route 43 area",
-          "johto route 44 area",
-          "johto route 45 area",
-          "johto route 46 area"
+          "Route 29",
+          "Route 30",
+          "Route 31",
+          "Route 32",
+          "Route 33",
+          "Route 42",
+          "Route 43",
+          "Route 44",
+          "Route 45",
+          "Route 46"
         ]
       },
       "silver": {
         "locations": [
-          "johto route 29 area",
-          "johto route 30 area",
-          "johto route 31 area",
-          "johto route 32 area",
-          "johto route 33 area",
-          "johto route 42 area",
-          "johto route 43 area",
-          "johto route 44 area",
-          "johto route 45 area",
-          "johto route 46 area"
+          "Route 29",
+          "Route 30",
+          "Route 31",
+          "Route 32",
+          "Route 33",
+          "Route 42",
+          "Route 43",
+          "Route 44",
+          "Route 45",
+          "Route 46"
         ]
       },
       "crystal": {
         "locations": [
-          "johto route 33 area",
-          "johto route 42 area",
-          "johto route 44 area",
-          "johto route 45 area",
-          "johto route 46 area",
-          "azalea town area"
+          "Route 33",
+          "Route 42",
+          "Route 44",
+          "Route 45",
+          "Route 46",
+          "Azalea Town"
         ]
       }
     },
     "191": {
       "gold": {
         "locations": [
-          "national park area",
-          "kanto route 24 area"
+          "National Park",
+          "Route 24"
         ]
       },
       "silver": {
         "locations": [
-          "national park area",
-          "kanto route 24 area"
+          "National Park",
+          "Route 24"
         ]
       },
       "crystal": {
         "locations": [
-          "national park area",
-          "kanto route 24 area"
+          "National Park",
+          "Route 24"
         ]
       }
     },
@@ -6234,95 +6277,95 @@
     "193": {
       "gold": {
         "locations": [
-          "johto route 35 area"
+          "Route 35"
         ]
       },
       "silver": {
         "locations": [
-          "johto route 35 area"
+          "Route 35"
         ]
       },
       "crystal": {
         "locations": [
-          "johto route 35 area"
+          "Route 35"
         ]
       }
     },
     "194": {
       "gold": {
         "locations": [
-          "johto route 32 area",
-          "ruins of alph outside",
-          "union cave 1f",
-          "union cave b1f"
+          "Route 32",
+          "Ruins Of Alph Outside",
+          "Union Cave (1F)",
+          "Union Cave (B1F)"
         ]
       },
       "silver": {
         "locations": [
-          "johto route 32 area",
-          "ruins of alph outside",
-          "union cave 1f",
-          "union cave b1f"
+          "Route 32",
+          "Ruins Of Alph Outside",
+          "Union Cave (1F)",
+          "Union Cave (B1F)"
         ]
       },
       "crystal": {
         "locations": [
-          "johto route 32 area",
-          "ruins of alph outside",
-          "union cave 1f",
-          "union cave b1f"
+          "Route 32",
+          "Ruins Of Alph Outside",
+          "Union Cave (1F)",
+          "Union Cave (B1F)"
         ]
       }
     },
     "195": {
       "gold": {
         "locations": [
-          "johto route 32 area",
-          "ruins of alph outside",
-          "union cave 1f",
-          "union cave b1f",
-          "union cave b2f",
-          "mt silver 2f",
-          "kanto route 12 area",
-          "kanto route 26 area",
-          "kanto route 27 area",
-          "kanto route 10 area",
-          "kanto route 13 area",
-          "kanto route 14 area",
-          "kanto route 15 area"
+          "Route 32",
+          "Ruins Of Alph Outside",
+          "Union Cave (1F)",
+          "Union Cave (B1F)",
+          "Union Cave (B2F)",
+          "Mt. Silver (2F)",
+          "Route 12",
+          "Route 26",
+          "Route 27",
+          "Route 10",
+          "Route 13",
+          "Route 14",
+          "Route 15"
         ]
       },
       "silver": {
         "locations": [
-          "johto route 32 area",
-          "ruins of alph outside",
-          "union cave 1f",
-          "union cave b1f",
-          "union cave b2f",
-          "mt silver 2f",
-          "kanto route 12 area",
-          "kanto route 26 area",
-          "kanto route 27 area",
-          "kanto route 10 area",
-          "kanto route 13 area",
-          "kanto route 14 area",
-          "kanto route 15 area"
+          "Route 32",
+          "Ruins Of Alph Outside",
+          "Union Cave (1F)",
+          "Union Cave (B1F)",
+          "Union Cave (B2F)",
+          "Mt. Silver (2F)",
+          "Route 12",
+          "Route 26",
+          "Route 27",
+          "Route 10",
+          "Route 13",
+          "Route 14",
+          "Route 15"
         ]
       },
       "crystal": {
         "locations": [
-          "johto route 32 area",
-          "ruins of alph outside",
-          "union cave 1f",
-          "union cave b1f",
-          "union cave b2f",
-          "mt silver 2f",
-          "kanto route 12 area",
-          "kanto route 26 area",
-          "kanto route 27 area",
-          "kanto route 13 area",
-          "kanto route 14 area",
-          "kanto route 15 area"
+          "Route 32",
+          "Ruins Of Alph Outside",
+          "Union Cave (1F)",
+          "Union Cave (B1F)",
+          "Union Cave (B2F)",
+          "Mt. Silver (2F)",
+          "Route 12",
+          "Route 26",
+          "Route 27",
+          "Route 13",
+          "Route 14",
+          "Route 15"
         ]
       }
     },
@@ -6363,22 +6406,22 @@
     "198": {
       "gold": {
         "locations": [
-          "kanto route 7 area",
-          "kanto route 16 area",
-          "kanto route 18 area"
+          "Route 7",
+          "Route 16",
+          "Route 18"
         ]
       },
       "silver": {
         "locations": [
-          "kanto route 7 area",
-          "kanto route 16 area",
-          "kanto route 18 area"
+          "Route 7",
+          "Route 16",
+          "Route 18"
         ]
       },
       "crystal": {
         "locations": [
-          "kanto route 7 area",
-          "kanto route 16 area"
+          "Route 7",
+          "Route 16"
         ]
       }
     },
@@ -6402,124 +6445,124 @@
     "200": {
       "gold": {
         "locations": [
-          "mt silver 2f"
+          "Mt. Silver (2F)"
         ]
       },
       "silver": {
         "locations": [
-          "mt silver 2f"
+          "Mt. Silver (2F)"
         ]
       },
       "crystal": {
         "locations": [
-          "mt silver 2f"
+          "Mt. Silver (2F)"
         ]
       }
     },
     "201": {
       "gold": {
         "locations": [
-          "ruins of alph interior a",
-          "ruins of alph interior b",
-          "ruins of alph interior c",
-          "ruins of alph interior d"
+          "Ruins Of Alph Interior A",
+          "Ruins Of Alph Interior B",
+          "Ruins Of Alph Interior C",
+          "Ruins Of Alph Interior D"
         ]
       },
       "silver": {
         "locations": [
-          "ruins of alph interior a",
-          "ruins of alph interior b",
-          "ruins of alph interior c",
-          "ruins of alph interior d"
+          "Ruins Of Alph Interior A",
+          "Ruins Of Alph Interior B",
+          "Ruins Of Alph Interior C",
+          "Ruins Of Alph Interior D"
         ]
       },
       "crystal": {
         "locations": [
-          "ruins of alph interior a",
-          "ruins of alph interior b",
-          "ruins of alph interior c",
-          "ruins of alph interior d"
+          "Ruins Of Alph Interior A",
+          "Ruins Of Alph Interior B",
+          "Ruins Of Alph Interior C",
+          "Ruins Of Alph Interior D"
         ]
       }
     },
     "202": {
       "gold": {
         "locations": [
-          "dark cave blackthorn city entrance"
+          "Dark Cave Blackthorn City Entrance"
         ]
       },
       "silver": {
         "locations": [
-          "dark cave blackthorn city entrance"
+          "Dark Cave Blackthorn City Entrance"
         ]
       },
       "crystal": {
         "locations": [
-          "dark cave blackthorn city entrance",
-          "goldenrod city game corner"
+          "Dark Cave Blackthorn City Entrance",
+          "Goldenrod City Game Corner"
         ]
       }
     },
     "203": {
       "gold": {
         "locations": [
-          "johto route 43 area"
+          "Route 43"
         ]
       },
       "silver": {
         "locations": [
-          "johto route 43 area"
+          "Route 43"
         ]
       }
     },
     "204": {
       "crystal": {
         "locations": [
-          "johto route 29 area",
-          "johto route 30 area",
-          "johto route 31 area",
-          "johto route 32 area",
-          "ilex forest area",
-          "johto route 34 area",
-          "johto route 35 area",
-          "johto route 36 area",
-          "johto route 37 area",
-          "johto route 38 area",
-          "johto route 39 area",
-          "johto route 43 area",
-          "lake of rage area",
-          "kanto route 26 area",
-          "kanto route 27 area"
+          "Route 29",
+          "Route 30",
+          "Route 31",
+          "Route 32",
+          "Ilex Forest",
+          "Route 34",
+          "Route 35",
+          "Route 36",
+          "Route 37",
+          "Route 38",
+          "Route 39",
+          "Route 43",
+          "Lake Of Rage",
+          "Route 26",
+          "Route 27"
         ]
       },
       "gold": {
         "locations": [
-          "ilex forest area",
-          "johto route 34 area",
-          "johto route 35 area",
-          "johto route 36 area",
-          "johto route 37 area",
-          "johto route 38 area",
-          "johto route 39 area",
-          "lake of rage area",
-          "kanto route 26 area",
-          "kanto route 27 area",
-          "azalea town area"
+          "Ilex Forest",
+          "Route 34",
+          "Route 35",
+          "Route 36",
+          "Route 37",
+          "Route 38",
+          "Route 39",
+          "Lake Of Rage",
+          "Route 26",
+          "Route 27",
+          "Azalea Town"
         ]
       },
       "silver": {
         "locations": [
-          "ilex forest area",
-          "johto route 34 area",
-          "johto route 35 area",
-          "johto route 36 area",
-          "johto route 37 area",
-          "johto route 38 area",
-          "johto route 39 area",
-          "lake of rage area",
-          "kanto route 26 area",
-          "kanto route 27 area",
-          "azalea town area"
+          "Ilex Forest",
+          "Route 34",
+          "Route 35",
+          "Route 36",
+          "Route 37",
+          "Route 38",
+          "Route 39",
+          "Lake Of Rage",
+          "Route 26",
+          "Route 27",
+          "Azalea Town"
         ]
       }
     },
@@ -6543,29 +6586,29 @@
     "206": {
       "gold": {
         "locations": [
-          "dark cave violet city entrance"
+          "Dark Cave Violet City Entrance"
         ]
       },
       "silver": {
         "locations": [
-          "dark cave violet city entrance"
+          "Dark Cave Violet City Entrance"
         ]
       },
       "crystal": {
         "locations": [
-          "dark cave violet city entrance"
+          "Dark Cave Violet City Entrance"
         ]
       }
     },
     "207": {
       "gold": {
         "locations": [
-          "johto route 45 area"
+          "Route 45"
         ]
       },
       "crystal": {
         "locations": [
-          "johto route 45 area"
+          "Route 45"
         ]
       }
     },
@@ -6589,29 +6632,29 @@
     "209": {
       "crystal": {
         "locations": [
-          "johto route 34 area",
-          "johto route 35 area",
-          "kanto route 5 area",
-          "kanto route 6 area",
-          "kanto route 7 area",
-          "kanto route 8 area"
+          "Route 34",
+          "Route 35",
+          "Route 5",
+          "Route 6",
+          "Route 7",
+          "Route 8"
         ]
       },
       "gold": {
         "locations": [
-          "johto route 38 area"
+          "Route 38"
         ]
       },
       "silver": {
         "locations": [
-          "johto route 38 area"
+          "Route 38"
         ]
       }
     },
     "210": {
       "crystal": {
         "locations": [
-          "kanto route 6 area"
+          "Route 6"
         ]
       },
       "gold": {
@@ -6628,23 +6671,23 @@
     "211": {
       "gold": {
         "locations": [
-          "johto route 32 area",
-          "kanto route 12 area",
-          "kanto route 13 area"
+          "Route 32",
+          "Route 12",
+          "Route 13"
         ]
       },
       "silver": {
         "locations": [
-          "johto route 32 area",
-          "kanto route 12 area",
-          "kanto route 13 area"
+          "Route 32",
+          "Route 12",
+          "Route 13"
         ]
       },
       "crystal": {
         "locations": [
-          "johto route 32 area",
-          "kanto route 12 area",
-          "kanto route 13 area"
+          "Route 32",
+          "Route 12",
+          "Route 13"
         ]
       }
     },
@@ -6668,150 +6711,151 @@
     "213": {
       "gold": {
         "locations": [
-          "johto sea route 40 area",
-          "cianwood city area",
-          "dark cave violet city entrance",
-          "cianwood city manias house"
+          "Sea Route 40",
+          "Cianwood City",
+          "Dark Cave Violet City Entrance",
+          "Cianwood City Manias House"
         ]
       },
       "silver": {
         "locations": [
-          "johto sea route 40 area",
-          "cianwood city area",
-          "dark cave violet city entrance",
-          "cianwood city manias house"
+          "Sea Route 40",
+          "Cianwood City",
+          "Dark Cave Violet City Entrance",
+          "Cianwood City Manias House"
         ]
       },
       "crystal": {
         "locations": [
-          "johto sea route 40 area",
-          "cianwood city area",
-          "dark cave violet city entrance",
-          "cianwood city manias house"
+          "Sea Route 40",
+          "Cianwood City",
+          "Dark Cave Violet City Entrance",
+          "Cianwood City Manias House"
         ]
       }
     },
     "214": {
       "gold": {
         "locations": [
-          "johto route 29 area",
-          "johto route 30 area",
-          "johto route 31 area",
-          "johto route 32 area",
-          "johto route 33 area",
-          "johto route 42 area",
-          "johto route 43 area",
-          "johto route 44 area",
-          "johto route 45 area",
-          "johto route 46 area"
+          "Route 29",
+          "Route 30",
+          "Route 31",
+          "Route 32",
+          "Route 33",
+          "Route 42",
+          "Route 43",
+          "Route 44",
+          "Route 45",
+          "Route 46"
         ]
       },
       "silver": {
         "locations": [
-          "johto route 29 area",
-          "johto route 30 area",
-          "johto route 31 area",
-          "johto route 32 area",
-          "johto route 33 area",
-          "johto route 42 area",
-          "johto route 43 area",
-          "johto route 44 area",
-          "johto route 45 area",
-          "johto route 46 area"
+          "Route 29",
+          "Route 30",
+          "Route 31",
+          "Route 32",
+          "Route 33",
+          "Route 42",
+          "Route 43",
+          "Route 44",
+          "Route 45",
+          "Route 46"
         ]
       },
       "crystal": {
         "locations": [
-          "johto route 33 area",
-          "johto route 42 area",
-          "johto route 44 area",
-          "johto route 45 area",
-          "johto route 46 area",
-          "azalea town area"
+          "Route 33",
+          "Route 42",
+          "Route 44",
+          "Route 45",
+          "Route 46",
+          "Azalea Town"
         ]
       }
     },
     "215": {
       "crystal": {
         "locations": [
-          "ice path b1f",
-          "ice path b2f",
-          "ice path b3f"
+          "Ice Path (B1F)",
+          "Ice Path (B2F)",
+          "Ice Path (B3F)"
         ]
       },
       "gold": {
         "locations": [
-          "mt silver outside",
-          "kanto route 28 area"
+          "Mt. Silver Outside",
+          "Route 28"
         ]
       },
       "silver": {
         "locations": [
-          "mt silver outside",
-          "kanto route 28 area"
+          "Mt. Silver Outside",
+          "Route 28"
         ]
       }
     },
     "216": {
       "gold": {
         "locations": [
-          "johto route 45 area"
+          "Route 45"
         ]
       },
       "crystal": {
         "locations": [
-          "dark cave violet city entrance",
-          "dark cave blackthorn city entrance"
+          "Dark Cave Violet City Entrance",
+          "Dark Cave Blackthorn City Entrance"
         ]
       },
       "silver": {
         "locations": [
-          "Trade, Event"
+          "Trade",
+          "Event"
         ]
       }
     },
     "217": {
       "crystal": {
         "locations": [
-          "dark cave blackthorn city entrance",
-          "mt silver 2f",
-          "mt silver 1f",
-          "mt silver top"
+          "Dark Cave Blackthorn City Entrance",
+          "Mt. Silver (2F)",
+          "Mt. Silver (1F)",
+          "Mt. Silver Top"
         ]
       },
       "gold": {
         "locations": [
-          "mt silver 2f",
-          "mt silver outside",
-          "mt silver 1f",
-          "mt silver top",
-          "kanto route 28 area",
-          "kanto victory road 1 1f",
-          "kanto victory road 1 2f",
-          "kanto victory road 1 3f"
+          "Mt. Silver (2F)",
+          "Mt. Silver Outside",
+          "Mt. Silver (1F)",
+          "Mt. Silver Top",
+          "Route 28",
+          "Victory Road 1 (1F)",
+          "Victory Road 1 (2F)",
+          "Victory Road 1 (3F)"
         ]
       }
     },
     "218": {
       "gold": {
         "locations": [
-          "kanto route 16 area",
-          "kanto route 17 area",
-          "kanto route 18 area"
+          "Route 16",
+          "Route 17",
+          "Route 18"
         ]
       },
       "silver": {
         "locations": [
-          "kanto route 16 area",
-          "kanto route 17 area",
-          "kanto route 18 area"
+          "Route 16",
+          "Route 17",
+          "Route 18"
         ]
       },
       "crystal": {
         "locations": [
-          "kanto route 16 area",
-          "kanto route 17 area",
-          "kanto route 18 area"
+          "Route 16",
+          "Route 17",
+          "Route 18"
         ]
       }
     },
@@ -6835,26 +6879,26 @@
     "220": {
       "gold": {
         "locations": [
-          "ice path 1f",
-          "ice path b1f",
-          "ice path b2f",
-          "ice path b3f"
+          "Ice Path (1F)",
+          "Ice Path (B1F)",
+          "Ice Path (B2F)",
+          "Ice Path (B3F)"
         ]
       },
       "silver": {
         "locations": [
-          "ice path 1f",
-          "ice path b1f",
-          "ice path b2f",
-          "ice path b3f"
+          "Ice Path (1F)",
+          "Ice Path (B1F)",
+          "Ice Path (B2F)",
+          "Ice Path (B3F)"
         ]
       },
       "crystal": {
         "locations": [
-          "ice path 1f",
-          "ice path b1f",
-          "ice path b2f",
-          "ice path b3f"
+          "Ice Path (1F)",
+          "Ice Path (B1F)",
+          "Ice Path (B2F)",
+          "Ice Path (B3F)"
         ]
       }
     },
@@ -6878,52 +6922,53 @@
     "222": {
       "gold": {
         "locations": [
-          "cherrygrove city area",
-          "union cave b2f",
-          "johto route 34 area",
-          "olivine city area",
-          "johto sea route 40 area",
-          "cianwood city area",
-          "kanto sea route 19 area"
+          "Cherrygrove City",
+          "Union Cave (B2F)",
+          "Route 34",
+          "Olivine City",
+          "Sea Route 40",
+          "Cianwood City",
+          "Sea Route 19"
         ]
       },
       "silver": {
         "locations": [
-          "cherrygrove city area",
-          "union cave b2f",
-          "johto route 34 area",
-          "olivine city area",
-          "johto sea route 40 area",
-          "cianwood city area",
-          "kanto sea route 19 area"
+          "Cherrygrove City",
+          "Union Cave (B2F)",
+          "Route 34",
+          "Olivine City",
+          "Sea Route 40",
+          "Cianwood City",
+          "Sea Route 19"
         ]
       },
       "crystal": {
         "locations": [
-          "cherrygrove city area",
-          "union cave b2f",
-          "johto route 34 area",
-          "olivine city area",
-          "johto sea route 40 area",
-          "cianwood city area",
-          "kanto sea route 19 area"
+          "Cherrygrove City",
+          "Union Cave (B2F)",
+          "Route 34",
+          "Olivine City",
+          "Sea Route 40",
+          "Cianwood City",
+          "Sea Route 19"
         ]
       }
     },
     "223": {
       "gold": {
         "locations": [
-          "johto route 44 area"
+          "Route 44"
         ]
       },
       "silver": {
         "locations": [
-          "johto route 44 area"
+          "Route 44"
         ]
       },
       "crystal": {
         "locations": [
-          "Trade, Event"
+          "Trade",
+          "Event"
         ]
       }
     },
@@ -6942,74 +6987,77 @@
     "225": {
       "silver": {
         "locations": [
-          "ice path 1f",
-          "ice path b1f",
-          "ice path b2f",
-          "ice path b3f"
+          "Ice Path (1F)",
+          "Ice Path (B1F)",
+          "Ice Path (B2F)",
+          "Ice Path (B3F)"
         ]
       },
       "crystal": {
         "locations": [
-          "ice path 1f",
-          "ice path b1f",
-          "ice path b2f",
-          "ice path b3f"
+          "Ice Path (1F)",
+          "Ice Path (B1F)",
+          "Ice Path (B2F)",
+          "Ice Path (B3F)"
         ]
       },
       "gold": {
         "locations": [
-          "Trade, Event"
+          "Trade",
+          "Event"
         ]
       }
     },
     "226": {
       "gold": {
         "locations": [
-          "johto sea route 41 area"
+          "Sea Route 41"
         ]
       },
       "crystal": {
         "locations": [
-          "johto sea route 41 area"
+          "Sea Route 41"
         ]
       },
       "silver": {
         "locations": [
-          "Trade, Event"
+          "Trade",
+          "Event"
         ]
       }
     },
     "227": {
       "silver": {
         "locations": [
-          "johto route 45 area"
+          "Route 45"
         ]
       },
       "crystal": {
         "locations": [
-          "johto route 45 area"
+          "Route 45"
         ]
       },
       "gold": {
         "locations": [
-          "Trade, Event"
+          "Trade",
+          "Event"
         ]
       }
     },
     "228": {
       "gold": {
         "locations": [
-          "kanto route 7 area"
+          "Route 7"
         ]
       },
       "silver": {
         "locations": [
-          "kanto route 7 area"
+          "Route 7"
         ]
       },
       "crystal": {
         "locations": [
-          "kanto route 7 area"
+          "Route 7"
         ]
       }
     },
@@ -7050,42 +7098,44 @@
     "231": {
       "silver": {
         "locations": [
-          "johto route 45 area"
+          "Route 45"
         ]
       },
       "crystal": {
         "locations": [
-          "johto route 45 area",
-          "johto route 46 area"
+          "Route 45",
+          "Route 46"
         ]
       },
       "gold": {
         "locations": [
-          "Trade, Event"
+          "Trade",
+          "Event"
         ]
       }
     },
     "232": {
       "crystal": {
         "locations": [
-          "johto route 45 area"
+          "Route 45"
         ]
       },
       "silver": {
         "locations": [
-          "mt silver 2f",
-          "mt silver outside",
-          "mt silver 1f",
-          "mt silver top",
-          "kanto route 28 area",
-          "kanto victory road 1 1f",
-          "kanto victory road 1 2f",
-          "kanto victory road 1 3f"
+          "Mt. Silver (2F)",
+          "Mt. Silver Outside",
+          "Mt. Silver (1F)",
+          "Mt. Silver Top",
+          "Route 28",
+          "Victory Road 1 (1F)",
+          "Victory Road 1 (2F)",
+          "Victory Road 1 (3F)"
         ]
       },
       "gold": {
         "locations": [
-          "Trade, Evolve Event Phanpy"
+          "Trade",
+          "Evolve Event Phanpy"
         ]
       }
     },
@@ -7109,54 +7159,54 @@
     "234": {
       "gold": {
         "locations": [
-          "johto route 36 area",
-          "johto route 37 area"
+          "Route 36",
+          "Route 37"
         ]
       },
       "silver": {
         "locations": [
-          "johto route 36 area",
-          "johto route 37 area"
+          "Route 36",
+          "Route 37"
         ]
       },
       "crystal": {
         "locations": [
-          "johto route 37 area"
+          "Route 37"
         ]
       }
     },
     "235": {
       "gold": {
         "locations": [
-          "ruins of alph outside"
+          "Ruins Of Alph Outside"
         ]
       },
       "silver": {
         "locations": [
-          "ruins of alph outside"
+          "Ruins Of Alph Outside"
         ]
       },
       "crystal": {
         "locations": [
-          "ruins of alph outside"
+          "Ruins Of Alph Outside"
         ]
       }
     },
     "236": {
       "crystal": {
         "locations": [
-          "johto route 34 area",
-          "mt mortar b1f"
+          "Route 34",
+          "Mt. Mortar (B1F)"
         ]
       },
       "gold": {
         "locations": [
-          "mt mortar b1f"
+          "Mt. Mortar (B1F)"
         ]
       },
       "silver": {
         "locations": [
-          "mt mortar b1f"
+          "Mt. Mortar (B1F)"
         ]
       }
     },
@@ -7180,7 +7230,7 @@
     "238": {
       "crystal": {
         "locations": [
-          "johto route 34 area"
+          "Route 34"
         ]
       },
       "gold": {
@@ -7197,7 +7247,7 @@
     "239": {
       "crystal": {
         "locations": [
-          "johto route 34 area"
+          "Route 34"
         ]
       },
       "gold": {
@@ -7214,7 +7264,7 @@
     "240": {
       "crystal": {
         "locations": [
-          "johto route 34 area"
+          "Route 34"
         ]
       },
       "gold": {
@@ -7231,20 +7281,20 @@
     "241": {
       "gold": {
         "locations": [
-          "johto route 38 area",
-          "johto route 39 area"
+          "Route 38",
+          "Route 39"
         ]
       },
       "silver": {
         "locations": [
-          "johto route 38 area",
-          "johto route 39 area"
+          "Route 38",
+          "Route 39"
         ]
       },
       "crystal": {
         "locations": [
-          "johto route 38 area",
-          "johto route 39 area"
+          "Route 38",
+          "Route 39"
         ]
       }
     },
@@ -7268,82 +7318,82 @@
     "243": {
       "gold": {
         "locations": [
-          "roaming johto area"
+          "Roaming Johto"
         ]
       },
       "silver": {
         "locations": [
-          "roaming johto area"
+          "Roaming Johto"
         ]
       },
       "crystal": {
         "locations": [
-          "roaming johto area"
+          "Roaming Johto"
         ]
       }
     },
     "244": {
       "gold": {
         "locations": [
-          "roaming johto area"
+          "Roaming Johto"
         ]
       },
       "silver": {
         "locations": [
-          "roaming johto area"
+          "Roaming Johto"
         ]
       },
       "crystal": {
         "locations": [
-          "roaming johto area"
+          "Roaming Johto"
         ]
       }
     },
     "245": {
       "gold": {
         "locations": [
-          "roaming johto area"
+          "Roaming Johto"
         ]
       },
       "silver": {
         "locations": [
-          "roaming johto area"
+          "Roaming Johto"
         ]
       },
       "crystal": {
         "locations": [
-          "bell tower 1f"
+          "Bell Tower (1F)"
         ]
       }
     },
     "246": {
       "gold": {
         "locations": [
-          "mt silver 2f",
-          "mt silver 1f",
-          "mt silver top"
+          "Mt. Silver (2F)",
+          "Mt. Silver (1F)",
+          "Mt. Silver Top"
         ]
       },
       "silver": {
         "locations": [
-          "mt silver 2f",
-          "mt silver 1f",
-          "mt silver top"
+          "Mt. Silver (2F)",
+          "Mt. Silver (1F)",
+          "Mt. Silver Top"
         ]
       },
       "crystal": {
         "locations": [
-          "mt silver 2f",
-          "mt silver 1f",
-          "mt silver top",
-          "celadon city prize corner"
+          "Mt. Silver (2F)",
+          "Mt. Silver (1F)",
+          "Mt. Silver Top",
+          "Celadon City Prize Corner"
         ]
       }
     },
     "247": {
       "crystal": {
         "locations": [
-          "mt silver top"
+          "Mt. Silver Top"
         ]
       },
       "gold": {
@@ -7377,51 +7427,53 @@
     "249": {
       "gold": {
         "locations": [
-          "whirl islands b2f"
+          "Whirl Islands (B2F)"
         ]
       },
       "silver": {
         "locations": [
-          "whirl islands b2f"
+          "Whirl Islands (B2F)"
         ]
       },
       "crystal": {
         "locations": [
-          "whirl islands b2f"
+          "Whirl Islands (B2F)"
         ]
       }
     },
     "250": {
       "gold": {
         "locations": [
-          "bell tower roof"
+          "Bell Tower Roof"
         ]
       },
       "silver": {
         "locations": [
-          "bell tower roof"
+          "Bell Tower Roof"
         ]
       },
       "crystal": {
         "locations": [
-          "bell tower roof"
+          "Bell Tower Roof"
         ]
       }
     },
     "251": {
       "crystal": {
         "locations": [
-          "ilex forest area"
+          "Ilex Forest"
         ]
       },
       "gold": {
         "locations": [
-          "Trade, Event"
+          "Trade",
+          "Event"
         ]
       },
       "silver": {
         "locations": [
-          "Trade, Event"
+          "Trade",
+          "Event"
         ]
       }
     }

@@ -13,6 +13,7 @@
       "type": "base",
       "optional": false,
       "defaultEnabled": false,
+      "startIndex": 1,
       "entries": [
         {
           "speciesId": 1,

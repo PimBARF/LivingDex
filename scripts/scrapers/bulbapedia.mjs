@@ -16,7 +16,9 @@ async function throttledFetch(url, options = {}) {
   const now = Date.now();
   const elapsed = now - lastRequestTime;
   if (elapsed < MIN_REQUEST_INTERVAL_MS) {
-    await new Promise((resolve) => setTimeout(resolve, MIN_REQUEST_INTERVAL_MS - elapsed));
+    await new Promise((resolve) =>
+      setTimeout(resolve, MIN_REQUEST_INTERVAL_MS - elapsed),
+    );
   }
   lastRequestTime = Date.now();
   return fetch(url, options);
@@ -27,76 +29,156 @@ async function throttledFetch(url, options = {}) {
  */
 export const BULBAPEDIA_VERSION_MAP = {
   // Gen 1
-  red: ["Red"],
-  blue: ["Blue"],
-  yellow: ["Yellow"],
+  red: ["Red", "R"],
+  blue: ["Blue", "B"],
+  yellow: ["Yellow", "Y"],
   // Gen 2
-  gold: ["Gold"],
-  silver: ["Silver"],
-  crystal: ["Crystal"],
+  gold: ["Gold", "G"],
+  silver: ["Silver", "S"],
+  crystal: ["Crystal", "C"],
   // Gen 3
-  ruby: ["Ruby"],
-  sapphire: ["Sapphire"],
-  emerald: ["Emerald"],
-  firered: ["FireRed"],
-  leafgreen: ["LeafGreen"],
+  ruby: ["Ruby", "Ru"],
+  sapphire: ["Sapphire", "Sa"],
+  emerald: ["Emerald", "E"],
+  firered: ["FireRed", "FR"],
+  leafgreen: ["LeafGreen", "LG"],
   // Gen 4
-  diamond: ["Diamond"],
-  pearl: ["Pearl"],
-  platinum: ["Platinum"],
-  heartgold: ["HeartGold"],
-  soulsilver: ["SoulSilver"],
+  diamond: ["Diamond", "D"],
+  pearl: ["Pearl", "P"],
+  platinum: ["Platinum", "Pt"],
+  heartgold: ["HeartGold", "HG"],
+  soulsilver: ["SoulSilver", "SS"],
   // Gen 5
-  black: ["Black"],
-  white: ["White"],
-  "black-2": ["Black 2"],
-  "white-2": ["White 2"],
+  black: ["Black", "B"],
+  white: ["White", "W"],
+  "black-2": ["Black 2", "B2"],
+  "white-2": ["White 2", "W2"],
   // Gen 6
   x: ["X"],
   y: ["Y"],
-  "omega-ruby": ["Omega Ruby"],
-  "alpha-sapphire": ["Alpha Sapphire"],
+  "omega-ruby": ["Omega Ruby", "OR"],
+  "alpha-sapphire": ["Alpha Sapphire", "AS"],
   // Gen 7
-  sun: ["Sun"],
-  moon: ["Moon"],
-  "ultra-sun": ["Ultra Sun"],
-  "ultra-moon": ["Ultra Moon"],
-  "lets-go-pikachu": ["Let's Go Pikachu", "Let's Go, Pikachu!"],
-  "lets-go-eevee": ["Let's Go Eevee", "Let's Go, Eevee!"],
+  sun: ["Sun", "S"],
+  moon: ["Moon", "M"],
+  "ultra-sun": ["Ultra Sun", "US"],
+  "ultra-moon": ["Ultra Moon", "UM"],
+  "lets-go-pikachu": ["Let's Go Pikachu", "Let's Go, Pikachu!", "LGP", "LGPE"],
+  "lets-go-eevee": ["Let's Go Eevee", "Let's Go, Eevee!", "LGE", "LGPE"],
   // Gen 8
-  sword: ["Sword"],
-  shield: ["Shield"],
-  "brilliant-diamond": ["Brilliant Diamond"],
-  "shining-pearl": ["Shining Pearl"],
-  "legends-arceus": ["Legends: Arceus"],
+  sword: ["Sword", "Sw"],
+  shield: ["Shield", "Sh"],
+  "brilliant-diamond": ["Brilliant Diamond", "BD", "BDSP"],
+  "shining-pearl": ["Shining Pearl", "SP", "BDSP"],
+  "legends-arceus": ["Legends: Arceus", "LA", "PLA"],
   // Gen 9
-  scarlet: ["Scarlet"],
-  violet: ["Violet"],
-  "legends-z-a": ["Legends: Z-A"],
+  scarlet: ["Scarlet", "Sc", "SV"],
+  violet: ["Violet", "Vi", "SV"],
+  "legends-z-a": ["Legends: Z-A", "ZA", "PLZA"],
 };
 
 /**
  * Clean wikitext formatting to plain readable location text
+ *
+ * @param {string} text - Raw wikitext string
+ * @returns {string} Cleaned, human-readable plain text
  */
 export function cleanWikitext(text) {
   if (!text) return "";
-  return (
-    text
-      // Replace wiki links [[Target|Label]] -> Label, [[Target]] -> Target
-      .replace(/\[\[(?:[^|\]]*\|)?([^\]]+)\]\]/g, "$1")
-      // Replace Bulbapedia specific templates like {{FB|Region|Location}} or {{DL|...|Name}}
-      .replace(/\{\{[^|]+\|[^|]+\|([^}]+)\}\}/g, "$1")
-      .replace(/\{\{[^|]+\|([^}]+)\}\}/g, "$1")
-      // Replace linebreaks and HTML tags
-      .replace(/<br\s*\/?>/gi, "; ")
-      .replace(/<sup[^>]*>.*?<\/sup>/gi, "")
-      .replace(/<[^>]+>/g, "")
-      // Clean remaining template curlies
-      .replace(/\{\{|\}\}/g, "")
-      // Remove extra whitespaces
-      .replace(/\s+/g, " ")
-      .trim()
+
+  let cleaned = text;
+
+  // 1. Remove comments, references, and HTML tags
+  cleaned = cleaned
+    .replace(/<!--[\s\S]*?-->/g, "")
+    .replace(/<ref[\s\S]*?<\/ref>/gi, "")
+    .replace(/<ref[^>]*\/>/gi, "")
+    .replace(/<sup[^>]*>.*?<\/sup>/gi, "")
+    .replace(/<br\s*\/?>/gi, "; ")
+    .replace(/<[^>]+>/g, "");
+
+  // 2. Resolve specific MediaWiki route and location templates
+  // {{rt|205|Sinnoh}} -> Route 205
+  cleaned = cleaned.replace(/\{\{rt\|([^|]+)(?:\|[^}]+)?\}\}/gi, (_, r) => {
+    const trimmed = r.trim();
+    return /^route\s+/i.test(trimmed) ? trimmed : `Route ${trimmed}`;
+  });
+
+  // {{rtp|Sinnoh|205}} -> Route 205
+  cleaned = cleaned.replace(/\{\{rtp\|[^|]+\|([^}]+)\}\}/gi, (_, r) => {
+    const trimmed = r.trim();
+    return /^route\s+/i.test(trimmed) ? trimmed : `Route ${trimmed}`;
+  });
+
+  // {{r|Sinnoh|205}} or {{r|205}} -> Route 205
+  cleaned = cleaned.replace(/\{\{r\|(?:[^|]+\|)?([^}]+)\}\}/gi, (_, r) => {
+    const trimmed = r.trim();
+    return /^route\s+/i.test(trimmed) ? trimmed : `Route ${trimmed}`;
+  });
+
+  // {{loc|Location|Region}} -> Location
+  cleaned = cleaned.replace(/\{\{loc\|([^|]+)(?:\|[^}]+)?\}\}/gi, "$1");
+
+  // {{FB|Region|Location}} -> Location
+  cleaned = cleaned.replace(/\{\{FB\|[^|]+\|([^}]+)\}\}/gi, "$1");
+
+  // {{DL|Page|Section|Display}} -> Display, or {{DL|Page|Section}} -> Section
+  cleaned = cleaned.replace(
+    /\{\{DL\|[^|]+\|([^|}]+)(?:\|([^}]+))?\}\}/gi,
+    (_, s, d) => (d || s).trim(),
   );
+
+  // 3. Wiki links: [[Target|Label]] -> Label, [[Target|Sub|Label]] -> Label, [[Target]] -> Target
+  cleaned = cleaned.replace(/\[\[(?:[^|\]]*\|)*([^\]]+)\]\]/g, "$1");
+
+  // 4. Clean remaining generic templates: {{template|arg1|arg2|...|lastArg}} -> lastArg
+  cleaned = cleaned.replace(/\{\{[^}]*\|([^|}]+)\}\}/g, "$1");
+  cleaned = cleaned.replace(/\{\{[^}]+\}\}/g, "");
+
+  // 5. Remove bold / italic markup
+  cleaned = cleaned.replace(/'{2,5}/g, "");
+
+  // 6. Clean up remaining wiki/template artifacts
+  cleaned = cleaned
+    .replace(/\[\[|\]\]/g, "")
+    .replace(/\{\{|\}\}/g, "")
+    .replace(/&nbsp;/gi, " ")
+    .replace(/&amp;/gi, "&");
+
+  // 7. Format day-of-the-week and time-of-day shorthand codes
+  cleaned = cleaned
+    .replace(/(?:\)|\])?(?:TuThSa|tuthsa)\b/gi, " - Tue, Thu, Sat)")
+    .replace(/(?:\)|\])?(?:MoWeFr|mowefr)\b/gi, " - Mon, Wed, Fri)")
+    .replace(/(?<=\S)(?:MD|md)\b/g, " (Morning, Day)")
+    .replace(/(?<=\S)(?:MN|mn)\b/g, " (Morning, Night)")
+    .replace(/(?<=\S)(?:DN|dn)\b/g, " (Day, Night)")
+    .replace(/\s*\(\s*-\s*/g, " (")
+    .replace(/\)\s*\)/g, ")");
+
+  // 8. Fix repeated words / phrases like "Routes Route 205" -> "Route 205"
+  cleaned = cleaned
+    .replace(/\bRoutes\s+(Route\s+\d+)/gi, "$1")
+    .replace(/\bRoute\s+Route\b/gi, "Route");
+
+  // Clean repeated "Sinnoh, Sinnoh" from previously broken templates
+  if (cleaned.includes("Sinnoh, Sinnoh")) {
+    cleaned = cleaned.replace(
+      /(?:Routes\s+)?(?:Sinnoh,\s*)+(.*)/i,
+      "Honey Trees (Routes 205–222, $1)",
+    );
+    cleaned = cleaned.replace(/\s*\(Honey Trees\)/i, "");
+  }
+
+  // 9. Clean up stray pipe characters and empty parentheticals
+  cleaned = cleaned
+    .replace(/\|\s*/g, ", ")
+    .replace(/\(\s*\)/g, "")
+    .replace(/,\s*,/g, ",")
+    .replace(/\s*;\s*/g, "; ")
+    .replace(/\s+/g, " ")
+    .trim();
+
+  return cleaned;
 }
 
 /**
@@ -116,7 +198,10 @@ export function extractAvailabilityTemplates(wikitext) {
       depth--;
       if (depth === 0 && start !== -1) {
         const tpl = wikitext.slice(start, i + 2);
-        if (tpl.startsWith("{{Availability/Entry") || tpl.startsWith("{{Availability/Gen")) {
+        if (
+          tpl.startsWith("{{Availability/Entry") ||
+          tpl.startsWith("{{Availability/Gen")
+        ) {
           templates.push(tpl);
         }
         start = -1;
@@ -170,7 +255,8 @@ export async function fetchBulbapediaPageWikitext(pageTitle) {
   try {
     const res = await throttledFetch(url, {
       headers: {
-        "User-Agent": "LivingDex-DataBuilder/1.0 (https://github.com/PimBARF/LivingDex)",
+        "User-Agent":
+          "LivingDex-DataBuilder/1.0 (https://github.com/PimBARF/LivingDex)",
       },
     });
     if (!res.ok) return "";
@@ -217,9 +303,11 @@ export async function fetchBulbapediaEncounters(speciesName) {
       params.games,
     ].filter(Boolean);
 
-    for (const [versionKey, bulbNames] of Object.entries(BULBAPEDIA_VERSION_MAP)) {
+    for (const [versionKey, bulbNames] of Object.entries(
+      BULBAPEDIA_VERSION_MAP,
+    )) {
       const matchesVersion = rawVersions.some((v) =>
-        bulbNames.some((bn) => v.toLowerCase() === bn.toLowerCase())
+        bulbNames.some((bn) => v.toLowerCase() === bn.toLowerCase()),
       );
 
       if (matchesVersion) {
@@ -253,7 +341,9 @@ export async function fetchBulbapediaDexRoster(pageTitle) {
 
   for (const line of lines) {
     // MediaWiki row format for dex tables often: {{rdex|001|Bulbasaur|...}} or #001 [[Bulbasaur]]
-    const templateMatch = line.match(/\{\{(?:rdex|ndex|MSP)\|([0-9]+)\|([^|]+)/i);
+    const templateMatch = line.match(
+      /\{\{(?:rdex|ndex|MSP)\|([0-9]+)\|([^|]+)/i,
+    );
     if (templateMatch) {
       const dexNum = Number(templateMatch[1]);
       const name = templateMatch[2].trim();
@@ -264,7 +354,9 @@ export async function fetchBulbapediaDexRoster(pageTitle) {
       continue;
     }
 
-    const linkMatch = line.match(/#?([0-9]{1,4})\s+\[\[([^\]|]+)(?:\|[^\]]+)?\]\]/);
+    const linkMatch = line.match(
+      /#?([0-9]{1,4})\s+\[\[([^\]|]+)(?:\|[^\]]+)?\]\]/,
+    );
     if (linkMatch) {
       const dexNum = Number(linkMatch[1]);
       const name = linkMatch[2].replace(/\s*\(Pokémon\)$/i, "").trim();

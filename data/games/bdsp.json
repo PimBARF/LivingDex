@@ -14,6 +14,7 @@
       "type": "base",
       "optional": false,
       "defaultEnabled": false,
+      "startIndex": 1,
       "entries": [
         {
           "speciesId": 387,
@@ -1081,15 +1082,29 @@
         ]
       }
     },
-    "35": {
+    "26": {
       "brilliant-diamond": {
         "locations": [
-          "Mt. Coronet, Trophy Garden"
+          "Evolve Pikachu"
         ]
       },
       "shining-pearl": {
         "locations": [
-          "Mt. Coronet, Trophy Garden"
+          "Evolve Pikachu"
+        ]
+      }
+    },
+    "35": {
+      "brilliant-diamond": {
+        "locations": [
+          "Mt. Coronet",
+          "Trophy Garden"
+        ]
+      },
+      "shining-pearl": {
+        "locations": [
+          "Mt. Coronet",
+          "Trophy Garden"
         ]
       }
     },
@@ -1108,60 +1123,132 @@
     "41": {
       "brilliant-diamond": {
         "locations": [
-          "Iron Island, Oreburgh Mine, Wayward Cave, Lost Tower (walking",
-          "all times)",
-          "Routes Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, and Sinnoh, Acuity Lakefront (tall grass)Surfing and walking",
-          "all times)",
-          "Grand Underground - Spacious Cave, Grassland Cave, Swampy Cave, Sunlit Cavern, Bogsunk Cavern"
+          "Iron Island",
+          "Oreburgh Mine",
+          "Wayward Cave",
+          "Lost Tower (walking",
+          "All Times)",
+          "Honey Trees (Routes 205–222, and Sinnoh, Acuity Lakefront (tall grass)N",
+          "Ravaged Path",
+          "Oreburgh Gate",
+          "Mt. Coronet (Surfing and walking",
+          "Grand Underground Spacious Cave",
+          "Grassland Cave",
+          "Swampy Cave",
+          "Sunlit Cavern",
+          "Bogsunk Cavern)"
         ]
       },
       "shining-pearl": {
         "locations": [
-          "Iron Island, Oreburgh Mine, Wayward Cave, Lost Tower (walking",
-          "all times)",
-          "Routes Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, and Sinnoh, Acuity Lakefront (tall grass)Surfing and walking",
-          "all times)",
-          "Grand Underground - Spacious Cave, Grassland Cave, Swampy Cave, Sunlit Cavern, Bogsunk Cavern"
+          "Iron Island",
+          "Oreburgh Mine",
+          "Wayward Cave",
+          "Lost Tower (walking",
+          "All Times)",
+          "Honey Trees (Routes 205–222, and Sinnoh, Acuity Lakefront (tall grass)N",
+          "Ravaged Path",
+          "Oreburgh Gate",
+          "Mt. Coronet (Surfing and walking",
+          "Grand Underground Spacious Cave",
+          "Grassland Cave",
+          "Swampy Cave",
+          "Sunlit Cavern",
+          "Bogsunk Cavern)"
         ]
       }
     },
     "42": {
       "brilliant-diamond": {
         "locations": [
-          "Ravaged Path, Oreburgh Gate, Surfing, all times)",
-          "Stark Mountain, Mt. Coronet, 227|Sinnoh96|Strength)"
+          "Ravaged Path",
+          "Oreburgh Gate",
+          "Victory Road",
+          "Mt. Coronet (Surfing, all times)",
+          "Stark Mountain",
+          "Mt. Coronet",
+          "Iron Island",
+          "Snowpoint Temple",
+          "Lost Tower",
+          "Turnback Cave (all times)",
+          "Route 227N",
+          "Grand Underground Grassland Cave",
+          "Spacious Cave",
+          "Swampy Cave",
+          "Sunlit Cavern",
+          "Bogsunk Cavern (After obtaining Strength)"
         ]
       },
       "shining-pearl": {
         "locations": [
-          "Ravaged Path, Oreburgh Gate, Surfing, all times)",
-          "Stark Mountain, Mt. Coronet, 227|Sinnoh96|Strength)"
+          "Ravaged Path",
+          "Oreburgh Gate",
+          "Victory Road",
+          "Mt. Coronet (Surfing, all times)",
+          "Stark Mountain",
+          "Mt. Coronet",
+          "Iron Island",
+          "Snowpoint Temple",
+          "Lost Tower",
+          "Turnback Cave (all times)",
+          "Route 227N",
+          "Grand Underground Grassland Cave",
+          "Spacious Cave",
+          "Swampy Cave",
+          "Sunlit Cavern",
+          "Bogsunk Cavern (After obtaining Strength)"
         ]
       }
     },
     "54": {
       "brilliant-diamond": {
         "locations": [
-          "Routes Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Twinleaf Town, Eterna City, Lake Verity, Celestic Town (208|Sinnoh, Sinnoh, Lake Acuity, Lake Valor, Great Marsh, Oreburgh Gate, Ravaged Path (walking and Surfing)",
-          "Grand Underground - Spacious Cave, Fountainspring Cave, Riverbank Cave, Still-Water Cavern"
+          "Honey Trees (Routes 205–222, Twinleaf Town, Eterna City, Lake Verity, Celestic Town (Surfing)",
+          "Routes Sinnoh",
+          "Sinnoh",
+          "Lake Acuity",
+          "Lake Valor",
+          "Great Marsh",
+          "Oreburgh Gate",
+          "Ravaged Path (walking and Surfing)",
+          "Grand Underground Spacious Cave",
+          "Fountainspring Cave",
+          "Riverbank Cave",
+          "Still Water Cavern)"
         ]
       },
       "shining-pearl": {
         "locations": [
-          "Routes Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Twinleaf Town, Eterna City, Lake Verity, Celestic Town (208|Sinnoh, Sinnoh, Lake Acuity, Lake Valor, Great Marsh, Oreburgh Gate, Ravaged Path (walking and Surfing)",
-          "Grand Underground - Spacious Cave, Fountainspring Cave, Riverbank Cave, Still-Water Cavern"
+          "Honey Trees (Routes 205–222, Twinleaf Town, Eterna City, Lake Verity, Celestic Town (Surfing)",
+          "Routes Sinnoh",
+          "Sinnoh",
+          "Lake Acuity",
+          "Lake Valor",
+          "Great Marsh",
+          "Oreburgh Gate",
+          "Ravaged Path (walking and Surfing)",
+          "Grand Underground Spacious Cave",
+          "Fountainspring Cave",
+          "Riverbank Cave",
+          "Still Water Cavern)"
         ]
       }
     },
     "55": {
       "brilliant-diamond": {
         "locations": [
-          "Routes Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, and Sinnoh, Twinleaf Town, Eterna City, Celestic Town, Ravaged Path, Oreburgh Gate, Lake Verity, Lake Acuity, Lake Valor, Sendoff Spring, Resort Area (226|Sinnoh and Sinnoh, Great Marsh, Sendoff Spring"
+          "Honey Trees (Routes 205–222, and Sinnoh, Twinleaf Town, Eterna City, Celestic Town, Ravaged Path, Oreburgh Gate, Lake Verity, Lake Acuity, Lake Valor, Sendoff Spring, Resort Area (Surfing)",
+          "Routes Sinnoh and Sinnoh",
+          "Great Marsh",
+          "Sendoff Spring)"
         ]
       },
       "shining-pearl": {
         "locations": [
-          "Routes Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, and Sinnoh, Twinleaf Town, Eterna City, Celestic Town, Ravaged Path, Oreburgh Gate, Lake Verity, Lake Acuity, Lake Valor, Sendoff Spring, Resort Area (226|Sinnoh and Sinnoh, Great Marsh, Sendoff Spring"
+          "Honey Trees (Routes 205–222, and Sinnoh, Twinleaf Town, Eterna City, Celestic Town, Ravaged Path, Oreburgh Gate, Lake Verity, Lake Acuity, Lake Valor, Sendoff Spring, Resort Area (Surfing)",
+          "Routes Sinnoh and Sinnoh",
+          "Great Marsh",
+          "Sendoff Spring)"
         ]
       }
     },
@@ -1182,12 +1269,18 @@
     "64": {
       "brilliant-diamond": {
         "locations": [
-          "Sinnoh, 97|Defog)"
+          "Route 215",
+          "Victory Road",
+          "Grand Underground Dazzling Cave",
+          "Stargleam Cavern (after obtaining Defog)"
         ]
       },
       "shining-pearl": {
         "locations": [
-          "Sinnoh, 97|Defog)"
+          "Route 215",
+          "Victory Road",
+          "Grand Underground Dazzling Cave",
+          "Stargleam Cavern (after obtaining Defog)"
         ]
       }
     },
@@ -1206,26 +1299,40 @@
     "66": {
       "brilliant-diamond": {
         "locations": [
-          "Routes Sinnoh, Sinnoh, and Sinnoh, Mount Coronet",
-          "Grand Underground - Spacious Cave, Grassland Cave, Whiteout Cave, Sunlit Cavern"
+          "Honey Trees (Routes 205–222, and Sinnoh, Mount Coronet",
+          "Grand Underground Spacious Cave",
+          "Grassland Cave",
+          "Whiteout Cave",
+          "Sunlit Cavern)"
         ]
       },
       "shining-pearl": {
         "locations": [
-          "Routes Sinnoh, Sinnoh, and Sinnoh, Mount Coronet",
-          "Grand Underground - Spacious Cave, Grassland Cave, Whiteout Cave, Sunlit Cavern"
+          "Honey Trees (Routes 205–222, and Sinnoh, Mount Coronet",
+          "Grand Underground Spacious Cave",
+          "Grassland Cave",
+          "Whiteout Cave",
+          "Sunlit Cavern)"
         ]
       }
     },
     "67": {
       "brilliant-diamond": {
         "locations": [
-          "Routes Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, and Sinnoh, Stark Mountain, Mount Coronet, 97|Defog)"
+          "Honey Trees (Routes 205–222, and Sinnoh, Stark Mountain, Mount Coronet, Victory Road, Acuity Lakefront",
+          "Grand Underground Spacious Cave",
+          "Grassland Cave",
+          "Whiteout Cave",
+          "Sunlit Cavern (After obtaining Defog)"
         ]
       },
       "shining-pearl": {
         "locations": [
-          "Routes Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, and Sinnoh, Stark Mountain, Mount Coronet, 97|Defog)"
+          "Honey Trees (Routes 205–222, and Sinnoh, Stark Mountain, Mount Coronet, Victory Road, Acuity Lakefront",
+          "Grand Underground Spacious Cave",
+          "Grassland Cave",
+          "Whiteout Cave",
+          "Sunlit Cavern (After obtaining Defog)"
         ]
       }
     },
@@ -1244,28 +1351,230 @@
     "72": {
       "brilliant-diamond": {
         "locations": [
-          "Routes Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, and Sinnoh, Canalave City, Pastoria City, Fuego Ironworks, Valley Windworks, Iron Island (Surfing)",
-          "Grand Underground - Fountainspring Cave, Riverbank Cave, Still-Water Cavern, Swampy Cave, Bogsunk Cavern (After defeating Candice)"
+          "Honey Trees (Routes 205–222, and Sinnoh, Canalave City, Pastoria City, Fuego Ironworks, Valley Windworks, Iron Island (Surfing)",
+          "Grand Underground Fountainspring Cave",
+          "Riverbank Cave",
+          "Still Water Cavern",
+          "Swampy Cave",
+          "Bogsunk Cavern (After defeating Candice)"
         ]
       },
       "shining-pearl": {
         "locations": [
-          "Routes Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, and Sinnoh, Canalave City, Pastoria City, Fuego Ironworks, Valley Windworks, Iron Island (Surfing)",
-          "Grand Underground - Fountainspring Cave, Riverbank Cave, Still-Water Cavern, Swampy Cave, Bogsunk Cavern (After defeating Candice)"
+          "Honey Trees (Routes 205–222, and Sinnoh, Canalave City, Pastoria City, Fuego Ironworks, Valley Windworks, Iron Island (Surfing)",
+          "Grand Underground Fountainspring Cave",
+          "Riverbank Cave",
+          "Still Water Cavern",
+          "Swampy Cave",
+          "Bogsunk Cavern (After defeating Candice)"
         ]
       }
     },
     "73": {
       "brilliant-diamond": {
         "locations": [
-          "Routes Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, and Sinnoh, Pastoria City, Canalave City, Sunyshore City, Valley Windworks, Fuego Ironworks, Iron Island, Surfing)",
-          "Grand Underground - Fountainspring Cave, Riverbank Cave, Still-Water Cavern, Swampy Cave, Bogsunk Cavern (After defeating Candice)"
+          "Honey Trees (Routes 205–222, and Sinnoh, Pastoria City, Canalave City, Sunyshore City, Valley Windworks, Fuego Ironworks, Iron Island, Pokémon League (Surfing)",
+          "Grand Underground Fountainspring Cave",
+          "Riverbank Cave",
+          "Still Water Cavern",
+          "Swampy Cave",
+          "Bogsunk Cavern (After defeating Candice)"
         ]
       },
       "shining-pearl": {
         "locations": [
-          "Routes Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, and Sinnoh, Pastoria City, Canalave City, Sunyshore City, Valley Windworks, Fuego Ironworks, Iron Island, Surfing)",
-          "Grand Underground - Fountainspring Cave, Riverbank Cave, Still-Water Cavern, Swampy Cave, Bogsunk Cavern (After defeating Candice)"
+          "Honey Trees (Routes 205–222, and Sinnoh, Pastoria City, Canalave City, Sunyshore City, Valley Windworks, Fuego Ironworks, Iron Island, Pokémon League (Surfing)",
+          "Grand Underground Fountainspring Cave",
+          "Riverbank Cave",
+          "Still Water Cavern",
+          "Swampy Cave",
+          "Bogsunk Cavern (After defeating Candice)"
+        ]
+      }
+    },
+    "74": {
+      "brilliant-diamond": {
+        "locations": [
+          "Oreburgh Mine (1F)",
+          "Oreburgh Mine (B1F)",
+          "Mt. Coronet (1F) Route 207",
+          "Mt. Coronet (1F) Route 211",
+          "Ravaged Path",
+          "Oreburgh Gate (1F)",
+          "Oreburgh Gate (B1F)",
+          "Stark Mountain Entrance",
+          "Stark Mountain Inside",
+          "Wayward Cave (1F)",
+          "Wayward Cave (B1F)",
+          "Ruin Maniac Cave 0 9 Different Unown Caught",
+          "Ruin Maniac Cave 10 25 Different Unown Caught",
+          "Maniac Tunnel 26 Plus Different Unown Caught",
+          "Iron Island (1F)",
+          "Iron Island (B1F) Left",
+          "Iron Island (B1F) Right",
+          "Iron Island (B2F) Right",
+          "Iron Island (B2F) Left",
+          "Iron Island (B3F)",
+          "Valor Lakefront",
+          "Route 206",
+          "Route 207",
+          "Route 210 South Towards Solaceon Town",
+          "Route 211 West Towards Eterna City",
+          "Route 214",
+          "Route 215"
+        ]
+      },
+      "shining-pearl": {
+        "locations": [
+          "Oreburgh Mine (1F)",
+          "Oreburgh Mine (B1F)",
+          "Mt. Coronet (1F) Route 207",
+          "Mt. Coronet (1F) Route 211",
+          "Ravaged Path",
+          "Oreburgh Gate (1F)",
+          "Oreburgh Gate (B1F)",
+          "Stark Mountain Entrance",
+          "Stark Mountain Inside",
+          "Wayward Cave (1F)",
+          "Wayward Cave (B1F)",
+          "Ruin Maniac Cave 0 9 Different Unown Caught",
+          "Ruin Maniac Cave 10 25 Different Unown Caught",
+          "Maniac Tunnel 26 Plus Different Unown Caught",
+          "Iron Island (1F)",
+          "Iron Island (B1F) Left",
+          "Iron Island (B1F) Right",
+          "Iron Island (B2F) Right",
+          "Iron Island (B2F) Left",
+          "Iron Island (B3F)",
+          "Valor Lakefront",
+          "Route 206",
+          "Route 207",
+          "Route 210 South Towards Solaceon Town",
+          "Route 211 West Towards Eterna City",
+          "Route 214",
+          "Route 215"
+        ]
+      }
+    },
+    "75": {
+      "brilliant-diamond": {
+        "locations": [
+          "Mt. Coronet (2F)",
+          "Mt. Coronet (3F)",
+          "Mt. Coronet (4F)",
+          "Mt. Coronet (4F) Small Room",
+          "Mt. Coronet (5F)",
+          "Mt. Coronet (6F)",
+          "Mt. Coronet (1F) From Exterior",
+          "Mt. Coronet (1F) Route 216",
+          "Mt. Coronet (B1F)",
+          "Victory Road (1F)",
+          "Victory Road (2F)",
+          "Victory Road Inside",
+          "Victory Road Inside Exit",
+          "Stark Mountain",
+          "Stark Mountain Entrance",
+          "Stark Mountain Inside",
+          "Snowpoint Temple (1F)",
+          "Snowpoint Temple (B1F)",
+          "Snowpoint Temple (B2F)",
+          "Snowpoint Temple (B3F)",
+          "Snowpoint Temple (B4F)",
+          "Snowpoint Temple (B5F)",
+          "Iron Island (1F)",
+          "Iron Island (B1F) Left",
+          "Iron Island (B1F) Right",
+          "Iron Island (B2F) Right",
+          "Iron Island (B2F) Left",
+          "Iron Island (B3F)",
+          "Valor Lakefront",
+          "Route 211 East Towards Celestic Town",
+          "Route 214",
+          "Route 216",
+          "Route 227"
+        ]
+      },
+      "shining-pearl": {
+        "locations": [
+          "Mt. Coronet (2F)",
+          "Mt. Coronet (3F)",
+          "Mt. Coronet (4F)",
+          "Mt. Coronet (4F) Small Room",
+          "Mt. Coronet (5F)",
+          "Mt. Coronet (6F)",
+          "Mt. Coronet (1F) From Exterior",
+          "Mt. Coronet (1F) Route 216",
+          "Mt. Coronet (B1F)",
+          "Victory Road (1F)",
+          "Victory Road (2F)",
+          "Victory Road Inside",
+          "Victory Road Inside Exit",
+          "Stark Mountain",
+          "Stark Mountain Entrance",
+          "Stark Mountain Inside",
+          "Snowpoint Temple (1F)",
+          "Snowpoint Temple (B1F)",
+          "Snowpoint Temple (B2F)",
+          "Snowpoint Temple (B3F)",
+          "Snowpoint Temple (B4F)",
+          "Snowpoint Temple (B5F)",
+          "Iron Island (1F)",
+          "Iron Island (B1F) Left",
+          "Iron Island (B1F) Right",
+          "Iron Island (B2F) Right",
+          "Iron Island (B2F) Left",
+          "Iron Island (B3F)",
+          "Valor Lakefront",
+          "Route 211 East Towards Celestic Town",
+          "Route 214",
+          "Route 216",
+          "Route 227"
+        ]
+      }
+    },
+    "76": {
+      "brilliant-diamond": {
+        "locations": [
+          "Evolve Graveler"
+        ]
+      },
+      "shining-pearl": {
+        "locations": [
+          "Evolve Graveler"
+        ]
+      }
+    },
+    "77": {
+      "brilliant-diamond": {
+        "locations": [
+          "Route 206",
+          "Route 210 South Towards Solaceon Town",
+          "Route 211 West Towards Eterna City",
+          "Route 211 East Towards Celestic Town",
+          "Route 214",
+          "Route 215"
+        ]
+      },
+      "shining-pearl": {
+        "locations": [
+          "Route 206",
+          "Route 210 South Towards Solaceon Town",
+          "Route 211 West Towards Eterna City",
+          "Route 211 East Towards Celestic Town",
+          "Route 214",
+          "Route 215"
+        ]
+      }
+    },
+    "78": {
+      "brilliant-diamond": {
+        "locations": [
+          "Evolve Ponyta"
+        ]
+      },
+      "shining-pearl": {
+        "locations": [
+          "Evolve Ponyta"
         ]
       }
     },
@@ -1273,13 +1582,19 @@
       "brilliant-diamond": {
         "locations": [
           "Fuego Ironworks (Swarm)",
-          "Grand Underground - Spacious Cave, Whiteout Cave, Icy Cave, Glacial Cavern"
+          "Grand Underground Spacious Cave",
+          "Whiteout Cave",
+          "Icy Cave",
+          "Glacial Cavern"
         ]
       },
       "shining-pearl": {
         "locations": [
           "Fuego Ironworks (Swarm)",
-          "Grand Underground - Spacious Cave, Whiteout Cave, Icy Cave, Glacial Cavern"
+          "Grand Underground Spacious Cave",
+          "Whiteout Cave",
+          "Icy Cave",
+          "Glacial Cavern"
         ]
       }
     },
@@ -1298,14 +1613,20 @@
     "92": {
       "brilliant-diamond": {
         "locations": [
-          "Sinnoh, Old Chateau, Lost Tower",
-          "Grand Underground - Dazzling Cave, Stargleam Cavern"
+          "Route 209",
+          "Old Chateau",
+          "Lost Tower",
+          "Grand Underground Dazzling Cave",
+          "Stargleam Cavern"
         ]
       },
       "shining-pearl": {
         "locations": [
-          "Sinnoh, Old Chateau, Lost Tower",
-          "Grand Underground - Dazzling Cave, Stargleam Cavern"
+          "Route 209",
+          "Old Chateau",
+          "Lost Tower",
+          "Grand Underground Dazzling Cave",
+          "Stargleam Cavern"
         ]
       }
     },
@@ -1313,13 +1634,15 @@
       "brilliant-diamond": {
         "locations": [
           "Turnback Cave",
-          "Trade *|Due to it holding an Everstone, the Haunter does not evolve into a Gengar upon the player receiving it"
+          "Trade Medicham in Snowpoint CityDue to it holding an Everstone",
+          "the Haunter does not evolve into a Gengar upon the player receiving it"
         ]
       },
       "shining-pearl": {
         "locations": [
           "Turnback Cave",
-          "Trade *|Due to it holding an Everstone, the Haunter does not evolve into a Gengar upon the player receiving it"
+          "Trade Medicham in Snowpoint CityDue to it holding an Everstone",
+          "the Haunter does not evolve into a Gengar upon the player receiving it"
         ]
       }
     },
@@ -1338,14 +1661,30 @@
     "95": {
       "brilliant-diamond": {
         "locations": [
-          "Iron Island, Snowpoint Temple, Oreburgh Mine, Victory Road, Stark Mountain",
-          "Grand Underground - Rocky Cave, Volcanic Cave, Sandsear Cave, Big Bluff Cavern, Typhlo Cavern"
+          "Iron Island",
+          "Snowpoint Temple",
+          "Oreburgh Mine",
+          "Victory Road",
+          "Stark Mountain",
+          "Grand Underground Rocky Cave",
+          "Volcanic Cave",
+          "Sandsear Cave",
+          "Big Bluff Cavern",
+          "Typhlo Cavern"
         ]
       },
       "shining-pearl": {
         "locations": [
-          "Iron Island, Snowpoint Temple, Oreburgh Mine, Victory Road, Stark Mountain",
-          "Grand Underground - Rocky Cave, Volcanic Cave, Sandsear Cave, Big Bluff Cavern, Typhlo Cavern"
+          "Iron Island",
+          "Snowpoint Temple",
+          "Oreburgh Mine",
+          "Victory Road",
+          "Stark Mountain",
+          "Grand Underground Rocky Cave",
+          "Volcanic Cave",
+          "Sandsear Cave",
+          "Big Bluff Cavern",
+          "Typhlo Cavern"
         ]
       }
     },
@@ -1353,102 +1692,165 @@
       "brilliant-diamond": {
         "locations": [
           "Lake Valor (Swarm)",
-          "Grand Underground - Spacious Cave, Riverbank Cave, Fountainspring Cave, Still-Water Cavern, Swampy Cave, Bogsunk Cavern"
+          "Grand Underground Spacious Cave",
+          "Riverbank Cave",
+          "Fountainspring Cave",
+          "Still Water Cavern",
+          "Swampy Cave",
+          "Bogsunk Cavern"
         ]
       },
       "shining-pearl": {
         "locations": [
           "Lake Valor (Swarm)",
-          "Grand Underground - Spacious Cave, Riverbank Cave, Fountainspring Cave, Still-Water Cavern, Swampy Cave, Bogsunk Cavern"
+          "Grand Underground Spacious Cave",
+          "Riverbank Cave",
+          "Fountainspring Cave",
+          "Still Water Cavern",
+          "Swampy Cave",
+          "Bogsunk Cavern"
         ]
       }
     },
     "111": {
       "brilliant-diamond": {
         "locations": [
-          "Sinnoh, Stark Mountain",
-          "Grand Underground - Spacious Cave, Rocky Cave, Sandsear Cave, Sunlit Cavern, Big Bluff CavernAfter obtaining the National Pokédex, Typhlo Cavern"
+          "Route 227",
+          "Stark Mountain",
+          "Grand Underground Spacious Cave",
+          "Rocky Cave",
+          "Sandsear Cave",
+          "Sunlit Cavern",
+          "Big Bluff CavernAfter obtaining the National Pokédex",
+          "Typhlo Cavern"
         ]
       },
       "shining-pearl": {
         "locations": [
-          "Sinnoh, Stark Mountain",
-          "Grand Underground - Spacious Cave, Rocky Cave, Sandsear Cave, Sunlit Cavern, Big Bluff CavernAfter obtaining the National Pokédex, Typhlo Cavern"
+          "Route 227",
+          "Stark Mountain",
+          "Grand Underground Spacious Cave",
+          "Rocky Cave",
+          "Sandsear Cave",
+          "Sunlit Cavern",
+          "Big Bluff CavernAfter obtaining the National Pokédex",
+          "Typhlo Cavern"
         ]
       }
     },
     "112": {
       "brilliant-diamond": {
         "locations": [
-          "Routes Sinnoh and Sinnoh, Stark Mountain",
-          "Grand Underground - Spacious Cave, Rocky Cave, Sandsear Cave, Big Bluff Cavern (After obtaining the National Pokédex)"
+          "Routes Sinnoh and Sinnoh",
+          "Stark Mountain",
+          "Grand Underground Spacious Cave",
+          "Rocky Cave",
+          "Sandsear Cave",
+          "Big Bluff Cavern (After obtaining the National Pokédex)"
         ]
       },
       "shining-pearl": {
         "locations": [
-          "Routes Sinnoh and Sinnoh, Stark Mountain",
-          "Grand Underground - Spacious Cave, Rocky Cave, Sandsear Cave, Big Bluff Cavern (After obtaining the National Pokédex)"
+          "Routes Sinnoh and Sinnoh",
+          "Stark Mountain",
+          "Grand Underground Spacious Cave",
+          "Rocky Cave",
+          "Sandsear Cave",
+          "Big Bluff Cavern (After obtaining the National Pokédex)"
         ]
       }
     },
     "113": {
       "brilliant-diamond": {
         "locations": [
-          "Routes Sinnoh and Sinnoh, Trophy Garden"
+          "Routes Sinnoh and Sinnoh",
+          "Trophy Garden"
         ]
       },
       "shining-pearl": {
         "locations": [
-          "Routes Sinnoh and Sinnoh, Trophy Garden"
+          "Routes Sinnoh and Sinnoh",
+          "Trophy Garden"
         ]
       }
     },
     "114": {
       "brilliant-diamond": {
         "locations": [
-          "Grand Underground - Swampy Cave, Bogsunk Cavern (After obtaining the National Pokédex)"
+          "Grand Underground Swampy Cave",
+          "Bogsunk Cavern (After obtaining the National Pokédex)"
         ]
       },
       "shining-pearl": {
         "locations": [
-          "Grand Underground - Swampy Cave, Bogsunk Cavern (After obtaining the National Pokédex)"
+          "Grand Underground Swampy Cave",
+          "Bogsunk Cavern (After obtaining the National Pokédex)"
         ]
       }
     },
     "118": {
       "brilliant-diamond": {
         "locations": [
-          "Routes Sinnoh, Sinnoh, Sinnoh, Sinnoh, and Sinnoh, Lake Acuity, Lake Verity, Twinleaf Town, Lake Valor, Resort Area, Sendoff Spring (Good Rod)"
+          "Honey Trees (Routes 205–222, and Sinnoh, Lake Acuity, Lake Verity, Twinleaf Town, Lake Valor, Resort Area, Sendoff Spring (Good Rod)"
         ]
       },
       "shining-pearl": {
         "locations": [
-          "Routes Sinnoh, Sinnoh, Sinnoh, Sinnoh, and Sinnoh, Lake Acuity, Lake Verity, Twinleaf Town, Lake Valor, Resort Area, Sendoff Spring (Good Rod)"
+          "Honey Trees (Routes 205–222, and Sinnoh, Lake Acuity, Lake Verity, Twinleaf Town, Lake Valor, Resort Area, Sendoff Spring (Good Rod)"
         ]
       }
     },
     "119": {
       "brilliant-diamond": {
         "locations": [
-          "Routes Sinnoh, Sinnoh, Sinnoh, Sinnoh, and Sinnoh, Lake Acuity, Lake Verity, Twinleaf Town, Lake Valor, Resort Area, Sendoff Spring (Super Rod)"
+          "Honey Trees (Routes 205–222, and Sinnoh, Lake Acuity, Lake Verity, Twinleaf Town, Lake Valor, Resort Area, Sendoff Spring (Super Rod)"
         ]
       },
       "shining-pearl": {
         "locations": [
-          "Routes Sinnoh, Sinnoh, Sinnoh, Sinnoh, and Sinnoh, Lake Acuity, Lake Verity, Twinleaf Town, Lake Valor, Resort Area, Sendoff Spring (Super Rod)"
+          "Honey Trees (Routes 205–222, and Sinnoh, Lake Acuity, Lake Verity, Twinleaf Town, Lake Valor, Resort Area, Sendoff Spring (Super Rod)"
+        ]
+      }
+    },
+    "122": {
+      "brilliant-diamond": {
+        "locations": [
+          "Route 218",
+          "Route 222"
+        ]
+      },
+      "shining-pearl": {
+        "locations": [
+          "Evolve Mime Jr."
         ]
       }
     },
     "123": {
       "brilliant-diamond": {
         "locations": [
-          "Sinnoh",
-          "Grand Underground - Grassland Cave, Sunlit Cavern, Riverbank Cave, Still-Water Cavern, Big Bluff Cavern"
+          "Route 229",
+          "Grand Underground Grassland Cave",
+          "Sunlit Cavern",
+          "Riverbank Cave",
+          "Still Water Cavern",
+          "Big Bluff Cavern"
+        ]
+      },
+      "shining-pearl": {
+        "locations": [
+          "Route 210 South Towards Solaceon Town",
+          "Route 210 West Towards Celestic Town",
+          "Route 215"
         ]
       }
     },
     "125": {
       "brilliant-diamond": {
+        "locations": [
+          "Evolve Elekid"
+        ]
+      },
+      "shining-pearl": {
         "locations": [
           "Evolve Elekid"
         ]
@@ -1459,19 +1861,24 @@
         "locations": [
           "Evolve Magby"
         ]
+      },
+      "brilliant-diamond": {
+        "locations": [
+          "Evolve Magby"
+        ]
       }
     },
     "129": {
       "brilliant-diamond": {
         "locations": [
-          "Routes Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, and Sinnoh, Twinleaf Town, Eterna City, Canalave City, Celestic Town, Pastoria City, Sunyshore City, Lake Verity, Lake Acuity, Lake Valor, Ravaged Path, Valley Windworks, Mt. Coronet, Iron Island, Great Marsh, Sendoff Spring, Victory Road, Fuego Ironworks, Oreburgh Gate, Resort Area (Old Rod or Good Rod)",
-          "Trade 226|Sinnoh (In Generation VIII|German)"
+          "Honey Trees (Routes 205–222, and Sinnoh, Twinleaf Town, Eterna City, Canalave City, Celestic Town, Pastoria City, Sunyshore City, Lake Verity, Lake Acuity, Lake Valor, Ravaged Path, Valley Windworks, Mt. Coronet, Iron Island, Great Marsh, Sendoff Spring, Pokémon League, Victory Road, Fuego Ironworks, Oreburgh Gate, Resort Area (Old Rod or Good Rod)",
+          "Trade Finneon on Route 226 (German)"
         ]
       },
       "shining-pearl": {
         "locations": [
-          "Routes Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, and Sinnoh, Twinleaf Town, Eterna City, Canalave City, Celestic Town, Pastoria City, Sunyshore City, Lake Verity, Lake Acuity, Lake Valor, Ravaged Path, Valley Windworks, Mt. Coronet, Iron Island, Great Marsh, Sendoff Spring, Victory Road, Fuego Ironworks, Oreburgh Gate, Resort Area (Old Rod or Good Rod)",
-          "Trade 226|Sinnoh (In Generation VIII|German)"
+          "Honey Trees (Routes 205–222, and Sinnoh, Twinleaf Town, Eterna City, Canalave City, Celestic Town, Pastoria City, Sunyshore City, Lake Verity, Lake Acuity, Lake Valor, Ravaged Path, Valley Windworks, Mt. Coronet, Iron Island, Great Marsh, Sendoff Spring, Pokémon League, Victory Road, Fuego Ironworks, Oreburgh Gate, Resort Area (Old Rod or Good Rod)",
+          "Trade Finneon on Route 226 (German)"
         ]
       }
     },
@@ -1479,13 +1886,13 @@
       "brilliant-diamond": {
         "locations": [
           "Great Marsh (Good Rod or Super Rod)",
-          "Routes Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, and Sinnoh, Twinleaf Town, Eterna City, Canalave City, Celestic Town, Pastoria City, Sunyshore City, Lake Verity, Lake Acuity, Lake Valor, Ravaged Path, Valley Windworks, Mt. Coronet, Iron Island, Sendoff Spring, Victory Road, Fuego Ironworks, Oreburgh Gate, Resort Area (Super Rod)"
+          "Honey Trees (Routes 205–222, and Sinnoh, Twinleaf Town, Eterna City, Canalave City, Celestic Town, Pastoria City, Sunyshore City, Lake Verity, Lake Acuity, Lake Valor, Ravaged Path, Valley Windworks, Mt. Coronet, Iron Island, Sendoff Spring, Pokémon League, Victory Road, Fuego Ironworks, Oreburgh Gate, Resort Area (Super Rod)"
         ]
       },
       "shining-pearl": {
         "locations": [
           "Great Marsh (Good Rod or Super Rod)",
-          "Routes Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, and Sinnoh, Twinleaf Town, Eterna City, Canalave City, Celestic Town, Pastoria City, Sunyshore City, Lake Verity, Lake Acuity, Lake Valor, Ravaged Path, Valley Windworks, Mt. Coronet, Iron Island, Sendoff Spring, Victory Road, Fuego Ironworks, Oreburgh Gate, Resort Area (Super Rod)"
+          "Honey Trees (Routes 205–222, and Sinnoh, Twinleaf Town, Eterna City, Canalave City, Celestic Town, Pastoria City, Sunyshore City, Lake Verity, Lake Acuity, Lake Valor, Ravaged Path, Valley Windworks, Mt. Coronet, Iron Island, Sendoff Spring, Pokémon League, Victory Road, Fuego Ironworks, Oreburgh Gate, Resort Area (Super Rod)"
         ]
       }
     },
@@ -1566,24 +1973,36 @@
     "163": {
       "brilliant-diamond": {
         "locations": [
-          "Routes Sinnoh, Sinnoh, Great Marsh96|Strength)"
+          "Honey Trees (Routes 205–222, Great MarshN",
+          "Grand Underground Spacious Cave",
+          "Grassland Cave",
+          "Fountainspring Cave",
+          "Riverbank Cave",
+          "Still Water Cavern",
+          "Sunlit Cavern (After obtaining Strength)"
         ]
       },
       "shining-pearl": {
         "locations": [
-          "Routes Sinnoh, Sinnoh, Great Marsh96|Strength)"
+          "Honey Trees (Routes 205–222, Great MarshN",
+          "Grand Underground Spacious Cave",
+          "Grassland Cave",
+          "Fountainspring Cave",
+          "Riverbank Cave",
+          "Still Water Cavern",
+          "Sunlit Cavern (After obtaining Strength)"
         ]
       }
     },
     "164": {
       "brilliant-diamond": {
         "locations": [
-          "Routes Sinnoh, Sinnoh, Sinnoh, and Sinnoh, Acuity Lakefront, Lake Acuity, Mt. Coronet, Great Marsh, Lake Valor, Sendoff SpringN"
+          "Honey Trees (Routes 205–222, and Sinnoh, Acuity Lakefront, Lake Acuity, Mt. Coronet, Great Marsh, Lake Valor, Sendoff SpringN)"
         ]
       },
       "shining-pearl": {
         "locations": [
-          "Routes Sinnoh, Sinnoh, Sinnoh, and Sinnoh, Acuity Lakefront, Lake Acuity, Mt. Coronet, Great Marsh, Lake Valor, Sendoff SpringN"
+          "Honey Trees (Routes 205–222, and Sinnoh, Acuity Lakefront, Lake Acuity, Mt. Coronet, Great Marsh, Lake Valor, Sendoff SpringN)"
         ]
       }
     },
@@ -1614,26 +2033,32 @@
     "173": {
       "brilliant-diamond": {
         "locations": [
-          "Mount Coronet, Trophy Garden"
+          "Mount Coronet",
+          "Trophy Garden"
         ]
       },
       "shining-pearl": {
         "locations": [
-          "Mount Coronet, Trophy Garden"
+          "Mount Coronet",
+          "Trophy Garden"
         ]
       }
     },
     "175": {
       "brilliant-diamond": {
         "locations": [
-          "Sinnoh (Poké Radar)",
-          "Grand Underground - Fountainspring Cave, Dazzling Cave, Stargleam Cavern"
+          "Route 230 (Poké Radar)",
+          "Grand Underground Fountainspring Cave",
+          "Dazzling Cave",
+          "Stargleam Cavern"
         ]
       },
       "shining-pearl": {
         "locations": [
-          "Sinnoh (Poké Radar)",
-          "Grand Underground - Fountainspring Cave, Dazzling Cave, Stargleam Cavern"
+          "Route 230 (Poké Radar)",
+          "Grand Underground Fountainspring Cave",
+          "Dazzling Cave",
+          "Stargleam Cavern"
         ]
       }
     },
@@ -1652,12 +2077,14 @@
     "183": {
       "brilliant-diamond": {
         "locations": [
-          "Great Marsh, Trophy Garden"
+          "Great Marsh",
+          "Trophy Garden"
         ]
       },
       "shining-pearl": {
         "locations": [
-          "Great Marsh, Trophy Garden"
+          "Great Marsh",
+          "Trophy Garden"
         ]
       }
     },
@@ -1688,14 +2115,14 @@
     "190": {
       "brilliant-diamond": {
         "locations": [
-          "Routes Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Eterna Forest, Floaroma Meadow, Fuego Ironworks, Valley Windworks (Honey Trees)",
-          "Grand Underground - Spacious Cave (After obtaining Defog)"
+          "Honey Trees (Routes 205–222, Eterna Forest, Floaroma Meadow, Fuego Ironworks, Valley Windworks",
+          "Grand Underground Spacious Cave (after Obtaining Defog)"
         ]
       },
       "shining-pearl": {
         "locations": [
-          "Routes Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Eterna Forest, Floaroma Meadow, Fuego Ironworks, Valley Windworks (Honey Trees)",
-          "Grand Underground - Spacious Cave (After obtaining Defog)"
+          "Honey Trees (Routes 205–222, Eterna Forest, Floaroma Meadow, Fuego Ironworks, Valley Windworks",
+          "Grand Underground Spacious Cave (after Obtaining Defog)"
         ]
       }
     },
@@ -1714,26 +2141,40 @@
     "194": {
       "brilliant-diamond": {
         "locations": [
-          "Sinnoh, Great Marsh",
-          "Grand Underground - Fountainspring Cave, Swampy Cave, Bogsunk Cavern (After obtaining the Defog)"
+          "Route 212",
+          "Great Marsh",
+          "Grand Underground Fountainspring Cave",
+          "Swampy Cave",
+          "Bogsunk Cavern (After obtaining the Defog)"
         ]
       },
       "shining-pearl": {
         "locations": [
-          "Sinnoh, Great Marsh",
-          "Grand Underground - Fountainspring Cave, Swampy Cave, Bogsunk Cavern (After obtaining the Defog)"
+          "Route 212",
+          "Great Marsh",
+          "Grand Underground Fountainspring Cave",
+          "Swampy Cave",
+          "Bogsunk Cavern (After obtaining the Defog)"
         ]
       }
     },
     "195": {
       "brilliant-diamond": {
         "locations": [
-          "Sinnoh and Great Marsh (97|Defog)"
+          "Route 212 and Great Marsh (Surfing)",
+          "Great Marsh (tall grass)",
+          "Grand Underground Fountainspring Cave",
+          "Swampy Cave",
+          "Bogsunk Cavern (After obtaining the Defog)"
         ]
       },
       "shining-pearl": {
         "locations": [
-          "Sinnoh and Great Marsh (97|Defog)"
+          "Route 212 and Great Marsh (Surfing)",
+          "Great Marsh (tall grass)",
+          "Grand Underground Fountainspring Cave",
+          "Swampy Cave",
+          "Bogsunk Cavern (After obtaining the Defog)"
         ]
       }
     },
@@ -1765,15 +2206,21 @@
       "brilliant-diamond": {
         "locations": [
           "Eterna Forest and Lost TowerN",
-          "Grand Underground - Spacious Cave, Grassland Cave, Riverbank Cave, Still-Water Cavern, Sunlit Cavern"
+          "Grand Underground Spacious Cave",
+          "Grassland Cave",
+          "Riverbank Cave",
+          "Still Water Cavern",
+          "Sunlit Cavern"
         ]
       }
     },
     "200": {
       "shining-pearl": {
         "locations": [
-          "Eterna Forest, Lost TowerN",
-          "Grand Underground - Dazzling Cave, Stargleam Cavern"
+          "Eterna Forest",
+          "Lost TowerN",
+          "Grand Underground Dazzling Cave",
+          "Stargleam Cavern"
         ]
       }
     },
@@ -1792,33 +2239,53 @@
     "203": {
       "brilliant-diamond": {
         "locations": [
-          "Sinnoh and Valor Lakefront",
-          "Grand Underground - Stargleam Cavern, Dazzling Cave (After obtaining Defog)"
+          "Route 214 and Valor Lakefront",
+          "Grand Underground Stargleam Cavern",
+          "Dazzling Cave (After obtaining Defog)"
         ]
       },
       "shining-pearl": {
         "locations": [
-          "Sinnoh and Valor Lakefront",
-          "Grand Underground - Stargleam Cavern, Dazzling Cave (After obtaining Defog)"
+          "Route 214 and Valor Lakefront",
+          "Grand Underground Stargleam Cavern",
+          "Dazzling Cave (After obtaining Defog)"
         ]
       }
     },
     "207": {
       "brilliant-diamond": {
         "locations": [
-          "Grand Underground - Rocky Cave, Swampy Cave, Big Bluff Cavern, Sunlit Cavern, Big Bluff Cavern, Bogsunk Cavern"
+          "Grand Underground Rocky Cave",
+          "Swampy Cave",
+          "Big Bluff Cavern",
+          "Sunlit Cavern",
+          "Bogsunk Cavern"
+        ]
+      },
+      "shining-pearl": {
+        "locations": [
+          "Stark Mountain",
+          "Route 206",
+          "Route 207",
+          "Route 214",
+          "Route 215",
+          "Route 227"
         ]
       }
     },
     "208": {
       "brilliant-diamond": {
         "locations": [
-          "Victory Road, Iron Island, Snowpoint Temple"
+          "Victory Road",
+          "Iron Island",
+          "Snowpoint Temple"
         ]
       },
       "shining-pearl": {
         "locations": [
-          "Victory Road, Iron Island, Snowpoint Temple"
+          "Victory Road",
+          "Iron Island",
+          "Snowpoint Temple"
         ]
       }
     },
@@ -1827,45 +2294,69 @@
         "locations": [
           "Evolve Scyther"
         ]
+      },
+      "shining-pearl": {
+        "locations": [
+          "Trade",
+          "Event"
+        ]
       }
     },
     "214": {
       "brilliant-diamond": {
         "locations": [
-          "Routes Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, and Sinnoh, Eterna Forest, Floaroma Meadow, Fuego Ironworks, Valley Windworks (Honey Trees)"
+          "Honey Trees (Routes 205–222, and Sinnoh, Eterna Forest, Floaroma Meadow, Fuego Ironworks, Valley Windworks)"
         ]
       },
       "shining-pearl": {
         "locations": [
-          "Routes Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, and Sinnoh, Eterna Forest, Floaroma Meadow, Fuego Ironworks, Valley Windworks (Honey Trees)"
+          "Honey Trees (Routes 205–222, and Sinnoh, Eterna Forest, Floaroma Meadow, Fuego Ironworks, Valley Windworks)"
         ]
       }
     },
     "215": {
       "brilliant-diamond": {
         "locations": [
-          "Routes Sinnoh and Sinnoh, Acuity Lakefront, Lake Acuity, Snowpoint Temple",
-          "Grand Underground - Whiteout Cave, Icy Cave, Glacial Cavern (After defeating Candice)"
+          "Routes Sinnoh and Sinnoh",
+          "Acuity Lakefront",
+          "Lake Acuity",
+          "Snowpoint Temple",
+          "Grand Underground Whiteout Cave",
+          "Icy Cave",
+          "Glacial Cavern (After defeating Candice)"
         ]
       },
       "shining-pearl": {
         "locations": [
-          "Routes Sinnoh and Sinnoh, Acuity Lakefront, Lake Acuity, Snowpoint Temple",
-          "Grand Underground - Whiteout Cave, Icy Cave, Glacial Cavern (After defeating Candice)"
+          "Routes Sinnoh and Sinnoh",
+          "Acuity Lakefront",
+          "Lake Acuity",
+          "Snowpoint Temple",
+          "Grand Underground Whiteout Cave",
+          "Icy Cave",
+          "Glacial Cavern (After defeating Candice)"
         ]
       }
     },
     "220": {
       "brilliant-diamond": {
         "locations": [
-          "Sinnoh (Swarm)",
-          "Grand Underground - Icy Cave, Swampy Cave, Whiteout Cave, Glacial Cavern, Bogsunk Cavern"
+          "Route 217 (Swarm)",
+          "Grand Underground Icy Cave",
+          "Swampy Cave",
+          "Whiteout Cave",
+          "Glacial Cavern",
+          "Bogsunk Cavern"
         ]
       },
       "shining-pearl": {
         "locations": [
-          "Sinnoh (Swarm)",
-          "Grand Underground - Icy Cave, Swampy Cave, Whiteout Cave, Glacial Cavern, Bogsunk Cavern"
+          "Route 217 (Swarm)",
+          "Grand Underground Icy Cave",
+          "Swampy Cave",
+          "Whiteout Cave",
+          "Glacial Cavern",
+          "Bogsunk Cavern"
         ]
       }
     },
@@ -1884,24 +2375,30 @@
     "223": {
       "brilliant-diamond": {
         "locations": [
-          "Routes Sinnoh, Sinnoh, Sinnoh, Sinnoh, and Sinnoh, Pastoria City, Sunyshore City, Pokémon League (Good Rod)"
+          "Honey Trees (Routes 205–222, and Sinnoh, Pastoria City, Sunyshore City, Pokémon League (Good Rod)"
         ]
       },
       "shining-pearl": {
         "locations": [
-          "Routes Sinnoh, Sinnoh, Sinnoh, Sinnoh, and Sinnoh, Pastoria City, Sunyshore City, Pokémon League (Good Rod)"
+          "Honey Trees (Routes 205–222, and Sinnoh, Pastoria City, Sunyshore City, Pokémon League (Good Rod)"
         ]
       }
     },
     "224": {
       "brilliant-diamond": {
         "locations": [
-          "Routes Sinnoh, Sinnoh, Sinnoh, Sinnoh, and Sinnoh, Pastoria City, Sunyshore City, 99|Waterfall)"
+          "Honey Trees (Routes 205–222, and Sinnoh, Pastoria City, Sunyshore City, Pokémon League (Super Rod)",
+          "Grand Underground Fountainspring Cave",
+          "Riverbank Cave",
+          "Still Water Cavern (after Obtaining Waterfall)"
         ]
       },
       "shining-pearl": {
         "locations": [
-          "Routes Sinnoh, Sinnoh, Sinnoh, Sinnoh, and Sinnoh, Pastoria City, Sunyshore City, 99|Waterfall)"
+          "Honey Trees (Routes 205–222, and Sinnoh, Pastoria City, Sunyshore City, Pokémon League (Super Rod)",
+          "Grand Underground Fountainspring Cave",
+          "Riverbank Cave",
+          "Still Water Cavern (after Obtaining Waterfall)"
         ]
       }
     },
@@ -1932,13 +2429,23 @@
     "229": {
       "brilliant-diamond": {
         "locations": [
-          "Grand Underground - Spacious Cave, Dazzling Cave, Volcanic Cave, Sandsear Cave, Stargleam Cavern, Typhlo Cavern"
+          "Grand Underground Spacious Cave",
+          "Dazzling Cave",
+          "Volcanic Cave",
+          "Sandsear Cave",
+          "Stargleam Cavern",
+          "Typhlo Cavern"
         ]
       },
       "shining-pearl": {
         "locations": [
           "Routes Sinnoh and Sinnoh (Poké Radar)",
-          "Grand Underground - Spacious Cave, Dazzling Cave, Volcanic Cave, Sandsear Cave, Stargleam Cavern, Typhlo Cavern"
+          "Grand Underground Spacious Cave",
+          "Dazzling Cave",
+          "Volcanic Cave",
+          "Sandsear Cave",
+          "Stargleam Cavern",
+          "Typhlo Cavern"
         ]
       }
     },
@@ -1957,14 +2464,33 @@
     "239": {
       "brilliant-diamond": {
         "locations": [
-          "Grand Underground - Dazzling Cave, Whiteout Cave, Stargleam Cavern, Glacial Cavern"
+          "Grand Underground Dazzling Cave",
+          "Whiteout Cave",
+          "Stargleam Cavern",
+          "Glacial Cavern"
+        ]
+      },
+      "shining-pearl": {
+        "locations": [
+          "Valley Windworks",
+          "Route 205 South Towards Floaroma Town"
         ]
       }
     },
     "240": {
       "shining-pearl": {
         "locations": [
-          "Grand Underground - Volcanic Cave, Sandsear Cave, Typhlo Cavern"
+          "Grand Underground Volcanic Cave",
+          "Sandsear Cave",
+          "Typhlo Cavern"
+        ]
+      },
+      "brilliant-diamond": {
+        "locations": [
+          "Stark Mountain",
+          "Stark Mountain Entrance",
+          "Stark Mountain Inside",
+          "Route 227"
         ]
       }
     },
@@ -1984,15 +2510,21 @@
       "brilliant-diamond": {
         "locations": [
           "Eterna Forest",
-          "Routes Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Eterna Forest, Floaroma Meadow, Fuego Ironworks, Valley Windworks (Honey Trees)",
-          "Grand Underground - Grassland Cave, Riverbank Cave, Still-Water Cavern, Sunlit Cavern"
+          "Honey Trees (Routes 205–222, Eterna Forest, Floaroma Meadow, Fuego Ironworks, Valley Windworks",
+          "Grand Underground Grassland Cave",
+          "Riverbank Cave",
+          "Still Water Cavern",
+          "Sunlit Cavern)"
         ]
       },
       "shining-pearl": {
         "locations": [
           "Eterna Forest",
-          "Routes Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Eterna Forest, Floaroma Meadow, Fuego Ironworks, Valley Windworks (Honey Trees)",
-          "Grand Underground - Grassland Cave, Riverbank Cave, Still-Water Cavern, Sunlit Cavern"
+          "Honey Trees (Routes 205–222, Eterna Forest, Floaroma Meadow, Fuego Ironworks, Valley Windworks",
+          "Grand Underground Grassland Cave",
+          "Riverbank Cave",
+          "Still Water Cavern",
+          "Sunlit Cavern)"
         ]
       }
     },
@@ -2000,8 +2532,11 @@
       "brilliant-diamond": {
         "locations": [
           "Eterna Forest",
-          "Routes Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Eterna Forest, Floaroma Meadow, Fuego Ironworks, Valley Windworks (Honey Trees)",
-          "Grand Underground - Grassland Cave, Riverbank Cave, Still-Water Cavern, Sunlit Cavern"
+          "Honey Trees (Routes 205–222, Eterna Forest, Floaroma Meadow, Fuego Ironworks, Valley Windworks",
+          "Grand Underground Grassland Cave",
+          "Riverbank Cave",
+          "Still Water Cavern",
+          "Sunlit Cavern)"
         ]
       },
       "shining-pearl": {
@@ -2013,12 +2548,13 @@
     "267": {
       "brilliant-diamond": {
         "locations": [
-          "Routes Sinnoh and Sinnoh, Eterna Forest"
+          "Routes Sinnoh and Sinnoh",
+          "Eterna Forest"
         ]
       },
       "shining-pearl": {
         "locations": [
-          "Sinnoh"
+          "Route 224"
         ]
       }
     },
@@ -2031,8 +2567,11 @@
       "shining-pearl": {
         "locations": [
           "Eterna Forest",
-          "Routes Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Eterna Forest, Floaroma Meadow, Fuego Ironworks, Valley Windworks (Honey Trees)",
-          "Grand Underground - Grassland Cave, Riverbank Cave, Still-Water Cavern, Sunlit Cavern"
+          "Honey Trees (Routes 205–222, Eterna Forest, Floaroma Meadow, Fuego Ironworks, Valley Windworks",
+          "Grand Underground Grassland Cave",
+          "Riverbank Cave",
+          "Still Water Cavern",
+          "Sunlit Cavern)"
         ]
       }
     },
@@ -2044,35 +2583,64 @@
       },
       "shining-pearl": {
         "locations": [
-          "Sinnoh, Eterna Forest"
+          "Route 230",
+          "Eterna Forest"
         ]
       }
     },
     "278": {
       "brilliant-diamond": {
         "locations": [
-          "Routes Sinnoh, Sinnoh, Sinnoh, and Sinnoh, Fuego Ironworks (Grass)",
-          "Routes Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, and Sinnoh, Canalave City, Fuego Ironworks, Iron Island, Pastoria City, Valley Windworks (97|Defog)"
+          "Honey Trees (Routes 205–222, and Sinnoh, Fuego Ironworks (Grass)",
+          "Routes Sinnoh",
+          "Sinnoh",
+          "and Sinnoh",
+          "Canalave City",
+          "Fuego Ironworks",
+          "Iron Island",
+          "Pastoria City",
+          "Valley Windworks (Surfing)",
+          "Grand Underground Spacious Cave",
+          "Fountainspring Cave",
+          "Riverbank Cave",
+          "Still Water Cavern (after Obtaining Defog)"
         ]
       },
       "shining-pearl": {
         "locations": [
-          "Routes Sinnoh, Sinnoh, Sinnoh, and Sinnoh, Fuego Ironworks (Grass)",
-          "Routes Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, and Sinnoh, Canalave City, Fuego Ironworks, Iron Island, Pastoria City, Valley Windworks (97|Defog)"
+          "Honey Trees (Routes 205–222, and Sinnoh, Fuego Ironworks (Grass)",
+          "Routes Sinnoh",
+          "Sinnoh",
+          "and Sinnoh",
+          "Canalave City",
+          "Fuego Ironworks",
+          "Iron Island",
+          "Pastoria City",
+          "Valley Windworks (Surfing)",
+          "Grand Underground Spacious Cave",
+          "Fountainspring Cave",
+          "Riverbank Cave",
+          "Still Water Cavern (after Obtaining Defog)"
         ]
       }
     },
     "279": {
       "brilliant-diamond": {
         "locations": [
-          "Routes Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, and Sinnoh, Canalave City, Fuego Ironworks, Iron Island, Pastoria City, Surfing)",
-          "Grand Underground - Spacious Cave, Fountainspring Cave, Riverbank Cave, Still-Water Cavern (After defeating Candice)"
+          "Honey Trees (Routes 205–222, and Sinnoh, Canalave City, Fuego Ironworks, Iron Island, Pastoria City, Pokémon League, Sunyshore City, Valley Windworks (Surfing)",
+          "Grand Underground Spacious Cave",
+          "Fountainspring Cave",
+          "Riverbank Cave",
+          "Still Water Cavern (after Defeating Candice)"
         ]
       },
       "shining-pearl": {
         "locations": [
-          "Routes Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, and Sinnoh, Canalave City, Fuego Ironworks, Iron Island, Pastoria City, Surfing)",
-          "Grand Underground - Spacious Cave, Fountainspring Cave, Riverbank Cave, Still-Water Cavern (After defeating Candice)"
+          "Honey Trees (Routes 205–222, and Sinnoh, Canalave City, Fuego Ironworks, Iron Island, Pastoria City, Pokémon League, Sunyshore City, Valley Windworks (Surfing)",
+          "Grand Underground Spacious Cave",
+          "Fountainspring Cave",
+          "Riverbank Cave",
+          "Still Water Cavern (after Defeating Candice)"
         ]
       }
     },
@@ -2080,13 +2648,17 @@
       "brilliant-diamond": {
         "locations": [
           "Routes Sinnoh and Sinnoh (Poké Radar)",
-          "Grand Underground - Fountainspring Cave, Dazzling Cave, Stargleam Cavern"
+          "Grand Underground Fountainspring Cave",
+          "Dazzling Cave",
+          "Stargleam Cavern"
         ]
       },
       "shining-pearl": {
         "locations": [
           "Routes Sinnoh and Sinnoh (Poké Radar)",
-          "Grand Underground - Fountainspring Cave, Dazzling Cave, Stargleam Cavern"
+          "Grand Underground Fountainspring Cave",
+          "Dazzling Cave",
+          "Stargleam Cavern"
         ]
       }
     },
@@ -2094,13 +2666,15 @@
       "brilliant-diamond": {
         "locations": [
           "Routes Sinnoh and Sinnoh (Poké Radar)",
-          "Grand Underground - Dazzling Cave, Stargleam Cavern (After obtaining the National Pokédex)"
+          "Grand Underground Dazzling Cave",
+          "Stargleam Cavern (After obtaining the National Pokédex)"
         ]
       },
       "shining-pearl": {
         "locations": [
           "Routes Sinnoh and Sinnoh (Poké Radar)",
-          "Grand Underground - Dazzling Cave, Stargleam Cavern (After obtaining the National Pokédex)"
+          "Grand Underground Dazzling Cave",
+          "Stargleam Cavern (After obtaining the National Pokédex)"
         ]
       }
     },
@@ -2119,78 +2693,104 @@
     "298": {
       "brilliant-diamond": {
         "locations": [
-          "Trophy Garden (after obtaining the National Pokédex), Great Marsh"
+          "Trophy Garden (after obtaining the National Pokédex)",
+          "Great Marsh"
         ]
       },
       "shining-pearl": {
         "locations": [
-          "Trophy Garden (after obtaining the National Pokédex), Great Marsh"
+          "Trophy Garden (after obtaining the National Pokédex)",
+          "Great Marsh"
         ]
       }
     },
     "299": {
       "brilliant-diamond": {
         "locations": [
-          "Sinnoh (Swarm)"
+          "Route 206 (Swarm)"
         ]
       },
       "shining-pearl": {
         "locations": [
-          "Sinnoh (Swarm)"
+          "Route 206 (Swarm)"
         ]
       }
     },
     "307": {
       "brilliant-diamond": {
         "locations": [
-          "Routes Sinnoh, Sinnoh, Sinnoh, Sinnoh, and Sinnoh, Acuity Lakefront, Mount Coronet",
-          "Grand Underground - Dazzling Cave, Stargleam Cavern, Whiteout Cave (After defeating Candice)"
+          "Honey Trees (Routes 205–222, and Sinnoh, Acuity Lakefront, Mount Coronet",
+          "Grand Underground Dazzling Cave",
+          "Stargleam Cavern",
+          "Whiteout Cave (After defeating Candice)"
         ]
       },
       "shining-pearl": {
         "locations": [
-          "Routes Sinnoh, Sinnoh, Sinnoh, Sinnoh, and Sinnoh, Acuity Lakefront, Mount Coronet",
-          "Grand Underground - Dazzling Cave, Stargleam Cavern, Whiteout Cave (After defeating Candice)"
+          "Honey Trees (Routes 205–222, and Sinnoh, Acuity Lakefront, Mount Coronet",
+          "Grand Underground Dazzling Cave",
+          "Stargleam Cavern",
+          "Whiteout Cave (After defeating Candice)"
         ]
       }
     },
     "308": {
       "brilliant-diamond": {
         "locations": [
-          "Sinnoh, Acuity Lakefront, Mount Coronet, Victory Road"
+          "Route 217",
+          "Acuity Lakefront",
+          "Mount Coronet",
+          "Victory Road"
         ]
       },
       "shining-pearl": {
         "locations": [
-          "Sinnoh, Acuity Lakefront, Mount Coronet, Victory Road"
+          "Route 217",
+          "Acuity Lakefront",
+          "Mount Coronet",
+          "Victory Road"
         ]
       }
     },
     "315": {
       "brilliant-diamond": {
         "locations": [
-          "Routes Sinnoh, Sinnoh, Sinnoh, Sinnoh, and Sinnoh, Trophy Garden, Great Marsh",
-          "Grand Underground - Grassland Cave, Swampy Cave, Sunlit Cavern, Bogsunk Cavern"
+          "Honey Trees (Routes 205–222, and Sinnoh, Trophy Garden, Great Marsh",
+          "Grand Underground Grassland Cave",
+          "Swampy Cave",
+          "Sunlit Cavern",
+          "Bogsunk Cavern)"
         ]
       },
       "shining-pearl": {
         "locations": [
-          "Routes Sinnoh, Sinnoh, Sinnoh, and Sinnoh, Trophy Garden, Great Marsh",
-          "Grand Underground - Grassland Cave, Swampy Cave, Sunlit Cavern, Bogsunk Cavern"
+          "Honey Trees (Routes 205–222, and Sinnoh, Trophy Garden, Great Marsh",
+          "Grand Underground Grassland Cave",
+          "Swampy Cave",
+          "Sunlit Cavern",
+          "Bogsunk Cavern)"
         ]
       }
     },
     "333": {
       "brilliant-diamond": {
         "locations": [
-          "SinnohEastern Section of Route (Poké Radar)",
-          "Grand Underground - Spacious Cave, Whiteout Cave, Icy Cave, Fountainspring Cave, Glacial Cavern"
+          "Route 211Eastern Section of Route (Poké Radar)",
+          "Grand Underground Spacious Cave",
+          "Whiteout Cave",
+          "Icy Cave",
+          "Fountainspring Cave",
+          "Glacial Cavern"
         ]
       },
       "shining-pearl": {
         "locations": [
-          "SinnohEastern Section of Route (Poké Radar)",
-          "Grand Underground - Spacious Cave, Whiteout Cave, Icy Cave, Fountainspring Cave, Glacial Cavern"
+          "Route 211Eastern Section of Route (Poké Radar)",
+          "Grand Underground Spacious Cave",
+          "Whiteout Cave",
+          "Icy Cave",
+          "Fountainspring Cave",
+          "Glacial Cavern"
         ]
       }
     },
@@ -2209,28 +2809,44 @@
     "339": {
       "brilliant-diamond": {
         "locations": [
-          "Routes Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Celestic Town, Eterna City, Great Marsh, Mt. Coronet, Oreburgh Gate, Ravaged Path (Good Rod)",
-          "Grand Underground - Fountainspring Cave, Riverbank Cave, Still-Water Cavern, Swampy Cave, Bogsunk Cavern (After obtaining Strength)"
+          "Honey Trees (Routes 205–222, Celestic Town, Eterna City, Great Marsh, Mt. Coronet, Oreburgh Gate, Ravaged Path (Good Rod)",
+          "Grand Underground Fountainspring Cave",
+          "Riverbank Cave",
+          "Still Water Cavern",
+          "Swampy Cave",
+          "Bogsunk Cavern (After obtaining Strength)"
         ]
       },
       "shining-pearl": {
         "locations": [
-          "Routes Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Celestic Town, Eterna City, Great Marsh, Mt. Coronet, Oreburgh Gate, Ravaged Path (Good Rod)",
-          "Grand Underground - Fountainspring Cave, Riverbank Cave, Still-Water Cavern, Swampy Cave, Bogsunk Cavern (After obtaining Strength)"
+          "Honey Trees (Routes 205–222, Celestic Town, Eterna City, Great Marsh, Mt. Coronet, Oreburgh Gate, Ravaged Path (Good Rod)",
+          "Grand Underground Fountainspring Cave",
+          "Riverbank Cave",
+          "Still Water Cavern",
+          "Swampy Cave",
+          "Bogsunk Cavern (After obtaining Strength)"
         ]
       }
     },
     "340": {
       "brilliant-diamond": {
         "locations": [
-          "Routes Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, and Sinnoh, Celestic Town, Eterna City, Great Marsh, Mt. Coronet, Oreburgh Gate, Ravaged Path (Super Rod)",
-          "Grand Underground - Fountainspring Cave, Riverbank Cave, Still-Water Cavern, Swampy Cave, Bogsunk Cavern (After obtaining Waterfall)"
+          "Honey Trees (Routes 205–222, and Sinnoh, Celestic Town, Eterna City, Great Marsh, Mt. Coronet, Oreburgh Gate, Ravaged Path (Super Rod)",
+          "Grand Underground Fountainspring Cave",
+          "Riverbank Cave",
+          "Still Water Cavern",
+          "Swampy Cave",
+          "Bogsunk Cavern (After obtaining Waterfall)"
         ]
       },
       "shining-pearl": {
         "locations": [
-          "Routes Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, and Sinnoh, Celestic Town, Eterna City, Great Marsh, Mt. Coronet, Oreburgh Gate, Ravaged Path (Super Rod)",
-          "Grand Underground - Fountainspring Cave, Riverbank Cave, Still-Water Cavern, Swampy Cave, Bogsunk Cavern (After obtaining Waterfall)"
+          "Honey Trees (Routes 205–222, and Sinnoh, Celestic Town, Eterna City, Great Marsh, Mt. Coronet, Oreburgh Gate, Ravaged Path (Super Rod)",
+          "Grand Underground Fountainspring Cave",
+          "Riverbank Cave",
+          "Still Water Cavern",
+          "Swampy Cave",
+          "Bogsunk Cavern (After obtaining Waterfall)"
         ]
       }
     },
@@ -2261,94 +2877,128 @@
     "355": {
       "brilliant-diamond": {
         "locations": [
-          "Sinnoh (Poké Radar)",
-          "Grand Underground - Dazzling Cave, Stargleam Cavern (After obtaining the National Pokédex)"
+          "Route 224 (Poké Radar)",
+          "Grand Underground Dazzling Cave",
+          "Stargleam Cavern (After obtaining the National Pokédex)"
         ]
       },
       "shining-pearl": {
         "locations": [
-          "Sinnoh (Poké Radar)",
-          "Grand Underground - Dazzling Cave, Stargleam Cavern (After obtaining the National Pokédex)"
+          "Route 224 (Poké Radar)",
+          "Grand Underground Dazzling Cave",
+          "Stargleam Cavern (After obtaining the National Pokédex)"
         ]
       }
     },
     "356": {
       "brilliant-diamond": {
         "locations": [
-          "Sinnoh (Poké Radar)",
-          "Grand Underground - Dazzling Cave, Stargleam Cavern (After obtaining the National Pokédex)"
+          "Route 224 (Poké Radar)",
+          "Grand Underground Dazzling Cave",
+          "Stargleam Cavern (After obtaining the National Pokédex)"
         ]
       },
       "shining-pearl": {
         "locations": [
-          "Sinnoh (Poké Radar)",
-          "Grand Underground - Dazzling Cave, Stargleam Cavern (After obtaining the National Pokédex)"
+          "Route 224 (Poké Radar)",
+          "Grand Underground Dazzling Cave",
+          "Stargleam Cavern (After obtaining the National Pokédex)"
         ]
       }
     },
     "357": {
       "brilliant-diamond": {
         "locations": [
-          "Grand Underground - Grassland Cave, Swampy Cave, Sunlit Cavern, Bogsunk Cavern (After obtaining the National Pokédex)"
+          "Grand Underground Grassland Cave",
+          "Swampy Cave",
+          "Sunlit Cavern",
+          "Bogsunk Cavern (After obtaining the National Pokédex)"
         ]
       },
       "shining-pearl": {
         "locations": [
-          "Grand Underground - Grassland Cave, Swampy Cave, Sunlit Cavern, Bogsunk Cavern (After obtaining the National Pokédex)"
+          "Grand Underground Grassland Cave",
+          "Swampy Cave",
+          "Sunlit Cavern",
+          "Bogsunk Cavern (After obtaining the National Pokédex)"
         ]
       }
     },
     "358": {
       "brilliant-diamond": {
         "locations": [
-          "Sendoff Spring, Mount Coronet"
+          "Sendoff Spring",
+          "Mount Coronet"
         ]
       },
       "shining-pearl": {
         "locations": [
-          "Sendoff Spring, Mount Coronet"
+          "Sendoff Spring",
+          "Mount Coronet"
         ]
       }
     },
     "359": {
       "brilliant-diamond": {
         "locations": [
-          "Sinnoh (Swarm)",
-          "Grand Underground - Spacious Cave, Grassland Cave, Dazzling Cave, Sunlit CavernAfter obtaining the National Pokédex, Stargleam Cavern, Big Bluff Cavern"
+          "Route 213 (Swarm)",
+          "Grand Underground Spacious Cave",
+          "Grassland Cave",
+          "Dazzling Cave",
+          "Sunlit CavernAfter obtaining the National Pokédex",
+          "Stargleam Cavern",
+          "Big Bluff Cavern"
         ]
       },
       "shining-pearl": {
         "locations": [
-          "Sinnoh (Swarm)",
-          "Grand Underground - Spacious Cave, Grassland Cave, Dazzling Cave, Sunlit CavernAfter obtaining the National Pokédex, Stargleam Cavern, Big Bluff Cavern"
+          "Route 213 (Swarm)",
+          "Grand Underground Spacious Cave",
+          "Grassland Cave",
+          "Dazzling Cave",
+          "Sunlit CavernAfter obtaining the National Pokédex",
+          "Stargleam Cavern",
+          "Big Bluff Cavern"
         ]
       }
     },
     "361": {
       "brilliant-diamond": {
         "locations": [
-          "Routes Sinnoh and Sinnoh, Acuity Lakefront (Poké Radar)",
-          "Grand Underground - Icy Cave, Whiteout Cave, Glacial Cavern"
+          "Routes Sinnoh and Sinnoh",
+          "Acuity Lakefront (Poké Radar)",
+          "Grand Underground Icy Cave",
+          "Whiteout Cave",
+          "Glacial Cavern"
         ]
       },
       "shining-pearl": {
         "locations": [
-          "Routes Sinnoh and Sinnoh, Acuity Lakefront (Poké Radar)",
-          "Grand Underground - Icy Cave, Whiteout Cave, Glacial Cavern"
+          "Routes Sinnoh and Sinnoh",
+          "Acuity Lakefront (Poké Radar)",
+          "Grand Underground Icy Cave",
+          "Whiteout Cave",
+          "Glacial Cavern"
         ]
       }
     },
     "362": {
       "brilliant-diamond": {
         "locations": [
-          "Routes Sinnoh and Sinnoh, Acuity Lakefront (Poké Radar)",
-          "Grand Underground - Icy Cave, Whiteout Cave, Glacial Cavern"
+          "Routes Sinnoh and Sinnoh",
+          "Acuity Lakefront (Poké Radar)",
+          "Grand Underground Icy Cave",
+          "Whiteout Cave",
+          "Glacial Cavern"
         ]
       },
       "shining-pearl": {
         "locations": [
-          "Routes Sinnoh and Sinnoh, Acuity Lakefront (Poké Radar)",
-          "Grand Underground - Icy Cave, Whiteout Cave, Glacial Cavern"
+          "Routes Sinnoh and Sinnoh",
+          "Acuity Lakefront (Poké Radar)",
+          "Grand Underground Icy Cave",
+          "Whiteout Cave",
+          "Glacial Cavern"
         ]
       }
     },
@@ -2356,13 +3006,19 @@
       "brilliant-diamond": {
         "locations": [
           "First partner Pokémon from Professor Rowan's briefcase at Lake Verity",
-          "Grand Underground - Grassland Cave, Sunlit Cavern, Riverbank Cave, Still-Water Cavern (after obtaining the National Pokédex)"
+          "Grand Underground Grassland Cave",
+          "Sunlit Cavern",
+          "Riverbank Cave",
+          "Still Water Cavern (after Obtaining The National Pokédex)"
         ]
       },
       "shining-pearl": {
         "locations": [
           "First partner Pokémon from Professor Rowan's briefcase at Lake Verity",
-          "Grand Underground - Grassland Cave, Sunlit Cavern, Riverbank Cave, Still-Water Cavern (after obtaining the National Pokédex)"
+          "Grand Underground Grassland Cave",
+          "Sunlit Cavern",
+          "Riverbank Cave",
+          "Still Water Cavern (after Obtaining The National Pokédex)"
         ]
       }
     },
@@ -2394,13 +3050,17 @@
       "brilliant-diamond": {
         "locations": [
           "First partner Pokémon from Professor Rowan's briefcase at Lake Verity",
-          "Grand Underground - Sandsear Cave, Typhlo Cavern, Volcanic Cave (after obtaining the National Pokédex)"
+          "Grand Underground Sandsear Cave",
+          "Typhlo Cavern",
+          "Volcanic Cave (after obtaining the National Pokédex)"
         ]
       },
       "shining-pearl": {
         "locations": [
           "First partner Pokémon from Professor Rowan's briefcase at Lake Verity",
-          "Grand Underground - Sandsear Cave, Typhlo Cavern, Volcanic Cave (after obtaining the National Pokédex)"
+          "Grand Underground Sandsear Cave",
+          "Typhlo Cavern",
+          "Volcanic Cave (after obtaining the National Pokédex)"
         ]
       }
     },
@@ -2432,13 +3092,17 @@
       "brilliant-diamond": {
         "locations": [
           "First partner Pokémon from Professor Rowan's briefcase at Lake Verity",
-          "Grand Underground - Fountainspring Cave, Riverbank Cave, Still-Water Cavern (after obtaining the National Pokédex)"
+          "Grand Underground Fountainspring Cave",
+          "Riverbank Cave",
+          "Still Water Cavern (after Obtaining The National Pokédex)"
         ]
       },
       "shining-pearl": {
         "locations": [
           "First partner Pokémon from Professor Rowan's briefcase at Lake Verity",
-          "Grand Underground - Fountainspring Cave, Riverbank Cave, Still-Water Cavern (after obtaining the National Pokédex)"
+          "Grand Underground Fountainspring Cave",
+          "Riverbank Cave",
+          "Still Water Cavern (after Obtaining The National Pokédex)"
         ]
       }
     },
@@ -2469,24 +3133,24 @@
     "396": {
       "brilliant-diamond": {
         "locations": [
-          "Routes Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, and Sinnoh, Lake Verity, Great Marsh"
+          "Honey Trees (Routes 205–222, and Sinnoh, Lake Verity, Great Marsh)"
         ]
       },
       "shining-pearl": {
         "locations": [
-          "Routes Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, and Sinnoh, Lake Verity, Great Marsh"
+          "Honey Trees (Routes 205–222, and Sinnoh, Lake Verity, Great Marsh)"
         ]
       }
     },
     "397": {
       "brilliant-diamond": {
         "locations": [
-          "Routes Sinnoh, Sinnoh, Lake Valor, Trophy Garden, Sendoff Spring, Great Marsh, Valor Lakefront"
+          "Honey Trees (Routes 205–222, Lake Valor, Trophy Garden, Sendoff Spring, Great Marsh, Valor Lakefront)"
         ]
       },
       "shining-pearl": {
         "locations": [
-          "Routes Sinnoh, Sinnoh, Lake Valor, Trophy Garden, Sendoff Spring, Great Marsh, Valor Lakefront"
+          "Honey Trees (Routes 205–222, Lake Valor, Trophy Garden, Sendoff Spring, Great Marsh, Valor Lakefront)"
         ]
       }
     },
@@ -2505,68 +3169,102 @@
     "399": {
       "brilliant-diamond": {
         "locations": [
-          "Routes Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Lake Verity, Great Marsh, Valley Windworks",
-          "Grand Underground - Spacious Cave, Grassland Cave, Fountainspring Cave, Riverbank Cave, Still-Water Cavern, Sunlit Cavern"
+          "Honey Trees (Routes 205–222, Lake Verity, Great Marsh, Valley Windworks",
+          "Grand Underground Spacious Cave",
+          "Grassland Cave",
+          "Fountainspring Cave",
+          "Riverbank Cave",
+          "Still Water Cavern",
+          "Sunlit Cavern)"
         ]
       },
       "shining-pearl": {
         "locations": [
-          "Routes Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Lake Verity, Great Marsh, Valley Windworks",
-          "Grand Underground - Spacious Cave, Grassland Cave, Fountainspring Cave, Riverbank Cave, Still-Water Cavern, Sunlit Cavern"
+          "Honey Trees (Routes 205–222, Lake Verity, Great Marsh, Valley Windworks",
+          "Grand Underground Spacious Cave",
+          "Grassland Cave",
+          "Fountainspring Cave",
+          "Riverbank Cave",
+          "Still Water Cavern",
+          "Sunlit Cavern)"
         ]
       }
     },
     "400": {
       "brilliant-diamond": {
         "locations": [
-          "Routes Sinnoh, Sinnoh, Sinnoh, Sinnoh, Lake Valor, Sendoff Spring, Great Marsh, Lake Acuity, Valor Lakefront",
-          "Grand Underground - Spacious Cave, Grassland Cave, Sunlit Cavern, Fountainspring Cave, Riverbank Cave, Still-Water Cavern (After obtaining Strength)"
+          "Honey Trees (Routes 205–222, Lake Valor, Sendoff Spring, Great Marsh, Lake Acuity, Valor Lakefront",
+          "Grand Underground Spacious Cave",
+          "Grassland Cave",
+          "Sunlit Cavern",
+          "Fountainspring Cave",
+          "Riverbank Cave",
+          "Still Water Cavern (after Obtaining Strength)"
         ]
       },
       "shining-pearl": {
         "locations": [
-          "Routes Sinnoh, Sinnoh, Sinnoh, Sinnoh, Lake Valor, Sendoff Spring, Great Marsh, Lake Acuity, Valor Lakefront",
-          "Grand Underground - Spacious Cave, Grassland Cave, Sunlit Cavern, Fountainspring Cave, Riverbank Cave, Still-Water Cavern (After obtaining Strength)"
+          "Honey Trees (Routes 205–222, Lake Valor, Sendoff Spring, Great Marsh, Lake Acuity, Valor Lakefront",
+          "Grand Underground Spacious Cave",
+          "Grassland Cave",
+          "Sunlit Cavern",
+          "Fountainspring Cave",
+          "Riverbank Cave",
+          "Still Water Cavern (after Obtaining Strength)"
         ]
       }
     },
     "401": {
       "brilliant-diamond": {
         "locations": [
-          "Routes Sinnoh, Sinnoh, Sinnoh, Sinnoh, SinnohN",
-          "Spacious Cave, Grassland Cave, Riverbank Cave, Still-Water Cavern, Sunlit Cavern (Grand Underground)"
+          "Honey Trees (Routes 205–222, Sinnoh (Morning, Night)",
+          "Spacious Cave",
+          "Grassland Cave",
+          "Riverbank Cave",
+          "Still Water Cavern",
+          "Sunlit Cavern (Grand Underground)"
         ]
       },
       "shining-pearl": {
         "locations": [
-          "Routes Sinnoh, Sinnoh, Sinnoh, Sinnoh, SinnohN",
-          "Spacious Cave, Grassland Cave, Riverbank Cave, Still-Water Cavern, Sunlit Cavern (Grand Underground)"
+          "Honey Trees (Routes 205–222, Sinnoh (Morning, Night)",
+          "Spacious Cave",
+          "Grassland Cave",
+          "Riverbank Cave",
+          "Still Water Cavern",
+          "Sunlit Cavern (Grand Underground)"
         ]
       }
     },
     "402": {
       "brilliant-diamond": {
         "locations": [
-          "Routes Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Trophy Garden, Valor Lakefront"
+          "Honey Trees (Routes 205–222, Trophy Garden, Valor Lakefront)"
         ]
       },
       "shining-pearl": {
         "locations": [
-          "Routes Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Trophy Garden, Valor Lakefront"
+          "Honey Trees (Routes 205–222, Trophy Garden, Valor Lakefront)"
         ]
       }
     },
     "403": {
       "brilliant-diamond": {
         "locations": [
-          "Routes Sinnoh, Sinnoh, and Sinnoh, Fuego Ironworks",
-          "Grand Underground - Spacious Cave, Grassland Cave, Sunlit Cavern, Whiteout Cave"
+          "Honey Trees (Routes 205–222, and Sinnoh, Fuego Ironworks",
+          "Grand Underground Spacious Cave",
+          "Grassland Cave",
+          "Sunlit Cavern",
+          "Whiteout Cave)"
         ]
       },
       "shining-pearl": {
         "locations": [
-          "Routes Sinnoh, Sinnoh, and Sinnoh, Fuego Ironworks",
-          "Grand Underground - Spacious Cave, Grassland Cave, Sunlit Cavern, Whiteout Cave"
+          "Honey Trees (Routes 205–222, and Sinnoh, Fuego Ironworks",
+          "Grand Underground Spacious Cave",
+          "Grassland Cave",
+          "Sunlit Cavern",
+          "Whiteout Cave)"
         ]
       }
     },
@@ -2574,13 +3272,19 @@
       "brilliant-diamond": {
         "locations": [
           "Fuego Ironworks",
-          "Grand Underground - Spacious Cave, Grassland Cave, Sunlit Cavern, Whiteout Cave (After defeating Candice)"
+          "Grand Underground Spacious Cave",
+          "Grassland Cave",
+          "Sunlit Cavern",
+          "Whiteout Cave (After defeating Candice)"
         ]
       },
       "shining-pearl": {
         "locations": [
           "Fuego Ironworks",
-          "Grand Underground - Spacious Cave, Grassland Cave, Sunlit Cavern, Whiteout Cave (After defeating Candice)"
+          "Grand Underground Spacious Cave",
+          "Grassland Cave",
+          "Sunlit Cavern",
+          "Whiteout Cave (After defeating Candice)"
         ]
       }
     },
@@ -2599,14 +3303,26 @@
     "406": {
       "brilliant-diamond": {
         "locations": [
-          "Routes Sinnoh and Sinnoh, Eterna Forest, Great Marsh",
-          "Grand Underground - Spacious Cave, Grassland Cave, Riverbank Cave, Still-Water Cavern, Sunlit Cavern"
+          "Routes Sinnoh and Sinnoh",
+          "Eterna Forest",
+          "Great Marsh",
+          "Grand Underground Spacious Cave",
+          "Grassland Cave",
+          "Riverbank Cave",
+          "Still Water Cavern",
+          "Sunlit Cavern"
         ]
       },
       "shining-pearl": {
         "locations": [
-          "Routes Sinnoh and Sinnoh, Eterna Forest, Great Marsh",
-          "Grand Underground - Spacious Cave, Grassland Cave, Riverbank Cave, Still-Water Cavern, Sunlit Cavern"
+          "Routes Sinnoh and Sinnoh",
+          "Eterna Forest",
+          "Great Marsh",
+          "Grand Underground Spacious Cave",
+          "Grassland Cave",
+          "Riverbank Cave",
+          "Still Water Cavern",
+          "Sunlit Cavern"
         ]
       }
     },
@@ -2640,6 +3356,12 @@
         "locations": [
           "Evolve Cranidos"
         ]
+      },
+      "shining-pearl": {
+        "locations": [
+          "Trade",
+          "Evolve CranidosIf the player's Trainer ID is an odd number"
+        ]
       }
     },
     "410": {
@@ -2660,17 +3382,23 @@
         "locations": [
           "Evolve Shieldon"
         ]
+      },
+      "brilliant-diamond": {
+        "locations": [
+          "Trade",
+          "Evolve ShieldonIf the player's Trainer ID is an even number"
+        ]
       }
     },
     "412": {
       "brilliant-diamond": {
         "locations": [
-          "Routes Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Eterna Forest, Floaroma Meadow, Fuego Ironworks, Valley Windworks (Honey Trees) ('''Plant Cloak''')"
+          "Honey Trees (Routes 205–222, Eterna Forest, Floaroma Meadow, Fuego Ironworks, Valley Windworks (Plant Cloak)"
         ]
       },
       "shining-pearl": {
         "locations": [
-          "Routes Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Eterna Forest, Floaroma Meadow, Fuego Ironworks, Valley Windworks (Honey Trees) ('''Plant Cloak''')"
+          "Honey Trees (Routes 205–222, Eterna Forest, Floaroma Meadow, Fuego Ironworks, Valley Windworks (Plant Cloak)"
         ]
       }
     },
@@ -2701,80 +3429,94 @@
     "415": {
       "brilliant-diamond": {
         "locations": [
-          "Routes Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Eterna Forest, Floaroma Meadow, Fuego Ironworks, Valley Windworks (Honey Trees)",
-          "Grand Underground - Grassland Cave, Sunlit Cavern"
+          "Honey Trees (Routes 205–222, Eterna Forest, Floaroma Meadow, Fuego Ironworks, Valley Windworks",
+          "Grand Underground Grassland Cave",
+          "Sunlit Cavern)"
         ]
       },
       "shining-pearl": {
         "locations": [
-          "Routes Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Eterna Forest, Floaroma Meadow, Fuego Ironworks, Valley Windworks (Honey Trees)",
-          "Grand Underground - Grassland Cave, Sunlit Cavern"
+          "Honey Trees (Routes 205–222, Eterna Forest, Floaroma Meadow, Fuego Ironworks, Valley Windworks",
+          "Grand Underground Grassland Cave",
+          "Sunlit Cavern)"
         ]
       }
     },
     "416": {
       "brilliant-diamond": {
         "locations": [
-          "Evolve Combeefemale"
+          "Evolve Combee"
         ]
       },
       "shining-pearl": {
         "locations": [
-          "Evolve Combeefemale"
+          "Evolve Combee"
         ]
       }
     },
     "417": {
       "brilliant-diamond": {
         "locations": [
-          "Sinnoh, Fuego Ironworks, Valley Windworks",
-          "Grand Underground - Spacious Cave, Whiteout Cave"
+          "Route 205",
+          "Fuego Ironworks",
+          "Valley Windworks",
+          "Grand Underground Spacious Cave",
+          "Whiteout Cave"
         ]
       },
       "shining-pearl": {
         "locations": [
-          "Sinnoh, Fuego Ironworks, Valley Windworks",
-          "Grand Underground - Spacious Cave, Whiteout Cave"
+          "Route 205",
+          "Fuego Ironworks",
+          "Valley Windworks",
+          "Grand Underground Spacious Cave",
+          "Whiteout Cave"
         ]
       }
     },
     "418": {
       "brilliant-diamond": {
         "locations": [
-          "Routes Sinnoh, Sinnoh, and Sinnoh, Valley Windworks",
-          "Grand Underground - Riverbank Cave, Fountainspring Cave, Still-Water Cavern"
+          "Honey Trees (Routes 205–222, and Sinnoh, Valley Windworks",
+          "Grand Underground Riverbank Cave",
+          "Fountainspring Cave",
+          "Still Water Cavern)"
         ]
       },
       "shining-pearl": {
         "locations": [
-          "Routes Sinnoh, Sinnoh, and Sinnoh, Valley Windworks",
-          "Grand Underground - Riverbank Cave, Fountainspring Cave, Still-Water Cavern"
+          "Honey Trees (Routes 205–222, and Sinnoh, Valley Windworks",
+          "Grand Underground Riverbank Cave",
+          "Fountainspring Cave",
+          "Still Water Cavern)"
         ]
       }
     },
     "419": {
       "brilliant-diamond": {
         "locations": [
-          "Routes Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, and Sinnoh, Fuego Ironworks, Victory Road"
+          "Honey Trees (Routes 205–222, and Sinnoh, Fuego Ironworks, Victory Road)"
         ]
       },
       "shining-pearl": {
         "locations": [
-          "Routes Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, and Sinnoh, Fuego Ironworks, Victory Road"
+          "Honey Trees (Routes 205–222, and Sinnoh, Fuego Ironworks, Victory Road)"
         ]
       }
     },
     "420": {
       "brilliant-diamond": {
         "locations": [
-          "Routes Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Eterna Forest, Floaroma Meadow, Fuego Ironworks, Valley Windworks (Honey Trees)",
-          "Grand Underground - Grassland Cave, Sunlit Cavern"
+          "Honey Trees (Routes 205–222, Eterna Forest, Floaroma Meadow, Fuego Ironworks, Valley Windworks",
+          "Grand Underground Grassland Cave",
+          "Sunlit Cavern)"
         ]
       },
       "shining-pearl": {
         "locations": [
-          "Routes Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Eterna Forest, Floaroma Meadow, Fuego Ironworks, Valley Windworks (Honey Trees)",
-          "Grand Underground - Grassland Cave, Sunlit Cavern"
+          "Honey Trees (Routes 205–222, Eterna Forest, Floaroma Meadow, Fuego Ironworks, Valley Windworks",
+          "Grand Underground Grassland Cave",
+          "Sunlit Cavern)"
         ]
       }
     },
@@ -2793,32 +3535,36 @@
     "422": {
       "brilliant-diamond": {
         "locations": [
-          "Routes Sinnoh, Sinnoh, and Sinnoh, Fuego Ironworks, Valley Windworks (tall grass) ('''West Sea''')",
-          "Routes Sinnoh and Sinnoh (tall grass) ('''East Sea''')",
-          "Grand Underground - Fountainspring Cave"
+          "Honey Trees (Routes 205–222, and Sinnoh, Fuego Ironworks, Valley Windworks (tall grass) (West Sea)",
+          "Routes Sinnoh and Sinnoh (tall grass) (East Sea)",
+          "Grand Underground Fountainspring Cave)"
         ]
       },
       "shining-pearl": {
         "locations": [
-          "Routes Sinnoh, Sinnoh, and Sinnoh, Fuego Ironworks, Valley Windworks (tall grass) ('''West Sea''')",
-          "Routes Sinnoh and Sinnoh (tall grass) ('''East Sea''')",
-          "Grand Underground - Fountainspring Cave"
+          "Honey Trees (Routes 205–222, and Sinnoh, Fuego Ironworks, Valley Windworks (tall grass) (West Sea)",
+          "Routes Sinnoh and Sinnoh (tall grass) (East Sea)",
+          "Grand Underground Fountainspring Cave)"
         ]
       }
     },
     "423": {
       "brilliant-diamond": {
         "locations": [
-          "Routes Sinnoh and Sinnoh, Fuego Ironworks (tall grass) ('''West Sea''')",
-          "Routes Sinnoh, Sinnoh, and Sinnoh (tall grass) ('''East Sea''')",
-          "Grand Underground - Fountainspring Cave"
+          "Routes Sinnoh and Honey Trees (Routes 205–222, Fuego Ironworks (tall grass) (West Sea)",
+          "Routes Sinnoh",
+          "Sinnoh",
+          "and Sinnoh (tall grass) (East Sea)",
+          "Grand Underground Fountainspring Cave)"
         ]
       },
       "shining-pearl": {
         "locations": [
-          "Routes Sinnoh and Sinnoh, Fuego Ironworks (tall grass) ('''West Sea''')",
-          "Routes Sinnoh, Sinnoh, and Sinnoh (tall grass) ('''East Sea''')",
-          "Grand Underground - Fountainspring Cave"
+          "Routes Sinnoh and Honey Trees (Routes 205–222, Fuego Ironworks (tall grass) (West Sea)",
+          "Routes Sinnoh",
+          "Sinnoh",
+          "and Sinnoh (tall grass) (East Sea)",
+          "Grand Underground Fountainspring Cave)"
         ]
       }
     },
@@ -2862,13 +3608,27 @@
       "brilliant-diamond": {
         "locations": [
           "Eterna Forest",
-          "Grand Underground - Spacious Cave, Grassland Cave, Sunlit Cavern, Riverbank Cave, Still-Water Cavern, Whiteout Cave, Icy Cave, Glacial Cavern"
+          "Grand Underground Spacious Cave",
+          "Grassland Cave",
+          "Sunlit Cavern",
+          "Riverbank Cave",
+          "Still Water Cavern",
+          "Whiteout Cave",
+          "Icy Cave",
+          "Glacial Cavern"
         ]
       },
       "shining-pearl": {
         "locations": [
           "Eterna Forest",
-          "Grand Underground - Spacious Cave, Grassland Cave, Sunlit Cavern, Riverbank Cave, Still-Water Cavern, Whiteout Cave, Icy Cave, Glacial Cavern"
+          "Grand Underground Spacious Cave",
+          "Grassland Cave",
+          "Sunlit Cavern",
+          "Riverbank Cave",
+          "Still Water Cavern",
+          "Whiteout Cave",
+          "Icy Cave",
+          "Glacial Cavern"
         ]
       }
     },
@@ -2902,7 +3662,11 @@
       "shining-pearl": {
         "locations": [
           "Routes Sinnoh and Sinnoh",
-          "Grand Underground - Grassland Cave, Spacious Cave, Riverbank Cave, Sunlit Cavern, Still-Water Cavern (After defeating Candice)"
+          "Grand Underground Grassland Cave",
+          "Spacious Cave",
+          "Riverbank Cave",
+          "Sunlit Cavern",
+          "Still Water Cavern (after Defeating Candice)"
         ]
       }
     },
@@ -2910,29 +3674,47 @@
       "shining-pearl": {
         "locations": [
           "Routes Sinnoh and Sinnoh",
-          "Grand Underground - Grassland Cave, Spacious Cave, Riverbank Cave, Still-Water Cavern, Sunlit Cavern (After obtaining Defog)"
+          "Grand Underground Grassland Cave",
+          "Spacious Cave",
+          "Riverbank Cave",
+          "Still Water Cavern",
+          "Sunlit Cavern (After obtaining Defog)"
         ]
       }
     },
     "433": {
       "brilliant-diamond": {
         "locations": [
-          "Sinnoh, Lake Valor, Mt. Coronet, Lake Acuity",
-          "Grand Underground - Spacious Cave, Dazzling Cave, Stargleam Cavern (After obtaining Strength)"
+          "Route 211",
+          "Lake Valor",
+          "Mt. Coronet",
+          "Lake Acuity",
+          "Grand Underground Spacious Cave",
+          "Dazzling Cave",
+          "Stargleam Cavern (After obtaining Strength)"
         ]
       },
       "shining-pearl": {
         "locations": [
-          "Sinnoh, Lake Valor, Mt. Coronet, Lake Acuity",
-          "Grand Underground - Spacious Cave, Dazzling Cave, Stargleam Cavern (After obtaining Strength)"
+          "Route 211",
+          "Lake Valor",
+          "Mt. Coronet",
+          "Lake Acuity",
+          "Grand Underground Spacious Cave",
+          "Dazzling Cave",
+          "Stargleam Cavern (After obtaining Strength)"
         ]
       }
     },
     "434": {
       "brilliant-diamond": {
         "locations": [
-          "Routes Sinnoh, Sinnoh, and Sinnoh",
-          "Grand Underground - Grassland Cave, Spacious Cave, Riverbank Cave, Sunlit Cavern, Still-Water Cavern (After obtaining Strength)"
+          "Honey Trees (Routes 205–222, and Sinnoh",
+          "Grand Underground Grassland Cave",
+          "Spacious Cave",
+          "Riverbank Cave",
+          "Sunlit Cavern",
+          "Still Water Cavern (after Obtaining Strength)"
         ]
       }
     },
@@ -2940,33 +3722,55 @@
       "brilliant-diamond": {
         "locations": [
           "Routes Sinnoh and Sinnoh",
-          "Grand Underground - Grassland Cave, Spacious Cave, Riverbank Cave, Sunlit Cavern, Still-Water Cavern (After obtaining Strength)"
+          "Grand Underground Grassland Cave",
+          "Spacious Cave",
+          "Riverbank Cave",
+          "Sunlit Cavern",
+          "Still Water Cavern (after Obtaining Strength)"
         ]
       }
     },
     "436": {
       "brilliant-diamond": {
         "locations": [
-          "Sinnoh, Wayward Cave, Turnback Cave, Mt. Coronet",
-          "Grand Underground - Rocky Cave, Icy Cave, Dazzling Cave, Stargleam Cavern, Big Bluff Cavern, Glacial Cavern (After obtaining Strength)"
+          "Route 206",
+          "Wayward Cave",
+          "Turnback Cave",
+          "Mt. Coronet",
+          "Grand Underground Rocky Cave",
+          "Icy Cave",
+          "Dazzling Cave",
+          "Stargleam Cavern",
+          "Big Bluff Cavern",
+          "Glacial Cavern (After obtaining Strength)"
         ]
       },
       "shining-pearl": {
         "locations": [
-          "Sinnoh, Wayward Cave, Turnback Cave, Mt. Coronet",
-          "Grand Underground - Rocky Cave, Icy Cave, Dazzling Cave, Stargleam Cavern, Big Bluff Cavern, Glacial Cavern (After obtaining Strength)"
+          "Route 206",
+          "Wayward Cave",
+          "Turnback Cave",
+          "Mt. Coronet",
+          "Grand Underground Rocky Cave",
+          "Icy Cave",
+          "Dazzling Cave",
+          "Stargleam Cavern",
+          "Big Bluff Cavern",
+          "Glacial Cavern (After obtaining Strength)"
         ]
       }
     },
     "437": {
       "brilliant-diamond": {
         "locations": [
-          "Turnback Cave, Mt. Coronet"
+          "Turnback Cave",
+          "Mt. Coronet"
         ]
       },
       "shining-pearl": {
         "locations": [
-          "Turnback Cave, Mt. Coronet"
+          "Turnback Cave",
+          "Mt. Coronet"
         ]
       }
     },
@@ -2978,14 +3782,16 @@
       },
       "shining-pearl": {
         "locations": [
-          "Routes Sinnoh and Sinnoh, Trophy Garden"
+          "Routes Sinnoh and Sinnoh",
+          "Trophy Garden"
         ]
       }
     },
     "439": {
       "brilliant-diamond": {
         "locations": [
-          "Routes Sinnoh and Sinnoh, Trophy Garden"
+          "Routes Sinnoh and Sinnoh",
+          "Trophy Garden"
         ]
       },
       "shining-pearl": {
@@ -2997,13 +3803,13 @@
     "440": {
       "brilliant-diamond": {
         "locations": [
-          "Hatch Hiker in Hearthome City",
+          "Hatch Egg received from a Hiker in Hearthome City",
           "Trophy Garden"
         ]
       },
       "shining-pearl": {
         "locations": [
-          "Hatch Hiker in Hearthome City",
+          "Hatch Egg received from a Hiker in Hearthome City",
           "Trophy Garden"
         ]
       }
@@ -3011,13 +3817,13 @@
     "441": {
       "brilliant-diamond": {
         "locations": [
-          "Routes Sinnoh and SinnohD",
+          "Routes Sinnoh and Sinnoh (Morning, Day)",
           "Trade Buizel at Eterna Condominiums"
         ]
       },
       "shining-pearl": {
         "locations": [
-          "Routes Sinnoh and SinnohD",
+          "Routes Sinnoh and Sinnoh (Morning, Day)",
           "Trade Buizel at Eterna Condominiums"
         ]
       }
@@ -3025,12 +3831,12 @@
     "442": {
       "brilliant-diamond": {
         "locations": [
-          "Hallowed Tower on Sinnoh"
+          "Hallowed Tower on Route 209"
         ]
       },
       "shining-pearl": {
         "locations": [
-          "Hallowed Tower on Sinnoh"
+          "Hallowed Tower on Route 209"
         ]
       }
     },
@@ -3038,25 +3844,33 @@
       "brilliant-diamond": {
         "locations": [
           "Wayward Cave",
-          "Grand Underground - Riverbank Cave, Fountainspring Cave, Still-Water Cavern (After defeating Candice)"
+          "Grand Underground Riverbank Cave",
+          "Fountainspring Cave",
+          "Still Water Cavern (after Defeating Candice)"
         ]
       },
       "shining-pearl": {
         "locations": [
           "Wayward Cave",
-          "Grand Underground - Riverbank Cave, Fountainspring Cave, Still-Water Cavern (After defeating Candice)"
+          "Grand Underground Riverbank Cave",
+          "Fountainspring Cave",
+          "Still Water Cavern (after Defeating Candice)"
         ]
       }
     },
     "444": {
       "brilliant-diamond": {
         "locations": [
-          "Grand Underground - Riverbank Cave, Fountainspring Cave, Still-Water Cavern (After obtaining Waterfall)"
+          "Grand Underground Riverbank Cave",
+          "Fountainspring Cave",
+          "Still Water Cavern (after Obtaining Waterfall)"
         ]
       },
       "shining-pearl": {
         "locations": [
-          "Grand Underground - Riverbank Cave, Fountainspring Cave, Still-Water Cavern (After obtaining Waterfall)"
+          "Grand Underground Riverbank Cave",
+          "Fountainspring Cave",
+          "Still Water Cavern (after Obtaining Waterfall)"
         ]
       }
     },
@@ -3075,14 +3889,24 @@
     "446": {
       "brilliant-diamond": {
         "locations": [
-          "Routes Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Eterna Forest, Floaroma Meadow, Fuego Ironworks, Valley Windworks (Honey Trees)",
-          "Grand Underground - Grassland Cave, Spacious Cave, Whiteout Cave, Riverbank Cave, Still-Water Cavern, Sunlit Cavern (After obtaining Defog)"
+          "Honey Trees (Routes 205–222, Eterna Forest, Floaroma Meadow, Fuego Ironworks, Valley Windworks",
+          "Grand Underground Grassland Cave",
+          "Spacious Cave",
+          "Whiteout Cave",
+          "Riverbank Cave",
+          "Still Water Cavern",
+          "Sunlit Cavern (After obtaining Defog)"
         ]
       },
       "shining-pearl": {
         "locations": [
-          "Routes Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Sinnoh, Eterna Forest, Floaroma Meadow, Fuego Ironworks, Valley Windworks (Honey Trees)",
-          "Grand Underground - Grassland Cave, Spacious Cave, Whiteout Cave, Riverbank Cave, Still-Water Cavern, Sunlit Cavern (After obtaining Defog)"
+          "Honey Trees (Routes 205–222, Eterna Forest, Floaroma Meadow, Fuego Ironworks, Valley Windworks",
+          "Grand Underground Grassland Cave",
+          "Spacious Cave",
+          "Whiteout Cave",
+          "Riverbank Cave",
+          "Still Water Cavern",
+          "Sunlit Cavern (After obtaining Defog)"
         ]
       }
     },
@@ -3114,25 +3938,29 @@
       "brilliant-diamond": {
         "locations": [
           "Maniac Tunnel",
-          "Grand Underground - Rocky Cave, Big Bluff Cavern, Sandsear Cave (After obtaining Defog)"
+          "Grand Underground Rocky Cave",
+          "Big Bluff Cavern",
+          "Sandsear Cave (After obtaining Defog)"
         ]
       },
       "shining-pearl": {
         "locations": [
           "Maniac Tunnel",
-          "Grand Underground - Rocky Cave, Big Bluff Cavern, Sandsear Cave (After obtaining Defog)"
+          "Grand Underground Rocky Cave",
+          "Big Bluff Cavern",
+          "Sandsear Cave (After obtaining Defog)"
         ]
       }
     },
     "450": {
       "brilliant-diamond": {
         "locations": [
-          "Sinnoh"
+          "Route 228"
         ]
       },
       "shining-pearl": {
         "locations": [
-          "Sinnoh"
+          "Route 228"
         ]
       }
     },
@@ -3140,13 +3968,25 @@
       "brilliant-diamond": {
         "locations": [
           "Great Marsh",
-          "Grand Underground - Volcanic Cave, Rocky Cave, Swampy Cave, Sandsear Cave, Typhlo Cavern, Big Bluff Cavern, Bogsunk Cavern"
+          "Grand Underground Volcanic Cave",
+          "Rocky Cave",
+          "Swampy Cave",
+          "Sandsear Cave",
+          "Typhlo Cavern",
+          "Big Bluff Cavern",
+          "Bogsunk Cavern"
         ]
       },
       "shining-pearl": {
         "locations": [
           "Great Marsh",
-          "Grand Underground - Volcanic Cave, Rocky Cave, Swampy Cave, Sandsear Cave, Typhlo Cavern, Big Bluff Cavern, Bogsunk Cavern"
+          "Grand Underground Volcanic Cave",
+          "Rocky Cave",
+          "Swampy Cave",
+          "Sandsear Cave",
+          "Typhlo Cavern",
+          "Big Bluff Cavern",
+          "Bogsunk Cavern"
         ]
       }
     },
@@ -3166,13 +4006,19 @@
       "brilliant-diamond": {
         "locations": [
           "Great Marsh",
-          "Grand Underground - Swampy Cave, Riverbank Cave, Still-Water Cavern, Bogsunk Cavern"
+          "Grand Underground Swampy Cave",
+          "Riverbank Cave",
+          "Still Water Cavern",
+          "Bogsunk Cavern"
         ]
       },
       "shining-pearl": {
         "locations": [
           "Great Marsh",
-          "Grand Underground - Swampy Cave, Riverbank Cave, Still-Water Cavern, Bogsunk Cavern"
+          "Grand Underground Swampy Cave",
+          "Riverbank Cave",
+          "Still Water Cavern",
+          "Bogsunk Cavern"
         ]
       }
     },
@@ -3203,50 +4049,60 @@
     "456": {
       "brilliant-diamond": {
         "locations": [
-          "Routes Sinnoh, Sinnoh, Sinnoh, Sinnoh, and Sinnoh, Fuego Ironworks, Iron Island, Canalave City, Valley Windworks (Good Rod)"
+          "Honey Trees (Routes 205–222, and Sinnoh, Fuego Ironworks, Iron Island, Canalave City, Valley Windworks (Good Rod)"
         ]
       },
       "shining-pearl": {
         "locations": [
-          "Routes Sinnoh, Sinnoh, Sinnoh, Sinnoh, and Sinnoh, Fuego Ironworks, Iron Island, Canalave City, Valley Windworks (Good Rod)"
+          "Honey Trees (Routes 205–222, and Sinnoh, Fuego Ironworks, Iron Island, Canalave City, Valley Windworks (Good Rod)"
         ]
       }
     },
     "457": {
       "brilliant-diamond": {
         "locations": [
-          "Routes Sinnoh, Sinnoh, Sinnoh, Sinnoh, and Sinnoh, Fuego Ironworks, Iron Island, Canalave City, Valley Windworks (Super Rod)"
+          "Honey Trees (Routes 205–222, and Sinnoh, Fuego Ironworks, Iron Island, Canalave City, Valley Windworks (Super Rod)"
         ]
       },
       "shining-pearl": {
         "locations": [
-          "Routes Sinnoh, Sinnoh, Sinnoh, Sinnoh, and Sinnoh, Fuego Ironworks, Iron Island, Canalave City, Valley Windworks (Super Rod)"
+          "Honey Trees (Routes 205–222, and Sinnoh, Fuego Ironworks, Iron Island, Canalave City, Valley Windworks (Super Rod)"
         ]
       }
     },
     "458": {
       "brilliant-diamond": {
         "locations": [
-          "Sinnoh, Sunyshore City (Surfing)"
+          "Route 223",
+          "Sunyshore City (Surfing)"
         ]
       },
       "shining-pearl": {
         "locations": [
-          "Sinnoh, Sunyshore City (Surfing)"
+          "Route 223",
+          "Sunyshore City (Surfing)"
         ]
       }
     },
     "459": {
       "brilliant-diamond": {
         "locations": [
-          "Routes Sinnoh and Sinnoh, Acuity Lakefront, Mt. Coronet (peak)",
-          "Grand Underground - Icy Cave, Whiteout Cave, Glacial Cavern (After defeating Candice)"
+          "Routes Sinnoh and Sinnoh",
+          "Acuity Lakefront",
+          "Mt. Coronet (peak)",
+          "Grand Underground Icy Cave",
+          "Whiteout Cave",
+          "Glacial Cavern (After defeating Candice)"
         ]
       },
       "shining-pearl": {
         "locations": [
-          "Routes Sinnoh and Sinnoh, Acuity Lakefront, Mt. Coronet (peak)",
-          "Grand Underground - Icy Cave, Whiteout Cave, Glacial Cavern (After defeating Candice)"
+          "Routes Sinnoh and Sinnoh",
+          "Acuity Lakefront",
+          "Mt. Coronet (peak)",
+          "Grand Underground Icy Cave",
+          "Whiteout Cave",
+          "Glacial Cavern (After defeating Candice)"
         ]
       }
     },
@@ -3313,12 +4169,14 @@
     "465": {
       "brilliant-diamond": {
         "locations": [
-          "Grand Underground - Swampy Cave, Bogsunk Cavern (After obtaining the National Pokédex)"
+          "Grand Underground Swampy Cave",
+          "Bogsunk Cavern (After obtaining the National Pokédex)"
         ]
       },
       "shining-pearl": {
         "locations": [
-          "Grand Underground - Swampy Cave, Bogsunk Cavern (After obtaining the National Pokédex)"
+          "Grand Underground Swampy Cave",
+          "Bogsunk Cavern (After obtaining the National Pokédex)"
         ]
       }
     },
@@ -3399,6 +4257,11 @@
         "locations": [
           "Evolve Gligar"
         ]
+      },
+      "shining-pearl": {
+        "locations": [
+          "Evolve Gligar"
+        ]
       }
     },
     "473": {
@@ -3428,12 +4291,12 @@
     "475": {
       "brilliant-diamond": {
         "locations": [
-          "Evolve Kirliamale"
+          "Evolve Kirlia"
         ]
       },
       "shining-pearl": {
         "locations": [
-          "Evolve Kirliamale"
+          "Evolve Kirlia"
         ]
       }
     },
@@ -3464,12 +4327,12 @@
     "478": {
       "brilliant-diamond": {
         "locations": [
-          "Evolve Snoruntfemale"
+          "Evolve Snorunt"
         ]
       },
       "shining-pearl": {
         "locations": [
-          "Evolve Snoruntfemale"
+          "Evolve Snorunt"
         ]
       }
     },
@@ -3526,6 +4389,11 @@
         "locations": [
           "Spear Pillar (Only one)"
         ]
+      },
+      "shining-pearl": {
+        "locations": [
+          "Spear Pillar"
+        ]
       }
     },
     "484": {
@@ -3533,17 +4401,22 @@
         "locations": [
           "Spear Pillar (Only one)"
         ]
+      },
+      "brilliant-diamond": {
+        "locations": [
+          "Spear Pillar"
+        ]
       }
     },
     "487": {
       "brilliant-diamond": {
         "locations": [
-          "Turnback Cave (Only one) ('''Altered Forme''')"
+          "Turnback Cave (Only one) (Altered Forme)"
         ]
       },
       "shining-pearl": {
         "locations": [
-          "Turnback Cave (Only one) ('''Altered Forme''')"
+          "Turnback Cave (Only one) (Altered Forme)"
         ]
       }
     },

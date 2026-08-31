@@ -14,6 +14,7 @@
       "type": "base",
       "optional": false,
       "defaultEnabled": false,
+      "startIndex": 1,
       "entries": [
         {
           "speciesId": 650,
@@ -788,6 +789,7 @@
       "type": "base",
       "optional": false,
       "defaultEnabled": false,
+      "startIndex": 1,
       "entries": [
         {
           "speciesId": 425,
@@ -1562,6 +1564,7 @@
       "type": "base",
       "optional": false,
       "defaultEnabled": false,
+      "startIndex": 1,
       "entries": [
         {
           "speciesId": 50,
@@ -2325,24 +2328,24 @@
     "1": {
       "x": {
         "locations": [
-          "lumiose city area"
+          "Lumiose City"
         ]
       },
       "y": {
         "locations": [
-          "lumiose city area"
+          "Lumiose City"
         ]
       }
     },
     "2": {
       "x": {
         "locations": [
-          "friend safari grass"
+          "Friend Safari Grass"
         ]
       },
       "y": {
         "locations": [
-          "friend safari grass"
+          "Friend Safari Grass"
         ]
       }
     },
@@ -2361,24 +2364,24 @@
     "4": {
       "x": {
         "locations": [
-          "lumiose city area"
+          "Lumiose City"
         ]
       },
       "y": {
         "locations": [
-          "lumiose city area"
+          "Lumiose City"
         ]
       }
     },
     "5": {
       "x": {
         "locations": [
-          "friend safari fire"
+          "Friend Safari Fire"
         ]
       },
       "y": {
         "locations": [
-          "friend safari fire"
+          "Friend Safari Fire"
         ]
       }
     },
@@ -2397,24 +2400,24 @@
     "7": {
       "x": {
         "locations": [
-          "lumiose city area"
+          "Lumiose City"
         ]
       },
       "y": {
         "locations": [
-          "lumiose city area"
+          "Lumiose City"
         ]
       }
     },
     "8": {
       "x": {
         "locations": [
-          "friend safari water"
+          "Friend Safari Water"
         ]
       },
       "y": {
         "locations": [
-          "friend safari water"
+          "Friend Safari Water"
         ]
       }
     },
@@ -2433,20 +2436,20 @@
     "10": {
       "y": {
         "locations": [
-          "kalos route 2 area",
-          "santalune forest area"
+          "Route 2",
+          "Santalune Forest"
         ]
       },
       "x": {
         "locations": [
-          "santalune forest area"
+          "Santalune Forest"
         ]
       }
     },
     "11": {
       "y": {
         "locations": [
-          "santalune forest area"
+          "Santalune Forest"
         ]
       },
       "x": {
@@ -2458,38 +2461,38 @@
     "12": {
       "x": {
         "locations": [
-          "friend safari bug"
+          "Friend Safari Bug"
         ]
       },
       "y": {
         "locations": [
-          "friend safari bug"
+          "Friend Safari Bug"
         ]
       }
     },
     "13": {
       "x": {
         "locations": [
-          "kalos route 2 area",
-          "santalune forest area"
+          "Route 2",
+          "Santalune Forest"
         ]
       },
       "y": {
         "locations": [
-          "santalune forest area"
+          "Santalune Forest"
         ]
       }
     },
     "14": {
       "x": {
         "locations": [
-          "santalune forest area",
-          "friend safari poison"
+          "Santalune Forest",
+          "Friend Safari Poison"
         ]
       },
       "y": {
         "locations": [
-          "friend safari poison"
+          "Friend Safari Poison"
         ]
       }
     },
@@ -2508,16 +2511,16 @@
     "16": {
       "x": {
         "locations": [
-          "kalos route 2 area",
-          "kalos route 3 area",
-          "friend safari flying"
+          "Route 2",
+          "Route 3",
+          "Friend Safari Flying"
         ]
       },
       "y": {
         "locations": [
-          "kalos route 2 area",
-          "kalos route 3 area",
-          "friend safari flying"
+          "Route 2",
+          "Route 3",
+          "Friend Safari Flying"
         ]
       }
     },
@@ -2548,64 +2551,64 @@
     "21": {
       "x": {
         "locations": [
-          "friend safari flying"
+          "Friend Safari Flying"
         ]
       },
       "y": {
         "locations": [
-          "friend safari flying"
+          "Friend Safari Flying"
         ]
       }
     },
     "22": {
       "x": {
         "locations": [
-          "kalos victory road outside"
+          "Victory Road Outside"
         ]
       },
       "y": {
         "locations": [
-          "kalos victory road outside"
+          "Victory Road Outside"
         ]
       }
     },
     "23": {
       "x": {
         "locations": [
-          "kalos route 14 area"
+          "Route 14"
         ]
       },
       "y": {
         "locations": [
-          "kalos route 14 area"
+          "Route 14"
         ]
       }
     },
     "24": {
       "x": {
         "locations": [
-          "kalos route 19 area"
+          "Route 19"
         ]
       },
       "y": {
         "locations": [
-          "kalos route 19 area"
+          "Route 19"
         ]
       }
     },
     "25": {
       "x": {
         "locations": [
-          "kalos route 3 area",
-          "santalune forest area",
-          "friend safari electric"
+          "Route 3",
+          "Santalune Forest",
+          "Friend Safari Electric"
         ]
       },
       "y": {
         "locations": [
-          "kalos route 3 area",
-          "santalune forest area",
-          "friend safari electric"
+          "Route 3",
+          "Santalune Forest",
+          "Friend Safari Electric"
         ]
       }
     },
@@ -2624,58 +2627,58 @@
     "27": {
       "x": {
         "locations": [
-          "friend safari ground"
+          "Friend Safari Ground"
         ]
       },
       "y": {
         "locations": [
-          "friend safari ground"
+          "Friend Safari Ground"
         ]
       }
     },
     "28": {
       "x": {
         "locations": [
-          "kalos route 18 area",
-          "terminus cave 1f",
-          "terminus cave b1f left",
-          "terminus cave b1f right",
-          "terminus cave b2f",
-          "terminus cave zygardes chamber"
+          "Route 18",
+          "Terminus Cave (1F)",
+          "Terminus Cave (B1F) Left",
+          "Terminus Cave (B1F) Right",
+          "Terminus Cave (B2F)",
+          "Terminus Cave Zygardes Chamber"
         ]
       },
       "y": {
         "locations": [
-          "kalos route 18 area",
-          "terminus cave 1f",
-          "terminus cave b1f left",
-          "terminus cave b1f right",
-          "terminus cave b2f",
-          "terminus cave zygardes chamber"
+          "Route 18",
+          "Terminus Cave (1F)",
+          "Terminus Cave (B1F) Left",
+          "Terminus Cave (B1F) Right",
+          "Terminus Cave (B2F)",
+          "Terminus Cave Zygardes Chamber"
         ]
       }
     },
     "29": {
       "x": {
         "locations": [
-          "kalos route 11 area"
+          "Route 11"
         ]
       },
       "y": {
         "locations": [
-          "kalos route 11 area"
+          "Route 11"
         ]
       }
     },
     "30": {
       "x": {
         "locations": [
-          "kalos route 11 area"
+          "Route 11"
         ]
       },
       "y": {
         "locations": [
-          "kalos route 11 area"
+          "Route 11"
         ]
       }
     },
@@ -2694,24 +2697,24 @@
     "32": {
       "x": {
         "locations": [
-          "kalos route 11 area"
+          "Route 11"
         ]
       },
       "y": {
         "locations": [
-          "kalos route 11 area"
+          "Route 11"
         ]
       }
     },
     "33": {
       "x": {
         "locations": [
-          "kalos route 11 area"
+          "Route 11"
         ]
       },
       "y": {
         "locations": [
-          "kalos route 11 area"
+          "Route 11"
         ]
       }
     },
@@ -2730,16 +2733,16 @@
     "39": {
       "x": {
         "locations": [
-          "kalos route 20 area",
-          "pokemon village area",
-          "friend safari fairy"
+          "Route 20",
+          "Pokemon Village",
+          "Friend Safari Fairy"
         ]
       },
       "y": {
         "locations": [
-          "kalos route 20 area",
-          "pokemon village area",
-          "friend safari fairy"
+          "Route 20",
+          "Pokemon Village",
+          "Friend Safari Fairy"
         ]
       }
     },
@@ -2758,12 +2761,12 @@
     "41": {
       "x": {
         "locations": [
-          "connecting cave area"
+          "Connecting Cave"
         ]
       },
       "y": {
         "locations": [
-          "connecting cave area"
+          "Connecting Cave"
         ]
       }
     },
@@ -2782,26 +2785,26 @@
     "43": {
       "x": {
         "locations": [
-          "kalos route 6 area",
-          "friend safari grass"
+          "Route 6",
+          "Friend Safari Grass"
         ]
       },
       "y": {
         "locations": [
-          "kalos route 6 area",
-          "friend safari grass"
+          "Route 6",
+          "Friend Safari Grass"
         ]
       }
     },
     "44": {
       "x": {
         "locations": [
-          "friend safari poison"
+          "Friend Safari Poison"
         ]
       },
       "y": {
         "locations": [
-          "friend safari poison"
+          "Friend Safari Poison"
         ]
       }
     },
@@ -2832,28 +2835,28 @@
     "51": {
       "x": {
         "locations": [
-          "kalos route 13 area",
-          "friend safari ground"
+          "Route 13",
+          "Friend Safari Ground"
         ]
       },
       "y": {
         "locations": [
-          "kalos route 13 area",
-          "friend safari ground"
+          "Route 13",
+          "Friend Safari Ground"
         ]
       }
     },
     "54": {
       "x": {
         "locations": [
-          "kalos route 7 area",
-          "kalos route 22 area"
+          "Route 7",
+          "Route 22"
         ]
       },
       "y": {
         "locations": [
-          "kalos route 7 area",
-          "kalos route 22 area"
+          "Route 7",
+          "Route 22"
         ]
       }
     },
@@ -2872,100 +2875,92 @@
     "60": {
       "x": {
         "locations": [
-          "couriway town area",
-          "laverre city area",
-          "kalos route 14 area",
-          "kalos route 15 area",
-          "kalos route 16 area",
-          "kalos route 19 area",
-          "kalos route 21 area",
-          "frost cavern unknown area 313",
-          "frost cavern unknown area 315",
-          "pokemon village area",
-          "kalos victory road unknown area 322",
-          "kalos victory road outside",
-          "kalos victory road unknown area 328"
+          "Couriway Town",
+          "Laverre City",
+          "Route 14",
+          "Route 15",
+          "Route 16",
+          "Route 19",
+          "Route 21",
+          "Frost Cavern Unknown Area",
+          "Pokemon Village",
+          "Victory Road Unknown Area",
+          "Victory Road Outside"
         ]
       },
       "y": {
         "locations": [
-          "couriway town area",
-          "laverre city area",
-          "kalos route 14 area",
-          "kalos route 15 area",
-          "kalos route 16 area",
-          "kalos route 19 area",
-          "kalos route 21 area",
-          "frost cavern unknown area 313",
-          "frost cavern unknown area 315",
-          "pokemon village area",
-          "kalos victory road unknown area 322",
-          "kalos victory road outside",
-          "kalos victory road unknown area 328"
+          "Couriway Town",
+          "Laverre City",
+          "Route 14",
+          "Route 15",
+          "Route 16",
+          "Route 19",
+          "Route 21",
+          "Frost Cavern Unknown Area",
+          "Pokemon Village",
+          "Victory Road Unknown Area",
+          "Victory Road Outside"
         ]
       }
     },
     "61": {
       "x": {
         "locations": [
-          "couriway town area",
-          "laverre city area",
-          "kalos route 14 area",
-          "kalos route 15 area",
-          "kalos route 16 area",
-          "kalos route 19 area",
-          "kalos route 21 area",
-          "frost cavern unknown area 313",
-          "frost cavern unknown area 315",
-          "pokemon village area",
-          "kalos victory road unknown area 322",
-          "kalos victory road outside",
-          "kalos victory road unknown area 328",
-          "friend safari water"
+          "Couriway Town",
+          "Laverre City",
+          "Route 14",
+          "Route 15",
+          "Route 16",
+          "Route 19",
+          "Route 21",
+          "Frost Cavern Unknown Area",
+          "Pokemon Village",
+          "Victory Road Unknown Area",
+          "Victory Road Outside",
+          "Friend Safari Water"
         ]
       },
       "y": {
         "locations": [
-          "couriway town area",
-          "laverre city area",
-          "kalos route 14 area",
-          "kalos route 15 area",
-          "kalos route 16 area",
-          "kalos route 19 area",
-          "kalos route 21 area",
-          "frost cavern unknown area 313",
-          "frost cavern unknown area 315",
-          "pokemon village area",
-          "kalos victory road unknown area 322",
-          "kalos victory road outside",
-          "kalos victory road unknown area 328",
-          "friend safari water"
+          "Couriway Town",
+          "Laverre City",
+          "Route 14",
+          "Route 15",
+          "Route 16",
+          "Route 19",
+          "Route 21",
+          "Frost Cavern Unknown Area",
+          "Pokemon Village",
+          "Victory Road Unknown Area",
+          "Victory Road Outside",
+          "Friend Safari Water"
         ]
       }
     },
     "62": {
       "x": {
         "locations": [
-          "kalos victory road unknown area 328"
+          "Victory Road Unknown Area"
         ]
       },
       "y": {
         "locations": [
-          "kalos victory road unknown area 328"
+          "Victory Road Unknown Area"
         ]
       }
     },
     "63": {
       "x": {
         "locations": [
-          "kalos route 5 area",
-          "friend safari psychic"
+          "Route 5",
+          "Friend Safari Psychic"
         ]
       },
       "y": {
         "locations": [
-          "kalos route 5 area",
-          "friend safari psychic"
+          "Route 5",
+          "Friend Safari Psychic"
         ]
       }
     },
@@ -2996,24 +2991,24 @@
     "66": {
       "x": {
         "locations": [
-          "glittering cave unknown area 303"
+          "Glittering Cave Unknown Area"
         ]
       },
       "y": {
         "locations": [
-          "glittering cave unknown area 303"
+          "Glittering Cave Unknown Area"
         ]
       }
     },
     "67": {
       "x": {
         "locations": [
-          "friend safari fighting"
+          "Friend Safari Fighting"
         ]
       },
       "y": {
         "locations": [
-          "friend safari fighting"
+          "Friend Safari Fighting"
         ]
       }
     },
@@ -3032,28 +3027,28 @@
     "69": {
       "x": {
         "locations": [
-          "kalos route 14 area"
+          "Route 14"
         ]
       },
       "y": {
         "locations": [
-          "kalos route 14 area"
+          "Route 14"
         ]
       }
     },
     "70": {
       "x": {
         "locations": [
-          "kalos route 14 area",
-          "kalos route 16 area",
-          "kalos route 19 area"
+          "Route 14",
+          "Route 16",
+          "Route 19"
         ]
       },
       "y": {
         "locations": [
-          "kalos route 14 area",
-          "kalos route 16 area",
-          "kalos route 19 area"
+          "Route 14",
+          "Route 16",
+          "Route 19"
         ]
       }
     },
@@ -3072,22 +3067,22 @@
     "72": {
       "x": {
         "locations": [
-          "ambrette town area",
-          "cyllage city area",
-          "shalour city area",
-          "kalos route 8 area",
-          "kalos route 12 area",
-          "azure bay area"
+          "Ambrette Town",
+          "Cyllage City",
+          "Shalour City",
+          "Route 8",
+          "Route 12",
+          "Azure Bay"
         ]
       },
       "y": {
         "locations": [
-          "ambrette town area",
-          "cyllage city area",
-          "shalour city area",
-          "kalos route 8 area",
-          "kalos route 12 area",
-          "azure bay area"
+          "Ambrette Town",
+          "Cyllage City",
+          "Shalour City",
+          "Route 8",
+          "Route 12",
+          "Azure Bay"
         ]
       }
     },
@@ -3106,62 +3101,50 @@
     "74": {
       "x": {
         "locations": [
-          "kalos route 18 area",
-          "kalos victory road unknown area 322",
-          "kalos victory road unknown area 324",
-          "kalos victory road unknown area 326",
-          "kalos victory road unknown area 328",
-          "terminus cave 1f",
-          "terminus cave b1f left",
-          "terminus cave b1f right",
-          "terminus cave b2f",
-          "terminus cave zygardes chamber"
+          "Route 18",
+          "Victory Road Unknown Area",
+          "Terminus Cave (1F)",
+          "Terminus Cave (B1F) Left",
+          "Terminus Cave (B1F) Right",
+          "Terminus Cave (B2F)",
+          "Terminus Cave Zygardes Chamber"
         ]
       },
       "y": {
         "locations": [
-          "kalos route 18 area",
-          "kalos victory road unknown area 322",
-          "kalos victory road unknown area 324",
-          "kalos victory road unknown area 326",
-          "kalos victory road unknown area 328",
-          "terminus cave 1f",
-          "terminus cave b1f left",
-          "terminus cave b1f right",
-          "terminus cave b2f",
-          "terminus cave zygardes chamber"
+          "Route 18",
+          "Victory Road Unknown Area",
+          "Terminus Cave (1F)",
+          "Terminus Cave (B1F) Left",
+          "Terminus Cave (B1F) Right",
+          "Terminus Cave (B2F)",
+          "Terminus Cave Zygardes Chamber"
         ]
       }
     },
     "75": {
       "x": {
         "locations": [
-          "kalos route 13 area",
-          "kalos route 18 area",
-          "kalos victory road unknown area 322",
-          "kalos victory road unknown area 324",
-          "kalos victory road unknown area 326",
-          "kalos victory road unknown area 328",
-          "terminus cave 1f",
-          "terminus cave b1f left",
-          "terminus cave b1f right",
-          "terminus cave b2f",
-          "terminus cave zygardes chamber"
+          "Route 13",
+          "Route 18",
+          "Victory Road Unknown Area",
+          "Terminus Cave (1F)",
+          "Terminus Cave (B1F) Left",
+          "Terminus Cave (B1F) Right",
+          "Terminus Cave (B2F)",
+          "Terminus Cave Zygardes Chamber"
         ]
       },
       "y": {
         "locations": [
-          "kalos route 13 area",
-          "kalos route 18 area",
-          "kalos victory road unknown area 322",
-          "kalos victory road unknown area 324",
-          "kalos victory road unknown area 326",
-          "kalos victory road unknown area 328",
-          "terminus cave 1f",
-          "terminus cave b1f left",
-          "terminus cave b1f right",
-          "terminus cave b2f",
-          "terminus cave zygardes chamber"
+          "Route 13",
+          "Route 18",
+          "Victory Road Unknown Area",
+          "Terminus Cave (1F)",
+          "Terminus Cave (B1F) Left",
+          "Terminus Cave (B1F) Right",
+          "Terminus Cave (B2F)",
+          "Terminus Cave Zygardes Chamber"
         ]
       }
     },
@@ -3180,14 +3163,14 @@
     "79": {
       "x": {
         "locations": [
-          "kalos route 12 area",
-          "azure bay area"
+          "Route 12",
+          "Azure Bay"
         ]
       },
       "y": {
         "locations": [
-          "kalos route 12 area",
-          "azure bay area"
+          "Route 12",
+          "Azure Bay"
         ]
       }
     },
@@ -3206,54 +3189,54 @@
     "81": {
       "x": {
         "locations": [
-          "Breed Magnezone"
+          "Breed Magneton or Magnezone"
         ]
       },
       "y": {
         "locations": [
-          "Breed Magnezone"
+          "Breed Magneton or Magnezone"
         ]
       }
     },
     "82": {
       "x": {
         "locations": [
-          "lost hotel area",
-          "friend safari steel"
+          "Lost Hotel",
+          "Friend Safari Steel"
         ]
       },
       "y": {
         "locations": [
-          "lost hotel area",
-          "friend safari steel"
+          "Lost Hotel",
+          "Friend Safari Steel"
         ]
       }
     },
     "83": {
       "x": {
         "locations": [
-          "kalos route 22 area",
-          "friend safari flying"
+          "Route 22",
+          "Friend Safari Flying"
         ]
       },
       "y": {
         "locations": [
-          "kalos route 22 area",
-          "friend safari flying"
+          "Route 22",
+          "Friend Safari Flying"
         ]
       }
     },
     "84": {
       "x": {
         "locations": [
-          "kalos route 5 area",
-          "friend safari flying"
+          "Route 5",
+          "Friend Safari Flying"
         ]
       },
       "y": {
         "locations": [
-          "kalos route 5 area",
-          "friend safari flying"
+          "Route 5",
+          "Friend Safari Flying"
         ]
       }
     },
@@ -3272,7 +3255,7 @@
     "90": {
       "y": {
         "locations": [
-          "kalos route 8 area"
+          "Route 8"
         ]
       },
       "x": {
@@ -3284,55 +3267,43 @@
     "91": {
       "y": {
         "locations": [
-          "kalos route 8 area",
-          "friend safari ice"
+          "Route 8",
+          "Friend Safari Ice"
         ]
       },
       "x": {
         "locations": [
-          "friend safari ice"
+          "Friend Safari Ice"
         ]
       }
     },
     "92": {
       "x": {
         "locations": [
-          "Breed Gengar"
+          "Breed Haunter or Gengar"
         ]
       },
       "y": {
         "locations": [
-          "Breed Gengar"
+          "Breed Haunter or Gengar"
         ]
       }
     },
     "93": {
       "x": {
         "locations": [
-          "kalos route 14 area",
-          "kalos route 19 area",
-          "frost cavern unknown area 314",
-          "frost cavern unknown area 315",
-          "frost cavern unknown area 316",
-          "frost cavern unknown area 317",
-          "kalos victory road unknown area 322",
-          "kalos victory road unknown area 324",
-          "kalos victory road unknown area 326",
-          "kalos victory road unknown area 328"
+          "Route 14",
+          "Route 19",
+          "Frost Cavern Unknown Area",
+          "Victory Road Unknown Area"
         ]
       },
       "y": {
         "locations": [
-          "kalos route 14 area",
-          "kalos route 19 area",
-          "frost cavern unknown area 314",
-          "frost cavern unknown area 315",
-          "frost cavern unknown area 316",
-          "frost cavern unknown area 317",
-          "kalos victory road unknown area 322",
-          "kalos victory road unknown area 324",
-          "kalos victory road unknown area 326",
-          "kalos victory road unknown area 328"
+          "Route 14",
+          "Route 19",
+          "Frost Cavern Unknown Area",
+          "Victory Road Unknown Area"
         ]
       }
     },
@@ -3351,17 +3322,15 @@
     "95": {
       "x": {
         "locations": [
-          "cyllage city area",
-          "glittering cave unknown area 303",
-          "glittering cave unknown area 304",
-          "friend safari rock"
+          "Cyllage City",
+          "Glittering Cave Unknown Area",
+          "Friend Safari Rock"
         ]
       },
       "y": {
         "locations": [
-          "glittering cave unknown area 303",
-          "glittering cave unknown area 304",
-          "friend safari rock"
+          "Glittering Cave Unknown Area",
+          "Friend Safari Rock"
         ]
       }
     },
@@ -3380,28 +3349,28 @@
     "101": {
       "x": {
         "locations": [
-          "lost hotel area",
-          "friend safari electric"
+          "Lost Hotel",
+          "Friend Safari Electric"
         ]
       },
       "y": {
         "locations": [
-          "lost hotel area",
-          "friend safari electric"
+          "Lost Hotel",
+          "Friend Safari Electric"
         ]
       }
     },
     "102": {
       "x": {
         "locations": [
-          "kalos route 12 area",
-          "azure bay area"
+          "Route 12",
+          "Azure Bay"
         ]
       },
       "y": {
         "locations": [
-          "kalos route 12 area",
-          "azure bay area"
+          "Route 12",
+          "Azure Bay"
         ]
       }
     },
@@ -3420,303 +3389,285 @@
     "104": {
       "x": {
         "locations": [
-          "glittering cave unknown area 303"
+          "Glittering Cave Unknown Area"
         ]
       },
       "y": {
         "locations": [
-          "glittering cave unknown area 303"
+          "Glittering Cave Unknown Area"
         ]
       }
     },
     "105": {
       "x": {
         "locations": [
-          "friend safari ground"
+          "Friend Safari Ground"
         ]
       },
       "y": {
         "locations": [
-          "friend safari ground"
+          "Friend Safari Ground"
         ]
       }
     },
     "108": {
       "x": {
         "locations": [
-          "kalos victory road unknown area 322",
-          "kalos victory road unknown area 324",
-          "kalos victory road unknown area 326",
-          "kalos victory road unknown area 328"
+          "Victory Road Unknown Area"
         ]
       },
       "y": {
         "locations": [
-          "kalos victory road unknown area 322",
-          "kalos victory road unknown area 324",
-          "kalos victory road unknown area 326",
-          "kalos victory road unknown area 328"
+          "Victory Road Unknown Area"
         ]
       }
     },
     "111": {
       "x": {
         "locations": [
-          "glittering cave unknown area 303"
+          "Glittering Cave Unknown Area"
         ]
       },
       "y": {
         "locations": [
-          "glittering cave unknown area 303"
+          "Glittering Cave Unknown Area"
         ]
       }
     },
     "112": {
       "x": {
         "locations": [
-          "friend safari rock"
+          "Friend Safari Rock"
         ]
       },
       "y": {
         "locations": [
-          "friend safari rock"
+          "Friend Safari Rock"
         ]
       }
     },
     "115": {
       "x": {
         "locations": [
-          "glittering cave unknown area 303"
+          "Glittering Cave Unknown Area"
         ]
       },
       "y": {
         "locations": [
-          "glittering cave unknown area 303"
+          "Glittering Cave Unknown Area"
         ]
       }
     },
     "116": {
       "x": {
         "locations": [
-          "ambrette town area",
-          "cyllage city area"
+          "Ambrette Town",
+          "Cyllage City"
         ]
       },
       "y": {
         "locations": [
-          "ambrette town area",
-          "cyllage city area"
+          "Ambrette Town",
+          "Cyllage City"
         ]
       }
     },
     "117": {
       "x": {
         "locations": [
-          "ambrette town area",
-          "cyllage city area"
+          "Ambrette Town",
+          "Cyllage City"
         ]
       },
       "y": {
         "locations": [
-          "ambrette town area",
-          "cyllage city area"
+          "Ambrette Town",
+          "Cyllage City"
         ]
       }
     },
     "118": {
       "x": {
         "locations": [
-          "kalos route 3 area",
-          "kalos route 22 area",
-          "parfum palace area"
+          "Route 3",
+          "Route 22",
+          "Parfum Palace"
         ]
       },
       "y": {
         "locations": [
-          "kalos route 3 area",
-          "kalos route 22 area",
-          "parfum palace area"
+          "Route 3",
+          "Route 22",
+          "Parfum Palace"
         ]
       }
     },
     "119": {
       "x": {
         "locations": [
-          "kalos route 3 area",
-          "kalos route 22 area",
-          "parfum palace area"
+          "Route 3",
+          "Route 22",
+          "Parfum Palace"
         ]
       },
       "y": {
         "locations": [
-          "kalos route 3 area",
-          "kalos route 22 area",
-          "parfum palace area"
+          "Route 3",
+          "Route 22",
+          "Parfum Palace"
         ]
       }
     },
     "120": {
       "x": {
         "locations": [
-          "kalos route 8 area"
+          "Route 8"
         ]
       }
     },
     "121": {
       "x": {
         "locations": [
-          "kalos route 8 area"
+          "Route 8"
         ]
       }
     },
     "122": {
       "x": {
         "locations": [
-          "reflection cave unknown area 305",
-          "reflection cave unknown area 306",
-          "reflection cave unknown area 307",
-          "reflection cave unknown area 308"
+          "Reflection Cave Unknown Area"
         ]
       },
       "y": {
         "locations": [
-          "reflection cave unknown area 305",
-          "reflection cave unknown area 306",
-          "reflection cave unknown area 307",
-          "reflection cave unknown area 308"
+          "Reflection Cave Unknown Area"
         ]
       }
     },
     "123": {
       "x": {
         "locations": [
-          "kalos route 21 area"
+          "Route 21"
         ]
       },
       "y": {
         "locations": [
-          "kalos route 21 area"
+          "Route 21"
         ]
       }
     },
     "124": {
       "x": {
         "locations": [
-          "frost cavern unknown area 314",
-          "frost cavern unknown area 315",
-          "frost cavern unknown area 316",
-          "frost cavern unknown area 317"
+          "Frost Cavern Unknown Area"
         ]
       },
       "y": {
         "locations": [
-          "frost cavern unknown area 314",
-          "frost cavern unknown area 315",
-          "frost cavern unknown area 316",
-          "frost cavern unknown area 317"
+          "Frost Cavern Unknown Area"
         ]
       }
     },
     "127": {
       "x": {
         "locations": [
-          "kalos route 12 area",
-          "friend safari bug"
+          "Route 12",
+          "Friend Safari Bug"
         ]
       },
       "y": {
         "locations": [
-          "friend safari bug"
+          "Friend Safari Bug"
         ]
       }
     },
     "128": {
       "x": {
         "locations": [
-          "kalos route 12 area"
+          "Route 12"
         ]
       },
       "y": {
         "locations": [
-          "kalos route 12 area"
+          "Route 12"
         ]
       }
     },
     "129": {
       "x": {
         "locations": [
-          "kalos route 3 area",
-          "kalos route 22 area",
-          "parfum palace area"
+          "Route 3",
+          "Route 22",
+          "Parfum Palace"
         ]
       },
       "y": {
         "locations": [
-          "kalos route 3 area",
-          "kalos route 22 area",
-          "parfum palace area"
+          "Route 3",
+          "Route 22",
+          "Parfum Palace"
         ]
       }
     },
     "130": {
       "x": {
         "locations": [
-          "kalos route 3 area",
-          "kalos route 22 area",
-          "parfum palace area",
-          "friend safari water"
+          "Route 3",
+          "Route 22",
+          "Parfum Palace",
+          "Friend Safari Water"
         ]
       },
       "y": {
         "locations": [
-          "kalos route 3 area",
-          "kalos route 22 area",
-          "parfum palace area",
-          "friend safari water"
+          "Route 3",
+          "Route 22",
+          "Parfum Palace",
+          "Friend Safari Water"
         ]
       }
     },
     "131": {
       "x": {
         "locations": [
-          "kalos route 12 area",
-          "azure bay area",
-          "friend safari ice"
+          "Route 12",
+          "Azure Bay",
+          "Friend Safari Ice"
         ]
       },
       "y": {
         "locations": [
-          "kalos route 12 area",
-          "azure bay area",
-          "friend safari ice"
+          "Route 12",
+          "Azure Bay",
+          "Friend Safari Ice"
         ]
       }
     },
     "132": {
       "x": {
         "locations": [
-          "pokemon village area",
-          "friend safari normal"
+          "Pokemon Village",
+          "Friend Safari Normal"
         ]
       },
       "y": {
         "locations": [
-          "pokemon village area",
-          "friend safari normal"
+          "Pokemon Village",
+          "Friend Safari Normal"
         ]
       }
     },
     "133": {
       "x": {
         "locations": [
-          "kalos route 10 area",
-          "friend safari normal"
+          "Route 10",
+          "Friend Safari Normal"
         ]
       },
       "y": {
         "locations": [
-          "kalos route 10 area",
-          "friend safari normal"
+          "Route 10",
+          "Friend Safari Normal"
         ]
       }
     },
@@ -3771,80 +3722,80 @@
     "143": {
       "x": {
         "locations": [
-          "kalos route 7 area"
+          "Route 7"
         ]
       },
       "y": {
         "locations": [
-          "kalos route 7 area"
+          "Route 7"
         ]
       }
     },
     "144": {
       "x": {
         "locations": [
-          "sea spirits den area",
-          "roaming kalos area"
+          "Sea Spirits Den",
+          "Roaming Kalos"
         ]
       },
       "y": {
         "locations": [
-          "sea spirits den area",
-          "roaming kalos area"
+          "Sea Spirits Den",
+          "Roaming Kalos"
         ]
       }
     },
     "145": {
       "x": {
         "locations": [
-          "sea spirits den area",
-          "roaming kalos area"
+          "Sea Spirits Den",
+          "Roaming Kalos"
         ]
       },
       "y": {
         "locations": [
-          "sea spirits den area",
-          "roaming kalos area"
+          "Sea Spirits Den",
+          "Roaming Kalos"
         ]
       }
     },
     "146": {
       "x": {
         "locations": [
-          "sea spirits den area",
-          "roaming kalos area"
+          "Sea Spirits Den",
+          "Roaming Kalos"
         ]
       },
       "y": {
         "locations": [
-          "sea spirits den area",
-          "roaming kalos area"
+          "Sea Spirits Den",
+          "Roaming Kalos"
         ]
       }
     },
     "147": {
       "x": {
         "locations": [
-          "kalos route 21 area"
+          "Route 21"
         ]
       },
       "y": {
         "locations": [
-          "kalos route 21 area"
+          "Route 21"
         ]
       }
     },
     "148": {
       "x": {
         "locations": [
-          "kalos route 21 area",
-          "friend safari dragon"
+          "Route 21",
+          "Friend Safari Dragon"
         ]
       },
       "y": {
         "locations": [
-          "kalos route 21 area",
-          "friend safari dragon"
+          "Route 21",
+          "Friend Safari Dragon"
         ]
       }
     },
@@ -3863,24 +3814,24 @@
     "150": {
       "x": {
         "locations": [
-          "unknown dungeon area"
+          "Unknown Dungeon"
         ]
       },
       "y": {
         "locations": [
-          "unknown dungeon area"
+          "Unknown Dungeon"
         ]
       }
     },
     "161": {
       "x": {
         "locations": [
-          "kalos route 6 area"
+          "Route 6"
         ]
       },
       "y": {
         "locations": [
-          "kalos route 6 area"
+          "Route 6"
         ]
       }
     },
@@ -3899,42 +3850,42 @@
     "163": {
       "x": {
         "locations": [
-          "friend safari flying"
+          "Friend Safari Flying"
         ]
       },
       "y": {
         "locations": [
-          "friend safari flying"
+          "Friend Safari Flying"
         ]
       }
     },
     "164": {
       "x": {
         "locations": [
-          "kalos route 20 area",
-          "pokemon village area"
+          "Route 20",
+          "Pokemon Village"
         ]
       },
       "y": {
         "locations": [
-          "kalos route 20 area",
-          "pokemon village area"
+          "Route 20",
+          "Pokemon Village"
         ]
       }
     },
     "165": {
       "x": {
         "locations": [
-          "kalos route 4 area",
-          "friend safari bug",
-          "kalos berry fields area"
+          "Route 4",
+          "Friend Safari Bug",
+          "Berry Fields"
         ]
       },
       "y": {
         "locations": [
-          "kalos route 4 area",
-          "friend safari bug",
-          "kalos berry fields area"
+          "Route 4",
+          "Friend Safari Bug",
+          "Berry Fields"
         ]
       }
     },
@@ -3965,30 +3916,24 @@
     "168": {
       "x": {
         "locations": [
-          "kalos victory road unknown area 322",
-          "kalos victory road unknown area 324",
-          "kalos victory road unknown area 326",
-          "kalos victory road unknown area 328",
-          "terminus cave 1f",
-          "terminus cave b1f left",
-          "terminus cave b1f right",
-          "terminus cave b2f",
-          "terminus cave zygardes chamber",
-          "friend safari poison"
+          "Victory Road Unknown Area",
+          "Terminus Cave (1F)",
+          "Terminus Cave (B1F) Left",
+          "Terminus Cave (B1F) Right",
+          "Terminus Cave (B2F)",
+          "Terminus Cave Zygardes Chamber",
+          "Friend Safari Poison"
         ]
       },
       "y": {
         "locations": [
-          "kalos victory road unknown area 322",
-          "kalos victory road unknown area 324",
-          "kalos victory road unknown area 326",
-          "kalos victory road unknown area 328",
-          "terminus cave 1f",
-          "terminus cave b1f left",
-          "terminus cave b1f right",
-          "terminus cave b2f",
-          "terminus cave zygardes chamber",
-          "friend safari poison"
+          "Victory Road Unknown Area",
+          "Terminus Cave (1F)",
+          "Terminus Cave (B1F) Left",
+          "Terminus Cave (B1F) Right",
+          "Terminus Cave (B2F)",
+          "Terminus Cave Zygardes Chamber",
+          "Friend Safari Poison"
         ]
       }
     },
@@ -4007,64 +3952,64 @@
     "170": {
       "x": {
         "locations": [
-          "shalour city area",
-          "azure bay area"
+          "Shalour City",
+          "Azure Bay"
         ]
       },
       "y": {
         "locations": [
-          "shalour city area",
-          "azure bay area"
+          "Shalour City",
+          "Azure Bay"
         ]
       }
     },
     "171": {
       "x": {
         "locations": [
-          "shalour city area",
-          "azure bay area"
+          "Shalour City",
+          "Azure Bay"
         ]
       },
       "y": {
         "locations": [
-          "shalour city area",
-          "azure bay area"
+          "Shalour City",
+          "Azure Bay"
         ]
       }
     },
     "172": {
       "x": {
         "locations": [
-          "Breed Raichu"
+          "Breed Pikachu or Raichu"
         ]
       },
       "y": {
         "locations": [
-          "Breed Raichu"
+          "Breed Pikachu or Raichu"
         ]
       }
     },
     "174": {
       "x": {
         "locations": [
-          "Breed Wigglytuff"
+          "Breed Jigglypuff or Wigglytuff"
         ]
       },
       "y": {
         "locations": [
-          "Breed Wigglytuff"
+          "Breed Jigglypuff or Wigglytuff"
         ]
       }
     },
     "179": {
       "x": {
         "locations": [
-          "kalos route 12 area"
+          "Route 12"
         ]
       },
       "y": {
         "locations": [
-          "kalos route 12 area"
+          "Route 12"
         ]
       }
     },
@@ -4107,62 +4052,62 @@
     "183": {
       "x": {
         "locations": [
-          "kalos route 3 area"
+          "Route 3"
         ]
       },
       "y": {
         "locations": [
-          "kalos route 3 area"
+          "Route 3"
         ]
       }
     },
     "184": {
       "x": {
         "locations": [
-          "kalos route 22 area",
-          "friend safari water"
+          "Route 22",
+          "Friend Safari Water"
         ]
       },
       "y": {
         "locations": [
-          "kalos route 22 area",
-          "friend safari water"
+          "Route 22",
+          "Friend Safari Water"
         ]
       }
     },
     "185": {
       "x": {
         "locations": [
-          "kalos route 20 area"
+          "Route 20"
         ]
       },
       "y": {
         "locations": [
-          "kalos route 20 area"
+          "Route 20"
         ]
       }
     },
     "186": {
       "x": {
         "locations": [
-          "kalos route 19 area"
+          "Route 19"
         ]
       },
       "y": {
         "locations": [
-          "kalos route 19 area"
+          "Route 19"
         ]
       }
     },
     "187": {
       "x": {
         "locations": [
-          "kalos route 7 area"
+          "Route 7"
         ]
       },
       "y": {
         "locations": [
-          "kalos route 7 area"
+          "Route 7"
         ]
       }
     },
@@ -4193,40 +4138,40 @@
     "193": {
       "x": {
         "locations": [
-          "kalos route 10 area"
+          "Route 10"
         ]
       },
       "y": {
         "locations": [
-          "kalos route 10 area"
+          "Route 10"
         ]
       }
     },
     "194": {
       "x": {
         "locations": [
-          "friend safari ground"
+          "Friend Safari Ground"
         ]
       },
       "y": {
         "locations": [
-          "friend safari ground"
+          "Friend Safari Ground"
         ]
       }
     },
     "195": {
       "x": {
         "locations": [
-          "kalos route 14 area",
-          "kalos route 19 area",
-          "friend safari water"
+          "Route 14",
+          "Route 19",
+          "Friend Safari Water"
         ]
       },
       "y": {
         "locations": [
-          "kalos route 14 area",
-          "kalos route 19 area",
-          "friend safari water"
+          "Route 14",
+          "Route 19",
+          "Friend Safari Water"
         ]
       }
     },
@@ -4257,14 +4202,14 @@
     "198": {
       "x": {
         "locations": [
-          "kalos route 15 area",
-          "kalos route 16 area"
+          "Route 15",
+          "Route 16"
         ]
       },
       "y": {
         "locations": [
-          "kalos route 15 area",
-          "kalos route 16 area"
+          "Route 15",
+          "Route 16"
         ]
       }
     },
@@ -4283,48 +4228,42 @@
     "202": {
       "x": {
         "locations": [
-          "reflection cave unknown area 305",
-          "reflection cave unknown area 306",
-          "reflection cave unknown area 307",
-          "reflection cave unknown area 308",
-          "friend safari psychic"
+          "Reflection Cave Unknown Area",
+          "Friend Safari Psychic"
         ]
       },
       "y": {
         "locations": [
-          "reflection cave unknown area 305",
-          "reflection cave unknown area 306",
-          "reflection cave unknown area 307",
-          "reflection cave unknown area 308",
-          "friend safari psychic"
+          "Reflection Cave Unknown Area",
+          "Friend Safari Psychic"
         ]
       }
     },
     "206": {
       "x": {
         "locations": [
-          "kalos route 3 area",
-          "kalos route 22 area",
-          "friend safari normal"
+          "Route 3",
+          "Route 22",
+          "Friend Safari Normal"
         ]
       },
       "y": {
         "locations": [
-          "kalos route 3 area",
-          "kalos route 22 area",
-          "friend safari normal"
+          "Route 3",
+          "Route 22",
+          "Friend Safari Normal"
         ]
       }
     },
     "207": {
       "x": {
         "locations": [
-          "kalos route 19 area"
+          "Route 19"
         ]
       },
       "y": {
         "locations": [
-          "kalos route 19 area"
+          "Route 19"
         ]
       }
     },
@@ -4343,14 +4282,14 @@
     "209": {
       "x": {
         "locations": [
-          "kalos route 10 area",
-          "friend safari fairy"
+          "Route 10",
+          "Friend Safari Fairy"
         ]
       },
       "y": {
         "locations": [
-          "kalos route 10 area",
-          "friend safari fairy"
+          "Route 10",
+          "Friend Safari Fairy"
         ]
       }
     },
@@ -4369,12 +4308,12 @@
     "211": {
       "x": {
         "locations": [
-          "kalos route 8 area"
+          "Route 8"
         ]
       },
       "y": {
         "locations": [
-          "kalos route 8 area"
+          "Route 8"
         ]
       }
     },
@@ -4393,197 +4332,189 @@
     "213": {
       "x": {
         "locations": [
-          "kalos route 18 area",
-          "kalos victory road unknown area 322",
-          "kalos victory road unknown area 324",
-          "terminus cave 1f",
-          "terminus cave b1f left",
-          "terminus cave b1f right",
-          "friend safari rock"
+          "Route 18",
+          "Victory Road Unknown Area",
+          "Terminus Cave (1F)",
+          "Terminus Cave (B1F) Left",
+          "Terminus Cave (B1F) Right",
+          "Friend Safari Rock"
         ]
       },
       "y": {
         "locations": [
-          "kalos route 18 area",
-          "kalos victory road unknown area 322",
-          "kalos victory road unknown area 324",
-          "terminus cave 1f",
-          "terminus cave b1f left",
-          "terminus cave b1f right",
-          "friend safari rock"
+          "Route 18",
+          "Victory Road Unknown Area",
+          "Terminus Cave (1F)",
+          "Terminus Cave (B1F) Left",
+          "Terminus Cave (B1F) Right",
+          "Friend Safari Rock"
         ]
       }
     },
     "214": {
       "y": {
         "locations": [
-          "kalos route 12 area",
-          "friend safari bug"
+          "Route 12",
+          "Friend Safari Bug"
         ]
       },
       "x": {
         "locations": [
-          "friend safari bug"
+          "Friend Safari Bug"
         ]
       }
     },
     "215": {
       "x": {
         "locations": [
-          "kalos route 17 area",
-          "friend safari ice",
-          "friend safari dark"
+          "Route 17",
+          "Friend Safari Ice",
+          "Friend Safari Dark"
         ]
       },
       "y": {
         "locations": [
-          "kalos route 17 area",
-          "friend safari ice",
-          "friend safari dark"
+          "Route 17",
+          "Friend Safari Ice",
+          "Friend Safari Dark"
         ]
       }
     },
     "216": {
       "x": {
         "locations": [
-          "friend safari normal"
+          "Friend Safari Normal"
         ]
       },
       "y": {
         "locations": [
-          "friend safari normal"
+          "Friend Safari Normal"
         ]
       }
     },
     "217": {
       "x": {
         "locations": [
-          "kalos route 21 area"
+          "Route 21"
         ]
       },
       "y": {
         "locations": [
-          "kalos route 21 area"
+          "Route 21"
         ]
       }
     },
     "218": {
       "x": {
         "locations": [
-          "kalos route 13 area",
-          "friend safari fire"
+          "Route 13",
+          "Friend Safari Fire"
         ]
       },
       "y": {
         "locations": [
-          "kalos route 13 area",
-          "friend safari fire"
+          "Route 13",
+          "Friend Safari Fire"
         ]
       }
     },
     "219": {
       "x": {
         "locations": [
-          "friend safari rock"
+          "Friend Safari Rock"
         ]
       },
       "y": {
         "locations": [
-          "friend safari rock"
+          "Friend Safari Rock"
         ]
       }
     },
     "220": {
       "x": {
         "locations": [
-          "Breed Mamoswine"
+          "Breed Piloswine or Mamoswine"
         ]
       },
       "y": {
         "locations": [
-          "Breed Mamoswine"
+          "Breed Piloswine or Mamoswine"
         ]
       }
     },
     "221": {
       "x": {
         "locations": [
-          "frost cavern unknown area 314",
-          "frost cavern unknown area 315",
-          "frost cavern unknown area 316",
-          "frost cavern unknown area 317",
-          "friend safari ice"
+          "Frost Cavern Unknown Area",
+          "Friend Safari Ice"
         ]
       },
       "y": {
         "locations": [
-          "frost cavern unknown area 314",
-          "frost cavern unknown area 315",
-          "frost cavern unknown area 316",
-          "frost cavern unknown area 317",
-          "friend safari ice"
+          "Frost Cavern Unknown Area",
+          "Friend Safari Ice"
         ]
       }
     },
     "222": {
       "x": {
         "locations": [
-          "kalos route 12 area",
-          "friend safari rock"
+          "Route 12",
+          "Friend Safari Rock"
         ]
       },
       "y": {
         "locations": [
-          "kalos route 12 area",
-          "friend safari rock"
+          "Route 12",
+          "Friend Safari Rock"
         ]
       }
     },
     "223": {
       "x": {
         "locations": [
-          "shalour city area",
-          "kalos route 12 area",
-          "azure bay area"
+          "Shalour City",
+          "Route 12",
+          "Azure Bay"
         ]
       },
       "y": {
         "locations": [
-          "shalour city area",
-          "kalos route 12 area",
-          "azure bay area"
+          "Shalour City",
+          "Route 12",
+          "Azure Bay"
         ]
       }
     },
     "224": {
       "x": {
         "locations": [
-          "shalour city area",
-          "kalos route 12 area",
-          "azure bay area",
-          "friend safari water"
+          "Shalour City",
+          "Route 12",
+          "Azure Bay",
+          "Friend Safari Water"
         ]
       },
       "y": {
         "locations": [
-          "shalour city area",
-          "kalos route 12 area",
-          "azure bay area",
-          "friend safari water"
+          "Shalour City",
+          "Route 12",
+          "Azure Bay",
+          "Friend Safari Water"
         ]
       }
     },
     "225": {
       "x": {
         "locations": [
-          "kalos route 17 area",
-          "friend safari ice"
+          "Route 17",
+          "Friend Safari Ice"
         ]
       },
       "y": {
         "locations": [
-          "kalos route 17 area",
-          "friend safari ice"
+          "Route 17",
+          "Friend Safari Ice"
         ]
       }
     },
@@ -4602,21 +4533,21 @@
     "227": {
       "x": {
         "locations": [
-          "kalos victory road outside",
-          "friend safari steel"
+          "Victory Road Outside",
+          "Friend Safari Steel"
         ]
       },
       "y": {
         "locations": [
-          "kalos victory road outside",
-          "friend safari steel"
+          "Victory Road Outside",
+          "Friend Safari Steel"
         ]
       }
     },
     "228": {
       "x": {
         "locations": [
-          "kalos route 10 area"
+          "Route 10"
         ]
       }
     },
@@ -4628,7 +4559,8 @@
       },
       "y": {
         "locations": [
-          "Trade, Event"
+          "Trade",
+          "Event"
         ]
       }
     },
@@ -4647,80 +4579,72 @@
     "235": {
       "x": {
         "locations": [
-          "kalos route 7 area",
-          "friend safari normal"
+          "Route 7",
+          "Friend Safari Normal"
         ]
       },
       "y": {
         "locations": [
-          "kalos route 7 area",
-          "friend safari normal"
+          "Route 7",
+          "Friend Safari Normal"
         ]
       }
     },
     "238": {
       "x": {
         "locations": [
-          "frost cavern unknown area 313",
-          "frost cavern unknown area 314",
-          "frost cavern unknown area 315",
-          "frost cavern unknown area 316",
-          "frost cavern unknown area 317"
+          "Frost Cavern Unknown Area"
         ]
       },
       "y": {
         "locations": [
-          "frost cavern unknown area 313",
-          "frost cavern unknown area 314",
-          "frost cavern unknown area 315",
-          "frost cavern unknown area 316",
-          "frost cavern unknown area 317"
+          "Frost Cavern Unknown Area"
         ]
       }
     },
     "241": {
       "x": {
         "locations": [
-          "kalos route 12 area"
+          "Route 12"
         ]
       },
       "y": {
         "locations": [
-          "kalos route 12 area"
+          "Route 12"
         ]
       }
     },
     "246": {
       "y": {
         "locations": [
-          "terminus cave 1f",
-          "terminus cave b1f left",
-          "terminus cave b1f right",
-          "terminus cave b2f",
-          "terminus cave zygardes chamber"
+          "Terminus Cave (1F)",
+          "Terminus Cave (B1F) Left",
+          "Terminus Cave (B1F) Right",
+          "Terminus Cave (B2F)",
+          "Terminus Cave Zygardes Chamber"
         ]
       },
       "x": {
         "locations": [
-          "Breed Tyranitar"
+          "Breed Pupitar or Tyranitar"
         ]
       }
     },
     "247": {
       "y": {
         "locations": [
-          "kalos route 18 area",
-          "terminus cave 1f",
-          "terminus cave b1f left",
-          "terminus cave b1f right",
-          "terminus cave b2f",
-          "terminus cave zygardes chamber",
-          "friend safari rock"
+          "Route 18",
+          "Terminus Cave (1F)",
+          "Terminus Cave (B1F) Left",
+          "Terminus Cave (B1F) Right",
+          "Terminus Cave (B2F)",
+          "Terminus Cave Zygardes Chamber",
+          "Friend Safari Rock"
         ]
       },
       "x": {
         "locations": [
-          "friend safari rock"
+          "Friend Safari Rock"
         ]
       }
     },
@@ -4751,25 +4675,25 @@
     "262": {
       "x": {
         "locations": [
-          "kalos route 15 area",
-          "friend safari dark"
+          "Route 15",
+          "Friend Safari Dark"
         ]
       },
       "y": {
         "locations": [
-          "friend safari dark"
+          "Friend Safari Dark"
         ]
       }
     },
     "263": {
       "x": {
         "locations": [
-          "kalos route 2 area"
+          "Route 2"
         ]
       },
       "y": {
         "locations": [
-          "kalos route 2 area"
+          "Route 2"
         ]
       }
     },
@@ -4788,34 +4712,34 @@
     "270": {
       "x": {
         "locations": [
-          "Breed Ludicolo"
+          "Breed Lombre or Ludicolo"
         ]
       },
       "y": {
         "locations": [
-          "Breed Ludicolo"
+          "Breed Lombre or Ludicolo"
         ]
       }
     },
     "271": {
       "x": {
         "locations": [
-          "couriway town area",
-          "kalos route 15 area",
-          "kalos route 16 area",
-          "kalos route 21 area",
-          "pokemon village area",
-          "kalos victory road outside"
+          "Couriway Town",
+          "Route 15",
+          "Route 16",
+          "Route 21",
+          "Pokemon Village",
+          "Victory Road Outside"
         ]
       },
       "y": {
         "locations": [
-          "couriway town area",
-          "kalos route 15 area",
-          "kalos route 16 area",
-          "kalos route 21 area",
-          "pokemon village area",
-          "kalos victory road outside"
+          "Couriway Town",
+          "Route 15",
+          "Route 16",
+          "Route 21",
+          "Pokemon Village",
+          "Victory Road Outside"
         ]
       }
     },
@@ -4834,12 +4758,12 @@
     "276": {
       "x": {
         "locations": [
-          "kalos route 8 area"
+          "Route 8"
         ]
       },
       "y": {
         "locations": [
-          "kalos route 8 area"
+          "Route 8"
         ]
       }
     },
@@ -4858,16 +4782,16 @@
     "278": {
       "x": {
         "locations": [
-          "kalos route 8 area",
-          "kalos route 12 area",
-          "azure bay area"
+          "Route 8",
+          "Route 12",
+          "Azure Bay"
         ]
       },
       "y": {
         "locations": [
-          "kalos route 8 area",
-          "kalos route 12 area",
-          "azure bay area"
+          "Route 8",
+          "Route 12",
+          "Azure Bay"
         ]
       }
     },
@@ -4886,24 +4810,24 @@
     "280": {
       "x": {
         "locations": [
-          "kalos route 4 area"
+          "Route 4"
         ]
       },
       "y": {
         "locations": [
-          "kalos route 4 area"
+          "Route 4"
         ]
       }
     },
     "281": {
       "x": {
         "locations": [
-          "friend safari fairy"
+          "Friend Safari Fairy"
         ]
       },
       "y": {
         "locations": [
-          "friend safari fairy"
+          "Friend Safari Fairy"
         ]
       }
     },
@@ -4934,28 +4858,28 @@
     "284": {
       "x": {
         "locations": [
-          "kalos route 3 area",
-          "friend safari bug"
+          "Route 3",
+          "Friend Safari Bug"
         ]
       },
       "y": {
         "locations": [
-          "kalos route 3 area",
-          "friend safari bug"
+          "Route 3",
+          "Friend Safari Bug"
         ]
       }
     },
     "290": {
       "x": {
         "locations": [
-          "kalos route 6 area",
-          "friend safari ground"
+          "Route 6",
+          "Friend Safari Ground"
         ]
       },
       "y": {
         "locations": [
-          "kalos route 6 area",
-          "friend safari ground"
+          "Route 6",
+          "Friend Safari Ground"
         ]
       }
     },
@@ -4974,36 +4898,36 @@
     "292": {
       "x": {
         "locations": [
-          "Evolve Poké Ball"
+          "Evolve Nincada with extra slot in party and spare Poké Ball"
         ]
       },
       "y": {
         "locations": [
-          "Evolve Poké Ball"
+          "Evolve Nincada with extra slot in party and spare Poké Ball"
         ]
       }
     },
     "293": {
       "x": {
         "locations": [
-          "connecting cave area"
+          "Connecting Cave"
         ]
       },
       "y": {
         "locations": [
-          "connecting cave area"
+          "Connecting Cave"
         ]
       }
     },
     "294": {
       "x": {
         "locations": [
-          "friend safari normal"
+          "Friend Safari Normal"
         ]
       },
       "y": {
         "locations": [
-          "friend safari normal"
+          "Friend Safari Normal"
         ]
       }
     },
@@ -5034,54 +4958,54 @@
     "297": {
       "x": {
         "locations": [
-          "kalos route 11 area",
-          "friend safari fighting"
+          "Route 11",
+          "Friend Safari Fighting"
         ]
       },
       "y": {
         "locations": [
-          "kalos route 11 area",
-          "friend safari fighting"
+          "Route 11",
+          "Friend Safari Fighting"
         ]
       }
     },
     "298": {
       "x": {
         "locations": [
-          "kalos route 3 area",
-          "kalos route 22 area"
+          "Route 3",
+          "Route 22"
         ]
       },
       "y": {
         "locations": [
-          "kalos route 3 area",
-          "kalos route 22 area"
+          "Route 3",
+          "Route 22"
         ]
       }
     },
     "299": {
       "x": {
         "locations": [
-          "kalos route 10 area",
-          "friend safari rock"
+          "Route 10",
+          "Friend Safari Rock"
         ]
       },
       "y": {
         "locations": [
-          "kalos route 10 area",
-          "friend safari rock"
+          "Route 10",
+          "Friend Safari Rock"
         ]
       }
     },
     "300": {
       "x": {
         "locations": [
-          "kalos route 4 area"
+          "Route 4"
         ]
       },
       "y": {
         "locations": [
-          "kalos route 4 area"
+          "Route 4"
         ]
       }
     },
@@ -5100,59 +5024,53 @@
     "302": {
       "x": {
         "locations": [
-          "reflection cave unknown area 305",
-          "reflection cave unknown area 306",
-          "reflection cave unknown area 307",
-          "reflection cave unknown area 308",
-          "friend safari dark"
+          "Reflection Cave Unknown Area",
+          "Friend Safari Dark"
         ]
       },
       "y": {
         "locations": [
-          "reflection cave unknown area 305",
-          "reflection cave unknown area 306",
-          "reflection cave unknown area 307",
-          "reflection cave unknown area 308",
-          "friend safari dark"
+          "Reflection Cave Unknown Area",
+          "Friend Safari Dark"
         ]
       }
     },
     "303": {
       "x": {
         "locations": [
-          "glittering cave unknown area 303",
-          "friend safari steel",
-          "friend safari fairy"
+          "Glittering Cave Unknown Area",
+          "Friend Safari Steel",
+          "Friend Safari Fairy"
         ]
       },
       "y": {
         "locations": [
-          "glittering cave unknown area 303",
-          "friend safari steel",
-          "friend safari fairy"
+          "Glittering Cave Unknown Area",
+          "Friend Safari Steel",
+          "Friend Safari Fairy"
         ]
       }
     },
     "304": {
       "x": {
         "locations": [
-          "terminus cave 1f",
-          "terminus cave b1f left",
-          "terminus cave b1f right",
-          "terminus cave b2f",
-          "terminus cave zygardes chamber"
+          "Terminus Cave (1F)",
+          "Terminus Cave (B1F) Left",
+          "Terminus Cave (B1F) Right",
+          "Terminus Cave (B2F)",
+          "Terminus Cave Zygardes Chamber"
         ]
       }
     },
     "305": {
       "x": {
         "locations": [
-          "kalos route 18 area",
-          "terminus cave 1f",
-          "terminus cave b1f left",
-          "terminus cave b1f right",
-          "terminus cave b2f",
-          "terminus cave zygardes chamber"
+          "Route 18",
+          "Terminus Cave (1F)",
+          "Terminus Cave (B1F) Left",
+          "Terminus Cave (B1F) Right",
+          "Terminus Cave (B2F)",
+          "Terminus Cave Zygardes Chamber"
         ]
       }
     },
@@ -5164,21 +5082,22 @@
       },
       "y": {
         "locations": [
-          "Trade, Event"
+          "Trade",
+          "Event"
         ]
       }
     },
     "307": {
       "x": {
         "locations": [
-          "connecting cave area",
-          "friend safari fighting"
+          "Connecting Cave",
+          "Friend Safari Fighting"
         ]
       },
       "y": {
         "locations": [
-          "connecting cave area",
-          "friend safari fighting"
+          "Connecting Cave",
+          "Friend Safari Fighting"
         ]
       }
     },
@@ -5197,7 +5116,7 @@
     "309": {
       "y": {
         "locations": [
-          "kalos route 10 area"
+          "Route 10"
         ]
       },
       "x": {
@@ -5209,144 +5128,144 @@
     "310": {
       "x": {
         "locations": [
-          "friend safari electric"
+          "Friend Safari Electric"
         ]
       },
       "y": {
         "locations": [
-          "friend safari electric"
+          "Friend Safari Electric"
         ]
       }
     },
     "311": {
       "x": {
         "locations": [
-          "kalos route 5 area"
+          "Route 5"
         ]
       },
       "y": {
         "locations": [
-          "kalos route 5 area"
+          "Route 5"
         ]
       }
     },
     "312": {
       "x": {
         "locations": [
-          "kalos route 5 area"
+          "Route 5"
         ]
       },
       "y": {
         "locations": [
-          "kalos route 5 area"
+          "Route 5"
         ]
       }
     },
     "313": {
       "x": {
         "locations": [
-          "kalos route 7 area",
-          "friend safari bug",
-          "kalos berry fields area"
+          "Route 7",
+          "Friend Safari Bug",
+          "Berry Fields"
         ]
       },
       "y": {
         "locations": [
-          "kalos route 7 area",
-          "friend safari bug",
-          "kalos berry fields area"
+          "Route 7",
+          "Friend Safari Bug",
+          "Berry Fields"
         ]
       }
     },
     "314": {
       "x": {
         "locations": [
-          "kalos route 7 area",
-          "friend safari bug",
-          "kalos berry fields area"
+          "Route 7",
+          "Friend Safari Bug",
+          "Berry Fields"
         ]
       },
       "y": {
         "locations": [
-          "kalos route 7 area",
-          "friend safari bug",
-          "kalos berry fields area"
+          "Route 7",
+          "Friend Safari Bug",
+          "Berry Fields"
         ]
       }
     },
     "315": {
       "x": {
         "locations": [
-          "kalos route 7 area"
+          "Route 7"
         ]
       },
       "y": {
         "locations": [
-          "kalos route 7 area"
+          "Route 7"
         ]
       }
     },
     "316": {
       "x": {
         "locations": [
-          "kalos route 5 area"
+          "Route 5"
         ]
       },
       "y": {
         "locations": [
-          "kalos route 5 area"
+          "Route 5"
         ]
       }
     },
     "317": {
       "x": {
         "locations": [
-          "friend safari poison"
+          "Friend Safari Poison"
         ]
       },
       "y": {
         "locations": [
-          "friend safari poison"
+          "Friend Safari Poison"
         ]
       }
     },
     "318": {
       "x": {
         "locations": [
-          "kalos route 22 area"
+          "Route 22"
         ]
       },
       "y": {
         "locations": [
-          "kalos route 22 area"
+          "Route 22"
         ]
       }
     },
     "319": {
       "x": {
         "locations": [
-          "kalos route 22 area"
+          "Route 22"
         ]
       },
       "y": {
         "locations": [
-          "kalos route 22 area"
+          "Route 22"
         ]
       }
     },
     "320": {
       "x": {
         "locations": [
-          "ambrette town area",
-          "cyllage city area",
-          "kalos route 8 area"
+          "Ambrette Town",
+          "Cyllage City",
+          "Route 8"
         ]
       },
       "y": {
         "locations": [
-          "ambrette town area",
-          "cyllage city area",
-          "kalos route 8 area"
+          "Ambrette Town",
+          "Cyllage City",
+          "Route 8"
         ]
       }
     },
@@ -5365,62 +5284,62 @@
     "324": {
       "x": {
         "locations": [
-          "kalos route 18 area"
+          "Route 18"
         ]
       },
       "y": {
         "locations": [
-          "kalos route 18 area"
+          "Route 18"
         ]
       }
     },
     "325": {
       "x": {
         "locations": [
-          "kalos route 8 area"
+          "Route 8"
         ]
       },
       "y": {
         "locations": [
-          "kalos route 8 area"
+          "Route 8"
         ]
       }
     },
     "326": {
       "x": {
         "locations": [
-          "friend safari psychic"
+          "Friend Safari Psychic"
         ]
       },
       "y": {
         "locations": [
-          "friend safari psychic"
+          "Friend Safari Psychic"
         ]
       }
     },
     "327": {
       "x": {
         "locations": [
-          "kalos route 21 area"
+          "Route 21"
         ]
       },
       "y": {
         "locations": [
-          "kalos route 21 area"
+          "Route 21"
         ]
       }
     },
     "328": {
       "x": {
         "locations": [
-          "kalos route 13 area",
-          "friend safari ground"
+          "Route 13",
+          "Friend Safari Ground"
         ]
       },
       "y": {
         "locations": [
-          "kalos route 13 area",
-          "friend safari ground"
+          "Route 13",
+          "Friend Safari Ground"
         ]
       }
     },
@@ -5451,170 +5370,170 @@
     "333": {
       "x": {
         "locations": [
-          "kalos route 21 area"
+          "Route 21"
         ]
       },
       "y": {
         "locations": [
-          "kalos route 21 area"
+          "Route 21"
         ]
       }
     },
     "334": {
       "x": {
         "locations": [
-          "kalos route 21 area"
+          "Route 21"
         ]
       },
       "y": {
         "locations": [
-          "kalos route 21 area"
+          "Route 21"
         ]
       }
     },
     "335": {
       "x": {
         "locations": [
-          "kalos route 8 area"
+          "Route 8"
         ]
       },
       "y": {
         "locations": [
-          "kalos route 8 area"
+          "Route 8"
         ]
       }
     },
     "336": {
       "x": {
         "locations": [
-          "kalos route 8 area",
-          "friend safari poison"
+          "Route 8",
+          "Friend Safari Poison"
         ]
       },
       "y": {
         "locations": [
-          "kalos route 8 area",
-          "friend safari poison"
+          "Route 8",
+          "Friend Safari Poison"
         ]
       }
     },
     "337": {
       "x": {
         "locations": [
-          "glittering cave unknown area 303"
+          "Glittering Cave Unknown Area"
         ]
       },
       "y": {
         "locations": [
-          "glittering cave unknown area 303"
+          "Glittering Cave Unknown Area"
         ]
       }
     },
     "338": {
       "x": {
         "locations": [
-          "glittering cave unknown area 303"
+          "Glittering Cave Unknown Area"
         ]
       },
       "y": {
         "locations": [
-          "glittering cave unknown area 303"
+          "Glittering Cave Unknown Area"
         ]
       }
     },
     "339": {
       "x": {
         "locations": [
-          "kalos route 14 area",
-          "kalos route 19 area"
+          "Route 14",
+          "Route 19"
         ]
       },
       "y": {
         "locations": [
-          "kalos route 14 area",
-          "kalos route 19 area"
+          "Route 14",
+          "Route 19"
         ]
       }
     },
     "340": {
       "x": {
         "locations": [
-          "kalos route 14 area",
-          "kalos route 19 area"
+          "Route 14",
+          "Route 19"
         ]
       },
       "y": {
         "locations": [
-          "kalos route 14 area",
-          "kalos route 19 area"
+          "Route 14",
+          "Route 19"
         ]
       }
     },
     "341": {
       "x": {
         "locations": [
-          "kalos route 3 area",
-          "parfum palace area"
+          "Route 3",
+          "Parfum Palace"
         ]
       },
       "y": {
         "locations": [
-          "kalos route 3 area",
-          "parfum palace area"
+          "Route 3",
+          "Parfum Palace"
         ]
       }
     },
     "342": {
       "x": {
         "locations": [
-          "kalos route 3 area",
-          "parfum palace area",
-          "friend safari dark"
+          "Route 3",
+          "Parfum Palace",
+          "Friend Safari Dark"
         ]
       },
       "y": {
         "locations": [
-          "kalos route 3 area",
-          "parfum palace area",
-          "friend safari dark"
+          "Route 3",
+          "Parfum Palace",
+          "Friend Safari Dark"
         ]
       }
     },
     "352": {
       "x": {
         "locations": [
-          "kalos route 6 area",
-          "friend safari normal"
+          "Route 6",
+          "Friend Safari Normal"
         ]
       },
       "y": {
         "locations": [
-          "kalos route 6 area",
-          "friend safari normal"
+          "Route 6",
+          "Friend Safari Normal"
         ]
       }
     },
     "353": {
       "x": {
         "locations": [
-          "friend safari ghost"
+          "Friend Safari Ghost"
         ]
       },
       "y": {
         "locations": [
-          "friend safari ghost"
+          "Friend Safari Ghost"
         ]
       }
     },
     "354": {
       "x": {
         "locations": [
-          "pokemon village area"
+          "Pokemon Village"
         ]
       },
       "y": {
         "locations": [
-          "pokemon village area"
+          "Pokemon Village"
         ]
       }
     },
@@ -5633,14 +5552,14 @@
     "359": {
       "x": {
         "locations": [
-          "kalos route 8 area",
-          "friend safari dark"
+          "Route 8",
+          "Friend Safari Dark"
         ]
       },
       "y": {
         "locations": [
-          "kalos route 8 area",
-          "friend safari dark"
+          "Route 8",
+          "Friend Safari Dark"
         ]
       }
     },
@@ -5659,19 +5578,19 @@
     "366": {
       "x": {
         "locations": [
-          "kalos route 12 area"
+          "Route 12"
         ]
       },
       "y": {
         "locations": [
-          "kalos route 12 area"
+          "Route 12"
         ]
       }
     },
     "367": {
       "x": {
         "locations": [
-          "kalos route 12 area"
+          "Route 12"
         ]
       },
       "y": {
@@ -5683,7 +5602,7 @@
     "368": {
       "y": {
         "locations": [
-          "kalos route 12 area"
+          "Route 12"
         ]
       },
       "x": {
@@ -5695,60 +5614,60 @@
     "369": {
       "x": {
         "locations": [
-          "ambrette town area",
-          "cyllage city area"
+          "Ambrette Town",
+          "Cyllage City"
         ]
       },
       "y": {
         "locations": [
-          "ambrette town area",
-          "cyllage city area"
+          "Ambrette Town",
+          "Cyllage City"
         ]
       }
     },
     "370": {
       "x": {
         "locations": [
-          "ambrette town area",
-          "cyllage city area",
-          "shalour city area",
-          "kalos route 8 area",
-          "kalos route 12 area",
-          "azure bay area"
+          "Ambrette Town",
+          "Cyllage City",
+          "Shalour City",
+          "Route 8",
+          "Route 12",
+          "Azure Bay"
         ]
       },
       "y": {
         "locations": [
-          "ambrette town area",
-          "cyllage city area",
-          "shalour city area",
-          "kalos route 8 area",
-          "kalos route 12 area",
-          "azure bay area"
+          "Ambrette Town",
+          "Cyllage City",
+          "Shalour City",
+          "Route 8",
+          "Route 12",
+          "Azure Bay"
         ]
       }
     },
     "371": {
       "x": {
         "locations": [
-          "kalos route 8 area"
+          "Route 8"
         ]
       },
       "y": {
         "locations": [
-          "kalos route 8 area"
+          "Route 8"
         ]
       }
     },
     "372": {
       "x": {
         "locations": [
-          "friend safari dragon"
+          "Friend Safari Dragon"
         ]
       },
       "y": {
         "locations": [
-          "friend safari dragon"
+          "Friend Safari Dragon"
         ]
       }
     },
@@ -5767,24 +5686,24 @@
     "396": {
       "x": {
         "locations": [
-          "kalos route 11 area"
+          "Route 11"
         ]
       },
       "y": {
         "locations": [
-          "kalos route 11 area"
+          "Route 11"
         ]
       }
     },
     "397": {
       "x": {
         "locations": [
-          "kalos route 11 area"
+          "Route 11"
         ]
       },
       "y": {
         "locations": [
-          "kalos route 11 area"
+          "Route 11"
         ]
       }
     },
@@ -5803,40 +5722,40 @@
     "399": {
       "x": {
         "locations": [
-          "kalos route 3 area",
-          "kalos route 22 area"
+          "Route 3",
+          "Route 22"
         ]
       },
       "y": {
         "locations": [
-          "kalos route 3 area",
-          "kalos route 22 area"
+          "Route 3",
+          "Route 22"
         ]
       }
     },
     "400": {
       "x": {
         "locations": [
-          "kalos route 22 area",
-          "friend safari water"
+          "Route 22",
+          "Friend Safari Water"
         ]
       },
       "y": {
         "locations": [
-          "kalos route 22 area",
-          "friend safari water"
+          "Route 22",
+          "Friend Safari Water"
         ]
       }
     },
     "406": {
       "x": {
         "locations": [
-          "kalos route 4 area"
+          "Route 4"
         ]
       },
       "y": {
         "locations": [
-          "kalos route 4 area"
+          "Route 4"
         ]
       }
     },
@@ -5855,14 +5774,14 @@
     "412": {
       "x": {
         "locations": [
-          "kalos route 3 area",
-          "kalos berry fields area"
+          "Route 3",
+          "Berry Fields"
         ]
       },
       "y": {
         "locations": [
-          "kalos route 3 area",
-          "kalos berry fields area"
+          "Route 3",
+          "Berry Fields"
         ]
       }
     },
@@ -5893,42 +5812,42 @@
     "415": {
       "x": {
         "locations": [
-          "kalos route 4 area",
-          "friend safari bug",
-          "kalos berry fields area"
+          "Route 4",
+          "Friend Safari Bug",
+          "Berry Fields"
         ]
       },
       "y": {
         "locations": [
-          "kalos route 4 area",
-          "friend safari bug",
-          "kalos berry fields area"
+          "Route 4",
+          "Friend Safari Bug",
+          "Berry Fields"
         ]
       }
     },
     "416": {
       "x": {
         "locations": [
-          "Evolve Combeefemale"
+          "Evolve Combee"
         ]
       },
       "y": {
         "locations": [
-          "Evolve Combeefemale"
+          "Evolve Combee"
         ]
       }
     },
     "417": {
       "x": {
         "locations": [
-          "kalos route 12 area",
-          "friend safari electric"
+          "Route 12",
+          "Friend Safari Electric"
         ]
       },
       "y": {
         "locations": [
-          "kalos route 12 area",
-          "friend safari electric"
+          "Route 12",
+          "Friend Safari Electric"
         ]
       }
     },
@@ -5947,54 +5866,50 @@
     "419": {
       "x": {
         "locations": [
-          "couriway town area",
-          "kalos route 15 area",
-          "kalos route 16 area",
-          "kalos route 21 area",
-          "frost cavern unknown area 313",
-          "frost cavern unknown area 315",
-          "kalos victory road unknown area 322",
-          "kalos victory road outside",
-          "kalos victory road unknown area 328",
-          "friend safari water"
+          "Couriway Town",
+          "Route 15",
+          "Route 16",
+          "Route 21",
+          "Frost Cavern Unknown Area",
+          "Victory Road Unknown Area",
+          "Victory Road Outside",
+          "Friend Safari Water"
         ]
       },
       "y": {
         "locations": [
-          "couriway town area",
-          "kalos route 15 area",
-          "kalos route 16 area",
-          "kalos route 21 area",
-          "frost cavern unknown area 313",
-          "frost cavern unknown area 315",
-          "kalos victory road unknown area 322",
-          "kalos victory road outside",
-          "kalos victory road unknown area 328",
-          "friend safari water"
+          "Couriway Town",
+          "Route 15",
+          "Route 16",
+          "Route 21",
+          "Frost Cavern Unknown Area",
+          "Victory Road Unknown Area",
+          "Victory Road Outside",
+          "Friend Safari Water"
         ]
       }
     },
     "425": {
       "x": {
         "locations": [
-          "kalos route 8 area"
+          "Route 8"
         ]
       },
       "y": {
         "locations": [
-          "kalos route 8 area"
+          "Route 8"
         ]
       }
     },
     "426": {
       "x": {
         "locations": [
-          "friend safari ghost"
+          "Friend Safari Ghost"
         ]
       },
       "y": {
         "locations": [
-          "friend safari ghost"
+          "Friend Safari Ghost"
         ]
       }
     },
@@ -6013,32 +5928,26 @@
     "433": {
       "x": {
         "locations": [
-          "kalos route 11 area",
-          "reflection cave unknown area 305",
-          "reflection cave unknown area 306",
-          "reflection cave unknown area 307",
-          "reflection cave unknown area 308"
+          "Route 11",
+          "Reflection Cave Unknown Area"
         ]
       },
       "y": {
         "locations": [
-          "kalos route 11 area",
-          "reflection cave unknown area 305",
-          "reflection cave unknown area 306",
-          "reflection cave unknown area 307",
-          "reflection cave unknown area 308"
+          "Route 11",
+          "Reflection Cave Unknown Area"
         ]
       }
     },
     "434": {
       "x": {
         "locations": [
-          "kalos route 11 area"
+          "Route 11"
         ]
       },
       "y": {
         "locations": [
-          "kalos route 11 area"
+          "Route 11"
         ]
       }
     },
@@ -6069,56 +5978,50 @@
     "439": {
       "x": {
         "locations": [
-          "reflection cave unknown area 305",
-          "reflection cave unknown area 306",
-          "reflection cave unknown area 307",
-          "reflection cave unknown area 308"
+          "Reflection Cave Unknown Area"
         ]
       },
       "y": {
         "locations": [
-          "reflection cave unknown area 305",
-          "reflection cave unknown area 306",
-          "reflection cave unknown area 307",
-          "reflection cave unknown area 308"
+          "Reflection Cave Unknown Area"
         ]
       }
     },
     "441": {
       "x": {
         "locations": [
-          "kalos route 12 area",
-          "azure bay area"
+          "Route 12",
+          "Azure Bay"
         ]
       },
       "y": {
         "locations": [
-          "kalos route 12 area",
-          "azure bay area"
+          "Route 12",
+          "Azure Bay"
         ]
       }
     },
     "443": {
       "x": {
         "locations": [
-          "kalos route 13 area"
+          "Route 13"
         ]
       },
       "y": {
         "locations": [
-          "kalos route 13 area"
+          "Route 13"
         ]
       }
     },
     "444": {
       "x": {
         "locations": [
-          "friend safari dragon"
+          "Friend Safari Dragon"
         ]
       },
       "y": {
         "locations": [
-          "friend safari dragon"
+          "Friend Safari Dragon"
         ]
       }
     },
@@ -6149,38 +6052,38 @@
     "447": {
       "x": {
         "locations": [
-          "kalos route 22 area",
-          "friend safari fighting"
+          "Route 22",
+          "Friend Safari Fighting"
         ]
       },
       "y": {
         "locations": [
-          "kalos route 22 area",
-          "friend safari fighting"
+          "Route 22",
+          "Friend Safari Fighting"
         ]
       }
     },
     "448": {
       "x": {
         "locations": [
-          "tower of mastery area"
+          "Tower Of Mastery"
         ]
       },
       "y": {
         "locations": [
-          "tower of mastery area"
+          "Tower Of Mastery"
         ]
       }
     },
     "449": {
       "x": {
         "locations": [
-          "kalos route 9 area"
+          "Route 9"
         ]
       },
       "y": {
         "locations": [
-          "kalos route 9 area"
+          "Route 9"
         ]
       }
     },
@@ -6199,110 +6102,110 @@
     "451": {
       "x": {
         "locations": [
-          "kalos route 14 area",
-          "kalos route 15 area",
-          "kalos route 16 area"
+          "Route 14",
+          "Route 15",
+          "Route 16"
         ]
       },
       "y": {
         "locations": [
-          "kalos route 14 area",
-          "kalos route 15 area",
-          "kalos route 16 area"
+          "Route 14",
+          "Route 15",
+          "Route 16"
         ]
       }
     },
     "452": {
       "x": {
         "locations": [
-          "kalos route 19 area",
-          "friend safari poison"
+          "Route 19",
+          "Friend Safari Poison"
         ]
       },
       "y": {
         "locations": [
-          "kalos route 19 area",
-          "friend safari poison"
+          "Route 19",
+          "Friend Safari Poison"
         ]
       }
     },
     "453": {
       "x": {
         "locations": [
-          "kalos route 7 area"
+          "Route 7"
         ]
       },
       "y": {
         "locations": [
-          "kalos route 7 area"
+          "Route 7"
         ]
       }
     },
     "454": {
       "x": {
         "locations": [
-          "friend safari poison"
+          "Friend Safari Poison"
         ]
       },
       "y": {
         "locations": [
-          "friend safari poison"
+          "Friend Safari Poison"
         ]
       }
     },
     "455": {
       "x": {
         "locations": [
-          "kalos route 14 area",
-          "kalos route 19 area"
+          "Route 14",
+          "Route 19"
         ]
       },
       "y": {
         "locations": [
-          "kalos route 14 area",
-          "kalos route 19 area"
+          "Route 14",
+          "Route 19"
         ]
       }
     },
     "458": {
       "x": {
         "locations": [
-          "shalour city area",
-          "kalos route 12 area",
-          "azure bay area"
+          "Shalour City",
+          "Route 12",
+          "Azure Bay"
         ]
       },
       "y": {
         "locations": [
-          "shalour city area",
-          "kalos route 12 area",
-          "azure bay area"
+          "Shalour City",
+          "Route 12",
+          "Azure Bay"
         ]
       }
     },
     "459": {
       "x": {
         "locations": [
-          "kalos route 17 area",
-          "friend safari ice"
+          "Route 17",
+          "Friend Safari Ice"
         ]
       },
       "y": {
         "locations": [
-          "kalos route 17 area",
-          "friend safari ice"
+          "Route 17",
+          "Friend Safari Ice"
         ]
       }
     },
     "460": {
       "x": {
         "locations": [
-          "kalos route 17 area"
+          "Route 17"
         ]
       },
       "y": {
         "locations": [
-          "kalos route 17 area"
+          "Route 17"
         ]
       }
     },
@@ -6417,12 +6320,12 @@
     "475": {
       "x": {
         "locations": [
-          "Evolve Kirliamale"
+          "Evolve Kirlia"
         ]
       },
       "y": {
         "locations": [
-          "Evolve Kirliamale"
+          "Evolve Kirlia"
         ]
       }
     },
@@ -6441,12 +6344,12 @@
     "479": {
       "x": {
         "locations": [
-          "lost hotel area"
+          "Lost Hotel"
         ]
       },
       "y": {
         "locations": [
-          "lost hotel area"
+          "Lost Hotel"
         ]
       }
     },
@@ -6465,12 +6368,12 @@
     "505": {
       "x": {
         "locations": [
-          "kalos route 15 area"
+          "Route 15"
         ]
       },
       "y": {
         "locations": [
-          "kalos route 15 area"
+          "Route 15"
         ]
       }
     },
@@ -6489,27 +6392,27 @@
     "510": {
       "y": {
         "locations": [
-          "kalos route 15 area",
-          "friend safari dark"
+          "Route 15",
+          "Friend Safari Dark"
         ]
       },
       "x": {
         "locations": [
-          "friend safari dark"
+          "Friend Safari Dark"
         ]
       }
     },
     "511": {
       "x": {
         "locations": [
-          "santalune forest area",
-          "friend safari grass"
+          "Santalune Forest",
+          "Friend Safari Grass"
         ]
       },
       "y": {
         "locations": [
-          "santalune forest area",
-          "friend safari grass"
+          "Santalune Forest",
+          "Friend Safari Grass"
         ]
       }
     },
@@ -6528,14 +6431,14 @@
     "513": {
       "x": {
         "locations": [
-          "santalune forest area",
-          "friend safari fire"
+          "Santalune Forest",
+          "Friend Safari Fire"
         ]
       },
       "y": {
         "locations": [
-          "santalune forest area",
-          "friend safari fire"
+          "Santalune Forest",
+          "Friend Safari Fire"
         ]
       }
     },
@@ -6554,14 +6457,14 @@
     "515": {
       "x": {
         "locations": [
-          "santalune forest area",
-          "friend safari water"
+          "Santalune Forest",
+          "Friend Safari Water"
         ]
       },
       "y": {
         "locations": [
-          "santalune forest area",
-          "friend safari water"
+          "Santalune Forest",
+          "Friend Safari Water"
         ]
       }
     },
@@ -6580,30 +6483,24 @@
     "524": {
       "x": {
         "locations": [
-          "reflection cave unknown area 305",
-          "reflection cave unknown area 306",
-          "reflection cave unknown area 307",
-          "reflection cave unknown area 308"
+          "Reflection Cave Unknown Area"
         ]
       },
       "y": {
         "locations": [
-          "reflection cave unknown area 305",
-          "reflection cave unknown area 306",
-          "reflection cave unknown area 307",
-          "reflection cave unknown area 308"
+          "Reflection Cave Unknown Area"
         ]
       }
     },
     "525": {
       "x": {
         "locations": [
-          "friend safari rock"
+          "Friend Safari Rock"
         ]
       },
       "y": {
         "locations": [
-          "friend safari rock"
+          "Friend Safari Rock"
         ]
       }
     },
@@ -6622,18 +6519,16 @@
     "527": {
       "x": {
         "locations": [
-          "glittering cave unknown area 303",
-          "glittering cave unknown area 304",
-          "reflection cave unknown area 305",
-          "friend safari flying"
+          "Glittering Cave Unknown Area",
+          "Reflection Cave Unknown Area",
+          "Friend Safari Flying"
         ]
       },
       "y": {
         "locations": [
-          "glittering cave unknown area 303",
-          "glittering cave unknown area 304",
-          "reflection cave unknown area 305",
-          "friend safari flying"
+          "Glittering Cave Unknown Area",
+          "Reflection Cave Unknown Area",
+          "Friend Safari Flying"
         ]
       }
     },
@@ -6652,46 +6547,40 @@
     "531": {
       "x": {
         "locations": [
-          "kalos route 6 area",
-          "friend safari normal"
+          "Route 6",
+          "Friend Safari Normal"
         ]
       },
       "y": {
         "locations": [
-          "kalos route 6 area",
-          "friend safari normal"
+          "Route 6",
+          "Friend Safari Normal"
         ]
       }
     },
     "532": {
       "x": {
         "locations": [
-          "Breed Conkeldurr"
+          "Breed Gurdurr or Conkeldurr"
         ]
       },
       "y": {
         "locations": [
-          "Breed Conkeldurr"
+          "Breed Gurdurr or Conkeldurr"
         ]
       }
     },
     "533": {
       "x": {
         "locations": [
-          "kalos route 18 area",
-          "kalos victory road unknown area 322",
-          "kalos victory road unknown area 324",
-          "kalos victory road unknown area 326",
-          "kalos victory road unknown area 328"
+          "Route 18",
+          "Victory Road Unknown Area"
         ]
       },
       "y": {
         "locations": [
-          "kalos route 18 area",
-          "kalos victory road unknown area 322",
-          "kalos victory road unknown area 324",
-          "kalos victory road unknown area 326",
-          "kalos victory road unknown area 328"
+          "Route 18",
+          "Victory Road Unknown Area"
         ]
       }
     },
@@ -6710,50 +6599,50 @@
     "538": {
       "y": {
         "locations": [
-          "kalos route 11 area",
-          "friend safari fighting"
+          "Route 11",
+          "Friend Safari Fighting"
         ]
       },
       "x": {
         "locations": [
-          "friend safari fighting"
+          "Friend Safari Fighting"
         ]
       }
     },
     "539": {
       "x": {
         "locations": [
-          "kalos route 11 area",
-          "friend safari fighting"
+          "Route 11",
+          "Friend Safari Fighting"
         ]
       },
       "y": {
         "locations": [
-          "friend safari fighting"
+          "Friend Safari Fighting"
         ]
       }
     },
     "543": {
       "x": {
         "locations": [
-          "kalos route 6 area"
+          "Route 6"
         ]
       },
       "y": {
         "locations": [
-          "kalos route 6 area"
+          "Route 6"
         ]
       }
     },
     "544": {
       "x": {
         "locations": [
-          "friend safari poison"
+          "Friend Safari Poison"
         ]
       },
       "y": {
         "locations": [
-          "friend safari poison"
+          "Friend Safari Poison"
         ]
       }
     },
@@ -6772,46 +6661,42 @@
     "550": {
       "x": {
         "locations": [
-          "couriway town area",
-          "laverre city area",
-          "kalos route 15 area",
-          "kalos route 16 area",
-          "kalos route 21 area",
-          "frost cavern unknown area 313",
-          "frost cavern unknown area 315",
-          "pokemon village area",
-          "kalos victory road unknown area 322",
-          "kalos victory road outside",
-          "kalos victory road unknown area 328"
+          "Couriway Town",
+          "Laverre City",
+          "Route 15",
+          "Route 16",
+          "Route 21",
+          "Frost Cavern Unknown Area",
+          "Pokemon Village",
+          "Victory Road Unknown Area",
+          "Victory Road Outside"
         ]
       },
       "y": {
         "locations": [
-          "couriway town area",
-          "laverre city area",
-          "kalos route 15 area",
-          "kalos route 16 area",
-          "kalos route 21 area",
-          "frost cavern unknown area 313",
-          "frost cavern unknown area 315",
-          "pokemon village area",
-          "kalos victory road unknown area 322",
-          "kalos victory road outside",
-          "kalos victory road unknown area 328"
+          "Couriway Town",
+          "Laverre City",
+          "Route 15",
+          "Route 16",
+          "Route 21",
+          "Frost Cavern Unknown Area",
+          "Pokemon Village",
+          "Victory Road Unknown Area",
+          "Victory Road Outside"
         ]
       }
     },
     "551": {
       "x": {
         "locations": [
-          "kalos route 9 area",
-          "friend safari dark"
+          "Route 9",
+          "Friend Safari Dark"
         ]
       },
       "y": {
         "locations": [
-          "kalos route 9 area",
-          "friend safari dark"
+          "Route 9",
+          "Friend Safari Dark"
         ]
       }
     },
@@ -6842,24 +6727,24 @@
     "557": {
       "x": {
         "locations": [
-          "ambrette town area",
-          "cyllage city area",
-          "kalos route 8 area",
-          "kalos route 12 area",
-          "glittering cave unknown area 304",
-          "azure bay area",
-          "friend safari rock"
+          "Ambrette Town",
+          "Cyllage City",
+          "Route 8",
+          "Route 12",
+          "Glittering Cave Unknown Area",
+          "Azure Bay",
+          "Friend Safari Rock"
         ]
       },
       "y": {
         "locations": [
-          "ambrette town area",
-          "cyllage city area",
-          "kalos route 8 area",
-          "kalos route 12 area",
-          "glittering cave unknown area 304",
-          "azure bay area",
-          "friend safari rock"
+          "Ambrette Town",
+          "Cyllage City",
+          "Route 8",
+          "Route 12",
+          "Glittering Cave Unknown Area",
+          "Azure Bay",
+          "Friend Safari Rock"
         ]
       }
     },
@@ -6878,12 +6763,12 @@
     "559": {
       "x": {
         "locations": [
-          "kalos route 5 area"
+          "Route 5"
         ]
       },
       "y": {
         "locations": [
-          "kalos route 5 area"
+          "Route 5"
         ]
       }
     },
@@ -6902,42 +6787,42 @@
     "561": {
       "x": {
         "locations": [
-          "kalos route 10 area",
-          "friend safari psychic"
+          "Route 10",
+          "Friend Safari Psychic"
         ]
       },
       "y": {
         "locations": [
-          "kalos route 10 area",
-          "friend safari psychic"
+          "Route 10",
+          "Friend Safari Psychic"
         ]
       }
     },
     "568": {
       "x": {
         "locations": [
-          "lost hotel area"
+          "Lost Hotel"
         ]
       },
       "y": {
         "locations": [
-          "lost hotel area"
+          "Lost Hotel"
         ]
       }
     },
     "569": {
       "x": {
         "locations": [
-          "pokemon village area",
-          "lost hotel area",
-          "friend safari poison"
+          "Pokemon Village",
+          "Lost Hotel",
+          "Friend Safari Poison"
         ]
       },
       "y": {
         "locations": [
-          "pokemon village area",
-          "lost hotel area",
-          "friend safari poison"
+          "Pokemon Village",
+          "Lost Hotel",
+          "Friend Safari Poison"
         ]
       }
     },
@@ -6956,42 +6841,42 @@
     "571": {
       "x": {
         "locations": [
-          "kalos route 20 area",
-          "pokemon village area"
+          "Route 20",
+          "Pokemon Village"
         ]
       },
       "y": {
         "locations": [
-          "kalos route 20 area",
-          "pokemon village area"
+          "Route 20",
+          "Pokemon Village"
         ]
       }
     },
     "574": {
       "x": {
         "locations": [
-          "Breed Gothitelle"
+          "Breed Gothorita or Gothitelle"
         ]
       },
       "y": {
         "locations": [
-          "Breed Gothitelle"
+          "Breed Gothorita or Gothitelle"
         ]
       }
     },
     "575": {
       "x": {
         "locations": [
-          "kalos route 20 area",
-          "pokemon village area",
-          "friend safari psychic"
+          "Route 20",
+          "Pokemon Village",
+          "Friend Safari Psychic"
         ]
       },
       "y": {
         "locations": [
-          "kalos route 20 area",
-          "pokemon village area",
-          "friend safari psychic"
+          "Route 20",
+          "Pokemon Village",
+          "Friend Safari Psychic"
         ]
       }
     },
@@ -7010,30 +6895,24 @@
     "577": {
       "x": {
         "locations": [
-          "reflection cave unknown area 305",
-          "reflection cave unknown area 306",
-          "reflection cave unknown area 307",
-          "reflection cave unknown area 308"
+          "Reflection Cave Unknown Area"
         ]
       },
       "y": {
         "locations": [
-          "reflection cave unknown area 305",
-          "reflection cave unknown area 306",
-          "reflection cave unknown area 307",
-          "reflection cave unknown area 308"
+          "Reflection Cave Unknown Area"
         ]
       }
     },
     "578": {
       "x": {
         "locations": [
-          "friend safari psychic"
+          "Friend Safari Psychic"
         ]
       },
       "y": {
         "locations": [
-          "friend safari psychic"
+          "Friend Safari Psychic"
         ]
       }
     },
@@ -7052,44 +6931,36 @@
     "580": {
       "x": {
         "locations": [
-          "kalos route 7 area"
+          "Route 7"
         ]
       },
       "y": {
         "locations": [
-          "kalos route 7 area"
+          "Route 7"
         ]
       }
     },
     "581": {
       "x": {
         "locations": [
-          "friend safari flying"
+          "Friend Safari Flying"
         ]
       },
       "y": {
         "locations": [
-          "friend safari flying"
+          "Friend Safari Flying"
         ]
       }
     },
     "582": {
       "x": {
         "locations": [
-          "frost cavern unknown area 313",
-          "frost cavern unknown area 314",
-          "frost cavern unknown area 315",
-          "frost cavern unknown area 316",
-          "frost cavern unknown area 317"
+          "Frost Cavern Unknown Area"
         ]
       },
       "y": {
         "locations": [
-          "frost cavern unknown area 313",
-          "frost cavern unknown area 314",
-          "frost cavern unknown area 315",
-          "frost cavern unknown area 316",
-          "frost cavern unknown area 317"
+          "Frost Cavern Unknown Area"
         ]
       }
     },
@@ -7120,28 +6991,28 @@
     "587": {
       "x": {
         "locations": [
-          "kalos route 10 area",
-          "friend safari electric"
+          "Route 10",
+          "Friend Safari Electric"
         ]
       },
       "y": {
         "locations": [
-          "kalos route 10 area",
-          "friend safari electric"
+          "Route 10",
+          "Friend Safari Electric"
         ]
       }
     },
     "588": {
       "x": {
         "locations": [
-          "kalos route 14 area",
-          "kalos route 19 area"
+          "Route 14",
+          "Route 19"
         ]
       },
       "y": {
         "locations": [
-          "kalos route 14 area",
-          "kalos route 19 area"
+          "Route 14",
+          "Route 19"
         ]
       }
     },
@@ -7160,64 +7031,62 @@
     "590": {
       "x": {
         "locations": [
-          "kalos route 15 area",
-          "kalos route 16 area",
-          "kalos route 20 area",
-          "pokemon village area"
+          "Route 15",
+          "Route 16",
+          "Route 20",
+          "Pokemon Village"
         ]
       },
       "y": {
         "locations": [
-          "kalos route 15 area",
-          "kalos route 16 area",
-          "kalos route 20 area",
-          "pokemon village area"
+          "Route 15",
+          "Route 16",
+          "Route 20",
+          "Pokemon Village"
         ]
       }
     },
     "591": {
       "x": {
         "locations": [
-          "kalos route 20 area",
-          "pokemon village area"
+          "Route 20",
+          "Pokemon Village"
         ]
       },
       "y": {
         "locations": [
-          "kalos route 20 area",
-          "pokemon village area"
+          "Route 20",
+          "Pokemon Village"
         ]
       }
     },
     "594": {
       "x": {
         "locations": [
-          "shalour city area",
-          "azure bay area"
+          "Shalour City",
+          "Azure Bay"
         ]
       },
       "y": {
         "locations": [
-          "shalour city area",
-          "azure bay area"
+          "Shalour City",
+          "Azure Bay"
         ]
       }
     },
     "597": {
       "x": {
         "locations": [
-          "glittering cave unknown area 303",
-          "glittering cave unknown area 304",
-          "reflection cave unknown area 305",
-          "friend safari steel"
+          "Glittering Cave Unknown Area",
+          "Reflection Cave Unknown Area",
+          "Friend Safari Steel"
         ]
       },
       "y": {
         "locations": [
-          "glittering cave unknown area 303",
-          "glittering cave unknown area 304",
-          "reflection cave unknown area 305",
-          "friend safari steel"
+          "Glittering Cave Unknown Area",
+          "Reflection Cave Unknown Area",
+          "Friend Safari Steel"
         ]
       }
     },
@@ -7236,24 +7105,24 @@
     "607": {
       "x": {
         "locations": [
-          "lost hotel area"
+          "Lost Hotel"
         ]
       },
       "y": {
         "locations": [
-          "lost hotel area"
+          "Lost Hotel"
         ]
       }
     },
     "608": {
       "x": {
         "locations": [
-          "friend safari ghost"
+          "Friend Safari Ghost"
         ]
       },
       "y": {
         "locations": [
-          "friend safari ghost"
+          "Friend Safari Ghost"
         ]
       }
     },
@@ -7272,24 +7141,24 @@
     "610": {
       "x": {
         "locations": [
-          "connecting cave area"
+          "Connecting Cave"
         ]
       },
       "y": {
         "locations": [
-          "connecting cave area"
+          "Connecting Cave"
         ]
       }
     },
     "611": {
       "x": {
         "locations": [
-          "friend safari dragon"
+          "Friend Safari Dragon"
         ]
       },
       "y": {
         "locations": [
-          "friend safari dragon"
+          "Friend Safari Dragon"
         ]
       }
     },
@@ -7308,71 +7177,52 @@
     "613": {
       "x": {
         "locations": [
-          "frost cavern unknown area 313",
-          "frost cavern unknown area 314",
-          "frost cavern unknown area 315",
-          "frost cavern unknown area 316",
-          "frost cavern unknown area 317"
+          "Frost Cavern Unknown Area"
         ]
       },
       "y": {
         "locations": [
-          "frost cavern unknown area 313",
-          "frost cavern unknown area 314",
-          "frost cavern unknown area 315",
-          "frost cavern unknown area 316",
-          "frost cavern unknown area 317"
+          "Frost Cavern Unknown Area"
         ]
       }
     },
     "614": {
       "x": {
         "locations": [
-          "frost cavern unknown area 314",
-          "frost cavern unknown area 315",
-          "frost cavern unknown area 316",
-          "frost cavern unknown area 317",
-          "friend safari ice"
+          "Frost Cavern Unknown Area",
+          "Friend Safari Ice"
         ]
       },
       "y": {
         "locations": [
-          "frost cavern unknown area 314",
-          "frost cavern unknown area 315",
-          "frost cavern unknown area 316",
-          "frost cavern unknown area 317",
-          "friend safari ice"
+          "Frost Cavern Unknown Area",
+          "Friend Safari Ice"
         ]
       }
     },
     "615": {
       "x": {
         "locations": [
-          "frost cavern unknown area 314",
-          "frost cavern unknown area 315",
-          "frost cavern unknown area 316",
-          "frost cavern unknown area 317"
+          "Frost Cavern Unknown Area"
         ]
       },
       "y": {
         "locations": [
-          "frost cavern unknown area 314",
-          "frost cavern unknown area 316",
-          "frost cavern unknown area 317"
+          "Frost Cavern Unknown Area"
         ]
       }
     },
     "616": {
       "x": {
         "locations": [
-          "kalos route 14 area",
-          "kalos route 19 area"
+          "Route 14",
+          "Route 19"
         ]
       },
       "y": {
         "locations": [
-          "kalos route 14 area",
-          "kalos route 19 area"
+          "Route 14",
+          "Route 19"
         ]
       }
     },
@@ -7391,30 +7241,30 @@
     "618": {
       "x": {
         "locations": [
-          "kalos route 14 area",
-          "kalos route 19 area",
-          "friend safari electric"
+          "Route 14",
+          "Route 19",
+          "Friend Safari Electric"
         ]
       },
       "y": {
         "locations": [
-          "kalos route 14 area",
-          "kalos route 19 area",
-          "friend safari electric"
+          "Route 14",
+          "Route 19",
+          "Friend Safari Electric"
         ]
       }
     },
     "619": {
       "x": {
         "locations": [
-          "kalos route 8 area",
-          "friend safari fighting"
+          "Route 8",
+          "Friend Safari Fighting"
         ]
       },
       "y": {
         "locations": [
-          "kalos route 8 area",
-          "friend safari fighting"
+          "Route 8",
+          "Friend Safari Fighting"
         ]
       }
     },
@@ -7433,60 +7283,54 @@
     "621": {
       "x": {
         "locations": [
-          "kalos victory road unknown area 322",
-          "kalos victory road unknown area 324",
-          "kalos victory road unknown area 326",
-          "kalos victory road unknown area 328",
-          "friend safari dragon"
+          "Victory Road Unknown Area",
+          "Friend Safari Dragon"
         ]
       },
       "y": {
         "locations": [
-          "kalos victory road unknown area 322",
-          "kalos victory road unknown area 324",
-          "kalos victory road unknown area 326",
-          "kalos victory road unknown area 328",
-          "friend safari dragon"
+          "Victory Road Unknown Area",
+          "Friend Safari Dragon"
         ]
       }
     },
     "622": {
       "x": {
         "locations": [
-          "kalos route 10 area"
+          "Route 10"
         ]
       },
       "y": {
         "locations": [
-          "kalos route 10 area"
+          "Route 10"
         ]
       }
     },
     "623": {
       "x": {
         "locations": [
-          "friend safari ghost"
+          "Friend Safari Ghost"
         ]
       },
       "y": {
         "locations": [
-          "friend safari ghost"
+          "Friend Safari Ghost"
         ]
       }
     },
     "624": {
       "x": {
         "locations": [
-          "kalos route 15 area",
-          "lost hotel area",
-          "friend safari dark"
+          "Route 15",
+          "Lost Hotel",
+          "Friend Safari Dark"
         ]
       },
       "y": {
         "locations": [
-          "kalos route 15 area",
-          "lost hotel area",
-          "friend safari dark"
+          "Route 15",
+          "Lost Hotel",
+          "Friend Safari Dark"
         ]
       }
     },
@@ -7505,100 +7349,94 @@
     "631": {
       "x": {
         "locations": [
-          "kalos route 18 area"
+          "Route 18"
         ]
       },
       "y": {
         "locations": [
-          "kalos route 18 area"
+          "Route 18"
         ]
       }
     },
     "632": {
       "x": {
         "locations": [
-          "kalos route 18 area",
-          "terminus cave 1f",
-          "terminus cave b1f left",
-          "terminus cave b1f right",
-          "terminus cave b2f",
-          "terminus cave zygardes chamber"
+          "Route 18",
+          "Terminus Cave (1F)",
+          "Terminus Cave (B1F) Left",
+          "Terminus Cave (B1F) Right",
+          "Terminus Cave (B2F)",
+          "Terminus Cave Zygardes Chamber"
         ]
       },
       "y": {
         "locations": [
-          "kalos route 18 area",
-          "terminus cave 1f",
-          "terminus cave b1f left",
-          "terminus cave b1f right",
-          "terminus cave b2f",
-          "terminus cave zygardes chamber"
+          "Route 18",
+          "Terminus Cave (1F)",
+          "Terminus Cave (B1F) Left",
+          "Terminus Cave (B1F) Right",
+          "Terminus Cave (B2F)",
+          "Terminus Cave Zygardes Chamber"
         ]
       }
     },
     "633": {
       "x": {
         "locations": [
-          "Breed Hydreigon"
+          "Breed Zweilous or Hydreigon"
         ]
       },
       "y": {
         "locations": [
-          "Breed Hydreigon"
+          "Breed Zweilous or Hydreigon"
         ]
       }
     },
     "634": {
       "x": {
         "locations": [
-          "kalos victory road unknown area 322",
-          "kalos victory road unknown area 324",
-          "kalos victory road unknown area 326",
-          "kalos victory road unknown area 328"
+          "Victory Road Unknown Area"
         ]
       },
       "y": {
         "locations": [
-          "kalos victory road unknown area 322",
-          "kalos victory road unknown area 324",
-          "kalos victory road unknown area 326",
-          "kalos victory road unknown area 328"
+          "Victory Road Unknown Area"
         ]
       }
     },
     "635": {
       "x": {
         "locations": [
-          "kalos victory road outside"
+          "Victory Road Outside"
         ]
       },
       "y": {
         "locations": [
-          "kalos victory road outside"
+          "Victory Road Outside"
         ]
       }
     },
     "650": {
       "x": {
         "locations": [
-          "aquacorde town area"
+          "Aquacorde Town"
         ]
       },
       "y": {
         "locations": [
-          "aquacorde town area"
+          "Aquacorde Town"
         ]
       }
     },
     "651": {
       "x": {
         "locations": [
-          "friend safari grass"
+          "Friend Safari Grass"
         ]
       },
       "y": {
         "locations": [
-          "friend safari grass"
+          "Friend Safari Grass"
         ]
       }
     },
@@ -7617,24 +7455,24 @@
     "653": {
       "x": {
         "locations": [
-          "aquacorde town area"
+          "Aquacorde Town"
         ]
       },
       "y": {
         "locations": [
-          "aquacorde town area"
+          "Aquacorde Town"
         ]
       }
     },
     "654": {
       "x": {
         "locations": [
-          "friend safari fire"
+          "Friend Safari Fire"
         ]
       },
       "y": {
         "locations": [
-          "friend safari fire"
+          "Friend Safari Fire"
         ]
       }
     },
@@ -7653,24 +7491,24 @@
     "656": {
       "x": {
         "locations": [
-          "aquacorde town area"
+          "Aquacorde Town"
         ]
       },
       "y": {
         "locations": [
-          "aquacorde town area"
+          "Aquacorde Town"
         ]
       }
     },
     "657": {
       "x": {
         "locations": [
-          "friend safari water"
+          "Friend Safari Water"
         ]
       },
       "y": {
         "locations": [
-          "friend safari water"
+          "Friend Safari Water"
         ]
       }
     },
@@ -7689,62 +7527,62 @@
     "659": {
       "x": {
         "locations": [
-          "kalos route 2 area",
-          "kalos route 3 area",
-          "kalos route 5 area",
-          "kalos route 22 area"
+          "Route 2",
+          "Route 3",
+          "Route 5",
+          "Route 22"
         ]
       },
       "y": {
         "locations": [
-          "kalos route 2 area",
-          "kalos route 3 area",
-          "kalos route 5 area",
-          "kalos route 22 area"
+          "Route 2",
+          "Route 3",
+          "Route 5",
+          "Route 22"
         ]
       }
     },
     "660": {
       "x": {
         "locations": [
-          "kalos route 22 area",
-          "friend safari ground"
+          "Route 22",
+          "Friend Safari Ground"
         ]
       },
       "y": {
         "locations": [
-          "kalos route 22 area",
-          "friend safari ground"
+          "Route 22",
+          "Friend Safari Ground"
         ]
       }
     },
     "661": {
       "x": {
         "locations": [
-          "kalos route 2 area",
-          "kalos route 3 area",
-          "santalune forest area"
+          "Route 2",
+          "Route 3",
+          "Santalune Forest"
         ]
       },
       "y": {
         "locations": [
-          "kalos route 2 area",
-          "kalos route 3 area",
-          "santalune forest area"
+          "Route 2",
+          "Route 3",
+          "Santalune Forest"
         ]
       }
     },
     "662": {
       "x": {
         "locations": [
-          "friend safari fire",
-          "friend safari flying"
+          "Friend Safari Fire",
+          "Friend Safari Flying"
         ]
       },
       "y": {
         "locations": [
-          "friend safari fire",
-          "friend safari flying"
+          "Friend Safari Fire",
+          "Friend Safari Flying"
         ]
       }
     },
@@ -7763,88 +7601,88 @@
     "664": {
       "x": {
         "locations": [
-          "kalos route 2 area",
-          "santalune forest area"
+          "Route 2",
+          "Santalune Forest"
         ]
       },
       "y": {
         "locations": [
-          "kalos route 2 area",
-          "santalune forest area"
+          "Route 2",
+          "Santalune Forest"
         ]
       }
     },
     "665": {
       "x": {
         "locations": [
-          "kalos berry fields area"
+          "Berry Fields"
         ]
       },
       "y": {
         "locations": [
-          "kalos berry fields area"
+          "Berry Fields"
         ]
       }
     },
     "666": {
       "x": {
         "locations": [
-          "friend safari bug"
+          "Friend Safari Bug"
         ]
       },
       "y": {
         "locations": [
-          "friend safari bug"
+          "Friend Safari Bug"
         ]
       }
     },
     "667": {
       "x": {
         "locations": [
-          "kalos route 22 area"
+          "Route 22"
         ]
       },
       "y": {
         "locations": [
-          "kalos route 22 area"
+          "Route 22"
         ]
       }
     },
     "668": {
       "x": {
         "locations": [
-          "friend safari fire"
+          "Friend Safari Fire"
         ]
       },
       "y": {
         "locations": [
-          "friend safari fire"
+          "Friend Safari Fire"
         ]
       }
     },
     "669": {
       "x": {
         "locations": [
-          "kalos route 4 area",
-          "kalos route 7 area"
+          "Route 4",
+          "Route 7"
         ]
       },
       "y": {
         "locations": [
-          "kalos route 4 area",
-          "kalos route 7 area"
+          "Route 4",
+          "Route 7"
         ]
       }
     },
     "670": {
       "x": {
         "locations": [
-          "friend safari fairy"
+          "Friend Safari Fairy"
         ]
       },
       "y": {
         "locations": [
-          "friend safari fairy"
+          "Friend Safari Fairy"
         ]
       }
     },
@@ -7863,38 +7701,38 @@
     "672": {
       "x": {
         "locations": [
-          "kalos route 5 area"
+          "Route 5"
         ]
       },
       "y": {
         "locations": [
-          "kalos route 5 area"
+          "Route 5"
         ]
       }
     },
     "673": {
       "x": {
         "locations": [
-          "friend safari grass"
+          "Friend Safari Grass"
         ]
       },
       "y": {
         "locations": [
-          "friend safari grass"
+          "Friend Safari Grass"
         ]
       }
     },
     "674": {
       "x": {
         "locations": [
-          "kalos route 5 area",
-          "friend safari fighting"
+          "Route 5",
+          "Friend Safari Fighting"
         ]
       },
       "y": {
         "locations": [
-          "kalos route 5 area",
-          "friend safari fighting"
+          "Route 5",
+          "Friend Safari Fighting"
         ]
       }
     },
@@ -7913,26 +7751,26 @@
     "676": {
       "x": {
         "locations": [
-          "kalos route 5 area"
+          "Route 5"
         ]
       },
       "y": {
         "locations": [
-          "kalos route 5 area"
+          "Route 5"
         ]
       }
     },
     "677": {
       "x": {
         "locations": [
-          "kalos route 6 area",
-          "friend safari psychic"
+          "Route 6",
+          "Friend Safari Psychic"
         ]
       },
       "y": {
         "locations": [
-          "kalos route 6 area",
-          "friend safari psychic"
+          "Route 6",
+          "Friend Safari Psychic"
         ]
       }
     },
@@ -7951,12 +7789,12 @@
     "679": {
       "x": {
         "locations": [
-          "kalos route 6 area"
+          "Route 6"
         ]
       },
       "y": {
         "locations": [
-          "kalos route 6 area"
+          "Route 6"
         ]
       }
     },
@@ -7987,13 +7825,13 @@
     "682": {
       "y": {
         "locations": [
-          "kalos route 7 area",
-          "friend safari fairy"
+          "Route 7",
+          "Friend Safari Fairy"
         ]
       },
       "x": {
         "locations": [
-          "friend safari fairy"
+          "Friend Safari Fairy"
         ]
       }
     },
@@ -8012,13 +7850,13 @@
     "684": {
       "x": {
         "locations": [
-          "kalos route 7 area",
-          "friend safari fairy"
+          "Route 7",
+          "Friend Safari Fairy"
         ]
       },
       "y": {
         "locations": [
-          "friend safari fairy"
+          "Friend Safari Fairy"
         ]
       }
     },
@@ -8037,16 +7875,16 @@
     "686": {
       "x": {
         "locations": [
-          "kalos route 8 area",
-          "azure bay area",
-          "friend safari dark"
+          "Route 8",
+          "Azure Bay",
+          "Friend Safari Dark"
         ]
       },
       "y": {
         "locations": [
-          "kalos route 8 area",
-          "azure bay area",
-          "friend safari dark"
+          "Route 8",
+          "Azure Bay",
+          "Friend Safari Dark"
         ]
       }
     },
@@ -8065,81 +7903,81 @@
     "688": {
       "x": {
         "locations": [
-          "ambrette town area",
-          "kalos route 8 area",
-          "kalos route 12 area",
-          "azure bay area"
+          "Ambrette Town",
+          "Route 8",
+          "Route 12",
+          "Azure Bay"
         ]
       },
       "y": {
         "locations": [
-          "ambrette town area",
-          "cyllage city area",
-          "kalos route 8 area",
-          "kalos route 12 area",
-          "azure bay area"
+          "Ambrette Town",
+          "Cyllage City",
+          "Route 8",
+          "Route 12",
+          "Azure Bay"
         ]
       }
     },
     "689": {
       "x": {
         "locations": [
-          "friend safari rock"
+          "Friend Safari Rock"
         ]
       },
       "y": {
         "locations": [
-          "friend safari rock"
+          "Friend Safari Rock"
         ]
       }
     },
     "690": {
       "y": {
         "locations": [
-          "ambrette town area",
-          "cyllage city area",
-          "kalos route 8 area"
+          "Ambrette Town",
+          "Cyllage City",
+          "Route 8"
         ]
       }
     },
     "691": {
       "y": {
         "locations": [
-          "ambrette town area",
-          "cyllage city area",
-          "kalos route 8 area"
+          "Ambrette Town",
+          "Cyllage City",
+          "Route 8"
         ]
       }
     },
     "692": {
       "x": {
         "locations": [
-          "ambrette town area",
-          "cyllage city area",
-          "kalos route 8 area"
+          "Ambrette Town",
+          "Cyllage City",
+          "Route 8"
         ]
       }
     },
     "693": {
       "x": {
         "locations": [
-          "ambrette town area",
-          "cyllage city area",
-          "kalos route 8 area"
+          "Ambrette Town",
+          "Cyllage City",
+          "Route 8"
         ]
       }
     },
     "694": {
       "x": {
         "locations": [
-          "kalos route 9 area",
-          "friend safari electric"
+          "Route 9",
+          "Friend Safari Electric"
         ]
       },
       "y": {
         "locations": [
-          "kalos route 9 area",
-          "friend safari electric"
+          "Route 9",
+          "Friend Safari Electric"
         ]
       }
     },
@@ -8158,12 +7996,12 @@
     "696": {
       "x": {
         "locations": [
-          "glittering cave unknown area 303"
+          "Glittering Cave Unknown Area"
         ]
       },
       "y": {
         "locations": [
-          "glittering cave unknown area 303"
+          "Glittering Cave Unknown Area"
         ]
       }
     },
@@ -8182,12 +8020,12 @@
     "698": {
       "x": {
         "locations": [
-          "glittering cave unknown area 303"
+          "Glittering Cave Unknown Area"
         ]
       },
       "y": {
         "locations": [
-          "glittering cave unknown area 303"
+          "Glittering Cave Unknown Area"
         ]
       }
     },
@@ -8218,74 +8056,68 @@
     "701": {
       "x": {
         "locations": [
-          "kalos route 10 area",
-          "friend safari flying"
+          "Route 10",
+          "Friend Safari Flying"
         ]
       },
       "y": {
         "locations": [
-          "kalos route 10 area",
-          "friend safari flying"
+          "Route 10",
+          "Friend Safari Flying"
         ]
       }
     },
     "702": {
       "x": {
         "locations": [
-          "kalos route 11 area",
-          "friend safari electric",
-          "friend safari fairy"
+          "Route 11",
+          "Friend Safari Electric",
+          "Friend Safari Fairy"
         ]
       },
       "y": {
         "locations": [
-          "kalos route 11 area",
-          "friend safari electric",
-          "friend safari fairy"
+          "Route 11",
+          "Friend Safari Electric",
+          "Friend Safari Fairy"
         ]
       }
     },
     "703": {
       "x": {
         "locations": [
-          "reflection cave unknown area 305",
-          "reflection cave unknown area 306",
-          "reflection cave unknown area 307",
-          "reflection cave unknown area 308"
+          "Reflection Cave Unknown Area"
         ]
       },
       "y": {
         "locations": [
-          "reflection cave unknown area 305",
-          "reflection cave unknown area 306",
-          "reflection cave unknown area 307",
-          "reflection cave unknown area 308"
+          "Reflection Cave Unknown Area"
         ]
       }
     },
     "704": {
       "x": {
         "locations": [
-          "kalos route 14 area"
+          "Route 14"
         ]
       },
       "y": {
         "locations": [
-          "kalos route 14 area"
+          "Route 14"
         ]
       }
     },
     "705": {
       "x": {
         "locations": [
-          "kalos route 19 area",
-          "friend safari dragon"
+          "Route 19",
+          "Friend Safari Dragon"
         ]
       },
       "y": {
         "locations": [
-          "kalos route 19 area",
-          "friend safari dragon"
+          "Route 19",
+          "Friend Safari Dragon"
         ]
       }
     },
@@ -8304,58 +8136,58 @@
     "707": {
       "x": {
         "locations": [
-          "kalos route 15 area",
-          "kalos route 16 area",
-          "lost hotel area",
-          "friend safari steel"
+          "Route 15",
+          "Route 16",
+          "Lost Hotel",
+          "Friend Safari Steel"
         ]
       },
       "y": {
         "locations": [
-          "kalos route 15 area",
-          "kalos route 16 area",
-          "lost hotel area",
-          "friend safari steel"
+          "Route 15",
+          "Route 16",
+          "Lost Hotel",
+          "Friend Safari Steel"
         ]
       }
     },
     "708": {
       "x": {
         "locations": [
-          "kalos route 16 area",
-          "friend safari ghost"
+          "Route 16",
+          "Friend Safari Ghost"
         ]
       },
       "y": {
         "locations": [
-          "kalos route 16 area",
-          "friend safari ghost"
+          "Route 16",
+          "Friend Safari Ghost"
         ]
       }
     },
     "709": {
       "x": {
         "locations": [
-          "kalos route 20 area"
+          "Route 20"
         ]
       },
       "y": {
         "locations": [
-          "kalos route 20 area"
+          "Route 20"
         ]
       }
     },
     "710": {
       "x": {
         "locations": [
-          "kalos route 16 area",
-          "friend safari ghost"
+          "Route 16",
+          "Friend Safari Ghost"
         ]
       },
       "y": {
         "locations": [
-          "kalos route 16 area",
-          "friend safari ghost"
+          "Route 16",
+          "Friend Safari Ghost"
         ]
       }
     },
@@ -8374,20 +8206,14 @@
     "712": {
       "x": {
         "locations": [
-          "frost cavern unknown area 314",
-          "frost cavern unknown area 315",
-          "frost cavern unknown area 316",
-          "frost cavern unknown area 317",
-          "friend safari ice"
+          "Frost Cavern Unknown Area",
+          "Friend Safari Ice"
         ]
       },
       "y": {
         "locations": [
-          "frost cavern unknown area 314",
-          "frost cavern unknown area 315",
-          "frost cavern unknown area 316",
-          "frost cavern unknown area 317",
-          "friend safari ice"
+          "Frost Cavern Unknown Area",
+          "Friend Safari Ice"
         ]
       }
     },
@@ -8406,30 +8232,24 @@
     "714": {
       "x": {
         "locations": [
-          "kalos victory road unknown area 322",
-          "kalos victory road unknown area 324",
-          "kalos victory road unknown area 326",
-          "kalos victory road unknown area 328",
-          "terminus cave 1f",
-          "terminus cave b1f left",
-          "terminus cave b1f right",
-          "terminus cave b2f",
-          "terminus cave zygardes chamber",
-          "friend safari dragon"
+          "Victory Road Unknown Area",
+          "Terminus Cave (1F)",
+          "Terminus Cave (B1F) Left",
+          "Terminus Cave (B1F) Right",
+          "Terminus Cave (B2F)",
+          "Terminus Cave Zygardes Chamber",
+          "Friend Safari Dragon"
         ]
       },
       "y": {
         "locations": [
-          "kalos victory road unknown area 322",
-          "kalos victory road unknown area 324",
-          "kalos victory road unknown area 326",
-          "kalos victory road unknown area 328",
-          "terminus cave 1f",
-          "terminus cave b1f left",
-          "terminus cave b1f right",
-          "terminus cave b2f",
-          "terminus cave zygardes chamber",
-          "friend safari dragon"
+          "Victory Road Unknown Area",
+          "Terminus Cave (1F)",
+          "Terminus Cave (B1F) Left",
+          "Terminus Cave (B1F) Right",
+          "Terminus Cave (B2F)",
+          "Terminus Cave Zygardes Chamber",
+          "Friend Safari Dragon"
         ]
       }
     },
@@ -8448,36 +8268,38 @@
     "716": {
       "x": {
         "locations": [
-          "team flare secret hq area"
+          "Team Flare Secret Hq"
         ]
       },
       "y": {
         "locations": [
-          "Trade, Event"
+          "Trade",
+          "Event"
         ]
       }
     },
     "717": {
       "y": {
         "locations": [
-          "team flare secret hq area"
+          "Team Flare Secret Hq"
         ]
       },
       "x": {
         "locations": [
-          "Trade, Event"
+          "Trade",
+          "Event"
         ]
       }
     },
     "718": {
       "x": {
         "locations": [
-          "terminus cave zygardes chamber"
+          "Terminus Cave Zygardes Chamber"
         ]
       },
       "y": {
         "locations": [
-          "terminus cave zygardes chamber"
+          "Terminus Cave Zygardes Chamber"
         ]
       }
     },

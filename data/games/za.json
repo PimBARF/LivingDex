@@ -13,6 +13,7 @@
       "type": "base",
       "optional": false,
       "defaultEnabled": false,
+      "startIndex": 1,
       "entries": [
         {
           "speciesId": 152,
@@ -1181,8 +1182,8 @@
     "1": {
       "legends-z-a": {
         "locations": [
-          "'''Vert District:''' Pokémon Research Lab (Received from Mable during Side Mission 22)",
-          "'''Centrico Plaza:''' Wild Zone 20"
+          "Vert District: Pokémon Research Lab (Received from Mable during Side Mission 22)",
+          "Centrico Plaza: Wild Zone 20"
         ]
       }
     },
@@ -1203,8 +1204,8 @@
     "4": {
       "legends-z-a": {
         "locations": [
-          "'''Vert District:''' Pokémon Research Lab (Received from Mable during Side Mission 22)",
-          "'''Centrico Plaza:''' Wild Zone 20"
+          "Vert District: Pokémon Research Lab (Received from Mable during Side Mission 22)",
+          "Centrico Plaza: Wild Zone 20"
         ]
       }
     },
@@ -1225,8 +1226,8 @@
     "7": {
       "legends-z-a": {
         "locations": [
-          "'''Vert District:''' Pokémon Research Lab (Received from Mable during Side Mission 22)",
-          "'''Centrico Plaza:''' Wild Zone 20"
+          "Vert District: Pokémon Research Lab (Received from Mable during Side Mission 22)",
+          "Centrico Plaza: Wild Zone 20"
         ]
       }
     },
@@ -1247,289 +1248,376 @@
     "13": {
       "legends-z-a": {
         "locations": [
-          "'''Vert District:''' Vert Sector 1, Vert Sector 2, Vert Sector 6, Vert Sector 8, Wild Zone 1",
-          "'''Bleu District:''' Bleu Sector 7",
-          "'''Magenta District:''' Magenta Sector 3&nbsp",
-          "link=Alpha Pokémon|14px (only one alpha, during Side Mission 043), Magenta Sector 4, Magenta Sector 6, Magenta Sector 7, Magenta Sector 9",
-          "'''Rouge District:''' Rouge Street, Rouge Sector 2, Rouge Sector 3, Rouge Sector 6",
-          "'''Jaune District:''' Jaune Sector 1, Jaune Sector 5, Jaune Sector 6, Jaune Sector 11"
+          "Vert District: Vert Sector 1",
+          "Vert Sector 2",
+          "Vert Sector 6",
+          "Vert Sector 8",
+          "Wild Zone 1",
+          "Bleu District: Bleu Sector 7",
+          "Magenta District: Magenta Sector 3 14px (only one alpha, during Side Mission 043)",
+          "Magenta Sector 4",
+          "Magenta Sector 6",
+          "Magenta Sector 7",
+          "Magenta Sector 9",
+          "Rouge District: Rouge Street",
+          "Rouge Sector 2",
+          "Rouge Sector 3",
+          "Rouge Sector 6",
+          "Jaune District: Jaune Sector 1",
+          "Jaune Sector 5",
+          "Jaune Sector 6",
+          "Jaune Sector 11"
         ]
       }
     },
     "14": {
       "legends-z-a": {
         "locations": [
-          "'''Vert District:''' Vert Sector 1, Vert Sector 8, Vert Sector 9, Wild Zone 2",
-          "'''Magenta District:''' Magenta Sector 6, Magenta Sector 9, Wild Zone 7",
-          "'''Rouge District:''' Rouge Street, Rouge Sector 2, Rouge Sector 3, Rouge Sector 6",
-          "'''Jaune District:''' Jaune Sector 5"
+          "Vert District: Vert Sector 1",
+          "Vert Sector 8",
+          "Vert Sector 9",
+          "Wild Zone 2",
+          "Magenta District: Magenta Sector 6",
+          "Magenta Sector 9",
+          "Wild Zone 7",
+          "Rouge District: Rouge Street",
+          "Rouge Sector 2",
+          "Rouge Sector 3",
+          "Rouge Sector 6",
+          "Jaune District: Jaune Sector 5"
         ]
       }
     },
     "15": {
       "legends-z-a": {
         "locations": [
-          "'''Vert District:''' Vert Sector 9,",
-          "'''Magenta District:''' Magenta Sector 4, Magenta Sector 6",
-          "'''Rouge District:''' Rouge Sector 2",
-          "'''Jaune District:''' Wild Zone 15"
+          "Vert District: Vert Sector 9",
+          "Magenta District: Magenta Sector 4",
+          "Magenta Sector 6",
+          "Rouge District: Rouge Sector 2",
+          "Jaune District: Wild Zone 15"
         ]
       }
     },
     "16": {
       "legends-z-a": {
         "locations": [
-          "Vernal Avenue, Hibernal Avenue",
-          "'''Vert District:''' Vert Sector 1, Vert Sector 3, Vert Sector 4, Vert Sector 5, Vert Sector 6, Vert Sector 7, Vert Sector 8, Vert Sector 9, Wild Zone 1",
-          "'''Bleu District:''' South Boulevard, Aymlis Park, Bleu Sector 3, Bleu Sector 4, Bleu Sector 5, Bleu Sector 6, Bleu Sector 7, Bleu Sector 8, Wild Zone 5",
-          "'''Magenta District:''' South Boulevard, North Boulevard, Magenta Street, Magenta Plaza, Magenta Sector 1, Magenta Sector 3",
-          "'''Rouge District:''' Rouge Street, Rouge Plaza, Rouge Sector 1, Rouge Sector 3, Rouge Sector 5",
-          "'''Jaune District:''' Jaune Street, Jaune Sector 1, Jaune Sector 2, Jaune Sector 3, Jaune Sector 4, Jaune Sector 6, Jaune Sector 7, Jaune Sector 9"
+          "Vernal Avenue",
+          "Hibernal Avenue",
+          "Vert District: Vert Sector 1",
+          "Vert Sector 3",
+          "Vert Sector 4",
+          "Vert Sector 5",
+          "Vert Sector 6",
+          "Vert Sector 7",
+          "Vert Sector 8",
+          "Vert Sector 9",
+          "Wild Zone 1",
+          "Bleu District: South Boulevard",
+          "Aymlis Park",
+          "Bleu Sector 3",
+          "Bleu Sector 4",
+          "Bleu Sector 5",
+          "Bleu Sector 6",
+          "Bleu Sector 7",
+          "Bleu Sector 8",
+          "Wild Zone 5",
+          "Magenta District: South Boulevard",
+          "North Boulevard",
+          "Magenta Street",
+          "Magenta Plaza",
+          "Magenta Sector 1",
+          "Magenta Sector 3",
+          "Rouge District: Rouge Street",
+          "Rouge Plaza",
+          "Rouge Sector 1",
+          "Rouge Sector 3",
+          "Rouge Sector 5",
+          "Jaune District: Jaune Street",
+          "Jaune Sector 1",
+          "Jaune Sector 2",
+          "Jaune Sector 3",
+          "Jaune Sector 4",
+          "Jaune Sector 6",
+          "Jaune Sector 7",
+          "Jaune Sector 9"
         ]
       }
     },
     "17": {
       "legends-z-a": {
         "locations": [
-          "'''Vert District:''' Vert Sector 2",
-          "'''Bleu District:''' Bleu Sector 7, Wild Zone 5",
-          "'''Rouge District:''' Rouge Sector 2, Rouge Sector 3, Rouge Sector 5",
-          "'''Jaune District:''' Jaune Sector 4"
+          "Vert District: Vert Sector 2",
+          "Bleu District: Bleu Sector 7",
+          "Wild Zone 5",
+          "Rouge District: Rouge Sector 2",
+          "Rouge Sector 3",
+          "Rouge Sector 5",
+          "Jaune District: Jaune Sector 4"
         ]
       }
     },
     "18": {
       "legends-z-a": {
         "locations": [
-          "'''Bleu District:''' Bleu Sector 5",
-          "'''Rouge District:''' Rouge Sector 4",
-          "'''Jaune District:''' Jaune Sector 4&nbsp",
-          "link=Alpha Pokémon|14px"
+          "Bleu District: Bleu Sector 5",
+          "Rouge District: Rouge Sector 4",
+          "Jaune District: Jaune Sector 4 14px"
         ]
       }
     },
     "23": {
       "legends-z-a": {
         "locations": [
-          "'''Magenta District:''' Magenta Sector 2, Magenta Sector 3, Lysandre Labs",
-          "'''Rouge District:''' Rouge Sector 3, Rouge Sector 8, Wild Zone 4",
-          "'''Jaune District:''' Jaune Sector 2, Jaune Sector 3"
+          "Magenta District: Magenta Sector 2",
+          "Magenta Sector 3",
+          "Lysandre Labs",
+          "Rouge District: Rouge Sector 3",
+          "Rouge Sector 8",
+          "Wild Zone 4",
+          "Jaune District: Jaune Sector 2",
+          "Jaune Sector 3"
         ]
       }
     },
     "24": {
       "legends-z-a": {
         "locations": [
-          "'''Bleu District:''' Wild Zone 10",
-          "'''Magenta District:''' Lysandre Labs&nbsp",
-          "link=Alpha Pokémon|14px",
-          "'''Rouge District:''' Rouge Sector 8"
+          "Bleu District: Wild Zone 10",
+          "Magenta District: Lysandre Labs 14px",
+          "Rouge District: Rouge Sector 8"
         ]
       }
     },
     "25": {
       "legends-z-a": {
         "locations": [
-          "'''Vert District:''' Vert Sector 8",
-          "'''Rouge District:''' Wild Zone 3",
-          "'''Jaune District:''' Wild Zone 6&nbsp",
-          "link=Alpha Pokémon|14px"
+          "Vert District: Vert Sector 8",
+          "Rouge District: Wild Zone 3",
+          "Jaune District: Wild Zone 6 14px"
         ]
       }
     },
     "26": {
       "legends-z-a": {
         "locations": [
-          "'''Magenta District:''' Trade Kantonian Raichu at Quasartico Inc. during Side Mission 108 ('''Alolan Form''')",
-          "'''Centrico Plaza:''' Wild Zone 20&nbsp",
-          "link=Alpha Pokémon|14px ('''Kantonian Form''')"
+          "Magenta District: Trade Kantonian Raichu at Quasartico Inc. during Side Mission 108 (Alolan Form)",
+          "Centrico Plaza: Wild Zone 20 14px (Kantonian Form)"
         ]
       }
     },
     "35": {
       "legends-z-a": {
         "locations": [
-          "'''Jaune District:''' Wild Zone 19"
+          "Jaune District: Wild Zone 19"
         ]
       }
     },
     "36": {
       "legends-z-a": {
         "locations": [
-          "'''Centrico Plaza:''' Wild Zone 20&nbsp",
-          "link=Alpha Pokémon|14px"
+          "Centrico Plaza: Wild Zone 20 14px"
         ]
       }
     },
     "63": {
       "legends-z-a": {
         "locations": [
-          "'''Vert District:''' Vert Sector 8",
-          "'''Bleu District:''' Wild Zone 5",
-          "'''Magenta District:''' Magenta Sector 6, Magenta Sector 7",
-          "'''Rouge District:''' Rouge Sector 6, Rouge Sector 8",
-          "'''Jaune District:''' Jaune Sector 5"
+          "Vert District: Vert Sector 8",
+          "Bleu District: Wild Zone 5",
+          "Magenta District: Magenta Sector 6",
+          "Magenta Sector 7",
+          "Rouge District: Rouge Sector 6",
+          "Rouge Sector 8",
+          "Jaune District: Jaune Sector 5"
         ]
       }
     },
     "64": {
       "legends-z-a": {
         "locations": [
-          "'''Magenta District:''' Wild Zone 9"
+          "Magenta District: Wild Zone 9"
         ]
       }
     },
     "65": {
       "legends-z-a": {
         "locations": [
-          "'''Centrico Plaza:''' Wild Zone 20&nbsp",
-          "link=Alpha Pokémon|14px"
+          "Centrico Plaza: Wild Zone 20 14px"
         ]
       }
     },
     "66": {
       "legends-z-a": {
         "locations": [
-          "'''Bleu District:''' Wild Zone 12",
-          "'''Jaune District:''' Wild Zone 8"
+          "Bleu District: Wild Zone 12",
+          "Jaune District: Wild Zone 8"
         ]
       }
     },
     "67": {
       "legends-z-a": {
         "locations": [
-          "'''Bleu District:''' Wild Zone 12"
+          "Bleu District: Wild Zone 12"
         ]
       }
     },
     "68": {
       "legends-z-a": {
         "locations": [
-          "'''Centrico Plaza:''' Wild Zone 20&nbsp",
-          "link=Alpha Pokémon|14px"
+          "Centrico Plaza: Wild Zone 20 14px"
         ]
       }
     },
     "69": {
       "legends-z-a": {
         "locations": [
-          "'''Vert District:''' Vert Sector 1, Vert Sector 2, Vert Sector 7, Vert Sector 9",
-          "'''Bleu District:''' Aymlis Park, Bleu Sector 3, Bleu Sector 6, Bleu Sector 7, Wild Zone 5, Wild Zone 10",
-          "'''Magenta District:''' Magenta Sector 3, Magenta Sector 6, Magenta Sector 8",
-          "'''Rouge District:''' Rouge Sector 5, Rouge Sector 8",
-          "'''Jaune District:''' Jaune Sector 2, Jaune Sector 7, Jaune Sector 8, Jaune Sector 11"
+          "Vert District: Vert Sector 1",
+          "Vert Sector 2",
+          "Vert Sector 7",
+          "Vert Sector 9",
+          "Bleu District: Aymlis Park",
+          "Bleu Sector 3",
+          "Bleu Sector 6",
+          "Bleu Sector 7",
+          "Wild Zone 5",
+          "Wild Zone 10",
+          "Magenta District: Magenta Sector 3",
+          "Magenta Sector 6",
+          "Magenta Sector 8",
+          "Rouge District: Rouge Sector 5",
+          "Rouge Sector 8",
+          "Jaune District: Jaune Sector 2",
+          "Jaune Sector 7",
+          "Jaune Sector 8",
+          "Jaune Sector 11"
         ]
       }
     },
     "70": {
       "legends-z-a": {
         "locations": [
-          "'''Rouge District:''' Wild Zone 13"
+          "Rouge District: Wild Zone 13"
         ]
       }
     },
     "71": {
       "legends-z-a": {
         "locations": [
-          "'''Centrico Plaza:''' Wild Zone 20&nbsp",
-          "link=Alpha Pokémon|14px"
+          "Centrico Plaza: Wild Zone 20 14px"
         ]
       }
     },
     "79": {
       "legends-z-a": {
         "locations": [
-          "'''Bleu District:''' Wild Zone 10 ('''Kantonian Form''')",
-          "'''Jaune District:''' Wild Zone 11 ('''Kantonian Form''')",
-          "Trade Kantonian Slowpoke on South Boulevard during Side Mission 39 ('''Galarian Form''')"
+          "Bleu District: Wild Zone 10 (Kantonian Form)",
+          "Jaune District: Wild Zone 11 (Kantonian Form)",
+          "Trade Kantonian Slowpoke on South Boulevard during Side Mission 39 (Galarian Form)"
         ]
       }
     },
     "80": {
       "legends-z-a": {
         "locations": [
-          "'''Jaune District:''' Wild Zone 11&nbsp",
-          "link=Alpha Pokémon|14px ('''Kantonian Form''')",
-          "Evolve Slowpoke ('''Galarian Form''')"
+          "Jaune District: Wild Zone 11 14px (Kantonian Form)",
+          "Evolve Slowpoke (Galarian Form)"
         ]
       }
     },
     "92": {
       "legends-z-a": {
         "locations": [
-          "'''Vert District:''' Vert Sector 1, Vert Sector 5, Vert Sector 7, Vert Sector 9",
-          "'''Bleu District:''' Espace Vide, Bleu Sector 4, Bleu Sector 5, Bleu Sector 8, Old Building (only one, during Main Mission 20), The Sewers",
-          "'''Magenta District:''' Magenta Sector 1, Magenta Sector 3, Magenta Sector 4, Magenta Sector 6, Magenta Sector 9",
-          "'''Rouge District:''' Rouge Sector 8, Wild Zone 4",
-          "'''Jaune District:''' Jaune Sector 4, Jaune Sector 6, Jaune Sector 7, Jaune Sector 9"
+          "Vert District: Vert Sector 1",
+          "Vert Sector 5",
+          "Vert Sector 7",
+          "Vert Sector 9",
+          "Bleu District: Espace Vide",
+          "Bleu Sector 4",
+          "Bleu Sector 5",
+          "Bleu Sector 8",
+          "Old Building (only one, during Main Mission 20)",
+          "The Sewers",
+          "Magenta District: Magenta Sector 1",
+          "Magenta Sector 3",
+          "Magenta Sector 4",
+          "Magenta Sector 6",
+          "Magenta Sector 9",
+          "Rouge District: Rouge Sector 8",
+          "Wild Zone 4",
+          "Jaune District: Jaune Sector 4",
+          "Jaune Sector 6",
+          "Jaune Sector 7",
+          "Jaune Sector 9"
         ]
       }
     },
     "93": {
       "legends-z-a": {
         "locations": [
-          "'''Bleu District:''' The Sewers",
-          "'''Magenta District:''' Magenta Sector 1, Magenta Sector 6",
-          "'''Rouge District:''' Rouge Sector 8",
-          "'''Jaune District:''' Jaune Sector 2, Jaune Sector 4, Jaune Sector 9, Wild Zone 15N"
+          "Bleu District: The Sewers",
+          "Magenta District: Magenta Sector 1",
+          "Magenta Sector 6",
+          "Rouge District: Rouge Sector 8",
+          "Jaune District: Jaune Sector 2",
+          "Jaune Sector 4",
+          "Jaune Sector 9",
+          "Wild Zone 15N"
         ]
       }
     },
     "94": {
       "legends-z-a": {
         "locations": [
-          "'''Bleu District:''' Old Building (only two, during Main Mission 20)",
-          "'''Centrico Plaza:''' Wild Zone 20&nbsp",
-          "link=Alpha Pokémon|14px"
+          "Bleu District: Old Building (only two, during Main Mission 20)",
+          "Centrico Plaza: Wild Zone 20 14px"
         ]
       }
     },
     "95": {
       "legends-z-a": {
         "locations": [
-          "'''Magenta District:''' Wild Zone 14"
+          "Magenta District: Wild Zone 14"
         ]
       }
     },
     "115": {
       "legends-z-a": {
         "locations": [
-          "'''Jaune District:''' Wild Zone 19",
-          "'''Centrico Plaza:''' Wild Zone 20&nbsp",
-          "link=Alpha Pokémon|14px"
+          "Jaune District: Wild Zone 19",
+          "Centrico Plaza: Wild Zone 20 14px"
         ]
       }
     },
     "120": {
       "legends-z-a": {
         "locations": [
-          "'''Vert District:''' Wild Zone 2N",
-          "'''Bleu District:''' Bleu Sector 9, Wild Zone 10"
+          "Vert District: Wild Zone 2N",
+          "Bleu District: Bleu Sector 9",
+          "Wild Zone 10"
         ]
       }
     },
     "121": {
       "legends-z-a": {
         "locations": [
-          "'''Bleu District:''' Wild Zone 16N",
-          "'''Centrico Plaza:''' Wild Zone 20&nbsp",
-          "link=Alpha Pokémon|14px"
+          "Bleu District: Wild Zone 16N",
+          "Centrico Plaza: Wild Zone 20 14px"
         ]
       }
     },
     "123": {
       "legends-z-a": {
         "locations": [
-          "'''Rouge District:''' Wild Zone 13N"
+          "Rouge District: Wild Zone 13N"
         ]
       }
     },
     "127": {
       "legends-z-a": {
         "locations": [
-          "'''Rouge District:''' Wild Zone 13",
-          "'''Centrico Plaza:''' Wild Zone 20&nbsp",
-          "link=Alpha Pokémon|14px"
+          "Rouge District: Wild Zone 13",
+          "Centrico Plaza: Wild Zone 20 14px"
         ]
       }
     },
@@ -1537,106 +1625,110 @@
       "legends-z-a": {
         "locations": [
           "Saison Canal",
-          "'''Vert District:''' Coulant Waterway, Vert Sector 4, Vert Sector 9, Wild Zone 2",
-          "'''Bleu District:''' Bleu Sector 5, Bleu Sector 7",
-          "'''Magenta District:''' Magenta Street",
-          "'''Jaune District:''' Wild Zone 6, Wild Zone 11"
+          "Vert District: Coulant Waterway",
+          "Vert Sector 4",
+          "Vert Sector 9",
+          "Wild Zone 2",
+          "Bleu District: Bleu Sector 5",
+          "Bleu Sector 7",
+          "Magenta District: Magenta Street",
+          "Jaune District: Wild Zone 6",
+          "Wild Zone 11"
         ]
       }
     },
     "130": {
       "legends-z-a": {
         "locations": [
-          "'''Jaune District:''' Wild Zone 11",
-          "'''Centrico Plaza:''' Wild Zone 20&nbsp",
-          "link=Alpha Pokémon|14px"
+          "Jaune District: Wild Zone 11",
+          "Centrico Plaza: Wild Zone 20 14px"
         ]
       }
     },
     "133": {
       "legends-z-a": {
         "locations": [
-          "'''Vert District:''' Vert Sector 8, Vert Sector 9",
-          "'''Bleu District:''' Bleu Sector 7",
-          "'''Magenta District:''' Magenta Sector 7, Magenta Sector 9",
-          "'''Rouge District:''' Rouge Sector 8",
-          "'''Jaune District:''' Jaune Sector 7, Wild Zone 19"
+          "Vert District: Vert Sector 8",
+          "Vert Sector 9",
+          "Bleu District: Bleu Sector 7",
+          "Magenta District: Magenta Sector 7",
+          "Magenta Sector 9",
+          "Rouge District: Rouge Sector 8",
+          "Jaune District: Jaune Sector 7",
+          "Wild Zone 19"
         ]
       }
     },
     "134": {
       "legends-z-a": {
         "locations": [
-          "'''Centrico Plaza:''' Wild Zone 20&nbsp",
-          "link=Alpha Pokémon|14px"
+          "Centrico Plaza: Wild Zone 20 14px"
         ]
       }
     },
     "135": {
       "legends-z-a": {
         "locations": [
-          "'''Centrico Plaza:''' Wild Zone 20&nbsp",
-          "link=Alpha Pokémon|14px"
+          "Centrico Plaza: Wild Zone 20 14px"
         ]
       }
     },
     "136": {
       "legends-z-a": {
         "locations": [
-          "'''Centrico Plaza:''' Wild Zone 20&nbsp",
-          "link=Alpha Pokémon|14px"
+          "Centrico Plaza: Wild Zone 20 14px"
         ]
       }
     },
     "142": {
       "legends-z-a": {
         "locations": [
-          "'''Vert District:''' Revive from an Old Amber at the Pokémon Research Lab"
+          "Vert District: Revive from an Old Amber at the Pokémon Research Lab"
         ]
       }
     },
     "147": {
       "legends-z-a": {
         "locations": [
-          "'''Vert District:''' Vert Sector 6",
-          "'''Bleu District:''' Bleu Sector 9",
-          "'''Magenta District:''' Magenta Sector 8",
-          "'''Rouge District:''' Rouge Sector 8",
-          "'''Jaune District:''' Jaune Sector 3, Jaune Sector 5"
+          "Vert District: Vert Sector 6",
+          "Bleu District: Bleu Sector 9",
+          "Magenta District: Magenta Sector 8",
+          "Rouge District: Rouge Sector 8",
+          "Jaune District: Jaune Sector 3",
+          "Jaune Sector 5"
         ]
       }
     },
     "148": {
       "legends-z-a": {
         "locations": [
-          "'''Vert District:''' Vert Sector 6",
-          "'''Bleu District:''' Bleu Sector 9",
-          "'''Magenta District:''' Magenta Sector 8",
-          "'''Rouge District:''' Rouge Sector 8",
-          "'''Jaune District:''' Jaune Sector 3"
+          "Vert District: Vert Sector 6",
+          "Bleu District: Bleu Sector 9",
+          "Magenta District: Magenta Sector 8",
+          "Rouge District: Rouge Sector 8",
+          "Jaune District: Jaune Sector 3"
         ]
       }
     },
     "149": {
       "legends-z-a": {
         "locations": [
-          "'''Centrico Plaza:''' Wild Zone 20&nbsp",
-          "link=Alpha Pokémon|14px"
+          "Centrico Plaza: Wild Zone 20 14px"
         ]
       }
     },
     "150": {
       "legends-z-a": {
         "locations": [
-          "'''Magenta District:''' Lysandre Labs (requires Mystery Gift activation) (Only one)"
+          "Magenta District: Lysandre Labs (requires Mystery Gift activation) (Only one)"
         ]
       }
     },
     "152": {
       "legends-z-a": {
         "locations": [
-          "'''Vert District:''' First partner Pokémon from Taunie/Urbain in Vert Sector 8",
-          "'''Centrico Plaza:''' Wild Zone 20"
+          "Vert District: First partner Pokémon from Taunie/Urbain in Vert Sector 8",
+          "Centrico Plaza: Wild Zone 20"
         ]
       }
     },
@@ -1657,8 +1749,8 @@
     "158": {
       "legends-z-a": {
         "locations": [
-          "'''Vert District:''' First partner Pokémon from Taunie/Urbain in Vert Sector 8",
-          "'''Centrico Plaza:''' Wild Zone 20"
+          "Vert District: First partner Pokémon from Taunie/Urbain in Vert Sector 8",
+          "Centrico Plaza: Wild Zone 20"
         ]
       }
     },
@@ -1679,62 +1771,66 @@
     "167": {
       "legends-z-a": {
         "locations": [
-          "'''Vert District:''' Vert Sector 6, Vert Sector 8, Vert Sector 9",
-          "'''Bleu District:''' Bleu Sector 3, Bleu Sector 7",
-          "'''Magenta District:''' Magenta Sector 4",
-          "'''Rouge District:''' Wild Zone 4",
-          "'''Jaune District:''' Jaune Sector 5, Jaune Sector 6"
+          "Vert District: Vert Sector 6",
+          "Vert Sector 8",
+          "Vert Sector 9",
+          "Bleu District: Bleu Sector 3",
+          "Bleu Sector 7",
+          "Magenta District: Magenta Sector 4",
+          "Rouge District: Wild Zone 4",
+          "Jaune District: Jaune Sector 5",
+          "Jaune Sector 6"
         ]
       }
     },
     "168": {
       "legends-z-a": {
         "locations": [
-          "'''Bleu District:''' Bleu Sector 1, Bleu Sector 5",
-          "'''Magenta District:''' The Sewers",
-          "'''Centrico Plaza:''' Wild Zone 20&nbsp",
-          "link=Alpha Pokémon|14px"
+          "Bleu District: Bleu Sector 1",
+          "Bleu Sector 5",
+          "Magenta District: The Sewers",
+          "Centrico Plaza: Wild Zone 20 14px"
         ]
       }
     },
     "172": {
       "legends-z-a": {
         "locations": [
-          "'''Vert District:''' Wild Zone 1"
+          "Vert District: Wild Zone 1"
         ]
       }
     },
     "173": {
       "legends-z-a": {
         "locations": [
-          "'''Vert District:''' Vert Sector 3",
-          "'''Bleu District:''' Bleu Sector 4",
-          "'''Magenta District:''' Magenta Sector 1",
-          "'''Rouge District:''' Rouge Sector 5",
-          "'''Jaune District:''' Jaune Sector 11, Wild Zone 19"
+          "Vert District: Vert Sector 3",
+          "Bleu District: Bleu Sector 4",
+          "Magenta District: Magenta Sector 1",
+          "Rouge District: Rouge Sector 5",
+          "Jaune District: Jaune Sector 11",
+          "Wild Zone 19"
         ]
       }
     },
     "179": {
       "legends-z-a": {
         "locations": [
-          "'''Vert District:''' Wild Zone 1"
+          "Vert District: Wild Zone 1"
         ]
       }
     },
     "180": {
       "legends-z-a": {
         "locations": [
-          "'''Bleu District:''' Wild Zone 16",
-          "'''Jaune District:''' Wild Zone 6"
+          "Bleu District: Wild Zone 16",
+          "Jaune District: Wild Zone 6"
         ]
       }
     },
     "181": {
       "legends-z-a": {
         "locations": [
-          "'''Bleu District:''' Wild Zone 16&nbsp",
-          "link=Alpha Pokémon|14px"
+          "Bleu District: Wild Zone 16 14px"
         ]
       }
     },
@@ -1755,15 +1851,15 @@
     "199": {
       "legends-z-a": {
         "locations": [
-          "Evolve Slowpoke ('''Galarian Form''')"
+          "Evolve Slowpoke (Johtonian Form)",
+          "Evolve Slowpoke (Galarian Form)"
         ]
       }
     },
     "208": {
       "legends-z-a": {
         "locations": [
-          "'''Rouge District:''' Wild Zone 3&nbsp",
-          "link=Alpha Pokémon|14px (only one, during Main Mission 40)"
+          "Rouge District: Wild Zone 3 14px (only one, during Main Mission 40)"
         ]
       }
     },
@@ -1777,9 +1873,8 @@
     "214": {
       "legends-z-a": {
         "locations": [
-          "'''Rouge District:''' Wild Zone 13",
-          "'''Centrico Plaza:''' Wild Zone 20&nbsp",
-          "link=Alpha Pokémon|14px",
+          "Rouge District: Wild Zone 13",
+          "Centrico Plaza: Wild Zone 20 14px",
           "Trade with Tracie in Passage du Palais during Side Mission 002"
         ]
       }
@@ -1787,46 +1882,45 @@
     "225": {
       "legends-z-a": {
         "locations": [
-          "'''Bleu District:''' Aymlis Park, Wild Zone 12",
-          "'''Centrico Plaza:''' Wild Zone 20&nbsp",
-          "link=Alpha Pokémon|14px"
+          "Bleu District: Aymlis Park",
+          "Wild Zone 12",
+          "Centrico Plaza: Wild Zone 20 14px"
         ]
       }
     },
     "227": {
       "legends-z-a": {
         "locations": [
-          "'''Vert District:''' Wild Zone 17",
-          "'''Centrico Plaza:''' Wild Zone 20&nbsp",
-          "link=Alpha Pokémon|14px"
+          "Vert District: Wild Zone 17",
+          "Centrico Plaza: Wild Zone 20 14px"
         ]
       }
     },
     "228": {
       "legends-z-a": {
         "locations": [
-          "'''Magenta District:''' Lysandre Labs",
-          "'''Jaune District:''' Wild Zone 6"
+          "Magenta District: Lysandre Labs",
+          "Jaune District: Wild Zone 6"
         ]
       }
     },
     "229": {
       "legends-z-a": {
         "locations": [
-          "'''Magenta District:''' Lysandre Labs",
-          "'''Jaune District:''' Wild Zone 6&nbsp",
-          "link=Alpha Pokémon|14px"
+          "Magenta District: Lysandre Labs",
+          "Jaune District: Wild Zone 6 14px"
         ]
       }
     },
     "246": {
       "legends-z-a": {
         "locations": [
-          "'''Vert District:''' Vert Sector 2",
-          "'''Bleu District:''' Bleu Sector 7",
-          "'''Magenta District:''' Magenta Sector 2",
-          "'''Rouge District:''' Rouge Sector 7",
-          "'''Jaune District:''' Jaune Sector 6, Wild Zone 15"
+          "Vert District: Vert Sector 2",
+          "Bleu District: Bleu Sector 7",
+          "Magenta District: Magenta Sector 2",
+          "Rouge District: Rouge Sector 7",
+          "Jaune District: Jaune Sector 6",
+          "Wild Zone 15"
         ]
       }
     },
@@ -1840,17 +1934,17 @@
     "248": {
       "legends-z-a": {
         "locations": [
-          "'''Centrico Plaza:''' Wild Zone 20 link=Alpha Pokémon|14px"
+          "Centrico Plaza: Wild Zone 20 14px"
         ]
       }
     },
     "280": {
       "legends-z-a": {
         "locations": [
-          "'''Vert District:''' Vert Sector 4",
-          "'''Bleu District:''' Bleu Sector 7",
-          "'''Magenta District:''' Magenta Sector 7",
-          "'''Rouge District:''' Rouge Sector 2"
+          "Vert District: Vert Sector 4",
+          "Bleu District: Bleu Sector 7",
+          "Magenta District: Magenta Sector 7",
+          "Rouge District: Rouge Sector 2"
         ]
       }
     },
@@ -1864,161 +1958,174 @@
     "282": {
       "legends-z-a": {
         "locations": [
-          "'''Centrico Plaza:''' Wild Zone 20"
+          "Centrico Plaza: Wild Zone 20"
         ]
       }
     },
     "302": {
       "legends-z-a": {
         "locations": [
-          "'''Magenta District:''' Wild Zone 9",
-          "'''Rouge District:''' Wild Zone 4 (only one, during Side Mission 003)",
-          "'''Centrico Plaza:''' Wild Zone 20 link=Alpha Pokémon|14px"
+          "Magenta District: Wild Zone 9",
+          "Rouge District: Wild Zone 4 (only one, during Side Mission 003)",
+          "Centrico Plaza: Wild Zone 20 14px"
         ]
       }
     },
     "303": {
       "legends-z-a": {
         "locations": [
-          "'''Vert District:''' Vert Sector 9, Wild Zone 17 link=Alpha Pokémon|14px",
-          "'''Bleu District:''' Bleu Sector 8",
-          "'''Magenta District:''' Magenta Sector 6 (only one, during Side Mission 077), Magenta Sector 9, Wild Zone 9",
-          "'''Rouge District:''' Rouge Sector 3",
-          "'''Jaune District:''' Jaune Sector 2"
+          "Vert District: Vert Sector 9",
+          "Wild Zone 17 14px",
+          "Bleu District: Bleu Sector 8",
+          "Magenta District: Magenta Sector 6 (only one, during Side Mission 077)",
+          "Magenta Sector 9",
+          "Wild Zone 9",
+          "Rouge District: Rouge Sector 3",
+          "Jaune District: Jaune Sector 2"
         ]
       }
     },
     "304": {
       "legends-z-a": {
         "locations": [
-          "'''Magenta District:''' Wild Zone 14"
+          "Magenta District: Wild Zone 14"
         ]
       }
     },
     "305": {
       "legends-z-a": {
         "locations": [
-          "'''Magenta District:''' Wild Zone 14"
+          "Magenta District: Wild Zone 14"
         ]
       }
     },
     "306": {
       "legends-z-a": {
         "locations": [
-          "'''Centrico Plaza:''' Wild Zone 20"
+          "Centrico Plaza: Wild Zone 20"
         ]
       }
     },
     "307": {
       "legends-z-a": {
         "locations": [
-          "'''Jaune District:''' Wild Zone 6D"
+          "Jaune District: Wild Zone 6D"
         ]
       }
     },
     "308": {
       "legends-z-a": {
         "locations": [
-          "'''Bleu District:''' Wild Zone 16D",
-          "'''Centrico Plaza:''' Wild Zone 20 link=Alpha Pokémon|14px"
+          "Bleu District: Wild Zone 16D",
+          "Centrico Plaza: Wild Zone 20 14px"
         ]
       }
     },
     "309": {
       "legends-z-a": {
         "locations": [
-          "'''Bleu District:''' Wild Zone 5",
-          "'''Magenta District:''' Lysandre Labs"
+          "Bleu District: Wild Zone 5",
+          "Magenta District: Lysandre Labs"
         ]
       }
     },
     "310": {
       "legends-z-a": {
         "locations": [
-          "'''Magenta District:''' Wild Zone 9 link=Alpha Pokémon|14px, Lysandre Labs"
+          "Magenta District: Wild Zone 9 14px",
+          "Lysandre Labs"
         ]
       }
     },
     "315": {
       "legends-z-a": {
         "locations": [
-          "'''Magenta District:''' Wild Zone 7"
+          "Magenta District: Wild Zone 7"
         ]
       }
     },
     "318": {
       "legends-z-a": {
         "locations": [
-          "'''Bleu District:''' Wild Zone 10"
+          "Bleu District: Wild Zone 10"
         ]
       }
     },
     "319": {
       "legends-z-a": {
         "locations": [
-          "'''Bleu District:''' Wild Zone 10 link=Alpha Pokémon|14px"
+          "Bleu District: Wild Zone 10 14px"
         ]
       }
     },
     "322": {
       "legends-z-a": {
         "locations": [
-          "'''Jaune District:''' Wild Zone 8"
+          "Jaune District: Wild Zone 8"
         ]
       }
     },
     "323": {
       "legends-z-a": {
         "locations": [
-          "'''Jaune District:''' Wild Zone 8 link=Alpha Pokémon|14px"
+          "Jaune District: Wild Zone 8 14px"
         ]
       }
     },
     "333": {
       "legends-z-a": {
         "locations": [
-          "'''Vert District:''' Vert Sector 3, Vert Sector 9",
-          "'''Bleu District:''' Bleu Sector 7, Bleu Sector 8",
-          "'''Magenta District:''' Magenta Sector 6, Magenta Sector 8, Wild Zone 18D",
-          "'''Rouge District:''' Rouge Sector 1, Rouge Sector 8",
-          "'''Jaune District:''' Jaune Sector 5, Wild Zone 6"
+          "Vert District: Vert Sector 3",
+          "Vert Sector 9",
+          "Bleu District: Bleu Sector 7",
+          "Bleu Sector 8",
+          "Magenta District: Magenta Sector 6",
+          "Magenta Sector 8",
+          "Wild Zone 18D",
+          "Rouge District: Rouge Sector 1",
+          "Rouge Sector 8",
+          "Jaune District: Jaune Sector 5",
+          "Wild Zone 6"
         ]
       }
     },
     "334": {
       "legends-z-a": {
         "locations": [
-          "'''Magenta District:''' Wild Zone 18D",
-          "'''Centrico Plaza:''' Wild Zone 20 link=Alpha Pokémon|14px"
+          "Magenta District: Wild Zone 18D",
+          "Centrico Plaza: Wild Zone 20 14px"
         ]
       }
     },
     "353": {
       "legends-z-a": {
         "locations": [
-          "'''Vert District:''' Vert Sector 5",
-          "'''Bleu District:''' Bleu Sector 3",
-          "'''Magenta District:''' Magenta Sector 7, Wild Zone 7",
-          "'''Rouge District:''' Rouge Sector 3",
-          "'''Jaune District:''' Jaune Sector 2, Jaune Sector 9, Wild Zone 15N"
+          "Vert District: Vert Sector 5",
+          "Bleu District: Bleu Sector 3",
+          "Magenta District: Magenta Sector 7",
+          "Wild Zone 7",
+          "Rouge District: Rouge Sector 3",
+          "Jaune District: Jaune Sector 2",
+          "Jaune Sector 9",
+          "Wild Zone 15N"
         ]
       }
     },
     "354": {
       "legends-z-a": {
         "locations": [
-          "'''Jaune District:''' Wild Zone 15N link=Alpha Pokémon|14px"
+          "Jaune District: Wild Zone 15N 14px"
         ]
       }
     },
     "359": {
       "legends-z-a": {
         "locations": [
-          "'''Bleu District:''' Bleu Sector 4",
-          "'''Magenta District:''' Magenta Sector 7",
-          "'''Rouge District:''' Académie Étoile",
-          "'''Jaune District:''' Jaune Street",
-          "'''Centrico Plaza:''' Wild Zone 20 link=Alpha Pokémon|14px",
+          "Bleu District: Bleu Sector 4",
+          "Magenta District: Magenta Sector 7",
+          "Rouge District: Académie Étoile",
+          "Jaune District: Jaune Street",
+          "Centrico Plaza: Wild Zone 20 14px",
           "Received after defeating the Rogue Mega Absol during Main Mission 09: \"Chase That Mysterious Pokémon!\" (Only one)"
         ]
       }
@@ -2026,7 +2133,7 @@
     "361": {
       "legends-z-a": {
         "locations": [
-          "'''Bleu District:''' Wild Zone 12"
+          "Bleu District: Wild Zone 12"
         ]
       }
     },
@@ -2040,7 +2147,7 @@
     "371": {
       "legends-z-a": {
         "locations": [
-          "'''Magenta District:''' Wild Zone 18"
+          "Magenta District: Wild Zone 18"
         ]
       }
     },
@@ -2054,73 +2161,92 @@
     "373": {
       "legends-z-a": {
         "locations": [
-          "'''Magenta District:''' Wild Zone 18 link=Alpha Pokémon|14px"
+          "Magenta District: Wild Zone 18 14px"
         ]
       }
     },
     "374": {
       "legends-z-a": {
         "locations": [
-          "'''Magenta District:''' Lysandre Labs"
+          "Magenta District: Lysandre Labs"
         ]
       }
     },
     "375": {
       "legends-z-a": {
         "locations": [
-          "'''Magenta District:''' Lysandre Labs"
+          "Magenta District: Lysandre Labs"
         ]
       }
     },
     "376": {
       "legends-z-a": {
         "locations": [
-          "'''Centrico Plaza:''' Wild Zone 20&nbsp",
-          "link=Alpha Pokémon|14px"
+          "Centrico Plaza: Wild Zone 20 14px"
         ]
       }
     },
     "406": {
       "legends-z-a": {
         "locations": [
-          "Estival Avenue, Hibernal Avenue",
-          "'''Vert District:''' Vert Sector 1, Vert Sector 3, Vert Sector 4, Vert Sector 9, Wild Zone 2",
-          "'''Bleu District:''' Aymlis Park, Bleu Sector 4, Bleu Sector 5, Bleu Sector 9",
-          "'''Magenta District:''' Magenta Sector 1, Magenta Sector 2, Magenta Sector 4, Magenta Sector 8",
-          "'''Rouge District:''' Rouge Sector 1, Rouge Sector 3, Rouge Sector 4, Rouge Sector 5, Rouge Sector 8",
-          "'''Jaune District:''' Jaune Sector 2, Jaune Sector 4, Jaune Sector 7, Jaune Sector 8, Jaune Sector 9, Jaune Sector 11"
+          "Estival Avenue",
+          "Hibernal Avenue",
+          "Vert District: Vert Sector 1",
+          "Vert Sector 3",
+          "Vert Sector 4",
+          "Vert Sector 9",
+          "Wild Zone 2",
+          "Bleu District: Aymlis Park",
+          "Bleu Sector 4",
+          "Bleu Sector 5",
+          "Bleu Sector 9",
+          "Magenta District: Magenta Sector 1",
+          "Magenta Sector 2",
+          "Magenta Sector 4",
+          "Magenta Sector 8",
+          "Rouge District: Rouge Sector 1",
+          "Rouge Sector 3",
+          "Rouge Sector 4",
+          "Rouge Sector 5",
+          "Rouge Sector 8",
+          "Jaune District: Jaune Sector 2",
+          "Jaune Sector 4",
+          "Jaune Sector 7",
+          "Jaune Sector 8",
+          "Jaune Sector 9",
+          "Jaune Sector 11"
         ]
       }
     },
     "407": {
       "legends-z-a": {
         "locations": [
-          "'''Centrico Plaza:''' Wild Zone 20"
+          "Centrico Plaza: Wild Zone 20"
         ]
       }
     },
     "427": {
       "legends-z-a": {
         "locations": [
-          "'''Vert District:''' Vert Sector 8, Vert Sector 9",
-          "'''Bleu District:''' Bleu Sector 3",
-          "'''Magenta District:''' Magenta Sector 7",
-          "'''Jaune District:''' Wild Zone 6"
+          "Vert District: Vert Sector 8",
+          "Vert Sector 9",
+          "Bleu District: Bleu Sector 3",
+          "Magenta District: Magenta Sector 7",
+          "Jaune District: Wild Zone 6"
         ]
       }
     },
     "428": {
       "legends-z-a": {
         "locations": [
-          "'''Magenta District:''' Wild Zone 18&nbsp",
-          "link=Alpha Pokémon|14px"
+          "Magenta District: Wild Zone 18 14px"
         ]
       }
     },
     "443": {
       "legends-z-a": {
         "locations": [
-          "'''Jaune District:''' Wild Zone 8"
+          "Jaune District: Wild Zone 8"
         ]
       }
     },
@@ -2134,18 +2260,17 @@
     "445": {
       "legends-z-a": {
         "locations": [
-          "'''Centrico Plaza:''' Wild Zone 20&nbsp",
-          "link=Alpha Pokémon|14px"
+          "Centrico Plaza: Wild Zone 20 14px"
         ]
       }
     },
     "447": {
       "legends-z-a": {
         "locations": [
-          "'''Vert District:''' Vert Sector 8",
-          "'''Bleu District:''' Bleu Sector 5",
-          "'''Magenta District:''' Magenta Sector 9",
-          "'''Rouge District:''' Rouge Sector 4",
+          "Vert District: Vert Sector 8",
+          "Bleu District: Bleu Sector 5",
+          "Magenta District: Magenta Sector 9",
+          "Rouge District: Rouge Sector 4",
           "Trade with Bond at Académie Étoile during Side Mission 024"
         ]
       }
@@ -2153,7 +2278,7 @@
     "448": {
       "legends-z-a": {
         "locations": [
-          "'''Centrico Plaza:''' Wild Zone 20",
+          "Centrico Plaza: Wild Zone 20",
           "Can be found in Room 202 after completing Main Mission 37 (Only one)"
         ]
       }
@@ -2161,71 +2286,65 @@
     "449": {
       "legends-z-a": {
         "locations": [
-          "'''Magenta District:''' Wild Zone 7D"
+          "Magenta District: Wild Zone 7D"
         ]
       }
     },
     "450": {
       "legends-z-a": {
         "locations": [
-          "'''Centrico Plaza:''' Wild Zone 20"
+          "Centrico Plaza: Wild Zone 20"
         ]
       }
     },
     "459": {
       "legends-z-a": {
         "locations": [
-          "'''Bleu District:''' Wild Zone 12"
+          "Bleu District: Wild Zone 12"
         ]
       }
     },
     "460": {
       "legends-z-a": {
         "locations": [
-          "'''Bleu District:''' Wild Zone 12&nbsp",
-          "link=Alpha Pokémon|14px"
+          "Bleu District: Wild Zone 12 14px"
         ]
       }
     },
     "470": {
       "legends-z-a": {
         "locations": [
-          "'''Centrico Plaza:''' Wild Zone 20&nbsp",
-          "link=Alpha Pokémon|14px"
+          "Centrico Plaza: Wild Zone 20 14px"
         ]
       }
     },
     "471": {
       "legends-z-a": {
         "locations": [
-          "'''Centrico Plaza:''' Wild Zone 20&nbsp",
-          "link=Alpha Pokémon|14px"
+          "Centrico Plaza: Wild Zone 20 14px"
         ]
       }
     },
     "475": {
       "legends-z-a": {
         "locations": [
-          "'''Bleu District:''' Wild Zone 5&nbsp",
-          "link=Alpha Pokémon|14px (only one, during Main Mission 40)",
-          "'''Centrico Plaza:''' Wild Zone 20&nbsp",
-          "link=Alpha Pokémon|14px"
+          "Bleu District: Wild Zone 5 14px (only one, during Main Mission 40)",
+          "Centrico Plaza: Wild Zone 20 14px"
         ]
       }
     },
     "478": {
       "legends-z-a": {
         "locations": [
-          "'''Centrico Plaza:''' Wild Zone 20&nbsp",
-          "link=Alpha Pokémon|14px"
+          "Centrico Plaza: Wild Zone 20 14px"
         ]
       }
     },
     "498": {
       "legends-z-a": {
         "locations": [
-          "'''Vert District:''' First partner Pokémon from Taunie/Urbain in Vert Sector 8",
-          "'''Centrico Plaza:''' Wild Zone 20"
+          "Vert District: First partner Pokémon from Taunie/Urbain in Vert Sector 8",
+          "Centrico Plaza: Wild Zone 20"
         ]
       }
     },
@@ -2246,195 +2365,243 @@
     "504": {
       "legends-z-a": {
         "locations": [
-          "'''Vert District:''' Vert Sector 1, Vert Sector 3, Vert Sector 4, Vert Sector 8, Vert Sector 9, Wild Zone 2",
-          "'''Bleu District:''' Aymlis Park, Bleu Sector 5, Bleu Sector 7, Bleu Sector 8, The Sewers",
-          "'''Magenta District:''' Magenta Sector 2, Magenta Sector 6, Magenta Sector 8",
-          "'''Rouge District:''' Académie Étoile, Rouge Sector 1, Rouge Sector 3, Rouge Sector 6, Wild Zone 4N",
-          "'''Jaune District:''' Jaune Street, Jaune Sector 4, Jaune Sector 8, Jaune Sector 9"
+          "Vert District: Vert Sector 1",
+          "Vert Sector 3",
+          "Vert Sector 4",
+          "Vert Sector 8",
+          "Vert Sector 9",
+          "Wild Zone 2",
+          "Bleu District: Aymlis Park",
+          "Bleu Sector 5",
+          "Bleu Sector 7",
+          "Bleu Sector 8",
+          "The Sewers",
+          "Magenta District: Magenta Sector 2",
+          "Magenta Sector 6",
+          "Magenta Sector 8",
+          "Rouge District: Académie Étoile",
+          "Rouge Sector 1",
+          "Rouge Sector 3",
+          "Rouge Sector 6",
+          "Wild Zone 4N",
+          "Jaune District: Jaune Street",
+          "Jaune Sector 4",
+          "Jaune Sector 8",
+          "Jaune Sector 9"
         ]
       }
     },
     "505": {
       "legends-z-a": {
         "locations": [
-          "Autumnal Avenue&nbsp",
-          "link=Alpha Pokémon|14px (Only one, during Side Mission 071)",
-          "'''Bleu District:''' Wild Zone 10"
+          "Autumnal Avenue 14px (Only one, during Side Mission 071)",
+          "Bleu District: Wild Zone 10"
         ]
       }
     },
     "511": {
       "legends-z-a": {
         "locations": [
-          "Autumnal Avenue, Hibernal Avenue",
-          "'''Vert District:''' Vert Sector 8",
-          "'''Bleu District:''' Bleu Sector 6, Bleu Sector 7",
-          "'''Magenta District:''' Magenta Sector 7",
-          "'''Rouge District:''' Rouge Sector 6, Rouge Sector 7",
-          "'''Jaune District:''' North Boulevard, Jaune Street, Jaune Sector 2, Jaune Sector 4, Jaune Sector 9, Jaune Sector 12"
+          "Autumnal Avenue",
+          "Hibernal Avenue",
+          "Vert District: Vert Sector 8",
+          "Bleu District: Bleu Sector 6",
+          "Bleu Sector 7",
+          "Magenta District: Magenta Sector 7",
+          "Rouge District: Rouge Sector 6",
+          "Rouge Sector 7",
+          "Jaune District: North Boulevard",
+          "Jaune Street",
+          "Jaune Sector 2",
+          "Jaune Sector 4",
+          "Jaune Sector 9",
+          "Jaune Sector 12"
         ]
       }
     },
     "512": {
       "legends-z-a": {
         "locations": [
-          "'''Centrico Plaza:''' Wild Zone 20&nbsp",
-          "link=Alpha Pokémon|14px"
+          "Centrico Plaza: Wild Zone 20 14px"
         ]
       }
     },
     "513": {
       "legends-z-a": {
         "locations": [
-          "Autumnal Avenue, Hibernal Avenue",
-          "'''Vert District:''' Vert Sector 8",
-          "'''Bleu District:''' Bleu Sector 6, Bleu Sector 7",
-          "'''Magenta District:''' Magenta Sector 7",
-          "'''Rouge District:''' Rouge Sector 6, Rouge Sector 7",
-          "'''Jaune District:''' North Boulevard, Jaune Sector 2, Jaune Sector 4, Jaune Sector 5, Jaune Sector 9, Jaune Sector 12"
+          "Autumnal Avenue",
+          "Hibernal Avenue",
+          "Vert District: Vert Sector 8",
+          "Bleu District: Bleu Sector 6",
+          "Bleu Sector 7",
+          "Magenta District: Magenta Sector 7",
+          "Rouge District: Rouge Sector 6",
+          "Rouge Sector 7",
+          "Jaune District: North Boulevard",
+          "Jaune Sector 2",
+          "Jaune Sector 4",
+          "Jaune Sector 5",
+          "Jaune Sector 9",
+          "Jaune Sector 12"
         ]
       }
     },
     "514": {
       "legends-z-a": {
         "locations": [
-          "'''Centrico Plaza:''' Wild Zone 20&nbsp",
-          "link=Alpha Pokémon|14px"
+          "Centrico Plaza: Wild Zone 20 14px"
         ]
       }
     },
     "515": {
       "legends-z-a": {
         "locations": [
-          "Autumnal Avenue, Hibernal Avenue",
-          "'''Vert District:''' Vert Sector 8",
-          "'''Bleu District:''' Bleu Sector 6, Bleu Sector 7",
-          "'''Magenta District:''' Magenta Sector 7",
-          "'''Rouge District:''' Rouge Sector 6, Rouge Sector 7",
-          "'''Jaune District:''' North Boulevard, Jaune Street, Jaune Sector 2, Jaune Sector 4, Jaune Sector 6, Jaune Sector 9, Jaune Sector 12"
+          "Autumnal Avenue",
+          "Hibernal Avenue",
+          "Vert District: Vert Sector 8",
+          "Bleu District: Bleu Sector 6",
+          "Bleu Sector 7",
+          "Magenta District: Magenta Sector 7",
+          "Rouge District: Rouge Sector 6",
+          "Rouge Sector 7",
+          "Jaune District: North Boulevard",
+          "Jaune Street",
+          "Jaune Sector 2",
+          "Jaune Sector 4",
+          "Jaune Sector 6",
+          "Jaune Sector 9",
+          "Jaune Sector 12"
         ]
       }
     },
     "516": {
       "legends-z-a": {
         "locations": [
-          "'''Centrico Plaza:''' Wild Zone 20&nbsp",
-          "link=Alpha Pokémon|14px"
+          "Centrico Plaza: Wild Zone 20 14px"
         ]
       }
     },
     "529": {
       "legends-z-a": {
         "locations": [
-          "'''Magenta District:''' Wild Zone 14",
-          "'''Jaune District:''' Wild Zone 8"
+          "Magenta District: Wild Zone 14",
+          "Jaune District: Wild Zone 8"
         ]
       }
     },
     "530": {
       "legends-z-a": {
         "locations": [
-          "'''Magenta District:''' Wild Zone 14"
+          "Magenta District: Wild Zone 14"
         ]
       }
     },
     "531": {
       "legends-z-a": {
         "locations": [
-          "'''Magenta District:''' Wild Zone 7",
-          "'''Jaune District:''' Wild Zone 19"
+          "Magenta District: Wild Zone 7",
+          "Jaune District: Wild Zone 19"
         ]
       }
     },
     "543": {
       "legends-z-a": {
         "locations": [
-          "'''Bleu District:''' Wild Zone 5"
+          "Bleu District: Wild Zone 5"
         ]
       }
     },
     "544": {
       "legends-z-a": {
         "locations": [
-          "'''Bleu District:''' Wild Zone 5&nbsp",
-          "link=Alpha Pokémon|14px",
-          "'''Jaune District:''' Wild Zone 15"
+          "Bleu District: Wild Zone 5 14px",
+          "Jaune District: Wild Zone 15"
         ]
       }
     },
     "545": {
       "legends-z-a": {
         "locations": [
-          "'''Jaune District:''' Wild Zone 15",
-          "'''Centrico Plaza:'''Wild Zone 20&nbsp",
-          "link=Alpha Pokémon|14px"
+          "Jaune District: Wild Zone 15",
+          "Centrico Plaza:Wild Zone 20 14px"
         ]
       }
     },
     "551": {
       "legends-z-a": {
         "locations": [
-          "'''Jaune District:''' Wild Zone 8"
+          "Jaune District: Wild Zone 8"
         ]
       }
     },
     "552": {
       "legends-z-a": {
         "locations": [
-          "'''Jaune District:''' Wild Zone 8"
+          "Jaune District: Wild Zone 8"
         ]
       }
     },
     "553": {
       "legends-z-a": {
         "locations": [
-          "'''Centrico Plaza:''' Wild Zone 20&nbsp",
-          "link=Alpha Pokémon|14px"
+          "Centrico Plaza: Wild Zone 20 14px"
         ]
       }
     },
     "559": {
       "legends-z-a": {
         "locations": [
-          "'''Bleu District:''' Bleu Sector 8, The Sewers",
-          "'''Rouge District:''' Rouge Sector 3"
+          "Bleu District: Bleu Sector 8",
+          "The Sewers",
+          "Rouge District: Rouge Sector 3"
         ]
       }
     },
     "560": {
       "legends-z-a": {
         "locations": [
-          "'''Rouge District:''' Rouge Sector 3",
-          "'''Centrico Plaza:''' Wild Zone 20"
+          "Rouge District: Rouge Sector 3",
+          "Centrico Plaza: Wild Zone 20"
         ]
       }
     },
     "568": {
       "legends-z-a": {
         "locations": [
-          "'''Vert District:''' Vert Sector 5, Vert Sector 6, Vert Sector 9",
-          "'''Bleu District:''' Bleu Sector 3",
-          "'''Magenta District:''' Magenta Sector 3, Magenta Sector 4, Magenta Sector 6, Magenta Sector 9",
-          "'''Rouge District:''' Rouge Sector 3, Rouge Sector 6, Rouge Sector 7",
-          "'''Jaune District:''' North Boulevard, Jaune Street, Jaune Sector 3, Jaune Sector 5, Jaune Sector 7"
+          "Vert District: Vert Sector 5",
+          "Vert Sector 6",
+          "Vert Sector 9",
+          "Bleu District: Bleu Sector 3",
+          "Magenta District: Magenta Sector 3",
+          "Magenta Sector 4",
+          "Magenta Sector 6",
+          "Magenta Sector 9",
+          "Rouge District: Rouge Sector 3",
+          "Rouge Sector 6",
+          "Rouge Sector 7",
+          "Jaune District: North Boulevard",
+          "Jaune Street",
+          "Jaune Sector 3",
+          "Jaune Sector 5",
+          "Jaune Sector 7"
         ]
       }
     },
     "569": {
       "legends-z-a": {
         "locations": [
-          "'''Vert District:''' Vert Sector 8 (Only one, during Side Mission 074)",
-          "'''Jaune District:''' Jaune Sector 5&nbsp",
-          "link=Alpha Pokémon|14px, Jaune Sector 7",
-          "'''Centrico Plaza:''' Wild Zone 20"
+          "Vert District: Vert Sector 8 (Only one, during Side Mission 074)",
+          "Jaune District: Jaune Sector 5 14px",
+          "Jaune Sector 7",
+          "Centrico Plaza: Wild Zone 20"
         ]
       }
     },
     "582": {
       "legends-z-a": {
         "locations": [
-          "'''Bleu District:''' Wild Zone 12",
-          "'''Magenta District:''' Wild Zone 7"
+          "Bleu District: Wild Zone 12",
+          "Magenta District: Wild Zone 7"
         ]
       }
     },
@@ -2448,25 +2615,28 @@
     "584": {
       "legends-z-a": {
         "locations": [
-          "'''Centrico Plaza:''' Wild Zone 20&nbsp",
-          "link=Alpha Pokémon|14px"
+          "Centrico Plaza: Wild Zone 20 14px"
         ]
       }
     },
     "587": {
       "legends-z-a": {
         "locations": [
-          "'''Vert District:''' Vert Sector 7, Vert Sector 8",
-          "'''Magenta District:''' North Boulevard, Magenta Sector 7, Magenta Sector 8, Wild Zone 14",
-          "'''Rouge District:''' Rouge Sector 1",
-          "'''Jaune District:''' Jaune Sector 7 (Only one, during Side Mission 089)"
+          "Vert District: Vert Sector 7",
+          "Vert Sector 8",
+          "Magenta District: North Boulevard",
+          "Magenta Sector 7",
+          "Magenta Sector 8",
+          "Wild Zone 14",
+          "Rouge District: Rouge Sector 1",
+          "Jaune District: Jaune Sector 7 (Only one, during Side Mission 089)"
         ]
       }
     },
     "602": {
       "legends-z-a": {
         "locations": [
-          "'''Bleu District:''' Wild Zone 10"
+          "Bleu District: Wild Zone 10"
         ]
       }
     },
@@ -2480,48 +2650,45 @@
     "604": {
       "legends-z-a": {
         "locations": [
-          "'''Centrico Plaza:''' Wild Zone 20&nbsp",
-          "link=Alpha Pokémon|14px"
+          "Centrico Plaza: Wild Zone 20 14px"
         ]
       }
     },
     "607": {
       "legends-z-a": {
         "locations": [
-          "'''Bleu District:''' The Sewers"
+          "Bleu District: The Sewers"
         ]
       }
     },
     "608": {
       "legends-z-a": {
         "locations": [
-          "'''Vert District:''' Wild Zone 17N"
+          "Vert District: Wild Zone 17N"
         ]
       }
     },
     "609": {
       "legends-z-a": {
         "locations": [
-          "'''Centrico Plaza:''' Wild Zone 20&nbsp",
-          "link=Alpha Pokémon|14px"
+          "Centrico Plaza: Wild Zone 20 14px"
         ]
       }
     },
     "618": {
       "legends-z-a": {
         "locations": [
-          "'''Jaune District:''' Wild Zone 11 ('''Unovan Form''')",
-          "Wild Zone 11 (Only one during Side Mission 72) ('''Galarian Form''')",
-          "'''Centrico Plaza:''' Wild Zone 20&nbsp",
-          "link=Alpha Pokémon|14px ('''Unovan Form''')"
+          "Jaune District: Wild Zone 11 (Unovan Form)",
+          "Wild Zone 11 (Only one during Side Mission 72) (Galarian Form)",
+          "Centrico Plaza: Wild Zone 20 14px (Unovan Form)"
         ]
       }
     },
     "650": {
       "legends-z-a": {
         "locations": [
-          "'''Vert District:''' Wild Zone 17",
-          "'''Rouge District:''' Académie Étoile (only one during Side Mission 7)"
+          "Vert District: Wild Zone 17",
+          "Rouge District: Académie Étoile (only one during Side Mission 7)"
         ]
       }
     },
@@ -2542,7 +2709,8 @@
     "653": {
       "legends-z-a": {
         "locations": [
-          "'''Magenta District:''' Magenta Sector 2 (only one during Side Mission 8), Wild Zone 18"
+          "Magenta District: Magenta Sector 2 (only one during Side Mission 8)",
+          "Wild Zone 18"
         ]
       }
     },
@@ -2563,8 +2731,8 @@
     "656": {
       "legends-z-a": {
         "locations": [
-          "'''Bleu District:''' Wild Zone 16",
-          "'''Rouge District:''' North Boulevard (only one during Side Mission 9)"
+          "Bleu District: Wild Zone 16",
+          "Rouge District: North Boulevard (only one during Side Mission 9)"
         ]
       }
     },
@@ -2585,12 +2753,21 @@
     "659": {
       "legends-z-a": {
         "locations": [
-          "'''Vert District:''' Vert Sector 4, Vert Sector 6, Vert Sector 8, Wild Zone 1",
-          "'''Bleu District:''' Bleu Sector 3, Bleu Sector 6, Bleu Sector 8, Wild Zone 5",
-          "'''Magenta District:''' Magenta Sector 7, Magenta Sector 8",
-          "'''Rouge District:''' Rouge Sector 2, Rouge Sector 8&nbsp",
-          "link=Alpha Pokémon|14px (only one alpha, during Side Mission 001)",
-          "'''Jaune District:''' Jaune Sector 6, Jaune Sector 7, Jaune Sector 11"
+          "Vert District: Vert Sector 4",
+          "Vert Sector 6",
+          "Vert Sector 8",
+          "Wild Zone 1",
+          "Bleu District: Bleu Sector 3",
+          "Bleu Sector 6",
+          "Bleu Sector 8",
+          "Wild Zone 5",
+          "Magenta District: Magenta Sector 7",
+          "Magenta Sector 8",
+          "Rouge District: Rouge Sector 2",
+          "Rouge Sector 8 14px (only one alpha, during Side Mission 001)",
+          "Jaune District: Jaune Sector 6",
+          "Jaune Sector 7",
+          "Jaune Sector 11"
         ]
       }
     },
@@ -2598,9 +2775,8 @@
       "legends-z-a": {
         "locations": [
           "Vernal Avenue (Only one, during Side Mission 023)",
-          "'''Vert District:''' Wild Zone 17",
-          "'''Centrico Plaza:''' Wild Zone 20&nbsp",
-          "link=Alpha Pokémon|14px"
+          "Vert District: Wild Zone 17",
+          "Centrico Plaza: Wild Zone 20 14px"
         ]
       }
     },
@@ -2608,227 +2784,262 @@
       "legends-z-a": {
         "locations": [
           "Vernal Avenue‚ Estival Avenue‚ Autumnal Avenue",
-          "'''Vert District:''' Vert DistrictOne spawner on a lamp post at the Lumi Cab taxi stand east of Station Front‚ Vert Street, South Boulevard, Vert Sector 1‚ Vert Sector 2‚ Vert Sector 3‚ Vert Sector 4‚ Vert Sector 5‚ Vert Sector 6‚ Vert Sector 7‚ Vert Sector 8‚ Vert Sector 9, Wild Zone 1",
-          "'''Bleu District:''' Bleu Street‚ South Boulevard‚ Aymlis Park‚ Bleu Sector 3‚ Bleu Sector 4‚ Bleu Sector 5‚ Bleu Sector 6‚ Bleu Sector 7‚ Bleu Sector 8",
-          "'''Magenta District:''' Magenta Sector 1‚ Magenta Sector 2‚ Magenta Sector 3‚ Magenta Sector 4‚ Magenta Sector 6‚ Magenta Sector 7‚ Magenta Sector 8‚ Magenta Sector 9",
-          "'''Rouge District:''' Rouge Street‚ North Boulevard‚ Rouge Sector 1‚ Rouge Sector 3‚ Rouge Sector 5‚ Rouge Sector 6‚ Rouge Sector 7‚ Rouge Sector 8‚ Wild Zone 3&nbsp",
-          "link=Alpha Pokémon|14px",
-          "'''Jaune District:''' Jaune Street‚ North Boulevard‚ Saison Canalside‚ Jaune Sector 2‚ Jaune Sector 3‚ Jaune Sector 5‚ Jaune Sector 6‚ Jaune Sector 7‚ Jaune Sector 9‚ Jaune Sector 11‚ Jaune Sector 12‚",
-          "'''Centrico Plaza:''' Centrico PlazaOne spawner southeast of the square near Saison Canalside‚ Wild Zone 20"
+          "Vert District: Vert DistrictOne spawner on a lamp post at the Lumi Cab taxi stand east of Station Front‚ Vert Street",
+          "South Boulevard",
+          "Vert Sector 1‚ Vert Sector 2‚ Vert Sector 3‚ Vert Sector 4‚ Vert Sector 5‚ Vert Sector 6‚ Vert Sector 7‚ Vert Sector 8‚ Vert Sector 9",
+          "Wild Zone 1",
+          "Bleu District: Bleu Street‚ South Boulevard‚ Aymlis Park‚ Bleu Sector 3‚ Bleu Sector 4‚ Bleu Sector 5‚ Bleu Sector 6‚ Bleu Sector 7‚ Bleu Sector 8",
+          "Magenta District: Magenta Sector 1‚ Magenta Sector 2‚ Magenta Sector 3‚ Magenta Sector 4‚ Magenta Sector 6‚ Magenta Sector 7‚ Magenta Sector 8‚ Magenta Sector 9",
+          "Rouge District: Rouge Street‚ North Boulevard‚ Rouge Sector 1‚ Rouge Sector 3‚ Rouge Sector 5‚ Rouge Sector 6‚ Rouge Sector 7‚ Rouge Sector 8‚ Wild Zone 3 14px",
+          "Jaune District: Jaune Street‚ North Boulevard‚ Saison Canalside‚ Jaune Sector 2‚ Jaune Sector 3‚ Jaune Sector 5‚ Jaune Sector 6‚ Jaune Sector 7‚ Jaune Sector 9‚ Jaune Sector 11‚ Jaune Sector 12‚",
+          "Centrico Plaza: Centrico PlazaOne spawner southeast of the square near Saison Canalside‚ Wild Zone 20"
         ]
       }
     },
     "662": {
       "legends-z-a": {
         "locations": [
-          "'''Vert District:''' Vert Sector 2, Vert Sector 4",
-          "'''Magenta District:''' Magenta Sector 6, Wild Zone 7&nbsp",
-          "link=Alpha Pokémon|14px, Wild Zone 9",
-          "'''Rouge District:''' Rouge Sector 3, Rouge Sector 8",
-          "'''Jaune District:''' Jaune Street‚ Jaune Sector 10"
+          "Vert District: Vert Sector 2",
+          "Vert Sector 4",
+          "Magenta District: Magenta Sector 6",
+          "Wild Zone 7 14px",
+          "Wild Zone 9",
+          "Rouge District: Rouge Sector 3",
+          "Rouge Sector 8",
+          "Jaune District: Jaune Street‚ Jaune Sector 10"
         ]
       }
     },
     "663": {
       "legends-z-a": {
         "locations": [
-          "'''Vert District:''' Vert Sector 3, Vert Sector 4",
-          "'''Magenta District:''' Magenta Sector 1",
-          "'''Centrico Plaza:''' Wild Zone 20&nbsp",
-          "link=Alpha Pokémon|14px"
+          "Vert District: Vert Sector 3",
+          "Vert Sector 4",
+          "Magenta District: Magenta Sector 1",
+          "Centrico Plaza: Wild Zone 20 14px"
         ]
       }
     },
     "664": {
       "legends-z-a": {
         "locations": [
-          "'''Vert District:''' Vert Sector 6, Vert Sector 8, Vert Sector 9, Wild Zone 1",
-          "'''Bleu District:''' Bleu Sector 4, Bleu Sector 7",
-          "'''Magenta District:''' Magenta Sector 6",
-          "'''Rouge District:''' Rouge Sector 1, Rouge Sector 8",
-          "'''Jaune District:''' Jaune Sector 5, Jaune Sector 9, Jaune Sector 12"
+          "Vert District: Vert Sector 6",
+          "Vert Sector 8",
+          "Vert Sector 9",
+          "Wild Zone 1",
+          "Bleu District: Bleu Sector 4",
+          "Bleu Sector 7",
+          "Magenta District: Magenta Sector 6",
+          "Rouge District: Rouge Sector 1",
+          "Rouge Sector 8",
+          "Jaune District: Jaune Sector 5",
+          "Jaune Sector 9",
+          "Jaune Sector 12"
         ]
       }
     },
     "665": {
       "legends-z-a": {
         "locations": [
-          "'''Vert District:''' Vert Sector 9",
-          "'''Bleu District:''' Bleu Sector 4, Bleu Sector 7",
-          "'''Magenta District:''' Magenta Sector 6",
-          "'''Rouge District:''' Wild Zone 4D, Lumiose Museum (only one, during Side Mission 021)",
-          "'''Jaune District:''' Jaune Sector 5"
+          "Vert District: Vert Sector 9",
+          "Bleu District: Bleu Sector 4",
+          "Bleu Sector 7",
+          "Magenta District: Magenta Sector 6",
+          "Rouge District: Wild Zone 4D",
+          "Lumiose Museum (only one, during Side Mission 021)",
+          "Jaune District: Jaune Sector 5"
         ]
       }
     },
     "666": {
       "legends-z-a": {
         "locations": [
-          "'''Bleu District:''' Bleu Sector 4 ('''Meadow Pattern''')",
-          "'''Magenta District:''' Magenta Sector 6 ('''Meadow Pattern''')",
-          "'''Rouge District:''' Rouge Sector 1‚ Rouge Sector 8‚ Wild Zone 1314px ('''Meadow Pattern''')",
-          "Evolve p|Spewpa received from Side Mission 021 ('''Marine Pattern''')",
-          "Trade ('''Garden Pattern''')",
-          "Pokémon HOME ('''All Other Patterns''')"
+          "Bleu District: Bleu Sector 4 (Meadow Pattern)",
+          "Magenta District: Magenta Sector 6 (Meadow Pattern)",
+          "Rouge District: Rouge Sector 1‚ Rouge Sector 8‚ Wild Zone 13D (Meadow Pattern)",
+          "Jaune District: Jaune Sector 5‚ Jaune Sector 11‚ Jaune Sector 12 (Meadow Pattern)",
+          "Centrico Plaza: Wild Zone 20 14px (Meadow Pattern)",
+          "Evolve Spewpa received from Side Mission 021 (Marine Pattern)",
+          "Trade (Garden Pattern)",
+          "Pokémon HOME (All Other Patterns)"
         ]
       }
     },
     "667": {
       "legends-z-a": {
         "locations": [
-          "'''Rouge District:''' Wild Zone 3"
+          "Rouge District: Wild Zone 3"
         ]
       }
     },
     "668": {
       "legends-z-a": {
         "locations": [
-          "'''Vert District:''' Wild Zone 17"
+          "Vert District: Wild Zone 17"
         ]
       }
     },
     "669": {
       "legends-z-a": {
         "locations": [
-          "Saison Canal ('''Red Flower''' & '''Yellow Flower''')",
-          "'''Vert District:'''",
-          "Vert Street, Vert Sector 4, Vert Sector 7, Vert Sector 8 ('''Red Flower''')",
-          "Vert Street ('''Yellow Flower''')",
-          "Vert Sector 6 ('''Blue Flower''')",
-          "Vert Sector 3 ('''White Flower''')",
-          "'''Bleu District:'''",
-          "Bleu Sector 8 ('''Orange Flower''')",
-          "Bleu Sector 7 ('''Blue Flower''')",
-          "Aymlis Park, Bleu Sector 4 ('''White Flower''')",
-          "'''Magenta District:'''",
-          "Magenta Sector 4, Magenta Sector 6 ('''Red Flower''')",
-          "Magenta Sector 1 ('''Yellow Flower''')",
-          "Magenta Sector 8 ('''Orange Flower''')",
-          "Magenta Sector 4 ('''White Flower''')",
-          "'''Rouge District:'''",
-          "North Boulevard, Rouge Sector 5, Rouge Sector 8, Wild Zone 3 ('''Red Flower''')",
-          "Rouge Sector 5 ('''Yellow Flower''')",
-          "Rouge Sector 6 ('''Blue Flower''')",
-          "'''Jaune District:'''",
-          "Jaune Sector 2, Jaune Sector 5 ('''Red Flower''')",
-          "Jaune Sector 3, Jaune Sector 8, Jaune Sector 9, Jaune Sector 11 ('''Yellow Flower''')",
-          "Jaune Sector 2, Jaune Sector 3, Jaune Sector 9 ('''Orange Flower''')",
-          "Jaune Sector 2, Jaune Sector 3, Jaune Sector 5 ('''Blue Flower''')",
-          "Jaune Sector 2 ('''White Flower''')"
+          "Saison Canal (Red Flower & Yellow Flower)",
+          "Vert District:",
+          "Vert Street",
+          "Vert Sector 4",
+          "Vert Sector 7",
+          "Vert Sector 8 (Red Flower)",
+          "Vert Street (Yellow Flower)",
+          "Vert Sector 6 (Blue Flower)",
+          "Vert Sector 3 (White Flower)",
+          "Bleu District:",
+          "Bleu Sector 8 (Orange Flower)",
+          "Bleu Sector 7 (Blue Flower)",
+          "Aymlis Park",
+          "Bleu Sector 4 (White Flower)",
+          "Magenta District:",
+          "Magenta Sector 4",
+          "Magenta Sector 6 (Red Flower)",
+          "Magenta Sector 1 (Yellow Flower)",
+          "Magenta Sector 8 (Orange Flower)",
+          "Magenta Sector 4 (White Flower)",
+          "Rouge District:",
+          "North Boulevard",
+          "Rouge Sector 5",
+          "Rouge Sector 8",
+          "Wild Zone 3 (Red Flower)",
+          "Rouge Sector 5 (Yellow Flower)",
+          "Rouge Sector 6 (Blue Flower)",
+          "Jaune District:",
+          "Jaune Sector 2",
+          "Jaune Sector 5 (Red Flower)",
+          "Jaune Sector 3",
+          "Jaune Sector 8",
+          "Jaune Sector 9",
+          "Jaune Sector 11 (Yellow Flower)",
+          "Jaune Sector 9 (Orange Flower)",
+          "Jaune Sector 5 (Blue Flower)",
+          "Jaune Sector 2 (White Flower)"
         ]
       }
     },
     "670": {
       "legends-z-a": {
         "locations": [
-          "'''Vert District:''' Vert Sector 5 ('''Colored Flowers'''), Vert Sector 8 ('''Blue Flower'''), Vert Sector 3 ('''White Flower''')",
-          "'''Bleu District:''' Bleu Sector 4 ('''White Flower''')",
-          "'''Magenta District:''' Magenta Sector 6 ('''Red Flower'''), 02 Wild Zone 7 ('''Red Flower''' & '''Orange Flower''')",
-          "'''Rouge District:''' Rouge Sector 8 ('''Red Flower''')",
-          "'''Jaune District:''' Jaune Sector 2 ('''Red Flower'''), Jaune Sector 8 ('''Yellow Flower''')",
-          "Received from Taunie/Urbain upon completing Main Mission 39 (Only one) ('''Eternal Flower''')"
+          "Vert District: Vert Sector 5 (Colored Flowers)",
+          "Vert Sector 8 (Blue Flower)",
+          "Vert Sector 3 (White Flower)",
+          "Bleu District: Bleu Sector 4 (White Flower)",
+          "Magenta District: Magenta Sector 6 (Red Flower)",
+          "02 Wild Zone 7 (Red Flower & Orange Flower)",
+          "Rouge District: Rouge Sector 8 (Red Flower)",
+          "Jaune District: Jaune Sector 2 (Red Flower)",
+          "Jaune Sector 8 (Yellow Flower)",
+          "Received from Taunie/Urbain upon completing Main Mission 39 (Only one) (Eternal Flower)"
         ]
       }
     },
     "671": {
       "legends-z-a": {
         "locations": [
-          "'''Bleu District:''' Wild Zone 16 ('''Blue Flower''' & '''White Flower''')",
-          "'''Centrico Plaza:''' Wild Zone 20&nbsp",
-          "link=Alpha Pokémon|14px ('''Red Flower''')"
+          "Bleu District: Wild Zone 16 (Blue Flower & White Flower)",
+          "Centrico Plaza: Wild Zone 20 14px (Red Flower)"
         ]
       }
     },
     "672": {
       "legends-z-a": {
         "locations": [
-          "'''Rouge District:''' Wild Zone 3"
+          "Rouge District: Wild Zone 3"
         ]
       }
     },
     "673": {
       "legends-z-a": {
         "locations": [
-          "'''Bleu District:''' Wild Zone 12",
-          "'''Centrico Plaza:''' Wild Zone 20&nbsp",
-          "link=Alpha Pokémon|14px"
+          "Bleu District: Wild Zone 12",
+          "Centrico Plaza: Wild Zone 20 14px"
         ]
       }
     },
     "674": {
       "legends-z-a": {
         "locations": [
-          "'''Rouge District:''' Wild Zone 3"
+          "Rouge District: Wild Zone 3"
         ]
       }
     },
     "675": {
       "legends-z-a": {
         "locations": [
-          "'''Magenta District:''' Wild Zone 9&nbsp",
-          "link=Alpha Pokémon|14px (only one, during Main Mission 40)",
-          "'''Centrico Plaza:''' Wild Zone 20&nbsp",
-          "link=Alpha Pokémon|14px"
+          "Magenta District: Wild Zone 9 14px (only one, during Main Mission 40)",
+          "Centrico Plaza: Wild Zone 20 14px"
         ]
       }
     },
     "676": {
       "legends-z-a": {
         "locations": [
-          "'''Jaune District:''' Wild Zone 11, Wild Zone 19",
-          "'''Centrico Plaza:''' Wild Zone 20&nbsp",
-          "link=Alpha Pokémon|14px"
+          "Jaune District: Wild Zone 11",
+          "Wild Zone 19",
+          "Centrico Plaza: Wild Zone 20 14px"
         ]
       }
     },
     "677": {
       "legends-z-a": {
         "locations": [
-          "'''Vert District:''' Vert Sector 8",
-          "'''Bleu District:''' Bleu Sector 4",
-          "'''Magenta District:''' Wild Zone 9",
-          "'''Rouge District:''' Rouge Sector 4, Rouge Sector 6, Rouge Sector 7, Wild Zone 3"
+          "Vert District: Vert Sector 8",
+          "Bleu District: Bleu Sector 4",
+          "Magenta District: Wild Zone 9",
+          "Rouge District: Rouge Sector 4",
+          "Rouge Sector 6",
+          "Rouge Sector 7",
+          "Wild Zone 3"
         ]
       }
     },
     "678": {
       "legends-z-a": {
         "locations": [
-          "'''Magenta District:''' Wild Zone 9&nbsp",
-          "link=Alpha Pokémon|14px"
+          "Magenta District: Wild Zone 9 14px"
         ]
       }
     },
     "679": {
       "legends-z-a": {
         "locations": [
-          "'''Magenta District:''' Lysandre Labs",
-          "'''Rouge District:''' Wild Zone 4N"
+          "Magenta District: Lysandre Labs",
+          "Rouge District: Wild Zone 4N"
         ]
       }
     },
     "680": {
       "legends-z-a": {
         "locations": [
-          "'''Magenta District:''' Lysandre Labs"
+          "Magenta District: Lysandre Labs"
         ]
       }
     },
     "681": {
       "legends-z-a": {
         "locations": [
-          "'''Centrico Plaza:''' Wild Zone 20&nbsp",
-          "link=Alpha Pokémon|14px"
+          "Centrico Plaza: Wild Zone 20 14px"
         ]
       }
     },
     "682": {
       "legends-z-a": {
         "locations": [
-          "'''Bleu District:''' South Boulevard, Bleu Sector 5",
-          "'''Magenta District:''' Magenta Sector 1, Magenta Sector 6",
-          "'''Rouge District:''' Rouge Sector 1, Rouge Sector 2, Rouge Sector 4, Rouge Sector 6, Rouge Sector 7",
-          "'''Jaune District:''' Saison Canalside"
+          "Bleu District: South Boulevard",
+          "Bleu Sector 5",
+          "Magenta District: Magenta Sector 1",
+          "Magenta Sector 6",
+          "Rouge District: Rouge Sector 1",
+          "Rouge Sector 2",
+          "Rouge Sector 4",
+          "Rouge Sector 6",
+          "Rouge Sector 7",
+          "Jaune District: Saison Canalside"
         ]
       }
     },
@@ -2842,10 +3053,17 @@
     "684": {
       "legends-z-a": {
         "locations": [
-          "'''Bleu District:''' South Boulevard, Bleu Sector 5, Bleu Sector 6",
-          "'''Magenta District:''' Magenta Sector 1, Magenta Sector 3, Magenta Sector 4, Magenta Sector 6",
-          "'''Rouge District:''' Rouge Sector 1, Rouge Sector 2, Rouge Sector 6",
-          "'''Jaune District:''' Saison Canalside"
+          "Bleu District: South Boulevard",
+          "Bleu Sector 5",
+          "Bleu Sector 6",
+          "Magenta District: Magenta Sector 1",
+          "Magenta Sector 3",
+          "Magenta Sector 4",
+          "Magenta Sector 6",
+          "Rouge District: Rouge Sector 1",
+          "Rouge Sector 2",
+          "Rouge Sector 6",
+          "Jaune District: Saison Canalside"
         ]
       }
     },
@@ -2859,87 +3077,84 @@
     "686": {
       "legends-z-a": {
         "locations": [
-          "'''Bleu District:''' The Sewers",
-          "'''Magenta District:''' The Sewers",
-          "'''Jaune District:''' Wild Zone 11"
+          "Bleu District: The Sewers",
+          "Magenta District: The Sewers",
+          "Jaune District: Wild Zone 11"
         ]
       }
     },
     "687": {
       "legends-z-a": {
         "locations": [
-          "'''Centrico Plaza:''' Wild Zone 20"
+          "Centrico Plaza: Wild Zone 20"
         ]
       }
     },
     "688": {
       "legends-z-a": {
         "locations": [
-          "'''Vert District:''' Wild Zone 2",
-          "'''Bleu District:''' Bleu Sector 5",
-          "'''Jaune District:''' Wild Zone 6"
+          "Vert District: Wild Zone 2",
+          "Bleu District: Bleu Sector 5",
+          "Jaune District: Wild Zone 6"
         ]
       }
     },
     "689": {
       "legends-z-a": {
         "locations": [
-          "'''Bleu District:''' Wild Zone 16N",
-          "'''Centrico Plaza:''' Wild Zone 20&nbsp",
-          "link=Alpha Pokémon|14px"
+          "Bleu District: Wild Zone 16N",
+          "Centrico Plaza: Wild Zone 20 14px"
         ]
       }
     },
     "690": {
       "legends-z-a": {
         "locations": [
-          "'''Bleu District:''' The Sewers",
-          "'''Magenta District:''' The Sewers"
+          "Bleu District: The Sewers",
+          "Magenta District: The Sewers"
         ]
       }
     },
     "691": {
       "legends-z-a": {
         "locations": [
-          "'''Bleu District:''' The Sewers",
-          "'''Centrico Plaza:''' Wild Zone 20"
+          "Bleu District: The Sewers",
+          "Centrico Plaza: Wild Zone 20"
         ]
       }
     },
     "692": {
       "legends-z-a": {
         "locations": [
-          "'''Jaune District:''' Wild Zone 11"
+          "Jaune District: Wild Zone 11"
         ]
       }
     },
     "693": {
       "legends-z-a": {
         "locations": [
-          "'''Jaune District:''' Wild Zone 11&nbsp",
-          "link=Alpha Pokémon|14px"
+          "Jaune District: Wild Zone 11 14px"
         ]
       }
     },
     "694": {
       "legends-z-a": {
         "locations": [
-          "'''Magenta District:''' Wild Zone 14D"
+          "Magenta District: Wild Zone 14D"
         ]
       }
     },
     "695": {
       "legends-z-a": {
         "locations": [
-          "'''Centrico Plaza:''' Wild Zone 20&nbsp",
-          "link=Alpha Pokémon|14px"
+          "Centrico Plaza: Wild Zone 20 14px"
         ]
       }
     },
     "696": {
       "legends-z-a": {
         "locations": [
-          "'''Vert District:''' Revive from a Jaw Fossil at the Pokémon Research Lab"
+          "Vert District: Revive from a Jaw Fossil at the Pokémon Research Lab"
         ]
       }
     },
@@ -2953,7 +3168,7 @@
     "698": {
       "legends-z-a": {
         "locations": [
-          "'''Vert District:''' Revive from a Sail Fossil at the Pokémon Research Lab"
+          "Vert District: Revive from a Sail Fossil at the Pokémon Research Lab"
         ]
       }
     },
@@ -2967,197 +3182,228 @@
     "700": {
       "legends-z-a": {
         "locations": [
-          "'''Centrico Plaza:''' Wild Zone 20&nbsp",
-          "link=Alpha Pokémon|14px"
+          "Centrico Plaza: Wild Zone 20 14px"
         ]
       }
     },
     "701": {
       "legends-z-a": {
         "locations": [
-          "'''Vert District:''' Vert Sector 1, Vert Sector 7, Vert Sector 9",
-          "'''Bleu District:''' Bleu Sector 3, Bleu Sector 4, Bleu Sector 6",
-          "'''Magenta District:''' Magenta Sector 1, Magenta Sector 9",
-          "'''Rouge District:''' Rouge Sector 1, Rouge Sector 3",
-          "'''Jaune District:''' Jaune Sector 3, Jaune Sector 7",
-          "'''Centrico Plaza:''' Wild Zone 20&nbsp",
-          "link=Alpha Pokémon|14px"
+          "Vert District: Vert Sector 1",
+          "Vert Sector 7",
+          "Vert Sector 9",
+          "Bleu District: Bleu Sector 3",
+          "Bleu Sector 4",
+          "Bleu Sector 6",
+          "Magenta District: Magenta Sector 1",
+          "Magenta Sector 9",
+          "Rouge District: Rouge Sector 1",
+          "Rouge Sector 3",
+          "Jaune District: Jaune Sector 3",
+          "Jaune Sector 7",
+          "Centrico Plaza: Wild Zone 20 14px"
         ]
       }
     },
     "702": {
       "legends-z-a": {
         "locations": [
-          "'''Vert District:''' Vert Sector 3, Vert Sector 8",
-          "'''Bleu District:''' Aymlis Park, Bleu Sector 4, Bleu Sector 6",
-          "'''Magenta District:''' North Boulevard, Magenta Sector 2, Magenta Sector 4, Magenta Sector 6, Magenta Sector 7",
-          "'''Rouge District:''' Rouge Sector 6, Rouge Sector 8",
-          "'''Jaune District:''' Jaune Sector 4, Jaune Sector 11",
-          "'''Centrico Plaza:''' Wild Zone 20&nbsp",
-          "link=Alpha Pokémon|14px"
+          "Vert District: Vert Sector 3",
+          "Vert Sector 8",
+          "Bleu District: Aymlis Park",
+          "Bleu Sector 4",
+          "Bleu Sector 6",
+          "Magenta District: North Boulevard",
+          "Magenta Sector 2",
+          "Magenta Sector 4",
+          "Magenta Sector 6",
+          "Magenta Sector 7",
+          "Rouge District: Rouge Sector 6",
+          "Rouge Sector 8",
+          "Jaune District: Jaune Sector 4",
+          "Jaune Sector 11",
+          "Centrico Plaza: Wild Zone 20 14px"
         ]
       }
     },
     "703": {
       "legends-z-a": {
         "locations": [
-          "'''Magenta District:''' Magenta Sector 8 (only during Side Mission EX1, requires Mystery Gift activation), Wild Zone 9",
-          "'''Centrico Plaza:''' Wild Zone 20&nbsp",
-          "link=Alpha Pokémon|14px"
+          "Magenta District: Magenta Sector 8 (only during Side Mission EX1, requires Mystery Gift activation)",
+          "Wild Zone 9",
+          "Centrico Plaza: Wild Zone 20 14px"
         ]
       }
     },
     "704": {
       "legends-z-a": {
         "locations": [
-          "'''Vert District:''' Vert Sector 1, Vert Sector 4, Vert Sector 5, Vert Sector 6, Vert Sector 8, Vert Sector 9",
-          "'''Bleu District:''' Aymlis Park, Bleu Sector 3, Bleu Sector 5, Bleu Sector 7, Bleu Sector 9, The Sewers",
-          "'''Magenta District:''' Magenta Street",
-          "'''Rouge District:''' Rouge Sector 1, Rouge Sector 8",
-          "'''Jaune District:''' Saison Canalside, Jaune Sector 2, Jaune Sector 10"
+          "Vert District: Vert Sector 1",
+          "Vert Sector 4",
+          "Vert Sector 5",
+          "Vert Sector 6",
+          "Vert Sector 8",
+          "Vert Sector 9",
+          "Bleu District: Aymlis Park",
+          "Bleu Sector 3",
+          "Bleu Sector 5",
+          "Bleu Sector 7",
+          "Bleu Sector 9",
+          "The Sewers",
+          "Magenta District: Magenta Street",
+          "Rouge District: Rouge Sector 1",
+          "Rouge Sector 8",
+          "Jaune District: Saison Canalside",
+          "Jaune Sector 2",
+          "Jaune Sector 10"
         ]
       }
     },
     "705": {
       "legends-z-a": {
         "locations": [
-          "'''Vert District:''' Vert Sector 1, Vert Sector 4, Vert Sector 5, Vert Sector 6, Vert Sector 8, Vert Sector 9 ('''Kalosian Form''')",
-          "'''Bleu District:''' Aymlis Park, Bleu Sector 3, Bleu Sector 5, Bleu Sector 7, Bleu Sector 9 ('''Kalosian Form''')",
-          "'''Magenta District:''' Magenta Street ('''Kalosian Form''')",
-          "'''Rouge District:''' Rouge Sector 1, Rouge Sector 8 ('''Kalosian Form''')",
-          "'''Jaune District:''' Saison Canalside, Jaune Sector 2, Jaune Sector 10 ('''Kalosian Form''')",
-          "Trade ('''Hisuian Form''')"
+          "Vert District: Vert Sector 1",
+          "Vert Sector 4",
+          "Vert Sector 5",
+          "Vert Sector 6",
+          "Vert Sector 8",
+          "Vert Sector 9 (Kalosian Form)",
+          "Bleu District: Aymlis Park",
+          "Bleu Sector 3",
+          "Bleu Sector 5",
+          "Bleu Sector 7",
+          "Bleu Sector 9 (Kalosian Form)",
+          "Magenta District: Magenta Street (Kalosian Form)",
+          "Rouge District: Rouge Sector 1",
+          "Rouge Sector 8 (Kalosian Form)",
+          "Jaune District: Saison Canalside",
+          "Jaune Sector 2",
+          "Jaune Sector 10 (Kalosian Form)",
+          "Trade (Hisuian Form)"
         ]
       }
     },
     "706": {
       "legends-z-a": {
         "locations": [
-          "'''Centrico Plaza:''' Wild Zone 20&nbsp",
-          "link=Alpha Pokémon|14px ('''Kalosian Form''')",
-          "Trade ('''Hisuian Form''')"
+          "Centrico Plaza: Wild Zone 20 14px (Kalosian Form)",
+          "Trade (Hisuian Form)"
         ]
       }
     },
     "707": {
       "legends-z-a": {
         "locations": [
-          "'''Vert District:''' Wild Zone 17D",
-          "'''Bleu District:''' The Sewers",
-          "'''Centrico Plaza:''' Wild Zone 20&nbsp",
-          "link=Alpha Pokémon|14px"
+          "Vert District: Wild Zone 17D",
+          "Bleu District: The Sewers",
+          "Centrico Plaza: Wild Zone 20 14px"
         ]
       }
     },
     "708": {
       "legends-z-a": {
         "locations": [
-          "'''Rouge District:''' Wild Zone 13N"
+          "Rouge District: Wild Zone 13N"
         ]
       }
     },
     "709": {
       "legends-z-a": {
         "locations": [
-          "'''Rouge District:''' Wild Zone 13&nbsp",
-          "link=Alpha Pokémon|14px",
-          "'''Jaune District:''' Wild Zone 15"
+          "Rouge District: Wild Zone 13 14px",
+          "Jaune District: Wild Zone 15"
         ]
       }
     },
     "710": {
       "legends-z-a": {
         "locations": [
-          "'''Jaune District:''' Wild Zone 15 ('''Medium/Small Varieties'''N)"
+          "Jaune District: Wild Zone 15 (Medium/Small VarietiesD, Large/Jumbo VarietiesN)"
         ]
       }
     },
     "711": {
       "legends-z-a": {
         "locations": [
-          "'''Jaune District:''' Wild Zone 15&nbsp",
-          "link=Alpha Pokémon|14px ('''Medium Variety''')",
-          "'''Centrico Plaza:''' Wild Zone 20&nbsp",
-          "link=Alpha Pokémon|14px ('''Medium Variety''')"
+          "Jaune District: Wild Zone 15 14px (Medium Variety)",
+          "Centrico Plaza: Wild Zone 20 14px (Medium Variety)"
         ]
       }
     },
     "712": {
       "legends-z-a": {
         "locations": [
-          "'''Bleu District:''' Wild Zone 12"
+          "Bleu District: Wild Zone 12"
         ]
       }
     },
     "713": {
       "legends-z-a": {
         "locations": [
-          "'''Bleu District:''' Wild Zone 12&nbsp",
-          "link=Alpha Pokémon|14px ('''Kalosian Form''')",
-          "Trade ('''Hisuian Form''')"
+          "Bleu District: Wild Zone 12 14px (Kalosian Form)",
+          "Trade (Hisuian Form)"
         ]
       }
     },
     "714": {
       "legends-z-a": {
         "locations": [
-          "'''Bleu District:''' The Sewers",
-          "'''Magenta District:''' Wild Zone 18N, The Sewers"
+          "Bleu District: The Sewers",
+          "Magenta District: Wild Zone 18N",
+          "The Sewers"
         ]
       }
     },
     "715": {
       "legends-z-a": {
         "locations": [
-          "'''Magenta District:''' Wild Zone 18N, Lysandre Labs",
-          "'''Centrico Plaza:''' Wild Zone 20&nbsp",
-          "link=Alpha Pokémon|14px"
+          "Magenta District: Wild Zone 18N",
+          "Lysandre Labs",
+          "Centrico Plaza: Wild Zone 20 14px"
         ]
       }
     },
     "716": {
       "legends-z-a": {
         "locations": [
-          "'''Jaune District:''' Wild Zone 11 (Only one)"
+          "Jaune District: Wild Zone 11 (Only one)"
         ]
       }
     },
     "717": {
       "legends-z-a": {
         "locations": [
-          "'''Rouge District:''' Rouge Sector 2 (Only one)"
+          "Rouge District: Rouge Sector 2 (Only one)"
         ]
       }
     },
     "718": {
       "legends-z-a": {
         "locations": [
-          "'''Centrico Plaza:''' Wild Zone 20 (Only one)"
+          "Centrico Plaza: Wild Zone 20 (Only one)"
         ]
       }
     },
     "719": {
       "legends-z-a": {
         "locations": [
-          "'''Magenta District:''' Magenta Sector 8 (requires Mystery Gift activation) (Only one)"
+          "Magenta District: Magenta Sector 8 (requires Mystery Gift activation) (Only one)"
         ]
       }
     },
     "780": {
       "legends-z-a": {
         "locations": [
-          "'''Jaune District:''' Wild Zone 19D",
-          "'''Centrico Plaza:''' Wild Zone 20&nbsp",
-          "link=Alpha Pokémon|14px"
+          "Jaune District: Wild Zone 19D",
+          "Centrico Plaza: Wild Zone 20 14px"
         ]
       }
     },
     "870": {
       "legends-z-a": {
         "locations": [
-          "'''Bleu District:''' Wild Zone 16",
-          "'''Centrico Plaza:''' Wild Zone 20&nbsp",
-          "link=Alpha Pokémon|14px"
+          "Bleu District: Wild Zone 16",
+          "Centrico Plaza: Wild Zone 20 14px"
         ]
       }
     }

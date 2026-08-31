@@ -723,7 +723,9 @@ function readSavedSettings() {
  * @param {string} [search=location.search] - Query string to parse for the `game` parameter.
  * @returns {string} The resolved game identifier (e.g., 'home', 'sv', 'swsh').
  */
-export function resolveActiveGameId(search = location.search) {
+export function resolveActiveGameId(
+  search = typeof location !== "undefined" ? location.search : "",
+) {
   const params = new URLSearchParams(search);
   const urlGame = params.get("game");
   if (urlGame) return urlGame;
@@ -754,9 +756,10 @@ export const SPECIES_CACHE_TTL_MS = 1000 * 60 * 60 * 24 * 180; // 180 days
 
 // API and UI constants
 export const NAME_FETCH_CONCURRENCY = 5;
-export const prefersReducedMotion = window.matchMedia(
-  "(prefers-reduced-motion: reduce)",
-).matches;
+export const prefersReducedMotion =
+  typeof window !== "undefined" && typeof window.matchMedia === "function"
+    ? window.matchMedia("(prefers-reduced-motion: reduce)").matches
+    : false;
 
 // Utility functions for sprite URLs and species name formatting
 const SPRITE_BASE =

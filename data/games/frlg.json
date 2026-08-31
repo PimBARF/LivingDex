@@ -14,6 +14,7 @@
       "type": "base",
       "optional": false,
       "defaultEnabled": false,
+      "startIndex": 1,
       "entries": [
         {
           "speciesId": 1,
@@ -777,12 +778,12 @@
     "1": {
       "firered": {
         "locations": [
-          "pallet town area"
+          "Pallet Town"
         ]
       },
       "leafgreen": {
         "locations": [
-          "pallet town area"
+          "Pallet Town"
         ]
       }
     },
@@ -813,12 +814,12 @@
     "4": {
       "firered": {
         "locations": [
-          "pallet town area"
+          "Pallet Town"
         ]
       },
       "leafgreen": {
         "locations": [
-          "pallet town area"
+          "Pallet Town"
         ]
       }
     },
@@ -849,12 +850,12 @@
     "7": {
       "firered": {
         "locations": [
-          "pallet town area"
+          "Pallet Town"
         ]
       },
       "leafgreen": {
         "locations": [
-          "pallet town area"
+          "Pallet Town"
         ]
       }
     },
@@ -885,38 +886,38 @@
     "10": {
       "firered": {
         "locations": [
-          "kanto route 2 south towards viridian city",
-          "kanto route 24 area",
-          "kanto route 25 area",
-          "viridian forest area",
-          "pattern bush area"
+          "Route 2 South Towards Viridian City",
+          "Route 24",
+          "Route 25",
+          "Viridian Forest",
+          "Pattern Bush"
         ]
       },
       "leafgreen": {
         "locations": [
-          "kanto route 2 south towards viridian city",
-          "kanto route 24 area",
-          "kanto route 25 area",
-          "viridian forest area",
-          "pattern bush area"
+          "Route 2 South Towards Viridian City",
+          "Route 24",
+          "Route 25",
+          "Viridian Forest",
+          "Pattern Bush"
         ]
       }
     },
     "11": {
       "firered": {
         "locations": [
-          "kanto route 24 area",
-          "kanto route 25 area",
-          "viridian forest area",
-          "pattern bush area"
+          "Route 24",
+          "Route 25",
+          "Viridian Forest",
+          "Pattern Bush"
         ]
       },
       "leafgreen": {
         "locations": [
-          "kanto route 24 area",
-          "kanto route 25 area",
-          "viridian forest area",
-          "pattern bush area"
+          "Route 24",
+          "Route 25",
+          "Viridian Forest",
+          "Pattern Bush"
         ]
       }
     },
@@ -935,38 +936,38 @@
     "13": {
       "firered": {
         "locations": [
-          "kanto route 2 south towards viridian city",
-          "kanto route 24 area",
-          "kanto route 25 area",
-          "viridian forest area",
-          "pattern bush area"
+          "Route 2 South Towards Viridian City",
+          "Route 24",
+          "Route 25",
+          "Viridian Forest",
+          "Pattern Bush"
         ]
       },
       "leafgreen": {
         "locations": [
-          "kanto route 2 south towards viridian city",
-          "kanto route 24 area",
-          "kanto route 25 area",
-          "viridian forest area",
-          "pattern bush area"
+          "Route 2 South Towards Viridian City",
+          "Route 24",
+          "Route 25",
+          "Viridian Forest",
+          "Pattern Bush"
         ]
       }
     },
     "14": {
       "firered": {
         "locations": [
-          "kanto route 24 area",
-          "kanto route 25 area",
-          "viridian forest area",
-          "pattern bush area"
+          "Route 24",
+          "Route 25",
+          "Viridian Forest",
+          "Pattern Bush"
         ]
       },
       "leafgreen": {
         "locations": [
-          "kanto route 24 area",
-          "kanto route 25 area",
-          "viridian forest area",
-          "pattern bush area"
+          "Route 24",
+          "Route 25",
+          "Viridian Forest",
+          "Pattern Bush"
         ]
       }
     },
@@ -985,64 +986,64 @@
     "16": {
       "firered": {
         "locations": [
-          "kanto route 12 area",
-          "kanto route 1 area",
-          "kanto route 2 south towards viridian city",
-          "kanto route 3 area",
-          "kanto route 5 area",
-          "kanto route 6 area",
-          "kanto route 7 area",
-          "kanto route 8 area",
-          "kanto route 13 area",
-          "kanto route 14 area",
-          "kanto route 15 area",
-          "kanto route 24 area",
-          "kanto route 25 area",
-          "berry forest area",
-          "bond bridge area",
-          "five isle meadow area"
+          "Route 12",
+          "Route 1",
+          "Route 2 South Towards Viridian City",
+          "Route 3",
+          "Route 5",
+          "Route 6",
+          "Route 7",
+          "Route 8",
+          "Route 13",
+          "Route 14",
+          "Route 15",
+          "Route 24",
+          "Route 25",
+          "Berry Forest",
+          "Bond Bridge",
+          "Five Isle Meadow"
         ]
       },
       "leafgreen": {
         "locations": [
-          "kanto route 12 area",
-          "kanto route 1 area",
-          "kanto route 2 south towards viridian city",
-          "kanto route 3 area",
-          "kanto route 5 area",
-          "kanto route 6 area",
-          "kanto route 7 area",
-          "kanto route 8 area",
-          "kanto route 13 area",
-          "kanto route 14 area",
-          "kanto route 15 area",
-          "kanto route 24 area",
-          "kanto route 25 area",
-          "berry forest area",
-          "bond bridge area",
-          "five isle meadow area"
+          "Route 12",
+          "Route 1",
+          "Route 2 South Towards Viridian City",
+          "Route 3",
+          "Route 5",
+          "Route 6",
+          "Route 7",
+          "Route 8",
+          "Route 13",
+          "Route 14",
+          "Route 15",
+          "Route 24",
+          "Route 25",
+          "Berry Forest",
+          "Bond Bridge",
+          "Five Isle Meadow"
         ]
       }
     },
     "17": {
       "firered": {
         "locations": [
-          "kanto route 13 area",
-          "kanto route 14 area",
-          "kanto route 15 area",
-          "berry forest area",
-          "bond bridge area",
-          "five isle meadow area"
+          "Route 13",
+          "Route 14",
+          "Route 15",
+          "Berry Forest",
+          "Bond Bridge",
+          "Five Isle Meadow"
         ]
       },
       "leafgreen": {
         "locations": [
-          "kanto route 13 area",
-          "kanto route 14 area",
-          "kanto route 15 area",
-          "berry forest area",
-          "bond bridge area",
-          "five isle meadow area"
+          "Route 13",
+          "Route 14",
+          "Route 15",
+          "Berry Forest",
+          "Bond Bridge",
+          "Five Isle Meadow"
         ]
       }
     },
@@ -1061,177 +1062,178 @@
     "19": {
       "firered": {
         "locations": [
-          "kanto route 1 area",
-          "kanto route 2 south towards viridian city",
-          "kanto route 4 area",
-          "kanto route 9 area",
-          "kanto route 16 area",
-          "kanto route 17 area",
-          "kanto route 18 area",
-          "kanto route 22 area",
-          "pokemon mansion 1f",
-          "pokemon mansion 2f",
-          "pokemon mansion 3f",
-          "pokemon mansion b1f"
+          "Route 1",
+          "Route 2 South Towards Viridian City",
+          "Route 4",
+          "Route 9",
+          "Route 16",
+          "Route 17",
+          "Route 18",
+          "Route 22",
+          "Pokemon Mansion (1F)",
+          "Pokemon Mansion (2F)",
+          "Pokemon Mansion (3F)",
+          "Pokemon Mansion (B1F)"
         ]
       },
       "leafgreen": {
         "locations": [
-          "kanto route 1 area",
-          "kanto route 2 south towards viridian city",
-          "kanto route 4 area",
-          "kanto route 9 area",
-          "kanto route 16 area",
-          "kanto route 17 area",
-          "kanto route 18 area",
-          "kanto route 22 area",
-          "pokemon mansion 1f",
-          "pokemon mansion 2f",
-          "pokemon mansion 3f",
-          "pokemon mansion b1f"
+          "Route 1",
+          "Route 2 South Towards Viridian City",
+          "Route 4",
+          "Route 9",
+          "Route 16",
+          "Route 17",
+          "Route 18",
+          "Route 22",
+          "Pokemon Mansion (1F)",
+          "Pokemon Mansion (2F)",
+          "Pokemon Mansion (3F)",
+          "Pokemon Mansion (B1F)"
         ]
       }
     },
     "20": {
       "firered": {
         "locations": [
-          "kanto route 16 area",
-          "kanto route 17 area",
-          "kanto route 18 area",
-          "pokemon mansion 1f",
-          "pokemon mansion 2f",
-          "pokemon mansion 3f",
-          "pokemon mansion b1f"
+          "Route 16",
+          "Route 17",
+          "Route 18",
+          "Pokemon Mansion (1F)",
+          "Pokemon Mansion (2F)",
+          "Pokemon Mansion (3F)",
+          "Pokemon Mansion (B1F)"
         ]
       },
       "leafgreen": {
         "locations": [
-          "kanto route 16 area",
-          "kanto route 17 area",
-          "kanto route 18 area",
-          "pokemon mansion 1f",
-          "pokemon mansion 2f",
-          "pokemon mansion 3f",
-          "pokemon mansion b1f"
+          "Route 16",
+          "Route 17",
+          "Route 18",
+          "Pokemon Mansion (1F)",
+          "Pokemon Mansion (2F)",
+          "Pokemon Mansion (3F)",
+          "Pokemon Mansion (B1F)"
         ]
       }
     },
     "21": {
       "firered": {
         "locations": [
-          "kanto route 3 area",
-          "kanto route 4 area",
-          "kanto route 9 area",
-          "kanto route 10 area",
-          "kanto route 11 area",
-          "kanto route 16 area",
-          "kanto route 17 area",
-          "kanto route 18 area",
-          "kanto route 22 area",
-          "kanto route 23 area",
-          "mt ember area",
-          "kindle road area",
-          "treasure beach area",
-          "cape brink area",
-          "water path area",
-          "ruin valley area",
-          "canyon entrance area"
+          "Route 3",
+          "Route 4",
+          "Route 9",
+          "Route 10",
+          "Route 11",
+          "Route 16",
+          "Route 17",
+          "Route 18",
+          "Route 22",
+          "Route 23",
+          "Mt. Ember",
+          "Kindle Road",
+          "Treasure Beach",
+          "Cape Brink",
+          "Water Path",
+          "Ruin Valley",
+          "Canyon Entrance"
         ]
       },
       "leafgreen": {
         "locations": [
-          "kanto route 3 area",
-          "kanto route 4 area",
-          "kanto route 9 area",
-          "kanto route 10 area",
-          "kanto route 11 area",
-          "kanto route 16 area",
-          "kanto route 17 area",
-          "kanto route 18 area",
-          "kanto route 22 area",
-          "kanto route 23 area",
-          "mt ember area",
-          "kindle road area",
-          "treasure beach area",
-          "cape brink area",
-          "water path area",
-          "ruin valley area",
-          "canyon entrance area"
+          "Route 3",
+          "Route 4",
+          "Route 9",
+          "Route 10",
+          "Route 11",
+          "Route 16",
+          "Route 17",
+          "Route 18",
+          "Route 22",
+          "Route 23",
+          "Mt. Ember",
+          "Kindle Road",
+          "Treasure Beach",
+          "Cape Brink",
+          "Water Path",
+          "Ruin Valley",
+          "Canyon Entrance"
         ]
       }
     },
     "22": {
       "firered": {
         "locations": [
-          "kanto route 17 area",
-          "kanto route 18 area",
-          "kanto route 23 area",
-          "mt ember area",
-          "kindle road area",
-          "treasure beach area",
-          "cape brink area",
-          "water path area",
-          "ruin valley area",
-          "canyon entrance area",
-          "sevault canyon area"
+          "Route 17",
+          "Route 18",
+          "Route 23",
+          "Mt. Ember",
+          "Kindle Road",
+          "Treasure Beach",
+          "Cape Brink",
+          "Water Path",
+          "Ruin Valley",
+          "Canyon Entrance",
+          "Sevault Canyon"
         ]
       },
       "leafgreen": {
         "locations": [
-          "kanto route 17 area",
-          "kanto route 18 area",
-          "kanto route 23 area",
-          "mt ember area",
-          "kindle road area",
-          "treasure beach area",
-          "cape brink area",
-          "water path area",
-          "ruin valley area",
-          "canyon entrance area",
-          "sevault canyon area"
+          "Route 17",
+          "Route 18",
+          "Route 23",
+          "Mt. Ember",
+          "Kindle Road",
+          "Treasure Beach",
+          "Cape Brink",
+          "Water Path",
+          "Ruin Valley",
+          "Canyon Entrance",
+          "Sevault Canyon"
         ]
       }
     },
     "23": {
       "firered": {
         "locations": [
-          "kanto route 4 area",
-          "kanto route 8 area",
-          "kanto route 9 area",
-          "kanto route 10 area",
-          "kanto route 11 area",
-          "kanto route 23 area"
+          "Route 4",
+          "Route 8",
+          "Route 9",
+          "Route 10",
+          "Route 11",
+          "Route 23"
         ]
       },
       "leafgreen": {
         "locations": [
-          "Trade, Event"
+          "Trade",
+          "Event"
         ]
       }
     },
     "24": {
       "firered": {
         "locations": [
-          "kanto route 23 area",
-          "kanto victory road 2 1f",
-          "kanto victory road 2 2f",
-          "kanto victory road 2 3f"
+          "Route 23",
+          "Victory Road 2 (1F)",
+          "Victory Road 2 (2F)",
+          "Victory Road 2 (3F)"
         ]
       }
     },
     "25": {
       "firered": {
         "locations": [
-          "viridian forest area",
-          "kanto power plant area",
-          "kanto pokecenter area"
+          "Viridian Forest",
+          "Power Plant",
+          "Pokecenter"
         ]
       },
       "leafgreen": {
         "locations": [
-          "viridian forest area",
-          "kanto power plant area",
-          "kanto pokecenter area"
+          "Viridian Forest",
+          "Power Plant",
+          "Pokecenter"
         ]
       }
     },
@@ -1250,63 +1252,70 @@
     "27": {
       "leafgreen": {
         "locations": [
-          "kanto route 4 area",
-          "kanto route 8 area",
-          "kanto route 9 area",
-          "kanto route 10 area",
-          "kanto route 11 area",
-          "kanto route 23 area"
+          "Route 4",
+          "Route 8",
+          "Route 9",
+          "Route 10",
+          "Route 11",
+          "Route 23"
         ]
       },
       "firered": {
         "locations": [
-          "Trade, Event"
+          "Trade",
+          "Event"
         ]
       }
     },
     "28": {
       "leafgreen": {
         "locations": [
-          "kanto route 23 area",
-          "kanto victory road 2 1f",
-          "kanto victory road 2 2f",
-          "kanto victory road 2 3f"
+          "Route 23",
+          "Victory Road 2 (1F)",
+          "Victory Road 2 (2F)",
+          "Victory Road 2 (3F)"
+        ]
+      },
+      "firered": {
+        "locations": [
+          "Cerulean Cave (1F)",
+          "Cerulean Cave (2F)"
         ]
       }
     },
     "29": {
       "firered": {
         "locations": [
-          "kanto route 3 area",
-          "kanto safari zone area 1 east",
-          "kanto safari zone area 3 west",
-          "kanto underground path area"
+          "Route 3",
+          "Safari Zone Area 1 East",
+          "Safari Zone Area 3 West",
+          "Underground Path"
         ]
       },
       "leafgreen": {
         "locations": [
-          "kanto route 3 area",
-          "kanto safari zone middle",
-          "kanto safari zone area 1 east",
-          "kanto safari zone area 2 north",
-          "kanto safari zone area 3 west"
+          "Route 3",
+          "Safari Zone Middle",
+          "Safari Zone Area 1 East",
+          "Safari Zone Area 2 North",
+          "Safari Zone Area 3 West"
         ]
       }
     },
     "30": {
       "firered": {
         "locations": [
-          "kanto route 11 area",
-          "kanto safari zone middle",
-          "kanto safari zone area 2 north"
+          "Route 11",
+          "Safari Zone Middle",
+          "Safari Zone Area 2 North"
         ]
       },
       "leafgreen": {
         "locations": [
-          "kanto safari zone middle",
-          "kanto safari zone area 1 east",
-          "kanto safari zone area 2 north",
-          "kanto safari zone area 3 west"
+          "Safari Zone Middle",
+          "Safari Zone Area 1 East",
+          "Safari Zone Area 2 North",
+          "Safari Zone Area 3 West"
         ]
       }
     },
@@ -1325,36 +1334,36 @@
     "32": {
       "firered": {
         "locations": [
-          "kanto route 3 area",
-          "kanto safari zone middle",
-          "kanto safari zone area 1 east",
-          "kanto safari zone area 2 north",
-          "kanto safari zone area 3 west"
+          "Route 3",
+          "Safari Zone Middle",
+          "Safari Zone Area 1 East",
+          "Safari Zone Area 2 North",
+          "Safari Zone Area 3 West"
         ]
       },
       "leafgreen": {
         "locations": [
-          "kanto route 3 area",
-          "kanto safari zone area 1 east",
-          "kanto safari zone area 3 west",
-          "kanto underground path area"
+          "Route 3",
+          "Safari Zone Area 1 East",
+          "Safari Zone Area 3 West",
+          "Underground Path"
         ]
       }
     },
     "33": {
       "leafgreen": {
         "locations": [
-          "kanto route 11 area",
-          "kanto safari zone middle",
-          "kanto safari zone area 2 north"
+          "Route 11",
+          "Safari Zone Middle",
+          "Safari Zone Area 2 North"
         ]
       },
       "firered": {
         "locations": [
-          "kanto safari zone middle",
-          "kanto safari zone area 1 east",
-          "kanto safari zone area 2 north",
-          "kanto safari zone area 3 west"
+          "Safari Zone Middle",
+          "Safari Zone Area 1 East",
+          "Safari Zone Area 2 North",
+          "Safari Zone Area 3 West"
         ]
       }
     },
@@ -1373,16 +1382,16 @@
     "35": {
       "firered": {
         "locations": [
-          "mt moon 1f",
-          "mt moon b2f",
-          "celadon city prize corner"
+          "Mt. Moon (1F)",
+          "Mt. Moon (B2F)",
+          "Celadon City Prize Corner"
         ]
       },
       "leafgreen": {
         "locations": [
-          "mt moon 1f",
-          "mt moon b2f",
-          "celadon city prize corner"
+          "Mt. Moon (1F)",
+          "Mt. Moon (B2F)",
+          "Celadon City Prize Corner"
         ]
       }
     },
@@ -1401,17 +1410,18 @@
     "37": {
       "leafgreen": {
         "locations": [
-          "kanto route 7 area",
-          "kanto route 8 area",
-          "pokemon mansion 1f",
-          "pokemon mansion 2f",
-          "pokemon mansion 3f",
-          "pokemon mansion b1f"
+          "Route 7",
+          "Route 8",
+          "Pokemon Mansion (1F)",
+          "Pokemon Mansion (2F)",
+          "Pokemon Mansion (3F)",
+          "Pokemon Mansion (B1F)"
         ]
       },
       "firered": {
         "locations": [
-          "Trade, Event"
+          "Trade",
+          "Event"
         ]
       }
     },
@@ -1420,17 +1430,22 @@
         "locations": [
           "Evolve Vulpix"
         ]
+      },
+      "firered": {
+        "locations": [
+          "Evolve Vulpix"
+        ]
       }
     },
     "39": {
       "firered": {
         "locations": [
-          "kanto route 3 area"
+          "Route 3"
         ]
       },
       "leafgreen": {
         "locations": [
-          "kanto route 3 area"
+          "Route 3"
         ]
       }
     },
@@ -1449,164 +1464,172 @@
     "41": {
       "firered": {
         "locations": [
-          "seafoam islands 1f",
-          "seafoam islands b1f",
-          "seafoam islands b2f",
-          "seafoam islands b3f",
-          "mt moon 1f",
-          "rock tunnel 1f",
-          "rock tunnel b1f",
-          "mt moon b2f",
-          "kanto victory road 2 1f",
-          "kanto victory road 2 2f",
-          "kanto victory road 2 3f",
-          "icefall cave entrance",
-          "icefall cave 1f",
-          "icefall cave b1f",
-          "icefall cave waterfall",
-          "lost cave room 1",
-          "lost cave room 2",
-          "lost cave room 3",
-          "lost cave room 4",
-          "lost cave room 5",
-          "lost cave room 6",
-          "lost cave room 7",
-          "lost cave room 8",
-          "lost cave room 9",
-          "lost cave room 10",
-          "lost cave item rooms",
-          "kanto altering cave a"
+          "Seafoam Islands (1F)",
+          "Seafoam Islands (B1F)",
+          "Seafoam Islands (B2F)",
+          "Seafoam Islands (B3F)",
+          "Mt. Moon (1F)",
+          "Rock Tunnel (1F)",
+          "Rock Tunnel (B1F)",
+          "Mt. Moon (B2F)",
+          "Victory Road 2 (1F)",
+          "Victory Road 2 (2F)",
+          "Victory Road 2 (3F)",
+          "Icefall Cave Entrance",
+          "Icefall Cave (1F)",
+          "Icefall Cave (B1F)",
+          "Icefall Cave Waterfall",
+          "Lost Cave Room 1",
+          "Lost Cave Room 2",
+          "Lost Cave Room 3",
+          "Lost Cave Room 4",
+          "Lost Cave Room 5",
+          "Lost Cave Room 6",
+          "Lost Cave Room 7",
+          "Lost Cave Room 8",
+          "Lost Cave Room 9",
+          "Lost Cave Room 10",
+          "Lost Cave Item Rooms",
+          "Altering Cave A"
         ]
       },
       "leafgreen": {
         "locations": [
-          "seafoam islands 1f",
-          "seafoam islands b1f",
-          "seafoam islands b2f",
-          "seafoam islands b3f",
-          "mt moon 1f",
-          "rock tunnel 1f",
-          "rock tunnel b1f",
-          "mt moon b2f",
-          "kanto victory road 2 1f",
-          "kanto victory road 2 2f",
-          "kanto victory road 2 3f",
-          "icefall cave entrance",
-          "icefall cave 1f",
-          "icefall cave b1f",
-          "icefall cave waterfall",
-          "lost cave room 1",
-          "lost cave room 2",
-          "lost cave room 3",
-          "lost cave room 4",
-          "lost cave room 5",
-          "lost cave room 6",
-          "lost cave room 7",
-          "lost cave room 8",
-          "lost cave room 9",
-          "lost cave room 10",
-          "lost cave item rooms",
-          "kanto altering cave a"
+          "Seafoam Islands (1F)",
+          "Seafoam Islands (B1F)",
+          "Seafoam Islands (B2F)",
+          "Seafoam Islands (B3F)",
+          "Mt. Moon (1F)",
+          "Rock Tunnel (1F)",
+          "Rock Tunnel (B1F)",
+          "Mt. Moon (B2F)",
+          "Victory Road 2 (1F)",
+          "Victory Road 2 (2F)",
+          "Victory Road 2 (3F)",
+          "Icefall Cave Entrance",
+          "Icefall Cave (1F)",
+          "Icefall Cave (B1F)",
+          "Icefall Cave Waterfall",
+          "Lost Cave Room 1",
+          "Lost Cave Room 2",
+          "Lost Cave Room 3",
+          "Lost Cave Room 4",
+          "Lost Cave Room 5",
+          "Lost Cave Room 6",
+          "Lost Cave Room 7",
+          "Lost Cave Room 8",
+          "Lost Cave Room 9",
+          "Lost Cave Room 10",
+          "Lost Cave Item Rooms",
+          "Altering Cave A"
         ]
       }
     },
     "42": {
       "firered": {
         "locations": [
-          "seafoam islands 1f",
-          "seafoam islands b1f",
-          "seafoam islands b2f",
-          "seafoam islands b3f",
-          "seafoam islands b4f",
-          "cerulean cave 1f",
-          "cerulean cave 2f",
-          "cerulean cave b1f",
-          "kanto victory road 2 1f",
-          "kanto victory road 2 2f",
-          "kanto victory road 2 3f",
-          "icefall cave entrance",
-          "icefall cave 1f",
-          "icefall cave b1f",
-          "icefall cave waterfall",
-          "lost cave room 1",
-          "lost cave room 2",
-          "lost cave room 3",
-          "lost cave room 4",
-          "lost cave room 5",
-          "lost cave room 6",
-          "lost cave room 7",
-          "lost cave room 8",
-          "lost cave room 9",
-          "lost cave room 10",
-          "lost cave item rooms"
+          "Seafoam Islands (1F)",
+          "Seafoam Islands (B1F)",
+          "Seafoam Islands (B2F)",
+          "Seafoam Islands (B3F)",
+          "Seafoam Islands (B4F)",
+          "Cerulean Cave (1F)",
+          "Cerulean Cave (2F)",
+          "Cerulean Cave (B1F)",
+          "Victory Road 2 (1F)",
+          "Victory Road 2 (2F)",
+          "Victory Road 2 (3F)",
+          "Icefall Cave Entrance",
+          "Icefall Cave (1F)",
+          "Icefall Cave (B1F)",
+          "Icefall Cave Waterfall",
+          "Lost Cave Room 1",
+          "Lost Cave Room 2",
+          "Lost Cave Room 3",
+          "Lost Cave Room 4",
+          "Lost Cave Room 5",
+          "Lost Cave Room 6",
+          "Lost Cave Room 7",
+          "Lost Cave Room 8",
+          "Lost Cave Room 9",
+          "Lost Cave Room 10",
+          "Lost Cave Item Rooms"
         ]
       },
       "leafgreen": {
         "locations": [
-          "seafoam islands 1f",
-          "seafoam islands b1f",
-          "seafoam islands b2f",
-          "seafoam islands b3f",
-          "seafoam islands b4f",
-          "cerulean cave 1f",
-          "cerulean cave 2f",
-          "cerulean cave b1f",
-          "kanto victory road 2 1f",
-          "kanto victory road 2 2f",
-          "kanto victory road 2 3f",
-          "icefall cave entrance",
-          "icefall cave 1f",
-          "icefall cave b1f",
-          "icefall cave waterfall",
-          "lost cave room 1",
-          "lost cave room 2",
-          "lost cave room 3",
-          "lost cave room 4",
-          "lost cave room 5",
-          "lost cave room 6",
-          "lost cave room 7",
-          "lost cave room 8",
-          "lost cave room 9",
-          "lost cave room 10",
-          "lost cave item rooms"
+          "Seafoam Islands (1F)",
+          "Seafoam Islands (B1F)",
+          "Seafoam Islands (B2F)",
+          "Seafoam Islands (B3F)",
+          "Seafoam Islands (B4F)",
+          "Cerulean Cave (1F)",
+          "Cerulean Cave (2F)",
+          "Cerulean Cave (B1F)",
+          "Victory Road 2 (1F)",
+          "Victory Road 2 (2F)",
+          "Victory Road 2 (3F)",
+          "Icefall Cave Entrance",
+          "Icefall Cave (1F)",
+          "Icefall Cave (B1F)",
+          "Icefall Cave Waterfall",
+          "Lost Cave Room 1",
+          "Lost Cave Room 2",
+          "Lost Cave Room 3",
+          "Lost Cave Room 4",
+          "Lost Cave Room 5",
+          "Lost Cave Room 6",
+          "Lost Cave Room 7",
+          "Lost Cave Room 8",
+          "Lost Cave Room 9",
+          "Lost Cave Room 10",
+          "Lost Cave Item Rooms"
         ]
       }
     },
     "43": {
       "firered": {
         "locations": [
-          "kanto route 12 area",
-          "kanto route 5 area",
-          "kanto route 6 area",
-          "kanto route 7 area",
-          "kanto route 13 area",
-          "kanto route 14 area",
-          "kanto route 15 area",
-          "kanto route 24 area",
-          "kanto route 25 area",
-          "berry forest area",
-          "cape brink area",
-          "bond bridge area",
-          "water path area"
+          "Route 12",
+          "Route 5",
+          "Route 6",
+          "Route 7",
+          "Route 13",
+          "Route 14",
+          "Route 15",
+          "Route 24",
+          "Route 25",
+          "Berry Forest",
+          "Cape Brink",
+          "Bond Bridge",
+          "Water Path"
         ]
       },
       "leafgreen": {
         "locations": [
-          "Trade, Event"
+          "Trade",
+          "Event"
         ]
       }
     },
     "44": {
       "firered": {
         "locations": [
-          "kanto route 12 area",
-          "kanto route 13 area",
-          "kanto route 14 area",
-          "kanto route 15 area",
-          "berry forest area",
-          "cape brink area",
-          "bond bridge area",
-          "water path area"
+          "Route 12",
+          "Route 13",
+          "Route 14",
+          "Route 15",
+          "Berry Forest",
+          "Cape Brink",
+          "Bond Bridge",
+          "Water Path"
+        ]
+      },
+      "leafgreen": {
+        "locations": [
+          "Routes Kanto",
+          "Kanto",
+          "and Kanto"
         ]
       }
     },
@@ -1615,303 +1638,321 @@
         "locations": [
           "Evolve Gloom"
         ]
+      },
+      "leafgreen": {
+        "locations": [
+          "Evolve Gloom"
+        ]
       }
     },
     "46": {
       "firered": {
         "locations": [
-          "mt moon 1f",
-          "mt moon b1f",
-          "mt moon b2f",
-          "kanto safari zone area 1 east",
-          "kanto safari zone area 2 north"
+          "Mt. Moon (1F)",
+          "Mt. Moon (B1F)",
+          "Mt. Moon (B2F)",
+          "Safari Zone Area 1 East",
+          "Safari Zone Area 2 North"
         ]
       },
       "leafgreen": {
         "locations": [
-          "mt moon 1f",
-          "mt moon b1f",
-          "mt moon b2f",
-          "kanto safari zone area 1 east",
-          "kanto safari zone area 2 north"
+          "Mt. Moon (1F)",
+          "Mt. Moon (B1F)",
+          "Mt. Moon (B2F)",
+          "Safari Zone Area 1 East",
+          "Safari Zone Area 2 North"
         ]
       }
     },
     "47": {
       "firered": {
         "locations": [
-          "cerulean cave 1f",
-          "cerulean cave 2f",
-          "cerulean cave b1f",
-          "kanto safari zone middle",
-          "kanto safari zone area 1 east"
+          "Cerulean Cave (1F)",
+          "Cerulean Cave (2F)",
+          "Cerulean Cave (B1F)",
+          "Safari Zone Middle",
+          "Safari Zone Area 1 East"
         ]
       },
       "leafgreen": {
         "locations": [
-          "cerulean cave 1f",
-          "cerulean cave 2f",
-          "cerulean cave b1f",
-          "kanto safari zone middle",
-          "kanto safari zone area 1 east"
+          "Cerulean Cave (1F)",
+          "Cerulean Cave (2F)",
+          "Cerulean Cave (B1F)",
+          "Safari Zone Middle",
+          "Safari Zone Area 1 East"
         ]
       }
     },
     "48": {
       "firered": {
         "locations": [
-          "kanto route 12 area",
-          "kanto route 13 area",
-          "kanto route 14 area",
-          "kanto route 15 area",
-          "kanto safari zone middle",
-          "kanto safari zone area 3 west",
-          "berry forest area",
-          "bond bridge area"
+          "Route 12",
+          "Route 13",
+          "Route 14",
+          "Route 15",
+          "Safari Zone Middle",
+          "Safari Zone Area 3 West",
+          "Berry Forest",
+          "Bond Bridge"
         ]
       },
       "leafgreen": {
         "locations": [
-          "kanto route 12 area",
-          "kanto route 13 area",
-          "kanto route 14 area",
-          "kanto route 15 area",
-          "kanto safari zone middle",
-          "kanto safari zone area 3 west",
-          "berry forest area",
-          "bond bridge area"
+          "Route 12",
+          "Route 13",
+          "Route 14",
+          "Route 15",
+          "Safari Zone Middle",
+          "Safari Zone Area 3 West",
+          "Berry Forest",
+          "Bond Bridge"
         ]
       }
     },
     "49": {
       "firered": {
         "locations": [
-          "kanto safari zone area 2 north",
-          "kanto safari zone area 3 west",
-          "berry forest area"
+          "Safari Zone Area 2 North",
+          "Safari Zone Area 3 West",
+          "Berry Forest"
         ]
       },
       "leafgreen": {
         "locations": [
-          "kanto safari zone area 2 north",
-          "kanto safari zone area 3 west",
-          "berry forest area"
+          "Safari Zone Area 2 North",
+          "Safari Zone Area 3 West",
+          "Berry Forest"
         ]
       }
     },
     "50": {
       "firered": {
         "locations": [
-          "digletts cave area"
+          "Digletts Cave"
         ]
       },
       "leafgreen": {
         "locations": [
-          "digletts cave area"
+          "Digletts Cave"
         ]
       }
     },
     "51": {
       "firered": {
         "locations": [
-          "digletts cave area"
+          "Digletts Cave"
         ]
       },
       "leafgreen": {
         "locations": [
-          "digletts cave area"
+          "Digletts Cave"
         ]
       }
     },
     "52": {
       "firered": {
         "locations": [
-          "kanto route 5 area",
-          "kanto route 6 area",
-          "kanto route 7 area",
-          "kanto route 8 area",
-          "kindle road area",
-          "treasure beach area",
-          "cape brink area",
-          "bond bridge area",
-          "five isle meadow area",
-          "water path area",
-          "ruin valley area",
-          "canyon entrance area",
-          "sevault canyon area"
+          "Route 5",
+          "Route 6",
+          "Route 7",
+          "Route 8",
+          "Kindle Road",
+          "Treasure Beach",
+          "Cape Brink",
+          "Bond Bridge",
+          "Five Isle Meadow",
+          "Water Path",
+          "Ruin Valley",
+          "Canyon Entrance",
+          "Sevault Canyon"
         ]
       },
       "leafgreen": {
         "locations": [
-          "kanto route 5 area",
-          "kanto route 6 area",
-          "kanto route 7 area",
-          "kanto route 8 area",
-          "kindle road area",
-          "treasure beach area",
-          "cape brink area",
-          "bond bridge area",
-          "five isle meadow area",
-          "water path area",
-          "ruin valley area",
-          "canyon entrance area",
-          "sevault canyon area"
+          "Route 5",
+          "Route 6",
+          "Route 7",
+          "Route 8",
+          "Kindle Road",
+          "Treasure Beach",
+          "Cape Brink",
+          "Bond Bridge",
+          "Five Isle Meadow",
+          "Water Path",
+          "Ruin Valley",
+          "Canyon Entrance",
+          "Sevault Canyon"
         ]
       }
     },
     "53": {
       "firered": {
         "locations": [
-          "kindle road area",
-          "treasure beach area",
-          "cape brink area",
-          "bond bridge area",
-          "five isle meadow area",
-          "water path area",
-          "ruin valley area",
-          "canyon entrance area",
-          "sevault canyon area"
+          "Kindle Road",
+          "Treasure Beach",
+          "Cape Brink",
+          "Bond Bridge",
+          "Five Isle Meadow",
+          "Water Path",
+          "Ruin Valley",
+          "Canyon Entrance",
+          "Sevault Canyon"
         ]
       },
       "leafgreen": {
         "locations": [
-          "kindle road area",
-          "treasure beach area",
-          "cape brink area",
-          "bond bridge area",
-          "five isle meadow area",
-          "water path area",
-          "ruin valley area",
-          "canyon entrance area",
-          "sevault canyon area"
+          "Kindle Road",
+          "Treasure Beach",
+          "Cape Brink",
+          "Bond Bridge",
+          "Five Isle Meadow",
+          "Water Path",
+          "Ruin Valley",
+          "Canyon Entrance",
+          "Sevault Canyon"
         ]
       }
     },
     "54": {
       "firered": {
         "locations": [
-          "seafoam islands 1f",
-          "seafoam islands b1f",
-          "seafoam islands b2f",
-          "seafoam islands b3f",
-          "seafoam islands b4f",
-          "kanto route 12 area",
-          "kanto sea route 19 area",
-          "kanto sea route 20 area",
-          "cinnabar island area",
-          "viridian city area",
-          "cerulean city area",
-          "vermilion city area",
-          "celadon city area",
-          "fuchsia city area",
-          "pallet town area",
-          "kanto route 4 area",
-          "kanto route 6 area",
-          "kanto route 10 area",
-          "kanto route 11 area",
-          "kanto route 13 area",
-          "kanto sea route 21 area",
-          "kanto route 22 area",
-          "kanto route 24 area",
-          "kanto route 25 area",
-          "cerulean cave 1f",
-          "cerulean cave b1f",
-          "kanto route 23 area",
-          "kanto safari zone middle",
-          "kanto safari zone area 1 east",
-          "kanto safari zone area 2 north",
-          "kanto safari zone area 3 west",
-          "ss anne area",
-          "berry forest area",
-          "icefall cave entrance",
-          "icefall cave waterfall",
-          "kindle road area",
-          "treasure beach area",
-          "cape brink area",
-          "bond bridge area",
-          "resort gorgeous area",
-          "water labyrinth area",
-          "five isle meadow area",
-          "memorial pillar area",
-          "outcast island area",
-          "green path area",
-          "water path area",
-          "ruin valley area",
-          "trainer tower area",
-          "canyon entrance area",
-          "tanoby ruins area",
-          "one island area",
-          "four island area",
-          "five island area"
+          "Seafoam Islands (1F)",
+          "Seafoam Islands (B1F)",
+          "Seafoam Islands (B2F)",
+          "Seafoam Islands (B3F)",
+          "Seafoam Islands (B4F)",
+          "Route 12",
+          "Sea Route 19",
+          "Sea Route 20",
+          "Cinnabar Island",
+          "Viridian City",
+          "Cerulean City",
+          "Vermilion City",
+          "Celadon City",
+          "Fuchsia City",
+          "Pallet Town",
+          "Route 4",
+          "Route 6",
+          "Route 10",
+          "Route 11",
+          "Route 13",
+          "Sea Route 21",
+          "Route 22",
+          "Route 24",
+          "Route 25",
+          "Cerulean Cave (1F)",
+          "Cerulean Cave (B1F)",
+          "Route 23",
+          "Safari Zone Middle",
+          "Safari Zone Area 1 East",
+          "Safari Zone Area 2 North",
+          "Safari Zone Area 3 West",
+          "Ss Anne",
+          "Berry Forest",
+          "Icefall Cave Entrance",
+          "Icefall Cave Waterfall",
+          "Kindle Road",
+          "Treasure Beach",
+          "Cape Brink",
+          "Bond Bridge",
+          "Resort Gorgeous",
+          "Water Labyrinth",
+          "Five Isle Meadow",
+          "Memorial Pillar",
+          "Outcast Island",
+          "Green Path",
+          "Water Path",
+          "Ruin Valley",
+          "Trainer Tower",
+          "Canyon Entrance",
+          "Tanoby Ruins",
+          "One Island",
+          "Four Island",
+          "Five Island"
         ]
       },
       "leafgreen": {
         "locations": [
-          "Trade, Event"
+          "Trade",
+          "Event"
         ]
       }
     },
     "55": {
       "firered": {
         "locations": [
-          "seafoam islands b1f",
-          "seafoam islands b2f",
-          "seafoam islands b3f",
-          "seafoam islands b4f",
-          "cerulean cave 1f",
-          "cerulean cave b1f",
-          "berry forest area",
-          "cape brink area"
+          "Seafoam Islands (B1F)",
+          "Seafoam Islands (B2F)",
+          "Seafoam Islands (B3F)",
+          "Seafoam Islands (B4F)",
+          "Cerulean Cave (1F)",
+          "Cerulean Cave (B1F)",
+          "Berry Forest",
+          "Cape Brink"
+        ]
+      },
+      "leafgreen": {
+        "locations": [
+          "Seafoam Islands (B2F)",
+          "Seafoam Islands (B4F)"
         ]
       }
     },
     "56": {
       "firered": {
         "locations": [
-          "rock tunnel 1f",
-          "rock tunnel b1f",
-          "kanto route 3 area",
-          "kanto route 4 area",
-          "kanto route 22 area",
-          "kanto route 23 area"
+          "Rock Tunnel (1F)",
+          "Rock Tunnel (B1F)",
+          "Route 3",
+          "Route 4",
+          "Route 22",
+          "Route 23"
         ]
       },
       "leafgreen": {
         "locations": [
-          "rock tunnel 1f",
-          "rock tunnel b1f",
-          "kanto route 3 area",
-          "kanto route 4 area",
-          "kanto route 22 area",
-          "kanto route 23 area"
+          "Rock Tunnel (1F)",
+          "Rock Tunnel (B1F)",
+          "Route 3",
+          "Route 4",
+          "Route 22",
+          "Route 23"
         ]
       }
     },
     "57": {
       "firered": {
         "locations": [
-          "cerulean cave 1f",
-          "kanto route 23 area",
-          "kanto victory road 2 2f"
+          "Cerulean Cave (1F)",
+          "Route 23",
+          "Victory Road 2 (2F)"
         ]
       },
       "leafgreen": {
         "locations": [
-          "cerulean cave 1f",
-          "kanto route 23 area",
-          "kanto victory road 2 2f"
+          "Cerulean Cave (1F)",
+          "Route 23",
+          "Victory Road 2 (2F)"
         ]
       }
     },
     "58": {
       "firered": {
         "locations": [
-          "kanto route 7 area",
-          "kanto route 8 area",
-          "pokemon mansion 1f",
-          "pokemon mansion 2f",
-          "pokemon mansion 3f",
-          "pokemon mansion b1f"
+          "Route 7",
+          "Route 8",
+          "Pokemon Mansion (1F)",
+          "Pokemon Mansion (2F)",
+          "Pokemon Mansion (3F)",
+          "Pokemon Mansion (B1F)"
+        ]
+      },
+      "leafgreen": {
+        "locations": [
+          "Routes Kanto and Kanto",
+          "Pokémon Mansion"
         ]
       }
     },
@@ -1920,81 +1961,86 @@
         "locations": [
           "Evolve Growlithe"
         ]
+      },
+      "leafgreen": {
+        "locations": [
+          "Evolve Growlithe"
+        ]
       }
     },
     "60": {
       "firered": {
         "locations": [
-          "viridian city area",
-          "fuchsia city area",
-          "kanto route 6 area",
-          "kanto route 22 area",
-          "kanto route 25 area",
-          "cerulean cave 1f",
-          "cerulean cave b1f",
-          "kanto route 23 area",
-          "kanto safari zone middle",
-          "kanto safari zone area 1 east",
-          "kanto safari zone area 2 north",
-          "kanto safari zone area 3 west",
-          "berry forest area",
-          "icefall cave entrance",
-          "cape brink area",
-          "ruin valley area",
-          "four island area"
+          "Viridian City",
+          "Fuchsia City",
+          "Route 6",
+          "Route 22",
+          "Route 25",
+          "Cerulean Cave (1F)",
+          "Cerulean Cave (B1F)",
+          "Route 23",
+          "Safari Zone Middle",
+          "Safari Zone Area 1 East",
+          "Safari Zone Area 2 North",
+          "Safari Zone Area 3 West",
+          "Berry Forest",
+          "Icefall Cave Entrance",
+          "Cape Brink",
+          "Ruin Valley",
+          "Four Island"
         ]
       },
       "leafgreen": {
         "locations": [
-          "viridian city area",
-          "fuchsia city area",
-          "kanto route 6 area",
-          "kanto route 22 area",
-          "kanto route 25 area",
-          "cerulean cave 1f",
-          "cerulean cave b1f",
-          "kanto route 23 area",
-          "kanto safari zone middle",
-          "kanto safari zone area 1 east",
-          "kanto safari zone area 2 north",
-          "kanto safari zone area 3 west",
-          "berry forest area",
-          "icefall cave entrance",
-          "cape brink area",
-          "ruin valley area",
-          "four island area"
+          "Viridian City",
+          "Fuchsia City",
+          "Route 6",
+          "Route 22",
+          "Route 25",
+          "Cerulean Cave (1F)",
+          "Cerulean Cave (B1F)",
+          "Route 23",
+          "Safari Zone Middle",
+          "Safari Zone Area 1 East",
+          "Safari Zone Area 2 North",
+          "Safari Zone Area 3 West",
+          "Berry Forest",
+          "Icefall Cave Entrance",
+          "Cape Brink",
+          "Ruin Valley",
+          "Four Island"
         ]
       }
     },
     "61": {
       "firered": {
         "locations": [
-          "viridian city area",
-          "kanto route 6 area",
-          "kanto route 22 area",
-          "kanto route 25 area",
-          "cerulean cave 1f",
-          "cerulean cave b1f",
-          "kanto route 23 area",
-          "icefall cave entrance",
-          "cape brink area",
-          "ruin valley area",
-          "four island area"
+          "Viridian City",
+          "Route 6",
+          "Route 22",
+          "Route 25",
+          "Cerulean Cave (1F)",
+          "Cerulean Cave (B1F)",
+          "Route 23",
+          "Icefall Cave Entrance",
+          "Cape Brink",
+          "Ruin Valley",
+          "Four Island"
         ]
       },
       "leafgreen": {
         "locations": [
-          "viridian city area",
-          "kanto route 6 area",
-          "kanto route 22 area",
-          "kanto route 25 area",
-          "cerulean cave 1f",
-          "cerulean cave b1f",
-          "kanto route 23 area",
-          "icefall cave entrance",
-          "cape brink area",
-          "ruin valley area",
-          "four island area"
+          "Viridian City",
+          "Route 6",
+          "Route 22",
+          "Route 25",
+          "Cerulean Cave (1F)",
+          "Cerulean Cave (B1F)",
+          "Route 23",
+          "Icefall Cave Entrance",
+          "Cape Brink",
+          "Ruin Valley",
+          "Four Island"
         ]
       }
     },
@@ -2013,30 +2059,30 @@
     "63": {
       "firered": {
         "locations": [
-          "kanto route 24 area",
-          "kanto route 25 area",
-          "celadon city prize corner"
+          "Route 24",
+          "Route 25",
+          "Celadon City Prize Corner"
         ]
       },
       "leafgreen": {
         "locations": [
-          "kanto route 24 area",
-          "kanto route 25 area",
-          "celadon city prize corner"
+          "Route 24",
+          "Route 25",
+          "Celadon City Prize Corner"
         ]
       }
     },
     "64": {
       "firered": {
         "locations": [
-          "cerulean cave 2f",
-          "cerulean cave b1f"
+          "Cerulean Cave (2F)",
+          "Cerulean Cave (B1F)"
         ]
       },
       "leafgreen": {
         "locations": [
-          "cerulean cave 2f",
-          "cerulean cave b1f"
+          "Cerulean Cave (2F)",
+          "Cerulean Cave (B1F)"
         ]
       }
     },
@@ -2055,54 +2101,54 @@
     "66": {
       "firered": {
         "locations": [
-          "rock tunnel 1f",
-          "rock tunnel b1f",
-          "kanto victory road 2 1f",
-          "kanto victory road 2 2f",
-          "kanto victory road 2 3f",
-          "mt ember area",
-          "mt ember cave",
-          "mt ember inside",
-          "mt ember 1f cave behind team rocket"
+          "Rock Tunnel (1F)",
+          "Rock Tunnel (B1F)",
+          "Victory Road 2 (1F)",
+          "Victory Road 2 (2F)",
+          "Victory Road 2 (3F)",
+          "Mt. Ember",
+          "Mt. Ember Cave",
+          "Mt. Ember Inside",
+          "Mt. Ember (1F) Cave Behind Team Rocket"
         ]
       },
       "leafgreen": {
         "locations": [
-          "rock tunnel 1f",
-          "rock tunnel b1f",
-          "kanto victory road 2 1f",
-          "kanto victory road 2 2f",
-          "kanto victory road 2 3f",
-          "mt ember area",
-          "mt ember cave",
-          "mt ember inside",
-          "mt ember 1f cave behind team rocket"
+          "Rock Tunnel (1F)",
+          "Rock Tunnel (B1F)",
+          "Victory Road 2 (1F)",
+          "Victory Road 2 (2F)",
+          "Victory Road 2 (3F)",
+          "Mt. Ember",
+          "Mt. Ember Cave",
+          "Mt. Ember Inside",
+          "Mt. Ember (1F) Cave Behind Team Rocket"
         ]
       }
     },
     "67": {
       "firered": {
         "locations": [
-          "cerulean cave 1f",
-          "cerulean cave 2f",
-          "cerulean cave b1f",
-          "kanto victory road 2 1f",
-          "kanto victory road 2 2f",
-          "kanto victory road 2 3f",
-          "mt ember inside",
-          "mt ember 1f cave behind team rocket"
+          "Cerulean Cave (1F)",
+          "Cerulean Cave (2F)",
+          "Cerulean Cave (B1F)",
+          "Victory Road 2 (1F)",
+          "Victory Road 2 (2F)",
+          "Victory Road 2 (3F)",
+          "Mt. Ember Inside",
+          "Mt. Ember (1F) Cave Behind Team Rocket"
         ]
       },
       "leafgreen": {
         "locations": [
-          "cerulean cave 1f",
-          "cerulean cave 2f",
-          "cerulean cave b1f",
-          "kanto victory road 2 1f",
-          "kanto victory road 2 2f",
-          "kanto victory road 2 3f",
-          "mt ember inside",
-          "mt ember 1f cave behind team rocket"
+          "Cerulean Cave (1F)",
+          "Cerulean Cave (2F)",
+          "Cerulean Cave (B1F)",
+          "Victory Road 2 (1F)",
+          "Victory Road 2 (2F)",
+          "Victory Road 2 (3F)",
+          "Mt. Ember Inside",
+          "Mt. Ember (1F) Cave Behind Team Rocket"
         ]
       }
     },
@@ -2121,38 +2167,49 @@
     "69": {
       "leafgreen": {
         "locations": [
-          "kanto route 12 area",
-          "kanto route 5 area",
-          "kanto route 6 area",
-          "kanto route 7 area",
-          "kanto route 13 area",
-          "kanto route 14 area",
-          "kanto route 15 area",
-          "kanto route 24 area",
-          "kanto route 25 area",
-          "berry forest area",
-          "cape brink area",
-          "bond bridge area",
-          "water path area"
+          "Route 12",
+          "Route 5",
+          "Route 6",
+          "Route 7",
+          "Route 13",
+          "Route 14",
+          "Route 15",
+          "Route 24",
+          "Route 25",
+          "Berry Forest",
+          "Cape Brink",
+          "Bond Bridge",
+          "Water Path"
         ]
       },
       "firered": {
         "locations": [
-          "Trade, Event"
+          "Trade",
+          "Event"
         ]
       }
     },
     "70": {
       "leafgreen": {
         "locations": [
-          "kanto route 12 area",
-          "kanto route 13 area",
-          "kanto route 14 area",
-          "kanto route 15 area",
-          "berry forest area",
-          "cape brink area",
-          "bond bridge area",
-          "water path area"
+          "Route 12",
+          "Route 13",
+          "Route 14",
+          "Route 15",
+          "Berry Forest",
+          "Cape Brink",
+          "Bond Bridge",
+          "Water Path"
+        ]
+      },
+      "firered": {
+        "locations": [
+          "Route 12",
+          "Route 13",
+          "Route 14",
+          "Route 15",
+          "Cerulean Cave (1F)",
+          "Cerulean Cave (2F)"
         ]
       }
     },
@@ -2161,195 +2218,200 @@
         "locations": [
           "Evolve Weepinbell"
         ]
+      },
+      "firered": {
+        "locations": [
+          "Evolve Weepinbell"
+        ]
       }
     },
     "72": {
       "firered": {
         "locations": [
-          "kanto route 12 area",
-          "kanto sea route 19 area",
-          "kanto sea route 20 area",
-          "cinnabar island area",
-          "cerulean city area",
-          "vermilion city area",
-          "pallet town area",
-          "kanto route 4 area",
-          "kanto route 10 area",
-          "kanto route 11 area",
-          "kanto route 13 area",
-          "kanto sea route 21 area",
-          "kanto route 24 area",
-          "ss anne area",
-          "icefall cave waterfall",
-          "kindle road area",
-          "treasure beach area",
-          "bond bridge area",
-          "resort gorgeous area",
-          "water labyrinth area",
-          "five isle meadow area",
-          "memorial pillar area",
-          "outcast island area",
-          "green path area",
-          "water path area",
-          "trainer tower area",
-          "tanoby ruins area",
-          "one island area",
-          "five island area"
+          "Route 12",
+          "Sea Route 19",
+          "Sea Route 20",
+          "Cinnabar Island",
+          "Cerulean City",
+          "Vermilion City",
+          "Pallet Town",
+          "Route 4",
+          "Route 10",
+          "Route 11",
+          "Route 13",
+          "Sea Route 21",
+          "Route 24",
+          "Ss Anne",
+          "Icefall Cave Waterfall",
+          "Kindle Road",
+          "Treasure Beach",
+          "Bond Bridge",
+          "Resort Gorgeous",
+          "Water Labyrinth",
+          "Five Isle Meadow",
+          "Memorial Pillar",
+          "Outcast Island",
+          "Green Path",
+          "Water Path",
+          "Trainer Tower",
+          "Tanoby Ruins",
+          "One Island",
+          "Five Island"
         ]
       },
       "leafgreen": {
         "locations": [
-          "kanto route 12 area",
-          "kanto sea route 19 area",
-          "kanto sea route 20 area",
-          "cinnabar island area",
-          "cerulean city area",
-          "vermilion city area",
-          "pallet town area",
-          "kanto route 4 area",
-          "kanto route 10 area",
-          "kanto route 11 area",
-          "kanto route 13 area",
-          "kanto sea route 21 area",
-          "kanto route 24 area",
-          "ss anne area",
-          "icefall cave waterfall",
-          "kindle road area",
-          "treasure beach area",
-          "bond bridge area",
-          "resort gorgeous area",
-          "water labyrinth area",
-          "five isle meadow area",
-          "memorial pillar area",
-          "outcast island area",
-          "green path area",
-          "water path area",
-          "trainer tower area",
-          "tanoby ruins area",
-          "one island area",
-          "five island area"
+          "Route 12",
+          "Sea Route 19",
+          "Sea Route 20",
+          "Cinnabar Island",
+          "Cerulean City",
+          "Vermilion City",
+          "Pallet Town",
+          "Route 4",
+          "Route 10",
+          "Route 11",
+          "Route 13",
+          "Sea Route 21",
+          "Route 24",
+          "Ss Anne",
+          "Icefall Cave Waterfall",
+          "Kindle Road",
+          "Treasure Beach",
+          "Bond Bridge",
+          "Resort Gorgeous",
+          "Water Labyrinth",
+          "Five Isle Meadow",
+          "Memorial Pillar",
+          "Outcast Island",
+          "Green Path",
+          "Water Path",
+          "Trainer Tower",
+          "Tanoby Ruins",
+          "One Island",
+          "Five Island"
         ]
       }
     },
     "73": {
       "firered": {
         "locations": [
-          "icefall cave waterfall",
-          "kindle road area",
-          "treasure beach area",
-          "bond bridge area",
-          "resort gorgeous area",
-          "water labyrinth area",
-          "five isle meadow area",
-          "memorial pillar area",
-          "outcast island area",
-          "green path area",
-          "water path area",
-          "trainer tower area",
-          "tanoby ruins area",
-          "one island area",
-          "five island area"
+          "Icefall Cave Waterfall",
+          "Kindle Road",
+          "Treasure Beach",
+          "Bond Bridge",
+          "Resort Gorgeous",
+          "Water Labyrinth",
+          "Five Isle Meadow",
+          "Memorial Pillar",
+          "Outcast Island",
+          "Green Path",
+          "Water Path",
+          "Trainer Tower",
+          "Tanoby Ruins",
+          "One Island",
+          "Five Island"
         ]
       },
       "leafgreen": {
         "locations": [
-          "icefall cave waterfall",
-          "kindle road area",
-          "treasure beach area",
-          "bond bridge area",
-          "resort gorgeous area",
-          "water labyrinth area",
-          "five isle meadow area",
-          "memorial pillar area",
-          "outcast island area",
-          "green path area",
-          "water path area",
-          "trainer tower area",
-          "tanoby ruins area",
-          "one island area",
-          "five island area"
+          "Icefall Cave Waterfall",
+          "Kindle Road",
+          "Treasure Beach",
+          "Bond Bridge",
+          "Resort Gorgeous",
+          "Water Labyrinth",
+          "Five Isle Meadow",
+          "Memorial Pillar",
+          "Outcast Island",
+          "Green Path",
+          "Water Path",
+          "Trainer Tower",
+          "Tanoby Ruins",
+          "One Island",
+          "Five Island"
         ]
       }
     },
     "74": {
       "firered": {
         "locations": [
-          "mt moon 1f",
-          "rock tunnel 1f",
-          "rock tunnel b1f",
-          "cerulean cave 1f",
-          "cerulean cave 2f",
-          "cerulean cave b1f",
-          "mt moon b2f",
-          "kanto victory road 2 1f",
-          "kanto victory road 2 2f",
-          "kanto victory road 2 3f",
-          "mt ember area",
-          "mt ember cave",
-          "mt ember inside",
-          "mt ember 1f cave behind team rocket",
-          "mt ember b1f",
-          "mt ember b2f",
-          "kindle road area",
-          "sevault canyon area",
-          "mt ember summit"
+          "Mt. Moon (1F)",
+          "Rock Tunnel (1F)",
+          "Rock Tunnel (B1F)",
+          "Cerulean Cave (1F)",
+          "Cerulean Cave (2F)",
+          "Cerulean Cave (B1F)",
+          "Mt. Moon (B2F)",
+          "Victory Road 2 (1F)",
+          "Victory Road 2 (2F)",
+          "Victory Road 2 (3F)",
+          "Mt. Ember",
+          "Mt. Ember Cave",
+          "Mt. Ember Inside",
+          "Mt. Ember (1F) Cave Behind Team Rocket",
+          "Mt. Ember (B1F)",
+          "Mt. Ember (B2F)",
+          "Kindle Road",
+          "Sevault Canyon",
+          "Mt. Ember Summit"
         ]
       },
       "leafgreen": {
         "locations": [
-          "mt moon 1f",
-          "rock tunnel 1f",
-          "rock tunnel b1f",
-          "cerulean cave 1f",
-          "cerulean cave 2f",
-          "cerulean cave b1f",
-          "mt moon b2f",
-          "kanto victory road 2 1f",
-          "kanto victory road 2 2f",
-          "kanto victory road 2 3f",
-          "mt ember area",
-          "mt ember cave",
-          "mt ember inside",
-          "mt ember 1f cave behind team rocket",
-          "mt ember b1f",
-          "mt ember b2f",
-          "kindle road area",
-          "sevault canyon area",
-          "mt ember summit"
+          "Mt. Moon (1F)",
+          "Rock Tunnel (1F)",
+          "Rock Tunnel (B1F)",
+          "Cerulean Cave (1F)",
+          "Cerulean Cave (2F)",
+          "Cerulean Cave (B1F)",
+          "Mt. Moon (B2F)",
+          "Victory Road 2 (1F)",
+          "Victory Road 2 (2F)",
+          "Victory Road 2 (3F)",
+          "Mt. Ember",
+          "Mt. Ember Cave",
+          "Mt. Ember Inside",
+          "Mt. Ember (1F) Cave Behind Team Rocket",
+          "Mt. Ember (B1F)",
+          "Mt. Ember (B2F)",
+          "Kindle Road",
+          "Sevault Canyon",
+          "Mt. Ember Summit"
         ]
       }
     },
     "75": {
       "firered": {
         "locations": [
-          "rock tunnel b1f",
-          "cerulean cave 1f",
-          "cerulean cave 2f",
-          "cerulean cave b1f",
-          "mt ember area",
-          "mt ember inside",
-          "mt ember 1f cave behind team rocket",
-          "mt ember b1f",
-          "mt ember b2f",
-          "kindle road area",
-          "sevault canyon area",
-          "mt ember summit"
+          "Rock Tunnel (B1F)",
+          "Cerulean Cave (1F)",
+          "Cerulean Cave (2F)",
+          "Cerulean Cave (B1F)",
+          "Mt. Ember",
+          "Mt. Ember Inside",
+          "Mt. Ember (1F) Cave Behind Team Rocket",
+          "Mt. Ember (B1F)",
+          "Mt. Ember (B2F)",
+          "Kindle Road",
+          "Sevault Canyon",
+          "Mt. Ember Summit"
         ]
       },
       "leafgreen": {
         "locations": [
-          "rock tunnel b1f",
-          "cerulean cave 1f",
-          "cerulean cave 2f",
-          "cerulean cave b1f",
-          "mt ember area",
-          "mt ember inside",
-          "mt ember 1f cave behind team rocket",
-          "mt ember b1f",
-          "mt ember b2f",
-          "kindle road area",
-          "sevault canyon area",
-          "mt ember summit"
+          "Rock Tunnel (B1F)",
+          "Cerulean Cave (1F)",
+          "Cerulean Cave (2F)",
+          "Cerulean Cave (B1F)",
+          "Mt. Ember",
+          "Mt. Ember Inside",
+          "Mt. Ember (1F) Cave Behind Team Rocket",
+          "Mt. Ember (B1F)",
+          "Mt. Ember (B2F)",
+          "Kindle Road",
+          "Sevault Canyon",
+          "Mt. Ember Summit"
         ]
       }
     },
@@ -2368,164 +2430,188 @@
     "77": {
       "firered": {
         "locations": [
-          "mt ember area",
-          "kindle road area"
+          "Mt. Ember",
+          "Kindle Road"
         ]
       },
       "leafgreen": {
         "locations": [
-          "mt ember area",
-          "kindle road area"
+          "Mt. Ember",
+          "Kindle Road"
         ]
       }
     },
     "78": {
       "firered": {
         "locations": [
-          "mt ember area",
-          "kindle road area"
+          "Mt. Ember",
+          "Kindle Road"
         ]
       },
       "leafgreen": {
         "locations": [
-          "mt ember area",
-          "kindle road area"
+          "Mt. Ember",
+          "Kindle Road"
         ]
       }
     },
     "79": {
       "leafgreen": {
         "locations": [
-          "seafoam islands 1f",
-          "seafoam islands b1f",
-          "seafoam islands b2f",
-          "seafoam islands b3f",
-          "seafoam islands b4f",
-          "kanto route 12 area",
-          "kanto sea route 19 area",
-          "kanto sea route 20 area",
-          "cinnabar island area",
-          "viridian city area",
-          "cerulean city area",
-          "vermilion city area",
-          "celadon city area",
-          "fuchsia city area",
-          "pallet town area",
-          "kanto route 4 area",
-          "kanto route 6 area",
-          "kanto route 10 area",
-          "kanto route 11 area",
-          "kanto route 13 area",
-          "kanto sea route 21 area",
-          "kanto route 22 area",
-          "kanto route 24 area",
-          "kanto route 25 area",
-          "cerulean cave 1f",
-          "cerulean cave b1f",
-          "kanto route 23 area",
-          "kanto safari zone middle",
-          "kanto safari zone area 1 east",
-          "kanto safari zone area 2 north",
-          "kanto safari zone area 3 west",
-          "ss anne area",
-          "berry forest area",
-          "icefall cave entrance",
-          "icefall cave waterfall",
-          "kindle road area",
-          "treasure beach area",
-          "cape brink area",
-          "bond bridge area",
-          "resort gorgeous area",
-          "water labyrinth area",
-          "five isle meadow area",
-          "memorial pillar area",
-          "outcast island area",
-          "green path area",
-          "water path area",
-          "ruin valley area",
-          "trainer tower area",
-          "canyon entrance area",
-          "tanoby ruins area",
-          "one island area",
-          "four island area",
-          "five island area"
+          "Seafoam Islands (1F)",
+          "Seafoam Islands (B1F)",
+          "Seafoam Islands (B2F)",
+          "Seafoam Islands (B3F)",
+          "Seafoam Islands (B4F)",
+          "Route 12",
+          "Sea Route 19",
+          "Sea Route 20",
+          "Cinnabar Island",
+          "Viridian City",
+          "Cerulean City",
+          "Vermilion City",
+          "Celadon City",
+          "Fuchsia City",
+          "Pallet Town",
+          "Route 4",
+          "Route 6",
+          "Route 10",
+          "Route 11",
+          "Route 13",
+          "Sea Route 21",
+          "Route 22",
+          "Route 24",
+          "Route 25",
+          "Cerulean Cave (1F)",
+          "Cerulean Cave (B1F)",
+          "Route 23",
+          "Safari Zone Middle",
+          "Safari Zone Area 1 East",
+          "Safari Zone Area 2 North",
+          "Safari Zone Area 3 West",
+          "Ss Anne",
+          "Berry Forest",
+          "Icefall Cave Entrance",
+          "Icefall Cave Waterfall",
+          "Kindle Road",
+          "Treasure Beach",
+          "Cape Brink",
+          "Bond Bridge",
+          "Resort Gorgeous",
+          "Water Labyrinth",
+          "Five Isle Meadow",
+          "Memorial Pillar",
+          "Outcast Island",
+          "Green Path",
+          "Water Path",
+          "Ruin Valley",
+          "Trainer Tower",
+          "Canyon Entrance",
+          "Tanoby Ruins",
+          "One Island",
+          "Four Island",
+          "Five Island"
+        ]
+      },
+      "firered": {
+        "locations": [
+          "Seafoam Islands (1F)",
+          "Seafoam Islands (B1F)",
+          "Seafoam Islands (B2F)",
+          "Seafoam Islands (B3F)",
+          "Seafoam Islands (B4F)",
+          "Celadon City",
+          "Route 10",
+          "Safari Zone Middle",
+          "Safari Zone Area 1 East",
+          "Safari Zone Area 2 North",
+          "Safari Zone Area 3 West"
         ]
       }
     },
     "80": {
       "leafgreen": {
         "locations": [
-          "seafoam islands b1f",
-          "seafoam islands b2f",
-          "seafoam islands b3f",
-          "seafoam islands b4f",
-          "cinnabar island area",
-          "cerulean cave 1f",
-          "cerulean cave b1f",
-          "berry forest area",
-          "cape brink area"
+          "Seafoam Islands (B1F)",
+          "Seafoam Islands (B2F)",
+          "Seafoam Islands (B3F)",
+          "Seafoam Islands (B4F)",
+          "Cinnabar Island",
+          "Cerulean Cave (1F)",
+          "Cerulean Cave (B1F)",
+          "Berry Forest",
+          "Cape Brink"
+        ]
+      },
+      "firered": {
+        "locations": [
+          "Seafoam Islands (B2F)",
+          "Seafoam Islands (B4F)",
+          "Cerulean Cave (1F)",
+          "Cerulean Cave (B1F)",
+          "Route 23"
         ]
       }
     },
     "81": {
       "firered": {
         "locations": [
-          "kanto power plant area"
+          "Power Plant"
         ]
       },
       "leafgreen": {
         "locations": [
-          "kanto power plant area"
+          "Power Plant"
         ]
       }
     },
     "82": {
       "firered": {
         "locations": [
-          "cerulean cave 1f",
-          "cerulean cave 2f",
-          "cerulean cave b1f",
-          "kanto power plant area"
+          "Cerulean Cave (1F)",
+          "Cerulean Cave (2F)",
+          "Cerulean Cave (B1F)",
+          "Power Plant"
         ]
       },
       "leafgreen": {
         "locations": [
-          "cerulean cave 1f",
-          "cerulean cave 2f",
-          "cerulean cave b1f",
-          "kanto power plant area"
+          "Cerulean Cave (1F)",
+          "Cerulean Cave (2F)",
+          "Cerulean Cave (B1F)",
+          "Power Plant"
         ]
       }
     },
     "83": {
       "firered": {
         "locations": [
-          "vermilion city area"
+          "Vermilion City"
         ]
       },
       "leafgreen": {
         "locations": [
-          "vermilion city area"
+          "Vermilion City"
         ]
       }
     },
     "84": {
       "firered": {
         "locations": [
-          "kanto route 16 area",
-          "kanto route 17 area",
-          "kanto route 18 area",
-          "kanto safari zone area 1 east",
-          "kanto safari zone area 3 west"
+          "Route 16",
+          "Route 17",
+          "Route 18",
+          "Safari Zone Area 1 East",
+          "Safari Zone Area 3 West"
         ]
       },
       "leafgreen": {
         "locations": [
-          "kanto route 16 area",
-          "kanto route 17 area",
-          "kanto route 18 area",
-          "kanto safari zone area 1 east",
-          "kanto safari zone area 3 west"
+          "Route 16",
+          "Route 17",
+          "Route 18",
+          "Safari Zone Area 1 East",
+          "Safari Zone Area 3 West"
         ]
       }
     },
@@ -2544,76 +2630,76 @@
     "86": {
       "firered": {
         "locations": [
-          "seafoam islands b1f",
-          "seafoam islands b2f",
-          "seafoam islands b3f",
-          "seafoam islands b4f",
-          "icefall cave entrance",
-          "icefall cave 1f",
-          "icefall cave b1f",
-          "icefall cave waterfall",
-          "cinnabar island cinnabar lab"
+          "Seafoam Islands (B1F)",
+          "Seafoam Islands (B2F)",
+          "Seafoam Islands (B3F)",
+          "Seafoam Islands (B4F)",
+          "Icefall Cave Entrance",
+          "Icefall Cave (1F)",
+          "Icefall Cave (B1F)",
+          "Icefall Cave Waterfall",
+          "Cinnabar Island Cinnabar Lab"
         ]
       },
       "leafgreen": {
         "locations": [
-          "seafoam islands b1f",
-          "seafoam islands b2f",
-          "seafoam islands b3f",
-          "seafoam islands b4f",
-          "icefall cave entrance",
-          "icefall cave 1f",
-          "icefall cave b1f",
-          "icefall cave waterfall",
-          "cinnabar island cinnabar lab"
+          "Seafoam Islands (B1F)",
+          "Seafoam Islands (B2F)",
+          "Seafoam Islands (B3F)",
+          "Seafoam Islands (B4F)",
+          "Icefall Cave Entrance",
+          "Icefall Cave (1F)",
+          "Icefall Cave (B1F)",
+          "Icefall Cave Waterfall",
+          "Cinnabar Island Cinnabar Lab"
         ]
       }
     },
     "87": {
       "firered": {
         "locations": [
-          "seafoam islands b3f",
-          "seafoam islands b4f",
-          "icefall cave entrance",
-          "icefall cave waterfall"
+          "Seafoam Islands (B3F)",
+          "Seafoam Islands (B4F)",
+          "Icefall Cave Entrance",
+          "Icefall Cave Waterfall"
         ]
       },
       "leafgreen": {
         "locations": [
-          "seafoam islands b3f",
-          "seafoam islands b4f",
-          "icefall cave entrance",
-          "icefall cave waterfall"
+          "Seafoam Islands (B3F)",
+          "Seafoam Islands (B4F)",
+          "Icefall Cave Entrance",
+          "Icefall Cave Waterfall"
         ]
       }
     },
     "88": {
       "firered": {
         "locations": [
-          "celadon city area",
-          "pokemon mansion 1f",
-          "pokemon mansion 2f",
-          "pokemon mansion 3f",
-          "pokemon mansion b1f"
+          "Celadon City",
+          "Pokemon Mansion (1F)",
+          "Pokemon Mansion (2F)",
+          "Pokemon Mansion (3F)",
+          "Pokemon Mansion (B1F)"
         ]
       },
       "leafgreen": {
         "locations": [
-          "celadon city area",
-          "pokemon mansion 1f",
-          "pokemon mansion 2f",
-          "pokemon mansion 3f",
-          "pokemon mansion b1f"
+          "Celadon City",
+          "Pokemon Mansion (1F)",
+          "Pokemon Mansion (2F)",
+          "Pokemon Mansion (3F)",
+          "Pokemon Mansion (B1F)"
         ]
       }
     },
     "89": {
       "leafgreen": {
         "locations": [
-          "pokemon mansion 1f",
-          "pokemon mansion 2f",
-          "pokemon mansion 3f",
-          "pokemon mansion b1f"
+          "Pokemon Mansion (1F)",
+          "Pokemon Mansion (2F)",
+          "Pokemon Mansion (3F)",
+          "Pokemon Mansion (B1F)"
         ]
       },
       "firered": {
@@ -2625,13 +2711,29 @@
     "90": {
       "firered": {
         "locations": [
-          "cinnabar island area",
-          "vermilion city area",
-          "pallet town area",
-          "ss anne area",
-          "icefall cave waterfall",
-          "one island area",
-          "five island area"
+          "Cinnabar Island",
+          "Vermilion City",
+          "Pallet Town",
+          "Ss Anne",
+          "Icefall Cave Waterfall",
+          "One Island",
+          "Five Island"
+        ]
+      },
+      "leafgreen": {
+        "locations": [
+          "Seafoam Islands (B1F)",
+          "Seafoam Islands (B2F)",
+          "Seafoam Islands (B3F)",
+          "Seafoam Islands (B4F)",
+          "Sea Route 19",
+          "Sea Route 20",
+          "Cinnabar Island",
+          "Vermilion City",
+          "Route 6",
+          "Route 11",
+          "Sea Route 21",
+          "Vermilion City Ss Anne Dock"
         ]
       }
     },
@@ -2640,89 +2742,94 @@
         "locations": [
           "Evolve Shellder"
         ]
+      },
+      "leafgreen": {
+        "locations": [
+          "Evolve Shellder"
+        ]
       }
     },
     "92": {
       "firered": {
         "locations": [
-          "pokemon tower 3f",
-          "pokemon tower 4f",
-          "pokemon tower 5f",
-          "pokemon tower 6f",
-          "pokemon tower 7f",
-          "lost cave room 1",
-          "lost cave room 2",
-          "lost cave room 3",
-          "lost cave room 4",
-          "lost cave room 5",
-          "lost cave room 6",
-          "lost cave room 7",
-          "lost cave room 8",
-          "lost cave room 9",
-          "lost cave room 10",
-          "lost cave item rooms"
+          "Pokemon Tower (3F)",
+          "Pokemon Tower (4F)",
+          "Pokemon Tower (5F)",
+          "Pokemon Tower (6F)",
+          "Pokemon Tower (7F)",
+          "Lost Cave Room 1",
+          "Lost Cave Room 2",
+          "Lost Cave Room 3",
+          "Lost Cave Room 4",
+          "Lost Cave Room 5",
+          "Lost Cave Room 6",
+          "Lost Cave Room 7",
+          "Lost Cave Room 8",
+          "Lost Cave Room 9",
+          "Lost Cave Room 10",
+          "Lost Cave Item Rooms"
         ]
       },
       "leafgreen": {
         "locations": [
-          "pokemon tower 3f",
-          "pokemon tower 4f",
-          "pokemon tower 5f",
-          "pokemon tower 6f",
-          "pokemon tower 7f",
-          "lost cave room 1",
-          "lost cave room 2",
-          "lost cave room 3",
-          "lost cave room 4",
-          "lost cave room 5",
-          "lost cave room 6",
-          "lost cave room 7",
-          "lost cave room 8",
-          "lost cave room 9",
-          "lost cave room 10",
-          "lost cave item rooms"
+          "Pokemon Tower (3F)",
+          "Pokemon Tower (4F)",
+          "Pokemon Tower (5F)",
+          "Pokemon Tower (6F)",
+          "Pokemon Tower (7F)",
+          "Lost Cave Room 1",
+          "Lost Cave Room 2",
+          "Lost Cave Room 3",
+          "Lost Cave Room 4",
+          "Lost Cave Room 5",
+          "Lost Cave Room 6",
+          "Lost Cave Room 7",
+          "Lost Cave Room 8",
+          "Lost Cave Room 9",
+          "Lost Cave Room 10",
+          "Lost Cave Item Rooms"
         ]
       }
     },
     "93": {
       "firered": {
         "locations": [
-          "pokemon tower 3f",
-          "pokemon tower 4f",
-          "pokemon tower 5f",
-          "pokemon tower 6f",
-          "pokemon tower 7f",
-          "lost cave room 1",
-          "lost cave room 2",
-          "lost cave room 3",
-          "lost cave room 4",
-          "lost cave room 5",
-          "lost cave room 6",
-          "lost cave room 7",
-          "lost cave room 8",
-          "lost cave room 9",
-          "lost cave room 10",
-          "lost cave item rooms"
+          "Pokemon Tower (3F)",
+          "Pokemon Tower (4F)",
+          "Pokemon Tower (5F)",
+          "Pokemon Tower (6F)",
+          "Pokemon Tower (7F)",
+          "Lost Cave Room 1",
+          "Lost Cave Room 2",
+          "Lost Cave Room 3",
+          "Lost Cave Room 4",
+          "Lost Cave Room 5",
+          "Lost Cave Room 6",
+          "Lost Cave Room 7",
+          "Lost Cave Room 8",
+          "Lost Cave Room 9",
+          "Lost Cave Room 10",
+          "Lost Cave Item Rooms"
         ]
       },
       "leafgreen": {
         "locations": [
-          "pokemon tower 3f",
-          "pokemon tower 4f",
-          "pokemon tower 5f",
-          "pokemon tower 6f",
-          "pokemon tower 7f",
-          "lost cave room 1",
-          "lost cave room 2",
-          "lost cave room 3",
-          "lost cave room 4",
-          "lost cave room 5",
-          "lost cave room 6",
-          "lost cave room 7",
-          "lost cave room 8",
-          "lost cave room 9",
-          "lost cave room 10",
-          "lost cave item rooms"
+          "Pokemon Tower (3F)",
+          "Pokemon Tower (4F)",
+          "Pokemon Tower (5F)",
+          "Pokemon Tower (6F)",
+          "Pokemon Tower (7F)",
+          "Lost Cave Room 1",
+          "Lost Cave Room 2",
+          "Lost Cave Room 3",
+          "Lost Cave Room 4",
+          "Lost Cave Room 5",
+          "Lost Cave Room 6",
+          "Lost Cave Room 7",
+          "Lost Cave Room 8",
+          "Lost Cave Room 9",
+          "Lost Cave Room 10",
+          "Lost Cave Item Rooms"
         ]
       }
     },
@@ -2741,130 +2848,130 @@
     "95": {
       "firered": {
         "locations": [
-          "rock tunnel 1f",
-          "rock tunnel b1f",
-          "kanto victory road 2 1f",
-          "kanto victory road 2 2f",
-          "kanto victory road 2 3f",
-          "sevault canyon area"
+          "Rock Tunnel (1F)",
+          "Rock Tunnel (B1F)",
+          "Victory Road 2 (1F)",
+          "Victory Road 2 (2F)",
+          "Victory Road 2 (3F)",
+          "Sevault Canyon"
         ]
       },
       "leafgreen": {
         "locations": [
-          "rock tunnel 1f",
-          "rock tunnel b1f",
-          "kanto victory road 2 1f",
-          "kanto victory road 2 2f",
-          "kanto victory road 2 3f",
-          "sevault canyon area"
+          "Rock Tunnel (1F)",
+          "Rock Tunnel (B1F)",
+          "Victory Road 2 (1F)",
+          "Victory Road 2 (2F)",
+          "Victory Road 2 (3F)",
+          "Sevault Canyon"
         ]
       }
     },
     "96": {
       "firered": {
         "locations": [
-          "kanto route 11 area",
-          "berry forest area"
+          "Route 11",
+          "Berry Forest"
         ]
       },
       "leafgreen": {
         "locations": [
-          "kanto route 11 area",
-          "berry forest area"
+          "Route 11",
+          "Berry Forest"
         ]
       }
     },
     "97": {
       "firered": {
         "locations": [
-          "berry forest area"
+          "Berry Forest"
         ]
       },
       "leafgreen": {
         "locations": [
-          "berry forest area"
+          "Berry Forest"
         ]
       }
     },
     "98": {
       "firered": {
         "locations": [
-          "seafoam islands b3f",
-          "seafoam islands b4f",
-          "kanto route 12 area",
-          "kanto sea route 19 area",
-          "kanto sea route 20 area",
-          "cinnabar island area",
-          "cerulean city area",
-          "vermilion city area",
-          "pallet town area",
-          "kanto route 4 area",
-          "kanto route 10 area",
-          "kanto route 11 area",
-          "kanto route 13 area",
-          "kanto sea route 21 area",
-          "kanto route 24 area",
-          "ss anne area"
+          "Seafoam Islands (B3F)",
+          "Seafoam Islands (B4F)",
+          "Route 12",
+          "Sea Route 19",
+          "Sea Route 20",
+          "Cinnabar Island",
+          "Cerulean City",
+          "Vermilion City",
+          "Pallet Town",
+          "Route 4",
+          "Route 10",
+          "Route 11",
+          "Route 13",
+          "Sea Route 21",
+          "Route 24",
+          "Ss Anne"
         ]
       },
       "leafgreen": {
         "locations": [
-          "seafoam islands b3f",
-          "seafoam islands b4f",
-          "kanto route 12 area",
-          "kanto sea route 19 area",
-          "kanto sea route 20 area",
-          "cinnabar island area",
-          "cerulean city area",
-          "vermilion city area",
-          "pallet town area",
-          "kanto route 4 area",
-          "kanto route 10 area",
-          "kanto route 11 area",
-          "kanto route 13 area",
-          "kanto sea route 21 area",
-          "kanto route 24 area",
-          "ss anne area",
-          "icefall cave waterfall",
-          "kindle road area",
-          "treasure beach area",
-          "bond bridge area",
-          "resort gorgeous area",
-          "water labyrinth area",
-          "five isle meadow area",
-          "memorial pillar area",
-          "outcast island area",
-          "green path area",
-          "water path area",
-          "trainer tower area",
-          "tanoby ruins area",
-          "one island area",
-          "five island area"
+          "Seafoam Islands (B3F)",
+          "Seafoam Islands (B4F)",
+          "Route 12",
+          "Sea Route 19",
+          "Sea Route 20",
+          "Cinnabar Island",
+          "Cerulean City",
+          "Vermilion City",
+          "Pallet Town",
+          "Route 4",
+          "Route 10",
+          "Route 11",
+          "Route 13",
+          "Sea Route 21",
+          "Route 24",
+          "Ss Anne",
+          "Icefall Cave Waterfall",
+          "Kindle Road",
+          "Treasure Beach",
+          "Bond Bridge",
+          "Resort Gorgeous",
+          "Water Labyrinth",
+          "Five Isle Meadow",
+          "Memorial Pillar",
+          "Outcast Island",
+          "Green Path",
+          "Water Path",
+          "Trainer Tower",
+          "Tanoby Ruins",
+          "One Island",
+          "Five Island"
         ]
       }
     },
     "99": {
       "leafgreen": {
         "locations": [
-          "kanto sea route 19 area",
-          "kanto sea route 20 area",
-          "pallet town area",
-          "kanto sea route 21 area",
-          "icefall cave waterfall",
-          "kindle road area",
-          "treasure beach area",
-          "bond bridge area",
-          "resort gorgeous area",
-          "water labyrinth area",
-          "five isle meadow area",
-          "memorial pillar area",
-          "outcast island area",
-          "green path area",
-          "water path area",
-          "trainer tower area",
-          "tanoby ruins area",
-          "one island area",
-          "five island area"
+          "Sea Route 19",
+          "Sea Route 20",
+          "Pallet Town",
+          "Sea Route 21",
+          "Icefall Cave Waterfall",
+          "Kindle Road",
+          "Treasure Beach",
+          "Bond Bridge",
+          "Resort Gorgeous",
+          "Water Labyrinth",
+          "Five Isle Meadow",
+          "Memorial Pillar",
+          "Outcast Island",
+          "Green Path",
+          "Water Path",
+          "Trainer Tower",
+          "Tanoby Ruins",
+          "One Island",
+          "Five Island"
         ]
       },
       "firered": {
@@ -2876,54 +2983,54 @@
     "100": {
       "firered": {
         "locations": [
-          "kanto route 10 area",
-          "kanto power plant area"
+          "Route 10",
+          "Power Plant"
         ]
       },
       "leafgreen": {
         "locations": [
-          "kanto route 10 area",
-          "kanto power plant area"
+          "Route 10",
+          "Power Plant"
         ]
       }
     },
     "101": {
       "firered": {
         "locations": [
-          "cerulean cave 1f",
-          "cerulean cave 2f",
-          "cerulean cave b1f",
-          "kanto power plant area",
-          "cinnabar island cinnabar lab"
+          "Cerulean Cave (1F)",
+          "Cerulean Cave (2F)",
+          "Cerulean Cave (B1F)",
+          "Power Plant",
+          "Cinnabar Island Cinnabar Lab"
         ]
       },
       "leafgreen": {
         "locations": [
-          "cerulean cave 1f",
-          "cerulean cave 2f",
-          "cerulean cave b1f",
-          "kanto power plant area",
-          "cinnabar island cinnabar lab"
+          "Cerulean Cave (1F)",
+          "Cerulean Cave (2F)",
+          "Cerulean Cave (B1F)",
+          "Power Plant",
+          "Cinnabar Island Cinnabar Lab"
         ]
       }
     },
     "102": {
       "firered": {
         "locations": [
-          "kanto safari zone middle",
-          "kanto safari zone area 1 east",
-          "kanto safari zone area 2 north",
-          "kanto safari zone area 3 west",
-          "berry forest area"
+          "Safari Zone Middle",
+          "Safari Zone Area 1 East",
+          "Safari Zone Area 2 North",
+          "Safari Zone Area 3 West",
+          "Berry Forest"
         ]
       },
       "leafgreen": {
         "locations": [
-          "kanto safari zone middle",
-          "kanto safari zone area 1 east",
-          "kanto safari zone area 2 north",
-          "kanto safari zone area 3 west",
-          "berry forest area"
+          "Safari Zone Middle",
+          "Safari Zone Area 1 East",
+          "Safari Zone Area 2 North",
+          "Safari Zone Area 3 West",
+          "Berry Forest"
         ]
       }
     },
@@ -2942,106 +3049,106 @@
     "104": {
       "firered": {
         "locations": [
-          "pokemon tower 3f",
-          "pokemon tower 4f",
-          "pokemon tower 5f",
-          "pokemon tower 6f",
-          "pokemon tower 7f",
-          "sevault canyon area"
+          "Pokemon Tower (3F)",
+          "Pokemon Tower (4F)",
+          "Pokemon Tower (5F)",
+          "Pokemon Tower (6F)",
+          "Pokemon Tower (7F)",
+          "Sevault Canyon"
         ]
       },
       "leafgreen": {
         "locations": [
-          "pokemon tower 3f",
-          "pokemon tower 4f",
-          "pokemon tower 5f",
-          "pokemon tower 6f",
-          "pokemon tower 7f",
-          "sevault canyon area"
+          "Pokemon Tower (3F)",
+          "Pokemon Tower (4F)",
+          "Pokemon Tower (5F)",
+          "Pokemon Tower (6F)",
+          "Pokemon Tower (7F)",
+          "Sevault Canyon"
         ]
       }
     },
     "105": {
       "firered": {
         "locations": [
-          "kanto victory road 2 1f",
-          "kanto victory road 2 2f",
-          "kanto victory road 2 3f",
-          "sevault canyon area"
+          "Victory Road 2 (1F)",
+          "Victory Road 2 (2F)",
+          "Victory Road 2 (3F)",
+          "Sevault Canyon"
         ]
       },
       "leafgreen": {
         "locations": [
-          "kanto victory road 2 1f",
-          "kanto victory road 2 2f",
-          "kanto victory road 2 3f",
-          "sevault canyon area"
+          "Victory Road 2 (1F)",
+          "Victory Road 2 (2F)",
+          "Victory Road 2 (3F)",
+          "Sevault Canyon"
         ]
       }
     },
     "106": {
       "firered": {
         "locations": [
-          "saffron city fighting dojo"
+          "Saffron City Fighting Dojo"
         ]
       },
       "leafgreen": {
         "locations": [
-          "saffron city fighting dojo"
+          "Saffron City Fighting Dojo"
         ]
       }
     },
     "107": {
       "firered": {
         "locations": [
-          "saffron city fighting dojo"
+          "Saffron City Fighting Dojo"
         ]
       },
       "leafgreen": {
         "locations": [
-          "saffron city fighting dojo"
+          "Saffron City Fighting Dojo"
         ]
       }
     },
     "108": {
       "firered": {
         "locations": [
-          "kanto route 18 area"
+          "Route 18"
         ]
       },
       "leafgreen": {
         "locations": [
-          "kanto route 18 area"
+          "Route 18"
         ]
       }
     },
     "109": {
       "firered": {
         "locations": [
-          "celadon city area",
-          "pokemon mansion 1f",
-          "pokemon mansion 2f",
-          "pokemon mansion 3f",
-          "pokemon mansion b1f"
+          "Celadon City",
+          "Pokemon Mansion (1F)",
+          "Pokemon Mansion (2F)",
+          "Pokemon Mansion (3F)",
+          "Pokemon Mansion (B1F)"
         ]
       },
       "leafgreen": {
         "locations": [
-          "celadon city area",
-          "pokemon mansion 1f",
-          "pokemon mansion 2f",
-          "pokemon mansion 3f",
-          "pokemon mansion b1f"
+          "Celadon City",
+          "Pokemon Mansion (1F)",
+          "Pokemon Mansion (2F)",
+          "Pokemon Mansion (3F)",
+          "Pokemon Mansion (B1F)"
         ]
       }
     },
     "110": {
       "firered": {
         "locations": [
-          "pokemon mansion 1f",
-          "pokemon mansion 2f",
-          "pokemon mansion 3f",
-          "pokemon mansion b1f"
+          "Pokemon Mansion (1F)",
+          "Pokemon Mansion (2F)",
+          "Pokemon Mansion (3F)",
+          "Pokemon Mansion (B1F)"
         ]
       },
       "leafgreen": {
@@ -3053,14 +3160,14 @@
     "111": {
       "firered": {
         "locations": [
-          "kanto safari zone middle",
-          "kanto safari zone area 2 north"
+          "Safari Zone Middle",
+          "Safari Zone Area 2 North"
         ]
       },
       "leafgreen": {
         "locations": [
-          "kanto safari zone middle",
-          "kanto safari zone area 2 north"
+          "Safari Zone Middle",
+          "Safari Zone Area 2 North"
         ]
       }
     },
@@ -3079,127 +3186,127 @@
     "113": {
       "firered": {
         "locations": [
-          "kanto safari zone middle",
-          "kanto safari zone area 2 north"
+          "Safari Zone Middle",
+          "Safari Zone Area 2 North"
         ]
       },
       "leafgreen": {
         "locations": [
-          "kanto safari zone middle",
-          "kanto safari zone area 2 north"
+          "Safari Zone Middle",
+          "Safari Zone Area 2 North"
         ]
       }
     },
     "114": {
       "firered": {
         "locations": [
-          "kanto sea route 21 area",
-          "treasure beach area",
-          "cinnabar island cinnabar lab"
+          "Sea Route 21",
+          "Treasure Beach",
+          "Cinnabar Island Cinnabar Lab"
         ]
       },
       "leafgreen": {
         "locations": [
-          "kanto sea route 21 area",
-          "treasure beach area",
-          "cinnabar island cinnabar lab"
+          "Sea Route 21",
+          "Treasure Beach",
+          "Cinnabar Island Cinnabar Lab"
         ]
       }
     },
     "115": {
       "firered": {
         "locations": [
-          "kanto safari zone area 1 east",
-          "kanto safari zone area 3 west"
+          "Safari Zone Area 1 East",
+          "Safari Zone Area 3 West"
         ]
       },
       "leafgreen": {
         "locations": [
-          "kanto safari zone area 1 east",
-          "kanto safari zone area 3 west"
+          "Safari Zone Area 1 East",
+          "Safari Zone Area 3 West"
         ]
       }
     },
     "116": {
       "firered": {
         "locations": [
-          "seafoam islands b3f",
-          "seafoam islands b4f",
-          "kanto route 12 area",
-          "kanto sea route 19 area",
-          "kanto sea route 20 area",
-          "cinnabar island area",
-          "cerulean city area",
-          "vermilion city area",
-          "pallet town area",
-          "kanto route 4 area",
-          "kanto route 10 area",
-          "kanto route 11 area",
-          "kanto route 13 area",
-          "kanto sea route 21 area",
-          "kanto route 24 area",
-          "ss anne area",
-          "icefall cave waterfall",
-          "kindle road area",
-          "treasure beach area",
-          "bond bridge area",
-          "resort gorgeous area",
-          "water labyrinth area",
-          "five isle meadow area",
-          "memorial pillar area",
-          "outcast island area",
-          "green path area",
-          "water path area",
-          "trainer tower area",
-          "tanoby ruins area",
-          "one island area",
-          "five island area"
+          "Seafoam Islands (B3F)",
+          "Seafoam Islands (B4F)",
+          "Route 12",
+          "Sea Route 19",
+          "Sea Route 20",
+          "Cinnabar Island",
+          "Cerulean City",
+          "Vermilion City",
+          "Pallet Town",
+          "Route 4",
+          "Route 10",
+          "Route 11",
+          "Route 13",
+          "Sea Route 21",
+          "Route 24",
+          "Ss Anne",
+          "Icefall Cave Waterfall",
+          "Kindle Road",
+          "Treasure Beach",
+          "Bond Bridge",
+          "Resort Gorgeous",
+          "Water Labyrinth",
+          "Five Isle Meadow",
+          "Memorial Pillar",
+          "Outcast Island",
+          "Green Path",
+          "Water Path",
+          "Trainer Tower",
+          "Tanoby Ruins",
+          "One Island",
+          "Five Island"
         ]
       },
       "leafgreen": {
         "locations": [
-          "seafoam islands b3f",
-          "seafoam islands b4f",
-          "kanto route 12 area",
-          "kanto sea route 19 area",
-          "kanto sea route 20 area",
-          "cinnabar island area",
-          "cerulean city area",
-          "vermilion city area",
-          "pallet town area",
-          "kanto route 4 area",
-          "kanto route 10 area",
-          "kanto route 11 area",
-          "kanto route 13 area",
-          "kanto sea route 21 area",
-          "kanto route 24 area",
-          "ss anne area"
+          "Seafoam Islands (B3F)",
+          "Seafoam Islands (B4F)",
+          "Route 12",
+          "Sea Route 19",
+          "Sea Route 20",
+          "Cinnabar Island",
+          "Cerulean City",
+          "Vermilion City",
+          "Pallet Town",
+          "Route 4",
+          "Route 10",
+          "Route 11",
+          "Route 13",
+          "Sea Route 21",
+          "Route 24",
+          "Ss Anne"
         ]
       }
     },
     "117": {
       "firered": {
         "locations": [
-          "kanto sea route 19 area",
-          "kanto sea route 20 area",
-          "cinnabar island area",
-          "pallet town area",
-          "kanto sea route 21 area",
-          "icefall cave waterfall",
-          "kindle road area",
-          "treasure beach area",
-          "bond bridge area",
-          "resort gorgeous area",
-          "water labyrinth area",
-          "five isle meadow area",
-          "memorial pillar area",
-          "outcast island area",
-          "green path area",
-          "water path area",
-          "trainer tower area",
-          "tanoby ruins area",
-          "one island area",
-          "five island area"
+          "Sea Route 19",
+          "Sea Route 20",
+          "Cinnabar Island",
+          "Pallet Town",
+          "Sea Route 21",
+          "Icefall Cave Waterfall",
+          "Kindle Road",
+          "Treasure Beach",
+          "Bond Bridge",
+          "Resort Gorgeous",
+          "Water Labyrinth",
+          "Five Isle Meadow",
+          "Memorial Pillar",
+          "Outcast Island",
+          "Green Path",
+          "Water Path",
+          "Trainer Tower",
+          "Tanoby Ruins",
+          "One Island",
+          "Five Island"
         ]
       },
       "leafgreen": {
@@ -3211,84 +3318,85 @@
     "118": {
       "firered": {
         "locations": [
-          "viridian city area",
-          "fuchsia city area",
-          "kanto route 6 area",
-          "kanto route 22 area",
-          "kanto route 25 area",
-          "cerulean cave 1f",
-          "cerulean cave b1f",
-          "kanto route 23 area",
-          "kanto safari zone middle",
-          "kanto safari zone area 1 east",
-          "kanto safari zone area 2 north",
-          "kanto safari zone area 3 west",
-          "berry forest area",
-          "icefall cave entrance",
-          "cape brink area",
-          "ruin valley area",
-          "four island area"
+          "Viridian City",
+          "Fuchsia City",
+          "Route 6",
+          "Route 22",
+          "Route 25",
+          "Cerulean Cave (1F)",
+          "Cerulean Cave (B1F)",
+          "Route 23",
+          "Safari Zone Middle",
+          "Safari Zone Area 1 East",
+          "Safari Zone Area 2 North",
+          "Safari Zone Area 3 West",
+          "Berry Forest",
+          "Icefall Cave Entrance",
+          "Cape Brink",
+          "Ruin Valley",
+          "Four Island"
         ]
       },
       "leafgreen": {
         "locations": [
-          "viridian city area",
-          "fuchsia city area",
-          "kanto route 6 area",
-          "kanto route 22 area",
-          "kanto route 25 area",
-          "cerulean cave 1f",
-          "cerulean cave b1f",
-          "kanto route 23 area",
-          "kanto safari zone middle",
-          "kanto safari zone area 1 east",
-          "kanto safari zone area 2 north",
-          "kanto safari zone area 3 west",
-          "berry forest area",
-          "icefall cave entrance",
-          "cape brink area",
-          "ruin valley area",
-          "four island area"
+          "Viridian City",
+          "Fuchsia City",
+          "Route 6",
+          "Route 22",
+          "Route 25",
+          "Cerulean Cave (1F)",
+          "Cerulean Cave (B1F)",
+          "Route 23",
+          "Safari Zone Middle",
+          "Safari Zone Area 1 East",
+          "Safari Zone Area 2 North",
+          "Safari Zone Area 3 West",
+          "Berry Forest",
+          "Icefall Cave Entrance",
+          "Cape Brink",
+          "Ruin Valley",
+          "Four Island"
         ]
       }
     },
     "119": {
       "firered": {
         "locations": [
-          "fuchsia city area",
-          "kanto safari zone middle",
-          "kanto safari zone area 1 east",
-          "kanto safari zone area 2 north",
-          "kanto safari zone area 3 west",
-          "berry forest area"
+          "Fuchsia City",
+          "Safari Zone Middle",
+          "Safari Zone Area 1 East",
+          "Safari Zone Area 2 North",
+          "Safari Zone Area 3 West",
+          "Berry Forest"
         ]
       },
       "leafgreen": {
         "locations": [
-          "fuchsia city area",
-          "kanto safari zone middle",
-          "kanto safari zone area 1 east",
-          "kanto safari zone area 2 north",
-          "kanto safari zone area 3 west",
-          "berry forest area"
+          "Fuchsia City",
+          "Safari Zone Middle",
+          "Safari Zone Area 1 East",
+          "Safari Zone Area 2 North",
+          "Safari Zone Area 3 West",
+          "Berry Forest"
         ]
       }
     },
     "120": {
       "leafgreen": {
         "locations": [
-          "cinnabar island area",
-          "vermilion city area",
-          "pallet town area",
-          "ss anne area",
-          "icefall cave waterfall",
-          "one island area",
-          "five island area"
+          "Cinnabar Island",
+          "Vermilion City",
+          "Pallet Town",
+          "Ss Anne",
+          "Icefall Cave Waterfall",
+          "One Island",
+          "Five Island"
         ]
       },
       "firered": {
         "locations": [
-          "Trade, Event"
+          "Trade",
+          "Event"
         ]
       }
     },
@@ -3297,350 +3405,365 @@
         "locations": [
           "Evolve Staryu"
         ]
+      },
+      "firered": {
+        "locations": [
+          "Evolve Staryu"
+        ]
       }
     },
     "122": {
       "firered": {
         "locations": [
-          "kanto route 2 north towards pewter city"
+          "Route 2 North Towards Pewter City"
         ]
       },
       "leafgreen": {
         "locations": [
-          "kanto route 2 north towards pewter city"
+          "Route 2 North Towards Pewter City"
         ]
       }
     },
     "123": {
       "firered": {
         "locations": [
-          "kanto safari zone middle",
-          "kanto safari zone area 1 east",
-          "celadon city prize corner"
+          "Safari Zone Middle",
+          "Safari Zone Area 1 East",
+          "Celadon City Prize Corner"
         ]
       },
       "leafgreen": {
         "locations": [
-          "Trade, Event"
+          "Trade",
+          "Event"
         ]
       }
     },
     "124": {
       "firered": {
         "locations": [
-          "cerulean city area"
+          "Cerulean City"
         ]
       },
       "leafgreen": {
         "locations": [
-          "cerulean city area"
+          "Cerulean City"
         ]
       }
     },
     "125": {
       "firered": {
         "locations": [
-          "kanto power plant area"
+          "Power Plant"
         ]
       },
       "leafgreen": {
         "locations": [
-          "Trade, Event"
+          "Trade",
+          "Event"
         ]
       }
     },
     "126": {
       "leafgreen": {
         "locations": [
-          "mt ember area"
+          "Mt. Ember"
         ]
       },
       "firered": {
         "locations": [
-          "Trade, Event"
+          "Trade",
+          "Event"
         ]
       }
     },
     "127": {
       "leafgreen": {
         "locations": [
-          "kanto safari zone middle",
-          "kanto safari zone area 1 east",
-          "celadon city prize corner"
+          "Safari Zone Middle",
+          "Safari Zone Area 1 East",
+          "Celadon City Prize Corner"
+        ]
+      },
+      "firered": {
+        "locations": [
+          "Safari Zone Area 2 North",
+          "Safari Zone Area 3 West",
+          "Celadon City Prize Corner"
         ]
       }
     },
     "128": {
       "firered": {
         "locations": [
-          "kanto safari zone area 2 north",
-          "kanto safari zone area 3 west"
+          "Safari Zone Area 2 North",
+          "Safari Zone Area 3 West"
         ]
       },
       "leafgreen": {
         "locations": [
-          "kanto safari zone area 2 north",
-          "kanto safari zone area 3 west"
+          "Safari Zone Area 2 North",
+          "Safari Zone Area 3 West"
         ]
       }
     },
     "129": {
       "firered": {
         "locations": [
-          "seafoam islands b3f",
-          "seafoam islands b4f",
-          "kanto route 12 area",
-          "kanto sea route 19 area",
-          "kanto sea route 20 area",
-          "cinnabar island area",
-          "viridian city area",
-          "cerulean city area",
-          "vermilion city area",
-          "celadon city area",
-          "fuchsia city area",
-          "pallet town area",
-          "kanto route 4 area",
-          "kanto route 6 area",
-          "kanto route 10 area",
-          "kanto route 11 area",
-          "kanto route 13 area",
-          "kanto sea route 21 area",
-          "kanto route 22 area",
-          "kanto route 24 area",
-          "kanto route 25 area",
-          "cerulean cave 1f",
-          "cerulean cave b1f",
-          "kanto route 23 area",
-          "kanto safari zone middle",
-          "kanto safari zone area 1 east",
-          "kanto safari zone area 2 north",
-          "kanto safari zone area 3 west",
-          "ss anne area",
-          "berry forest area",
-          "icefall cave entrance",
-          "icefall cave waterfall",
-          "kindle road area",
-          "treasure beach area",
-          "cape brink area",
-          "bond bridge area",
-          "resort gorgeous area",
-          "water labyrinth area",
-          "five isle meadow area",
-          "memorial pillar area",
-          "outcast island area",
-          "green path area",
-          "water path area",
-          "ruin valley area",
-          "trainer tower area",
-          "tanoby ruins area",
-          "one island area",
-          "four island area",
-          "five island area",
-          "kanto route 4 pokemon center",
-          "kanto route 3 pokemon center"
+          "Seafoam Islands (B3F)",
+          "Seafoam Islands (B4F)",
+          "Route 12",
+          "Sea Route 19",
+          "Sea Route 20",
+          "Cinnabar Island",
+          "Viridian City",
+          "Cerulean City",
+          "Vermilion City",
+          "Celadon City",
+          "Fuchsia City",
+          "Pallet Town",
+          "Route 4",
+          "Route 6",
+          "Route 10",
+          "Route 11",
+          "Route 13",
+          "Sea Route 21",
+          "Route 22",
+          "Route 24",
+          "Route 25",
+          "Cerulean Cave (1F)",
+          "Cerulean Cave (B1F)",
+          "Route 23",
+          "Safari Zone Middle",
+          "Safari Zone Area 1 East",
+          "Safari Zone Area 2 North",
+          "Safari Zone Area 3 West",
+          "Ss Anne",
+          "Berry Forest",
+          "Icefall Cave Entrance",
+          "Icefall Cave Waterfall",
+          "Kindle Road",
+          "Treasure Beach",
+          "Cape Brink",
+          "Bond Bridge",
+          "Resort Gorgeous",
+          "Water Labyrinth",
+          "Five Isle Meadow",
+          "Memorial Pillar",
+          "Outcast Island",
+          "Green Path",
+          "Water Path",
+          "Ruin Valley",
+          "Trainer Tower",
+          "Tanoby Ruins",
+          "One Island",
+          "Four Island",
+          "Five Island",
+          "Route 4 Pokemon Center",
+          "Route 3 Pokemon Center"
         ]
       },
       "leafgreen": {
         "locations": [
-          "seafoam islands b3f",
-          "seafoam islands b4f",
-          "kanto route 12 area",
-          "kanto sea route 19 area",
-          "kanto sea route 20 area",
-          "cinnabar island area",
-          "viridian city area",
-          "cerulean city area",
-          "vermilion city area",
-          "celadon city area",
-          "fuchsia city area",
-          "pallet town area",
-          "kanto route 4 area",
-          "kanto route 6 area",
-          "kanto route 10 area",
-          "kanto route 11 area",
-          "kanto route 13 area",
-          "kanto sea route 21 area",
-          "kanto route 22 area",
-          "kanto route 24 area",
-          "kanto route 25 area",
-          "cerulean cave 1f",
-          "cerulean cave b1f",
-          "kanto route 23 area",
-          "kanto safari zone middle",
-          "kanto safari zone area 1 east",
-          "kanto safari zone area 2 north",
-          "kanto safari zone area 3 west",
-          "ss anne area",
-          "berry forest area",
-          "icefall cave entrance",
-          "icefall cave waterfall",
-          "kindle road area",
-          "treasure beach area",
-          "cape brink area",
-          "bond bridge area",
-          "resort gorgeous area",
-          "water labyrinth area",
-          "five isle meadow area",
-          "memorial pillar area",
-          "outcast island area",
-          "green path area",
-          "water path area",
-          "ruin valley area",
-          "trainer tower area",
-          "tanoby ruins area",
-          "one island area",
-          "four island area",
-          "five island area",
-          "kanto route 4 pokemon center",
-          "kanto route 3 pokemon center"
+          "Seafoam Islands (B3F)",
+          "Seafoam Islands (B4F)",
+          "Route 12",
+          "Sea Route 19",
+          "Sea Route 20",
+          "Cinnabar Island",
+          "Viridian City",
+          "Cerulean City",
+          "Vermilion City",
+          "Celadon City",
+          "Fuchsia City",
+          "Pallet Town",
+          "Route 4",
+          "Route 6",
+          "Route 10",
+          "Route 11",
+          "Route 13",
+          "Sea Route 21",
+          "Route 22",
+          "Route 24",
+          "Route 25",
+          "Cerulean Cave (1F)",
+          "Cerulean Cave (B1F)",
+          "Route 23",
+          "Safari Zone Middle",
+          "Safari Zone Area 1 East",
+          "Safari Zone Area 2 North",
+          "Safari Zone Area 3 West",
+          "Ss Anne",
+          "Berry Forest",
+          "Icefall Cave Entrance",
+          "Icefall Cave Waterfall",
+          "Kindle Road",
+          "Treasure Beach",
+          "Cape Brink",
+          "Bond Bridge",
+          "Resort Gorgeous",
+          "Water Labyrinth",
+          "Five Isle Meadow",
+          "Memorial Pillar",
+          "Outcast Island",
+          "Green Path",
+          "Water Path",
+          "Ruin Valley",
+          "Trainer Tower",
+          "Tanoby Ruins",
+          "One Island",
+          "Four Island",
+          "Five Island",
+          "Route 4 Pokemon Center",
+          "Route 3 Pokemon Center"
         ]
       }
     },
     "130": {
       "firered": {
         "locations": [
-          "seafoam islands b3f",
-          "seafoam islands b4f",
-          "kanto route 12 area",
-          "kanto sea route 19 area",
-          "kanto sea route 20 area",
-          "cinnabar island area",
-          "viridian city area",
-          "cerulean city area",
-          "vermilion city area",
-          "fuchsia city area",
-          "pallet town area",
-          "kanto route 4 area",
-          "kanto route 6 area",
-          "kanto route 10 area",
-          "kanto route 11 area",
-          "kanto route 13 area",
-          "kanto sea route 21 area",
-          "kanto route 22 area",
-          "kanto route 24 area",
-          "kanto route 25 area",
-          "cerulean cave 1f",
-          "cerulean cave b1f",
-          "kanto route 23 area",
-          "ss anne area",
-          "berry forest area",
-          "icefall cave entrance",
-          "icefall cave waterfall",
-          "kindle road area",
-          "treasure beach area",
-          "cape brink area",
-          "bond bridge area",
-          "resort gorgeous area",
-          "water labyrinth area",
-          "five isle meadow area",
-          "memorial pillar area",
-          "outcast island area",
-          "green path area",
-          "water path area",
-          "ruin valley area",
-          "trainer tower area",
-          "tanoby ruins area",
-          "one island area",
-          "four island area",
-          "five island area"
+          "Seafoam Islands (B3F)",
+          "Seafoam Islands (B4F)",
+          "Route 12",
+          "Sea Route 19",
+          "Sea Route 20",
+          "Cinnabar Island",
+          "Viridian City",
+          "Cerulean City",
+          "Vermilion City",
+          "Fuchsia City",
+          "Pallet Town",
+          "Route 4",
+          "Route 6",
+          "Route 10",
+          "Route 11",
+          "Route 13",
+          "Sea Route 21",
+          "Route 22",
+          "Route 24",
+          "Route 25",
+          "Cerulean Cave (1F)",
+          "Cerulean Cave (B1F)",
+          "Route 23",
+          "Ss Anne",
+          "Berry Forest",
+          "Icefall Cave Entrance",
+          "Icefall Cave Waterfall",
+          "Kindle Road",
+          "Treasure Beach",
+          "Cape Brink",
+          "Bond Bridge",
+          "Resort Gorgeous",
+          "Water Labyrinth",
+          "Five Isle Meadow",
+          "Memorial Pillar",
+          "Outcast Island",
+          "Green Path",
+          "Water Path",
+          "Ruin Valley",
+          "Trainer Tower",
+          "Tanoby Ruins",
+          "One Island",
+          "Four Island",
+          "Five Island"
         ]
       },
       "leafgreen": {
         "locations": [
-          "seafoam islands b3f",
-          "seafoam islands b4f",
-          "kanto route 12 area",
-          "kanto sea route 19 area",
-          "kanto sea route 20 area",
-          "cinnabar island area",
-          "viridian city area",
-          "cerulean city area",
-          "vermilion city area",
-          "fuchsia city area",
-          "pallet town area",
-          "kanto route 4 area",
-          "kanto route 6 area",
-          "kanto route 10 area",
-          "kanto route 11 area",
-          "kanto route 13 area",
-          "kanto sea route 21 area",
-          "kanto route 22 area",
-          "kanto route 24 area",
-          "kanto route 25 area",
-          "cerulean cave 1f",
-          "cerulean cave b1f",
-          "kanto route 23 area",
-          "ss anne area",
-          "berry forest area",
-          "icefall cave entrance",
-          "icefall cave waterfall",
-          "kindle road area",
-          "treasure beach area",
-          "cape brink area",
-          "bond bridge area",
-          "resort gorgeous area",
-          "water labyrinth area",
-          "five isle meadow area",
-          "memorial pillar area",
-          "outcast island area",
-          "green path area",
-          "water path area",
-          "ruin valley area",
-          "trainer tower area",
-          "tanoby ruins area",
-          "one island area",
-          "four island area",
-          "five island area"
+          "Seafoam Islands (B3F)",
+          "Seafoam Islands (B4F)",
+          "Route 12",
+          "Sea Route 19",
+          "Sea Route 20",
+          "Cinnabar Island",
+          "Viridian City",
+          "Cerulean City",
+          "Vermilion City",
+          "Fuchsia City",
+          "Pallet Town",
+          "Route 4",
+          "Route 6",
+          "Route 10",
+          "Route 11",
+          "Route 13",
+          "Sea Route 21",
+          "Route 22",
+          "Route 24",
+          "Route 25",
+          "Cerulean Cave (1F)",
+          "Cerulean Cave (B1F)",
+          "Route 23",
+          "Ss Anne",
+          "Berry Forest",
+          "Icefall Cave Entrance",
+          "Icefall Cave Waterfall",
+          "Kindle Road",
+          "Treasure Beach",
+          "Cape Brink",
+          "Bond Bridge",
+          "Resort Gorgeous",
+          "Water Labyrinth",
+          "Five Isle Meadow",
+          "Memorial Pillar",
+          "Outcast Island",
+          "Green Path",
+          "Water Path",
+          "Ruin Valley",
+          "Trainer Tower",
+          "Tanoby Ruins",
+          "One Island",
+          "Four Island",
+          "Five Island"
         ]
       }
     },
     "131": {
       "firered": {
         "locations": [
-          "icefall cave waterfall",
-          "saffron city silph co 7f"
+          "Icefall Cave Waterfall",
+          "Saffron City Silph Co (7F)"
         ]
       },
       "leafgreen": {
         "locations": [
-          "icefall cave waterfall",
-          "saffron city silph co 7f"
+          "Icefall Cave Waterfall",
+          "Saffron City Silph Co (7F)"
         ]
       }
     },
     "132": {
       "firered": {
         "locations": [
-          "kanto route 13 area",
-          "kanto route 14 area",
-          "kanto route 15 area",
-          "cerulean cave 1f",
-          "cerulean cave 2f",
-          "cerulean cave b1f",
-          "pokemon mansion b1f"
+          "Route 13",
+          "Route 14",
+          "Route 15",
+          "Cerulean Cave (1F)",
+          "Cerulean Cave (2F)",
+          "Cerulean Cave (B1F)",
+          "Pokemon Mansion (B1F)"
         ]
       },
       "leafgreen": {
         "locations": [
-          "kanto route 13 area",
-          "kanto route 14 area",
-          "kanto route 15 area",
-          "cerulean cave 1f",
-          "cerulean cave 2f",
-          "cerulean cave b1f",
-          "pokemon mansion b1f"
+          "Route 13",
+          "Route 14",
+          "Route 15",
+          "Cerulean Cave (1F)",
+          "Cerulean Cave (2F)",
+          "Cerulean Cave (B1F)",
+          "Pokemon Mansion (B1F)"
         ]
       }
     },
     "133": {
       "firered": {
         "locations": [
-          "celadon city celadon mansion"
+          "Celadon City Celadon Mansion"
         ]
       },
       "leafgreen": {
         "locations": [
-          "celadon city celadon mansion"
+          "Celadon City Celadon Mansion"
         ]
       }
     },
@@ -3683,24 +3806,24 @@
     "137": {
       "firered": {
         "locations": [
-          "celadon city prize corner"
+          "Celadon City Prize Corner"
         ]
       },
       "leafgreen": {
         "locations": [
-          "celadon city prize corner"
+          "Celadon City Prize Corner"
         ]
       }
     },
     "138": {
       "firered": {
         "locations": [
-          "cinnabar island cinnabar lab"
+          "Cinnabar Island Cinnabar Lab"
         ]
       },
       "leafgreen": {
         "locations": [
-          "cinnabar island cinnabar lab"
+          "Cinnabar Island Cinnabar Lab"
         ]
       }
     },
@@ -3719,12 +3842,12 @@
     "140": {
       "firered": {
         "locations": [
-          "cinnabar island cinnabar lab"
+          "Cinnabar Island Cinnabar Lab"
         ]
       },
       "leafgreen": {
         "locations": [
-          "cinnabar island cinnabar lab"
+          "Cinnabar Island Cinnabar Lab"
         ]
       }
     },
@@ -3743,100 +3866,100 @@
     "142": {
       "firered": {
         "locations": [
-          "cinnabar island cinnabar lab"
+          "Cinnabar Island Cinnabar Lab"
         ]
       },
       "leafgreen": {
         "locations": [
-          "cinnabar island cinnabar lab"
+          "Cinnabar Island Cinnabar Lab"
         ]
       }
     },
     "143": {
       "firered": {
         "locations": [
-          "kanto route 12 area",
-          "kanto route 16 area"
+          "Route 12",
+          "Route 16"
         ]
       },
       "leafgreen": {
         "locations": [
-          "kanto route 12 area",
-          "kanto route 16 area"
+          "Route 12",
+          "Route 16"
         ]
       }
     },
     "144": {
       "firered": {
         "locations": [
-          "seafoam islands b4f"
+          "Seafoam Islands (B4F)"
         ]
       },
       "leafgreen": {
         "locations": [
-          "seafoam islands b4f"
+          "Seafoam Islands (B4F)"
         ]
       }
     },
     "145": {
       "firered": {
         "locations": [
-          "kanto power plant area"
+          "Power Plant"
         ]
       },
       "leafgreen": {
         "locations": [
-          "kanto power plant area"
+          "Power Plant"
         ]
       }
     },
     "146": {
       "firered": {
         "locations": [
-          "mt ember summit"
+          "Mt. Ember Summit"
         ]
       },
       "leafgreen": {
         "locations": [
-          "mt ember summit"
+          "Mt. Ember Summit"
         ]
       }
     },
     "147": {
       "firered": {
         "locations": [
-          "kanto safari zone middle",
-          "kanto safari zone area 1 east",
-          "kanto safari zone area 2 north",
-          "kanto safari zone area 3 west",
-          "celadon city prize corner"
+          "Safari Zone Middle",
+          "Safari Zone Area 1 East",
+          "Safari Zone Area 2 North",
+          "Safari Zone Area 3 West",
+          "Celadon City Prize Corner"
         ]
       },
       "leafgreen": {
         "locations": [
-          "kanto safari zone middle",
-          "kanto safari zone area 1 east",
-          "kanto safari zone area 2 north",
-          "kanto safari zone area 3 west",
-          "celadon city prize corner"
+          "Safari Zone Middle",
+          "Safari Zone Area 1 East",
+          "Safari Zone Area 2 North",
+          "Safari Zone Area 3 West",
+          "Celadon City Prize Corner"
         ]
       }
     },
     "148": {
       "firered": {
         "locations": [
-          "kanto safari zone middle",
-          "kanto safari zone area 1 east",
-          "kanto safari zone area 2 north",
-          "kanto safari zone area 3 west"
+          "Safari Zone Middle",
+          "Safari Zone Area 1 East",
+          "Safari Zone Area 2 North",
+          "Safari Zone Area 3 West"
         ]
       },
       "leafgreen": {
         "locations": [
-          "kanto safari zone middle",
-          "kanto safari zone area 1 east",
-          "kanto safari zone area 2 north",
-          "kanto safari zone area 3 west"
+          "Safari Zone Middle",
+          "Safari Zone Area 1 East",
+          "Safari Zone Area 2 North",
+          "Safari Zone Area 3 West"
         ]
       }
     },
@@ -3855,12 +3978,12 @@
     "150": {
       "firered": {
         "locations": [
-          "cerulean cave b1f"
+          "Cerulean Cave (B1F)"
         ]
       },
       "leafgreen": {
         "locations": [
-          "cerulean cave b1f"
+          "Cerulean Cave (B1F)"
         ]
       }
     },

@@ -14,6 +14,7 @@
       "type": "base",
       "optional": false,
       "defaultEnabled": false,
+      "startIndex": 1,
       "entries": [
         {
           "speciesId": 1,
@@ -787,14 +788,14 @@
     "1": {
       "lets-go-pikachu": {
         "locations": [
-          "cerulean city area",
-          "viridian forest area"
+          "Cerulean City",
+          "Viridian Forest"
         ]
       },
       "lets-go-eevee": {
         "locations": [
-          "cerulean city area",
-          "viridian forest area"
+          "Cerulean City",
+          "Viridian Forest"
         ]
       }
     },
@@ -825,20 +826,20 @@
     "4": {
       "lets-go-pikachu": {
         "locations": [
-          "rock tunnel 1f",
-          "rock tunnel b1f",
-          "kanto route 3 area",
-          "kanto route 4 area",
-          "kanto route 24 area"
+          "Rock Tunnel (1F)",
+          "Rock Tunnel (B1F)",
+          "Route 3",
+          "Route 4",
+          "Route 24"
         ]
       },
       "lets-go-eevee": {
         "locations": [
-          "rock tunnel 1f",
-          "rock tunnel b1f",
-          "kanto route 3 area",
-          "kanto route 4 area",
-          "kanto route 24 area"
+          "Rock Tunnel (1F)",
+          "Rock Tunnel (B1F)",
+          "Route 3",
+          "Route 4",
+          "Route 24"
         ]
       }
     },
@@ -857,86 +858,86 @@
     "6": {
       "lets-go-pikachu": {
         "locations": [
-          "kanto route 12 area",
-          "kanto sea route 19 area",
-          "kanto sea route 20 area",
-          "kanto route 1 area",
-          "kanto route 2 south towards viridian city",
-          "kanto route 3 area",
-          "kanto route 4 area",
-          "kanto route 6 area",
-          "kanto route 7 area",
-          "kanto route 8 area",
-          "kanto route 9 area",
-          "kanto route 10 area",
-          "kanto route 11 area",
-          "kanto route 13 area",
-          "kanto route 14 area",
-          "kanto route 15 area",
-          "kanto route 16 area",
-          "kanto route 17 area",
-          "kanto route 18 area",
-          "kanto sea route 21 area",
-          "kanto route 22 area",
-          "kanto route 24 area",
-          "kanto route 25 area",
-          "kanto route 2 north towards pewter city",
-          "kanto route 23 area"
+          "Route 12",
+          "Sea Route 19",
+          "Sea Route 20",
+          "Route 1",
+          "Route 2 South Towards Viridian City",
+          "Route 3",
+          "Route 4",
+          "Route 6",
+          "Route 7",
+          "Route 8",
+          "Route 9",
+          "Route 10",
+          "Route 11",
+          "Route 13",
+          "Route 14",
+          "Route 15",
+          "Route 16",
+          "Route 17",
+          "Route 18",
+          "Sea Route 21",
+          "Route 22",
+          "Route 24",
+          "Route 25",
+          "Route 2 North Towards Pewter City",
+          "Route 23"
         ]
       },
       "lets-go-eevee": {
         "locations": [
-          "kanto route 12 area",
-          "kanto sea route 19 area",
-          "kanto sea route 20 area",
-          "kanto route 1 area",
-          "kanto route 2 south towards viridian city",
-          "kanto route 3 area",
-          "kanto route 4 area",
-          "kanto route 6 area",
-          "kanto route 7 area",
-          "kanto route 8 area",
-          "kanto route 9 area",
-          "kanto route 10 area",
-          "kanto route 11 area",
-          "kanto route 13 area",
-          "kanto route 14 area",
-          "kanto route 15 area",
-          "kanto route 16 area",
-          "kanto route 17 area",
-          "kanto route 18 area",
-          "kanto sea route 21 area",
-          "kanto route 22 area",
-          "kanto route 24 area",
-          "kanto route 25 area",
-          "kanto route 2 north towards pewter city",
-          "kanto route 23 area"
+          "Route 12",
+          "Sea Route 19",
+          "Sea Route 20",
+          "Route 1",
+          "Route 2 South Towards Viridian City",
+          "Route 3",
+          "Route 4",
+          "Route 6",
+          "Route 7",
+          "Route 8",
+          "Route 9",
+          "Route 10",
+          "Route 11",
+          "Route 13",
+          "Route 14",
+          "Route 15",
+          "Route 16",
+          "Route 17",
+          "Route 18",
+          "Sea Route 21",
+          "Route 22",
+          "Route 24",
+          "Route 25",
+          "Route 2 North Towards Pewter City",
+          "Route 23"
         ]
       }
     },
     "7": {
       "lets-go-pikachu": {
         "locations": [
-          "seafoam islands 1f",
-          "seafoam islands b1f",
-          "seafoam islands b2f",
-          "seafoam islands b3f",
-          "seafoam islands b4f",
-          "vermilion city area",
-          "kanto route 24 area",
-          "kanto route 25 area"
+          "Seafoam Islands (1F)",
+          "Seafoam Islands (B1F)",
+          "Seafoam Islands (B2F)",
+          "Seafoam Islands (B3F)",
+          "Seafoam Islands (B4F)",
+          "Vermilion City",
+          "Route 24",
+          "Route 25"
         ]
       },
       "lets-go-eevee": {
         "locations": [
-          "seafoam islands 1f",
-          "seafoam islands b1f",
-          "seafoam islands b2f",
-          "seafoam islands b3f",
-          "seafoam islands b4f",
-          "vermilion city area",
-          "kanto route 24 area",
-          "kanto route 25 area"
+          "Seafoam Islands (1F)",
+          "Seafoam Islands (B1F)",
+          "Seafoam Islands (B2F)",
+          "Seafoam Islands (B3F)",
+          "Seafoam Islands (B4F)",
+          "Vermilion City",
+          "Route 24",
+          "Route 25"
         ]
       }
     },
@@ -967,35 +968,35 @@
     "10": {
       "lets-go-pikachu": {
         "locations": [
-          "kanto route 2 south towards viridian city",
-          "kanto route 2 north towards pewter city",
-          "viridian forest area"
+          "Route 2 South Towards Viridian City",
+          "Route 2 North Towards Pewter City",
+          "Viridian Forest"
         ]
       },
       "lets-go-eevee": {
         "locations": [
-          "kanto route 2 south towards viridian city",
-          "kanto route 2 north towards pewter city",
-          "viridian forest area"
+          "Route 2 South Towards Viridian City",
+          "Route 2 North Towards Pewter City",
+          "Viridian Forest"
         ]
       }
     },
     "11": {
       "lets-go-pikachu": {
         "locations": [
-          "viridian forest area"
+          "Viridian Forest"
         ]
       },
       "lets-go-eevee": {
         "locations": [
-          "viridian forest area"
+          "Viridian Forest"
         ]
       }
     },
     "12": {
       "lets-go-pikachu": {
         "locations": [
-          "viridian forest area"
+          "Viridian Forest"
         ]
       },
       "lets-go-eevee": {
@@ -1007,35 +1008,35 @@
     "13": {
       "lets-go-pikachu": {
         "locations": [
-          "kanto route 2 south towards viridian city",
-          "kanto route 2 north towards pewter city",
-          "viridian forest area"
+          "Route 2 South Towards Viridian City",
+          "Route 2 North Towards Pewter City",
+          "Viridian Forest"
         ]
       },
       "lets-go-eevee": {
         "locations": [
-          "kanto route 2 south towards viridian city",
-          "kanto route 2 north towards pewter city",
-          "viridian forest area"
+          "Route 2 South Towards Viridian City",
+          "Route 2 North Towards Pewter City",
+          "Viridian Forest"
         ]
       }
     },
     "14": {
       "lets-go-pikachu": {
         "locations": [
-          "viridian forest area"
+          "Viridian Forest"
         ]
       },
       "lets-go-eevee": {
         "locations": [
-          "viridian forest area"
+          "Viridian Forest"
         ]
       }
     },
     "15": {
       "lets-go-eevee": {
         "locations": [
-          "viridian forest area"
+          "Viridian Forest"
         ]
       },
       "lets-go-pikachu": {
@@ -1047,228 +1048,236 @@
     "16": {
       "lets-go-pikachu": {
         "locations": [
-          "kanto route 12 area",
-          "kanto sea route 19 area",
-          "kanto sea route 20 area",
-          "kanto route 1 area",
-          "kanto route 2 south towards viridian city",
-          "kanto route 5 area",
-          "kanto route 6 area",
-          "kanto route 7 area",
-          "kanto route 8 area",
-          "kanto route 11 area",
-          "kanto route 13 area",
-          "kanto route 14 area",
-          "kanto route 15 area",
-          "kanto route 16 area",
-          "kanto route 17 area",
-          "kanto route 18 area",
-          "kanto sea route 21 area",
-          "kanto route 24 area",
-          "kanto route 25 area",
-          "kanto route 2 north towards pewter city",
-          "viridian forest area"
+          "Route 12",
+          "Sea Route 19",
+          "Sea Route 20",
+          "Route 1",
+          "Route 2 South Towards Viridian City",
+          "Route 5",
+          "Route 6",
+          "Route 7",
+          "Route 8",
+          "Route 11",
+          "Route 13",
+          "Route 14",
+          "Route 15",
+          "Route 16",
+          "Route 17",
+          "Route 18",
+          "Sea Route 21",
+          "Route 24",
+          "Route 25",
+          "Route 2 North Towards Pewter City",
+          "Viridian Forest"
         ]
       },
       "lets-go-eevee": {
         "locations": [
-          "kanto route 12 area",
-          "kanto sea route 19 area",
-          "kanto sea route 20 area",
-          "kanto route 1 area",
-          "kanto route 2 south towards viridian city",
-          "kanto route 5 area",
-          "kanto route 6 area",
-          "kanto route 7 area",
-          "kanto route 8 area",
-          "kanto route 11 area",
-          "kanto route 13 area",
-          "kanto route 14 area",
-          "kanto route 15 area",
-          "kanto route 16 area",
-          "kanto route 17 area",
-          "kanto route 18 area",
-          "kanto sea route 21 area",
-          "kanto route 24 area",
-          "kanto route 25 area",
-          "kanto route 2 north towards pewter city",
-          "viridian forest area"
+          "Route 12",
+          "Sea Route 19",
+          "Sea Route 20",
+          "Route 1",
+          "Route 2 South Towards Viridian City",
+          "Route 5",
+          "Route 6",
+          "Route 7",
+          "Route 8",
+          "Route 11",
+          "Route 13",
+          "Route 14",
+          "Route 15",
+          "Route 16",
+          "Route 17",
+          "Route 18",
+          "Sea Route 21",
+          "Route 24",
+          "Route 25",
+          "Route 2 North Towards Pewter City",
+          "Viridian Forest"
         ]
       }
     },
     "17": {
       "lets-go-pikachu": {
         "locations": [
-          "kanto route 12 area",
-          "kanto sea route 19 area",
-          "kanto sea route 20 area",
-          "kanto route 1 area",
-          "kanto route 2 south towards viridian city",
-          "kanto route 5 area",
-          "kanto route 6 area",
-          "kanto route 7 area",
-          "kanto route 8 area",
-          "kanto route 11 area",
-          "kanto route 13 area",
-          "kanto route 14 area",
-          "kanto route 15 area",
-          "kanto route 16 area",
-          "kanto route 17 area",
-          "kanto route 18 area",
-          "kanto sea route 21 area",
-          "kanto route 24 area",
-          "kanto route 25 area",
-          "kanto route 2 north towards pewter city"
+          "Route 12",
+          "Sea Route 19",
+          "Sea Route 20",
+          "Route 1",
+          "Route 2 South Towards Viridian City",
+          "Route 5",
+          "Route 6",
+          "Route 7",
+          "Route 8",
+          "Route 11",
+          "Route 13",
+          "Route 14",
+          "Route 15",
+          "Route 16",
+          "Route 17",
+          "Route 18",
+          "Sea Route 21",
+          "Route 24",
+          "Route 25",
+          "Route 2 North Towards Pewter City"
         ]
       },
       "lets-go-eevee": {
         "locations": [
-          "kanto route 12 area",
-          "kanto sea route 19 area",
-          "kanto sea route 20 area",
-          "kanto route 1 area",
-          "kanto route 2 south towards viridian city",
-          "kanto route 5 area",
-          "kanto route 6 area",
-          "kanto route 7 area",
-          "kanto route 8 area",
-          "kanto route 11 area",
-          "kanto route 13 area",
-          "kanto route 14 area",
-          "kanto route 15 area",
-          "kanto route 16 area",
-          "kanto route 17 area",
-          "kanto route 18 area",
-          "kanto sea route 21 area",
-          "kanto route 24 area",
-          "kanto route 25 area",
-          "kanto route 2 north towards pewter city"
+          "Route 12",
+          "Sea Route 19",
+          "Sea Route 20",
+          "Route 1",
+          "Route 2 South Towards Viridian City",
+          "Route 5",
+          "Route 6",
+          "Route 7",
+          "Route 8",
+          "Route 11",
+          "Route 13",
+          "Route 14",
+          "Route 15",
+          "Route 16",
+          "Route 17",
+          "Route 18",
+          "Sea Route 21",
+          "Route 24",
+          "Route 25",
+          "Route 2 North Towards Pewter City"
         ]
       }
     },
     "18": {
       "lets-go-pikachu": {
         "locations": [
-          "kanto route 12 area",
-          "kanto sea route 19 area",
-          "kanto sea route 20 area",
-          "kanto route 1 area",
-          "kanto route 2 south towards viridian city",
-          "kanto route 5 area",
-          "kanto route 6 area",
-          "kanto route 7 area",
-          "kanto route 8 area",
-          "kanto route 11 area",
-          "kanto route 13 area",
-          "kanto route 14 area",
-          "kanto route 15 area",
-          "kanto route 16 area",
-          "kanto route 17 area",
-          "kanto route 18 area",
-          "kanto sea route 21 area",
-          "kanto route 24 area",
-          "kanto route 25 area",
-          "kanto route 2 north towards pewter city"
+          "Route 12",
+          "Sea Route 19",
+          "Sea Route 20",
+          "Route 1",
+          "Route 2 South Towards Viridian City",
+          "Route 5",
+          "Route 6",
+          "Route 7",
+          "Route 8",
+          "Route 11",
+          "Route 13",
+          "Route 14",
+          "Route 15",
+          "Route 16",
+          "Route 17",
+          "Route 18",
+          "Sea Route 21",
+          "Route 24",
+          "Route 25",
+          "Route 2 North Towards Pewter City"
         ]
       },
       "lets-go-eevee": {
         "locations": [
-          "kanto route 12 area",
-          "kanto sea route 19 area",
-          "kanto sea route 20 area",
-          "kanto route 1 area",
-          "kanto route 2 south towards viridian city",
-          "kanto route 5 area",
-          "kanto route 6 area",
-          "kanto route 7 area",
-          "kanto route 8 area",
-          "kanto route 11 area",
-          "kanto route 13 area",
-          "kanto route 14 area",
-          "kanto route 15 area",
-          "kanto route 16 area",
-          "kanto route 17 area",
-          "kanto route 18 area",
-          "kanto sea route 21 area",
-          "kanto route 24 area",
-          "kanto route 25 area",
-          "kanto route 2 north towards pewter city"
+          "Route 12",
+          "Sea Route 19",
+          "Sea Route 20",
+          "Route 1",
+          "Route 2 South Towards Viridian City",
+          "Route 5",
+          "Route 6",
+          "Route 7",
+          "Route 8",
+          "Route 11",
+          "Route 13",
+          "Route 14",
+          "Route 15",
+          "Route 16",
+          "Route 17",
+          "Route 18",
+          "Sea Route 21",
+          "Route 24",
+          "Route 25",
+          "Route 2 North Towards Pewter City"
         ]
       }
     },
     "19": {
       "lets-go-pikachu": {
         "locations": [
-          "cerulean city area"
+          "Cerulean City"
         ]
       },
       "lets-go-eevee": {
         "locations": [
-          "cerulean city area"
+          "Cerulean City"
         ]
       }
     },
     "20": {
       "lets-go-pikachu": {
         "locations": [
-          "Routes Kanto, Kanto, Kanto, Kanto, Kanto, Kanto, Kanto, Kanto and Kanto, Rattata ('''Alolan Form''')"
+          "Routes Kanto",
+          "Kanto",
+          "Kanto and Kanto",
+          "Pokémon Mansion (Kantonian Form)",
+          "Evolve Rattata (Alolan Form)"
         ]
       },
       "lets-go-eevee": {
         "locations": [
-          "Routes Kanto, Kanto, Kanto, Kanto, Kanto, Kanto, Kanto, Kanto and Kanto, Rattata ('''Alolan Form''')"
+          "Routes Kanto",
+          "Kanto",
+          "Kanto and Kanto",
+          "Pokémon Mansion (Kantonian Form)",
+          "Evolve Rattata (Alolan Form)"
         ]
       }
     },
     "21": {
       "lets-go-pikachu": {
         "locations": [
-          "kanto route 3 area",
-          "kanto route 4 area",
-          "kanto route 9 area",
-          "kanto route 10 area",
-          "kanto route 22 area",
-          "kanto route 23 area"
+          "Route 3",
+          "Route 4",
+          "Route 9",
+          "Route 10",
+          "Route 22",
+          "Route 23"
         ]
       },
       "lets-go-eevee": {
         "locations": [
-          "kanto route 3 area",
-          "kanto route 4 area",
-          "kanto route 9 area",
-          "kanto route 10 area",
-          "kanto route 22 area",
-          "kanto route 23 area"
+          "Route 3",
+          "Route 4",
+          "Route 9",
+          "Route 10",
+          "Route 22",
+          "Route 23"
         ]
       }
     },
     "22": {
       "lets-go-pikachu": {
         "locations": [
-          "kanto route 3 area",
-          "kanto route 4 area",
-          "kanto route 9 area",
-          "kanto route 10 area",
-          "kanto route 22 area",
-          "kanto route 23 area"
+          "Route 3",
+          "Route 4",
+          "Route 9",
+          "Route 10",
+          "Route 22",
+          "Route 23"
         ]
       },
       "lets-go-eevee": {
         "locations": [
-          "kanto route 3 area",
-          "kanto route 4 area",
-          "kanto route 9 area",
-          "kanto route 10 area",
-          "kanto route 22 area",
-          "kanto route 23 area"
+          "Route 3",
+          "Route 4",
+          "Route 9",
+          "Route 10",
+          "Route 22",
+          "Route 23"
         ]
       }
     },
     "23": {
       "lets-go-eevee": {
         "locations": [
-          "kanto route 3 area",
-          "kanto route 4 area"
+          "Route 3",
+          "Route 4"
         ]
       }
     },
@@ -1282,192 +1291,192 @@
     "25": {
       "lets-go-pikachu": {
         "locations": [
-          "pallet town area",
-          "viridian forest area"
+          "Pallet Town",
+          "Viridian Forest"
         ]
       },
       "lets-go-eevee": {
         "locations": [
-          "viridian forest area"
+          "Viridian Forest"
         ]
       }
     },
     "26": {
       "lets-go-pikachu": {
         "locations": [
-          "saffron city area"
+          "Saffron City"
         ]
       },
       "lets-go-eevee": {
         "locations": [
-          "saffron city area"
+          "Saffron City"
         ]
       }
     },
     "27": {
       "lets-go-pikachu": {
         "locations": [
-          "celadon city area"
+          "Celadon City"
         ]
       }
     },
     "28": {
       "lets-go-pikachu": {
         "locations": [
-          "Evolve Sandshrew ('''Kantonian/Alolan Forms''')"
+          "Evolve Sandshrew (Kantonian/Alolan Forms)"
         ]
       }
     },
     "29": {
       "lets-go-pikachu": {
         "locations": [
-          "kanto route 9 area",
-          "kanto route 10 area",
-          "kanto route 22 area",
-          "kanto route 23 area"
+          "Route 9",
+          "Route 10",
+          "Route 22",
+          "Route 23"
         ]
       },
       "lets-go-eevee": {
         "locations": [
-          "kanto route 9 area",
-          "kanto route 10 area",
-          "kanto route 22 area",
-          "kanto route 23 area"
+          "Route 9",
+          "Route 10",
+          "Route 22",
+          "Route 23"
         ]
       }
     },
     "30": {
       "lets-go-pikachu": {
         "locations": [
-          "kanto route 9 area",
-          "kanto route 10 area",
-          "kanto route 23 area"
+          "Route 9",
+          "Route 10",
+          "Route 23"
         ]
       },
       "lets-go-eevee": {
         "locations": [
-          "kanto route 9 area",
-          "kanto route 10 area",
-          "kanto route 23 area"
+          "Route 9",
+          "Route 10",
+          "Route 23"
         ]
       }
     },
     "31": {
       "lets-go-pikachu": {
         "locations": [
-          "kanto route 23 area"
+          "Route 23"
         ]
       },
       "lets-go-eevee": {
         "locations": [
-          "kanto route 23 area"
+          "Route 23"
         ]
       }
     },
     "32": {
       "lets-go-pikachu": {
         "locations": [
-          "kanto route 9 area",
-          "kanto route 10 area",
-          "kanto route 22 area",
-          "kanto route 23 area"
+          "Route 9",
+          "Route 10",
+          "Route 22",
+          "Route 23"
         ]
       },
       "lets-go-eevee": {
         "locations": [
-          "kanto route 9 area",
-          "kanto route 10 area",
-          "kanto route 22 area",
-          "kanto route 23 area"
+          "Route 9",
+          "Route 10",
+          "Route 22",
+          "Route 23"
         ]
       }
     },
     "33": {
       "lets-go-pikachu": {
         "locations": [
-          "kanto route 9 area",
-          "kanto route 10 area",
-          "kanto route 23 area"
+          "Route 9",
+          "Route 10",
+          "Route 23"
         ]
       },
       "lets-go-eevee": {
         "locations": [
-          "kanto route 9 area",
-          "kanto route 10 area",
-          "kanto route 23 area"
+          "Route 9",
+          "Route 10",
+          "Route 23"
         ]
       }
     },
     "34": {
       "lets-go-pikachu": {
         "locations": [
-          "kanto route 23 area"
+          "Route 23"
         ]
       },
       "lets-go-eevee": {
         "locations": [
-          "kanto route 23 area"
+          "Route 23"
         ]
       }
     },
     "35": {
       "lets-go-pikachu": {
         "locations": [
-          "mt moon 1f",
-          "mt moon b1f",
-          "mt moon b2f"
+          "Mt. Moon (1F)",
+          "Mt. Moon (B1F)",
+          "Mt. Moon (B2F)"
         ]
       },
       "lets-go-eevee": {
         "locations": [
-          "mt moon 1f",
-          "mt moon b1f",
-          "mt moon b2f"
+          "Mt. Moon (1F)",
+          "Mt. Moon (B1F)",
+          "Mt. Moon (B2F)"
         ]
       }
     },
     "36": {
       "lets-go-pikachu": {
         "locations": [
-          "mt moon b2f"
+          "Mt. Moon (B2F)"
         ]
       },
       "lets-go-eevee": {
         "locations": [
-          "mt moon b2f"
+          "Mt. Moon (B2F)"
         ]
       }
     },
     "37": {
       "lets-go-eevee": {
         "locations": [
-          "celadon city area"
+          "Celadon City"
         ]
       }
     },
     "38": {
       "lets-go-eevee": {
         "locations": [
-          "Routes Kanto and Kanto ('''Kantonian Form''')",
-          "Evolve Vulpix ('''Alolan Form''')"
+          "Routes Kanto and Kanto (Kantonian Form)",
+          "Evolve Vulpix (Alolan Form)"
         ]
       }
     },
     "39": {
       "lets-go-pikachu": {
         "locations": [
-          "kanto route 5 area",
-          "kanto route 6 area",
-          "kanto route 7 area",
-          "kanto route 8 area"
+          "Route 5",
+          "Route 6",
+          "Route 7",
+          "Route 8"
         ]
       },
       "lets-go-eevee": {
         "locations": [
-          "kanto route 5 area",
-          "kanto route 6 area",
-          "kanto route 7 area",
-          "kanto route 8 area"
+          "Route 5",
+          "Route 6",
+          "Route 7",
+          "Route 8"
         ]
       }
     },
@@ -1486,147 +1495,147 @@
     "41": {
       "lets-go-pikachu": {
         "locations": [
-          "seafoam islands 1f",
-          "seafoam islands b1f",
-          "seafoam islands b2f",
-          "seafoam islands b3f",
-          "seafoam islands b4f",
-          "mt moon 1f",
-          "rock tunnel 1f",
-          "rock tunnel b1f",
-          "kanto victory road 1 1f",
-          "digletts cave area",
-          "kanto victory road 1 2f",
-          "kanto victory road 1 3f",
-          "cerulean cave 1f",
-          "cerulean cave 2f",
-          "cerulean cave b1f",
-          "mt moon b1f",
-          "mt moon b2f",
-          "pokemon tower 3f",
-          "pokemon tower 4f",
-          "pokemon tower 5f",
-          "pokemon tower 6f"
+          "Seafoam Islands (1F)",
+          "Seafoam Islands (B1F)",
+          "Seafoam Islands (B2F)",
+          "Seafoam Islands (B3F)",
+          "Seafoam Islands (B4F)",
+          "Mt. Moon (1F)",
+          "Rock Tunnel (1F)",
+          "Rock Tunnel (B1F)",
+          "Victory Road 1 (1F)",
+          "Digletts Cave",
+          "Victory Road 1 (2F)",
+          "Victory Road 1 (3F)",
+          "Cerulean Cave (1F)",
+          "Cerulean Cave (2F)",
+          "Cerulean Cave (B1F)",
+          "Mt. Moon (B1F)",
+          "Mt. Moon (B2F)",
+          "Pokemon Tower (3F)",
+          "Pokemon Tower (4F)",
+          "Pokemon Tower (5F)",
+          "Pokemon Tower (6F)"
         ]
       },
       "lets-go-eevee": {
         "locations": [
-          "seafoam islands 1f",
-          "seafoam islands b1f",
-          "seafoam islands b2f",
-          "seafoam islands b3f",
-          "seafoam islands b4f",
-          "mt moon 1f",
-          "rock tunnel 1f",
-          "rock tunnel b1f",
-          "kanto victory road 1 1f",
-          "digletts cave area",
-          "kanto victory road 1 2f",
-          "kanto victory road 1 3f",
-          "cerulean cave 1f",
-          "cerulean cave 2f",
-          "cerulean cave b1f",
-          "mt moon b1f",
-          "mt moon b2f",
-          "pokemon tower 3f",
-          "pokemon tower 4f",
-          "pokemon tower 5f",
-          "pokemon tower 6f"
+          "Seafoam Islands (1F)",
+          "Seafoam Islands (B1F)",
+          "Seafoam Islands (B2F)",
+          "Seafoam Islands (B3F)",
+          "Seafoam Islands (B4F)",
+          "Mt. Moon (1F)",
+          "Rock Tunnel (1F)",
+          "Rock Tunnel (B1F)",
+          "Victory Road 1 (1F)",
+          "Digletts Cave",
+          "Victory Road 1 (2F)",
+          "Victory Road 1 (3F)",
+          "Cerulean Cave (1F)",
+          "Cerulean Cave (2F)",
+          "Cerulean Cave (B1F)",
+          "Mt. Moon (B1F)",
+          "Mt. Moon (B2F)",
+          "Pokemon Tower (3F)",
+          "Pokemon Tower (4F)",
+          "Pokemon Tower (5F)",
+          "Pokemon Tower (6F)"
         ]
       }
     },
     "42": {
       "lets-go-pikachu": {
         "locations": [
-          "seafoam islands 1f",
-          "seafoam islands b1f",
-          "seafoam islands b2f",
-          "seafoam islands b3f",
-          "seafoam islands b4f",
-          "rock tunnel 1f",
-          "rock tunnel b1f",
-          "kanto victory road 1 1f",
-          "kanto victory road 1 2f",
-          "kanto victory road 1 3f",
-          "cerulean cave 1f",
-          "cerulean cave 2f",
-          "cerulean cave b1f",
-          "pokemon tower 3f",
-          "pokemon tower 4f",
-          "pokemon tower 5f",
-          "pokemon tower 6f"
+          "Seafoam Islands (1F)",
+          "Seafoam Islands (B1F)",
+          "Seafoam Islands (B2F)",
+          "Seafoam Islands (B3F)",
+          "Seafoam Islands (B4F)",
+          "Rock Tunnel (1F)",
+          "Rock Tunnel (B1F)",
+          "Victory Road 1 (1F)",
+          "Victory Road 1 (2F)",
+          "Victory Road 1 (3F)",
+          "Cerulean Cave (1F)",
+          "Cerulean Cave (2F)",
+          "Cerulean Cave (B1F)",
+          "Pokemon Tower (3F)",
+          "Pokemon Tower (4F)",
+          "Pokemon Tower (5F)",
+          "Pokemon Tower (6F)"
         ]
       },
       "lets-go-eevee": {
         "locations": [
-          "seafoam islands 1f",
-          "seafoam islands b1f",
-          "seafoam islands b2f",
-          "seafoam islands b3f",
-          "seafoam islands b4f",
-          "rock tunnel 1f",
-          "rock tunnel b1f",
-          "kanto victory road 1 1f",
-          "kanto victory road 1 2f",
-          "kanto victory road 1 3f",
-          "cerulean cave 1f",
-          "cerulean cave 2f",
-          "cerulean cave b1f",
-          "pokemon tower 3f",
-          "pokemon tower 4f",
-          "pokemon tower 5f",
-          "pokemon tower 6f"
+          "Seafoam Islands (1F)",
+          "Seafoam Islands (B1F)",
+          "Seafoam Islands (B2F)",
+          "Seafoam Islands (B3F)",
+          "Seafoam Islands (B4F)",
+          "Rock Tunnel (1F)",
+          "Rock Tunnel (B1F)",
+          "Victory Road 1 (1F)",
+          "Victory Road 1 (2F)",
+          "Victory Road 1 (3F)",
+          "Cerulean Cave (1F)",
+          "Cerulean Cave (2F)",
+          "Cerulean Cave (B1F)",
+          "Pokemon Tower (3F)",
+          "Pokemon Tower (4F)",
+          "Pokemon Tower (5F)",
+          "Pokemon Tower (6F)"
         ]
       }
     },
     "43": {
       "lets-go-pikachu": {
         "locations": [
-          "kanto route 12 area",
-          "kanto route 1 area",
-          "kanto route 2 south towards viridian city",
-          "kanto route 13 area",
-          "kanto route 14 area",
-          "kanto route 15 area",
-          "kanto sea route 21 area",
-          "kanto route 24 area",
-          "kanto route 25 area",
-          "kanto route 2 north towards pewter city",
-          "viridian forest area"
+          "Route 12",
+          "Route 1",
+          "Route 2 South Towards Viridian City",
+          "Route 13",
+          "Route 14",
+          "Route 15",
+          "Sea Route 21",
+          "Route 24",
+          "Route 25",
+          "Route 2 North Towards Pewter City",
+          "Viridian Forest"
         ]
       }
     },
     "44": {
       "lets-go-pikachu": {
         "locations": [
-          "kanto route 12 area",
-          "kanto route 13 area",
-          "kanto route 14 area",
-          "kanto route 15 area",
-          "kanto sea route 21 area"
+          "Route 12",
+          "Route 13",
+          "Route 14",
+          "Route 15",
+          "Sea Route 21"
         ]
       }
     },
     "45": {
       "lets-go-pikachu": {
         "locations": [
-          "kanto sea route 21 area"
+          "Sea Route 21"
         ]
       }
     },
     "46": {
       "lets-go-pikachu": {
         "locations": [
-          "mt moon 1f",
-          "mt moon b1f",
-          "mt moon b2f"
+          "Mt. Moon (1F)",
+          "Mt. Moon (B1F)",
+          "Mt. Moon (B2F)"
         ]
       },
       "lets-go-eevee": {
         "locations": [
-          "mt moon 1f",
-          "mt moon b1f",
-          "mt moon b2f"
+          "Mt. Moon (1F)",
+          "Mt. Moon (B1F)",
+          "Mt. Moon (B2F)"
         ]
       }
     },
@@ -1645,124 +1654,124 @@
     "48": {
       "lets-go-pikachu": {
         "locations": [
-          "kanto route 14 area",
-          "kanto route 15 area",
-          "kanto route 24 area",
-          "kanto route 25 area"
+          "Route 14",
+          "Route 15",
+          "Route 24",
+          "Route 25"
         ]
       },
       "lets-go-eevee": {
         "locations": [
-          "kanto route 14 area",
-          "kanto route 15 area",
-          "kanto route 24 area",
-          "kanto route 25 area"
+          "Route 14",
+          "Route 15",
+          "Route 24",
+          "Route 25"
         ]
       }
     },
     "49": {
       "lets-go-pikachu": {
         "locations": [
-          "kanto route 14 area",
-          "kanto route 15 area"
+          "Route 14",
+          "Route 15"
         ]
       },
       "lets-go-eevee": {
         "locations": [
-          "kanto route 14 area",
-          "kanto route 15 area"
+          "Route 14",
+          "Route 15"
         ]
       }
     },
     "50": {
       "lets-go-pikachu": {
         "locations": [
-          "lavender town area"
+          "Lavender Town"
         ]
       },
       "lets-go-eevee": {
         "locations": [
-          "lavender town area"
+          "Lavender Town"
         ]
       }
     },
     "51": {
       "lets-go-pikachu": {
         "locations": [
-          "Diglett's Cave ('''Kantonian Form''')",
-          "Evolve Diglett ('''Alolan Form''')"
+          "Diglett's Cave (Kantonian Form)",
+          "Evolve Diglett (Alolan Form)"
         ]
       },
       "lets-go-eevee": {
         "locations": [
-          "Diglett's Cave ('''Kantonian Form''')",
-          "Evolve Diglett ('''Alolan Form''')"
+          "Diglett's Cave (Kantonian Form)",
+          "Evolve Diglett (Alolan Form)"
         ]
       }
     },
     "52": {
       "lets-go-eevee": {
         "locations": [
-          "cinnabar island area"
+          "Cinnabar Island"
         ]
       }
     },
     "53": {
       "lets-go-pikachu": {
         "locations": [
-          "Vermilion City (Only one) ('''Kantonian Form''')",
-          "Trade ('''Alolan Form''')"
+          "Vermilion City (Only one) (Kantonian Form)",
+          "Trade (Alolan Form)"
         ]
       },
       "lets-go-eevee": {
         "locations": [
-          "Evolve Meowth ('''Kantonian/Alolan Forms''')"
+          "Evolve Meowth (Kantonian/Alolan Forms)"
         ]
       }
     },
     "54": {
       "lets-go-pikachu": {
         "locations": [
-          "kanto route 4 area",
-          "kanto route 6 area",
-          "kanto route 17 area",
-          "kanto route 24 area",
-          "kanto route 25 area",
-          "cerulean cave 1f",
-          "cerulean cave b1f"
+          "Route 4",
+          "Route 6",
+          "Route 17",
+          "Route 24",
+          "Route 25",
+          "Cerulean Cave (1F)",
+          "Cerulean Cave (B1F)"
         ]
       },
       "lets-go-eevee": {
         "locations": [
-          "kanto route 4 area",
-          "kanto route 6 area",
-          "kanto route 17 area",
-          "kanto route 24 area",
-          "kanto route 25 area",
-          "cerulean cave 1f",
-          "cerulean cave b1f"
+          "Route 4",
+          "Route 6",
+          "Route 17",
+          "Route 24",
+          "Route 25",
+          "Cerulean Cave (1F)",
+          "Cerulean Cave (B1F)"
         ]
       }
     },
     "55": {
       "lets-go-pikachu": {
         "locations": [
-          "cerulean cave 1f",
-          "cerulean cave b1f"
+          "Cerulean Cave (1F)",
+          "Cerulean Cave (B1F)"
         ]
       },
       "lets-go-eevee": {
         "locations": [
-          "cerulean cave 1f",
-          "cerulean cave b1f"
+          "Cerulean Cave (1F)",
+          "Cerulean Cave (B1F)"
         ]
       }
     },
     "56": {
       "lets-go-pikachu": {
         "locations": [
-          "kanto route 3 area",
-          "kanto route 4 area"
+          "Route 3",
+          "Route 4"
         ]
       }
     },
@@ -1776,109 +1785,109 @@
     "58": {
       "lets-go-pikachu": {
         "locations": [
-          "kanto route 5 area",
-          "kanto route 6 area",
-          "kanto route 7 area",
-          "kanto route 8 area"
+          "Route 5",
+          "Route 6",
+          "Route 7",
+          "Route 8"
         ]
       }
     },
     "59": {
       "lets-go-eevee": {
         "locations": [
-          "vermilion city area"
+          "Vermilion City"
         ]
       },
       "lets-go-pikachu": {
         "locations": [
-          "kanto route 7 area",
-          "kanto route 8 area"
+          "Route 7",
+          "Route 8"
         ]
       }
     },
     "60": {
       "lets-go-pikachu": {
         "locations": [
-          "kanto route 22 area",
-          "kanto route 25 area",
-          "cerulean cave 1f",
-          "cerulean cave b1f",
-          "kanto route 23 area"
+          "Route 22",
+          "Route 25",
+          "Cerulean Cave (1F)",
+          "Cerulean Cave (B1F)",
+          "Route 23"
         ]
       },
       "lets-go-eevee": {
         "locations": [
-          "kanto route 22 area",
-          "kanto route 25 area",
-          "cerulean cave 1f",
-          "cerulean cave b1f",
-          "kanto route 23 area"
+          "Route 22",
+          "Route 25",
+          "Cerulean Cave (1F)",
+          "Cerulean Cave (B1F)",
+          "Route 23"
         ]
       }
     },
     "61": {
       "lets-go-pikachu": {
         "locations": [
-          "kanto route 22 area",
-          "kanto route 25 area",
-          "cerulean cave 1f",
-          "cerulean cave b1f",
-          "kanto route 23 area"
+          "Route 22",
+          "Route 25",
+          "Cerulean Cave (1F)",
+          "Cerulean Cave (B1F)",
+          "Route 23"
         ]
       },
       "lets-go-eevee": {
         "locations": [
-          "kanto route 22 area",
-          "kanto route 25 area",
-          "cerulean cave 1f",
-          "cerulean cave b1f",
-          "kanto route 23 area"
+          "Route 22",
+          "Route 25",
+          "Cerulean Cave (1F)",
+          "Cerulean Cave (B1F)",
+          "Route 23"
         ]
       }
     },
     "62": {
       "lets-go-pikachu": {
         "locations": [
-          "cerulean cave 1f",
-          "cerulean cave b1f"
+          "Cerulean Cave (1F)",
+          "Cerulean Cave (B1F)"
         ]
       },
       "lets-go-eevee": {
         "locations": [
-          "cerulean cave 1f",
-          "cerulean cave b1f"
+          "Cerulean Cave (1F)",
+          "Cerulean Cave (B1F)"
         ]
       }
     },
     "63": {
       "lets-go-pikachu": {
         "locations": [
-          "kanto route 5 area",
-          "kanto route 6 area",
-          "kanto route 7 area",
-          "kanto route 8 area"
+          "Route 5",
+          "Route 6",
+          "Route 7",
+          "Route 8"
         ]
       },
       "lets-go-eevee": {
         "locations": [
-          "kanto route 5 area",
-          "kanto route 6 area",
-          "kanto route 7 area",
-          "kanto route 8 area"
+          "Route 5",
+          "Route 6",
+          "Route 7",
+          "Route 8"
         ]
       }
     },
     "64": {
       "lets-go-pikachu": {
         "locations": [
-          "kanto route 7 area",
-          "kanto route 8 area"
+          "Route 7",
+          "Route 8"
         ]
       },
       "lets-go-eevee": {
         "locations": [
-          "kanto route 7 area",
-          "kanto route 8 area"
+          "Route 7",
+          "Route 8"
         ]
       }
     },
@@ -1897,36 +1906,36 @@
     "66": {
       "lets-go-pikachu": {
         "locations": [
-          "rock tunnel 1f",
-          "rock tunnel b1f",
-          "kanto victory road 1 1f",
-          "kanto victory road 1 2f",
-          "kanto victory road 1 3f"
+          "Rock Tunnel (1F)",
+          "Rock Tunnel (B1F)",
+          "Victory Road 1 (1F)",
+          "Victory Road 1 (2F)",
+          "Victory Road 1 (3F)"
         ]
       },
       "lets-go-eevee": {
         "locations": [
-          "rock tunnel 1f",
-          "rock tunnel b1f",
-          "kanto victory road 1 1f",
-          "kanto victory road 1 2f",
-          "kanto victory road 1 3f"
+          "Rock Tunnel (1F)",
+          "Rock Tunnel (B1F)",
+          "Victory Road 1 (1F)",
+          "Victory Road 1 (2F)",
+          "Victory Road 1 (3F)"
         ]
       }
     },
     "67": {
       "lets-go-pikachu": {
         "locations": [
-          "kanto victory road 1 1f",
-          "kanto victory road 1 2f",
-          "kanto victory road 1 3f"
+          "Victory Road 1 (1F)",
+          "Victory Road 1 (2F)",
+          "Victory Road 1 (3F)"
         ]
       },
       "lets-go-eevee": {
         "locations": [
-          "kanto victory road 1 1f",
-          "kanto victory road 1 2f",
-          "kanto victory road 1 3f"
+          "Victory Road 1 (1F)",
+          "Victory Road 1 (2F)",
+          "Victory Road 1 (3F)"
         ]
       }
     },
@@ -1945,35 +1954,35 @@
     "69": {
       "lets-go-eevee": {
         "locations": [
-          "kanto route 12 area",
-          "kanto route 1 area",
-          "kanto route 2 south towards viridian city",
-          "kanto route 13 area",
-          "kanto route 14 area",
-          "kanto route 15 area",
-          "kanto sea route 21 area",
-          "kanto route 24 area",
-          "kanto route 25 area",
-          "kanto route 2 north towards pewter city",
-          "viridian forest area"
+          "Route 12",
+          "Route 1",
+          "Route 2 South Towards Viridian City",
+          "Route 13",
+          "Route 14",
+          "Route 15",
+          "Sea Route 21",
+          "Route 24",
+          "Route 25",
+          "Route 2 North Towards Pewter City",
+          "Viridian Forest"
         ]
       }
     },
     "70": {
       "lets-go-eevee": {
         "locations": [
-          "kanto route 12 area",
-          "kanto route 13 area",
-          "kanto route 14 area",
-          "kanto route 15 area",
-          "kanto sea route 21 area"
+          "Route 12",
+          "Route 13",
+          "Route 14",
+          "Route 15",
+          "Sea Route 21"
         ]
       }
     },
     "71": {
       "lets-go-eevee": {
         "locations": [
-          "kanto sea route 21 area"
+          "Sea Route 21"
         ]
       },
       "lets-go-pikachu": {
@@ -1985,92 +1994,98 @@
     "72": {
       "lets-go-pikachu": {
         "locations": [
-          "seafoam islands b3f",
-          "seafoam islands b4f",
-          "kanto route 12 area",
-          "kanto sea route 19 area",
-          "kanto sea route 20 area",
-          "kanto route 4 area",
-          "kanto route 10 area",
-          "kanto route 11 area",
-          "kanto route 13 area",
-          "kanto route 18 area",
-          "kanto sea route 21 area",
-          "kanto route 24 area"
+          "Seafoam Islands (B3F)",
+          "Seafoam Islands (B4F)",
+          "Route 12",
+          "Sea Route 19",
+          "Sea Route 20",
+          "Route 4",
+          "Route 10",
+          "Route 11",
+          "Route 13",
+          "Route 18",
+          "Sea Route 21",
+          "Route 24"
         ]
       },
       "lets-go-eevee": {
         "locations": [
-          "seafoam islands b3f",
-          "seafoam islands b4f",
-          "kanto route 12 area",
-          "kanto sea route 19 area",
-          "kanto sea route 20 area",
-          "kanto route 4 area",
-          "kanto route 10 area",
-          "kanto route 11 area",
-          "kanto route 13 area",
-          "kanto route 18 area",
-          "kanto sea route 21 area",
-          "kanto route 24 area"
+          "Seafoam Islands (B3F)",
+          "Seafoam Islands (B4F)",
+          "Route 12",
+          "Sea Route 19",
+          "Sea Route 20",
+          "Route 4",
+          "Route 10",
+          "Route 11",
+          "Route 13",
+          "Route 18",
+          "Sea Route 21",
+          "Route 24"
         ]
       }
     },
     "73": {
       "lets-go-pikachu": {
         "locations": [
-          "seafoam islands b3f",
-          "seafoam islands b4f",
-          "kanto route 12 area",
-          "kanto sea route 19 area",
-          "kanto sea route 20 area",
-          "kanto route 4 area",
-          "kanto route 10 area",
-          "kanto route 11 area",
-          "kanto route 13 area",
-          "kanto route 18 area",
-          "kanto sea route 21 area",
-          "kanto route 24 area"
+          "Seafoam Islands (B3F)",
+          "Seafoam Islands (B4F)",
+          "Route 12",
+          "Sea Route 19",
+          "Sea Route 20",
+          "Route 4",
+          "Route 10",
+          "Route 11",
+          "Route 13",
+          "Route 18",
+          "Sea Route 21",
+          "Route 24"
         ]
       },
       "lets-go-eevee": {
         "locations": [
-          "seafoam islands b3f",
-          "seafoam islands b4f",
-          "kanto route 12 area",
-          "kanto sea route 19 area",
-          "kanto sea route 20 area",
-          "kanto route 4 area",
-          "kanto route 10 area",
-          "kanto route 11 area",
-          "kanto route 13 area",
-          "kanto route 18 area",
-          "kanto sea route 21 area",
-          "kanto route 24 area"
+          "Seafoam Islands (B3F)",
+          "Seafoam Islands (B4F)",
+          "Route 12",
+          "Sea Route 19",
+          "Sea Route 20",
+          "Route 4",
+          "Route 10",
+          "Route 11",
+          "Route 13",
+          "Route 18",
+          "Sea Route 21",
+          "Route 24"
         ]
       }
     },
     "74": {
       "lets-go-pikachu": {
         "locations": [
-          "vermilion city area"
+          "Vermilion City"
         ]
       },
       "lets-go-eevee": {
         "locations": [
-          "vermilion city area"
+          "Vermilion City"
         ]
       }
     },
     "75": {
       "lets-go-pikachu": {
         "locations": [
-          "Rock Tunnel, Geodude ('''Alolan Form''')"
+          "Rock Tunnel",
+          "Victory Road",
+          "Cerulean Cave (Kantonian Form)",
+          "Evolve Geodude (Alolan Form)"
         ]
       },
       "lets-go-eevee": {
         "locations": [
-          "Rock Tunnel, Geodude ('''Alolan Form''')"
+          "Rock Tunnel",
+          "Victory Road",
+          "Cerulean Cave (Kantonian Form)",
+          "Evolve Geodude (Alolan Form)"
         ]
       }
     },
@@ -2089,253 +2104,254 @@
     "77": {
       "lets-go-pikachu": {
         "locations": [
-          "kanto route 17 area"
+          "Route 17"
         ]
       },
       "lets-go-eevee": {
         "locations": [
-          "kanto route 17 area"
+          "Route 17"
         ]
       }
     },
     "78": {
       "lets-go-pikachu": {
         "locations": [
-          "kanto route 17 area"
+          "Route 17"
         ]
       },
       "lets-go-eevee": {
         "locations": [
-          "kanto route 17 area"
+          "Route 17"
         ]
       }
     },
     "79": {
       "lets-go-pikachu": {
         "locations": [
-          "seafoam islands 1f",
-          "seafoam islands b1f",
-          "seafoam islands b2f",
-          "seafoam islands b3f",
-          "seafoam islands b4f"
+          "Seafoam Islands (1F)",
+          "Seafoam Islands (B1F)",
+          "Seafoam Islands (B2F)",
+          "Seafoam Islands (B3F)",
+          "Seafoam Islands (B4F)"
         ]
       },
       "lets-go-eevee": {
         "locations": [
-          "seafoam islands 1f",
-          "seafoam islands b1f",
-          "seafoam islands b2f",
-          "seafoam islands b3f",
-          "seafoam islands b4f"
+          "Seafoam Islands (1F)",
+          "Seafoam Islands (B1F)",
+          "Seafoam Islands (B2F)",
+          "Seafoam Islands (B3F)",
+          "Seafoam Islands (B4F)"
         ]
       }
     },
     "80": {
       "lets-go-pikachu": {
         "locations": [
-          "seafoam islands 1f",
-          "seafoam islands b1f",
-          "seafoam islands b2f",
-          "seafoam islands b3f",
-          "seafoam islands b4f"
+          "Seafoam Islands (1F)",
+          "Seafoam Islands (B1F)",
+          "Seafoam Islands (B2F)",
+          "Seafoam Islands (B3F)",
+          "Seafoam Islands (B4F)"
         ]
       },
       "lets-go-eevee": {
         "locations": [
-          "seafoam islands 1f",
-          "seafoam islands b1f",
-          "seafoam islands b2f",
-          "seafoam islands b3f",
-          "seafoam islands b4f"
+          "Seafoam Islands (1F)",
+          "Seafoam Islands (B1F)",
+          "Seafoam Islands (B2F)",
+          "Seafoam Islands (B3F)",
+          "Seafoam Islands (B4F)"
         ]
       }
     },
     "81": {
       "lets-go-pikachu": {
         "locations": [
-          "kanto power plant area"
+          "Power Plant"
         ]
       },
       "lets-go-eevee": {
         "locations": [
-          "kanto power plant area"
+          "Power Plant"
         ]
       }
     },
     "82": {
       "lets-go-pikachu": {
         "locations": [
-          "kanto power plant area"
+          "Power Plant"
         ]
       },
       "lets-go-eevee": {
         "locations": [
-          "kanto power plant area"
+          "Power Plant"
         ]
       }
     },
     "83": {
       "lets-go-pikachu": {
         "locations": [
-          "kanto route 12 area",
-          "kanto route 13 area"
+          "Route 12",
+          "Route 13"
         ]
       },
       "lets-go-eevee": {
         "locations": [
-          "kanto route 12 area",
-          "kanto route 13 area"
+          "Route 12",
+          "Route 13"
         ]
       }
     },
     "84": {
       "lets-go-pikachu": {
         "locations": [
-          "kanto route 16 area",
-          "kanto route 17 area",
-          "kanto route 18 area"
+          "Route 16",
+          "Route 17",
+          "Route 18"
         ]
       },
       "lets-go-eevee": {
         "locations": [
-          "kanto route 16 area",
-          "kanto route 17 area",
-          "kanto route 18 area"
+          "Route 16",
+          "Route 17",
+          "Route 18"
         ]
       }
     },
     "85": {
       "lets-go-pikachu": {
         "locations": [
-          "kanto route 16 area",
-          "kanto route 17 area",
-          "kanto route 18 area"
+          "Route 16",
+          "Route 17",
+          "Route 18"
         ]
       },
       "lets-go-eevee": {
         "locations": [
-          "kanto route 16 area",
-          "kanto route 17 area",
-          "kanto route 18 area"
+          "Route 16",
+          "Route 17",
+          "Route 18"
         ]
       }
     },
     "86": {
       "lets-go-pikachu": {
         "locations": [
-          "seafoam islands 1f",
-          "seafoam islands b1f",
-          "seafoam islands b2f",
-          "seafoam islands b3f",
-          "seafoam islands b4f"
+          "Seafoam Islands (1F)",
+          "Seafoam Islands (B1F)",
+          "Seafoam Islands (B2F)",
+          "Seafoam Islands (B3F)",
+          "Seafoam Islands (B4F)"
         ]
       },
       "lets-go-eevee": {
         "locations": [
-          "seafoam islands 1f",
-          "seafoam islands b1f",
-          "seafoam islands b2f",
-          "seafoam islands b3f",
-          "seafoam islands b4f"
+          "Seafoam Islands (1F)",
+          "Seafoam Islands (B1F)",
+          "Seafoam Islands (B2F)",
+          "Seafoam Islands (B3F)",
+          "Seafoam Islands (B4F)"
         ]
       }
     },
     "87": {
       "lets-go-pikachu": {
         "locations": [
-          "seafoam islands 1f",
-          "seafoam islands b1f",
-          "seafoam islands b2f",
-          "seafoam islands b3f",
-          "seafoam islands b4f"
+          "Seafoam Islands (1F)",
+          "Seafoam Islands (B1F)",
+          "Seafoam Islands (B2F)",
+          "Seafoam Islands (B3F)",
+          "Seafoam Islands (B4F)"
         ]
       },
       "lets-go-eevee": {
         "locations": [
-          "seafoam islands 1f",
-          "seafoam islands b1f",
-          "seafoam islands b2f",
-          "seafoam islands b3f",
-          "seafoam islands b4f"
+          "Seafoam Islands (1F)",
+          "Seafoam Islands (B1F)",
+          "Seafoam Islands (B2F)",
+          "Seafoam Islands (B3F)",
+          "Seafoam Islands (B4F)"
         ]
       }
     },
     "88": {
       "lets-go-pikachu": {
         "locations": [
-          "cinnabar island area"
+          "Cinnabar Island"
         ]
       }
     },
     "89": {
       "lets-go-pikachu": {
         "locations": [
-          "Kanto|Power Plant ('''Kantonian Form''')",
-          "Evolve Grimer ('''Alolan Form''')"
+          "Pokémon Mansion",
+          "Power Plant (Kantonian Form)",
+          "Evolve Grimer (Alolan Form)"
         ]
       }
     },
     "90": {
       "lets-go-pikachu": {
         "locations": [
-          "seafoam islands b3f",
-          "seafoam islands b4f"
+          "Seafoam Islands (B3F)",
+          "Seafoam Islands (B4F)"
         ]
       },
       "lets-go-eevee": {
         "locations": [
-          "seafoam islands b3f",
-          "seafoam islands b4f"
+          "Seafoam Islands (B3F)",
+          "Seafoam Islands (B4F)"
         ]
       }
     },
     "91": {
       "lets-go-pikachu": {
         "locations": [
-          "seafoam islands b3f",
-          "seafoam islands b4f"
+          "Seafoam Islands (B3F)",
+          "Seafoam Islands (B4F)"
         ]
       },
       "lets-go-eevee": {
         "locations": [
-          "seafoam islands b3f",
-          "seafoam islands b4f"
+          "Seafoam Islands (B3F)",
+          "Seafoam Islands (B4F)"
         ]
       }
     },
     "92": {
       "lets-go-pikachu": {
         "locations": [
-          "pokemon tower 3f",
-          "pokemon tower 4f",
-          "pokemon tower 5f",
-          "pokemon tower 6f"
+          "Pokemon Tower (3F)",
+          "Pokemon Tower (4F)",
+          "Pokemon Tower (5F)",
+          "Pokemon Tower (6F)"
         ]
       },
       "lets-go-eevee": {
         "locations": [
-          "pokemon tower 3f",
-          "pokemon tower 4f",
-          "pokemon tower 5f",
-          "pokemon tower 6f"
+          "Pokemon Tower (3F)",
+          "Pokemon Tower (4F)",
+          "Pokemon Tower (5F)",
+          "Pokemon Tower (6F)"
         ]
       }
     },
     "93": {
       "lets-go-pikachu": {
         "locations": [
-          "pokemon tower 3f",
-          "pokemon tower 4f",
-          "pokemon tower 5f",
-          "pokemon tower 6f"
+          "Pokemon Tower (3F)",
+          "Pokemon Tower (4F)",
+          "Pokemon Tower (5F)",
+          "Pokemon Tower (6F)"
         ]
       },
       "lets-go-eevee": {
         "locations": [
-          "pokemon tower 3f",
-          "pokemon tower 4f",
-          "pokemon tower 5f",
-          "pokemon tower 6f"
+          "Pokemon Tower (3F)",
+          "Pokemon Tower (4F)",
+          "Pokemon Tower (5F)",
+          "Pokemon Tower (6F)"
         ]
       }
     },
@@ -2354,38 +2370,38 @@
     "95": {
       "lets-go-pikachu": {
         "locations": [
-          "mt moon 1f",
-          "rock tunnel 1f",
-          "rock tunnel b1f",
-          "kanto victory road 1 1f",
-          "kanto victory road 1 2f",
-          "kanto victory road 1 3f",
-          "mt moon b1f",
-          "mt moon b2f"
+          "Mt. Moon (1F)",
+          "Rock Tunnel (1F)",
+          "Rock Tunnel (B1F)",
+          "Victory Road 1 (1F)",
+          "Victory Road 1 (2F)",
+          "Victory Road 1 (3F)",
+          "Mt. Moon (B1F)",
+          "Mt. Moon (B2F)"
         ]
       },
       "lets-go-eevee": {
         "locations": [
-          "mt moon 1f",
-          "rock tunnel 1f",
-          "rock tunnel b1f",
-          "kanto victory road 1 1f",
-          "kanto victory road 1 2f",
-          "kanto victory road 1 3f",
-          "mt moon b1f",
-          "mt moon b2f"
+          "Mt. Moon (1F)",
+          "Rock Tunnel (1F)",
+          "Rock Tunnel (B1F)",
+          "Victory Road 1 (1F)",
+          "Victory Road 1 (2F)",
+          "Victory Road 1 (3F)",
+          "Mt. Moon (B1F)",
+          "Mt. Moon (B2F)"
         ]
       }
     },
     "96": {
       "lets-go-pikachu": {
         "locations": [
-          "kanto route 11 area"
+          "Route 11"
         ]
       },
       "lets-go-eevee": {
         "locations": [
-          "kanto route 11 area"
+          "Route 11"
         ]
       }
     },
@@ -2404,611 +2420,611 @@
     "98": {
       "lets-go-pikachu": {
         "locations": [
-          "kanto route 12 area",
-          "kanto route 10 area",
-          "kanto route 13 area"
+          "Route 12",
+          "Route 10",
+          "Route 13"
         ]
       },
       "lets-go-eevee": {
         "locations": [
-          "kanto route 12 area",
-          "kanto route 10 area",
-          "kanto route 13 area"
+          "Route 12",
+          "Route 10",
+          "Route 13"
         ]
       }
     },
     "99": {
       "lets-go-pikachu": {
         "locations": [
-          "kanto route 12 area",
-          "kanto route 13 area"
+          "Route 12",
+          "Route 13"
         ]
       },
       "lets-go-eevee": {
         "locations": [
-          "kanto route 12 area",
-          "kanto route 13 area"
+          "Route 12",
+          "Route 13"
         ]
       }
     },
     "100": {
       "lets-go-pikachu": {
         "locations": [
-          "kanto power plant area"
+          "Power Plant"
         ]
       },
       "lets-go-eevee": {
         "locations": [
-          "kanto power plant area"
+          "Power Plant"
         ]
       }
     },
     "101": {
       "lets-go-pikachu": {
         "locations": [
-          "kanto power plant area"
+          "Power Plant"
         ]
       },
       "lets-go-eevee": {
         "locations": [
-          "kanto power plant area"
+          "Power Plant"
         ]
       }
     },
     "102": {
       "lets-go-pikachu": {
         "locations": [
-          "kanto route 23 area"
+          "Route 23"
         ]
       },
       "lets-go-eevee": {
         "locations": [
-          "kanto route 23 area"
+          "Route 23"
         ]
       }
     },
     "103": {
       "lets-go-pikachu": {
         "locations": [
-          "indigo plateau area"
+          "Indigo Plateau"
         ]
       },
       "lets-go-eevee": {
         "locations": [
-          "indigo plateau area"
+          "Indigo Plateau"
         ]
       }
     },
     "104": {
       "lets-go-pikachu": {
         "locations": [
-          "rock tunnel 1f",
-          "rock tunnel b1f",
-          "pokemon tower 3f",
-          "pokemon tower 4f",
-          "pokemon tower 5f",
-          "pokemon tower 6f"
+          "Rock Tunnel (1F)",
+          "Rock Tunnel (B1F)",
+          "Pokemon Tower (3F)",
+          "Pokemon Tower (4F)",
+          "Pokemon Tower (5F)",
+          "Pokemon Tower (6F)"
         ]
       },
       "lets-go-eevee": {
         "locations": [
-          "rock tunnel 1f",
-          "rock tunnel b1f",
-          "pokemon tower 3f",
-          "pokemon tower 4f",
-          "pokemon tower 5f",
-          "pokemon tower 6f"
+          "Rock Tunnel (1F)",
+          "Rock Tunnel (B1F)",
+          "Pokemon Tower (3F)",
+          "Pokemon Tower (4F)",
+          "Pokemon Tower (5F)",
+          "Pokemon Tower (6F)"
         ]
       }
     },
     "105": {
       "lets-go-pikachu": {
         "locations": [
-          "fuchsia city area"
+          "Fuchsia City"
         ]
       },
       "lets-go-eevee": {
         "locations": [
-          "fuchsia city area"
+          "Fuchsia City"
         ]
       }
     },
     "106": {
       "lets-go-pikachu": {
         "locations": [
-          "kanto victory road 1 2f",
-          "saffron city fighting dojo"
+          "Victory Road 1 (2F)",
+          "Saffron City Fighting Dojo"
         ]
       },
       "lets-go-eevee": {
         "locations": [
-          "kanto victory road 1 2f",
-          "saffron city fighting dojo"
+          "Victory Road 1 (2F)",
+          "Saffron City Fighting Dojo"
         ]
       }
     },
     "107": {
       "lets-go-pikachu": {
         "locations": [
-          "kanto victory road 1 3f",
-          "saffron city fighting dojo"
+          "Victory Road 1 (3F)",
+          "Saffron City Fighting Dojo"
         ]
       },
       "lets-go-eevee": {
         "locations": [
-          "kanto victory road 1 3f",
-          "saffron city fighting dojo"
+          "Victory Road 1 (3F)",
+          "Saffron City Fighting Dojo"
         ]
       }
     },
     "108": {
       "lets-go-pikachu": {
         "locations": [
-          "cerulean cave 1f",
-          "cerulean cave 2f",
-          "cerulean cave b1f"
+          "Cerulean Cave (1F)",
+          "Cerulean Cave (2F)",
+          "Cerulean Cave (B1F)"
         ]
       },
       "lets-go-eevee": {
         "locations": [
-          "cerulean cave 1f",
-          "cerulean cave 2f",
-          "cerulean cave b1f"
+          "Cerulean Cave (1F)",
+          "Cerulean Cave (2F)",
+          "Cerulean Cave (B1F)"
         ]
       }
     },
     "109": {
       "lets-go-eevee": {
         "locations": [
-          "kanto power plant area",
-          "pokemon mansion 1f",
-          "pokemon mansion 2f",
-          "pokemon mansion 3f",
-          "pokemon mansion b1f"
+          "Power Plant",
+          "Pokemon Mansion (1F)",
+          "Pokemon Mansion (2F)",
+          "Pokemon Mansion (3F)",
+          "Pokemon Mansion (B1F)"
         ]
       }
     },
     "110": {
       "lets-go-eevee": {
         "locations": [
-          "kanto power plant area",
-          "pokemon mansion 1f",
-          "pokemon mansion 2f",
-          "pokemon mansion 3f",
-          "pokemon mansion b1f"
+          "Power Plant",
+          "Pokemon Mansion (1F)",
+          "Pokemon Mansion (2F)",
+          "Pokemon Mansion (3F)",
+          "Pokemon Mansion (B1F)"
         ]
       }
     },
     "111": {
       "lets-go-pikachu": {
         "locations": [
-          "rock tunnel 1f",
-          "rock tunnel b1f",
-          "kanto victory road 1 1f",
-          "kanto victory road 1 2f",
-          "kanto victory road 1 3f",
-          "cerulean cave 1f",
-          "cerulean cave 2f",
-          "cerulean cave b1f"
+          "Rock Tunnel (1F)",
+          "Rock Tunnel (B1F)",
+          "Victory Road 1 (1F)",
+          "Victory Road 1 (2F)",
+          "Victory Road 1 (3F)",
+          "Cerulean Cave (1F)",
+          "Cerulean Cave (2F)",
+          "Cerulean Cave (B1F)"
         ]
       },
       "lets-go-eevee": {
         "locations": [
-          "rock tunnel 1f",
-          "rock tunnel b1f",
-          "kanto victory road 1 1f",
-          "kanto victory road 1 2f",
-          "kanto victory road 1 3f",
-          "cerulean cave 1f",
-          "cerulean cave 2f",
-          "cerulean cave b1f"
+          "Rock Tunnel (1F)",
+          "Rock Tunnel (B1F)",
+          "Victory Road 1 (1F)",
+          "Victory Road 1 (2F)",
+          "Victory Road 1 (3F)",
+          "Cerulean Cave (1F)",
+          "Cerulean Cave (2F)",
+          "Cerulean Cave (B1F)"
         ]
       }
     },
     "112": {
       "lets-go-pikachu": {
         "locations": [
-          "kanto victory road 1 1f",
-          "kanto victory road 1 2f",
-          "kanto victory road 1 3f",
-          "cerulean cave 1f",
-          "cerulean cave 2f",
-          "cerulean cave b1f"
+          "Victory Road 1 (1F)",
+          "Victory Road 1 (2F)",
+          "Victory Road 1 (3F)",
+          "Cerulean Cave (1F)",
+          "Cerulean Cave (2F)",
+          "Cerulean Cave (B1F)"
         ]
       },
       "lets-go-eevee": {
         "locations": [
-          "kanto victory road 1 1f",
-          "kanto victory road 1 2f",
-          "kanto victory road 1 3f",
-          "cerulean cave 1f",
-          "cerulean cave 2f",
-          "cerulean cave b1f"
+          "Victory Road 1 (1F)",
+          "Victory Road 1 (2F)",
+          "Victory Road 1 (3F)",
+          "Cerulean Cave (1F)",
+          "Cerulean Cave (2F)",
+          "Cerulean Cave (B1F)"
         ]
       }
     },
     "113": {
       "lets-go-pikachu": {
         "locations": [
-          "kanto route 12 area",
-          "mt moon 1f",
-          "kanto victory road 1 1f",
-          "kanto route 5 area",
-          "kanto route 6 area",
-          "kanto route 8 area",
-          "kanto route 9 area",
-          "kanto route 10 area",
-          "kanto route 11 area",
-          "kanto route 13 area",
-          "kanto route 14 area",
-          "kanto route 15 area",
-          "kanto route 16 area",
-          "kanto route 17 area",
-          "kanto route 18 area",
-          "kanto sea route 21 area",
-          "digletts cave area",
-          "cerulean cave 2f",
-          "mt moon b1f",
-          "mt moon b2f",
-          "kanto route 23 area",
-          "kanto power plant area",
-          "pokemon tower 3f",
-          "pokemon tower 4f",
-          "pokemon tower 5f",
-          "pokemon tower 6f",
-          "pokemon mansion 1f",
-          "pokemon mansion 2f",
-          "pokemon mansion 3f",
-          "pokemon mansion b1f"
+          "Route 12",
+          "Mt. Moon (1F)",
+          "Victory Road 1 (1F)",
+          "Route 5",
+          "Route 6",
+          "Route 8",
+          "Route 9",
+          "Route 10",
+          "Route 11",
+          "Route 13",
+          "Route 14",
+          "Route 15",
+          "Route 16",
+          "Route 17",
+          "Route 18",
+          "Sea Route 21",
+          "Digletts Cave",
+          "Cerulean Cave (2F)",
+          "Mt. Moon (B1F)",
+          "Mt. Moon (B2F)",
+          "Route 23",
+          "Power Plant",
+          "Pokemon Tower (3F)",
+          "Pokemon Tower (4F)",
+          "Pokemon Tower (5F)",
+          "Pokemon Tower (6F)",
+          "Pokemon Mansion (1F)",
+          "Pokemon Mansion (2F)",
+          "Pokemon Mansion (3F)",
+          "Pokemon Mansion (B1F)"
         ]
       },
       "lets-go-eevee": {
         "locations": [
-          "kanto route 12 area",
-          "mt moon 1f",
-          "kanto victory road 1 1f",
-          "kanto route 5 area",
-          "kanto route 6 area",
-          "kanto route 8 area",
-          "kanto route 9 area",
-          "kanto route 10 area",
-          "kanto route 11 area",
-          "kanto route 13 area",
-          "kanto route 14 area",
-          "kanto route 15 area",
-          "kanto route 16 area",
-          "kanto route 17 area",
-          "kanto route 18 area",
-          "kanto sea route 21 area",
-          "digletts cave area",
-          "cerulean cave 2f",
-          "mt moon b1f",
-          "mt moon b2f",
-          "kanto route 23 area",
-          "kanto power plant area",
-          "pokemon tower 3f",
-          "pokemon tower 4f",
-          "pokemon tower 5f",
-          "pokemon tower 6f",
-          "pokemon mansion 1f",
-          "pokemon mansion 2f",
-          "pokemon mansion 3f",
-          "pokemon mansion b1f"
+          "Route 12",
+          "Mt. Moon (1F)",
+          "Victory Road 1 (1F)",
+          "Route 5",
+          "Route 6",
+          "Route 8",
+          "Route 9",
+          "Route 10",
+          "Route 11",
+          "Route 13",
+          "Route 14",
+          "Route 15",
+          "Route 16",
+          "Route 17",
+          "Route 18",
+          "Sea Route 21",
+          "Digletts Cave",
+          "Cerulean Cave (2F)",
+          "Mt. Moon (B1F)",
+          "Mt. Moon (B2F)",
+          "Route 23",
+          "Power Plant",
+          "Pokemon Tower (3F)",
+          "Pokemon Tower (4F)",
+          "Pokemon Tower (5F)",
+          "Pokemon Tower (6F)",
+          "Pokemon Mansion (1F)",
+          "Pokemon Mansion (2F)",
+          "Pokemon Mansion (3F)",
+          "Pokemon Mansion (B1F)"
         ]
       }
     },
     "114": {
       "lets-go-pikachu": {
         "locations": [
-          "kanto sea route 21 area"
+          "Sea Route 21"
         ]
       },
       "lets-go-eevee": {
         "locations": [
-          "kanto sea route 21 area"
+          "Sea Route 21"
         ]
       }
     },
     "115": {
       "lets-go-pikachu": {
         "locations": [
-          "rock tunnel 1f",
-          "rock tunnel b1f"
+          "Rock Tunnel (1F)",
+          "Rock Tunnel (B1F)"
         ]
       },
       "lets-go-eevee": {
         "locations": [
-          "rock tunnel 1f",
-          "rock tunnel b1f"
+          "Rock Tunnel (1F)",
+          "Rock Tunnel (B1F)"
         ]
       }
     },
     "116": {
       "lets-go-pikachu": {
         "locations": [
-          "kanto route 12 area",
-          "kanto route 11 area",
-          "kanto route 13 area"
+          "Route 12",
+          "Route 11",
+          "Route 13"
         ]
       },
       "lets-go-eevee": {
         "locations": [
-          "kanto route 12 area",
-          "kanto route 11 area",
-          "kanto route 13 area"
+          "Route 12",
+          "Route 11",
+          "Route 13"
         ]
       }
     },
     "117": {
       "lets-go-pikachu": {
         "locations": [
-          "kanto route 12 area",
-          "kanto route 11 area",
-          "kanto route 13 area"
+          "Route 12",
+          "Route 11",
+          "Route 13"
         ]
       },
       "lets-go-eevee": {
         "locations": [
-          "kanto route 12 area",
-          "kanto route 11 area",
-          "kanto route 13 area"
+          "Route 12",
+          "Route 11",
+          "Route 13"
         ]
       }
     },
     "118": {
       "lets-go-pikachu": {
         "locations": [
-          "kanto route 6 area"
+          "Route 6"
         ]
       },
       "lets-go-eevee": {
         "locations": [
-          "kanto route 6 area"
+          "Route 6"
         ]
       }
     },
     "119": {
       "lets-go-pikachu": {
         "locations": [
-          "kanto route 6 area"
+          "Route 6"
         ]
       },
       "lets-go-eevee": {
         "locations": [
-          "kanto route 6 area"
+          "Route 6"
         ]
       }
     },
     "120": {
       "lets-go-pikachu": {
         "locations": [
-          "kanto sea route 19 area",
-          "kanto route 18 area",
-          "kanto sea route 21 area"
+          "Sea Route 19",
+          "Route 18",
+          "Sea Route 21"
         ]
       },
       "lets-go-eevee": {
         "locations": [
-          "kanto sea route 19 area",
-          "kanto route 18 area",
-          "kanto sea route 21 area"
+          "Sea Route 19",
+          "Route 18",
+          "Sea Route 21"
         ]
       }
     },
     "121": {
       "lets-go-pikachu": {
         "locations": [
-          "kanto sea route 19 area",
-          "kanto route 18 area",
-          "kanto sea route 21 area"
+          "Sea Route 19",
+          "Route 18",
+          "Sea Route 21"
         ]
       },
       "lets-go-eevee": {
         "locations": [
-          "kanto sea route 19 area",
-          "kanto route 18 area",
-          "kanto sea route 21 area"
+          "Sea Route 19",
+          "Route 18",
+          "Sea Route 21"
         ]
       }
     },
     "122": {
       "lets-go-pikachu": {
         "locations": [
-          "kanto route 11 area"
+          "Route 11"
         ]
       },
       "lets-go-eevee": {
         "locations": [
-          "kanto route 11 area"
+          "Route 11"
         ]
       }
     },
     "123": {
       "lets-go-pikachu": {
         "locations": [
-          "kanto route 14 area",
-          "kanto route 15 area"
+          "Route 14",
+          "Route 15"
         ]
       }
     },
     "124": {
       "lets-go-pikachu": {
         "locations": [
-          "seafoam islands 1f",
-          "seafoam islands b1f",
-          "seafoam islands b2f",
-          "seafoam islands b3f",
-          "seafoam islands b4f"
+          "Seafoam Islands (1F)",
+          "Seafoam Islands (B1F)",
+          "Seafoam Islands (B2F)",
+          "Seafoam Islands (B3F)",
+          "Seafoam Islands (B4F)"
         ]
       },
       "lets-go-eevee": {
         "locations": [
-          "seafoam islands 1f",
-          "seafoam islands b1f",
-          "seafoam islands b2f",
-          "seafoam islands b3f",
-          "seafoam islands b4f"
+          "Seafoam Islands (1F)",
+          "Seafoam Islands (B1F)",
+          "Seafoam Islands (B2F)",
+          "Seafoam Islands (B3F)",
+          "Seafoam Islands (B4F)"
         ]
       }
     },
     "125": {
       "lets-go-pikachu": {
         "locations": [
-          "kanto power plant area"
+          "Power Plant"
         ]
       },
       "lets-go-eevee": {
         "locations": [
-          "kanto power plant area"
+          "Power Plant"
         ]
       }
     },
     "126": {
       "lets-go-pikachu": {
         "locations": [
-          "pokemon mansion 1f",
-          "pokemon mansion 2f",
-          "pokemon mansion 3f",
-          "pokemon mansion b1f"
+          "Pokemon Mansion (1F)",
+          "Pokemon Mansion (2F)",
+          "Pokemon Mansion (3F)",
+          "Pokemon Mansion (B1F)"
         ]
       },
       "lets-go-eevee": {
         "locations": [
-          "pokemon mansion 1f",
-          "pokemon mansion 2f",
-          "pokemon mansion 3f",
-          "pokemon mansion b1f"
+          "Pokemon Mansion (1F)",
+          "Pokemon Mansion (2F)",
+          "Pokemon Mansion (3F)",
+          "Pokemon Mansion (B1F)"
         ]
       }
     },
     "127": {
       "lets-go-eevee": {
         "locations": [
-          "kanto route 14 area",
-          "kanto route 15 area"
+          "Route 14",
+          "Route 15"
         ]
       }
     },
     "128": {
       "lets-go-pikachu": {
         "locations": [
-          "kanto route 14 area",
-          "kanto route 15 area"
+          "Route 14",
+          "Route 15"
         ]
       },
       "lets-go-eevee": {
         "locations": [
-          "kanto route 14 area",
-          "kanto route 15 area"
+          "Route 14",
+          "Route 15"
         ]
       }
     },
     "129": {
       "lets-go-pikachu": {
         "locations": [
-          "seafoam islands b3f",
-          "seafoam islands b4f",
-          "kanto route 12 area",
-          "kanto sea route 19 area",
-          "kanto sea route 20 area",
-          "kanto route 4 area",
-          "kanto route 6 area",
-          "kanto route 10 area",
-          "kanto route 11 area",
-          "kanto route 13 area",
-          "kanto route 18 area",
-          "kanto sea route 21 area",
-          "kanto route 22 area",
-          "kanto route 24 area",
-          "kanto route 25 area",
-          "cerulean cave 1f",
-          "cerulean cave b1f",
-          "kanto route 23 area"
+          "Seafoam Islands (B3F)",
+          "Seafoam Islands (B4F)",
+          "Route 12",
+          "Sea Route 19",
+          "Sea Route 20",
+          "Route 4",
+          "Route 6",
+          "Route 10",
+          "Route 11",
+          "Route 13",
+          "Route 18",
+          "Sea Route 21",
+          "Route 22",
+          "Route 24",
+          "Route 25",
+          "Cerulean Cave (1F)",
+          "Cerulean Cave (B1F)",
+          "Route 23"
         ]
       },
       "lets-go-eevee": {
         "locations": [
-          "seafoam islands b3f",
-          "seafoam islands b4f",
-          "kanto route 12 area",
-          "kanto sea route 19 area",
-          "kanto sea route 20 area",
-          "kanto route 4 area",
-          "kanto route 6 area",
-          "kanto route 10 area",
-          "kanto route 11 area",
-          "kanto route 13 area",
-          "kanto route 18 area",
-          "kanto sea route 21 area",
-          "kanto route 22 area",
-          "kanto route 24 area",
-          "kanto route 25 area",
-          "cerulean cave 1f",
-          "cerulean cave b1f",
-          "kanto route 23 area"
+          "Seafoam Islands (B3F)",
+          "Seafoam Islands (B4F)",
+          "Route 12",
+          "Sea Route 19",
+          "Sea Route 20",
+          "Route 4",
+          "Route 6",
+          "Route 10",
+          "Route 11",
+          "Route 13",
+          "Route 18",
+          "Sea Route 21",
+          "Route 22",
+          "Route 24",
+          "Route 25",
+          "Cerulean Cave (1F)",
+          "Cerulean Cave (B1F)",
+          "Route 23"
         ]
       }
     },
     "130": {
       "lets-go-pikachu": {
         "locations": [
-          "kanto sea route 20 area"
+          "Sea Route 20"
         ]
       },
       "lets-go-eevee": {
         "locations": [
-          "kanto sea route 20 area"
+          "Sea Route 20"
         ]
       }
     },
     "131": {
       "lets-go-pikachu": {
         "locations": [
-          "kanto sea route 19 area",
-          "kanto sea route 20 area"
+          "Sea Route 19",
+          "Sea Route 20"
         ]
       },
       "lets-go-eevee": {
         "locations": [
-          "kanto sea route 19 area",
-          "kanto sea route 20 area"
+          "Sea Route 19",
+          "Sea Route 20"
         ]
       }
     },
     "132": {
       "lets-go-pikachu": {
         "locations": [
-          "cerulean cave 1f",
-          "cerulean cave 2f",
-          "cerulean cave b1f",
-          "pokemon mansion 1f",
-          "pokemon mansion 2f",
-          "pokemon mansion 3f",
-          "pokemon mansion b1f"
+          "Cerulean Cave (1F)",
+          "Cerulean Cave (2F)",
+          "Cerulean Cave (B1F)",
+          "Pokemon Mansion (1F)",
+          "Pokemon Mansion (2F)",
+          "Pokemon Mansion (3F)",
+          "Pokemon Mansion (B1F)"
         ]
       },
       "lets-go-eevee": {
         "locations": [
-          "cerulean cave 1f",
-          "cerulean cave 2f",
-          "cerulean cave b1f",
-          "pokemon mansion 1f",
-          "pokemon mansion 2f",
-          "pokemon mansion 3f",
-          "pokemon mansion b1f"
+          "Cerulean Cave (1F)",
+          "Cerulean Cave (2F)",
+          "Cerulean Cave (B1F)",
+          "Pokemon Mansion (1F)",
+          "Pokemon Mansion (2F)",
+          "Pokemon Mansion (3F)",
+          "Pokemon Mansion (B1F)"
         ]
       }
     },
     "133": {
       "lets-go-eevee": {
         "locations": [
-          "pallet town area",
-          "kanto route 17 area"
+          "Pallet Town",
+          "Route 17"
         ]
       },
       "lets-go-pikachu": {
         "locations": [
-          "kanto route 17 area"
+          "Route 17"
         ]
       }
     },
@@ -3051,26 +3067,26 @@
     "137": {
       "lets-go-pikachu": {
         "locations": [
-          "kanto route 7 area",
-          "saffron city silph co"
+          "Route 7",
+          "Saffron City Silph Co"
         ]
       },
       "lets-go-eevee": {
         "locations": [
-          "kanto route 7 area",
-          "saffron city silph co"
+          "Route 7",
+          "Saffron City Silph Co"
         ]
       }
     },
     "138": {
       "lets-go-pikachu": {
         "locations": [
-          "cinnabar island cinnabar lab"
+          "Cinnabar Island Cinnabar Lab"
         ]
       },
       "lets-go-eevee": {
         "locations": [
-          "cinnabar island cinnabar lab"
+          "Cinnabar Island Cinnabar Lab"
         ]
       }
     },
@@ -3089,12 +3105,12 @@
     "140": {
       "lets-go-pikachu": {
         "locations": [
-          "cinnabar island cinnabar lab"
+          "Cinnabar Island Cinnabar Lab"
         ]
       },
       "lets-go-eevee": {
         "locations": [
-          "cinnabar island cinnabar lab"
+          "Cinnabar Island Cinnabar Lab"
         ]
       }
     },
@@ -3113,314 +3129,314 @@
     "142": {
       "lets-go-pikachu": {
         "locations": [
-          "cinnabar island cinnabar lab"
+          "Cinnabar Island Cinnabar Lab"
         ]
       },
       "lets-go-eevee": {
         "locations": [
-          "cinnabar island cinnabar lab"
+          "Cinnabar Island Cinnabar Lab"
         ]
       }
     },
     "143": {
       "lets-go-pikachu": {
         "locations": [
-          "kanto route 12 area",
-          "kanto route 16 area",
-          "cerulean cave 1f",
-          "cerulean cave 2f",
-          "cerulean cave b1f"
+          "Route 12",
+          "Route 16",
+          "Cerulean Cave (1F)",
+          "Cerulean Cave (2F)",
+          "Cerulean Cave (B1F)"
         ]
       },
       "lets-go-eevee": {
         "locations": [
-          "kanto route 12 area",
-          "kanto route 16 area",
-          "cerulean cave 1f",
-          "cerulean cave 2f",
-          "cerulean cave b1f"
+          "Route 12",
+          "Route 16",
+          "Cerulean Cave (1F)",
+          "Cerulean Cave (2F)",
+          "Cerulean Cave (B1F)"
         ]
       }
     },
     "144": {
       "lets-go-pikachu": {
         "locations": [
-          "seafoam islands b4f",
-          "kanto route 12 area",
-          "kanto sea route 19 area",
-          "kanto sea route 20 area",
-          "kanto route 1 area",
-          "kanto route 2 south towards viridian city",
-          "kanto route 3 area",
-          "kanto route 4 area",
-          "kanto route 6 area",
-          "kanto route 7 area",
-          "kanto route 8 area",
-          "kanto route 9 area",
-          "kanto route 10 area",
-          "kanto route 11 area",
-          "kanto route 13 area",
-          "kanto route 14 area",
-          "kanto route 15 area",
-          "kanto route 16 area",
-          "kanto route 17 area",
-          "kanto route 18 area",
-          "kanto sea route 21 area",
-          "kanto route 22 area",
-          "kanto route 24 area",
-          "kanto route 25 area",
-          "kanto route 2 north towards pewter city",
-          "kanto route 23 area"
+          "Seafoam Islands (B4F)",
+          "Route 12",
+          "Sea Route 19",
+          "Sea Route 20",
+          "Route 1",
+          "Route 2 South Towards Viridian City",
+          "Route 3",
+          "Route 4",
+          "Route 6",
+          "Route 7",
+          "Route 8",
+          "Route 9",
+          "Route 10",
+          "Route 11",
+          "Route 13",
+          "Route 14",
+          "Route 15",
+          "Route 16",
+          "Route 17",
+          "Route 18",
+          "Sea Route 21",
+          "Route 22",
+          "Route 24",
+          "Route 25",
+          "Route 2 North Towards Pewter City",
+          "Route 23"
         ]
       },
       "lets-go-eevee": {
         "locations": [
-          "seafoam islands b4f",
-          "kanto route 12 area",
-          "kanto sea route 19 area",
-          "kanto sea route 20 area",
-          "kanto route 1 area",
-          "kanto route 2 south towards viridian city",
-          "kanto route 3 area",
-          "kanto route 4 area",
-          "kanto route 6 area",
-          "kanto route 7 area",
-          "kanto route 8 area",
-          "kanto route 9 area",
-          "kanto route 10 area",
-          "kanto route 11 area",
-          "kanto route 13 area",
-          "kanto route 14 area",
-          "kanto route 15 area",
-          "kanto route 16 area",
-          "kanto route 17 area",
-          "kanto route 18 area",
-          "kanto sea route 21 area",
-          "kanto route 22 area",
-          "kanto route 24 area",
-          "kanto route 25 area",
-          "kanto route 2 north towards pewter city",
-          "kanto route 23 area"
+          "Seafoam Islands (B4F)",
+          "Route 12",
+          "Sea Route 19",
+          "Sea Route 20",
+          "Route 1",
+          "Route 2 South Towards Viridian City",
+          "Route 3",
+          "Route 4",
+          "Route 6",
+          "Route 7",
+          "Route 8",
+          "Route 9",
+          "Route 10",
+          "Route 11",
+          "Route 13",
+          "Route 14",
+          "Route 15",
+          "Route 16",
+          "Route 17",
+          "Route 18",
+          "Sea Route 21",
+          "Route 22",
+          "Route 24",
+          "Route 25",
+          "Route 2 North Towards Pewter City",
+          "Route 23"
         ]
       }
     },
     "145": {
       "lets-go-pikachu": {
         "locations": [
-          "kanto route 12 area",
-          "kanto sea route 19 area",
-          "kanto sea route 20 area",
-          "kanto route 1 area",
-          "kanto route 2 south towards viridian city",
-          "kanto route 3 area",
-          "kanto route 4 area",
-          "kanto route 6 area",
-          "kanto route 7 area",
-          "kanto route 8 area",
-          "kanto route 9 area",
-          "kanto route 10 area",
-          "kanto route 11 area",
-          "kanto route 13 area",
-          "kanto route 14 area",
-          "kanto route 15 area",
-          "kanto route 16 area",
-          "kanto route 17 area",
-          "kanto route 18 area",
-          "kanto sea route 21 area",
-          "kanto route 22 area",
-          "kanto route 24 area",
-          "kanto route 25 area",
-          "kanto route 2 north towards pewter city",
-          "kanto route 23 area",
-          "kanto power plant area"
+          "Route 12",
+          "Sea Route 19",
+          "Sea Route 20",
+          "Route 1",
+          "Route 2 South Towards Viridian City",
+          "Route 3",
+          "Route 4",
+          "Route 6",
+          "Route 7",
+          "Route 8",
+          "Route 9",
+          "Route 10",
+          "Route 11",
+          "Route 13",
+          "Route 14",
+          "Route 15",
+          "Route 16",
+          "Route 17",
+          "Route 18",
+          "Sea Route 21",
+          "Route 22",
+          "Route 24",
+          "Route 25",
+          "Route 2 North Towards Pewter City",
+          "Route 23",
+          "Power Plant"
         ]
       },
       "lets-go-eevee": {
         "locations": [
-          "kanto route 12 area",
-          "kanto sea route 19 area",
-          "kanto sea route 20 area",
-          "kanto route 1 area",
-          "kanto route 2 south towards viridian city",
-          "kanto route 3 area",
-          "kanto route 4 area",
-          "kanto route 6 area",
-          "kanto route 7 area",
-          "kanto route 8 area",
-          "kanto route 9 area",
-          "kanto route 10 area",
-          "kanto route 11 area",
-          "kanto route 13 area",
-          "kanto route 14 area",
-          "kanto route 15 area",
-          "kanto route 16 area",
-          "kanto route 17 area",
-          "kanto route 18 area",
-          "kanto sea route 21 area",
-          "kanto route 22 area",
-          "kanto route 24 area",
-          "kanto route 25 area",
-          "kanto route 2 north towards pewter city",
-          "kanto route 23 area",
-          "kanto power plant area"
+          "Route 12",
+          "Sea Route 19",
+          "Sea Route 20",
+          "Route 1",
+          "Route 2 South Towards Viridian City",
+          "Route 3",
+          "Route 4",
+          "Route 6",
+          "Route 7",
+          "Route 8",
+          "Route 9",
+          "Route 10",
+          "Route 11",
+          "Route 13",
+          "Route 14",
+          "Route 15",
+          "Route 16",
+          "Route 17",
+          "Route 18",
+          "Sea Route 21",
+          "Route 22",
+          "Route 24",
+          "Route 25",
+          "Route 2 North Towards Pewter City",
+          "Route 23",
+          "Power Plant"
         ]
       }
     },
     "146": {
       "lets-go-pikachu": {
         "locations": [
-          "kanto route 12 area",
-          "kanto sea route 19 area",
-          "kanto sea route 20 area",
-          "kanto route 1 area",
-          "kanto route 2 south towards viridian city",
-          "kanto route 3 area",
-          "kanto route 4 area",
-          "kanto route 6 area",
-          "kanto route 7 area",
-          "kanto route 8 area",
-          "kanto route 9 area",
-          "kanto route 10 area",
-          "kanto route 11 area",
-          "kanto route 13 area",
-          "kanto route 14 area",
-          "kanto route 15 area",
-          "kanto route 16 area",
-          "kanto route 17 area",
-          "kanto route 18 area",
-          "kanto sea route 21 area",
-          "kanto route 22 area",
-          "kanto route 24 area",
-          "kanto route 25 area",
-          "kanto victory road 1 2f",
-          "kanto route 2 north towards pewter city",
-          "kanto route 23 area"
+          "Route 12",
+          "Sea Route 19",
+          "Sea Route 20",
+          "Route 1",
+          "Route 2 South Towards Viridian City",
+          "Route 3",
+          "Route 4",
+          "Route 6",
+          "Route 7",
+          "Route 8",
+          "Route 9",
+          "Route 10",
+          "Route 11",
+          "Route 13",
+          "Route 14",
+          "Route 15",
+          "Route 16",
+          "Route 17",
+          "Route 18",
+          "Sea Route 21",
+          "Route 22",
+          "Route 24",
+          "Route 25",
+          "Victory Road 1 (2F)",
+          "Route 2 North Towards Pewter City",
+          "Route 23"
         ]
       },
       "lets-go-eevee": {
         "locations": [
-          "kanto route 12 area",
-          "kanto sea route 19 area",
-          "kanto sea route 20 area",
-          "kanto route 1 area",
-          "kanto route 2 south towards viridian city",
-          "kanto route 3 area",
-          "kanto route 4 area",
-          "kanto route 6 area",
-          "kanto route 7 area",
-          "kanto route 8 area",
-          "kanto route 9 area",
-          "kanto route 10 area",
-          "kanto route 11 area",
-          "kanto route 13 area",
-          "kanto route 14 area",
-          "kanto route 15 area",
-          "kanto route 16 area",
-          "kanto route 17 area",
-          "kanto route 18 area",
-          "kanto sea route 21 area",
-          "kanto route 22 area",
-          "kanto route 24 area",
-          "kanto route 25 area",
-          "kanto victory road 1 2f",
-          "kanto route 2 north towards pewter city",
-          "kanto route 23 area"
+          "Route 12",
+          "Sea Route 19",
+          "Sea Route 20",
+          "Route 1",
+          "Route 2 South Towards Viridian City",
+          "Route 3",
+          "Route 4",
+          "Route 6",
+          "Route 7",
+          "Route 8",
+          "Route 9",
+          "Route 10",
+          "Route 11",
+          "Route 13",
+          "Route 14",
+          "Route 15",
+          "Route 16",
+          "Route 17",
+          "Route 18",
+          "Sea Route 21",
+          "Route 22",
+          "Route 24",
+          "Route 25",
+          "Victory Road 1 (2F)",
+          "Route 2 North Towards Pewter City",
+          "Route 23"
         ]
       }
     },
     "147": {
       "lets-go-pikachu": {
         "locations": [
-          "kanto route 10 area"
+          "Route 10"
         ]
       },
       "lets-go-eevee": {
         "locations": [
-          "kanto route 10 area"
+          "Route 10"
         ]
       }
     },
     "148": {
       "lets-go-pikachu": {
         "locations": [
-          "kanto route 10 area"
+          "Route 10"
         ]
       },
       "lets-go-eevee": {
         "locations": [
-          "kanto route 10 area"
+          "Route 10"
         ]
       }
     },
     "149": {
       "lets-go-pikachu": {
         "locations": [
-          "kanto route 12 area",
-          "kanto sea route 19 area",
-          "kanto sea route 20 area",
-          "kanto route 1 area",
-          "kanto route 2 south towards viridian city",
-          "kanto route 3 area",
-          "kanto route 4 area",
-          "kanto route 6 area",
-          "kanto route 7 area",
-          "kanto route 8 area",
-          "kanto route 9 area",
-          "kanto route 10 area",
-          "kanto route 11 area",
-          "kanto route 13 area",
-          "kanto route 14 area",
-          "kanto route 15 area",
-          "kanto route 16 area",
-          "kanto route 17 area",
-          "kanto route 18 area",
-          "kanto sea route 21 area",
-          "kanto route 22 area",
-          "kanto route 24 area",
-          "kanto route 25 area",
-          "kanto route 2 north towards pewter city",
-          "kanto route 23 area"
+          "Route 12",
+          "Sea Route 19",
+          "Sea Route 20",
+          "Route 1",
+          "Route 2 South Towards Viridian City",
+          "Route 3",
+          "Route 4",
+          "Route 6",
+          "Route 7",
+          "Route 8",
+          "Route 9",
+          "Route 10",
+          "Route 11",
+          "Route 13",
+          "Route 14",
+          "Route 15",
+          "Route 16",
+          "Route 17",
+          "Route 18",
+          "Sea Route 21",
+          "Route 22",
+          "Route 24",
+          "Route 25",
+          "Route 2 North Towards Pewter City",
+          "Route 23"
         ]
       },
       "lets-go-eevee": {
         "locations": [
-          "kanto route 12 area",
-          "kanto sea route 19 area",
-          "kanto sea route 20 area",
-          "kanto route 1 area",
-          "kanto route 2 south towards viridian city",
-          "kanto route 3 area",
-          "kanto route 4 area",
-          "kanto route 6 area",
-          "kanto route 7 area",
-          "kanto route 8 area",
-          "kanto route 9 area",
-          "kanto route 10 area",
-          "kanto route 11 area",
-          "kanto route 13 area",
-          "kanto route 14 area",
-          "kanto route 15 area",
-          "kanto route 16 area",
-          "kanto route 17 area",
-          "kanto route 18 area",
-          "kanto sea route 21 area",
-          "kanto route 22 area",
-          "kanto route 24 area",
-          "kanto route 25 area",
-          "kanto route 2 north towards pewter city",
-          "kanto route 23 area"
+          "Route 12",
+          "Sea Route 19",
+          "Sea Route 20",
+          "Route 1",
+          "Route 2 South Towards Viridian City",
+          "Route 3",
+          "Route 4",
+          "Route 6",
+          "Route 7",
+          "Route 8",
+          "Route 9",
+          "Route 10",
+          "Route 11",
+          "Route 13",
+          "Route 14",
+          "Route 15",
+          "Route 16",
+          "Route 17",
+          "Route 18",
+          "Sea Route 21",
+          "Route 22",
+          "Route 24",
+          "Route 25",
+          "Route 2 North Towards Pewter City",
+          "Route 23"
         ]
       }
     },
     "150": {
       "lets-go-pikachu": {
         "locations": [
-          "cerulean cave b1f"
+          "Cerulean Cave (B1F)"
         ]
       },
       "lets-go-eevee": {
         "locations": [
-          "cerulean cave b1f"
+          "Cerulean Cave (B1F)"
         ]
       }
     },
@@ -3439,24 +3455,28 @@
     "808": {
       "lets-go-pikachu": {
         "locations": [
-          "Transfer from mainland China|Mainland Chinese version)'''"
+          "Transfer from GO to GO Park (International version)",
+          "Event (Mainland Chinese version)"
         ]
       },
       "lets-go-eevee": {
         "locations": [
-          "Transfer from mainland China|Mainland Chinese version)'''"
+          "Transfer from GO to GO Park (International version)",
+          "Event (Mainland Chinese version)"
         ]
       }
     },
     "809": {
       "lets-go-pikachu": {
         "locations": [
-          "Transfer from mainland China|Mainland Chinese version)'''"
+          "Transfer from GO to GO Park (International version)",
+          "Event (Mainland Chinese version)"
         ]
       },
       "lets-go-eevee": {
         "locations": [
-          "Transfer from mainland China|Mainland Chinese version)'''"
+          "Transfer from GO to GO Park (International version)",
+          "Event (Mainland Chinese version)"
         ]
       }
     }

@@ -14,6 +14,7 @@
       "type": "base",
       "optional": false,
       "defaultEnabled": false,
+      "startIndex": 1,
       "entries": [
         {
           "speciesId": 494,
@@ -1527,258 +1528,258 @@
     "19": {
       "black-2": {
         "locations": [
-          "castelia city area",
-          "castelia sewers area",
-          "castelia sewers unknown area 38",
-          "relic passage castelia sewers entrance"
+          "Castelia City",
+          "Castelia Sewers",
+          "Castelia Sewers Unknown Area",
+          "Relic Passage Castelia Sewers Entrance"
         ]
       },
       "white-2": {
         "locations": [
-          "castelia city area",
-          "castelia sewers area",
-          "castelia sewers unknown area 38",
-          "relic passage castelia sewers entrance"
+          "Castelia City",
+          "Castelia Sewers",
+          "Castelia Sewers Unknown Area",
+          "Relic Passage Castelia Sewers Entrance"
         ]
       }
     },
     "20": {
       "black-2": {
         "locations": [
-          "dreamyard area",
-          "dreamyard b1f",
-          "strange house 1f",
-          "strange house b1f",
-          "relic passage relic castle entrance"
+          "Dreamyard",
+          "Dreamyard (B1F)",
+          "Strange House (1F)",
+          "Strange House (B1F)",
+          "Relic Passage Relic Castle Entrance"
         ]
       },
       "white-2": {
         "locations": [
-          "dreamyard area",
-          "dreamyard b1f",
-          "strange house 1f",
-          "strange house b1f",
-          "relic passage relic castle entrance"
+          "Dreamyard",
+          "Dreamyard (B1F)",
+          "Strange House (1F)",
+          "Strange House (B1F)",
+          "Relic Passage Relic Castle Entrance"
         ]
       }
     },
     "27": {
       "black-2": {
         "locations": [
-          "desert resort entrance",
-          "desert resort area",
-          "relic castle a"
+          "Desert Resort Entrance",
+          "Desert Resort",
+          "Relic Castle A"
         ]
       },
       "white-2": {
         "locations": [
-          "desert resort entrance",
-          "desert resort area",
-          "relic castle a"
+          "Desert Resort Entrance",
+          "Desert Resort",
+          "Relic Castle A"
         ]
       }
     },
     "28": {
       "black-2": {
         "locations": [
-          "relic castle c",
-          "unova route 15 area"
+          "Relic Castle C",
+          "Route 15"
         ]
       },
       "white-2": {
         "locations": [
-          "relic castle c",
-          "unova route 15 area"
+          "Relic Castle C",
+          "Route 15"
         ]
       }
     },
     "35": {
       "black-2": {
         "locations": [
-          "giant chasm outside",
-          "giant chasm area",
-          "giant chasm forest",
-          "giant chasm forest cave",
-          "giant chasm hidden grotto"
+          "Giant Chasm Outside",
+          "Giant Chasm",
+          "Giant Chasm Forest",
+          "Giant Chasm Forest Cave",
+          "Giant Chasm Hidden Grotto"
         ]
       },
       "white-2": {
         "locations": [
-          "giant chasm outside",
-          "giant chasm area",
-          "giant chasm forest",
-          "giant chasm forest cave",
-          "giant chasm hidden grotto"
+          "Giant Chasm Outside",
+          "Giant Chasm",
+          "Giant Chasm Forest",
+          "Giant Chasm Forest Cave",
+          "Giant Chasm Hidden Grotto"
         ]
       }
     },
     "36": {
       "black-2": {
         "locations": [
-          "giant chasm outside",
-          "giant chasm forest",
-          "giant chasm forest cave"
+          "Giant Chasm Outside",
+          "Giant Chasm Forest",
+          "Giant Chasm Forest Cave"
         ]
       },
       "white-2": {
         "locations": [
-          "giant chasm outside",
-          "giant chasm forest",
-          "giant chasm forest cave"
+          "Giant Chasm Outside",
+          "Giant Chasm Forest",
+          "Giant Chasm Forest Cave"
         ]
       }
     },
     "37": {
       "black-2": {
         "locations": [
-          "abundant shrine area",
-          "abundant shrine hidden grotto near youngster"
+          "Abundant Shrine",
+          "Abundant Shrine Hidden Grotto Near Youngster"
         ]
       },
       "white-2": {
         "locations": [
-          "abundant shrine area",
-          "abundant shrine hidden grotto near youngster"
+          "Abundant Shrine",
+          "Abundant Shrine Hidden Grotto Near Youngster"
         ]
       }
     },
     "38": {
       "black-2": {
         "locations": [
-          "abundant shrine area"
+          "Abundant Shrine"
         ]
       },
       "white-2": {
         "locations": [
-          "abundant shrine area"
+          "Abundant Shrine"
         ]
       }
     },
     "39": {
       "black-2": {
         "locations": [
-          "dreamyard area",
-          "dreamyard b1f",
-          "unova route 1 area",
-          "unova route 2 area"
+          "Dreamyard",
+          "Dreamyard (B1F)",
+          "Route 1",
+          "Route 2"
         ]
       },
       "white-2": {
         "locations": [
-          "dreamyard area",
-          "dreamyard b1f",
-          "unova route 1 area",
-          "unova route 2 area"
+          "Dreamyard",
+          "Dreamyard (B1F)",
+          "Route 1",
+          "Route 2"
         ]
       }
     },
     "40": {
       "black-2": {
         "locations": [
-          "dreamyard area",
-          "unova route 1 area",
-          "unova route 2 area"
+          "Dreamyard",
+          "Route 1",
+          "Route 2"
         ]
       },
       "white-2": {
         "locations": [
-          "dreamyard area",
-          "unova route 1 area",
-          "unova route 2 area"
+          "Dreamyard",
+          "Route 1",
+          "Route 2"
         ]
       }
     },
     "41": {
       "black-2": {
         "locations": [
-          "castelia sewers area",
-          "castelia sewers unknown area 38"
+          "Castelia Sewers",
+          "Castelia Sewers Unknown Area"
         ]
       },
       "white-2": {
         "locations": [
-          "castelia sewers area",
-          "castelia sewers unknown area 38"
+          "Castelia Sewers",
+          "Castelia Sewers Unknown Area"
         ]
       }
     },
     "42": {
       "black-2": {
         "locations": [
-          "dreamyard area",
-          "dreamyard b1f",
-          "celestial tower 3f",
-          "celestial tower 4f",
-          "celestial tower 5f",
-          "strange house 1f",
-          "strange house b1f"
+          "Dreamyard",
+          "Dreamyard (B1F)",
+          "Celestial Tower (3F)",
+          "Celestial Tower (4F)",
+          "Celestial Tower (5F)",
+          "Strange House (1F)",
+          "Strange House (B1F)"
         ]
       },
       "white-2": {
         "locations": [
-          "dreamyard area",
-          "dreamyard b1f",
-          "celestial tower 3f",
-          "celestial tower 4f",
-          "celestial tower 5f",
-          "strange house 1f",
-          "strange house b1f"
+          "Dreamyard",
+          "Dreamyard (B1F)",
+          "Celestial Tower (3F)",
+          "Celestial Tower (4F)",
+          "Celestial Tower (5F)",
+          "Strange House (1F)",
+          "Strange House (B1F)"
         ]
       }
     },
     "54": {
       "black-2": {
         "locations": [
-          "floccesy ranch inner"
+          "Floccesy Ranch Inner"
         ]
       },
       "white-2": {
         "locations": [
-          "floccesy ranch inner"
+          "Floccesy Ranch Inner"
         ]
       }
     },
     "55": {
       "black-2": {
         "locations": [
-          "village bridge area",
-          "unova route 11 area",
-          "unova route 14 area",
-          "abundant shrine area",
-          "seaside cave 1f",
-          "seaside cave b1f",
-          "nature sanctuary area",
-          "unova route 22 area",
-          "unova route 23 area",
-          "unova route 23 hidden grotto",
-          "abundant shrine hidden grotto shrine"
+          "Village Bridge",
+          "Route 11",
+          "Route 14",
+          "Abundant Shrine",
+          "Seaside Cave (1F)",
+          "Seaside Cave (B1F)",
+          "Nature Sanctuary",
+          "Route 22",
+          "Route 23",
+          "Route 23 Hidden Grotto",
+          "Abundant Shrine Hidden Grotto Shrine"
         ]
       },
       "white-2": {
         "locations": [
-          "village bridge area",
-          "unova route 11 area",
-          "unova route 14 area",
-          "abundant shrine area",
-          "seaside cave 1f",
-          "seaside cave b1f",
-          "nature sanctuary area",
-          "unova route 22 area",
-          "unova route 23 area",
-          "unova route 23 hidden grotto",
-          "abundant shrine hidden grotto shrine"
+          "Village Bridge",
+          "Route 11",
+          "Route 14",
+          "Abundant Shrine",
+          "Seaside Cave (1F)",
+          "Seaside Cave (B1F)",
+          "Nature Sanctuary",
+          "Route 22",
+          "Route 23",
+          "Route 23 Hidden Grotto",
+          "Abundant Shrine Hidden Grotto Shrine"
         ]
       }
     },
     "58": {
       "black-2": {
         "locations": [
-          "virbank complex inner"
+          "Virbank Complex Inner"
         ]
       },
       "white-2": {
         "locations": [
-          "virbank complex inner"
+          "Virbank Complex Inner"
         ]
       }
     },
@@ -1797,206 +1798,200 @@
     "81": {
       "black-2": {
         "locations": [
-          "virbank complex outer",
-          "virbank complex inner"
+          "Virbank Complex Outer",
+          "Virbank Complex Inner"
         ]
       },
       "white-2": {
         "locations": [
-          "virbank complex outer",
-          "virbank complex inner"
+          "Virbank Complex Outer",
+          "Virbank Complex Inner"
         ]
       }
     },
     "82": {
       "black-2": {
         "locations": [
-          "p2 laboratory area"
+          "P2 Laboratory"
         ]
       },
       "white-2": {
         "locations": [
-          "p2 laboratory area"
+          "P2 Laboratory"
         ]
       }
     },
     "86": {
       "black-2": {
         "locations": [
-          "giant chasm area",
-          "seaside cave 1f"
+          "Giant Chasm",
+          "Seaside Cave (1F)"
         ]
       },
       "white-2": {
         "locations": [
-          "giant chasm area",
-          "seaside cave 1f"
+          "Giant Chasm",
+          "Seaside Cave (1F)"
         ]
       }
     },
     "87": {
       "black-2": {
         "locations": [
-          "giant chasm area",
-          "seaside cave 1f"
+          "Giant Chasm",
+          "Seaside Cave (1F)"
         ]
       },
       "white-2": {
         "locations": [
-          "giant chasm area",
-          "seaside cave 1f"
+          "Giant Chasm",
+          "Seaside Cave (1F)"
         ]
       }
     },
     "88": {
       "black-2": {
         "locations": [
-          "castelia sewers area",
-          "castelia sewers unknown area 38"
+          "Castelia Sewers",
+          "Castelia Sewers Unknown Area"
         ]
       },
       "white-2": {
         "locations": [
-          "castelia sewers area",
-          "castelia sewers unknown area 38"
+          "Castelia Sewers",
+          "Castelia Sewers Unknown Area"
         ]
       }
     },
     "89": {
       "black-2": {
         "locations": [
-          "unova route 9 area",
-          "castelia sewers area",
-          "castelia sewers unknown area 38",
-          "unova route 9 hidden grotto"
+          "Route 9",
+          "Castelia Sewers",
+          "Castelia Sewers Unknown Area",
+          "Route 9 Hidden Grotto"
         ]
       },
       "white-2": {
         "locations": [
-          "unova route 9 area",
-          "castelia sewers area",
-          "castelia sewers unknown area 38",
-          "unova route 9 hidden grotto"
+          "Route 9",
+          "Castelia Sewers",
+          "Castelia Sewers Unknown Area",
+          "Route 9 Hidden Grotto"
         ]
       }
     },
     "95": {
       "black-2": {
         "locations": [
-          "twist mountain b1f 3f",
-          "unova victory road 2 unknown area 74",
-          "unova victory road 2 unknown area 75",
-          "unova victory road 2 unknown area 77",
-          "unova victory road 2 unknown area 80",
-          "relic passage castelia sewers entrance",
-          "relic passage relic castle entrance",
-          "relic passage pwt entrance",
-          "clay tunnel area",
-          "underground ruins area",
-          "rocky mountain room area",
-          "glacier room area",
-          "iron room area"
+          "Twist Mountain (B1F) (3F)",
+          "Victory Road 2 Unknown Area",
+          "Relic Passage Castelia Sewers Entrance",
+          "Relic Passage Relic Castle Entrance",
+          "Relic Passage Pwt Entrance",
+          "Clay Tunnel",
+          "Underground Ruins",
+          "Rocky Mountain Room",
+          "Glacier Room",
+          "Iron Room"
         ]
       },
       "white-2": {
         "locations": [
-          "twist mountain b1f 3f",
-          "unova victory road 2 unknown area 74",
-          "unova victory road 2 unknown area 75",
-          "unova victory road 2 unknown area 77",
-          "unova victory road 2 unknown area 80",
-          "relic passage castelia sewers entrance",
-          "relic passage relic castle entrance",
-          "relic passage pwt entrance",
-          "clay tunnel area",
-          "underground ruins area",
-          "rocky mountain room area",
-          "glacier room area",
-          "iron room area"
+          "Twist Mountain (B1F) (3F)",
+          "Victory Road 2 Unknown Area",
+          "Relic Passage Castelia Sewers Entrance",
+          "Relic Passage Relic Castle Entrance",
+          "Relic Passage Pwt Entrance",
+          "Clay Tunnel",
+          "Underground Ruins",
+          "Rocky Mountain Room",
+          "Glacier Room",
+          "Iron Room"
         ]
       }
     },
     "108": {
       "black-2": {
         "locations": [
-          "unova route 2 area"
+          "Route 2"
         ]
       },
       "white-2": {
         "locations": [
-          "unova route 2 area"
+          "Route 2"
         ]
       }
     },
     "109": {
       "black-2": {
         "locations": [
-          "virbank complex inner"
+          "Virbank Complex Inner"
         ]
       },
       "white-2": {
         "locations": [
-          "virbank complex inner"
+          "Virbank Complex Inner"
         ]
       }
     },
     "110": {
       "black-2": {
         "locations": [
-          "p2 laboratory area"
+          "P2 Laboratory"
         ]
       },
       "white-2": {
         "locations": [
-          "p2 laboratory area"
+          "P2 Laboratory"
         ]
       }
     },
     "114": {
       "black-2": {
         "locations": [
-          "giant chasm outside",
-          "unova route 13 area",
-          "unova route 13 hidden grotto giant chasm"
+          "Giant Chasm Outside",
+          "Route 13",
+          "Route 13 Hidden Grotto Giant Chasm"
         ]
       },
       "white-2": {
         "locations": [
-          "giant chasm outside",
-          "unova route 13 area",
-          "unova route 13 hidden grotto giant chasm"
+          "Giant Chasm Outside",
+          "Route 13",
+          "Route 13 Hidden Grotto Giant Chasm"
         ]
       }
     },
     "120": {
       "black-2": {
         "locations": [
-          "unova route 13 area",
-          "undella town area",
-          "humilau city area"
+          "Route 13",
+          "Undella Town",
+          "Humilau City"
         ]
       },
       "white-2": {
         "locations": [
-          "unova route 13 area",
-          "undella town area",
-          "humilau city area"
+          "Route 13",
+          "Undella Town",
+          "Humilau City"
         ]
       }
     },
     "121": {
       "black-2": {
         "locations": [
-          "unova route 13 area",
-          "undella town area",
-          "humilau city area"
+          "Route 13",
+          "Undella Town",
+          "Humilau City"
         ]
       },
       "white-2": {
         "locations": [
-          "unova route 13 area",
-          "undella town area",
-          "humilau city area"
+          "Route 13",
+          "Undella Town",
+          "Humilau City"
         ]
       }
     },
@@ -2017,54 +2012,54 @@
     "127": {
       "white-2": {
         "locations": [
-          "unova route 12 area",
-          "lostlorn forest area",
-          "lostlorn forest hidden grotto"
+          "Route 12",
+          "Lostlorn Forest",
+          "Lostlorn Forest Hidden Grotto"
         ]
       },
       "black-2": {
         "locations": [
-          "lostlorn forest hidden grotto"
+          "Lostlorn Forest Hidden Grotto"
         ]
       }
     },
     "131": {
       "black-2": {
         "locations": [
-          "village bridge area"
+          "Village Bridge"
         ]
       },
       "white-2": {
         "locations": [
-          "village bridge area"
+          "Village Bridge"
         ]
       }
     },
     "132": {
       "black-2": {
         "locations": [
-          "giant chasm forest",
-          "giant chasm forest cave",
-          "giant chasm hidden grotto"
+          "Giant Chasm Forest",
+          "Giant Chasm Forest Cave",
+          "Giant Chasm Hidden Grotto"
         ]
       },
       "white-2": {
         "locations": [
-          "giant chasm forest",
-          "giant chasm forest cave",
-          "giant chasm hidden grotto"
+          "Giant Chasm Forest",
+          "Giant Chasm Forest Cave",
+          "Giant Chasm Hidden Grotto"
         ]
       }
     },
     "133": {
       "black-2": {
         "locations": [
-          "castelia city area"
+          "Castelia City"
         ]
       },
       "white-2": {
         "locations": [
-          "castelia city area"
+          "Castelia City"
         ]
       }
     },
@@ -2107,37 +2102,37 @@
     "169": {
       "black-2": {
         "locations": [
-          "dreamyard area"
+          "Dreamyard"
         ]
       },
       "white-2": {
         "locations": [
-          "dreamyard area"
+          "Dreamyard"
         ]
       }
     },
     "173": {
       "black-2": {
         "locations": [
-          "Breed Clefable"
+          "Breed Clefairy or Clefable"
         ]
       },
       "white-2": {
         "locations": [
-          "Breed Clefable"
+          "Breed Clefairy or Clefable"
         ]
       }
     },
     "174": {
       "black-2": {
         "locations": [
-          "Breed Wigglytuff",
+          "Breed Jigglypuff or Wigglytuff",
           "Transfer from Dream Radar"
         ]
       },
       "white-2": {
         "locations": [
-          "Breed Wigglytuff",
+          "Breed Jigglypuff or Wigglytuff",
           "Transfer from Dream Radar"
         ]
       }
@@ -2145,12 +2140,12 @@
     "179": {
       "black-2": {
         "locations": [
-          "floccesy ranch inner"
+          "Floccesy Ranch Inner"
         ]
       },
       "white-2": {
         "locations": [
-          "floccesy ranch inner"
+          "Floccesy Ranch Inner"
         ]
       }
     },
@@ -2181,86 +2176,78 @@
     "183": {
       "black-2": {
         "locations": [
-          "pinwheel forest inside",
-          "village bridge area",
-          "unova route 6 area",
-          "unova route 11 area",
-          "abundant shrine area",
-          "unova victory road 2 unknown area 71",
-          "unova victory road 2 unknown area 75",
-          "unova victory road 2 unknown area 78",
-          "floccesy ranch outer",
-          "floccesy ranch inner",
-          "relic passage relic castle entrance",
-          "unova route 20 area",
-          "unova route 22 area",
-          "floccesy ranch hidden grotto"
+          "Pinwheel Forest Inside",
+          "Village Bridge",
+          "Route 6",
+          "Route 11",
+          "Abundant Shrine",
+          "Victory Road 2 Unknown Area",
+          "Floccesy Ranch Outer",
+          "Floccesy Ranch Inner",
+          "Relic Passage Relic Castle Entrance",
+          "Route 20",
+          "Route 22",
+          "Floccesy Ranch Hidden Grotto"
         ]
       },
       "white-2": {
         "locations": [
-          "pinwheel forest inside",
-          "village bridge area",
-          "unova route 6 area",
-          "unova route 11 area",
-          "abundant shrine area",
-          "unova victory road 2 unknown area 71",
-          "unova victory road 2 unknown area 75",
-          "unova victory road 2 unknown area 78",
-          "floccesy ranch outer",
-          "floccesy ranch inner",
-          "relic passage relic castle entrance",
-          "unova route 20 area",
-          "unova route 22 area",
-          "floccesy ranch hidden grotto"
+          "Pinwheel Forest Inside",
+          "Village Bridge",
+          "Route 6",
+          "Route 11",
+          "Abundant Shrine",
+          "Victory Road 2 Unknown Area",
+          "Floccesy Ranch Outer",
+          "Floccesy Ranch Inner",
+          "Relic Passage Relic Castle Entrance",
+          "Route 20",
+          "Route 22",
+          "Floccesy Ranch Hidden Grotto"
         ]
       }
     },
     "184": {
       "black-2": {
         "locations": [
-          "pinwheel forest inside",
-          "village bridge area",
-          "unova route 6 area",
-          "unova route 11 area",
-          "abundant shrine area",
-          "unova victory road 2 unknown area 71",
-          "unova victory road 2 unknown area 75",
-          "unova victory road 2 unknown area 78",
-          "floccesy ranch outer",
-          "floccesy ranch inner",
-          "relic passage relic castle entrance",
-          "unova route 20 area",
-          "unova route 22 area"
+          "Pinwheel Forest Inside",
+          "Village Bridge",
+          "Route 6",
+          "Route 11",
+          "Abundant Shrine",
+          "Victory Road 2 Unknown Area",
+          "Floccesy Ranch Outer",
+          "Floccesy Ranch Inner",
+          "Relic Passage Relic Castle Entrance",
+          "Route 20",
+          "Route 22"
         ]
       },
       "white-2": {
         "locations": [
-          "pinwheel forest inside",
-          "village bridge area",
-          "unova route 6 area",
-          "unova route 11 area",
-          "abundant shrine area",
-          "unova victory road 2 unknown area 71",
-          "unova victory road 2 unknown area 75",
-          "unova victory road 2 unknown area 78",
-          "floccesy ranch outer",
-          "floccesy ranch inner",
-          "relic passage relic castle entrance",
-          "unova route 20 area",
-          "unova route 22 area"
+          "Pinwheel Forest Inside",
+          "Village Bridge",
+          "Route 6",
+          "Route 11",
+          "Abundant Shrine",
+          "Victory Road 2 Unknown Area",
+          "Floccesy Ranch Outer",
+          "Floccesy Ranch Inner",
+          "Relic Passage Relic Castle Entrance",
+          "Route 20",
+          "Route 22"
         ]
       }
     },
     "191": {
       "black-2": {
         "locations": [
-          "unova route 20 area"
+          "Route 20"
         ]
       },
       "white-2": {
         "locations": [
-          "unova route 20 area"
+          "Route 20"
         ]
       }
     },
@@ -2279,14 +2266,14 @@
     "193": {
       "black-2": {
         "locations": [
-          "pinwheel forest outside",
-          "unova route 3 area"
+          "Pinwheel Forest Outside",
+          "Route 3"
         ]
       },
       "white-2": {
         "locations": [
-          "pinwheel forest outside",
-          "unova route 3 area"
+          "Pinwheel Forest Outside",
+          "Route 3"
         ]
       }
     },
@@ -2317,290 +2304,286 @@
     "206": {
       "black-2": {
         "locations": [
-          "dreamyard area",
-          "village bridge area",
-          "unova route 1 area",
-          "unova route 2 area",
-          "unova route 6 area",
-          "unova route 12 area",
-          "unova route 18 area",
-          "unova victory road 2 unknown area 72",
-          "unova victory road 2 unknown area 73",
-          "unova victory road 2 unknown area 79",
-          "floccesy ranch inner",
-          "nature sanctuary area",
-          "unova route 20 area",
-          "unova route 6 hidden grotto near pokemon breeder",
-          "floccesy ranch hidden grotto"
+          "Dreamyard",
+          "Village Bridge",
+          "Route 1",
+          "Route 2",
+          "Route 6",
+          "Route 12",
+          "Route 18",
+          "Victory Road 2 Unknown Area",
+          "Floccesy Ranch Inner",
+          "Nature Sanctuary",
+          "Route 20",
+          "Route 6 Hidden Grotto Near Pokemon Breeder",
+          "Floccesy Ranch Hidden Grotto"
         ]
       },
       "white-2": {
         "locations": [
-          "dreamyard area",
-          "village bridge area",
-          "unova route 1 area",
-          "unova route 2 area",
-          "unova route 6 area",
-          "unova route 12 area",
-          "unova route 18 area",
-          "unova victory road 2 unknown area 72",
-          "unova victory road 2 unknown area 73",
-          "unova victory road 2 unknown area 79",
-          "floccesy ranch inner",
-          "nature sanctuary area",
-          "unova route 20 area",
-          "unova route 6 hidden grotto near pokemon breeder",
-          "floccesy ranch hidden grotto"
+          "Dreamyard",
+          "Village Bridge",
+          "Route 1",
+          "Route 2",
+          "Route 6",
+          "Route 12",
+          "Route 18",
+          "Victory Road 2 Unknown Area",
+          "Floccesy Ranch Inner",
+          "Nature Sanctuary",
+          "Route 20",
+          "Route 6 Hidden Grotto Near Pokemon Breeder",
+          "Floccesy Ranch Hidden Grotto"
         ]
       }
     },
     "207": {
       "black-2": {
         "locations": [
-          "unova route 11 area",
-          "unova route 15 area",
-          "unova route 23 area",
-          "unova route 23 hidden grotto"
+          "Route 11",
+          "Route 15",
+          "Route 23",
+          "Route 23 Hidden Grotto"
         ]
       },
       "white-2": {
         "locations": [
-          "unova route 11 area",
-          "unova route 15 area",
-          "unova route 23 area",
-          "unova route 23 hidden grotto"
+          "Route 11",
+          "Route 15",
+          "Route 23",
+          "Route 23 Hidden Grotto"
         ]
       }
     },
     "208": {
       "black-2": {
         "locations": [
-          "twist mountain b1f 3f",
-          "clay tunnel area",
-          "underground ruins area",
-          "rocky mountain room area",
-          "glacier room area",
-          "iron room area"
+          "Twist Mountain (B1F) (3F)",
+          "Clay Tunnel",
+          "Underground Ruins",
+          "Rocky Mountain Room",
+          "Glacier Room",
+          "Iron Room"
         ]
       },
       "white-2": {
         "locations": [
-          "twist mountain b1f 3f",
-          "clay tunnel area",
-          "underground ruins area",
-          "rocky mountain room area",
-          "glacier room area",
-          "iron room area"
+          "Twist Mountain (B1F) (3F)",
+          "Clay Tunnel",
+          "Underground Ruins",
+          "Rocky Mountain Room",
+          "Glacier Room",
+          "Iron Room"
         ]
       }
     },
     "213": {
       "black-2": {
         "locations": [
-          "seaside cave b1f"
+          "Seaside Cave (B1F)"
         ]
       },
       "white-2": {
         "locations": [
-          "seaside cave b1f"
+          "Seaside Cave (B1F)"
         ]
       }
     },
     "214": {
       "black-2": {
         "locations": [
-          "unova route 12 area",
-          "lostlorn forest area",
-          "lostlorn forest hidden grotto"
+          "Route 12",
+          "Lostlorn Forest",
+          "Lostlorn Forest Hidden Grotto"
         ]
       },
       "white-2": {
         "locations": [
-          "lostlorn forest hidden grotto"
+          "Lostlorn Forest Hidden Grotto"
         ]
       }
     },
     "215": {
       "black-2": {
         "locations": [
-          "giant chasm area",
-          "giant chasm hidden grotto"
+          "Giant Chasm",
+          "Giant Chasm Hidden Grotto"
         ]
       },
       "white-2": {
         "locations": [
-          "giant chasm area",
-          "giant chasm hidden grotto"
+          "Giant Chasm",
+          "Giant Chasm Hidden Grotto"
         ]
       }
     },
     "220": {
       "black-2": {
         "locations": [
-          "Breed Mamoswine"
+          "Breed Piloswine or Mamoswine"
         ]
       },
       "white-2": {
         "locations": [
-          "Breed Mamoswine"
+          "Breed Piloswine or Mamoswine"
         ]
       }
     },
     "221": {
       "black-2": {
         "locations": [
-          "giant chasm area",
-          "giant chasm forest",
-          "giant chasm forest cave"
+          "Giant Chasm",
+          "Giant Chasm Forest",
+          "Giant Chasm Forest Cave"
         ]
       },
       "white-2": {
         "locations": [
-          "giant chasm area",
-          "giant chasm forest",
-          "giant chasm forest cave"
+          "Giant Chasm",
+          "Giant Chasm Forest",
+          "Giant Chasm Forest Cave"
         ]
       }
     },
     "222": {
       "black-2": {
         "locations": [
-          "unova route 18 area",
-          "humilau city area",
-          "unova route 18 hidden grotto"
+          "Route 18",
+          "Humilau City",
+          "Route 18 Hidden Grotto"
         ]
       },
       "white-2": {
         "locations": [
-          "unova route 18 area",
-          "humilau city area",
-          "unova route 18 hidden grotto"
+          "Route 18",
+          "Humilau City",
+          "Route 18 Hidden Grotto"
         ]
       }
     },
     "223": {
       "black-2": {
         "locations": [
-          "undella bay area",
-          "unova route 21 area"
+          "Undella Bay",
+          "Route 21"
         ]
       },
       "white-2": {
         "locations": [
-          "undella bay area",
-          "unova route 21 area"
+          "Undella Bay",
+          "Route 21"
         ]
       }
     },
     "224": {
       "black-2": {
         "locations": [
-          "undella bay area",
-          "unova route 21 area"
+          "Undella Bay",
+          "Route 21"
         ]
       },
       "white-2": {
         "locations": [
-          "undella bay area",
-          "unova route 21 area"
+          "Undella Bay",
+          "Route 21"
         ]
       }
     },
     "225": {
       "black-2": {
         "locations": [
-          "giant chasm outside",
-          "giant chasm area",
-          "giant chasm forest",
-          "giant chasm forest cave",
-          "unova route 22 area"
+          "Giant Chasm Outside",
+          "Giant Chasm",
+          "Giant Chasm Forest",
+          "Giant Chasm Forest Cave",
+          "Route 22"
         ]
       },
       "white-2": {
         "locations": [
-          "giant chasm outside",
-          "giant chasm area",
-          "giant chasm forest",
-          "giant chasm forest cave",
-          "unova route 22 area"
+          "Giant Chasm Outside",
+          "Giant Chasm",
+          "Giant Chasm Forest",
+          "Giant Chasm Forest Cave",
+          "Route 22"
         ]
       }
     },
     "226": {
       "black-2": {
         "locations": [
-          "undella bay area",
-          "unova route 21 area"
+          "Undella Bay",
+          "Route 21"
         ]
       },
       "white-2": {
         "locations": [
-          "undella bay area",
-          "unova route 21 area"
+          "Undella Bay",
+          "Route 21"
         ]
       }
     },
     "227": {
       "black-2": {
         "locations": [
-          "reversal mountain unknown area 48"
+          "Reversal Mountain Unknown Area"
         ]
       },
       "white-2": {
         "locations": [
-          "reversal mountain unknown area 48"
+          "Reversal Mountain Unknown Area"
         ]
       }
     },
     "239": {
       "white-2": {
         "locations": [
-          "virbank complex outer",
-          "virbank complex inner"
+          "Virbank Complex Outer",
+          "Virbank Complex Inner"
         ]
       }
     },
     "240": {
       "black-2": {
         "locations": [
-          "virbank complex outer",
-          "virbank complex inner"
+          "Virbank Complex Outer",
+          "Virbank Complex Inner"
         ]
       }
     },
     "246": {
       "black-2": {
         "locations": [
-          "Breed Tyranitar"
+          "Breed Pupitar or Tyranitar"
         ]
       },
       "white-2": {
         "locations": [
-          "Breed Tyranitar"
+          "Breed Pupitar or Tyranitar"
         ]
       }
     },
     "247": {
       "black-2": {
         "locations": [
-          "unova route 15 area"
+          "Route 15"
         ]
       },
       "white-2": {
         "locations": [
-          "unova route 15 area"
+          "Route 15"
         ]
       }
     },
     "248": {
       "black-2": {
         "locations": [
-          "unova route 15 area"
+          "Route 15"
         ]
       },
       "white-2": {
         "locations": [
-          "unova route 15 area"
+          "Route 15"
         ]
       }
     },
@@ -2619,146 +2602,146 @@
     "279": {
       "black-2": {
         "locations": [
-          "giant chasm outside",
-          "unova route 13 area",
-          "unova route 22 area",
-          "unova route 22 hidden grotto"
+          "Giant Chasm Outside",
+          "Route 13",
+          "Route 22",
+          "Route 22 Hidden Grotto"
         ]
       },
       "white-2": {
         "locations": [
-          "giant chasm outside",
-          "unova route 13 area",
-          "unova route 22 area",
-          "unova route 22 hidden grotto"
+          "Giant Chasm Outside",
+          "Route 13",
+          "Route 22",
+          "Route 22 Hidden Grotto"
         ]
       }
     },
     "287": {
       "black-2": {
         "locations": [
-          "Breed Slaking"
+          "Breed Vigoroth or Slaking"
         ]
       },
       "white-2": {
         "locations": [
-          "Breed Slaking"
+          "Breed Vigoroth or Slaking"
         ]
       }
     },
     "288": {
       "black-2": {
         "locations": [
-          "pinwheel forest inside"
+          "Pinwheel Forest Inside"
         ]
       },
       "white-2": {
         "locations": [
-          "pinwheel forest inside"
+          "Pinwheel Forest Inside"
         ]
       }
     },
     "289": {
       "black-2": {
         "locations": [
-          "pinwheel forest inside"
+          "Pinwheel Forest Inside"
         ]
       },
       "white-2": {
         "locations": [
-          "pinwheel forest inside"
+          "Pinwheel Forest Inside"
         ]
       }
     },
     "298": {
       "black-2": {
         "locations": [
-          "floccesy ranch outer",
-          "floccesy ranch inner",
-          "unova route 20 area"
+          "Floccesy Ranch Outer",
+          "Floccesy Ranch Inner",
+          "Route 20"
         ]
       },
       "white-2": {
         "locations": [
-          "floccesy ranch outer",
-          "floccesy ranch inner",
-          "unova route 20 area"
+          "Floccesy Ranch Outer",
+          "Floccesy Ranch Inner",
+          "Route 20"
         ]
       }
     },
     "299": {
       "black-2": {
         "locations": [
-          "chargestone cave 1f",
-          "chargestone cave b1f",
-          "chargestone cave b2f",
-          "clay tunnel area",
-          "underground ruins area",
-          "rocky mountain room area",
-          "glacier room area",
-          "iron room area",
-          "unova route 6 hidden grotto mistralton cave"
+          "Chargestone Cave (1F)",
+          "Chargestone Cave (B1F)",
+          "Chargestone Cave (B2F)",
+          "Clay Tunnel",
+          "Underground Ruins",
+          "Rocky Mountain Room",
+          "Glacier Room",
+          "Iron Room",
+          "Route 6 Hidden Grotto Mistralton Cave"
         ]
       },
       "white-2": {
         "locations": [
-          "chargestone cave 1f",
-          "chargestone cave b1f",
-          "chargestone cave b2f",
-          "clay tunnel area",
-          "underground ruins area",
-          "rocky mountain room area",
-          "glacier room area",
-          "iron room area",
-          "unova route 6 hidden grotto mistralton cave"
+          "Chargestone Cave (1F)",
+          "Chargestone Cave (B1F)",
+          "Chargestone Cave (B2F)",
+          "Clay Tunnel",
+          "Underground Ruins",
+          "Rocky Mountain Room",
+          "Glacier Room",
+          "Iron Room",
+          "Route 6 Hidden Grotto Mistralton Cave"
         ]
       }
     },
     "300": {
       "white-2": {
         "locations": [
-          "castelia city area"
+          "Castelia City"
         ]
       }
     },
     "301": {
       "white-2": {
         "locations": [
-          "castelia city area"
+          "Castelia City"
         ]
       }
     },
     "304": {
       "black-2": {
         "locations": [
-          "mistralton cave area",
-          "guidance chamber area"
+          "Mistralton Cave",
+          "Guidance Chamber"
         ]
       },
       "white-2": {
         "locations": [
-          "mistralton cave area",
-          "guidance chamber area"
+          "Mistralton Cave",
+          "Guidance Chamber"
         ]
       }
     },
     "305": {
       "black-2": {
         "locations": [
-          "clay tunnel area",
-          "underground ruins area",
-          "rocky mountain room area",
-          "glacier room area",
-          "iron room area"
+          "Clay Tunnel",
+          "Underground Ruins",
+          "Rocky Mountain Room",
+          "Glacier Room",
+          "Iron Room"
         ]
       },
       "white-2": {
         "locations": [
-          "clay tunnel area",
-          "underground ruins area",
-          "rocky mountain room area",
-          "glacier room area",
-          "iron room area"
+          "Clay Tunnel",
+          "Underground Ruins",
+          "Rocky Mountain Room",
+          "Glacier Room",
+          "Iron Room"
         ]
       }
     },
@@ -2777,142 +2760,94 @@
     "315": {
       "black-2": {
         "locations": [
-          "unova route 12 area",
-          "lostlorn forest area",
-          "unova victory road 2 unknown area 72"
+          "Route 12",
+          "Lostlorn Forest",
+          "Victory Road 2 Unknown Area"
         ]
       },
       "white-2": {
         "locations": [
-          "unova route 12 area",
-          "lostlorn forest area",
-          "unova victory road 2 unknown area 72"
+          "Route 12",
+          "Lostlorn Forest",
+          "Victory Road 2 Unknown Area"
         ]
       }
     },
     "320": {
       "black-2": {
         "locations": [
-          "undella bay area"
+          "Undella Bay"
         ]
       },
       "white-2": {
         "locations": [
-          "undella bay area"
+          "Undella Bay"
         ]
       }
     },
     "321": {
       "black-2": {
         "locations": [
-          "undella bay area"
+          "Undella Bay"
         ]
       },
       "white-2": {
         "locations": [
-          "undella bay area"
+          "Undella Bay"
         ]
       }
     },
     "322": {
       "white-2": {
         "locations": [
-          "reversal mountain unknown area 48",
-          "reversal mountain unknown area 49",
-          "reversal mountain unknown area 50",
-          "reversal mountain unknown area 51",
-          "reversal mountain unknown area 52",
-          "reversal mountain unknown area 53",
-          "reversal mountain unknown area 54",
-          "reversal mountain unknown area 55",
-          "reversal mountain unknown area 56",
-          "reversal mountain unknown area 57",
-          "reversal mountain unknown area 58",
-          "reversal mountain unknown area 59",
-          "reversal mountain unknown area 60"
+          "Reversal Mountain Unknown Area"
         ]
       }
     },
     "323": {
       "white-2": {
         "locations": [
-          "reversal mountain unknown area 48",
-          "reversal mountain unknown area 49",
-          "reversal mountain unknown area 50",
-          "reversal mountain unknown area 51",
-          "reversal mountain unknown area 52",
-          "reversal mountain unknown area 53",
-          "reversal mountain unknown area 54",
-          "reversal mountain unknown area 55",
-          "reversal mountain unknown area 56",
-          "reversal mountain unknown area 57",
-          "reversal mountain unknown area 58",
-          "reversal mountain unknown area 59",
-          "reversal mountain unknown area 60"
+          "Reversal Mountain Unknown Area"
         ]
       }
     },
     "325": {
       "black-2": {
         "locations": [
-          "reversal mountain unknown area 48",
-          "reversal mountain unknown area 49",
-          "reversal mountain unknown area 50",
-          "reversal mountain unknown area 51",
-          "reversal mountain unknown area 52",
-          "reversal mountain unknown area 53",
-          "reversal mountain unknown area 54",
-          "reversal mountain unknown area 55",
-          "reversal mountain unknown area 56",
-          "reversal mountain unknown area 57",
-          "reversal mountain unknown area 58",
-          "reversal mountain unknown area 59",
-          "reversal mountain unknown area 60"
+          "Reversal Mountain Unknown Area"
         ]
       }
     },
     "326": {
       "black-2": {
         "locations": [
-          "reversal mountain unknown area 48",
-          "reversal mountain unknown area 49",
-          "reversal mountain unknown area 50",
-          "reversal mountain unknown area 51",
-          "reversal mountain unknown area 52",
-          "reversal mountain unknown area 53",
-          "reversal mountain unknown area 54",
-          "reversal mountain unknown area 55",
-          "reversal mountain unknown area 56",
-          "reversal mountain unknown area 57",
-          "reversal mountain unknown area 58",
-          "reversal mountain unknown area 59",
-          "reversal mountain unknown area 60"
+          "Reversal Mountain Unknown Area"
         ]
       }
     },
     "328": {
       "black-2": {
         "locations": [
-          "desert resort area",
-          "reversal mountain unknown area 48"
+          "Desert Resort",
+          "Reversal Mountain Unknown Area"
         ]
       },
       "white-2": {
         "locations": [
-          "desert resort area",
-          "reversal mountain unknown area 48"
+          "Desert Resort",
+          "Reversal Mountain Unknown Area"
         ]
       }
     },
     "329": {
       "black-2": {
         "locations": [
-          "reversal mountain unknown area 48"
+          "Reversal Mountain Unknown Area"
         ]
       },
       "white-2": {
         "locations": [
-          "reversal mountain unknown area 48"
+          "Reversal Mountain Unknown Area"
         ]
       }
     },
@@ -2931,160 +2866,158 @@
     "333": {
       "black-2": {
         "locations": [
-          "unova route 14 area",
-          "abundant shrine area",
-          "abundant shrine hidden grotto shrine"
+          "Route 14",
+          "Abundant Shrine",
+          "Abundant Shrine Hidden Grotto Shrine"
         ]
       },
       "white-2": {
         "locations": [
-          "unova route 14 area",
-          "abundant shrine area",
-          "abundant shrine hidden grotto shrine"
+          "Route 14",
+          "Abundant Shrine",
+          "Abundant Shrine Hidden Grotto Shrine"
         ]
       }
     },
     "334": {
       "black-2": {
         "locations": [
-          "unova route 14 area",
-          "abundant shrine area",
-          "unova victory road 2 unknown area 73",
-          "unova victory road 2 unknown area 79",
-          "nature sanctuary area"
+          "Route 14",
+          "Abundant Shrine",
+          "Victory Road 2 Unknown Area",
+          "Nature Sanctuary"
         ]
       },
       "white-2": {
         "locations": [
-          "unova route 14 area",
-          "abundant shrine area",
-          "unova victory road 2 unknown area 73",
-          "unova victory road 2 unknown area 79",
-          "nature sanctuary area"
+          "Route 14",
+          "Abundant Shrine",
+          "Victory Road 2 Unknown Area",
+          "Nature Sanctuary"
         ]
       }
     },
     "335": {
       "black-2": {
         "locations": [
-          "village bridge area",
-          "unova route 7 area",
-          "unova route 11 area",
-          "unova route 7 hidden grotto",
-          "unova route 23 hidden grotto"
+          "Village Bridge",
+          "Route 7",
+          "Route 11",
+          "Route 7 Hidden Grotto",
+          "Route 23 Hidden Grotto"
         ]
       },
       "white-2": {
         "locations": [
-          "village bridge area",
-          "unova route 7 area",
-          "unova route 11 area",
-          "unova route 7 hidden grotto",
-          "unova route 23 hidden grotto"
+          "Village Bridge",
+          "Route 7",
+          "Route 11",
+          "Route 7 Hidden Grotto",
+          "Route 23 Hidden Grotto"
         ]
       }
     },
     "336": {
       "black-2": {
         "locations": [
-          "village bridge area",
-          "unova route 7 area",
-          "unova route 11 area",
-          "unova route 7 hidden grotto",
-          "unova route 23 hidden grotto"
+          "Village Bridge",
+          "Route 7",
+          "Route 11",
+          "Route 7 Hidden Grotto",
+          "Route 23 Hidden Grotto"
         ]
       },
       "white-2": {
         "locations": [
-          "village bridge area",
-          "unova route 7 area",
-          "unova route 11 area",
-          "unova route 7 hidden grotto",
-          "unova route 23 hidden grotto"
+          "Village Bridge",
+          "Route 7",
+          "Route 11",
+          "Route 7 Hidden Grotto",
+          "Route 23 Hidden Grotto"
         ]
       }
     },
     "337": {
       "black-2": {
         "locations": [
-          "giant chasm outside",
-          "giant chasm area",
-          "giant chasm forest",
-          "giant chasm forest cave",
-          "unova route 13 area",
-          "unova route 22 area"
+          "Giant Chasm Outside",
+          "Giant Chasm",
+          "Giant Chasm Forest",
+          "Giant Chasm Forest Cave",
+          "Route 13",
+          "Route 22"
         ]
       },
       "white-2": {
         "locations": [
-          "giant chasm outside",
-          "giant chasm area",
-          "giant chasm forest",
-          "giant chasm forest cave",
-          "unova route 13 area",
-          "unova route 22 area"
+          "Giant Chasm Outside",
+          "Giant Chasm",
+          "Giant Chasm Forest",
+          "Giant Chasm Forest Cave",
+          "Route 13",
+          "Route 22"
         ]
       }
     },
     "338": {
       "black-2": {
         "locations": [
-          "giant chasm outside",
-          "giant chasm area",
-          "giant chasm forest",
-          "giant chasm forest cave",
-          "unova route 13 area",
-          "unova route 22 area"
+          "Giant Chasm Outside",
+          "Giant Chasm",
+          "Giant Chasm Forest",
+          "Giant Chasm Forest Cave",
+          "Route 13",
+          "Route 22"
         ]
       },
       "white-2": {
         "locations": [
-          "giant chasm outside",
-          "giant chasm area",
-          "giant chasm forest",
-          "giant chasm forest cave",
-          "unova route 13 area",
-          "unova route 22 area"
+          "Giant Chasm Outside",
+          "Giant Chasm",
+          "Giant Chasm Forest",
+          "Giant Chasm Forest Cave",
+          "Route 13",
+          "Route 22"
         ]
       }
     },
     "341": {
       "black-2": {
         "locations": [
-          "striaton city area",
-          "unova route 3 area"
+          "Striaton City",
+          "Route 3"
         ]
       },
       "white-2": {
         "locations": [
-          "striaton city area",
-          "unova route 3 area"
+          "Striaton City",
+          "Route 3"
         ]
       }
     },
     "342": {
       "black-2": {
         "locations": [
-          "striaton city area",
-          "unova route 3 area"
+          "Striaton City",
+          "Route 3"
         ]
       },
       "white-2": {
         "locations": [
-          "striaton city area",
-          "unova route 3 area"
+          "Striaton City",
+          "Route 3"
         ]
       }
     },
     "343": {
       "black-2": {
         "locations": [
-          "relic castle d"
+          "Relic Castle D"
         ]
       },
       "white-2": {
         "locations": [
-          "relic castle d"
+          "Relic Castle D"
         ]
       }
     },
@@ -3103,12 +3036,12 @@
     "351": {
       "black-2": {
         "locations": [
-          "unova route 6 area"
+          "Route 6"
         ]
       },
       "white-2": {
         "locations": [
-          "unova route 6 area"
+          "Route 6"
         ]
       }
     },
@@ -3127,97 +3060,95 @@
     "354": {
       "black-2": {
         "locations": [
-          "unova victory road 2 unknown area 71",
-          "unova victory road 2 unknown area 78",
-          "strange house 1f",
-          "strange house b1f"
+          "Victory Road 2 Unknown Area",
+          "Strange House (1F)",
+          "Strange House (B1F)"
         ]
       },
       "white-2": {
         "locations": [
-          "unova victory road 2 unknown area 71",
-          "unova victory road 2 unknown area 78",
-          "strange house 1f",
-          "strange house b1f"
+          "Victory Road 2 Unknown Area",
+          "Strange House (1F)",
+          "Strange House (B1F)"
         ]
       }
     },
     "357": {
       "black-2": {
         "locations": [
-          "unova route 18 area"
+          "Route 18"
         ]
       },
       "white-2": {
         "locations": [
-          "unova route 18 area"
+          "Route 18"
         ]
       }
     },
     "359": {
       "black-2": {
         "locations": [
-          "unova route 13 area",
-          "unova route 14 area",
-          "unova route 23 hidden grotto"
+          "Route 13",
+          "Route 14",
+          "Route 23 Hidden Grotto"
         ]
       },
       "white-2": {
         "locations": [
-          "unova route 13 area",
-          "unova route 14 area",
-          "unova route 23 hidden grotto"
+          "Route 13",
+          "Route 14",
+          "Route 23 Hidden Grotto"
         ]
       }
     },
     "363": {
       "black-2": {
         "locations": [
-          "undella bay area",
-          "unova route 13 hidden grotto stairs"
+          "Undella Bay",
+          "Route 13 Hidden Grotto Stairs"
         ]
       },
       "white-2": {
         "locations": [
-          "undella bay area",
-          "unova route 13 hidden grotto stairs"
+          "Undella Bay",
+          "Route 13 Hidden Grotto Stairs"
         ]
       }
     },
     "364": {
       "black-2": {
         "locations": [
-          "undella bay area"
+          "Undella Bay"
         ]
       },
       "white-2": {
         "locations": [
-          "undella bay area"
+          "Undella Bay"
         ]
       }
     },
     "365": {
       "black-2": {
         "locations": [
-          "undella bay area"
+          "Undella Bay"
         ]
       },
       "white-2": {
         "locations": [
-          "undella bay area"
+          "Undella Bay"
         ]
       }
     },
     "374": {
       "black-2": {
         "locations": [
-          "Breed Metagross",
+          "Breed Metang or Metagross",
           "Transfer from Dream Radar"
         ]
       },
       "white-2": {
         "locations": [
-          "Breed Metagross",
+          "Breed Metang or Metagross",
           "Transfer from Dream Radar"
         ]
       }
@@ -3225,216 +3156,212 @@
     "375": {
       "black-2": {
         "locations": [
-          "giant chasm forest",
-          "giant chasm forest cave",
-          "giant chasm hidden grotto"
+          "Giant Chasm Forest",
+          "Giant Chasm Forest Cave",
+          "Giant Chasm Hidden Grotto"
         ]
       },
       "white-2": {
         "locations": [
-          "giant chasm forest",
-          "giant chasm forest cave",
-          "giant chasm hidden grotto"
+          "Giant Chasm Forest",
+          "Giant Chasm Forest Cave",
+          "Giant Chasm Hidden Grotto"
         ]
       }
     },
     "376": {
       "black-2": {
         "locations": [
-          "giant chasm forest",
-          "giant chasm forest cave"
+          "Giant Chasm Forest",
+          "Giant Chasm Forest Cave"
         ]
       },
       "white-2": {
         "locations": [
-          "giant chasm forest",
-          "giant chasm forest cave"
+          "Giant Chasm Forest",
+          "Giant Chasm Forest Cave"
         ]
       }
     },
     "406": {
       "black-2": {
         "locations": [
-          "Breed Roserade holding a Rose Incense"
+          "Breed Roselia or Roserade holding a Rose Incense"
         ]
       },
       "white-2": {
         "locations": [
-          "Breed Roserade holding a Rose Incense"
+          "Breed Roselia or Roserade holding a Rose Incense"
         ]
       }
     },
     "407": {
       "black-2": {
         "locations": [
-          "unova route 12 area",
-          "lostlorn forest area",
-          "unova victory road 2 unknown area 72"
+          "Route 12",
+          "Lostlorn Forest",
+          "Victory Road 2 Unknown Area"
         ]
       },
       "white-2": {
         "locations": [
-          "unova route 12 area",
-          "lostlorn forest area",
-          "unova victory road 2 unknown area 72"
+          "Route 12",
+          "Lostlorn Forest",
+          "Victory Road 2 Unknown Area"
         ]
       }
     },
     "415": {
       "black-2": {
         "locations": [
-          "unova route 12 area",
-          "lostlorn forest area",
-          "lostlorn forest hidden grotto"
+          "Route 12",
+          "Lostlorn Forest",
+          "Lostlorn Forest Hidden Grotto"
         ]
       },
       "white-2": {
         "locations": [
-          "unova route 12 area",
-          "lostlorn forest area",
-          "lostlorn forest hidden grotto"
+          "Route 12",
+          "Lostlorn Forest",
+          "Lostlorn Forest Hidden Grotto"
         ]
       }
     },
     "416": {
       "black-2": {
         "locations": [
-          "unova route 12 area",
-          "lostlorn forest area"
+          "Route 12",
+          "Lostlorn Forest"
         ]
       },
       "white-2": {
         "locations": [
-          "unova route 12 area",
-          "lostlorn forest area"
+          "Route 12",
+          "Lostlorn Forest"
         ]
       }
     },
     "418": {
       "black-2": {
         "locations": [
-          "unova route 11 area",
-          "unova route 14 area",
-          "lostlorn forest area",
-          "unova victory road 2 unknown area 73",
-          "unova victory road 2 unknown area 79",
-          "nature sanctuary area",
-          "unova route 23 area"
+          "Route 11",
+          "Route 14",
+          "Lostlorn Forest",
+          "Victory Road 2 Unknown Area",
+          "Nature Sanctuary",
+          "Route 23"
         ]
       },
       "white-2": {
         "locations": [
-          "unova route 11 area",
-          "unova route 14 area",
-          "lostlorn forest area",
-          "unova victory road 2 unknown area 73",
-          "unova victory road 2 unknown area 79",
-          "nature sanctuary area",
-          "unova route 23 area"
+          "Route 11",
+          "Route 14",
+          "Lostlorn Forest",
+          "Victory Road 2 Unknown Area",
+          "Nature Sanctuary",
+          "Route 23"
         ]
       }
     },
     "419": {
       "black-2": {
         "locations": [
-          "unova route 11 area",
-          "unova route 14 area",
-          "lostlorn forest area",
-          "unova victory road 2 unknown area 73",
-          "unova victory road 2 unknown area 79",
-          "nature sanctuary area",
-          "unova route 23 area"
+          "Route 11",
+          "Route 14",
+          "Lostlorn Forest",
+          "Victory Road 2 Unknown Area",
+          "Nature Sanctuary",
+          "Route 23"
         ]
       },
       "white-2": {
         "locations": [
-          "unova route 11 area",
-          "unova route 14 area",
-          "lostlorn forest area",
-          "unova victory road 2 unknown area 73",
-          "unova victory road 2 unknown area 79",
-          "nature sanctuary area",
-          "unova route 23 area"
+          "Route 11",
+          "Route 14",
+          "Lostlorn Forest",
+          "Victory Road 2 Unknown Area",
+          "Nature Sanctuary",
+          "Route 23"
         ]
       }
     },
     "425": {
       "black-2": {
         "locations": [
-          "unova route 13 hidden grotto stairs"
+          "Route 13 Hidden Grotto Stairs"
         ]
       },
       "white-2": {
         "locations": [
-          "unova route 13 hidden grotto stairs"
+          "Route 13 Hidden Grotto Stairs"
         ]
       }
     },
     "426": {
       "black-2": {
         "locations": [
-          "unova route 13 area",
-          "unova route 14 area",
-          "reversal mountain unknown area 48"
+          "Route 13",
+          "Route 14",
+          "Reversal Mountain Unknown Area"
         ]
       },
       "white-2": {
         "locations": [
-          "unova route 13 area",
-          "unova route 14 area",
-          "reversal mountain unknown area 48"
+          "Route 13",
+          "Route 14",
+          "Reversal Mountain Unknown Area"
         ]
       }
     },
     "427": {
       "black-2": {
         "locations": [
-          "castelia city area"
+          "Castelia City"
         ]
       }
     },
     "428": {
       "black-2": {
         "locations": [
-          "castelia city area"
+          "Castelia City"
         ]
       }
     },
     "436": {
       "black-2": {
         "locations": [
-          "abundant shrine area",
-          "abundant shrine hidden grotto near youngster"
+          "Abundant Shrine",
+          "Abundant Shrine Hidden Grotto Near Youngster"
         ]
       },
       "white-2": {
         "locations": [
-          "abundant shrine area",
-          "abundant shrine hidden grotto near youngster"
+          "Abundant Shrine",
+          "Abundant Shrine Hidden Grotto Near Youngster"
         ]
       }
     },
     "437": {
       "black-2": {
         "locations": [
-          "abundant shrine area"
+          "Abundant Shrine"
         ]
       },
       "white-2": {
         "locations": [
-          "abundant shrine area"
+          "Abundant Shrine"
         ]
       }
     },
     "447": {
       "black-2": {
         "locations": [
-          "floccesy ranch inner"
+          "Floccesy Ranch Inner"
         ]
       },
       "white-2": {
         "locations": [
-          "floccesy ranch inner"
+          "Floccesy Ranch Inner"
         ]
       }
     },
@@ -3453,38 +3380,14 @@
     "451": {
       "black-2": {
         "locations": [
-          "reversal mountain unknown area 48",
-          "reversal mountain unknown area 49",
-          "reversal mountain unknown area 50",
-          "reversal mountain unknown area 51",
-          "reversal mountain unknown area 52",
-          "reversal mountain unknown area 53",
-          "reversal mountain unknown area 54",
-          "reversal mountain unknown area 55",
-          "reversal mountain unknown area 56",
-          "reversal mountain unknown area 57",
-          "reversal mountain unknown area 58",
-          "reversal mountain unknown area 59",
-          "reversal mountain unknown area 60",
-          "unova route 13 hidden grotto giant chasm"
+          "Reversal Mountain Unknown Area",
+          "Route 13 Hidden Grotto Giant Chasm"
         ]
       },
       "white-2": {
         "locations": [
-          "reversal mountain unknown area 48",
-          "reversal mountain unknown area 49",
-          "reversal mountain unknown area 50",
-          "reversal mountain unknown area 51",
-          "reversal mountain unknown area 52",
-          "reversal mountain unknown area 53",
-          "reversal mountain unknown area 54",
-          "reversal mountain unknown area 55",
-          "reversal mountain unknown area 56",
-          "reversal mountain unknown area 57",
-          "reversal mountain unknown area 58",
-          "reversal mountain unknown area 59",
-          "reversal mountain unknown area 60",
-          "unova route 13 hidden grotto giant chasm"
+          "Reversal Mountain Unknown Area",
+          "Route 13 Hidden Grotto Giant Chasm"
         ]
       }
     },
@@ -3503,54 +3406,54 @@
     "453": {
       "black-2": {
         "locations": [
-          "icirrus city area",
-          "unova route 8 area",
-          "moor of icirrus area"
+          "Icirrus City",
+          "Route 8",
+          "Moor Of Icirrus"
         ]
       },
       "white-2": {
         "locations": [
-          "icirrus city area",
-          "unova route 8 area",
-          "moor of icirrus area"
+          "Icirrus City",
+          "Route 8",
+          "Moor Of Icirrus"
         ]
       }
     },
     "454": {
       "black-2": {
         "locations": [
-          "pinwheel forest outside"
+          "Pinwheel Forest Outside"
         ]
       },
       "white-2": {
         "locations": [
-          "pinwheel forest outside"
+          "Pinwheel Forest Outside"
         ]
       }
     },
     "455": {
       "black-2": {
         "locations": [
-          "unova route 18 area"
+          "Route 18"
         ]
       },
       "white-2": {
         "locations": [
-          "unova route 18 area"
+          "Route 18"
         ]
       }
     },
     "458": {
       "black-2": {
         "locations": [
-          "undella bay area",
-          "unova route 21 area"
+          "Undella Bay",
+          "Route 21"
         ]
       },
       "white-2": {
         "locations": [
-          "undella bay area",
-          "unova route 21 area"
+          "Undella Bay",
+          "Route 21"
         ]
       }
     },
@@ -3569,40 +3472,40 @@
     "462": {
       "black-2": {
         "locations": [
-          "p2 laboratory area"
+          "P2 Laboratory"
         ]
       },
       "white-2": {
         "locations": [
-          "p2 laboratory area"
+          "P2 Laboratory"
         ]
       }
     },
     "463": {
       "black-2": {
         "locations": [
-          "unova route 2 area"
+          "Route 2"
         ]
       },
       "white-2": {
         "locations": [
-          "unova route 2 area"
+          "Route 2"
         ]
       }
     },
     "465": {
       "black-2": {
         "locations": [
-          "giant chasm outside",
-          "unova route 13 area",
-          "humilau city area"
+          "Giant Chasm Outside",
+          "Route 13",
+          "Humilau City"
         ]
       },
       "white-2": {
         "locations": [
-          "giant chasm outside",
-          "unova route 13 area",
-          "humilau city area"
+          "Giant Chasm Outside",
+          "Route 13",
+          "Humilau City"
         ]
       }
     },
@@ -3623,14 +3526,14 @@
     "469": {
       "black-2": {
         "locations": [
-          "pinwheel forest outside",
-          "unova route 3 area"
+          "Pinwheel Forest Outside",
+          "Route 3"
         ]
       },
       "white-2": {
         "locations": [
-          "pinwheel forest outside",
-          "unova route 3 area"
+          "Pinwheel Forest Outside",
+          "Route 3"
         ]
       }
     },
@@ -3661,30 +3564,30 @@
     "472": {
       "black-2": {
         "locations": [
-          "unova route 11 area",
-          "unova route 15 area",
-          "unova route 23 area"
+          "Route 11",
+          "Route 15",
+          "Route 23"
         ]
       },
       "white-2": {
         "locations": [
-          "unova route 11 area",
-          "unova route 15 area",
-          "unova route 23 area"
+          "Route 11",
+          "Route 15",
+          "Route 23"
         ]
       }
     },
     "473": {
       "black-2": {
         "locations": [
-          "giant chasm forest",
-          "giant chasm forest cave"
+          "Giant Chasm Forest",
+          "Giant Chasm Forest Cave"
         ]
       },
       "white-2": {
         "locations": [
-          "giant chasm forest",
-          "giant chasm forest cave"
+          "Giant Chasm Forest",
+          "Giant Chasm Forest Cave"
         ]
       }
     },
@@ -3703,24 +3606,26 @@
     "494": {
       "black-2": {
         "locations": [
-          "Trade, Event"
+          "Trade",
+          "Event"
         ]
       },
       "white-2": {
         "locations": [
-          "Trade, Event"
+          "Trade",
+          "Event"
         ]
       }
     },
     "495": {
       "black-2": {
         "locations": [
-          "aspertia city area"
+          "Aspertia City"
         ]
       },
       "white-2": {
         "locations": [
-          "aspertia city area"
+          "Aspertia City"
         ]
       }
     },
@@ -3751,12 +3656,12 @@
     "498": {
       "black-2": {
         "locations": [
-          "aspertia city area"
+          "Aspertia City"
         ]
       },
       "white-2": {
         "locations": [
-          "aspertia city area"
+          "Aspertia City"
         ]
       }
     },
@@ -3787,12 +3692,12 @@
     "501": {
       "black-2": {
         "locations": [
-          "aspertia city area"
+          "Aspertia City"
         ]
       },
       "white-2": {
         "locations": [
-          "aspertia city area"
+          "Aspertia City"
         ]
       }
     },
@@ -3823,156 +3728,156 @@
     "504": {
       "black-2": {
         "locations": [
-          "floccesy ranch inner",
-          "virbank complex outer",
-          "virbank complex inner",
-          "unova route 19 area",
-          "unova route 20 area"
+          "Floccesy Ranch Inner",
+          "Virbank Complex Outer",
+          "Virbank Complex Inner",
+          "Route 19",
+          "Route 20"
         ]
       },
       "white-2": {
         "locations": [
-          "floccesy ranch inner",
-          "virbank complex outer",
-          "virbank complex inner",
-          "unova route 19 area",
-          "unova route 20 area"
+          "Floccesy Ranch Inner",
+          "Virbank Complex Outer",
+          "Virbank Complex Inner",
+          "Route 19",
+          "Route 20"
         ]
       }
     },
     "505": {
       "black-2": {
         "locations": [
-          "dreamyard area",
-          "dreamyard b1f",
-          "p2 laboratory area",
-          "unova route 1 area",
-          "unova route 2 area",
-          "unova route 3 area",
-          "unova route 7 area",
-          "unova route 18 area",
-          "unova route 2 hidden grotto",
-          "unova route 7 hidden grotto"
+          "Dreamyard",
+          "Dreamyard (B1F)",
+          "P2 Laboratory",
+          "Route 1",
+          "Route 2",
+          "Route 3",
+          "Route 7",
+          "Route 18",
+          "Route 2 Hidden Grotto",
+          "Route 7 Hidden Grotto"
         ]
       },
       "white-2": {
         "locations": [
-          "dreamyard area",
-          "dreamyard b1f",
-          "p2 laboratory area",
-          "unova route 1 area",
-          "unova route 2 area",
-          "unova route 3 area",
-          "unova route 7 area",
-          "unova route 18 area",
-          "unova route 2 hidden grotto",
-          "unova route 7 hidden grotto"
+          "Dreamyard",
+          "Dreamyard (B1F)",
+          "P2 Laboratory",
+          "Route 1",
+          "Route 2",
+          "Route 3",
+          "Route 7",
+          "Route 18",
+          "Route 2 Hidden Grotto",
+          "Route 7 Hidden Grotto"
         ]
       }
     },
     "506": {
       "black-2": {
         "locations": [
-          "floccesy ranch inner"
+          "Floccesy Ranch Inner"
         ]
       },
       "white-2": {
         "locations": [
-          "floccesy ranch inner"
+          "Floccesy Ranch Inner"
         ]
       }
     },
     "507": {
       "black-2": {
         "locations": [
-          "p2 laboratory area",
-          "unova route 1 area",
-          "unova route 2 area",
-          "unova route 3 area",
-          "floccesy ranch hidden grotto"
+          "P2 Laboratory",
+          "Route 1",
+          "Route 2",
+          "Route 3",
+          "Floccesy Ranch Hidden Grotto"
         ]
       },
       "white-2": {
         "locations": [
-          "p2 laboratory area",
-          "unova route 1 area",
-          "unova route 2 area",
-          "unova route 3 area",
-          "floccesy ranch hidden grotto"
+          "P2 Laboratory",
+          "Route 1",
+          "Route 2",
+          "Route 3",
+          "Floccesy Ranch Hidden Grotto"
         ]
       }
     },
     "508": {
       "black-2": {
         "locations": [
-          "p2 laboratory area",
-          "unova route 1 area",
-          "unova route 2 area",
-          "unova route 3 area"
+          "P2 Laboratory",
+          "Route 1",
+          "Route 2",
+          "Route 3"
         ]
       },
       "white-2": {
         "locations": [
-          "p2 laboratory area",
-          "unova route 1 area",
-          "unova route 2 area",
-          "unova route 3 area"
+          "P2 Laboratory",
+          "Route 1",
+          "Route 2",
+          "Route 3"
         ]
       }
     },
     "509": {
       "black-2": {
         "locations": [
-          "unova route 3 area",
-          "unova route 19 area",
-          "unova route 20 area"
+          "Route 3",
+          "Route 19",
+          "Route 20"
         ]
       },
       "white-2": {
         "locations": [
-          "unova route 3 area",
-          "unova route 19 area",
-          "unova route 20 area"
+          "Route 3",
+          "Route 19",
+          "Route 20"
         ]
       }
     },
     "510": {
       "black-2": {
         "locations": [
-          "dreamyard area",
-          "dreamyard b1f",
-          "unova route 2 area",
-          "unova route 5 area",
-          "unova route 9 area",
-          "unova route 16 area",
-          "unova route 5 hidden grotto",
-          "unova route 9 hidden grotto"
+          "Dreamyard",
+          "Dreamyard (B1F)",
+          "Route 2",
+          "Route 5",
+          "Route 9",
+          "Route 16",
+          "Route 5 Hidden Grotto",
+          "Route 9 Hidden Grotto"
         ]
       },
       "white-2": {
         "locations": [
-          "dreamyard area",
-          "dreamyard b1f",
-          "unova route 2 area",
-          "unova route 5 area",
-          "unova route 9 area",
-          "unova route 16 area",
-          "unova route 5 hidden grotto",
-          "unova route 9 hidden grotto"
+          "Dreamyard",
+          "Dreamyard (B1F)",
+          "Route 2",
+          "Route 5",
+          "Route 9",
+          "Route 16",
+          "Route 5 Hidden Grotto",
+          "Route 9 Hidden Grotto"
         ]
       }
     },
     "511": {
       "black-2": {
         "locations": [
-          "pinwheel forest inside",
-          "lostlorn forest area"
+          "Pinwheel Forest Inside",
+          "Lostlorn Forest"
         ]
       },
       "white-2": {
         "locations": [
-          "pinwheel forest inside",
-          "lostlorn forest area"
+          "Pinwheel Forest Inside",
+          "Lostlorn Forest"
         ]
       }
     },
@@ -3991,14 +3896,14 @@
     "513": {
       "black-2": {
         "locations": [
-          "pinwheel forest inside",
-          "lostlorn forest area"
+          "Pinwheel Forest Inside",
+          "Lostlorn Forest"
         ]
       },
       "white-2": {
         "locations": [
-          "pinwheel forest inside",
-          "lostlorn forest area"
+          "Pinwheel Forest Inside",
+          "Lostlorn Forest"
         ]
       }
     },
@@ -4017,14 +3922,14 @@
     "515": {
       "black-2": {
         "locations": [
-          "pinwheel forest inside",
-          "lostlorn forest area"
+          "Pinwheel Forest Inside",
+          "Lostlorn Forest"
         ]
       },
       "white-2": {
         "locations": [
-          "pinwheel forest inside",
-          "lostlorn forest area"
+          "Pinwheel Forest Inside",
+          "Lostlorn Forest"
         ]
       }
     },
@@ -4043,96 +3948,92 @@
     "517": {
       "black-2": {
         "locations": [
-          "dreamyard area",
-          "dreamyard b1f"
+          "Dreamyard",
+          "Dreamyard (B1F)"
         ]
       },
       "white-2": {
         "locations": [
-          "dreamyard area",
-          "dreamyard b1f"
+          "Dreamyard",
+          "Dreamyard (B1F)"
         ]
       }
     },
     "518": {
       "black-2": {
         "locations": [
-          "dreamyard area"
+          "Dreamyard"
         ]
       },
       "white-2": {
         "locations": [
-          "dreamyard area"
+          "Dreamyard"
         ]
       }
     },
     "519": {
       "black-2": {
         "locations": [
-          "castelia city area",
-          "floccesy ranch inner",
-          "virbank complex outer",
-          "unova route 20 area"
+          "Castelia City",
+          "Floccesy Ranch Inner",
+          "Virbank Complex Outer",
+          "Route 20"
         ]
       },
       "white-2": {
         "locations": [
-          "castelia city area",
-          "floccesy ranch inner",
-          "virbank complex outer",
-          "unova route 20 area"
+          "Castelia City",
+          "Floccesy Ranch Inner",
+          "Virbank Complex Outer",
+          "Route 20"
         ]
       }
     },
     "520": {
       "black-2": {
         "locations": [
-          "dragonspiral tower entrance",
-          "dragonspiral tower outside",
-          "unova route 3 area",
-          "unova route 6 area",
-          "unova route 7 area",
-          "unova route 12 area",
-          "unova victory road 2 unknown area 73",
-          "unova victory road 2 unknown area 79"
+          "Dragonspiral Tower Entrance",
+          "Dragonspiral Tower Outside",
+          "Route 3",
+          "Route 6",
+          "Route 7",
+          "Route 12",
+          "Victory Road 2 Unknown Area"
         ]
       },
       "white-2": {
         "locations": [
-          "dragonspiral tower entrance",
-          "dragonspiral tower outside",
-          "unova route 3 area",
-          "unova route 6 area",
-          "unova route 7 area",
-          "unova route 12 area",
-          "unova victory road 2 unknown area 73",
-          "unova victory road 2 unknown area 79"
+          "Dragonspiral Tower Entrance",
+          "Dragonspiral Tower Outside",
+          "Route 3",
+          "Route 6",
+          "Route 7",
+          "Route 12",
+          "Victory Road 2 Unknown Area"
         ]
       }
     },
     "521": {
       "black-2": {
         "locations": [
-          "dragonspiral tower entrance",
-          "dragonspiral tower outside",
-          "unova route 3 area",
-          "unova route 6 area",
-          "unova route 7 area",
-          "unova route 12 area",
-          "unova victory road 2 unknown area 73",
-          "unova victory road 2 unknown area 79"
+          "Dragonspiral Tower Entrance",
+          "Dragonspiral Tower Outside",
+          "Route 3",
+          "Route 6",
+          "Route 7",
+          "Route 12",
+          "Victory Road 2 Unknown Area"
         ]
       },
       "white-2": {
         "locations": [
-          "dragonspiral tower entrance",
-          "dragonspiral tower outside",
-          "unova route 3 area",
-          "unova route 6 area",
-          "unova route 7 area",
-          "unova route 12 area",
-          "unova victory road 2 unknown area 73",
-          "unova victory road 2 unknown area 79"
+          "Dragonspiral Tower Entrance",
+          "Dragonspiral Tower Outside",
+          "Route 3",
+          "Route 6",
+          "Route 7",
+          "Route 12",
+          "Victory Road 2 Unknown Area"
         ]
       }
     },
@@ -4151,178 +4052,132 @@
     "523": {
       "black-2": {
         "locations": [
-          "unova route 3 area",
-          "unova route 7 area",
-          "unova route 3 hidden grotto dark grass"
+          "Route 3",
+          "Route 7",
+          "Route 3 Hidden Grotto Dark Grass"
         ]
       },
       "white-2": {
         "locations": [
-          "unova route 3 area",
-          "unova route 7 area",
-          "unova route 3 hidden grotto dark grass"
+          "Route 3",
+          "Route 7",
+          "Route 3 Hidden Grotto Dark Grass"
         ]
       }
     },
     "524": {
       "black-2": {
         "locations": [
-          "relic passage castelia sewers entrance"
+          "Relic Passage Castelia Sewers Entrance"
         ]
       },
       "white-2": {
         "locations": [
-          "relic passage castelia sewers entrance"
+          "Relic Passage Castelia Sewers Entrance"
         ]
       }
     },
     "525": {
       "black-2": {
         "locations": [
-          "chargestone cave 1f",
-          "chargestone cave b1f",
-          "chargestone cave b2f",
-          "twist mountain b1f 3f",
-          "wellspring cave area",
-          "mistralton cave area",
-          "guidance chamber area",
-          "unova victory road 7f",
-          "unova victory road 2 unknown area 74",
-          "unova victory road 2 unknown area 75",
-          "reversal mountain unknown area 49",
-          "reversal mountain unknown area 50",
-          "reversal mountain unknown area 51",
-          "reversal mountain unknown area 52",
-          "reversal mountain unknown area 53",
-          "reversal mountain unknown area 54",
-          "reversal mountain unknown area 55",
-          "reversal mountain unknown area 56",
-          "reversal mountain unknown area 57",
-          "reversal mountain unknown area 58",
-          "reversal mountain unknown area 59",
-          "reversal mountain unknown area 60",
-          "relic passage relic castle entrance",
-          "relic passage pwt entrance",
-          "clay tunnel area",
-          "underground ruins area",
-          "rocky mountain room area",
-          "glacier room area",
-          "iron room area",
-          "seaside cave 1f",
-          "seaside cave b1f"
+          "Chargestone Cave (1F)",
+          "Chargestone Cave (B1F)",
+          "Chargestone Cave (B2F)",
+          "Twist Mountain (B1F) (3F)",
+          "Wellspring Cave",
+          "Mistralton Cave",
+          "Guidance Chamber",
+          "Victory Road (7F)",
+          "Victory Road 2 Unknown Area",
+          "Reversal Mountain Unknown Area",
+          "Relic Passage Relic Castle Entrance",
+          "Relic Passage Pwt Entrance",
+          "Clay Tunnel",
+          "Underground Ruins",
+          "Rocky Mountain Room",
+          "Glacier Room",
+          "Iron Room",
+          "Seaside Cave (1F)",
+          "Seaside Cave (B1F)"
         ]
       },
       "white-2": {
         "locations": [
-          "chargestone cave 1f",
-          "chargestone cave b1f",
-          "chargestone cave b2f",
-          "twist mountain b1f 3f",
-          "wellspring cave area",
-          "mistralton cave area",
-          "guidance chamber area",
-          "unova victory road 7f",
-          "unova victory road 2 unknown area 74",
-          "unova victory road 2 unknown area 75",
-          "reversal mountain unknown area 49",
-          "reversal mountain unknown area 50",
-          "reversal mountain unknown area 51",
-          "reversal mountain unknown area 52",
-          "reversal mountain unknown area 53",
-          "reversal mountain unknown area 54",
-          "reversal mountain unknown area 55",
-          "reversal mountain unknown area 56",
-          "reversal mountain unknown area 57",
-          "reversal mountain unknown area 58",
-          "reversal mountain unknown area 59",
-          "reversal mountain unknown area 60",
-          "relic passage relic castle entrance",
-          "relic passage pwt entrance",
-          "clay tunnel area",
-          "underground ruins area",
-          "rocky mountain room area",
-          "glacier room area",
-          "iron room area",
-          "seaside cave 1f",
-          "seaside cave b1f"
+          "Chargestone Cave (1F)",
+          "Chargestone Cave (B1F)",
+          "Chargestone Cave (B2F)",
+          "Twist Mountain (B1F) (3F)",
+          "Wellspring Cave",
+          "Mistralton Cave",
+          "Guidance Chamber",
+          "Victory Road (7F)",
+          "Victory Road 2 Unknown Area",
+          "Reversal Mountain Unknown Area",
+          "Relic Passage Relic Castle Entrance",
+          "Relic Passage Pwt Entrance",
+          "Clay Tunnel",
+          "Underground Ruins",
+          "Rocky Mountain Room",
+          "Glacier Room",
+          "Iron Room",
+          "Seaside Cave (1F)",
+          "Seaside Cave (B1F)"
         ]
       }
     },
     "526": {
       "black-2": {
         "locations": [
-          "unova route 7 area"
+          "Route 7"
         ]
       },
       "white-2": {
         "locations": [
-          "unova route 7 area"
+          "Route 7"
         ]
       }
     },
     "527": {
       "black-2": {
         "locations": [
-          "twist mountain b1f 3f",
-          "wellspring cave area",
-          "mistralton cave area",
-          "guidance chamber area",
-          "reversal mountain unknown area 49",
-          "reversal mountain unknown area 50",
-          "reversal mountain unknown area 51",
-          "reversal mountain unknown area 52",
-          "reversal mountain unknown area 53",
-          "reversal mountain unknown area 54",
-          "reversal mountain unknown area 55",
-          "reversal mountain unknown area 56",
-          "reversal mountain unknown area 57",
-          "reversal mountain unknown area 58",
-          "reversal mountain unknown area 59",
-          "reversal mountain unknown area 60",
-          "relic passage castelia sewers entrance",
-          "relic passage relic castle entrance",
-          "relic passage pwt entrance",
-          "clay tunnel area",
-          "underground ruins area",
-          "rocky mountain room area",
-          "glacier room area",
-          "iron room area",
-          "seaside cave 1f",
-          "seaside cave b1f",
-          "unova route 6 hidden grotto near pokemon breeder",
-          "unova route 6 hidden grotto mistralton cave"
+          "Twist Mountain (B1F) (3F)",
+          "Wellspring Cave",
+          "Mistralton Cave",
+          "Guidance Chamber",
+          "Reversal Mountain Unknown Area",
+          "Relic Passage Castelia Sewers Entrance",
+          "Relic Passage Relic Castle Entrance",
+          "Relic Passage Pwt Entrance",
+          "Clay Tunnel",
+          "Underground Ruins",
+          "Rocky Mountain Room",
+          "Glacier Room",
+          "Iron Room",
+          "Seaside Cave (1F)",
+          "Seaside Cave (B1F)",
+          "Route 6 Hidden Grotto Near Pokemon Breeder",
+          "Route 6 Hidden Grotto Mistralton Cave"
         ]
       },
       "white-2": {
         "locations": [
-          "twist mountain b1f 3f",
-          "wellspring cave area",
-          "mistralton cave area",
-          "guidance chamber area",
-          "reversal mountain unknown area 49",
-          "reversal mountain unknown area 50",
-          "reversal mountain unknown area 51",
-          "reversal mountain unknown area 52",
-          "reversal mountain unknown area 53",
-          "reversal mountain unknown area 54",
-          "reversal mountain unknown area 55",
-          "reversal mountain unknown area 56",
-          "reversal mountain unknown area 57",
-          "reversal mountain unknown area 58",
-          "reversal mountain unknown area 59",
-          "reversal mountain unknown area 60",
-          "relic passage castelia sewers entrance",
-          "relic passage relic castle entrance",
-          "relic passage pwt entrance",
-          "clay tunnel area",
-          "underground ruins area",
-          "rocky mountain room area",
-          "glacier room area",
-          "iron room area",
-          "seaside cave 1f",
-          "seaside cave b1f",
-          "unova route 6 hidden grotto near pokemon breeder",
-          "unova route 6 hidden grotto mistralton cave"
+          "Twist Mountain (B1F) (3F)",
+          "Wellspring Cave",
+          "Mistralton Cave",
+          "Guidance Chamber",
+          "Reversal Mountain Unknown Area",
+          "Relic Passage Castelia Sewers Entrance",
+          "Relic Passage Relic Castle Entrance",
+          "Relic Passage Pwt Entrance",
+          "Clay Tunnel",
+          "Underground Ruins",
+          "Rocky Mountain Room",
+          "Glacier Room",
+          "Iron Room",
+          "Seaside Cave (1F)",
+          "Seaside Cave (B1F)",
+          "Route 6 Hidden Grotto Near Pokemon Breeder",
+          "Route 6 Hidden Grotto Mistralton Cave"
         ]
       }
     },
@@ -4341,210 +4196,176 @@
     "529": {
       "black-2": {
         "locations": [
-          "chargestone cave 1f",
-          "chargestone cave b1f",
-          "chargestone cave b2f",
-          "mistralton cave area",
-          "guidance chamber area",
-          "relic passage castelia sewers entrance",
-          "relic passage relic castle entrance",
-          "relic passage pwt entrance"
+          "Chargestone Cave (1F)",
+          "Chargestone Cave (B1F)",
+          "Chargestone Cave (B2F)",
+          "Mistralton Cave",
+          "Guidance Chamber",
+          "Relic Passage Castelia Sewers Entrance",
+          "Relic Passage Relic Castle Entrance",
+          "Relic Passage Pwt Entrance"
         ]
       },
       "white-2": {
         "locations": [
-          "chargestone cave 1f",
-          "chargestone cave b1f",
-          "chargestone cave b2f",
-          "mistralton cave area",
-          "guidance chamber area",
-          "relic passage castelia sewers entrance",
-          "relic passage relic castle entrance",
-          "relic passage pwt entrance"
+          "Chargestone Cave (1F)",
+          "Chargestone Cave (B1F)",
+          "Chargestone Cave (B2F)",
+          "Mistralton Cave",
+          "Guidance Chamber",
+          "Relic Passage Castelia Sewers Entrance",
+          "Relic Passage Relic Castle Entrance",
+          "Relic Passage Pwt Entrance"
         ]
       }
     },
     "530": {
       "black-2": {
         "locations": [
-          "twist mountain b1f 3f",
-          "giant chasm area",
-          "wellspring cave area",
-          "unova victory road 7f",
-          "unova victory road 2 unknown area 74",
-          "unova victory road 2 unknown area 75",
-          "unova victory road 2 unknown area 77",
-          "unova victory road 2 unknown area 80",
-          "reversal mountain unknown area 49",
-          "reversal mountain unknown area 50",
-          "reversal mountain unknown area 51",
-          "reversal mountain unknown area 52",
-          "reversal mountain unknown area 53",
-          "reversal mountain unknown area 54",
-          "reversal mountain unknown area 55",
-          "reversal mountain unknown area 56",
-          "reversal mountain unknown area 57",
-          "reversal mountain unknown area 58",
-          "reversal mountain unknown area 59",
-          "reversal mountain unknown area 60",
-          "clay tunnel area",
-          "underground ruins area",
-          "rocky mountain room area",
-          "glacier room area",
-          "iron room area",
-          "seaside cave 1f",
-          "seaside cave b1f"
+          "Twist Mountain (B1F) (3F)",
+          "Giant Chasm",
+          "Wellspring Cave",
+          "Victory Road (7F)",
+          "Victory Road 2 Unknown Area",
+          "Reversal Mountain Unknown Area",
+          "Clay Tunnel",
+          "Underground Ruins",
+          "Rocky Mountain Room",
+          "Glacier Room",
+          "Iron Room",
+          "Seaside Cave (1F)",
+          "Seaside Cave (B1F)"
         ]
       },
       "white-2": {
         "locations": [
-          "twist mountain b1f 3f",
-          "giant chasm area",
-          "wellspring cave area",
-          "unova victory road 7f",
-          "unova victory road 2 unknown area 74",
-          "unova victory road 2 unknown area 75",
-          "unova victory road 2 unknown area 77",
-          "unova victory road 2 unknown area 80",
-          "reversal mountain unknown area 49",
-          "reversal mountain unknown area 50",
-          "reversal mountain unknown area 51",
-          "reversal mountain unknown area 52",
-          "reversal mountain unknown area 53",
-          "reversal mountain unknown area 54",
-          "reversal mountain unknown area 55",
-          "reversal mountain unknown area 56",
-          "reversal mountain unknown area 57",
-          "reversal mountain unknown area 58",
-          "reversal mountain unknown area 59",
-          "reversal mountain unknown area 60",
-          "clay tunnel area",
-          "underground ruins area",
-          "rocky mountain room area",
-          "glacier room area",
-          "iron room area",
-          "seaside cave 1f",
-          "seaside cave b1f"
+          "Twist Mountain (B1F) (3F)",
+          "Giant Chasm",
+          "Wellspring Cave",
+          "Victory Road (7F)",
+          "Victory Road 2 Unknown Area",
+          "Reversal Mountain Unknown Area",
+          "Clay Tunnel",
+          "Underground Ruins",
+          "Rocky Mountain Room",
+          "Glacier Room",
+          "Iron Room",
+          "Seaside Cave (1F)",
+          "Seaside Cave (B1F)"
         ]
       }
     },
     "531": {
       "black-2": {
         "locations": [
-          "dreamyard area",
-          "pinwheel forest outside",
-          "pinwheel forest inside",
-          "dragonspiral tower entrance",
-          "dragonspiral tower outside",
-          "giant chasm outside",
-          "giant chasm forest",
-          "giant chasm forest cave",
-          "p2 laboratory area",
-          "village bridge area",
-          "unova route 1 area",
-          "unova route 2 area",
-          "unova route 3 area",
-          "unova route 5 area",
-          "unova route 6 area",
-          "unova route 7 area",
-          "unova route 9 area",
-          "unova route 11 area",
-          "unova route 12 area",
-          "unova route 13 area",
-          "unova route 14 area",
-          "abundant shrine area",
-          "unova route 15 area",
-          "unova route 16 area",
-          "lostlorn forest area",
-          "unova route 18 area",
-          "castelia city area",
-          "unova victory road 2 unknown area 72",
-          "unova victory road 2 unknown area 73",
-          "unova victory road 2 unknown area 76",
-          "unova victory road 2 unknown area 79",
-          "floccesy ranch inner",
-          "virbank complex outer",
-          "virbank complex inner",
-          "reversal mountain unknown area 48",
-          "nature sanctuary area",
-          "unova route 20 area",
-          "unova route 22 area",
-          "unova route 23 area"
+          "Dreamyard",
+          "Pinwheel Forest Outside",
+          "Pinwheel Forest Inside",
+          "Dragonspiral Tower Entrance",
+          "Dragonspiral Tower Outside",
+          "Giant Chasm Outside",
+          "Giant Chasm Forest",
+          "Giant Chasm Forest Cave",
+          "P2 Laboratory",
+          "Village Bridge",
+          "Route 1",
+          "Route 2",
+          "Route 3",
+          "Route 5",
+          "Route 6",
+          "Route 7",
+          "Route 9",
+          "Route 11",
+          "Route 12",
+          "Route 13",
+          "Route 14",
+          "Abundant Shrine",
+          "Route 15",
+          "Route 16",
+          "Lostlorn Forest",
+          "Route 18",
+          "Castelia City",
+          "Victory Road 2 Unknown Area",
+          "Floccesy Ranch Inner",
+          "Virbank Complex Outer",
+          "Virbank Complex Inner",
+          "Reversal Mountain Unknown Area",
+          "Nature Sanctuary",
+          "Route 20",
+          "Route 22",
+          "Route 23"
         ]
       },
       "white-2": {
         "locations": [
-          "dreamyard area",
-          "pinwheel forest outside",
-          "pinwheel forest inside",
-          "dragonspiral tower entrance",
-          "dragonspiral tower outside",
-          "giant chasm outside",
-          "giant chasm forest",
-          "giant chasm forest cave",
-          "p2 laboratory area",
-          "village bridge area",
-          "unova route 1 area",
-          "unova route 2 area",
-          "unova route 3 area",
-          "unova route 5 area",
-          "unova route 6 area",
-          "unova route 7 area",
-          "unova route 9 area",
-          "unova route 11 area",
-          "unova route 12 area",
-          "unova route 13 area",
-          "unova route 14 area",
-          "abundant shrine area",
-          "unova route 15 area",
-          "unova route 16 area",
-          "lostlorn forest area",
-          "unova route 18 area",
-          "castelia city area",
-          "unova victory road 2 unknown area 72",
-          "unova victory road 2 unknown area 73",
-          "unova victory road 2 unknown area 76",
-          "unova victory road 2 unknown area 79",
-          "floccesy ranch inner",
-          "virbank complex outer",
-          "virbank complex inner",
-          "reversal mountain unknown area 48",
-          "nature sanctuary area",
-          "unova route 20 area",
-          "unova route 22 area",
-          "unova route 23 area"
+          "Dreamyard",
+          "Pinwheel Forest Outside",
+          "Pinwheel Forest Inside",
+          "Dragonspiral Tower Entrance",
+          "Dragonspiral Tower Outside",
+          "Giant Chasm Outside",
+          "Giant Chasm Forest",
+          "Giant Chasm Forest Cave",
+          "P2 Laboratory",
+          "Village Bridge",
+          "Route 1",
+          "Route 2",
+          "Route 3",
+          "Route 5",
+          "Route 6",
+          "Route 7",
+          "Route 9",
+          "Route 11",
+          "Route 12",
+          "Route 13",
+          "Route 14",
+          "Abundant Shrine",
+          "Route 15",
+          "Route 16",
+          "Lostlorn Forest",
+          "Route 18",
+          "Castelia City",
+          "Victory Road 2 Unknown Area",
+          "Floccesy Ranch Inner",
+          "Virbank Complex Outer",
+          "Virbank Complex Inner",
+          "Reversal Mountain Unknown Area",
+          "Nature Sanctuary",
+          "Route 20",
+          "Route 22",
+          "Route 23"
         ]
       }
     },
     "532": {
       "black-2": {
         "locations": [
-          "relic passage castelia sewers entrance"
+          "Relic Passage Castelia Sewers Entrance"
         ]
       },
       "white-2": {
         "locations": [
-          "relic passage castelia sewers entrance"
+          "Relic Passage Castelia Sewers Entrance"
         ]
       }
     },
     "533": {
       "black-2": {
         "locations": [
-          "pinwheel forest outside",
-          "twist mountain b1f 3f",
-          "unova victory road 2 unknown area 76",
-          "relic passage relic castle entrance",
-          "relic passage pwt entrance"
+          "Pinwheel Forest Outside",
+          "Twist Mountain (B1F) (3F)",
+          "Victory Road 2 Unknown Area",
+          "Relic Passage Relic Castle Entrance",
+          "Relic Passage Pwt Entrance"
         ]
       },
       "white-2": {
         "locations": [
-          "pinwheel forest outside",
-          "twist mountain b1f 3f",
-          "unova victory road 2 unknown area 76",
-          "relic passage relic castle entrance",
-          "relic passage pwt entrance"
+          "Pinwheel Forest Outside",
+          "Twist Mountain (B1F) (3F)",
+          "Victory Road 2 Unknown Area",
+          "Relic Passage Relic Castle Entrance",
+          "Relic Passage Pwt Entrance"
         ]
       }
     },
@@ -4575,191 +4396,191 @@
     "536": {
       "black-2": {
         "locations": [
-          "icirrus city area",
-          "pinwheel forest outside",
-          "unova route 8 area",
-          "moor of icirrus area"
+          "Icirrus City",
+          "Pinwheel Forest Outside",
+          "Route 8",
+          "Moor Of Icirrus"
         ]
       },
       "white-2": {
         "locations": [
-          "icirrus city area",
-          "pinwheel forest outside",
-          "unova route 8 area",
-          "moor of icirrus area"
+          "Icirrus City",
+          "Pinwheel Forest Outside",
+          "Route 8",
+          "Moor Of Icirrus"
         ]
       }
     },
     "537": {
       "black-2": {
         "locations": [
-          "icirrus city area",
-          "pinwheel forest outside",
-          "unova route 8 area",
-          "moor of icirrus area"
+          "Icirrus City",
+          "Pinwheel Forest Outside",
+          "Route 8",
+          "Moor Of Icirrus"
         ]
       },
       "white-2": {
         "locations": [
-          "icirrus city area",
-          "pinwheel forest outside",
-          "unova route 8 area",
-          "moor of icirrus area"
+          "Icirrus City",
+          "Pinwheel Forest Outside",
+          "Route 8",
+          "Moor Of Icirrus"
         ]
       }
     },
     "538": {
       "black-2": {
         "locations": [
-          "pinwheel forest outside",
-          "unova route 15 area",
-          "unova route 18 area",
-          "unova victory road 2 unknown area 76",
-          "unova route 23 area"
+          "Pinwheel Forest Outside",
+          "Route 15",
+          "Route 18",
+          "Victory Road 2 Unknown Area",
+          "Route 23"
         ]
       },
       "white-2": {
         "locations": [
-          "pinwheel forest outside",
-          "unova route 15 area",
-          "unova route 18 area",
-          "unova victory road 2 unknown area 76",
-          "unova route 23 area"
+          "Pinwheel Forest Outside",
+          "Route 15",
+          "Route 18",
+          "Victory Road 2 Unknown Area",
+          "Route 23"
         ]
       }
     },
     "539": {
       "black-2": {
         "locations": [
-          "pinwheel forest outside",
-          "unova route 15 area",
-          "unova route 18 area",
-          "unova victory road 2 unknown area 76",
-          "unova route 23 area"
+          "Pinwheel Forest Outside",
+          "Route 15",
+          "Route 18",
+          "Victory Road 2 Unknown Area",
+          "Route 23"
         ]
       },
       "white-2": {
         "locations": [
-          "pinwheel forest outside",
-          "unova route 15 area",
-          "unova route 18 area",
-          "unova victory road 2 unknown area 76",
-          "unova route 23 area"
+          "Pinwheel Forest Outside",
+          "Route 15",
+          "Route 18",
+          "Victory Road 2 Unknown Area",
+          "Route 23"
         ]
       }
     },
     "540": {
       "black-2": {
         "locations": [
-          "unova route 12 area",
-          "unova route 20 area"
+          "Route 12",
+          "Route 20"
         ]
       },
       "white-2": {
         "locations": [
-          "unova route 12 area",
-          "unova route 20 area"
+          "Route 12",
+          "Route 20"
         ]
       }
     },
     "541": {
       "black-2": {
         "locations": [
-          "pinwheel forest inside",
-          "unova route 6 area",
-          "lostlorn forest area"
+          "Pinwheel Forest Inside",
+          "Route 6",
+          "Lostlorn Forest"
         ]
       },
       "white-2": {
         "locations": [
-          "pinwheel forest inside",
-          "unova route 6 area",
-          "lostlorn forest area"
+          "Pinwheel Forest Inside",
+          "Route 6",
+          "Lostlorn Forest"
         ]
       }
     },
     "542": {
       "black-2": {
         "locations": [
-          "unova route 6 area",
-          "unova route 12 area",
-          "lostlorn forest area",
-          "lostlorn forest hidden grotto"
+          "Route 6",
+          "Route 12",
+          "Lostlorn Forest",
+          "Lostlorn Forest Hidden Grotto"
         ]
       },
       "white-2": {
         "locations": [
-          "unova route 6 area",
-          "unova route 12 area",
-          "lostlorn forest area",
-          "lostlorn forest hidden grotto"
+          "Route 6",
+          "Route 12",
+          "Lostlorn Forest",
+          "Lostlorn Forest Hidden Grotto"
         ]
       }
     },
     "543": {
       "black-2": {
         "locations": [
-          "lostlorn forest area",
-          "unova route 20 area"
+          "Lostlorn Forest",
+          "Route 20"
         ]
       },
       "white-2": {
         "locations": [
-          "lostlorn forest area",
-          "unova route 20 area"
+          "Lostlorn Forest",
+          "Route 20"
         ]
       }
     },
     "544": {
       "black-2": {
         "locations": [
-          "pinwheel forest inside",
-          "lostlorn forest area"
+          "Pinwheel Forest Inside",
+          "Lostlorn Forest"
         ]
       },
       "white-2": {
         "locations": [
-          "pinwheel forest inside",
-          "lostlorn forest area"
+          "Pinwheel Forest Inside",
+          "Lostlorn Forest"
         ]
       }
     },
     "545": {
       "black-2": {
         "locations": [
-          "pinwheel forest inside"
+          "Pinwheel Forest Inside"
         ]
       },
       "white-2": {
         "locations": [
-          "pinwheel forest inside"
+          "Pinwheel Forest Inside"
         ]
       }
     },
     "546": {
       "black-2": {
         "locations": [
-          "pinwheel forest inside",
-          "abundant shrine area",
-          "lostlorn forest area",
-          "castelia city area",
-          "unova victory road 2 unknown area 72"
+          "Pinwheel Forest Inside",
+          "Abundant Shrine",
+          "Lostlorn Forest",
+          "Castelia City",
+          "Victory Road 2 Unknown Area"
         ]
       },
       "white-2": {
         "locations": [
-          "unova route 4 area"
+          "Route 4"
         ]
       }
     },
     "547": {
       "black-2": {
         "locations": [
-          "pinwheel forest inside",
-          "abundant shrine area",
-          "lostlorn forest area",
-          "castelia city area",
-          "unova victory road 2 unknown area 72"
+          "Pinwheel Forest Inside",
+          "Abundant Shrine",
+          "Lostlorn Forest",
+          "Castelia City",
+          "Victory Road 2 Unknown Area"
         ]
       },
       "white-2": {
@@ -4771,27 +4592,27 @@
     "548": {
       "white-2": {
         "locations": [
-          "pinwheel forest inside",
-          "abundant shrine area",
-          "lostlorn forest area",
-          "castelia city area",
-          "unova victory road 2 unknown area 72"
+          "Pinwheel Forest Inside",
+          "Abundant Shrine",
+          "Lostlorn Forest",
+          "Castelia City",
+          "Victory Road 2 Unknown Area"
         ]
       },
       "black-2": {
         "locations": [
-          "unova route 4 area"
+          "Route 4"
         ]
       }
     },
     "549": {
       "white-2": {
         "locations": [
-          "pinwheel forest inside",
-          "abundant shrine area",
-          "lostlorn forest area",
-          "castelia city area",
-          "unova victory road 2 unknown area 72"
+          "Pinwheel Forest Inside",
+          "Abundant Shrine",
+          "Lostlorn Forest",
+          "Castelia City",
+          "Victory Road 2 Unknown Area"
         ]
       },
       "black-2": {
@@ -4803,104 +4624,96 @@
     "550": {
       "black-2": {
         "locations": [
-          "striaton city area",
-          "pinwheel forest inside",
-          "dragonspiral tower outside",
-          "giant chasm area",
-          "village bridge area",
-          "unova route 1 area",
-          "unova route 3 area",
-          "wellspring cave area",
-          "unova route 6 area",
-          "unova route 11 area",
-          "unova route 13 area",
-          "unova route 14 area",
-          "abundant shrine area",
-          "lostlorn forest area",
-          "undella town area",
-          "aspertia city area",
-          "humilau city area",
-          "unova victory road 2 unknown area 71",
-          "unova victory road 2 unknown area 73",
-          "unova victory road 2 unknown area 75",
-          "unova victory road 2 unknown area 78",
-          "unova victory road 2 unknown area 79",
-          "floccesy ranch outer",
-          "floccesy ranch inner",
-          "relic passage relic castle entrance",
-          "clay tunnel area",
-          "nature sanctuary area",
-          "unova route 19 area",
-          "unova route 20 area",
-          "unova route 22 area",
-          "unova route 23 area"
+          "Striaton City",
+          "Pinwheel Forest Inside",
+          "Dragonspiral Tower Outside",
+          "Giant Chasm",
+          "Village Bridge",
+          "Route 1",
+          "Route 3",
+          "Wellspring Cave",
+          "Route 6",
+          "Route 11",
+          "Route 13",
+          "Route 14",
+          "Abundant Shrine",
+          "Lostlorn Forest",
+          "Undella Town",
+          "Aspertia City",
+          "Humilau City",
+          "Victory Road 2 Unknown Area",
+          "Floccesy Ranch Outer",
+          "Floccesy Ranch Inner",
+          "Relic Passage Relic Castle Entrance",
+          "Clay Tunnel",
+          "Nature Sanctuary",
+          "Route 19",
+          "Route 20",
+          "Route 22",
+          "Route 23"
         ]
       },
       "white-2": {
         "locations": [
-          "striaton city area",
-          "pinwheel forest inside",
-          "dragonspiral tower outside",
-          "giant chasm area",
-          "village bridge area",
-          "unova route 1 area",
-          "unova route 3 area",
-          "wellspring cave area",
-          "unova route 6 area",
-          "unova route 11 area",
-          "unova route 13 area",
-          "unova route 14 area",
-          "abundant shrine area",
-          "lostlorn forest area",
-          "undella town area",
-          "aspertia city area",
-          "humilau city area",
-          "unova victory road 2 unknown area 71",
-          "unova victory road 2 unknown area 73",
-          "unova victory road 2 unknown area 75",
-          "unova victory road 2 unknown area 78",
-          "unova victory road 2 unknown area 79",
-          "floccesy ranch outer",
-          "floccesy ranch inner",
-          "relic passage relic castle entrance",
-          "clay tunnel area",
-          "nature sanctuary area",
-          "unova route 19 area",
-          "unova route 20 area",
-          "unova route 22 area",
-          "unova route 23 area"
+          "Striaton City",
+          "Pinwheel Forest Inside",
+          "Dragonspiral Tower Outside",
+          "Giant Chasm",
+          "Village Bridge",
+          "Route 1",
+          "Route 3",
+          "Wellspring Cave",
+          "Route 6",
+          "Route 11",
+          "Route 13",
+          "Route 14",
+          "Abundant Shrine",
+          "Lostlorn Forest",
+          "Undella Town",
+          "Aspertia City",
+          "Humilau City",
+          "Victory Road 2 Unknown Area",
+          "Floccesy Ranch Outer",
+          "Floccesy Ranch Inner",
+          "Relic Passage Relic Castle Entrance",
+          "Clay Tunnel",
+          "Nature Sanctuary",
+          "Route 19",
+          "Route 20",
+          "Route 22",
+          "Route 23"
         ]
       }
     },
     "551": {
       "black-2": {
         "locations": [
-          "desert resort entrance",
-          "desert resort area",
-          "relic castle a",
-          "relic castle c",
-          "unova route 4 area"
+          "Desert Resort Entrance",
+          "Desert Resort",
+          "Relic Castle A",
+          "Relic Castle C",
+          "Route 4"
         ]
       },
       "white-2": {
         "locations": [
-          "desert resort entrance",
-          "desert resort area",
-          "relic castle a",
-          "relic castle c",
-          "unova route 4 area"
+          "Desert Resort Entrance",
+          "Desert Resort",
+          "Relic Castle A",
+          "Relic Castle C",
+          "Route 4"
         ]
       }
     },
     "552": {
       "black-2": {
         "locations": [
-          "relic castle c"
+          "Relic Castle C"
         ]
       },
       "white-2": {
         "locations": [
-          "relic castle c"
+          "Relic Castle C"
         ]
       }
     },
@@ -4919,16 +4732,16 @@
     "554": {
       "black-2": {
         "locations": [
-          "desert resort entrance",
-          "desert resort area",
-          "unova route 4 area"
+          "Desert Resort Entrance",
+          "Desert Resort",
+          "Route 4"
         ]
       },
       "white-2": {
         "locations": [
-          "desert resort entrance",
-          "desert resort area",
-          "unova route 4 area"
+          "Desert Resort Entrance",
+          "Desert Resort",
+          "Route 4"
         ]
       }
     },
@@ -4947,100 +4760,100 @@
     "556": {
       "black-2": {
         "locations": [
-          "desert resort entrance",
-          "desert resort area"
+          "Desert Resort Entrance",
+          "Desert Resort"
         ]
       },
       "white-2": {
         "locations": [
-          "desert resort entrance",
-          "desert resort area"
+          "Desert Resort Entrance",
+          "Desert Resort"
         ]
       }
     },
     "557": {
       "black-2": {
         "locations": [
-          "desert resort entrance",
-          "desert resort area"
+          "Desert Resort Entrance",
+          "Desert Resort"
         ]
       },
       "white-2": {
         "locations": [
-          "desert resort entrance",
-          "desert resort area"
+          "Desert Resort Entrance",
+          "Desert Resort"
         ]
       }
     },
     "558": {
       "black-2": {
         "locations": [
-          "unova route 18 area",
-          "seaside cave 1f"
+          "Route 18",
+          "Seaside Cave (1F)"
         ]
       },
       "white-2": {
         "locations": [
-          "unova route 18 area",
-          "seaside cave 1f"
+          "Route 18",
+          "Seaside Cave (1F)"
         ]
       }
     },
     "559": {
       "black-2": {
         "locations": [
-          "desert resort entrance",
-          "unova route 4 area"
+          "Desert Resort Entrance",
+          "Route 4"
         ]
       },
       "white-2": {
         "locations": [
-          "desert resort entrance",
-          "unova route 4 area"
+          "Desert Resort Entrance",
+          "Route 4"
         ]
       }
     },
     "560": {
       "black-2": {
         "locations": [
-          "p2 laboratory area",
-          "unova route 1 area",
-          "unova route 15 area",
-          "unova route 18 area"
+          "P2 Laboratory",
+          "Route 1",
+          "Route 15",
+          "Route 18"
         ]
       },
       "white-2": {
         "locations": [
-          "p2 laboratory area",
-          "unova route 1 area",
-          "unova route 15 area",
-          "unova route 18 area"
+          "P2 Laboratory",
+          "Route 1",
+          "Route 15",
+          "Route 18"
         ]
       }
     },
     "561": {
       "black-2": {
         "locations": [
-          "desert resort area"
+          "Desert Resort"
         ]
       },
       "white-2": {
         "locations": [
-          "desert resort area"
+          "Desert Resort"
         ]
       }
     },
     "562": {
       "black-2": {
         "locations": [
-          "relic castle a",
-          "relic castle c"
+          "Relic Castle A",
+          "Relic Castle C"
         ]
       },
       "white-2": {
         "locations": [
-          "relic castle a",
-          "relic castle c"
+          "Relic Castle A",
+          "Relic Castle C"
         ]
       }
     },
@@ -5059,12 +4872,12 @@
     "564": {
       "black-2": {
         "locations": [
-          "nacrene city nacrene museum"
+          "Nacrene City Nacrene Museum"
         ]
       },
       "white-2": {
         "locations": [
-          "nacrene city nacrene museum"
+          "Nacrene City Nacrene Museum"
         ]
       }
     },
@@ -5083,12 +4896,12 @@
     "566": {
       "black-2": {
         "locations": [
-          "nacrene city nacrene museum"
+          "Nacrene City Nacrene Museum"
         ]
       },
       "white-2": {
         "locations": [
-          "nacrene city nacrene museum"
+          "Nacrene City Nacrene Museum"
         ]
       }
     },
@@ -5107,304 +4920,304 @@
     "568": {
       "black-2": {
         "locations": [
-          "unova route 4 area",
-          "unova route 5 area",
-          "unova route 16 area"
+          "Route 4",
+          "Route 5",
+          "Route 16"
         ]
       },
       "white-2": {
         "locations": [
-          "unova route 5 area",
-          "unova route 16 area"
+          "Route 5",
+          "Route 16"
         ]
       }
     },
     "569": {
       "black-2": {
         "locations": [
-          "unova route 9 area",
-          "unova route 9 hidden grotto"
+          "Route 9",
+          "Route 9 Hidden Grotto"
         ]
       },
       "white-2": {
         "locations": [
-          "unova route 9 area",
-          "unova route 9 hidden grotto"
+          "Route 9",
+          "Route 9 Hidden Grotto"
         ]
       }
     },
     "570": {
       "black-2": {
         "locations": [
-          "driftveil city area"
+          "Driftveil City"
         ]
       },
       "white-2": {
         "locations": [
-          "driftveil city area"
+          "Driftveil City"
         ]
       }
     },
     "571": {
       "black-2": {
         "locations": [
-          "Evolve Zorua"
+          "Evolve N's Zorua"
         ]
       },
       "white-2": {
         "locations": [
-          "Evolve Zorua"
+          "Evolve N's Zorua"
         ]
       }
     },
     "572": {
       "white-2": {
         "locations": [
-          "unova route 4 area",
-          "unova route 5 area",
-          "unova route 9 area",
-          "unova route 16 area",
-          "unova route 5 hidden grotto"
+          "Route 4",
+          "Route 5",
+          "Route 9",
+          "Route 16",
+          "Route 5 Hidden Grotto"
         ]
       },
       "black-2": {
         "locations": [
-          "unova route 5 area",
-          "unova route 9 area",
-          "unova route 16 area",
-          "unova route 5 hidden grotto"
+          "Route 5",
+          "Route 9",
+          "Route 16",
+          "Route 5 Hidden Grotto"
         ]
       }
     },
     "573": {
       "black-2": {
         "locations": [
-          "unova route 5 area",
-          "unova route 9 area",
-          "unova route 16 area"
+          "Route 5",
+          "Route 9",
+          "Route 16"
         ]
       },
       "white-2": {
         "locations": [
-          "unova route 5 area",
-          "unova route 9 area",
-          "unova route 16 area"
+          "Route 5",
+          "Route 9",
+          "Route 16"
         ]
       }
     },
     "574": {
       "black-2": {
         "locations": [
-          "unova route 5 area",
-          "unova route 16 area",
-          "strange house 1f",
-          "strange house b1f"
+          "Route 5",
+          "Route 16",
+          "Strange House (1F)",
+          "Strange House (B1F)"
         ]
       }
     },
     "575": {
       "black-2": {
         "locations": [
-          "unova route 9 area",
-          "strange house 1f",
-          "strange house b1f"
+          "Route 9",
+          "Strange House (1F)",
+          "Strange House (B1F)"
         ]
       }
     },
     "576": {
       "black-2": {
         "locations": [
-          "unova route 9 area"
+          "Route 9"
         ]
       }
     },
     "577": {
       "white-2": {
         "locations": [
-          "unova route 5 area",
-          "unova route 16 area",
-          "strange house 1f",
-          "strange house b1f"
+          "Route 5",
+          "Route 16",
+          "Strange House (1F)",
+          "Strange House (B1F)"
         ]
       }
     },
     "578": {
       "white-2": {
         "locations": [
-          "unova route 9 area",
-          "strange house 1f",
-          "strange house b1f"
+          "Route 9",
+          "Strange House (1F)",
+          "Strange House (B1F)"
         ]
       }
     },
     "579": {
       "white-2": {
         "locations": [
-          "unova route 9 area"
+          "Route 9"
         ]
       }
     },
     "580": {
       "black-2": {
         "locations": [
-          "driftveil drawbridge area"
+          "Driftveil Drawbridge"
         ]
       },
       "white-2": {
         "locations": [
-          "driftveil drawbridge area"
+          "Driftveil Drawbridge"
         ]
       }
     },
     "581": {
       "black-2": {
         "locations": [
-          "marvelous bridge area"
+          "Marvelous Bridge"
         ]
       },
       "white-2": {
         "locations": [
-          "marvelous bridge area"
+          "Marvelous Bridge"
         ]
       }
     },
     "582": {
       "black-2": {
         "locations": [
-          "Breed Vanilluxe"
+          "Breed Vanillish or Vanilluxe"
         ]
       },
       "white-2": {
         "locations": [
-          "Breed Vanilluxe"
+          "Breed Vanillish or Vanilluxe"
         ]
       }
     },
     "583": {
       "black-2": {
         "locations": [
-          "dragonspiral tower entrance",
-          "dragonspiral tower outside",
-          "giant chasm outside",
-          "giant chasm area"
+          "Dragonspiral Tower Entrance",
+          "Dragonspiral Tower Outside",
+          "Giant Chasm Outside",
+          "Giant Chasm"
         ]
       },
       "white-2": {
         "locations": [
-          "dragonspiral tower entrance",
-          "dragonspiral tower outside",
-          "giant chasm outside",
-          "giant chasm area"
+          "Dragonspiral Tower Entrance",
+          "Dragonspiral Tower Outside",
+          "Giant Chasm Outside",
+          "Giant Chasm"
         ]
       }
     },
     "584": {
       "black-2": {
         "locations": [
-          "dragonspiral tower entrance",
-          "dragonspiral tower outside",
-          "giant chasm outside"
+          "Dragonspiral Tower Entrance",
+          "Dragonspiral Tower Outside",
+          "Giant Chasm Outside"
         ]
       },
       "white-2": {
         "locations": [
-          "dragonspiral tower entrance",
-          "dragonspiral tower outside",
-          "giant chasm outside"
+          "Dragonspiral Tower Entrance",
+          "Dragonspiral Tower Outside",
+          "Giant Chasm Outside"
         ]
       }
     },
     "585": {
       "black-2": {
         "locations": [
-          "unova route 6 area",
-          "unova route 7 area",
-          "unova route 6 weather institute"
+          "Route 6",
+          "Route 7",
+          "Route 6 Weather Institute"
         ]
       },
       "white-2": {
         "locations": [
-          "unova route 6 area",
-          "unova route 7 area",
-          "unova route 6 weather institute"
+          "Route 6",
+          "Route 7",
+          "Route 6 Weather Institute"
         ]
       }
     },
     "586": {
       "black-2": {
         "locations": [
-          "dragonspiral tower entrance",
-          "dragonspiral tower outside"
+          "Dragonspiral Tower Entrance",
+          "Dragonspiral Tower Outside"
         ]
       },
       "white-2": {
         "locations": [
-          "dragonspiral tower entrance",
-          "dragonspiral tower outside"
+          "Dragonspiral Tower Entrance",
+          "Dragonspiral Tower Outside"
         ]
       }
     },
     "587": {
       "black-2": {
         "locations": [
-          "dragonspiral tower entrance",
-          "dragonspiral tower outside",
-          "village bridge area",
-          "unova route 5 area",
-          "unova route 6 area",
-          "unova route 7 area",
-          "unova route 9 area",
-          "unova route 11 area",
-          "unova route 12 area",
-          "unova route 13 area",
-          "unova route 14 area",
-          "abundant shrine area",
-          "unova route 15 area",
-          "unova route 16 area",
-          "lostlorn forest area",
-          "unova route 22 area",
-          "unova route 23 area"
+          "Dragonspiral Tower Entrance",
+          "Dragonspiral Tower Outside",
+          "Village Bridge",
+          "Route 5",
+          "Route 6",
+          "Route 7",
+          "Route 9",
+          "Route 11",
+          "Route 12",
+          "Route 13",
+          "Route 14",
+          "Abundant Shrine",
+          "Route 15",
+          "Route 16",
+          "Lostlorn Forest",
+          "Route 22",
+          "Route 23"
         ]
       },
       "white-2": {
         "locations": [
-          "dragonspiral tower entrance",
-          "dragonspiral tower outside",
-          "village bridge area",
-          "unova route 5 area",
-          "unova route 6 area",
-          "unova route 7 area",
-          "unova route 9 area",
-          "unova route 11 area",
-          "unova route 12 area",
-          "unova route 13 area",
-          "unova route 14 area",
-          "abundant shrine area",
-          "unova route 15 area",
-          "unova route 16 area",
-          "lostlorn forest area",
-          "unova route 22 area",
-          "unova route 23 area"
+          "Dragonspiral Tower Entrance",
+          "Dragonspiral Tower Outside",
+          "Village Bridge",
+          "Route 5",
+          "Route 6",
+          "Route 7",
+          "Route 9",
+          "Route 11",
+          "Route 12",
+          "Route 13",
+          "Route 14",
+          "Abundant Shrine",
+          "Route 15",
+          "Route 16",
+          "Lostlorn Forest",
+          "Route 22",
+          "Route 23"
         ]
       }
     },
     "588": {
       "black-2": {
         "locations": [
-          "icirrus city area",
-          "unova route 6 area",
-          "unova route 8 area",
-          "moor of icirrus area",
-          "unova route 11 area"
+          "Icirrus City",
+          "Route 6",
+          "Route 8",
+          "Moor Of Icirrus",
+          "Route 11"
         ]
       },
       "white-2": {
         "locations": [
-          "icirrus city area",
-          "unova route 6 area",
-          "unova route 8 area",
-          "moor of icirrus area",
-          "unova route 11 area"
+          "Icirrus City",
+          "Route 6",
+          "Route 8",
+          "Moor Of Icirrus",
+          "Route 11"
         ]
       }
     },
@@ -5423,156 +5236,156 @@
     "590": {
       "black-2": {
         "locations": [
-          "unova route 6 area",
-          "unova route 7 area",
-          "unova route 5 hidden grotto",
-          "unova route 6 hidden grotto near pokemon breeder",
-          "unova route 6 hidden grotto mistralton cave",
-          "unova route 13 hidden grotto giant chasm",
-          "unova route 13 hidden grotto stairs"
+          "Route 6",
+          "Route 7",
+          "Route 5 Hidden Grotto",
+          "Route 6 Hidden Grotto Near Pokemon Breeder",
+          "Route 6 Hidden Grotto Mistralton Cave",
+          "Route 13 Hidden Grotto Giant Chasm",
+          "Route 13 Hidden Grotto Stairs"
         ]
       },
       "white-2": {
         "locations": [
-          "unova route 6 area",
-          "unova route 7 area",
-          "unova route 5 hidden grotto",
-          "unova route 6 hidden grotto near pokemon breeder",
-          "unova route 6 hidden grotto mistralton cave",
-          "unova route 13 hidden grotto giant chasm",
-          "unova route 13 hidden grotto stairs"
+          "Route 6",
+          "Route 7",
+          "Route 5 Hidden Grotto",
+          "Route 6 Hidden Grotto Near Pokemon Breeder",
+          "Route 6 Hidden Grotto Mistralton Cave",
+          "Route 13 Hidden Grotto Giant Chasm",
+          "Route 13 Hidden Grotto Stairs"
         ]
       }
     },
     "591": {
       "black-2": {
         "locations": [
-          "unova route 11 area",
-          "unova route 22 area",
-          "unova route 23 area",
-          "unova route 22 hidden grotto",
-          "abundant shrine hidden grotto near youngster",
-          "abundant shrine hidden grotto shrine",
-          "pinwheel forest hidden grotto inner area"
+          "Route 11",
+          "Route 22",
+          "Route 23",
+          "Route 22 Hidden Grotto",
+          "Abundant Shrine Hidden Grotto Near Youngster",
+          "Abundant Shrine Hidden Grotto Shrine",
+          "Pinwheel Forest Hidden Grotto Inner"
         ]
       },
       "white-2": {
         "locations": [
-          "unova route 11 area",
-          "unova route 22 area",
-          "unova route 23 area",
-          "unova route 22 hidden grotto",
-          "abundant shrine hidden grotto near youngster",
-          "abundant shrine hidden grotto shrine",
-          "pinwheel forest hidden grotto inner area"
+          "Route 11",
+          "Route 22",
+          "Route 23",
+          "Route 22 Hidden Grotto",
+          "Abundant Shrine Hidden Grotto Near Youngster",
+          "Abundant Shrine Hidden Grotto Shrine",
+          "Pinwheel Forest Hidden Grotto Inner"
         ]
       }
     },
     "592": {
       "black-2": {
         "locations": [
-          "p2 laboratory area",
-          "undella bay area",
-          "unova route 4 area",
-          "unova route 13 area",
-          "unova route 18 area",
-          "undella town area",
-          "unova route 17 area",
-          "virbank city area",
-          "humilau city area",
-          "virbank complex outer",
-          "seaside cave 1f",
-          "unova route 21 area"
+          "P2 Laboratory",
+          "Undella Bay",
+          "Route 4",
+          "Route 13",
+          "Route 18",
+          "Undella Town",
+          "Route 17",
+          "Virbank City",
+          "Humilau City",
+          "Virbank Complex Outer",
+          "Seaside Cave (1F)",
+          "Route 21"
         ]
       },
       "white-2": {
         "locations": [
-          "p2 laboratory area",
-          "undella bay area",
-          "unova route 4 area",
-          "unova route 13 area",
-          "unova route 18 area",
-          "undella town area",
-          "unova route 17 area",
-          "virbank city area",
-          "humilau city area",
-          "virbank complex outer",
-          "seaside cave 1f",
-          "unova route 21 area"
+          "P2 Laboratory",
+          "Undella Bay",
+          "Route 4",
+          "Route 13",
+          "Route 18",
+          "Undella Town",
+          "Route 17",
+          "Virbank City",
+          "Humilau City",
+          "Virbank Complex Outer",
+          "Seaside Cave (1F)",
+          "Route 21"
         ]
       }
     },
     "593": {
       "black-2": {
         "locations": [
-          "p2 laboratory area",
-          "undella bay area",
-          "unova route 4 area",
-          "unova route 13 area",
-          "unova route 18 area",
-          "undella town area",
-          "unova route 17 area",
-          "virbank city area",
-          "humilau city area",
-          "virbank complex outer",
-          "seaside cave 1f",
-          "unova route 21 area"
+          "P2 Laboratory",
+          "Undella Bay",
+          "Route 4",
+          "Route 13",
+          "Route 18",
+          "Undella Town",
+          "Route 17",
+          "Virbank City",
+          "Humilau City",
+          "Virbank Complex Outer",
+          "Seaside Cave (1F)",
+          "Route 21"
         ]
       },
       "white-2": {
         "locations": [
-          "p2 laboratory area",
-          "undella bay area",
-          "unova route 4 area",
-          "unova route 13 area",
-          "unova route 18 area",
-          "undella town area",
-          "unova route 17 area",
-          "virbank city area",
-          "humilau city area",
-          "virbank complex outer",
-          "seaside cave 1f",
-          "unova route 21 area"
+          "P2 Laboratory",
+          "Undella Bay",
+          "Route 4",
+          "Route 13",
+          "Route 18",
+          "Undella Town",
+          "Route 17",
+          "Virbank City",
+          "Humilau City",
+          "Virbank Complex Outer",
+          "Seaside Cave (1F)",
+          "Route 21"
         ]
       }
     },
     "594": {
       "black-2": {
         "locations": [
-          "p2 laboratory area",
-          "unova route 4 area",
-          "unova route 18 area",
-          "unova route 17 area",
-          "virbank city area",
-          "virbank complex outer",
-          "unova route 21 area"
+          "P2 Laboratory",
+          "Route 4",
+          "Route 18",
+          "Route 17",
+          "Virbank City",
+          "Virbank Complex Outer",
+          "Route 21"
         ]
       },
       "white-2": {
         "locations": [
-          "p2 laboratory area",
-          "unova route 4 area",
-          "unova route 18 area",
-          "unova route 17 area",
-          "virbank city area",
-          "virbank complex outer",
-          "unova route 21 area"
+          "P2 Laboratory",
+          "Route 4",
+          "Route 18",
+          "Route 17",
+          "Virbank City",
+          "Virbank Complex Outer",
+          "Route 21"
         ]
       }
     },
     "595": {
       "black-2": {
         "locations": [
-          "chargestone cave 1f",
-          "chargestone cave b1f",
-          "chargestone cave b2f"
+          "Chargestone Cave (1F)",
+          "Chargestone Cave (B1F)",
+          "Chargestone Cave (B2F)"
         ]
       },
       "white-2": {
         "locations": [
-          "chargestone cave 1f",
-          "chargestone cave b1f",
-          "chargestone cave b2f"
+          "Chargestone Cave (1F)",
+          "Chargestone Cave (B1F)",
+          "Chargestone Cave (B2F)"
         ]
       }
     },
@@ -5591,16 +5404,16 @@
     "597": {
       "black-2": {
         "locations": [
-          "chargestone cave 1f",
-          "chargestone cave b1f",
-          "chargestone cave b2f"
+          "Chargestone Cave (1F)",
+          "Chargestone Cave (B1F)",
+          "Chargestone Cave (B2F)"
         ]
       },
       "white-2": {
         "locations": [
-          "chargestone cave 1f",
-          "chargestone cave b1f",
-          "chargestone cave b2f"
+          "Chargestone Cave (1F)",
+          "Chargestone Cave (B1F)",
+          "Chargestone Cave (B2F)"
         ]
       }
     },
@@ -5619,70 +5432,70 @@
     "599": {
       "black-2": {
         "locations": [
-          "chargestone cave 1f",
-          "chargestone cave b1f",
-          "chargestone cave b2f"
+          "Chargestone Cave (1F)",
+          "Chargestone Cave (B1F)",
+          "Chargestone Cave (B2F)"
         ]
       },
       "white-2": {
         "locations": [
-          "chargestone cave 1f",
-          "chargestone cave b1f",
-          "chargestone cave b2f"
+          "Chargestone Cave (1F)",
+          "Chargestone Cave (B1F)",
+          "Chargestone Cave (B2F)"
         ]
       }
     },
     "600": {
       "black-2": {
         "locations": [
-          "p2 laboratory area"
+          "P2 Laboratory"
         ]
       },
       "white-2": {
         "locations": [
-          "p2 laboratory area"
+          "P2 Laboratory"
         ]
       }
     },
     "601": {
       "black-2": {
         "locations": [
-          "p2 laboratory area"
+          "P2 Laboratory"
         ]
       },
       "white-2": {
         "locations": [
-          "p2 laboratory area"
+          "P2 Laboratory"
         ]
       }
     },
     "602": {
       "black-2": {
         "locations": [
-          "chargestone cave 1f",
-          "chargestone cave b1f",
-          "chargestone cave b2f",
-          "seaside cave 1f"
+          "Chargestone Cave (1F)",
+          "Chargestone Cave (B1F)",
+          "Chargestone Cave (B2F)",
+          "Seaside Cave (1F)"
         ]
       },
       "white-2": {
         "locations": [
-          "chargestone cave 1f",
-          "chargestone cave b1f",
-          "chargestone cave b2f",
-          "seaside cave 1f"
+          "Chargestone Cave (1F)",
+          "Chargestone Cave (B1F)",
+          "Chargestone Cave (B2F)",
+          "Seaside Cave (1F)"
         ]
       }
     },
     "603": {
       "black-2": {
         "locations": [
-          "seaside cave b1f"
+          "Seaside Cave (B1F)"
         ]
       },
       "white-2": {
         "locations": [
-          "seaside cave b1f"
+          "Seaside Cave (B1F)"
         ]
       }
     },
@@ -5701,16 +5514,16 @@
     "605": {
       "black-2": {
         "locations": [
-          "celestial tower 3f",
-          "celestial tower 4f",
-          "celestial tower 5f"
+          "Celestial Tower (3F)",
+          "Celestial Tower (4F)",
+          "Celestial Tower (5F)"
         ]
       },
       "white-2": {
         "locations": [
-          "celestial tower 3f",
-          "celestial tower 4f",
-          "celestial tower 5f"
+          "Celestial Tower (3F)",
+          "Celestial Tower (4F)",
+          "Celestial Tower (5F)"
         ]
       }
     },
@@ -5729,22 +5542,22 @@
     "607": {
       "black-2": {
         "locations": [
-          "celestial tower 2f",
-          "celestial tower 3f",
-          "celestial tower 4f",
-          "celestial tower 5f",
-          "strange house 1f",
-          "strange house b1f"
+          "Celestial Tower (2F)",
+          "Celestial Tower (3F)",
+          "Celestial Tower (4F)",
+          "Celestial Tower (5F)",
+          "Strange House (1F)",
+          "Strange House (B1F)"
         ]
       },
       "white-2": {
         "locations": [
-          "celestial tower 2f",
-          "celestial tower 3f",
-          "celestial tower 4f",
-          "celestial tower 5f",
-          "strange house 1f",
-          "strange house b1f"
+          "Celestial Tower (2F)",
+          "Celestial Tower (3F)",
+          "Celestial Tower (4F)",
+          "Celestial Tower (5F)",
+          "Strange House (1F)",
+          "Strange House (B1F)"
         ]
       }
     },
@@ -5775,100 +5588,100 @@
     "610": {
       "black-2": {
         "locations": [
-          "mistralton cave area",
-          "guidance chamber area"
+          "Mistralton Cave",
+          "Guidance Chamber"
         ]
       },
       "white-2": {
         "locations": [
-          "mistralton cave area",
-          "guidance chamber area"
+          "Mistralton Cave",
+          "Guidance Chamber"
         ]
       }
     },
     "611": {
       "black-2": {
         "locations": [
-          "nature sanctuary area"
+          "Nature Sanctuary"
         ]
       },
       "white-2": {
         "locations": [
-          "nature sanctuary area"
+          "Nature Sanctuary"
         ]
       }
     },
     "612": {
       "black-2": {
         "locations": [
-          "nature sanctuary area"
+          "Nature Sanctuary"
         ]
       },
       "white-2": {
         "locations": [
-          "nature sanctuary area"
+          "Nature Sanctuary"
         ]
       }
     },
     "613": {
       "black-2": {
         "locations": [
-          "unova route 7 area",
-          "unova route 7 hidden grotto"
+          "Route 7",
+          "Route 7 Hidden Grotto"
         ]
       },
       "white-2": {
         "locations": [
-          "unova route 7 area",
-          "unova route 7 hidden grotto"
+          "Route 7",
+          "Route 7 Hidden Grotto"
         ]
       }
     },
     "614": {
       "black-2": {
         "locations": [
-          "twist mountain b1f 3f",
-          "dragonspiral tower entrance",
-          "dragonspiral tower outside"
+          "Twist Mountain (B1F) (3F)",
+          "Dragonspiral Tower Entrance",
+          "Dragonspiral Tower Outside"
         ]
       },
       "white-2": {
         "locations": [
-          "twist mountain b1f 3f",
-          "dragonspiral tower entrance",
-          "dragonspiral tower outside"
+          "Twist Mountain (B1F) (3F)",
+          "Dragonspiral Tower Entrance",
+          "Dragonspiral Tower Outside"
         ]
       }
     },
     "615": {
       "black-2": {
         "locations": [
-          "twist mountain b1f 3f"
+          "Twist Mountain (B1F) (3F)"
         ]
       },
       "white-2": {
         "locations": [
-          "twist mountain b1f 3f"
+          "Twist Mountain (B1F) (3F)"
         ]
       }
     },
     "616": {
       "black-2": {
         "locations": [
-          "icirrus city area",
-          "unova route 6 area",
-          "unova route 8 area",
-          "moor of icirrus area",
-          "unova route 11 area"
+          "Icirrus City",
+          "Route 6",
+          "Route 8",
+          "Moor Of Icirrus",
+          "Route 11"
         ]
       },
       "white-2": {
         "locations": [
-          "icirrus city area",
-          "unova route 6 area",
-          "unova route 8 area",
-          "moor of icirrus area",
-          "unova route 11 area"
+          "Icirrus City",
+          "Route 6",
+          "Route 8",
+          "Moor Of Icirrus",
+          "Route 11"
         ]
       }
     },
@@ -5887,74 +5700,72 @@
     "618": {
       "black-2": {
         "locations": [
-          "icirrus city area",
-          "unova route 8 area",
-          "moor of icirrus area"
+          "Icirrus City",
+          "Route 8",
+          "Moor Of Icirrus"
         ]
       },
       "white-2": {
         "locations": [
-          "icirrus city area",
-          "unova route 8 area",
-          "moor of icirrus area"
+          "Icirrus City",
+          "Route 8",
+          "Moor Of Icirrus"
         ]
       }
     },
     "619": {
       "black-2": {
         "locations": [
-          "dragonspiral tower entrance",
-          "unova route 14 area",
-          "unova route 22 area",
-          "unova route 23 area",
-          "unova route 22 hidden grotto"
+          "Dragonspiral Tower Entrance",
+          "Route 14",
+          "Route 22",
+          "Route 23",
+          "Route 22 Hidden Grotto"
         ]
       },
       "white-2": {
         "locations": [
-          "dragonspiral tower entrance",
-          "unova route 14 area",
-          "unova route 22 area",
-          "unova route 23 area",
-          "unova route 22 hidden grotto"
+          "Dragonspiral Tower Entrance",
+          "Route 14",
+          "Route 22",
+          "Route 23",
+          "Route 22 Hidden Grotto"
         ]
       }
     },
     "620": {
       "black-2": {
         "locations": [
-          "dragonspiral tower entrance",
-          "dragonspiral tower outside",
-          "dragonspiral tower 1f",
-          "unova route 23 area"
+          "Dragonspiral Tower Entrance",
+          "Dragonspiral Tower Outside",
+          "Dragonspiral Tower (1F)",
+          "Route 23"
         ]
       },
       "white-2": {
         "locations": [
-          "dragonspiral tower entrance",
-          "dragonspiral tower outside",
-          "dragonspiral tower 1f",
-          "unova route 23 area"
+          "Dragonspiral Tower Entrance",
+          "Dragonspiral Tower Outside",
+          "Dragonspiral Tower (1F)",
+          "Route 23"
         ]
       }
     },
     "621": {
       "black-2": {
         "locations": [
-          "dragonspiral tower entrance",
-          "dragonspiral tower outside",
-          "dragonspiral tower 1f",
-          "unova victory road 2 unknown area 77",
-          "unova victory road 2 unknown area 80"
+          "Dragonspiral Tower Entrance",
+          "Dragonspiral Tower Outside",
+          "Dragonspiral Tower (1F)",
+          "Victory Road 2 Unknown Area"
         ]
       },
       "white-2": {
         "locations": [
-          "dragonspiral tower entrance",
-          "dragonspiral tower outside",
-          "dragonspiral tower 1f",
-          "unova victory road 2 unknown area 77",
-          "unova victory road 2 unknown area 80"
+          "Dragonspiral Tower Entrance",
+          "Dragonspiral Tower Outside",
+          "Dragonspiral Tower (1F)",
+          "Victory Road 2 Unknown Area"
         ]
       }
     },
@@ -5973,30 +5784,28 @@
     "623": {
       "black-2": {
         "locations": [
-          "dragonspiral tower 1f",
-          "dragonspiral tower 2f",
-          "unova victory road 2 unknown area 71",
-          "unova victory road 2 unknown area 78"
+          "Dragonspiral Tower (1F)",
+          "Dragonspiral Tower (2F)",
+          "Victory Road 2 Unknown Area"
         ]
       },
       "white-2": {
         "locations": [
-          "dragonspiral tower 1f",
-          "dragonspiral tower 2f",
-          "unova victory road 2 unknown area 71",
-          "unova victory road 2 unknown area 78"
+          "Dragonspiral Tower (1F)",
+          "Dragonspiral Tower (2F)",
+          "Victory Road 2 Unknown Area"
         ]
       }
     },
     "624": {
       "black-2": {
         "locations": [
-          "unova route 9 area"
+          "Route 9"
         ]
       },
       "white-2": {
         "locations": [
-          "unova route 9 area"
+          "Route 9"
         ]
       }
     },
@@ -6015,102 +5824,100 @@
     "626": {
       "black-2": {
         "locations": [
-          "unova route 23 area",
-          "unova route 9 hidden grotto"
+          "Route 23",
+          "Route 9 Hidden Grotto"
         ]
       },
       "white-2": {
         "locations": [
-          "unova route 23 area",
-          "unova route 9 hidden grotto"
+          "Route 23",
+          "Route 9 Hidden Grotto"
         ]
       }
     },
     "627": {
       "white-2": {
         "locations": [
-          "unova route 23 area"
+          "Route 23"
         ]
       }
     },
     "628": {
       "white-2": {
         "locations": [
-          "unova route 4 area"
+          "Route 4"
         ]
       }
     },
     "629": {
       "black-2": {
         "locations": [
-          "unova route 23 area"
+          "Route 23"
         ]
       }
     },
     "630": {
       "black-2": {
         "locations": [
-          "unova route 4 area"
+          "Route 4"
         ]
       }
     },
     "631": {
       "black-2": {
         "locations": [
-          "twist mountain b1f 3f"
+          "Twist Mountain (B1F) (3F)"
         ]
       },
       "white-2": {
         "locations": [
-          "twist mountain b1f 3f"
+          "Twist Mountain (B1F) (3F)"
         ]
       }
     },
     "632": {
       "black-2": {
         "locations": [
-          "twist mountain b1f 3f",
-          "clay tunnel area",
-          "underground ruins area",
-          "rocky mountain room area",
-          "glacier room area",
-          "iron room area"
+          "Twist Mountain (B1F) (3F)",
+          "Clay Tunnel",
+          "Underground Ruins",
+          "Rocky Mountain Room",
+          "Glacier Room",
+          "Iron Room"
         ]
       },
       "white-2": {
         "locations": [
-          "twist mountain b1f 3f",
-          "clay tunnel area",
-          "underground ruins area",
-          "rocky mountain room area",
-          "glacier room area",
-          "iron room area"
+          "Twist Mountain (B1F) (3F)",
+          "Clay Tunnel",
+          "Underground Ruins",
+          "Rocky Mountain Room",
+          "Glacier Room",
+          "Iron Room"
         ]
       }
     },
     "633": {
       "black-2": {
         "locations": [
-          "Breed Hydreigon"
+          "Breed Zweilous or Hydreigon"
         ]
       },
       "white-2": {
         "locations": [
-          "Breed Hydreigon"
+          "Breed Zweilous or Hydreigon"
         ]
       }
     },
     "634": {
       "black-2": {
         "locations": [
-          "unova victory road 2 unknown area 77",
-          "unova victory road 2 unknown area 80"
+          "Victory Road 2 Unknown Area"
         ]
       },
       "white-2": {
         "locations": [
-          "unova victory road 2 unknown area 77",
-          "unova victory road 2 unknown area 80"
+          "Victory Road 2 Unknown Area"
         ]
       }
     },
@@ -6141,110 +5948,110 @@
     "637": {
       "black-2": {
         "locations": [
-          "relic castle d"
+          "Relic Castle D"
         ]
       },
       "white-2": {
         "locations": [
-          "relic castle d"
+          "Relic Castle D"
         ]
       }
     },
     "638": {
       "black-2": {
         "locations": [
-          "unova route 13 area"
+          "Route 13"
         ]
       },
       "white-2": {
         "locations": [
-          "unova route 13 area"
+          "Route 13"
         ]
       }
     },
     "639": {
       "black-2": {
         "locations": [
-          "unova route 22 area"
+          "Route 22"
         ]
       },
       "white-2": {
         "locations": [
-          "unova route 22 area"
+          "Route 22"
         ]
       }
     },
     "640": {
       "black-2": {
         "locations": [
-          "unova route 11 area"
+          "Route 11"
         ]
       },
       "white-2": {
         "locations": [
-          "unova route 11 area"
+          "Route 11"
         ]
       }
     },
     "641": {
       "black-2": {
         "locations": [
-          "Transfer from Dream Radar ('''Therian Forme''')"
+          "Transfer from Dream Radar (Therian Forme)"
         ]
       },
       "white-2": {
         "locations": [
-          "Transfer from Dream Radar ('''Therian Forme''')"
+          "Transfer from Dream Radar (Therian Forme)"
         ]
       }
     },
     "642": {
       "black-2": {
         "locations": [
-          "Transfer from Dream Radar ('''Therian Forme''')"
+          "Transfer from Dream Radar (Therian Forme)"
         ]
       },
       "white-2": {
         "locations": [
-          "Transfer from Dream Radar ('''Therian Forme''')"
+          "Transfer from Dream Radar (Therian Forme)"
         ]
       }
     },
     "643": {
       "white-2": {
         "locations": [
-          "dragonspiral tower 7f"
+          "Dragonspiral Tower (7F)"
         ]
       }
     },
     "644": {
       "black-2": {
         "locations": [
-          "dragonspiral tower 7f"
+          "Dragonspiral Tower (7F)"
         ]
       }
     },
     "645": {
       "black-2": {
         "locations": [
-          "Transfer from Dream Radar ('''Therian Forme''')"
+          "Transfer from Dream Radar (Therian Forme)"
         ]
       },
       "white-2": {
         "locations": [
-          "Transfer from Dream Radar ('''Therian Forme''')"
+          "Transfer from Dream Radar (Therian Forme)"
         ]
       }
     },
     "646": {
       "black-2": {
         "locations": [
-          "giant chasm forest cave"
+          "Giant Chasm Forest Cave"
         ]
       },
       "white-2": {
         "locations": [
-          "giant chasm forest cave"
+          "Giant Chasm Forest Cave"
         ]
       }
     },

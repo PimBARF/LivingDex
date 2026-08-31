@@ -163,6 +163,7 @@ export function rebuildDexView({ sections, slotCount }) {
       sec.title,
       sec.entries.length,
       startGlobal,
+      sec.startIndex || 1,
     );
     startGlobal += sec.entries.length;
   }

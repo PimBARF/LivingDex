@@ -387,10 +387,99 @@ async function buildSpeciesData(totalSpecies) {
 /**
  * Format evolution details into human readable condition strings
  */
-function formatEvoCondition(detail) {
+/**
+ * Format evolution details into human readable condition strings
+ */
+function formatEvoCondition(detail, fromSpeciesId, toSpeciesId) {
   if (!detail) return "Special condition";
   const trigger = detail.trigger?.name || "";
   const parts = [];
+
+  const locName = detail.location?.name || "";
+  const itemName = detail.item?.name || "";
+
+  // 1. Moss Rock / Leaf Stone (Leafeon, etc.)
+  const isMossRock = [
+    "eterna-forest",
+    "pinwheel-forest",
+    "kalos-route-20",
+    "petalburg-woods",
+    "lush-jungle",
+  ].includes(locName);
+  if (isMossRock || (toSpeciesId === 470 && itemName === "leaf-stone")) {
+    return "Use Leaf Stone (or Moss Rock)";
+  }
+
+  // 2. Ice Rock / Ice Stone (Glaceon, etc.)
+  const isIceRock = [
+    "sinnoh-route-217",
+    "twist-mountain",
+    "frost-cavern",
+    "shoal-cave",
+    "mount-lanakila",
+  ].includes(locName);
+  if (isIceRock || (toSpeciesId === 471 && itemName === "ice-stone")) {
+    return "Use Ice Stone (or Ice Rock)";
+  }
+
+  // 3. Magnetic Field / Thunder Stone (Magnezone, Probopass, Vikavolt)
+  const isMagneticField = [
+    "mt-coronet",
+    "chargestone-cave",
+    "kalos-route-13",
+    "blush-mountain",
+    "magnetic-field",
+  ].includes(locName);
+  if (
+    isMagneticField ||
+    ([462, 476, 738].includes(toSpeciesId) && itemName === "thunder-stone")
+  ) {
+    return "Use Thunder Stone (or Magnetic Field)";
+  }
+
+  // 4. Sylveon (Fairy-move + Affection/Friendship)
+  if (
+    toSpeciesId === 700 &&
+    (detail.min_affection || detail.min_happiness) &&
+    detail.known_move_type?.name === "fairy"
+  ) {
+    return "Knowing a Fairy-type move, High Friendship";
+  }
+
+  // 5. Qwilfish -> Overqwil (Barb Barrage in Strong Style)
+  if (toSpeciesId === 904) {
+    return "Use Barb Barrage 20 times in Strong Style";
+  }
+
+  // 6. Stantler -> Wyrdeer (Psyshield Bash in Agile Style)
+  if (toSpeciesId === 899) {
+    return "Use Psyshield Bash 20 times in Agile Style";
+  }
+
+  // 7. Basculin -> Basculegion (Recoil damage)
+  if (toSpeciesId === 902) {
+    return "Take 294+ recoil damage without fainting";
+  }
+
+  // 8. Primeape -> Annihilape (Rage Fist 20 times)
+  if (toSpeciesId === 979) {
+    return "Use Rage Fist 20 times";
+  }
+
+  // 9. Bisharp -> Kingambit (Defeat 3 Bisharp holding Leader Crest)
+  if (toSpeciesId === 983) {
+    return "Defeat 3 Bisharp holding Leader’s Crest";
+  }
+
+  // 10. Farfetchd -> Sirfetchd (3 Critical hits)
+  if (toSpeciesId === 865) {
+    return "Land 3 Critical Hits in a single battle";
+  }
+
+  // 11. Yamask -> Runerigus (49+ damage under stone bridge)
+  if (toSpeciesId === 867) {
+    return "Take 49+ damage without fainting and pass under stone bridge in Dusty Bowl";
+  }
 
   if (detail.min_level) parts.push(`Level ${detail.min_level}`);
   if (detail.item?.name) parts.push(`Use ${prettifyName(detail.item.name)}`);
@@ -424,6 +513,98 @@ function formatEvoCondition(detail) {
   }
 
   return parts.join(", ") || (trigger ? prettifyName(trigger) : "Level up");
+}
+
+/**
+ * Resolves the regional form scope for a given evolution transition
+ */
+function resolveTransitionRegion(fromSpeciesId, toSpeciesId, detail) {
+  const itemName = detail.item?.name || "";
+
+  // Rattata (19) -> Raticate (20)
+  if (fromSpeciesId === 19) {
+    if (detail.time_of_day === "night") return "alola";
+    return null;
+  }
+
+  // Sandshrew (27) -> Sandslash (28)
+  if (fromSpeciesId === 27) {
+    if (itemName === "ice-stone") return "alola";
+    return null;
+  }
+
+  // Vulpix (37) -> Ninetales (38)
+  if (fromSpeciesId === 37) {
+    if (itemName === "ice-stone") return "alola";
+    return null;
+  }
+
+  // Meowth (52) -> Persian (53) / Perrserker (863)
+  if (fromSpeciesId === 52) {
+    if (toSpeciesId === 863) return "galar";
+    if (toSpeciesId === 53 && detail.min_happiness) return "alola";
+    return null;
+  }
+
+  // Slowpoke (79) -> Slowbro (80) / Slowking (199)
+  if (fromSpeciesId === 79) {
+    if (itemName === "galarica-cuff" || itemName === "galarica-wreath")
+      return "galar";
+    return null;
+  }
+
+  // Farfetch'd (83) -> Sirfetch'd (865)
+  if (fromSpeciesId === 83 && toSpeciesId === 865) return "galar";
+
+  // Voltorb (100) -> Electrode (101)
+  if (fromSpeciesId === 100) {
+    if (itemName === "leaf-stone") return "hisui";
+    return null;
+  }
+
+  // Cubone (104) -> Marowak (105)
+  if (fromSpeciesId === 104) {
+    if (detail.time_of_day === "night") return "alola";
+    return null;
+  }
+
+  // Mr. Mime (122) -> Mr. Rime (866)
+  if (fromSpeciesId === 122 && toSpeciesId === 866) return "galar";
+
+  // Wooper (194) -> Quagsire (195) / Clodsire (980)
+  if (fromSpeciesId === 194) {
+    if (toSpeciesId === 980) return "paldea";
+    return null;
+  }
+
+  // Qwilfish (211) -> Overqwil (904)
+  if (fromSpeciesId === 211 && toSpeciesId === 904) return "hisui";
+
+  // Sneasel (215) -> Weavile (461) / Sneasler (903)
+  if (fromSpeciesId === 215) {
+    if (toSpeciesId === 903) return "hisui";
+    return null;
+  }
+
+  // Corsola (222) -> Cursola (864)
+  if (fromSpeciesId === 222 && toSpeciesId === 864) return "galar";
+
+  // Zigzagoon (263) -> Linoone (264) -> Obstagoon (862)
+  if (fromSpeciesId === 264 && toSpeciesId === 862) return "galar";
+
+  // Darumaka (554) -> Darmanitan (555)
+  if (fromSpeciesId === 554) {
+    if (itemName === "ice-stone") return "galar";
+    return null;
+  }
+
+  // Yamask (562) -> Cofagrigus (563) / Runerigus (867)
+  if (fromSpeciesId === 562) {
+    if (toSpeciesId === 867) return "galar";
+    return null;
+  }
+
+  return null;
 }
 
 /**
@@ -479,42 +660,58 @@ async function buildEvolutionData(speciesMap) {
               : [{}];
 
           for (const detail of details) {
-            transitions.push({
-              fromSpeciesId: speciesId,
-              fromForm: null,
+            const desc = formatEvoCondition(detail, speciesId, toSpeciesId);
+            const transitionRegion = resolveTransitionRegion(
+              speciesId,
               toSpeciesId,
-              toForm: null,
-              trigger: detail.trigger?.name || "level-up",
-              minLevel: detail.min_level || null,
-              item: detail.item?.name || null,
-              heldItem: detail.held_item?.name || null,
-              knownMove: detail.known_move?.name || null,
-              knownMoveType: detail.known_move_type?.name || null,
-              happiness: detail.min_happiness || null,
-              timeOfDay: detail.time_of_day || null,
-              location: detail.location?.name || null,
-              tradeSpeciesId: detail.trade_species?.url
-                ? Number(
-                    detail.trade_species.url.match(
-                      /\/pokemon-species\/(\d+)\//,
-                    )?.[1],
-                  )
-                : null,
-              partySpeciesId: detail.party_species?.url
-                ? Number(
-                    detail.party_species.url.match(
-                      /\/pokemon-species\/(\d+)\//,
-                    )?.[1],
-                  )
-                : null,
-              gender:
-                detail.gender === 1
-                  ? "female"
-                  : detail.gender === 2
-                    ? "male"
-                    : null,
-              description: formatEvoCondition(detail),
-            });
+              detail,
+            );
+            const isDuplicate = transitions.some(
+              (t) =>
+                t.fromSpeciesId === speciesId &&
+                t.toSpeciesId === toSpeciesId &&
+                t.description === desc &&
+                t.region === transitionRegion,
+            );
+            if (!isDuplicate) {
+              transitions.push({
+                fromSpeciesId: speciesId,
+                fromForm: null,
+                toSpeciesId,
+                toForm: null,
+                trigger: detail.trigger?.name || "level-up",
+                minLevel: detail.min_level || null,
+                item: detail.item?.name || null,
+                heldItem: detail.held_item?.name || null,
+                knownMove: detail.known_move?.name || null,
+                knownMoveType: detail.known_move_type?.name || null,
+                happiness: detail.min_happiness || null,
+                timeOfDay: detail.time_of_day || null,
+                location: detail.location?.name || null,
+                region: transitionRegion,
+                tradeSpeciesId: detail.trade_species?.url
+                  ? Number(
+                      detail.trade_species.url.match(
+                        /\/pokemon-species\/(\d+)\//,
+                      )?.[1],
+                    )
+                  : null,
+                partySpeciesId: detail.party_species?.url
+                  ? Number(
+                      detail.party_species.url.match(
+                        /\/pokemon-species\/(\d+)\//,
+                      )?.[1],
+                    )
+                  : null,
+                gender:
+                  detail.gender === 1
+                    ? "female"
+                    : detail.gender === 2
+                      ? "male"
+                      : null,
+                description: desc,
+              });
+            }
           }
         }
         traverse(next);
@@ -534,10 +731,18 @@ async function buildEvolutionData(speciesMap) {
         );
         if (outgoing.length === 0) {
           if (currentPath.length > 0) {
-            paths.push({
-              root: { speciesId: rootNode.speciesId, name: rootNode.name },
-              steps: currentPath,
-            });
+            const pathSignature = `${rootNode.speciesId}->${currentPath.map((s) => `${s.toSpeciesId}:${s.description}:${s.region || ""}`).join("->")}`;
+            const exists = paths.some(
+              (p) =>
+                `${p.root.speciesId}->${p.steps.map((s) => `${s.toSpeciesId}:${s.description}:${s.region || ""}`).join("->")}` ===
+                pathSignature,
+            );
+            if (!exists) {
+              paths.push({
+                root: { speciesId: rootNode.speciesId, name: rootNode.name },
+                steps: currentPath,
+              });
+            }
           }
           return;
         }
@@ -548,6 +753,8 @@ async function buildEvolutionData(speciesMap) {
             toSpeciesId: tr.toSpeciesId,
             toName: toNode?.name || `Species #${tr.toSpeciesId}`,
             description: tr.description,
+            item: tr.item || null,
+            region: tr.region || null,
           };
           if (evoData.baby_trigger_item?.name && rootNode.isBaby) {
             step.reverseBreeding = {
@@ -1040,6 +1247,143 @@ const GAME_CONFIGS = [
 ];
 
 /**
+ * Prettify and clean raw encounter location names from PokéAPI and Bulbapedia
+ */
+/**
+ * Splits a composite encounter location string by top-level commas and semicolons
+ * (ignoring commas inside parentheses).
+ */
+function splitEncounterLocations(rawString) {
+  if (!rawString) return [];
+  const results = [];
+  let depth = 0;
+  let current = "";
+
+  for (let i = 0; i < rawString.length; i++) {
+    const char = rawString[i];
+    if (char === "(" || char === "[" || char === "{") depth++;
+    else if (char === ")" || char === "]" || char === "}") depth--;
+
+    if (
+      (char === ";" || (char === "," && depth === 0) || char === "\n") &&
+      depth === 0
+    ) {
+      const trimmed = current.trim();
+      if (trimmed) results.push(trimmed);
+      current = "";
+    } else {
+      current += char;
+    }
+  }
+
+  if (current.trim()) {
+    results.push(current.trim());
+  }
+
+  return results;
+}
+
+/**
+ * Prettify and clean raw encounter location names from PokéAPI and Bulbapedia
+ */
+function cleanLocationAreaName(rawLocation) {
+  if (!rawLocation) return "";
+  let text = String(rawLocation).trim();
+
+  // Clean wikitext formatting and link targets if present
+  text = text
+    .replace(/\[\[(?:[^|\]]*\|)*([^\]]+)\]\]/g, "$1")
+    .replace(/'{2,5}/g, "")
+    .replace(/<[^>]+>/g, "")
+    .replace(/&nbsp;/gi, " ")
+    .replace(/&amp;/gi, "&");
+
+  // Clean Tera Raid Battles link text
+  text = text.replace(/List of \d+★ Tera Raid Battles \([^)]+\)\|/gi, "");
+  text = text.replace(
+    /Tera Raid Battle Search \([^)]+\)\|/gi,
+    "Tera Raid Battles: ",
+  );
+  text = text.replace(
+    /(?<=\(|,\s*)[^,|()]*(?:\s*\([^)]*\))?\s*\|\s*([1-7]★)/g,
+    "$1",
+  );
+
+  // Format day-of-the-week and time-of-day shorthand codes
+  text = text
+    .replace(/(?:\)|\])?(?:TuThSa|tuthsa)\b/gi, " - Tue, Thu, Sat)")
+    .replace(/(?:\)|\])?(?:MoWeFr|mowefr)\b/gi, " - Mon, Wed, Fri)")
+    .replace(/(?<=\S)(?:MD|md)\b/g, " (Morning, Day)")
+    .replace(/(?<=\S)(?:MN|mn)\b/g, " (Morning, Night)")
+    .replace(/(?<=\S)(?:DN|dn)\b/g, " (Day, Night)")
+    .replace(/\s*\(\s*-\s*/g, " (")
+    .replace(/\)\s*\)/g, ")");
+
+  // Fix repeated "Sinnoh, Sinnoh"
+  if (text.includes("Sinnoh, Sinnoh")) {
+    text = text.replace(
+      /(?:Routes\s+)?(?:Sinnoh,\s*)+(.*)/i,
+      "Honey Trees (Routes 205–222, $1)",
+    );
+    text = text.replace(/\s*\(Honey Trees\)/i, "");
+  }
+
+  const isKebabOrAllLower = text === text.toLowerCase() || text.includes("-");
+
+  if (isKebabOrAllLower) {
+    let parts = text.replace(/-/g, " ").trim().split(/\s+/);
+    const regions = [
+      "kanto",
+      "johto",
+      "hoenn",
+      "sinnoh",
+      "unova",
+      "kalos",
+      "alola",
+      "galar",
+      "hisui",
+      "paldea",
+    ];
+    if (parts.length > 1 && regions.includes(parts[0].toLowerCase())) {
+      parts.shift();
+    }
+    if (parts[parts.length - 1]?.toLowerCase() === "area") {
+      parts.pop();
+    }
+
+    const formattedWords = parts.map((w) => {
+      const lower = w.toLowerCase();
+      if (/^b?\d+f$/i.test(lower)) {
+        return `(${lower.toUpperCase()})`;
+      }
+      if (lower === "mt" || lower === "mt.") {
+        return "Mt.";
+      }
+      if (lower === "route") {
+        return "Route";
+      }
+      return w.charAt(0).toUpperCase() + w.slice(1).toLowerCase();
+    });
+
+    text = formattedWords
+      .join(" ")
+      .replace(/\s+\((B?\d+F)\)/g, " ($1)")
+      .replace(/\bUnknown Area\s*\d*/gi, "Unknown Area")
+      .trim();
+  }
+
+  text = text
+    .replace(/\s*;\s*/g, "; ")
+    .replace(/\s*\|\s*/g, ", ")
+    .replace(/\s+/g, " ")
+    .replace(/,\s*,/g, ",")
+    .replace(/\(\s*\)/g, "")
+    .trim();
+
+  return text;
+}
+
+/**
  * Scrape or fetch encounters with multi-source fallback (PokéAPI -> Bulbapedia -> Serebii)
  */
 async function resolveEncountersForSpecies(
@@ -1050,6 +1394,18 @@ async function resolveEncountersForSpecies(
 ) {
   const result = {};
 
+  // Remake version fallback map
+  const REMAKE_FALLBACK_MAP = {
+    "brilliant-diamond": ["diamond", "platinum"],
+    "shining-pearl": ["pearl", "platinum"],
+    firered: ["red", "yellow"],
+    leafgreen: ["blue", "yellow"],
+    heartgold: ["gold", "crystal"],
+    soulsilver: ["silver", "crystal"],
+    "omega-ruby": ["ruby", "emerald"],
+    "alpha-sapphire": ["sapphire", "emerald"],
+  };
+
   // 1. Try PokéAPI first
   const encData = await cachedFetch(
     `pokemon/${formId}/encounters`,
@@ -1057,8 +1413,10 @@ async function resolveEncountersForSpecies(
   );
   if (Array.isArray(encData) && encData.length > 0) {
     for (const loc of encData) {
-      const locationName =
-        loc.location_area?.name?.replace(/-/g, " ") || "Unknown Area";
+      const locationName = cleanLocationAreaName(
+        loc.location_area?.name || "Unknown Area",
+      );
+      if (!locationName) continue;
       for (const detail of loc.version_details || []) {
         const vName = detail.version?.name;
         if (targetVersions.includes(vName)) {
@@ -1072,7 +1430,7 @@ async function resolveEncountersForSpecies(
   }
 
   // 2. Check missing target versions
-  const missingVersions = targetVersions.filter(
+  let missingVersions = targetVersions.filter(
     (v) => !result[v] || result[v].locations.length === 0,
   );
 
@@ -1098,33 +1456,104 @@ async function resolveEncountersForSpecies(
       for (const vName of missingVersions) {
         if (bulbEncounters[vName] && bulbEncounters[vName].length > 0) {
           if (!result[vName]) result[vName] = { locations: [] };
-          result[vName].locations.push(...bulbEncounters[vName]);
+          for (const loc of bulbEncounters[vName]) {
+            const splitLocs = splitEncounterLocations(loc);
+            for (const item of splitLocs) {
+              const cleaned = cleanLocationAreaName(item);
+              if (cleaned && !result[vName].locations.includes(cleaned)) {
+                result[vName].locations.push(cleaned);
+              }
+            }
+          }
         }
       }
     }
 
     // 2b. Serebii Fallback for SV / SwSh if still missing
-    const stillMissing = targetVersions.filter(
+    missingVersions = targetVersions.filter(
       (v) => !result[v] || result[v].locations.length === 0,
     );
 
-    if (stillMissing.some((v) => v === "scarlet" || v === "violet")) {
+    if (missingVersions.some((v) => v === "scarlet" || v === "violet")) {
       const serebiiSV = await fetchSerebiiSVEncounters(speciesName);
       for (const v of ["scarlet", "violet"]) {
         if (serebiiSV[v]?.length) {
           if (!result[v]) result[v] = { locations: [] };
-          result[v].locations.push(...serebiiSV[v]);
+          for (const loc of serebiiSV[v]) {
+            const splitLocs = splitEncounterLocations(loc);
+            for (const item of splitLocs) {
+              const cleaned = cleanLocationAreaName(item);
+              if (cleaned && !result[v].locations.includes(cleaned)) {
+                result[v].locations.push(cleaned);
+              }
+            }
+          }
         }
       }
     }
 
-    if (stillMissing.some((v) => v === "sword" || v === "shield")) {
+    if (missingVersions.some((v) => v === "sword" || v === "shield")) {
       const serebiiSwSh = await fetchSerebiiSwShEncounters(speciesName);
       for (const v of ["sword", "shield"]) {
         if (serebiiSwSh[v]?.length) {
           if (!result[v]) result[v] = { locations: [] };
-          result[v].locations.push(...serebiiSwSh[v]);
+          for (const loc of serebiiSwSh[v]) {
+            const splitLocs = splitEncounterLocations(loc);
+            for (const item of splitLocs) {
+              const cleaned = cleanLocationAreaName(item);
+              if (cleaned && !result[v].locations.includes(cleaned)) {
+                result[v].locations.push(cleaned);
+              }
+            }
+          }
         }
+      }
+    }
+
+    // 2c. Remake version fallback (e.g. BDSP -> Diamond/Pearl) if still missing
+    missingVersions = targetVersions.filter(
+      (v) => !result[v] || result[v].locations.length === 0,
+    );
+
+    for (const vName of missingVersions) {
+      const fallbacks = REMAKE_FALLBACK_MAP[vName] || [];
+      for (const fbVersion of fallbacks) {
+        // Try PokéAPI fallback first
+        if (Array.isArray(encData) && encData.length > 0) {
+          for (const loc of encData) {
+            const locationName = cleanLocationAreaName(
+              loc.location_area?.name || "Unknown Area",
+            );
+            if (!locationName) continue;
+            for (const detail of loc.version_details || []) {
+              if (detail.version?.name === fbVersion) {
+                if (!result[vName]) result[vName] = { locations: [] };
+                if (!result[vName].locations.includes(locationName)) {
+                  result[vName].locations.push(locationName);
+                }
+              }
+            }
+          }
+        }
+
+        // Try Bulbapedia fallback if still missing
+        if (
+          (!result[vName] || result[vName].locations.length === 0) &&
+          bulbEncounters?.[fbVersion]?.length
+        ) {
+          if (!result[vName]) result[vName] = { locations: [] };
+          for (const loc of bulbEncounters[fbVersion]) {
+            const splitLocs = splitEncounterLocations(loc);
+            for (const item of splitLocs) {
+              const cleaned = cleanLocationAreaName(item);
+              if (cleaned && !result[vName].locations.includes(cleaned)) {
+                result[vName].locations.push(cleaned);
+              }
+            }
+          }
+        }
+
+        if (result[vName]?.locations.length > 0) break;
       }
     }
   }
@@ -1226,6 +1655,8 @@ async function buildGamesData(speciesMap = {}) {
         type: seg.type,
         optional: seg.optional || false,
         defaultEnabled: seg.defaultEnabled || false,
+        startIndex:
+          seg.startEntry || seg.startIndex || (entries[0]?.dexNumber ?? 1),
         entries,
       });
 

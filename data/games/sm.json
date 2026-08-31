@@ -14,6 +14,7 @@
       "type": "base",
       "optional": false,
       "defaultEnabled": false,
+      "startIndex": 1,
       "entries": [
         {
           "speciesId": 722,
@@ -1532,255 +1533,257 @@
     "10": {
       "sun": {
         "locations": [
-          "alola route 1 east",
-          "alola route 1 south",
-          "alola route 1 west",
-          "alola route 5 area",
-          "lush jungle south",
-          "melemele meadow area"
+          "Route 1 East",
+          "Route 1 South",
+          "Route 1 West",
+          "Route 5",
+          "Lush Jungle South",
+          "Melemele Meadow"
         ]
       },
       "moon": {
         "locations": [
-          "alola route 1 east",
-          "alola route 1 south",
-          "alola route 1 west",
-          "alola route 5 area",
-          "lush jungle south",
-          "melemele meadow area"
+          "Route 1 East",
+          "Route 1 South",
+          "Route 1 West",
+          "Route 5",
+          "Lush Jungle South",
+          "Melemele Meadow"
         ]
       }
     },
     "11": {
       "sun": {
         "locations": [
-          "alola route 1 south",
-          "alola route 1 west",
-          "alola route 5 area",
-          "lush jungle south",
-          "melemele meadow area"
+          "Route 1 South",
+          "Route 1 West",
+          "Route 5",
+          "Lush Jungle South",
+          "Melemele Meadow"
         ]
       },
       "moon": {
         "locations": [
-          "alola route 1 south",
-          "alola route 1 west",
-          "alola route 5 area",
-          "lush jungle south",
-          "melemele meadow area"
+          "Route 1 South",
+          "Route 1 West",
+          "Route 5",
+          "Lush Jungle South",
+          "Melemele Meadow"
         ]
       }
     },
     "12": {
       "sun": {
         "locations": [
-          "alola route 5 area",
-          "lush jungle south",
-          "melemele meadow area"
+          "Route 5",
+          "Lush Jungle South",
+          "Melemele Meadow"
         ]
       },
       "moon": {
         "locations": [
-          "alola route 5 area",
-          "lush jungle south",
-          "melemele meadow area"
+          "Route 5",
+          "Lush Jungle South",
+          "Melemele Meadow"
         ]
       }
     },
     "19": {
       "sun": {
         "locations": [
-          "alola route 1 east",
-          "alola route 1 hauoli outskirts",
-          "alola route 1 south",
-          "alola route 1 west",
-          "alola route 2 north",
-          "alola route 2 south",
-          "alola route 3 north",
-          "alola route 3 south",
-          "alola route 4 area",
-          "alola route 6 north",
-          "alola route 6 south",
-          "alola route 8 main",
-          "hauoli city shopping district",
-          "kalae bay area",
-          "verdant cavern trial site"
+          "Route 1 East",
+          "Route 1 Hauoli Outskirts",
+          "Route 1 South",
+          "Route 1 West",
+          "Route 2 North",
+          "Route 2 South",
+          "Route 3 North",
+          "Route 3 South",
+          "Route 4",
+          "Route 6 North",
+          "Route 6 South",
+          "Route 8 Main",
+          "Hauoli City Shopping District",
+          "Kalae Bay",
+          "Verdant Cavern Trial Site"
         ]
       },
       "moon": {
         "locations": [
-          "alola route 1 east",
-          "alola route 1 hauoli outskirts",
-          "alola route 1 south",
-          "alola route 1 west",
-          "alola route 2 north",
-          "alola route 2 south",
-          "alola route 3 north",
-          "alola route 3 south",
-          "alola route 4 area",
-          "alola route 6 north",
-          "alola route 6 south",
-          "alola route 8 main",
-          "hauoli city shopping district",
-          "kalae bay area",
-          "verdant cavern trial site"
+          "Route 1 East",
+          "Route 1 Hauoli Outskirts",
+          "Route 1 South",
+          "Route 1 West",
+          "Route 2 North",
+          "Route 2 South",
+          "Route 3 North",
+          "Route 3 South",
+          "Route 4",
+          "Route 6 North",
+          "Route 6 South",
+          "Route 8 Main",
+          "Hauoli City Shopping District",
+          "Kalae Bay",
+          "Verdant Cavern Trial Site"
         ]
       }
     },
     "20": {
       "sun": {
         "locations": [
-          "alola route 10 area",
-          "alola route 11 area",
-          "alola route 14 area",
-          "alola route 15 main",
-          "alola route 16 main",
-          "alola route 17 northeast",
-          "alola route 17 west",
-          "akala outskirts area",
-          "ancient poni path area",
-          "malie city outer cape",
-          "poni gauntlet area",
-          "poni grove area",
-          "poni plains center",
-          "poni plains east",
-          "poni plains north",
-          "poni plains west",
-          "poni wilds area",
-          "tapu village area"
+          "Route 10",
+          "Route 11",
+          "Route 14",
+          "Route 15 Main",
+          "Route 16 Main",
+          "Route 17 Northeast",
+          "Route 17 West",
+          "Akala Outskirts",
+          "Ancient Poni Path",
+          "Malie City Outer Cape",
+          "Poni Gauntlet",
+          "Poni Grove",
+          "Poni Plains Center",
+          "Poni Plains East",
+          "Poni Plains North",
+          "Poni Plains West",
+          "Poni Wilds",
+          "Tapu Village"
         ]
       },
       "moon": {
         "locations": [
-          "alola route 10 area",
-          "alola route 11 area",
-          "alola route 14 area",
-          "alola route 15 main",
-          "alola route 16 main",
-          "alola route 17 northeast",
-          "alola route 17 west",
-          "akala outskirts area",
-          "ancient poni path area",
-          "malie city outer cape",
-          "poni gauntlet area",
-          "poni grove area",
-          "poni plains center",
-          "poni plains east",
-          "poni plains north",
-          "poni plains west",
-          "poni wilds area",
-          "tapu village area"
+          "Route 10",
+          "Route 11",
+          "Route 14",
+          "Route 15 Main",
+          "Route 16 Main",
+          "Route 17 Northeast",
+          "Route 17 West",
+          "Akala Outskirts",
+          "Ancient Poni Path",
+          "Malie City Outer Cape",
+          "Poni Gauntlet",
+          "Poni Grove",
+          "Poni Plains Center",
+          "Poni Plains East",
+          "Poni Plains North",
+          "Poni Plains West",
+          "Poni Wilds",
+          "Tapu Village"
         ]
       }
     },
     "21": {
       "sun": {
         "locations": [
-          "alola route 2 north",
-          "alola route 3 north",
-          "alola route 3 south",
-          "poke pelago poni island reached",
-          "poke pelago ulaula island reached",
-          "poke pelago elite four defeated"
+          "Route 2 North",
+          "Route 3 North",
+          "Route 3 South",
+          "Poke Pelago Poni Island Reached",
+          "Poke Pelago Ulaula Island Reached",
+          "Poke Pelago Elite Four Defeated"
         ]
       },
       "moon": {
         "locations": [
-          "alola route 2 north",
-          "alola route 3 north",
-          "alola route 3 south",
-          "poke pelago poni island reached",
-          "poke pelago ulaula island reached",
-          "poke pelago elite four defeated"
+          "Route 2 North",
+          "Route 3 North",
+          "Route 3 South",
+          "Poke Pelago Poni Island Reached",
+          "Poke Pelago Ulaula Island Reached",
+          "Poke Pelago Elite Four Defeated"
         ]
       }
     },
     "22": {
       "sun": {
         "locations": [
-          "alola route 10 area",
-          "alola route 17 northeast",
-          "alola route 17 west",
-          "mount hokulani main",
-          "poni plains north",
-          "poni plains west"
+          "Route 10",
+          "Route 17 Northeast",
+          "Route 17 West",
+          "Mount Hokulani Main",
+          "Poni Plains North",
+          "Poni Plains West"
         ]
       },
       "moon": {
         "locations": [
-          "alola route 10 area",
-          "alola route 17 northeast",
-          "alola route 17 west",
-          "mount hokulani main",
-          "poni plains north",
-          "poni plains west"
+          "Route 10",
+          "Route 17 Northeast",
+          "Route 17 West",
+          "Mount Hokulani Main",
+          "Poni Plains North",
+          "Poni Plains West"
         ]
       }
     },
     "25": {
       "sun": {
         "locations": [
-          "alola route 1 west",
-          "hauoli city shopping district"
+          "Route 1 West",
+          "Hauoli City Shopping District"
         ]
       },
       "moon": {
         "locations": [
-          "alola route 1 west",
-          "hauoli city shopping district"
+          "Route 1 West",
+          "Hauoli City Shopping District"
         ]
       }
     },
     "26": {
       "sun": {
         "locations": [
-          "Trade ('''Kantonian Form''')",
-          "Evolve Pikachu ('''Alolan Form''')"
+          "Trade (Kantonian Form)",
+          "Evolve Pikachu (Alolan Form)"
         ]
       },
       "moon": {
         "locations": [
-          "Trade ('''Kantonian Form''')",
-          "Evolve Pikachu ('''Alolan Form''')"
+          "Trade (Kantonian Form)",
+          "Evolve Pikachu (Alolan Form)"
         ]
       }
     },
     "27": {
       "moon": {
         "locations": [
-          "alola route 14 area",
-          "mount lanakila outside",
-          "tapu village area"
+          "Route 14",
+          "Mount Lanakila Outside",
+          "Tapu Village"
         ]
       },
       "sun": {
         "locations": [
-          "Trade, Pokémon Bank"
+          "Trade",
+          "Pokémon Bank"
         ]
       }
     },
     "28": {
       "sun": {
         "locations": [
-          "Trade, Pokémon Bank"
+          "Trade",
+          "Pokémon Bank"
         ]
       },
       "moon": {
         "locations": [
-          "Evolve Sandshrew ('''Alolan Form''')",
-          "Pokémon Bank ('''Kantonian Form''')"
+          "Evolve Sandshrew (Alolan Form)",
+          "Pokémon Bank (Kantonian Form)"
         ]
       }
     },
     "35": {
       "sun": {
         "locations": [
-          "mount hokulani main"
+          "Mount Hokulani Main"
         ]
       },
       "moon": {
         "locations": [
-          "mount hokulani main"
+          "Mount Hokulani Main"
         ]
       }
     },
@@ -1799,43 +1802,45 @@
     "37": {
       "sun": {
         "locations": [
-          "alola route 14 area",
-          "mount lanakila outside",
-          "tapu village area"
+          "Route 14",
+          "Mount Lanakila Outside",
+          "Tapu Village"
         ]
       },
       "moon": {
         "locations": [
-          "Trade, Pokémon Bank"
+          "Trade",
+          "Pokémon Bank"
         ]
       }
     },
     "38": {
       "sun": {
         "locations": [
-          "Evolve Vulpix ('''Alolan Form''')",
-          "Pokémon Bank ('''Kantonian Form''')"
+          "Evolve Vulpix (Alolan Form)",
+          "Pokémon Bank (Kantonian Form)"
         ]
       },
       "moon": {
         "locations": [
-          "Trade, Pokémon Bank"
+          "Trade",
+          "Pokémon Bank"
         ]
       }
     },
     "39": {
       "sun": {
         "locations": [
-          "alola route 4 area",
-          "alola route 6 north",
-          "alola route 6 south"
+          "Route 4",
+          "Route 6 North",
+          "Route 6 South"
         ]
       },
       "moon": {
         "locations": [
-          "alola route 4 area",
-          "alola route 6 north",
-          "alola route 6 south"
+          "Route 4",
+          "Route 6 North",
+          "Route 6 South"
         ]
       }
     },
@@ -1854,70 +1859,70 @@
     "41": {
       "sun": {
         "locations": [
-          "digletts tunnel area",
-          "hauoli cemetery area",
-          "lush jungle east cave",
-          "memorial hill area",
-          "seaward cave area",
-          "ten carat hill inside",
-          "verdant cavern trial site",
-          "poke pelago poni island reached",
-          "poke pelago ulaula island reached",
-          "poke pelago elite four defeated"
+          "Digletts Tunnel",
+          "Hauoli Cemetery",
+          "Lush Jungle East Cave",
+          "Memorial Hill",
+          "Seaward Cave",
+          "Ten Carat Hill Inside",
+          "Verdant Cavern Trial Site",
+          "Poke Pelago Poni Island Reached",
+          "Poke Pelago Ulaula Island Reached",
+          "Poke Pelago Elite Four Defeated"
         ]
       },
       "moon": {
         "locations": [
-          "digletts tunnel area",
-          "hauoli cemetery area",
-          "lush jungle east cave",
-          "memorial hill area",
-          "seaward cave area",
-          "ten carat hill inside",
-          "verdant cavern trial site",
-          "poke pelago poni island reached",
-          "poke pelago ulaula island reached",
-          "poke pelago elite four defeated"
+          "Digletts Tunnel",
+          "Hauoli Cemetery",
+          "Lush Jungle East Cave",
+          "Memorial Hill",
+          "Seaward Cave",
+          "Ten Carat Hill Inside",
+          "Verdant Cavern Trial Site",
+          "Poke Pelago Poni Island Reached",
+          "Poke Pelago Ulaula Island Reached",
+          "Poke Pelago Elite Four Defeated"
         ]
       }
     },
     "42": {
       "sun": {
         "locations": [
-          "mount lanakila cave",
-          "resolution cave area",
-          "thrifty megamart abandoned site",
-          "vast poni canyon inside",
-          "vast poni canyon northwest"
+          "Mount Lanakila Cave",
+          "Resolution Cave",
+          "Thrifty Megamart Abandoned Site",
+          "Vast Poni Canyon Inside",
+          "Vast Poni Canyon Northwest"
         ]
       },
       "moon": {
         "locations": [
-          "mount lanakila cave",
-          "resolution cave area",
-          "thrifty megamart abandoned site",
-          "vast poni canyon inside",
-          "vast poni canyon northwest"
+          "Mount Lanakila Cave",
+          "Resolution Cave",
+          "Thrifty Megamart Abandoned Site",
+          "Vast Poni Canyon Inside",
+          "Vast Poni Canyon Northwest"
         ]
       }
     },
     "46": {
       "sun": {
         "locations": [
-          "alola route 11 area",
-          "brooklet hill north",
-          "lush jungle north",
-          "lush jungle south",
-          "lush jungle west"
+          "Route 11",
+          "Brooklet Hill North",
+          "Lush Jungle North",
+          "Lush Jungle South",
+          "Lush Jungle West"
         ]
       },
       "moon": {
         "locations": [
-          "alola route 11 area",
-          "brooklet hill north",
-          "lush jungle north",
-          "lush jungle south",
-          "lush jungle west"
+          "Route 11",
+          "Brooklet Hill North",
+          "Lush Jungle North",
+          "Lush Jungle South",
+          "Lush Jungle West"
         ]
       }
     },
@@ -1936,146 +1941,146 @@
     "50": {
       "sun": {
         "locations": [
-          "alola route 5 area",
-          "alola route 7 area",
-          "digletts tunnel area",
-          "lush jungle east cave",
-          "seaward cave area",
-          "ten carat hill inside",
-          "verdant cavern trial site"
+          "Route 5",
+          "Route 7",
+          "Digletts Tunnel",
+          "Lush Jungle East Cave",
+          "Seaward Cave",
+          "Ten Carat Hill Inside",
+          "Verdant Cavern Trial Site"
         ]
       },
       "moon": {
         "locations": [
-          "alola route 5 area",
-          "alola route 7 area",
-          "digletts tunnel area",
-          "lush jungle east cave",
-          "seaward cave area",
-          "ten carat hill inside",
-          "verdant cavern trial site"
+          "Route 5",
+          "Route 7",
+          "Digletts Tunnel",
+          "Lush Jungle East Cave",
+          "Seaward Cave",
+          "Ten Carat Hill Inside",
+          "Verdant Cavern Trial Site"
         ]
       }
     },
     "51": {
       "sun": {
         "locations": [
-          "haina desert area",
-          "poni coast area",
-          "resolution cave area",
-          "vast poni canyon inside",
-          "vast poni canyon northwest"
+          "Haina Desert",
+          "Poni Coast",
+          "Resolution Cave",
+          "Vast Poni Canyon Inside",
+          "Vast Poni Canyon Northwest"
         ]
       },
       "moon": {
         "locations": [
-          "haina desert area",
-          "poni coast area",
-          "resolution cave area",
-          "vast poni canyon inside",
-          "vast poni canyon northwest"
+          "Haina Desert",
+          "Poni Coast",
+          "Resolution Cave",
+          "Vast Poni Canyon Inside",
+          "Vast Poni Canyon Northwest"
         ]
       }
     },
     "52": {
       "sun": {
         "locations": [
-          "alola route 1 hauoli outskirts",
-          "alola route 2 south",
-          "hauoli city shopping district",
-          "malie garden area"
+          "Route 1 Hauoli Outskirts",
+          "Route 2 South",
+          "Hauoli City Shopping District",
+          "Malie Garden"
         ]
       },
       "moon": {
         "locations": [
-          "alola route 1 hauoli outskirts",
-          "alola route 2 south",
-          "hauoli city shopping district",
-          "malie garden area"
+          "Route 1 Hauoli Outskirts",
+          "Route 2 South",
+          "Hauoli City Shopping District",
+          "Malie Garden"
         ]
       }
     },
     "53": {
       "sun": {
         "locations": [
-          "Evolve Meowth ('''Alolan Form''')",
-          "Pokémon Bank ('''Kantonian Form''')"
+          "Evolve Meowth (Alolan Form)",
+          "Pokémon Bank (Kantonian Form)"
         ]
       },
       "moon": {
         "locations": [
-          "Evolve Meowth ('''Alolan Form''')",
-          "Pokémon Bank ('''Kantonian Form''')"
+          "Evolve Meowth (Alolan Form)",
+          "Pokémon Bank (Kantonian Form)"
         ]
       }
     },
     "54": {
       "sun": {
         "locations": [
-          "brooklet hill north",
-          "brooklet hill south",
-          "malie garden area",
-          "seaward cave area"
+          "Brooklet Hill North",
+          "Brooklet Hill South",
+          "Malie Garden",
+          "Seaward Cave"
         ]
       },
       "moon": {
         "locations": [
-          "brooklet hill north",
-          "brooklet hill south",
-          "malie garden area",
-          "seaward cave area"
+          "Brooklet Hill North",
+          "Brooklet Hill South",
+          "Malie Garden",
+          "Seaward Cave"
         ]
       }
     },
     "55": {
       "sun": {
         "locations": [
-          "poni gauntlet area",
-          "vast poni canyon northwest"
+          "Poni Gauntlet",
+          "Vast Poni Canyon Northwest"
         ]
       },
       "moon": {
         "locations": [
-          "poni gauntlet area",
-          "vast poni canyon northwest"
+          "Poni Gauntlet",
+          "Vast Poni Canyon Northwest"
         ]
       }
     },
     "56": {
       "sun": {
         "locations": [
-          "alola route 3 north",
-          "alola route 3 south"
+          "Route 3 North",
+          "Route 3 South"
         ]
       },
       "moon": {
         "locations": [
-          "alola route 3 north",
-          "alola route 3 south"
+          "Route 3 North",
+          "Route 3 South"
         ]
       }
     },
     "57": {
       "sun": {
         "locations": [
-          "poni plains west"
+          "Poni Plains West"
         ]
       },
       "moon": {
         "locations": [
-          "poni plains west"
+          "Poni Plains West"
         ]
       }
     },
     "58": {
       "sun": {
         "locations": [
-          "alola route 2 north"
+          "Route 2 North"
         ]
       },
       "moon": {
         "locations": [
-          "alola route 2 north"
+          "Route 2 North"
         ]
       }
     },
@@ -2094,78 +2099,78 @@
     "60": {
       "sun": {
         "locations": [
-          "brooklet hill north",
-          "brooklet hill south",
-          "malie garden area",
-          "poke pelago poni island reached",
-          "poke pelago ulaula island reached",
-          "poke pelago elite four defeated"
+          "Brooklet Hill North",
+          "Brooklet Hill South",
+          "Malie Garden",
+          "Poke Pelago Poni Island Reached",
+          "Poke Pelago Ulaula Island Reached",
+          "Poke Pelago Elite Four Defeated"
         ]
       },
       "moon": {
         "locations": [
-          "brooklet hill north",
-          "brooklet hill south",
-          "malie garden area",
-          "poke pelago poni island reached",
-          "poke pelago ulaula island reached",
-          "poke pelago elite four defeated"
+          "Brooklet Hill North",
+          "Brooklet Hill South",
+          "Malie Garden",
+          "Poke Pelago Poni Island Reached",
+          "Poke Pelago Ulaula Island Reached",
+          "Poke Pelago Elite Four Defeated"
         ]
       }
     },
     "61": {
       "sun": {
         "locations": [
-          "konikoni city area",
-          "malie garden area"
+          "Konikoni City",
+          "Malie Garden"
         ]
       },
       "moon": {
         "locations": [
-          "konikoni city area",
-          "malie garden area"
+          "Konikoni City",
+          "Malie Garden"
         ]
       }
     },
     "62": {
       "sun": {
         "locations": [
-          "malie garden area"
+          "Malie Garden"
         ]
       },
       "moon": {
         "locations": [
-          "malie garden area"
+          "Malie Garden"
         ]
       }
     },
     "63": {
       "sun": {
         "locations": [
-          "alola route 2 south",
-          "hauoli city shopping district"
+          "Route 2 South",
+          "Hauoli City Shopping District"
         ]
       },
       "moon": {
         "locations": [
-          "alola route 2 south",
-          "hauoli city shopping district"
+          "Route 2 South",
+          "Hauoli City Shopping District"
         ]
       }
     },
     "64": {
       "sun": {
         "locations": [
-          "poke pelago poni island reached",
-          "poke pelago ulaula island reached",
-          "poke pelago elite four defeated"
+          "Poke Pelago Poni Island Reached",
+          "Poke Pelago Ulaula Island Reached",
+          "Poke Pelago Elite Four Defeated"
         ]
       },
       "moon": {
         "locations": [
-          "poke pelago poni island reached",
-          "poke pelago ulaula island reached",
-          "poke pelago elite four defeated"
+          "Poke Pelago Poni Island Reached",
+          "Poke Pelago Ulaula Island Reached",
+          "Poke Pelago Elite Four Defeated"
         ]
       }
     },
@@ -2184,26 +2189,26 @@
     "66": {
       "sun": {
         "locations": [
-          "alola route 2 main",
-          "ten carat hill farthest hollow"
+          "Route 2 Main",
+          "Ten Carat Hill Farthest Hollow"
         ]
       },
       "moon": {
         "locations": [
-          "alola route 2 main",
-          "ten carat hill farthest hollow"
+          "Route 2 Main",
+          "Ten Carat Hill Farthest Hollow"
         ]
       }
     },
     "67": {
       "sun": {
         "locations": [
-          "vast poni canyon outside"
+          "Vast Poni Canyon Outside"
         ]
       },
       "moon": {
         "locations": [
-          "vast poni canyon outside"
+          "Vast Poni Canyon Outside"
         ]
       }
     },
@@ -2222,132 +2227,132 @@
     "72": {
       "sun": {
         "locations": [
-          "alola route 1 hauoli outskirts",
-          "alola route 7 area",
-          "alola route 14 area",
-          "alola route 15 main",
-          "brooklet hill totems den",
-          "hano beach area",
-          "kalae bay area",
-          "melemele sea area",
-          "secluded shore area"
+          "Route 1 Hauoli Outskirts",
+          "Route 7",
+          "Route 14",
+          "Route 15 Main",
+          "Brooklet Hill Totems Den",
+          "Hano Beach",
+          "Kalae Bay",
+          "Melemele Sea",
+          "Secluded Shore"
         ]
       },
       "moon": {
         "locations": [
-          "alola route 1 hauoli outskirts",
-          "alola route 7 area",
-          "alola route 14 area",
-          "alola route 15 main",
-          "brooklet hill totems den",
-          "hano beach area",
-          "kalae bay area",
-          "melemele sea area",
-          "secluded shore area"
+          "Route 1 Hauoli Outskirts",
+          "Route 7",
+          "Route 14",
+          "Route 15 Main",
+          "Brooklet Hill Totems Den",
+          "Hano Beach",
+          "Kalae Bay",
+          "Melemele Sea",
+          "Secluded Shore"
         ]
       }
     },
     "73": {
       "sun": {
         "locations": [
-          "poni wilds area"
+          "Poni Wilds"
         ]
       },
       "moon": {
         "locations": [
-          "poni wilds area"
+          "Poni Wilds"
         ]
       }
     },
     "74": {
       "sun": {
         "locations": [
-          "alola route 12 area",
-          "blush mountain area"
+          "Route 12",
+          "Blush Mountain"
         ]
       },
       "moon": {
         "locations": [
-          "alola route 12 area",
-          "blush mountain area"
+          "Route 12",
+          "Blush Mountain"
         ]
       }
     },
     "75": {
       "sun": {
         "locations": [
-          "alola route 17 northeast"
+          "Route 17 Northeast"
         ]
       },
       "moon": {
         "locations": [
-          "alola route 17 northeast"
+          "Route 17 Northeast"
         ]
       }
     },
     "76": {
       "sun": {
         "locations": [
-          "Trade Graveler in Tapu Villageevolves immediately after being obtained ('''Alolan Form''')",
-          "Pokémon Bank ('''Kantonian Form''')"
+          "Trade Haunter for Graveler in Tapu Villageevolves immediately after being obtained (Alolan Form)",
+          "Pokémon Bank (Kantonian Form)"
         ]
       },
       "moon": {
         "locations": [
-          "Trade Graveler in Tapu Villageevolves immediately after being obtained ('''Alolan Form''')",
-          "Pokémon Bank ('''Kantonian Form''')"
+          "Trade Haunter for Graveler in Tapu Villageevolves immediately after being obtained (Alolan Form)",
+          "Pokémon Bank (Kantonian Form)"
         ]
       }
     },
     "79": {
       "sun": {
         "locations": [
-          "alola route 1 hauoli outskirts",
-          "alola route 15 main",
-          "alola route 16 main",
-          "kalae bay area"
+          "Route 1 Hauoli Outskirts",
+          "Route 15 Main",
+          "Route 16 Main",
+          "Kalae Bay"
         ]
       },
       "moon": {
         "locations": [
-          "alola route 1 hauoli outskirts",
-          "alola route 15 main",
-          "alola route 16 main",
-          "kalae bay area"
+          "Route 1 Hauoli Outskirts",
+          "Route 15 Main",
+          "Route 16 Main",
+          "Kalae Bay"
         ]
       }
     },
     "80": {
       "sun": {
         "locations": [
-          "kalae bay area"
+          "Kalae Bay"
         ]
       },
       "moon": {
         "locations": [
-          "kalae bay area"
+          "Kalae Bay"
         ]
       }
     },
     "81": {
       "sun": {
         "locations": [
-          "alola route 1 hauoli outskirts",
-          "hauoli city shopping district",
-          "malie city outer cape",
-          "poke pelago poni island reached",
-          "poke pelago ulaula island reached",
-          "poke pelago elite four defeated"
+          "Route 1 Hauoli Outskirts",
+          "Hauoli City Shopping District",
+          "Malie City Outer Cape",
+          "Poke Pelago Poni Island Reached",
+          "Poke Pelago Ulaula Island Reached",
+          "Poke Pelago Elite Four Defeated"
         ]
       },
       "moon": {
         "locations": [
-          "alola route 1 hauoli outskirts",
-          "hauoli city shopping district",
-          "malie city outer cape",
-          "poke pelago poni island reached",
-          "poke pelago ulaula island reached",
-          "poke pelago elite four defeated"
+          "Route 1 Hauoli Outskirts",
+          "Hauoli City Shopping District",
+          "Malie City Outer Cape",
+          "Poke Pelago Poni Island Reached",
+          "Poke Pelago Ulaula Island Reached",
+          "Poke Pelago Elite Four Defeated"
         ]
       }
     },
@@ -2366,48 +2371,48 @@
     "88": {
       "sun": {
         "locations": [
-          "alola route 1 hauoli outskirts",
-          "hauoli city shopping district",
-          "malie city outer cape"
+          "Route 1 Hauoli Outskirts",
+          "Hauoli City Shopping District",
+          "Malie City Outer Cape"
         ]
       },
       "moon": {
         "locations": [
-          "alola route 1 hauoli outskirts",
-          "hauoli city shopping district",
-          "malie city outer cape"
+          "Route 1 Hauoli Outskirts",
+          "Hauoli City Shopping District",
+          "Malie City Outer Cape"
         ]
       }
     },
     "89": {
       "sun": {
         "locations": [
-          "Evolve Grimer ('''Alolan Form''')",
-          "Pokémon Bank ('''Kantonian Form''')"
+          "Evolve Grimer (Alolan Form)",
+          "Pokémon Bank (Kantonian Form)"
         ]
       },
       "moon": {
         "locations": [
-          "Evolve Grimer ('''Alolan Form''')",
-          "Pokémon Bank ('''Kantonian Form''')"
+          "Evolve Grimer (Alolan Form)",
+          "Pokémon Bank (Kantonian Form)"
         ]
       }
     },
     "90": {
       "sun": {
         "locations": [
-          "kalae bay area",
-          "poke pelago poni island reached",
-          "poke pelago ulaula island reached",
-          "poke pelago elite four defeated"
+          "Kalae Bay",
+          "Poke Pelago Poni Island Reached",
+          "Poke Pelago Ulaula Island Reached",
+          "Poke Pelago Elite Four Defeated"
         ]
       },
       "moon": {
         "locations": [
-          "kalae bay area",
-          "poke pelago poni island reached",
-          "poke pelago ulaula island reached",
-          "poke pelago elite four defeated"
+          "Kalae Bay",
+          "Poke Pelago Poni Island Reached",
+          "Poke Pelago Ulaula Island Reached",
+          "Poke Pelago Elite Four Defeated"
         ]
       }
     },
@@ -2426,448 +2431,448 @@
     "92": {
       "sun": {
         "locations": [
-          "hauoli cemetery area",
-          "memorial hill area",
-          "poke pelago poni island reached",
-          "poke pelago ulaula island reached",
-          "poke pelago elite four defeated"
+          "Hauoli Cemetery",
+          "Memorial Hill",
+          "Poke Pelago Poni Island Reached",
+          "Poke Pelago Ulaula Island Reached",
+          "Poke Pelago Elite Four Defeated"
         ]
       },
       "moon": {
         "locations": [
-          "hauoli cemetery area",
-          "memorial hill area",
-          "poke pelago poni island reached",
-          "poke pelago ulaula island reached",
-          "poke pelago elite four defeated"
+          "Hauoli Cemetery",
+          "Memorial Hill",
+          "Poke Pelago Poni Island Reached",
+          "Poke Pelago Ulaula Island Reached",
+          "Poke Pelago Elite Four Defeated"
         ]
       }
     },
     "93": {
       "sun": {
         "locations": [
-          "thrifty megamart abandoned site"
+          "Thrifty Megamart Abandoned Site"
         ]
       },
       "moon": {
         "locations": [
-          "thrifty megamart abandoned site"
+          "Thrifty Megamart Abandoned Site"
         ]
       }
     },
     "94": {
       "sun": {
         "locations": [
-          "thrifty megamart abandoned site"
+          "Thrifty Megamart Abandoned Site"
         ]
       },
       "moon": {
         "locations": [
-          "thrifty megamart abandoned site"
+          "Thrifty Megamart Abandoned Site"
         ]
       }
     },
     "96": {
       "sun": {
         "locations": [
-          "alola route 2 south"
+          "Route 2 South"
         ]
       },
       "moon": {
         "locations": [
-          "alola route 2 south"
+          "Route 2 South"
         ]
       }
     },
     "97": {
       "sun": {
         "locations": [
-          "poni plains north"
+          "Poni Plains North"
         ]
       },
       "moon": {
         "locations": [
-          "poni plains north"
+          "Poni Plains North"
         ]
       }
     },
     "102": {
       "sun": {
         "locations": [
-          "ancient poni path area",
-          "exeggutor island area",
-          "poni wilds area"
+          "Ancient Poni Path",
+          "Exeggutor Island",
+          "Poni Wilds"
         ]
       },
       "moon": {
         "locations": [
-          "ancient poni path area",
-          "exeggutor island area",
-          "poni wilds area"
+          "Ancient Poni Path",
+          "Exeggutor Island",
+          "Poni Wilds"
         ]
       }
     },
     "103": {
       "sun": {
         "locations": [
-          "exeggutor island area"
+          "Exeggutor Island"
         ]
       },
       "moon": {
         "locations": [
-          "exeggutor island area"
+          "Exeggutor Island"
         ]
       }
     },
     "104": {
       "sun": {
         "locations": [
-          "wela volcano park area"
+          "Wela Volcano Park"
         ]
       },
       "moon": {
         "locations": [
-          "wela volcano park area"
+          "Wela Volcano Park"
         ]
       }
     },
     "105": {
       "sun": {
         "locations": [
-          "Trade ('''Kantonian Form''')",
-          "Evolve Cubone ('''Alolan Form''')"
+          "Trade (Kantonian Form)",
+          "Evolve Cubone (Alolan Form)"
         ]
       },
       "moon": {
         "locations": [
-          "Trade ('''Kantonian Form''')",
-          "Evolve Cubone ('''Alolan Form''')"
+          "Trade (Kantonian Form)",
+          "Evolve Cubone (Alolan Form)"
         ]
       }
     },
     "113": {
       "sun": {
         "locations": [
-          "alola route 12 area",
-          "blush mountain area",
-          "mount hokulani main",
-          "poni grove area"
+          "Route 12",
+          "Blush Mountain",
+          "Mount Hokulani Main",
+          "Poni Grove"
         ]
       },
       "moon": {
         "locations": [
-          "alola route 12 area",
-          "blush mountain area",
-          "mount hokulani main",
-          "poni grove area"
+          "Route 12",
+          "Blush Mountain",
+          "Mount Hokulani Main",
+          "Poni Grove"
         ]
       }
     },
     "115": {
       "sun": {
         "locations": [
-          "wela volcano park area"
+          "Wela Volcano Park"
         ]
       },
       "moon": {
         "locations": [
-          "wela volcano park area"
+          "Wela Volcano Park"
         ]
       }
     },
     "118": {
       "sun": {
         "locations": [
-          "brooklet hill north",
-          "brooklet hill south",
-          "malie garden area"
+          "Brooklet Hill North",
+          "Brooklet Hill South",
+          "Malie Garden"
         ]
       },
       "moon": {
         "locations": [
-          "brooklet hill north",
-          "brooklet hill south",
-          "malie garden area"
+          "Brooklet Hill North",
+          "Brooklet Hill South",
+          "Malie Garden"
         ]
       }
     },
     "119": {
       "sun": {
         "locations": [
-          "brooklet hill north",
-          "brooklet hill south",
-          "malie garden area"
+          "Brooklet Hill North",
+          "Brooklet Hill South",
+          "Malie Garden"
         ]
       },
       "moon": {
         "locations": [
-          "brooklet hill north",
-          "brooklet hill south",
-          "malie garden area"
+          "Brooklet Hill North",
+          "Brooklet Hill South",
+          "Malie Garden"
         ]
       }
     },
     "120": {
       "sun": {
         "locations": [
-          "alola route 7 area",
-          "hano beach area",
-          "poke pelago poni island reached",
-          "poke pelago ulaula island reached",
-          "poke pelago elite four defeated"
+          "Route 7",
+          "Hano Beach",
+          "Poke Pelago Poni Island Reached",
+          "Poke Pelago Ulaula Island Reached",
+          "Poke Pelago Elite Four Defeated"
         ]
       },
       "moon": {
         "locations": [
-          "alola route 7 area",
-          "hano beach area",
-          "poke pelago poni island reached",
-          "poke pelago ulaula island reached",
-          "poke pelago elite four defeated"
+          "Route 7",
+          "Hano Beach",
+          "Poke Pelago Poni Island Reached",
+          "Poke Pelago Ulaula Island Reached",
+          "Poke Pelago Elite Four Defeated"
         ]
       }
     },
     "121": {
       "sun": {
         "locations": [
-          "alola route 7 area"
+          "Route 7"
         ]
       },
       "moon": {
         "locations": [
-          "alola route 7 area"
+          "Route 7"
         ]
       }
     },
     "123": {
       "sun": {
         "locations": [
-          "poni plains center",
-          "poke pelago elite four defeated"
+          "Poni Plains Center",
+          "Poke Pelago Elite Four Defeated"
         ]
       },
       "moon": {
         "locations": [
-          "poni plains center",
-          "poke pelago elite four defeated"
+          "Poni Plains Center",
+          "Poke Pelago Elite Four Defeated"
         ]
       }
     },
     "125": {
       "sun": {
         "locations": [
-          "alola route 12 area",
-          "blush mountain area"
+          "Route 12",
+          "Blush Mountain"
         ]
       },
       "moon": {
         "locations": [
-          "alola route 12 area",
-          "blush mountain area"
+          "Route 12",
+          "Blush Mountain"
         ]
       }
     },
     "126": {
       "sun": {
         "locations": [
-          "wela volcano park area"
+          "Wela Volcano Park"
         ]
       },
       "moon": {
         "locations": [
-          "wela volcano park area"
+          "Wela Volcano Park"
         ]
       }
     },
     "127": {
       "sun": {
         "locations": [
-          "lush jungle north",
-          "poni grove area",
-          "poke pelago poni island reached",
-          "poke pelago ulaula island reached",
-          "poke pelago elite four defeated"
+          "Lush Jungle North",
+          "Poni Grove",
+          "Poke Pelago Poni Island Reached",
+          "Poke Pelago Ulaula Island Reached",
+          "Poke Pelago Elite Four Defeated"
         ]
       },
       "moon": {
         "locations": [
-          "lush jungle north",
-          "poni grove area",
-          "poke pelago poni island reached",
-          "poke pelago ulaula island reached",
-          "poke pelago elite four defeated"
+          "Lush Jungle North",
+          "Poni Grove",
+          "Poke Pelago Poni Island Reached",
+          "Poke Pelago Ulaula Island Reached",
+          "Poke Pelago Elite Four Defeated"
         ]
       }
     },
     "128": {
       "sun": {
         "locations": [
-          "paniola ranch area",
-          "poni plains center",
-          "poni plains east",
-          "poni plains north",
-          "poni plains west"
+          "Paniola Ranch",
+          "Poni Plains Center",
+          "Poni Plains East",
+          "Poni Plains North",
+          "Poni Plains West"
         ]
       },
       "moon": {
         "locations": [
-          "paniola ranch area",
-          "poni plains center",
-          "poni plains east",
-          "poni plains north",
-          "poni plains west"
+          "Paniola Ranch",
+          "Poni Plains Center",
+          "Poni Plains East",
+          "Poni Plains North",
+          "Poni Plains West"
         ]
       }
     },
     "129": {
       "sun": {
         "locations": [
-          "alola route 7 area",
-          "alola route 8 main",
-          "alola route 9 main",
-          "alola route 13 area",
-          "alola route 14 area",
-          "alola route 15 main",
-          "brooklet hill north",
-          "brooklet hill south",
-          "brooklet hill totems den",
-          "kalae bay area",
-          "malie garden area",
-          "melemele sea area",
-          "paniola town area",
-          "poni breaker coast area",
-          "poni gauntlet area",
-          "poni meadow area",
-          "poni wilds area",
-          "seafolk village main",
-          "seaward cave area",
-          "secluded shore area",
-          "tapu village area",
-          "vast poni canyon northwest"
+          "Route 7",
+          "Route 8 Main",
+          "Route 9 Main",
+          "Route 13",
+          "Route 14",
+          "Route 15 Main",
+          "Brooklet Hill North",
+          "Brooklet Hill South",
+          "Brooklet Hill Totems Den",
+          "Kalae Bay",
+          "Malie Garden",
+          "Melemele Sea",
+          "Paniola Town",
+          "Poni Breaker Coast",
+          "Poni Gauntlet",
+          "Poni Meadow",
+          "Poni Wilds",
+          "Seafolk Village Main",
+          "Seaward Cave",
+          "Secluded Shore",
+          "Tapu Village",
+          "Vast Poni Canyon Northwest"
         ]
       },
       "moon": {
         "locations": [
-          "alola route 7 area",
-          "alola route 8 main",
-          "alola route 9 main",
-          "alola route 13 area",
-          "alola route 14 area",
-          "alola route 15 main",
-          "brooklet hill north",
-          "brooklet hill south",
-          "brooklet hill totems den",
-          "kalae bay area",
-          "malie garden area",
-          "melemele sea area",
-          "paniola town area",
-          "poni breaker coast area",
-          "poni gauntlet area",
-          "poni meadow area",
-          "poni wilds area",
-          "seafolk village main",
-          "seaward cave area",
-          "secluded shore area",
-          "tapu village area",
-          "vast poni canyon northwest"
+          "Route 7",
+          "Route 8 Main",
+          "Route 9 Main",
+          "Route 13",
+          "Route 14",
+          "Route 15 Main",
+          "Brooklet Hill North",
+          "Brooklet Hill South",
+          "Brooklet Hill Totems Den",
+          "Kalae Bay",
+          "Malie Garden",
+          "Melemele Sea",
+          "Paniola Town",
+          "Poni Breaker Coast",
+          "Poni Gauntlet",
+          "Poni Meadow",
+          "Poni Wilds",
+          "Seafolk Village Main",
+          "Seaward Cave",
+          "Secluded Shore",
+          "Tapu Village",
+          "Vast Poni Canyon Northwest"
         ]
       }
     },
     "130": {
       "sun": {
         "locations": [
-          "alola route 7 area",
-          "alola route 8 main",
-          "alola route 9 main",
-          "alola route 13 area",
-          "alola route 14 area",
-          "alola route 15 main",
-          "brooklet hill north",
-          "brooklet hill south",
-          "brooklet hill totems den",
-          "kalae bay area",
-          "malie garden area",
-          "melemele sea area",
-          "paniola town area",
-          "poni breaker coast area",
-          "poni gauntlet area",
-          "poni meadow area",
-          "poni wilds area",
-          "seafolk village main",
-          "seaward cave area",
-          "secluded shore area",
-          "tapu village area",
-          "vast poni canyon northwest"
+          "Route 7",
+          "Route 8 Main",
+          "Route 9 Main",
+          "Route 13",
+          "Route 14",
+          "Route 15 Main",
+          "Brooklet Hill North",
+          "Brooklet Hill South",
+          "Brooklet Hill Totems Den",
+          "Kalae Bay",
+          "Malie Garden",
+          "Melemele Sea",
+          "Paniola Town",
+          "Poni Breaker Coast",
+          "Poni Gauntlet",
+          "Poni Meadow",
+          "Poni Wilds",
+          "Seafolk Village Main",
+          "Seaward Cave",
+          "Secluded Shore",
+          "Tapu Village",
+          "Vast Poni Canyon Northwest"
         ]
       },
       "moon": {
         "locations": [
-          "alola route 7 area",
-          "alola route 8 main",
-          "alola route 9 main",
-          "alola route 13 area",
-          "alola route 14 area",
-          "alola route 15 main",
-          "brooklet hill north",
-          "brooklet hill south",
-          "brooklet hill totems den",
-          "kalae bay area",
-          "malie garden area",
-          "melemele sea area",
-          "paniola town area",
-          "poni breaker coast area",
-          "poni gauntlet area",
-          "poni meadow area",
-          "poni wilds area",
-          "seafolk village main",
-          "seaward cave area",
-          "secluded shore area",
-          "tapu village area",
-          "vast poni canyon northwest"
+          "Route 7",
+          "Route 8 Main",
+          "Route 9 Main",
+          "Route 13",
+          "Route 14",
+          "Route 15 Main",
+          "Brooklet Hill North",
+          "Brooklet Hill South",
+          "Brooklet Hill Totems Den",
+          "Kalae Bay",
+          "Malie Garden",
+          "Melemele Sea",
+          "Paniola Town",
+          "Poni Breaker Coast",
+          "Poni Gauntlet",
+          "Poni Meadow",
+          "Poni Wilds",
+          "Seafolk Village Main",
+          "Seaward Cave",
+          "Secluded Shore",
+          "Tapu Village",
+          "Vast Poni Canyon Northwest"
         ]
       }
     },
     "131": {
       "sun": {
         "locations": [
-          "poni wilds area",
-          "poke pelago elite four defeated"
+          "Poni Wilds",
+          "Poke Pelago Elite Four Defeated"
         ]
       },
       "moon": {
         "locations": [
-          "poni wilds area",
-          "poke pelago elite four defeated"
+          "Poni Wilds",
+          "Poke Pelago Elite Four Defeated"
         ]
       }
     },
     "132": {
       "sun": {
         "locations": [
-          "mount hokulani main"
+          "Mount Hokulani Main"
         ]
       },
       "moon": {
         "locations": [
-          "mount hokulani main"
+          "Mount Hokulani Main"
         ]
       }
     },
     "133": {
       "sun": {
         "locations": [
-          "alola route 4 area",
-          "alola route 6 north",
-          "alola route 6 south",
-          "paniola ranch area"
+          "Route 4",
+          "Route 6 North",
+          "Route 6 South",
+          "Paniola Ranch"
         ]
       },
       "moon": {
         "locations": [
-          "alola route 4 area",
-          "alola route 6 north",
-          "alola route 6 south",
-          "paniola ranch area"
+          "Route 4",
+          "Route 6 North",
+          "Route 6 South",
+          "Paniola Ranch"
         ]
       }
     },
@@ -2910,176 +2915,176 @@
     "137": {
       "sun": {
         "locations": [
-          "alola route 15 aether house"
+          "Route 15 Aether House"
         ]
       },
       "moon": {
         "locations": [
-          "alola route 15 aether house"
+          "Route 15 Aether House"
         ]
       }
     },
     "142": {
       "sun": {
         "locations": [
-          "seafolk village huntail boat"
+          "Seafolk Village Huntail Boat"
         ]
       },
       "moon": {
         "locations": [
-          "seafolk village huntail boat"
+          "Seafolk Village Huntail Boat"
         ]
       }
     },
     "143": {
       "sun": {
         "locations": [
-          "alola route 1 south"
+          "Route 1 South"
         ]
       },
       "moon": {
         "locations": [
-          "alola route 1 south"
+          "Route 1 South"
         ]
       }
     },
     "147": {
       "sun": {
         "locations": [
-          "poni gauntlet area",
-          "poni meadow area",
-          "vast poni canyon northwest"
+          "Poni Gauntlet",
+          "Poni Meadow",
+          "Vast Poni Canyon Northwest"
         ]
       },
       "moon": {
         "locations": [
-          "poni gauntlet area",
-          "poni meadow area",
-          "vast poni canyon northwest"
+          "Poni Gauntlet",
+          "Poni Meadow",
+          "Vast Poni Canyon Northwest"
         ]
       }
     },
     "148": {
       "sun": {
         "locations": [
-          "poni gauntlet area",
-          "poni meadow area",
-          "vast poni canyon northwest"
+          "Poni Gauntlet",
+          "Poni Meadow",
+          "Vast Poni Canyon Northwest"
         ]
       },
       "moon": {
         "locations": [
-          "poni gauntlet area",
-          "poni meadow area",
-          "vast poni canyon northwest"
+          "Poni Gauntlet",
+          "Poni Meadow",
+          "Vast Poni Canyon Northwest"
         ]
       }
     },
     "149": {
       "sun": {
         "locations": [
-          "poni gauntlet area"
+          "Poni Gauntlet"
         ]
       },
       "moon": {
         "locations": [
-          "poni gauntlet area"
+          "Poni Gauntlet"
         ]
       }
     },
     "165": {
       "sun": {
         "locations": [
-          "alola route 1 east",
-          "alola route 1 south",
-          "alola route 1 west"
+          "Route 1 East",
+          "Route 1 South",
+          "Route 1 West"
         ]
       },
       "moon": {
         "locations": [
-          "alola route 1 east",
-          "alola route 1 south",
-          "alola route 1 west"
+          "Route 1 East",
+          "Route 1 South",
+          "Route 1 West"
         ]
       }
     },
     "166": {
       "sun": {
         "locations": [
-          "alola route 10 area",
-          "alola route 11 area",
-          "alola route 17 west",
-          "malie garden area",
-          "ulaula meadow area"
+          "Route 10",
+          "Route 11",
+          "Route 17 West",
+          "Malie Garden",
+          "Ulaula Meadow"
         ]
       },
       "moon": {
         "locations": [
-          "alola route 10 area",
-          "alola route 11 area",
-          "alola route 17 west",
-          "malie garden area",
-          "ulaula meadow area"
+          "Route 10",
+          "Route 11",
+          "Route 17 West",
+          "Malie Garden",
+          "Ulaula Meadow"
         ]
       }
     },
     "167": {
       "sun": {
         "locations": [
-          "alola route 1 east",
-          "alola route 1 south",
-          "alola route 1 west"
+          "Route 1 East",
+          "Route 1 South",
+          "Route 1 West"
         ]
       },
       "moon": {
         "locations": [
-          "alola route 1 east",
-          "alola route 1 south",
-          "alola route 1 west"
+          "Route 1 East",
+          "Route 1 South",
+          "Route 1 West"
         ]
       }
     },
     "168": {
       "sun": {
         "locations": [
-          "alola route 10 area",
-          "alola route 11 area",
-          "alola route 17 west",
-          "malie garden area",
-          "ulaula meadow area"
+          "Route 10",
+          "Route 11",
+          "Route 17 West",
+          "Malie Garden",
+          "Ulaula Meadow"
         ]
       },
       "moon": {
         "locations": [
-          "alola route 10 area",
-          "alola route 11 area",
-          "alola route 17 west",
-          "malie garden area",
-          "ulaula meadow area"
+          "Route 10",
+          "Route 11",
+          "Route 17 West",
+          "Malie Garden",
+          "Ulaula Meadow"
         ]
       }
     },
     "169": {
       "sun": {
         "locations": [
-          "resolution cave area"
+          "Resolution Cave"
         ]
       },
       "moon": {
         "locations": [
-          "resolution cave area"
+          "Resolution Cave"
         ]
       }
     },
     "170": {
       "sun": {
         "locations": [
-          "alola route 8 main"
+          "Route 8 Main"
         ]
       },
       "moon": {
         "locations": [
-          "alola route 8 main"
+          "Route 8 Main"
         ]
       }
     },
@@ -3098,118 +3103,118 @@
     "172": {
       "sun": {
         "locations": [
-          "alola route 1 west",
-          "hauoli city shopping district"
+          "Route 1 West",
+          "Hauoli City Shopping District"
         ]
       },
       "moon": {
         "locations": [
-          "alola route 1 west",
-          "hauoli city shopping district"
+          "Route 1 West",
+          "Hauoli City Shopping District"
         ]
       }
     },
     "173": {
       "sun": {
         "locations": [
-          "mount hokulani main"
+          "Mount Hokulani Main"
         ]
       },
       "moon": {
         "locations": [
-          "mount hokulani main"
+          "Mount Hokulani Main"
         ]
       }
     },
     "174": {
       "sun": {
         "locations": [
-          "alola route 4 area",
-          "alola route 6 north",
-          "alola route 6 south"
+          "Route 4",
+          "Route 6 North",
+          "Route 6 South"
         ]
       },
       "moon": {
         "locations": [
-          "alola route 4 area",
-          "alola route 6 north",
-          "alola route 6 south"
+          "Route 4",
+          "Route 6 North",
+          "Route 6 South"
         ]
       }
     },
     "185": {
       "sun": {
         "locations": [
-          "alola route 1 south",
-          "lush jungle south"
+          "Route 1 South",
+          "Lush Jungle South"
         ]
       },
       "moon": {
         "locations": [
-          "alola route 1 south",
-          "lush jungle south"
+          "Route 1 South",
+          "Lush Jungle South"
         ]
       }
     },
     "186": {
       "sun": {
         "locations": [
-          "malie garden area"
+          "Malie Garden"
         ]
       },
       "moon": {
         "locations": [
-          "malie garden area"
+          "Malie Garden"
         ]
       }
     },
     "196": {
       "sun": {
         "locations": [
-          "alola route 4 area",
-          "alola route 6 north",
-          "alola route 6 south"
+          "Route 4",
+          "Route 6 North",
+          "Route 6 South"
         ]
       },
       "moon": {
         "locations": [
-          "alola route 4 area",
-          "alola route 6 north",
-          "alola route 6 south"
+          "Route 4",
+          "Route 6 North",
+          "Route 6 South"
         ]
       }
     },
     "197": {
       "sun": {
         "locations": [
-          "alola route 4 area",
-          "alola route 6 north",
-          "alola route 6 south"
+          "Route 4",
+          "Route 6 North",
+          "Route 6 South"
         ]
       },
       "moon": {
         "locations": [
-          "alola route 4 area",
-          "alola route 6 north",
-          "alola route 6 south"
+          "Route 4",
+          "Route 6 North",
+          "Route 6 South"
         ]
       }
     },
     "198": {
       "sun": {
         "locations": [
-          "vast poni canyon outside",
-          "poke pelago poni island reached",
-          "poke pelago ulaula island reached",
-          "poke pelago elite four defeated"
+          "Vast Poni Canyon Outside",
+          "Poke Pelago Poni Island Reached",
+          "Poke Pelago Ulaula Island Reached",
+          "Poke Pelago Elite Four Defeated"
         ]
       },
       "moon": {
         "locations": [
-          "vast poni canyon outside",
-          "poke pelago poni island reached",
-          "poke pelago ulaula island reached",
-          "poke pelago elite four defeated"
+          "Vast Poni Canyon Outside",
+          "Poke Pelago Poni Island Reached",
+          "Poke Pelago Ulaula Island Reached",
+          "Poke Pelago Elite Four Defeated"
         ]
       }
     },
@@ -3228,12 +3233,12 @@
     "200": {
       "sun": {
         "locations": [
-          "hauoli cemetery area"
+          "Hauoli Cemetery"
         ]
       },
       "moon": {
         "locations": [
-          "hauoli cemetery area"
+          "Hauoli Cemetery"
         ]
       }
     },
@@ -3252,18 +3257,18 @@
     "210": {
       "sun": {
         "locations": [
-          "ancient poni path area",
-          "poni gauntlet area",
-          "poni grove area",
-          "poni wilds area"
+          "Ancient Poni Path",
+          "Poni Gauntlet",
+          "Poni Grove",
+          "Poni Wilds"
         ]
       },
       "moon": {
         "locations": [
-          "ancient poni path area",
-          "poni gauntlet area",
-          "poni grove area",
-          "poni wilds area"
+          "Ancient Poni Path",
+          "Poni Gauntlet",
+          "Poni Grove",
+          "Poni Wilds"
         ]
       }
     },
@@ -3282,62 +3287,62 @@
     "215": {
       "sun": {
         "locations": [
-          "mount lanakila cave",
-          "mount lanakila outside"
+          "Mount Lanakila Cave",
+          "Mount Lanakila Outside"
         ]
       },
       "moon": {
         "locations": [
-          "mount lanakila cave",
-          "mount lanakila outside"
+          "Mount Lanakila Cave",
+          "Mount Lanakila Outside"
         ]
       }
     },
     "222": {
       "sun": {
         "locations": [
-          "alola route 9 main",
-          "melemele sea area"
+          "Route 9 Main",
+          "Melemele Sea"
         ]
       },
       "moon": {
         "locations": [
-          "alola route 9 main",
-          "melemele sea area"
+          "Route 9 Main",
+          "Melemele Sea"
         ]
       }
     },
     "225": {
       "sun": {
         "locations": [
-          "alola route 3 north"
+          "Route 3 North"
         ]
       },
       "moon": {
         "locations": [
-          "alola route 3 north"
+          "Route 3 North"
         ]
       }
     },
     "227": {
       "sun": {
         "locations": [
-          "alola route 10 area",
-          "alola route 17 northeast",
-          "mount hokulani main",
-          "vast poni canyon outside",
-          "poke pelago poni island reached",
-          "poke pelago elite four defeated"
+          "Route 10",
+          "Route 17 Northeast",
+          "Mount Hokulani Main",
+          "Vast Poni Canyon Outside",
+          "Poke Pelago Poni Island Reached",
+          "Poke Pelago Elite Four Defeated"
         ]
       },
       "moon": {
         "locations": [
-          "alola route 10 area",
-          "alola route 17 northeast",
-          "mount hokulani main",
-          "vast poni canyon outside",
-          "poke pelago poni island reached",
-          "poke pelago elite four defeated"
+          "Route 10",
+          "Route 17 Northeast",
+          "Mount Hokulani Main",
+          "Vast Poni Canyon Outside",
+          "Poke Pelago Poni Island Reached",
+          "Poke Pelago Elite Four Defeated"
         ]
       }
     },
@@ -3356,60 +3361,60 @@
     "235": {
       "sun": {
         "locations": [
-          "alola route 2 north",
-          "alola route 2 south"
+          "Route 2 North",
+          "Route 2 South"
         ]
       },
       "moon": {
         "locations": [
-          "alola route 2 north",
-          "alola route 2 south"
+          "Route 2 North",
+          "Route 2 South"
         ]
       }
     },
     "239": {
       "sun": {
         "locations": [
-          "alola route 12 area",
-          "blush mountain area"
+          "Route 12",
+          "Blush Mountain"
         ]
       },
       "moon": {
         "locations": [
-          "alola route 12 area",
-          "blush mountain area"
+          "Route 12",
+          "Blush Mountain"
         ]
       }
     },
     "240": {
       "sun": {
         "locations": [
-          "wela volcano park area"
+          "Wela Volcano Park"
         ]
       },
       "moon": {
         "locations": [
-          "wela volcano park area"
+          "Wela Volcano Park"
         ]
       }
     },
     "241": {
       "sun": {
         "locations": [
-          "paniola ranch area",
-          "poni plains center",
-          "poni plains east",
-          "poni plains north",
-          "poni plains west"
+          "Paniola Ranch",
+          "Poni Plains Center",
+          "Poni Plains East",
+          "Poni Plains North",
+          "Poni Plains West"
         ]
       },
       "moon": {
         "locations": [
-          "paniola ranch area",
-          "poni plains center",
-          "poni plains east",
-          "poni plains north",
-          "poni plains west"
+          "Paniola Ranch",
+          "Poni Plains Center",
+          "Poni Plains East",
+          "Poni Plains North",
+          "Poni Plains West"
         ]
       }
     },
@@ -3428,146 +3433,146 @@
     "278": {
       "sun": {
         "locations": [
-          "alola route 1 hauoli outskirts",
-          "alola route 7 area",
-          "akala outskirts area",
-          "brooklet hill north",
-          "brooklet hill south",
-          "brooklet hill totems den",
-          "hano beach area",
-          "hauoli city shopping district",
-          "kalae bay area",
-          "melemele sea area",
-          "poke pelago poni island reached",
-          "poke pelago ulaula island reached",
-          "poke pelago elite four defeated"
+          "Route 1 Hauoli Outskirts",
+          "Route 7",
+          "Akala Outskirts",
+          "Brooklet Hill North",
+          "Brooklet Hill South",
+          "Brooklet Hill Totems Den",
+          "Hano Beach",
+          "Hauoli City Shopping District",
+          "Kalae Bay",
+          "Melemele Sea",
+          "Poke Pelago Poni Island Reached",
+          "Poke Pelago Ulaula Island Reached",
+          "Poke Pelago Elite Four Defeated"
         ]
       },
       "moon": {
         "locations": [
-          "alola route 1 hauoli outskirts",
-          "alola route 7 area",
-          "akala outskirts area",
-          "brooklet hill north",
-          "brooklet hill south",
-          "brooklet hill totems den",
-          "hano beach area",
-          "hauoli city shopping district",
-          "kalae bay area",
-          "melemele sea area",
-          "poke pelago poni island reached",
-          "poke pelago ulaula island reached",
-          "poke pelago elite four defeated"
+          "Route 1 Hauoli Outskirts",
+          "Route 7",
+          "Akala Outskirts",
+          "Brooklet Hill North",
+          "Brooklet Hill South",
+          "Brooklet Hill Totems Den",
+          "Hano Beach",
+          "Hauoli City Shopping District",
+          "Kalae Bay",
+          "Melemele Sea",
+          "Poke Pelago Poni Island Reached",
+          "Poke Pelago Ulaula Island Reached",
+          "Poke Pelago Elite Four Defeated"
         ]
       }
     },
     "279": {
       "sun": {
         "locations": [
-          "alola route 14 area",
-          "alola route 15 main",
-          "alola route 16 main",
-          "ancient poni path area",
-          "exeggutor island area",
-          "poni gauntlet area",
-          "poni plains east",
-          "poni wilds area",
-          "secluded shore area",
-          "tapu village area"
+          "Route 14",
+          "Route 15 Main",
+          "Route 16 Main",
+          "Ancient Poni Path",
+          "Exeggutor Island",
+          "Poni Gauntlet",
+          "Poni Plains East",
+          "Poni Wilds",
+          "Secluded Shore",
+          "Tapu Village"
         ]
       },
       "moon": {
         "locations": [
-          "alola route 14 area",
-          "alola route 15 main",
-          "alola route 16 main",
-          "ancient poni path area",
-          "exeggutor island area",
-          "poni gauntlet area",
-          "poni plains east",
-          "poni wilds area",
-          "secluded shore area",
-          "tapu village area"
+          "Route 14",
+          "Route 15 Main",
+          "Route 16 Main",
+          "Ancient Poni Path",
+          "Exeggutor Island",
+          "Poni Gauntlet",
+          "Poni Plains East",
+          "Poni Wilds",
+          "Secluded Shore",
+          "Tapu Village"
         ]
       }
     },
     "283": {
       "sun": {
         "locations": [
-          "brooklet hill north",
-          "brooklet hill south"
+          "Brooklet Hill North",
+          "Brooklet Hill South"
         ]
       },
       "moon": {
         "locations": [
-          "brooklet hill north",
-          "brooklet hill south"
+          "Brooklet Hill North",
+          "Brooklet Hill South"
         ]
       }
     },
     "284": {
       "sun": {
         "locations": [
-          "malie garden area"
+          "Malie Garden"
         ]
       },
       "moon": {
         "locations": [
-          "malie garden area"
+          "Malie Garden"
         ]
       }
     },
     "296": {
       "sun": {
         "locations": [
-          "alola route 2 north",
-          "alola route 2 south"
+          "Route 2 North",
+          "Route 2 South"
         ]
       },
       "moon": {
         "locations": [
-          "alola route 2 north",
-          "alola route 2 south"
+          "Route 2 North",
+          "Route 2 South"
         ]
       }
     },
     "297": {
       "sun": {
         "locations": [
-          "poni plains center"
+          "Poni Plains Center"
         ]
       },
       "moon": {
         "locations": [
-          "poni plains center"
+          "Poni Plains Center"
         ]
       }
     },
     "299": {
       "sun": {
         "locations": [
-          "akala outskirts area"
+          "Akala Outskirts"
         ]
       },
       "moon": {
         "locations": [
-          "akala outskirts area"
+          "Akala Outskirts"
         ]
       }
     },
     "302": {
       "sun": {
         "locations": [
-          "ten carat hill inside",
-          "vast poni canyon inside",
-          "vast poni canyon northwest"
+          "Ten Carat Hill Inside",
+          "Vast Poni Canyon Inside",
+          "Vast Poni Canyon Northwest"
         ]
       },
       "moon": {
         "locations": [
-          "ten carat hill inside",
-          "vast poni canyon inside",
-          "vast poni canyon northwest"
+          "Ten Carat Hill Inside",
+          "Vast Poni Canyon Inside",
+          "Vast Poni Canyon Northwest"
         ]
       }
     },
@@ -3586,82 +3591,82 @@
     "319": {
       "sun": {
         "locations": [
-          "poni breaker coast area"
+          "Poni Breaker Coast"
         ]
       },
       "moon": {
         "locations": [
-          "poni breaker coast area"
+          "Poni Breaker Coast"
         ]
       }
     },
     "320": {
       "sun": {
         "locations": [
-          "poni breaker coast area",
-          "poni wilds area",
-          "seafolk village main"
+          "Poni Breaker Coast",
+          "Poni Wilds",
+          "Seafolk Village Main"
         ]
       },
       "moon": {
         "locations": [
-          "poni breaker coast area",
-          "poni wilds area",
-          "seafolk village main"
+          "Poni Breaker Coast",
+          "Poni Wilds",
+          "Seafolk Village Main"
         ]
       }
     },
     "321": {
       "sun": {
         "locations": [
-          "poni breaker coast area",
-          "poni wilds area",
-          "seafolk village main"
+          "Poni Breaker Coast",
+          "Poni Wilds",
+          "Seafolk Village Main"
         ]
       },
       "moon": {
         "locations": [
-          "poni breaker coast area",
-          "poni wilds area",
-          "seafolk village main"
+          "Poni Breaker Coast",
+          "Poni Wilds",
+          "Seafolk Village Main"
         ]
       }
     },
     "324": {
       "sun": {
         "locations": [
-          "alola route 12 area",
-          "blush mountain area"
+          "Route 12",
+          "Blush Mountain"
         ]
       },
       "moon": {
         "locations": [
-          "alola route 12 area",
-          "blush mountain area"
+          "Route 12",
+          "Blush Mountain"
         ]
       }
     },
     "327": {
       "sun": {
         "locations": [
-          "ten carat hill farthest hollow"
+          "Ten Carat Hill Farthest Hollow"
         ]
       },
       "moon": {
         "locations": [
-          "ten carat hill farthest hollow"
+          "Ten Carat Hill Farthest Hollow"
         ]
       }
     },
     "328": {
       "sun": {
         "locations": [
-          "haina desert area"
+          "Haina Desert"
         ]
       },
       "moon": {
         "locations": [
-          "haina desert area"
+          "Haina Desert"
         ]
       }
     },
@@ -3692,54 +3697,54 @@
     "339": {
       "sun": {
         "locations": [
-          "paniola town area",
-          "poni gauntlet area",
-          "poni meadow area",
-          "seaward cave area",
-          "vast poni canyon northwest"
+          "Paniola Town",
+          "Poni Gauntlet",
+          "Poni Meadow",
+          "Seaward Cave",
+          "Vast Poni Canyon Northwest"
         ]
       },
       "moon": {
         "locations": [
-          "paniola town area",
-          "poni gauntlet area",
-          "poni meadow area",
-          "seaward cave area",
-          "vast poni canyon northwest"
+          "Paniola Town",
+          "Poni Gauntlet",
+          "Poni Meadow",
+          "Seaward Cave",
+          "Vast Poni Canyon Northwest"
         ]
       }
     },
     "340": {
       "sun": {
         "locations": [
-          "paniola town area",
-          "poni gauntlet area",
-          "poni meadow area",
-          "seaward cave area",
-          "vast poni canyon northwest"
+          "Paniola Town",
+          "Poni Gauntlet",
+          "Poni Meadow",
+          "Seaward Cave",
+          "Vast Poni Canyon Northwest"
         ]
       },
       "moon": {
         "locations": [
-          "paniola town area",
-          "poni gauntlet area",
-          "poni meadow area",
-          "seaward cave area",
-          "vast poni canyon northwest"
+          "Paniola Town",
+          "Poni Gauntlet",
+          "Poni Meadow",
+          "Seaward Cave",
+          "Vast Poni Canyon Northwest"
         ]
       }
     },
     "349": {
       "sun": {
         "locations": [
-          "brooklet hill north",
-          "brooklet hill south"
+          "Brooklet Hill North",
+          "Brooklet Hill South"
         ]
       },
       "moon": {
         "locations": [
-          "brooklet hill north",
-          "brooklet hill south"
+          "Brooklet Hill North",
+          "Brooklet Hill South"
         ]
       }
     },
@@ -3758,170 +3763,170 @@
     "351": {
       "sun": {
         "locations": [
-          "alola route 17 northeast",
-          "alola route 17 west",
-          "exeggutor island area",
-          "haina desert area",
-          "lush jungle north",
-          "lush jungle south",
-          "lush jungle west",
-          "malie garden area",
-          "mount lanakila outside",
-          "tapu village area"
+          "Route 17 Northeast",
+          "Route 17 West",
+          "Exeggutor Island",
+          "Haina Desert",
+          "Lush Jungle North",
+          "Lush Jungle South",
+          "Lush Jungle West",
+          "Malie Garden",
+          "Mount Lanakila Outside",
+          "Tapu Village"
         ]
       },
       "moon": {
         "locations": [
-          "alola route 17 northeast",
-          "alola route 17 west",
-          "exeggutor island area",
-          "haina desert area",
-          "lush jungle north",
-          "lush jungle south",
-          "lush jungle west",
-          "malie garden area",
-          "mount lanakila outside",
-          "tapu village area"
+          "Route 17 Northeast",
+          "Route 17 West",
+          "Exeggutor Island",
+          "Haina Desert",
+          "Lush Jungle North",
+          "Lush Jungle South",
+          "Lush Jungle West",
+          "Malie Garden",
+          "Mount Lanakila Outside",
+          "Tapu Village"
         ]
       }
     },
     "359": {
       "sun": {
         "locations": [
-          "alola route 14 area",
-          "mount lanakila cave",
-          "mount lanakila outside",
-          "tapu village area"
+          "Route 14",
+          "Mount Lanakila Cave",
+          "Mount Lanakila Outside",
+          "Tapu Village"
         ]
       },
       "moon": {
         "locations": [
-          "alola route 14 area",
-          "mount lanakila cave",
-          "mount lanakila outside",
-          "tapu village area"
+          "Route 14",
+          "Mount Lanakila Cave",
+          "Mount Lanakila Outside",
+          "Tapu Village"
         ]
       }
     },
     "361": {
       "sun": {
         "locations": [
-          "alola route 14 area",
-          "mount lanakila cave",
-          "mount lanakila outside",
-          "tapu village area"
+          "Route 14",
+          "Mount Lanakila Cave",
+          "Mount Lanakila Outside",
+          "Tapu Village"
         ]
       },
       "moon": {
         "locations": [
-          "alola route 14 area",
-          "mount lanakila cave",
-          "mount lanakila outside",
-          "tapu village area"
+          "Route 14",
+          "Mount Lanakila Cave",
+          "Mount Lanakila Outside",
+          "Tapu Village"
         ]
       }
     },
     "362": {
       "sun": {
         "locations": [
-          "mount lanakila cave",
-          "mount lanakila outside"
+          "Mount Lanakila Cave",
+          "Mount Lanakila Outside"
         ]
       },
       "moon": {
         "locations": [
-          "mount lanakila cave",
-          "mount lanakila outside"
+          "Mount Lanakila Cave",
+          "Mount Lanakila Outside"
         ]
       }
     },
     "369": {
       "sun": {
         "locations": [
-          "poni wilds area"
+          "Poni Wilds"
         ]
       },
       "moon": {
         "locations": [
-          "poni wilds area"
+          "Poni Wilds"
         ]
       }
     },
     "370": {
       "sun": {
         "locations": [
-          "alola route 9 main",
-          "melemele sea area"
+          "Route 9 Main",
+          "Melemele Sea"
         ]
       },
       "moon": {
         "locations": [
-          "alola route 9 main",
-          "melemele sea area"
+          "Route 9 Main",
+          "Melemele Sea"
         ]
       }
     },
     "371": {
       "sun": {
         "locations": [
-          "alola route 3 south",
-          "kalae bay area"
+          "Route 3 South",
+          "Kalae Bay"
         ]
       },
       "moon": {
         "locations": [
-          "alola route 3 south",
-          "kalae bay area"
+          "Route 3 South",
+          "Kalae Bay"
         ]
       }
     },
     "372": {
       "sun": {
         "locations": [
-          "kalae bay area"
+          "Kalae Bay"
         ]
       },
       "moon": {
         "locations": [
-          "kalae bay area"
+          "Kalae Bay"
         ]
       }
     },
     "373": {
       "sun": {
         "locations": [
-          "alola route 3 south"
+          "Route 3 South"
         ]
       },
       "moon": {
         "locations": [
-          "alola route 3 south"
+          "Route 3 South"
         ]
       }
     },
     "374": {
       "sun": {
         "locations": [
-          "mount hokulani main"
+          "Mount Hokulani Main"
         ]
       },
       "moon": {
         "locations": [
-          "mount hokulani main"
+          "Mount Hokulani Main"
         ]
       }
     },
     "375": {
       "sun": {
         "locations": [
-          "poke pelago poni island reached",
-          "poke pelago elite four defeated"
+          "Poke Pelago Poni Island Reached",
+          "Poke Pelago Elite Four Defeated"
         ]
       },
       "moon": {
         "locations": [
-          "poke pelago poni island reached",
-          "poke pelago elite four defeated"
+          "Poke Pelago Poni Island Reached",
+          "Poke Pelago Elite Four Defeated"
         ]
       }
     },
@@ -3940,12 +3945,12 @@
     "408": {
       "sun": {
         "locations": [
-          "alola route 8 fossil restoration center"
+          "Route 8 Fossil Restoration Center"
         ]
       },
       "moon": {
         "locations": [
-          "alola route 8 fossil restoration center"
+          "Route 8 Fossil Restoration Center"
         ]
       }
     },
@@ -3959,12 +3964,12 @@
     "410": {
       "sun": {
         "locations": [
-          "alola route 8 fossil restoration center"
+          "Route 8 Fossil Restoration Center"
         ]
       },
       "moon": {
         "locations": [
-          "alola route 8 fossil restoration center"
+          "Route 8 Fossil Restoration Center"
         ]
       }
     },
@@ -3978,70 +3983,70 @@
     "422": {
       "sun": {
         "locations": [
-          "Breed Gastrodon ('''East Sea''')",
-          "Trade ('''West Sea''')"
+          "Breed Gastrodon (East Sea)",
+          "Trade (West Sea)"
         ]
       },
       "moon": {
         "locations": [
-          "Breed Gastrodon ('''East Sea''')",
-          "Trade ('''West Sea''')"
+          "Breed Gastrodon (East Sea)",
+          "Trade (West Sea)"
         ]
       }
     },
     "423": {
       "sun": {
         "locations": [
-          "ancient poni path area",
-          "exeggutor island area",
-          "poni wilds area"
+          "Ancient Poni Path",
+          "Exeggutor Island",
+          "Poni Wilds"
         ]
       },
       "moon": {
         "locations": [
-          "ancient poni path area",
-          "exeggutor island area",
-          "poni wilds area"
+          "Ancient Poni Path",
+          "Exeggutor Island",
+          "Poni Wilds"
         ]
       }
     },
     "425": {
       "sun": {
         "locations": [
-          "hauoli cemetery area"
+          "Hauoli Cemetery"
         ]
       },
       "moon": {
         "locations": [
-          "hauoli cemetery area"
+          "Hauoli Cemetery"
         ]
       }
     },
     "426": {
       "sun": {
         "locations": [
-          "poke pelago poni island reached",
-          "poke pelago ulaula island reached",
-          "poke pelago elite four defeated"
+          "Poke Pelago Poni Island Reached",
+          "Poke Pelago Ulaula Island Reached",
+          "Poke Pelago Elite Four Defeated"
         ]
       },
       "moon": {
         "locations": [
-          "poke pelago poni island reached",
-          "poke pelago ulaula island reached",
-          "poke pelago elite four defeated"
+          "Poke Pelago Poni Island Reached",
+          "Poke Pelago Ulaula Island Reached",
+          "Poke Pelago Elite Four Defeated"
         ]
       }
     },
     "429": {
       "sun": {
         "locations": [
-          "poke pelago elite four defeated"
+          "Poke Pelago Elite Four Defeated"
         ]
       },
       "moon": {
         "locations": [
-          "poke pelago elite four defeated"
+          "Poke Pelago Elite Four Defeated"
         ]
       }
     },
@@ -4060,64 +4065,64 @@
     "438": {
       "sun": {
         "locations": [
-          "alola route 1 south",
-          "lush jungle south"
+          "Route 1 South",
+          "Lush Jungle South"
         ]
       },
       "moon": {
         "locations": [
-          "alola route 1 south",
-          "lush jungle south"
+          "Route 1 South",
+          "Lush Jungle South"
         ]
       }
     },
     "440": {
       "sun": {
         "locations": [
-          "alola route 1 south",
-          "alola route 1 west",
-          "alola route 4 area",
-          "alola route 6 north",
-          "alola route 6 south",
-          "hauoli city shopping district",
-          "lush jungle south",
-          "malie city main"
+          "Route 1 South",
+          "Route 1 West",
+          "Route 4",
+          "Route 6 North",
+          "Route 6 South",
+          "Hauoli City Shopping District",
+          "Lush Jungle South",
+          "Malie City Main"
         ]
       },
       "moon": {
         "locations": [
-          "alola route 1 south",
-          "alola route 1 west",
-          "alola route 4 area",
-          "alola route 6 north",
-          "alola route 6 south",
-          "hauoli city shopping district",
-          "lush jungle south",
-          "malie city main"
+          "Route 1 South",
+          "Route 1 West",
+          "Route 4",
+          "Route 6 North",
+          "Route 6 South",
+          "Hauoli City Shopping District",
+          "Lush Jungle South",
+          "Malie City Main"
         ]
       }
     },
     "443": {
       "sun": {
         "locations": [
-          "Breed Garchomp"
+          "Breed Gabite or Garchomp"
         ]
       },
       "moon": {
         "locations": [
-          "Breed Garchomp"
+          "Breed Gabite or Garchomp"
         ]
       }
     },
     "444": {
       "sun": {
         "locations": [
-          "haina desert area"
+          "Haina Desert"
         ]
       },
       "moon": {
         "locations": [
-          "haina desert area"
+          "Haina Desert"
         ]
       }
     },
@@ -4136,76 +4141,76 @@
     "446": {
       "sun": {
         "locations": [
-          "alola route 1 south"
+          "Route 1 South"
         ]
       },
       "moon": {
         "locations": [
-          "alola route 1 south"
+          "Route 1 South"
         ]
       }
     },
     "447": {
       "sun": {
         "locations": [
-          "poni grove area"
+          "Poni Grove"
         ]
       },
       "moon": {
         "locations": [
-          "poni grove area"
+          "Poni Grove"
         ]
       }
     },
     "448": {
       "sun": {
         "locations": [
-          "poni grove area"
+          "Poni Grove"
         ]
       },
       "moon": {
         "locations": [
-          "poni grove area"
+          "Poni Grove"
         ]
       }
     },
     "456": {
       "sun": {
         "locations": [
-          "alola route 1 hauoli outskirts",
-          "alola route 7 area",
-          "alola route 14 area",
-          "alola route 15 main",
-          "brooklet hill totems den",
-          "hano beach area",
-          "kalae bay area",
-          "melemele sea area",
-          "secluded shore area"
+          "Route 1 Hauoli Outskirts",
+          "Route 7",
+          "Route 14",
+          "Route 15 Main",
+          "Brooklet Hill Totems Den",
+          "Hano Beach",
+          "Kalae Bay",
+          "Melemele Sea",
+          "Secluded Shore"
         ]
       },
       "moon": {
         "locations": [
-          "alola route 1 hauoli outskirts",
-          "alola route 7 area",
-          "alola route 14 area",
-          "alola route 15 main",
-          "brooklet hill totems den",
-          "hano beach area",
-          "kalae bay area",
-          "melemele sea area",
-          "secluded shore area"
+          "Route 1 Hauoli Outskirts",
+          "Route 7",
+          "Route 14",
+          "Route 15 Main",
+          "Brooklet Hill Totems Den",
+          "Hano Beach",
+          "Kalae Bay",
+          "Melemele Sea",
+          "Secluded Shore"
         ]
       }
     },
     "457": {
       "sun": {
         "locations": [
-          "poni wilds area"
+          "Poni Wilds"
         ]
       },
       "moon": {
         "locations": [
-          "poni wilds area"
+          "Poni Wilds"
         ]
       }
     },
@@ -4308,34 +4313,34 @@
     "478": {
       "sun": {
         "locations": [
-          "Evolve Snoruntfemale"
+          "Evolve Snorunt"
         ]
       },
       "moon": {
         "locations": [
-          "Evolve Snoruntfemale"
+          "Evolve Snorunt"
         ]
       }
     },
     "506": {
       "sun": {
         "locations": [
-          "alola route 4 area",
-          "alola route 5 area",
-          "alola route 6 north",
-          "alola route 6 south",
-          "brooklet hill north",
-          "paniola ranch area"
+          "Route 4",
+          "Route 5",
+          "Route 6 North",
+          "Route 6 South",
+          "Brooklet Hill North",
+          "Paniola Ranch"
         ]
       },
       "moon": {
         "locations": [
-          "alola route 4 area",
-          "alola route 5 area",
-          "alola route 6 north",
-          "alola route 6 south",
-          "brooklet hill north",
-          "paniola ranch area"
+          "Route 4",
+          "Route 5",
+          "Route 6 North",
+          "Route 6 South",
+          "Brooklet Hill North",
+          "Paniola Ranch"
         ]
       }
     },
@@ -4366,30 +4371,30 @@
     "524": {
       "sun": {
         "locations": [
-          "ten carat hill farthest hollow",
-          "ten carat hill inside"
+          "Ten Carat Hill Farthest Hollow",
+          "Ten Carat Hill Inside"
         ]
       },
       "moon": {
         "locations": [
-          "ten carat hill farthest hollow",
-          "ten carat hill inside"
+          "Ten Carat Hill Farthest Hollow",
+          "Ten Carat Hill Inside"
         ]
       }
     },
     "525": {
       "sun": {
         "locations": [
-          "vast poni canyon inside",
-          "vast poni canyon northwest",
-          "vast poni canyon outside"
+          "Vast Poni Canyon Inside",
+          "Vast Poni Canyon Northwest",
+          "Vast Poni Canyon Outside"
         ]
       },
       "moon": {
         "locations": [
-          "vast poni canyon inside",
-          "vast poni canyon northwest",
-          "vast poni canyon outside"
+          "Vast Poni Canyon Inside",
+          "Vast Poni Canyon Northwest",
+          "Vast Poni Canyon Outside"
         ]
       }
     },
@@ -4408,14 +4413,14 @@
     "546": {
       "sun": {
         "locations": [
-          "malie garden area",
-          "melemele meadow area",
-          "poni meadow area",
-          "poni plains center",
-          "poni plains east",
-          "poni plains north",
-          "poni plains west",
-          "ulaula meadow area"
+          "Malie Garden",
+          "Melemele Meadow",
+          "Poni Meadow",
+          "Poni Plains Center",
+          "Poni Plains East",
+          "Poni Plains North",
+          "Poni Plains West",
+          "Ulaula Meadow"
         ]
       }
     },
@@ -4429,14 +4434,14 @@
     "548": {
       "moon": {
         "locations": [
-          "malie garden area",
-          "melemele meadow area",
-          "poni meadow area",
-          "poni plains center",
-          "poni plains east",
-          "poni plains north",
-          "poni plains west",
-          "ulaula meadow area"
+          "Malie Garden",
+          "Melemele Meadow",
+          "Poni Meadow",
+          "Poni Plains Center",
+          "Poni Plains East",
+          "Poni Plains North",
+          "Poni Plains West",
+          "Ulaula Meadow"
         ]
       }
     },
@@ -4450,12 +4455,12 @@
     "551": {
       "sun": {
         "locations": [
-          "haina desert area"
+          "Haina Desert"
         ]
       },
       "moon": {
         "locations": [
-          "haina desert area"
+          "Haina Desert"
         ]
       }
     },
@@ -4486,12 +4491,12 @@
     "564": {
       "sun": {
         "locations": [
-          "alola route 8 fossil restoration center"
+          "Route 8 Fossil Restoration Center"
         ]
       },
       "moon": {
         "locations": [
-          "alola route 8 fossil restoration center"
+          "Route 8 Fossil Restoration Center"
         ]
       }
     },
@@ -4505,12 +4510,12 @@
     "566": {
       "sun": {
         "locations": [
-          "alola route 8 fossil restoration center"
+          "Route 8 Fossil Restoration Center"
         ]
       },
       "moon": {
         "locations": [
-          "alola route 8 fossil restoration center"
+          "Route 8 Fossil Restoration Center"
         ]
       }
     },
@@ -4524,48 +4529,48 @@
     "568": {
       "sun": {
         "locations": [
-          "malie city outer cape"
+          "Malie City Outer Cape"
         ]
       },
       "moon": {
         "locations": [
-          "malie city outer cape"
+          "Malie City Outer Cape"
         ]
       }
     },
     "569": {
       "sun": {
         "locations": [
-          "malie city outer cape"
+          "Malie City Outer Cape"
         ]
       },
       "moon": {
         "locations": [
-          "malie city outer cape"
+          "Malie City Outer Cape"
         ]
       }
     },
     "582": {
       "sun": {
         "locations": [
-          "tapu village area"
+          "Tapu Village"
         ]
       },
       "moon": {
         "locations": [
-          "tapu village area"
+          "Tapu Village"
         ]
       }
     },
     "583": {
       "sun": {
         "locations": [
-          "mount lanakila outside"
+          "Mount Lanakila Outside"
         ]
       },
       "moon": {
         "locations": [
-          "mount lanakila outside"
+          "Mount Lanakila Outside"
         ]
       }
     },
@@ -4584,138 +4589,138 @@
     "587": {
       "sun": {
         "locations": [
-          "poni plains west",
-          "poke pelago elite four defeated"
+          "Poni Plains West",
+          "Poke Pelago Elite Four Defeated"
         ]
       },
       "moon": {
         "locations": [
-          "poni plains west",
-          "poke pelago elite four defeated"
+          "Poni Plains West",
+          "Poke Pelago Elite Four Defeated"
         ]
       }
     },
     "594": {
       "sun": {
         "locations": [
-          "brooklet hill totems den"
+          "Brooklet Hill Totems Den"
         ]
       },
       "moon": {
         "locations": [
-          "brooklet hill totems den"
+          "Brooklet Hill Totems Den"
         ]
       }
     },
     "627": {
       "sun": {
         "locations": [
-          "alola route 3 north",
-          "poke pelago poni island reached",
-          "poke pelago ulaula island reached",
-          "poke pelago elite four defeated"
+          "Route 3 North",
+          "Poke Pelago Poni Island Reached",
+          "Poke Pelago Ulaula Island Reached",
+          "Poke Pelago Elite Four Defeated"
         ]
       }
     },
     "628": {
       "sun": {
         "locations": [
-          "poni plains north"
+          "Poni Plains North"
         ]
       }
     },
     "629": {
       "moon": {
         "locations": [
-          "alola route 3 north",
-          "poke pelago poni island reached",
-          "poke pelago ulaula island reached",
-          "poke pelago elite four defeated"
+          "Route 3 North",
+          "Poke Pelago Poni Island Reached",
+          "Poke Pelago Ulaula Island Reached",
+          "Poke Pelago Elite Four Defeated"
         ]
       }
     },
     "630": {
       "moon": {
         "locations": [
-          "poni plains north"
+          "Poni Plains North"
         ]
       }
     },
     "661": {
       "sun": {
         "locations": [
-          "wela volcano park area",
-          "poke pelago poni island reached",
-          "poke pelago ulaula island reached",
-          "poke pelago elite four defeated"
+          "Wela Volcano Park",
+          "Poke Pelago Poni Island Reached",
+          "Poke Pelago Ulaula Island Reached",
+          "Poke Pelago Elite Four Defeated"
         ]
       },
       "moon": {
         "locations": [
-          "wela volcano park area",
-          "poke pelago poni island reached",
-          "poke pelago ulaula island reached",
-          "poke pelago elite four defeated"
+          "Wela Volcano Park",
+          "Poke Pelago Poni Island Reached",
+          "Poke Pelago Ulaula Island Reached",
+          "Poke Pelago Elite Four Defeated"
         ]
       }
     },
     "662": {
       "sun": {
         "locations": [
-          "alola route 8 main"
+          "Route 8 Main"
         ]
       },
       "moon": {
         "locations": [
-          "alola route 8 main"
+          "Route 8 Main"
         ]
       }
     },
     "663": {
       "sun": {
         "locations": [
-          "poni gauntlet area"
+          "Poni Gauntlet"
         ]
       },
       "moon": {
         "locations": [
-          "poni gauntlet area"
+          "Poni Gauntlet"
         ]
       }
     },
     "674": {
       "sun": {
         "locations": [
-          "alola route 10 area",
-          "alola route 11 area",
-          "alola route 17 northeast",
-          "alola route 17 west"
+          "Route 10",
+          "Route 11",
+          "Route 17 Northeast",
+          "Route 17 West"
         ]
       },
       "moon": {
         "locations": [
-          "alola route 10 area",
-          "alola route 11 area",
-          "alola route 17 northeast",
-          "alola route 17 west"
+          "Route 10",
+          "Route 11",
+          "Route 17 Northeast",
+          "Route 17 West"
         ]
       }
     },
     "675": {
       "sun": {
         "locations": [
-          "alola route 10 area",
-          "alola route 11 area",
-          "alola route 17 northeast",
-          "alola route 17 west"
+          "Route 10",
+          "Route 11",
+          "Route 17 Northeast",
+          "Route 17 West"
         ]
       },
       "moon": {
         "locations": [
-          "alola route 10 area",
-          "alola route 11 area",
-          "alola route 17 northeast",
-          "alola route 17 west"
+          "Route 10",
+          "Route 11",
+          "Route 17 Northeast",
+          "Route 17 West"
         ]
       }
     },
@@ -4734,58 +4739,58 @@
     "703": {
       "sun": {
         "locations": [
-          "ten carat hill farthest hollow",
-          "ten carat hill inside",
-          "vast poni canyon inside",
-          "vast poni canyon northwest",
-          "vast poni canyon outside",
-          "poke pelago poni island reached",
-          "poke pelago ulaula island reached",
-          "poke pelago elite four defeated"
+          "Ten Carat Hill Farthest Hollow",
+          "Ten Carat Hill Inside",
+          "Vast Poni Canyon Inside",
+          "Vast Poni Canyon Northwest",
+          "Vast Poni Canyon Outside",
+          "Poke Pelago Poni Island Reached",
+          "Poke Pelago Ulaula Island Reached",
+          "Poke Pelago Elite Four Defeated"
         ]
       },
       "moon": {
         "locations": [
-          "ten carat hill farthest hollow",
-          "ten carat hill inside",
-          "vast poni canyon inside",
-          "vast poni canyon northwest",
-          "vast poni canyon outside",
-          "poke pelago poni island reached",
-          "poke pelago ulaula island reached",
-          "poke pelago elite four defeated"
+          "Ten Carat Hill Farthest Hollow",
+          "Ten Carat Hill Inside",
+          "Vast Poni Canyon Inside",
+          "Vast Poni Canyon Northwest",
+          "Vast Poni Canyon Outside",
+          "Poke Pelago Poni Island Reached",
+          "Poke Pelago Ulaula Island Reached",
+          "Poke Pelago Elite Four Defeated"
         ]
       }
     },
     "704": {
       "sun": {
         "locations": [
-          "alola route 17 northeast",
-          "alola route 17 west",
-          "lush jungle north",
-          "lush jungle south",
-          "lush jungle west"
+          "Route 17 Northeast",
+          "Route 17 West",
+          "Lush Jungle North",
+          "Lush Jungle South",
+          "Lush Jungle West"
         ]
       },
       "moon": {
         "locations": [
-          "alola route 17 northeast",
-          "alola route 17 west",
-          "lush jungle north",
-          "lush jungle south",
-          "lush jungle west"
+          "Route 17 Northeast",
+          "Route 17 West",
+          "Lush Jungle North",
+          "Lush Jungle South",
+          "Lush Jungle West"
         ]
       }
     },
     "705": {
       "sun": {
         "locations": [
-          "exeggutor island area"
+          "Exeggutor Island"
         ]
       },
       "moon": {
         "locations": [
-          "exeggutor island area"
+          "Exeggutor Island"
         ]
       }
     },
@@ -4804,68 +4809,68 @@
     "707": {
       "sun": {
         "locations": [
-          "thrifty megamart abandoned site",
-          "poke pelago poni island reached",
-          "poke pelago elite four defeated"
+          "Thrifty Megamart Abandoned Site",
+          "Poke Pelago Poni Island Reached",
+          "Poke Pelago Elite Four Defeated"
         ]
       },
       "moon": {
         "locations": [
-          "thrifty megamart abandoned site",
-          "poke pelago poni island reached",
-          "poke pelago elite four defeated"
+          "Thrifty Megamart Abandoned Site",
+          "Poke Pelago Poni Island Reached",
+          "Poke Pelago Elite Four Defeated"
         ]
       }
     },
     "708": {
       "sun": {
         "locations": [
-          "memorial hill area"
+          "Memorial Hill"
         ]
       },
       "moon": {
         "locations": [
-          "memorial hill area"
+          "Memorial Hill"
         ]
       }
     },
     "709": {
       "sun": {
         "locations": [
-          "poke pelago poni island reached",
-          "poke pelago ulaula island reached",
-          "poke pelago elite four defeated"
+          "Poke Pelago Poni Island Reached",
+          "Poke Pelago Ulaula Island Reached",
+          "Poke Pelago Elite Four Defeated"
         ]
       },
       "moon": {
         "locations": [
-          "poke pelago poni island reached",
-          "poke pelago ulaula island reached",
-          "poke pelago elite four defeated"
+          "Poke Pelago Poni Island Reached",
+          "Poke Pelago Ulaula Island Reached",
+          "Poke Pelago Elite Four Defeated"
         ]
       }
     },
     "718": {
       "sun": {
         "locations": [
-          "alola route 16 main"
+          "Route 16 Main"
         ]
       },
       "moon": {
         "locations": [
-          "alola route 16 main"
+          "Route 16 Main"
         ]
       }
     },
     "722": {
       "sun": {
         "locations": [
-          "iki town area"
+          "Iki Town"
         ]
       },
       "moon": {
         "locations": [
-          "iki town area"
+          "Iki Town"
         ]
       }
     },
@@ -4896,12 +4901,12 @@
     "725": {
       "sun": {
         "locations": [
-          "iki town area"
+          "Iki Town"
         ]
       },
       "moon": {
         "locations": [
-          "iki town area"
+          "Iki Town"
         ]
       }
     },
@@ -4932,12 +4937,12 @@
     "728": {
       "sun": {
         "locations": [
-          "iki town area"
+          "Iki Town"
         ]
       },
       "moon": {
         "locations": [
-          "iki town area"
+          "Iki Town"
         ]
       }
     },
@@ -4968,62 +4973,62 @@
     "731": {
       "sun": {
         "locations": [
-          "alola route 1 east",
-          "alola route 1 south",
-          "alola route 1 west",
-          "alola route 4 area",
-          "alola route 5 area",
-          "alola route 6 north",
-          "alola route 6 south",
-          "alola route 8 main",
-          "poke pelago poni island reached",
-          "poke pelago ulaula island reached",
-          "poke pelago elite four defeated"
+          "Route 1 East",
+          "Route 1 South",
+          "Route 1 West",
+          "Route 4",
+          "Route 5",
+          "Route 6 North",
+          "Route 6 South",
+          "Route 8 Main",
+          "Poke Pelago Poni Island Reached",
+          "Poke Pelago Ulaula Island Reached",
+          "Poke Pelago Elite Four Defeated"
         ]
       },
       "moon": {
         "locations": [
-          "alola route 1 east",
-          "alola route 1 south",
-          "alola route 1 west",
-          "alola route 4 area",
-          "alola route 5 area",
-          "alola route 6 north",
-          "alola route 6 south",
-          "alola route 8 main",
-          "poke pelago poni island reached",
-          "poke pelago ulaula island reached",
-          "poke pelago elite four defeated"
+          "Route 1 East",
+          "Route 1 South",
+          "Route 1 West",
+          "Route 4",
+          "Route 5",
+          "Route 6 North",
+          "Route 6 South",
+          "Route 8 Main",
+          "Poke Pelago Poni Island Reached",
+          "Poke Pelago Ulaula Island Reached",
+          "Poke Pelago Elite Four Defeated"
         ]
       }
     },
     "732": {
       "sun": {
         "locations": [
-          "alola route 8 main",
-          "alola route 11 area",
-          "lush jungle north",
-          "lush jungle south",
-          "lush jungle west",
-          "poni grove area",
-          "poni plains center",
-          "poni plains east",
-          "poni plains north",
-          "poni plains west"
+          "Route 8 Main",
+          "Route 11",
+          "Lush Jungle North",
+          "Lush Jungle South",
+          "Lush Jungle West",
+          "Poni Grove",
+          "Poni Plains Center",
+          "Poni Plains East",
+          "Poni Plains North",
+          "Poni Plains West"
         ]
       },
       "moon": {
         "locations": [
-          "alola route 8 main",
-          "alola route 11 area",
-          "lush jungle north",
-          "lush jungle south",
-          "lush jungle west",
-          "poni grove area",
-          "poni plains center",
-          "poni plains east",
-          "poni plains north",
-          "poni plains west"
+          "Route 8 Main",
+          "Route 11",
+          "Lush Jungle North",
+          "Lush Jungle South",
+          "Lush Jungle West",
+          "Poni Grove",
+          "Poni Plains Center",
+          "Poni Plains East",
+          "Poni Plains North",
+          "Poni Plains West"
         ]
       }
     },
@@ -5042,116 +5047,116 @@
     "734": {
       "sun": {
         "locations": [
-          "alola route 1 east",
-          "alola route 1 hauoli outskirts",
-          "alola route 1 south",
-          "alola route 1 west",
-          "alola route 2 north",
-          "alola route 2 south",
-          "alola route 3 north",
-          "alola route 3 south",
-          "alola route 4 area",
-          "alola route 6 north",
-          "alola route 6 south",
-          "alola route 8 main",
-          "hauoli city shopping district",
-          "kalae bay area"
+          "Route 1 East",
+          "Route 1 Hauoli Outskirts",
+          "Route 1 South",
+          "Route 1 West",
+          "Route 2 North",
+          "Route 2 South",
+          "Route 3 North",
+          "Route 3 South",
+          "Route 4",
+          "Route 6 North",
+          "Route 6 South",
+          "Route 8 Main",
+          "Hauoli City Shopping District",
+          "Kalae Bay"
         ]
       },
       "moon": {
         "locations": [
-          "alola route 1 east",
-          "alola route 1 hauoli outskirts",
-          "alola route 1 south",
-          "alola route 1 west",
-          "alola route 2 north",
-          "alola route 2 south",
-          "alola route 3 north",
-          "alola route 3 south",
-          "alola route 4 area",
-          "alola route 6 north",
-          "alola route 6 south",
-          "alola route 8 main",
-          "hauoli city shopping district",
-          "kalae bay area"
+          "Route 1 East",
+          "Route 1 Hauoli Outskirts",
+          "Route 1 South",
+          "Route 1 West",
+          "Route 2 North",
+          "Route 2 South",
+          "Route 3 North",
+          "Route 3 South",
+          "Route 4",
+          "Route 6 North",
+          "Route 6 South",
+          "Route 8 Main",
+          "Hauoli City Shopping District",
+          "Kalae Bay"
         ]
       }
     },
     "735": {
       "sun": {
         "locations": [
-          "alola route 10 area",
-          "alola route 11 area",
-          "alola route 14 area",
-          "alola route 15 main",
-          "alola route 16 main",
-          "alola route 17 northeast",
-          "alola route 17 west",
-          "akala outskirts area",
-          "ancient poni path area",
-          "malie city outer cape",
-          "poni gauntlet area",
-          "poni grove area",
-          "poni plains center",
-          "poni plains east",
-          "poni plains north",
-          "poni plains west",
-          "poni wilds area",
-          "tapu village area"
+          "Route 10",
+          "Route 11",
+          "Route 14",
+          "Route 15 Main",
+          "Route 16 Main",
+          "Route 17 Northeast",
+          "Route 17 West",
+          "Akala Outskirts",
+          "Ancient Poni Path",
+          "Malie City Outer Cape",
+          "Poni Gauntlet",
+          "Poni Grove",
+          "Poni Plains Center",
+          "Poni Plains East",
+          "Poni Plains North",
+          "Poni Plains West",
+          "Poni Wilds",
+          "Tapu Village"
         ]
       },
       "moon": {
         "locations": [
-          "alola route 10 area",
-          "alola route 11 area",
-          "alola route 14 area",
-          "alola route 15 main",
-          "alola route 16 main",
-          "alola route 17 northeast",
-          "alola route 17 west",
-          "akala outskirts area",
-          "ancient poni path area",
-          "malie city outer cape",
-          "poni gauntlet area",
-          "poni grove area",
-          "poni plains center",
-          "poni plains east",
-          "poni plains north",
-          "poni plains west",
-          "poni wilds area",
-          "tapu village area"
+          "Route 10",
+          "Route 11",
+          "Route 14",
+          "Route 15 Main",
+          "Route 16 Main",
+          "Route 17 Northeast",
+          "Route 17 West",
+          "Akala Outskirts",
+          "Ancient Poni Path",
+          "Malie City Outer Cape",
+          "Poni Gauntlet",
+          "Poni Grove",
+          "Poni Plains Center",
+          "Poni Plains East",
+          "Poni Plains North",
+          "Poni Plains West",
+          "Poni Wilds",
+          "Tapu Village"
         ]
       }
     },
     "736": {
       "sun": {
         "locations": [
-          "alola route 1 west",
-          "alola route 4 area",
-          "alola route 5 area",
-          "alola route 6 north",
-          "alola route 6 south"
+          "Route 1 West",
+          "Route 4",
+          "Route 5",
+          "Route 6 North",
+          "Route 6 South"
         ]
       },
       "moon": {
         "locations": [
-          "alola route 1 west",
-          "alola route 4 area",
-          "alola route 5 area",
-          "alola route 6 north",
-          "alola route 6 south"
+          "Route 1 West",
+          "Route 4",
+          "Route 5",
+          "Route 6 North",
+          "Route 6 South"
         ]
       }
     },
     "737": {
       "sun": {
         "locations": [
-          "blush mountain area"
+          "Blush Mountain"
         ]
       },
       "moon": {
         "locations": [
-          "blush mountain area"
+          "Blush Mountain"
         ]
       }
     },
@@ -5170,36 +5175,36 @@
     "739": {
       "sun": {
         "locations": [
-          "alola route 2 south",
-          "alola route 3 south",
-          "alola route 4 area",
-          "alola route 5 area",
-          "alola route 8 main",
-          "alola route 10 area",
-          "alola route 12 area",
-          "alola route 15 main",
-          "alola route 16 main",
-          "alola route 17 west",
-          "alola berry fields area",
-          "poni plains west",
-          "poni wilds area"
+          "Route 2 South",
+          "Route 3 South",
+          "Route 4",
+          "Route 5",
+          "Route 8 Main",
+          "Route 10",
+          "Route 12",
+          "Route 15 Main",
+          "Route 16 Main",
+          "Route 17 West",
+          "Berry Fields",
+          "Poni Plains West",
+          "Poni Wilds"
         ]
       },
       "moon": {
         "locations": [
-          "alola route 2 south",
-          "alola route 3 south",
-          "alola route 4 area",
-          "alola route 5 area",
-          "alola route 8 main",
-          "alola route 10 area",
-          "alola route 12 area",
-          "alola route 15 main",
-          "alola route 16 main",
-          "alola route 17 west",
-          "alola berry fields area",
-          "poni plains west",
-          "poni wilds area"
+          "Route 2 South",
+          "Route 3 South",
+          "Route 4",
+          "Route 5",
+          "Route 8 Main",
+          "Route 10",
+          "Route 12",
+          "Route 15 Main",
+          "Route 16 Main",
+          "Route 17 West",
+          "Berry Fields",
+          "Poni Plains West",
+          "Poni Wilds"
         ]
       }
     },
@@ -5218,114 +5223,114 @@
     "741": {
       "sun": {
         "locations": [
-          "ulaula meadow area"
+          "Ulaula Meadow"
         ]
       },
       "moon": {
         "locations": [
-          "ulaula meadow area"
+          "Ulaula Meadow"
         ]
       }
     },
     "742": {
       "sun": {
         "locations": [
-          "alola route 2 north",
-          "alola route 3 north",
-          "alola route 3 south",
-          "melemele meadow area"
+          "Route 2 North",
+          "Route 3 North",
+          "Route 3 South",
+          "Melemele Meadow"
         ]
       },
       "moon": {
         "locations": [
-          "alola route 2 north",
-          "alola route 3 north",
-          "alola route 3 south",
-          "melemele meadow area"
+          "Route 2 North",
+          "Route 3 North",
+          "Route 3 South",
+          "Melemele Meadow"
         ]
       }
     },
     "743": {
       "sun": {
         "locations": [
-          "poni meadow area",
-          "ulaula meadow area"
+          "Poni Meadow",
+          "Ulaula Meadow"
         ]
       },
       "moon": {
         "locations": [
-          "poni meadow area",
-          "ulaula meadow area"
+          "Poni Meadow",
+          "Ulaula Meadow"
         ]
       }
     },
     "744": {
       "sun": {
         "locations": [
-          "ten carat hill farthest hollow"
+          "Ten Carat Hill Farthest Hollow"
         ]
       },
       "moon": {
         "locations": [
-          "ten carat hill farthest hollow"
+          "Ten Carat Hill Farthest Hollow"
         ]
       }
     },
     "745": {
       "sun": {
         "locations": [
-          "vast poni canyon outside"
+          "Vast Poni Canyon Outside"
         ]
       },
       "moon": {
         "locations": [
-          "vast poni canyon outside"
+          "Vast Poni Canyon Outside"
         ]
       }
     },
     "746": {
       "sun": {
         "locations": [
-          "alola route 7 area",
-          "alola route 8 main",
-          "alola route 9 main",
-          "alola route 13 area",
-          "alola route 14 area",
-          "alola route 15 main",
-          "brooklet hill totems den",
-          "kalae bay area",
-          "melemele sea area",
-          "secluded shore area",
-          "tapu village area"
+          "Route 7",
+          "Route 8 Main",
+          "Route 9 Main",
+          "Route 13",
+          "Route 14",
+          "Route 15 Main",
+          "Brooklet Hill Totems Den",
+          "Kalae Bay",
+          "Melemele Sea",
+          "Secluded Shore",
+          "Tapu Village"
         ]
       },
       "moon": {
         "locations": [
-          "alola route 7 area",
-          "alola route 8 main",
-          "alola route 9 main",
-          "alola route 13 area",
-          "alola route 14 area",
-          "alola route 15 main",
-          "brooklet hill totems den",
-          "kalae bay area",
-          "melemele sea area",
-          "secluded shore area",
-          "tapu village area"
+          "Route 7",
+          "Route 8 Main",
+          "Route 9 Main",
+          "Route 13",
+          "Route 14",
+          "Route 15 Main",
+          "Brooklet Hill Totems Den",
+          "Kalae Bay",
+          "Melemele Sea",
+          "Secluded Shore",
+          "Tapu Village"
         ]
       }
     },
     "747": {
       "sun": {
         "locations": [
-          "alola route 9 main",
-          "melemele sea area"
+          "Route 9 Main",
+          "Melemele Sea"
         ]
       },
       "moon": {
         "locations": [
-          "alola route 9 main",
-          "melemele sea area"
+          "Route 9 Main",
+          "Melemele Sea"
         ]
       }
     },
@@ -5344,76 +5349,76 @@
     "749": {
       "sun": {
         "locations": [
-          "alola route 4 area",
-          "alola route 6 north",
-          "alola route 12 area",
-          "blush mountain area",
-          "paniola ranch area"
+          "Route 4",
+          "Route 6 North",
+          "Route 12",
+          "Blush Mountain",
+          "Paniola Ranch"
         ]
       },
       "moon": {
         "locations": [
-          "alola route 4 area",
-          "alola route 6 north",
-          "alola route 12 area",
-          "blush mountain area",
-          "paniola ranch area"
+          "Route 4",
+          "Route 6 North",
+          "Route 12",
+          "Blush Mountain",
+          "Paniola Ranch"
         ]
       }
     },
     "750": {
       "sun": {
         "locations": [
-          "poni plains west"
+          "Poni Plains West"
         ]
       },
       "moon": {
         "locations": [
-          "poni plains west"
+          "Poni Plains West"
         ]
       }
     },
     "751": {
       "sun": {
         "locations": [
-          "brooklet hill north",
-          "brooklet hill south"
+          "Brooklet Hill North",
+          "Brooklet Hill South"
         ]
       },
       "moon": {
         "locations": [
-          "brooklet hill north",
-          "brooklet hill south"
+          "Brooklet Hill North",
+          "Brooklet Hill South"
         ]
       }
     },
     "752": {
       "sun": {
         "locations": [
-          "malie garden area"
+          "Malie Garden"
         ]
       },
       "moon": {
         "locations": [
-          "malie garden area"
+          "Malie Garden"
         ]
       }
     },
     "753": {
       "sun": {
         "locations": [
-          "alola route 5 area",
-          "lush jungle north",
-          "lush jungle south",
-          "lush jungle west"
+          "Route 5",
+          "Lush Jungle North",
+          "Lush Jungle South",
+          "Lush Jungle West"
         ]
       },
       "moon": {
         "locations": [
-          "alola route 5 area",
-          "lush jungle north",
-          "lush jungle south",
-          "lush jungle west"
+          "Route 5",
+          "Lush Jungle North",
+          "Lush Jungle South",
+          "Lush Jungle West"
         ]
       }
     },
@@ -5432,20 +5437,20 @@
     "755": {
       "sun": {
         "locations": [
-          "alola route 11 area",
-          "brooklet hill north",
-          "lush jungle north",
-          "lush jungle south",
-          "lush jungle west"
+          "Route 11",
+          "Brooklet Hill North",
+          "Lush Jungle North",
+          "Lush Jungle South",
+          "Lush Jungle West"
         ]
       },
       "moon": {
         "locations": [
-          "alola route 11 area",
-          "brooklet hill north",
-          "lush jungle north",
-          "lush jungle south",
-          "lush jungle west"
+          "Route 11",
+          "Brooklet Hill North",
+          "Lush Jungle North",
+          "Lush Jungle South",
+          "Lush Jungle West"
         ]
       }
     },
@@ -5464,78 +5469,78 @@
     "757": {
       "sun": {
         "locations": [
-          "alola route 8 main",
-          "wela volcano park area"
+          "Route 8 Main",
+          "Wela Volcano Park"
         ]
       },
       "moon": {
         "locations": [
-          "alola route 8 main",
-          "wela volcano park area"
+          "Route 8 Main",
+          "Wela Volcano Park"
         ]
       }
     },
     "758": {
       "sun": {
         "locations": [
-          "Evolve Salanditfemale"
+          "Evolve Salandit"
         ]
       },
       "moon": {
         "locations": [
-          "Evolve Salanditfemale"
+          "Evolve Salandit"
         ]
       }
     },
     "759": {
       "sun": {
         "locations": [
-          "alola route 8 main",
-          "akala outskirts area"
+          "Route 8 Main",
+          "Akala Outskirts"
         ]
       },
       "moon": {
         "locations": [
-          "alola route 8 main",
-          "akala outskirts area"
+          "Route 8 Main",
+          "Akala Outskirts"
         ]
       }
     },
     "760": {
       "sun": {
         "locations": [
-          "poni gauntlet area"
+          "Poni Gauntlet"
         ]
       },
       "moon": {
         "locations": [
-          "poni gauntlet area"
+          "Poni Gauntlet"
         ]
       }
     },
     "761": {
       "sun": {
         "locations": [
-          "alola route 5 area",
-          "lush jungle west"
+          "Route 5",
+          "Lush Jungle West"
         ]
       },
       "moon": {
         "locations": [
-          "alola route 5 area",
-          "lush jungle west"
+          "Route 5",
+          "Lush Jungle West"
         ]
       }
     },
     "762": {
       "sun": {
         "locations": [
-          "seafolk village main"
+          "Seafolk Village Main"
         ]
       },
       "moon": {
         "locations": [
-          "seafolk village main"
+          "Seafolk Village Main"
         ]
       }
     },
@@ -5554,60 +5559,62 @@
     "764": {
       "sun": {
         "locations": [
-          "lush jungle north",
-          "lush jungle south",
-          "lush jungle west"
+          "Lush Jungle North",
+          "Lush Jungle South",
+          "Lush Jungle West"
         ]
       },
       "moon": {
         "locations": [
-          "lush jungle north",
-          "lush jungle south",
-          "lush jungle west"
+          "Lush Jungle North",
+          "Lush Jungle South",
+          "Lush Jungle West"
         ]
       }
     },
     "765": {
       "moon": {
         "locations": [
-          "lush jungle north",
-          "lush jungle south",
-          "lush jungle west"
+          "Lush Jungle North",
+          "Lush Jungle South",
+          "Lush Jungle West"
         ]
       },
       "sun": {
         "locations": [
-          "Trade, Event"
+          "Trade",
+          "Event"
         ]
       }
     },
     "766": {
       "sun": {
         "locations": [
-          "lush jungle north",
-          "lush jungle south",
-          "lush jungle west"
+          "Lush Jungle North",
+          "Lush Jungle South",
+          "Lush Jungle West"
         ]
       },
       "moon": {
         "locations": [
-          "Trade, Event"
+          "Trade",
+          "Event"
         ]
       }
     },
     "767": {
       "sun": {
         "locations": [
-          "alola route 8 main",
-          "poni breaker coast area",
-          "poni wilds area"
+          "Route 8 Main",
+          "Poni Breaker Coast",
+          "Poni Wilds"
         ]
       },
       "moon": {
         "locations": [
-          "alola route 8 main",
-          "poni breaker coast area",
-          "poni wilds area"
+          "Route 8 Main",
+          "Poni Breaker Coast",
+          "Poni Wilds"
         ]
       }
     },
@@ -5626,12 +5633,12 @@
     "769": {
       "sun": {
         "locations": [
-          "hano beach area"
+          "Hano Beach"
         ]
       },
       "moon": {
         "locations": [
-          "hano beach area"
+          "Hano Beach"
         ]
       }
     },
@@ -5650,32 +5657,32 @@
     "771": {
       "sun": {
         "locations": [
-          "alola route 7 area",
-          "hano beach area",
-          "poke pelago poni island reached",
-          "poke pelago ulaula island reached",
-          "poke pelago elite four defeated"
+          "Route 7",
+          "Hano Beach",
+          "Poke Pelago Poni Island Reached",
+          "Poke Pelago Ulaula Island Reached",
+          "Poke Pelago Elite Four Defeated"
         ]
       },
       "moon": {
         "locations": [
-          "alola route 7 area",
-          "hano beach area",
-          "poke pelago poni island reached",
-          "poke pelago ulaula island reached",
-          "poke pelago elite four defeated"
+          "Route 7",
+          "Hano Beach",
+          "Poke Pelago Poni Island Reached",
+          "Poke Pelago Ulaula Island Reached",
+          "Poke Pelago Elite Four Defeated"
         ]
       }
     },
     "772": {
       "sun": {
         "locations": [
-          "aether paradise 2f"
+          "Aether Paradise (2F)"
         ]
       },
       "moon": {
         "locations": [
-          "aether paradise 2f"
+          "Aether Paradise (2F)"
         ]
       }
     },
@@ -5694,200 +5701,202 @@
     "774": {
       "sun": {
         "locations": [
-          "mount hokulani main"
+          "Mount Hokulani Main"
         ]
       },
       "moon": {
         "locations": [
-          "mount hokulani main"
+          "Mount Hokulani Main"
         ]
       }
     },
     "775": {
       "sun": {
         "locations": [
-          "alola route 11 area"
+          "Route 11"
         ]
       },
       "moon": {
         "locations": [
-          "alola route 11 area"
+          "Route 11"
         ]
       }
     },
     "776": {
       "sun": {
         "locations": [
-          "blush mountain area"
+          "Blush Mountain"
         ]
       },
       "moon": {
         "locations": [
-          "Trade, Event"
+          "Trade",
+          "Event"
         ]
       }
     },
     "777": {
       "sun": {
         "locations": [
-          "blush mountain area"
+          "Blush Mountain"
         ]
       },
       "moon": {
         "locations": [
-          "blush mountain area"
+          "Blush Mountain"
         ]
       }
     },
     "778": {
       "sun": {
         "locations": [
-          "thrifty megamart abandoned site"
+          "Thrifty Megamart Abandoned Site"
         ]
       },
       "moon": {
         "locations": [
-          "thrifty megamart abandoned site"
+          "Thrifty Megamart Abandoned Site"
         ]
       }
     },
     "779": {
       "sun": {
         "locations": [
-          "alola route 13 area",
-          "alola route 14 area",
-          "alola route 15 main",
-          "secluded shore area",
-          "tapu village area"
+          "Route 13",
+          "Route 14",
+          "Route 15 Main",
+          "Secluded Shore",
+          "Tapu Village"
         ]
       },
       "moon": {
         "locations": [
-          "alola route 13 area",
-          "alola route 14 area",
-          "alola route 15 main",
-          "secluded shore area",
-          "tapu village area"
+          "Route 13",
+          "Route 14",
+          "Route 15 Main",
+          "Secluded Shore",
+          "Tapu Village"
         ]
       }
     },
     "780": {
       "moon": {
         "locations": [
-          "mount lanakila cave"
+          "Mount Lanakila Cave"
         ]
       },
       "sun": {
         "locations": [
-          "Trade, Event"
+          "Trade",
+          "Event"
         ]
       }
     },
     "781": {
       "sun": {
         "locations": [
-          "seafolk village main"
+          "Seafolk Village Main"
         ]
       },
       "moon": {
         "locations": [
-          "seafolk village main"
+          "Seafolk Village Main"
         ]
       }
     },
     "782": {
       "sun": {
         "locations": [
-          "vast poni canyon outside"
+          "Vast Poni Canyon Outside"
         ]
       },
       "moon": {
         "locations": [
-          "vast poni canyon outside"
+          "Vast Poni Canyon Outside"
         ]
       }
     },
     "783": {
       "sun": {
         "locations": [
-          "vast poni canyon outside"
+          "Vast Poni Canyon Outside"
         ]
       },
       "moon": {
         "locations": [
-          "vast poni canyon outside"
+          "Vast Poni Canyon Outside"
         ]
       }
     },
     "784": {
       "sun": {
         "locations": [
-          "vast poni canyon outside"
+          "Vast Poni Canyon Outside"
         ]
       },
       "moon": {
         "locations": [
-          "vast poni canyon outside"
+          "Vast Poni Canyon Outside"
         ]
       }
     },
     "785": {
       "sun": {
         "locations": [
-          "ruins of conflict area"
+          "Ruins Of Conflict"
         ]
       },
       "moon": {
         "locations": [
-          "ruins of conflict area"
+          "Ruins Of Conflict"
         ]
       }
     },
     "786": {
       "sun": {
         "locations": [
-          "ruins of life area"
+          "Ruins Of Life"
         ]
       },
       "moon": {
         "locations": [
-          "ruins of life area"
+          "Ruins Of Life"
         ]
       }
     },
     "787": {
       "sun": {
         "locations": [
-          "ruins of abundance area"
+          "Ruins Of Abundance"
         ]
       },
       "moon": {
         "locations": [
-          "ruins of abundance area"
+          "Ruins Of Abundance"
         ]
       }
     },
     "788": {
       "sun": {
         "locations": [
-          "ruins of hope area"
+          "Ruins Of Hope"
         ]
       },
       "moon": {
         "locations": [
-          "ruins of hope area"
+          "Ruins Of Hope"
         ]
       }
     },
     "789": {
       "moon": {
         "locations": [
-          "lake of the moone area"
+          "Lake Of The Moone"
         ]
       },
       "sun": {
         "locations": [
-          "lake of the sunne area"
+          "Lake Of The Sunne"
         ]
       }
     },
@@ -5906,97 +5915,96 @@
     "791": {
       "sun": {
         "locations": [
-          "altar of the sunne area"
+          "Altar Of The Sunne"
         ]
       }
     },
     "792": {
       "moon": {
         "locations": [
-          "altar of the moone area"
+          "Altar Of The Moone"
         ]
       }
     },
     "793": {
       "sun": {
         "locations": [
-          "digletts tunnel area",
-          "wela volcano park area"
+          "Digletts Tunnel",
+          "Wela Volcano Park"
         ]
       },
       "moon": {
         "locations": [
-          "digletts tunnel area",
-          "wela volcano park area"
+          "Digletts Tunnel",
+          "Wela Volcano Park"
         ]
       }
     },
     "794": {
       "sun": {
         "locations": [
-          "melemele meadow area"
+          "Melemele Meadow"
         ]
       }
     },
     "795": {
       "moon": {
         "locations": [
-          "verdant cavern trial site",
-          "verdant cavern  trial site area"
+          "Verdant Cavern Trial Site"
         ]
       }
     },
     "796": {
       "sun": {
         "locations": [
-          "memorial hill area",
-          "lush jungle all areas"
+          "Memorial Hill",
+          "Lush Jungle All Areas"
         ]
       },
       "moon": {
         "locations": [
-          "memorial hill area",
-          "lush jungle all areas"
+          "Memorial Hill",
+          "Lush Jungle All Areas"
         ]
       }
     },
     "797": {
       "moon": {
         "locations": [
-          "haina desert area",
-          "malie garden area"
+          "Haina Desert",
+          "Malie Garden"
         ]
       }
     },
     "798": {
       "sun": {
         "locations": [
-          "malie garden area",
-          "alola route 17 all areas"
+          "Malie Garden",
+          "Route 17 All Areas"
         ]
       }
     },
     "799": {
       "sun": {
         "locations": [
-          "resolution cave area"
+          "Resolution Cave"
         ]
       },
       "moon": {
         "locations": [
-          "resolution cave area"
+          "Resolution Cave"
         ]
       }
     },
     "800": {
       "sun": {
         "locations": [
-          "ten carat hill farthest hollow"
+          "Ten Carat Hill Farthest Hollow"
         ]
       },
       "moon": {
         "locations": [
-          "ten carat hill farthest hollow"
+          "Ten Carat Hill Farthest Hollow"
         ]
       }
     },

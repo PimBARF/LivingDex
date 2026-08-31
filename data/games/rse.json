@@ -15,6 +15,7 @@
       "type": "base",
       "optional": false,
       "defaultEnabled": false,
+      "startIndex": 1,
       "entries": [
         {
           "speciesId": 252,
@@ -1033,23 +1034,23 @@
     "25": {
       "ruby": {
         "locations": [
-          "hoenn safari zone sw",
-          "hoenn safari zone se",
-          "hoenn pokecenter area"
+          "Safari Zone Sw",
+          "Safari Zone Se",
+          "Pokecenter"
         ]
       },
       "sapphire": {
         "locations": [
-          "hoenn safari zone sw",
-          "hoenn safari zone se",
-          "hoenn pokecenter area"
+          "Safari Zone Sw",
+          "Safari Zone Se",
+          "Pokecenter"
         ]
       },
       "emerald": {
         "locations": [
-          "hoenn safari zone sw",
-          "hoenn safari zone se",
-          "hoenn pokecenter area"
+          "Safari Zone Sw",
+          "Safari Zone Se",
+          "Pokecenter"
         ]
       }
     },
@@ -1073,20 +1074,20 @@
     "27": {
       "ruby": {
         "locations": [
-          "hoenn route 111 area",
-          "hoenn route 113 area"
+          "Route 111",
+          "Route 113"
         ]
       },
       "sapphire": {
         "locations": [
-          "hoenn route 111 area",
-          "hoenn route 113 area"
+          "Route 111",
+          "Route 113"
         ]
       },
       "emerald": {
         "locations": [
-          "hoenn route 111 area",
-          "mirage tower area"
+          "Route 111",
+          "Mirage Tower"
         ]
       }
     },
@@ -1110,17 +1111,17 @@
     "37": {
       "ruby": {
         "locations": [
-          "mt pyre outside"
+          "Mt. Pyre Outside"
         ]
       },
       "sapphire": {
         "locations": [
-          "mt pyre outside"
+          "Mt. Pyre Outside"
         ]
       },
       "emerald": {
         "locations": [
-          "mt pyre outside"
+          "Mt. Pyre Outside"
         ]
       }
     },
@@ -1144,17 +1145,17 @@
     "39": {
       "ruby": {
         "locations": [
-          "hoenn route 115 area"
+          "Route 115"
         ]
       },
       "sapphire": {
         "locations": [
-          "hoenn route 115 area"
+          "Route 115"
         ]
       },
       "emerald": {
         "locations": [
-          "hoenn route 115 area"
+          "Route 115"
         ]
       }
     },
@@ -1178,216 +1179,216 @@
     "41": {
       "ruby": {
         "locations": [
-          "meteor falls area",
-          "granite cave 1f",
-          "granite cave b1f",
-          "granite cave b2f",
-          "granite cave 1fsmall room",
-          "seafloor cavern area",
-          "cave of origin entrance",
-          "cave of origin 1f",
-          "cave of origin b1f",
-          "cave of origin b2f",
-          "cave of origin b3f",
-          "hoenn victory road 1f",
-          "shoal cave high tide",
-          "shoal cave b1f",
-          "shoal cave low tide",
-          "shoal cave b2f",
-          "shoal cave b3f"
+          "Meteor Falls",
+          "Granite Cave (1F)",
+          "Granite Cave (B1F)",
+          "Granite Cave (B2F)",
+          "Granite Cave 1fsmall Room",
+          "Seafloor Cavern",
+          "Cave Of Origin Entrance",
+          "Cave Of Origin (1F)",
+          "Cave Of Origin (B1F)",
+          "Cave Of Origin (B2F)",
+          "Cave Of Origin (B3F)",
+          "Victory Road (1F)",
+          "Shoal Cave High Tide",
+          "Shoal Cave (B1F)",
+          "Shoal Cave Low Tide",
+          "Shoal Cave (B2F)",
+          "Shoal Cave (B3F)"
         ]
       },
       "sapphire": {
         "locations": [
-          "meteor falls area",
-          "granite cave 1f",
-          "granite cave b1f",
-          "granite cave b2f",
-          "granite cave 1fsmall room",
-          "seafloor cavern area",
-          "cave of origin entrance",
-          "cave of origin 1f",
-          "cave of origin b1f",
-          "cave of origin b2f",
-          "cave of origin b3f",
-          "hoenn victory road 1f",
-          "shoal cave high tide",
-          "shoal cave b1f",
-          "shoal cave low tide",
-          "shoal cave b2f",
-          "shoal cave b3f"
+          "Meteor Falls",
+          "Granite Cave (1F)",
+          "Granite Cave (B1F)",
+          "Granite Cave (B2F)",
+          "Granite Cave 1fsmall Room",
+          "Seafloor Cavern",
+          "Cave Of Origin Entrance",
+          "Cave Of Origin (1F)",
+          "Cave Of Origin (B1F)",
+          "Cave Of Origin (B2F)",
+          "Cave Of Origin (B3F)",
+          "Victory Road (1F)",
+          "Shoal Cave High Tide",
+          "Shoal Cave (B1F)",
+          "Shoal Cave Low Tide",
+          "Shoal Cave (B2F)",
+          "Shoal Cave (B3F)"
         ]
       },
       "emerald": {
         "locations": [
-          "meteor falls area",
-          "granite cave 1f",
-          "granite cave b1f",
-          "granite cave b2f",
-          "granite cave 1fsmall room",
-          "seafloor cavern area",
-          "cave of origin entrance",
-          "cave of origin 1f",
-          "cave of origin b1f",
-          "cave of origin b2f",
-          "cave of origin b3f",
-          "hoenn victory road 1f",
-          "shoal cave high tide",
-          "shoal cave b1f",
-          "hoenn altering cave area",
-          "shoal cave low tide",
-          "shoal cave b2f",
-          "shoal cave b3f"
+          "Meteor Falls",
+          "Granite Cave (1F)",
+          "Granite Cave (B1F)",
+          "Granite Cave (B2F)",
+          "Granite Cave 1fsmall Room",
+          "Seafloor Cavern",
+          "Cave Of Origin Entrance",
+          "Cave Of Origin (1F)",
+          "Cave Of Origin (B1F)",
+          "Cave Of Origin (B2F)",
+          "Cave Of Origin (B3F)",
+          "Victory Road (1F)",
+          "Shoal Cave High Tide",
+          "Shoal Cave (B1F)",
+          "Altering Cave",
+          "Shoal Cave Low Tide",
+          "Shoal Cave (B2F)",
+          "Shoal Cave (B3F)"
         ]
       }
     },
     "42": {
       "ruby": {
         "locations": [
-          "meteor falls back",
-          "meteor falls b1f",
-          "meteor falls backsmall room",
-          "seafloor cavern area",
-          "cave of origin entrance",
-          "cave of origin 1f",
-          "cave of origin b1f",
-          "cave of origin b2f",
-          "cave of origin b3f",
-          "hoenn victory road 1f",
-          "hoenn victory road b1f",
-          "hoenn victory road b2f",
-          "shoal cave high tide",
-          "shoal cave b1f",
-          "sky pillar 1f",
-          "sky pillar 3f",
-          "sky pillar 5f",
-          "shoal cave low tide",
-          "shoal cave b2f",
-          "shoal cave b3f"
+          "Meteor Falls Back",
+          "Meteor Falls (B1F)",
+          "Meteor Falls Backsmall Room",
+          "Seafloor Cavern",
+          "Cave Of Origin Entrance",
+          "Cave Of Origin (1F)",
+          "Cave Of Origin (B1F)",
+          "Cave Of Origin (B2F)",
+          "Cave Of Origin (B3F)",
+          "Victory Road (1F)",
+          "Victory Road (B1F)",
+          "Victory Road (B2F)",
+          "Shoal Cave High Tide",
+          "Shoal Cave (B1F)",
+          "Sky Pillar (1F)",
+          "Sky Pillar (3F)",
+          "Sky Pillar (5F)",
+          "Shoal Cave Low Tide",
+          "Shoal Cave (B2F)",
+          "Shoal Cave (B3F)"
         ]
       },
       "sapphire": {
         "locations": [
-          "meteor falls back",
-          "meteor falls b1f",
-          "meteor falls backsmall room",
-          "seafloor cavern area",
-          "cave of origin entrance",
-          "cave of origin 1f",
-          "cave of origin b1f",
-          "cave of origin b2f",
-          "cave of origin b3f",
-          "hoenn victory road 1f",
-          "hoenn victory road b1f",
-          "hoenn victory road b2f",
-          "shoal cave high tide",
-          "shoal cave b1f",
-          "sky pillar 1f",
-          "sky pillar 3f",
-          "sky pillar 5f",
-          "shoal cave low tide",
-          "shoal cave b2f",
-          "shoal cave b3f"
+          "Meteor Falls Back",
+          "Meteor Falls (B1F)",
+          "Meteor Falls Backsmall Room",
+          "Seafloor Cavern",
+          "Cave Of Origin Entrance",
+          "Cave Of Origin (1F)",
+          "Cave Of Origin (B1F)",
+          "Cave Of Origin (B2F)",
+          "Cave Of Origin (B3F)",
+          "Victory Road (1F)",
+          "Victory Road (B1F)",
+          "Victory Road (B2F)",
+          "Shoal Cave High Tide",
+          "Shoal Cave (B1F)",
+          "Sky Pillar (1F)",
+          "Sky Pillar (3F)",
+          "Sky Pillar (5F)",
+          "Shoal Cave Low Tide",
+          "Shoal Cave (B2F)",
+          "Shoal Cave (B3F)"
         ]
       },
       "emerald": {
         "locations": [
-          "meteor falls back",
-          "meteor falls b1f",
-          "meteor falls backsmall room",
-          "seafloor cavern area",
-          "cave of origin entrance",
-          "cave of origin 1f",
-          "cave of origin b1f",
-          "cave of origin b2f",
-          "cave of origin b3f",
-          "hoenn victory road 1f",
-          "hoenn victory road b1f",
-          "hoenn victory road b2f",
-          "shoal cave high tide",
-          "shoal cave b1f",
-          "sky pillar 1f",
-          "sky pillar 3f",
-          "sky pillar 5f",
-          "shoal cave low tide",
-          "shoal cave b2f",
-          "shoal cave b3f"
+          "Meteor Falls Back",
+          "Meteor Falls (B1F)",
+          "Meteor Falls Backsmall Room",
+          "Seafloor Cavern",
+          "Cave Of Origin Entrance",
+          "Cave Of Origin (1F)",
+          "Cave Of Origin (B1F)",
+          "Cave Of Origin (B2F)",
+          "Cave Of Origin (B3F)",
+          "Victory Road (1F)",
+          "Victory Road (B1F)",
+          "Victory Road (B2F)",
+          "Shoal Cave High Tide",
+          "Shoal Cave (B1F)",
+          "Sky Pillar (1F)",
+          "Sky Pillar (3F)",
+          "Sky Pillar (5F)",
+          "Shoal Cave Low Tide",
+          "Shoal Cave (B2F)",
+          "Shoal Cave (B3F)"
         ]
       }
     },
     "43": {
       "ruby": {
         "locations": [
-          "hoenn route 110 area",
-          "hoenn route 117 area",
-          "hoenn route 119 area",
-          "hoenn route 120 area",
-          "hoenn route 121 area",
-          "hoenn route 123 area",
-          "hoenn safari zone nwmach bike area",
-          "hoenn safari zone neacro bike area",
-          "hoenn safari zone sw",
-          "hoenn safari zone se"
+          "Route 110",
+          "Route 117",
+          "Route 119",
+          "Route 120",
+          "Route 121",
+          "Route 123",
+          "Safari Zone Nwmach Bike",
+          "Safari Zone Neacro Bike",
+          "Safari Zone Sw",
+          "Safari Zone Se"
         ]
       },
       "sapphire": {
         "locations": [
-          "hoenn route 110 area",
-          "hoenn route 117 area",
-          "hoenn route 119 area",
-          "hoenn route 120 area",
-          "hoenn route 121 area",
-          "hoenn route 123 area",
-          "hoenn safari zone nwmach bike area",
-          "hoenn safari zone neacro bike area",
-          "hoenn safari zone sw",
-          "hoenn safari zone se"
+          "Route 110",
+          "Route 117",
+          "Route 119",
+          "Route 120",
+          "Route 121",
+          "Route 123",
+          "Safari Zone Nwmach Bike",
+          "Safari Zone Neacro Bike",
+          "Safari Zone Sw",
+          "Safari Zone Se"
         ]
       },
       "emerald": {
         "locations": [
-          "hoenn route 110 area",
-          "hoenn route 117 area",
-          "hoenn route 119 area",
-          "hoenn route 120 area",
-          "hoenn route 121 area",
-          "hoenn route 123 area",
-          "hoenn safari zone nwmach bike area",
-          "hoenn safari zone neacro bike area",
-          "hoenn safari zone sw",
-          "hoenn safari zone se"
+          "Route 110",
+          "Route 117",
+          "Route 119",
+          "Route 120",
+          "Route 121",
+          "Route 123",
+          "Safari Zone Nwmach Bike",
+          "Safari Zone Neacro Bike",
+          "Safari Zone Sw",
+          "Safari Zone Se"
         ]
       }
     },
     "44": {
       "ruby": {
         "locations": [
-          "hoenn route 121 area",
-          "hoenn route 123 area",
-          "hoenn safari zone nwmach bike area",
-          "hoenn safari zone neacro bike area",
-          "hoenn safari zone sw",
-          "hoenn safari zone se"
+          "Route 121",
+          "Route 123",
+          "Safari Zone Nwmach Bike",
+          "Safari Zone Neacro Bike",
+          "Safari Zone Sw",
+          "Safari Zone Se"
         ]
       },
       "sapphire": {
         "locations": [
-          "hoenn route 121 area",
-          "hoenn route 123 area",
-          "hoenn safari zone nwmach bike area",
-          "hoenn safari zone neacro bike area",
-          "hoenn safari zone sw",
-          "hoenn safari zone se"
+          "Route 121",
+          "Route 123",
+          "Safari Zone Nwmach Bike",
+          "Safari Zone Neacro Bike",
+          "Safari Zone Sw",
+          "Safari Zone Se"
         ]
       },
       "emerald": {
         "locations": [
-          "hoenn route 121 area",
-          "hoenn route 123 area",
-          "hoenn safari zone nwmach bike area",
-          "hoenn safari zone neacro bike area",
-          "hoenn safari zone sw",
-          "hoenn safari zone se"
+          "Route 121",
+          "Route 123",
+          "Safari Zone Nwmach Bike",
+          "Safari Zone Neacro Bike",
+          "Safari Zone Sw",
+          "Safari Zone Se"
         ]
       }
     },
@@ -1411,64 +1412,64 @@
     "54": {
       "ruby": {
         "locations": [
-          "hoenn safari zone nwmach bike area",
-          "hoenn safari zone sw"
+          "Safari Zone Nwmach Bike",
+          "Safari Zone Sw"
         ]
       },
       "sapphire": {
         "locations": [
-          "hoenn safari zone nwmach bike area",
-          "hoenn safari zone sw"
+          "Safari Zone Nwmach Bike",
+          "Safari Zone Sw"
         ]
       },
       "emerald": {
         "locations": [
-          "hoenn safari zone nwmach bike area",
-          "hoenn safari zone sw"
+          "Safari Zone Nwmach Bike",
+          "Safari Zone Sw"
         ]
       }
     },
     "55": {
       "ruby": {
         "locations": [
-          "hoenn safari zone nwmach bike area"
+          "Safari Zone Nwmach Bike"
         ]
       },
       "sapphire": {
         "locations": [
-          "hoenn safari zone nwmach bike area"
+          "Safari Zone Nwmach Bike"
         ]
       },
       "emerald": {
         "locations": [
-          "hoenn safari zone nwmach bike area"
+          "Safari Zone Nwmach Bike"
         ]
       }
     },
     "63": {
       "ruby": {
         "locations": [
-          "granite cave 1f",
-          "granite cave b1f",
-          "granite cave b2f",
-          "granite cave 1fsmall room"
+          "Granite Cave (1F)",
+          "Granite Cave (B1F)",
+          "Granite Cave (B2F)",
+          "Granite Cave 1fsmall Room"
         ]
       },
       "sapphire": {
         "locations": [
-          "granite cave 1f",
-          "granite cave b1f",
-          "granite cave b2f",
-          "granite cave 1fsmall room"
+          "Granite Cave (1F)",
+          "Granite Cave (B1F)",
+          "Granite Cave (B2F)",
+          "Granite Cave 1fsmall Room"
         ]
       },
       "emerald": {
         "locations": [
-          "granite cave 1f",
-          "granite cave b1f",
-          "granite cave b2f",
-          "granite cave 1fsmall room",
-          "hoenn route 116 area"
+          "Granite Cave (1F)",
+          "Granite Cave (B1F)",
+          "Granite Cave (B2F)",
+          "Granite Cave 1fsmall Room",
+          "Route 116"
         ]
       }
     },
@@ -1509,22 +1510,22 @@
     "66": {
       "ruby": {
         "locations": [
-          "jagged pass area",
-          "fiery path area",
-          "hoenn route 112 area"
+          "Jagged Pass",
+          "Fiery Path",
+          "Route 112"
         ]
       },
       "sapphire": {
         "locations": [
-          "jagged pass area",
-          "fiery path area",
-          "hoenn route 112 area"
+          "Jagged Pass",
+          "Fiery Path",
+          "Route 112"
         ]
       },
       "emerald": {
         "locations": [
-          "jagged pass area",
-          "fiery path area"
+          "Jagged Pass",
+          "Fiery Path"
         ]
       }
     },
@@ -1565,183 +1566,183 @@
     "72": {
       "ruby": {
         "locations": [
-          "slateport city area",
-          "lilycove city area",
-          "mossdeep city area",
-          "ever grande city area",
-          "seafloor cavern area",
-          "shoal cave high tide",
-          "abandoned ship area",
-          "hoenn route 103 area",
-          "hoenn route 105 area",
-          "hoenn route 106 area",
-          "hoenn route 107 area",
-          "hoenn route 108 area",
-          "hoenn route 109 area",
-          "hoenn route 110 area",
-          "hoenn route 115 area",
-          "hoenn route 118 area",
-          "hoenn route 119 area",
-          "hoenn route 121 area",
-          "hoenn route 122 area",
-          "hoenn route 123 area",
-          "hoenn route 124 area",
-          "hoenn route 125 area",
-          "hoenn route 126 area",
-          "hoenn route 127 area",
-          "hoenn route 128 area",
-          "hoenn route 129 area",
-          "hoenn route 130 area",
-          "hoenn route 131 area",
-          "hoenn route 132 area",
-          "hoenn route 133 area",
-          "hoenn route 134 area",
-          "dewford town area",
-          "pacifidlog town area"
+          "Slateport City",
+          "Lilycove City",
+          "Mossdeep City",
+          "Ever Grande City",
+          "Seafloor Cavern",
+          "Shoal Cave High Tide",
+          "Abandoned Ship",
+          "Route 103",
+          "Route 105",
+          "Route 106",
+          "Route 107",
+          "Route 108",
+          "Route 109",
+          "Route 110",
+          "Route 115",
+          "Route 118",
+          "Route 119",
+          "Route 121",
+          "Route 122",
+          "Route 123",
+          "Route 124",
+          "Route 125",
+          "Route 126",
+          "Route 127",
+          "Route 128",
+          "Route 129",
+          "Route 130",
+          "Route 131",
+          "Route 132",
+          "Route 133",
+          "Route 134",
+          "Dewford Town",
+          "Pacifidlog Town"
         ]
       },
       "sapphire": {
         "locations": [
-          "slateport city area",
-          "lilycove city area",
-          "mossdeep city area",
-          "sootopolis city area",
-          "ever grande city area",
-          "seafloor cavern area",
-          "shoal cave high tide",
-          "abandoned ship area",
-          "hoenn route 103 area",
-          "hoenn route 105 area",
-          "hoenn route 106 area",
-          "hoenn route 107 area",
-          "hoenn route 108 area",
-          "hoenn route 109 area",
-          "hoenn route 110 area",
-          "hoenn route 115 area",
-          "hoenn route 118 area",
-          "hoenn route 119 area",
-          "hoenn route 121 area",
-          "hoenn route 122 area",
-          "hoenn route 123 area",
-          "hoenn route 124 area",
-          "hoenn route 125 area",
-          "hoenn route 126 area",
-          "hoenn route 127 area",
-          "hoenn route 128 area",
-          "hoenn route 129 area",
-          "hoenn route 130 area",
-          "hoenn route 131 area",
-          "hoenn route 132 area",
-          "hoenn route 133 area",
-          "hoenn route 134 area",
-          "dewford town area",
-          "pacifidlog town area"
+          "Slateport City",
+          "Lilycove City",
+          "Mossdeep City",
+          "Sootopolis City",
+          "Ever Grande City",
+          "Seafloor Cavern",
+          "Shoal Cave High Tide",
+          "Abandoned Ship",
+          "Route 103",
+          "Route 105",
+          "Route 106",
+          "Route 107",
+          "Route 108",
+          "Route 109",
+          "Route 110",
+          "Route 115",
+          "Route 118",
+          "Route 119",
+          "Route 121",
+          "Route 122",
+          "Route 123",
+          "Route 124",
+          "Route 125",
+          "Route 126",
+          "Route 127",
+          "Route 128",
+          "Route 129",
+          "Route 130",
+          "Route 131",
+          "Route 132",
+          "Route 133",
+          "Route 134",
+          "Dewford Town",
+          "Pacifidlog Town"
         ]
       },
       "emerald": {
         "locations": [
-          "slateport city area",
-          "lilycove city area",
-          "mossdeep city area",
-          "sootopolis city area",
-          "ever grande city area",
-          "seafloor cavern area",
-          "shoal cave high tide",
-          "abandoned ship area",
-          "hoenn route 103 area",
-          "hoenn route 105 area",
-          "hoenn route 106 area",
-          "hoenn route 107 area",
-          "hoenn route 108 area",
-          "hoenn route 109 area",
-          "hoenn route 110 area",
-          "hoenn route 115 area",
-          "hoenn route 118 area",
-          "hoenn route 119 area",
-          "hoenn route 121 area",
-          "hoenn route 122 area",
-          "hoenn route 123 area",
-          "hoenn route 124 area",
-          "hoenn route 125 area",
-          "hoenn route 126 area",
-          "hoenn route 127 area",
-          "hoenn route 128 area",
-          "hoenn route 129 area",
-          "hoenn route 130 area",
-          "hoenn route 131 area",
-          "hoenn route 132 area",
-          "hoenn route 133 area",
-          "hoenn route 134 area",
-          "dewford town area",
-          "pacifidlog town area"
+          "Slateport City",
+          "Lilycove City",
+          "Mossdeep City",
+          "Sootopolis City",
+          "Ever Grande City",
+          "Seafloor Cavern",
+          "Shoal Cave High Tide",
+          "Abandoned Ship",
+          "Route 103",
+          "Route 105",
+          "Route 106",
+          "Route 107",
+          "Route 108",
+          "Route 109",
+          "Route 110",
+          "Route 115",
+          "Route 118",
+          "Route 119",
+          "Route 121",
+          "Route 122",
+          "Route 123",
+          "Route 124",
+          "Route 125",
+          "Route 126",
+          "Route 127",
+          "Route 128",
+          "Route 129",
+          "Route 130",
+          "Route 131",
+          "Route 132",
+          "Route 133",
+          "Route 134",
+          "Dewford Town",
+          "Pacifidlog Town"
         ]
       }
     },
     "73": {
       "ruby": {
         "locations": [
-          "abandoned ship area"
+          "Abandoned Ship"
         ]
       },
       "sapphire": {
         "locations": [
-          "abandoned ship area"
+          "Abandoned Ship"
         ]
       },
       "emerald": {
         "locations": [
-          "abandoned ship area"
+          "Abandoned Ship"
         ]
       }
     },
     "74": {
       "ruby": {
         "locations": [
-          "granite cave 1f",
-          "granite cave b2f",
-          "hoenn victory road b1f",
-          "hoenn route 111 area",
-          "hoenn route 114 area",
-          "hoenn safari zone neacro bike area"
+          "Granite Cave (1F)",
+          "Granite Cave (B2F)",
+          "Victory Road (B1F)",
+          "Route 111",
+          "Route 114",
+          "Safari Zone Neacro Bike"
         ]
       },
       "sapphire": {
         "locations": [
-          "granite cave 1f",
-          "granite cave b2f",
-          "hoenn victory road b1f",
-          "hoenn route 111 area",
-          "hoenn route 114 area",
-          "hoenn safari zone neacro bike area"
+          "Granite Cave (1F)",
+          "Granite Cave (B2F)",
+          "Victory Road (B1F)",
+          "Route 111",
+          "Route 114",
+          "Safari Zone Neacro Bike"
         ]
       },
       "emerald": {
         "locations": [
-          "granite cave 1f",
-          "granite cave b2f",
-          "hoenn victory road b1f",
-          "hoenn route 111 area",
-          "hoenn route 114 area",
-          "hoenn safari zone neacro bike area",
-          "magma hideout area"
+          "Granite Cave (1F)",
+          "Granite Cave (B2F)",
+          "Victory Road (B1F)",
+          "Route 111",
+          "Route 114",
+          "Safari Zone Neacro Bike",
+          "Magma Hideout"
         ]
       }
     },
     "75": {
       "ruby": {
         "locations": [
-          "hoenn victory road b1f"
+          "Victory Road (B1F)"
         ]
       },
       "sapphire": {
         "locations": [
-          "hoenn victory road b1f"
+          "Victory Road (B1F)"
         ]
       },
       "emerald": {
         "locations": [
-          "hoenn victory road b1f",
-          "magma hideout area"
+          "Victory Road (B1F)",
+          "Magma Hideout"
         ]
       }
     },
@@ -1765,94 +1766,94 @@
     "81": {
       "ruby": {
         "locations": [
-          "new mauville entrance",
-          "new mauville area"
+          "New Mauville Entrance",
+          "New Mauville"
         ]
       },
       "sapphire": {
         "locations": [
-          "new mauville entrance",
-          "new mauville area"
+          "New Mauville Entrance",
+          "New Mauville"
         ]
       },
       "emerald": {
         "locations": [
-          "new mauville entrance",
-          "new mauville area"
+          "New Mauville Entrance",
+          "New Mauville"
         ]
       }
     },
     "82": {
       "ruby": {
         "locations": [
-          "new mauville area"
+          "New Mauville"
         ]
       },
       "sapphire": {
         "locations": [
-          "new mauville area"
+          "New Mauville"
         ]
       },
       "emerald": {
         "locations": [
-          "new mauville area"
+          "New Mauville"
         ]
       }
     },
     "84": {
       "ruby": {
         "locations": [
-          "hoenn safari zone nwmach bike area",
-          "hoenn safari zone sw",
-          "hoenn safari zone se"
+          "Safari Zone Nwmach Bike",
+          "Safari Zone Sw",
+          "Safari Zone Se"
         ]
       },
       "sapphire": {
         "locations": [
-          "hoenn safari zone nwmach bike area",
-          "hoenn safari zone sw",
-          "hoenn safari zone se"
+          "Safari Zone Nwmach Bike",
+          "Safari Zone Sw",
+          "Safari Zone Se"
         ]
       },
       "emerald": {
         "locations": [
-          "hoenn safari zone nwmach bike area",
-          "hoenn safari zone sw",
-          "hoenn safari zone se"
+          "Safari Zone Nwmach Bike",
+          "Safari Zone Sw",
+          "Safari Zone Se"
         ]
       }
     },
     "85": {
       "ruby": {
         "locations": [
-          "hoenn safari zone nwmach bike area"
+          "Safari Zone Nwmach Bike"
         ]
       },
       "sapphire": {
         "locations": [
-          "hoenn safari zone nwmach bike area"
+          "Safari Zone Nwmach Bike"
         ]
       },
       "emerald": {
         "locations": [
-          "hoenn safari zone nwmach bike area"
+          "Safari Zone Nwmach Bike"
         ]
       }
     },
     "88": {
       "ruby": {
         "locations": [
-          "fiery path area"
+          "Fiery Path"
         ]
       },
       "sapphire": {
         "locations": [
-          "fiery path area"
+          "Fiery Path"
         ]
       },
       "emerald": {
         "locations": [
-          "fiery path area"
+          "Fiery Path"
         ]
       }
     },
@@ -1876,59 +1877,59 @@
     "100": {
       "ruby": {
         "locations": [
-          "new mauville entrance",
-          "new mauville area"
+          "New Mauville Entrance",
+          "New Mauville"
         ]
       },
       "sapphire": {
         "locations": [
-          "new mauville entrance",
-          "new mauville area"
+          "New Mauville Entrance",
+          "New Mauville"
         ]
       },
       "emerald": {
         "locations": [
-          "new mauville entrance",
-          "new mauville area"
+          "New Mauville Entrance",
+          "New Mauville"
         ]
       }
     },
     "101": {
       "ruby": {
         "locations": [
-          "new mauville area",
-          "team magma hideout area"
+          "New Mauville",
+          "Team Magma Hideout"
         ]
       },
       "sapphire": {
         "locations": [
-          "new mauville area",
-          "team aqua hideout area",
-          "team magma hideout area"
+          "New Mauville",
+          "Team Aqua Hideout",
+          "Team Magma Hideout"
         ]
       },
       "emerald": {
         "locations": [
-          "new mauville area",
-          "team aqua hideout area",
-          "team magma hideout area"
+          "New Mauville",
+          "Team Aqua Hideout",
+          "Team Magma Hideout"
         ]
       }
     },
     "109": {
       "ruby": {
         "locations": [
-          "fiery path area"
+          "Fiery Path"
         ]
       },
       "sapphire": {
         "locations": [
-          "fiery path area"
+          "Fiery Path"
         ]
       },
       "emerald": {
         "locations": [
-          "fiery path area"
+          "Fiery Path"
         ]
       }
     },
@@ -1952,17 +1953,17 @@
     "111": {
       "ruby": {
         "locations": [
-          "hoenn safari zone nwmach bike area"
+          "Safari Zone Nwmach Bike"
         ]
       },
       "sapphire": {
         "locations": [
-          "hoenn safari zone nwmach bike area"
+          "Safari Zone Nwmach Bike"
         ]
       },
       "emerald": {
         "locations": [
-          "hoenn safari zone nwmach bike area"
+          "Safari Zone Nwmach Bike"
         ]
       }
     },
@@ -1986,24 +1987,24 @@
     "116": {
       "ruby": {
         "locations": [
-          "hoenn route 132 area",
-          "hoenn route 133 area",
-          "hoenn route 134 area"
+          "Route 132",
+          "Route 133",
+          "Route 134"
         ]
       },
       "sapphire": {
         "locations": [
-          "hoenn route 132 area",
-          "hoenn route 133 area",
-          "hoenn route 134 area"
+          "Route 132",
+          "Route 133",
+          "Route 134"
         ]
       },
       "emerald": {
         "locations": [
-          "hoenn route 132 area",
-          "hoenn route 133 area",
-          "hoenn route 134 area",
-          "pacifidlog town area"
+          "Route 132",
+          "Route 133",
+          "Route 134",
+          "Pacifidlog Town"
         ]
       }
     },
@@ -2027,91 +2028,91 @@
     "118": {
       "ruby": {
         "locations": [
-          "petalburg city area",
-          "meteor falls area",
-          "meteor falls back",
-          "meteor falls b1f",
-          "meteor falls backsmall room",
-          "hoenn victory road b2f",
-          "hoenn route 102 area",
-          "hoenn route 111 area",
-          "hoenn route 114 area",
-          "hoenn route 117 area",
-          "hoenn route 120 area",
-          "hoenn safari zone nwmach bike area",
-          "hoenn safari zone sw"
+          "Petalburg City",
+          "Meteor Falls",
+          "Meteor Falls Back",
+          "Meteor Falls (B1F)",
+          "Meteor Falls Backsmall Room",
+          "Victory Road (B2F)",
+          "Route 102",
+          "Route 111",
+          "Route 114",
+          "Route 117",
+          "Route 120",
+          "Safari Zone Nwmach Bike",
+          "Safari Zone Sw"
         ]
       },
       "sapphire": {
         "locations": [
-          "petalburg city area",
-          "meteor falls area",
-          "meteor falls back",
-          "meteor falls b1f",
-          "meteor falls backsmall room",
-          "hoenn victory road b2f",
-          "hoenn route 102 area",
-          "hoenn route 111 area",
-          "hoenn route 114 area",
-          "hoenn route 117 area",
-          "hoenn route 120 area",
-          "hoenn safari zone nwmach bike area",
-          "hoenn safari zone sw"
+          "Petalburg City",
+          "Meteor Falls",
+          "Meteor Falls Back",
+          "Meteor Falls (B1F)",
+          "Meteor Falls Backsmall Room",
+          "Victory Road (B2F)",
+          "Route 102",
+          "Route 111",
+          "Route 114",
+          "Route 117",
+          "Route 120",
+          "Safari Zone Nwmach Bike",
+          "Safari Zone Sw"
         ]
       },
       "emerald": {
         "locations": [
-          "petalburg city area",
-          "meteor falls area",
-          "meteor falls back",
-          "meteor falls b1f",
-          "meteor falls backsmall room",
-          "hoenn victory road b2f",
-          "hoenn route 102 area",
-          "hoenn route 111 area",
-          "hoenn route 114 area",
-          "hoenn route 117 area",
-          "hoenn route 120 area",
-          "hoenn safari zone nwmach bike area",
-          "hoenn safari zone sw",
-          "hoenn safari zone expansion south"
+          "Petalburg City",
+          "Meteor Falls",
+          "Meteor Falls Back",
+          "Meteor Falls (B1F)",
+          "Meteor Falls Backsmall Room",
+          "Victory Road (B2F)",
+          "Route 102",
+          "Route 111",
+          "Route 114",
+          "Route 117",
+          "Route 120",
+          "Safari Zone Nwmach Bike",
+          "Safari Zone Sw",
+          "Safari Zone Expansion South"
         ]
       }
     },
     "119": {
       "ruby": {
         "locations": [
-          "hoenn safari zone nwmach bike area",
-          "hoenn safari zone sw"
+          "Safari Zone Nwmach Bike",
+          "Safari Zone Sw"
         ]
       },
       "sapphire": {
         "locations": [
-          "hoenn safari zone nwmach bike area",
-          "hoenn safari zone sw"
+          "Safari Zone Nwmach Bike",
+          "Safari Zone Sw"
         ]
       },
       "emerald": {
         "locations": [
-          "hoenn safari zone nwmach bike area",
-          "hoenn safari zone sw"
+          "Safari Zone Nwmach Bike",
+          "Safari Zone Sw"
         ]
       }
     },
     "120": {
       "ruby": {
         "locations": [
-          "lilycove city area"
+          "Lilycove City"
         ]
       },
       "sapphire": {
         "locations": [
-          "lilycove city area"
+          "Lilycove City"
         ]
       },
       "emerald": {
         "locations": [
-          "lilycove city area"
+          "Lilycove City"
         ]
       }
     },
@@ -2135,193 +2136,193 @@
     "127": {
       "ruby": {
         "locations": [
-          "hoenn safari zone nwmach bike area"
+          "Safari Zone Nwmach Bike"
         ]
       },
       "sapphire": {
         "locations": [
-          "hoenn safari zone nwmach bike area"
+          "Safari Zone Nwmach Bike"
         ]
       },
       "emerald": {
         "locations": [
-          "hoenn safari zone nwmach bike area"
+          "Safari Zone Nwmach Bike"
         ]
       }
     },
     "129": {
       "ruby": {
         "locations": [
-          "petalburg city area",
-          "slateport city area",
-          "lilycove city area",
-          "mossdeep city area",
-          "sootopolis city area",
-          "ever grande city area",
-          "meteor falls area",
-          "meteor falls back",
-          "meteor falls b1f",
-          "meteor falls backsmall room",
-          "seafloor cavern area",
-          "hoenn victory road b2f",
-          "shoal cave high tide",
-          "abandoned ship area",
-          "hoenn route 102 area",
-          "hoenn route 103 area",
-          "hoenn route 104 area",
-          "hoenn route 105 area",
-          "hoenn route 106 area",
-          "hoenn route 107 area",
-          "hoenn route 108 area",
-          "hoenn route 109 area",
-          "hoenn route 110 area",
-          "hoenn route 111 area",
-          "hoenn route 114 area",
-          "hoenn route 115 area",
-          "hoenn route 117 area",
-          "hoenn route 118 area",
-          "hoenn route 119 area",
-          "hoenn route 120 area",
-          "hoenn route 121 area",
-          "hoenn route 122 area",
-          "hoenn route 123 area",
-          "hoenn route 124 area",
-          "hoenn route 125 area",
-          "hoenn route 126 area",
-          "hoenn route 127 area",
-          "hoenn route 128 area",
-          "hoenn route 129 area",
-          "hoenn route 130 area",
-          "hoenn route 131 area",
-          "hoenn route 132 area",
-          "hoenn route 133 area",
-          "hoenn route 134 area",
-          "hoenn safari zone nwmach bike area",
-          "hoenn safari zone sw",
-          "dewford town area",
-          "pacifidlog town area"
+          "Petalburg City",
+          "Slateport City",
+          "Lilycove City",
+          "Mossdeep City",
+          "Sootopolis City",
+          "Ever Grande City",
+          "Meteor Falls",
+          "Meteor Falls Back",
+          "Meteor Falls (B1F)",
+          "Meteor Falls Backsmall Room",
+          "Seafloor Cavern",
+          "Victory Road (B2F)",
+          "Shoal Cave High Tide",
+          "Abandoned Ship",
+          "Route 102",
+          "Route 103",
+          "Route 104",
+          "Route 105",
+          "Route 106",
+          "Route 107",
+          "Route 108",
+          "Route 109",
+          "Route 110",
+          "Route 111",
+          "Route 114",
+          "Route 115",
+          "Route 117",
+          "Route 118",
+          "Route 119",
+          "Route 120",
+          "Route 121",
+          "Route 122",
+          "Route 123",
+          "Route 124",
+          "Route 125",
+          "Route 126",
+          "Route 127",
+          "Route 128",
+          "Route 129",
+          "Route 130",
+          "Route 131",
+          "Route 132",
+          "Route 133",
+          "Route 134",
+          "Safari Zone Nwmach Bike",
+          "Safari Zone Sw",
+          "Dewford Town",
+          "Pacifidlog Town"
         ]
       },
       "sapphire": {
         "locations": [
-          "petalburg city area",
-          "slateport city area",
-          "lilycove city area",
-          "mossdeep city area",
-          "sootopolis city area",
-          "ever grande city area",
-          "meteor falls area",
-          "meteor falls back",
-          "meteor falls b1f",
-          "meteor falls backsmall room",
-          "seafloor cavern area",
-          "hoenn victory road b2f",
-          "shoal cave high tide",
-          "abandoned ship area",
-          "hoenn route 102 area",
-          "hoenn route 103 area",
-          "hoenn route 104 area",
-          "hoenn route 105 area",
-          "hoenn route 106 area",
-          "hoenn route 107 area",
-          "hoenn route 108 area",
-          "hoenn route 109 area",
-          "hoenn route 110 area",
-          "hoenn route 111 area",
-          "hoenn route 114 area",
-          "hoenn route 115 area",
-          "hoenn route 117 area",
-          "hoenn route 118 area",
-          "hoenn route 119 area",
-          "hoenn route 120 area",
-          "hoenn route 121 area",
-          "hoenn route 122 area",
-          "hoenn route 123 area",
-          "hoenn route 124 area",
-          "hoenn route 125 area",
-          "hoenn route 126 area",
-          "hoenn route 127 area",
-          "hoenn route 128 area",
-          "hoenn route 129 area",
-          "hoenn route 130 area",
-          "hoenn route 131 area",
-          "hoenn route 132 area",
-          "hoenn route 133 area",
-          "hoenn route 134 area",
-          "hoenn safari zone nwmach bike area",
-          "hoenn safari zone sw",
-          "dewford town area",
-          "pacifidlog town area"
+          "Petalburg City",
+          "Slateport City",
+          "Lilycove City",
+          "Mossdeep City",
+          "Sootopolis City",
+          "Ever Grande City",
+          "Meteor Falls",
+          "Meteor Falls Back",
+          "Meteor Falls (B1F)",
+          "Meteor Falls Backsmall Room",
+          "Seafloor Cavern",
+          "Victory Road (B2F)",
+          "Shoal Cave High Tide",
+          "Abandoned Ship",
+          "Route 102",
+          "Route 103",
+          "Route 104",
+          "Route 105",
+          "Route 106",
+          "Route 107",
+          "Route 108",
+          "Route 109",
+          "Route 110",
+          "Route 111",
+          "Route 114",
+          "Route 115",
+          "Route 117",
+          "Route 118",
+          "Route 119",
+          "Route 120",
+          "Route 121",
+          "Route 122",
+          "Route 123",
+          "Route 124",
+          "Route 125",
+          "Route 126",
+          "Route 127",
+          "Route 128",
+          "Route 129",
+          "Route 130",
+          "Route 131",
+          "Route 132",
+          "Route 133",
+          "Route 134",
+          "Safari Zone Nwmach Bike",
+          "Safari Zone Sw",
+          "Dewford Town",
+          "Pacifidlog Town"
         ]
       },
       "emerald": {
         "locations": [
-          "petalburg city area",
-          "slateport city area",
-          "lilycove city area",
-          "mossdeep city area",
-          "sootopolis city area",
-          "ever grande city area",
-          "meteor falls area",
-          "meteor falls back",
-          "meteor falls b1f",
-          "meteor falls backsmall room",
-          "seafloor cavern area",
-          "hoenn victory road b2f",
-          "shoal cave high tide",
-          "abandoned ship area",
-          "hoenn route 102 area",
-          "hoenn route 103 area",
-          "hoenn route 104 area",
-          "hoenn route 105 area",
-          "hoenn route 106 area",
-          "hoenn route 107 area",
-          "hoenn route 108 area",
-          "hoenn route 109 area",
-          "hoenn route 110 area",
-          "hoenn route 111 area",
-          "hoenn route 114 area",
-          "hoenn route 115 area",
-          "hoenn route 117 area",
-          "hoenn route 118 area",
-          "hoenn route 119 area",
-          "hoenn route 120 area",
-          "hoenn route 121 area",
-          "hoenn route 122 area",
-          "hoenn route 123 area",
-          "hoenn route 124 area",
-          "hoenn route 125 area",
-          "hoenn route 126 area",
-          "hoenn route 127 area",
-          "hoenn route 128 area",
-          "hoenn route 129 area",
-          "hoenn route 130 area",
-          "hoenn route 131 area",
-          "hoenn route 132 area",
-          "hoenn route 133 area",
-          "hoenn route 134 area",
-          "hoenn safari zone nwmach bike area",
-          "hoenn safari zone sw",
-          "dewford town area",
-          "pacifidlog town area",
-          "hoenn safari zone expansion south"
+          "Petalburg City",
+          "Slateport City",
+          "Lilycove City",
+          "Mossdeep City",
+          "Sootopolis City",
+          "Ever Grande City",
+          "Meteor Falls",
+          "Meteor Falls Back",
+          "Meteor Falls (B1F)",
+          "Meteor Falls Backsmall Room",
+          "Seafloor Cavern",
+          "Victory Road (B2F)",
+          "Shoal Cave High Tide",
+          "Abandoned Ship",
+          "Route 102",
+          "Route 103",
+          "Route 104",
+          "Route 105",
+          "Route 106",
+          "Route 107",
+          "Route 108",
+          "Route 109",
+          "Route 110",
+          "Route 111",
+          "Route 114",
+          "Route 115",
+          "Route 117",
+          "Route 118",
+          "Route 119",
+          "Route 120",
+          "Route 121",
+          "Route 122",
+          "Route 123",
+          "Route 124",
+          "Route 125",
+          "Route 126",
+          "Route 127",
+          "Route 128",
+          "Route 129",
+          "Route 130",
+          "Route 131",
+          "Route 132",
+          "Route 133",
+          "Route 134",
+          "Safari Zone Nwmach Bike",
+          "Safari Zone Sw",
+          "Dewford Town",
+          "Pacifidlog Town",
+          "Safari Zone Expansion South"
         ]
       }
     },
     "130": {
       "ruby": {
         "locations": [
-          "sootopolis city area"
+          "Sootopolis City"
         ]
       },
       "sapphire": {
         "locations": [
-          "sootopolis city area"
+          "Sootopolis City"
         ]
       },
       "emerald": {
         "locations": [
-          "sootopolis city area"
+          "Sootopolis City"
         ]
       }
     },
@@ -2345,20 +2346,20 @@
     "170": {
       "ruby": {
         "locations": [
-          "hoenn route 124 underwater",
-          "hoenn route 126 underwater"
+          "Route 124 Underwater",
+          "Route 126 Underwater"
         ]
       },
       "sapphire": {
         "locations": [
-          "hoenn route 124 underwater",
-          "hoenn route 126 underwater"
+          "Route 124 Underwater",
+          "Route 126 Underwater"
         ]
       },
       "emerald": {
         "locations": [
-          "hoenn route 124 underwater",
-          "hoenn route 126 underwater"
+          "Route 124 Underwater",
+          "Route 126 Underwater"
         ]
       }
     },
@@ -2382,74 +2383,74 @@
     "172": {
       "ruby": {
         "locations": [
-          "Breed Raichu"
+          "Breed Pikachu or Raichu"
         ]
       },
       "sapphire": {
         "locations": [
-          "Breed Raichu"
+          "Breed Pikachu or Raichu"
         ]
       },
       "emerald": {
         "locations": [
-          "Breed Raichu"
+          "Breed Pikachu or Raichu"
         ]
       }
     },
     "174": {
       "ruby": {
         "locations": [
-          "Breed Wigglytuff"
+          "Breed Jigglypuff or Wigglytuff"
         ]
       },
       "sapphire": {
         "locations": [
-          "Breed Wigglytuff"
+          "Breed Jigglypuff or Wigglytuff"
         ]
       },
       "emerald": {
         "locations": [
-          "Breed Wigglytuff"
+          "Breed Jigglypuff or Wigglytuff"
         ]
       }
     },
     "177": {
       "ruby": {
         "locations": [
-          "hoenn safari zone neacro bike area",
-          "hoenn safari zone sw",
-          "hoenn safari zone se"
+          "Safari Zone Neacro Bike",
+          "Safari Zone Sw",
+          "Safari Zone Se"
         ]
       },
       "sapphire": {
         "locations": [
-          "hoenn safari zone neacro bike area",
-          "hoenn safari zone sw",
-          "hoenn safari zone se"
+          "Safari Zone Neacro Bike",
+          "Safari Zone Sw",
+          "Safari Zone Se"
         ]
       },
       "emerald": {
         "locations": [
-          "hoenn safari zone neacro bike area",
-          "hoenn safari zone sw",
-          "hoenn safari zone se"
+          "Safari Zone Neacro Bike",
+          "Safari Zone Sw",
+          "Safari Zone Se"
         ]
       }
     },
     "178": {
       "ruby": {
         "locations": [
-          "hoenn safari zone neacro bike area"
+          "Safari Zone Neacro Bike"
         ]
       },
       "sapphire": {
         "locations": [
-          "hoenn safari zone neacro bike area"
+          "Safari Zone Neacro Bike"
         ]
       },
       "emerald": {
         "locations": [
-          "hoenn safari zone neacro bike area"
+          "Safari Zone Neacro Bike"
         ]
       }
     },
@@ -2473,35 +2474,35 @@
     "183": {
       "ruby": {
         "locations": [
-          "petalburg city area",
-          "hoenn route 102 area",
-          "hoenn route 111 area",
-          "hoenn route 114 area",
-          "hoenn route 117 area",
-          "hoenn route 120 area"
+          "Petalburg City",
+          "Route 102",
+          "Route 111",
+          "Route 114",
+          "Route 117",
+          "Route 120"
         ]
       },
       "sapphire": {
         "locations": [
-          "petalburg city area",
-          "hoenn route 102 area",
-          "hoenn route 111 area",
-          "hoenn route 114 area",
-          "hoenn route 117 area",
-          "hoenn route 120 area"
+          "Petalburg City",
+          "Route 102",
+          "Route 111",
+          "Route 114",
+          "Route 117",
+          "Route 120"
         ]
       },
       "emerald": {
         "locations": [
-          "petalburg city area",
-          "hoenn route 102 area",
-          "hoenn route 104 area",
-          "hoenn route 111 area",
-          "hoenn route 112 area",
-          "hoenn route 114 area",
-          "hoenn route 117 area",
-          "hoenn route 120 area",
-          "hoenn safari zone expansion south"
+          "Petalburg City",
+          "Route 102",
+          "Route 104",
+          "Route 111",
+          "Route 112",
+          "Route 114",
+          "Route 117",
+          "Route 120",
+          "Safari Zone Expansion South"
         ]
       }
     },
@@ -2525,75 +2526,75 @@
     "202": {
       "ruby": {
         "locations": [
-          "hoenn safari zone sw",
-          "hoenn safari zone se"
+          "Safari Zone Sw",
+          "Safari Zone Se"
         ]
       },
       "sapphire": {
         "locations": [
-          "hoenn safari zone sw",
-          "hoenn safari zone se"
+          "Safari Zone Sw",
+          "Safari Zone Se"
         ]
       },
       "emerald": {
         "locations": [
-          "hoenn safari zone sw",
-          "hoenn safari zone se"
+          "Safari Zone Sw",
+          "Safari Zone Se"
         ]
       }
     },
     "203": {
       "ruby": {
         "locations": [
-          "hoenn safari zone sw",
-          "hoenn safari zone se"
+          "Safari Zone Sw",
+          "Safari Zone Se"
         ]
       },
       "sapphire": {
         "locations": [
-          "hoenn safari zone sw",
-          "hoenn safari zone se"
+          "Safari Zone Sw",
+          "Safari Zone Se"
         ]
       },
       "emerald": {
         "locations": [
-          "hoenn safari zone sw",
-          "hoenn safari zone se"
+          "Safari Zone Sw",
+          "Safari Zone Se"
         ]
       }
     },
     "214": {
       "ruby": {
         "locations": [
-          "hoenn safari zone neacro bike area"
+          "Safari Zone Neacro Bike"
         ]
       },
       "sapphire": {
         "locations": [
-          "hoenn safari zone neacro bike area"
+          "Safari Zone Neacro Bike"
         ]
       },
       "emerald": {
         "locations": [
-          "hoenn safari zone neacro bike area"
+          "Safari Zone Neacro Bike"
         ]
       }
     },
     "218": {
       "ruby": {
         "locations": [
-          "fiery path area"
+          "Fiery Path"
         ]
       },
       "sapphire": {
         "locations": [
-          "fiery path area"
+          "Fiery Path"
         ]
       },
       "emerald": {
         "locations": [
-          "fiery path area",
-          "hoenn route 113 area"
+          "Fiery Path",
+          "Route 113"
         ]
       }
     },
@@ -2617,39 +2618,39 @@
     "222": {
       "ruby": {
         "locations": [
-          "ever grande city area",
-          "hoenn route 128 area",
-          "pacifidlog town area"
+          "Ever Grande City",
+          "Route 128",
+          "Pacifidlog Town"
         ]
       },
       "sapphire": {
         "locations": [
-          "ever grande city area",
-          "hoenn route 128 area",
-          "pacifidlog town area"
+          "Ever Grande City",
+          "Route 128",
+          "Pacifidlog Town"
         ]
       },
       "emerald": {
         "locations": [
-          "ever grande city area",
-          "hoenn route 128 area"
+          "Ever Grande City",
+          "Route 128"
         ]
       }
     },
     "227": {
       "ruby": {
         "locations": [
-          "hoenn route 113 area"
+          "Route 113"
         ]
       },
       "sapphire": {
         "locations": [
-          "hoenn route 113 area"
+          "Route 113"
         ]
       },
       "emerald": {
         "locations": [
-          "hoenn route 113 area"
+          "Route 113"
         ]
       }
     },
@@ -2673,17 +2674,17 @@
     "231": {
       "ruby": {
         "locations": [
-          "hoenn safari zone neacro bike area"
+          "Safari Zone Neacro Bike"
         ]
       },
       "sapphire": {
         "locations": [
-          "hoenn safari zone neacro bike area"
+          "Safari Zone Neacro Bike"
         ]
       },
       "emerald": {
         "locations": [
-          "hoenn safari zone neacro bike area"
+          "Safari Zone Neacro Bike"
         ]
       }
     },
@@ -2707,17 +2708,17 @@
     "252": {
       "ruby": {
         "locations": [
-          "hoenn route 101 area"
+          "Route 101"
         ]
       },
       "sapphire": {
         "locations": [
-          "hoenn route 101 area"
+          "Route 101"
         ]
       },
       "emerald": {
         "locations": [
-          "hoenn route 101 area"
+          "Route 101"
         ]
       }
     },
@@ -2758,17 +2759,17 @@
     "255": {
       "ruby": {
         "locations": [
-          "hoenn route 101 area"
+          "Route 101"
         ]
       },
       "sapphire": {
         "locations": [
-          "hoenn route 101 area"
+          "Route 101"
         ]
       },
       "emerald": {
         "locations": [
-          "hoenn route 101 area"
+          "Route 101"
         ]
       }
     },
@@ -2809,17 +2810,17 @@
     "258": {
       "ruby": {
         "locations": [
-          "hoenn route 101 area"
+          "Route 101"
         ]
       },
       "sapphire": {
         "locations": [
-          "hoenn route 101 area"
+          "Route 101"
         ]
       },
       "emerald": {
         "locations": [
-          "hoenn route 101 area"
+          "Route 101"
         ]
       }
     },
@@ -2860,40 +2861,40 @@
     "261": {
       "emerald": {
         "locations": [
-          "petalburg woods area",
-          "hoenn route 101 area",
-          "hoenn route 102 area",
-          "hoenn route 103 area",
-          "hoenn route 104 area",
-          "hoenn route 110 area",
-          "hoenn route 116 area",
-          "hoenn route 117 area",
-          "hoenn route 120 area",
-          "hoenn route 121 area",
-          "hoenn route 123 area"
+          "Petalburg Woods",
+          "Route 101",
+          "Route 102",
+          "Route 103",
+          "Route 104",
+          "Route 110",
+          "Route 116",
+          "Route 117",
+          "Route 120",
+          "Route 121",
+          "Route 123"
         ]
       },
       "ruby": {
         "locations": [
-          "hoenn route 101 area",
-          "hoenn route 102 area",
-          "hoenn route 103 area"
+          "Route 101",
+          "Route 102",
+          "Route 103"
         ]
       },
       "sapphire": {
         "locations": [
-          "hoenn route 101 area",
-          "hoenn route 102 area",
-          "hoenn route 103 area"
+          "Route 101",
+          "Route 102",
+          "Route 103"
         ]
       }
     },
     "262": {
       "emerald": {
         "locations": [
-          "hoenn route 120 area",
-          "hoenn route 121 area",
-          "hoenn route 123 area"
+          "Route 120",
+          "Route 121",
+          "Route 123"
         ]
       },
       "ruby": {
@@ -2910,114 +2911,114 @@
     "263": {
       "ruby": {
         "locations": [
-          "petalburg woods area",
-          "hoenn route 101 area",
-          "hoenn route 102 area",
-          "hoenn route 103 area",
-          "hoenn route 104 area",
-          "hoenn route 110 area",
-          "hoenn route 116 area",
-          "hoenn route 117 area",
-          "hoenn route 118 area",
-          "hoenn route 119 area",
-          "hoenn route 120 area",
-          "hoenn route 121 area",
-          "hoenn route 123 area"
+          "Petalburg Woods",
+          "Route 101",
+          "Route 102",
+          "Route 103",
+          "Route 104",
+          "Route 110",
+          "Route 116",
+          "Route 117",
+          "Route 118",
+          "Route 119",
+          "Route 120",
+          "Route 121",
+          "Route 123"
         ]
       },
       "sapphire": {
         "locations": [
-          "petalburg woods area",
-          "hoenn route 101 area",
-          "hoenn route 102 area",
-          "hoenn route 103 area",
-          "hoenn route 104 area",
-          "hoenn route 110 area",
-          "hoenn route 116 area",
-          "hoenn route 117 area",
-          "hoenn route 118 area",
-          "hoenn route 119 area",
-          "hoenn route 120 area",
-          "hoenn route 121 area",
-          "hoenn route 123 area"
+          "Petalburg Woods",
+          "Route 101",
+          "Route 102",
+          "Route 103",
+          "Route 104",
+          "Route 110",
+          "Route 116",
+          "Route 117",
+          "Route 118",
+          "Route 119",
+          "Route 120",
+          "Route 121",
+          "Route 123"
         ]
       },
       "emerald": {
         "locations": [
-          "hoenn route 101 area",
-          "hoenn route 102 area",
-          "hoenn route 103 area",
-          "hoenn route 118 area",
-          "hoenn route 119 area"
+          "Route 101",
+          "Route 102",
+          "Route 103",
+          "Route 118",
+          "Route 119"
         ]
       }
     },
     "264": {
       "ruby": {
         "locations": [
-          "hoenn route 118 area",
-          "hoenn route 119 area",
-          "hoenn route 120 area",
-          "hoenn route 121 area",
-          "hoenn route 123 area"
+          "Route 118",
+          "Route 119",
+          "Route 120",
+          "Route 121",
+          "Route 123"
         ]
       },
       "sapphire": {
         "locations": [
-          "hoenn route 118 area",
-          "hoenn route 119 area",
-          "hoenn route 120 area",
-          "hoenn route 121 area",
-          "hoenn route 123 area"
+          "Route 118",
+          "Route 119",
+          "Route 120",
+          "Route 121",
+          "Route 123"
         ]
       },
       "emerald": {
         "locations": [
-          "hoenn route 118 area",
-          "hoenn route 119 area"
+          "Route 118",
+          "Route 119"
         ]
       }
     },
     "265": {
       "ruby": {
         "locations": [
-          "petalburg woods area",
-          "hoenn route 101 area",
-          "hoenn route 102 area",
-          "hoenn route 104 area"
+          "Petalburg Woods",
+          "Route 101",
+          "Route 102",
+          "Route 104"
         ]
       },
       "sapphire": {
         "locations": [
-          "petalburg woods area",
-          "hoenn route 101 area",
-          "hoenn route 102 area",
-          "hoenn route 104 area"
+          "Petalburg Woods",
+          "Route 101",
+          "Route 102",
+          "Route 104"
         ]
       },
       "emerald": {
         "locations": [
-          "petalburg woods area",
-          "hoenn route 101 area",
-          "hoenn route 102 area",
-          "hoenn route 104 area"
+          "Petalburg Woods",
+          "Route 101",
+          "Route 102",
+          "Route 104"
         ]
       }
     },
     "266": {
       "ruby": {
         "locations": [
-          "petalburg woods area"
+          "Petalburg Woods"
         ]
       },
       "sapphire": {
         "locations": [
-          "petalburg woods area"
+          "Petalburg Woods"
         ]
       },
       "emerald": {
         "locations": [
-          "petalburg woods area"
+          "Petalburg Woods"
         ]
       }
     },
@@ -3041,17 +3042,17 @@
     "268": {
       "ruby": {
         "locations": [
-          "petalburg woods area"
+          "Petalburg Woods"
         ]
       },
       "sapphire": {
         "locations": [
-          "petalburg woods area"
+          "Petalburg Woods"
         ]
       },
       "emerald": {
         "locations": [
-          "petalburg woods area"
+          "Petalburg Woods"
         ]
       }
     },
@@ -3075,31 +3076,32 @@
     "270": {
       "sapphire": {
         "locations": [
-          "hoenn route 102 area",
-          "hoenn route 114 area"
+          "Route 102",
+          "Route 114"
         ]
       },
       "emerald": {
         "locations": [
-          "hoenn route 102 area",
-          "hoenn route 114 area"
+          "Route 102",
+          "Route 114"
         ]
       },
       "ruby": {
         "locations": [
-          "Trade, Event"
+          "Trade",
+          "Event"
         ]
       }
     },
     "271": {
       "sapphire": {
         "locations": [
-          "hoenn route 114 area"
+          "Route 114"
         ]
       },
       "emerald": {
         "locations": [
-          "hoenn route 114 area"
+          "Route 114"
         ]
       }
     },
@@ -3118,21 +3120,23 @@
     "273": {
       "ruby": {
         "locations": [
-          "hoenn route 102 area",
-          "hoenn route 114 area"
+          "Route 102",
+          "Route 114"
         ]
       },
       "emerald": {
         "locations": [
-          "hoenn route 102 area",
-          "hoenn route 117 area",
-          "hoenn route 120 area",
-          "rustboro city area"
+          "Route 102",
+          "Route 117",
+          "Route 120",
+          "Rustboro City"
         ]
       },
       "sapphire": {
         "locations": [
-          "Routes Hoenn, Hoenn, and Hoenn (Swarm",
+          "Routes Hoenn",
+          "Hoenn",
+          "and Hoenn (Swarm",
           "after mixing records with Emerald)"
         ]
       }
@@ -3140,17 +3144,17 @@
     "274": {
       "ruby": {
         "locations": [
-          "hoenn route 114 area"
+          "Route 114"
         ]
       },
       "emerald": {
         "locations": [
-          "hoenn route 114 area"
+          "Route 114"
         ]
       },
       "sapphire": {
         "locations": [
-          "Hoenn (Swarm",
+          "Route 114 (Swarm",
           "after mixing records with Emerald)"
         ]
       }
@@ -3163,7 +3167,8 @@
       },
       "sapphire": {
         "locations": [
-          "Trade, Event"
+          "Trade",
+          "Event"
         ]
       },
       "emerald": {
@@ -3175,277 +3180,277 @@
     "276": {
       "ruby": {
         "locations": [
-          "petalburg woods area",
-          "hoenn route 104 area",
-          "hoenn route 115 area",
-          "hoenn route 116 area"
+          "Petalburg Woods",
+          "Route 104",
+          "Route 115",
+          "Route 116"
         ]
       },
       "sapphire": {
         "locations": [
-          "petalburg woods area",
-          "hoenn route 104 area",
-          "hoenn route 115 area",
-          "hoenn route 116 area"
+          "Petalburg Woods",
+          "Route 104",
+          "Route 115",
+          "Route 116"
         ]
       },
       "emerald": {
         "locations": [
-          "petalburg woods area",
-          "hoenn route 104 area",
-          "hoenn route 115 area",
-          "hoenn route 116 area"
+          "Petalburg Woods",
+          "Route 104",
+          "Route 115",
+          "Route 116"
         ]
       }
     },
     "277": {
       "ruby": {
         "locations": [
-          "hoenn route 115 area"
+          "Route 115"
         ]
       },
       "sapphire": {
         "locations": [
-          "hoenn route 115 area"
+          "Route 115"
         ]
       },
       "emerald": {
         "locations": [
-          "hoenn route 115 area"
+          "Route 115"
         ]
       }
     },
     "278": {
       "ruby": {
         "locations": [
-          "slateport city area",
-          "lilycove city area",
-          "mossdeep city area",
-          "ever grande city area",
-          "mt pyre outside",
-          "hoenn route 103 area",
-          "hoenn route 104 area",
-          "hoenn route 105 area",
-          "hoenn route 106 area",
-          "hoenn route 107 area",
-          "hoenn route 108 area",
-          "hoenn route 109 area",
-          "hoenn route 110 area",
-          "hoenn route 115 area",
-          "hoenn route 118 area",
-          "hoenn route 119 area",
-          "hoenn route 121 area",
-          "hoenn route 122 area",
-          "hoenn route 123 area",
-          "hoenn route 124 area",
-          "hoenn route 125 area",
-          "hoenn route 126 area",
-          "hoenn route 127 area",
-          "hoenn route 128 area",
-          "hoenn route 129 area",
-          "hoenn route 130 area",
-          "hoenn route 131 area",
-          "hoenn route 132 area",
-          "hoenn route 133 area",
-          "hoenn route 134 area",
-          "dewford town area",
-          "pacifidlog town area"
+          "Slateport City",
+          "Lilycove City",
+          "Mossdeep City",
+          "Ever Grande City",
+          "Mt. Pyre Outside",
+          "Route 103",
+          "Route 104",
+          "Route 105",
+          "Route 106",
+          "Route 107",
+          "Route 108",
+          "Route 109",
+          "Route 110",
+          "Route 115",
+          "Route 118",
+          "Route 119",
+          "Route 121",
+          "Route 122",
+          "Route 123",
+          "Route 124",
+          "Route 125",
+          "Route 126",
+          "Route 127",
+          "Route 128",
+          "Route 129",
+          "Route 130",
+          "Route 131",
+          "Route 132",
+          "Route 133",
+          "Route 134",
+          "Dewford Town",
+          "Pacifidlog Town"
         ]
       },
       "sapphire": {
         "locations": [
-          "slateport city area",
-          "lilycove city area",
-          "mossdeep city area",
-          "ever grande city area",
-          "mt pyre outside",
-          "hoenn route 103 area",
-          "hoenn route 104 area",
-          "hoenn route 105 area",
-          "hoenn route 106 area",
-          "hoenn route 107 area",
-          "hoenn route 108 area",
-          "hoenn route 109 area",
-          "hoenn route 110 area",
-          "hoenn route 115 area",
-          "hoenn route 118 area",
-          "hoenn route 119 area",
-          "hoenn route 121 area",
-          "hoenn route 122 area",
-          "hoenn route 123 area",
-          "hoenn route 124 area",
-          "hoenn route 125 area",
-          "hoenn route 126 area",
-          "hoenn route 127 area",
-          "hoenn route 128 area",
-          "hoenn route 129 area",
-          "hoenn route 130 area",
-          "hoenn route 131 area",
-          "hoenn route 132 area",
-          "hoenn route 133 area",
-          "hoenn route 134 area",
-          "dewford town area",
-          "pacifidlog town area"
+          "Slateport City",
+          "Lilycove City",
+          "Mossdeep City",
+          "Ever Grande City",
+          "Mt. Pyre Outside",
+          "Route 103",
+          "Route 104",
+          "Route 105",
+          "Route 106",
+          "Route 107",
+          "Route 108",
+          "Route 109",
+          "Route 110",
+          "Route 115",
+          "Route 118",
+          "Route 119",
+          "Route 121",
+          "Route 122",
+          "Route 123",
+          "Route 124",
+          "Route 125",
+          "Route 126",
+          "Route 127",
+          "Route 128",
+          "Route 129",
+          "Route 130",
+          "Route 131",
+          "Route 132",
+          "Route 133",
+          "Route 134",
+          "Dewford Town",
+          "Pacifidlog Town"
         ]
       },
       "emerald": {
         "locations": [
-          "slateport city area",
-          "lilycove city area",
-          "mossdeep city area",
-          "ever grande city area",
-          "mt pyre outside",
-          "hoenn route 103 area",
-          "hoenn route 104 area",
-          "hoenn route 105 area",
-          "hoenn route 106 area",
-          "hoenn route 107 area",
-          "hoenn route 108 area",
-          "hoenn route 109 area",
-          "hoenn route 110 area",
-          "hoenn route 115 area",
-          "hoenn route 118 area",
-          "hoenn route 119 area",
-          "hoenn route 121 area",
-          "hoenn route 122 area",
-          "hoenn route 123 area",
-          "hoenn route 124 area",
-          "hoenn route 125 area",
-          "hoenn route 126 area",
-          "hoenn route 127 area",
-          "hoenn route 128 area",
-          "hoenn route 129 area",
-          "hoenn route 130 area",
-          "hoenn route 131 area",
-          "hoenn route 132 area",
-          "hoenn route 133 area",
-          "hoenn route 134 area",
-          "dewford town area",
-          "pacifidlog town area"
+          "Slateport City",
+          "Lilycove City",
+          "Mossdeep City",
+          "Ever Grande City",
+          "Mt. Pyre Outside",
+          "Route 103",
+          "Route 104",
+          "Route 105",
+          "Route 106",
+          "Route 107",
+          "Route 108",
+          "Route 109",
+          "Route 110",
+          "Route 115",
+          "Route 118",
+          "Route 119",
+          "Route 121",
+          "Route 122",
+          "Route 123",
+          "Route 124",
+          "Route 125",
+          "Route 126",
+          "Route 127",
+          "Route 128",
+          "Route 129",
+          "Route 130",
+          "Route 131",
+          "Route 132",
+          "Route 133",
+          "Route 134",
+          "Dewford Town",
+          "Pacifidlog Town"
         ]
       }
     },
     "279": {
       "ruby": {
         "locations": [
-          "slateport city area",
-          "lilycove city area",
-          "mossdeep city area",
-          "ever grande city area",
-          "hoenn route 103 area",
-          "hoenn route 104 area",
-          "hoenn route 105 area",
-          "hoenn route 106 area",
-          "hoenn route 107 area",
-          "hoenn route 108 area",
-          "hoenn route 109 area",
-          "hoenn route 110 area",
-          "hoenn route 115 area",
-          "hoenn route 118 area",
-          "hoenn route 119 area",
-          "hoenn route 121 area",
-          "hoenn route 122 area",
-          "hoenn route 123 area",
-          "hoenn route 124 area",
-          "hoenn route 125 area",
-          "hoenn route 126 area",
-          "hoenn route 127 area",
-          "hoenn route 128 area",
-          "hoenn route 129 area",
-          "hoenn route 130 area",
-          "hoenn route 131 area",
-          "hoenn route 132 area",
-          "hoenn route 133 area",
-          "hoenn route 134 area",
-          "dewford town area",
-          "pacifidlog town area"
+          "Slateport City",
+          "Lilycove City",
+          "Mossdeep City",
+          "Ever Grande City",
+          "Route 103",
+          "Route 104",
+          "Route 105",
+          "Route 106",
+          "Route 107",
+          "Route 108",
+          "Route 109",
+          "Route 110",
+          "Route 115",
+          "Route 118",
+          "Route 119",
+          "Route 121",
+          "Route 122",
+          "Route 123",
+          "Route 124",
+          "Route 125",
+          "Route 126",
+          "Route 127",
+          "Route 128",
+          "Route 129",
+          "Route 130",
+          "Route 131",
+          "Route 132",
+          "Route 133",
+          "Route 134",
+          "Dewford Town",
+          "Pacifidlog Town"
         ]
       },
       "sapphire": {
         "locations": [
-          "slateport city area",
-          "lilycove city area",
-          "mossdeep city area",
-          "ever grande city area",
-          "hoenn route 103 area",
-          "hoenn route 104 area",
-          "hoenn route 105 area",
-          "hoenn route 106 area",
-          "hoenn route 107 area",
-          "hoenn route 108 area",
-          "hoenn route 109 area",
-          "hoenn route 110 area",
-          "hoenn route 115 area",
-          "hoenn route 118 area",
-          "hoenn route 119 area",
-          "hoenn route 121 area",
-          "hoenn route 122 area",
-          "hoenn route 123 area",
-          "hoenn route 124 area",
-          "hoenn route 125 area",
-          "hoenn route 126 area",
-          "hoenn route 127 area",
-          "hoenn route 128 area",
-          "hoenn route 129 area",
-          "hoenn route 130 area",
-          "hoenn route 131 area",
-          "hoenn route 132 area",
-          "hoenn route 133 area",
-          "hoenn route 134 area",
-          "dewford town area",
-          "pacifidlog town area"
+          "Slateport City",
+          "Lilycove City",
+          "Mossdeep City",
+          "Ever Grande City",
+          "Route 103",
+          "Route 104",
+          "Route 105",
+          "Route 106",
+          "Route 107",
+          "Route 108",
+          "Route 109",
+          "Route 110",
+          "Route 115",
+          "Route 118",
+          "Route 119",
+          "Route 121",
+          "Route 122",
+          "Route 123",
+          "Route 124",
+          "Route 125",
+          "Route 126",
+          "Route 127",
+          "Route 128",
+          "Route 129",
+          "Route 130",
+          "Route 131",
+          "Route 132",
+          "Route 133",
+          "Route 134",
+          "Dewford Town",
+          "Pacifidlog Town"
         ]
       },
       "emerald": {
         "locations": [
-          "slateport city area",
-          "lilycove city area",
-          "mossdeep city area",
-          "ever grande city area",
-          "hoenn route 103 area",
-          "hoenn route 104 area",
-          "hoenn route 105 area",
-          "hoenn route 106 area",
-          "hoenn route 107 area",
-          "hoenn route 108 area",
-          "hoenn route 109 area",
-          "hoenn route 110 area",
-          "hoenn route 115 area",
-          "hoenn route 118 area",
-          "hoenn route 119 area",
-          "hoenn route 121 area",
-          "hoenn route 122 area",
-          "hoenn route 123 area",
-          "hoenn route 124 area",
-          "hoenn route 125 area",
-          "hoenn route 126 area",
-          "hoenn route 127 area",
-          "hoenn route 128 area",
-          "hoenn route 129 area",
-          "hoenn route 130 area",
-          "hoenn route 131 area",
-          "hoenn route 132 area",
-          "hoenn route 133 area",
-          "hoenn route 134 area",
-          "dewford town area",
-          "pacifidlog town area"
+          "Slateport City",
+          "Lilycove City",
+          "Mossdeep City",
+          "Ever Grande City",
+          "Route 103",
+          "Route 104",
+          "Route 105",
+          "Route 106",
+          "Route 107",
+          "Route 108",
+          "Route 109",
+          "Route 110",
+          "Route 115",
+          "Route 118",
+          "Route 119",
+          "Route 121",
+          "Route 122",
+          "Route 123",
+          "Route 124",
+          "Route 125",
+          "Route 126",
+          "Route 127",
+          "Route 128",
+          "Route 129",
+          "Route 130",
+          "Route 131",
+          "Route 132",
+          "Route 133",
+          "Route 134",
+          "Dewford Town",
+          "Pacifidlog Town"
         ]
       }
     },
     "280": {
       "ruby": {
         "locations": [
-          "hoenn route 102 area"
+          "Route 102"
         ]
       },
       "sapphire": {
         "locations": [
-          "hoenn route 102 area"
+          "Route 102"
         ]
       },
       "emerald": {
         "locations": [
-          "hoenn route 102 area"
+          "Route 102"
         ]
       }
     },
@@ -3486,25 +3491,27 @@
     "283": {
       "ruby": {
         "locations": [
-          "hoenn route 102 area",
-          "hoenn route 111 area",
-          "hoenn route 114 area",
-          "hoenn route 117 area",
-          "hoenn route 120 area"
+          "Route 102",
+          "Route 111",
+          "Route 114",
+          "Route 117",
+          "Route 120"
         ]
       },
       "sapphire": {
         "locations": [
-          "hoenn route 102 area",
-          "hoenn route 111 area",
-          "hoenn route 114 area",
-          "hoenn route 117 area",
-          "hoenn route 120 area"
+          "Route 102",
+          "Route 111",
+          "Route 114",
+          "Route 117",
+          "Route 120"
         ]
       },
       "emerald": {
         "locations": [
-          "Routes Hoenn, Hoenn, Hoenn, and Hoenn (Swarm",
+          "Routes Hoenn",
+          "Hoenn",
+          "and Hoenn (Swarm",
           "after mixing records with Ruby or Sapphire)"
         ]
       }
@@ -3522,24 +3529,24 @@
       },
       "emerald": {
         "locations": [
-          "Evolve swarm *|After mixing records with Pokémon Ruby or Sapphire"
+          "Evolve swarm SurskitAfter mixing records with Pokémon Ruby or Sapphire"
         ]
       }
     },
     "285": {
       "ruby": {
         "locations": [
-          "petalburg woods area"
+          "Petalburg Woods"
         ]
       },
       "sapphire": {
         "locations": [
-          "petalburg woods area"
+          "Petalburg Woods"
         ]
       },
       "emerald": {
         "locations": [
-          "petalburg woods area"
+          "Petalburg Woods"
         ]
       }
     },
@@ -3563,17 +3570,17 @@
     "287": {
       "ruby": {
         "locations": [
-          "petalburg woods area"
+          "Petalburg Woods"
         ]
       },
       "sapphire": {
         "locations": [
-          "petalburg woods area"
+          "Petalburg Woods"
         ]
       },
       "emerald": {
         "locations": [
-          "petalburg woods area"
+          "Petalburg Woods"
         ]
       }
     },
@@ -3614,17 +3621,17 @@
     "290": {
       "ruby": {
         "locations": [
-          "hoenn route 116 area"
+          "Route 116"
         ]
       },
       "sapphire": {
         "locations": [
-          "hoenn route 116 area"
+          "Route 116"
         ]
       },
       "emerald": {
         "locations": [
-          "hoenn route 116 area"
+          "Route 116"
         ]
       }
     },
@@ -3665,42 +3672,42 @@
     "293": {
       "ruby": {
         "locations": [
-          "rusturf tunnel area",
-          "hoenn victory road 1f",
-          "hoenn route 116 area"
+          "Rusturf Tunnel",
+          "Victory Road (1F)",
+          "Route 116"
         ]
       },
       "sapphire": {
         "locations": [
-          "rusturf tunnel area",
-          "hoenn victory road 1f",
-          "hoenn route 116 area"
+          "Rusturf Tunnel",
+          "Victory Road (1F)",
+          "Route 116"
         ]
       },
       "emerald": {
         "locations": [
-          "rusturf tunnel area",
-          "hoenn victory road 1f",
-          "hoenn route 116 area",
-          "desert underpass area"
+          "Rusturf Tunnel",
+          "Victory Road (1F)",
+          "Route 116",
+          "Desert Underpass"
         ]
       }
     },
     "294": {
       "ruby": {
         "locations": [
-          "hoenn victory road 1f"
+          "Victory Road (1F)"
         ]
       },
       "sapphire": {
         "locations": [
-          "hoenn victory road 1f"
+          "Victory Road (1F)"
         ]
       },
       "emerald": {
         "locations": [
-          "hoenn victory road 1f",
-          "desert underpass area"
+          "Victory Road (1F)",
+          "Desert Underpass"
         ]
       }
     },
@@ -3724,101 +3731,101 @@
     "296": {
       "ruby": {
         "locations": [
-          "granite cave 1f",
-          "granite cave b1f",
-          "granite cave 1fsmall room",
-          "hoenn victory road 1f",
-          "rustboro city area"
+          "Granite Cave (1F)",
+          "Granite Cave (B1F)",
+          "Granite Cave 1fsmall Room",
+          "Victory Road (1F)",
+          "Rustboro City"
         ]
       },
       "sapphire": {
         "locations": [
-          "granite cave 1f",
-          "granite cave b1f",
-          "granite cave 1fsmall room",
-          "hoenn victory road 1f",
-          "rustboro city area"
+          "Granite Cave (1F)",
+          "Granite Cave (B1F)",
+          "Granite Cave 1fsmall Room",
+          "Victory Road (1F)",
+          "Rustboro City"
         ]
       },
       "emerald": {
         "locations": [
-          "granite cave 1f",
-          "granite cave b1f",
-          "granite cave 1fsmall room",
-          "hoenn victory road 1f"
+          "Granite Cave (1F)",
+          "Granite Cave (B1F)",
+          "Granite Cave 1fsmall Room",
+          "Victory Road (1F)"
         ]
       }
     },
     "297": {
       "ruby": {
         "locations": [
-          "hoenn victory road 1f",
-          "hoenn victory road b1f"
+          "Victory Road (1F)",
+          "Victory Road (B1F)"
         ]
       },
       "sapphire": {
         "locations": [
-          "hoenn victory road 1f",
-          "hoenn victory road b1f"
+          "Victory Road (1F)",
+          "Victory Road (B1F)"
         ]
       },
       "emerald": {
         "locations": [
-          "hoenn victory road 1f",
-          "hoenn victory road b1f"
+          "Victory Road (1F)",
+          "Victory Road (B1F)"
         ]
       }
     },
     "298": {
       "ruby": {
         "locations": [
-          "Breed Azumarill holding a Sea Incense"
+          "Breed Marill or Azumarill holding a Sea Incense"
         ]
       },
       "sapphire": {
         "locations": [
-          "Breed Azumarill holding a Sea Incense"
+          "Breed Marill or Azumarill holding a Sea Incense"
         ]
       },
       "emerald": {
         "locations": [
-          "Breed Azumarill holding a Sea Incense"
+          "Breed Marill or Azumarill holding a Sea Incense"
         ]
       }
     },
     "299": {
       "ruby": {
         "locations": [
-          "granite cave b2f"
+          "Granite Cave (B2F)"
         ]
       },
       "sapphire": {
         "locations": [
-          "granite cave b2f"
+          "Granite Cave (B2F)"
         ]
       },
       "emerald": {
         "locations": [
-          "granite cave b2f"
+          "Granite Cave (B2F)"
         ]
       }
     },
     "300": {
       "ruby": {
         "locations": [
-          "hoenn route 116 area",
-          "fortree city area"
+          "Route 116",
+          "Fortree City"
         ]
       },
       "sapphire": {
         "locations": [
-          "hoenn route 116 area",
-          "fortree city area"
+          "Route 116",
+          "Fortree City"
         ]
       },
       "emerald": {
         "locations": [
-          "hoenn route 116 area"
+          "Route 116"
         ]
       }
     },
@@ -3842,111 +3849,113 @@
     "302": {
       "sapphire": {
         "locations": [
-          "granite cave b1f",
-          "granite cave b2f",
-          "cave of origin 1f",
-          "cave of origin b1f",
-          "cave of origin b2f",
-          "cave of origin b3f",
-          "hoenn victory road b2f",
-          "sky pillar 1f",
-          "sky pillar 3f",
-          "sky pillar 5f"
+          "Granite Cave (B1F)",
+          "Granite Cave (B2F)",
+          "Cave Of Origin (1F)",
+          "Cave Of Origin (B1F)",
+          "Cave Of Origin (B2F)",
+          "Cave Of Origin (B3F)",
+          "Victory Road (B2F)",
+          "Sky Pillar (1F)",
+          "Sky Pillar (3F)",
+          "Sky Pillar (5F)"
         ]
       },
       "emerald": {
         "locations": [
-          "granite cave b1f",
-          "granite cave b2f",
-          "cave of origin 1f",
-          "cave of origin b1f",
-          "cave of origin b2f",
-          "cave of origin b3f",
-          "hoenn victory road b2f",
-          "sky pillar 1f",
-          "sky pillar 3f",
-          "sky pillar 5f"
+          "Granite Cave (B1F)",
+          "Granite Cave (B2F)",
+          "Cave Of Origin (1F)",
+          "Cave Of Origin (B1F)",
+          "Cave Of Origin (B2F)",
+          "Cave Of Origin (B3F)",
+          "Victory Road (B2F)",
+          "Sky Pillar (1F)",
+          "Sky Pillar (3F)",
+          "Sky Pillar (5F)"
         ]
       },
       "ruby": {
         "locations": [
-          "Trade, Event"
+          "Trade",
+          "Event"
         ]
       }
     },
     "303": {
       "ruby": {
         "locations": [
-          "granite cave b1f",
-          "granite cave b2f",
-          "cave of origin 1f",
-          "cave of origin b1f",
-          "cave of origin b2f",
-          "cave of origin b3f",
-          "hoenn victory road b2f",
-          "sky pillar 1f",
-          "sky pillar 3f",
-          "sky pillar 5f"
+          "Granite Cave (B1F)",
+          "Granite Cave (B2F)",
+          "Cave Of Origin (1F)",
+          "Cave Of Origin (B1F)",
+          "Cave Of Origin (B2F)",
+          "Cave Of Origin (B3F)",
+          "Victory Road (B2F)",
+          "Sky Pillar (1F)",
+          "Sky Pillar (3F)",
+          "Sky Pillar (5F)"
         ]
       },
       "emerald": {
         "locations": [
-          "hoenn victory road b1f",
-          "hoenn victory road b2f"
+          "Victory Road (B1F)",
+          "Victory Road (B2F)"
         ]
       },
       "sapphire": {
         "locations": [
-          "Trade, Event"
+          "Trade",
+          "Event"
         ]
       }
     },
     "304": {
       "ruby": {
         "locations": [
-          "granite cave b1f",
-          "granite cave b2f",
-          "granite cave 1fsmall room",
-          "hoenn victory road 1f"
+          "Granite Cave (B1F)",
+          "Granite Cave (B2F)",
+          "Granite Cave 1fsmall Room",
+          "Victory Road (1F)"
         ]
       },
       "sapphire": {
         "locations": [
-          "granite cave b1f",
-          "granite cave b2f",
-          "granite cave 1fsmall room",
-          "hoenn victory road 1f"
+          "Granite Cave (B1F)",
+          "Granite Cave (B2F)",
+          "Granite Cave 1fsmall Room",
+          "Victory Road (1F)"
         ]
       },
       "emerald": {
         "locations": [
-          "granite cave b1f",
-          "granite cave b2f",
-          "granite cave 1fsmall room",
-          "hoenn victory road 1f"
+          "Granite Cave (B1F)",
+          "Granite Cave (B2F)",
+          "Granite Cave 1fsmall Room",
+          "Victory Road (1F)"
         ]
       }
     },
     "305": {
       "ruby": {
         "locations": [
-          "hoenn victory road 1f",
-          "hoenn victory road b1f",
-          "hoenn victory road b2f"
+          "Victory Road (1F)",
+          "Victory Road (B1F)",
+          "Victory Road (B2F)"
         ]
       },
       "sapphire": {
         "locations": [
-          "hoenn victory road 1f",
-          "hoenn victory road b1f",
-          "hoenn victory road b2f"
+          "Victory Road (1F)",
+          "Victory Road (B1F)",
+          "Victory Road (B2F)"
         ]
       },
       "emerald": {
         "locations": [
-          "hoenn victory road 1f",
-          "hoenn victory road b1f",
-          "hoenn victory road b2f"
+          "Victory Road (1F)",
+          "Victory Road (B1F)",
+          "Victory Road (B2F)"
         ]
       }
     },
@@ -3970,173 +3979,175 @@
     "307": {
       "ruby": {
         "locations": [
-          "mt pyre outside",
-          "hoenn victory road b1f"
+          "Mt. Pyre Outside",
+          "Victory Road (B1F)"
         ]
       },
       "sapphire": {
         "locations": [
-          "mt pyre outside",
-          "hoenn victory road b1f"
+          "Mt. Pyre Outside",
+          "Victory Road (B1F)"
         ]
       },
       "emerald": {
         "locations": [
-          "Trade, Event"
+          "Trade",
+          "Event"
         ]
       }
     },
     "308": {
       "ruby": {
         "locations": [
-          "hoenn victory road b1f",
-          "hoenn victory road b2f"
+          "Victory Road (B1F)",
+          "Victory Road (B2F)"
         ]
       },
       "sapphire": {
         "locations": [
-          "hoenn victory road b1f",
-          "hoenn victory road b2f"
+          "Victory Road (B1F)",
+          "Victory Road (B2F)"
         ]
       }
     },
     "309": {
       "ruby": {
         "locations": [
-          "hoenn route 110 area",
-          "hoenn route 118 area"
+          "Route 110",
+          "Route 118"
         ]
       },
       "sapphire": {
         "locations": [
-          "hoenn route 110 area",
-          "hoenn route 118 area"
+          "Route 110",
+          "Route 118"
         ]
       },
       "emerald": {
         "locations": [
-          "hoenn route 110 area",
-          "hoenn route 118 area"
+          "Route 110",
+          "Route 118"
         ]
       }
     },
     "310": {
       "ruby": {
         "locations": [
-          "hoenn route 118 area"
+          "Route 118"
         ]
       },
       "sapphire": {
         "locations": [
-          "hoenn route 118 area"
+          "Route 118"
         ]
       },
       "emerald": {
         "locations": [
-          "hoenn route 118 area"
+          "Route 118"
         ]
       }
     },
     "311": {
       "ruby": {
         "locations": [
-          "hoenn route 110 area"
+          "Route 110"
         ]
       },
       "sapphire": {
         "locations": [
-          "hoenn route 110 area"
+          "Route 110"
         ]
       },
       "emerald": {
         "locations": [
-          "hoenn route 110 area",
-          "fortree city area"
+          "Route 110",
+          "Fortree City"
         ]
       }
     },
     "312": {
       "ruby": {
         "locations": [
-          "hoenn route 110 area"
+          "Route 110"
         ]
       },
       "sapphire": {
         "locations": [
-          "hoenn route 110 area"
+          "Route 110"
         ]
       },
       "emerald": {
         "locations": [
-          "hoenn route 110 area"
+          "Route 110"
         ]
       }
     },
     "313": {
       "ruby": {
         "locations": [
-          "hoenn route 117 area"
+          "Route 117"
         ]
       },
       "sapphire": {
         "locations": [
-          "hoenn route 117 area"
+          "Route 117"
         ]
       },
       "emerald": {
         "locations": [
-          "hoenn route 117 area"
+          "Route 117"
         ]
       }
     },
     "314": {
       "ruby": {
         "locations": [
-          "hoenn route 117 area"
+          "Route 117"
         ]
       },
       "sapphire": {
         "locations": [
-          "hoenn route 117 area"
+          "Route 117"
         ]
       },
       "emerald": {
         "locations": [
-          "hoenn route 117 area"
+          "Route 117"
         ]
       }
     },
     "315": {
       "ruby": {
         "locations": [
-          "hoenn route 117 area"
+          "Route 117"
         ]
       },
       "sapphire": {
         "locations": [
-          "hoenn route 117 area"
+          "Route 117"
         ]
       },
       "emerald": {
         "locations": [
-          "Trade, Event"
+          "Trade",
+          "Event"
         ]
       }
     },
     "316": {
       "ruby": {
         "locations": [
-          "hoenn route 110 area"
+          "Route 110"
         ]
       },
       "sapphire": {
         "locations": [
-          "hoenn route 110 area"
+          "Route 110"
         ]
       },
       "emerald": {
         "locations": [
-          "hoenn route 110 area"
+          "Route 110"
         ]
       }
     },
@@ -4160,223 +4171,223 @@
     "318": {
       "ruby": {
         "locations": [
-          "hoenn route 118 area",
-          "hoenn route 119 area"
+          "Route 118",
+          "Route 119"
         ]
       },
       "sapphire": {
         "locations": [
-          "hoenn route 118 area",
-          "hoenn route 119 area"
+          "Route 118",
+          "Route 119"
         ]
       },
       "emerald": {
         "locations": [
-          "hoenn route 118 area",
-          "hoenn route 119 area"
+          "Route 118",
+          "Route 119"
         ]
       }
     },
     "319": {
       "ruby": {
         "locations": [
-          "mossdeep city area",
-          "hoenn route 103 area",
-          "hoenn route 118 area",
-          "hoenn route 122 area",
-          "hoenn route 124 area",
-          "hoenn route 125 area",
-          "hoenn route 126 area",
-          "hoenn route 127 area",
-          "hoenn route 129 area",
-          "hoenn route 130 area",
-          "hoenn route 131 area",
-          "hoenn route 132 area",
-          "hoenn route 133 area",
-          "hoenn route 134 area",
-          "pacifidlog town area"
+          "Mossdeep City",
+          "Route 103",
+          "Route 118",
+          "Route 122",
+          "Route 124",
+          "Route 125",
+          "Route 126",
+          "Route 127",
+          "Route 129",
+          "Route 130",
+          "Route 131",
+          "Route 132",
+          "Route 133",
+          "Route 134",
+          "Pacifidlog Town"
         ]
       },
       "sapphire": {
         "locations": [
-          "mossdeep city area",
-          "hoenn route 103 area",
-          "hoenn route 118 area",
-          "hoenn route 122 area",
-          "hoenn route 124 area",
-          "hoenn route 125 area",
-          "hoenn route 126 area",
-          "hoenn route 127 area",
-          "hoenn route 129 area",
-          "hoenn route 130 area",
-          "hoenn route 131 area",
-          "hoenn route 132 area",
-          "hoenn route 133 area",
-          "hoenn route 134 area",
-          "pacifidlog town area"
+          "Mossdeep City",
+          "Route 103",
+          "Route 118",
+          "Route 122",
+          "Route 124",
+          "Route 125",
+          "Route 126",
+          "Route 127",
+          "Route 129",
+          "Route 130",
+          "Route 131",
+          "Route 132",
+          "Route 133",
+          "Route 134",
+          "Pacifidlog Town"
         ]
       },
       "emerald": {
         "locations": [
-          "mossdeep city area",
-          "hoenn route 103 area",
-          "hoenn route 118 area",
-          "hoenn route 122 area",
-          "hoenn route 124 area",
-          "hoenn route 125 area",
-          "hoenn route 126 area",
-          "hoenn route 127 area",
-          "hoenn route 129 area",
-          "hoenn route 130 area",
-          "hoenn route 131 area",
-          "hoenn route 132 area",
-          "hoenn route 133 area",
-          "hoenn route 134 area",
-          "pacifidlog town area"
+          "Mossdeep City",
+          "Route 103",
+          "Route 118",
+          "Route 122",
+          "Route 124",
+          "Route 125",
+          "Route 126",
+          "Route 127",
+          "Route 129",
+          "Route 130",
+          "Route 131",
+          "Route 132",
+          "Route 133",
+          "Route 134",
+          "Pacifidlog Town"
         ]
       }
     },
     "320": {
       "ruby": {
         "locations": [
-          "slateport city area",
-          "lilycove city area",
-          "mossdeep city area",
-          "ever grande city area",
-          "seafloor cavern area",
-          "shoal cave high tide",
-          "hoenn route 103 area",
-          "hoenn route 105 area",
-          "hoenn route 106 area",
-          "hoenn route 107 area",
-          "hoenn route 108 area",
-          "hoenn route 109 area",
-          "hoenn route 110 area",
-          "hoenn route 115 area",
-          "hoenn route 121 area",
-          "hoenn route 122 area",
-          "hoenn route 123 area",
-          "hoenn route 124 area",
-          "hoenn route 125 area",
-          "hoenn route 126 area",
-          "hoenn route 127 area",
-          "hoenn route 128 area",
-          "hoenn route 129 area",
-          "hoenn route 130 area",
-          "hoenn route 131 area",
-          "hoenn route 132 area",
-          "hoenn route 133 area",
-          "hoenn route 134 area",
-          "dewford town area",
-          "pacifidlog town area"
+          "Slateport City",
+          "Lilycove City",
+          "Mossdeep City",
+          "Ever Grande City",
+          "Seafloor Cavern",
+          "Shoal Cave High Tide",
+          "Route 103",
+          "Route 105",
+          "Route 106",
+          "Route 107",
+          "Route 108",
+          "Route 109",
+          "Route 110",
+          "Route 115",
+          "Route 121",
+          "Route 122",
+          "Route 123",
+          "Route 124",
+          "Route 125",
+          "Route 126",
+          "Route 127",
+          "Route 128",
+          "Route 129",
+          "Route 130",
+          "Route 131",
+          "Route 132",
+          "Route 133",
+          "Route 134",
+          "Dewford Town",
+          "Pacifidlog Town"
         ]
       },
       "sapphire": {
         "locations": [
-          "slateport city area",
-          "lilycove city area",
-          "mossdeep city area",
-          "ever grande city area",
-          "seafloor cavern area",
-          "shoal cave high tide",
-          "hoenn route 103 area",
-          "hoenn route 105 area",
-          "hoenn route 106 area",
-          "hoenn route 107 area",
-          "hoenn route 108 area",
-          "hoenn route 109 area",
-          "hoenn route 110 area",
-          "hoenn route 115 area",
-          "hoenn route 121 area",
-          "hoenn route 122 area",
-          "hoenn route 123 area",
-          "hoenn route 124 area",
-          "hoenn route 125 area",
-          "hoenn route 126 area",
-          "hoenn route 127 area",
-          "hoenn route 128 area",
-          "hoenn route 129 area",
-          "hoenn route 130 area",
-          "hoenn route 131 area",
-          "hoenn route 132 area",
-          "hoenn route 133 area",
-          "hoenn route 134 area",
-          "dewford town area",
-          "pacifidlog town area"
+          "Slateport City",
+          "Lilycove City",
+          "Mossdeep City",
+          "Ever Grande City",
+          "Seafloor Cavern",
+          "Shoal Cave High Tide",
+          "Route 103",
+          "Route 105",
+          "Route 106",
+          "Route 107",
+          "Route 108",
+          "Route 109",
+          "Route 110",
+          "Route 115",
+          "Route 121",
+          "Route 122",
+          "Route 123",
+          "Route 124",
+          "Route 125",
+          "Route 126",
+          "Route 127",
+          "Route 128",
+          "Route 129",
+          "Route 130",
+          "Route 131",
+          "Route 132",
+          "Route 133",
+          "Route 134",
+          "Dewford Town",
+          "Pacifidlog Town"
         ]
       },
       "emerald": {
         "locations": [
-          "slateport city area",
-          "lilycove city area",
-          "mossdeep city area",
-          "ever grande city area",
-          "seafloor cavern area",
-          "shoal cave high tide",
-          "hoenn route 103 area",
-          "hoenn route 105 area",
-          "hoenn route 106 area",
-          "hoenn route 107 area",
-          "hoenn route 108 area",
-          "hoenn route 109 area",
-          "hoenn route 110 area",
-          "hoenn route 115 area",
-          "hoenn route 121 area",
-          "hoenn route 122 area",
-          "hoenn route 123 area",
-          "hoenn route 124 area",
-          "hoenn route 125 area",
-          "hoenn route 126 area",
-          "hoenn route 127 area",
-          "hoenn route 128 area",
-          "hoenn route 129 area",
-          "hoenn route 130 area",
-          "hoenn route 131 area",
-          "hoenn route 132 area",
-          "hoenn route 133 area",
-          "hoenn route 134 area",
-          "dewford town area",
-          "pacifidlog town area"
+          "Slateport City",
+          "Lilycove City",
+          "Mossdeep City",
+          "Ever Grande City",
+          "Seafloor Cavern",
+          "Shoal Cave High Tide",
+          "Route 103",
+          "Route 105",
+          "Route 106",
+          "Route 107",
+          "Route 108",
+          "Route 109",
+          "Route 110",
+          "Route 115",
+          "Route 121",
+          "Route 122",
+          "Route 123",
+          "Route 124",
+          "Route 125",
+          "Route 126",
+          "Route 127",
+          "Route 128",
+          "Route 129",
+          "Route 130",
+          "Route 131",
+          "Route 132",
+          "Route 133",
+          "Route 134",
+          "Dewford Town",
+          "Pacifidlog Town"
         ]
       }
     },
     "321": {
       "ruby": {
         "locations": [
-          "hoenn route 129 area"
+          "Route 129"
         ]
       },
       "sapphire": {
         "locations": [
-          "hoenn route 129 area"
+          "Route 129"
         ]
       },
       "emerald": {
         "locations": [
-          "hoenn route 129 area"
+          "Route 129"
         ]
       }
     },
     "322": {
       "ruby": {
         "locations": [
-          "jagged pass area",
-          "fiery path area",
-          "hoenn route 112 area"
+          "Jagged Pass",
+          "Fiery Path",
+          "Route 112"
         ]
       },
       "sapphire": {
         "locations": [
-          "jagged pass area",
-          "fiery path area",
-          "hoenn route 112 area"
+          "Jagged Pass",
+          "Fiery Path",
+          "Route 112"
         ]
       },
       "emerald": {
         "locations": [
-          "jagged pass area",
-          "fiery path area",
-          "hoenn route 112 area"
+          "Jagged Pass",
+          "Fiery Path",
+          "Route 112"
         ]
       }
     },
@@ -4400,35 +4411,35 @@
     "324": {
       "ruby": {
         "locations": [
-          "fiery path area"
+          "Fiery Path"
         ]
       },
       "sapphire": {
         "locations": [
-          "fiery path area"
+          "Fiery Path"
         ]
       },
       "emerald": {
         "locations": [
-          "fiery path area",
-          "magma hideout area"
+          "Fiery Path",
+          "Magma Hideout"
         ]
       }
     },
     "325": {
       "ruby": {
         "locations": [
-          "jagged pass area"
+          "Jagged Pass"
         ]
       },
       "sapphire": {
         "locations": [
-          "jagged pass area"
+          "Jagged Pass"
         ]
       },
       "emerald": {
         "locations": [
-          "jagged pass area"
+          "Jagged Pass"
         ]
       }
     },
@@ -4452,35 +4463,35 @@
     "327": {
       "ruby": {
         "locations": [
-          "hoenn route 113 area"
+          "Route 113"
         ]
       },
       "sapphire": {
         "locations": [
-          "hoenn route 113 area"
+          "Route 113"
         ]
       },
       "emerald": {
         "locations": [
-          "hoenn route 113 area"
+          "Route 113"
         ]
       }
     },
     "328": {
       "ruby": {
         "locations": [
-          "hoenn route 111 area"
+          "Route 111"
         ]
       },
       "sapphire": {
         "locations": [
-          "hoenn route 111 area"
+          "Route 111"
         ]
       },
       "emerald": {
         "locations": [
-          "hoenn route 111 area",
-          "mirage tower area"
+          "Route 111",
+          "Mirage Tower"
         ]
       }
     },
@@ -4521,17 +4532,17 @@
     "331": {
       "ruby": {
         "locations": [
-          "hoenn route 111 area"
+          "Route 111"
         ]
       },
       "sapphire": {
         "locations": [
-          "hoenn route 111 area"
+          "Route 111"
         ]
       },
       "emerald": {
         "locations": [
-          "hoenn route 111 area"
+          "Route 111"
         ]
       }
     },
@@ -4555,196 +4566,201 @@
     "333": {
       "ruby": {
         "locations": [
-          "hoenn route 114 area",
-          "hoenn route 115 area"
+          "Route 114",
+          "Route 115"
         ]
       },
       "sapphire": {
         "locations": [
-          "hoenn route 114 area",
-          "hoenn route 115 area"
+          "Route 114",
+          "Route 115"
         ]
       },
       "emerald": {
         "locations": [
-          "hoenn route 114 area",
-          "hoenn route 115 area"
+          "Route 114",
+          "Route 115"
         ]
       }
     },
     "334": {
       "ruby": {
         "locations": [
-          "sky pillar 5f"
+          "Sky Pillar (5F)"
         ]
       },
       "sapphire": {
         "locations": [
-          "sky pillar 5f"
+          "Sky Pillar (5F)"
         ]
       },
       "emerald": {
         "locations": [
-          "sky pillar 5f"
+          "Sky Pillar (5F)"
         ]
       }
     },
     "335": {
       "ruby": {
         "locations": [
-          "hoenn route 114 area"
+          "Route 114"
         ]
       },
       "sapphire": {
         "locations": [
-          "Trade, Event"
+          "Trade",
+          "Event"
         ]
       },
       "emerald": {
         "locations": [
-          "Trade, Event"
+          "Trade",
+          "Event"
         ]
       }
     },
     "336": {
       "sapphire": {
         "locations": [
-          "hoenn route 114 area"
+          "Route 114"
         ]
       },
       "emerald": {
         "locations": [
-          "hoenn route 114 area"
+          "Route 114"
         ]
       }
     },
     "337": {
       "sapphire": {
         "locations": [
-          "meteor falls area",
-          "meteor falls back",
-          "meteor falls b1f",
-          "meteor falls backsmall room"
+          "Meteor Falls",
+          "Meteor Falls Back",
+          "Meteor Falls (B1F)",
+          "Meteor Falls Backsmall Room"
         ]
       },
       "ruby": {
         "locations": [
-          "Trade, Event"
+          "Trade",
+          "Event"
         ]
       },
       "emerald": {
         "locations": [
-          "Trade, Event"
+          "Trade",
+          "Event"
         ]
       }
     },
     "338": {
       "ruby": {
         "locations": [
-          "meteor falls area",
-          "meteor falls back",
-          "meteor falls b1f",
-          "meteor falls backsmall room"
+          "Meteor Falls",
+          "Meteor Falls Back",
+          "Meteor Falls (B1F)",
+          "Meteor Falls Backsmall Room"
         ]
       },
       "emerald": {
         "locations": [
-          "meteor falls area",
-          "meteor falls back",
-          "meteor falls b1f",
-          "meteor falls backsmall room"
+          "Meteor Falls",
+          "Meteor Falls Back",
+          "Meteor Falls (B1F)",
+          "Meteor Falls Backsmall Room"
         ]
       },
       "sapphire": {
         "locations": [
-          "Trade, Event"
+          "Trade",
+          "Event"
         ]
       }
     },
     "339": {
       "ruby": {
         "locations": [
-          "meteor falls area",
-          "meteor falls back",
-          "meteor falls b1f",
-          "meteor falls backsmall room",
-          "hoenn victory road b2f",
-          "hoenn route 111 area",
-          "hoenn route 114 area",
-          "hoenn route 120 area"
+          "Meteor Falls",
+          "Meteor Falls Back",
+          "Meteor Falls (B1F)",
+          "Meteor Falls Backsmall Room",
+          "Victory Road (B2F)",
+          "Route 111",
+          "Route 114",
+          "Route 120"
         ]
       },
       "sapphire": {
         "locations": [
-          "meteor falls area",
-          "meteor falls back",
-          "meteor falls b1f",
-          "meteor falls backsmall room",
-          "hoenn victory road b2f",
-          "hoenn route 111 area",
-          "hoenn route 114 area",
-          "hoenn route 120 area"
+          "Meteor Falls",
+          "Meteor Falls Back",
+          "Meteor Falls (B1F)",
+          "Meteor Falls Backsmall Room",
+          "Victory Road (B2F)",
+          "Route 111",
+          "Route 114",
+          "Route 120"
         ]
       },
       "emerald": {
         "locations": [
-          "meteor falls area",
-          "meteor falls back",
-          "meteor falls b1f",
-          "meteor falls backsmall room",
-          "hoenn victory road b2f",
-          "hoenn route 111 area",
-          "hoenn route 114 area",
-          "hoenn route 120 area"
+          "Meteor Falls",
+          "Meteor Falls Back",
+          "Meteor Falls (B1F)",
+          "Meteor Falls Backsmall Room",
+          "Victory Road (B2F)",
+          "Route 111",
+          "Route 114",
+          "Route 120"
         ]
       }
     },
     "340": {
       "ruby": {
         "locations": [
-          "meteor falls back",
-          "meteor falls b1f",
-          "meteor falls backsmall room",
-          "hoenn victory road b2f"
+          "Meteor Falls Back",
+          "Meteor Falls (B1F)",
+          "Meteor Falls Backsmall Room",
+          "Victory Road (B2F)"
         ]
       },
       "sapphire": {
         "locations": [
-          "meteor falls back",
-          "meteor falls b1f",
-          "meteor falls backsmall room",
-          "hoenn victory road b2f"
+          "Meteor Falls Back",
+          "Meteor Falls (B1F)",
+          "Meteor Falls Backsmall Room",
+          "Victory Road (B2F)"
         ]
       },
       "emerald": {
         "locations": [
-          "meteor falls back",
-          "meteor falls b1f",
-          "meteor falls backsmall room",
-          "hoenn victory road b2f"
+          "Meteor Falls Back",
+          "Meteor Falls (B1F)",
+          "Meteor Falls Backsmall Room",
+          "Victory Road (B2F)"
         ]
       }
     },
     "341": {
       "ruby": {
         "locations": [
-          "petalburg city area",
-          "hoenn route 102 area",
-          "hoenn route 117 area"
+          "Petalburg City",
+          "Route 102",
+          "Route 117"
         ]
       },
       "sapphire": {
         "locations": [
-          "petalburg city area",
-          "hoenn route 102 area",
-          "hoenn route 117 area"
+          "Petalburg City",
+          "Route 102",
+          "Route 117"
         ]
       },
       "emerald": {
         "locations": [
-          "petalburg city area",
-          "hoenn route 102 area",
-          "hoenn route 117 area"
+          "Petalburg City",
+          "Route 102",
+          "Route 117"
         ]
       }
     },
@@ -4768,57 +4784,57 @@
     "343": {
       "ruby": {
         "locations": [
-          "hoenn route 111 area"
+          "Route 111"
         ]
       },
       "sapphire": {
         "locations": [
-          "hoenn route 111 area"
+          "Route 111"
         ]
       },
       "emerald": {
         "locations": [
-          "hoenn route 111 area"
+          "Route 111"
         ]
       }
     },
     "344": {
       "ruby": {
         "locations": [
-          "sky pillar 1f",
-          "sky pillar 3f",
-          "sky pillar 5f"
+          "Sky Pillar (1F)",
+          "Sky Pillar (3F)",
+          "Sky Pillar (5F)"
         ]
       },
       "sapphire": {
         "locations": [
-          "sky pillar 1f",
-          "sky pillar 3f",
-          "sky pillar 5f"
+          "Sky Pillar (1F)",
+          "Sky Pillar (3F)",
+          "Sky Pillar (5F)"
         ]
       },
       "emerald": {
         "locations": [
-          "sky pillar 1f",
-          "sky pillar 3f",
-          "sky pillar 5f"
+          "Sky Pillar (1F)",
+          "Sky Pillar (3F)",
+          "Sky Pillar (5F)"
         ]
       }
     },
     "345": {
       "ruby": {
         "locations": [
-          "rustboro city area"
+          "Rustboro City"
         ]
       },
       "sapphire": {
         "locations": [
-          "rustboro city area"
+          "Rustboro City"
         ]
       },
       "emerald": {
         "locations": [
-          "rustboro city area"
+          "Rustboro City"
         ]
       }
     },
@@ -4842,17 +4858,17 @@
     "347": {
       "ruby": {
         "locations": [
-          "rustboro city area"
+          "Rustboro City"
         ]
       },
       "sapphire": {
         "locations": [
-          "rustboro city area"
+          "Rustboro City"
         ]
       },
       "emerald": {
         "locations": [
-          "rustboro city area"
+          "Rustboro City"
         ]
       }
     },
@@ -4876,17 +4892,17 @@
     "349": {
       "ruby": {
         "locations": [
-          "hoenn route 119 area"
+          "Route 119"
         ]
       },
       "sapphire": {
         "locations": [
-          "hoenn route 119 area"
+          "Route 119"
         ]
       },
       "emerald": {
         "locations": [
-          "hoenn route 119 area"
+          "Route 119"
         ]
       }
     },
@@ -4910,100 +4926,100 @@
     "351": {
       "ruby": {
         "locations": [
-          "hoenn route 119 weather institute"
+          "Route 119 Weather Institute"
         ]
       },
       "sapphire": {
         "locations": [
-          "hoenn route 119 weather institute"
+          "Route 119 Weather Institute"
         ]
       },
       "emerald": {
         "locations": [
-          "hoenn route 119 weather institute"
+          "Route 119 Weather Institute"
         ]
       }
     },
     "352": {
       "ruby": {
         "locations": [
-          "hoenn route 118 area",
-          "hoenn route 119 area",
-          "hoenn route 120 area",
-          "hoenn route 121 area",
-          "hoenn route 123 area"
+          "Route 118",
+          "Route 119",
+          "Route 120",
+          "Route 121",
+          "Route 123"
         ]
       },
       "sapphire": {
         "locations": [
-          "hoenn route 118 area",
-          "hoenn route 119 area",
-          "hoenn route 120 area",
-          "hoenn route 121 area",
-          "hoenn route 123 area"
+          "Route 118",
+          "Route 119",
+          "Route 120",
+          "Route 121",
+          "Route 123"
         ]
       },
       "emerald": {
         "locations": [
-          "hoenn route 118 area",
-          "hoenn route 119 area",
-          "hoenn route 120 area",
-          "hoenn route 121 area",
-          "hoenn route 123 area"
+          "Route 118",
+          "Route 119",
+          "Route 120",
+          "Route 121",
+          "Route 123"
         ]
       }
     },
     "353": {
       "sapphire": {
         "locations": [
-          "mt pyre 1f",
-          "mt pyre 2f",
-          "mt pyre 3f",
-          "mt pyre 4f",
-          "mt pyre 5f",
-          "mt pyre 6f",
-          "mt pyre outside",
-          "mt pyre summit",
-          "hoenn route 121 area",
-          "hoenn route 123 area"
+          "Mt. Pyre (1F)",
+          "Mt. Pyre (2F)",
+          "Mt. Pyre (3F)",
+          "Mt. Pyre (4F)",
+          "Mt. Pyre (5F)",
+          "Mt. Pyre (6F)",
+          "Mt. Pyre Outside",
+          "Mt. Pyre Summit",
+          "Route 121",
+          "Route 123"
         ]
       },
       "emerald": {
         "locations": [
-          "mt pyre 1f",
-          "mt pyre 2f",
-          "mt pyre 3f",
-          "mt pyre 4f",
-          "mt pyre 5f",
-          "mt pyre 6f",
-          "mt pyre outside",
-          "mt pyre summit",
-          "hoenn route 121 area",
-          "hoenn route 123 area"
+          "Mt. Pyre (1F)",
+          "Mt. Pyre (2F)",
+          "Mt. Pyre (3F)",
+          "Mt. Pyre (4F)",
+          "Mt. Pyre (5F)",
+          "Mt. Pyre (6F)",
+          "Mt. Pyre Outside",
+          "Mt. Pyre Summit",
+          "Route 121",
+          "Route 123"
         ]
       },
       "ruby": {
         "locations": [
-          "mt pyre 4f",
-          "mt pyre 5f",
-          "mt pyre 6f",
-          "mt pyre summit"
+          "Mt. Pyre (4F)",
+          "Mt. Pyre (5F)",
+          "Mt. Pyre (6F)",
+          "Mt. Pyre Summit"
         ]
       }
     },
     "354": {
       "sapphire": {
         "locations": [
-          "sky pillar 1f",
-          "sky pillar 3f",
-          "sky pillar 5f"
+          "Sky Pillar (1F)",
+          "Sky Pillar (3F)",
+          "Sky Pillar (5F)"
         ]
       },
       "emerald": {
         "locations": [
-          "sky pillar 1f",
-          "sky pillar 3f",
-          "sky pillar 5f"
+          "Sky Pillar (1F)",
+          "Sky Pillar (3F)",
+          "Sky Pillar (5F)"
         ]
       },
       "ruby": {
@@ -5015,41 +5031,41 @@
     "355": {
       "ruby": {
         "locations": [
-          "mt pyre 1f",
-          "mt pyre 2f",
-          "mt pyre 3f",
-          "mt pyre 4f",
-          "mt pyre 5f",
-          "mt pyre 6f",
-          "mt pyre outside",
-          "mt pyre summit",
-          "hoenn route 121 area",
-          "hoenn route 123 area"
+          "Mt. Pyre (1F)",
+          "Mt. Pyre (2F)",
+          "Mt. Pyre (3F)",
+          "Mt. Pyre (4F)",
+          "Mt. Pyre (5F)",
+          "Mt. Pyre (6F)",
+          "Mt. Pyre Outside",
+          "Mt. Pyre Summit",
+          "Route 121",
+          "Route 123"
         ]
       },
       "sapphire": {
         "locations": [
-          "mt pyre 4f",
-          "mt pyre 5f",
-          "mt pyre 6f",
-          "mt pyre summit"
+          "Mt. Pyre (4F)",
+          "Mt. Pyre (5F)",
+          "Mt. Pyre (6F)",
+          "Mt. Pyre Summit"
         ]
       },
       "emerald": {
         "locations": [
-          "mt pyre 4f",
-          "mt pyre 5f",
-          "mt pyre 6f",
-          "mt pyre summit"
+          "Mt. Pyre (4F)",
+          "Mt. Pyre (5F)",
+          "Mt. Pyre (6F)",
+          "Mt. Pyre Summit"
         ]
       }
     },
     "356": {
       "ruby": {
         "locations": [
-          "sky pillar 1f",
-          "sky pillar 3f",
-          "sky pillar 5f"
+          "Sky Pillar (1F)",
+          "Sky Pillar (3F)",
+          "Sky Pillar (5F)"
         ]
       },
       "sapphire": {
@@ -5066,91 +5082,91 @@
     "357": {
       "ruby": {
         "locations": [
-          "hoenn route 119 area"
+          "Route 119"
         ]
       },
       "sapphire": {
         "locations": [
-          "hoenn route 119 area"
+          "Route 119"
         ]
       },
       "emerald": {
         "locations": [
-          "hoenn route 119 area"
+          "Route 119"
         ]
       }
     },
     "358": {
       "ruby": {
         "locations": [
-          "mt pyre summit"
+          "Mt. Pyre Summit"
         ]
       },
       "sapphire": {
         "locations": [
-          "mt pyre summit"
+          "Mt. Pyre Summit"
         ]
       },
       "emerald": {
         "locations": [
-          "mt pyre summit"
+          "Mt. Pyre Summit"
         ]
       }
     },
     "359": {
       "ruby": {
         "locations": [
-          "hoenn route 120 area"
+          "Route 120"
         ]
       },
       "sapphire": {
         "locations": [
-          "hoenn route 120 area"
+          "Route 120"
         ]
       },
       "emerald": {
         "locations": [
-          "hoenn route 120 area"
+          "Route 120"
         ]
       }
     },
     "360": {
       "ruby": {
         "locations": [
-          "hoenn route 130 area",
-          "lavaridge town area",
-          "mirage island area"
+          "Route 130",
+          "Lavaridge Town",
+          "Mirage Island"
         ]
       },
       "sapphire": {
         "locations": [
-          "hoenn route 130 area",
-          "lavaridge town area",
-          "mirage island area"
+          "Route 130",
+          "Lavaridge Town",
+          "Mirage Island"
         ]
       },
       "emerald": {
         "locations": [
-          "hoenn route 130 area",
-          "lavaridge town area",
-          "mirage island area"
+          "Route 130",
+          "Lavaridge Town",
+          "Mirage Island"
         ]
       }
     },
     "361": {
       "ruby": {
         "locations": [
-          "shoal cave b3f"
+          "Shoal Cave (B3F)"
         ]
       },
       "sapphire": {
         "locations": [
-          "shoal cave b3f"
+          "Shoal Cave (B3F)"
         ]
       },
       "emerald": {
         "locations": [
-          "shoal cave b3f"
+          "Shoal Cave (B3F)"
         ]
       }
     },
@@ -5174,29 +5190,29 @@
     "363": {
       "ruby": {
         "locations": [
-          "shoal cave high tide",
-          "shoal cave b1f",
-          "shoal cave low tide",
-          "shoal cave b2f",
-          "shoal cave b3f"
+          "Shoal Cave High Tide",
+          "Shoal Cave (B1F)",
+          "Shoal Cave Low Tide",
+          "Shoal Cave (B2F)",
+          "Shoal Cave (B3F)"
         ]
       },
       "sapphire": {
         "locations": [
-          "shoal cave high tide",
-          "shoal cave b1f",
-          "shoal cave low tide",
-          "shoal cave b2f",
-          "shoal cave b3f"
+          "Shoal Cave High Tide",
+          "Shoal Cave (B1F)",
+          "Shoal Cave Low Tide",
+          "Shoal Cave (B2F)",
+          "Shoal Cave (B3F)"
         ]
       },
       "emerald": {
         "locations": [
-          "shoal cave high tide",
-          "shoal cave b1f",
-          "shoal cave low tide",
-          "shoal cave b2f",
-          "shoal cave b3f"
+          "Shoal Cave High Tide",
+          "Shoal Cave (B1F)",
+          "Shoal Cave Low Tide",
+          "Shoal Cave (B2F)",
+          "Shoal Cave (B3F)"
         ]
       }
     },
@@ -5237,20 +5253,20 @@
     "366": {
       "ruby": {
         "locations": [
-          "hoenn route 124 underwater",
-          "hoenn route 126 underwater"
+          "Route 124 Underwater",
+          "Route 126 Underwater"
         ]
       },
       "sapphire": {
         "locations": [
-          "hoenn route 124 underwater",
-          "hoenn route 126 underwater"
+          "Route 124 Underwater",
+          "Route 126 Underwater"
         ]
       },
       "emerald": {
         "locations": [
-          "hoenn route 124 underwater",
-          "hoenn route 126 underwater"
+          "Route 124 Underwater",
+          "Route 126 Underwater"
         ]
       }
     },
@@ -5291,57 +5307,57 @@
     "369": {
       "ruby": {
         "locations": [
-          "hoenn route 124 underwater",
-          "hoenn route 126 underwater"
+          "Route 124 Underwater",
+          "Route 126 Underwater"
         ]
       },
       "sapphire": {
         "locations": [
-          "hoenn route 124 underwater",
-          "hoenn route 126 underwater"
+          "Route 124 Underwater",
+          "Route 126 Underwater"
         ]
       },
       "emerald": {
         "locations": [
-          "hoenn route 124 underwater",
-          "hoenn route 126 underwater"
+          "Route 124 Underwater",
+          "Route 126 Underwater"
         ]
       }
     },
     "370": {
       "ruby": {
         "locations": [
-          "ever grande city area",
-          "hoenn route 128 area"
+          "Ever Grande City",
+          "Route 128"
         ]
       },
       "sapphire": {
         "locations": [
-          "ever grande city area",
-          "hoenn route 128 area"
+          "Ever Grande City",
+          "Route 128"
         ]
       },
       "emerald": {
         "locations": [
-          "ever grande city area",
-          "hoenn route 128 area"
+          "Ever Grande City",
+          "Route 128"
         ]
       }
     },
     "371": {
       "ruby": {
         "locations": [
-          "meteor falls backsmall room"
+          "Meteor Falls Backsmall Room"
         ]
       },
       "sapphire": {
         "locations": [
-          "meteor falls backsmall room"
+          "Meteor Falls Backsmall Room"
         ]
       },
       "emerald": {
         "locations": [
-          "meteor falls backsmall room"
+          "Meteor Falls Backsmall Room"
         ]
       }
     },
@@ -5382,17 +5398,17 @@
     "374": {
       "ruby": {
         "locations": [
-          "mossdeep city stevens house"
+          "Mossdeep City Stevens House"
         ]
       },
       "sapphire": {
         "locations": [
-          "mossdeep city stevens house"
+          "Mossdeep City Stevens House"
         ]
       },
       "emerald": {
         "locations": [
-          "mossdeep city stevens house"
+          "Mossdeep City Stevens House"
         ]
       }
     },
@@ -5433,162 +5449,165 @@
     "377": {
       "ruby": {
         "locations": [
-          "desert ruins area"
+          "Desert Ruins"
         ]
       },
       "sapphire": {
         "locations": [
-          "desert ruins area"
+          "Desert Ruins"
         ]
       },
       "emerald": {
         "locations": [
-          "desert ruins area"
+          "Desert Ruins"
         ]
       }
     },
     "378": {
       "ruby": {
         "locations": [
-          "island cave area"
+          "Island Cave"
         ]
       },
       "sapphire": {
         "locations": [
-          "island cave area"
+          "Island Cave"
         ]
       },
       "emerald": {
         "locations": [
-          "island cave area"
+          "Island Cave"
         ]
       }
     },
     "379": {
       "ruby": {
         "locations": [
-          "ancient tomb area"
+          "Ancient Tomb"
         ]
       },
       "sapphire": {
         "locations": [
-          "ancient tomb area"
+          "Ancient Tomb"
         ]
       },
       "emerald": {
         "locations": [
-          "ancient tomb area"
+          "Ancient Tomb"
         ]
       }
     },
     "380": {
       "ruby": {
         "locations": [
-          "southern island area"
+          "Southern Island"
         ]
       },
       "emerald": {
         "locations": [
-          "southern island area",
-          "roaming hoenn area"
+          "Southern Island",
+          "Roaming Hoenn"
         ]
       },
       "sapphire": {
         "locations": [
-          "roaming hoenn area"
+          "Roaming Hoenn"
         ]
       }
     },
     "381": {
       "sapphire": {
         "locations": [
-          "southern island area"
+          "Southern Island"
         ]
       },
       "emerald": {
         "locations": [
-          "southern island area",
-          "roaming hoenn area"
+          "Southern Island",
+          "Roaming Hoenn"
         ]
       },
       "ruby": {
         "locations": [
-          "roaming hoenn area"
+          "Roaming Hoenn"
         ]
       }
     },
     "382": {
       "sapphire": {
         "locations": [
-          "cave of origin b4f"
+          "Cave Of Origin (B4F)"
         ]
       },
       "emerald": {
         "locations": [
-          "marine cave area"
+          "Marine Cave"
         ]
       }
     },
     "383": {
       "ruby": {
         "locations": [
-          "cave of origin b4f"
+          "Cave Of Origin (B4F)"
         ]
       },
       "emerald": {
         "locations": [
-          "terra cave area"
+          "Terra Cave"
         ]
       }
     },
     "384": {
       "ruby": {
         "locations": [
-          "sky pillar apex"
+          "Sky Pillar Apex"
         ]
       },
       "sapphire": {
         "locations": [
-          "sky pillar apex"
+          "Sky Pillar Apex"
         ]
       },
       "emerald": {
         "locations": [
-          "sky pillar apex"
+          "Sky Pillar Apex"
         ]
       }
     },
     "385": {
       "ruby": {
         "locations": [
-          "hoenn pokecenter area"
+          "Pokecenter"
         ]
       },
       "sapphire": {
         "locations": [
-          "hoenn pokecenter area"
+          "Pokecenter"
         ]
       },
       "emerald": {
         "locations": [
-          "Trade, Event"
+          "Trade",
+          "Event"
         ]
       }
     },
     "386": {
       "emerald": {
         "locations": [
-          "birth island area"
+          "Birth Island"
         ]
       },
       "ruby": {
         "locations": [
-          "Trade, Event"
+          "Trade",
+          "Event"
         ]
       },
       "sapphire": {
         "locations": [
-          "Trade, Event"
+          "Trade",
+          "Event"
         ]
       }
     }
