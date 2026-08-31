@@ -573,7 +573,7 @@ body.is-scrolled #progressWrap {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   width: 100%;
   aspect-ratio: 1 / 1;
   padding: 0;
@@ -592,10 +592,11 @@ body.is-scrolled #progressWrap {
 
 /* Sprite appearance (dim until caught) */
 .cell .sprite {
-  width: 125%;
-  height: 125%;
-  object-fit: contain;
-  margin-top: -12.5%;
+  width: 100%;
+  height: 100%;
+  max-width: 96px;
+  max-height: 96px;
+  object-fit: scale-down;
   filter: saturate(50%) opacity(50%) blur(2px);
   transition: filter 0.2s ease;
 }
@@ -1084,7 +1085,7 @@ body.is-scrolled #progressWrap {
 .pokemon-info-sprite {
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: scale-down;
 }
 
 .pokemon-info-meta {
@@ -1278,7 +1279,7 @@ body.is-scrolled #progressWrap {
 .evo-sprite {
   width: 52px;
   height: 52px;
-  object-fit: contain;
+  object-fit: scale-down;
   background: var(--surface-soft);
   border-radius: 8px;
   border: 1px solid var(--border);
