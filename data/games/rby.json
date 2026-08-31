@@ -806,7 +806,8 @@
       },
       "yellow": {
         "locations": [
-          "Evolve Bulbasaur"
+          "Evolve Bulbasaur",
+          "Friend Safari (Grass)"
         ]
       }
     },
@@ -857,7 +858,8 @@
       },
       "yellow": {
         "locations": [
-          "Evolve Charmander"
+          "Evolve Charmander",
+          "Friend Safari (Fire)"
         ]
       }
     },
@@ -908,7 +910,8 @@
       },
       "yellow": {
         "locations": [
-          "Evolve Squirtle"
+          "Evolve Squirtle",
+          "Friend Safari (Water)"
         ]
       }
     },
@@ -983,7 +986,8 @@
       },
       "yellow": {
         "locations": [
-          "Evolve Metapod"
+          "Evolve Metapod",
+          "Friend Safari (Bug)"
         ]
       }
     },
@@ -1001,6 +1005,11 @@
           "Route 25",
           "Viridian Forest"
         ]
+      },
+      "yellow": {
+        "locations": [
+          "Santalune Forest"
+        ]
       }
     },
     "14": {
@@ -1016,6 +1025,11 @@
           "Route 25",
           "Viridian Forest"
         ]
+      },
+      "yellow": {
+        "locations": [
+          "Friend Safari (Poison)"
+        ]
       }
     },
     "15": {
@@ -1025,6 +1039,11 @@
         ]
       },
       "blue": {
+        "locations": [
+          "Evolve Kakuna"
+        ]
+      },
+      "yellow": {
         "locations": [
           "Evolve Kakuna"
         ]
@@ -1288,6 +1307,11 @@
           "Route 11",
           "Route 23"
         ]
+      },
+      "yellow": {
+        "locations": [
+          "Route 14 (Horde Encounter)"
+        ]
       }
     },
     "24": {
@@ -1296,6 +1320,11 @@
           "Cerulean Cave (1F)",
           "Cerulean Cave (B1F)",
           "Route 23"
+        ]
+      },
+      "yellow": {
+        "locations": [
+          "Route 19 (Horde Encounter)"
         ]
       }
     },
@@ -1330,6 +1359,11 @@
           "Cerulean Cave (1F)",
           "Cerulean Cave (B1F)",
           "Power Plant"
+        ]
+      },
+      "yellow": {
+        "locations": [
+          "Evolve Pikachu"
         ]
       }
     },
@@ -1583,7 +1617,8 @@
       },
       "yellow": {
         "locations": [
-          "Evolve Vulpix"
+          "Evolve Vulpix",
+          "Friend Safari (Fire)"
         ]
       }
     },
@@ -2202,7 +2237,8 @@
       },
       "yellow": {
         "locations": [
-          "Evolve Poliwhirl"
+          "Evolve Poliwhirl",
+          "Victory Road (Super Rod)"
         ]
       }
     },
@@ -2330,7 +2366,8 @@
       },
       "yellow": {
         "locations": [
-          "Trade Cubone for Machoke in Underground Path (Kanto Routes 5–6) (evolves immediately)"
+          "Trade Cubone for Machoke in Underground Path (Kanto Routes 5–6) (evolves immediately)",
+          "Evolve Machoke"
         ]
       }
     },
@@ -2902,7 +2939,9 @@
       },
       "yellow": {
         "locations": [
-          "Evolve Shellder"
+          "Evolve Shellder",
+          "Route 8 (Super Rod)",
+          "Friend Safari (Ice)"
         ]
       }
     },
@@ -3754,12 +3793,22 @@
         "locations": [
           "Cerulean City"
         ]
+      },
+      "yellow": {
+        "locations": [
+          "Frost Cavern"
+        ]
       }
     },
     "125": {
       "red": {
         "locations": [
           "Power Plant"
+        ]
+      },
+      "yellow": {
+        "locations": [
+          "Friend Safari (Electric)"
         ]
       }
     },
@@ -3768,6 +3817,11 @@
         "locations": [
           "Pokemon Mansion (3F)",
           "Pokemon Mansion (B1F)"
+        ]
+      },
+      "yellow": {
+        "locations": [
+          "Friend Safari (Fire)"
         ]
       }
     },

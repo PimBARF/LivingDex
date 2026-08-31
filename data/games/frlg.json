@@ -1219,6 +1219,11 @@
           "Victory Road 2 (2F)",
           "Victory Road 2 (3F)"
         ]
+      },
+      "leafgreen": {
+        "locations": [
+          "Route 19 (Horde Encounter)"
+        ]
       }
     },
     "25": {
@@ -1433,7 +1438,8 @@
       },
       "firered": {
         "locations": [
-          "Evolve Vulpix"
+          "Evolve Vulpix",
+          "Friend Safari (Fire)"
         ]
       }
     },

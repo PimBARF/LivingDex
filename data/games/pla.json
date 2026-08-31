@@ -1310,9 +1310,7 @@
           "Nature's PantryN",
           "Tidewater DamN",
           "The HeartwoodN",
-          "Oreburrow TunnelN and nearby (additional 14px (Day, Night)",
-          "near Obsidian FallsN",
-          "Massive Mass Outbreaks",
+          "Oreburrow TunnelN and nearby (additional 14px (Day, Night), near Obsidian FallsN, massive mass outbreaks",
           "Crimson Mirelands: Cloudpool RidgeN",
           "near Diamond SettlementN",
           "Diamond HeathN",
@@ -1499,18 +1497,13 @@
           "Ursa's RingN",
           "near Sludge MoundN",
           "Scarlet BogN",
-          "Shrouded RuinsN (also (mass outbreaks) (Day, Night)",
-          "Cottonsedge PrairieN",
-          "Droning MeadowN",
-          "near Lake ValorN",
-          "Massive Mass Outbreaks",
+          "Shrouded RuinsN (also (mass outbreaks) (Day, Night), Cottonsedge PrairieN, Droning MeadowN, near Lake ValorN, massive mass outbreaks",
           "Coronet Highlands: Clamberclaw CliffsN",
           "Celestica RuinsN",
           "Sacred PlazaN",
           "Bolderoll RavineN",
-          "Alabaster Icelands: Bonechill WastesN (also mass outbreaks (Day, Night)",
-          "near Avalugg's LegacyN",
-          "near Icepeak CavernN"
+          "Massive Mass Outbreaks",
+          "Alabaster Icelands: Bonechill WastesN (also mass outbreaks (Day, Night), near Avalugg's LegacyN, near Icepeak CavernN, massive mass outbreaks"
         ]
       }
     },
@@ -1524,18 +1517,13 @@
           "Ursa's RingN",
           "near Sludge MoundN",
           "Scarlet BogN",
-          "Shrouded RuinsN (also mass outbreaks (Day, Night)",
-          "Cottonsedge PrairieN",
-          "Droning MeadowN",
-          "near Lake ValorN",
-          "Massive Mass Outbreaks",
+          "Shrouded RuinsN (also mass outbreaks (Day, Night), Cottonsedge PrairieN, Droning MeadowN, near Lake ValorN, massive mass outbreaks",
           "Coronet Highlands: Clamberclaw CliffsN",
           "Celestica RuinsN",
           "Sacred PlazaN",
           "Bolderoll RavineN",
-          "Alabaster Icelands: Bonechill WastesN (also mass outbreaks (Day, Night)",
-          "near Avalugg's LegacyN",
-          "near Icepeak CavernN"
+          "Massive Mass Outbreaks",
+          "Alabaster Icelands: Bonechill WastesN (also mass outbreaks (Day, Night), near Avalugg's LegacyN, near Icepeak CavernN, massive mass outbreaks"
         ]
       }
     },
@@ -1777,9 +1765,7 @@
       "legends-arceus": {
         "locations": [
           "Crimson Mirelands: Cottonsedge Prairie",
-          "Cobalt Coastlands: Bathers' LagoonD (also mass outbreaks (Day, Night)",
-          "Tranquility CoveD",
-          "Massive Mass Outbreaks"
+          "Cobalt Coastlands: Bathers' LagoonD (also mass outbreaks (Day, Night), Tranquility CoveD, massive mass outbreaks"
         ]
       }
     },
@@ -1851,8 +1837,7 @@
     "198": {
       "legends-arceus": {
         "locations": [
-          "Crimson Mirelands: Cloudpool RidgeN (also mass outbreaks nearby (Day, Night)",
-          "Massive Mass Outbreaks",
+          "Crimson Mirelands: Cloudpool RidgeN (also mass outbreaks nearby (Day, Night), massive mass outbreaks",
           "Cobalt Coastlands: Crossing SlopeN",
           "Ginkgo LandingN",
           "Aipom HillN",
@@ -1870,13 +1855,8 @@
       "legends-arceus": {
         "locations": [
           "Coronet Highlands: near Celestica RuinsN",
-          "Sacred PlazaN (also mass outbreaks nearby (Day, Night)",
-          "Stonetooth RowsN",
-          "Massive Mass Outbreaks",
-          "Alabaster Icelands: Avalanche SlopesN and nearby (also mass outbreaks (Day, Night)",
-          "near Glacier Terrace",
-          "Icepeak Cavern",
-          "Ice Colu (Morning, Night) Chamber"
+          "Sacred PlazaN (also mass outbreaks nearby (Day, Night), Stonetooth RowsN, massive mass outbreaks",
+          "Alabaster Icelands: Avalanche SlopesN and nearby (also mass outbreaks (Day, Night), near Glacier Terrace, Icepeak Cavern, Ice Colu (Morning, Night) Chamber, massive mass outbreaks"
         ]
       }
     },
@@ -2114,9 +2094,7 @@
       "legends-arceus": {
         "locations": [
           "Obsidian Fieldlands: Floaro GardensN",
-          "Grueling GroveN (mass outbreaks nearby (Day, Night)",
-          "The HeartwoodN",
-          "Massive Mass Outbreaks",
+          "Grueling GroveN (mass outbreaks nearby (Day, Night), The HeartwoodN, massive mass outbreaks",
           "Cobalt Coastlands: Bathers' LagoonN",
           "Veilstone CapeN"
         ]
@@ -2206,10 +2184,7 @@
         "locations": [
           "Cobalt Coastlands: Deadwood HauntN",
           "Coronet Highlands: massive mass outbreaks",
-          "Alabaster Icelands: Icebound FallsN and nearby (also mass outbreaks (Day, Night)",
-          "Arena's ApproachN",
-          "Avalanche Slopes",
-          "Massive Mass Outbreaks"
+          "Alabaster Icelands: Icebound FallsN and nearby (also mass outbreaks (Day, Night), Arena's ApproachN, Avalanche Slopes, massive mass outbreaks"
         ]
       }
     },
@@ -2219,9 +2194,7 @@
           "Cobalt Coastlands: Deadwood HauntN",
           "Coronet Highlands: Space Time Distortions",
           "Massive Mass Outbreaks",
-          "Alabaster Icelands: Icebound FallsN and nearby (also mass outbreaks (Day, Night)",
-          "Arena's ApproachN",
-          "Avalanche Slopes"
+          "Alabaster Icelands: Icebound FallsN and nearby (also mass outbreaks (Day, Night), Arena's ApproachN, Avalanche Slopes, massive mass outbreaks"
         ]
       }
     },
@@ -2405,19 +2378,10 @@
       "legends-arceus": {
         "locations": [
           "Obsidian Fieldlands: Deertrack HeightsD",
-          "Windswept RunD (additional 14px (Day, Night)",
-          "Nature's PantryD",
-          "Tidewater DamD",
-          "near Obsidian FallsD",
-          "Ramanas IslandD",
-          "Sandgem FlatsD (mass outbreaks nearby (Day, Night)",
-          "Massive Mass Outbreaks",
+          "Windswept RunD (additional 14px (Day, Night), Nature's PantryD, Tidewater DamD, near Obsidian FallsD, Ramanas IslandD, Sandgem FlatsD (mass outbreaks nearby (Day, Night), massive mass outbreaks",
           "Cobalt Coastlands: Crossing SlopeD",
           "Bathers' LagoonD",
-          "Deadwood HauntD (additional mass outbreaks (Day, Night)",
-          "Sand's ReachD",
-          "Tranquility CoveD",
-          "near Castaway ShoreD"
+          "Deadwood HauntD (additional mass outbreaks (Day, Night), Sand's ReachD, Tranquility CoveD, near Castaway ShoreD, massive mass outbreaks"
         ]
       }
     },
@@ -2425,12 +2389,12 @@
       "legends-arceus": {
         "locations": [
           "Obsidian Fieldlands: near Nature's Pantry",
-          "near Lake VerityD (also mass outbreaks (Day, Night)",
-          "Massive Mass Outbreaks",
+          "near Lake VerityD (also mass outbreaks (Day, Night), massive mass outbreaks",
           "Cobalt Coastlands: Deadwood HauntD",
           "Tranquility CoveD",
           "near Castaway Shore",
-          "Spring PathD"
+          "Spring PathD",
+          "Massive Mass Outbreaks"
         ]
       }
     },
@@ -2535,10 +2499,7 @@
     "406": {
       "legends-arceus": {
         "locations": [
-          "Crimson Mirelands: Golden LowlandsD (also mass outbreaks (Day, Night)",
-          "Gapejaw Bog",
-          "near Cottonsedge Prairie",
-          "Massive Mass Outbreaks",
+          "Crimson Mirelands: Golden LowlandsD (also mass outbreaks (Day, Night), Gapejaw Bog, near Cottonsedge Prairie, massive mass outbreaks",
           "Coronet Highlands: Fabled Spring"
         ]
       }
@@ -2857,14 +2818,10 @@
           "Sand's Reach and nearbyN",
           "Tranquility CoveN",
           "near Castaway ShoreN",
-          "near Islespy ShoreN (mass outbreaks nearby (Day, Night)",
-          "Lunker's LairN",
-          "Seagrass HavenN",
-          "Firespit IslandN",
+          "near Islespy ShoreN (mass outbreaks nearby (Day, Night), Lunker's LairN, Seagrass HavenN, Firespit IslandN",
           "Alabaster Icelands: Bonechill WastesN",
           "Avalugg's LegacyN",
-          "Glacier TerraceN (also mass outbreaks (Day, Night)",
-          "Heart's CragN"
+          "Glacier TerraceN (also mass outbreaks (Day, Night), Heart's CragN, massive mass outbreaks"
         ]
       }
     },
@@ -2886,14 +2843,10 @@
           "Sand's Reach and nearbyN",
           "Tranquility CoveN",
           "near Castaway ShoreN",
-          "near Islespy ShoreN (mass outbreaks nearby (Day, Night)",
-          "Lunker's LairN",
-          "Seagrass HavenN",
-          "Firespit IslandN",
+          "near Islespy ShoreN (mass outbreaks nearby (Day, Night), Lunker's LairN, Seagrass HavenN, Firespit IslandN",
           "Alabaster Icelands: Bonechill WastesN",
           "Avalugg's LegacyN",
-          "Glacier TerraceN (also mass outbreaks (Day, Night)",
-          "Heart's CragN"
+          "Glacier TerraceN (also mass outbreaks (Day, Night), Heart's CragN, massive mass outbreaks"
         ]
       }
     },
@@ -3063,8 +3016,7 @@
       "legends-arceus": {
         "locations": [
           "Obsidian Fieldlands: massive mass outbreaks",
-          "Cobalt Coastlands: Deadwood HauntD (also mass outbreaks (Day, Night)",
-          "Massive Mass Outbreaks"
+          "Cobalt Coastlands: Deadwood HauntD (also mass outbreaks (Day, Night), massive mass outbreaks"
         ]
       }
     },
@@ -3345,7 +3297,7 @@
           "Crimson Mirelands: Gapejaw Bog (mass outbreaks)",
           "Droning Meadow 14px",
           "Massive Mass Outbreaks",
-          "Coronet Highlands: Heavenward LookoutD (also mass outbreaks (Day, Night)"
+          "Coronet Highlands: Heavenward LookoutD (also mass outbreaks (Day, Night), massive mass outbreaks"
         ]
       }
     },
