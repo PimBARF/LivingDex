@@ -1,9 +1,5 @@
 import { loadSettings } from "../storage.js";
-import {
-  ACTIVE_GAME_ID,
-  spriteUrlForSpecies,
-  remoteSpriteUrlForSpecies,
-} from "../config.js";
+import { ACTIVE_GAME_ID, spriteUrlForSpecies } from "../config.js";
 import { attachModalHandlers } from "./modals.js";
 import { isShinyMode } from "../state.js";
 import { getPokemonModalData } from "../db.js";
@@ -120,17 +116,13 @@ function createEvolutionMember({
 
   const sprite = document.createElement("img");
   sprite.className = "evo-sprite";
+  sprite.crossOrigin = "anonymous";
   sprite.src = spriteUrlForSpecies(spriteId, spriteStyle, isShinyMode);
   sprite.alt = name || `Species #${speciesId}`;
   sprite.loading = "lazy";
   sprite.decoding = "async";
   sprite.onerror = function onEvolutionSpriteError() {
-    if (!this.dataset.fallbackTried) {
-      this.dataset.fallbackTried = "true";
-      this.src = remoteSpriteUrlForSpecies(spriteId, spriteStyle, isShinyMode);
-    } else {
-      this.style.opacity = "0.2";
-    }
+    this.style.opacity = "0.2";
   };
 
   const label = document.createElement("span");
@@ -341,15 +333,10 @@ export async function openPokemonInfoModal(speciesId, formId, name) {
   titleEl.textContent = name;
   numberEl.textContent = `#${speciesId}`;
   spriteEl.decoding = "async";
+  spriteEl.crossOrigin = "anonymous";
   spriteEl.style.opacity = "";
-  delete spriteEl.dataset.fallbackTried;
   spriteEl.onerror = function onModalSpriteError() {
-    if (!this.dataset.fallbackTried) {
-      this.dataset.fallbackTried = "true";
-      this.src = remoteSpriteUrlForSpecies(formId, spriteStyle, isShinyMode);
-    } else {
-      this.style.opacity = "0.2";
-    }
+    this.style.opacity = "0.2";
   };
   spriteEl.src = spriteUrlForSpecies(formId, spriteStyle, isShinyMode);
   spriteEl.alt = name;

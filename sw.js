@@ -4,7 +4,7 @@
  * offline execution, background revalidation, and update lifecycle control.
  */
 
-const CACHE_VERSION = "v1.0.0";
+const CACHE_VERSION = "v1.0.3";
 const SHELL_CACHE = `livingdex-shell-${CACHE_VERSION}`;
 const DATA_CACHE = `livingdex-data-${CACHE_VERSION}`;
 const SPRITE_CACHE = "livingdex-sprites-v1";
@@ -64,6 +64,79 @@ const DATA_ASSETS = [
   "./data/games/pla.json",
   "./data/games/za.json",
 ];
+
+/**
+ * Maps a remote PokeAPI sprite URL to a local assets/sprites/... path.
+ *
+ * @param {string} pathname
+ * @returns {string|null}
+ */
+function mapRemoteSpriteToLocalPath(pathname) {
+  let match = pathname.match(
+    /\/sprites\/pokemon\/other\/official-artwork\/(shiny\/)?(\d+)\.png$/,
+  );
+  if (match) {
+    return `./assets/sprites/official-artwork/${match[1] || ""}${match[2]}.png`;
+  }
+
+  match = pathname.match(
+    /\/sprites\/pokemon\/other\/home\/(shiny\/)?(\d+)\.png$/,
+  );
+  if (match) {
+    return `./assets/sprites/home/${match[1] || ""}${match[2]}.png`;
+  }
+
+  match = pathname.match(
+    /\/sprites\/pokemon\/other\/showdown\/(shiny\/)?(\d+)\.gif$/,
+  );
+  if (match) {
+    return `./assets/sprites/showdown/${match[1] || ""}${match[2]}.gif`;
+  }
+
+  match = pathname.match(/\/sprites\/pokemon\/(shiny\/)?(\d+)\.png$/);
+  if (match) {
+    return `./assets/sprites/pokesprites/${match[1] || ""}${match[2]}.png`;
+  }
+
+  return null;
+}
+
+/**
+ * Maps a local assets/sprites/... path to a remote PokeAPI sprite URL.
+ *
+ * @param {string} pathname
+ * @returns {string|null}
+ */
+function mapLocalSpriteToRemoteUrl(pathname) {
+  const GITHUB_BASE =
+    "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon";
+
+  let match = pathname.match(
+    /\/assets\/sprites\/official-artwork\/(shiny\/)?(\d+)\.png$/,
+  );
+  if (match) {
+    return `${GITHUB_BASE}/other/official-artwork/${match[1] || ""}${match[2]}.png`;
+  }
+
+  match = pathname.match(/\/assets\/sprites\/home\/(shiny\/)?(\d+)\.png$/);
+  if (match) {
+    return `${GITHUB_BASE}/other/home/${match[1] || ""}${match[2]}.png`;
+  }
+
+  match = pathname.match(/\/assets\/sprites\/showdown\/(shiny\/)?(\d+)\.gif$/);
+  if (match) {
+    return `${GITHUB_BASE}/other/showdown/${match[1] || ""}${match[2]}.gif`;
+  }
+
+  match = pathname.match(
+    /\/assets\/sprites\/pokesprites\/(shiny\/)?(\d+)\.png$/,
+  );
+  if (match) {
+    return `${GITHUB_BASE}/${match[1] || ""}${match[2]}.png`;
+  }
+
+  return null;
+}
 
 /**
  * Install Event: Pre-cache App Shell and Core Datasets.
@@ -131,14 +204,13 @@ self.addEventListener("fetch", (event) => {
   // Ignore browser extensions or other schemes
   if (!url.protocol.startsWith("http")) return;
 
-  // Strategy 1: Sprites & Artwork (Cache-First)
-  // Matches both local assets/sprites and remote PokeAPI GitHub raw sprites
+  // Strategy 1: Sprites & Artwork (Smart Cache-First with Local + Remote fallback)
   const isSprite =
     url.pathname.includes("/sprites/") ||
     url.hostname === "raw.githubusercontent.com";
 
   if (isSprite) {
-    event.respondWith(cacheFirstWithNetworkFallback(request, SPRITE_CACHE));
+    event.respondWith(handleSpriteFetch(request));
     return;
   }
 
@@ -174,34 +246,110 @@ self.addEventListener("fetch", (event) => {
 });
 
 /**
- * Cache-First with network fallback strategy.
- * Used for static sprite images and media assets.
+ * Smart sprite fetch handler:
+ * 1. Check SPRITE_CACHE.
+ * 2. If miss and remote request: check if a local assets/sprites/... file exists.
+ * 3. If local exists, store in SPRITE_CACHE and serve.
+ * 4. If local missing, fetch from remote PokeAPI CDN, store in SPRITE_CACHE and serve.
  *
  * @param {Request} request
- * @param {string} cacheName
  * @returns {Promise<Response>}
  */
-async function cacheFirstWithNetworkFallback(request, cacheName) {
-  const cache = await caches.open(cacheName);
-  const cachedResponse = await cache.match(request);
-  if (cachedResponse) {
-    return cachedResponse;
+async function handleSpriteFetch(request) {
+  const cache = await caches.open(SPRITE_CACHE);
+  const cached = await cache.match(request);
+  if (cached) {
+    return cached;
   }
 
-  try {
-    const networkResponse = await fetch(request);
-    if (networkResponse && networkResponse.status === 200) {
-      cache.put(request, networkResponse.clone());
+  const url = new URL(request.url);
+
+  // Case A: Remote PokeAPI sprite requested
+  if (url.hostname === "raw.githubusercontent.com") {
+    const localPath = mapRemoteSpriteToLocalPath(url.pathname);
+    if (localPath) {
+      try {
+        const localRes = await fetch(localPath);
+        const contentType = localRes.headers.get("content-type") || "";
+        // Ensure local server returned an actual image and not an HTML 404 page
+        if (
+          localRes.ok &&
+          (contentType.startsWith("image/") || localRes.status === 200)
+        ) {
+          cache.put(request, localRes.clone());
+          return localRes;
+        }
+      } catch {
+        /* proceed to remote network fetch */
+      }
     }
-    return networkResponse;
-  } catch (err) {
-    // If both cache and network fail, return synthetic 404
-    return new Response("Asset not found or offline", {
-      status: 404,
-      statusText: "Not Found",
-      headers: { "Content-Type": "text/plain" },
-    });
+
+    try {
+      // Fetch with CORS so the response is transparent with status 200 (OK)
+      const remoteRes = await fetch(request.url, { mode: "cors" });
+      if (remoteRes && remoteRes.ok) {
+        cache.put(request, remoteRes.clone());
+        return remoteRes;
+      }
+    } catch {
+      /* fallback to standard fetch */
+    }
+
+    try {
+      const fallbackRes = await fetch(request);
+      if (
+        fallbackRes &&
+        (fallbackRes.ok ||
+          fallbackRes.status === 200 ||
+          fallbackRes.type === "opaque")
+      ) {
+        cache.put(request, fallbackRes.clone());
+      }
+      return fallbackRes;
+    } catch {
+      return new Response("Sprite unavailable offline", {
+        status: 404,
+        statusText: "Not Found",
+        headers: { "Content-Type": "text/plain" },
+      });
+    }
   }
+
+  // Case B: Local assets/sprites/... requested directly
+  try {
+    const localRes = await fetch(request);
+    const contentType = localRes.headers.get("content-type") || "";
+    if (localRes.ok && contentType.startsWith("image/")) {
+      cache.put(request, localRes.clone());
+      return localRes;
+    }
+  } catch {
+    /* fallback to remote if local is missing */
+  }
+
+  const remoteUrl = mapLocalSpriteToRemoteUrl(url.pathname);
+  if (remoteUrl) {
+    try {
+      const remoteRes = await fetch(remoteUrl, { mode: "cors" });
+      if (
+        remoteRes &&
+        (remoteRes.ok ||
+          remoteRes.status === 200 ||
+          remoteRes.type === "opaque")
+      ) {
+        cache.put(request, remoteRes.clone());
+      }
+      return remoteRes;
+    } catch {
+      /* ignore */
+    }
+  }
+
+  return new Response("Sprite unavailable offline", {
+    status: 404,
+    statusText: "Not Found",
+    headers: { "Content-Type": "text/plain" },
+  });
 }
 
 /**
@@ -234,7 +382,7 @@ async function staleWhileRevalidate(request, cacheName) {
 }
 
 /**
- * Message Event: Handles client commands (SKIP_WAITING, REFRESH_DATA, CLEAR_ALL).
+ * Message Event: Handles client commands (SKIP_WAITING, REFRESH_DATA, PURGE_ALL_CACHES).
  */
 self.addEventListener("message", (event) => {
   if (!event.data) return;

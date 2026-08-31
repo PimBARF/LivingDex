@@ -5,11 +5,7 @@ import {
   loadShinyCaughtSlots,
   saveShinyCaughtSlots,
 } from "../storage.js";
-import {
-  BOX_CAPACITY,
-  spriteUrlForSpecies,
-  remoteSpriteUrlForSpecies,
-} from "../config.js";
+import { BOX_CAPACITY, spriteUrlForSpecies } from "../config.js";
 import { openPokemonInfoModal } from "./pokemon-info.js";
 import { applyHideCaughtFilter } from "./controls.js";
 import { updateProgressBar, isShinyMode } from "../state.js";
@@ -17,24 +13,6 @@ import { updateProgressBar, isShinyMode } from "../state.js";
 // =============================================================================
 // DOM RENDERING & BOX MANAGEMENT
 // =============================================================================
-
-/**
- * Handles image load errors by attempting a fallback to the remote PokeAPI CDN
- * before falling back to reduced opacity.
- *
- * @param {HTMLImageElement} img - The image element that failed to load.
- * @param {number|string} formId - The form/species ID for the sprite.
- * @param {string} spriteStyle - The active sprite style.
- * @returns {void}
- */
-export function handleSpriteError(img, formId, spriteStyle) {
-  if (!img.dataset.fallbackTried) {
-    img.dataset.fallbackTried = "true";
-    img.src = remoteSpriteUrlForSpecies(formId, spriteStyle, isShinyMode);
-  } else {
-    img.style.opacity = ".2";
-  }
-}
 
 /**
  * Create shell sections that mirror in-game storage boxes.
@@ -120,7 +98,7 @@ export function createDexSlot(
   const spriteStyle = loadSettings().spriteStyle || "pokesprites";
   button.innerHTML = `
     <div class="index">${displayIndex}</div>
-    <img class="sprite" src="${spriteUrlForSpecies(formId, spriteStyle, isShinyMode)}" alt="${name}" loading="lazy" decoding="async" onerror="this.dataset.fallbackTried ? this.style.opacity=.2 : (this.dataset.fallbackTried='true', this.src='${remoteSpriteUrlForSpecies(formId, spriteStyle, isShinyMode)}')"/>
+    <img class="sprite" src="${spriteUrlForSpecies(formId, spriteStyle, isShinyMode)}" alt="${name}" loading="lazy" decoding="async" crossorigin="anonymous" onerror="this.style.opacity=.2"/>
     <div class="label">${name}</div>
     <span class="cell-info-btn" role="button" aria-label="View info for ${name}" tabindex="0">i</span>
   `;
@@ -142,8 +120,9 @@ export function applySpriteStyleToCells() {
       const formId = cell?.dataset.form;
       if (!formId) return;
       img.style.opacity = "";
-      delete img.dataset.fallbackTried;
-      img.onerror = () => handleSpriteError(img, formId, spriteStyle);
+      img.onerror = function onSpriteError() {
+        this.style.opacity = ".2";
+      };
       img.src = spriteUrlForSpecies(formId, spriteStyle, isShinyMode);
     });
 }

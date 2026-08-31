@@ -825,7 +825,8 @@ export const localSpriteUrlForSpecies = (
 
 /**
  * Generates the primary sprite URL for a given Pokémon ID, sprite style, and shiny state.
- * Points to local assets path by default, with automatic remote fallback handled by image onerror.
+ * Returns the canonical PokeAPI URL, which is intercepted by the Service Worker to serve
+ * locally cached copies, check local assets/sprites/, or fetch & cache from the remote CDN.
  *
  * @param {number|string} id - The Pokémon species or form ID.
  * @param {'pokesprites'|'official-artwork'|'home'|'showdown'|string} [style="pokesprites"] - Visual sprite style.
@@ -836,7 +837,7 @@ export const spriteUrlForSpecies = (
   id,
   style = "pokesprites",
   isShiny = false,
-) => localSpriteUrlForSpecies(id, style, isShiny);
+) => remoteSpriteUrlForSpecies(id, style, isShiny);
 
 /**
  * Normalizes a hyphenated Pokémon or form name into a title-cased, space-separated display name.
