@@ -1,11 +1,33 @@
-/**********************************************
+/*******************************************************************************
  * LivingDex.app – Core Stylesheet
- **********************************************/
+ * 
+ * A clean, dependency-free CSS architecture designed for high performance,
+ * full responsive scalability, light/dark theming, and accessibility.
+ * 
+ * TABLE OF CONTENTS:
+ *  0. LOCAL FONTS ........................ Self-hosted Inter variable font
+ *  1. DESIGN TOKENS ...................... CSS variables, themes & color palette
+ *  2. BASE & RESET ....................... Universal reset, typography & a11y
+ *  3. BUTTONS & ACTIONS .................. Buttons, donation CTA & destructive actions
+ *  4. FORM CONTROLS & INPUTS ............. Inputs, dropdowns, switches & search
+ *  5. FEEDBACK & NOTIFICATIONS ........... Floating toast alerts & status variants
+ *  6. LAYOUT & HEADER .................... Sticky header, topbar, search row & footer
+ *  7. GAME CONTROLS & SEGMENT TOGGLES .... Title row, shiny mode & DLC/region chips
+ *  8. PROGRESS BAR ....................... Sticky caught progress tracker
+ *  9. DEX BOXES & SECTIONS ............... PC box containers & bulk controls
+ * 10. DEX GRID & CELLS ................... 6-col/3-col grid, sprites, slots & shiny mode
+ * 11. TYPE BADGES ........................ Pokémon type pills & color token map
+ * 12. MODALS & DIALOGS ................... Backdrop, dialog card, settings, import & about
+ * 13. POKÉMON INFO MODAL ................. Detailed stats, flavor text & evolution tree
+ * 14. UTILITIES .......................... Floating scroll-to-top button
+ ******************************************************************************/
 
- /* ============================================
-   LOCAL FONTS (INTER VARIABLE)
-   ============================================ */
+/* =============================================================================
+   0) LOCAL FONTS (Inter Variable)
+   ============================================================================= */
 
+/* Self-hosted variable font files providing full weight range (100–900)
+   with font-display: swap for fast perceived page loads. */
 @font-face {
   font-family: 'Inter';
   font-style: normal;
@@ -22,40 +44,42 @@
   src: url('assets/fonts/Inter-Italic-VariableFont_opsz,wght.ttf') format('truetype');
 }
 
-/* ============================================
-   1) DESIGN TOKENS (CSS Variables)
-   ============================================ */
-:root {
-  /* palette */
-  --bg: rgb(245, 247, 250);
-  --bg-header: rgba(255, 255, 255, 0.5);
-  --text: rgb(33, 33, 33);
-  --card: rgb(255, 255, 255);
-  --border: rgba(0, 0, 0, 0.12);
-  --muted: rgba(0, 0, 0, 0.65);
-  --accent: rgb(255, 204, 0);       /* primary brand accent */
-  --accent-2: rgb(66, 133, 244);    /* secondary/action (focus/hover) */
-  --focus-ring: rgb(37, 99, 235);
-  --surface-soft: rgba(0, 0, 0, 0.03);
-  --surface-soft-border: rgba(0, 0, 0, 0.06);
-  --surface-soft-hover: rgba(66, 133, 244, 0.08);
-  --label: rgba(255, 255, 255, 0.8);
-  --success: rgb(16, 185, 129);
-  --warning: rgb(245, 158, 11);
-  --danger: rgb(239, 68, 68);
-  --shiny-star-rgb: 230, 120, 0;
-  --shiny-bg-core: rgba(255, 160, 0, 0.85);
-  --shiny-bg-edge: rgba(255, 130, 0, 0.25);
-  --shiny-bg-core-hover: rgba(255, 160, 0, 1);
-  --shiny-bg-edge-hover: rgba(255, 130, 0, 0.4);
+/* =============================================================================
+   1) DESIGN TOKENS (CSS Variables & Theme Overrides)
+   ============================================================================= */
 
-  /* layout */
-  --grid-gap: 8px;
-  --radius: 14px;
-  --panel-radius: 12px;
-  --control-radius: 10px;
-  --dialog-radius: 16px;
+:root {
+  /* --- Brand & Base Color Palette --- */
+  --bg: rgb(245, 247, 250);                      /* Page background (light) */
+  --bg-header: rgba(255, 255, 255, 0.5);         /* Header gradient base */
+  --text: rgb(33, 33, 33);                       /* Primary body text */
+  --card: rgb(255, 255, 255);                    /* Card & surface background */
+  --border: rgba(0, 0, 0, 0.12);                 /* Subtle structural borders */
+  --muted: rgba(0, 0, 0, 0.65);                  /* Secondary / descriptive text */
+  --accent: rgb(255, 204, 0);                    /* Primary brand accent (Pikachu yellow) */
+  --accent-2: rgb(66, 133, 244);                 /* Action color (interactive links/buttons) */
+  --focus-ring: rgb(37, 99, 235);                /* Accessible focus outline ring */
+
+  /* --- Interactive Surfaces & Tints --- */
+  --surface-soft: rgba(0, 0, 0, 0.03);           /* Low-contrast chip/row background */
+  --surface-soft-border: rgba(0, 0, 0, 0.06);    /* Chip/row border */
+  --surface-soft-hover: rgba(66, 133, 244, 0.08);/* Hover tint for interactive chips */
+  --label: rgba(255, 255, 255, 0.8);             /* Cell badge/label background overlay */
+
+  /* --- State & Status Colors --- */
+  --success: rgb(16, 185, 129);                  /* Positive feedback / completed */
+  --warning: rgb(245, 158, 11);                  /* Cautionary notes / warnings */
+  --danger: rgb(239, 68, 68);                    /* Destructive actions / errors */
+
+  /* --- Layout & Border Radii Scale --- */
+  --grid-gap: 8px;                               /* Spacing between dex cells */
+  --radius: 14px;                                /* Box container corner radius */
+  --panel-radius: 12px;                          /* Inner section & sprite panel radius */
+  --control-radius: 10px;                        /* Buttons, chips & inputs radius */
+  --dialog-radius: 16px;                         /* Modal dialog window radius */
   --dialog-shadow: 0 18px 42px rgba(0, 0, 0, 0.24);
+
+  /* --- Accessible Focus Glow Shadows --- */
   --focus-shadow-primary: 0 0 0 3px color-mix(in srgb, var(--focus-ring) 28%, transparent);
   --focus-shadow-soft: 0 0 0 3px color-mix(in srgb, var(--focus-ring) 12%, transparent);
   --focus-shadow-control: 0 0 0 3px color-mix(in srgb, var(--focus-ring) 14%, transparent);
@@ -63,8 +87,8 @@
   --focus-shadow-toggle: 0 0 0 3px color-mix(in srgb, var(--focus-ring) 18%, transparent);
 }
 
+/* Dark Theme Overrides (Applied via data-theme attribute on <html>) */
 [data-theme="dark"] {
-  /* dark theme overrides */
   --bg: rgb(24, 26, 27);
   --bg-header: rgba(40, 42, 45, 0.5);
   --text: rgb(235, 235, 235);
@@ -78,11 +102,52 @@
   --surface-soft-border: rgba(255, 255, 255, 0.12);
   --surface-soft-hover: rgba(66, 133, 244, 0.14);
   --label: rgba(24, 26, 27, 0.86);
-  --shiny-star-rgb: 255, 255, 255;
-  --shiny-bg-core: rgba(255, 215, 0, 0.65);
-  --shiny-bg-edge: rgba(255, 180, 0, 0.2);
-  --shiny-bg-core-hover: rgba(255, 215, 0, 0.85);
-  --shiny-bg-edge-hover: rgba(255, 180, 0, 0.3);
+}
+
+/* =============================================================================
+   2) BASE & RESET
+   ============================================================================= */
+
+/* Universal box-sizing reset */
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  color: var(--text);
+  background: var(--bg);
+  position: relative;
+}
+
+a {
+  color: var(--accent-2);
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+/* --- Reduced Motion Support ---
+   Covers both OS-level preference and the in-app user preference setting. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
 
 html[data-motion="reduced"] *,
@@ -94,51 +159,7 @@ html[data-motion="reduced"] *::after {
   scroll-behavior: auto !important;
 }
 
-/* Pokémon type colors */
-.type-badge[data-type="normal"]   { --type-color: #9FA19F; }
-.type-badge[data-type="fire"]     { --type-color: #E62829; }
-.type-badge[data-type="water"]    { --type-color: #2980EF; }
-.type-badge[data-type="grass"]    { --type-color: #3FA129; }
-.type-badge[data-type="electric"] { --type-color: #FAC000; color: #333; }
-.type-badge[data-type="ice"]      { --type-color: #3DCEF3; color: #333; }
-.type-badge[data-type="fighting"] { --type-color: #FF8000; }
-.type-badge[data-type="poison"]   { --type-color: #9141CB; }
-.type-badge[data-type="ground"]   { --type-color: #915121; }
-.type-badge[data-type="flying"]   { --type-color: #81B9EF; color: #333; }
-.type-badge[data-type="psychic"]  { --type-color: #EF4179; }
-.type-badge[data-type="bug"]      { --type-color: #91A119; }
-.type-badge[data-type="rock"]     { --type-color: #AFA981; }
-.type-badge[data-type="ghost"]    { --type-color: #704170; }
-.type-badge[data-type="dragon"]   { --type-color: #5060E1; }
-.type-badge[data-type="dark"]     { --type-color: #624D4E; }
-.type-badge[data-type="steel"]    { --type-color: #60A1B8; }
-.type-badge[data-type="fairy"]    { --type-color: #EF70EF; color: #333; }
-.type-badge[data-type="stellar"]  { --type-color: #40B5A5; }
-
-/* ============================================
-   2) BASE / RESET
-   ============================================ */
-* { box-sizing: border-box; }
-
-html, body { min-height: 100%; }
-
-body {
-  margin: 0;
-  font-family: "Inter", system-ui, sans-serif;
-  color: var(--text);
-  background: var(--bg);
-  position: relative;
-}
-
-a { color: var(--accent-2); }
-
-button,
-input,
-select,
-textarea {
-  font: inherit;
-}
-
+/* --- Accessible Keyboard Navigation Focus States --- */
 a:focus-visible,
 button:focus-visible,
 input:focus-visible,
@@ -153,9 +174,172 @@ button:focus-visible,
   box-shadow: var(--focus-shadow-primary);
 }
 
-/* ============================================
-   3) LAYOUT
-   ============================================ */
+/* =============================================================================
+   3) BUTTONS & ACTIONS
+   ============================================================================= */
+
+/* Base reusable button */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1rem;
+  border-radius: var(--control-radius);
+  border: 1px solid var(--border);
+  background: var(--card);
+  color: var(--text);
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    transform 120ms ease,
+    box-shadow 120ms ease,
+    background 120ms ease,
+    color 120ms ease,
+    border-color 120ms ease;
+  white-space: nowrap;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+  border-color: var(--accent-2);
+}
+
+.btn[disabled],
+.btn.is-disabled {
+  opacity: 0.55;
+  pointer-events: none;
+}
+
+/* Ko-fi donation / support CTA button */
+.support-btn {
+  background-image: linear-gradient(
+    135deg,
+    color-mix(in srgb, var(--accent) 18%, transparent),
+    color-mix(in srgb, var(--accent) 32%, transparent)
+  );
+  background-color: color-mix(in srgb, var(--accent) 26%, transparent);
+  border-color: color-mix(in srgb, var(--accent) 70%, transparent);
+  color: var(--text);
+  text-decoration: none;
+  box-shadow: 0 0 0 1px color-mix(in srgb, var(--accent) 12%, transparent);
+  flex-shrink: 0;
+}
+
+.support-btn:hover {
+  background: linear-gradient(
+    135deg,
+    color-mix(in srgb, var(--accent) 24%, transparent),
+    color-mix(in srgb, var(--accent) 42%, transparent)
+  );
+  border-color: color-mix(in srgb, var(--accent) 90%, transparent);
+}
+
+/* Destructive / danger action button (Reset progress, clear data, overwrite) */
+.btn-danger {
+  background: var(--danger);
+  color: #fff;
+  border-color: var(--danger);
+}
+
+.btn-danger:hover {
+  filter: brightness(0.95);
+  border-color: var(--danger);
+}
+
+/* =============================================================================
+   4) FORM CONTROLS & INPUTS
+   ============================================================================= */
+
+.input,
+.select,
+.textarea,
+#search {
+  display: inline-block;
+  width: 100%;
+  min-width: 0;
+  padding: 0.55rem 0.7rem;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: var(--card);
+  color: var(--text);
+}
+
+.input:focus,
+.select:focus,
+.textarea:focus,
+#search:focus {
+  outline: 3px solid var(--focus-ring);
+  outline-offset: 1px;
+}
+
+/* Topbar search input field */
+#search {
+  flex: 1;
+  flex-basis: 260px;
+  min-width: 0;
+  padding: 0.6rem 1rem;
+}
+
+/* Game / Pokédex selector dropdown */
+#dexSelector {
+  width: auto;
+  min-width: 180px;
+  font-weight: 600;
+  height: 41px;
+  padding: 0.6rem 1rem;
+  border-radius: var(--control-radius);
+  line-height: 1.2;
+}
+
+/* Reusable switch / checkbox layout wrapper */
+.switch {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  user-select: none;
+}
+
+/* =============================================================================
+   5) FEEDBACK & NOTIFICATIONS (Toasts)
+   ============================================================================= */
+
+/* Floating bottom-center toast notification popup */
+.toast {
+  position: fixed;
+  bottom: 22px;
+  left: 50%;
+  transform: translateX(-50%) translateY(100%);
+  min-width: 240px;
+  text-align: center;
+  border-radius: 12px;
+  padding: 0.75rem 1rem;
+  border-left: 12px solid var(--success);
+  background: var(--card);
+  color: var(--text);
+  font-weight: 600;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+  opacity: 0;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  z-index: 200;
+  pointer-events: none;
+}
+
+.toast.show {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+/* Toast color variants */
+.toast-success { border-left-color: var(--success); }
+.toast-warning { border-left-color: var(--warning); }
+.toast-danger  { border-left-color: var(--danger);  }
+
+/* =============================================================================
+   6) LAYOUT & HEADER
+   ============================================================================= */
+
+/* Sticky frosted header */
 header {
   position: sticky;
   top: 0;
@@ -165,7 +349,8 @@ header {
   background-color: var(--card);
   background: linear-gradient(var(--card) 35%, var(--bg-header));
   backdrop-filter: saturate(180%) blur(5px);
-  color: rgb(33, 33, 33); /* explicit for contrast on yellow */
+  -webkit-backdrop-filter: saturate(180%) blur(5px);
+  color: rgb(33, 33, 33);
   transition: padding 200ms ease;
 }
 
@@ -176,6 +361,7 @@ header {
   margin-bottom: 10px;
 }
 
+/* Brand logo */
 .logo a {
   font-weight: 700;
   font-size: clamp(20px, 3vw, 26px);
@@ -187,6 +373,7 @@ header {
   color: var(--accent);
 }
 
+/* Topbar utility buttons (Donate, Theme, Settings) */
 .controls {
   margin-left: auto;
   display: flex;
@@ -196,6 +383,7 @@ header {
   justify-content: flex-end;
 }
 
+/* Search input & hide caught button row */
 .searchrow {
   display: flex;
   gap: 10px;
@@ -206,14 +394,27 @@ header {
   will-change: max-height, opacity, margin;
 }
 
-.filters { display: flex; gap: 14px; align-items: center; }
+/* Main tracker container */
+main {
+  padding: 18px;
+  max-width: 680px;
+  margin: 0 auto;
+}
 
-/* Mobile: move game selector below topbar */
+/* Page footer */
+footer {
+  padding: 30px 18px;
+  color: var(--text);
+  text-align: center;
+}
+
+/* --- Mobile Header & Collapsible Search (max-width: 640px) --- */
 @media (max-width: 640px) {
   .topbar {
     flex-wrap: wrap;
   }
-  
+
+  /* Move game selector below topbar controls on narrow screens */
   #dexSelector {
     order: 3;
     width: 100%;
@@ -233,10 +434,15 @@ header {
     flex-shrink: 0;
   }
 
-  /* Collapsible search bar on mobile */
-  /* Keep enough expanded height so controls never clip if metrics differ */
-  header .searchrow { max-height: 96px; }
-  body.search-collapsed header { padding-bottom: 6px; }
+  /* Auto-collapsing search bar on mobile scroll down */
+  header .searchrow {
+    max-height: 96px;
+  }
+
+  body.search-collapsed header {
+    padding-bottom: 6px;
+  }
+
   body.search-collapsed header .searchrow {
     max-height: 0;
     opacity: 0;
@@ -246,158 +452,14 @@ header {
   }
 }
 
-main {
-  padding: 18px;
-  max-width: 680px;
-  margin: 0 auto;
-}
+/* =============================================================================
+   7) GAME CONTROLS & SEGMENT TOGGLES
+   ============================================================================= */
 
-footer {
-  padding: 30px 18px;
-  color: var(--text);
-  text-align: center;
-}
-
-/* ============================================
-   4) FORMS (inputs, selects, textareas)
-   ============================================ */
-.input,
-.select,
-.textarea,
-#search {
-  display: inline-block;
-  width: 100%;
-  min-width: 0;
-  padding: 0.55rem 0.7rem;
-  border-radius: 8px;
-  border: 1px solid var(--border);
-  background: var(--card);
-  color: var(--text);
-}
-
-/* Dedicated tweaks for the main search */
-#search {
-  flex: 1;
-  flex-basis: 260px;
-  min-width: 0;
-  padding: 0.6rem 1rem;
-}
-
-/* Dex selector dropdown */
-#dexSelector {
-  width: auto;
-  min-width: 180px;
-  font-weight: 600;
-  height: 41px;
-  padding: 0.6rem 1rem;
-  border-radius: 10px;
-  line-height: 1.2;
-}
-
-.input:focus,
-.select:focus,
-.textarea:focus,
-#search:focus {
-  outline: 3px solid var(--accent-2);
-  outline-offset: 1px;
-}
-
-/* Toggle/switch wrapper */
-.switch { display: inline-flex; align-items: center; gap: 6px; user-select: none; }
-
-/* ============================================
-   5) BUTTONS
-   ============================================ */
-.btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-  padding: 0.6rem 1rem;
-  border-radius: 10px;
-  border: 1px solid var(--border);
-  background: var(--card);
-  color: var(--text);
-  font-weight: 600;
-  cursor: pointer;
-  transition: transform 120ms ease, box-shadow 120ms ease, background 120ms ease, color 120ms ease, border-color 120ms ease;
-  white-space: nowrap;
-}
-
-.btn:hover {
-  transform: translateY(-1px);
-  border-color: var(--accent-2);
-}
-
-.support-btn {
-  background-image: linear-gradient(135deg, rgba(255, 204, 0, 0.18), rgba(255, 204, 0, 0.32));
-  background-color: rgba(255, 204, 0, 0.26);
-  border-color: rgba(255, 204, 0, 0.7);
-  color: var(--text);
-  text-decoration: none;
-  box-shadow: 0 0 0 1px rgba(255, 204, 0, 0.12);
-  flex-shrink: 0;
-}
-
-.support-btn:hover {
-  background: linear-gradient(135deg, rgba(255, 204, 0, 0.24), rgba(255, 204, 0, 0.42));
-  border-color: rgba(255, 204, 0, 0.9);
-}
-
-.btn[disabled],
-.btn.is-disabled {
-  opacity: 0.55;
-  pointer-events: none;
-}
-
-/* ============================================
-   6) FEEDBACK – Toasts
-   ============================================ */
-.toast {
-  position: fixed;
-  bottom: 22px;
-  left: 50%;
-  transform: translateX(-50%) translateY(100%);
-  min-width: 240px;
-  text-align: center;
-  border-radius: 12px;
-  padding: 0.75rem 1rem;
-  border-left: 12px solid var(--success);
-  background: var(--card);
-  color: var(--text);
-  font-weight: 600;
-  box-shadow: 0 4px 16px rgba(0,0,0,0.25);
-  opacity: 0;
-  transition: opacity 0.4s ease, transform 0.4s ease;
-  z-index: 200;
-  pointer-events: none;
-}
-
-.toast.show {
-  opacity: 1;
-  transform: translateX(-50%) translateY(0);
-}
-
-.toast-success { border-color: var(--success); }
-.toast-warning { border-color: var(--warning); }
-.toast-danger  { border-color: var(--danger);  }
-
-/* ============================================
-   7) GAME INFO SECTION
-   ============================================ */
 #gameInfo {
   margin-bottom: 12px;
 }
 
-#gameTitle {
-  font-size: 22px;
-  font-weight: 700;
-  margin: 0 0 8px 0;
-  color: var(--text);
-  line-height: 1;
-}
-
-/* Row wrapper for game title + share button */
 #gameTitleRow {
   display: flex;
   align-items: center;
@@ -405,13 +467,23 @@ footer {
   margin: 0 0 8px 0;
 }
 
-/* Slightly tighten padding on the inline icon button */
-#shareDex.btn, #shinyToggle.btn {
+#gameTitle {
+  font-size: 22px;
+  font-weight: 700;
+  margin: 0;
+  color: var(--text);
+  line-height: 1;
+}
+
+/* Inline action buttons beside game title (Share & Shiny Mode) */
+#shareDex.btn,
+#shinyToggle.btn {
   padding: 0.5rem 0.8rem;
   line-height: 1;
   transform: translateY(-3px);
 }
 
+/* Shiny mode active toggle indicator */
 #shinyToggle.active,
 #shinyToggle[aria-pressed="true"] {
   border-color: rgba(255, 215, 0, 0.8);
@@ -420,13 +492,14 @@ footer {
 
 #shinyToggle.active:hover,
 #shinyToggle[aria-pressed="true"]:hover {
-  border-color: var(--accent-2, #2AA3EF); 
+  border-color: var(--accent-2);
 }
 
 #hideCaughtBtn {
   white-space: nowrap;
 }
 
+/* DLC / Regional Expansion Segment Chips */
 #segmentToggles {
   display: flex;
   flex-wrap: wrap;
@@ -469,10 +542,11 @@ footer {
   color: var(--text);
 }
 
-/* ============================================
-   8) PROGRESS BAR
-   ============================================ */
-/*#progressWrap { margin: 6px 0 16px; position: relative; }*/
+/* =============================================================================
+   8) PROGRESS BAR (Sticky Tracker)
+   ============================================================================= */
+
+/* Sticky progress bar anchored below header during scroll */
 #progressWrap {
   position: sticky;
   top: 135px;
@@ -483,6 +557,7 @@ footer {
   transition: top 0.2s ease, width 0.2s ease, max-width 0.2s ease;
 }
 
+/* Compact width when page is scrolled */
 body.is-scrolled #progressWrap {
   width: 96%;
   max-width: 580px;
@@ -517,15 +592,22 @@ body.is-scrolled #progressWrap {
   color: var(--text);
 }
 
-/* Adjustments for the mobile header */
+/* Adjust sticky progress bar offset for mobile header height */
 @media (max-width: 640px) {
-  #progressWrap { top: 220px; }
-  body.search-collapsed #progressWrap { top: 165px; }
+  #progressWrap {
+    top: 220px;
+  }
+
+  body.search-collapsed #progressWrap {
+    top: 165px;
+  }
 }
 
-/* ============================================
-   9) BOX / PANELS
-   ============================================ */
+/* =============================================================================
+   9) DEX BOXES & SECTIONS
+   ============================================================================= */
+
+/* Section heading (e.g. "Main Pokédex", "The Teal Mask") */
 .section-title {
   margin: 18px 4px 8px;
   font-size: 18px;
@@ -533,6 +615,7 @@ body.is-scrolled #progressWrap {
   color: var(--text);
 }
 
+/* Storage box container (30 slots per box) */
 .box {
   background: var(--card);
   border: 1px solid var(--border);
@@ -546,6 +629,7 @@ body.is-scrolled #progressWrap {
   box-shadow: var(--focus-shadow-soft);
 }
 
+/* Box header with title range and bulk "Mark all / Unmark all" button */
 .box h2 {
   margin: 0 0 10px 4px;
   font-size: 16px;
@@ -556,16 +640,25 @@ body.is-scrolled #progressWrap {
   align-items: center;
 }
 
-/* ============================================
-   10) GRID + CELLS (Dex grid)
-   ============================================ */
+/* =============================================================================
+   10) DEX GRID & CELLS
+   ============================================================================= */
+
+/* 6-column grid on desktop (6x5 = 30-slot PC box) */
 .grid {
   display: grid;
   grid-template-columns: repeat(6, minmax(0, 1fr));
   gap: var(--grid-gap);
 }
 
-/* Base cell */
+/* 3-column grid on mobile (3x10 = 30-slot PC box) */
+@media (max-width: 600px) {
+  .grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+/* Individual Pokémon slot cell */
 .cell {
   background: var(--card);
   color: var(--text);
@@ -581,7 +674,11 @@ body.is-scrolled #progressWrap {
   border: 1px solid var(--border);
   cursor: pointer;
   overflow: hidden;
-  transition: transform 0.2s ease, border-color 0.2s ease, filter 0.2s ease, opacity 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease,
+    filter 0.2s ease,
+    opacity 0.2s ease;
 }
 
 .cell:focus-visible {
@@ -590,7 +687,12 @@ body.is-scrolled #progressWrap {
   box-shadow: var(--focus-shadow-primary);
 }
 
-/* Sprite appearance (dim until caught) */
+.cell:hover {
+  transform: translateY(-1px);
+  border-color: var(--accent-2);
+}
+
+/* Sprite image (dimmed/desaturated when uncaught) */
 .cell .sprite {
   width: 100%;
   height: 100%;
@@ -601,13 +703,7 @@ body.is-scrolled #progressWrap {
   transition: filter 0.2s ease;
 }
 
-/* Hover affordance */
-.cell:hover {
-  transform: translateY(-1px);
-  border-color: var(--accent-2);
-}
-
-/* Caught state: brighter + accent background */
+/* Caught state: full vibrant sprite with Pikachu yellow background */
 .cell.caught {
   background: var(--accent);
 }
@@ -616,37 +712,26 @@ body.is-scrolled #progressWrap {
   filter: none;
 }
 
-/* Emphasis states */
+/* Search match highlight state */
 .cell.highlight {
   transform: translateY(-2px) scale(1.02);
   border-color: var(--accent);
   z-index: 2;
 }
 
+/* Search non-matching dimmed state */
 .cell.dimmed {
   opacity: 0.22;
   filter: grayscale(1) saturate(0.2);
   pointer-events: none;
 }
 
-/* Hide caught if the view is filtered */
-.hide-caught .cell.caught { display: none; }
-
-/* Label at the bottom of each cell */
-.label {
-  position: absolute;
-  bottom: 0;
-  z-index: 1;
-  width: 100%;
-  padding: 6px;
-  margin: 0;
-  text-align: center;
-  background: var(--label);
-  color: var(--text);
-  font-size: clamp(10px, 2.6vw, 13px);
+/* Hide Caught filter active state */
+.hide-caught .cell.caught {
+  display: none;
 }
 
-/* Index badge in the top-left corner */
+/* Slot index number badge (top-left) */
 .cell .index {
   position: absolute;
   top: 6px;
@@ -667,13 +752,73 @@ body.is-scrolled #progressWrap {
   pointer-events: none;
 }
 
-/* Keep badge on top when highlighted/caught */
 .cell.highlight .index,
-.cell.caught .index { z-index: 4; }
+.cell.caught .index {
+  z-index: 4;
+}
 
-/* Placeholder (empty) slot styling */
+/* Species name label (bottom of cell) */
+.cell .label {
+  position: absolute;
+  bottom: 0;
+  z-index: 1;
+  width: 100%;
+  padding: 6px;
+  margin: 0;
+  text-align: center;
+  background: var(--label);
+  color: var(--text);
+  font-size: clamp(10px, 2.6vw, 13px);
+}
+
+/* Pokémon details info trigger icon button (top-right of cell) */
+.cell-info-btn {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  z-index: 5;
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  border-radius: 50%;
+  border: 1px solid transparent;
+  background: var(--label);
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  opacity: 0.35;
+  transition: opacity 0.15s ease, background 0.15s ease, color 0.15s ease;
+  pointer-events: auto;
+}
+
+.cell:hover .cell-info-btn,
+.cell:focus-within .cell-info-btn {
+  opacity: 1;
+  background: var(--accent-2);
+  color: #fff;
+  border-color: transparent;
+}
+
+.cell-info-btn:focus-visible {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 2px;
+  opacity: 1;
+}
+
+/* Placeholder (empty trailing slots in box) */
 .cell.is-placeholder {
-  background: repeating-linear-gradient(45deg,var(--card),var(--card) 6px,rgba(0,0,0,0.05) 6px,rgba(0,0,0,0.05) 12px);
+  background: repeating-linear-gradient(
+    45deg,
+    var(--card),
+    var(--card) 6px,
+    rgba(0, 0, 0, 0.05) 6px,
+    rgba(0, 0, 0, 0.05) 12px
+  );
   border: 1px dashed var(--border);
   opacity: 0.45;
   cursor: default;
@@ -681,42 +826,75 @@ body.is-scrolled #progressWrap {
   align-items: center;
   justify-content: center;
 }
-.cell.is-placeholder .label { background: transparent; color: var(--muted); }
-.cell.is-placeholder .index { background: transparent; color: var(--muted); }
 
-/* Responsive grid columns */
-@media (max-width: 600px) {
-  .grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.cell.is-placeholder .label,
+.cell.is-placeholder .index {
+  background: transparent;
+  color: var(--muted);
 }
 
-/* ============================================
-   SHINY MODE
-   ============================================ */
-
+/* --- Shiny Mode Caught Overrides (Sparkle texture & golden frame) --- */
 .shiny-mode .cell.caught {
-  /* 1. Revert to your native theme accent color */
   background-color: var(--accent);
-
-  /* 2. Apply a subtle, repeating SVG sparkle pattern */
   background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 2L14.5 9.5L22 12L14.5 14.5L12 22L9.5 14.5L2 12L9.5 9.5L12 2Z" fill="rgba(255, 255, 255, 0.3)"/></svg>');
   background-size: 32px 32px;
   background-position: center;
-  
-  /* 3. Keep a distinct golden border for framing */
-  border-color: #F5A623 !important;
+  border-color: #f5a623;
 }
 
 .shiny-mode .cell.caught:hover {
-  /* Slightly increase the visibility of the pattern on hover */
   background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 2L14.5 9.5L22 12L14.5 14.5L12 22L9.5 14.5L2 12L9.5 9.5L12 2Z" fill="rgba(255, 255, 255, 0.5)"/></svg>');
+  border-color: #f5a623;
   box-shadow: 0 0 8px rgba(245, 166, 35, 0.4);
 }
-  
-/* ============================================
-   11) MODALS
-   ============================================ */
-.modal[hidden] { display: none !important; }
 
+/* =============================================================================
+   11) TYPE BADGES
+   ============================================================================= */
+
+/* Base Pokémon elemental type pill */
+.type-badge {
+  padding: 2px 10px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: capitalize;
+  color: #fff;
+  background: var(--type-color, #888);
+}
+
+/* Official Pokémon elemental type color palette (Gen 1–9 + Stellar) */
+.type-badge[data-type="normal"]   { --type-color: #9FA19F; }
+.type-badge[data-type="fire"]     { --type-color: #E62829; }
+.type-badge[data-type="water"]    { --type-color: #2980EF; }
+.type-badge[data-type="grass"]    { --type-color: #3FA129; }
+.type-badge[data-type="electric"] { --type-color: #FAC000; color: #333; }
+.type-badge[data-type="ice"]      { --type-color: #3DCEF3; color: #333; }
+.type-badge[data-type="fighting"] { --type-color: #FF8000; }
+.type-badge[data-type="poison"]   { --type-color: #9141CB; }
+.type-badge[data-type="ground"]   { --type-color: #915121; }
+.type-badge[data-type="flying"]   { --type-color: #81B9EF; color: #333; }
+.type-badge[data-type="psychic"]  { --type-color: #EF4179; }
+.type-badge[data-type="bug"]      { --type-color: #91A119; }
+.type-badge[data-type="rock"]     { --type-color: #AFA981; }
+.type-badge[data-type="ghost"]    { --type-color: #704170; }
+.type-badge[data-type="dragon"]   { --type-color: #5060E1; }
+.type-badge[data-type="dark"]     { --type-color: #624D4E; }
+.type-badge[data-type="steel"]    { --type-color: #60A1B8; }
+.type-badge[data-type="fairy"]    { --type-color: #EF70EF; color: #333; }
+.type-badge[data-type="stellar"]  { --type-color: #40B5A5; }
+
+/* =============================================================================
+   12) MODALS & DIALOGS (Base Modal, Settings, Import, About)
+   ============================================================================= */
+
+/* Hidden attribute override for dialogs */
+.modal[hidden] {
+  display: none !important;
+}
+
+/* Modal overlay wrapper */
 .modal {
   position: fixed;
   inset: 0;
@@ -725,6 +903,7 @@ body.is-scrolled #progressWrap {
   place-items: center;
 }
 
+/* Frosted glass backdrop overlay */
 .modal-backdrop {
   position: absolute;
   inset: 0;
@@ -733,6 +912,7 @@ body.is-scrolled #progressWrap {
   -webkit-backdrop-filter: blur(6px);
 }
 
+/* Modal dialog surface card */
 .modal-card {
   position: relative;
   max-width: 520px;
@@ -759,6 +939,7 @@ body.is-scrolled #progressWrap {
   letter-spacing: -0.03em;
 }
 
+/* Bottom action buttons row in modals */
 .modal-actions {
   display: flex;
   gap: 10px;
@@ -766,6 +947,13 @@ body.is-scrolled #progressWrap {
   margin-top: 8px;
   padding-top: 8px;
   border-top: 1px solid var(--border);
+}
+
+/* --- Settings Modal --- */
+#settingsDesc {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.96rem;
 }
 
 .settings-body {
@@ -782,7 +970,7 @@ body.is-scrolled #progressWrap {
   border: 1px solid var(--border);
   border-radius: var(--panel-radius);
   background: var(--card);
-  box-shadow: 0 1px 0 rgba(0,0,0,0.04);
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.04);
 }
 
 .settings-section:last-of-type {
@@ -800,6 +988,7 @@ body.is-scrolled #progressWrap {
   gap: 8px;
 }
 
+/* Blue dot icon before section heading */
 .settings-section h4::before {
   content: "";
   width: 7px;
@@ -891,7 +1080,7 @@ body.is-scrolled #progressWrap {
   color: var(--text);
 }
 
-/* Help text under buttons */
+/* Descriptive help text under buttons */
 .settings-help {
   font-size: 12px;
   color: var(--muted);
@@ -899,6 +1088,7 @@ body.is-scrolled #progressWrap {
   padding-left: 2px;
 }
 
+/* --- Import Review Modal --- */
 .import-modal-card {
   max-width: 620px;
 }
@@ -939,16 +1129,16 @@ body.is-scrolled #progressWrap {
   color: var(--warning);
 }
 
-#settingsDesc {
-  margin: 0;
-  color: var(--muted);
-  font-size: 0.96rem;
-}
-
+/* --- About Modal --- */
 .about-body {
   display: flex;
   flex-direction: column;
   gap: 12px;
+}
+
+.about-body p {
+  margin: 0;
+  color: var(--text);
 }
 
 .about-section {
@@ -967,11 +1157,7 @@ body.is-scrolled #progressWrap {
   font-size: 0.85em;
 }
 
-.about-body p {
-  margin: 0;
-  color: var(--text);
-}
-
+/* --- Mobile Modal Layout Adjustments (max-width: 520px) --- */
 @media (max-width: 520px) {
   .modal-card {
     padding: 16px;
@@ -1000,68 +1186,17 @@ body.is-scrolled #progressWrap {
     width: 100%;
     justify-content: flex-start;
   }
-  .pokemon-info-body {
-    max-height: min(42vh, 320px);
-  }
-
-  .evo-member,
-  .evo-connector,
-  .evo-method-lines {
-    min-width: 52px;
-  }
 }
 
-/* ============================================
-   12) POKÉMON INFO BUTTON
-   ============================================ */
-
-/* (i) button on each cell */
-.cell-info-btn {
-  position: absolute;
-  top: 5px;
-  right: 5px;
-  z-index: 5;
-  width: 20px;
-  height: 20px;
-  padding: 0;
-  border-radius: 50%;
-  border: 1px solid transparent;
-  background: var(--label);
-  color: var(--muted);
-  font-size: 11px;
-  font-weight: 700;
-  line-height: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  opacity: 0.35;
-  transition: opacity 0.15s ease, background 0.15s ease, color 0.15s ease;
-  pointer-events: auto;
-}
-
-.cell:hover .cell-info-btn,
-.cell:focus-within .cell-info-btn {
-  opacity: 1;
-  background: var(--accent-2);
-  color: #fff;
-  border-color: transparent;
-}
-
-.cell-info-btn:focus-visible {
-  outline: 2px solid var(--focus-ring);
-  outline-offset: 2px;
-  opacity: 1;
-}
-
-/* ============================================
-   13) POKÉMON INFO MODAL
-   ============================================ */
+/* =============================================================================
+   13) POKÉMON INFO MODAL & EVOLUTION TREES
+   ============================================================================= */
 
 .pokemon-info-card {
   max-width: 460px;
 }
 
+/* Header with sprite artwork thumbnail and name/number/types */
 .pokemon-info-header {
   display: flex;
   gap: 16px;
@@ -1114,17 +1249,6 @@ body.is-scrolled #progressWrap {
   flex-wrap: wrap;
 }
 
-.type-badge {
-  padding: 2px 10px;
-  border-radius: 999px;
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.04em;
-  text-transform: capitalize;
-  color: #fff;
-  background: var(--type-color, #888);
-}
-
 .pokemon-info-body {
   display: flex;
   flex-direction: column;
@@ -1134,6 +1258,7 @@ body.is-scrolled #progressWrap {
   padding-right: 2px;
 }
 
+/* --- Pokédex Flavor Text Quote --- */
 .pokemon-info-flavor {
   position: relative;
   isolation: isolate;
@@ -1145,6 +1270,7 @@ body.is-scrolled #progressWrap {
   line-height: 1.6;
 }
 
+/* Decorative large quotation marks */
 .pokemon-info-flavor::before,
 .pokemon-info-flavor::after {
   position: absolute;
@@ -1167,6 +1293,7 @@ body.is-scrolled #progressWrap {
   bottom: -1.05rem;
 }
 
+/* Section label headings ("Encounter details", "Evolution details") */
 .pokemon-info-section-label {
   font-size: 10px;
   font-weight: 700;
@@ -1176,6 +1303,7 @@ body.is-scrolled #progressWrap {
   margin-top: 2px;
 }
 
+/* --- In-Game Encounter Details --- */
 .pokemon-info-encounter {
   display: flex;
   flex-direction: column;
@@ -1244,7 +1372,7 @@ body.is-scrolled #progressWrap {
   font-weight: 600;
 }
 
-/* Evolution chain */
+/* --- Evolution Chain Visual Tree --- */
 .pokemon-info-evo {
   display: flex;
   flex-direction: column;
@@ -1268,11 +1396,6 @@ body.is-scrolled #progressWrap {
   flex-direction: column;
   align-items: center;
   gap: 3px;
-  min-width: 56px;
-}
-
-.evo-connector,
-.evo-method-lines {
   min-width: 56px;
 }
 
@@ -1302,6 +1425,7 @@ body.is-scrolled #progressWrap {
   align-items: center;
   justify-content: center;
   gap: 2px;
+  min-width: 56px;
 }
 
 .evo-method-lines {
@@ -1309,6 +1433,7 @@ body.is-scrolled #progressWrap {
   flex-direction: column;
   align-items: center;
   gap: 1px;
+  min-width: 56px;
 }
 
 .evo-method-line {
@@ -1336,7 +1461,7 @@ body.is-scrolled #progressWrap {
   margin-top: -1px;
 }
 
-/* Loading / error states */
+/* --- Loading & Error States --- */
 .pokemon-info-loading,
 .pokemon-info-error {
   padding: 24px 0;
@@ -1349,21 +1474,24 @@ body.is-scrolled #progressWrap {
   color: var(--danger);
 }
 
-/* Danger button (used elsewhere too) */
-.btn-danger {
-  background: var(--danger);
-  color: #fff;
-  border-color: var(--danger);
-}
-.btn-danger:hover {
-  filter: brightness(0.95);
-  border-color: var(--danger);
+/* --- Mobile Adjustments for Pokémon Info (max-width: 520px) --- */
+@media (max-width: 520px) {
+  .pokemon-info-body {
+    max-height: min(42vh, 320px);
+  }
+
+  .evo-member,
+  .evo-connector,
+  .evo-method-lines {
+    min-width: 52px;
+  }
 }
 
-/* ============================================
+/* =============================================================================
    14) UTILITIES
-   ============================================ */
+   ============================================================================= */
 
+/* Floating circular scroll-to-top button */
 .scroll-top {
   position: fixed;
   bottom: 24px;
@@ -1379,9 +1507,7 @@ body.is-scrolled #progressWrap {
   opacity: 0;
   transform: translateY(12px);
   pointer-events: none;
-  transition:
-    opacity 0.25s ease,
-    transform 0.25s ease;
+  transition: opacity 0.25s ease, transform 0.25s ease;
 }
 
 .scroll-top.is-visible {
