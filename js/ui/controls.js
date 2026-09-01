@@ -164,11 +164,12 @@ export function registerHeaderControls(slotCount) {
     const activeSlotCount =
       document.querySelectorAll(".cell:not(.is-placeholder)").length ||
       slotCount;
+    const shareHash = await encodeCaughtState(
+      loadCaughtSlots(),
+      activeSlotCount,
+    );
     const url =
-      location.origin +
-      location.pathname +
-      location.search +
-      encodeCaughtState(loadCaughtSlots(), activeSlotCount);
+      location.origin + location.pathname + location.search + shareHash;
     try {
       await navigator.clipboard.writeText(url);
       showToast("Link copied to clipboard!", "success");

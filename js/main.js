@@ -123,7 +123,7 @@ async function initializeLivingDexApp() {
    * @returns {string[]} List of enabled segment identifiers.
    */
   const getShareSegments = () => Array.from(loadEnabledSegments());
-  const sharedState = decodeCaughtState(
+  const sharedState = await decodeCaughtState(
     location.hash,
     LIVING_DEX_SLOT_COUNT,
     getShareSegments(),
@@ -143,11 +143,11 @@ async function initializeLivingDexApp() {
   }
 
   // Watch for hash changes (e.g., user clicking shared link)
-  window.addEventListener("hashchange", () => {
+  window.addEventListener("hashchange", async () => {
     const activeSlotCount =
       document.querySelectorAll(".cell:not(.is-placeholder)").length ||
       LIVING_DEX_SLOT_COUNT;
-    const incomingState = decodeCaughtState(
+    const incomingState = await decodeCaughtState(
       location.hash,
       activeSlotCount,
       getShareSegments(),

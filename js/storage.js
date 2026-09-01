@@ -11,8 +11,6 @@ import {
   getDefaultEnabledSegments,
 } from "./config.js";
 
-import pako from "./pako.esm.mjs";
-
 /**
  * @typedef {Object} AppSettings
  * @property {'light'|'dark'|'auto'} theme - Theme preference ('light', 'dark', or 'auto').
@@ -382,11 +380,12 @@ function shareContextMatches(payload, slotCount, segments) {
 /**
  * Bit-pack and compress the current caught state into a URL hash string.
  *
+ * @async
  * @param {Record<string|number, boolean>} caught - Map of slot numbers to caught status.
  * @param {number} slotCount - Total number of slots in the dex.
- * @returns {string} URL hash fragment containing compressed state (e.g. "#s=..."), or empty string on error.
+ * @returns {Promise<string>} URL hash fragment containing compressed state (e.g. "#s=..."), or empty string on error.
  */
-export function encodeCaughtState(caught, slotCount) {
+export async function encodeCaughtState(caught, slotCount) {
   try {
     // 1) Bit-pack caught slots into bytes
     const bytes = new Uint8Array(Math.ceil(slotCount / 8));
@@ -404,7 +403,10 @@ export function encodeCaughtState(caught, slotCount) {
       slotCount,
       bits: bytesToBase64Url(bytes),
     });
-    const compressed = pako.deflate(new TextEncoder().encode(payload));
+    const stream = new Blob([new TextEncoder().encode(payload)])
+      .stream()
+      .pipeThrough(new CompressionStream("deflate"));
+    const compressed = new Uint8Array(await new Response(stream).arrayBuffer());
     return "#s=" + bytesToBase64Url(compressed);
   } catch (err) {
     console.error("encodeCaughtState error:", err);
@@ -415,12 +417,13 @@ export function encodeCaughtState(caught, slotCount) {
 /**
  * Decompress and decode a caught state from a URL hash fragment.
  *
+ * @async
  * @param {string} hash - URL hash containing "#s=...".
  * @param {number} slotCount - Expected number of slots.
  * @param {Iterable<string>} [segments=getShareSegments()] - Enabled segment keys to validate against.
- * @returns {Record<number, boolean>|null} Map of slot numbers to caught status, or null if invalid or mismatched.
+ * @returns {Promise<Record<number, boolean>|null>} Map of slot numbers to caught status, or null if invalid or mismatched.
  */
-export function decodeCaughtState(
+export async function decodeCaughtState(
   hash,
   slotCount,
   segments = getShareSegments(),
@@ -430,9 +433,11 @@ export function decodeCaughtState(
     if (!match) return null;
 
     const compressed = base64UrlToBytes(match[1]);
-    const payload = JSON.parse(
-      new TextDecoder().decode(pako.inflate(compressed)),
-    );
+    const stream = new Blob([compressed])
+      .stream()
+      .pipeThrough(new DecompressionStream("deflate"));
+    const decompressedText = await new Response(stream).text();
+    const payload = JSON.parse(decompressedText);
     if (!shareContextMatches(payload, slotCount, segments)) return null;
 
     const bytes = base64UrlToBytes(payload.bits);
