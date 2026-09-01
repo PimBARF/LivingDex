@@ -205,6 +205,7 @@ export function registerResetControls(slotCount) {
   confirmBtn?.addEventListener("click", () => {
     resetDexProgress(slotCount);
     closeModal();
+    showToast("Pokédex progress has been reset.", "success");
   });
 }
 
@@ -435,6 +436,7 @@ export function registerSettingsControls() {
   const confirmImportBtn = document.getElementById("confirmImportData");
   const cancelImportBtn = document.getElementById("cancelImportData");
   const aboutBtn = document.getElementById("settingsAbout");
+  const footerAboutBtn = document.getElementById("footerAboutBtn");
   const aboutModal = document.getElementById("modalAbout");
   const aboutBackdrop = aboutModal?.querySelector("[data-close]");
   const closeAboutBtn = document.getElementById("closeAbout");
@@ -890,6 +892,7 @@ export function registerSettingsControls() {
   clearCacheBtn?.addEventListener("click", clearSpeciesCacheAction);
   clearAllBtn?.addEventListener("click", clearAllDataAction);
   aboutBtn?.addEventListener("click", openAboutModal);
+  footerAboutBtn?.addEventListener("click", openAboutModal);
 
   return { closeModal };
 }

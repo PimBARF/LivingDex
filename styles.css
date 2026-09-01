@@ -599,13 +599,76 @@ main {
 /* Page footer */
 footer {
   margin-top: auto;
-  padding: 30px 18px;
-  color: var(--text);
+  padding: 32px 18px 24px;
+  color: var(--muted);
   text-align: center;
+}
+
+.footer-content {
+  max-width: 680px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.footer-tagline {
+  margin: 0;
+  font-size: 0.8125rem;
+  color: var(--muted);
+  font-weight: 500;
+}
+
+.footer-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px 12px;
+}
+
+.footer-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: var(--text);
+  background: transparent;
+  border: 1px solid transparent;
+  cursor: pointer;
+  text-decoration: none;
+  font-family: inherit;
+  transition: color 0.15s ease, background-color 0.15s ease, border-color 0.15s ease;
+}
+
+.footer-link:hover {
+  color: var(--accent-2);
+  background: color-mix(in srgb, var(--accent-2) 10%, transparent);
+}
+
+.footer-link:focus-visible {
+  outline: 2px solid var(--accent-2);
+  outline-offset: 2px;
+}
+
+.footer-sep {
+  color: var(--border);
+  font-size: 0.75rem;
+  user-select: none;
 }
 
 /* --- Mobile Header & Collapsible Search (max-width: 640px) --- */
 @media (max-width: 640px) {
+  /* Footer adjustments on touch / small screens */
+  .footer-shortcuts-sep,
+  .footer-shortcuts-btn {
+    display: none;
+  }
+
   .topbar {
     flex-wrap: wrap;
     gap: 8px;
@@ -689,7 +752,8 @@ footer {
 #gameTitleRow {
   display: flex;
   align-items: center;
-  gap: 10px;
+  justify-content: space-between;
+  gap: 12px;
   margin: 0;
 }
 
@@ -699,13 +763,27 @@ footer {
   margin: 0;
   color: var(--text);
   line-height: 1.2;
+  min-width: 0;
+  overflow-wrap: break-word;
 }
 
-/* Inline action buttons beside game title (Share & Shiny Mode) */
+.game-title-actions {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  flex-shrink: 0;
+  margin-left: auto;
+}
+
+/* Compact inline action buttons beside game title (Share & Shiny Mode) */
 #shareDex.btn,
 #shinyToggle.btn {
-  padding: 0.4rem 0.75rem;
+  height: 34px;
+  min-width: 34px;
+  padding: 0 8px;
+  font-size: 14px;
   line-height: 1;
+  border-radius: var(--control-radius);
 }
 
 /* Shiny mode active toggle indicator */

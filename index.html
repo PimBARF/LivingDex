@@ -130,9 +130,11 @@
     <div id="gameInfo">
       <div id="gameTitleRow">
         <h1 id="gameTitle">LivingDex Tracker</h1>
-        <button id="shinyToggle" class="btn" type="button" title="Toggle Shiny Mode" aria-pressed="false" aria-label="Toggle Shiny Mode">✨</button>
-        <button id="shareDex" class="btn" type="button" title="Share this progress"
-          aria-label="Share your current Pokédex progress">🔗</button>
+        <div class="game-title-actions">
+          <button id="shinyToggle" class="btn" type="button" title="Toggle Shiny Mode" aria-pressed="false" aria-label="Toggle Shiny Mode">✨</button>
+          <button id="shareDex" class="btn" type="button" title="Share this progress"
+            aria-label="Share your current Pokédex progress">🔗</button>
+        </div>
       </div>
       <div id="segmentToggles">
         <!-- Populated by JavaScript based on current game -->
@@ -149,18 +151,23 @@
   </main>
 
   <footer>
-    <a class="btn support-btn" href="https://ko-fi.com/pimbarf" target="_blank" rel="noreferrer"
-      aria-label="Donate to LivingDex on Ko-fi">
-      ☕ Donate
-    </a>
-    &nbsp;•&nbsp;
-    <button id="shortcutsBtn" class="btn" type="button" title="View keyboard shortcuts" aria-haspopup="dialog">
-      ⌨️ Shortcuts
-    </button>
-    &nbsp;•&nbsp;
-    <button id="resetDex" class="btn btn-danger" type="button" title="Reset this Pokédex" aria-haspopup="dialog">
-      Reset progress
-    </button>
+    <div class="footer-content">
+      <p class="footer-tagline">LivingDex &bull; Track your living dex collection</p>
+      <div class="footer-links">
+        <a class="footer-link" href="https://ko-fi.com/pimbarf" target="_blank" rel="noreferrer"
+          aria-label="Support LivingDex on Ko-fi">
+          ☕ Support on Ko-fi
+        </a>
+        <span class="footer-sep footer-shortcuts-sep" aria-hidden="true">•</span>
+        <button id="shortcutsBtn" class="footer-link footer-shortcuts-btn" type="button" title="View keyboard shortcuts" aria-haspopup="dialog">
+          ⌨️ Shortcuts
+        </button>
+        <span class="footer-sep" aria-hidden="true">•</span>
+        <button id="footerAboutBtn" class="footer-link" type="button" title="About LivingDex" aria-haspopup="dialog">
+          ℹ️ About
+        </button>
+      </div>
+    </div>
   </footer>
 
   <input id="settingsImportFile" type="file" accept="application/json" aria-label="Import settings file" hidden />
@@ -348,6 +355,19 @@
               <div class="settings-btn-grid">
                 <button type="button" id="settingsClearSpeciesCache" class="btn btn-secondary settings-action-btn">
                   <span>🧹</span> Clear species cache
+                </button>
+              </div>
+            </div>
+
+            <div class="settings-danger-block">
+              <div class="settings-danger-content">
+                <div class="settings-row-text">
+                  <span class="settings-row-title text-danger">Reset active Pokédex</span>
+                  <span id="settingsResetDexHelp" class="settings-help-text">Clear caught progress for the currently selected game on this device.</span>
+                </div>
+                <button type="button" id="resetDex" class="btn btn-danger"
+                  aria-describedby="settingsResetDexHelp" aria-haspopup="dialog">
+                  Reset progress
                 </button>
               </div>
             </div>
