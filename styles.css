@@ -1331,142 +1331,377 @@ body.is-scrolled #progressWrap {
 }
 
 /* --- Settings Modal --- */
+.settings-modal-card {
+  max-width: 540px;
+}
+
+.settings-header {
+  margin-bottom: 8px;
+}
+
+.settings-header h3 {
+  margin: 0 0 4px;
+}
+
 #settingsDesc {
   margin: 0;
   color: var(--muted);
-  font-size: 0.96rem;
+  font-size: 0.92rem;
+  line-height: 1.4;
 }
 
 .settings-body {
-  margin-top: 8px;
-  padding: 2px 4px 0 0;
+  margin-top: 6px;
+  padding: 2px 4px 6px 0;
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 16px;
   overflow-y: auto;
+  overscroll-behavior: contain;
 }
 
 .settings-section {
-  padding: 10px 10px 8px;
-  border: 1px solid var(--border);
-  border-radius: var(--panel-radius);
-  background: var(--card);
-  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.04);
-}
-
-.settings-section:last-of-type {
-  border-bottom: none;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
 }
 
 .settings-section h4 {
-  margin: 0 0 8px;
+  margin: 0;
   font-size: 11px;
+  font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.09em;
+  letter-spacing: 0.08em;
   color: var(--muted);
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 6px;
+  padding-left: 2px;
 }
 
-/* Blue dot icon before section heading */
+/* Accent dot icon before section heading */
 .settings-section h4::before {
   content: "";
-  width: 7px;
-  height: 7px;
+  width: 6px;
+  height: 6px;
   border-radius: 50%;
   background: var(--accent-2);
-  box-shadow: none;
+  flex-shrink: 0;
 }
 
-.settings-row,
-.settings-section .switch,
-.import-option {
-  border: 1px solid var(--surface-soft-border);
-  border-radius: var(--control-radius);
+/* Unified group container per section — single clean surface */
+.settings-group {
   background: var(--surface-soft);
+  border: 1px solid var(--surface-soft-border);
+  border-radius: var(--panel-radius);
+  overflow: hidden;
 }
 
+/* Individual setting row within a group */
 .settings-row {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 10px;
-  margin: 6px 0;
-  padding: 7px 10px;
+  gap: 12px;
+  padding: 11px 14px;
+  border-bottom: 1px solid var(--surface-soft-border);
+  transition: background-color 0.15s ease;
 }
 
-.settings-row:focus-within,
-.settings-section .switch:focus-within,
-.import-option:focus-within {
-  border-color: var(--focus-ring);
-  box-shadow: var(--focus-shadow-control);
+.settings-group > .settings-row:last-child,
+.settings-group > :last-child {
+  border-bottom: none;
 }
 
-.settings-row-label {
+.settings-row-clickable {
+  cursor: pointer;
+  user-select: none;
+}
+
+.settings-row-clickable:hover {
+  background: var(--surface-soft-hover);
+}
+
+.settings-row-clickable:focus-within {
+  background: var(--surface-soft-hover);
+}
+
+/* Text column on left of setting row */
+.settings-row-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  flex: 1;
+  min-width: 0;
+}
+
+.settings-row-title {
   font-size: 14px;
   font-weight: 600;
   color: var(--text);
+  line-height: 1.3;
+}
+
+.settings-row-subtitle {
+  font-size: 12px;
+  color: var(--muted);
+  line-height: 1.35;
 }
 
 .settings-row-control {
   display: flex;
-  flex-wrap: wrap;
-  gap: 7px;
-  justify-content: flex-end;
   align-items: center;
+  justify-content: flex-end;
+  flex-shrink: 0;
 }
 
-.settings-row-control .select {
-  min-width: 180px;
+.settings-select {
+  min-width: 170px;
+  max-width: 220px;
+  height: 36px;
+  padding: 0.35rem 0.75rem;
+  font-size: 13px;
+  font-weight: 500;
+  border-radius: calc(var(--control-radius) - 2px);
 }
 
-.settings-row > :is(.btn, .switch, .settings-row-control) {
-  flex: 1;
+/* Theme Segmented Control in Settings */
+.settings-theme-segmented {
+  display: inline-flex;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: calc(var(--control-radius) - 2px);
+  padding: 3px;
+  gap: 2px;
+  height: 36px;
+  box-sizing: border-box;
 }
 
-.settings-row > .btn {
-  width: 100%;
+.settings-theme-option {
+  cursor: pointer;
+  display: inline-flex;
+  align-items: stretch;
+  margin: 0;
+  user-select: none;
 }
 
-.settings-section .switch {
+.settings-theme-option .segmented-btn {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  padding: 8px 12px;
-  transition: border-color 0.15s ease, background 0.15s ease;
+  justify-content: center;
+  padding: 0 10px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--muted);
+  border-radius: calc(var(--control-radius) - 4px);
+  border: 1px solid transparent;
+  transition: all 0.15s ease;
+  white-space: nowrap;
 }
 
-.settings-section .switch:hover {
-  border-color: var(--accent-2);
+.settings-theme-option:hover .segmented-btn {
+  color: var(--text);
   background: var(--surface-soft-hover);
 }
 
-.settings-section .switch:focus-within {
-  border-color: var(--focus-ring);
-  box-shadow: var(--focus-shadow-switch);
+.settings-theme-option:has(input:checked) .segmented-btn {
+  background: var(--card);
+  color: var(--text);
+  border-color: var(--border);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+  font-weight: 700;
 }
 
-.settings-section .switch input[type="checkbox"],
-.settings-section .switch input[type="radio"] {
-  accent-color: var(--accent-2);
-  width: 18px;
-  height: 18px;
+[data-theme="dark"] .settings-theme-option:has(input:checked) .segmented-btn {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.18);
+}
+
+.settings-theme-option input:focus-visible + .segmented-btn {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 1px;
+}
+
+/* Modern iOS-style Toggle Switch */
+.toggle-switch {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  flex-shrink: 0;
   margin: 0;
 }
 
-.settings-section .switch span {
-  font-size: 14px;
-  font-weight: 600;
-  color: var(--text);
+.toggle-switch input {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+  margin: 0;
+  pointer-events: none;
 }
 
-/* Descriptive help text under buttons */
-.settings-help {
+.toggle-track {
+  display: inline-block;
+  width: 42px;
+  height: 24px;
+  background: var(--border);
+  border-radius: 999px;
+  transition: background-color 0.2s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.2s ease;
+  position: relative;
+}
+
+.toggle-track::after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 20px;
+  height: 20px;
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.toggle-switch input:checked + .toggle-track {
+  background: var(--accent-2);
+}
+
+.toggle-switch input:checked + .toggle-track::after {
+  transform: translateX(18px);
+}
+
+.toggle-switch input:focus-visible + .toggle-track {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 2px;
+  box-shadow: var(--focus-shadow-primary);
+}
+
+/* Action Blocks & Button Grids */
+.settings-action-block {
+  padding: 12px 14px;
+  border-bottom: 1px solid var(--surface-soft-border);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.settings-nav-block {
+  padding: 12px 14px;
+}
+
+.settings-btn-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.settings-action-btn {
+  width: 100%;
+  height: 38px;
+  font-size: 13px;
+  font-weight: 600;
+  gap: 6px;
+  padding: 0 12px;
+}
+
+.settings-help-text {
   font-size: 12px;
   color: var(--muted);
-  margin: 8px 0 0;
-  padding-left: 2px;
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* Danger Zone */
+.settings-danger-block {
+  padding: 12px 14px;
+  background: color-mix(in srgb, var(--danger) 5%, transparent);
+  border-top: 1px solid color-mix(in srgb, var(--danger) 18%, transparent);
+}
+
+.settings-danger-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+}
+
+.settings-danger-content .btn-danger {
+  flex-shrink: 0;
+  height: 36px;
+  padding: 0 14px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.text-danger {
+  color: var(--danger);
+}
+
+/* Generic Screen-Reader-Only Utility */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* Responsive adjustments for Settings Modal */
+@media (max-width: 520px) {
+  .settings-modal-card {
+    max-width: 100%;
+    width: calc(100% - 20px);
+  }
+
+  .settings-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .settings-row-clickable {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .settings-row-control,
+  .settings-select {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .settings-theme-segmented {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .settings-theme-option {
+    flex: 1;
+  }
+
+  .settings-theme-option .segmented-btn {
+    width: 100%;
+  }
+
+  .settings-btn-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .settings-danger-content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .settings-danger-content .btn-danger {
+    width: 100%;
+  }
 }
 
 /* --- Import Review Modal --- */
@@ -1492,6 +1727,21 @@ body.is-scrolled #progressWrap {
   flex-direction: column;
   gap: 6px;
   padding: 10px 12px;
+  border: 1px solid var(--surface-soft-border);
+  border-radius: var(--control-radius);
+  background: var(--surface-soft);
+  cursor: pointer;
+  transition: background-color 0.15s ease, border-color 0.15s ease;
+}
+
+.import-option:hover {
+  background: var(--surface-soft-hover);
+  border-color: var(--accent-2);
+}
+
+.import-option:focus-within {
+  border-color: var(--focus-ring);
+  box-shadow: var(--focus-shadow-control);
 }
 
 .import-option .switch {

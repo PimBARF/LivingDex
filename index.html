@@ -190,39 +190,49 @@
   <div id="modalSettings" class="modal" role="dialog" aria-modal="true" aria-labelledby="settingsTitle"
     aria-describedby="settingsDesc" hidden>
     <div class="modal-backdrop" data-close></div>
-    <div class="modal-card" role="document">
-      <h3 id="settingsTitle">Settings</h3>
-      <p id="settingsDesc">
-        Change how LivingDex.app looks and behaves on this device.
-      </p>
+    <div class="modal-card settings-modal-card" role="document">
+      <div class="settings-header">
+        <h3 id="settingsTitle">Settings</h3>
+        <p id="settingsDesc">
+          Customize your display, preferences, and data on this device.
+        </p>
+      </div>
 
       <div class="settings-body">
         <!-- Appearance -->
         <section class="settings-section" aria-labelledby="settingsAppearanceHeading">
           <h4 id="settingsAppearanceHeading">Appearance</h4>
-
-          <div class="settings-row">
-            <div class="settings-row-label">Theme</div>
-            <div class="settings-row-control" role="radiogroup" aria-label="Theme">
-              <label class="switch">
-                <input type="radio" name="settingsTheme" id="settingsThemeLight" value="light">
-                <span>Light</span>
-              </label>
-              <label class="switch">
-                <input type="radio" name="settingsTheme" id="settingsThemeDark" value="dark">
-                <span>Dark</span>
-              </label>
-              <label class="switch">
-                <input type="radio" name="settingsTheme" id="settingsThemeAuto" value="auto">
-                <span>Auto (system)</span>
-              </label>
+          <div class="settings-group">
+            <div class="settings-row">
+              <div class="settings-row-text">
+                <span class="settings-row-title">Theme</span>
+                <span class="settings-row-subtitle">Select your preferred color mode</span>
+              </div>
+              <div class="segmented-control settings-theme-segmented" role="radiogroup" aria-label="Theme">
+                <label class="settings-theme-option" title="Light theme">
+                  <input type="radio" name="settingsTheme" id="settingsThemeLight" value="light" class="sr-only">
+                  <span class="segmented-btn">☀️ Light</span>
+                </label>
+                <label class="settings-theme-option" title="Dark theme">
+                  <input type="radio" name="settingsTheme" id="settingsThemeDark" value="dark" class="sr-only">
+                  <span class="segmented-btn">🌙 Dark</span>
+                </label>
+                <label class="settings-theme-option" title="Auto (system preference)">
+                  <input type="radio" name="settingsTheme" id="settingsThemeAuto" value="auto" class="sr-only">
+                  <span class="segmented-btn">💻 Auto</span>
+                </label>
+              </div>
             </div>
-          </div>
 
-          <div class="settings-row">
-            <label class="switch" for="settingsReducedMotion">
-              <input type="checkbox" id="settingsReducedMotion">
-              <span>Reduce motion (fewer animations)</span>
+            <label class="settings-row settings-row-clickable" for="settingsReducedMotion">
+              <div class="settings-row-text">
+                <span class="settings-row-title">Reduce motion</span>
+                <span class="settings-row-subtitle">Minimize transition animations and effects</span>
+              </div>
+              <span class="toggle-switch">
+                <input type="checkbox" id="settingsReducedMotion">
+                <span class="toggle-track"></span>
+              </span>
             </label>
           </div>
         </section>
@@ -230,134 +240,145 @@
         <!-- Display -->
         <section class="settings-section" aria-labelledby="settingsDisplayHeading">
           <h4 id="settingsDisplayHeading">Display</h4>
-
-          <div class="settings-row">
-            <label class="switch" for="settingsHideCaught">
-              <input type="checkbox" id="settingsHideCaught">
-              <span>Hide caught Pokémon by default</span>
+          <div class="settings-group">
+            <label class="settings-row settings-row-clickable" for="settingsHideCaught">
+              <div class="settings-row-text">
+                <span class="settings-row-title">Hide caught Pokémon</span>
+                <span class="settings-row-subtitle">Start with caught Pokémon hidden by default</span>
+              </div>
+              <span class="toggle-switch">
+                <input type="checkbox" id="settingsHideCaught">
+                <span class="toggle-track"></span>
+              </span>
             </label>
-          </div>
 
-          <div class="settings-row">
-            <label for="settingsLanguage" class="settings-row-label">
-              Pokémon names language
-            </label>
-            <div class="settings-row-control">
-              <select id="settingsLanguage" class="select">
-                <option value="en">English (default)</option>
-                <option value="ja">Japanese</option>
-                <option value="fr">French</option>
-                <option value="es">Spanish</option>
-                <option value="de">German</option>
-                <option value="it">Italian</option>
-                <option value="ko">Korean</option>
-                <option value="zh-Hans">Chinese (simplified)</option>
-                <option value="zh-Hant">Chinese (traditional)</option>
-              </select>
+            <div class="settings-row">
+              <div class="settings-row-text">
+                <label for="settingsLanguage" class="settings-row-title">Pokémon names language</label>
+                <span class="settings-row-subtitle">Localization for species display names</span>
+              </div>
+              <div class="settings-row-control">
+                <select id="settingsLanguage" class="select settings-select">
+                  <option value="en">English (default)</option>
+                  <option value="ja">Japanese</option>
+                  <option value="fr">French</option>
+                  <option value="es">Spanish</option>
+                  <option value="de">German</option>
+                  <option value="it">Italian</option>
+                  <option value="ko">Korean</option>
+                  <option value="zh-Hans">Chinese (simplified)</option>
+                  <option value="zh-Hant">Chinese (traditional)</option>
+                </select>
+              </div>
             </div>
-          </div>
 
-          <div class="settings-row">
-            <label for="settingsSpriteStyle" class="settings-row-label">
-              Sprite style
-            </label>
-            <div class="settings-row-control">
-              <select id="settingsSpriteStyle" class="select">
-                <option value="pokesprites">PokeAPI sprites (default, smaller filesize)</option>
-                <option value="official-artwork">Official artwork</option>
-                <option value="home">Home sprites (3D)</option>
-                <option value="showdown">Showdown (animated)</option>
-              </select>
+            <div class="settings-row">
+              <div class="settings-row-text">
+                <label for="settingsSpriteStyle" class="settings-row-title">Sprite artwork style</label>
+                <span class="settings-row-subtitle">Choose rendering style for Pokémon sprites</span>
+              </div>
+              <div class="settings-row-control">
+                <select id="settingsSpriteStyle" class="select settings-select">
+                  <option value="pokesprites">PokeAPI sprites (fast &amp; compact)</option>
+                  <option value="official-artwork">Official artwork</option>
+                  <option value="home">Home 3D models</option>
+                  <option value="showdown">Showdown (animated)</option>
+                </select>
+              </div>
             </div>
           </div>
         </section>
 
-        <!-- Data -->
+        <!-- Data & Storage -->
         <section class="settings-section" aria-labelledby="settingsDataHeading">
-          <h4 id="settingsDataHeading">Data</h4>
+          <h4 id="settingsDataHeading">Data &amp; Storage</h4>
+          
+          <div class="settings-group">
+            <div class="settings-action-block">
+              <div class="settings-btn-grid">
+                <button type="button" id="settingsExportData" class="btn btn-secondary settings-action-btn">
+                  <span>📤</span> Export all data
+                </button>
+                <button type="button" id="settingsImportData" class="btn btn-secondary settings-action-btn" aria-describedby="settingsImportHelp">
+                  <span>📥</span> Import data
+                </button>
+              </div>
+              <p id="settingsImportHelp" class="settings-help-text">
+                Save a JSON backup of your progress or restore data from another device.
+              </p>
+            </div>
 
-          <div class="settings-row">
-            <button type="button" id="settingsExportData" class="btn">
-              Export all data
-            </button>
-          </div>
+            <div class="settings-action-block">
+              <div class="settings-btn-grid">
+                <button type="button" id="settingsRefreshCache" class="btn btn-secondary settings-action-btn">
+                  <span>🔄</span> Refresh offline cache
+                </button>
+                <button type="button" id="settingsClearSpeciesCache" class="btn btn-secondary settings-action-btn">
+                  <span>🧹</span> Clear species cache
+                </button>
+              </div>
+            </div>
 
-          <div class="settings-row">
-            <button type="button" id="settingsImportData" class="btn" aria-describedby="settingsImportHelp">
-              Import data
-            </button>
+            <div class="settings-danger-block">
+              <div class="settings-danger-content">
+                <div class="settings-row-text">
+                  <span class="settings-row-title text-danger">Clear all saved data</span>
+                  <span id="settingsClearAllHelp" class="settings-help-text">Permanently wipes all caught progress and custom settings across all games on this device.</span>
+                </div>
+                <button type="button" id="settingsClearAllData" class="btn btn-danger"
+                  aria-describedby="settingsClearAllHelp">
+                  Clear all data ⚠️
+                </button>
+              </div>
+            </div>
           </div>
-          <p id="settingsImportHelp" class="settings-help">
-            Importing will replace your saved settings and progress for matching games on this device.
-          </p>
-
-          <div class="settings-row">
-            <button type="button" id="settingsRefreshCache" class="btn">
-              Refresh offline data & cache 🔄
-            </button>
-          </div>
-
-          <div class="settings-row">
-            <button type="button" id="settingsClearSpeciesCache" class="btn">
-              Clear species cache
-            </button>
-          </div>
-
-          <div class="settings-row">
-            <button type="button" id="settingsClearAllData" class="btn btn-danger"
-              aria-describedby="settingsClearAllHelp">
-              Clear all saved data ⚠️
-            </button>
-          </div>
-          <p id="settingsClearAllHelp" class="settings-help">
-            This removes all progress and cached data for all games on this device.
-          </p>
         </section>
 
-        <!-- Other -->
+        <!-- General & About -->
         <section class="settings-section" aria-labelledby="settingsOtherHeading">
-          <h4 id="settingsOtherHeading">Other</h4>
-
-          <div class="settings-row">
-            <label for="settingsDefaultGameMode" class="settings-row-label">
-              Default game
-            </label>
-            <div class="settings-row-control">
-              <select id="settingsDefaultGameMode" class="select">
-                <option value="last-used">Last used</option>
-                <option value="specific">Specific game…</option>
-              </select>
+          <h4 id="settingsOtherHeading">General &amp; About</h4>
+          <div class="settings-group">
+            <div class="settings-row">
+              <div class="settings-row-text">
+                <label for="settingsDefaultGameMode" class="settings-row-title">Default Pokédex</label>
+                <span class="settings-row-subtitle">Game loaded automatically on startup</span>
+              </div>
+              <div class="settings-row-control">
+                <select id="settingsDefaultGameMode" class="select settings-select">
+                  <option value="last-used">Last used</option>
+                  <option value="specific">Specific game…</option>
+                </select>
+              </div>
             </div>
-          </div>
 
-          <div class="settings-row" id="settingsDefaultGameWrapper">
-            <label for="settingsDefaultGame" class="settings-row-label">
-              Specific game
-            </label>
-            <div class="settings-row-control">
-              <select id="settingsDefaultGame" class="select">
-                <option value="">Select a game…</option>
-                <!-- Populate from GAMES in JS -->
-              </select>
+            <div class="settings-row" id="settingsDefaultGameWrapper" hidden>
+              <div class="settings-row-text">
+                <label for="settingsDefaultGame" class="settings-row-title">Specific game</label>
+              </div>
+              <div class="settings-row-control">
+                <select id="settingsDefaultGame" class="select settings-select">
+                  <option value="">Select a game…</option>
+                  <!-- Populate from GAMES in JS -->
+                </select>
+              </div>
             </div>
-          </div>
 
-          <div class="settings-row">
-            <button type="button" id="settingsShortcuts" class="btn">
-              ⌨️ Keyboard shortcuts
-            </button>
-          </div>
-
-          <div class="settings-row">
-            <button type="button" id="settingsAbout" class="btn">
-              About LivingDex.app
-            </button>
+            <div class="settings-nav-block">
+              <div class="settings-btn-grid">
+                <button type="button" id="settingsShortcuts" class="btn btn-secondary settings-action-btn">
+                  <span>⌨️</span> Shortcuts guide
+                </button>
+                <button type="button" id="settingsAbout" class="btn btn-secondary settings-action-btn">
+                  <span>ℹ️</span> About LivingDex
+                </button>
+              </div>
+            </div>
           </div>
         </section>
       </div>
 
       <div class="modal-actions">
-        <button id="closeSettings" class="btn" type="button" aria-label="Close settings">Close</button>
+        <button id="closeSettings" class="btn btn-primary" type="button" aria-label="Close settings">Done</button>
       </div>
     </div>
   </div>
