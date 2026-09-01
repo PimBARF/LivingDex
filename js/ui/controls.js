@@ -219,6 +219,8 @@ export function applySearchFilter(query) {
       behavior: isMotionReduced() ? "auto" : "smooth",
       block: "center",
     });
+  } else {
+    cells.forEach((cell) => cell.classList.add("dimmed"));
   }
 }
 

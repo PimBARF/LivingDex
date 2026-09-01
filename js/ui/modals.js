@@ -553,6 +553,10 @@ export function registerSegmentsModal({ onSegmentsUpdated } = {}) {
     closeBtn,
     backdrop,
     onOpen: () => {
+      try {
+        localStorage.setItem("livingdex-seen-segments-guide", "true");
+        openBtn?.classList.remove("has-discovery-pulse");
+      } catch {}
       populateSegmentsList();
       closeBtn?.focus();
     },

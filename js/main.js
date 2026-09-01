@@ -238,6 +238,15 @@ export async function renderGameInfo() {
     segmentsBtn.title = optionalSegments.length
       ? `Configure ${ACTIVE_GAME.title} Segments & Order`
       : `View ${ACTIVE_GAME.title} Dex Structure`;
+
+    try {
+      const hasSeenGuide = localStorage.getItem(
+        "livingdex-seen-segments-guide",
+      );
+      if (!hasSeenGuide && optionalSegments.length > 0) {
+        segmentsBtn.classList.add("has-discovery-pulse");
+      }
+    } catch {}
   }
 }
 
