@@ -2,51 +2,33 @@
 
 > A fast, modern, privacy-first Living Pokédex tracker for all main-series Pokémon games, including regional forms, DLC expansions, and shiny checklists.
 
-## Overview
+## Documentation
 
-LivingDex.app is a client-side Progressive Web Application (PWA) designed to track Pokémon Living Dex progress with zero dependencies, zero tracking, and instant local persistence via localStorage.
+- [LivingDex Home](https://livingdex.app/): Main application interface and living Pokédex tracker.
+- [Pokémon HOME Tracker](https://livingdex.app/?game=home): Track the full National Pokédex (#1 to #1025).
+- [Pokémon Scarlet & Violet Tracker](https://livingdex.app/?game=sv): Track Paldea Pokédex, The Teal Mask, and The Indigo Disk DLC expansions.
+- [Pokémon Sword & Shield Tracker](https://livingdex.app/?game=swsh): Track Galar Pokédex, The Isle of Armor, and The Crown Tundra DLC expansions.
+- [Pokémon Legends: Arceus Tracker](https://livingdex.app/?game=pla): Track Hisui Pokédex.
+- [Pokémon Legends: Z-A Tracker](https://livingdex.app/?game=za): Track Lumiose City Pokédex.
+- [Pokémon Brilliant Diamond & Shining Pearl Tracker](https://livingdex.app/?game=bdsp): Track Sinnoh Pokédex.
+- [Pokémon Let's Go Pikachu & Eevee Tracker](https://livingdex.app/?game=lgpe): Track Let's Go Kanto Pokédex.
+- [Pokémon Ultra Sun & Ultra Moon Tracker](https://livingdex.app/?game=usum): Track Updated Alola Pokédex.
+- [Pokémon Sun & Moon Tracker](https://livingdex.app/?game=sm): Track Alola Pokédex.
+- [Pokémon Omega Ruby & Alpha Sapphire Tracker](https://livingdex.app/?game=oras): Track Updated Hoenn Pokédex.
+- [Pokémon X & Y Tracker](https://livingdex.app/?game=xy): Track Kalos Pokédexes (Central, Coastal, Mountain).
+- [Pokémon Black 2 & White 2 Tracker](https://livingdex.app/?game=b2w2): Track Updated Unova Pokédex.
+- [Pokémon Black & White Tracker](https://livingdex.app/?game=bw): Track Unova Pokédex.
+- [Pokémon HeartGold & SoulSilver Tracker](https://livingdex.app/?game=hgss): Track Updated Johto Pokédex.
+- [Pokémon Diamond, Pearl & Platinum Tracker](https://livingdex.app/?game=dppt): Track Sinnoh and Extended Sinnoh Pokédex.
+- [Pokémon FireRed & LeafGreen Tracker](https://livingdex.app/?game=frlg): Track Kanto Pokédex.
+- [Pokémon Ruby, Sapphire & Emerald Tracker](https://livingdex.app/?game=rse): Track Hoenn Pokédex.
+- [Pokémon Gold, Silver & Crystal Tracker](https://livingdex.app/?game=gsc): Track Johto Pokédex.
+- [Pokémon Red, Blue & Yellow Tracker](https://livingdex.app/?game=rby): Track original Generation 1 Kanto Pokédex.
+- [Source Code](https://github.com/PimBARF/LivingDex): Official open-source GitHub repository.
+- [Issues & Bug Reports](https://github.com/PimBARF/LivingDex/issues): Issue tracker and feature requests.
 
-- **Website**: https://livingdex.app/
-- **Source Code**: https://github.com/PimBARF/LivingDex
-- **License**: MIT
-- **Data Sources**: PokéAPI, Bulbapedia, Serebii
+## Optional
 
-## Core Features
-
-- **Multi-Game Support**: Tracks living dexes across Generations 1 through 9, including Pokémon HOME, Scarlet & Violet (with The Teal Mask & The Indigo Disk), Sword & Shield (with Isle of Armor & Crown Tundra), and Legends: Arceus / Z-A.
-- **Form & Expansion Tracking**: Dedicated sections for regional forms (Alolan, Galarian, Hisuian, Paldean), Gigantamax forms, and DLC expansions.
-- **In-Game Encounter Details**: Interactive info modals providing exact wild locations, raid dens, and trade notes per game release.
-- **Evolution Flowcharts**: Visual branch-aware evolution trees respecting game generation scope and item requirements.
-- **Shareable Progress**: URL hash-encoded checklist state allows sharing caught progress via simple links without requiring a database backend.
-- **Offline First**: Fully functional offline via Service Worker caching with custom sprite caching.
-
-## URL Parameters & Routing
-
-- `?game={gameId}`: Load a specific game tracker.
-  - `home`: Pokémon HOME (National Pokédex #1–1025)
-  - `sv`: Pokémon Scarlet & Violet
-  - `swsh`: Pokémon Sword & Shield
-  - `pla`: Pokémon Legends: Arceus
-  - `za`: Pokémon Legends: Z-A
-  - `bdsp`: Pokémon Brilliant Diamond & Shining Pearl
-  - `lgpe`: Pokémon Let's Go Pikachu & Eevee
-  - `usum`: Pokémon Ultra Sun & Ultra Moon
-  - `sm`: Pokémon Sun & Moon
-  - `oras`: Pokémon Omega Ruby & Alpha Sapphire
-  - `xy`: Pokémon X & Y
-  - `b2w2`: Pokémon Black 2 & White 2
-  - `bw`: Pokémon Black & White
-  - `hgss`: Pokémon HeartGold & SoulSilver
-  - `dppt`: Pokémon Diamond, Pearl & Platinum
-  - `frlg`: Pokémon FireRed & LeafGreen
-  - `rse`: Pokémon Ruby, Sapphire & Emerald
-  - `gsc`: Pokémon Gold, Silver & Crystal
-  - `rby`: Pokémon Red, Blue & Yellow
-- `#s={hash}`: Encoded compressed bitfield of caught slot indices.
-
-## Technical Architecture
-
-- **Frontend**: Vanilla HTML5, Modern CSS (CSS Grid, Custom Properties, container queries, `content-visibility: auto`), ES Modules.
-- **Storage**: LocalStorage (`{gamePrefix}-caught-v1`, `{gamePrefix}-shiny-caught-v1`, `settings-v1`).
-- **Compression**: pako Deflate/Inflate for URL hash serialization.
-
+- [Web App Manifest](https://livingdex.app/manifest.json): Progressive Web App manifest configuration.
+- [Sitemap](https://livingdex.app/sitemap.xml): XML sitemap for search engine crawlers.
+- [Donation & Support](https://ko-fi.com/pimbarf): Support project maintenance on Ko-fi.

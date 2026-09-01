@@ -102,7 +102,7 @@ export function createDexSlot(
   const spriteStyle = loadSettings().spriteStyle || "pokesprites";
   button.innerHTML = `
     <div class="index">${displayIndex}</div>
-    <img class="sprite" src="${spriteUrlForSpecies(formId, spriteStyle, isShinyMode)}" alt="${name}" loading="lazy" decoding="async" crossorigin="anonymous" onerror="this.style.opacity=.2"/>
+    <img class="sprite" src="${spriteUrlForSpecies(formId, spriteStyle, isShinyMode)}" alt="${name}" width="96" height="96" loading="lazy" decoding="async" crossorigin="anonymous" onerror="this.style.opacity=.2"/>
     <div class="label">${name}</div>
     <span class="cell-info-btn" role="button" aria-label="View info for ${name}" tabindex="0">i</span>
   `;
