@@ -4,7 +4,7 @@
  * offline execution, background revalidation, and update lifecycle control.
  */
 
-const CACHE_VERSION = "v1.0.6";
+const CACHE_VERSION = "v1.0.7";
 const SHELL_CACHE = `livingdex-shell-${CACHE_VERSION}`;
 const DATA_CACHE = `livingdex-data-${CACHE_VERSION}`;
 const SPRITE_CACHE = "livingdex-sprites-v1";
@@ -35,8 +35,8 @@ const SHELL_ASSETS = [
   "./assets/favicon.ico",
   "./assets/icon-192.png",
   "./assets/icon-512.png",
-  "./assets/fonts/Inter-VariableFont_opsz,wght.ttf",
-  "./assets/fonts/Inter-Italic-VariableFont_opsz,wght.ttf",
+  "./assets/fonts/InterVariable.woff2",
+  "./assets/fonts/InterVariable-Italic.woff2",
 ];
 
 /**
