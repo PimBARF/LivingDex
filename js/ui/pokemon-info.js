@@ -203,15 +203,31 @@ function createEvolutionMember({
   const member = document.createElement("div");
   member.className = "evo-member";
 
+  const primarySpriteUrl = spriteUrlForSpecies(
+    spriteId,
+    spriteStyle,
+    isShinyMode,
+  );
+  const fallbackSpriteUrl = spriteUrlForSpecies(
+    speciesId,
+    spriteStyle,
+    isShinyMode,
+  );
+
   const sprite = document.createElement("img");
   sprite.className = "evo-sprite";
   sprite.crossOrigin = "anonymous";
-  sprite.src = spriteUrlForSpecies(spriteId, spriteStyle, isShinyMode);
+  sprite.src = primarySpriteUrl;
+  sprite.dataset.fallback = fallbackSpriteUrl;
   sprite.alt = name || `Species #${speciesId}`;
   sprite.loading = "lazy";
   sprite.decoding = "async";
   sprite.onerror = function onEvolutionSpriteError() {
-    this.style.opacity = "0.2";
+    if (this.dataset.fallback && this.src !== this.dataset.fallback) {
+      this.src = this.dataset.fallback;
+    } else {
+      this.style.opacity = "0.2";
+    }
   };
 
   const label = document.createElement("span");

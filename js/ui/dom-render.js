@@ -437,9 +437,46 @@ export function renderDexSectionBoxes(
  * @param {number|string} formId - Form ID for sprite lookup (may differ from speciesId for regional/alternate forms).
  * @param {string} name - Display name of the Pokémon (or base species name).
  * @param {string} displayIndex - Formatted index string to show in cell badge (e.g. "001").
+/**
+ * Helper to determine the short variant subtitle (e.g. "Female", "Gigantamax", "Matcha Cream, Strawberry Sweet").
+ * @param {string} speciesName - Base species name.
+ * @param {string} [formTitle=""] - Explicit form title from data if available.
+ * @param {string} [formName=""] - Explicit form name from data if available.
+ * @param {string} [gender=""] - Gender variant ('female' or '').
+ * @returns {string} The variant subtitle, or empty string if standard form.
+ */
+function getVariantSubtitle(
+  speciesName,
+  formTitle = "",
+  formName = "",
+  gender = "",
+) {
+  if (formTitle) return formTitle;
+  if (gender === "female") return "Female";
+  if (formName && formName !== speciesName) {
+    const match = formName.match(/\((.+?)\)/);
+    if (match) return match[1];
+    if (formName.toLowerCase().startsWith(speciesName.toLowerCase())) {
+      const remainder = formName.slice(speciesName.length).trim();
+      if (remainder) return remainder;
+    }
+    return formName;
+  }
+  return "";
+}
+
+/**
+ * Creates an interactive Pokémon dex slot cell button element.
+ *
+ * @param {number} slotIndex - Box slot index.
+ * @param {number} speciesId - National Pokédex number.
+ * @param {number} formId - Specific form/species variant ID.
+ * @param {string} name - Species display name.
+ * @param {string} displayIndex - Formatted index string (e.g., '001').
  * @param {string[]} [types=[]] - Pokémon types.
  * @param {string} [gender=""] - Gender variant ('female' or '').
  * @param {string} [formName=""] - Explicit form name if available.
+ * @param {string} [formTitle=""] - Explicit form variant title if available.
  * @returns {HTMLButtonElement} The generated interactive dex slot button element.
  */
 export function createDexSlot(
@@ -451,6 +488,7 @@ export function createDexSlot(
   types = [],
   gender = "",
   formName = "",
+  formTitle = "",
 ) {
   const button = document.createElement("button");
   button.className = "cell";
@@ -461,9 +499,13 @@ export function createDexSlot(
   button.dataset.form = formId;
   button.dataset.gender = gender || "";
   button.dataset.formName = formName || "";
+  button.dataset.formTitle = formTitle || "";
+  button.dataset.speciesName = name;
 
-  const displayName = formName || name;
-  button.dataset.name = displayName.toLowerCase();
+  const variantText = getVariantSubtitle(name, formTitle, formName, gender);
+  const displayName =
+    formName || (variantText ? `${name} (${variantText})` : name);
+  button.dataset.name = `${name} ${variantText}`.trim().toLowerCase();
 
   const resolvedTypes = types.length
     ? types
@@ -488,7 +530,10 @@ export function createDexSlot(
   button.innerHTML = `
     <div class="index">${displayIndex}</div>
     <img class="sprite" src="${primarySpriteUrl}" data-fallback="${fallbackSpriteUrl}" alt="${displayName}" width="96" height="96" loading="lazy" decoding="async" crossorigin="anonymous" onerror="if (this.dataset.fallback &amp;&amp; this.src !== this.dataset.fallback) { this.src = this.dataset.fallback; } else { this.style.opacity = '.2'; }"/>
-    <div class="label">${displayName}</div>
+    <div class="label">
+      <span class="label-name">${name}</span>
+      ${variantText ? `<span class="label-variant">${variantText}</span>` : ""}
+    </div>
     <span class="cell-info-btn" role="button" aria-label="View info for ${displayName}" tabindex="0">i</span>
   `;
   return button;
@@ -618,7 +663,8 @@ export function populateDexSlots(sections, slotCount, onComplete) {
 
     task.entries.forEach(
       ({ entry, globalSlotIndex: slotIdx, localIndex: locIdx }) => {
-        const { speciesId, formId, dexNumber, gender, formName } = entry;
+        const { speciesId, formId, dexNumber, gender, formName, formTitle } =
+          entry;
         const speciesName =
           window.__livingDexNames?.[speciesId] || `#${speciesId}`;
         const num = dexNumber != null ? dexNumber : locIdx + 1;
@@ -632,6 +678,7 @@ export function populateDexSlots(sections, slotCount, onComplete) {
           [],
           gender,
           formName,
+          formTitle,
         );
 
         if (caught[slotIdx]) {
@@ -692,7 +739,17 @@ export function populateDexSlots(sections, slotCount, onComplete) {
             event.stopPropagation();
             const latestBaseName =
               window.__livingDexNames?.[speciesId] || speciesName;
-            const latestDisplayName = formName || latestBaseName;
+            const variantText = getVariantSubtitle(
+              latestBaseName,
+              formTitle,
+              formName,
+              gender,
+            );
+            const latestDisplayName =
+              formName ||
+              (variantText
+                ? `${latestBaseName} (${variantText})`
+                : latestBaseName);
             openPokemonInfoModal(
               speciesId,
               formId,
@@ -833,18 +890,36 @@ export function applyNamesToCells() {
   document.querySelectorAll(".cell:not(.is-placeholder)").forEach((cell) => {
     const national = Number(cell.dataset.national);
     const regional = Number(cell.dataset.regional);
-    const formName = cell.dataset.formName;
-    const name =
-      formName ||
+    const formName = cell.dataset.formName || "";
+    const formTitle = cell.dataset.formTitle || "";
+    const gender = cell.dataset.gender || "";
+    const baseName =
       window.__livingDexNames?.[national] ||
-      cell.dataset.name ||
+      cell.dataset.speciesName ||
       `#${national}`;
-    cell.dataset.name = String(name).toLowerCase();
+    cell.dataset.speciesName = baseName;
+
+    const variantText = getVariantSubtitle(
+      baseName,
+      formTitle,
+      formName,
+      gender,
+    );
+    const displayName =
+      formName || (variantText ? `${baseName} (${variantText})` : baseName);
+    cell.dataset.name = `${baseName} ${variantText}`.trim().toLowerCase();
+
     // Keep existing title format using the number shown in the badge
     const indexText =
       cell.querySelector(".index")?.textContent || String(regional);
-    cell.title = `#${indexText} — ${name} (${national})`;
+    cell.title = `#${indexText} — ${displayName} (${national})`;
+
     const label = cell.querySelector(".label");
-    if (label) label.textContent = name;
+    if (label) {
+      label.innerHTML = `
+        <span class="label-name">${baseName}</span>
+        ${variantText ? `<span class="label-variant">${variantText}</span>` : ""}
+      `;
+    }
   });
 }

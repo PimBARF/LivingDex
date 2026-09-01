@@ -1336,12 +1336,46 @@ body.is-scrolled #progressWrap {
   bottom: 0;
   z-index: 1;
   width: 100%;
-  padding: 6px;
+  padding: 3px 4px;
   margin: 0;
+  box-sizing: border-box;
   text-align: center;
   background: var(--label);
   color: var(--text);
-  font-size: clamp(10px, 2.6vw, 13px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  line-height: 1.15;
+  pointer-events: none;
+}
+
+.cell .label-name {
+  font-size: clamp(10px, 2.4vw, 12px);
+  font-weight: 600;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
+}
+
+.cell .label-variant {
+  font-size: clamp(8.5px, 2vw, 10px);
+  font-weight: 500;
+  color: var(--muted);
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
+  opacity: 0.9;
+  letter-spacing: -0.01em;
+}
+
+.cell.caught .label-variant {
+  color: inherit;
+  opacity: 0.8;
 }
 
 /* Pokémon details info trigger icon button (top-right of cell) */
