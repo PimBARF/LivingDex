@@ -189,6 +189,8 @@ button:focus-visible,
   justify-content: center;
   gap: 0.5rem;
   padding: 0.6rem 1rem;
+  height: 41px;
+  box-sizing: border-box;
   border-radius: var(--control-radius);
   border: 1px solid var(--border);
   background: var(--card);
@@ -486,7 +488,7 @@ header {
   justify-content: flex-end;
 }
 
-/* Search input & hide caught button row */
+/* Search input & filter row */
 .searchrow {
   display: flex;
   gap: 10px;
@@ -495,6 +497,90 @@ header {
   flex-wrap: wrap;
   transition: max-height 200ms ease, opacity 150ms ease, margin 200ms ease;
   will-change: max-height, opacity, margin;
+}
+
+.search-input-wrap {
+  flex: 1 1 220px;
+  min-width: 0;
+  display: flex;
+}
+
+.search-input-wrap #search {
+  width: 100%;
+}
+
+/* Filter modal trigger button */
+.filter-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+.filter-btn.has-filters {
+  border-color: var(--accent-2);
+  background: var(--surface-soft-hover);
+}
+
+.filter-count-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 18px;
+  height: 18px;
+  padding: 0 5px;
+  border-radius: 999px;
+  background: var(--accent-2);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+/* 3-way Segmented filter control (All / Uncaught / Caught) */
+.segmented-control {
+  display: inline-flex;
+  align-items: stretch;
+  background: var(--surface-soft);
+  border: 1px solid var(--border);
+  border-radius: var(--control-radius);
+  padding: 3px;
+  gap: 3px;
+  flex-shrink: 0;
+  user-select: none;
+  height: 41px;
+  box-sizing: border-box;
+}
+
+.segmented-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: 1px solid transparent;
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 600;
+  padding: 0 12px;
+  border-radius: calc(var(--control-radius) - 3px);
+  cursor: pointer;
+  transition: all 0.15s ease;
+  line-height: 1;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.segmented-btn:hover {
+  color: var(--text);
+  background: var(--surface-soft-hover);
+}
+
+.segmented-btn.is-active {
+  background: var(--card);
+  color: var(--text);
+  border-color: var(--border);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
 }
 
 /* Main tracker container */
@@ -522,6 +608,16 @@ footer {
 @media (max-width: 640px) {
   .topbar {
     flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  /* Donate button on mobile: show emoji icon only */
+  .support-btn .support-btn-text {
+    display: none;
+  }
+
+  .support-btn {
+    padding: 0.5rem 0.65rem;
   }
 
   /* Move game selector below topbar controls on narrow screens */
@@ -532,22 +628,41 @@ footer {
     flex-basis: 100%;
   }
 
+  /* Search row: search bar on its own full row, filters and status filter side-by-side below */
   .searchrow {
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
+    gap: 8px;
   }
 
-  .searchrow #search {
-    width: auto;
+  .search-input-wrap {
+    width: 100%;
+    flex: 1 1 100%;
+  }
+
+  .search-input-wrap #search {
+    width: 100%;
+  }
+
+  .filter-btn {
+    flex: 0 0 auto;
+  }
+
+  .segmented-control {
     flex: 1 1 auto;
+    display: flex;
+    justify-content: space-between;
   }
 
-  #hideCaughtBtn {
-    flex-shrink: 0;
+  .segmented-btn {
+    flex: 1 1 0;
+    text-align: center;
+    padding: 0 4px;
+    font-size: 12px;
   }
 
   /* Auto-collapsing search bar on mobile scroll down */
   header .searchrow {
-    max-height: 96px;
+    max-height: 140px;
   }
 
   body.search-collapsed header {
@@ -604,10 +719,6 @@ footer {
 #shinyToggle.active:hover,
 #shinyToggle[aria-pressed="true"]:hover {
   border-color: var(--accent-2);
-}
-
-#hideCaughtBtn {
-  white-space: nowrap;
 }
 
 /* DLC / Regional Expansion Segment Chips */
@@ -707,11 +818,11 @@ body.is-scrolled #progressWrap {
 /* Adjust sticky progress bar offset for mobile header height */
 @media (max-width: 640px) {
   #progressWrap {
-    top: 220px;
+    top: 230px;
   }
 
   body.search-collapsed #progressWrap {
-    top: 165px;
+    top: 130px;
   }
 }
 
@@ -851,6 +962,23 @@ body.is-scrolled #progressWrap {
   display: none;
 }
 
+/* Hide Uncaught filter active state */
+.hide-uncaught .cell:not(.caught):not(.is-placeholder) {
+  display: none;
+}
+
+/* Type filter active state */
+.type-filter-active .cell.type-hidden {
+  display: none;
+}
+
+/* Hide placeholders when filtering */
+.hide-caught .cell.is-placeholder,
+.hide-uncaught .cell.is-placeholder,
+.type-filter-active .cell.is-placeholder {
+  display: none;
+}
+
 /* Slot index number badge (top-left) */
 .cell .index {
   position: absolute;
@@ -985,25 +1113,158 @@ body.is-scrolled #progressWrap {
 }
 
 /* Official Pokémon elemental type color palette (Gen 1–9 + Stellar) */
-.type-badge[data-type="normal"]   { --type-color: #9FA19F; }
-.type-badge[data-type="fire"]     { --type-color: #E62829; }
-.type-badge[data-type="water"]    { --type-color: #2980EF; }
-.type-badge[data-type="grass"]    { --type-color: #3FA129; }
-.type-badge[data-type="electric"] { --type-color: #FAC000; color: #333; }
-.type-badge[data-type="ice"]      { --type-color: #3DCEF3; color: #333; }
-.type-badge[data-type="fighting"] { --type-color: #FF8000; }
-.type-badge[data-type="poison"]   { --type-color: #9141CB; }
-.type-badge[data-type="ground"]   { --type-color: #915121; }
-.type-badge[data-type="flying"]   { --type-color: #81B9EF; color: #333; }
-.type-badge[data-type="psychic"]  { --type-color: #EF4179; }
-.type-badge[data-type="bug"]      { --type-color: #91A119; }
-.type-badge[data-type="rock"]     { --type-color: #AFA981; }
-.type-badge[data-type="ghost"]    { --type-color: #704170; }
-.type-badge[data-type="dragon"]   { --type-color: #5060E1; }
-.type-badge[data-type="dark"]     { --type-color: #624D4E; }
-.type-badge[data-type="steel"]    { --type-color: #60A1B8; }
-.type-badge[data-type="fairy"]    { --type-color: #EF70EF; color: #333; }
-.type-badge[data-type="stellar"]  { --type-color: #40B5A5; }
+:is(.type-badge, .filter-type-btn)[data-type="normal"]   { --type-color: #9FA19F; }
+:is(.type-badge, .filter-type-btn)[data-type="fire"]     { --type-color: #E62829; }
+:is(.type-badge, .filter-type-btn)[data-type="water"]    { --type-color: #2980EF; }
+:is(.type-badge, .filter-type-btn)[data-type="grass"]    { --type-color: #3FA129; }
+:is(.type-badge, .filter-type-btn)[data-type="electric"] { --type-color: #FAC000; }
+:is(.type-badge, .filter-type-btn)[data-type="ice"]      { --type-color: #3DCEF3; }
+:is(.type-badge, .filter-type-btn)[data-type="fighting"] { --type-color: #FF8000; }
+:is(.type-badge, .filter-type-btn)[data-type="poison"]   { --type-color: #9141CB; }
+:is(.type-badge, .filter-type-btn)[data-type="ground"]   { --type-color: #915121; }
+:is(.type-badge, .filter-type-btn)[data-type="flying"]   { --type-color: #81B9EF; }
+:is(.type-badge, .filter-type-btn)[data-type="psychic"]  { --type-color: #EF4179; }
+:is(.type-badge, .filter-type-btn)[data-type="bug"]      { --type-color: #91A119; }
+:is(.type-badge, .filter-type-btn)[data-type="rock"]     { --type-color: #AFA981; }
+:is(.type-badge, .filter-type-btn)[data-type="ghost"]    { --type-color: #704170; }
+:is(.type-badge, .filter-type-btn)[data-type="dragon"]   { --type-color: #5060E1; }
+:is(.type-badge, .filter-type-btn)[data-type="dark"]     { --type-color: #624D4E; }
+:is(.type-badge, .filter-type-btn)[data-type="steel"]    { --type-color: #60A1B8; }
+:is(.type-badge, .filter-type-btn)[data-type="fairy"]    { --type-color: #EF70EF; }
+:is(.type-badge, .filter-type-btn)[data-type="stellar"]  { --type-color: #40B5A5; }
+
+.type-badge[data-type="electric"],
+.type-badge[data-type="ice"],
+.type-badge[data-type="flying"],
+.type-badge[data-type="fairy"] {
+  color: #333;
+}
+
+/* --- Filters & Options Modal --- */
+.filters-modal-card {
+  max-width: 540px;
+}
+
+.filters-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.filters-modal-header h3 {
+  margin: 0;
+}
+
+#filtersModalDesc {
+  margin: 0 0 6px;
+  color: var(--muted);
+  font-size: 0.94rem;
+}
+
+.filters-modal-body {
+  margin-top: 8px;
+  padding: 2px 4px 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  overflow-y: auto;
+}
+
+.filter-section {
+  padding: 12px 14px 14px;
+  border: 1px solid var(--border);
+  border-radius: var(--panel-radius);
+  background: var(--card);
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.04);
+}
+
+.filter-section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.filter-section-header h4 {
+  margin: 0;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.filter-section-header h4::before {
+  content: "";
+  width: 7px;
+  height: 7px;
+  border-radius: 999px;
+  background: var(--accent-2);
+}
+
+.filter-section-hint {
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.filter-type-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(78px, 1fr));
+  gap: 8px;
+}
+
+.filter-type-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 6px;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-transform: capitalize;
+  color: #fff;
+  background: var(--type-color, #888);
+  border: 2px solid transparent;
+  cursor: pointer;
+  user-select: none;
+  opacity: 0.5;
+  filter: saturate(0.7);
+  transition: all 0.15s cubic-bezier(0.16, 1, 0.3, 1);
+  box-sizing: border-box;
+}
+
+.filter-type-btn:hover {
+  opacity: 0.85;
+  filter: saturate(1);
+  transform: translateY(-1px);
+}
+
+.filter-type-btn.is-active {
+  opacity: 1;
+  filter: saturate(1.15);
+  border-color: #fff;
+  box-shadow: 0 0 0 2px var(--type-color), 0 3px 8px rgba(0, 0, 0, 0.25);
+  transform: translateY(-1px);
+}
+
+.filter-type-btn[data-type="electric"],
+.filter-type-btn[data-type="ice"],
+.filter-type-btn[data-type="flying"],
+.filter-type-btn[data-type="fairy"] {
+  color: #222;
+}
+
+.filter-type-btn[data-type="electric"].is-active,
+.filter-type-btn[data-type="ice"].is-active,
+.filter-type-btn[data-type="flying"].is-active,
+.filter-type-btn[data-type="fairy"].is-active {
+  border-color: #222;
+}
 
 /* =============================================================================
    12) MODALS & DIALOGS (Base Modal, Settings, Import, About)
@@ -1669,4 +1930,58 @@ body.is-scrolled #progressWrap {
   opacity: 1;
   transform: translateY(0);
   pointer-events: auto;
+}
+
+/* =============================================================================
+   15) KEYBOARD SHORTCUTS MODAL
+   ============================================================================= */
+
+.shortcuts-modal-card {
+  max-width: 520px;
+}
+
+.shortcuts-table {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 16px 0;
+}
+
+.shortcut-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 12px;
+  background: var(--surface-soft);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  gap: 12px;
+}
+
+.shortcut-keys {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  flex-shrink: 0;
+}
+
+.kbd-badge {
+  display: inline-block;
+  padding: 3px 8px;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 700;
+  background: var(--card);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  min-width: 24px;
+  text-align: center;
+}
+
+.shortcut-desc {
+  font-size: 13px;
+  color: var(--text);
+  text-align: right;
 }

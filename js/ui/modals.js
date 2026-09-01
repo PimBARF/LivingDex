@@ -207,6 +207,57 @@ export function registerResetControls(slotCount) {
 }
 
 /**
+ * Register Keyboard Shortcuts modal handlers.
+ *
+ * @returns {{ openModal: () => void, closeModal: () => void }} Modal controller methods.
+ */
+export function registerShortcutsModal() {
+  const modal = document.getElementById("modalShortcuts");
+  const openBtn = document.getElementById("shortcutsBtn");
+  const closeBtn = document.getElementById("closeShortcuts");
+  const backdrop = modal?.querySelector("[data-close]");
+  const settingsShortcutsBtn = document.getElementById("settingsShortcuts");
+
+  const handlers = attachModalHandlers({
+    modal,
+    openBtn,
+    closeBtn,
+    backdrop,
+    onOpen: () => closeBtn?.focus(),
+    onClose: () => {},
+    focusSelector: "#closeShortcuts",
+  });
+
+  settingsShortcutsBtn?.addEventListener("click", () => {
+    handlers.openModal();
+  });
+
+  return handlers;
+}
+
+/**
+ * Register Filters & Options modal handlers.
+ *
+ * @returns {{ openModal: () => void, closeModal: () => void }} Modal controller methods.
+ */
+export function registerFiltersModal() {
+  const modal = document.getElementById("modalFilters");
+  const openBtn = document.getElementById("filtersBtn");
+  const closeBtn = document.getElementById("closeFilters");
+  const backdrop = modal?.querySelector("[data-close]");
+
+  return attachModalHandlers({
+    modal,
+    openBtn,
+    closeBtn,
+    backdrop,
+    onOpen: () => closeBtn?.focus(),
+    onClose: () => {},
+    focusSelector: "#closeFilters",
+  });
+}
+
+/**
  * Check whether a value is a non-null, non-array object.
  *
  * @param {*} value - The value to check.

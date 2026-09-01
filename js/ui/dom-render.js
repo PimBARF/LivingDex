@@ -9,10 +9,17 @@ import { BOX_CAPACITY, spriteUrlForSpecies } from "../config.js";
 import { openPokemonInfoModal } from "./pokemon-info.js";
 import { applyHideCaughtFilter } from "./controls.js";
 import { updateProgressBar, isShinyMode } from "../state.js";
+import { getSpeciesTypes } from "../db.js";
 
 // =============================================================================
 // DOM RENDERING & BOX MANAGEMENT
 // =============================================================================
+
+/**
+ * Tracks the last clicked regional slot index for shift-click range selection.
+ * @type {number|null}
+ */
+let lastClickedSlotIndex = null;
 
 /**
  * Create shell sections that mirror in-game storage boxes.
@@ -89,6 +96,7 @@ export function createDexSlot(
   formId,
   name,
   displayIndex,
+  types = [],
 ) {
   const button = document.createElement("button");
   button.className = "cell";
@@ -98,6 +106,10 @@ export function createDexSlot(
   button.dataset.national = speciesId;
   button.dataset.form = formId;
   button.dataset.name = name.toLowerCase();
+  const resolvedTypes = types.length
+    ? types
+    : getSpeciesTypes(speciesId, formId);
+  button.dataset.types = resolvedTypes.join(" ");
   button.title = `#${displayIndex} — ${name} (${speciesId})`;
   const spriteStyle = loadSettings().spriteStyle || "pokesprites";
   button.innerHTML = `
@@ -230,15 +242,40 @@ export function populateDexSlots(sections, slotCount, onComplete) {
           cell.setAttribute("aria-pressed", "true");
         }
 
-        cell.onclick = () => {
+        cell.onclick = (event) => {
           const nextCaught = isShinyMode
             ? loadShinyCaughtSlots()
             : loadCaughtSlots();
           const regionalSlot = Number(cell.dataset.regional);
           const isCaught = !cell.classList.contains("caught");
-          cell.classList.toggle("caught", isCaught);
-          cell.setAttribute("aria-pressed", String(isCaught));
-          nextCaught[regionalSlot] = isCaught;
+
+          if (
+            event.shiftKey &&
+            lastClickedSlotIndex !== null &&
+            lastClickedSlotIndex !== regionalSlot
+          ) {
+            const start = Math.min(lastClickedSlotIndex, regionalSlot);
+            const end = Math.max(lastClickedSlotIndex, regionalSlot);
+            const targetState = isCaught;
+
+            for (let slot = start; slot <= end; slot += 1) {
+              const targetCell = document.querySelector(
+                `.cell[data-regional='${slot}']`,
+              );
+              if (targetCell) {
+                targetCell.classList.toggle("caught", targetState);
+                targetCell.setAttribute("aria-pressed", String(targetState));
+                nextCaught[slot] = targetState;
+              }
+            }
+          } else {
+            cell.classList.toggle("caught", isCaught);
+            cell.setAttribute("aria-pressed", String(isCaught));
+            nextCaught[regionalSlot] = isCaught;
+          }
+
+          lastClickedSlotIndex = regionalSlot;
+
           if (isShinyMode) {
             saveShinyCaughtSlots(nextCaught);
           } else {

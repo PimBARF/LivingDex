@@ -20,6 +20,8 @@ import { applyTheme, applyReducedMotionPreference } from "./ui/theme.js";
 import {
   registerResetControls,
   registerSettingsControls,
+  registerShortcutsModal,
+  registerFiltersModal,
   showToast,
 } from "./ui/modals.js";
 
@@ -27,6 +29,7 @@ import {
   registerHeaderControls,
   registerScrollToTopButton,
   applyHideCaughtFilter,
+  setStatusFilter,
 } from "./ui/controls.js";
 
 import {
@@ -81,6 +84,8 @@ async function initializeLivingDexApp() {
   registerScrollToTopButton();
   registerResetControls(0);
   registerSettingsControls();
+  registerShortcutsModal();
+  registerFiltersModal();
 
   const app = document.getElementById("app");
   if (!app) return;
@@ -184,14 +189,7 @@ export async function applyPersistedViewSettings({
   previousLanguage,
 } = {}) {
   const settings = loadSettings();
-  const hideToggle = document.getElementById("toggleUncaught");
-
-  if (hideToggle) {
-    hideToggle.checked = !!settings.hideCaughtDefault;
-    hideToggle.dispatchEvent(new Event("change"));
-  } else {
-    applyHideCaughtFilter();
-  }
+  setStatusFilter(settings.hideCaughtDefault ? "uncaught" : "all");
 
   applySpriteStyleToCells();
 

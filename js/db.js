@@ -234,7 +234,10 @@ export async function getNamesData(lang = "en") {
  */
 export async function buildActiveDexSections() {
   const enabled = loadEnabledSegments();
-  const gameData = await getGameDexData(ACTIVE_GAME_ID);
+  const [gameData] = await Promise.all([
+    getGameDexData(ACTIVE_GAME_ID),
+    getAllSpeciesData(),
+  ]);
 
   const sections = [];
   const warnings = [];
@@ -436,6 +439,17 @@ function resolveMemberSpriteId(
   }
 
   return targetSpeciesId;
+}
+
+export function getSpeciesTypes(
+  speciesId,
+  formId = null,
+  generationNumber = null,
+) {
+  if (!speciesDataCache) return [];
+  const species = speciesDataCache[Number(speciesId)];
+  if (!species) return [];
+  return resolveTypes(species, Number(formId || speciesId), generationNumber);
 }
 
 /**
