@@ -131,6 +131,7 @@
       <div id="gameTitleRow">
         <h1 id="gameTitle">LivingDex Tracker</h1>
         <div class="game-title-actions">
+          <button id="segmentsBtn" class="btn segments-btn" type="button" title="Configure Pokédex Segments &amp; Forms" aria-label="Configure Pokédex Segments &amp; Forms" aria-haspopup="dialog">📑<span class="segments-btn-text"> Segments</span></button>
           <button id="shinyToggle" class="btn" type="button" title="Toggle Shiny Mode" aria-pressed="false" aria-label="Toggle Shiny Mode">✨</button>
           <button id="shareDex" class="btn" type="button" title="Share this progress"
             aria-label="Share your current Pokédex progress">🔗</button>
@@ -579,6 +580,43 @@
           Yes, reset
         </button>
         <button id="cancelReset" class="btn" type="button" aria-label="Cancel reset">Cancel</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Pokédex Segments & Reordering modal -->
+  <div id="modalSegments" class="modal" role="dialog" aria-modal="true" aria-labelledby="segmentsModalTitle"
+    aria-describedby="segmentsModalDesc" hidden>
+    <div class="modal-backdrop" data-close></div>
+    <div class="modal-card segments-modal-card" role="document">
+      <div class="segments-modal-header">
+        <h3 id="segmentsModalTitle">Pokédex Segments</h3>
+        <button id="resetSegmentsOrderBtn" class="btn btn-sm btn-ghost" type="button" aria-label="Reset segments to default order">Reset order</button>
+      </div>
+      <p id="segmentsModalDesc">
+        Choose which optional expansions, regional forms, or variants to display, and customize the order they appear in your dex.
+      </p>
+
+      <div class="segments-modal-body">
+        <div class="segment-presets-section">
+          <span class="segment-presets-title">Presets:</span>
+          <div id="segmentPresetsGroup" class="segment-presets-group">
+            <button type="button" class="btn btn-sm btn-secondary segment-preset-btn" data-preset="base">Base Game</button>
+            <button type="button" class="btn btn-sm btn-secondary segment-preset-btn" data-preset="dlc">Base + DLC</button>
+            <button type="button" class="btn btn-sm btn-secondary segment-preset-btn" data-preset="forms">All Forms</button>
+            <button type="button" class="btn btn-sm btn-secondary segment-preset-btn" data-preset="all">Master (100%)</button>
+          </div>
+        </div>
+
+        <div class="segments-list-section">
+          <div id="segmentsOrganizerList" class="segments-organizer-list" role="list" aria-label="Pokédex segments order">
+            <!-- Populated dynamically with segment cards (toggle, drag handle, up/down buttons, badges) -->
+          </div>
+        </div>
+      </div>
+
+      <div class="modal-actions">
+        <button id="closeSegments" class="btn btn-primary" type="button" aria-label="Apply and close segment settings">Done</button>
       </div>
     </div>
   </div>

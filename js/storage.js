@@ -385,38 +385,115 @@ export function hashSpeciesIds(speciesOrder) {
 }
 
 /**
- * Read enabled segments setting for the current dex from localStorage.
- *
- * @returns {Set<string>} Set of enabled segment keys.
+ * @typedef {Object} SegmentConfig
+ * @property {Set<string>} enabled - Set of enabled segment identifiers.
+ * @property {string[]} order - Ordered list of segment identifiers.
  */
-export function loadEnabledSegments() {
+
+/**
+ * Load segment configuration (enabled set and custom order) for the specified or active game.
+ *
+ * @param {import("./config.js").GameConfig} [game=ACTIVE_GAME] - Game configuration.
+ * @returns {SegmentConfig} Segment configuration object.
+ */
+export function loadSegmentConfig(game = ACTIVE_GAME) {
+  const defaultOrder = (game.dexes || []).map((seg) => seg.id);
+  const defaultEnabled = getDefaultEnabledSegments(game);
+
   try {
-    const raw = localStorage.getItem(SEGMENTS_STORAGE_KEY);
-    if (!raw) return getDefaultEnabledSegments(ACTIVE_GAME);
+    const key = `${game.storagePrefix}-segments-v1`;
+    const raw = localStorage.getItem(key);
+    if (!raw) {
+      return {
+        enabled: defaultEnabled,
+        order: defaultOrder,
+      };
+    }
     const parsed = JSON.parse(raw);
-    if (!parsed || typeof parsed !== "object")
-      return getDefaultEnabledSegments(ACTIVE_GAME);
-    return new Set(parsed.enabled || getDefaultEnabledSegments(ACTIVE_GAME));
+    if (!parsed || typeof parsed !== "object") {
+      return {
+        enabled: defaultEnabled,
+        order: defaultOrder,
+      };
+    }
+
+    const enabledList = Array.isArray(parsed.enabled)
+      ? parsed.enabled
+      : Array.from(defaultEnabled);
+    const orderList = Array.isArray(parsed.order) ? parsed.order : defaultOrder;
+
+    return {
+      enabled: new Set(enabledList),
+      order: orderList,
+    };
   } catch {
-    return getDefaultEnabledSegments(ACTIVE_GAME);
+    return {
+      enabled: defaultEnabled,
+      order: defaultOrder,
+    };
   }
 }
 
 /**
- * Persist enabled segments setting for the current dex to localStorage.
+ * Persist segment configuration (enabled set and custom order) for the specified or active game.
  *
- * @param {Set<string>|Iterable<string>} set - Set or collection of enabled segment keys.
+ * @param {{ enabled: Set<string>|Iterable<string>, order?: string[] }} config - Configuration to save.
+ * @param {string} [gamePrefix=ACTIVE_GAME.storagePrefix] - Game storage prefix.
  * @returns {void}
  */
-export function saveEnabledSegments(set) {
+export function saveSegmentConfig(
+  config,
+  gamePrefix = ACTIVE_GAME.storagePrefix,
+) {
   try {
-    localStorage.setItem(
-      SEGMENTS_STORAGE_KEY,
-      JSON.stringify({ enabled: Array.from(set) }),
-    );
+    const key = `${gamePrefix}-segments-v1`;
+    const payload = {
+      enabled: Array.from(config.enabled || []),
+      order: Array.isArray(config.order) ? config.order : [],
+    };
+    localStorage.setItem(key, JSON.stringify(payload));
   } catch {
-    /* ignore */
+    // Ignore quota errors silently
   }
+}
+
+/**
+ * Reset segment configuration to default for the specified or active game.
+ *
+ * @param {string} [gamePrefix=ACTIVE_GAME.storagePrefix] - Game storage prefix.
+ * @returns {void}
+ */
+export function resetSegmentConfig(gamePrefix = ACTIVE_GAME.storagePrefix) {
+  try {
+    localStorage.removeItem(`${gamePrefix}-segments-v1`);
+  } catch {
+    // Ignore quota errors silently
+  }
+}
+
+/**
+ * Read enabled segments setting for the current dex from localStorage.
+ *
+ * @param {import("./config.js").GameConfig} [game=ACTIVE_GAME] - Game configuration.
+ * @returns {Set<string>} Set of enabled segment keys.
+ */
+export function loadEnabledSegments(game = ACTIVE_GAME) {
+  return loadSegmentConfig(game).enabled;
+}
+
+/**
+ * Persist enabled segments setting for the current dex to localStorage while preserving custom order.
+ *
+ * @param {Set<string>|Iterable<string>} set - Set or collection of enabled segment keys.
+ * @param {string} [gamePrefix=ACTIVE_GAME.storagePrefix] - Game storage prefix.
+ * @returns {void}
+ */
+export function saveEnabledSegments(
+  set,
+  gamePrefix = ACTIVE_GAME.storagePrefix,
+) {
+  const current = loadSegmentConfig(ACTIVE_GAME);
+  saveSegmentConfig({ enabled: set, order: current.order }, gamePrefix);
 }
 
 // =============================================================================

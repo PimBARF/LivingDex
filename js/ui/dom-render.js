@@ -432,7 +432,14 @@ export function renderDexSectionBoxes(
  * @param {number} speciesId - National Pokédex species ID for lookup and modal info.
  * @param {number|string} formId - Form ID for sprite lookup (may differ from speciesId for regional/alternate forms).
  * @param {string} name - Display name of the Pokémon.
+ * @param {number} slotIndex - Global slot index for storage and dataset tracking.
+ * @param {number} speciesId - National Pokédex species ID for lookup and modal info.
+ * @param {number|string} formId - Form ID for sprite lookup (may differ from speciesId for regional/alternate forms).
+ * @param {string} name - Display name of the Pokémon (or base species name).
  * @param {string} displayIndex - Formatted index string to show in cell badge (e.g. "001").
+ * @param {string[]} [types=[]] - Pokémon types.
+ * @param {string} [gender=""] - Gender variant ('female' or '').
+ * @param {string} [formName=""] - Explicit form name if available.
  * @returns {HTMLButtonElement} The generated interactive dex slot button element.
  */
 export function createDexSlot(
@@ -442,6 +449,8 @@ export function createDexSlot(
   name,
   displayIndex,
   types = [],
+  gender = "",
+  formName = "",
 ) {
   const button = document.createElement("button");
   button.className = "cell";
@@ -450,18 +459,37 @@ export function createDexSlot(
   button.dataset.regional = slotIndex;
   button.dataset.national = speciesId;
   button.dataset.form = formId;
-  button.dataset.name = name.toLowerCase();
+  button.dataset.gender = gender || "";
+  button.dataset.formName = formName || "";
+
+  const displayName = formName || name;
+  button.dataset.name = displayName.toLowerCase();
+
   const resolvedTypes = types.length
     ? types
     : getSpeciesTypes(speciesId, formId);
   button.dataset.types = resolvedTypes.join(" ");
-  button.title = `#${displayIndex} — ${name} (${speciesId})`;
+  button.title = `#${displayIndex} — ${displayName} (${speciesId})`;
+
   const spriteStyle = loadSettings().spriteStyle || "pokesprites";
+  const targetSpriteId = gender === "female" ? speciesId : formId;
+  const primarySpriteUrl = spriteUrlForSpecies(
+    targetSpriteId,
+    spriteStyle,
+    isShinyMode,
+    gender,
+  );
+  const fallbackSpriteUrl = spriteUrlForSpecies(
+    speciesId,
+    spriteStyle,
+    isShinyMode,
+  );
+
   button.innerHTML = `
     <div class="index">${displayIndex}</div>
-    <img class="sprite" src="${spriteUrlForSpecies(formId, spriteStyle, isShinyMode)}" alt="${name}" width="96" height="96" loading="lazy" decoding="async" crossorigin="anonymous" onerror="this.style.opacity=.2"/>
-    <div class="label">${name}</div>
-    <span class="cell-info-btn" role="button" aria-label="View info for ${name}" tabindex="0">i</span>
+    <img class="sprite" src="${primarySpriteUrl}" data-fallback="${fallbackSpriteUrl}" alt="${displayName}" width="96" height="96" loading="lazy" decoding="async" crossorigin="anonymous" onerror="if (this.dataset.fallback &amp;&amp; this.src !== this.dataset.fallback) { this.src = this.dataset.fallback; } else { this.style.opacity = '.2'; }"/>
+    <div class="label">${displayName}</div>
+    <span class="cell-info-btn" role="button" aria-label="View info for ${displayName}" tabindex="0">i</span>
   `;
   return button;
 }
@@ -479,12 +507,33 @@ export function applySpriteStyleToCells() {
     .forEach((img) => {
       const cell = img.closest(".cell");
       const formId = cell?.dataset.form;
-      if (!formId) return;
+      const speciesId = cell?.dataset.national;
+      const gender = cell?.dataset.gender || "";
+      if (!formId || !speciesId) return;
+
+      const targetId = gender === "female" ? speciesId : formId;
+      const primaryUrl = spriteUrlForSpecies(
+        targetId,
+        spriteStyle,
+        isShinyMode,
+        gender,
+      );
+      const fallbackUrl = spriteUrlForSpecies(
+        speciesId,
+        spriteStyle,
+        isShinyMode,
+      );
+
       img.style.opacity = "";
+      img.dataset.fallback = fallbackUrl;
       img.onerror = function onSpriteError() {
-        this.style.opacity = ".2";
+        if (this.dataset.fallback && this.src !== this.dataset.fallback) {
+          this.src = this.dataset.fallback;
+        } else {
+          this.style.opacity = ".2";
+        }
       };
-      img.src = spriteUrlForSpecies(formId, spriteStyle, isShinyMode);
+      img.src = primaryUrl;
     });
 }
 
@@ -569,7 +618,7 @@ export function populateDexSlots(sections, slotCount, onComplete) {
 
     task.entries.forEach(
       ({ entry, globalSlotIndex: slotIdx, localIndex: locIdx }) => {
-        const { speciesId, formId, dexNumber } = entry;
+        const { speciesId, formId, dexNumber, gender, formName } = entry;
         const speciesName =
           window.__livingDexNames?.[speciesId] || `#${speciesId}`;
         const num = dexNumber != null ? dexNumber : locIdx + 1;
@@ -580,6 +629,9 @@ export function populateDexSlots(sections, slotCount, onComplete) {
           formId,
           speciesName,
           displayIndex,
+          [],
+          gender,
+          formName,
         );
 
         if (caught[slotIdx]) {
@@ -638,9 +690,16 @@ export function populateDexSlots(sections, slotCount, onComplete) {
            */
           const handleInfo = (event) => {
             event.stopPropagation();
-            const latestName =
+            const latestBaseName =
               window.__livingDexNames?.[speciesId] || speciesName;
-            openPokemonInfoModal(speciesId, formId, latestName);
+            const latestDisplayName = formName || latestBaseName;
+            openPokemonInfoModal(
+              speciesId,
+              formId,
+              latestDisplayName,
+              gender,
+              formName,
+            );
           };
           infoBtn.addEventListener("click", handleInfo);
           infoBtn.addEventListener("keydown", (event) => {
@@ -774,7 +833,9 @@ export function applyNamesToCells() {
   document.querySelectorAll(".cell:not(.is-placeholder)").forEach((cell) => {
     const national = Number(cell.dataset.national);
     const regional = Number(cell.dataset.regional);
+    const formName = cell.dataset.formName;
     const name =
+      formName ||
       window.__livingDexNames?.[national] ||
       cell.dataset.name ||
       `#${national}`;

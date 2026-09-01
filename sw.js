@@ -4,7 +4,7 @@
  * offline execution, background revalidation, and update lifecycle control.
  */
 
-const CACHE_VERSION = "v1.4.1";
+const CACHE_VERSION = "v1.5.1";
 const SHELL_CACHE = `livingdex-shell-${CACHE_VERSION}`;
 const DATA_CACHE = `livingdex-data-${CACHE_VERSION}`;
 const SPRITE_CACHE = "livingdex-sprites-v1";
@@ -43,6 +43,7 @@ const SHELL_ASSETS = [
  */
 const DATA_ASSETS = [
   "./data/species.json",
+  "./data/forms.json",
   "./data/evolutions.json",
   "./data/flavor/en.json",
   "./data/games/dex/home.json",
@@ -93,29 +94,31 @@ const DATA_ASSETS = [
  */
 function mapRemoteSpriteToLocalPath(pathname) {
   let match = pathname.match(
-    /\/sprites\/pokemon\/other\/official-artwork\/(shiny\/)?(\d+)\.png$/,
+    /\/sprites\/pokemon\/other\/official-artwork\/(shiny\/)?(female\/)?(\d+)\.png$/,
   );
   if (match) {
-    return `./assets/sprites/official-artwork/${match[1] || ""}${match[2]}.png`;
+    return `./assets/sprites/official-artwork/${match[1] || ""}${match[2] || ""}${match[3]}.png`;
   }
 
   match = pathname.match(
-    /\/sprites\/pokemon\/other\/home\/(shiny\/)?(\d+)\.png$/,
+    /\/sprites\/pokemon\/other\/home\/(shiny\/)?(female\/)?(\d+)\.png$/,
   );
   if (match) {
-    return `./assets/sprites/home/${match[1] || ""}${match[2]}.png`;
+    return `./assets/sprites/home/${match[1] || ""}${match[2] || ""}${match[3]}.png`;
   }
 
   match = pathname.match(
-    /\/sprites\/pokemon\/other\/showdown\/(shiny\/)?(\d+)\.gif$/,
+    /\/sprites\/pokemon\/other\/showdown\/(shiny\/)?(female\/)?(\d+)\.gif$/,
   );
   if (match) {
-    return `./assets/sprites/showdown/${match[1] || ""}${match[2]}.gif`;
+    return `./assets/sprites/showdown/${match[1] || ""}${match[2] || ""}${match[3]}.gif`;
   }
 
-  match = pathname.match(/\/sprites\/pokemon\/(shiny\/)?(\d+)\.png$/);
+  match = pathname.match(
+    /\/sprites\/pokemon\/(shiny\/)?(female\/)?(\d+)\.png$/,
+  );
   if (match) {
-    return `./assets/sprites/pokesprites/${match[1] || ""}${match[2]}.png`;
+    return `./assets/sprites/pokesprites/${match[1] || ""}${match[2] || ""}${match[3]}.png`;
   }
 
   return null;
@@ -132,27 +135,31 @@ function mapLocalSpriteToRemoteUrl(pathname) {
     "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon";
 
   let match = pathname.match(
-    /\/assets\/sprites\/official-artwork\/(shiny\/)?(\d+)\.png$/,
+    /\/assets\/sprites\/official-artwork\/(shiny\/)?(female\/)?(\d+)\.png$/,
   );
   if (match) {
-    return `${GITHUB_BASE}/other/official-artwork/${match[1] || ""}${match[2]}.png`;
-  }
-
-  match = pathname.match(/\/assets\/sprites\/home\/(shiny\/)?(\d+)\.png$/);
-  if (match) {
-    return `${GITHUB_BASE}/other/home/${match[1] || ""}${match[2]}.png`;
-  }
-
-  match = pathname.match(/\/assets\/sprites\/showdown\/(shiny\/)?(\d+)\.gif$/);
-  if (match) {
-    return `${GITHUB_BASE}/other/showdown/${match[1] || ""}${match[2]}.gif`;
+    return `${GITHUB_BASE}/other/official-artwork/${match[1] || ""}${match[2] || ""}${match[3]}.png`;
   }
 
   match = pathname.match(
-    /\/assets\/sprites\/pokesprites\/(shiny\/)?(\d+)\.png$/,
+    /\/assets\/sprites\/home\/(shiny\/)?(female\/)?(\d+)\.png$/,
   );
   if (match) {
-    return `${GITHUB_BASE}/${match[1] || ""}${match[2]}.png`;
+    return `${GITHUB_BASE}/other/home/${match[1] || ""}${match[2] || ""}${match[3]}.png`;
+  }
+
+  match = pathname.match(
+    /\/assets\/sprites\/showdown\/(shiny\/)?(female\/)?(\d+)\.gif$/,
+  );
+  if (match) {
+    return `${GITHUB_BASE}/other/showdown/${match[1] || ""}${match[2] || ""}${match[3]}.gif`;
+  }
+
+  match = pathname.match(
+    /\/assets\/sprites\/pokesprites\/(shiny\/)?(female\/)?(\d+)\.png$/,
+  );
+  if (match) {
+    return `${GITHUB_BASE}/${match[1] || ""}${match[2] || ""}${match[3]}.png`;
   }
 
   return null;

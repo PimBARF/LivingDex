@@ -776,17 +776,25 @@ const SPRITE_EXTENSIONS = {
 
 /**
  * Remote PokeAPI sprite URL generators.
- * @type {Record<string, (id: number|string, isShiny: boolean) => string>}
+ * @type {Record<string, (id: number|string, isShiny: boolean, gender?: string) => string>}
  */
 const SPRITE_REMOTE_STYLE_URLS = {
-  "official-artwork": (id, isShiny) =>
-    `${SPRITE_REMOTE_BASE}/other/official-artwork/${isShiny ? "shiny/" : ""}${id}.png`,
-  home: (id, isShiny) =>
-    `${SPRITE_REMOTE_BASE}/other/home/${isShiny ? "shiny/" : ""}${id}.png`,
-  showdown: (id, isShiny) =>
-    `${SPRITE_REMOTE_BASE}/other/showdown/${isShiny ? "shiny/" : ""}${id}.gif`,
-  pokesprites: (id, isShiny) =>
-    `${SPRITE_REMOTE_BASE}/${isShiny ? "shiny/" : ""}${id}.png`,
+  "official-artwork": (id, isShiny, gender) => {
+    const isFemale = gender === "female";
+    return `${SPRITE_REMOTE_BASE}/other/official-artwork/${isShiny ? "shiny/" : ""}${isFemale ? "female/" : ""}${id}.png`;
+  },
+  home: (id, isShiny, gender) => {
+    const isFemale = gender === "female";
+    return `${SPRITE_REMOTE_BASE}/other/home/${isShiny ? "shiny/" : ""}${isFemale ? "female/" : ""}${id}.png`;
+  },
+  showdown: (id, isShiny, gender) => {
+    const isFemale = gender === "female";
+    return `${SPRITE_REMOTE_BASE}/other/showdown/${isShiny ? "shiny/" : ""}${isFemale ? "female/" : ""}${id}.gif`;
+  },
+  pokesprites: (id, isShiny, gender) => {
+    const isFemale = gender === "female";
+    return `${SPRITE_REMOTE_BASE}/${isShiny ? "shiny/" : ""}${isFemale ? "female/" : ""}${id}.png`;
+  },
 };
 
 /**
@@ -795,16 +803,19 @@ const SPRITE_REMOTE_STYLE_URLS = {
  * @param {number|string} id - The Pokémon species or form ID.
  * @param {string} [style="pokesprites"] - Visual sprite style.
  * @param {boolean} [isShiny=false] - Whether to return the shiny variant.
+ * @param {string} [gender=""] - Gender variant ('female' or '').
  * @returns {string} Remote URL.
  */
 export const remoteSpriteUrlForSpecies = (
   id,
   style = "pokesprites",
   isShiny = false,
+  gender = "",
 ) =>
   (SPRITE_REMOTE_STYLE_URLS[style] || SPRITE_REMOTE_STYLE_URLS["pokesprites"])(
     id,
     isShiny,
+    gender,
   );
 
 /**
@@ -813,33 +824,38 @@ export const remoteSpriteUrlForSpecies = (
  * @param {number|string} id - The Pokémon species or form ID.
  * @param {string} [style="pokesprites"] - Visual sprite style.
  * @param {boolean} [isShiny=false] - Whether to return the shiny variant.
+ * @param {string} [gender=""] - Gender variant ('female' or '').
  * @returns {string} Local relative path.
  */
 export const localSpriteUrlForSpecies = (
   id,
   style = "pokesprites",
   isShiny = false,
+  gender = "",
 ) => {
   const normStyle = SPRITE_EXTENSIONS[style] ? style : "pokesprites";
   const ext = SPRITE_EXTENSIONS[normStyle];
-  return `assets/sprites/${normStyle}/${isShiny ? "shiny/" : ""}${id}.${ext}`;
+  const isFemale = gender === "female";
+  return `assets/sprites/${normStyle}/${isShiny ? "shiny/" : ""}${isFemale ? "female/" : ""}${id}.${ext}`;
 };
 
 /**
- * Generates the primary sprite URL for a given Pokémon ID, sprite style, and shiny state.
+ * Generates the primary sprite URL for a given Pokémon ID, sprite style, shiny state, and gender.
  * Returns the canonical PokeAPI URL, which is intercepted by the Service Worker to serve
  * locally cached copies, check local assets/sprites/, or fetch & cache from the remote CDN.
  *
  * @param {number|string} id - The Pokémon species or form ID.
  * @param {'pokesprites'|'official-artwork'|'home'|'showdown'|string} [style="pokesprites"] - Visual sprite style.
  * @param {boolean} [isShiny=false] - Whether to return the shiny variant sprite URL.
+ * @param {string} [gender=""] - Gender variant ('female' or '').
  * @returns {string} URL pointing to the Pokémon sprite image.
  */
 export const spriteUrlForSpecies = (
   id,
   style = "pokesprites",
   isShiny = false,
-) => remoteSpriteUrlForSpecies(id, style, isShiny);
+  gender = "",
+) => remoteSpriteUrlForSpecies(id, style, isShiny, gender);
 
 /**
  * Normalizes a hyphenated Pokémon or form name into a title-cased, space-separated display name.

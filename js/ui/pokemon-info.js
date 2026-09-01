@@ -398,12 +398,21 @@ function renderEvolutionDetails(evoEl, evolutionPaths, spriteStyle) {
  * @param {number} speciesId - National Pokédex species ID.
  * @param {number} formId - Pokémon form ID or sprite ID.
  * @param {string} name - Species/form display name.
+ * @param {string} [gender=""] - Gender variant ('female' or '').
+ * @param {string} [formName=""] - Explicit form name if available.
  * @returns {Promise<void>}
  */
-export async function openPokemonInfoModal(speciesId, formId, name) {
+export async function openPokemonInfoModal(
+  speciesId,
+  formId,
+  name,
+  gender = "",
+  formName = "",
+) {
   const modal = document.getElementById("modalPokemonInfo");
   if (!modal) return;
 
+  const displayName = formName || name;
   const titleEl = document.getElementById("pokemonInfoTitle");
   const numberEl = document.getElementById("pokemonInfoNumber");
   const spriteEl = document.getElementById("pokemonInfoSprite");
@@ -417,27 +426,44 @@ export async function openPokemonInfoModal(speciesId, formId, name) {
   const errorEl = document.getElementById("pokemonInfoError");
 
   const spriteStyle = loadSettings().spriteStyle || "pokesprites";
+  const targetSpriteId = gender === "female" ? speciesId : formId;
+  const primarySpriteUrl = spriteUrlForSpecies(
+    targetSpriteId,
+    spriteStyle,
+    isShinyMode,
+    gender,
+  );
+  const fallbackSpriteUrl = spriteUrlForSpecies(
+    speciesId,
+    spriteStyle,
+    isShinyMode,
+  );
 
   stopCurrentAudio();
   const cryBtn = document.getElementById("pokemonInfoCryBtn");
   if (cryBtn) {
     cryBtn.onclick = () => {
-      playPokemonCry(speciesId, name);
+      playPokemonCry(speciesId, displayName);
     };
-    cryBtn.setAttribute("aria-label", `Play cry for ${name}`);
+    cryBtn.setAttribute("aria-label", `Play cry for ${displayName}`);
   }
 
   // Immediate placeholder state
-  titleEl.textContent = name;
+  titleEl.textContent = displayName;
   numberEl.textContent = `#${speciesId}`;
   spriteEl.decoding = "async";
   spriteEl.crossOrigin = "anonymous";
   spriteEl.style.opacity = "";
+  spriteEl.dataset.fallback = fallbackSpriteUrl;
   spriteEl.onerror = function onModalSpriteError() {
-    this.style.opacity = "0.2";
+    if (this.dataset.fallback && this.src !== this.dataset.fallback) {
+      this.src = this.dataset.fallback;
+    } else {
+      this.style.opacity = "0.2";
+    }
   };
-  spriteEl.src = spriteUrlForSpecies(formId, spriteStyle, isShinyMode);
-  spriteEl.alt = name;
+  spriteEl.src = primarySpriteUrl;
+  spriteEl.alt = displayName;
   typesEl.innerHTML = "";
   flavorEl.textContent = "";
   encounterEl.innerHTML = "";

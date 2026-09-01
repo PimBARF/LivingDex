@@ -18,6 +18,10 @@ It’s a lightweight static web app: no login, no backend, and no build step. Ju
 - **Detailed Pokémon Info & Cries**:
   - Tap the info icon on any Pokémon to view types, Pokédex flavor text, evolution triggers, and in-game encounter locations.
   - Play official in-game Pokémon audio cries directly inside the modal.
+- **Customizable Dex Segments & Reordering**:
+  - Toggle optional expansions, regional forms, cosmetic variants, and visual gender differences on/off per game.
+  - Re-order segments via drag-and-drop (`⋮⋮`) or Move Up/Down buttons (`▲` / `▼`) to match your exact in-game box layout.
+  - 1-click quick presets: _Base Game_, _Base + DLC_, _All Forms_, and _Master (100%)_, with instant live box recalculation.
 - **Shiny Tracking Mode**: 1-click toggle (`✨` or press `S`) to track Shiny Living Dexes independently.
 - **Filters & Search**:
   - Instant search by Pokémon name or Pokédex number (`/`).

@@ -1,5 +1,9 @@
 import { ACTIVE_GAME_ID } from "./config.js";
-import { loadEnabledSegments, loadSettings } from "./storage.js";
+import {
+  loadSegmentConfig,
+  loadEnabledSegments,
+  loadSettings,
+} from "./storage.js";
 import { applyNamesToCells } from "./ui/dom-render.js";
 
 /**
@@ -292,7 +296,12 @@ export async function getNamesData(lang = "en") {
  * @returns {Promise<{ sections: Array<Object>, warnings: Array<Object> }>} Object containing resolved sections and any warnings.
  */
 export async function buildActiveDexSections() {
-  const enabled = loadEnabledSegments();
+  const segmentConfig = loadSegmentConfig();
+  const enabled = segmentConfig.enabled;
+  const preferredOrder = Array.isArray(segmentConfig.order)
+    ? segmentConfig.order
+    : [];
+
   const [gameData] = await Promise.all([
     getGameDexData(ACTIVE_GAME_ID),
     getAllSpeciesData(),
@@ -302,7 +311,33 @@ export async function buildActiveDexSections() {
   const warnings = [];
 
   if (gameData && Array.isArray(gameData.sections)) {
+    // Map sections by id for fast lookup
+    const sectionMap = new Map();
     for (const seg of gameData.sections) {
+      sectionMap.set(seg.id, seg);
+    }
+
+    // Determine final ordered section list:
+    // 1. Items in preferredOrder that exist in game data
+    // 2. Any newly scraped or discovered sections not yet in preferredOrder
+    const orderedSections = [];
+    const seenIds = new Set();
+
+    for (const id of preferredOrder) {
+      if (sectionMap.has(id)) {
+        orderedSections.push(sectionMap.get(id));
+        seenIds.add(id);
+      }
+    }
+
+    for (const seg of gameData.sections) {
+      if (!seenIds.has(seg.id)) {
+        orderedSections.push(seg);
+        seenIds.add(seg.id);
+      }
+    }
+
+    for (const seg of orderedSections) {
       // Check if this segment is enabled in local storage
       const isEnabled = !seg.optional || enabled.has(seg.id);
       if (!isEnabled) continue;

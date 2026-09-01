@@ -1,8 +1,14 @@
-import { buildActiveDexSections, loadSpeciesNames } from "./db.js";
+import {
+  buildActiveDexSections,
+  loadSpeciesNames,
+  getGameDexData,
+} from "./db.js";
 
 import {
   loadSettings,
   loadEnabledSegments,
+  loadSegmentConfig,
+  saveSegmentConfig,
   decodeCaughtState,
   saveEnabledSegments,
 } from "./storage.js";
@@ -22,6 +28,7 @@ import {
   registerSettingsControls,
   registerShortcutsModal,
   registerFiltersModal,
+  registerSegmentsModal,
   showToast,
 } from "./ui/modals.js";
 
@@ -86,6 +93,7 @@ async function initializeLivingDexApp() {
   registerSettingsControls();
   registerShortcutsModal();
   registerFiltersModal();
+  registerSegmentsModal({ onSegmentsUpdated: () => renderGameInfo() });
 
   const app = document.getElementById("app");
   if (!app) return;
@@ -209,9 +217,9 @@ export async function applyPersistedViewSettings({
  * a segment, this updates persistent storage, recalculates active Pokédex sections,
  * rebuilds the box grid view, and fetches species names for the updated slot list.
  *
- * @returns {void}
+ * @returns {Promise<void>}
  */
-export function renderGameInfo() {
+export async function renderGameInfo() {
   const titleEl = document.getElementById("gameTitle");
   const togglesEl = document.getElementById("segmentToggles");
 
@@ -223,60 +231,97 @@ export function renderGameInfo() {
 
   togglesEl.innerHTML = "";
 
-  const enabled = loadEnabledSegments();
+  const config = loadSegmentConfig(ACTIVE_GAME);
+  const enabled = config.enabled;
+  const preferredOrder = config.order || [];
+
+  const gameData = await getGameDexData(ACTIVE_GAME_ID).catch(() => null);
+  const rawSections =
+    gameData && Array.isArray(gameData.sections)
+      ? gameData.sections
+      : ACTIVE_GAME.dexes || [];
+
+  const sectionMap = new Map();
+  rawSections.forEach((s) => sectionMap.set(s.id, s));
+
+  const orderedSections = [];
+  const seen = new Set();
+  preferredOrder.forEach((id) => {
+    if (sectionMap.has(id)) {
+      orderedSections.push(sectionMap.get(id));
+      seen.add(id);
+    }
+  });
+  rawSections.forEach((s) => {
+    if (!seen.has(s.id)) {
+      orderedSections.push(s);
+      seen.add(s.id);
+    }
+  });
+
+  const optionalSegments = orderedSections.filter((s) => s.optional);
+
+  // Hide or display segments button styling if there are optional segments
+  const segmentsBtn = document.getElementById("segmentsBtn");
+  if (segmentsBtn) {
+    segmentsBtn.title = optionalSegments.length
+      ? `Configure ${ACTIVE_GAME.title} Segments & Order`
+      : `View ${ACTIVE_GAME.title} Dex Structure`;
+  }
 
   // Create checkboxes for optional segments
-  ACTIVE_GAME.dexes
-    .filter((s) => s.optional)
-    .forEach((seg) => {
-      const id = `gameinfo-seg-${seg.id}`;
-      const wrapper = document.createElement("label");
-      wrapper.className = "segment-toggle";
+  optionalSegments.forEach((seg) => {
+    const id = `gameinfo-seg-${seg.id}`;
+    const wrapper = document.createElement("label");
+    wrapper.className = "segment-toggle";
 
-      const input = document.createElement("input");
-      input.type = "checkbox";
-      input.id = id;
-      input.name = id;
-      input.checked = enabled.has(seg.id);
+    const input = document.createElement("input");
+    input.type = "checkbox";
+    input.id = id;
+    input.name = id;
+    input.checked = enabled.has(seg.id);
 
-      const text = document.createElement("span");
-      // Always show the configured title for the segment, including forms
-      text.textContent = seg.title;
+    const text = document.createElement("span");
+    text.textContent = seg.title;
 
-      wrapper.appendChild(input);
-      wrapper.appendChild(text);
-      togglesEl.appendChild(wrapper);
+    wrapper.appendChild(input);
+    wrapper.appendChild(text);
+    togglesEl.appendChild(wrapper);
 
-      // Add event listener for live updates
-      input.addEventListener("change", async () => {
-        const currentEnabled = loadEnabledSegments();
+    // Add event listener for live updates
+    input.addEventListener("change", async () => {
+      const currentConfig = loadSegmentConfig(ACTIVE_GAME);
+      const currentEnabled = currentConfig.enabled;
 
-        if (input.checked) {
-          currentEnabled.add(seg.id);
-        } else {
-          currentEnabled.delete(seg.id);
-        }
+      if (input.checked) {
+        currentEnabled.add(seg.id);
+      } else {
+        currentEnabled.delete(seg.id);
+      }
 
-        saveEnabledSegments(currentEnabled);
-
-        const { sections, warnings } = await buildActiveDexSections();
-        const combinedSpeciesIds = sections.flatMap((s) =>
-          s.entries.map((e) => e.speciesId),
-        );
-        const newSlotCount = combinedSpeciesIds.length;
-
-        rebuildDexView({ sections, slotCount: newSlotCount });
-        if (warnings.length) {
-          console.warn("Pokédex sections loaded with warnings:", warnings);
-          showToast("Some Pokédex data could not be loaded.", "warning");
-        }
-
-        const nameResult = await loadSpeciesNames(combinedSpeciesIds);
-        if (nameResult.failedIds.length) {
-          showToast("Some Pokémon names could not be loaded.", "warning");
-        }
+      saveSegmentConfig({
+        enabled: currentEnabled,
+        order: currentConfig.order,
       });
+
+      const { sections, warnings } = await buildActiveDexSections();
+      const combinedSpeciesIds = sections.flatMap((s) =>
+        s.entries.map((e) => e.speciesId),
+      );
+      const newSlotCount = combinedSpeciesIds.length;
+
+      rebuildDexView({ sections, slotCount: newSlotCount });
+      if (warnings.length) {
+        console.warn("Pokédex sections loaded with warnings:", warnings);
+        showToast("Some Pokédex data could not be loaded.", "warning");
+      }
+
+      const nameResult = await loadSpeciesNames(combinedSpeciesIds);
+      if (nameResult.failedIds.length) {
+        showToast("Some Pokémon names could not be loaded.", "warning");
+      }
     });
+  });
 }
 
 /**

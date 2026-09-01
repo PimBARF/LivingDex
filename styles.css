@@ -2609,3 +2609,248 @@ body.is-scrolled #progressWrap {
   color: var(--text);
   text-align: right;
 }
+
+/* =============================================================================
+   16) POKÉDEX SEGMENTS & REORDERING MODAL
+   ============================================================================= */
+
+.segments-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-weight: 600;
+  font-size: 13px;
+  padding: 0 10px;
+  height: 36px;
+}
+
+@media (max-width: 480px) {
+  .segments-btn-text {
+    display: none;
+  }
+}
+
+.segments-modal-card {
+  max-width: 560px;
+}
+
+.segments-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.segments-modal-header h3 {
+  margin: 0;
+}
+
+.segments-modal-body {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin: 8px 0 12px;
+  overflow-y: auto;
+  max-height: min(65vh, 520px);
+  padding-right: 2px;
+}
+
+.segment-presets-section {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  padding: 8px 12px;
+  background: var(--surface-soft);
+  border: 1px solid var(--surface-soft-border);
+  border-radius: var(--control-radius);
+}
+
+.segment-presets-title {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-right: 2px;
+}
+
+.segment-presets-group {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.segment-preset-btn {
+  padding: 4px 10px;
+  font-size: 12px;
+  font-weight: 600;
+  border-radius: 6px;
+  height: 28px;
+}
+
+.segment-preset-btn:hover {
+  background: var(--surface-soft-hover);
+  border-color: var(--accent-2);
+}
+
+.segments-organizer-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.segment-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 10px 12px;
+  background: var(--surface-soft);
+  border: 1px solid var(--surface-soft-border);
+  border-radius: var(--panel-radius);
+  transition: background-color 0.15s ease, border-color 0.15s ease, transform 0.15s ease;
+  user-select: none;
+}
+
+.segment-item:hover {
+  border-color: var(--border);
+  background: var(--surface-soft-hover);
+}
+
+.segment-item.is-disabled {
+  opacity: 0.6;
+}
+
+.segment-item.is-dragging {
+  opacity: 0.4;
+  border: 2px dashed var(--accent-2);
+  background: var(--card);
+}
+
+.segment-item.drag-over {
+  border-color: var(--accent-2);
+  transform: scale(1.01);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.segment-item-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+  flex: 1;
+}
+
+.segment-drag-handle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: grab;
+  color: var(--muted);
+  font-size: 16px;
+  padding: 2px 4px;
+  touch-action: none;
+}
+
+.segment-drag-handle:active {
+  cursor: grabbing;
+}
+
+.segment-item-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.segment-item-title-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.segment-item-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text);
+  line-height: 1.3;
+}
+
+.segment-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 1px 6px;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-radius: 4px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  color: var(--muted);
+}
+
+.segment-badge-base {
+  border-color: color-mix(in srgb, var(--accent-2) 40%, transparent);
+  color: var(--accent-2);
+}
+
+.segment-badge-dlc {
+  border-color: color-mix(in srgb, #9c27b0 40%, transparent);
+  color: #ab47bc;
+}
+
+.segment-badge-forms {
+  border-color: color-mix(in srgb, #ff9800 40%, transparent);
+  color: #ffa726;
+}
+
+.segment-badge-gender {
+  border-color: color-mix(in srgb, #e91e63 40%, transparent);
+  color: #ec407a;
+}
+
+.segment-item-meta {
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.segment-item-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.segment-reorder-btn-group {
+  display: inline-flex;
+  gap: 2px;
+}
+
+.segment-reorder-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  font-size: 11px;
+  border-radius: 6px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  color: var(--text);
+  cursor: pointer;
+  transition: background-color 0.15s ease, border-color 0.15s ease;
+}
+
+.segment-reorder-btn:hover:not(:disabled) {
+  background: var(--surface-soft-hover);
+  border-color: var(--accent-2);
+}
+
+.segment-reorder-btn:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}

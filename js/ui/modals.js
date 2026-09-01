@@ -4,6 +4,9 @@ import {
   clearSpeciesCache,
   clearAllSavedData,
   clearBoxLabels,
+  loadSegmentConfig,
+  saveSegmentConfig,
+  resetSegmentConfig,
 } from "../storage.js";
 
 import {
@@ -13,12 +16,22 @@ import {
   resolveReducedMotionPreference,
 } from "./theme.js";
 
-import { GAMES, getOrderedGameEntries } from "../config.js";
+import {
+  GAMES,
+  ACTIVE_GAME,
+  ACTIVE_GAME_ID,
+  getOrderedGameEntries,
+} from "../config.js";
 
-import { resetDexProgress } from "../state.js";
+import { resetDexProgress, rebuildDexView } from "../state.js";
 import { applyPersistedViewSettings } from "../main.js";
 import { refreshOfflineDataAndCaches } from "../pwa.js";
 import { applyBoxLabelsToHeaders, updateAllBoxProgress } from "./dom-render.js";
+import {
+  getGameDexData,
+  buildActiveDexSections,
+  loadSpeciesNames,
+} from "../db.js";
 
 /**
  * Attach common modal accessibility and event handlers including opening, closing,
@@ -257,6 +270,294 @@ export function registerFiltersModal() {
     onOpen: () => closeBtn?.focus(),
     onClose: () => {},
     focusSelector: "#closeFilters",
+  });
+}
+
+/**
+ * Register Pokédex Segments & Reordering modal handlers and interactions.
+ *
+ * @param {Object} [options={}] - Options object.
+ * @param {(() => void)|null} [options.onSegmentsUpdated] - Callback executed when segment selection or order changes.
+ * @returns {{ openModal: () => void, closeModal: () => void }} Modal controller methods.
+ */
+export function registerSegmentsModal({ onSegmentsUpdated } = {}) {
+  const modal = document.getElementById("modalSegments");
+  const openBtn = document.getElementById("segmentsBtn");
+  const closeBtn = document.getElementById("closeSegments");
+  const backdrop = modal?.querySelector("[data-close]");
+  const listEl = document.getElementById("segmentsOrganizerList");
+  const resetBtn = document.getElementById("resetSegmentsOrderBtn");
+  const presetsGroup = document.getElementById("segmentPresetsGroup");
+
+  let draggedItem = null;
+
+  /**
+   * Helper to trigger a live Pokédex re-render with the updated segment configuration.
+   */
+  async function refreshActiveDex() {
+    const { sections, warnings } = await buildActiveDexSections();
+    const combinedSpeciesIds = sections.flatMap((s) =>
+      s.entries.map((e) => e.speciesId),
+    );
+    const slotCount = combinedSpeciesIds.length;
+
+    rebuildDexView({ sections, slotCount });
+    if (warnings.length) {
+      console.warn("Pokédex sections reloaded with warnings:", warnings);
+    }
+    if (combinedSpeciesIds.length) {
+      await loadSpeciesNames(combinedSpeciesIds);
+    }
+    onSegmentsUpdated?.();
+  }
+
+  /**
+   * Collect the current order and enabled status from the list DOM elements and save to storage.
+   */
+  function syncAndSaveFromDom() {
+    if (!listEl) return;
+    const items = Array.from(listEl.querySelectorAll(".segment-item"));
+    const order = items.map((el) => el.dataset.segmentId).filter(Boolean);
+    const enabled = new Set();
+
+    items.forEach((el) => {
+      const checkbox = el.querySelector('input[type="checkbox"]');
+      if (checkbox?.checked) {
+        enabled.add(el.dataset.segmentId);
+      }
+      el.classList.toggle("is-disabled", !checkbox?.checked);
+    });
+
+    saveSegmentConfig({ enabled, order });
+    updateMoveButtonStates();
+    refreshActiveDex();
+  }
+
+  /**
+   * Enable/disable the Up and Down arrow buttons based on item position.
+   */
+  function updateMoveButtonStates() {
+    if (!listEl) return;
+    const items = Array.from(listEl.querySelectorAll(".segment-item"));
+    items.forEach((item, index) => {
+      const upBtn = item.querySelector(".segment-reorder-up");
+      const downBtn = item.querySelector(".segment-reorder-down");
+      if (upBtn) upBtn.disabled = index === 0;
+      if (downBtn) downBtn.disabled = index === items.length - 1;
+    });
+  }
+
+  /**
+   * Render the list of segments in current order with interactive controls.
+   */
+  async function populateSegmentsList() {
+    if (!listEl) return;
+    listEl.innerHTML = "";
+
+    const [gameData] = await Promise.all([
+      getGameDexData(ACTIVE_GAME_ID).catch(() => null),
+    ]);
+
+    const rawSections =
+      gameData && Array.isArray(gameData.sections)
+        ? gameData.sections
+        : ACTIVE_GAME.dexes || [];
+
+    const sectionMap = new Map();
+    rawSections.forEach((s) => sectionMap.set(s.id, s));
+
+    const config = loadSegmentConfig(ACTIVE_GAME);
+    const enabledSet = config.enabled;
+    const preferredOrder = config.order || [];
+
+    // Order items
+    const orderedSections = [];
+    const seen = new Set();
+    preferredOrder.forEach((id) => {
+      if (sectionMap.has(id)) {
+        orderedSections.push(sectionMap.get(id));
+        seen.add(id);
+      }
+    });
+    rawSections.forEach((s) => {
+      if (!seen.has(s.id)) {
+        orderedSections.push(s);
+        seen.add(s.id);
+      }
+    });
+
+    orderedSections.forEach((seg, index) => {
+      const isOptional = seg.optional !== false;
+      const isEnabled = !isOptional || enabledSet.has(seg.id);
+      const entryCount = Array.isArray(seg.entries)
+        ? seg.entries.length
+        : seg.manualIds?.length || 0;
+      const boxCount = entryCount > 0 ? Math.ceil(entryCount / 30) : undefined;
+
+      const typeKey = seg.type || "base";
+      let badgeClass = "segment-badge-base";
+      let badgeLabel = "Base";
+      if (typeKey === "dlc") {
+        badgeClass = "segment-badge-dlc";
+        badgeLabel = "DLC";
+      } else if (typeKey === "forms") {
+        badgeClass = "segment-badge-forms";
+        badgeLabel = "Forms";
+      } else if (typeKey === "gender") {
+        badgeClass = "segment-badge-gender";
+        badgeLabel = "Gender";
+      }
+
+      const item = document.createElement("div");
+      item.className = `segment-item${isEnabled ? "" : " is-disabled"}`;
+      item.dataset.segmentId = seg.id;
+      item.dataset.type = typeKey;
+      item.draggable = true;
+
+      const countText =
+        entryCount > 0
+          ? `${entryCount} Pokémon${boxCount ? ` · ${boxCount} ${boxCount === 1 ? "Box" : "Boxes"}` : ""}`
+          : "";
+
+      item.innerHTML = `
+        <div class="segment-item-left">
+          <span class="segment-drag-handle" title="Drag to re-order" aria-hidden="true">⋮⋮</span>
+          <label class="toggle-switch" title="${isOptional ? (isEnabled ? "Disable segment" : "Enable segment") : "Required base segment"}">
+            <input type="checkbox" ${isEnabled ? "checked" : ""} ${isOptional ? "" : "disabled"}>
+            <span class="toggle-track"></span>
+          </label>
+          <div class="segment-item-info">
+            <div class="segment-item-title-row">
+              <span class="segment-item-title">${seg.title}</span>
+              <span class="segment-badge ${badgeClass}">${badgeLabel}</span>
+            </div>
+            ${countText ? `<span class="segment-item-meta">${countText}</span>` : ""}
+          </div>
+        </div>
+        <div class="segment-item-actions">
+          <div class="segment-reorder-btn-group">
+            <button type="button" class="segment-reorder-btn segment-reorder-up" title="Move Up" aria-label="Move ${seg.title} up" ${index === 0 ? "disabled" : ""}>▲</button>
+            <button type="button" class="segment-reorder-btn segment-reorder-down" title="Move Down" aria-label="Move ${seg.title} down" ${index === orderedSections.length - 1 ? "disabled" : ""}>▼</button>
+          </div>
+        </div>
+      `;
+
+      // Checkbox event
+      const checkbox = item.querySelector('input[type="checkbox"]');
+      checkbox?.addEventListener("change", () => {
+        syncAndSaveFromDom();
+      });
+
+      // Up button event
+      const upBtn = item.querySelector(".segment-reorder-up");
+      upBtn?.addEventListener("click", () => {
+        const prev = item.previousElementSibling;
+        if (prev) {
+          listEl.insertBefore(item, prev);
+          syncAndSaveFromDom();
+        }
+      });
+
+      // Down button event
+      const downBtn = item.querySelector(".segment-reorder-down");
+      downBtn?.addEventListener("click", () => {
+        const next = item.nextElementSibling;
+        if (next) {
+          listEl.insertBefore(next, item);
+          syncAndSaveFromDom();
+        }
+      });
+
+      // Drag and Drop events
+      item.addEventListener("dragstart", (e) => {
+        draggedItem = item;
+        item.classList.add("is-dragging");
+        e.dataTransfer.effectAllowed = "move";
+        e.dataTransfer.setData("text/plain", seg.id);
+      });
+
+      item.addEventListener("dragend", () => {
+        draggedItem = null;
+        item.classList.remove("is-dragging");
+        listEl.querySelectorAll(".segment-item").forEach((el) => {
+          el.classList.remove("drag-over");
+        });
+      });
+
+      item.addEventListener("dragover", (e) => {
+        e.preventDefault();
+        e.dataTransfer.dropEffect = "move";
+        if (draggedItem && draggedItem !== item) {
+          item.classList.add("drag-over");
+        }
+      });
+
+      item.addEventListener("dragleave", () => {
+        item.classList.remove("drag-over");
+      });
+
+      item.addEventListener("drop", (e) => {
+        e.preventDefault();
+        item.classList.remove("drag-over");
+        if (draggedItem && draggedItem !== item) {
+          const rect = item.getBoundingClientRect();
+          const next = (e.clientY - rect.top) / (rect.bottom - rect.top) > 0.5;
+          listEl.insertBefore(draggedItem, next ? item.nextSibling : item);
+          syncAndSaveFromDom();
+        }
+      });
+
+      listEl.appendChild(item);
+    });
+
+    updateMoveButtonStates();
+  }
+
+  // Preset buttons handler
+  presetsGroup?.addEventListener("click", (e) => {
+    const btn = e.target.closest(".segment-preset-btn");
+    if (!btn || !listEl) return;
+    const preset = btn.dataset.preset;
+
+    const items = listEl.querySelectorAll(".segment-item");
+    items.forEach((item) => {
+      const checkbox = item.querySelector('input[type="checkbox"]');
+      if (!checkbox || checkbox.disabled) return;
+      const type = item.dataset.type || "base";
+
+      if (preset === "base") {
+        checkbox.checked = type === "base";
+      } else if (preset === "dlc") {
+        checkbox.checked = type === "base" || type === "dlc";
+      } else if (preset === "forms") {
+        checkbox.checked =
+          type === "base" || type === "dlc" || type === "forms";
+      } else if (preset === "all") {
+        checkbox.checked = true;
+      }
+    });
+
+    syncAndSaveFromDom();
+  });
+
+  // Reset order button handler
+  resetBtn?.addEventListener("click", () => {
+    resetSegmentConfig();
+    populateSegmentsList();
+    refreshActiveDex();
+  });
+
+  return attachModalHandlers({
+    modal,
+    openBtn,
+    closeBtn,
+    backdrop,
+    onOpen: () => {
+      populateSegmentsList();
+      closeBtn?.focus();
+    },
+    onClose: () => {},
+    focusSelector: "#closeSegments",
   });
 }
 
