@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "PokemonNamesDatabase",
+  "description": "Schema for localized Pokémon names dictionaries keyed by species ID",
+  "type": "object",
+  "patternProperties": {
+    "^[0-9]+$": {
+      "type": "string",
+      "description": "Localized Pokémon name"
+    }
+  },
+  "additionalProperties": false
+}

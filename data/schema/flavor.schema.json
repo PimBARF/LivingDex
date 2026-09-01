@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "PokemonFlavorTextDatabase",
+  "description": "Schema for localized Pokémon Pokédex flavor text dictionaries keyed by species ID",
+  "type": "object",
+  "patternProperties": {
+    "^[0-9]+$": {
+      "type": "string",
+      "description": "Pokédex flavor text description for this species"
+    }
+  },
+  "additionalProperties": false
+}

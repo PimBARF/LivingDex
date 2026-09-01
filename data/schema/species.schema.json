@@ -1,31 +1,27 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "PokemonSpeciesDatabase",
-  "description": "Schema for the master Pokémon species, multilingual names, traits, and forms database",
+  "description": "Schema for the master Pokémon species, core identifiers, traits, and forms database",
   "type": "object",
   "patternProperties": {
     "^[0-9]+$": {
       "type": "object",
-      "required": ["speciesId", "names", "generation", "forms"],
+      "required": ["speciesId", "name", "generation", "forms"],
       "properties": {
         "speciesId": {
           "type": "integer",
           "minimum": 1,
           "description": "National Pokédex species ID"
         },
+        "name": {
+          "type": "string",
+          "description": "Primary canonical English Pokémon species name"
+        },
         "names": {
           "type": "object",
-          "description": "Localized Pokémon species names",
+          "description": "Localized Pokémon species names (primary en fallback)",
           "properties": {
-            "en": { "type": "string" },
-            "ja": { "type": "string" },
-            "fr": { "type": "string" },
-            "de": { "type": "string" },
-            "es": { "type": "string" },
-            "it": { "type": "string" },
-            "ko": { "type": "string" },
-            "zh-Hans": { "type": "string" },
-            "zh-Hant": { "type": "string" }
+            "en": { "type": "string" }
           },
           "required": ["en"],
           "additionalProperties": { "type": "string" }
@@ -42,7 +38,7 @@
         },
         "flavorText": {
           "type": "object",
-          "description": "Multi-language species Pokédex flavor text",
+          "description": "Legacy/optional multi-language flavor text map (extracted to data/flavor/{lang}.json)",
           "additionalProperties": { "type": "string" }
         },
         "baseStats": {
@@ -71,7 +67,7 @@
           "description": "List of distinct battle, regional, gender, or cosmetic forms for this species",
           "items": {
             "type": "object",
-            "required": ["formId", "name", "isDefault", "types"],
+            "required": ["formId", "name", "types"],
             "properties": {
               "formId": {
                 "type": "integer",

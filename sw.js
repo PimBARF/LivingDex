@@ -4,7 +4,7 @@
  * offline execution, background revalidation, and update lifecycle control.
  */
 
-const CACHE_VERSION = "v1.0.8";
+const CACHE_VERSION = "v1.0.9";
 const SHELL_CACHE = `livingdex-shell-${CACHE_VERSION}`;
 const DATA_CACHE = `livingdex-data-${CACHE_VERSION}`;
 const SPRITE_CACHE = "livingdex-sprites-v1";
@@ -44,25 +44,26 @@ const SHELL_ASSETS = [
 const DATA_ASSETS = [
   "./data/species.json",
   "./data/evolutions.json",
-  "./data/games/home.json",
-  "./data/games/sv.json",
-  "./data/games/swsh.json",
-  "./data/games/rby.json",
-  "./data/games/gsc.json",
-  "./data/games/rse.json",
-  "./data/games/frlg.json",
-  "./data/games/dppt.json",
-  "./data/games/hgss.json",
-  "./data/games/bw.json",
-  "./data/games/b2w2.json",
-  "./data/games/xy.json",
-  "./data/games/oras.json",
-  "./data/games/sm.json",
-  "./data/games/usum.json",
-  "./data/games/lgpe.json",
-  "./data/games/bdsp.json",
-  "./data/games/pla.json",
-  "./data/games/za.json",
+  "./data/flavor/en.json",
+  "./data/games/dex/home.json",
+  "./data/games/dex/sv.json",
+  "./data/games/dex/swsh.json",
+  "./data/games/dex/rby.json",
+  "./data/games/dex/gsc.json",
+  "./data/games/dex/rse.json",
+  "./data/games/dex/frlg.json",
+  "./data/games/dex/dppt.json",
+  "./data/games/dex/hgss.json",
+  "./data/games/dex/bw.json",
+  "./data/games/dex/b2w2.json",
+  "./data/games/dex/xy.json",
+  "./data/games/dex/oras.json",
+  "./data/games/dex/sm.json",
+  "./data/games/dex/usum.json",
+  "./data/games/dex/lgpe.json",
+  "./data/games/dex/bdsp.json",
+  "./data/games/dex/pla.json",
+  "./data/games/dex/za.json",
 ];
 
 /**

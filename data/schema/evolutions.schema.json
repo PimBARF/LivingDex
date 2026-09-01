@@ -36,7 +36,7 @@
           "description": "Directed evolution links between species/forms",
           "items": {
             "type": "object",
-            "required": ["fromSpeciesId", "toSpeciesId", "trigger"],
+            "required": ["fromSpeciesId", "toSpeciesId", "trigger", "description"],
             "properties": {
               "fromSpeciesId": { "type": "integer", "minimum": 1 },
               "fromForm": { "type": ["string", "null"] },
@@ -54,6 +54,7 @@
               "happiness": { "type": ["integer", "null"] },
               "timeOfDay": { "type": ["string", "null"] },
               "location": { "type": ["string", "null"] },
+              "region": { "type": ["string", "null"] },
               "tradeSpeciesId": { "type": ["integer", "null"] },
               "partySpeciesId": { "type": ["integer", "null"] },
               "gender": { "type": ["string", "null"] },
@@ -89,16 +90,20 @@
                     "toSpeciesId": { "type": "integer" },
                     "toName": { "type": "string" },
                     "description": { "type": "string" },
+                    "item": { "type": ["string", "null"] },
+                    "region": { "type": ["string", "null"] },
                     "reverseBreeding": {
                       "type": "object",
                       "properties": {
                         "itemName": { "type": "string" }
                       }
                     }
-                  }
+                  },
+                  "additionalProperties": true
                 }
               }
-            }
+            },
+            "additionalProperties": true
           }
         }
       },

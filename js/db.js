@@ -15,10 +15,28 @@ let speciesDataCache = null;
 let evolutionDataCache = null;
 
 /**
- * In-memory cache for the loaded game configurations dataset.
+ * In-memory cache for the loaded game dex datasets.
  * @type {Record<string, Object>}
  */
-const gameDataCache = {};
+const gameDexDataCache = {};
+
+/**
+ * In-memory cache for the loaded game encounters datasets.
+ * @type {Record<string, Object>}
+ */
+const gameEncountersCache = {};
+
+/**
+ * In-memory cache for loaded flavor text dictionaries by language.
+ * @type {Record<string, Record<string|number, string>>}
+ */
+const flavorDataCache = {};
+
+/**
+ * In-memory cache for loaded localized species name dictionaries by language.
+ * @type {Record<string, Record<string|number, string>>}
+ */
+const namesDataCache = {};
 
 /**
  * Fetches the master species dataset if not already loaded.
@@ -72,18 +90,140 @@ export async function getEvolutionData(chainId) {
 }
 
 /**
- * Retrieves game-specific configurations and encounter data.
+ * Retrieves game-specific Pokédex roster and section configurations.
  *
  * @param {string} gameId - The game identifier (e.g., 'sv', 'swsh').
- * @returns {Promise<Object>} The game configuration object.
+ * @returns {Promise<Object>} The game dex configuration object.
+ */
+export async function getGameDexData(gameId) {
+  if (!gameDexDataCache[gameId]) {
+    const res = await fetch(`data/games/dex/${gameId}.json`);
+    if (!res.ok) throw new Error(`Failed to fetch game dex data for ${gameId}`);
+    gameDexDataCache[gameId] = await res.json();
+  }
+  return gameDexDataCache[gameId];
+}
+
+/**
+ * Retrieves game-specific encounter locations on demand.
+ *
+ * @param {string} gameId - The game identifier (e.g., 'sv', 'swsh').
+ * @returns {Promise<Object>} The game encounters object.
+ */
+export async function getGameEncounterData(gameId) {
+  if (!gameEncountersCache[gameId]) {
+    try {
+      const res = await fetch(`data/games/encounters/${gameId}.json`);
+      if (!res.ok) throw new Error(`Failed to fetch encounters for ${gameId}`);
+      gameEncountersCache[gameId] = await res.json();
+    } catch (err) {
+      console.warn(`Could not load encounters for game ${gameId}:`, err);
+      gameEncountersCache[gameId] = { gameId, encounters: {} };
+    }
+  }
+  return gameEncountersCache[gameId];
+}
+
+/**
+ * Retrieves game configuration and Pokédex sections.
+ * Backward-compatible alias to getGameDexData.
+ *
+ * @param {string} gameId - The game identifier.
+ * @returns {Promise<Object>} The game dex configuration object.
  */
 export async function getGameData(gameId) {
-  if (!gameDataCache[gameId]) {
-    const res = await fetch(`data/games/${gameId}.json`);
-    if (!res.ok) throw new Error(`Failed to fetch game data for ${gameId}`);
-    gameDataCache[gameId] = await res.json();
+  return getGameDexData(gameId);
+}
+
+/**
+ * Resolves encounter details for a given species and game version from sparse/deduplicated keys.
+ * Supports exact version matches, 'all', and slash-delimited version groupings (e.g. 'scarlet/violet').
+ *
+ * @param {Record<string, Record<string, Object>>|undefined} encounters - Encounters map keyed by species ID.
+ * @param {number|string} speciesId - Target National Pokédex species ID.
+ * @param {string} version - Specific game version string (e.g. 'scarlet', 'sword').
+ * @returns {Object|null} The resolved encounter details object or null if not found.
+ */
+export function getVersionEncounters(encounters, speciesId, version) {
+  const sp = encounters?.[speciesId];
+  if (!sp) return null;
+  if (sp[version]) return sp[version];
+  if (sp["all"]) return sp["all"];
+  const match = Object.entries(sp).find(([key]) =>
+    key.split("/").includes(version),
+  );
+  return match ? match[1] : null;
+}
+
+/**
+ * Retrieves the flavor text dictionary for a given language lazily on-demand.
+ *
+ * @param {string} [lang="en"] - Language code (e.g. 'en', 'de', 'ja', 'fr').
+ * @returns {Promise<Record<string, string>>} Dictionary mapping species ID to flavor text.
+ */
+export async function getFlavorData(lang = "en") {
+  if (!flavorDataCache[lang]) {
+    try {
+      const res = await fetch(`data/flavor/${lang}.json`);
+      if (!res.ok) {
+        if (lang !== "en") {
+          return getFlavorData("en");
+        }
+        throw new Error(`Failed to fetch flavor/${lang}.json`);
+      }
+      flavorDataCache[lang] = await res.json();
+    } catch (err) {
+      if (lang !== "en") {
+        return getFlavorData("en");
+      }
+      console.error("Failed to load flavor text:", err);
+      flavorDataCache[lang] = {};
+    }
   }
-  return gameDataCache[gameId];
+  return flavorDataCache[lang];
+}
+
+/**
+ * Retrieves the localized flavor text for a specific species with fallback to English.
+ *
+ * @param {number|string} speciesId - National Pokédex species ID.
+ * @param {string} [lang="en"] - Target language code.
+ * @returns {Promise<string>} Localized flavor text description or '—' if unavailable.
+ */
+export async function getFlavorText(speciesId, lang = "en") {
+  const langFlavor = await getFlavorData(lang);
+  let text = langFlavor?.[String(speciesId)] || langFlavor?.[Number(speciesId)];
+  if (!text && lang !== "en") {
+    const enFlavor = await getFlavorData("en");
+    text = enFlavor?.[String(speciesId)] || enFlavor?.[Number(speciesId)];
+  }
+  return text || "—";
+}
+
+/**
+ * Retrieves localized species names dictionary on-demand for languages other than English.
+ *
+ * @param {string} [lang="en"] - Target language code.
+ * @returns {Promise<Record<string, string>|null>} Dictionary mapping species ID to localized name or null for English.
+ */
+export async function getNamesData(lang = "en") {
+  if (lang === "en") return null;
+  if (!namesDataCache[lang]) {
+    try {
+      const res = await fetch(`data/names/${lang}.json`);
+      if (!res.ok) {
+        throw new Error(`Failed to fetch names/${lang}.json`);
+      }
+      namesDataCache[lang] = await res.json();
+    } catch (err) {
+      console.warn(
+        `Failed to load localized names for language '${lang}':`,
+        err,
+      );
+      namesDataCache[lang] = {};
+    }
+  }
+  return namesDataCache[lang];
 }
 
 /**
@@ -94,7 +234,7 @@ export async function getGameData(gameId) {
  */
 export async function buildActiveDexSections() {
   const enabled = loadEnabledSegments();
-  const gameData = await getGameData(ACTIVE_GAME_ID);
+  const gameData = await getGameDexData(ACTIVE_GAME_ID);
 
   const sections = [];
   const warnings = [];
@@ -131,8 +271,9 @@ export async function buildActiveDexSections() {
 
 /**
  * Loads species names into the global window.__livingDexNames cache for quick UI access.
+ * Fetches localized name dictionaries lazily when the active language is non-English.
  *
- * @param {Array<number|string>} speciesOrder - Ordered array of species IDs (can be ignored now as we load all).
+ * @param {Array<number|string>} speciesOrder - Ordered array of species IDs.
  * @returns {Promise<{ cacheState: string, failedIds: number[] }>} Validation state.
  */
 export async function loadSpeciesNames(speciesOrder) {
@@ -145,11 +286,25 @@ export async function loadSpeciesNames(speciesOrder) {
 
   try {
     const allSpecies = await getAllSpeciesData();
+    const localizedNames =
+      language !== "en" ? await getNamesData(language) : null;
 
     // Map translated names to the global cache
-    for (const [id, data] of Object.entries(allSpecies)) {
-      const name = data.names[language] || data.names.en || `Species #${id}`;
-      window.__livingDexNames[Number(id)] = name;
+    for (const [idStr, data] of Object.entries(allSpecies)) {
+      const id = Number(idStr);
+      let name;
+      if (localizedNames && localizedNames[id]) {
+        name = localizedNames[id];
+      } else if (data.names && data.names[language]) {
+        name = data.names[language];
+      } else if (data.names && data.names.en) {
+        name = data.names.en;
+      } else if (data.name) {
+        name = data.name;
+      } else {
+        name = `Species #${id}`;
+      }
+      window.__livingDexNames[id] = name;
     }
 
     // Refresh the DOM
@@ -269,7 +424,10 @@ function resolveMemberSpriteId(
     const targetSpecies = allSpecies[targetSpeciesId];
     if (targetSpecies && Array.isArray(targetSpecies.forms)) {
       const matchingForm = targetSpecies.forms.find(
-        (f) => f.region === activeRegion || f.formKey === activeRegion,
+        (f) =>
+          f.region === activeRegion ||
+          (f.isRegional && f.region === activeRegion) ||
+          f.formKey === activeRegion,
       );
       if (matchingForm) {
         return matchingForm.formId;
@@ -281,7 +439,7 @@ function resolveMemberSpriteId(
 }
 
 /**
- * Resolves types taking historical past generation types into account.
+ * Resolves types taking historical past generation types and sparse form properties into account.
  *
  * @param {Object} speciesData - Species record from species.json.
  * @param {number} formId - Selected form ID.
@@ -291,7 +449,7 @@ function resolveMemberSpriteId(
 function resolveTypes(speciesData, formId, generationNumber) {
   const form =
     speciesData.forms?.find((f) => f.formId === formId) ||
-    speciesData.forms?.find((f) => f.isDefault) ||
+    speciesData.forms?.find((f) => Boolean(f.isDefault)) ||
     speciesData.forms?.[0];
   if (!form) return [];
 
@@ -311,6 +469,7 @@ function resolveTypes(speciesData, formId, generationNumber) {
 
 /**
  * Resolves and formats evolution flowchart paths based on game scope, generation, and form context.
+ * Adapts to sparse format where isBaby, region, reverseBreeding, and conditions are omitted when false/null.
  *
  * @param {Object} evoData - Evolution chain object from evolutions.json.
  * @param {number} speciesId - Active species ID.
@@ -345,7 +504,12 @@ function resolveEvolutionFlowchart(
   const activeForm =
     activeSpecies?.forms?.find((f) => f.formId === formId) ||
     activeSpecies?.forms?.[0];
-  const activeRegion = activeForm?.region || null;
+  const activeRegion =
+    activeForm?.region ||
+    (activeForm?.formKey &&
+    ["alola", "galar", "hisui", "paldea"].includes(activeForm.formKey)
+      ? activeForm.formKey
+      : null);
 
   const nodeGenMap = new Map();
   (evoData.nodes || []).forEach((node) => {
@@ -519,19 +683,24 @@ function findPreEvolutionName(paths, speciesId) {
 
 /**
  * Clusters game versions by identical location arrays into unified display groups.
- * Handles base game versions and expansion pass versions separately so expansion passes
- * are only displayed when encounter locations are present.
+ * Handles base game versions and expansion pass versions separately using on-demand encounters data.
  *
- * @param {Object} gameData - Game dataset from games/*.json.
+ * @param {Object} gameDexData - Game dex dataset from games/dex/*.json.
+ * @param {Object} gameEncountersData - Game encounters dataset from games/encounters/*.json.
  * @param {number} speciesId - Target species ID.
  * @param {string} preEvolutionName - Pre-evolution name if applicable.
  * @returns {Array<Object>} Formatted encounter groups for UI.
  */
-function resolveEncounterGroups(gameData, speciesId, preEvolutionName) {
-  if (!gameData || !gameData.versions) return [];
+function resolveEncounterGroups(
+  gameDexData,
+  gameEncountersData,
+  speciesId,
+  preEvolutionName,
+) {
+  if (!gameDexData || !gameDexData.versions) return [];
 
-  const allVersions = gameData.versions;
-  const rawEncounters = gameData.encounters?.[String(speciesId)] || {};
+  const allVersions = gameDexData.versions;
+  const rawEncounters = gameEncountersData?.encounters || {};
 
   const baseVersions = allVersions.filter(
     (v) => !v.endsWith("-expansion-pass"),
@@ -552,7 +721,8 @@ function resolveEncounterGroups(gameData, speciesId, preEvolutionName) {
 
     const versionLocationMap = new Map();
     for (const version of versions) {
-      const locs = rawEncounters[version]?.locations || [];
+      const enc = getVersionEncounters(rawEncounters, speciesId, version);
+      const locs = enc?.locations || [];
       versionLocationMap.set(version, locs);
     }
 
@@ -646,6 +816,7 @@ function resolveEncounterGroups(gameData, speciesId, preEvolutionName) {
 
 /**
  * Retrieves fully formatted and scoped data for rendering the Pokémon Info modal.
+ * Decouples game dex, encounters, and flavor text loading on-demand.
  *
  * @param {number} speciesId - National Pokédex species ID.
  * @param {number} formId - Specific form ID or sprite ID.
@@ -659,19 +830,20 @@ export async function getPokemonModalData(speciesId, formId, gameId) {
     throw new Error(`Species #${speciesId} not found in database.`);
   }
 
-  const gameData = await getGameData(gameId);
-  const evoData = await getEvolutionData(speciesData.evolutionChainId);
+  const [gameDexData, evoData] = await Promise.all([
+    getGameDexData(gameId),
+    getEvolutionData(speciesData.evolutionChainId),
+  ]);
 
   const language = loadSettings().language || "en";
-  const generationNumber = gameData?.generation || null;
+  const generationNumber = gameDexData?.generation || null;
 
   const name = resolveSpeciesDisplayName(
     speciesId,
-    speciesData.names?.[language] || speciesData.names?.en,
+    speciesData.names?.[language] || speciesData.names?.en || speciesData.name,
   );
   const types = resolveTypes(speciesData, formId, generationNumber);
-  const flavorText =
-    speciesData.flavorText?.[language] || speciesData.flavorText?.en || "—";
+  const flavorText = await getFlavorText(speciesId, language);
 
   const evolutionPaths = resolveEvolutionFlowchart(
     evoData,
@@ -684,9 +856,16 @@ export async function getPokemonModalData(speciesId, formId, gameId) {
   const preEvolutionName = findPreEvolutionName(evolutionPaths, speciesId);
 
   const showEncounters = gameId !== "home";
-  const encounterGroups = showEncounters
-    ? resolveEncounterGroups(gameData, speciesId, preEvolutionName)
-    : [];
+  let encounterGroups = [];
+  if (showEncounters) {
+    const gameEncountersData = await getGameEncounterData(gameId);
+    encounterGroups = resolveEncounterGroups(
+      gameDexData,
+      gameEncountersData,
+      speciesId,
+      preEvolutionName,
+    );
+  }
 
   return {
     speciesId,

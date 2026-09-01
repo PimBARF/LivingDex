@@ -1,0 +1,74 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "PokemonGameDexDatabase",
+  "description": "Schema for game-specific Pokédexes, sections, and roster entries",
+  "type": "object",
+  "required": [
+    "gameId",
+    "title",
+    "group",
+    "generation",
+    "sections"
+  ],
+  "properties": {
+    "gameId": {
+      "type": "string",
+      "description": "Unique internal game key (e.g. 'rby', 'gsc', 'swsh', 'sv')"
+    },
+    "title": {
+      "type": "string",
+      "description": "Game display title"
+    },
+    "group": {
+      "type": "string",
+      "description": "Game generation or special group (e.g. 'gen1', 'special')"
+    },
+    "generation": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 9
+    },
+    "versions": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Sub-versions for this game release (e.g. ['red', 'blue', 'yellow'])"
+    },
+    "sections": {
+      "type": "array",
+      "description": "Pokédex segments configured for this game",
+      "items": {
+        "type": "object",
+        "required": ["id", "title", "type", "entries"],
+        "properties": {
+          "id": { "type": "string" },
+          "title": { "type": "string" },
+          "type": {
+            "type": "string",
+            "enum": ["base", "dlc", "forms", "gender", "cosmetic", "custom"]
+          },
+          "optional": { "type": "boolean" },
+          "defaultEnabled": { "type": "boolean" },
+          "startIndex": { "type": ["integer", "null"] },
+          "entries": {
+            "type": "array",
+            "description": "Ordered entries in this Pokédex segment",
+            "items": {
+              "type": "object",
+              "required": ["speciesId", "formId"],
+              "properties": {
+                "speciesId": { "type": "integer", "minimum": 1 },
+                "formId": { "type": "integer", "minimum": 1 },
+                "dexNumber": { "type": ["integer", "null"] },
+                "formKey": { "type": ["string", "null"] },
+                "gender": { "type": ["string", "null"] }
+              },
+              "additionalProperties": true
+            }
+          }
+        },
+        "additionalProperties": true
+      }
+    }
+  },
+  "additionalProperties": true
+}
