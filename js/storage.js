@@ -4,6 +4,8 @@ import {
   CAUGHT_STORAGE_KEY,
   SHINY_CAUGHT_STORAGE_KEY,
   SEGMENTS_STORAGE_KEY,
+  BOX_LABELS_STORAGE_KEY,
+  COLLAPSED_BOXES_STORAGE_KEY,
   SPECIES_CACHE_KEY,
   SPECIES_CACHE_META_KEY,
   SPECIES_CACHE_TTL_MS,
@@ -16,6 +18,8 @@ import {
  * @property {'light'|'dark'|'auto'} theme - Theme preference ('light', 'dark', or 'auto').
  * @property {'system'|boolean} reducedMotion - Reduced motion preference ('system', true, or false).
  * @property {boolean} hideCaughtDefault - Whether to hide caught slots by default.
+ * @property {boolean} rememberCollapsedBoxes - Whether to persist collapsed box states across sessions.
+ * @property {boolean} autoCollapseFullBoxes - Whether to automatically collapse a box when all slots are caught.
  * @property {string} language - UI and Pokemon name language code (e.g., 'en').
  * @property {string} spriteStyle - Selected sprite style key.
  * @property {'last-used'|'specific'} defaultGameMode - Mode for initial game selection.
@@ -31,6 +35,8 @@ const DEFAULT_SETTINGS = {
   theme: "auto", // 'light' | 'dark' | 'auto'
   reducedMotion: "system", // 'system' | true | false
   hideCaughtDefault: false,
+  rememberCollapsedBoxes: false,
+  autoCollapseFullBoxes: false,
   language: "en",
   spriteStyle: "pokesprites",
   defaultGameMode: "last-used", // 'last-used' | 'specific'
@@ -160,6 +166,128 @@ export function loadShinyCaughtSlots() {
 export function saveShinyCaughtSlots(caught) {
   try {
     localStorage.setItem(SHINY_CAUGHT_STORAGE_KEY, JSON.stringify(caught));
+  } catch {
+    // Ignore quota errors silently
+  }
+}
+
+/**
+ * Load custom box label mappings from localStorage for the specified or active game.
+ *
+ * @param {string} [gamePrefix=ACTIVE_GAME.storagePrefix] - Game storage prefix.
+ * @returns {Record<string, string>} Map of box IDs to custom box labels.
+ */
+export function loadBoxLabels(gamePrefix = ACTIVE_GAME.storagePrefix) {
+  try {
+    const key = `${gamePrefix}-box-labels-v1`;
+    return JSON.parse(localStorage.getItem(key) || "{}");
+  } catch {
+    return {};
+  }
+}
+
+/**
+ * Persist custom box label mappings to localStorage for the specified or active game.
+ *
+ * @param {Record<string, string>} labels - Map of box IDs to custom box labels.
+ * @param {string} [gamePrefix=ACTIVE_GAME.storagePrefix] - Game storage prefix.
+ * @returns {void}
+ */
+export function saveBoxLabels(labels, gamePrefix = ACTIVE_GAME.storagePrefix) {
+  try {
+    const key = `${gamePrefix}-box-labels-v1`;
+    if (!labels || Object.keys(labels).length === 0) {
+      localStorage.removeItem(key);
+    } else {
+      localStorage.setItem(key, JSON.stringify(labels));
+    }
+  } catch {
+    // Ignore quota errors silently
+  }
+}
+
+/**
+ * Clear custom box labels for the specified or active game.
+ *
+ * @param {string} [gamePrefix=ACTIVE_GAME.storagePrefix] - Game storage prefix.
+ * @returns {void}
+ */
+export function clearBoxLabels(gamePrefix = ACTIVE_GAME.storagePrefix) {
+  try {
+    localStorage.removeItem(`${gamePrefix}-box-labels-v1`);
+  } catch {
+    // Ignore quota errors silently
+  }
+}
+
+/**
+ * Clear all custom box labels across all games.
+ *
+ * @returns {void}
+ */
+export function clearAllBoxLabels() {
+  try {
+    Object.keys(localStorage).forEach((key) => {
+      if (key.endsWith("-box-labels-v1")) {
+        localStorage.removeItem(key);
+      }
+    });
+  } catch {
+    // Ignore quota errors silently
+  }
+}
+
+/**
+ * Load persisted collapsed box IDs from localStorage for the specified or active game.
+ *
+ * @param {string} [gamePrefix=ACTIVE_GAME.storagePrefix] - Game storage prefix.
+ * @returns {Set<string>} Set of collapsed box IDs.
+ */
+export function loadCollapsedBoxes(gamePrefix = ACTIVE_GAME.storagePrefix) {
+  try {
+    const key = `${gamePrefix}-collapsed-boxes-v1`;
+    const raw = localStorage.getItem(key);
+    if (!raw) return new Set();
+    const parsed = JSON.parse(raw);
+    return Array.isArray(parsed) ? new Set(parsed) : new Set();
+  } catch {
+    return new Set();
+  }
+}
+
+/**
+ * Persist collapsed box IDs to localStorage for the specified or active game.
+ *
+ * @param {Set<string>|string[]} collapsedSet - Set or array of collapsed box IDs.
+ * @param {string} [gamePrefix=ACTIVE_GAME.storagePrefix] - Game storage prefix.
+ * @returns {void}
+ */
+export function saveCollapsedBoxes(
+  collapsedSet,
+  gamePrefix = ACTIVE_GAME.storagePrefix,
+) {
+  try {
+    const key = `${gamePrefix}-collapsed-boxes-v1`;
+    const list = Array.from(collapsedSet);
+    if (list.length === 0) {
+      localStorage.removeItem(key);
+    } else {
+      localStorage.setItem(key, JSON.stringify(list));
+    }
+  } catch {
+    // Ignore quota errors silently
+  }
+}
+
+/**
+ * Clear persisted collapsed box state for the specified or active game.
+ *
+ * @param {string} [gamePrefix=ACTIVE_GAME.storagePrefix] - Game storage prefix.
+ * @returns {void}
+ */
+export function clearCollapsedBoxes(gamePrefix = ACTIVE_GAME.storagePrefix) {
+  try {
+    localStorage.removeItem(`${gamePrefix}-collapsed-boxes-v1`);
   } catch {
     // Ignore quota errors silently
   }

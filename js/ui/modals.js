@@ -3,6 +3,7 @@ import {
   saveSettings,
   clearSpeciesCache,
   clearAllSavedData,
+  clearBoxLabels,
 } from "../storage.js";
 
 import {
@@ -17,6 +18,7 @@ import { GAMES, getOrderedGameEntries } from "../config.js";
 import { resetDexProgress } from "../state.js";
 import { applyPersistedViewSettings } from "../main.js";
 import { refreshOfflineDataAndCaches } from "../pwa.js";
+import { applyBoxLabelsToHeaders, updateAllBoxProgress } from "./dom-render.js";
 
 /**
  * Attach common modal accessibility and event handlers including opening, closing,
@@ -318,7 +320,9 @@ function buildExportPayload() {
     games: Object.fromEntries(
       Object.entries(GAMES).map(([gameKey, config]) => {
         const caughtKey = `${config.storagePrefix}-caught-v1`;
+        const shinyCaughtKey = `${config.storagePrefix}-shiny-caught-v1`;
         const segmentsKey = `${config.storagePrefix}-segments-v1`;
+        const boxLabelsKey = `${config.storagePrefix}-box-labels-v1`;
         const speciesCacheKey = `${config.storagePrefix}-species-names-v1`;
         const speciesCacheMetaKey = `${config.storagePrefix}-species-names-meta-v1`;
 
@@ -326,7 +330,9 @@ function buildExportPayload() {
           gameKey,
           {
             caught: readStoredObject(caughtKey, {}),
+            shinyCaught: readStoredObject(shinyCaughtKey, {}),
             segments: readStoredObject(segmentsKey, null),
+            boxLabels: readStoredObject(boxLabelsKey, null),
             speciesCache: readStoredObject(speciesCacheKey, null),
             speciesCacheMeta: readStoredObject(speciesCacheMetaKey, null),
           },
@@ -365,8 +371,12 @@ function normalizeImportPayload(rawPayload) {
       const nextGame = {};
       if (isPlainObject(gamePayload.caught))
         nextGame.caught = gamePayload.caught;
+      if (isPlainObject(gamePayload.shinyCaught))
+        nextGame.shinyCaught = gamePayload.shinyCaught;
       if (isPlainObject(gamePayload.segments))
         nextGame.segments = gamePayload.segments;
+      if (isPlainObject(gamePayload.boxLabels))
+        nextGame.boxLabels = gamePayload.boxLabels;
       if (isPlainObject(gamePayload.speciesCache))
         nextGame.speciesCache = gamePayload.speciesCache;
       if (isPlainObject(gamePayload.speciesCacheMeta))
@@ -475,6 +485,16 @@ export function registerSettingsControls() {
         settings.reducedMotion,
       );
     if (hideCaught) hideCaught.checked = !!settings.hideCaughtDefault;
+    const rememberCollapsed = document.getElementById(
+      "settingsRememberCollapsed",
+    );
+    if (rememberCollapsed)
+      rememberCollapsed.checked = !!settings.rememberCollapsedBoxes;
+    const autoCollapseFull = document.getElementById(
+      "settingsAutoCollapseFull",
+    );
+    if (autoCollapseFull)
+      autoCollapseFull.checked = !!settings.autoCollapseFullBoxes;
     if (language) language.value = settings.language || "en";
     if (spriteStyle) spriteStyle.value = settings.spriteStyle || "pokesprites";
     if (defaultGameModeSelect)
@@ -509,6 +529,12 @@ export function registerSettingsControls() {
         : false,
       hideCaughtDefault:
         !!document.getElementById("settingsHideCaught")?.checked,
+      rememberCollapsedBoxes: !!document.getElementById(
+        "settingsRememberCollapsed",
+      )?.checked,
+      autoCollapseFullBoxes: !!document.getElementById(
+        "settingsAutoCollapseFull",
+      )?.checked,
       language: document.getElementById("settingsLanguage")?.value || "en",
       spriteStyle:
         document.getElementById("settingsSpriteStyle")?.value || "pokesprites",
@@ -583,6 +609,8 @@ export function registerSettingsControls() {
       if (!config) continue;
 
       const caughtCount = countObjectEntries(gamePayload.caught);
+      const shinyCount = countObjectEntries(gamePayload.shinyCaught);
+      const labelCount = countObjectEntries(gamePayload.boxLabels);
       const segmentCount = countObjectEntries(gamePayload.segments);
       const cacheCount = countObjectEntries(gamePayload.speciesCache);
       const hasMeta = isPlainObject(gamePayload.speciesCacheMeta);
@@ -595,7 +623,7 @@ export function registerSettingsControls() {
           <span>${config.title}</span>
         </span>
         <p class="import-option-meta">
-          Caught: ${caughtCount} · Segments: ${segmentCount} · Cache names: ${cacheCount}${hasMeta ? " · Cache metadata included" : ""}
+          Caught: ${caughtCount}${shinyCount ? ` · Shiny: ${shinyCount}` : ""}${labelCount ? ` · Box labels: ${labelCount}` : ""} · Segments: ${segmentCount} · Cache names: ${cacheCount}${hasMeta ? " · Cache metadata included" : ""}
         </p>
       `;
       importOptions.appendChild(row);
@@ -660,10 +688,22 @@ export function registerSettingsControls() {
           JSON.stringify(gamePayload.caught),
         );
       }
+      if (isPlainObject(gamePayload.shinyCaught)) {
+        localStorage.setItem(
+          `${config.storagePrefix}-shiny-caught-v1`,
+          JSON.stringify(gamePayload.shinyCaught),
+        );
+      }
       if (isPlainObject(gamePayload.segments)) {
         localStorage.setItem(
           `${config.storagePrefix}-segments-v1`,
           JSON.stringify(gamePayload.segments),
+        );
+      }
+      if (isPlainObject(gamePayload.boxLabels)) {
+        localStorage.setItem(
+          `${config.storagePrefix}-box-labels-v1`,
+          JSON.stringify(gamePayload.boxLabels),
         );
       }
       if (isPlainObject(gamePayload.speciesCache)) {
@@ -805,6 +845,15 @@ export function registerSettingsControls() {
     .getElementById("settingsHideCaught")
     ?.addEventListener("change", persistSettingsFromControls);
   document
+    .getElementById("settingsRememberCollapsed")
+    ?.addEventListener("change", persistSettingsFromControls);
+  document
+    .getElementById("settingsAutoCollapseFull")
+    ?.addEventListener("change", () => {
+      persistSettingsFromControls();
+      updateAllBoxProgress();
+    });
+  document
     .getElementById("settingsLanguage")
     ?.addEventListener("change", persistSettingsFromControls);
   document
@@ -828,6 +877,15 @@ export function registerSettingsControls() {
     importAllData(event.target.files?.[0]),
   );
   confirmImportBtn?.addEventListener("click", applySelectedImport);
+
+  document
+    .getElementById("settingsResetBoxLabels")
+    ?.addEventListener("click", () => {
+      clearBoxLabels();
+      applyBoxLabelsToHeaders();
+      showToast("Box names reset to default.", "success");
+    });
+
   refreshCacheBtn?.addEventListener("click", refreshCacheAction);
   clearCacheBtn?.addEventListener("click", clearSpeciesCacheAction);
   clearAllBtn?.addEventListener("click", clearAllDataAction);

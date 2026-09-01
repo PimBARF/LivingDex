@@ -1,69 +1,98 @@
 # LivingDex.app ✨
 
-A simple Pokédex tracker for keeping tabs on every catch, across every game and region.
+A clean, modern Pokédex tracker designed for organizing Living Dexes across every Pokémon game and region.
 
 It’s a lightweight static web app: no login, no backend, and no build step. Just open the site in a browser and start tracking.
 
-## What it does
+---
 
-- Pick a game or region
-- Toggle optional dex segments like DLC or form groups
-- Mark Pokémon as caught or uncaught
-- Search by name or number
-- Hide already-caught entries when you want to focus on what’s left
-- See live progress while you play
-- Share your progress with a link
-- Keep everything saved in your browser
+## ✨ What it does
 
-## Quick start
+- **PC Box Organization**: Displays Pokémon in 30-slot boxes matching in-game storage layout.
+- **Box Completion & Ergonomics**:
+  - Live caught counters per box (`X/30`).
+  - Celebratory completion styling when all 30 slots are caught.
+  - One-tap bulk toggling with `✓ All` / `✗ All`.
+  - Smooth collapsible boxes (`▲` / `▼`) with optional persistent memory and smart auto-collapsing.
+- **Custom In-Game Box Labels**: Tap any box title to rename it to match your in-game boxes (e.g. _“Box 1: Starters”_), with a 1-click reset in Settings.
+- **Detailed Pokémon Info & Cries**:
+  - Tap the info icon on any Pokémon to view types, Pokédex flavor text, evolution triggers, and in-game encounter locations.
+  - Play official in-game Pokémon audio cries directly inside the modal.
+- **Shiny Tracking Mode**: 1-click toggle (`✨` or press `S`) to track Shiny Living Dexes independently.
+- **Filters & Search**:
+  - Instant search by Pokémon name or Pokédex number (`/`).
+  - 3-way status filter: `[ All │ Uncaught │ Caught ]` (press `H`).
+  - 18 Pokémon type filter chips for single and dual-type filtering.
+- **Keyboard Shortcuts**: Full power-user navigation (`/`, `Space`, `S`, `H`, `[`, `]`, `?`).
+- **Data Privacy & Backups**:
+  - 100% offline-ready Progressive Web App (PWA).
+  - All data is stored privately in your browser’s `localStorage`.
+  - Export and import your progress anytime as downloadable JSON backups with granular import review.
+- **Multi-Language Support**: Species names localized in English, Japanese, French, Spanish, German, Italian, Korean, and Simplified Chinese.
 
-1. Download or clone this repo.
-2. Open `index.html` in a browser.
+---
 
-Or run a tiny local server:
+## 🚀 Quick start
+
+1. Download or clone this repo:
+   ```bash
+   git clone https://github.com/PimBARF/LivingDex.git
+   ```
+2. Open `index.html` directly in your browser.
+
+Or run a lightweight local server:
 
 ```bash
 python -m http.server 8080
 ```
 
-Then open http://localhost:8080 in your browser.
+Then visit `http://localhost:8080`.
 
-## Features
+---
 
-- Tracks many mainline games and dexes
-- Supports optional DLC and regional forms
-- Works with search and filtering
-- Includes dark mode and light mode
-- Uses local browser storage, so your progress stays on your device
-- Uses pre-compiled local JSON datasets for instant, offline-first loading and zero external API dependencies
+## ⌨️ Keyboard Shortcuts
 
-## Project structure
+| Key               | Action                                              |
+| :---------------- | :-------------------------------------------------- |
+| `/`               | Focus search bar                                    |
+| `Space` / `Enter` | Toggle caught status on focused Pokémon             |
+| `S`               | Toggle Shiny tracking mode                          |
+| `H`               | Cycle status filter (_All_ → _Uncaught_ → _Caught_) |
+| `[` / `]`         | Jump to previous / next storage box                 |
+| `?`               | Open keyboard shortcuts cheat-sheet                 |
+| `Escape`          | Close active modal or cancel box renaming           |
 
-- `index.html` — app shell and UI
-- `styles.css` — layout and styling
-- `manifest.json` & `sw.js` — Progressive Web App (PWA) offline caching
-- `data/` — pre-compiled game, species, and evolution datasets
-- `js/` — app logic
-  - `config.js` — game, segment, and dex definitions
-  - `db.js` — local dataset queries and data access
-  - `pwa.js` — PWA service worker registration and sprite caching controls
-  - `state.js` — data management and UI synchronization
-  - `storage.js` — browser storage helpers and data encoding
-  - `ui/` — modular DOM rendering, modals, and user interactions
-  - `main.js` — app startup
+---
 
-## Support
+## 📁 Project structure
 
-If you use this project and want to help keep it free and running, you can donate on Ko-fi:
+- `index.html` — App shell and UI structure
+- `styles.css` — Modern responsive styles, theme tokens, and animations
+- `manifest.json` & `sw.js` — PWA service worker with multi-tier caching
+- `data/` — Pre-compiled local datasets (dex entries, species, evolutions, encounters)
+- `js/` — Modular ES application logic:
+  - `config.js` — Game, segment, and dex definitions
+  - `db.js` — Dataset queries and data access
+  - `state.js` — State management and UI synchronization
+  - `storage.js` — LocalStorage helpers, settings, and backup serialization
+  - `pwa.js` — Service worker lifecycle and cache controls
+  - `ui/theme.js` — Light/dark theme and reduced motion handlers
+  - `ui/controls.js` — Header controls, search, and status filtering
+  - `ui/dom-render.js` — Dex grid, PC boxes, collapse animations, and inline renaming
+  - `ui/modals.js` — Settings, filters, shortcuts, and backup export/import
+  - `ui/pokemon-info.js` — Pokémon info modal, evolution trees, encounters, and audio cries
+  - `main.js` — Startup initialization
 
-- https://ko-fi.com/pimbarf
+---
 
-## Notes
+## ☕ Support
 
-- No dependencies or build tools are required.
-- Progress is stored in your browser, not on a server.
-- If you want to clear saved progress, clear the site data for this app in your browser settings.
+If you enjoy using LivingDex and want to help support development and hosting:
 
-## License
+- [Support on Ko-fi](https://ko-fi.com/pimbarf)
+
+---
+
+## 📄 License
 
 MIT. See [LICENSE](./LICENSE) for details.

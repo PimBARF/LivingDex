@@ -11,6 +11,93 @@ import { getPokemonModalData } from "../db.js";
 /** One-time setup state for the info modal handlers. */
 let _infoModalHandlers = null;
 
+/** Currently active HTML5 Audio element for cries. */
+let currentAudio = null;
+
+/**
+ * Stop any currently playing Pokémon cry audio and reset button visual states.
+ *
+ * @returns {void}
+ */
+export function stopCurrentAudio() {
+  if (currentAudio) {
+    try {
+      currentAudio.pause();
+      currentAudio.currentTime = 0;
+    } catch {}
+    currentAudio = null;
+  }
+  const cryBtn = document.getElementById("pokemonInfoCryBtn");
+  if (cryBtn) {
+    cryBtn.classList.remove("is-playing");
+    cryBtn.setAttribute("aria-label", "Play Pokémon cry");
+  }
+}
+
+/**
+ * Plays the iconic in-game audio cry for the given species ID.
+ *
+ * @param {number} speciesId - National Pokédex species ID.
+ * @param {string} [name=""] - Pokémon name for fallback / aria-label.
+ * @returns {void}
+ */
+export function playPokemonCry(speciesId, name = "") {
+  stopCurrentAudio();
+  const cryBtn = document.getElementById("pokemonInfoCryBtn");
+
+  if (!speciesId) return;
+
+  const primaryUrl = `https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/${speciesId}.ogg`;
+  const sanitizedName = String(name)
+    .toLowerCase()
+    .replace(/[^a-z0-9]/g, "");
+  const fallbackUrl = `https://play.pokemonshowdown.com/audio/cries/${sanitizedName}.mp3`;
+
+  const audio = new Audio(primaryUrl);
+  audio.volume = 0.5;
+  currentAudio = audio;
+
+  if (cryBtn) {
+    cryBtn.classList.add("is-playing");
+    cryBtn.setAttribute("aria-label", `Playing cry for ${name || speciesId}`);
+  }
+
+  audio.onended = () => {
+    if (currentAudio === audio) {
+      stopCurrentAudio();
+    }
+  };
+
+  audio.onerror = () => {
+    // If primary PokéAPI cry fails and we have a fallback name, try Showdown
+    if (fallbackUrl && sanitizedName) {
+      const fallbackAudio = new Audio(fallbackUrl);
+      fallbackAudio.volume = 0.5;
+      currentAudio = fallbackAudio;
+
+      fallbackAudio.onended = () => {
+        if (currentAudio === fallbackAudio) {
+          stopCurrentAudio();
+        }
+      };
+
+      fallbackAudio.onerror = () => {
+        stopCurrentAudio();
+      };
+
+      fallbackAudio.play().catch(() => {
+        stopCurrentAudio();
+      });
+    } else {
+      stopCurrentAudio();
+    }
+  };
+
+  audio.play().catch(() => {
+    stopCurrentAudio();
+  });
+}
+
 /**
  * Lazily initializes and returns the modal dialog open/close handlers for the info modal.
  *
@@ -27,7 +114,9 @@ function getInfoModalHandlers() {
     closeBtn,
     backdrop,
     onOpen: () => closeBtn?.focus(),
-    onClose: () => {},
+    onClose: () => {
+      stopCurrentAudio();
+    },
     focusSelector: "#closePokemonInfo",
   });
   return _infoModalHandlers;
@@ -328,6 +417,15 @@ export async function openPokemonInfoModal(speciesId, formId, name) {
   const errorEl = document.getElementById("pokemonInfoError");
 
   const spriteStyle = loadSettings().spriteStyle || "pokesprites";
+
+  stopCurrentAudio();
+  const cryBtn = document.getElementById("pokemonInfoCryBtn");
+  if (cryBtn) {
+    cryBtn.onclick = () => {
+      playPokemonCry(speciesId, name);
+    };
+    cryBtn.setAttribute("aria-label", `Play cry for ${name}`);
+  }
 
   // Immediate placeholder state
   titleEl.textContent = name;

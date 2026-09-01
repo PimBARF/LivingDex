@@ -10,6 +10,7 @@ import {
   renderDexSectionBoxes,
   populateDexSlots,
   registerBoxControls,
+  updateAllBoxProgress,
 } from "./ui/dom-render.js";
 
 /**
@@ -69,6 +70,9 @@ export function updateProgressBar(slotCount) {
   // Update the window title with an optional shiny indicator
   const titlePrefix = isShinyMode ? "✨ Shiny " : "";
   document.title = `${titlePrefix}${ACTIVE_GAME.title} — ${caught}/${safeSlotCount}`;
+
+  // Update completion badges and states across all boxes
+  updateAllBoxProgress();
 }
 
 /**

@@ -746,6 +746,8 @@ export const BOX_CAPACITY = 30;
 export const CAUGHT_STORAGE_KEY = `${ACTIVE_GAME.storagePrefix}-caught-v1`;
 export const SHINY_CAUGHT_STORAGE_KEY = `${ACTIVE_GAME.storagePrefix}-shiny-caught-v1`;
 export const SEGMENTS_STORAGE_KEY = `${ACTIVE_GAME.storagePrefix}-segments-v1`;
+export const BOX_LABELS_STORAGE_KEY = `${ACTIVE_GAME.storagePrefix}-box-labels-v1`;
+export const COLLAPSED_BOXES_STORAGE_KEY = `${ACTIVE_GAME.storagePrefix}-collapsed-boxes-v1`;
 
 // Global app settings
 export const SETTINGS_STORAGE_KEY = "settings-v1";

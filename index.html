@@ -252,6 +252,28 @@
               </span>
             </label>
 
+            <label class="settings-row settings-row-clickable" for="settingsRememberCollapsed">
+              <div class="settings-row-text">
+                <span class="settings-row-title">Remember collapsed boxes</span>
+                <span class="settings-row-subtitle">Keep boxes collapsed across page reloads</span>
+              </div>
+              <span class="toggle-switch">
+                <input type="checkbox" id="settingsRememberCollapsed">
+                <span class="toggle-track"></span>
+              </span>
+            </label>
+
+            <label class="settings-row settings-row-clickable" for="settingsAutoCollapseFull">
+              <div class="settings-row-text">
+                <span class="settings-row-title">Auto-collapse full boxes</span>
+                <span class="settings-row-subtitle">Automatically collapse a box when all 30 slots are caught</span>
+              </div>
+              <span class="toggle-switch">
+                <input type="checkbox" id="settingsAutoCollapseFull">
+                <span class="toggle-track"></span>
+              </span>
+            </label>
+
             <div class="settings-row">
               <div class="settings-row-text">
                 <label for="settingsLanguage" class="settings-row-title">Pokémon names language</label>
@@ -310,9 +332,20 @@
 
             <div class="settings-action-block">
               <div class="settings-btn-grid">
+                <button type="button" id="settingsResetBoxLabels" class="btn btn-secondary settings-action-btn" aria-describedby="settingsResetLabelsHelp">
+                  <span>🏷️</span> Reset box names
+                </button>
                 <button type="button" id="settingsRefreshCache" class="btn btn-secondary settings-action-btn">
                   <span>🔄</span> Refresh offline cache
                 </button>
+              </div>
+              <p id="settingsResetLabelsHelp" class="settings-help-text">
+                Revert all custom box titles for the active game to default ranges.
+              </p>
+            </div>
+
+            <div class="settings-action-block">
+              <div class="settings-btn-grid">
                 <button type="button" id="settingsClearSpeciesCache" class="btn btn-secondary settings-action-btn">
                   <span>🧹</span> Clear species cache
                 </button>
@@ -483,7 +516,13 @@
           <img id="pokemonInfoSprite" class="pokemon-info-sprite" src="" alt="" />
         </div>
         <div class="pokemon-info-meta">
-          <div id="pokemonInfoNumber" class="pokemon-info-number"></div>
+          <div class="pokemon-info-meta-top">
+            <div id="pokemonInfoNumber" class="pokemon-info-number"></div>
+            <button id="pokemonInfoCryBtn" class="btn btn-icon pokemon-info-cry-btn" type="button" title="Play Pokémon cry" aria-label="Play Pokémon cry">
+              <span class="cry-icon" aria-hidden="true">🔊</span>
+              <span class="cry-label">Play cry</span>
+            </button>
+          </div>
           <h3 id="pokemonInfoTitle" class="pokemon-info-name"></h3>
           <div id="pokemonInfoTypes" class="pokemon-info-types"></div>
         </div>

@@ -4,6 +4,10 @@ import {
   saveCaughtSlots,
   loadShinyCaughtSlots,
   saveShinyCaughtSlots,
+  loadBoxLabels,
+  saveBoxLabels,
+  loadCollapsedBoxes,
+  saveCollapsedBoxes,
 } from "../storage.js";
 import { BOX_CAPACITY, spriteUrlForSpecies } from "../config.js";
 import { openPokemonInfoModal } from "./pokemon-info.js";
@@ -20,6 +24,324 @@ import { getSpeciesTypes } from "../db.js";
  * @type {number|null}
  */
 let lastClickedSlotIndex = null;
+
+/**
+ * In-memory set of collapsed box IDs for active session persistence.
+ * @type {Set<string>}
+ */
+export const sessionCollapsedBoxes = new Set();
+
+/**
+ * Retrieve the active collapsed box IDs based on the user's settings.
+ * Uses localStorage when rememberCollapsedBoxes is enabled, otherwise active session memory.
+ *
+ * @returns {Set<string>} Set of collapsed box IDs.
+ */
+/**
+ * In-memory set tracking box IDs that were collapsed automatically due to being full.
+ * @type {Set<string>}
+ */
+export const autoCollapsedBoxes = new Set();
+
+export function getActiveCollapsedBoxes() {
+  const settings = loadSettings();
+  return settings.rememberCollapsedBoxes
+    ? loadCollapsedBoxes()
+    : sessionCollapsedBoxes;
+}
+
+/**
+ * Set the collapsed state of a box element and update persistence.
+ *
+ * @param {HTMLElement} box - The box element to collapse or expand.
+ * @param {boolean} isCollapsed - Whether the box should be collapsed.
+ * @param {boolean} [isAuto=false] - Whether this collapse was triggered automatically.
+ * @returns {void}
+ */
+export function setBoxCollapsedState(box, isCollapsed, isAuto = false) {
+  if (!box) return;
+  const boxId = box.dataset.boxId;
+  const currentlyCollapsed = box.classList.contains("is-collapsed");
+
+  if (isAuto) {
+    if (isCollapsed) {
+      autoCollapsedBoxes.add(boxId);
+      box.dataset.autoCollapsed = "true";
+    } else {
+      autoCollapsedBoxes.delete(boxId);
+      delete box.dataset.autoCollapsed;
+    }
+  } else {
+    // Manual user action clears auto-collapse tracking for this box
+    autoCollapsedBoxes.delete(boxId);
+    delete box.dataset.autoCollapsed;
+  }
+
+  if (currentlyCollapsed === isCollapsed) return;
+
+  box.classList.toggle("is-collapsed", isCollapsed);
+
+  const collapseBtn = box.querySelector(".box-collapse-btn");
+  const collapseIcon = box.querySelector(".box-collapse-icon");
+  const titleSpan = box.querySelector(".box-title");
+  const displayTitle = titleSpan?.textContent || "box";
+
+  if (collapseBtn) {
+    collapseBtn.setAttribute("aria-expanded", String(!isCollapsed));
+    collapseBtn.setAttribute(
+      "aria-label",
+      `${isCollapsed ? "Expand" : "Collapse"} ${displayTitle}`,
+    );
+  }
+  if (collapseIcon) {
+    collapseIcon.textContent = isCollapsed ? "▼" : "▲";
+  }
+
+  const settings = loadSettings();
+  if (isCollapsed) {
+    sessionCollapsedBoxes.add(boxId);
+  } else {
+    sessionCollapsedBoxes.delete(boxId);
+  }
+
+  if (settings.rememberCollapsedBoxes) {
+    const persistent = loadCollapsedBoxes();
+    if (isCollapsed) {
+      persistent.add(boxId);
+    } else {
+      persistent.delete(boxId);
+    }
+    saveCollapsedBoxes(persistent);
+  }
+}
+
+/**
+ * Toggle the collapsed state of a box element and update persistence.
+ *
+ * @param {HTMLElement} box - The box element to collapse or expand.
+ * @returns {void}
+ */
+export function toggleBoxCollapse(box) {
+  if (!box) return;
+  setBoxCollapsedState(box, !box.classList.contains("is-collapsed"), false);
+}
+
+/**
+ * Render the title wrap contents for a box, supporting custom names and edit triggers.
+ *
+ * @param {HTMLElement} box - The box element.
+ * @returns {void}
+ */
+export function renderBoxTitleWrap(box) {
+  if (!box) return;
+  const boxId = box.dataset.boxId;
+  const titleWrap = box.querySelector(".box-title-wrap");
+  if (!titleWrap) return;
+
+  const labels = loadBoxLabels();
+  const defaultTitle = box.dataset.defaultTitle || "";
+  const customTitle = labels[boxId] || "";
+  const displayTitle = customTitle || defaultTitle;
+
+  titleWrap.innerHTML = `
+    <span class="box-title" role="button" tabindex="0" title="Click to rename box" aria-label="Box name: ${displayTitle}. Click to rename">${displayTitle}</span>
+  `;
+
+  const collapseBtn = box.querySelector(".box-collapse-btn");
+  if (collapseBtn) {
+    const isCollapsed = box.classList.contains("is-collapsed");
+    collapseBtn.setAttribute(
+      "aria-label",
+      `${isCollapsed ? "Expand" : "Collapse"} ${displayTitle}`,
+    );
+  }
+}
+
+/**
+ * Start inline renaming of a box title.
+ *
+ * @param {HTMLElement} box - The box element whose title is being edited.
+ * @returns {void}
+ */
+export function startRenamingBox(box) {
+  if (!box) return;
+  const boxId = box.dataset.boxId;
+  const titleWrap = box.querySelector(".box-title-wrap");
+  if (!titleWrap || titleWrap.querySelector(".box-title-input")) return;
+
+  const labels = loadBoxLabels();
+  const currentCustom = labels[boxId] || "";
+  const defaultTitle = box.dataset.defaultTitle || "";
+  const currentVal = currentCustom || defaultTitle;
+
+  const input = document.createElement("input");
+  input.type = "text";
+  input.className = "box-title-input";
+  input.maxLength = 50;
+  input.value = currentVal;
+  input.placeholder = defaultTitle;
+  input.setAttribute("aria-label", "Edit box name");
+
+  titleWrap.innerHTML = "";
+  titleWrap.appendChild(input);
+  input.focus();
+  input.select();
+
+  let committed = false;
+
+  function finish(save) {
+    if (committed) return;
+    committed = true;
+
+    if (save) {
+      const nextVal = input.value.trim();
+      const updatedLabels = loadBoxLabels();
+      if (!nextVal || nextVal === defaultTitle) {
+        delete updatedLabels[boxId];
+      } else {
+        updatedLabels[boxId] = nextVal;
+      }
+      saveBoxLabels(updatedLabels);
+    }
+
+    renderBoxTitleWrap(box);
+    bindBoxHeaderEvents(box);
+  }
+
+  input.addEventListener("keydown", (event) => {
+    if (event.key === "Enter") {
+      event.preventDefault();
+      finish(true);
+    } else if (event.key === "Escape") {
+      event.preventDefault();
+      finish(false);
+    }
+  });
+
+  input.addEventListener("blur", () => {
+    finish(true);
+  });
+}
+
+/**
+ * Bind click and keyboard listeners to the box title.
+ *
+ * @param {HTMLElement} box - The box element.
+ * @returns {void}
+ */
+function bindBoxHeaderEvents(box) {
+  const titleSpan = box.querySelector(".box-title");
+
+  const onRenameTrigger = (event) => {
+    event.stopPropagation();
+    startRenamingBox(box);
+  };
+
+  if (titleSpan) {
+    titleSpan.onclick = onRenameTrigger;
+    titleSpan.onkeydown = (event) => {
+      if (event.key === "Enter" || event.key === " ") {
+        event.preventDefault();
+        onRenameTrigger(event);
+      }
+    };
+  }
+}
+
+/**
+ * Update the caught counter badge, completion class, and toggle button text for a box.
+ *
+ * @param {HTMLElement} box - The box element to update.
+ * @returns {void}
+ */
+export function updateBoxProgress(box) {
+  if (!box) return;
+  const grid = box.querySelector(".grid");
+  const badge = box.querySelector(".box-progress-badge");
+  const toggleBtn = box.querySelector(".box-toggle");
+  if (!grid || !badge) return;
+
+  const cells = Array.from(grid.querySelectorAll(".cell:not(.is-placeholder)"));
+  const totalSlots = cells.length;
+  if (totalSlots === 0) return;
+
+  const caught = isShinyMode ? loadShinyCaughtSlots() : loadCaughtSlots();
+  let caughtCount = 0;
+  for (const cell of cells) {
+    const slot = Number(cell.dataset.regional);
+    if (caught[slot]) {
+      caughtCount += 1;
+    }
+  }
+
+  const isComplete = caughtCount === totalSlots && totalSlots > 0;
+  box.classList.toggle("is-completed", isComplete);
+
+  if (isComplete) {
+    badge.textContent = `${totalSlots}/${totalSlots}`;
+    badge.classList.add("is-completed");
+    badge.setAttribute(
+      "aria-label",
+      `Box complete: ${totalSlots} of ${totalSlots} caught`,
+    );
+  } else {
+    badge.textContent = `${caughtCount}/${totalSlots}`;
+    badge.classList.remove("is-completed");
+    badge.setAttribute(
+      "aria-label",
+      `Box progress: ${caughtCount} of ${totalSlots} caught`,
+    );
+  }
+
+  if (toggleBtn) {
+    const rangeText = box.dataset.rangeText || "";
+    toggleBtn.textContent = isComplete ? "✗ All" : "✓ All";
+    toggleBtn.setAttribute(
+      "aria-label",
+      `${isComplete ? "Mark all uncaught" : "Mark all caught"} in ${rangeText}`,
+    );
+  }
+
+  const settings = loadSettings();
+  const boxId = box.dataset.boxId;
+  const isAutoCollapsed =
+    autoCollapsedBoxes.has(boxId) || box.dataset.autoCollapsed === "true";
+
+  if (settings.autoCollapseFullBoxes) {
+    if (isComplete) {
+      if (!box.classList.contains("is-collapsed")) {
+        setBoxCollapsedState(box, true, true);
+      }
+    } else if (isAutoCollapsed) {
+      setBoxCollapsedState(box, false, true);
+    }
+  } else if (isAutoCollapsed) {
+    setBoxCollapsedState(box, false, true);
+  }
+}
+
+/**
+ * Update the progress badges and completion states for all boxes in the DOM.
+ *
+ * @returns {void}
+ */
+export function updateAllBoxProgress() {
+  document.querySelectorAll(".box").forEach((box) => {
+    updateBoxProgress(box);
+  });
+}
+
+/**
+ * Re-apply saved box labels across all rendered box headers.
+ *
+ * @returns {void}
+ */
+export function applyBoxLabelsToHeaders() {
+  document.querySelectorAll(".box").forEach((box) => {
+    renderBoxTitleWrap(box);
+    bindBoxHeaderEvents(box);
+  });
+}
 
 /**
  * Create shell sections that mirror in-game storage boxes.
@@ -49,6 +371,9 @@ export function renderDexSectionBoxes(
   heading.textContent = sectionTitle;
   fragment.appendChild(heading);
 
+  const labels = loadBoxLabels();
+  const collapsedBoxes = getActiveCollapsedBoxes();
+
   const boxCount = Math.ceil(slotsInSection / BOX_CAPACITY);
   for (let boxIndex = 0; boxIndex < boxCount; boxIndex += 1) {
     const localStart = startLocalIndex + boxIndex * BOX_CAPACITY;
@@ -61,18 +386,38 @@ export function renderDexSectionBoxes(
       startGlobalSlot + (boxIndex + 1) * BOX_CAPACITY - 1,
       startGlobalSlot + slotsInSection - 1,
     );
+    const boxId = `${sectionKey}:${boxIndex}`;
     const rangeText = `#${String(localStart).padStart(3, "0")}–${String(localEnd).padStart(3, "0")}`;
+    const defaultTitle = `${sectionTitle} — ${rangeText}`;
+    const customTitle = labels[boxId] || "";
+    const displayTitle = customTitle || defaultTitle;
+    const isCollapsed = collapsedBoxes.has(boxId);
+
     const section = document.createElement("section");
-    section.className = "box";
+    section.className = `box${isCollapsed ? " is-collapsed" : ""}`;
     section.dataset.section = sectionKey;
+    section.dataset.boxId = boxId;
+    section.dataset.defaultTitle = defaultTitle;
+    section.dataset.rangeText = rangeText;
+
     section.innerHTML = `
-      <h2>
-        <span>${sectionTitle} — ${rangeText}</span>
-        <span class="tools">
-          <button class="btn box-toggle" type="button" data-range="${globalStart}-${globalEnd}" aria-label="Mark all caught in ${rangeText}">Mark all</button>
-        </span>
-      </h2>
-      <div class="grid"></div>
+      <div class="box-header">
+        <div class="box-header-left">
+          <button class="btn btn-icon box-collapse-btn" type="button" aria-expanded="${isCollapsed ? "false" : "true"}" aria-label="${isCollapsed ? "Expand" : "Collapse"} ${displayTitle}">
+            <span class="box-collapse-icon" aria-hidden="true">${isCollapsed ? "▼" : "▲"}</span>
+          </button>
+          <div class="box-title-wrap">
+            <span class="box-title" role="button" tabindex="0" title="Click to rename box" aria-label="Box name: ${displayTitle}. Click to rename">${displayTitle}</span>
+          </div>
+        </div>
+        <div class="box-action-pill" role="group" aria-label="Box actions for ${displayTitle}">
+          <span class="box-progress-badge" aria-label="Box progress">0/30</span>
+          <button class="box-toggle" type="button" data-range="${globalStart}-${globalEnd}" aria-label="Mark all caught in ${rangeText}">✓ All</button>
+        </div>
+      </div>
+      <div class="box-content">
+        <div class="grid"></div>
+      </div>
     `;
     fragment.appendChild(section);
   }
@@ -375,51 +720,47 @@ export function registerBoxControls(slotCount) {
   document.querySelectorAll(".box").forEach((box) => {
     const grid = box.querySelector(".grid");
     const toggleBtn = box.querySelector(".box-toggle");
-    if (!toggleBtn) return;
+    const collapseBtn = box.querySelector(".box-collapse-btn");
 
-    /**
-     * Retrieve all non-placeholder interactive cells within this box.
-     * @returns {HTMLElement[]} Array of interactive cell elements.
-     */
-    function interactiveCells() {
-      return Array.from(grid.querySelectorAll(".cell:not(.is-placeholder)"));
+    bindBoxHeaderEvents(box);
+
+    if (collapseBtn) {
+      collapseBtn.onclick = (event) => {
+        event.stopPropagation();
+        toggleBoxCollapse(box);
+      };
     }
 
-    /**
-     * Update the box toggle button label and aria-label according to the caught state of its cells.
-     * @returns {void}
-     */
-    function updateToggleBtnLabel() {
-      const caught = loadCaughtSlots();
-      const cells = interactiveCells();
-      const allCaught = cells.every(
-        (cell) => caught[Number(cell.dataset.regional)],
-      );
-      toggleBtn.textContent = allCaught ? "Unmark all" : "Mark all";
-      toggleBtn.setAttribute(
-        "aria-label",
-        `${allCaught ? "Mark all uncaught" : "Mark all caught"} in this box`,
-      );
+    if (toggleBtn && grid) {
+      function interactiveCells() {
+        return Array.from(grid.querySelectorAll(".cell:not(.is-placeholder)"));
+      }
+
+      updateBoxProgress(box);
+
+      toggleBtn.onclick = () => {
+        const caught = isShinyMode ? loadShinyCaughtSlots() : loadCaughtSlots();
+        const cells = interactiveCells();
+        const allCaught = cells.every(
+          (cell) => caught[Number(cell.dataset.regional)],
+        );
+        cells.forEach((cell) => {
+          cell.classList.toggle("caught", !allCaught);
+          cell.setAttribute("aria-pressed", String(!allCaught));
+          caught[Number(cell.dataset.regional)] = !allCaught;
+        });
+
+        if (isShinyMode) {
+          saveShinyCaughtSlots(caught);
+        } else {
+          saveCaughtSlots(caught);
+        }
+
+        updateProgressBar(slotCount);
+        applyHideCaughtFilter();
+        updateBoxProgress(box);
+      };
     }
-
-    updateToggleBtnLabel();
-
-    toggleBtn.onclick = () => {
-      const caught = loadCaughtSlots();
-      const cells = interactiveCells();
-      const allCaught = cells.every(
-        (cell) => caught[Number(cell.dataset.regional)],
-      );
-      cells.forEach((cell) => {
-        cell.classList.toggle("caught", !allCaught);
-        cell.setAttribute("aria-pressed", String(!allCaught));
-        caught[Number(cell.dataset.regional)] = !allCaught;
-      });
-      saveCaughtSlots(caught);
-      updateProgressBar(slotCount);
-      applyHideCaughtFilter();
-      updateToggleBtnLabel();
-    };
   });
 }
 
