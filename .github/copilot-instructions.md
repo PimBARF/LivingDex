@@ -25,12 +25,13 @@
 ├── assets/                    # Favicon, PWA icons (192/512), and self-hosted Inter variable fonts
 ├── data/                      # Pre-compiled static JSON datasets (zero runtime API calls for dex data)
 │   ├── species.json           # Master species database (IDs, names, types, forms, gender diffs, sprite keys)
-│   ├── evolutions.json        # Evolution chain hierarchies and trigger requirements
+│   ├── evolutions.json        # Master evolution chain hierarchies and trigger requirements (fallback / HOME)
 │   ├── flavor/<lang>.json     # Pokédex flavor text by language (en, de, es, fr, it, ja, ko, zh, etc.)
 │   ├── names/<lang>.json      # Localized Pokémon species names by language
 │   ├── games/
 │   │   ├── dex/<gameId>.json  # Game-specific Pokédex rosters, orderings, and segment definitions
-│   │   └── encounters/<id>.json # Wild encounter locations, methods, rates, and version exclusives
+│   │   ├── encounters/<id>.json # Wild encounter locations, methods, rates, and version exclusives
+│   │   └── evolutions/<gameId>.json # Game-specific evolution databases and trigger conditions
 │   └── schema/*.schema.json   # JSON Schemas validating datasets
 └── js/                        # Modular ES6+ JavaScript
     ├── main.js                # App bootstrap, coordinator of initialization, hash routing, global events
@@ -122,6 +123,7 @@
   - Add game configuration to `GAMES` in `js/config.js`.
   - Add game roster JSON in `data/games/dex/<gameId>.json`.
   - Add wild encounters in `data/games/encounters/<gameId>.json`.
+  - Add game evolutions in `data/games/evolutions/<gameId>.json`.
 
 ---
 

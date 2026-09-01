@@ -15,6 +15,12 @@ let speciesDataCache = null;
 let evolutionDataCache = null;
 
 /**
+ * In-memory cache for the loaded game evolution datasets.
+ * @type {Record<string, Object>}
+ */
+const gameEvolutionsCache = {};
+
+/**
  * In-memory cache for the loaded game dex datasets.
  * @type {Record<string, Object>}
  */
@@ -78,15 +84,68 @@ export async function getAllEvolutionData() {
 }
 
 /**
- * Retrieves evolution chain data by its chain ID.
+ * Dynamically loads and caches game-specific evolution data on demand with graceful fallback to master evolutions.
+ *
+ * @param {string} [gameId="home"] - The game identifier (e.g. 'rby', 'gsc', 'pla', 'sv', 'home').
+ * @returns {Promise<Record<number, Object>>} The evolution dictionary for the specified game or master dataset.
+ */
+export async function loadEvolutions(gameId = "home") {
+  if (!gameId || gameId === "home") {
+    return getAllEvolutionData();
+  }
+  if (!gameEvolutionsCache[gameId]) {
+    try {
+      const res = await fetch(`data/games/evolutions/${gameId}.json`);
+      if (!res.ok) throw new Error(`Failed to fetch evolutions for ${gameId}`);
+      gameEvolutionsCache[gameId] = await res.json();
+    } catch (err) {
+      console.warn(
+        `Could not load evolutions for game ${gameId}, falling back to master evolutions:`,
+        err,
+      );
+      gameEvolutionsCache[gameId] = await getAllEvolutionData();
+    }
+  }
+  return gameEvolutionsCache[gameId];
+}
+
+/**
+ * Retrieves game-specific evolution data on demand.
+ * Backward-compatible / naming alias to loadEvolutions.
+ *
+ * @param {string} gameId - The game identifier.
+ * @returns {Promise<Record<number, Object>>} The game evolutions dictionary.
+ */
+export async function getGameEvolutionData(gameId) {
+  return loadEvolutions(gameId);
+}
+
+/**
+ * Retrieves evolution chain data by its chain ID and optional game scope.
  *
  * @param {number|string} chainId - The evolution chain ID.
+ * @param {string|null} [gameId=null] - Optional game identifier (e.g. 'rby', 'pla', 'home').
  * @returns {Promise<Object|null>} The evolution chain object or null if not found.
  */
-export async function getEvolutionData(chainId) {
+export async function getEvolutionData(chainId, gameId = null) {
   if (!chainId) return null;
-  const allEvolutions = await getAllEvolutionData();
+  const allEvolutions = gameId
+    ? await loadEvolutions(gameId)
+    : await getAllEvolutionData();
   return allEvolutions[Number(chainId)] || null;
+}
+
+/**
+ * Retrieves evolution chain data for a species by species ID and optional game scope.
+ *
+ * @param {number|string} speciesId - The National Pokédex species ID.
+ * @param {string|null} [gameId=null] - Optional game identifier.
+ * @returns {Promise<Object|null>} The evolution chain object or null if not found.
+ */
+export async function getEvolutionChain(speciesId, gameId = null) {
+  const species = await getSpeciesData(speciesId);
+  if (!species || !species.evolutionChainId) return null;
+  return getEvolutionData(species.evolutionChainId, gameId);
 }
 
 /**
@@ -481,11 +540,24 @@ function resolveTypes(speciesData, formId, generationNumber) {
   return form.types || [];
 }
 
+const REGIONAL_SPECIES_MAP = {
+  alola: [19, 26, 27, 28, 37, 38, 50, 51, 52, 53, 74, 75, 76, 88, 89, 103, 105],
+  galar: [
+    52, 77, 78, 79, 80, 83, 110, 122, 144, 145, 146, 199, 222, 263, 264, 554,
+    555, 562, 618,
+  ],
+  hisui: [
+    58, 59, 100, 101, 157, 211, 215, 503, 549, 570, 571, 628, 705, 706, 713,
+    724,
+  ],
+  paldea: [128, 194],
+};
+
 /**
  * Resolves and formats evolution flowchart paths based on game scope, generation, and form context.
  * Adapts to sparse format where isBaby, region, reverseBreeding, and conditions are omitted when false/null.
  *
- * @param {Object} evoData - Evolution chain object from evolutions.json.
+ * @param {Object} evoData - Evolution chain object from evolutions.json or game-specific evolution JSON.
  * @param {number} speciesId - Active species ID.
  * @param {number} formId - Active form ID.
  * @param {string} gameId - Active game identifier.
@@ -575,10 +647,23 @@ function resolveEvolutionFlowchart(
         continue;
       }
 
-      // Regional form filtering
-      if (step.region && step.region !== activeRegion) continue;
+      // Regional form filtering:
+      // 1. When viewing a regional form, exclude steps for mismatched regions
+      if (step.region && activeRegion && step.region !== activeRegion) continue;
+
+      // 2. When viewing a non-regional form of a species that has a regional variant,
+      // skip steps specific to the regional variant (unless the active species being inspected is the evolved form itself)
+      if (
+        step.region &&
+        !activeRegion &&
+        speciesId !== step.toSpeciesId &&
+        REGIONAL_SPECIES_MAP[step.region]?.includes(newRootSpecies.speciesId)
+      ) {
+        continue;
+      }
+
+      // 3. Skip standard steps when inspecting regional forms that have their own exclusive evolution paths
       if (!step.region && activeRegion) {
-        // Skip standard steps when inspecting regional forms that have their own exclusive evolution paths
         if (
           activeRegion === "alola" &&
           [19, 27, 37, 52].includes(newRootSpecies.speciesId)
@@ -846,7 +931,7 @@ export async function getPokemonModalData(speciesId, formId, gameId) {
 
   const [gameDexData, evoData] = await Promise.all([
     getGameDexData(gameId),
-    getEvolutionData(speciesData.evolutionChainId),
+    getEvolutionData(speciesData.evolutionChainId, gameId),
   ]);
 
   const language = loadSettings().language || "en";
