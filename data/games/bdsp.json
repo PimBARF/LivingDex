@@ -1126,17 +1126,17 @@
           "Iron Island",
           "Oreburgh Mine",
           "Wayward Cave",
-          "Lost Tower (walking",
-          "All Times)",
-          "Honey Trees (Routes 205–222, and Sinnoh, Acuity Lakefront (tall grass)N",
+          "Lost Tower (walking)",
+          "All Times",
+          "Honey Trees (Routes 205–222, Acuity Lakefront (tall grass) (Night) )",
           "Ravaged Path",
           "Oreburgh Gate",
-          "Mt. Coronet (Surfing and walking",
+          "Mt. Coronet (Surfing and walking)",
           "Grand Underground Spacious Cave",
           "Grassland Cave",
           "Swampy Cave",
           "Sunlit Cavern",
-          "Bogsunk Cavern)"
+          "Bogsunk Cavern"
         ]
       },
       "shining-pearl": {
@@ -1144,17 +1144,17 @@
           "Iron Island",
           "Oreburgh Mine",
           "Wayward Cave",
-          "Lost Tower (walking",
-          "All Times)",
-          "Honey Trees (Routes 205–222, and Sinnoh, Acuity Lakefront (tall grass)N",
+          "Lost Tower (walking)",
+          "All Times",
+          "Honey Trees (Routes 205–222, Acuity Lakefront (tall grass) (Night) )",
           "Ravaged Path",
           "Oreburgh Gate",
-          "Mt. Coronet (Surfing and walking",
+          "Mt. Coronet (Surfing and walking)",
           "Grand Underground Spacious Cave",
           "Grassland Cave",
           "Swampy Cave",
           "Sunlit Cavern",
-          "Bogsunk Cavern)"
+          "Bogsunk Cavern"
         ]
       }
     },
@@ -1171,7 +1171,7 @@
           "Snowpoint Temple",
           "Lost Tower",
           "Turnback Cave (all times)",
-          "Route 227N",
+          "Route 227 (Night)",
           "Grand Underground Grassland Cave",
           "Spacious Cave",
           "Swampy Cave",
@@ -1191,7 +1191,7 @@
           "Snowpoint Temple",
           "Lost Tower",
           "Turnback Cave (all times)",
-          "Route 227N",
+          "Route 227 (Night)",
           "Grand Underground Grassland Cave",
           "Spacious Cave",
           "Swampy Cave",
@@ -1203,7 +1203,7 @@
     "54": {
       "brilliant-diamond": {
         "locations": [
-          "Honey Trees (Routes 205–222, Twinleaf Town, Eterna City, Lake Verity, Celestic Town (Surfing)",
+          "Honey Trees (Routes 205–222, Twinleaf Town, Eterna City, Lake Verity, Celestic Town (Surfing) )",
           "Routes Sinnoh",
           "Sinnoh",
           "Lake Acuity",
@@ -1214,12 +1214,12 @@
           "Grand Underground Spacious Cave",
           "Fountainspring Cave",
           "Riverbank Cave",
-          "Still Water Cavern)"
+          "Still Water Cavern"
         ]
       },
       "shining-pearl": {
         "locations": [
-          "Honey Trees (Routes 205–222, Twinleaf Town, Eterna City, Lake Verity, Celestic Town (Surfing)",
+          "Honey Trees (Routes 205–222, Twinleaf Town, Eterna City, Lake Verity, Celestic Town (Surfing) )",
           "Routes Sinnoh",
           "Sinnoh",
           "Lake Acuity",
@@ -1230,25 +1230,25 @@
           "Grand Underground Spacious Cave",
           "Fountainspring Cave",
           "Riverbank Cave",
-          "Still Water Cavern)"
+          "Still Water Cavern"
         ]
       }
     },
     "55": {
       "brilliant-diamond": {
         "locations": [
-          "Honey Trees (Routes 205–222, and Sinnoh, Twinleaf Town, Eterna City, Celestic Town, Ravaged Path, Oreburgh Gate, Lake Verity, Lake Acuity, Lake Valor, Sendoff Spring, Resort Area (Surfing)",
+          "Honey Trees (Routes 205–222, Twinleaf Town, Eterna City, Celestic Town, Ravaged Path, Oreburgh Gate, Lake Verity, Lake Acuity, Lake Valor, Sendoff Spring, Resort Area (Surfing) )",
           "Routes Sinnoh and Sinnoh",
           "Great Marsh",
-          "Sendoff Spring)"
+          "Sendoff Spring"
         ]
       },
       "shining-pearl": {
         "locations": [
-          "Honey Trees (Routes 205–222, and Sinnoh, Twinleaf Town, Eterna City, Celestic Town, Ravaged Path, Oreburgh Gate, Lake Verity, Lake Acuity, Lake Valor, Sendoff Spring, Resort Area (Surfing)",
+          "Honey Trees (Routes 205–222, Twinleaf Town, Eterna City, Celestic Town, Ravaged Path, Oreburgh Gate, Lake Verity, Lake Acuity, Lake Valor, Sendoff Spring, Resort Area (Surfing) )",
           "Routes Sinnoh and Sinnoh",
           "Great Marsh",
-          "Sendoff Spring)"
+          "Sendoff Spring"
         ]
       }
     },
@@ -1299,27 +1299,27 @@
     "66": {
       "brilliant-diamond": {
         "locations": [
-          "Honey Trees (Routes 205–222, and Sinnoh, Mount Coronet",
+          "Honey Trees (Routes 205–222, Mount Coronet)",
           "Grand Underground Spacious Cave",
           "Grassland Cave",
           "Whiteout Cave",
-          "Sunlit Cavern)"
+          "Sunlit Cavern"
         ]
       },
       "shining-pearl": {
         "locations": [
-          "Honey Trees (Routes 205–222, and Sinnoh, Mount Coronet",
+          "Honey Trees (Routes 205–222, Mount Coronet)",
           "Grand Underground Spacious Cave",
           "Grassland Cave",
           "Whiteout Cave",
-          "Sunlit Cavern)"
+          "Sunlit Cavern"
         ]
       }
     },
     "67": {
       "brilliant-diamond": {
         "locations": [
-          "Honey Trees (Routes 205–222, and Sinnoh, Stark Mountain, Mount Coronet, Victory Road, Acuity Lakefront",
+          "Honey Trees (Routes 205–222, Stark Mountain, Mount Coronet, Victory Road, Acuity Lakefront)",
           "Grand Underground Spacious Cave",
           "Grassland Cave",
           "Whiteout Cave",
@@ -1328,7 +1328,7 @@
       },
       "shining-pearl": {
         "locations": [
-          "Honey Trees (Routes 205–222, and Sinnoh, Stark Mountain, Mount Coronet, Victory Road, Acuity Lakefront",
+          "Honey Trees (Routes 205–222, Stark Mountain, Mount Coronet, Victory Road, Acuity Lakefront)",
           "Grand Underground Spacious Cave",
           "Grassland Cave",
           "Whiteout Cave",
@@ -1351,7 +1351,7 @@
     "72": {
       "brilliant-diamond": {
         "locations": [
-          "Honey Trees (Routes 205–222, and Sinnoh, Canalave City, Pastoria City, Fuego Ironworks, Valley Windworks, Iron Island (Surfing)",
+          "Honey Trees (Routes 205–222, Canalave City, Pastoria City, Fuego Ironworks, Valley Windworks, Iron Island (Surfing) )",
           "Grand Underground Fountainspring Cave",
           "Riverbank Cave",
           "Still Water Cavern",
@@ -1361,7 +1361,7 @@
       },
       "shining-pearl": {
         "locations": [
-          "Honey Trees (Routes 205–222, and Sinnoh, Canalave City, Pastoria City, Fuego Ironworks, Valley Windworks, Iron Island (Surfing)",
+          "Honey Trees (Routes 205–222, Canalave City, Pastoria City, Fuego Ironworks, Valley Windworks, Iron Island (Surfing) )",
           "Grand Underground Fountainspring Cave",
           "Riverbank Cave",
           "Still Water Cavern",
@@ -1373,7 +1373,7 @@
     "73": {
       "brilliant-diamond": {
         "locations": [
-          "Honey Trees (Routes 205–222, and Sinnoh, Pastoria City, Canalave City, Sunyshore City, Valley Windworks, Fuego Ironworks, Iron Island, Pokémon League (Surfing)",
+          "Honey Trees (Routes 205–222, Pastoria City, Canalave City, Sunyshore City, Valley Windworks, Fuego Ironworks, Iron Island, Pokémon League (Surfing) )",
           "Grand Underground Fountainspring Cave",
           "Riverbank Cave",
           "Still Water Cavern",
@@ -1383,7 +1383,7 @@
       },
       "shining-pearl": {
         "locations": [
-          "Honey Trees (Routes 205–222, and Sinnoh, Pastoria City, Canalave City, Sunyshore City, Valley Windworks, Fuego Ironworks, Iron Island, Pokémon League (Surfing)",
+          "Honey Trees (Routes 205–222, Pastoria City, Canalave City, Sunyshore City, Valley Windworks, Fuego Ironworks, Iron Island, Pokémon League (Surfing) )",
           "Grand Underground Fountainspring Cave",
           "Riverbank Cave",
           "Still Water Cavern",
@@ -1634,14 +1634,14 @@
       "brilliant-diamond": {
         "locations": [
           "Turnback Cave",
-          "Trade Medicham in Snowpoint CityDue to it holding an Everstone",
+          "Trade Medicham in Snowpoint City Due to it holding an Everstone",
           "the Haunter does not evolve into a Gengar upon the player receiving it"
         ]
       },
       "shining-pearl": {
         "locations": [
           "Turnback Cave",
-          "Trade Medicham in Snowpoint CityDue to it holding an Everstone",
+          "Trade Medicham in Snowpoint City Due to it holding an Everstone",
           "the Haunter does not evolve into a Gengar upon the player receiving it"
         ]
       }
@@ -1721,7 +1721,7 @@
           "Rocky Cave",
           "Sandsear Cave",
           "Sunlit Cavern",
-          "Big Bluff CavernAfter obtaining the National Pokédex",
+          "Big Bluff Cavern After obtaining the National Pokédex",
           "Typhlo Cavern"
         ]
       },
@@ -1733,7 +1733,7 @@
           "Rocky Cave",
           "Sandsear Cave",
           "Sunlit Cavern",
-          "Big Bluff CavernAfter obtaining the National Pokédex",
+          "Big Bluff Cavern After obtaining the National Pokédex",
           "Typhlo Cavern"
         ]
       }
@@ -1791,24 +1791,24 @@
     "118": {
       "brilliant-diamond": {
         "locations": [
-          "Honey Trees (Routes 205–222, and Sinnoh, Lake Acuity, Lake Verity, Twinleaf Town, Lake Valor, Resort Area, Sendoff Spring (Good Rod)"
+          "Honey Trees (Routes 205–222, Lake Acuity, Lake Verity, Twinleaf Town, Lake Valor, Resort Area, Sendoff Spring (Good Rod) )"
         ]
       },
       "shining-pearl": {
         "locations": [
-          "Honey Trees (Routes 205–222, and Sinnoh, Lake Acuity, Lake Verity, Twinleaf Town, Lake Valor, Resort Area, Sendoff Spring (Good Rod)"
+          "Honey Trees (Routes 205–222, Lake Acuity, Lake Verity, Twinleaf Town, Lake Valor, Resort Area, Sendoff Spring (Good Rod) )"
         ]
       }
     },
     "119": {
       "brilliant-diamond": {
         "locations": [
-          "Honey Trees (Routes 205–222, and Sinnoh, Lake Acuity, Lake Verity, Twinleaf Town, Lake Valor, Resort Area, Sendoff Spring (Super Rod)"
+          "Honey Trees (Routes 205–222, Lake Acuity, Lake Verity, Twinleaf Town, Lake Valor, Resort Area, Sendoff Spring (Super Rod) )"
         ]
       },
       "shining-pearl": {
         "locations": [
-          "Honey Trees (Routes 205–222, and Sinnoh, Lake Acuity, Lake Verity, Twinleaf Town, Lake Valor, Resort Area, Sendoff Spring (Super Rod)"
+          "Honey Trees (Routes 205–222, Lake Acuity, Lake Verity, Twinleaf Town, Lake Valor, Resort Area, Sendoff Spring (Super Rod) )"
         ]
       }
     },
@@ -1871,13 +1871,11 @@
     "129": {
       "brilliant-diamond": {
         "locations": [
-          "Honey Trees (Routes 205–222, and Sinnoh, Twinleaf Town, Eterna City, Canalave City, Celestic Town, Pastoria City, Sunyshore City, Lake Verity, Lake Acuity, Lake Valor, Ravaged Path, Valley Windworks, Mt. Coronet, Iron Island, Great Marsh, Sendoff Spring, Pokémon League, Victory Road, Fuego Ironworks, Oreburgh Gate, Resort Area (Old Rod or Good Rod)",
           "Trade Finneon on Route 226 (German)"
         ]
       },
       "shining-pearl": {
         "locations": [
-          "Honey Trees (Routes 205–222, and Sinnoh, Twinleaf Town, Eterna City, Canalave City, Celestic Town, Pastoria City, Sunyshore City, Lake Verity, Lake Acuity, Lake Valor, Ravaged Path, Valley Windworks, Mt. Coronet, Iron Island, Great Marsh, Sendoff Spring, Pokémon League, Victory Road, Fuego Ironworks, Oreburgh Gate, Resort Area (Old Rod or Good Rod)",
           "Trade Finneon on Route 226 (German)"
         ]
       }
@@ -1885,28 +1883,26 @@
     "130": {
       "brilliant-diamond": {
         "locations": [
-          "Great Marsh (Good Rod or Super Rod)",
-          "Honey Trees (Routes 205–222, and Sinnoh, Twinleaf Town, Eterna City, Canalave City, Celestic Town, Pastoria City, Sunyshore City, Lake Verity, Lake Acuity, Lake Valor, Ravaged Path, Valley Windworks, Mt. Coronet, Iron Island, Sendoff Spring, Pokémon League, Victory Road, Fuego Ironworks, Oreburgh Gate, Resort Area (Super Rod)"
+          "Great Marsh (Good Rod or Super Rod)"
         ]
       },
       "shining-pearl": {
         "locations": [
-          "Great Marsh (Good Rod or Super Rod)",
-          "Honey Trees (Routes 205–222, and Sinnoh, Twinleaf Town, Eterna City, Canalave City, Celestic Town, Pastoria City, Sunyshore City, Lake Verity, Lake Acuity, Lake Valor, Ravaged Path, Valley Windworks, Mt. Coronet, Iron Island, Sendoff Spring, Pokémon League, Victory Road, Fuego Ironworks, Oreburgh Gate, Resort Area (Super Rod)"
+          "Great Marsh (Good Rod or Super Rod)"
         ]
       }
     },
     "133": {
       "brilliant-diamond": {
         "locations": [
-          "Received from Bebe in Hearthome CityAfter obtaining the National Pokédex",
-          "Trophy GardenAfter obtaining the National Pokédex"
+          "Received from Bebe in Hearthome City After obtaining the National Pokédex",
+          "Trophy Garden After obtaining the National Pokédex"
         ]
       },
       "shining-pearl": {
         "locations": [
-          "Received from Bebe in Hearthome CityAfter obtaining the National Pokédex",
-          "Trophy GardenAfter obtaining the National Pokédex"
+          "Received from Bebe in Hearthome City After obtaining the National Pokédex",
+          "Trophy Garden After obtaining the National Pokédex"
         ]
       }
     },
@@ -1973,7 +1969,7 @@
     "163": {
       "brilliant-diamond": {
         "locations": [
-          "Honey Trees (Routes 205–222, Great MarshN",
+          "Honey Trees (Routes 205–222, Great Marsh (Night) )",
           "Grand Underground Spacious Cave",
           "Grassland Cave",
           "Fountainspring Cave",
@@ -1984,7 +1980,7 @@
       },
       "shining-pearl": {
         "locations": [
-          "Honey Trees (Routes 205–222, Great MarshN",
+          "Honey Trees (Routes 205–222, Great Marsh (Night) )",
           "Grand Underground Spacious Cave",
           "Grassland Cave",
           "Fountainspring Cave",
@@ -1997,12 +1993,12 @@
     "164": {
       "brilliant-diamond": {
         "locations": [
-          "Honey Trees (Routes 205–222, and Sinnoh, Acuity Lakefront, Lake Acuity, Mt. Coronet, Great Marsh, Lake Valor, Sendoff SpringN)"
+          "Honey Trees (Routes 205–222, Acuity Lakefront, Lake Acuity, Mt. Coronet, Great Marsh, Lake Valor, Sendoff Spring (Night) )"
         ]
       },
       "shining-pearl": {
         "locations": [
-          "Honey Trees (Routes 205–222, and Sinnoh, Acuity Lakefront, Lake Acuity, Mt. Coronet, Great Marsh, Lake Valor, Sendoff SpringN)"
+          "Honey Trees (Routes 205–222, Acuity Lakefront, Lake Acuity, Mt. Coronet, Great Marsh, Lake Valor, Sendoff Spring (Night) )"
         ]
       }
     },
@@ -2115,13 +2111,13 @@
     "190": {
       "brilliant-diamond": {
         "locations": [
-          "Honey Trees (Routes 205–222, Eterna Forest, Floaroma Meadow, Fuego Ironworks, Valley Windworks",
+          "Honey Trees (Routes 205–222, Eterna Forest, Floaroma Meadow, Fuego Ironworks, Valley Windworks)",
           "Grand Underground Spacious Cave (after Obtaining Defog)"
         ]
       },
       "shining-pearl": {
         "locations": [
-          "Honey Trees (Routes 205–222, Eterna Forest, Floaroma Meadow, Fuego Ironworks, Valley Windworks",
+          "Honey Trees (Routes 205–222, Eterna Forest, Floaroma Meadow, Fuego Ironworks, Valley Windworks)",
           "Grand Underground Spacious Cave (after Obtaining Defog)"
         ]
       }
@@ -2205,7 +2201,7 @@
     "198": {
       "brilliant-diamond": {
         "locations": [
-          "Eterna Forest and Lost TowerN",
+          "Eterna Forest and Lost Tower (Night)",
           "Grand Underground Spacious Cave",
           "Grassland Cave",
           "Riverbank Cave",
@@ -2218,7 +2214,7 @@
       "shining-pearl": {
         "locations": [
           "Eterna Forest",
-          "Lost TowerN",
+          "Lost Tower (Night)",
           "Grand Underground Dazzling Cave",
           "Stargleam Cavern"
         ]
@@ -2305,12 +2301,12 @@
     "214": {
       "brilliant-diamond": {
         "locations": [
-          "Honey Trees (Routes 205–222, and Sinnoh, Eterna Forest, Floaroma Meadow, Fuego Ironworks, Valley Windworks)"
+          "Honey Trees (Routes 205–222, Eterna Forest, Floaroma Meadow, Fuego Ironworks, Valley Windworks)"
         ]
       },
       "shining-pearl": {
         "locations": [
-          "Honey Trees (Routes 205–222, and Sinnoh, Eterna Forest, Floaroma Meadow, Fuego Ironworks, Valley Windworks)"
+          "Honey Trees (Routes 205–222, Eterna Forest, Floaroma Meadow, Fuego Ironworks, Valley Windworks)"
         ]
       }
     },
@@ -2375,19 +2371,19 @@
     "223": {
       "brilliant-diamond": {
         "locations": [
-          "Honey Trees (Routes 205–222, and Sinnoh, Pastoria City, Sunyshore City, Pokémon League (Good Rod)"
+          "Honey Trees (Routes 205–222, Pastoria City, Sunyshore City, Pokémon League (Good Rod) )"
         ]
       },
       "shining-pearl": {
         "locations": [
-          "Honey Trees (Routes 205–222, and Sinnoh, Pastoria City, Sunyshore City, Pokémon League (Good Rod)"
+          "Honey Trees (Routes 205–222, Pastoria City, Sunyshore City, Pokémon League (Good Rod) )"
         ]
       }
     },
     "224": {
       "brilliant-diamond": {
         "locations": [
-          "Honey Trees (Routes 205–222, and Sinnoh, Pastoria City, Sunyshore City, Pokémon League (Super Rod)",
+          "Honey Trees (Routes 205–222, Pastoria City, Sunyshore City, Pokémon League (Super Rod) )",
           "Grand Underground Fountainspring Cave",
           "Riverbank Cave",
           "Still Water Cavern (after Obtaining Waterfall)"
@@ -2395,7 +2391,7 @@
       },
       "shining-pearl": {
         "locations": [
-          "Honey Trees (Routes 205–222, and Sinnoh, Pastoria City, Sunyshore City, Pokémon League (Super Rod)",
+          "Honey Trees (Routes 205–222, Pastoria City, Sunyshore City, Pokémon League (Super Rod) )",
           "Grand Underground Fountainspring Cave",
           "Riverbank Cave",
           "Still Water Cavern (after Obtaining Waterfall)"
@@ -2510,21 +2506,21 @@
       "brilliant-diamond": {
         "locations": [
           "Eterna Forest",
-          "Honey Trees (Routes 205–222, Eterna Forest, Floaroma Meadow, Fuego Ironworks, Valley Windworks",
+          "Honey Trees (Routes 205–222, Eterna Forest, Floaroma Meadow, Fuego Ironworks, Valley Windworks)",
           "Grand Underground Grassland Cave",
           "Riverbank Cave",
           "Still Water Cavern",
-          "Sunlit Cavern)"
+          "Sunlit Cavern"
         ]
       },
       "shining-pearl": {
         "locations": [
           "Eterna Forest",
-          "Honey Trees (Routes 205–222, Eterna Forest, Floaroma Meadow, Fuego Ironworks, Valley Windworks",
+          "Honey Trees (Routes 205–222, Eterna Forest, Floaroma Meadow, Fuego Ironworks, Valley Windworks)",
           "Grand Underground Grassland Cave",
           "Riverbank Cave",
           "Still Water Cavern",
-          "Sunlit Cavern)"
+          "Sunlit Cavern"
         ]
       }
     },
@@ -2532,11 +2528,11 @@
       "brilliant-diamond": {
         "locations": [
           "Eterna Forest",
-          "Honey Trees (Routes 205–222, Eterna Forest, Floaroma Meadow, Fuego Ironworks, Valley Windworks",
+          "Honey Trees (Routes 205–222, Eterna Forest, Floaroma Meadow, Fuego Ironworks, Valley Windworks)",
           "Grand Underground Grassland Cave",
           "Riverbank Cave",
           "Still Water Cavern",
-          "Sunlit Cavern)"
+          "Sunlit Cavern"
         ]
       },
       "shining-pearl": {
@@ -2567,11 +2563,11 @@
       "shining-pearl": {
         "locations": [
           "Eterna Forest",
-          "Honey Trees (Routes 205–222, Eterna Forest, Floaroma Meadow, Fuego Ironworks, Valley Windworks",
+          "Honey Trees (Routes 205–222, Eterna Forest, Floaroma Meadow, Fuego Ironworks, Valley Windworks)",
           "Grand Underground Grassland Cave",
           "Riverbank Cave",
           "Still Water Cavern",
-          "Sunlit Cavern)"
+          "Sunlit Cavern"
         ]
       }
     },
@@ -2591,7 +2587,7 @@
     "278": {
       "brilliant-diamond": {
         "locations": [
-          "Honey Trees (Routes 205–222, and Sinnoh, Fuego Ironworks (Grass)",
+          "Honey Trees (Routes 205–222, Fuego Ironworks (Grass) )",
           "Routes Sinnoh",
           "Sinnoh",
           "and Sinnoh",
@@ -2608,7 +2604,7 @@
       },
       "shining-pearl": {
         "locations": [
-          "Honey Trees (Routes 205–222, and Sinnoh, Fuego Ironworks (Grass)",
+          "Honey Trees (Routes 205–222, Fuego Ironworks (Grass) )",
           "Routes Sinnoh",
           "Sinnoh",
           "and Sinnoh",
@@ -2627,7 +2623,7 @@
     "279": {
       "brilliant-diamond": {
         "locations": [
-          "Honey Trees (Routes 205–222, and Sinnoh, Canalave City, Fuego Ironworks, Iron Island, Pastoria City, Pokémon League, Sunyshore City, Valley Windworks (Surfing)",
+          "Honey Trees (Routes 205–222, Canalave City, Fuego Ironworks, Iron Island, Pastoria City, Pokémon League, Sunyshore City, Valley Windworks (Surfing) )",
           "Grand Underground Spacious Cave",
           "Fountainspring Cave",
           "Riverbank Cave",
@@ -2636,7 +2632,7 @@
       },
       "shining-pearl": {
         "locations": [
-          "Honey Trees (Routes 205–222, and Sinnoh, Canalave City, Fuego Ironworks, Iron Island, Pastoria City, Pokémon League, Sunyshore City, Valley Windworks (Surfing)",
+          "Honey Trees (Routes 205–222, Canalave City, Fuego Ironworks, Iron Island, Pastoria City, Pokémon League, Sunyshore City, Valley Windworks (Surfing) )",
           "Grand Underground Spacious Cave",
           "Fountainspring Cave",
           "Riverbank Cave",
@@ -2719,7 +2715,7 @@
     "307": {
       "brilliant-diamond": {
         "locations": [
-          "Honey Trees (Routes 205–222, and Sinnoh, Acuity Lakefront, Mount Coronet",
+          "Honey Trees (Routes 205–222, Acuity Lakefront, Mount Coronet)",
           "Grand Underground Dazzling Cave",
           "Stargleam Cavern",
           "Whiteout Cave (After defeating Candice)"
@@ -2727,7 +2723,7 @@
       },
       "shining-pearl": {
         "locations": [
-          "Honey Trees (Routes 205–222, and Sinnoh, Acuity Lakefront, Mount Coronet",
+          "Honey Trees (Routes 205–222, Acuity Lakefront, Mount Coronet)",
           "Grand Underground Dazzling Cave",
           "Stargleam Cavern",
           "Whiteout Cave (After defeating Candice)"
@@ -2755,27 +2751,27 @@
     "315": {
       "brilliant-diamond": {
         "locations": [
-          "Honey Trees (Routes 205–222, and Sinnoh, Trophy Garden, Great Marsh",
+          "Honey Trees (Routes 205–222, Trophy Garden, Great Marsh)",
           "Grand Underground Grassland Cave",
           "Swampy Cave",
           "Sunlit Cavern",
-          "Bogsunk Cavern)"
+          "Bogsunk Cavern"
         ]
       },
       "shining-pearl": {
         "locations": [
-          "Honey Trees (Routes 205–222, and Sinnoh, Trophy Garden, Great Marsh",
+          "Honey Trees (Routes 205–222, Trophy Garden, Great Marsh)",
           "Grand Underground Grassland Cave",
           "Swampy Cave",
           "Sunlit Cavern",
-          "Bogsunk Cavern)"
+          "Bogsunk Cavern"
         ]
       }
     },
     "333": {
       "brilliant-diamond": {
         "locations": [
-          "Route 211Eastern Section of Route (Poké Radar)",
+          "Route 211 Eastern Section of Route (Poké Radar)",
           "Grand Underground Spacious Cave",
           "Whiteout Cave",
           "Icy Cave",
@@ -2785,7 +2781,7 @@
       },
       "shining-pearl": {
         "locations": [
-          "Route 211Eastern Section of Route (Poké Radar)",
+          "Route 211 Eastern Section of Route (Poké Radar)",
           "Grand Underground Spacious Cave",
           "Whiteout Cave",
           "Icy Cave",
@@ -2809,7 +2805,7 @@
     "339": {
       "brilliant-diamond": {
         "locations": [
-          "Honey Trees (Routes 205–222, Celestic Town, Eterna City, Great Marsh, Mt. Coronet, Oreburgh Gate, Ravaged Path (Good Rod)",
+          "Honey Trees (Routes 205–222, Celestic Town, Eterna City, Great Marsh, Mt. Coronet, Oreburgh Gate, Ravaged Path (Good Rod) )",
           "Grand Underground Fountainspring Cave",
           "Riverbank Cave",
           "Still Water Cavern",
@@ -2819,7 +2815,7 @@
       },
       "shining-pearl": {
         "locations": [
-          "Honey Trees (Routes 205–222, Celestic Town, Eterna City, Great Marsh, Mt. Coronet, Oreburgh Gate, Ravaged Path (Good Rod)",
+          "Honey Trees (Routes 205–222, Celestic Town, Eterna City, Great Marsh, Mt. Coronet, Oreburgh Gate, Ravaged Path (Good Rod) )",
           "Grand Underground Fountainspring Cave",
           "Riverbank Cave",
           "Still Water Cavern",
@@ -2831,7 +2827,7 @@
     "340": {
       "brilliant-diamond": {
         "locations": [
-          "Honey Trees (Routes 205–222, and Sinnoh, Celestic Town, Eterna City, Great Marsh, Mt. Coronet, Oreburgh Gate, Ravaged Path (Super Rod)",
+          "Honey Trees (Routes 205–222, Celestic Town, Eterna City, Great Marsh, Mt. Coronet, Oreburgh Gate, Ravaged Path (Super Rod) )",
           "Grand Underground Fountainspring Cave",
           "Riverbank Cave",
           "Still Water Cavern",
@@ -2841,7 +2837,7 @@
       },
       "shining-pearl": {
         "locations": [
-          "Honey Trees (Routes 205–222, and Sinnoh, Celestic Town, Eterna City, Great Marsh, Mt. Coronet, Oreburgh Gate, Ravaged Path (Super Rod)",
+          "Honey Trees (Routes 205–222, Celestic Town, Eterna City, Great Marsh, Mt. Coronet, Oreburgh Gate, Ravaged Path (Super Rod) )",
           "Grand Underground Fountainspring Cave",
           "Riverbank Cave",
           "Still Water Cavern",
@@ -2945,7 +2941,7 @@
           "Grand Underground Spacious Cave",
           "Grassland Cave",
           "Dazzling Cave",
-          "Sunlit CavernAfter obtaining the National Pokédex",
+          "Sunlit Cavern After obtaining the National Pokédex",
           "Stargleam Cavern",
           "Big Bluff Cavern"
         ]
@@ -2956,7 +2952,7 @@
           "Grand Underground Spacious Cave",
           "Grassland Cave",
           "Dazzling Cave",
-          "Sunlit CavernAfter obtaining the National Pokédex",
+          "Sunlit Cavern After obtaining the National Pokédex",
           "Stargleam Cavern",
           "Big Bluff Cavern"
         ]
@@ -3133,12 +3129,12 @@
     "396": {
       "brilliant-diamond": {
         "locations": [
-          "Honey Trees (Routes 205–222, and Sinnoh, Lake Verity, Great Marsh)"
+          "Honey Trees (Routes 205–222, Lake Verity, Great Marsh)"
         ]
       },
       "shining-pearl": {
         "locations": [
-          "Honey Trees (Routes 205–222, and Sinnoh, Lake Verity, Great Marsh)"
+          "Honey Trees (Routes 205–222, Lake Verity, Great Marsh)"
         ]
       }
     },
@@ -3169,31 +3165,31 @@
     "399": {
       "brilliant-diamond": {
         "locations": [
-          "Honey Trees (Routes 205–222, Lake Verity, Great Marsh, Valley Windworks",
+          "Honey Trees (Routes 205–222, Lake Verity, Great Marsh, Valley Windworks)",
           "Grand Underground Spacious Cave",
           "Grassland Cave",
           "Fountainspring Cave",
           "Riverbank Cave",
           "Still Water Cavern",
-          "Sunlit Cavern)"
+          "Sunlit Cavern"
         ]
       },
       "shining-pearl": {
         "locations": [
-          "Honey Trees (Routes 205–222, Lake Verity, Great Marsh, Valley Windworks",
+          "Honey Trees (Routes 205–222, Lake Verity, Great Marsh, Valley Windworks)",
           "Grand Underground Spacious Cave",
           "Grassland Cave",
           "Fountainspring Cave",
           "Riverbank Cave",
           "Still Water Cavern",
-          "Sunlit Cavern)"
+          "Sunlit Cavern"
         ]
       }
     },
     "400": {
       "brilliant-diamond": {
         "locations": [
-          "Honey Trees (Routes 205–222, Lake Valor, Sendoff Spring, Great Marsh, Lake Acuity, Valor Lakefront",
+          "Honey Trees (Routes 205–222, Lake Valor, Sendoff Spring, Great Marsh, Lake Acuity, Valor Lakefront)",
           "Grand Underground Spacious Cave",
           "Grassland Cave",
           "Sunlit Cavern",
@@ -3204,7 +3200,7 @@
       },
       "shining-pearl": {
         "locations": [
-          "Honey Trees (Routes 205–222, Lake Valor, Sendoff Spring, Great Marsh, Lake Acuity, Valor Lakefront",
+          "Honey Trees (Routes 205–222, Lake Valor, Sendoff Spring, Great Marsh, Lake Acuity, Valor Lakefront)",
           "Grand Underground Spacious Cave",
           "Grassland Cave",
           "Sunlit Cavern",
@@ -3217,7 +3213,7 @@
     "401": {
       "brilliant-diamond": {
         "locations": [
-          "Honey Trees (Routes 205–222, Sinnoh (Morning, Night)",
+          "Honey Trees (Routes 205–222, Sinnoh (Morning) (Night) )",
           "Spacious Cave",
           "Grassland Cave",
           "Riverbank Cave",
@@ -3227,7 +3223,7 @@
       },
       "shining-pearl": {
         "locations": [
-          "Honey Trees (Routes 205–222, Sinnoh (Morning, Night)",
+          "Honey Trees (Routes 205–222, Sinnoh (Morning) (Night) )",
           "Spacious Cave",
           "Grassland Cave",
           "Riverbank Cave",
@@ -3251,20 +3247,20 @@
     "403": {
       "brilliant-diamond": {
         "locations": [
-          "Honey Trees (Routes 205–222, and Sinnoh, Fuego Ironworks",
+          "Honey Trees (Routes 205–222, Fuego Ironworks)",
           "Grand Underground Spacious Cave",
           "Grassland Cave",
           "Sunlit Cavern",
-          "Whiteout Cave)"
+          "Whiteout Cave"
         ]
       },
       "shining-pearl": {
         "locations": [
-          "Honey Trees (Routes 205–222, and Sinnoh, Fuego Ironworks",
+          "Honey Trees (Routes 205–222, Fuego Ironworks)",
           "Grand Underground Spacious Cave",
           "Grassland Cave",
           "Sunlit Cavern",
-          "Whiteout Cave)"
+          "Whiteout Cave"
         ]
       }
     },
@@ -3360,7 +3356,7 @@
       "shining-pearl": {
         "locations": [
           "Trade",
-          "Evolve CranidosIf the player's Trainer ID is an odd number"
+          "Evolve Cranidos If the player's Trainer ID is an odd number"
         ]
       }
     },
@@ -3386,19 +3382,19 @@
       "brilliant-diamond": {
         "locations": [
           "Trade",
-          "Evolve ShieldonIf the player's Trainer ID is an even number"
+          "Evolve Shieldon If the player's Trainer ID is an even number"
         ]
       }
     },
     "412": {
       "brilliant-diamond": {
         "locations": [
-          "Honey Trees (Routes 205–222, Eterna Forest, Floaroma Meadow, Fuego Ironworks, Valley Windworks (Plant Cloak)"
+          "Honey Trees (Routes 205–222, Eterna Forest, Floaroma Meadow, Fuego Ironworks, Valley Windworks (Plant Cloak) )"
         ]
       },
       "shining-pearl": {
         "locations": [
-          "Honey Trees (Routes 205–222, Eterna Forest, Floaroma Meadow, Fuego Ironworks, Valley Windworks (Plant Cloak)"
+          "Honey Trees (Routes 205–222, Eterna Forest, Floaroma Meadow, Fuego Ironworks, Valley Windworks (Plant Cloak) )"
         ]
       }
     },
@@ -3429,16 +3425,16 @@
     "415": {
       "brilliant-diamond": {
         "locations": [
-          "Honey Trees (Routes 205–222, Eterna Forest, Floaroma Meadow, Fuego Ironworks, Valley Windworks",
+          "Honey Trees (Routes 205–222, Eterna Forest, Floaroma Meadow, Fuego Ironworks, Valley Windworks)",
           "Grand Underground Grassland Cave",
-          "Sunlit Cavern)"
+          "Sunlit Cavern"
         ]
       },
       "shining-pearl": {
         "locations": [
-          "Honey Trees (Routes 205–222, Eterna Forest, Floaroma Meadow, Fuego Ironworks, Valley Windworks",
+          "Honey Trees (Routes 205–222, Eterna Forest, Floaroma Meadow, Fuego Ironworks, Valley Windworks)",
           "Grand Underground Grassland Cave",
-          "Sunlit Cavern)"
+          "Sunlit Cavern"
         ]
       }
     },
@@ -3477,46 +3473,46 @@
     "418": {
       "brilliant-diamond": {
         "locations": [
-          "Honey Trees (Routes 205–222, and Sinnoh, Valley Windworks",
+          "Honey Trees (Routes 205–222, Valley Windworks)",
           "Grand Underground Riverbank Cave",
           "Fountainspring Cave",
-          "Still Water Cavern)"
+          "Still Water Cavern"
         ]
       },
       "shining-pearl": {
         "locations": [
-          "Honey Trees (Routes 205–222, and Sinnoh, Valley Windworks",
+          "Honey Trees (Routes 205–222, Valley Windworks)",
           "Grand Underground Riverbank Cave",
           "Fountainspring Cave",
-          "Still Water Cavern)"
+          "Still Water Cavern"
         ]
       }
     },
     "419": {
       "brilliant-diamond": {
         "locations": [
-          "Honey Trees (Routes 205–222, and Sinnoh, Fuego Ironworks, Victory Road)"
+          "Honey Trees (Routes 205–222, Fuego Ironworks, Victory Road)"
         ]
       },
       "shining-pearl": {
         "locations": [
-          "Honey Trees (Routes 205–222, and Sinnoh, Fuego Ironworks, Victory Road)"
+          "Honey Trees (Routes 205–222, Fuego Ironworks, Victory Road)"
         ]
       }
     },
     "420": {
       "brilliant-diamond": {
         "locations": [
-          "Honey Trees (Routes 205–222, Eterna Forest, Floaroma Meadow, Fuego Ironworks, Valley Windworks",
+          "Honey Trees (Routes 205–222, Eterna Forest, Floaroma Meadow, Fuego Ironworks, Valley Windworks)",
           "Grand Underground Grassland Cave",
-          "Sunlit Cavern)"
+          "Sunlit Cavern"
         ]
       },
       "shining-pearl": {
         "locations": [
-          "Honey Trees (Routes 205–222, Eterna Forest, Floaroma Meadow, Fuego Ironworks, Valley Windworks",
+          "Honey Trees (Routes 205–222, Eterna Forest, Floaroma Meadow, Fuego Ironworks, Valley Windworks)",
           "Grand Underground Grassland Cave",
-          "Sunlit Cavern)"
+          "Sunlit Cavern"
         ]
       }
     },
@@ -3535,36 +3531,36 @@
     "422": {
       "brilliant-diamond": {
         "locations": [
-          "Honey Trees (Routes 205–222, and Sinnoh, Fuego Ironworks, Valley Windworks (tall grass) (West Sea)",
+          "Honey Trees (Routes 205–222, Fuego Ironworks, Valley Windworks (tall grass) (West Sea) )",
           "Routes Sinnoh and Sinnoh (tall grass) (East Sea)",
-          "Grand Underground Fountainspring Cave)"
+          "Grand Underground Fountainspring Cave"
         ]
       },
       "shining-pearl": {
         "locations": [
-          "Honey Trees (Routes 205–222, and Sinnoh, Fuego Ironworks, Valley Windworks (tall grass) (West Sea)",
+          "Honey Trees (Routes 205–222, Fuego Ironworks, Valley Windworks (tall grass) (West Sea) )",
           "Routes Sinnoh and Sinnoh (tall grass) (East Sea)",
-          "Grand Underground Fountainspring Cave)"
+          "Grand Underground Fountainspring Cave"
         ]
       }
     },
     "423": {
       "brilliant-diamond": {
         "locations": [
-          "Routes Sinnoh and Honey Trees (Routes 205–222, Fuego Ironworks (tall grass) (West Sea)",
+          "Routes Sinnoh and Honey Trees (Routes 205–222, Fuego Ironworks (tall grass) (West Sea) )",
           "Routes Sinnoh",
           "Sinnoh",
           "and Sinnoh (tall grass) (East Sea)",
-          "Grand Underground Fountainspring Cave)"
+          "Grand Underground Fountainspring Cave"
         ]
       },
       "shining-pearl": {
         "locations": [
-          "Routes Sinnoh and Honey Trees (Routes 205–222, Fuego Ironworks (tall grass) (West Sea)",
+          "Routes Sinnoh and Honey Trees (Routes 205–222, Fuego Ironworks (tall grass) (West Sea) )",
           "Routes Sinnoh",
           "Sinnoh",
           "and Sinnoh (tall grass) (East Sea)",
-          "Grand Underground Fountainspring Cave)"
+          "Grand Underground Fountainspring Cave"
         ]
       }
     },
@@ -3709,7 +3705,7 @@
     "434": {
       "brilliant-diamond": {
         "locations": [
-          "Honey Trees (Routes 205–222, and Sinnoh",
+          "Honey Trees (Routes 205–222, and Sinnoh)",
           "Grand Underground Grassland Cave",
           "Spacious Cave",
           "Riverbank Cave",
@@ -3817,13 +3813,13 @@
     "441": {
       "brilliant-diamond": {
         "locations": [
-          "Routes Sinnoh and Sinnoh (Morning, Day)",
+          "Routes Sinnoh and Sinnoh (Morning) (Day)",
           "Trade Buizel at Eterna Condominiums"
         ]
       },
       "shining-pearl": {
         "locations": [
-          "Routes Sinnoh and Sinnoh (Morning, Day)",
+          "Routes Sinnoh and Sinnoh (Morning) (Day)",
           "Trade Buizel at Eterna Condominiums"
         ]
       }
@@ -3889,7 +3885,7 @@
     "446": {
       "brilliant-diamond": {
         "locations": [
-          "Honey Trees (Routes 205–222, Eterna Forest, Floaroma Meadow, Fuego Ironworks, Valley Windworks",
+          "Honey Trees (Routes 205–222, Eterna Forest, Floaroma Meadow, Fuego Ironworks, Valley Windworks)",
           "Grand Underground Grassland Cave",
           "Spacious Cave",
           "Whiteout Cave",
@@ -3900,7 +3896,7 @@
       },
       "shining-pearl": {
         "locations": [
-          "Honey Trees (Routes 205–222, Eterna Forest, Floaroma Meadow, Fuego Ironworks, Valley Windworks",
+          "Honey Trees (Routes 205–222, Eterna Forest, Floaroma Meadow, Fuego Ironworks, Valley Windworks)",
           "Grand Underground Grassland Cave",
           "Spacious Cave",
           "Whiteout Cave",
@@ -4049,24 +4045,24 @@
     "456": {
       "brilliant-diamond": {
         "locations": [
-          "Honey Trees (Routes 205–222, and Sinnoh, Fuego Ironworks, Iron Island, Canalave City, Valley Windworks (Good Rod)"
+          "Honey Trees (Routes 205–222, Fuego Ironworks, Iron Island, Canalave City, Valley Windworks (Good Rod) )"
         ]
       },
       "shining-pearl": {
         "locations": [
-          "Honey Trees (Routes 205–222, and Sinnoh, Fuego Ironworks, Iron Island, Canalave City, Valley Windworks (Good Rod)"
+          "Honey Trees (Routes 205–222, Fuego Ironworks, Iron Island, Canalave City, Valley Windworks (Good Rod) )"
         ]
       }
     },
     "457": {
       "brilliant-diamond": {
         "locations": [
-          "Honey Trees (Routes 205–222, and Sinnoh, Fuego Ironworks, Iron Island, Canalave City, Valley Windworks (Super Rod)"
+          "Honey Trees (Routes 205–222, Fuego Ironworks, Iron Island, Canalave City, Valley Windworks (Super Rod) )"
         ]
       },
       "shining-pearl": {
         "locations": [
-          "Honey Trees (Routes 205–222, and Sinnoh, Fuego Ironworks, Iron Island, Canalave City, Valley Windworks (Super Rod)"
+          "Honey Trees (Routes 205–222, Fuego Ironworks, Iron Island, Canalave City, Valley Windworks (Super Rod) )"
         ]
       }
     },
@@ -4339,12 +4335,12 @@
     "479": {
       "brilliant-diamond": {
         "locations": [
-          "TV in Old ChateauN (Only one) (After obtaining the National Pokédex)"
+          "TV in Old Chateau (Night) (Only one) (After obtaining the National Pokédex)"
         ]
       },
       "shining-pearl": {
         "locations": [
-          "TV in Old ChateauN (Only one) (After obtaining the National Pokédex)"
+          "TV in Old Chateau (Night) (Only one) (After obtaining the National Pokédex)"
         ]
       }
     },

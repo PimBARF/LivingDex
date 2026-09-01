@@ -5696,7 +5696,7 @@
       "platinum": {
         "locations": [
           "Trade",
-          "Evolve CranidosIf the player's Trainer ID is an odd number"
+          "Evolve Cranidos If the player's Trainer ID is an odd number"
         ]
       }
     },
@@ -5726,7 +5726,7 @@
       "platinum": {
         "locations": [
           "Trade",
-          "Evolve ShieldonIf the player's Trainer ID is an even number"
+          "Evolve Shieldon If the player's Trainer ID is an even number"
         ]
       }
     },

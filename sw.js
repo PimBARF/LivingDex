@@ -5,6 +5,7 @@
  */
 
 const CACHE_VERSION = "v1.0.3";
+const CACHE_VERSION = "v1.0.4";
 const SHELL_CACHE = `livingdex-shell-${CACHE_VERSION}`;
 const DATA_CACHE = `livingdex-data-${CACHE_VERSION}`;
 const SPRITE_CACHE = "livingdex-sprites-v1";

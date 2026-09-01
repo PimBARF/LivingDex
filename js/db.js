@@ -187,11 +187,28 @@ function prettifyVersionName(name) {
 
 /**
  * Joins a list of version names into a formatted slash-separated string.
+ * Supports clean grouping of expansion pass versions (e.g. 'Sword / Shield Expansion Pass').
  *
  * @param {string[]} versions - Array of version identifiers.
  * @returns {string} Formatted version list.
  */
 function joinVersionNames(versions) {
+  if (!versions || !versions.length) return "";
+
+  const allExpansion =
+    versions.length > 1 &&
+    versions.every((v) => v.endsWith("-expansion-pass"));
+
+  if (allExpansion) {
+    const baseNames = versions.map((v) =>
+      prettifyVersionName(v.replace(/-expansion-pass$/, "")),
+    );
+    if (baseNames.length === 2) {
+      return `${baseNames[0]} / ${baseNames[1]} Expansion Pass`;
+    }
+    return `${baseNames.slice(0, -1).join(" / ")} / ${baseNames[baseNames.length - 1]} Expansion Pass`;
+  }
+
   const names = versions.map(prettifyVersionName).filter(Boolean);
   if (!names.length) return "";
   if (names.length === 1) return names[0];
@@ -503,6 +520,8 @@ function findPreEvolutionName(paths, speciesId) {
 
 /**
  * Clusters game versions by identical location arrays into unified display groups.
+ * Handles base game versions and expansion pass versions separately so expansion passes
+ * are only displayed when encounter locations are present.
  *
  * @param {Object} gameData - Game dataset from games/*.json.
  * @param {number} speciesId - Target species ID.
@@ -513,6 +532,7 @@ function resolveEncounterGroups(gameData, speciesId, preEvolutionName) {
   if (!gameData || !gameData.versions) return [];
 
   const versionNames = gameData.versions;
+  const allVersions = gameData.versions;
   const rawEncounters = gameData.encounters?.[String(speciesId)] || {};
 
   const versionLocationMap = new Map();
@@ -520,6 +540,12 @@ function resolveEncounterGroups(gameData, speciesId, preEvolutionName) {
     const locs = rawEncounters[version]?.locations || [];
     versionLocationMap.set(version, locs);
   }
+  const baseVersions = allVersions.filter(
+    (v) => !v.endsWith("-expansion-pass"),
+  );
+  const expansionVersions = allVersions.filter((v) =>
+    v.endsWith("-expansion-pass"),
+  );
 
   const groupMap = new Map();
   for (const version of versionNames) {
@@ -527,20 +553,100 @@ function resolveEncounterGroups(gameData, speciesId, preEvolutionName) {
     const key = locs.slice().sort().join("|||");
     if (!groupMap.has(key)) {
       groupMap.set(key, { versions: [], entries: locs });
+  /**
+   * Clusters a subset of versions by identical location entries.
+   *
+   * @param {string[]} versions - Versions to cluster.
+   * @param {boolean} [isExpansion=false] - Whether these are expansion versions.
+   * @returns {Array<Object>} Clustered encounter groups.
+   */
+  function clusterVersionSet(versions, isExpansion = false) {
+    if (!versions.length) return [];
+
+    const versionLocationMap = new Map();
+    for (const version of versions) {
+      const locs = rawEncounters[version]?.locations || [];
+      versionLocationMap.set(version, locs);
     }
     groupMap.get(key).versions.push(version);
+
+    const groupMap = new Map();
+    for (const version of versions) {
+      const locs = versionLocationMap.get(version) || [];
+      const key = locs.slice().sort().join("|||");
+      if (!groupMap.has(key)) {
+        groupMap.set(key, { versions: [], entries: locs });
+      }
+      groupMap.get(key).versions.push(version);
+    }
+
+    const groups = Array.from(groupMap.values());
+    const populatedGroups = groups.filter((g) => g.entries.length > 0);
+    const populatedVersions = populatedGroups.flatMap((g) => g.versions);
+
+    // Expansion groups are omitted completely if no expansion encounters exist
+    if (isExpansion && !populatedGroups.length) {
+      return [];
+    }
+
+    // If no versions in this set have encounters
+    if (!populatedGroups.length) {
+      return [];
+    }
+
+    // All versions in this set share identical encounters
+    if (
+      populatedGroups.length === 1 &&
+      populatedGroups[0].versions.length === versions.length
+    ) {
+      return [
+        {
+          versionHeader: joinVersionNames(versions),
+          locations: populatedGroups[0].entries,
+        },
+      ];
+    }
+
+    // Mixed versions
+    return groups
+      .filter((groupData) => groupData.entries.length > 0 || !isExpansion)
+      .map((groupData) => {
+        const header = joinVersionNames(groupData.versions);
+        if (groupData.entries.length > 0) {
+          return {
+            versionHeader: header,
+            locations: groupData.entries,
+          };
+        }
+
+        const tradeSources = populatedVersions.filter(
+          (v) => !groupData.versions.includes(v),
+        );
+        return {
+          versionHeader: header,
+          locations: [],
+          tradeNote: formatTradeSourceList(tradeSources),
+        };
+      });
   }
 
   const groups = Array.from(groupMap.values());
   const populatedGroups = groups.filter((g) => g.entries.length > 0);
   const populatedVersions = populatedGroups.flatMap((g) => g.versions);
+  const baseGroups = clusterVersionSet(baseVersions, false);
+  const expansionGroups = clusterVersionSet(expansionVersions, true);
+  const combined = [...baseGroups, ...expansionGroups];
 
   // Case 1: No encounters in any version
   if (!populatedGroups.length) {
+  if (!combined.length) {
     if (preEvolutionName) {
       return [
         {
           versionHeader: joinVersionNames(versionNames),
+          versionHeader: joinVersionNames(
+            baseVersions.length ? baseVersions : allVersions,
+          ),
           locations: [],
           evolveNote: `Evolve ${preEvolutionName}`,
         },
@@ -587,6 +693,7 @@ function resolveEncounterGroups(gameData, speciesId, preEvolutionName) {
       tradeNote: formatTradeSourceList(tradeSources),
     };
   });
+  return combined;
 }
 
 /**

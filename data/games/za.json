@@ -1254,7 +1254,7 @@
           "Vert Sector 8",
           "Wild Zone 1",
           "Bleu District: Bleu Sector 7",
-          "Magenta District: Magenta Sector 3 14px (only one alpha, during Side Mission 043)",
+          "Magenta District: Magenta Sector 3 (Alpha) (only one alpha, during Side Mission 043)",
           "Magenta Sector 4",
           "Magenta Sector 6",
           "Magenta Sector 7",
@@ -1362,7 +1362,7 @@
         "locations": [
           "Bleu District: Bleu Sector 5",
           "Rouge District: Rouge Sector 4",
-          "Jaune District: Jaune Sector 4 14px"
+          "Jaune District: Jaune Sector 4 (Alpha)"
         ]
       }
     },
@@ -1384,7 +1384,7 @@
       "legends-z-a": {
         "locations": [
           "Bleu District: Wild Zone 10",
-          "Magenta District: Lysandre Labs 14px",
+          "Magenta District: Lysandre Labs (Alpha)",
           "Rouge District: Rouge Sector 8"
         ]
       }
@@ -1394,7 +1394,7 @@
         "locations": [
           "Vert District: Vert Sector 8",
           "Rouge District: Wild Zone 3",
-          "Jaune District: Wild Zone 6 14px"
+          "Jaune District: Wild Zone 6 (Alpha)"
         ]
       }
     },
@@ -1402,7 +1402,7 @@
       "legends-z-a": {
         "locations": [
           "Magenta District: Trade Kantonian Raichu at Quasartico Inc. during Side Mission 108 (Alolan Form)",
-          "Centrico Plaza: Wild Zone 20 14px (Kantonian Form)"
+          "Centrico Plaza: Wild Zone 20 (Alpha) (Kantonian Form)"
         ]
       }
     },
@@ -1416,7 +1416,7 @@
     "36": {
       "legends-z-a": {
         "locations": [
-          "Centrico Plaza: Wild Zone 20 14px"
+          "Centrico Plaza: Wild Zone 20 (Alpha)"
         ]
       }
     },
@@ -1443,7 +1443,7 @@
     "65": {
       "legends-z-a": {
         "locations": [
-          "Centrico Plaza: Wild Zone 20 14px"
+          "Centrico Plaza: Wild Zone 20 (Alpha)"
         ]
       }
     },
@@ -1465,7 +1465,7 @@
     "68": {
       "legends-z-a": {
         "locations": [
-          "Centrico Plaza: Wild Zone 20 14px"
+          "Centrico Plaza: Wild Zone 20 (Alpha)"
         ]
       }
     },
@@ -1504,7 +1504,7 @@
     "71": {
       "legends-z-a": {
         "locations": [
-          "Centrico Plaza: Wild Zone 20 14px"
+          "Centrico Plaza: Wild Zone 20 (Alpha)"
         ]
       }
     },
@@ -1520,7 +1520,7 @@
     "80": {
       "legends-z-a": {
         "locations": [
-          "Jaune District: Wild Zone 11 14px (Kantonian Form)",
+          "Jaune District: Wild Zone 11 (Alpha) (Kantonian Form)",
           "Evolve Slowpoke (Galarian Form)"
         ]
       }
@@ -1562,7 +1562,7 @@
           "Jaune District: Jaune Sector 2",
           "Jaune Sector 4",
           "Jaune Sector 9",
-          "Wild Zone 15N"
+          "Wild Zone 15 (Night)"
         ]
       }
     },
@@ -1570,7 +1570,7 @@
       "legends-z-a": {
         "locations": [
           "Bleu District: Old Building (only two, during Main Mission 20)",
-          "Centrico Plaza: Wild Zone 20 14px"
+          "Centrico Plaza: Wild Zone 20 (Alpha)"
         ]
       }
     },
@@ -1585,14 +1585,14 @@
       "legends-z-a": {
         "locations": [
           "Jaune District: Wild Zone 19",
-          "Centrico Plaza: Wild Zone 20 14px"
+          "Centrico Plaza: Wild Zone 20 (Alpha)"
         ]
       }
     },
     "120": {
       "legends-z-a": {
         "locations": [
-          "Vert District: Wild Zone 2N",
+          "Vert District: Wild Zone 2 (Night)",
           "Bleu District: Bleu Sector 9",
           "Wild Zone 10"
         ]
@@ -1601,15 +1601,15 @@
     "121": {
       "legends-z-a": {
         "locations": [
-          "Bleu District: Wild Zone 16N",
-          "Centrico Plaza: Wild Zone 20 14px"
+          "Bleu District: Wild Zone 16 (Night)",
+          "Centrico Plaza: Wild Zone 20 (Alpha)"
         ]
       }
     },
     "123": {
       "legends-z-a": {
         "locations": [
-          "Rouge District: Wild Zone 13N"
+          "Rouge District: Wild Zone 13 (Night)"
         ]
       }
     },
@@ -1617,7 +1617,7 @@
       "legends-z-a": {
         "locations": [
           "Rouge District: Wild Zone 13",
-          "Centrico Plaza: Wild Zone 20 14px"
+          "Centrico Plaza: Wild Zone 20 (Alpha)"
         ]
       }
     },
@@ -1641,7 +1641,7 @@
       "legends-z-a": {
         "locations": [
           "Jaune District: Wild Zone 11",
-          "Centrico Plaza: Wild Zone 20 14px"
+          "Centrico Plaza: Wild Zone 20 (Alpha)"
         ]
       }
     },
@@ -1662,21 +1662,21 @@
     "134": {
       "legends-z-a": {
         "locations": [
-          "Centrico Plaza: Wild Zone 20 14px"
+          "Centrico Plaza: Wild Zone 20 (Alpha)"
         ]
       }
     },
     "135": {
       "legends-z-a": {
         "locations": [
-          "Centrico Plaza: Wild Zone 20 14px"
+          "Centrico Plaza: Wild Zone 20 (Alpha)"
         ]
       }
     },
     "136": {
       "legends-z-a": {
         "locations": [
-          "Centrico Plaza: Wild Zone 20 14px"
+          "Centrico Plaza: Wild Zone 20 (Alpha)"
         ]
       }
     },
@@ -1713,7 +1713,7 @@
     "149": {
       "legends-z-a": {
         "locations": [
-          "Centrico Plaza: Wild Zone 20 14px"
+          "Centrico Plaza: Wild Zone 20 (Alpha)"
         ]
       }
     },
@@ -1789,7 +1789,7 @@
           "Bleu District: Bleu Sector 1",
           "Bleu Sector 5",
           "Magenta District: The Sewers",
-          "Centrico Plaza: Wild Zone 20 14px"
+          "Centrico Plaza: Wild Zone 20 (Alpha)"
         ]
       }
     },
@@ -1830,7 +1830,7 @@
     "181": {
       "legends-z-a": {
         "locations": [
-          "Bleu District: Wild Zone 16 14px"
+          "Bleu District: Wild Zone 16 (Alpha)"
         ]
       }
     },
@@ -1859,7 +1859,7 @@
     "208": {
       "legends-z-a": {
         "locations": [
-          "Rouge District: Wild Zone 3 14px (only one, during Main Mission 40)"
+          "Rouge District: Wild Zone 3 (Alpha) (only one, during Main Mission 40)"
         ]
       }
     },
@@ -1874,7 +1874,7 @@
       "legends-z-a": {
         "locations": [
           "Rouge District: Wild Zone 13",
-          "Centrico Plaza: Wild Zone 20 14px",
+          "Centrico Plaza: Wild Zone 20 (Alpha)",
           "Trade with Tracie in Passage du Palais during Side Mission 002"
         ]
       }
@@ -1884,7 +1884,7 @@
         "locations": [
           "Bleu District: Aymlis Park",
           "Wild Zone 12",
-          "Centrico Plaza: Wild Zone 20 14px"
+          "Centrico Plaza: Wild Zone 20 (Alpha)"
         ]
       }
     },
@@ -1892,7 +1892,7 @@
       "legends-z-a": {
         "locations": [
           "Vert District: Wild Zone 17",
-          "Centrico Plaza: Wild Zone 20 14px"
+          "Centrico Plaza: Wild Zone 20 (Alpha)"
         ]
       }
     },
@@ -1908,7 +1908,7 @@
       "legends-z-a": {
         "locations": [
           "Magenta District: Lysandre Labs",
-          "Jaune District: Wild Zone 6 14px"
+          "Jaune District: Wild Zone 6 (Alpha)"
         ]
       }
     },
@@ -1934,7 +1934,7 @@
     "248": {
       "legends-z-a": {
         "locations": [
-          "Centrico Plaza: Wild Zone 20 14px"
+          "Centrico Plaza: Wild Zone 20 (Alpha)"
         ]
       }
     },
@@ -1967,7 +1967,7 @@
         "locations": [
           "Magenta District: Wild Zone 9",
           "Rouge District: Wild Zone 4 (only one, during Side Mission 003)",
-          "Centrico Plaza: Wild Zone 20 14px"
+          "Centrico Plaza: Wild Zone 20 (Alpha)"
         ]
       }
     },
@@ -1975,7 +1975,7 @@
       "legends-z-a": {
         "locations": [
           "Vert District: Vert Sector 9",
-          "Wild Zone 17 14px",
+          "Wild Zone 17 (Alpha)",
           "Bleu District: Bleu Sector 8",
           "Magenta District: Magenta Sector 6 (only one, during Side Mission 077)",
           "Magenta Sector 9",
@@ -2009,15 +2009,15 @@
     "307": {
       "legends-z-a": {
         "locations": [
-          "Jaune District: Wild Zone 6D"
+          "Jaune District: Wild Zone 6 (Day)"
         ]
       }
     },
     "308": {
       "legends-z-a": {
         "locations": [
-          "Bleu District: Wild Zone 16D",
-          "Centrico Plaza: Wild Zone 20 14px"
+          "Bleu District: Wild Zone 16 (Day)",
+          "Centrico Plaza: Wild Zone 20 (Alpha)"
         ]
       }
     },
@@ -2032,7 +2032,7 @@
     "310": {
       "legends-z-a": {
         "locations": [
-          "Magenta District: Wild Zone 9 14px",
+          "Magenta District: Wild Zone 9 (Alpha)",
           "Lysandre Labs"
         ]
       }
@@ -2054,7 +2054,7 @@
     "319": {
       "legends-z-a": {
         "locations": [
-          "Bleu District: Wild Zone 10 14px"
+          "Bleu District: Wild Zone 10 (Alpha)"
         ]
       }
     },
@@ -2068,7 +2068,7 @@
     "323": {
       "legends-z-a": {
         "locations": [
-          "Jaune District: Wild Zone 8 14px"
+          "Jaune District: Wild Zone 8 (Alpha)"
         ]
       }
     },
@@ -2081,7 +2081,7 @@
           "Bleu Sector 8",
           "Magenta District: Magenta Sector 6",
           "Magenta Sector 8",
-          "Wild Zone 18D",
+          "Wild Zone 18 (Day)",
           "Rouge District: Rouge Sector 1",
           "Rouge Sector 8",
           "Jaune District: Jaune Sector 5",
@@ -2092,8 +2092,8 @@
     "334": {
       "legends-z-a": {
         "locations": [
-          "Magenta District: Wild Zone 18D",
-          "Centrico Plaza: Wild Zone 20 14px"
+          "Magenta District: Wild Zone 18 (Day)",
+          "Centrico Plaza: Wild Zone 20 (Alpha)"
         ]
       }
     },
@@ -2107,14 +2107,14 @@
           "Rouge District: Rouge Sector 3",
           "Jaune District: Jaune Sector 2",
           "Jaune Sector 9",
-          "Wild Zone 15N"
+          "Wild Zone 15 (Night)"
         ]
       }
     },
     "354": {
       "legends-z-a": {
         "locations": [
-          "Jaune District: Wild Zone 15N 14px"
+          "Jaune District: Wild Zone 15 (Night) (Alpha)"
         ]
       }
     },
@@ -2125,7 +2125,7 @@
           "Magenta District: Magenta Sector 7",
           "Rouge District: Académie Étoile",
           "Jaune District: Jaune Street",
-          "Centrico Plaza: Wild Zone 20 14px",
+          "Centrico Plaza: Wild Zone 20 (Alpha)",
           "Received after defeating the Rogue Mega Absol during Main Mission 09: \"Chase That Mysterious Pokémon!\" (Only one)"
         ]
       }
@@ -2161,7 +2161,7 @@
     "373": {
       "legends-z-a": {
         "locations": [
-          "Magenta District: Wild Zone 18 14px"
+          "Magenta District: Wild Zone 18 (Alpha)"
         ]
       }
     },
@@ -2182,7 +2182,7 @@
     "376": {
       "legends-z-a": {
         "locations": [
-          "Centrico Plaza: Wild Zone 20 14px"
+          "Centrico Plaza: Wild Zone 20 (Alpha)"
         ]
       }
     },
@@ -2239,7 +2239,7 @@
     "428": {
       "legends-z-a": {
         "locations": [
-          "Magenta District: Wild Zone 18 14px"
+          "Magenta District: Wild Zone 18 (Alpha)"
         ]
       }
     },
@@ -2260,7 +2260,7 @@
     "445": {
       "legends-z-a": {
         "locations": [
-          "Centrico Plaza: Wild Zone 20 14px"
+          "Centrico Plaza: Wild Zone 20 (Alpha)"
         ]
       }
     },
@@ -2286,7 +2286,7 @@
     "449": {
       "legends-z-a": {
         "locations": [
-          "Magenta District: Wild Zone 7D"
+          "Magenta District: Wild Zone 7 (Day)"
         ]
       }
     },
@@ -2307,36 +2307,36 @@
     "460": {
       "legends-z-a": {
         "locations": [
-          "Bleu District: Wild Zone 12 14px"
+          "Bleu District: Wild Zone 12 (Alpha)"
         ]
       }
     },
     "470": {
       "legends-z-a": {
         "locations": [
-          "Centrico Plaza: Wild Zone 20 14px"
+          "Centrico Plaza: Wild Zone 20 (Alpha)"
         ]
       }
     },
     "471": {
       "legends-z-a": {
         "locations": [
-          "Centrico Plaza: Wild Zone 20 14px"
+          "Centrico Plaza: Wild Zone 20 (Alpha)"
         ]
       }
     },
     "475": {
       "legends-z-a": {
         "locations": [
-          "Bleu District: Wild Zone 5 14px (only one, during Main Mission 40)",
-          "Centrico Plaza: Wild Zone 20 14px"
+          "Bleu District: Wild Zone 5 (Alpha) (only one, during Main Mission 40)",
+          "Centrico Plaza: Wild Zone 20 (Alpha)"
         ]
       }
     },
     "478": {
       "legends-z-a": {
         "locations": [
-          "Centrico Plaza: Wild Zone 20 14px"
+          "Centrico Plaza: Wild Zone 20 (Alpha)"
         ]
       }
     },
@@ -2383,7 +2383,7 @@
           "Rouge Sector 1",
           "Rouge Sector 3",
           "Rouge Sector 6",
-          "Wild Zone 4N",
+          "Wild Zone 4 (Night)",
           "Jaune District: Jaune Street",
           "Jaune Sector 4",
           "Jaune Sector 8",
@@ -2394,7 +2394,7 @@
     "505": {
       "legends-z-a": {
         "locations": [
-          "Autumnal Avenue 14px (Only one, during Side Mission 071)",
+          "Autumnal Avenue (Alpha) (Only one, during Side Mission 071)",
           "Bleu District: Wild Zone 10"
         ]
       }
@@ -2422,7 +2422,7 @@
     "512": {
       "legends-z-a": {
         "locations": [
-          "Centrico Plaza: Wild Zone 20 14px"
+          "Centrico Plaza: Wild Zone 20 (Alpha)"
         ]
       }
     },
@@ -2449,7 +2449,7 @@
     "514": {
       "legends-z-a": {
         "locations": [
-          "Centrico Plaza: Wild Zone 20 14px"
+          "Centrico Plaza: Wild Zone 20 (Alpha)"
         ]
       }
     },
@@ -2477,7 +2477,7 @@
     "516": {
       "legends-z-a": {
         "locations": [
-          "Centrico Plaza: Wild Zone 20 14px"
+          "Centrico Plaza: Wild Zone 20 (Alpha)"
         ]
       }
     },
@@ -2514,7 +2514,7 @@
     "544": {
       "legends-z-a": {
         "locations": [
-          "Bleu District: Wild Zone 5 14px",
+          "Bleu District: Wild Zone 5 (Alpha)",
           "Jaune District: Wild Zone 15"
         ]
       }
@@ -2523,7 +2523,7 @@
       "legends-z-a": {
         "locations": [
           "Jaune District: Wild Zone 15",
-          "Centrico Plaza:Wild Zone 20 14px"
+          "Centrico Plaza: Wild Zone 20 (Alpha)"
         ]
       }
     },
@@ -2544,7 +2544,7 @@
     "553": {
       "legends-z-a": {
         "locations": [
-          "Centrico Plaza: Wild Zone 20 14px"
+          "Centrico Plaza: Wild Zone 20 (Alpha)"
         ]
       }
     },
@@ -2591,7 +2591,7 @@
       "legends-z-a": {
         "locations": [
           "Vert District: Vert Sector 8 (Only one, during Side Mission 074)",
-          "Jaune District: Jaune Sector 5 14px",
+          "Jaune District: Jaune Sector 5 (Alpha)",
           "Jaune Sector 7",
           "Centrico Plaza: Wild Zone 20"
         ]
@@ -2615,7 +2615,7 @@
     "584": {
       "legends-z-a": {
         "locations": [
-          "Centrico Plaza: Wild Zone 20 14px"
+          "Centrico Plaza: Wild Zone 20 (Alpha)"
         ]
       }
     },
@@ -2650,7 +2650,7 @@
     "604": {
       "legends-z-a": {
         "locations": [
-          "Centrico Plaza: Wild Zone 20 14px"
+          "Centrico Plaza: Wild Zone 20 (Alpha)"
         ]
       }
     },
@@ -2664,14 +2664,14 @@
     "608": {
       "legends-z-a": {
         "locations": [
-          "Vert District: Wild Zone 17N"
+          "Vert District: Wild Zone 17 (Night)"
         ]
       }
     },
     "609": {
       "legends-z-a": {
         "locations": [
-          "Centrico Plaza: Wild Zone 20 14px"
+          "Centrico Plaza: Wild Zone 20 (Alpha)"
         ]
       }
     },
@@ -2680,7 +2680,7 @@
         "locations": [
           "Jaune District: Wild Zone 11 (Unovan Form)",
           "Wild Zone 11 (Only one during Side Mission 72) (Galarian Form)",
-          "Centrico Plaza: Wild Zone 20 14px (Unovan Form)"
+          "Centrico Plaza: Wild Zone 20 (Alpha) (Unovan Form)"
         ]
       }
     },
@@ -2764,7 +2764,7 @@
           "Magenta District: Magenta Sector 7",
           "Magenta Sector 8",
           "Rouge District: Rouge Sector 2",
-          "Rouge Sector 8 14px (only one alpha, during Side Mission 001)",
+          "Rouge Sector 8 (Alpha) (only one alpha, during Side Mission 001)",
           "Jaune District: Jaune Sector 6",
           "Jaune Sector 7",
           "Jaune Sector 11"
@@ -2776,23 +2776,66 @@
         "locations": [
           "Vernal Avenue (Only one, during Side Mission 023)",
           "Vert District: Wild Zone 17",
-          "Centrico Plaza: Wild Zone 20 14px"
+          "Centrico Plaza: Wild Zone 20 (Alpha)"
         ]
       }
     },
     "661": {
       "legends-z-a": {
         "locations": [
-          "Vernal Avenue‚ Estival Avenue‚ Autumnal Avenue",
-          "Vert District: Vert DistrictOne spawner on a lamp post at the Lumi Cab taxi stand east of Station Front‚ Vert Street",
+          "Vernal Avenue",
+          "Estival Avenue",
+          "Autumnal Avenue",
+          "Vert District: Vert District One spawner on a lamp post at the Lumi Cab taxi stand east of Station Front",
+          "Vert Street",
           "South Boulevard",
-          "Vert Sector 1‚ Vert Sector 2‚ Vert Sector 3‚ Vert Sector 4‚ Vert Sector 5‚ Vert Sector 6‚ Vert Sector 7‚ Vert Sector 8‚ Vert Sector 9",
+          "Vert Sector 1",
+          "Vert Sector 2",
+          "Vert Sector 3",
+          "Vert Sector 4",
+          "Vert Sector 5",
+          "Vert Sector 6",
+          "Vert Sector 7",
+          "Vert Sector 8",
+          "Vert Sector 9",
           "Wild Zone 1",
-          "Bleu District: Bleu Street‚ South Boulevard‚ Aymlis Park‚ Bleu Sector 3‚ Bleu Sector 4‚ Bleu Sector 5‚ Bleu Sector 6‚ Bleu Sector 7‚ Bleu Sector 8",
-          "Magenta District: Magenta Sector 1‚ Magenta Sector 2‚ Magenta Sector 3‚ Magenta Sector 4‚ Magenta Sector 6‚ Magenta Sector 7‚ Magenta Sector 8‚ Magenta Sector 9",
-          "Rouge District: Rouge Street‚ North Boulevard‚ Rouge Sector 1‚ Rouge Sector 3‚ Rouge Sector 5‚ Rouge Sector 6‚ Rouge Sector 7‚ Rouge Sector 8‚ Wild Zone 3 14px",
-          "Jaune District: Jaune Street‚ North Boulevard‚ Saison Canalside‚ Jaune Sector 2‚ Jaune Sector 3‚ Jaune Sector 5‚ Jaune Sector 6‚ Jaune Sector 7‚ Jaune Sector 9‚ Jaune Sector 11‚ Jaune Sector 12‚",
-          "Centrico Plaza: Centrico PlazaOne spawner southeast of the square near Saison Canalside‚ Wild Zone 20"
+          "Bleu District: Bleu Street",
+          "Aymlis Park",
+          "Bleu Sector 3",
+          "Bleu Sector 4",
+          "Bleu Sector 5",
+          "Bleu Sector 6",
+          "Bleu Sector 7",
+          "Bleu Sector 8",
+          "Magenta District: Magenta Sector 1",
+          "Magenta Sector 2",
+          "Magenta Sector 3",
+          "Magenta Sector 4",
+          "Magenta Sector 6",
+          "Magenta Sector 7",
+          "Magenta Sector 8",
+          "Magenta Sector 9",
+          "Rouge District: Rouge Street",
+          "North Boulevard",
+          "Rouge Sector 1",
+          "Rouge Sector 3",
+          "Rouge Sector 5",
+          "Rouge Sector 6",
+          "Rouge Sector 7",
+          "Rouge Sector 8",
+          "Wild Zone 3 (Alpha)",
+          "Jaune District: Jaune Street",
+          "Saison Canalside",
+          "Jaune Sector 2",
+          "Jaune Sector 3",
+          "Jaune Sector 5",
+          "Jaune Sector 6",
+          "Jaune Sector 7",
+          "Jaune Sector 9",
+          "Jaune Sector 11",
+          "Jaune Sector 12",
+          "Centrico Plaza: Centrico Plaza One spawner southeast of the square near Saison Canalside",
+          "Wild Zone 20"
         ]
       }
     },
@@ -2802,11 +2845,12 @@
           "Vert District: Vert Sector 2",
           "Vert Sector 4",
           "Magenta District: Magenta Sector 6",
-          "Wild Zone 7 14px",
+          "Wild Zone 7 (Alpha)",
           "Wild Zone 9",
           "Rouge District: Rouge Sector 3",
           "Rouge Sector 8",
-          "Jaune District: Jaune Street‚ Jaune Sector 10"
+          "Jaune District: Jaune Street",
+          "Jaune Sector 10"
         ]
       }
     },
@@ -2816,7 +2860,7 @@
           "Vert District: Vert Sector 3",
           "Vert Sector 4",
           "Magenta District: Magenta Sector 1",
-          "Centrico Plaza: Wild Zone 20 14px"
+          "Centrico Plaza: Wild Zone 20 (Alpha)"
         ]
       }
     },
@@ -2845,7 +2889,7 @@
           "Bleu District: Bleu Sector 4",
           "Bleu Sector 7",
           "Magenta District: Magenta Sector 6",
-          "Rouge District: Wild Zone 4D",
+          "Rouge District: Wild Zone 4 (Day)",
           "Lumiose Museum (only one, during Side Mission 021)",
           "Jaune District: Jaune Sector 5"
         ]
@@ -2856,9 +2900,13 @@
         "locations": [
           "Bleu District: Bleu Sector 4 (Meadow Pattern)",
           "Magenta District: Magenta Sector 6 (Meadow Pattern)",
-          "Rouge District: Rouge Sector 1‚ Rouge Sector 8‚ Wild Zone 13D (Meadow Pattern)",
-          "Jaune District: Jaune Sector 5‚ Jaune Sector 11‚ Jaune Sector 12 (Meadow Pattern)",
-          "Centrico Plaza: Wild Zone 20 14px (Meadow Pattern)",
+          "Rouge District: Rouge Sector 1",
+          "Rouge Sector 8",
+          "Wild Zone 13 (Day) (Meadow Pattern)",
+          "Jaune District: Jaune Sector 5",
+          "Jaune Sector 11",
+          "Jaune Sector 12 (Meadow Pattern)",
+          "Centrico Plaza: Wild Zone 20 (Alpha) (Meadow Pattern)",
           "Evolve Spewpa received from Side Mission 021 (Marine Pattern)",
           "Trade (Garden Pattern)",
           "Pokémon HOME (All Other Patterns)"
@@ -2942,7 +2990,7 @@
       "legends-z-a": {
         "locations": [
           "Bleu District: Wild Zone 16 (Blue Flower & White Flower)",
-          "Centrico Plaza: Wild Zone 20 14px (Red Flower)"
+          "Centrico Plaza: Wild Zone 20 (Alpha) (Red Flower)"
         ]
       }
     },
@@ -2957,7 +3005,7 @@
       "legends-z-a": {
         "locations": [
           "Bleu District: Wild Zone 12",
-          "Centrico Plaza: Wild Zone 20 14px"
+          "Centrico Plaza: Wild Zone 20 (Alpha)"
         ]
       }
     },
@@ -2971,8 +3019,8 @@
     "675": {
       "legends-z-a": {
         "locations": [
-          "Magenta District: Wild Zone 9 14px (only one, during Main Mission 40)",
-          "Centrico Plaza: Wild Zone 20 14px"
+          "Magenta District: Wild Zone 9 (Alpha) (only one, during Main Mission 40)",
+          "Centrico Plaza: Wild Zone 20 (Alpha)"
         ]
       }
     },
@@ -2981,7 +3029,7 @@
         "locations": [
           "Jaune District: Wild Zone 11",
           "Wild Zone 19",
-          "Centrico Plaza: Wild Zone 20 14px"
+          "Centrico Plaza: Wild Zone 20 (Alpha)"
         ]
       }
     },
@@ -3001,7 +3049,7 @@
     "678": {
       "legends-z-a": {
         "locations": [
-          "Magenta District: Wild Zone 9 14px"
+          "Magenta District: Wild Zone 9 (Alpha)"
         ]
       }
     },
@@ -3009,7 +3057,7 @@
       "legends-z-a": {
         "locations": [
           "Magenta District: Lysandre Labs",
-          "Rouge District: Wild Zone 4N"
+          "Rouge District: Wild Zone 4 (Night)"
         ]
       }
     },
@@ -3023,7 +3071,7 @@
     "681": {
       "legends-z-a": {
         "locations": [
-          "Centrico Plaza: Wild Zone 20 14px"
+          "Centrico Plaza: Wild Zone 20 (Alpha)"
         ]
       }
     },
@@ -3102,8 +3150,8 @@
     "689": {
       "legends-z-a": {
         "locations": [
-          "Bleu District: Wild Zone 16N",
-          "Centrico Plaza: Wild Zone 20 14px"
+          "Bleu District: Wild Zone 16 (Night)",
+          "Centrico Plaza: Wild Zone 20 (Alpha)"
         ]
       }
     },
@@ -3133,21 +3181,21 @@
     "693": {
       "legends-z-a": {
         "locations": [
-          "Jaune District: Wild Zone 11 14px"
+          "Jaune District: Wild Zone 11 (Alpha)"
         ]
       }
     },
     "694": {
       "legends-z-a": {
         "locations": [
-          "Magenta District: Wild Zone 14D"
+          "Magenta District: Wild Zone 14 (Day)"
         ]
       }
     },
     "695": {
       "legends-z-a": {
         "locations": [
-          "Centrico Plaza: Wild Zone 20 14px"
+          "Centrico Plaza: Wild Zone 20 (Alpha)"
         ]
       }
     },
@@ -3182,7 +3230,7 @@
     "700": {
       "legends-z-a": {
         "locations": [
-          "Centrico Plaza: Wild Zone 20 14px"
+          "Centrico Plaza: Wild Zone 20 (Alpha)"
         ]
       }
     },
@@ -3201,7 +3249,7 @@
           "Rouge Sector 3",
           "Jaune District: Jaune Sector 3",
           "Jaune Sector 7",
-          "Centrico Plaza: Wild Zone 20 14px"
+          "Centrico Plaza: Wild Zone 20 (Alpha)"
         ]
       }
     },
@@ -3222,7 +3270,7 @@
           "Rouge Sector 8",
           "Jaune District: Jaune Sector 4",
           "Jaune Sector 11",
-          "Centrico Plaza: Wild Zone 20 14px"
+          "Centrico Plaza: Wild Zone 20 (Alpha)"
         ]
       }
     },
@@ -3231,7 +3279,7 @@
         "locations": [
           "Magenta District: Magenta Sector 8 (only during Side Mission EX1, requires Mystery Gift activation)",
           "Wild Zone 9",
-          "Centrico Plaza: Wild Zone 20 14px"
+          "Centrico Plaza: Wild Zone 20 (Alpha)"
         ]
       }
     },
@@ -3286,7 +3334,7 @@
     "706": {
       "legends-z-a": {
         "locations": [
-          "Centrico Plaza: Wild Zone 20 14px (Kalosian Form)",
+          "Centrico Plaza: Wild Zone 20 (Alpha) (Kalosian Form)",
           "Trade (Hisuian Form)"
         ]
       }
@@ -3294,23 +3342,23 @@
     "707": {
       "legends-z-a": {
         "locations": [
-          "Vert District: Wild Zone 17D",
+          "Vert District: Wild Zone 17 (Day)",
           "Bleu District: The Sewers",
-          "Centrico Plaza: Wild Zone 20 14px"
+          "Centrico Plaza: Wild Zone 20 (Alpha)"
         ]
       }
     },
     "708": {
       "legends-z-a": {
         "locations": [
-          "Rouge District: Wild Zone 13N"
+          "Rouge District: Wild Zone 13 (Night)"
         ]
       }
     },
     "709": {
       "legends-z-a": {
         "locations": [
-          "Rouge District: Wild Zone 13 14px",
+          "Rouge District: Wild Zone 13 (Alpha)",
           "Jaune District: Wild Zone 15"
         ]
       }
@@ -3318,15 +3366,15 @@
     "710": {
       "legends-z-a": {
         "locations": [
-          "Jaune District: Wild Zone 15 (Medium/Small VarietiesD, Large/Jumbo VarietiesN)"
+          "Jaune District: Wild Zone 15 (Medium/Small Varieties (Day) , Large/Jumbo Varieties (Night) )"
         ]
       }
     },
     "711": {
       "legends-z-a": {
         "locations": [
-          "Jaune District: Wild Zone 15 14px (Medium Variety)",
-          "Centrico Plaza: Wild Zone 20 14px (Medium Variety)"
+          "Jaune District: Wild Zone 15 (Alpha) (Medium Variety)",
+          "Centrico Plaza: Wild Zone 20 (Alpha) (Medium Variety)"
         ]
       }
     },
@@ -3340,7 +3388,7 @@
     "713": {
       "legends-z-a": {
         "locations": [
-          "Bleu District: Wild Zone 12 14px (Kalosian Form)",
+          "Bleu District: Wild Zone 12 (Alpha) (Kalosian Form)",
           "Trade (Hisuian Form)"
         ]
       }
@@ -3349,7 +3397,7 @@
       "legends-z-a": {
         "locations": [
           "Bleu District: The Sewers",
-          "Magenta District: Wild Zone 18N",
+          "Magenta District: Wild Zone 18 (Night)",
           "The Sewers"
         ]
       }
@@ -3357,9 +3405,9 @@
     "715": {
       "legends-z-a": {
         "locations": [
-          "Magenta District: Wild Zone 18N",
+          "Magenta District: Wild Zone 18 (Night)",
           "Lysandre Labs",
-          "Centrico Plaza: Wild Zone 20 14px"
+          "Centrico Plaza: Wild Zone 20 (Alpha)"
         ]
       }
     },
@@ -3394,8 +3442,8 @@
     "780": {
       "legends-z-a": {
         "locations": [
-          "Jaune District: Wild Zone 19D",
-          "Centrico Plaza: Wild Zone 20 14px"
+          "Jaune District: Wild Zone 19 (Day)",
+          "Centrico Plaza: Wild Zone 20 (Alpha)"
         ]
       }
     },
@@ -3403,7 +3451,7 @@
       "legends-z-a": {
         "locations": [
           "Bleu District: Wild Zone 16",
-          "Centrico Plaza: Wild Zone 20 14px"
+          "Centrico Plaza: Wild Zone 20 (Alpha)"
         ]
       }
     }
