@@ -722,7 +722,7 @@ body.is-scrolled #progressWrap {
   padding: 14px;
   margin-bottom: 20px;
   content-visibility: auto;
-  contain-intrinsic-size: 0 400px;
+  contain-intrinsic-size: auto 400px;
 }
 
 .box:focus-within {

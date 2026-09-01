@@ -34,11 +34,13 @@ export function renderDexSectionBoxes(
   startGlobalSlot,
   startLocalIndex = 1,
 ) {
+  const fragment = document.createDocumentFragment();
+
   // Heading for section
   const heading = document.createElement("h2");
   heading.className = "section-title";
   heading.textContent = sectionTitle;
-  container.appendChild(heading);
+  fragment.appendChild(heading);
 
   const boxCount = Math.ceil(slotsInSection / BOX_CAPACITY);
   for (let boxIndex = 0; boxIndex < boxCount; boxIndex += 1) {
@@ -52,20 +54,22 @@ export function renderDexSectionBoxes(
       startGlobalSlot + (boxIndex + 1) * BOX_CAPACITY - 1,
       startGlobalSlot + slotsInSection - 1,
     );
+    const rangeText = `#${String(localStart).padStart(3, "0")}–${String(localEnd).padStart(3, "0")}`;
     const section = document.createElement("section");
     section.className = "box";
     section.dataset.section = sectionKey;
     section.innerHTML = `
       <h2>
-        <span>${sectionTitle} — #${String(localStart).padStart(3, "0")}–${String(localEnd).padStart(3, "0")}</span>
+        <span>${sectionTitle} — ${rangeText}</span>
         <span class="tools">
-          <button class="btn box-toggle" type="button" data-range="${globalStart}-${globalEnd}"></button>
+          <button class="btn box-toggle" type="button" data-range="${globalStart}-${globalEnd}" aria-label="Mark all caught in ${rangeText}">Mark all</button>
         </span>
       </h2>
       <div class="grid"></div>
     `;
-    container.appendChild(section);
+    fragment.appendChild(section);
   }
+  container.appendChild(fragment);
 }
 
 /**
@@ -142,104 +146,134 @@ export function applySpriteStyleToCells() {
 
 /**
  * Populate all boxes with cells following the configured living dex order.
- * Applies caught state from storage, registers click handlers, sets up info modal triggers,
- * and appends placeholder cells for partially filled trailing boxes.
+ * Uses DocumentFragments and progressive batching to maximize FCP/LCP speed
+ * and eliminate main-thread blocking (TBT).
  *
  * @param {DexSection[]} sections - Array of section configuration objects.
  * @param {number} slotCount - Total number of dex slots across all sections (used for progress tracking).
+ * @param {() => void} [onComplete] - Optional callback when all boxes finish populating.
  * @returns {void}
  */
-export function populateDexSlots(sections, slotCount) {
+export function populateDexSlots(sections, slotCount, onComplete) {
   const caught = isShinyMode ? loadShinyCaughtSlots() : loadCaughtSlots();
   let globalSlotIndex = 1; // continuous global slot numbering for storage
 
+  const boxTasks = [];
+
   sections.forEach((section) => {
     const { key, entries, startIndex } = section;
-    // Select all grids for this section (in order)
     const sectionBoxes = Array.from(
       document.querySelectorAll(`.box[data-section='${key}'] .grid`),
     );
     let localIndex = (startIndex || 1) - 1;
     let boxCursor = 0;
     let slotsPlacedInCurrentBox = 0;
+    let currentBoxEntries = [];
 
     entries.forEach((entry) => {
-      const { speciesId, formId, dexNumber } = entry;
-      const speciesName =
-        window.__livingDexNames?.[speciesId] || `#${speciesId}`;
-      const num = dexNumber != null ? dexNumber : localIndex + 1;
-      const displayIndex = String(num).padStart(3, "0");
-      const cell = createDexSlot(
+      currentBoxEntries.push({
+        entry,
         globalSlotIndex,
-        speciesId,
-        formId,
-        speciesName,
-        displayIndex,
-      );
+        localIndex,
+      });
 
-      if (caught[globalSlotIndex]) {
-        cell.classList.add("caught");
-        cell.setAttribute("aria-pressed", "true");
-      }
-
-      cell.onclick = () => {
-        const nextCaught = isShinyMode
-          ? loadShinyCaughtSlots()
-          : loadCaughtSlots();
-        const regionalSlot = Number(cell.dataset.regional);
-        const isCaught = !cell.classList.contains("caught");
-        cell.classList.toggle("caught", isCaught);
-        cell.setAttribute("aria-pressed", String(isCaught));
-        nextCaught[regionalSlot] = isCaught;
-        if (isShinyMode) {
-          saveShinyCaughtSlots(nextCaught);
-        } else {
-          saveCaughtSlots(nextCaught);
-        }
-        updateProgressBar(slotCount);
-        applyHideCaughtFilter();
-      };
-
-      // Info button: open info modal without toggling caught state
-      const infoBtn = cell.querySelector(".cell-info-btn");
-      if (infoBtn) {
-        /**
-         * Event handler to open the Pokémon info modal without toggling caught state.
-         * @param {MouseEvent|KeyboardEvent} event - The click or keydown event.
-         */
-        const handleInfo = (event) => {
-          event.stopPropagation();
-          const latestName =
-            window.__livingDexNames?.[speciesId] || speciesName;
-          openPokemonInfoModal(speciesId, formId, latestName);
-        };
-        infoBtn.addEventListener("click", handleInfo);
-        infoBtn.addEventListener("keydown", (event) => {
-          if (event.key === "Enter" || event.key === " ") {
-            event.preventDefault();
-            handleInfo(event);
-          }
-        });
-      }
-
-      // Append to current box
-      sectionBoxes[boxCursor]?.appendChild(cell);
       globalSlotIndex += 1;
       localIndex += 1;
       slotsPlacedInCurrentBox += 1;
 
-      // Move to next box if capacity reached
       if (slotsPlacedInCurrentBox >= BOX_CAPACITY) {
+        boxTasks.push({
+          grid: sectionBoxes[boxCursor],
+          entries: currentBoxEntries,
+          placeholderCount: 0,
+        });
         boxCursor += 1;
         slotsPlacedInCurrentBox = 0;
+        currentBoxEntries = [];
       }
     });
 
-    // Fill remaining empty slots in the last partially filled box with placeholders
-    while (
-      slotsPlacedInCurrentBox > 0 &&
-      slotsPlacedInCurrentBox < BOX_CAPACITY
-    ) {
+    if (slotsPlacedInCurrentBox > 0) {
+      boxTasks.push({
+        grid: sectionBoxes[boxCursor],
+        entries: currentBoxEntries,
+        placeholderCount: BOX_CAPACITY - slotsPlacedInCurrentBox,
+      });
+    }
+  });
+
+  /**
+   * Renders a single box task's cells using DocumentFragment.
+   * @param {Object} task - Box render task definition.
+   */
+  function renderBoxTask(task) {
+    if (!task || !task.grid) return;
+    const fragment = document.createDocumentFragment();
+
+    task.entries.forEach(
+      ({ entry, globalSlotIndex: slotIdx, localIndex: locIdx }) => {
+        const { speciesId, formId, dexNumber } = entry;
+        const speciesName =
+          window.__livingDexNames?.[speciesId] || `#${speciesId}`;
+        const num = dexNumber != null ? dexNumber : locIdx + 1;
+        const displayIndex = String(num).padStart(3, "0");
+        const cell = createDexSlot(
+          slotIdx,
+          speciesId,
+          formId,
+          speciesName,
+          displayIndex,
+        );
+
+        if (caught[slotIdx]) {
+          cell.classList.add("caught");
+          cell.setAttribute("aria-pressed", "true");
+        }
+
+        cell.onclick = () => {
+          const nextCaught = isShinyMode
+            ? loadShinyCaughtSlots()
+            : loadCaughtSlots();
+          const regionalSlot = Number(cell.dataset.regional);
+          const isCaught = !cell.classList.contains("caught");
+          cell.classList.toggle("caught", isCaught);
+          cell.setAttribute("aria-pressed", String(isCaught));
+          nextCaught[regionalSlot] = isCaught;
+          if (isShinyMode) {
+            saveShinyCaughtSlots(nextCaught);
+          } else {
+            saveCaughtSlots(nextCaught);
+          }
+          updateProgressBar(slotCount);
+          applyHideCaughtFilter();
+        };
+
+        const infoBtn = cell.querySelector(".cell-info-btn");
+        if (infoBtn) {
+          /**
+           * Event handler to open the Pokémon info modal without toggling caught state.
+           * @param {MouseEvent|KeyboardEvent} event - The click or keydown event.
+           */
+          const handleInfo = (event) => {
+            event.stopPropagation();
+            const latestName =
+              window.__livingDexNames?.[speciesId] || speciesName;
+            openPokemonInfoModal(speciesId, formId, latestName);
+          };
+          infoBtn.addEventListener("click", handleInfo);
+          infoBtn.addEventListener("keydown", (event) => {
+            if (event.key === "Enter" || event.key === " ") {
+              event.preventDefault();
+              handleInfo(event);
+            }
+          });
+        }
+
+        fragment.appendChild(cell);
+      },
+    );
+
+    for (let p = 0; p < task.placeholderCount; p += 1) {
       const placeholder = document.createElement("div");
       placeholder.className = "cell is-placeholder";
       placeholder.setAttribute("aria-hidden", "true");
@@ -248,10 +282,49 @@ export function populateDexSlots(sections, slotCount) {
         <div class="index">—</div>
         <div class="label">Empty</div>
       `;
-      sectionBoxes[boxCursor]?.appendChild(placeholder);
-      slotsPlacedInCurrentBox += 1;
+      fragment.appendChild(placeholder);
     }
-  });
+
+    task.grid.appendChild(fragment);
+  }
+
+  // Populate first 2 boxes synchronously for instant LCP (above the fold)
+  const syncCount = Math.min(2, boxTasks.length);
+  for (let i = 0; i < syncCount; i += 1) {
+    renderBoxTask(boxTasks[i]);
+  }
+
+  // Stream remaining boxes in non-blocking batches
+  if (boxTasks.length > syncCount) {
+    let cursor = syncCount;
+    const batchSize = 4;
+
+    function processNextBatch() {
+      const limit = Math.min(cursor + batchSize, boxTasks.length);
+      for (let i = cursor; i < limit; i += 1) {
+        renderBoxTask(boxTasks[i]);
+      }
+      cursor = limit;
+
+      if (cursor < boxTasks.length) {
+        if (typeof requestAnimationFrame !== "undefined") {
+          requestAnimationFrame(processNextBatch);
+        } else {
+          setTimeout(processNextBatch, 0);
+        }
+      } else {
+        if (typeof onComplete === "function") onComplete();
+      }
+    }
+
+    if (typeof requestAnimationFrame !== "undefined") {
+      requestAnimationFrame(processNextBatch);
+    } else {
+      setTimeout(processNextBatch, 0);
+    }
+  } else {
+    if (typeof onComplete === "function") onComplete();
+  }
 }
 
 /**

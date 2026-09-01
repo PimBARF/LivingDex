@@ -138,7 +138,7 @@ export function resetDexProgress(slotCount) {
  * @param {number} params.slotCount - Total number of slots across all rendered sections.
  * @returns {void}
  */
-export function rebuildDexView({ sections, slotCount }) {
+export function rebuildDexView({ sections, slotCount, onComplete }) {
   const app = document.getElementById("app");
   if (!app) return;
 
@@ -152,6 +152,7 @@ export function rebuildDexView({ sections, slotCount }) {
     `;
     updateProgressBar(0);
     applyHideCaughtFilter();
+    if (typeof onComplete === "function") onComplete();
     return;
   }
 
@@ -168,7 +169,12 @@ export function rebuildDexView({ sections, slotCount }) {
     startGlobal += sec.entries.length;
   }
 
-  populateDexSlots(sections, slotCount);
+  populateDexSlots(sections, slotCount, () => {
+    registerBoxControls(slotCount);
+    updateProgressBar(slotCount);
+    applyHideCaughtFilter();
+    if (typeof onComplete === "function") onComplete();
+  });
   registerBoxControls(slotCount);
   updateProgressBar(slotCount);
   applyHideCaughtFilter();

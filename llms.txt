@@ -1,0 +1,52 @@
+# LivingDex.app
+
+> A fast, modern, privacy-first Living Pokédex tracker for all main-series Pokémon games, including regional forms, DLC expansions, and shiny checklists.
+
+## Overview
+
+LivingDex.app is a client-side Progressive Web Application (PWA) designed to track Pokémon Living Dex progress with zero dependencies, zero tracking, and instant local persistence via localStorage.
+
+- **Website**: https://livingdex.app/
+- **Source Code**: https://github.com/PimBARF/LivingDex
+- **License**: MIT
+- **Data Sources**: PokéAPI, Bulbapedia, Serebii
+
+## Core Features
+
+- **Multi-Game Support**: Tracks living dexes across Generations 1 through 9, including Pokémon HOME, Scarlet & Violet (with The Teal Mask & The Indigo Disk), Sword & Shield (with Isle of Armor & Crown Tundra), and Legends: Arceus / Z-A.
+- **Form & Expansion Tracking**: Dedicated sections for regional forms (Alolan, Galarian, Hisuian, Paldean), Gigantamax forms, and DLC expansions.
+- **In-Game Encounter Details**: Interactive info modals providing exact wild locations, raid dens, and trade notes per game release.
+- **Evolution Flowcharts**: Visual branch-aware evolution trees respecting game generation scope and item requirements.
+- **Shareable Progress**: URL hash-encoded checklist state allows sharing caught progress via simple links without requiring a database backend.
+- **Offline First**: Fully functional offline via Service Worker caching with custom sprite caching.
+
+## URL Parameters & Routing
+
+- `?game={gameId}`: Load a specific game tracker.
+  - `home`: Pokémon HOME (National Pokédex #1–1025)
+  - `sv`: Pokémon Scarlet & Violet
+  - `swsh`: Pokémon Sword & Shield
+  - `pla`: Pokémon Legends: Arceus
+  - `za`: Pokémon Legends: Z-A
+  - `bdsp`: Pokémon Brilliant Diamond & Shining Pearl
+  - `lgpe`: Pokémon Let's Go Pikachu & Eevee
+  - `usum`: Pokémon Ultra Sun & Ultra Moon
+  - `sm`: Pokémon Sun & Moon
+  - `oras`: Pokémon Omega Ruby & Alpha Sapphire
+  - `xy`: Pokémon X & Y
+  - `b2w2`: Pokémon Black 2 & White 2
+  - `bw`: Pokémon Black & White
+  - `hgss`: Pokémon HeartGold & SoulSilver
+  - `dppt`: Pokémon Diamond, Pearl & Platinum
+  - `frlg`: Pokémon FireRed & LeafGreen
+  - `rse`: Pokémon Ruby, Sapphire & Emerald
+  - `gsc`: Pokémon Gold, Silver & Crystal
+  - `rby`: Pokémon Red, Blue & Yellow
+- `#s={hash}`: Encoded compressed bitfield of caught slot indices.
+
+## Technical Architecture
+
+- **Frontend**: Vanilla HTML5, Modern CSS (CSS Grid, Custom Properties, container queries, `content-visibility: auto`), ES Modules.
+- **Storage**: LocalStorage (`{gamePrefix}-caught-v1`, `{gamePrefix}-shiny-caught-v1`, `settings-v1`).
+- **Compression**: pako Deflate/Inflate for URL hash serialization.
+

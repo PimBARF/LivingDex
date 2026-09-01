@@ -24,7 +24,32 @@
   <meta name="theme-color" content="#181a1b" media="(prefers-color-scheme: dark)">
   
   <link rel="apple-touch-icon" href="https://livingdex.app/assets/icon-192.png">
+  <link rel="preload" href="assets/fonts/Inter-VariableFont_opsz,wght.ttf" as="font" type="font/ttf" crossorigin>
   <link rel="stylesheet" href="styles.css">
+
+  <!-- Schema.org Structured Data for WebApplication & Agentic AI Discoverability -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "LivingDex.app",
+    "url": "https://livingdex.app/",
+    "description": "A fast, modern Living Pokédex tracker for all main-series Pokémon games, including regional forms, DLC expansions, and shiny checklists.",
+    "applicationCategory": "GameApplication",
+    "operatingSystem": "All",
+    "browserRequirements": "Requires JavaScript. Requires HTML5.",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "author": {
+      "@type": "Person",
+      "name": "PimBARF",
+      "url": "https://github.com/PimBARF"
+    }
+  }
+  </script>
 
   <!-- Apply saved theme preference immediately to prevent flash -->
   <script>
