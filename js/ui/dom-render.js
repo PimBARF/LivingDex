@@ -477,6 +477,7 @@ function getVariantSubtitle(
  * @param {string} [gender=""] - Gender variant ('female' or '').
  * @param {string} [formName=""] - Explicit form name if available.
  * @param {string} [formTitle=""] - Explicit form variant title if available.
+ * @param {number|string} [spriteId=""] - Explicit sprite ID if different from formId.
  * @returns {HTMLButtonElement} The generated interactive dex slot button element.
  */
 export function createDexSlot(
@@ -489,6 +490,7 @@ export function createDexSlot(
   gender = "",
   formName = "",
   formTitle = "",
+  spriteId = "",
 ) {
   const button = document.createElement("button");
   button.className = "cell";
@@ -497,6 +499,7 @@ export function createDexSlot(
   button.dataset.regional = slotIndex;
   button.dataset.national = speciesId;
   button.dataset.form = formId;
+  button.dataset.sprite = spriteId || "";
   button.dataset.gender = gender || "";
   button.dataset.formName = formName || "";
   button.dataset.formTitle = formTitle || "";
@@ -514,7 +517,7 @@ export function createDexSlot(
   button.title = `#${displayIndex} — ${displayName} (${speciesId})`;
 
   const spriteStyle = loadSettings().spriteStyle || "pokesprites";
-  const targetSpriteId = gender === "female" ? speciesId : formId;
+  const targetSpriteId = gender === "female" ? speciesId : spriteId || formId;
   const primarySpriteUrl = spriteUrlForSpecies(
     targetSpriteId,
     spriteStyle,
@@ -552,11 +555,12 @@ export function applySpriteStyleToCells() {
     .forEach((img) => {
       const cell = img.closest(".cell");
       const formId = cell?.dataset.form;
+      const spriteId = cell?.dataset.sprite;
       const speciesId = cell?.dataset.national;
       const gender = cell?.dataset.gender || "";
       if (!formId || !speciesId) return;
 
-      const targetId = gender === "female" ? speciesId : formId;
+      const targetId = gender === "female" ? speciesId : spriteId || formId;
       const primaryUrl = spriteUrlForSpecies(
         targetId,
         spriteStyle,
@@ -663,8 +667,15 @@ export function populateDexSlots(sections, slotCount, onComplete) {
 
     task.entries.forEach(
       ({ entry, globalSlotIndex: slotIdx, localIndex: locIdx }) => {
-        const { speciesId, formId, dexNumber, gender, formName, formTitle } =
-          entry;
+        const {
+          speciesId,
+          formId,
+          spriteId,
+          dexNumber,
+          gender,
+          formName,
+          formTitle,
+        } = entry;
         const speciesName =
           window.__livingDexNames?.[speciesId] || `#${speciesId}`;
         const num = dexNumber != null ? dexNumber : locIdx + 1;
@@ -679,6 +690,7 @@ export function populateDexSlots(sections, slotCount, onComplete) {
           gender,
           formName,
           formTitle,
+          spriteId,
         );
 
         if (caught[slotIdx]) {
@@ -756,6 +768,7 @@ export function populateDexSlots(sections, slotCount, onComplete) {
               latestDisplayName,
               gender,
               formName,
+              spriteId,
             );
           };
           infoBtn.addEventListener("click", handleInfo);

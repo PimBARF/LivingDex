@@ -416,6 +416,7 @@ function renderEvolutionDetails(evoEl, evolutionPaths, spriteStyle) {
  * @param {string} name - Species/form display name.
  * @param {string} [gender=""] - Gender variant ('female' or '').
  * @param {string} [formName=""] - Explicit form name if available.
+ * @param {number|string} [spriteId=""] - Explicit sprite ID if different from formId.
  * @returns {Promise<void>}
  */
 export async function openPokemonInfoModal(
@@ -424,6 +425,7 @@ export async function openPokemonInfoModal(
   name,
   gender = "",
   formName = "",
+  spriteId = "",
 ) {
   const modal = document.getElementById("modalPokemonInfo");
   if (!modal) return;
@@ -442,7 +444,7 @@ export async function openPokemonInfoModal(
   const errorEl = document.getElementById("pokemonInfoError");
 
   const spriteStyle = loadSettings().spriteStyle || "pokesprites";
-  const targetSpriteId = gender === "female" ? speciesId : formId;
+  const targetSpriteId = gender === "female" ? speciesId : spriteId || formId;
   const primarySpriteUrl = spriteUrlForSpecies(
     targetSpriteId,
     spriteStyle,

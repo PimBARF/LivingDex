@@ -3,13 +3,7 @@
   "title": "PokemonGameDexDatabase",
   "description": "Schema for game-specific Pokédexes, sections, and roster entries",
   "type": "object",
-  "required": [
-    "gameId",
-    "title",
-    "group",
-    "generation",
-    "sections"
-  ],
+  "required": ["gameId", "title", "group", "generation", "sections"],
   "properties": {
     "gameId": {
       "type": "string",
@@ -58,6 +52,7 @@
               "properties": {
                 "speciesId": { "type": "integer", "minimum": 1 },
                 "formId": { "type": "integer", "minimum": 1 },
+                "spriteId": { "type": ["integer", "string"] },
                 "dexNumber": { "type": ["integer", "null"] },
                 "formKey": { "type": ["string", "null"] },
                 "gender": { "type": ["string", "null"] }

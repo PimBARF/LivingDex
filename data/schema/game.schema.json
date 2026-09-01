@@ -58,6 +58,7 @@
               "properties": {
                 "speciesId": { "type": "integer", "minimum": 1 },
                 "formId": { "type": "integer", "minimum": 1 },
+                "spriteId": { "type": ["integer", "string"] },
                 "dexNumber": { "type": ["integer", "null"] },
                 "formKey": { "type": ["string", "null"] },
                 "gender": { "type": ["string", "null"] }

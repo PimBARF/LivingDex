@@ -514,7 +514,11 @@ function resolveMemberSpriteId(
   activeRegion,
 ) {
   if (targetSpeciesId === activeSpeciesId) {
-    return activeFormId;
+    const activeSpecies = allSpecies[activeSpeciesId];
+    const activeForm = activeSpecies?.forms?.find(
+      (f) => f.formId === activeFormId,
+    );
+    return activeForm?.spriteId || activeFormId || targetSpeciesId;
   }
 
   if (activeRegion) {
@@ -527,7 +531,7 @@ function resolveMemberSpriteId(
           f.formKey === activeRegion,
       );
       if (matchingForm) {
-        return matchingForm.formId;
+        return matchingForm.spriteId || matchingForm.formId;
       }
     }
   }
@@ -608,23 +612,24 @@ function resolveEvolutionFlowchart(
   generationNumber,
   allSpecies,
 ) {
+  const activeSpecies = allSpecies[speciesId];
+  const activeForm =
+    activeSpecies?.forms?.find((f) => f.formId === formId) ||
+    activeSpecies?.forms?.[0];
+  const resolvedRootSpriteId = activeForm?.spriteId || formId || speciesId;
+
   if (!evoData || !evoData.paths || !evoData.paths.length) {
     return [
       {
         root: {
           speciesId,
-          spriteId: formId,
+          spriteId: resolvedRootSpriteId,
           name: resolveSpeciesDisplayName(speciesId),
         },
         steps: [],
       },
     ];
   }
-
-  const activeSpecies = allSpecies[speciesId];
-  const activeForm =
-    activeSpecies?.forms?.find((f) => f.formId === formId) ||
-    activeSpecies?.forms?.[0];
   const activeRegion =
     activeForm?.region ||
     (activeForm?.formKey &&
@@ -786,7 +791,7 @@ function resolveEvolutionFlowchart(
         {
           root: {
             speciesId,
-            spriteId: formId,
+            spriteId: resolvedRootSpriteId,
             name: resolveSpeciesDisplayName(speciesId),
           },
           steps: [],

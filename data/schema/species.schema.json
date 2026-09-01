@@ -58,8 +58,14 @@
         "isMythical": { "type": "boolean" },
         "isBaby": { "type": "boolean" },
         "hasGenderDifferences": { "type": "boolean" },
-        "height": { "type": ["number", "null"], "description": "Height in meters" },
-        "weight": { "type": ["number", "null"], "description": "Weight in kilograms" },
+        "height": {
+          "type": ["number", "null"],
+          "description": "Height in meters"
+        },
+        "weight": {
+          "type": ["number", "null"],
+          "description": "Weight in kilograms"
+        },
         "color": { "type": ["string", "null"] },
         "shape": { "type": ["string", "null"] },
         "forms": {
@@ -74,6 +80,10 @@
                 "minimum": 1,
                 "description": "Form ID or unique Pokémon resource ID"
               },
+              "spriteId": {
+                "type": ["integer", "string"],
+                "description": "Asset key used to resolve sprite image files (e.g. 10091, '201-b', '172-spiky-eared')"
+              },
               "name": {
                 "type": "string",
                 "description": "Form identifier name (e.g. 'pikachu-alola', 'unown-b', 'meowstic-female')"
@@ -84,7 +94,17 @@
               },
               "formType": {
                 "type": "string",
-                "enum": ["default", "regional", "gender", "cosmetic", "mega", "gmax", "battle", "event", "other"],
+                "enum": [
+                  "default",
+                  "regional",
+                  "gender",
+                  "cosmetic",
+                  "mega",
+                  "gmax",
+                  "battle",
+                  "event",
+                  "other"
+                ],
                 "description": "Form category classification"
               },
               "isDefault": { "type": "boolean" },
