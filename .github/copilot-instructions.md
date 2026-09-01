@@ -5,6 +5,7 @@
 **LivingDex.app** is a fast, modern, privacy-first, offline-capable Living Pokédex tracker for all main-series Pokémon games (Generation 1 through Gen 9 / HOME / Legends / DLC expansions / regional forms / shiny checklists).
 
 ### Core Philosophy
+
 - **Zero external frameworks or bundlers:** Pure vanilla JavaScript (ES modules), HTML5, and CSS3. No React, Vue, TypeScript, Tailwind, Vite, Webpack, or npm dependencies.
 - **Privacy-first & client-side only:** No backend, database, accounts, or telemetry. All user progress is stored locally in `localStorage` and encoded in shareable URL hashes.
 - **Offline-first PWA:** Service Worker (`sw.js`) with multi-tier caching (App Shell, local pre-compiled JSON datasets, and sprite caches).
@@ -73,16 +74,19 @@
    - `SHELL_CACHE`: Core app shell files (`index.html`, `styles.css`, `js/**/*.js`, fonts, icons).
    - `DATA_CACHE`: Pre-cached static JSON datasets (`data/**/*.json`).
    - `SPRITE_CACHE`: Dynamic cache for sprite images fetched from external CDNs, with support for batch pre-downloading via the settings dialog.
+   - **MANDATORY Update Rule**: Whenever pushing updates or making changes to the UI, JavaScript, styles, HTML, or datasets, **always bump `CACHE_VERSION` in `sw.js`** (e.g. from `v1.1.0` to `v1.1.1`). This triggers the browser's background Service Worker update check and displays the floating `#updateBanner` ("Update Available") to users.
 
 ---
 
 ## Key Conventions & Coding Standards
 
 ### 1. Zero External Dependencies
+
 - **Do not introduce npm packages, bundlers, transpilers, or UI frameworks.**
 - Use modern standard Web APIs: `fetch()`, `<dialog>`, `CSS Grid/Flexbox`, `localStorage`, `matchMedia`, `history.pushState` / `URLSearchParams`.
 
 ### 2. Native ES Modules
+
 - All JS files are ES modules loaded via `<script type="module" src="js/main.js">`.
 - Always use explicit `.js` extensions in relative imports:
   ```javascript
@@ -91,6 +95,7 @@
   ```
 
 ### 3. DOM & UI Guidelines
+
 - Keep UI logic cleanly separated inside `js/ui/`.
 - Use template literals and direct DOM manipulation with `DocumentFragment` where batching creates performance wins.
 - Leverage Event Delegation on container elements (`.boxes-container`, `.modal-container`) rather than binding listeners to hundreds of individual cells.
@@ -98,17 +103,20 @@
 - Never use inline `onclick` or inline style attributes for interactive state; use CSS classes and event listeners.
 
 ### 4. Accessibility (a11y)
+
 - Use semantic HTML landmarks (`<header>`, `<main>`, `<section>`, `<nav>`, `<dialog>`).
 - Interactive modal dialogs must manage focus (trap focus inside dialog when open, restore focus to trigger button on close).
 - Ensure all interactive elements have accessible names via `aria-label`, `aria-labelledby`, or visible text.
 - Respect user motion preferences: inspect `prefers-reduced-motion` and toggle animations using `.reduced-motion` / CSS variables.
 
 ### 5. Styling & Themes
+
 - All design tokens, colors, spacings, and surfaces are defined as CSS Custom Properties in `styles.css` under `:root` and `[data-theme="dark"]`.
 - Theme is switched by updating `document.documentElement.dataset.theme = 'light' | 'dark'`.
 - Responsive breakpoints: Desktop multi-column grid (`minmax(280px, 1fr)`), tablet (2 columns), and mobile single-column box layout.
 
 ### 6. Datasets & Schemas
+
 - Master data resides in `data/*.json` and must adhere to the JSON Schemas in `data/schema/*.schema.json`.
 - When adding or modifying game dexes:
   - Add game configuration to `GAMES` in `js/config.js`.
@@ -131,3 +139,5 @@
   - Verify PWA service worker lifecycle in DevTools Application tab.
   - Test with various `localStorage` states and URL parameters (`?game=sv`, `?game=swsh`, etc.).
   - Verify dark/light theme switching and screen reader accessibility.
+- **Deployment / Release Step:**
+  - **Always bump `CACHE_VERSION` in `sw.js`** when pushing updates so users receive the update notification prompt.
