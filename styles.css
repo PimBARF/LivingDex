@@ -798,54 +798,6 @@ footer {
   border-color: var(--accent-2);
 }
 
-/* DLC / Regional Expansion Segment Chips */
-#segmentToggles {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  align-items: center;
-  margin-top: 8px;
-}
-
-#segmentToggles:empty {
-  display: none;
-}
-
-.segment-toggle {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 8px 12px;
-  border-radius: 8px;
-  background: var(--surface-soft);
-  border: 1px solid var(--surface-soft-border);
-  cursor: pointer;
-  user-select: none;
-  transition: border-color 0.2s ease, background 0.2s ease;
-}
-
-.segment-toggle:hover {
-  border-color: var(--accent-2);
-}
-
-.segment-toggle:focus-within {
-  border-color: var(--focus-ring);
-  box-shadow: var(--focus-shadow-toggle);
-}
-
-.segment-toggle input[type="checkbox"] {
-  cursor: pointer;
-  width: 16px;
-  height: 16px;
-  margin: 0;
-}
-
-.segment-toggle span {
-  font-size: 14px;
-  font-weight: 500;
-  color: var(--text);
-}
-
 /* =============================================================================
    8) PROGRESS BAR (Sticky Tracker)
    ============================================================================= */
