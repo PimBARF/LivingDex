@@ -1295,20 +1295,23 @@ body.is-scrolled #progressWrap {
 /* Slot index number badge (top-left) */
 .cell .index {
   position: absolute;
-  top: 6px;
-  left: 6px;
-  width: clamp(18px, 4.5vw, 22px);
-  height: clamp(18px, 4.5vw, 22px);
-  min-width: clamp(18px, 4.5vw, 22px);
+  top: 5px;
+  left: 5px;
+  height: 24px;
+  min-width: 24px;
+  padding: 0 5px;
+  box-sizing: border-box;
   border-radius: 999px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   background: var(--label);
   color: var(--text);
-  font-size: clamp(9px, 2.4vw, 11px);
+  font-size: 11px;
   font-weight: 700;
   line-height: 1;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.02em;
   z-index: 2;
   pointer-events: none;
 }
