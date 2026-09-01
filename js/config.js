@@ -494,6 +494,12 @@ export const GAMES = {
         type: "base",
         optional: false,
       },
+      {
+        id: "hyperspace",
+        title: "Hyperspace Pokédex",
+        type: "dlc",
+        optional: true,
+      },
     ],
   },
 };
