@@ -955,9 +955,15 @@ body.is-scrolled #progressWrap {
 .box-content {
   display: grid;
   grid-template-rows: 1fr;
-  transition: grid-template-rows 0.26s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.2s ease;
+  transition:
+    grid-template-rows 0.26s cubic-bezier(0.16, 1, 0.3, 1),
+    opacity 0.2s ease,
+    padding 0.26s ease,
+    margin 0.26s ease;
   overflow: hidden;
   opacity: 1;
+  padding: 4px;
+  margin: -4px;
 }
 
 .box-content > .grid {
@@ -967,6 +973,8 @@ body.is-scrolled #progressWrap {
 .box.is-collapsed .box-content {
   grid-template-rows: 0fr;
   opacity: 0;
+  padding: 0;
+  margin: 0;
 }
 
 .box.is-collapsed .box-header {
@@ -1234,6 +1242,7 @@ body.is-scrolled #progressWrap {
 .cell:hover {
   transform: translateY(-1px);
   border-color: var(--accent-2);
+  z-index: 1;
 }
 
 /* Sprite image (dimmed/desaturated when uncaught) */
