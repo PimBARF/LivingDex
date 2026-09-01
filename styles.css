@@ -124,6 +124,10 @@ body {
   color: var(--text);
   background: var(--bg);
   position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  min-height: 100dvh;
 }
 
 a {
@@ -283,8 +287,8 @@ button:focus-visible,
 
 /* Game / Pokédex selector dropdown */
 #dexSelector {
-  width: auto;
-  min-width: 180px;
+  width: 270px;
+  min-width: 270px;
   font-weight: 600;
   height: 41px;
   padding: 0.6rem 1rem;
@@ -495,13 +499,20 @@ header {
 
 /* Main tracker container */
 main {
+  flex: 1 0 auto;
+  width: 100%;
   padding: 18px;
   max-width: 680px;
   margin: 0 auto;
 }
 
+#app {
+  min-height: 600px;
+}
+
 /* Page footer */
 footer {
+  margin-top: auto;
   padding: 30px 18px;
   color: var(--text);
   text-align: center;
@@ -517,6 +528,7 @@ footer {
   #dexSelector {
     order: 3;
     width: 100%;
+    min-width: 0;
     flex-basis: 100%;
   }
 
@@ -604,6 +616,7 @@ footer {
   flex-wrap: wrap;
   gap: 12px;
   align-items: center;
+  min-height: 38px;
 }
 
 .segment-toggle {
@@ -722,7 +735,13 @@ body.is-scrolled #progressWrap {
   padding: 14px;
   margin-bottom: 20px;
   content-visibility: auto;
-  contain-intrinsic-size: auto 400px;
+  contain-intrinsic-size: auto 580px;
+}
+
+@media (max-width: 600px) {
+  .box {
+    contain-intrinsic-size: auto 1080px;
+  }
 }
 
 .box:focus-within {
@@ -878,14 +897,14 @@ body.is-scrolled #progressWrap {
   top: 5px;
   right: 5px;
   z-index: 5;
-  width: 20px;
-  height: 20px;
+  width: 28px;
+  height: 28px;
   padding: 0;
   border-radius: 50%;
   border: 1px solid transparent;
   background: var(--label);
   color: var(--muted);
-  font-size: 11px;
+  font-size: 13px;
   font-weight: 700;
   line-height: 1;
   display: flex;
