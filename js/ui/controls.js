@@ -170,30 +170,20 @@ export function toggleTypeFilter(typeId) {
 // =============================================================================
 
 /**
- * Timer handle for debouncing smooth scroll to the first search match.
- * Prevents viewport jumping and keyboard cursor resets during rapid mobile typing.
- * @type {number|null}
- */
-let searchScrollTimer = null;
-
-/**
  * Filters and highlights Pokémon cells based on a search query.
  * Supports searching by regional or national Pokédex number (e.g. "#42", "42") or by Pokémon name.
- * Highlights matching cells, dims non-matching cells, and scrolls the first match into view.
+ * Highlights matching cells and dims non-matching cells.
+ * Optionally scrolls the first match into view when explicitly requested (e.g. on Enter key).
  *
  * @param {string} query - The search query string entered by the user.
- * @param {{ immediateScroll?: boolean }} [options] - Options for scrolling behavior.
+ * @param {object} [options] - Optional settings for applying the filter.
+ * @param {boolean} [options.scroll=false] - Whether to scroll the first match into view.
  * @returns {void}
  */
-export function applySearchFilter(query, { immediateScroll = false } = {}) {
+export function applySearchFilter(query, { scroll = false } = {}) {
   const trimmed = query.trim().toLowerCase();
   const cells = [...document.querySelectorAll(".cell:not(.is-placeholder)")];
   cells.forEach((cell) => cell.classList.remove("highlight", "dimmed"));
-
-  if (searchScrollTimer) {
-    clearTimeout(searchScrollTimer);
-    searchScrollTimer = null;
-  }
 
   if (!trimmed) return;
 
@@ -228,56 +218,11 @@ export function applySearchFilter(query, { immediateScroll = false } = {}) {
       if (!matchedCells.has(cell)) cell.classList.add("dimmed");
     });
     matches.forEach((cell) => cell.classList.add("highlight"));
-
-    const scrollToMatch = () => {
-      const firstMatch = matches[0];
-      if (!firstMatch) return;
-
-      // Don't scroll if already visible in viewport beneath the header
-      const rect = firstMatch.getBoundingClientRect();
-      const header = document.querySelector("header");
-      const headerBottom = header ? header.getBoundingClientRect().bottom : 0;
-      const isInView =
-        rect.top >= headerBottom &&
-        rect.bottom <=
-          (window.innerHeight || document.documentElement.clientHeight);
-
-      if (isInView) return;
-
-      const searchInput = document.getElementById("search");
-      const isFocused = document.activeElement === searchInput;
-      const start = isFocused ? searchInput?.selectionStart : null;
-      const end = isFocused ? searchInput?.selectionEnd : null;
-
-      firstMatch.scrollIntoView({
+    if (scroll) {
+      matches[0].scrollIntoView({
         behavior: isMotionReduced() ? "auto" : "smooth",
         block: "center",
       });
-
-      // Restore cursor position if scrollIntoView caused mobile browser to reset it
-      if (isFocused && typeof start === "number" && typeof end === "number") {
-        if (
-          searchInput.selectionStart !== start ||
-          searchInput.selectionEnd !== end
-        ) {
-          searchInput.setSelectionRange(start, end);
-        }
-        requestAnimationFrame(() => {
-          if (
-            document.activeElement === searchInput &&
-            searchInput.selectionStart === 0 &&
-            start > 0
-          ) {
-            searchInput.setSelectionRange(start, end);
-          }
-        });
-      }
-    };
-
-    if (immediateScroll) {
-      scrollToMatch();
-    } else {
-      searchScrollTimer = setTimeout(scrollToMatch, 250);
     }
   } else {
     cells.forEach((cell) => cell.classList.add("dimmed"));
@@ -436,23 +381,19 @@ export function registerHeaderControls(slotCount) {
 
   // Search input
   searchInput?.addEventListener("input", (event) => {
-    const input = event.target;
-    const start = input.selectionStart;
-    const end = input.selectionEnd;
-    applySearchFilter(input.value);
-    if (
-      typeof start === "number" &&
-      typeof end === "number" &&
-      input.selectionStart === 0 &&
-      start > 0
-    ) {
-      input.setSelectionRange(start, end);
-    }
+    applySearchFilter(event.target.value);
+    updateSearchCollapse();
+  });
+
+  searchInput?.addEventListener("search", () => {
+    applySearchFilter(searchInput.value);
+    updateSearchCollapse();
   });
 
   searchInput?.addEventListener("keydown", (event) => {
     if (event.key === "Enter") {
-      applySearchFilter(searchInput.value, { immediateScroll: true });
+      event.preventDefault();
+      applySearchFilter(searchInput.value, { scroll: true });
     }
   });
 
@@ -522,7 +463,7 @@ export function registerHeaderControls(slotCount) {
   const hideDefault = !!loadSettings().hideCaughtDefault;
   setStatusFilter(hideDefault ? "uncaught" : "all");
 
-  // Mobile: collapse the search bar after scrolling down
+  // Mobile: collapse the search bar after scrolling down (when not actively searching)
   const isMobile = () => window.matchMedia("(max-width: 640px)").matches;
   const COLLAPSE_Y = 120;
   const EXPAND_Y = 60;
@@ -533,8 +474,11 @@ export function registerHeaderControls(slotCount) {
       document.body.classList.remove("search-collapsed");
       return;
     }
-    // Prevent collapsing while the user is actively focused on the search input
-    if (document.activeElement === searchInput) {
+    const isSearching = Boolean(
+      (searchInput && searchInput.value.trim().length > 0) ||
+        document.activeElement === searchInput,
+    );
+    if (isSearching) {
       document.body.classList.remove("search-collapsed");
       return;
     }
@@ -545,13 +489,8 @@ export function registerHeaderControls(slotCount) {
     }
   };
 
-  searchInput?.addEventListener("focus", () => {
-    document.body.classList.remove("search-collapsed");
-  });
-
-  searchInput?.addEventListener("blur", () => {
-    updateSearchCollapse();
-  });
+  searchInput?.addEventListener("focus", updateSearchCollapse);
+  searchInput?.addEventListener("blur", updateSearchCollapse);
 
   window.addEventListener("scroll", updateSearchCollapse, { passive: true });
   window.addEventListener("resize", updateSearchCollapse);
