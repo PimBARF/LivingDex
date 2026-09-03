@@ -113,7 +113,8 @@
     <div class="searchrow">
       <div class="search-input-wrap">
         <input id="search" type="search" placeholder="Search name, number or press /"
-          aria-label="Search Pokemon" />
+          aria-label="Search Pokemon" autocomplete="off" />
+        <button id="searchClear" class="search-clear-btn" type="button" title="Clear search" aria-label="Clear search" hidden>✕</button>
       </div>
       <button id="filtersBtn" class="btn filter-btn" type="button" title="Filter options" aria-label="Open filter options" aria-haspopup="dialog">
         🔍 Filters <span id="activeFilterBadge" class="filter-count-badge" hidden>0</span>

@@ -444,6 +444,14 @@ export function registerHeaderControls(slotCount) {
   initializeTypeFilterControls();
   registerKeyboardShortcuts();
 
+  const searchClear = document.getElementById("searchClear");
+
+  const updateSearchClearVisibility = () => {
+    if (searchClear) {
+      searchClear.hidden = !searchInput || !searchInput.value;
+    }
+  };
+
   // Search input
   searchInput?.addEventListener("input", (event) => {
     const input = event.target;
@@ -451,6 +459,7 @@ export function registerHeaderControls(slotCount) {
     const end = input.selectionEnd;
     applySearchFilter(input.value);
     updateSearchCollapse();
+    updateSearchClearVisibility();
     if (
       typeof start === "number" &&
       typeof end === "number" &&
@@ -461,8 +470,23 @@ export function registerHeaderControls(slotCount) {
     }
   });
 
+  // Dedicated clear button (works across Firefox, Chrome, Safari, Edge)
+  searchClear?.addEventListener("click", () => {
+    if (searchInput) {
+      searchInput.value = "";
+      applySearchFilter("", { immediateScroll: true });
+      searchInput.blur();
+      updateSearchClearVisibility();
+      updateSearchCollapse();
+    }
+  });
+
   searchInput?.addEventListener("search", () => {
     applySearchFilter(searchInput.value, { immediateScroll: true });
+    updateSearchClearVisibility();
+    if (!searchInput.value) {
+      searchInput.blur();
+    }
     updateSearchCollapse();
   });
 
@@ -472,6 +496,8 @@ export function registerHeaderControls(slotCount) {
       applySearchFilter(searchInput.value, { immediateScroll: true });
     }
   });
+
+  updateSearchClearVisibility();
 
   // 3-way Segmented status buttons (All / Uncaught / Caught)
   statusFilter?.querySelectorAll(".segmented-btn").forEach((btn) => {
