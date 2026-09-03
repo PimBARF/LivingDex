@@ -170,17 +170,30 @@ export function toggleTypeFilter(typeId) {
 // =============================================================================
 
 /**
+ * Timer handle for debouncing smooth scroll to the first search match.
+ * Prevents viewport jumping and keyboard cursor resets during rapid mobile typing.
+ * @type {number|null}
+ */
+let searchScrollTimer = null;
+
+/**
  * Filters and highlights Pokémon cells based on a search query.
  * Supports searching by regional or national Pokédex number (e.g. "#42", "42") or by Pokémon name.
  * Highlights matching cells, dims non-matching cells, and scrolls the first match into view.
  *
  * @param {string} query - The search query string entered by the user.
+ * @param {{ immediateScroll?: boolean }} [options] - Options for scrolling behavior.
  * @returns {void}
  */
-export function applySearchFilter(query) {
+export function applySearchFilter(query, { immediateScroll = false } = {}) {
   const trimmed = query.trim().toLowerCase();
   const cells = [...document.querySelectorAll(".cell:not(.is-placeholder)")];
   cells.forEach((cell) => cell.classList.remove("highlight", "dimmed"));
+
+  if (searchScrollTimer) {
+    clearTimeout(searchScrollTimer);
+    searchScrollTimer = null;
+  }
 
   if (!trimmed) return;
 
@@ -215,10 +228,57 @@ export function applySearchFilter(query) {
       if (!matchedCells.has(cell)) cell.classList.add("dimmed");
     });
     matches.forEach((cell) => cell.classList.add("highlight"));
-    matches[0].scrollIntoView({
-      behavior: isMotionReduced() ? "auto" : "smooth",
-      block: "center",
-    });
+
+    const scrollToMatch = () => {
+      const firstMatch = matches[0];
+      if (!firstMatch) return;
+
+      // Don't scroll if already visible in viewport beneath the header
+      const rect = firstMatch.getBoundingClientRect();
+      const header = document.querySelector("header");
+      const headerBottom = header ? header.getBoundingClientRect().bottom : 0;
+      const isInView =
+        rect.top >= headerBottom &&
+        rect.bottom <=
+          (window.innerHeight || document.documentElement.clientHeight);
+
+      if (isInView) return;
+
+      const searchInput = document.getElementById("search");
+      const isFocused = document.activeElement === searchInput;
+      const start = isFocused ? searchInput?.selectionStart : null;
+      const end = isFocused ? searchInput?.selectionEnd : null;
+
+      firstMatch.scrollIntoView({
+        behavior: isMotionReduced() ? "auto" : "smooth",
+        block: "center",
+      });
+
+      // Restore cursor position if scrollIntoView caused mobile browser to reset it
+      if (isFocused && typeof start === "number" && typeof end === "number") {
+        if (
+          searchInput.selectionStart !== start ||
+          searchInput.selectionEnd !== end
+        ) {
+          searchInput.setSelectionRange(start, end);
+        }
+        requestAnimationFrame(() => {
+          if (
+            document.activeElement === searchInput &&
+            searchInput.selectionStart === 0 &&
+            start > 0
+          ) {
+            searchInput.setSelectionRange(start, end);
+          }
+        });
+      }
+    };
+
+    if (immediateScroll) {
+      scrollToMatch();
+    } else {
+      searchScrollTimer = setTimeout(scrollToMatch, 250);
+    }
   } else {
     cells.forEach((cell) => cell.classList.add("dimmed"));
   }
@@ -375,9 +435,26 @@ export function registerHeaderControls(slotCount) {
   registerKeyboardShortcuts();
 
   // Search input
-  searchInput?.addEventListener("input", (event) =>
-    applySearchFilter(event.target.value),
-  );
+  searchInput?.addEventListener("input", (event) => {
+    const input = event.target;
+    const start = input.selectionStart;
+    const end = input.selectionEnd;
+    applySearchFilter(input.value);
+    if (
+      typeof start === "number" &&
+      typeof end === "number" &&
+      input.selectionStart === 0 &&
+      start > 0
+    ) {
+      input.setSelectionRange(start, end);
+    }
+  });
+
+  searchInput?.addEventListener("keydown", (event) => {
+    if (event.key === "Enter") {
+      applySearchFilter(searchInput.value, { immediateScroll: true });
+    }
+  });
 
   // 3-way Segmented status buttons (All / Uncaught / Caught)
   statusFilter?.querySelectorAll(".segmented-btn").forEach((btn) => {
@@ -456,6 +533,11 @@ export function registerHeaderControls(slotCount) {
       document.body.classList.remove("search-collapsed");
       return;
     }
+    // Prevent collapsing while the user is actively focused on the search input
+    if (document.activeElement === searchInput) {
+      document.body.classList.remove("search-collapsed");
+      return;
+    }
     if (window.scrollY > COLLAPSE_Y) {
       document.body.classList.add("search-collapsed");
     } else if (window.scrollY < EXPAND_Y) {
@@ -465,6 +547,10 @@ export function registerHeaderControls(slotCount) {
 
   searchInput?.addEventListener("focus", () => {
     document.body.classList.remove("search-collapsed");
+  });
+
+  searchInput?.addEventListener("blur", () => {
+    updateSearchCollapse();
   });
 
   window.addEventListener("scroll", updateSearchCollapse, { passive: true });

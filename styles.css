@@ -728,11 +728,11 @@ footer {
     max-height: 140px;
   }
 
-  body.search-collapsed header {
+  body.search-collapsed:not(:has(:focus-within)) header {
     padding-bottom: 6px;
   }
 
-  body.search-collapsed header .searchrow {
+  body.search-collapsed header .searchrow:not(:focus-within) {
     max-height: 0;
     opacity: 0;
     margin: 0;
@@ -854,7 +854,7 @@ body.is-scrolled #progressWrap {
     top: 230px;
   }
 
-  body.search-collapsed #progressWrap {
+  body.search-collapsed:not(:has(:focus-within)) #progressWrap {
     top: 130px;
   }
 }
