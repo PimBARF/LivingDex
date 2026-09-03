@@ -232,31 +232,32 @@ export function applySearchFilter(query, { immediateScroll = false } = {}) {
       const firstMatch = matches[0];
       if (!firstMatch) return;
 
-      const header = document.querySelector("header");
-      const headerBottom = header ? header.getBoundingClientRect().bottom : 0;
-      const rect = firstMatch.getBoundingClientRect();
-
-      // Check visible viewport height (accounts for mobile virtual keyboard)
-      const viewportHeight =
-        window.visualViewport?.height ||
-        window.innerHeight ||
-        document.documentElement.clientHeight;
-
-      const isAlreadyInView =
-        rect.top >= headerBottom + 4 && rect.bottom <= viewportHeight - 4;
-
-      if (isAlreadyInView) return;
-
       const searchInput = document.getElementById("search");
       const isFocused = document.activeElement === searchInput;
       const start = isFocused ? searchInput?.selectionStart : null;
       const end = isFocused ? searchInput?.selectionEnd : null;
 
-      // Calculate scroll offset to position the cell comfortably below the sticky header
+      // Calculate combined sticky height (header + sticky progress bar + padding)
+      const isMobileScreen = window.matchMedia("(max-width: 640px)").matches;
+      const progressWrap = document.getElementById("progressWrap");
+      const header = document.querySelector("header");
+
+      let stickyOffset = 0;
+      if (header) {
+        stickyOffset += header.offsetHeight;
+      }
+      if (progressWrap && !progressWrap.hidden) {
+        stickyOffset += progressWrap.offsetHeight + (isMobileScreen ? 18 : 22);
+      } else {
+        stickyOffset += 16;
+      }
+
       const cellAbsoluteTop =
         firstMatch.getBoundingClientRect().top + window.scrollY;
-      const headerHeight = header ? header.offsetHeight : 120;
-      const targetY = Math.max(0, cellAbsoluteTop - headerHeight - 12);
+      const targetY = Math.max(0, cellAbsoluteTop - stickyOffset);
+
+      // Skip scroll only if already at the target scroll position
+      if (Math.abs(window.scrollY - targetY) < 4) return;
 
       window.scrollTo({
         top: targetY,
