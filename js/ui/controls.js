@@ -568,27 +568,45 @@ export function registerHeaderControls(slotCount) {
   // Mobile: collapse the search bar after scrolling down (when not actively searching)
   const isMobile = () => window.matchMedia("(max-width: 640px)").matches;
   const COLLAPSE_Y = 120;
-  const EXPAND_Y = 60;
+  let lastScrollY = window.scrollY;
 
   const updateSearchCollapse = () => {
-    document.body.classList.toggle("is-scrolled", window.scrollY > COLLAPSE_Y);
+    const currentScrollY = Math.max(0, window.scrollY);
+    const scrollDelta = currentScrollY - lastScrollY;
+
+    document.body.classList.toggle("is-scrolled", currentScrollY > COLLAPSE_Y);
+
     if (!isMobile()) {
       document.body.classList.remove("search-collapsed");
+      lastScrollY = currentScrollY;
       return;
     }
+
     const isSearching = Boolean(
       (searchInput && searchInput.value.trim().length > 0) ||
       document.activeElement === searchInput,
     );
+
     if (isSearching) {
       document.body.classList.remove("search-collapsed");
+      lastScrollY = currentScrollY;
       return;
     }
-    if (window.scrollY > COLLAPSE_Y) {
-      document.body.classList.add("search-collapsed");
-    } else if (window.scrollY < EXPAND_Y) {
+
+    // Always expand when user is at the top of the page
+    if (currentScrollY <= 40) {
       document.body.classList.remove("search-collapsed");
     }
+    // Collapse when actively scrolling down past the threshold
+    else if (scrollDelta > 10 && currentScrollY > COLLAPSE_Y) {
+      document.body.classList.add("search-collapsed");
+    }
+    // Reveal when user scrolls up with intent
+    else if (scrollDelta < -15) {
+      document.body.classList.remove("search-collapsed");
+    }
+
+    lastScrollY = currentScrollY;
   };
 
   searchInput?.addEventListener("focus", updateSearchCollapse);

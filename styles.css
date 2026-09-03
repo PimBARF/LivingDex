@@ -116,6 +116,7 @@
 html,
 body {
   min-height: 100%;
+  overflow-anchor: none;
 }
 
 body {
@@ -456,6 +457,7 @@ header {
   backdrop-filter: saturate(180%) blur(5px);
   -webkit-backdrop-filter: saturate(180%) blur(5px);
   color: rgb(33, 33, 33);
+  overflow-anchor: none;
   transition: padding 200ms ease;
 }
 
@@ -858,6 +860,7 @@ footer {
   width: 100%;
   max-width: 680px;
   margin: 6px auto 16px;
+  overflow-anchor: none;
   transition: top 0.2s ease, width 0.2s ease, max-width 0.2s ease;
 }
 
