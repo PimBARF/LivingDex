@@ -167,23 +167,32 @@ export function toggleTypeFilter(typeId) {
 
 // =============================================================================
 // HEADER CONTROLS & USER INTERACTIONS
-// =============================================================================
+/**
+ * Timer handle for debouncing smooth scroll to the first search match.
+ * Prevents viewport jumping and keyboard cursor resets during rapid mobile typing.
+ * @type {number|null}
+ */
+let searchScrollTimer = null;
 
 /**
  * Filters and highlights Pokémon cells based on a search query.
  * Supports searching by regional or national Pokédex number (e.g. "#42", "42") or by Pokémon name.
- * Highlights matching cells and dims non-matching cells.
- * Optionally scrolls the first match into view when explicitly requested (e.g. on Enter key).
+ * Highlights matching cells, dims non-matching cells, and smoothly scrolls to the first match below the sticky header.
  *
  * @param {string} query - The search query string entered by the user.
  * @param {object} [options] - Optional settings for applying the filter.
- * @param {boolean} [options.scroll=false] - Whether to scroll the first match into view.
+ * @param {boolean} [options.immediateScroll=false] - Whether to scroll immediately instead of debouncing.
  * @returns {void}
  */
-export function applySearchFilter(query, { scroll = false } = {}) {
+export function applySearchFilter(query, { immediateScroll = false } = {}) {
   const trimmed = query.trim().toLowerCase();
   const cells = [...document.querySelectorAll(".cell:not(.is-placeholder)")];
   cells.forEach((cell) => cell.classList.remove("highlight", "dimmed"));
+
+  if (searchScrollTimer) {
+    clearTimeout(searchScrollTimer);
+    searchScrollTimer = null;
+  }
 
   if (!trimmed) return;
 
@@ -218,11 +227,66 @@ export function applySearchFilter(query, { scroll = false } = {}) {
       if (!matchedCells.has(cell)) cell.classList.add("dimmed");
     });
     matches.forEach((cell) => cell.classList.add("highlight"));
-    if (scroll) {
-      matches[0].scrollIntoView({
+
+    const scrollToMatch = () => {
+      const firstMatch = matches[0];
+      if (!firstMatch) return;
+
+      const header = document.querySelector("header");
+      const headerBottom = header ? header.getBoundingClientRect().bottom : 0;
+      const rect = firstMatch.getBoundingClientRect();
+
+      // Check visible viewport height (accounts for mobile virtual keyboard)
+      const viewportHeight =
+        window.visualViewport?.height ||
+        window.innerHeight ||
+        document.documentElement.clientHeight;
+
+      const isAlreadyInView =
+        rect.top >= headerBottom + 4 && rect.bottom <= viewportHeight - 4;
+
+      if (isAlreadyInView) return;
+
+      const searchInput = document.getElementById("search");
+      const isFocused = document.activeElement === searchInput;
+      const start = isFocused ? searchInput?.selectionStart : null;
+      const end = isFocused ? searchInput?.selectionEnd : null;
+
+      // Calculate scroll offset to position the cell comfortably below the sticky header
+      const cellAbsoluteTop =
+        firstMatch.getBoundingClientRect().top + window.scrollY;
+      const headerHeight = header ? header.offsetHeight : 120;
+      const targetY = Math.max(0, cellAbsoluteTop - headerHeight - 12);
+
+      window.scrollTo({
+        top: targetY,
         behavior: isMotionReduced() ? "auto" : "smooth",
-        block: "center",
       });
+
+      // Guard against mobile browser resetting input cursor on document scroll
+      if (isFocused && typeof start === "number" && typeof end === "number") {
+        if (
+          searchInput.selectionStart !== start ||
+          searchInput.selectionEnd !== end
+        ) {
+          searchInput.setSelectionRange(start, end);
+        }
+        requestAnimationFrame(() => {
+          if (
+            document.activeElement === searchInput &&
+            searchInput.selectionStart === 0 &&
+            start > 0
+          ) {
+            searchInput.setSelectionRange(start, end);
+          }
+        });
+      }
+    };
+
+    if (immediateScroll) {
+      scrollToMatch();
+    } else {
+      searchScrollTimer = setTimeout(scrollToMatch, 180);
     }
   } else {
     cells.forEach((cell) => cell.classList.add("dimmed"));
@@ -381,19 +445,30 @@ export function registerHeaderControls(slotCount) {
 
   // Search input
   searchInput?.addEventListener("input", (event) => {
-    applySearchFilter(event.target.value);
+    const input = event.target;
+    const start = input.selectionStart;
+    const end = input.selectionEnd;
+    applySearchFilter(input.value);
     updateSearchCollapse();
+    if (
+      typeof start === "number" &&
+      typeof end === "number" &&
+      input.selectionStart === 0 &&
+      start > 0
+    ) {
+      input.setSelectionRange(start, end);
+    }
   });
 
   searchInput?.addEventListener("search", () => {
-    applySearchFilter(searchInput.value);
+    applySearchFilter(searchInput.value, { immediateScroll: true });
     updateSearchCollapse();
   });
 
   searchInput?.addEventListener("keydown", (event) => {
     if (event.key === "Enter") {
       event.preventDefault();
-      applySearchFilter(searchInput.value, { scroll: true });
+      applySearchFilter(searchInput.value, { immediateScroll: true });
     }
   });
 
@@ -476,7 +551,7 @@ export function registerHeaderControls(slotCount) {
     }
     const isSearching = Boolean(
       (searchInput && searchInput.value.trim().length > 0) ||
-        document.activeElement === searchInput,
+      document.activeElement === searchInput,
     );
     if (isSearching) {
       document.body.classList.remove("search-collapsed");
