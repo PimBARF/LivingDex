@@ -1231,6 +1231,9 @@ body.is-scrolled #progressWrap {
   border: 1px solid var(--border);
   cursor: pointer;
   overflow: hidden;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  user-select: none;
   transition:
     transform 0.2s ease,
     border-color 0.2s ease,
@@ -1257,6 +1260,9 @@ body.is-scrolled #progressWrap {
   max-width: 96px;
   max-height: 96px;
   object-fit: scale-down;
+  pointer-events: none;
+  -webkit-user-drag: none;
+  user-select: none;
   filter: saturate(50%) opacity(50%) blur(2px);
   transition: filter 0.2s ease;
 }
@@ -1458,6 +1464,130 @@ body.is-scrolled #progressWrap {
   background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 2L14.5 9.5L22 12L14.5 14.5L12 22L9.5 14.5L2 12L9.5 9.5L12 2Z" fill="rgba(255, 255, 255, 0.5)"/></svg>');
   border-color: #f5a623;
   box-shadow: 0 0 8px rgba(245, 166, 35, 0.4);
+}
+
+/* =============================================================================
+   10.1) TOUCH DRAG SELECTION & VISUAL CUES
+   ============================================================================= */
+
+/* When drag selection is active, prevent accidental text selection & callouts */
+body.is-drag-selecting {
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+  cursor: grabbing;
+}
+
+body.is-drag-selecting .cell {
+  touch-action: none;
+}
+
+/* Long-press preparation state before drag activates */
+.cell.is-press-holding {
+  transform: scale(0.94);
+  border-color: var(--accent-2);
+  box-shadow: 0 0 0 2px rgba(66, 133, 244, 0.35);
+  transition: transform 0.32s cubic-bezier(0.2, 0, 0, 1), border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Cell where drag originated */
+.cell.is-drag-origin {
+  transform: scale(1.04);
+  z-index: 5;
+  box-shadow: 0 0 0 3px var(--accent-2), 0 4px 12px rgba(0, 0, 0, 0.18);
+}
+
+/* Cell being touched or freshly toggled during drag */
+.cell.is-drag-active {
+  animation: cell-drag-pop 0.24s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  z-index: 4;
+}
+
+@keyframes cell-drag-pop {
+  0% {
+    transform: scale(0.92);
+  }
+  50% {
+    transform: scale(1.06);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Floating Drag HUD providing clear live feedback of batch operation */
+.drag-hud {
+  position: fixed;
+  bottom: calc(24px + env(safe-area-inset-bottom, 0px));
+  left: 50%;
+  transform: translate(-50%, 20px) scale(0.95);
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 18px;
+  border-radius: 9999px;
+  background: var(--card);
+  color: var(--text);
+  border: 1px solid var(--border);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2), 0 2px 8px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  font-size: 13.5px;
+  font-weight: 600;
+  pointer-events: none;
+  transition: opacity 0.2s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.2s cubic-bezier(0.16, 1, 0.3, 1),
+              visibility 0.2s;
+  white-space: nowrap;
+}
+
+.drag-hud.is-visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translate(-50%, 0) scale(1);
+}
+
+.drag-hud-icon {
+  font-size: 14px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+}
+
+.drag-hud[data-mode="caught"] .drag-hud-icon {
+  background: var(--accent);
+  color: #111;
+}
+
+.drag-hud[data-mode="uncaught"] .drag-hud-icon {
+  background: var(--surface-soft-border);
+  color: var(--muted);
+}
+
+.drag-hud-count {
+  display: inline-block;
+  padding: 1px 7px;
+  border-radius: 9999px;
+  background: var(--surface-soft);
+  font-variant-numeric: tabular-nums;
+  font-size: 12px;
+  border: 1px solid var(--surface-soft-border);
+}
+
+/* Reduce motion overrides */
+@media (prefers-reduced-motion: reduce) {
+  .cell.is-press-holding,
+  .cell.is-drag-origin,
+  .cell.is-drag-active {
+    animation: none;
+    transform: none;
+  }
 }
 
 /* =============================================================================

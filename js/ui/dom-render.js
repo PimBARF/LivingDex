@@ -26,6 +26,24 @@ import { getSpeciesTypes } from "../db.js";
 let lastClickedSlotIndex = null;
 
 /**
+ * Tracks whether the upcoming click event should be suppressed after a drag gesture.
+ * @type {boolean}
+ */
+let suppressNextClick = false;
+
+/**
+ * Tracks the active total slot count for progress updates in touch drag operations.
+ * @type {number}
+ */
+let activeSlotCount = 0;
+
+/**
+ * Cached reference to the floating drag HUD element.
+ * @type {HTMLElement|null}
+ */
+let dragHudEl = null;
+
+/**
  * In-memory set of collapsed box IDs for active session persistence.
  * @type {Set<string>}
  */
@@ -738,6 +756,10 @@ export function populateDexSlots(sections, slotCount, onComplete) {
         }
 
         cell.onclick = (event) => {
+          if (suppressNextClick) {
+            suppressNextClick = false;
+            return;
+          }
           const nextCaught = isShinyMode
             ? loadShinyCaughtSlots()
             : loadCaughtSlots();
@@ -879,6 +901,319 @@ export function populateDexSlots(sections, slotCount, onComplete) {
 }
 
 /**
+ * Retrieves or lazily creates the floating Drag HUD element for touch drag selection feedback.
+ *
+ * @returns {HTMLElement} The drag HUD container element.
+ */
+function getOrCreateDragHud() {
+  if (dragHudEl && document.body.contains(dragHudEl)) return dragHudEl;
+  let hud = document.getElementById("dragSelectionHud");
+  if (!hud) {
+    hud = document.createElement("div");
+    hud.id = "dragSelectionHud";
+    hud.className = "drag-hud";
+    hud.setAttribute("role", "status");
+    hud.setAttribute("aria-live", "polite");
+    document.body.appendChild(hud);
+  }
+  dragHudEl = hud;
+  return dragHudEl;
+}
+
+/**
+ * Updates the floating Drag HUD display with live batch status and counter.
+ *
+ * @param {boolean} visible - Whether the HUD should be visible.
+ * @param {boolean} [isCaught=true] - Whether the batch action marks Pokémon as caught or uncaught.
+ * @param {number} [count=1] - Number of Pokémon affected in the current drag session.
+ * @returns {void}
+ */
+function updateDragHud(visible, isCaught = true, count = 1) {
+  const hud = getOrCreateDragHud();
+  if (!visible) {
+    hud.classList.remove("is-visible");
+    return;
+  }
+  hud.dataset.mode = isCaught ? "caught" : "uncaught";
+  const icon = isCaught ? "✓" : "✗";
+  const label = isCaught ? "Marking caught" : "Marking uncaught";
+  hud.innerHTML = `
+    <span class="drag-hud-icon" aria-hidden="true">${icon}</span>
+    <span class="drag-hud-text">${label}</span>
+    <span class="drag-hud-count">${count}</span>
+  `;
+  hud.classList.add("is-visible");
+}
+
+/**
+ * Initialize touch drag selection on the dex container.
+ * Uses a gentle long-press threshold (~320ms) and movement slop threshold (10px) so normal scrolling
+ * is completely unaffected and non-aggressive, while providing smooth batch selection when held.
+ *
+ * @param {number} slotCount - Total slot count for progress updates.
+ * @returns {void}
+ */
+export function registerTouchDragSelection(slotCount) {
+  if (typeof slotCount === "number" && slotCount > 0) {
+    activeSlotCount = slotCount;
+  }
+
+  const app = document.getElementById("app");
+  if (!app || app.dataset.touchDragBound === "true") return;
+  app.dataset.touchDragBound = "true";
+
+  const LONG_PRESS_DELAY = 320; // ms to activate drag selection
+  const MOVE_SLOP = 10; // px allowed movement before identifying gesture as scroll
+
+  let longPressTimer = null;
+  let startTouchX = 0;
+  let startTouchY = 0;
+  let currentTouchX = 0;
+  let currentTouchY = 0;
+  let isDragActive = false;
+  let startCell = null;
+  let targetCaughtState = false;
+  let modifiedSlots = new Set();
+  let nextCaughtStateMap = null;
+  let autoScrollRaf = null;
+
+  function cancelLongPress() {
+    if (longPressTimer) {
+      clearTimeout(longPressTimer);
+      longPressTimer = null;
+    }
+    if (startCell) {
+      startCell.classList.remove("is-press-holding");
+    }
+  }
+
+  function processCell(cell) {
+    if (!cell || !isDragActive || !nextCaughtStateMap) return;
+    const slot = Number(cell.dataset.regional);
+    if (!slot) return;
+
+    if (!modifiedSlots.has(slot)) {
+      modifiedSlots.add(slot);
+      cell.classList.toggle("caught", targetCaughtState);
+      cell.setAttribute("aria-pressed", String(targetCaughtState));
+      cell.classList.add("is-drag-active");
+      setTimeout(() => cell.classList.remove("is-drag-active"), 250);
+
+      nextCaughtStateMap[slot] = targetCaughtState;
+      lastClickedSlotIndex = slot;
+
+      if (navigator.vibrate) {
+        try {
+          navigator.vibrate(8);
+        } catch (_) {}
+      }
+
+      updateDragHud(true, targetCaughtState, modifiedSlots.size);
+    }
+  }
+
+  function startAutoScroll() {
+    if (autoScrollRaf) return;
+
+    function step() {
+      if (!isDragActive) {
+        autoScrollRaf = null;
+        return;
+      }
+
+      const edgeThreshold = 70;
+      const viewportHeight = window.innerHeight;
+      let scrollSpeed = 0;
+
+      if (currentTouchY < edgeThreshold && currentTouchY > 0) {
+        const intensity = (edgeThreshold - currentTouchY) / edgeThreshold;
+        scrollSpeed = -Math.round(intensity * 16);
+      } else if (currentTouchY > viewportHeight - edgeThreshold) {
+        const intensity =
+          (currentTouchY - (viewportHeight - edgeThreshold)) / edgeThreshold;
+        scrollSpeed = Math.round(intensity * 16);
+      }
+
+      if (scrollSpeed !== 0) {
+        window.scrollBy(0, scrollSpeed);
+        const el = document.elementFromPoint(currentTouchX, currentTouchY);
+        const cell = el?.closest(".cell:not(.is-placeholder)");
+        if (cell) {
+          processCell(cell);
+        }
+      }
+
+      autoScrollRaf = requestAnimationFrame(step);
+    }
+
+    autoScrollRaf = requestAnimationFrame(step);
+  }
+
+  function stopAutoScroll() {
+    if (autoScrollRaf) {
+      cancelAnimationFrame(autoScrollRaf);
+      autoScrollRaf = null;
+    }
+  }
+
+  // Intercept synthetic click event when finishing a drag-select gesture
+  app.addEventListener(
+    "click",
+    (event) => {
+      if (suppressNextClick) {
+        event.preventDefault();
+        event.stopImmediatePropagation();
+        suppressNextClick = false;
+      }
+    },
+    true,
+  );
+
+  app.addEventListener(
+    "touchstart",
+    (event) => {
+      if (event.touches.length !== 1) {
+        cancelLongPress();
+        return;
+      }
+
+      const touch = event.touches[0];
+      const target = touch.target;
+
+      if (
+        target.closest(".cell-info-btn") ||
+        target.closest("button:not(.cell)") ||
+        target.closest(".box-collapse-btn") ||
+        target.closest(".box-toggle")
+      ) {
+        return;
+      }
+
+      const cell = target.closest(".cell:not(.is-placeholder)");
+      if (!cell) return;
+
+      startCell = cell;
+      startTouchX = touch.clientX;
+      startTouchY = touch.clientY;
+      currentTouchX = touch.clientX;
+      currentTouchY = touch.clientY;
+      isDragActive = false;
+
+      // Provide visual hold indicator
+      startCell.classList.add("is-press-holding");
+
+      cancelLongPress();
+      longPressTimer = setTimeout(() => {
+        isDragActive = true;
+        document.body.classList.add("is-drag-selecting");
+
+        if (startCell) {
+          startCell.classList.remove("is-press-holding");
+          startCell.classList.add("is-drag-origin");
+          startCell.classList.add("is-drag-active");
+          setTimeout(() => startCell?.classList.remove("is-drag-active"), 250);
+        }
+
+        if (navigator.vibrate) {
+          try {
+            navigator.vibrate(15);
+          } catch (_) {}
+        }
+
+        nextCaughtStateMap = isShinyMode
+          ? loadShinyCaughtSlots()
+          : loadCaughtSlots();
+
+        const regionalSlot = Number(startCell.dataset.regional);
+        targetCaughtState = !startCell.classList.contains("caught");
+
+        modifiedSlots.clear();
+        modifiedSlots.add(regionalSlot);
+
+        startCell.classList.toggle("caught", targetCaughtState);
+        startCell.setAttribute("aria-pressed", String(targetCaughtState));
+        nextCaughtStateMap[regionalSlot] = targetCaughtState;
+        lastClickedSlotIndex = regionalSlot;
+
+        updateDragHud(true, targetCaughtState, 1);
+        startAutoScroll();
+      }, LONG_PRESS_DELAY);
+    },
+    { passive: true },
+  );
+
+  app.addEventListener(
+    "touchmove",
+    (event) => {
+      if (event.touches.length !== 1) return;
+      const touch = event.touches[0];
+      currentTouchX = touch.clientX;
+      currentTouchY = touch.clientY;
+
+      if (!isDragActive) {
+        const dx = touch.clientX - startTouchX;
+        const dy = touch.clientY - startTouchY;
+        if (Math.hypot(dx, dy) > MOVE_SLOP) {
+          cancelLongPress();
+        }
+        return;
+      }
+
+      if (event.cancelable) {
+        event.preventDefault();
+      }
+
+      const el = document.elementFromPoint(touch.clientX, touch.clientY);
+      const cell = el?.closest(".cell:not(.is-placeholder)");
+      if (cell) {
+        processCell(cell);
+      }
+    },
+    { passive: false },
+  );
+
+  function finishDrag(cancelled = false) {
+    cancelLongPress();
+    stopAutoScroll();
+
+    if (startCell) {
+      startCell.classList.remove("is-press-holding");
+      startCell.classList.remove("is-drag-origin");
+    }
+
+    if (isDragActive) {
+      isDragActive = false;
+      document.body.classList.remove("is-drag-selecting");
+      updateDragHud(false);
+
+      if (!cancelled && modifiedSlots.size > 0 && nextCaughtStateMap) {
+        if (isShinyMode) {
+          saveShinyCaughtSlots(nextCaughtStateMap);
+        } else {
+          saveCaughtSlots(nextCaughtStateMap);
+        }
+        updateProgressBar(activeSlotCount || slotCount);
+        applyHideCaughtFilter();
+      }
+
+      suppressNextClick = true;
+      setTimeout(() => {
+        suppressNextClick = false;
+      }, 300);
+    }
+
+    startCell = null;
+    modifiedSlots.clear();
+    nextCaughtStateMap = null;
+  }
+
+  app.addEventListener("touchend", () => finishDrag(false), { passive: true });
+  app.addEventListener("touchcancel", () => finishDrag(true), {
+    passive: true,
+  });
+}
+
+/**
  * Register per-box controls (Mark all caught, Clear box).
  * These buttons enable bulk operations on entire boxes.
  *
@@ -886,6 +1221,7 @@ export function populateDexSlots(sections, slotCount, onComplete) {
  * @returns {void}
  */
 export function registerBoxControls(slotCount) {
+  registerTouchDragSelection(slotCount);
   document.querySelectorAll(".box").forEach((box) => {
     const grid = box.querySelector(".grid");
     const toggleBtn = box.querySelector(".box-toggle");
