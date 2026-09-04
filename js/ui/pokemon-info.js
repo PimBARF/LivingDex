@@ -3,6 +3,8 @@ import { ACTIVE_GAME_ID, spriteUrlForSpecies } from "../config.js";
 import { attachModalHandlers } from "./modals.js";
 import { isShinyMode } from "../state.js";
 import { getPokemonModalData } from "../db.js";
+import { getVisiblePokemonCells } from "./controls.js";
+import { getCellDisplayInfo } from "./dom-render.js";
 
 // =============================================================================
 // POKÉMON INFO MODAL (VIEW LAYER)
@@ -13,6 +15,111 @@ let _infoModalHandlers = null;
 
 /** Currently active HTML5 Audio element for cries. */
 let currentAudio = null;
+
+/** Currently active Pokémon cell element displayed in the modal. */
+let currentActiveCell = null;
+
+/**
+ * Opens the info modal for the specified Pokémon cell.
+ *
+ * @param {HTMLElement} targetCell - The target cell element.
+ * @returns {void}
+ */
+function navigateToCell(targetCell) {
+  if (!targetCell) return;
+  const info = getCellDisplayInfo(targetCell);
+  if (!info) return;
+  openPokemonInfoModal(
+    info.speciesId,
+    info.formId,
+    info.displayName,
+    info.gender,
+    info.formName,
+    info.spriteId,
+    targetCell,
+  );
+}
+
+/**
+ * Updates the state and metadata of the Previous and Next buttons in the modal footer.
+ *
+ * @param {HTMLElement|null} activeCell - The currently active cell in the modal.
+ * @param {number} speciesId - Fallback species ID if cell is not in DOM.
+ * @param {number} formId - Fallback form ID.
+ * @param {string} gender - Fallback gender.
+ */
+function updateNavigationButtons(activeCell, speciesId, formId, gender) {
+  const prevBtn = document.getElementById("prevPokemonBtn");
+  const nextBtn = document.getElementById("nextPokemonBtn");
+  const prevMeta = document.getElementById("prevPokemonMeta");
+  const nextMeta = document.getElementById("nextPokemonMeta");
+
+  if (!prevBtn || !nextBtn) return;
+
+  const visibleCells = getVisiblePokemonCells();
+  let resolvedCell = activeCell;
+
+  if (!resolvedCell || !visibleCells.includes(resolvedCell)) {
+    resolvedCell =
+      visibleCells.find(
+        (c) =>
+          Number(c.dataset.national) === speciesId &&
+          Number(c.dataset.form) === formId &&
+          (c.dataset.gender || "") === gender,
+      ) ||
+      visibleCells.find((c) => Number(c.dataset.national) === speciesId) ||
+      null;
+  }
+
+  currentActiveCell = resolvedCell;
+  const currentIndex = resolvedCell ? visibleCells.indexOf(resolvedCell) : -1;
+
+  const prevCell = currentIndex > 0 ? visibleCells[currentIndex - 1] : null;
+  const nextCell =
+    currentIndex >= 0 && currentIndex < visibleCells.length - 1
+      ? visibleCells[currentIndex + 1]
+      : null;
+
+  if (prevCell) {
+    const prevInfo = getCellDisplayInfo(prevCell);
+    prevBtn.disabled = false;
+    prevBtn.removeAttribute("aria-disabled");
+    if (prevMeta) prevMeta.textContent = prevInfo?.metaText || "";
+    prevBtn.setAttribute(
+      "aria-label",
+      prevInfo ? `Previous Pokémon: ${prevInfo.metaText}` : "Previous Pokémon",
+    );
+    prevBtn.onclick = () => {
+      navigateToCell(prevCell);
+    };
+  } else {
+    prevBtn.disabled = true;
+    prevBtn.setAttribute("aria-disabled", "true");
+    if (prevMeta) prevMeta.textContent = "";
+    prevBtn.setAttribute("aria-label", "Previous Pokémon");
+    prevBtn.onclick = null;
+  }
+
+  if (nextCell) {
+    const nextInfo = getCellDisplayInfo(nextCell);
+    nextBtn.disabled = false;
+    nextBtn.removeAttribute("aria-disabled");
+    if (nextMeta) nextMeta.textContent = nextInfo?.metaText || "";
+    nextBtn.setAttribute(
+      "aria-label",
+      nextInfo ? `Next Pokémon: ${nextInfo.metaText}` : "Next Pokémon",
+    );
+    nextBtn.onclick = () => {
+      navigateToCell(nextCell);
+    };
+  } else {
+    nextBtn.disabled = true;
+    nextBtn.setAttribute("aria-disabled", "true");
+    if (nextMeta) nextMeta.textContent = "";
+    nextBtn.setAttribute("aria-label", "Next Pokémon");
+    nextBtn.onclick = null;
+  }
+}
 
 /**
  * Stop any currently playing Pokémon cry audio and reset button visual states.
@@ -116,6 +223,22 @@ function getInfoModalHandlers() {
     onOpen: () => closeBtn?.focus(),
     onClose: () => {
       stopCurrentAudio();
+      currentActiveCell = null;
+    },
+    onKeydown: (event) => {
+      if (event.key === "ArrowLeft") {
+        const prevBtn = document.getElementById("prevPokemonBtn");
+        if (prevBtn && !prevBtn.disabled && prevBtn.onclick) {
+          event.preventDefault();
+          prevBtn.click();
+        }
+      } else if (event.key === "ArrowRight") {
+        const nextBtn = document.getElementById("nextPokemonBtn");
+        if (nextBtn && !nextBtn.disabled && nextBtn.onclick) {
+          event.preventDefault();
+          nextBtn.click();
+        }
+      }
     },
     focusSelector: "#closePokemonInfo",
   });
@@ -417,6 +540,7 @@ function renderEvolutionDetails(evoEl, evolutionPaths, spriteStyle) {
  * @param {string} [gender=""] - Gender variant ('female' or '').
  * @param {string} [formName=""] - Explicit form name if available.
  * @param {number|string} [spriteId=""] - Explicit sprite ID if different from formId.
+ * @param {HTMLElement|null} [sourceCell=null] - Originating dex slot cell element.
  * @returns {Promise<void>}
  */
 export async function openPokemonInfoModal(
@@ -426,6 +550,7 @@ export async function openPokemonInfoModal(
   gender = "",
   formName = "",
   spriteId = "",
+  sourceCell = null,
 ) {
   const modal = document.getElementById("modalPokemonInfo");
   if (!modal) return;
@@ -489,6 +614,8 @@ export async function openPokemonInfoModal(
   bodyEl.hidden = true;
   errorEl.hidden = true;
   loadingEl.hidden = false;
+
+  updateNavigationButtons(sourceCell, speciesId, formId, gender);
 
   const { openModal } = getInfoModalHandlers();
   openModal();

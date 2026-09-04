@@ -445,7 +445,7 @@ export function renderDexSectionBoxes(
  * @param {string} [gender=""] - Gender variant ('female' or '').
  * @returns {string} The variant subtitle, or empty string if standard form.
  */
-function getVariantSubtitle(
+export function getVariantSubtitle(
   speciesName,
   formTitle = "",
   formName = "",
@@ -463,6 +463,45 @@ function getVariantSubtitle(
     return formName;
   }
   return "";
+}
+
+/**
+ * Extracts normalized Pokémon display information from an active slot cell element.
+ *
+ * @param {HTMLElement} cell - The Pokémon slot cell element.
+ * @returns {Object|null} Extracted Pokémon information including speciesId, formId, and formatted labels.
+ */
+export function getCellDisplayInfo(cell) {
+  if (!cell) return null;
+  const speciesId = Number(cell.dataset.national);
+  const formId = Number(cell.dataset.form);
+  const spriteId = cell.dataset.sprite || "";
+  const gender = cell.dataset.gender || "";
+  const formName = cell.dataset.formName || "";
+  const formTitle = cell.dataset.formTitle || "";
+  const baseName =
+    cell.dataset.speciesName ||
+    window.__livingDexNames?.[speciesId] ||
+    `#${speciesId}`;
+  const variantText = getVariantSubtitle(baseName, formTitle, formName, gender);
+  const displayName =
+    formName || (variantText ? `${baseName} (${variantText})` : baseName);
+
+  const indexEl = cell.querySelector(".index");
+  const displayIndex =
+    indexEl?.textContent?.trim() || String(speciesId).padStart(3, "0");
+
+  return {
+    cell,
+    speciesId,
+    formId,
+    spriteId,
+    gender,
+    formName,
+    displayName,
+    displayIndex,
+    metaText: `#${displayIndex} ${displayName}`,
+  };
 }
 
 /**
@@ -769,6 +808,7 @@ export function populateDexSlots(sections, slotCount, onComplete) {
               gender,
               formName,
               spriteId,
+              cell,
             );
           };
           infoBtn.addEventListener("click", handleInfo);

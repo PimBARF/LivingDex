@@ -165,6 +165,50 @@ export function toggleTypeFilter(typeId) {
   applyTypeFilter();
 }
 
+/**
+ * Queries all Pokémon cells in the dex that are currently visible and matching
+ * the active status filter, type filters, search query, and non-hidden sections.
+ *
+ * @returns {HTMLButtonElement[]} Array of active, visible cell elements.
+ */
+export function getVisiblePokemonCells() {
+  const isSearchActive = Boolean(
+    document.getElementById("search")?.value.trim(),
+  );
+  const allCells = Array.from(
+    document.querySelectorAll(".cell:not(.is-placeholder)"),
+  );
+
+  return allCells.filter((cell) => {
+    // Exclude cells in hidden sections / tabs
+    if (cell.closest("[hidden]")) return false;
+    if (
+      cell.offsetParent === null &&
+      window.getComputedStyle(cell).display === "none"
+    ) {
+      return false;
+    }
+    // Exclude dimmed non-matching search results
+    if (isSearchActive && cell.classList.contains("dimmed")) return false;
+    // Exclude hidden types
+    if (cell.classList.contains("type-hidden")) return false;
+    // Exclude caught/uncaught filter mismatches
+    if (
+      document.body.classList.contains("hide-caught") &&
+      cell.classList.contains("caught")
+    ) {
+      return false;
+    }
+    if (
+      document.body.classList.contains("hide-uncaught") &&
+      !cell.classList.contains("caught")
+    ) {
+      return false;
+    }
+    return true;
+  });
+}
+
 // =============================================================================
 // HEADER CONTROLS & USER INTERACTIONS
 /**

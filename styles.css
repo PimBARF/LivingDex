@@ -2261,7 +2261,7 @@ body.is-scrolled #progressWrap {
    ============================================================================= */
 
 .pokemon-info-card {
-  max-width: 460px;
+  max-width: 500px;
 }
 
 /* Header with sprite artwork thumbnail and name/number/types */
@@ -2589,6 +2589,104 @@ body.is-scrolled #progressWrap {
 
 .pokemon-info-error {
   color: var(--danger);
+}
+
+/* --- Pokémon Info Navigation Footer --- */
+.pokemon-info-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  width: 100%;
+}
+
+.pokemon-info-nav-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: 1;
+  min-width: 0;
+}
+
+.pokemon-info-nav-group.is-prev {
+  justify-content: flex-start;
+}
+
+.pokemon-info-nav-group.is-next {
+  justify-content: flex-end;
+}
+
+.pokemon-info-nav-btn,
+.pokemon-info-close-btn {
+  width: 74px;
+  height: 34px;
+  padding: 0 8px;
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  box-sizing: border-box;
+}
+
+.pokemon-info-nav-btn {
+  background: var(--surface-soft);
+  border: 1px solid var(--surface-soft-border);
+  color: var(--text);
+  border-radius: var(--border-radius-sm, 6px);
+  cursor: pointer;
+  transition: background-color 0.15s ease, border-color 0.15s ease, opacity 0.15s ease, transform 0.1s ease;
+  user-select: none;
+}
+
+.pokemon-info-nav-btn:hover:not(:disabled) {
+  background: var(--surface-soft-hover);
+  border-color: var(--accent-2);
+}
+
+.pokemon-info-nav-btn:active:not(:disabled) {
+  transform: scale(0.98);
+}
+
+.pokemon-info-nav-btn:disabled,
+.pokemon-info-nav-btn[aria-disabled="true"] {
+  opacity: 0.35;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.pokemon-info-nav-btn .nav-arrow {
+  font-size: 1.1rem;
+  line-height: 1;
+  flex-shrink: 0;
+  font-weight: 700;
+}
+
+.pokemon-info-nav-btn .nav-label {
+  font-weight: 600;
+  flex-shrink: 0;
+}
+
+.pokemon-info-nav-group .nav-meta {
+  display: none;
+  font-size: 0.78rem;
+  color: var(--muted);
+  font-weight: 500;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.pokemon-info-nav-group.is-next .nav-meta {
+  text-align: right;
+}
+
+@media (min-width: 440px) {
+  .pokemon-info-nav-group .nav-meta {
+    display: block;
+  }
 }
 
 /* --- Mobile Adjustments for Pokémon Info (max-width: 520px) --- */
