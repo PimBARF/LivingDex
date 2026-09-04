@@ -458,7 +458,8 @@ header {
   -webkit-backdrop-filter: saturate(180%) blur(5px);
   color: rgb(33, 33, 33);
   overflow-anchor: none;
-  transition: padding 200ms ease;
+  transition: padding 350ms ease, margin-bottom 350ms ease;
+  margin-bottom: 0;
 }
 
 .topbar {
@@ -497,7 +498,7 @@ header {
   align-items: center;
   margin-bottom: 8px;
   flex-wrap: wrap;
-  transition: max-height 200ms ease, opacity 150ms ease, margin 200ms ease;
+  transition: max-height 350ms ease, opacity 250ms ease, margin 350ms ease;
   will-change: max-height, opacity, margin;
 }
 
@@ -775,11 +776,12 @@ footer {
 
   /* Auto-collapsing search bar on mobile scroll down */
   header .searchrow {
-    max-height: 140px;
+    max-height: var(--searchrow-height-only, 89px);
   }
 
   body.search-collapsed header {
     padding-bottom: 6px;
+    margin-bottom: var(--searchrow-height, 101px);
   }
 
   body.search-collapsed header .searchrow {
@@ -861,7 +863,7 @@ footer {
   max-width: 680px;
   margin: 6px auto 16px;
   overflow-anchor: none;
-  transition: top 0.2s ease, width 0.2s ease, max-width 0.2s ease;
+  transition: top 0.35s ease, width 0.35s ease, max-width 0.35s ease;
 }
 
 /* Compact width when page is scrolled */
@@ -902,11 +904,11 @@ body.is-scrolled #progressWrap {
 /* Adjust sticky progress bar offset for mobile header height */
 @media (max-width: 640px) {
   #progressWrap {
-    top: 230px;
+    top: var(--header-expanded-height, 230px);
   }
 
   body.search-collapsed #progressWrap {
-    top: 130px;
+    top: var(--header-collapsed-height, 130px);
   }
 }
 

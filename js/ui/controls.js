@@ -614,6 +614,48 @@ export function registerHeaderControls(slotCount) {
   const COLLAPSE_Y = 120;
   let lastScrollY = window.scrollY;
 
+  // Dynamically compute mobile header heights to prevent layout shifts when collapsing/expanding
+  const updateHeaderMetrics = () => {
+    if (!isMobile()) {
+      document.documentElement.style.removeProperty("--searchrow-height");
+      document.documentElement.style.removeProperty("--searchrow-height-only");
+      document.documentElement.style.removeProperty("--header-expanded-height");
+      document.documentElement.style.removeProperty(
+        "--header-collapsed-height",
+      );
+      return;
+    }
+
+    const header = document.querySelector("header");
+    const searchRow = document.querySelector("header .searchrow");
+    if (!header || !searchRow) return;
+
+    if (!document.body.classList.contains("search-collapsed")) {
+      const searchRowHeight = searchRow.offsetHeight;
+      const headerHeight = header.offsetHeight;
+      // Searchrow delta: searchRow height + searchrow margin-bottom (8px) + header padding delta (10px - 6px = 4px)
+      const searchRowDelta = searchRowHeight + 8 + 4;
+      const collapsedHeaderHeight = Math.max(0, headerHeight - searchRowDelta);
+
+      document.documentElement.style.setProperty(
+        "--searchrow-height-only",
+        `${searchRowHeight}px`,
+      );
+      document.documentElement.style.setProperty(
+        "--searchrow-height",
+        `${searchRowDelta}px`,
+      );
+      document.documentElement.style.setProperty(
+        "--header-expanded-height",
+        `${headerHeight + 8}px`,
+      );
+      document.documentElement.style.setProperty(
+        "--header-collapsed-height",
+        `${collapsedHeaderHeight + 8}px`,
+      );
+    }
+  };
+
   const updateSearchCollapse = () => {
     const currentScrollY = Math.max(0, window.scrollY);
     const scrollDelta = currentScrollY - lastScrollY;
@@ -657,8 +699,17 @@ export function registerHeaderControls(slotCount) {
   searchInput?.addEventListener("blur", updateSearchCollapse);
 
   window.addEventListener("scroll", updateSearchCollapse, { passive: true });
-  window.addEventListener("resize", updateSearchCollapse);
+  window.addEventListener("resize", () => {
+    updateHeaderMetrics();
+    updateSearchCollapse();
+  });
+  window.addEventListener("orientationchange", () => {
+    setTimeout(updateHeaderMetrics, 100);
+  });
+
+  updateHeaderMetrics();
   updateSearchCollapse();
+  requestAnimationFrame(updateHeaderMetrics);
 }
 
 /**
