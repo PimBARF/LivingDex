@@ -27,7 +27,7 @@ import {
 
 import { resetDexProgress, rebuildDexView } from "../state.js";
 import { applyPersistedViewSettings } from "../main.js";
-import { refreshOfflineDataAndCaches } from "../pwa.js";
+import { refreshOfflineDataAndCaches, checkForUpdates } from "../pwa.js";
 import { applyBoxLabelsToHeaders, updateAllBoxProgress } from "./dom-render.js";
 import {
   getGameDexData,
@@ -758,6 +758,7 @@ export function registerSettingsControls() {
   const importInput = document.getElementById("settingsImportFile");
   const refreshCacheBtn = document.getElementById("settingsRefreshCache");
   const clearCacheBtn = document.getElementById("settingsClearSpeciesCache");
+  const checkUpdatesBtn = document.getElementById("settingsCheckUpdates");
   const clearAllBtn = document.getElementById("settingsClearAllData");
   const defaultGameModeSelect = document.getElementById(
     "settingsDefaultGameMode",
@@ -1145,6 +1146,23 @@ export function registerSettingsControls() {
   }
 
   /**
+   * Check for service worker updates.
+   */
+  async function checkUpdatesAction() {
+    showToast("Checking for updates...", "warning");
+    const res = await checkForUpdates();
+    if (res.status === "update-available") {
+      showToast(res.message, "success");
+    } else if (res.status === "up-to-date") {
+      showToast(res.message, "success");
+    } else if (res.status === "offline") {
+      showToast(res.message, "warning");
+    } else {
+      showToast(res.message, "danger");
+    }
+  }
+
+  /**
    * Prompt user for confirmation before wiping all stored progress and settings.
    */
   function clearAllDataAction() {
@@ -1266,6 +1284,7 @@ export function registerSettingsControls() {
 
   refreshCacheBtn?.addEventListener("click", refreshCacheAction);
   clearCacheBtn?.addEventListener("click", clearSpeciesCacheAction);
+  checkUpdatesBtn?.addEventListener("click", checkUpdatesAction);
   clearAllBtn?.addEventListener("click", clearAllDataAction);
   aboutBtn?.addEventListener("click", openAboutModal);
   footerAboutBtn?.addEventListener("click", openAboutModal);

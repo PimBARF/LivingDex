@@ -64,7 +64,9 @@ export async function initPwa() {
   });
 
   try {
-    const reg = await navigator.serviceWorker.register("./sw.js");
+    const reg = await navigator.serviceWorker.register("./sw.js", {
+      updateViaCache: "none",
+    });
     swRegistration = reg;
 
     // Check if there is already a waiting worker upon page load
@@ -96,17 +98,135 @@ export async function initPwa() {
       }
     });
 
-    // Periodically check for updates when returning to the tab
-    document.addEventListener("visibilitychange", () => {
-      if (document.visibilityState === "visible") {
+    // Proactively check for updates on resume, focus, page show, and online
+    const triggerUpdateCheck = () => {
+      if (navigator.onLine && document.visibilityState !== "hidden") {
         reg.update().catch(() => {});
       }
-    });
+    };
+
+    document.addEventListener("visibilitychange", triggerUpdateCheck);
+    window.addEventListener("focus", triggerUpdateCheck);
+    window.addEventListener("pageshow", triggerUpdateCheck);
+    window.addEventListener("online", triggerUpdateCheck);
+
+    // Periodically check for updates while the app is active (every 30 minutes)
+    const UPDATE_CHECK_INTERVAL_MS = 30 * 60 * 1000;
+    setInterval(triggerUpdateCheck, UPDATE_CHECK_INTERVAL_MS);
 
     return reg;
   } catch (err) {
     console.warn("[PWA] Service Worker registration failed:", err);
     return null;
+  }
+}
+
+/**
+ * Proactively triggers a service worker update check and returns the result.
+ *
+ * @returns {Promise<{ status: 'update-available'|'up-to-date'|'offline'|'unsupported'|'error', message: string }>}
+ */
+export async function checkForUpdates() {
+  if (typeof navigator === "undefined" || !("serviceWorker" in navigator)) {
+    return {
+      status: "unsupported",
+      message: "Service Workers are not supported in this browser.",
+    };
+  }
+
+  if (!navigator.onLine) {
+    return {
+      status: "offline",
+      message: "You are offline. Connect to the internet to check for updates.",
+    };
+  }
+
+  try {
+    const reg =
+      swRegistration || (await navigator.serviceWorker.getRegistration());
+    if (!reg) {
+      return {
+        status: "unsupported",
+        message: "No active service worker registered.",
+      };
+    }
+
+    // Check if an update is already waiting to be applied
+    if (reg.waiting) {
+      showUpdateBanner(reg.waiting);
+      return {
+        status: "update-available",
+        message: "A new update is available! Click 'Update now' to apply.",
+      };
+    }
+
+    // Trigger update check against the server
+    await reg.update();
+
+    if (reg.waiting) {
+      showUpdateBanner(reg.waiting);
+      return {
+        status: "update-available",
+        message: "A new update is available! Click 'Update now' to apply.",
+      };
+    }
+
+    if (reg.installing) {
+      return new Promise((resolve) => {
+        const worker = reg.installing;
+        const onStateChange = () => {
+          if (
+            worker.state === "installed" &&
+            navigator.serviceWorker.controller
+          ) {
+            worker.removeEventListener("statechange", onStateChange);
+            showUpdateBanner(worker);
+            resolve({
+              status: "update-available",
+              message:
+                "A new update is available! Click 'Update now' to apply.",
+            });
+          } else if (worker.state === "redundant") {
+            worker.removeEventListener("statechange", onStateChange);
+            resolve({
+              status: "up-to-date",
+              message: "LivingDex is up to date.",
+            });
+          }
+        };
+
+        worker.addEventListener("statechange", onStateChange);
+
+        // Fallback timer if state change resolves earlier or gets stuck
+        setTimeout(() => {
+          worker.removeEventListener("statechange", onStateChange);
+          if (reg.waiting) {
+            showUpdateBanner(reg.waiting);
+            resolve({
+              status: "update-available",
+              message:
+                "A new update is available! Click 'Update now' to apply.",
+            });
+          } else {
+            resolve({
+              status: "up-to-date",
+              message: "LivingDex is up to date.",
+            });
+          }
+        }, 3000);
+      });
+    }
+
+    return {
+      status: "up-to-date",
+      message: "LivingDex is up to date.",
+    };
+  } catch (err) {
+    console.warn("[PWA] Update check failed:", err);
+    return {
+      status: "error",
+      message: `Failed to check for updates: ${err.message || "Network error"}`,
+    };
   }
 }
 
