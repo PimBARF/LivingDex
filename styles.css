@@ -3680,6 +3680,12 @@ body.is-drag-selecting .cell {
   gap: 4px;
 }
 
+.missing-ready-badge.is-warning {
+  background: color-mix(in srgb, var(--warning) 16%, transparent);
+  color: var(--warning);
+  border-color: color-mix(in srgb, var(--warning) 40%, transparent);
+}
+
 .missing-ready-badge.is-item-missing {
   background: color-mix(in srgb, #f39c12 15%, transparent);
   color: #e67e22;

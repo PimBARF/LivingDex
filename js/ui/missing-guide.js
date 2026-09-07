@@ -479,7 +479,7 @@ function getFilteredMissingList(list) {
     // Method filter
     if (filterState.method !== "all") {
       if (filterState.method === "ready") {
-        if (!p.isReadyToEvolve) return false;
+        if (!p.isReadyToEvolve && !p.isSacrificeEvolve) return false;
       } else if (filterState.method === "wild") {
         if (!p.hasWildLocations) return false;
       } else if (filterState.method === "item") {
@@ -546,7 +546,9 @@ function getFilteredMissingList(list) {
       return (order[a.methodCategory] || 99) - (order[b.methodCategory] || 99);
     }
     if (filterState.sort === "readiness") {
-      return (b.isReadyToEvolve ? 1 : 0) - (a.isReadyToEvolve ? 1 : 0);
+      const scoreA = a.isReadyToEvolve ? 2 : a.isSacrificeEvolve ? 1 : 0;
+      const scoreB = b.isReadyToEvolve ? 2 : b.isSacrificeEvolve ? 1 : 0;
+      return scoreB - scoreA;
     }
     return 0;
   });
@@ -659,12 +661,18 @@ function renderMissingList(container) {
     if (p.isReadyToEvolve && p.preEvolutionName) {
       const readyBanner = document.createElement("div");
       readyBanner.className = "missing-ready-badge";
-      readyBanner.innerHTML = `<span>🟢</span> Ready: <strong>${p.preEvolutionName}</strong> is owned${p.requiredItem ? ` &amp; item in bag` : ""}!`;
+      readyBanner.innerHTML = `<span>🟢</span> Ready: <strong>${p.preSpecimenCount} ${p.preEvolutionName}</strong> owned (extra to spare)${p.requiredItem ? ` &amp; item in bag` : ""}!`;
       body.appendChild(readyBanner);
+    } else if (p.isSacrificeEvolve && p.preEvolutionName) {
+      const warnBanner = document.createElement("div");
+      warnBanner.className = "missing-ready-badge is-warning";
+      warnBanner.innerHTML = `<span>⚠️</span> Warning: Only 1 <strong>${p.preEvolutionName}</strong> owned—evolving will vacate its Living Dex slot!`;
+      body.appendChild(warnBanner);
     } else if (p.hasPreEvo && p.requiredItem && !p.hasItem) {
       const partialBanner = document.createElement("div");
       partialBanner.className = "missing-ready-badge is-item-missing";
-      partialBanner.innerHTML = `<span>🟡</span> Has <strong>${p.preEvolutionName}</strong>, needs <strong>${normalizeItemName(p.requiredItem)}</strong>`;
+      const countLabel = p.preSpecimenCount > 0 ? `${p.preSpecimenCount} ` : "";
+      partialBanner.innerHTML = `<span>🟡</span> Has <strong>${countLabel}${p.preEvolutionName}</strong>, needs <strong>${normalizeItemName(p.requiredItem)}</strong>`;
       body.appendChild(partialBanner);
     }
 

@@ -1256,7 +1256,11 @@ export async function getMissingPokemonData(
     let evolveDetails = null;
     let preEvolutionSpeciesId = null;
     let preEvolutionName = "";
+    let preSpecimenCount = 0;
+    let hasSurplusPreEvo = false;
+    let hasExactOnePreEvo = false;
     let isReadyToEvolve = false;
+    let isSacrificeEvolve = false;
     let hasPreEvo = false;
     let hasItem = true;
     let requiredItem = null;
@@ -1275,9 +1279,18 @@ export async function getMissingPokemonData(
           preSpec?.names?.[language] || preSpec?.names?.en || preSpec?.name,
         );
 
-        hasPreEvo =
-          caughtSpeciesIds.has(preEvolutionSpeciesId) ||
-          (specimenInventory[preEvolutionSpeciesId] || 0) > 0;
+        const preInventoryCount = specimenInventory[preEvolutionSpeciesId];
+        const preCaughtInDex = caughtSpeciesIds.has(preEvolutionSpeciesId);
+        preSpecimenCount =
+          typeof preInventoryCount === "number"
+            ? preInventoryCount
+            : preCaughtInDex
+              ? 1
+              : 0;
+
+        hasSurplusPreEvo = preSpecimenCount >= 2;
+        hasExactOnePreEvo = preSpecimenCount === 1;
+        hasPreEvo = preSpecimenCount > 0;
 
         requiredItem =
           incomingTransition.item || incomingTransition.heldItem || null;
@@ -1285,7 +1298,8 @@ export async function getMissingPokemonData(
 
         hasItem = requiredItem ? (itemInventory[requiredItem] || 0) > 0 : true;
 
-        isReadyToEvolve = Boolean(hasPreEvo && hasItem);
+        isReadyToEvolve = Boolean(hasSurplusPreEvo && hasItem);
+        isSacrificeEvolve = Boolean(hasExactOnePreEvo && hasItem);
 
         evolveDetails = {
           fromSpeciesId: preEvolutionSpeciesId,
@@ -1294,8 +1308,12 @@ export async function getMissingPokemonData(
           description: incomingTransition.description,
           item: requiredItem,
           hasPreEvo,
+          hasSurplusPreEvo,
+          hasExactOnePreEvo,
+          preSpecimenCount,
           hasItem,
           isReady: isReadyToEvolve,
+          isSacrifice: isSacrificeEvolve,
         };
 
         if (requiredItem) {
@@ -1328,7 +1346,11 @@ export async function getMissingPokemonData(
       evolveDetails,
       preEvolutionSpeciesId,
       preEvolutionName,
+      preSpecimenCount,
+      hasSurplusPreEvo,
+      hasExactOnePreEvo,
       isReadyToEvolve,
+      isSacrificeEvolve,
       hasPreEvo,
       hasItem,
       requiredItem,
