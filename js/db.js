@@ -5,6 +5,7 @@ import {
   loadSettings,
   loadItemInventory,
   loadSpecimenInventory,
+  getSelectedGameVersion,
 } from "./storage.js";
 import { applyNamesToCells } from "./ui/dom-render.js";
 
@@ -1087,13 +1088,70 @@ export async function getHomeSpeciesGamesMap() {
 }
 
 /**
+ * Formats a game version code into a human-readable title (e.g. 'black-2' -> 'Black 2').
+ *
+ * @param {string} v - The raw version code.
+ * @returns {string} Formatted version display name.
+ */
+export function formatVersionName(v) {
+  if (!v) return "";
+  const map = {
+    red: "Red",
+    blue: "Blue",
+    yellow: "Yellow",
+    gold: "Gold",
+    silver: "Silver",
+    crystal: "Crystal",
+    ruby: "Ruby",
+    sapphire: "Sapphire",
+    emerald: "Emerald",
+    firered: "FireRed",
+    leafgreen: "LeafGreen",
+    diamond: "Diamond",
+    pearl: "Pearl",
+    platinum: "Platinum",
+    heartgold: "HeartGold",
+    soulsilver: "SoulSilver",
+    black: "Black",
+    white: "White",
+    "black-2": "Black 2",
+    "white-2": "White 2",
+    x: "X",
+    y: "Y",
+    "omega-ruby": "Omega Ruby",
+    "alpha-sapphire": "Alpha Sapphire",
+    sun: "Sun",
+    moon: "Moon",
+    "ultra-sun": "Ultra Sun",
+    "ultra-moon": "Ultra Moon",
+    "lets-go-pikachu": "Let's Go Pikachu",
+    "lets-go-eevee": "Let's Go Eevee",
+    sword: "Sword",
+    shield: "Shield",
+    "brilliant-diamond": "Brilliant Diamond",
+    "shining-pearl": "Shining Pearl",
+    "legends-arceus": "Legends: Arceus",
+    scarlet: "Scarlet",
+    violet: "Violet",
+    "legends-z-a": "Legends: Z-A",
+    home: "HOME",
+  };
+  return map[v] || v.charAt(0).toUpperCase() + v.slice(1).replace(/-/g, " ");
+}
+
+/**
  * Retrieves enriched data for all uncaught Pokémon in the active game / living dex.
  *
  * @param {string} gameId - Active game identifier.
  * @param {Record<number, boolean>} [caughtSlots={}] - Map of caught slot indices.
+ * @param {string} [targetVersion=""] - Optional specific game version (e.g. 'yellow' or 'all').
  * @returns {Promise<Array<Object>>} List of missing Pokémon records with acquisition details.
  */
-export async function getMissingPokemonData(gameId, caughtSlots = {}) {
+export async function getMissingPokemonData(
+  gameId,
+  caughtSlots = {},
+  targetVersion = "",
+) {
   const allSpecies = await getAllSpeciesData();
   const gameDexData = await getGameDexData(gameId);
   const evoDataMap = await loadEvolutions(gameId);
@@ -1132,6 +1190,8 @@ export async function getMissingPokemonData(gameId, caughtSlots = {}) {
   const missingEntries = allSlots.filter((slot) => !slot.isCaught);
   const isHome = gameId === "home";
   const homeGamesMap = isHome ? await getHomeSpeciesGamesMap() : null;
+  const effectiveVersion =
+    targetVersion || getSelectedGameVersion(gameId) || "all";
   const results = [];
 
   for (const slot of missingEntries) {
@@ -1153,17 +1213,40 @@ export async function getMissingPokemonData(gameId, caughtSlots = {}) {
 
     // Locations or obtainable games
     let locations = [];
+    let exclusiveTo = [];
     if (isHome) {
       locations = homeGamesMap?.get(slot.speciesId) || [];
     } else if (gameDexData?.versions) {
       const rawEnc = encountersData?.encounters || {};
-      for (const version of gameDexData.versions) {
-        const vEnc = getVersionEncounters(rawEnc, slot.speciesId, version);
+      if (effectiveVersion && effectiveVersion !== "all") {
+        const vEnc = getVersionEncounters(
+          rawEnc,
+          slot.speciesId,
+          effectiveVersion,
+        );
         if (vEnc?.locations?.length) {
-          locations.push(...vEnc.locations);
+          locations = [...vEnc.locations];
+        } else {
+          // Check sibling versions for availability
+          const siblings = gameDexData.versions.filter(
+            (v) => v !== effectiveVersion,
+          );
+          for (const sib of siblings) {
+            const sEnc = getVersionEncounters(rawEnc, slot.speciesId, sib);
+            if (sEnc?.locations?.length) {
+              exclusiveTo.push(formatVersionName(sib));
+            }
+          }
         }
+      } else {
+        for (const version of gameDexData.versions) {
+          const vEnc = getVersionEncounters(rawEnc, slot.speciesId, version);
+          if (vEnc?.locations?.length) {
+            locations.push(...vEnc.locations);
+          }
+        }
+        locations = Array.from(new Set(locations));
       }
-      locations = Array.from(new Set(locations));
     }
 
     // Evolution path analysis
@@ -1240,6 +1323,8 @@ export async function getMissingPokemonData(gameId, caughtSlots = {}) {
       sectionTitle: slot.sectionTitle,
       locations,
       hasWildLocations: locations.length > 0,
+      exclusiveTo,
+      targetVersion: effectiveVersion,
       evolveDetails,
       preEvolutionSpeciesId,
       preEvolutionName,

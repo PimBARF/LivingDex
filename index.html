@@ -315,6 +315,17 @@
                 </select>
               </div>
             </div>
+            <div id="settingsGameVersionRow" class="settings-row" hidden>
+              <div class="settings-row-text">
+                <label for="settingsGameVersion" class="settings-row-title">Active game version</label>
+                <span class="settings-row-subtitle">Tailor wild encounters and missing guide to your cartridge</span>
+              </div>
+              <div class="settings-row-control">
+                <select id="settingsGameVersion" class="select settings-select">
+                  <option value="all">All Versions</option>
+                </select>
+              </div>
+            </div>
           </div>
         </section>
 
@@ -781,6 +792,12 @@
 
         <div id="missingFiltersCollapse" class="missing-filters-collapse" hidden>
           <div class="missing-filters-row">
+            <div id="missingFilterVersionWrap" class="missing-filter-control" hidden>
+              <select id="missingFilterVersion" class="select missing-select" aria-label="Filter by game version">
+                <option value="all">All Versions</option>
+              </select>
+            </div>
+
             <div id="missingFilterMethodWrap" class="missing-filter-control">
               <select id="missingFilterMethod" class="select missing-select" aria-label="Filter by acquisition method">
                 <option value="all">All Methods</option>

@@ -12,6 +12,8 @@ import {
   saveItemInventory,
   loadSpecimenInventory,
   saveSpecimenInventory,
+  getSelectedGameVersion,
+  setSelectedGameVersion,
 } from "../storage.js";
 import { isShinyMode, syncCaughtState, countCaughtSlots } from "../state.js";
 import {
@@ -19,6 +21,8 @@ import {
   getEvolutionFamilyChecklist,
   getEvolutionItemsSummary,
   buildActiveDexSections,
+  getGameDexData,
+  formatVersionName,
 } from "../db.js";
 import { attachModalHandlers } from "./modals.js";
 import { openPokemonInfoModal } from "./pokemon-info.js";
@@ -36,6 +40,7 @@ let filterState = {
   method: "all",
   type: "",
   segment: "",
+  version: "all",
   sort: "dex-asc",
   familyFilter: "all",
 };
@@ -103,6 +108,8 @@ export function registerMissingGuideModal() {
     closeBtn,
     backdrop,
     onOpen: async () => {
+      filterState.version = getSelectedGameVersion(ACTIVE_GAME_ID) || "all";
+      await populateVersionFilterDropdown();
       await refreshMissingGuideData();
       populateSegmentFilterDropdown();
       updateActiveFilterBadge();
@@ -138,6 +145,7 @@ function updateActiveFilterBadge() {
   if (!badge) return;
 
   let count = 0;
+  if (filterState.version && filterState.version !== "all") count += 1;
   if (filterState.method !== "all") count += 1;
   if (filterState.type) count += 1;
   if (filterState.segment) count += 1;
@@ -163,7 +171,7 @@ async function refreshMissingGuideData() {
   );
 
   const [missing, families, items] = await Promise.all([
-    getMissingPokemonData(ACTIVE_GAME_ID, caught),
+    getMissingPokemonData(ACTIVE_GAME_ID, caught, filterState.version),
     getEvolutionFamilyChecklist(ACTIVE_GAME_ID, caught),
     getEvolutionItemsSummary(ACTIVE_GAME_ID, caught),
   ]);
@@ -196,6 +204,41 @@ function updateModalHeaderStats() {
   } else if (currentTab === "items") {
     statsEl.innerHTML = `<span class="stats-label-full">${remainingItemsCount} / ${itemsCount} Items Needed</span><span class="stats-label-short">${remainingItemsCount} Items Needed</span>`;
   }
+}
+
+/**
+ * Populates game version filter dropdown options based on active game's versions.
+ */
+async function populateVersionFilterDropdown() {
+  const versionWrap = document.getElementById("missingFilterVersionWrap");
+  const versionSelect = document.getElementById("missingFilterVersion");
+  if (!versionSelect || !versionWrap) return;
+
+  const gameDexData = await getGameDexData(ACTIVE_GAME_ID);
+  const versions = gameDexData?.versions || [];
+
+  if (versions.length <= 1 || ACTIVE_GAME_ID === "home") {
+    versionWrap.hidden = true;
+    return;
+  }
+
+  versionWrap.hidden = false;
+  const currentSaved = getSelectedGameVersion(ACTIVE_GAME_ID) || "all";
+  versionSelect.innerHTML = "";
+
+  const allOpt = document.createElement("option");
+  allOpt.value = "all";
+  allOpt.textContent = `All Versions (${versions.map(formatVersionName).join(" / ")})`;
+  versionSelect.appendChild(allOpt);
+
+  versions.forEach((v) => {
+    const opt = document.createElement("option");
+    opt.value = v;
+    opt.textContent = formatVersionName(v);
+    versionSelect.appendChild(opt);
+  });
+
+  versionSelect.value = filterState.version || currentSaved;
 }
 
 /**
@@ -268,6 +311,7 @@ function setupFilterListeners() {
   const searchClear = document.getElementById("missingSearchClear");
   const toggleFiltersBtn = document.getElementById("missingToggleFiltersBtn");
   const filtersCollapse = document.getElementById("missingFiltersCollapse");
+  const versionSelect = document.getElementById("missingFilterVersion");
   const methodSelect = document.getElementById("missingFilterMethod");
   const familySelect = document.getElementById("missingFilterFamily");
   const typeSelect = document.getElementById("missingFilterType");
@@ -281,6 +325,17 @@ function setupFilterListeners() {
       filtersCollapse.hidden = isExpanded;
       toggleFiltersBtn.setAttribute("aria-expanded", String(!isExpanded));
       toggleFiltersBtn.classList.toggle("is-active", !isExpanded);
+    });
+  }
+
+  if (versionSelect) {
+    versionSelect.addEventListener("change", async (e) => {
+      filterState.version = e.target.value;
+      setSelectedGameVersion(ACTIVE_GAME_ID, filterState.version);
+      updateActiveFilterBadge();
+      await refreshMissingGuideData();
+      updateModalHeaderStats();
+      renderActiveTab();
     });
   }
 
@@ -345,15 +400,18 @@ function setupFilterListeners() {
   }
 
   if (resetFiltersBtn) {
-    resetFiltersBtn.addEventListener("click", () => {
+    resetFiltersBtn.addEventListener("click", async () => {
       filterState = {
         search: "",
         method: "all",
         type: "",
         segment: "",
+        version: "all",
         sort: "dex-asc",
         familyFilter: "all",
       };
+      setSelectedGameVersion(ACTIVE_GAME_ID, "all");
+      if (versionSelect) versionSelect.value = "all";
       if (searchInput) searchInput.value = "";
       if (searchClear) searchClear.hidden = true;
       if (methodSelect) methodSelect.value = "all";
@@ -362,6 +420,8 @@ function setupFilterListeners() {
       if (segmentSelect) segmentSelect.value = "";
       if (sortSelect) sortSelect.value = "dex-asc";
       updateActiveFilterBadge();
+      await refreshMissingGuideData();
+      updateModalHeaderStats();
       renderActiveTab();
     });
   }
@@ -631,6 +691,12 @@ function renderMissingList(container) {
         <span class="method-icon">🌿</span>
         <span class="method-label">${wildLabel}</span>
       `;
+    } else if (p.exclusiveTo && p.exclusiveTo.length > 0) {
+      methodBadge.className = "missing-method-badge method-transfer";
+      methodBadge.innerHTML = `
+        <span class="method-icon">🔄</span>
+        <span class="method-label">Trade from ${p.exclusiveTo.join(", ")}</span>
+      `;
     } else {
       methodBadge.innerHTML = `
         <span class="method-icon">📦</span>
@@ -639,7 +705,7 @@ function renderMissingList(container) {
     }
     body.appendChild(methodBadge);
 
-    // Locations / Obtainable Games preview
+    // Locations / Obtainable Games / Version Exclusives preview
     if (p.locations && p.locations.length > 0) {
       const locWrap = document.createElement("div");
       locWrap.className = "missing-locations-wrap";
@@ -681,6 +747,25 @@ function renderMissingList(container) {
         }
         locWrap.appendChild(locList);
       }
+      body.appendChild(locWrap);
+    } else if (p.exclusiveTo && p.exclusiveTo.length > 0) {
+      const locWrap = document.createElement("div");
+      locWrap.className = "missing-locations-wrap";
+
+      const locTitle = document.createElement("span");
+      locTitle.className = "missing-locations-title";
+      locTitle.textContent = "✨ Version Exclusive:";
+      locWrap.appendChild(locTitle);
+
+      const gamesList = document.createElement("div");
+      gamesList.className = "missing-games-tags-list";
+      p.exclusiveTo.forEach((vTitle) => {
+        const gTag = document.createElement("span");
+        gTag.className = "missing-game-tag missing-version-tag";
+        gTag.textContent = vTitle;
+        gamesList.appendChild(gTag);
+      });
+      locWrap.appendChild(gamesList);
       body.appendChild(locWrap);
     }
 

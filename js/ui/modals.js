@@ -7,6 +7,8 @@ import {
   loadSegmentConfig,
   saveSegmentConfig,
   resetSegmentConfig,
+  getSelectedGameVersion,
+  setSelectedGameVersion,
 } from "../storage.js";
 
 import {
@@ -31,6 +33,7 @@ import {
   getGameDexData,
   buildActiveDexSections,
   loadSpeciesNames,
+  formatVersionName,
 } from "../db.js";
 import {
   registerMissingGuideModal,
@@ -844,6 +847,34 @@ export function registerSettingsControls() {
       defaultGameWrapper.hidden =
         (defaultGameModeSelect?.value || "last-used") !== "specific";
     }
+
+    const gameVersionRow = document.getElementById("settingsGameVersionRow");
+    const gameVersionSelect = document.getElementById("settingsGameVersion");
+    if (gameVersionRow && gameVersionSelect) {
+      getGameDexData(ACTIVE_GAME_ID).then((dexData) => {
+        const versions = dexData?.versions || [];
+        if (versions.length > 1 && ACTIVE_GAME_ID !== "home") {
+          gameVersionRow.hidden = false;
+          gameVersionSelect.innerHTML = "";
+
+          const allOpt = document.createElement("option");
+          allOpt.value = "all";
+          allOpt.textContent = `All Versions (${versions.map(formatVersionName).join(" / ")})`;
+          gameVersionSelect.appendChild(allOpt);
+
+          versions.forEach((v) => {
+            const opt = document.createElement("option");
+            opt.value = v;
+            opt.textContent = formatVersionName(v);
+            gameVersionSelect.appendChild(opt);
+          });
+          gameVersionSelect.value =
+            getSelectedGameVersion(ACTIVE_GAME_ID) || "all";
+        } else {
+          gameVersionRow.hidden = true;
+        }
+      });
+    }
   }
 
   /**
@@ -880,6 +911,14 @@ export function registerSettingsControls() {
       defaultGameId:
         document.getElementById("settingsDefaultGame")?.value || null,
     };
+
+    const gameVersionSelect = document.getElementById("settingsGameVersion");
+    if (
+      gameVersionSelect &&
+      !gameVersionSelect.closest("#settingsGameVersionRow")?.hidden
+    ) {
+      setSelectedGameVersion(ACTIVE_GAME_ID, gameVersionSelect.value);
+    }
 
     saveSettings(nextSettings);
     applyTheme(nextSettings.theme);
@@ -1194,6 +1233,9 @@ export function registerSettingsControls() {
     ?.addEventListener("change", persistSettingsFromControls);
   document
     .getElementById("settingsSpriteStyle")
+    ?.addEventListener("change", persistSettingsFromControls);
+  document
+    .getElementById("settingsGameVersion")
     ?.addEventListener("change", persistSettingsFromControls);
 
   defaultGameModeSelect?.addEventListener("change", () => {

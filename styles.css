@@ -3680,6 +3680,12 @@ body.is-drag-selecting .cell {
   border: 1px solid color-mix(in srgb, var(--accent-2) 25%, transparent);
 }
 
+.missing-game-tag.missing-version-tag {
+  background: color-mix(in srgb, #9b59b6 14%, transparent);
+  color: #9b59b6;
+  border-color: color-mix(in srgb, #9b59b6 30%, transparent);
+}
+
 .missing-card-actions {
   display: flex;
   align-items: center;

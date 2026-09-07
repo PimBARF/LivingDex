@@ -43,6 +43,7 @@ const DEFAULT_SETTINGS = {
   spriteStyle: "pokesprites",
   defaultGameMode: "last-used", // 'last-used' | 'specific'
   defaultGameId: null,
+  gameVersions: {}, // Map of gameId -> selected version string (e.g. { rby: "yellow" })
   version: 1,
 };
 
@@ -724,4 +725,36 @@ export function saveSpecimenInventory(inventory) {
     );
   } catch {}
   return inventory;
+}
+
+/**
+ * Gets the selected version for a specific game (e.g. 'yellow' for 'rby').
+ *
+ * @param {string} [gameId=ACTIVE_GAME_ID] - The target game identifier.
+ * @returns {string} The selected version string or empty string if all versions.
+ */
+export function getSelectedGameVersion(gameId = ACTIVE_GAME_ID) {
+  const settings = loadSettings();
+  const versions = settings.gameVersions || {};
+  return versions[gameId] || "";
+}
+
+/**
+ * Saves the selected version for a specific game (e.g. 'yellow' for 'rby').
+ *
+ * @param {string} gameId - The target game identifier.
+ * @param {string} version - The version string (e.g. 'yellow', 'all', or '').
+ * @returns {string} The saved version string.
+ */
+export function setSelectedGameVersion(gameId, version) {
+  const settings = loadSettings();
+  const versions = { ...(settings.gameVersions || {}) };
+  if (!version || version === "all") {
+    delete versions[gameId];
+  } else {
+    versions[gameId] = version;
+  }
+  settings.gameVersions = versions;
+  saveSettings(settings);
+  return version;
 }
