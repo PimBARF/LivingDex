@@ -827,6 +827,17 @@ footer {
   margin-left: auto;
 }
 
+/* Ensure all action buttons in game title bar share identical height and alignment */
+.game-title-actions .btn {
+  height: 34px;
+  box-sizing: border-box;
+  font-size: 13px;
+  line-height: 1;
+  border-radius: var(--control-radius);
+  display: inline-flex;
+  align-items: center;
+}
+
 /* Compact inline action buttons beside game title (Share & Shiny Mode) */
 #shareDex.btn,
 #shinyToggle.btn {
@@ -834,8 +845,6 @@ footer {
   min-width: 34px;
   padding: 0 8px;
   font-size: 14px;
-  line-height: 1;
-  border-radius: var(--control-radius);
 }
 
 /* Shiny mode active toggle indicator */
@@ -2928,7 +2937,7 @@ body.is-drag-selecting .cell {
   font-weight: 600;
   font-size: 13px;
   padding: 0 10px;
-  height: 36px;
+  height: 34px;
   position: relative;
 }
 
@@ -3306,9 +3315,17 @@ body.is-drag-selecting .cell {
   margin-bottom: 10px;
 }
 
-.missing-search-wrap {
-  position: relative;
+.missing-search-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
   width: 100%;
+}
+
+.missing-search-wrap {
+  flex: 1 1 auto;
+  min-width: 0;
+  position: relative;
 }
 
 .missing-search-input {
@@ -3326,6 +3343,70 @@ body.is-drag-selecting .cell {
   outline: none;
   border-color: var(--accent-1);
   box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent-1) 20%, transparent);
+}
+
+.missing-toggle-filters-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  height: 38px;
+  padding: 0 12px;
+  font-size: 0.84rem;
+  font-weight: 600;
+  flex-shrink: 0;
+  border-radius: var(--radius);
+  background: var(--card);
+  border: 1px solid var(--border);
+  color: var(--text);
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.missing-toggle-filters-btn:hover {
+  background: var(--surface-soft-hover);
+  border-color: var(--accent-1);
+}
+
+.missing-toggle-filters-btn.is-active {
+  background: color-mix(in srgb, var(--accent-1) 12%, var(--card));
+  border-color: var(--accent-1);
+  color: var(--accent-1);
+}
+
+.missing-toggle-filters-btn.has-active-filters {
+  border-color: var(--accent-1);
+  box-shadow: 0 0 0 2px color-mix(in srgb, var(--accent-1) 25%, transparent);
+}
+
+.missing-filter-count-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--accent-1);
+  color: #fff;
+  font-size: 0.7rem;
+  font-weight: 700;
+  min-width: 16px;
+  height: 16px;
+  padding: 0 4px;
+  border-radius: 8px;
+  line-height: 1;
+}
+
+.missing-filters-collapse {
+  width: 100%;
+  animation: filterFadeIn 0.18s ease;
+}
+
+@keyframes filterFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .missing-filters-row {
@@ -3955,20 +4036,277 @@ body.is-drag-selecting .cell {
 }
 
 @media (max-width: 600px) {
+  .missing-guide-modal-card {
+    padding: 10px 10px 8px;
+    width: calc(100% - 16px);
+    max-height: calc(100dvh - 16px);
+    border-radius: 12px;
+  }
+
+  .missing-guide-header {
+    gap: 4px;
+    margin-bottom: 4px;
+  }
+
+  .missing-guide-title-row h3 {
+    font-size: 1.1rem;
+  }
+
+  .missing-guide-stats {
+    font-size: 0.74rem;
+    padding: 2px 7px;
+  }
+
+  #missingGuideDesc {
+    display: none;
+  }
+
+  .missing-tabs-segmented {
+    height: 32px;
+    margin-top: 2px;
+  }
+
+  .missing-tabs-segmented .segmented-btn {
+    font-size: 0.76rem;
+    padding: 3px 6px;
+    height: 100%;
+  }
+
+  .missing-toolbar {
+    padding: 4px 0 6px;
+    margin-bottom: 6px;
+    gap: 6px;
+  }
+
+  .missing-search-input {
+    height: 34px;
+    font-size: 0.84rem;
+    padding: 4px 30px 4px 10px;
+  }
+
+  .missing-toggle-filters-btn {
+    height: 34px;
+    padding: 0 8px;
+    font-size: 0.78rem;
+    gap: 4px;
+  }
+
+  .missing-guide-body {
+    min-height: 200px;
+    padding-right: 2px;
+  }
+
   .missing-cards-grid {
     grid-template-columns: 1fr;
+    gap: 8px;
+    padding-bottom: 4px;
+  }
+
+  .missing-card {
+    padding: 8px 10px;
+  }
+
+  .missing-card-sprite-wrap {
+    width: 44px;
+    height: 44px;
+    border-radius: 8px;
+  }
+
+  .missing-card-sprite {
+    max-width: 40px;
+    max-height: 40px;
+  }
+
+  .missing-card-name {
+    font-size: 0.92rem;
+    margin-bottom: 1px;
+  }
+
+  .missing-card-number {
+    font-size: 0.68rem;
+  }
+
+  .missing-card-types .type-badge {
+    font-size: 0.65rem;
+    padding: 1px 4px;
+  }
+
+  .missing-ready-badge {
+    font-size: 0.72rem;
+    padding: 3px 6px;
+  }
+
+  .missing-method-badge {
+    font-size: 0.74rem;
+    padding: 4px 8px;
+  }
+
+  .missing-locations-wrap {
+    font-size: 0.7rem;
+    line-height: 1.25;
+  }
+
+  .missing-card-actions {
+    margin-top: 6px;
+    padding-top: 6px;
+    gap: 6px;
+  }
+
+  .missing-catch-btn,
+  .missing-info-btn {
+    height: 30px;
+    font-size: 0.78rem;
+    padding: 0 8px;
+  }
+
+  .family-quotas-list {
+    gap: 8px;
+    padding-bottom: 4px;
+  }
+
+  .family-quota-card {
+    padding: 8px 10px;
+    border-radius: 10px;
+  }
+
+  .family-quota-header {
+    margin-bottom: 4px;
+  }
+
+  .family-root-sprite {
+    width: 28px;
+    height: 28px;
+  }
+
+  .family-quota-title {
+    font-size: 0.94rem;
+  }
+
+  .family-progress-badge {
+    font-size: 0.72rem;
+    padding: 2px 6px;
+  }
+
+  .family-quota-banner {
+    padding: 5px 8px;
+    font-size: 0.76rem;
+    margin-bottom: 6px;
+    gap: 6px;
+  }
+
+  .family-members-row {
+    gap: 6px;
   }
 
   .family-member-chip {
     flex: 1 1 100%;
+    min-width: 100%;
+    padding: 4px 8px;
+    border-radius: 8px;
+  }
+
+  .family-member-sprite {
+    width: 28px;
+    height: 28px;
+  }
+
+  .family-member-name {
+    font-size: 0.8rem;
+  }
+
+  .family-member-evo {
+    font-size: 0.68rem;
+  }
+
+  .quantity-stepper-wrap {
+    height: 24px;
+  }
+
+  .stepper-btn {
+    width: 22px;
+    font-size: 13px;
+  }
+
+  .stepper-input {
+    width: 26px;
+    font-size: 12px;
+  }
+
+  .family-items-wrap {
+    margin-top: 6px;
+    padding-top: 4px;
+    gap: 4px;
+  }
+
+  .family-items-label {
+    font-size: 0.72rem;
+  }
+
+  .family-item-chip {
+    font-size: 0.72rem;
+    padding: 2px 6px;
+  }
+
+  .items-shopping-section {
+    margin-bottom: 12px;
+  }
+
+  .items-section-title {
+    font-size: 0.88rem;
+    margin-bottom: 6px;
+  }
+
+  .items-shopping-grid {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .shopping-item-card {
+    padding: 8px 10px;
+    gap: 6px;
+    border-radius: 8px;
+  }
+
+  .shopping-item-sprite {
+    width: 26px;
+    height: 26px;
+  }
+
+  .shopping-item-name {
+    font-size: 0.85rem;
+  }
+
+  .shopping-item-count {
+    font-size: 0.72rem;
+  }
+
+  .shopping-target-tag {
+    font-size: 0.7rem;
+    padding: 1px 4px;
+  }
+
+  .shopping-target-sprite {
+    width: 16px;
+    height: 16px;
   }
 
   .missing-filters-row {
     flex-direction: column;
     align-items: stretch;
+    gap: 6px;
   }
 
   .missing-filter-control {
     min-width: 100%;
+  }
+
+  .missing-select {
+    height: 30px;
+    font-size: 0.78rem;
+  }
+
+  .missing-reset-btn {
+    height: 28px;
+    font-size: 0.74rem;
   }
 }

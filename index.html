@@ -768,75 +768,83 @@
 
       <!-- Filter & Sort Toolbar -->
       <div class="missing-toolbar" role="search" aria-label="Filter missing guide">
-        <div class="missing-search-wrap">
-          <input id="missingSearch" type="search" class="input missing-search-input" placeholder="Search missing Pokémon, item, location..." aria-label="Search missing Pokémon" autocomplete="off" />
-          <button id="missingSearchClear" class="search-clear-btn" type="button" title="Clear search" aria-label="Clear search" hidden>✕</button>
+        <div class="missing-search-row">
+          <div class="missing-search-wrap">
+            <input id="missingSearch" type="search" class="input missing-search-input" placeholder="Search name, item, location..." aria-label="Search missing Pokémon" autocomplete="off" />
+            <button id="missingSearchClear" class="search-clear-btn" type="button" title="Clear search" aria-label="Clear search" hidden>✕</button>
+          </div>
+          <button id="missingToggleFiltersBtn" class="btn missing-toggle-filters-btn" type="button" aria-expanded="false" title="Toggle filters and sorting options">
+            <span class="filter-icon">🔍</span><span class="missing-filters-btn-label"> Filters</span>
+            <span id="missingActiveFilterBadge" class="missing-filter-count-badge" hidden>0</span>
+          </button>
         </div>
 
-        <div class="missing-filters-row">
-          <div id="missingFilterMethodWrap" class="missing-filter-control">
-            <select id="missingFilterMethod" class="select missing-select" aria-label="Filter by acquisition method">
-              <option value="all">All Methods</option>
-              <option value="ready">🟢 Ready to Evolve</option>
-              <option value="wild">🌿 Wild Spawns</option>
-              <option value="item">💎 Evolution Items</option>
-              <option value="level">⚡ Level-Up</option>
-              <option value="trade">🔄 Trade</option>
-              <option value="special">✨ Special Conditions</option>
-              <option value="transfer">📦 Transfer / Trade Only</option>
-            </select>
-          </div>
+        <div id="missingFiltersCollapse" class="missing-filters-collapse" hidden>
+          <div class="missing-filters-row">
+            <div id="missingFilterMethodWrap" class="missing-filter-control">
+              <select id="missingFilterMethod" class="select missing-select" aria-label="Filter by acquisition method">
+                <option value="all">All Methods</option>
+                <option value="ready">🟢 Ready to Evolve</option>
+                <option value="wild">🌿 Wild Spawns</option>
+                <option value="item">💎 Evolution Items</option>
+                <option value="level">⚡ Level-Up</option>
+                <option value="trade">🔄 Trade</option>
+                <option value="special">✨ Special Conditions</option>
+                <option value="transfer">📦 Transfer / Trade Only</option>
+              </select>
+            </div>
 
-          <div id="missingFilterFamilyWrap" class="missing-filter-control" hidden>
-            <select id="missingFilterFamily" class="select missing-select" aria-label="Filter by family status">
-              <option value="all">All Incomplete Families</option>
-              <option value="ready">🟢 Base Specimen Caught</option>
-              <option value="zero">⚪ 0 Members Caught</option>
-            </select>
-          </div>
+            <div id="missingFilterFamilyWrap" class="missing-filter-control" hidden>
+              <select id="missingFilterFamily" class="select missing-select" aria-label="Filter by family status">
+                <option value="all">All Incomplete Families</option>
+                <option value="ready">🟢 Base Specimen Caught</option>
+                <option value="zero">⚪ 0 Members Caught</option>
+              </select>
+            </div>
 
-          <div id="missingFilterTypeWrap" class="missing-filter-control">
-            <select id="missingFilterType" class="select missing-select" aria-label="Filter by Pokémon type">
-              <option value="">All Types</option>
-              <option value="normal">Normal</option>
-              <option value="fire">Fire</option>
-              <option value="water">Water</option>
-              <option value="grass">Grass</option>
-              <option value="electric">Electric</option>
-              <option value="ice">Ice</option>
-              <option value="fighting">Fighting</option>
-              <option value="poison">Poison</option>
-              <option value="ground">Ground</option>
-              <option value="flying">Flying</option>
-              <option value="psychic">Psychic</option>
-              <option value="bug">Bug</option>
-              <option value="rock">Rock</option>
-              <option value="ghost">Ghost</option>
-              <option value="dragon">Dragon</option>
-              <option value="dark">Dark</option>
-              <option value="steel">Steel</option>
-              <option value="fairy">Fairy</option>
-            </select>
-          </div>
+            <div id="missingFilterTypeWrap" class="missing-filter-control">
+              <select id="missingFilterType" class="select missing-select" aria-label="Filter by Pokémon type">
+                <option value="">All Types</option>
+                <option value="normal">Normal</option>
+                <option value="fire">Fire</option>
+                <option value="water">Water</option>
+                <option value="grass">Grass</option>
+                <option value="electric">Electric</option>
+                <option value="ice">Ice</option>
+                <option value="fighting">Fighting</option>
+                <option value="poison">Poison</option>
+                <option value="ground">Ground</option>
+                <option value="flying">Flying</option>
+                <option value="psychic">Psychic</option>
+                <option value="bug">Bug</option>
+                <option value="rock">Rock</option>
+                <option value="ghost">Ghost</option>
+                <option value="dragon">Dragon</option>
+                <option value="dark">Dark</option>
+                <option value="steel">Steel</option>
+                <option value="fairy">Fairy</option>
+              </select>
+            </div>
 
-          <div id="missingFilterSegmentWrap" class="missing-filter-control">
-            <select id="missingFilterSegment" class="select missing-select" aria-label="Filter by Pokédex segment">
-              <option value="">All Segments</option>
-            </select>
-          </div>
+            <div id="missingFilterSegmentWrap" class="missing-filter-control">
+              <select id="missingFilterSegment" class="select missing-select" aria-label="Filter by Pokédex segment">
+                <option value="">All Segments</option>
+              </select>
+            </div>
 
-          <div id="missingSortWrap" class="missing-filter-control">
-            <select id="missingSort" class="select missing-select" aria-label="Sort options">
-              <option value="dex-asc">Dex # (Lowest first)</option>
-              <option value="dex-desc">Dex # (Highest first)</option>
-              <option value="name-asc">Name (A → Z)</option>
-              <option value="name-desc">Name (Z → A)</option>
-              <option value="category">Acquisition Method</option>
-              <option value="readiness">Ready to Evolve first</option>
-            </select>
-          </div>
+            <div id="missingSortWrap" class="missing-filter-control">
+              <select id="missingSort" class="select missing-select" aria-label="Sort options">
+                <option value="dex-asc">Dex # (Lowest first)</option>
+                <option value="dex-desc">Dex # (Highest first)</option>
+                <option value="name-asc">Name (A → Z)</option>
+                <option value="name-desc">Name (Z → A)</option>
+                <option value="category">Acquisition Method</option>
+                <option value="readiness">Ready to Evolve first</option>
+              </select>
+            </div>
 
-          <button id="missingResetFilters" class="btn btn-sm btn-ghost missing-reset-btn" type="button" aria-label="Reset all filters">Reset filters</button>
+            <button id="missingResetFilters" class="btn btn-sm btn-ghost missing-reset-btn" type="button" aria-label="Reset all filters">Reset filters</button>
+          </div>
         </div>
       </div>
 

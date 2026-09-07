@@ -86,12 +86,35 @@ export function attachModalHandlers({
     modal.hidden = false;
     onOpen?.(lastFocus);
 
-    const focusTarget = modal.querySelector(
-      focusSelector ||
-        'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])',
-    );
+    const isMobile =
+      window.matchMedia("(max-width: 640px)").matches ||
+      "ontouchstart" in window;
+
+    let targetEl = null;
+    if (focusSelector) {
+      targetEl = modal.querySelector(focusSelector);
+      // If selected target is an input field and we are on mobile, avoid focusing input to prevent virtual keyboard
+      if (
+        isMobile &&
+        targetEl &&
+        (targetEl.tagName === "INPUT" || targetEl.tagName === "TEXTAREA")
+      ) {
+        targetEl = modal.querySelector(
+          ".modal-close-btn, [data-close], button, [tabindex]:not([tabindex='-1'])",
+        );
+      }
+    } else {
+      targetEl = isMobile
+        ? modal.querySelector(
+            ".modal-close-btn, [data-close], button, [tabindex]:not([tabindex='-1'])",
+          )
+        : modal.querySelector(
+            'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])',
+          );
+    }
+
     const fallbackTarget =
-      focusTarget ||
+      targetEl ||
       modal.querySelector("button, [href], input, select, textarea");
     fallbackTarget?.focus();
 

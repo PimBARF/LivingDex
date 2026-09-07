@@ -105,6 +105,7 @@ export function registerMissingGuideModal() {
     onOpen: async () => {
       await refreshMissingGuideData();
       populateSegmentFilterDropdown();
+      updateActiveFilterBadge();
       renderActiveTab();
     },
     onClose: () => {
@@ -125,6 +126,28 @@ export function registerMissingGuideModal() {
 export function openMissingGuideModal() {
   if (_missingModalHandlers) {
     _missingModalHandlers.openModal();
+  }
+}
+
+/**
+ * Updates the active filter badge count and toggle button highlight.
+ */
+function updateActiveFilterBadge() {
+  const badge = document.getElementById("missingActiveFilterBadge");
+  const toggleBtn = document.getElementById("missingToggleFiltersBtn");
+  if (!badge) return;
+
+  let count = 0;
+  if (filterState.method !== "all") count += 1;
+  if (filterState.type) count += 1;
+  if (filterState.segment) count += 1;
+  if (filterState.sort !== "dex-asc") count += 1;
+  if (filterState.familyFilter !== "all" && currentTab === "family") count += 1;
+
+  badge.textContent = String(count);
+  badge.hidden = count === 0;
+  if (toggleBtn) {
+    toggleBtn.classList.toggle("has-active-filters", count > 0);
   }
 }
 
@@ -230,6 +253,7 @@ function setupTabListeners() {
       if (segmentFilter) segmentFilter.hidden = currentTab === "items";
       if (sortSelect) sortSelect.hidden = currentTab === "items";
 
+      updateActiveFilterBadge();
       updateModalHeaderStats();
       renderActiveTab();
     });
@@ -242,12 +266,23 @@ function setupTabListeners() {
 function setupFilterListeners() {
   const searchInput = document.getElementById("missingSearch");
   const searchClear = document.getElementById("missingSearchClear");
+  const toggleFiltersBtn = document.getElementById("missingToggleFiltersBtn");
+  const filtersCollapse = document.getElementById("missingFiltersCollapse");
   const methodSelect = document.getElementById("missingFilterMethod");
   const familySelect = document.getElementById("missingFilterFamily");
   const typeSelect = document.getElementById("missingFilterType");
   const segmentSelect = document.getElementById("missingFilterSegment");
   const sortSelect = document.getElementById("missingSort");
   const resetFiltersBtn = document.getElementById("missingResetFilters");
+
+  if (toggleFiltersBtn && filtersCollapse) {
+    toggleFiltersBtn.addEventListener("click", () => {
+      const isExpanded = !filtersCollapse.hidden;
+      filtersCollapse.hidden = isExpanded;
+      toggleFiltersBtn.setAttribute("aria-expanded", String(!isExpanded));
+      toggleFiltersBtn.classList.toggle("is-active", !isExpanded);
+    });
+  }
 
   if (searchInput) {
     searchInput.addEventListener("input", (e) => {
@@ -272,6 +307,7 @@ function setupFilterListeners() {
   if (methodSelect) {
     methodSelect.addEventListener("change", (e) => {
       filterState.method = e.target.value;
+      updateActiveFilterBadge();
       renderActiveTab();
     });
   }
@@ -279,6 +315,7 @@ function setupFilterListeners() {
   if (familySelect) {
     familySelect.addEventListener("change", (e) => {
       filterState.familyFilter = e.target.value;
+      updateActiveFilterBadge();
       renderActiveTab();
     });
   }
@@ -286,6 +323,7 @@ function setupFilterListeners() {
   if (typeSelect) {
     typeSelect.addEventListener("change", (e) => {
       filterState.type = e.target.value;
+      updateActiveFilterBadge();
       renderActiveTab();
     });
   }
@@ -293,6 +331,7 @@ function setupFilterListeners() {
   if (segmentSelect) {
     segmentSelect.addEventListener("change", (e) => {
       filterState.segment = e.target.value;
+      updateActiveFilterBadge();
       renderActiveTab();
     });
   }
@@ -300,6 +339,7 @@ function setupFilterListeners() {
   if (sortSelect) {
     sortSelect.addEventListener("change", (e) => {
       filterState.sort = e.target.value;
+      updateActiveFilterBadge();
       renderActiveTab();
     });
   }
@@ -321,6 +361,7 @@ function setupFilterListeners() {
       if (typeSelect) typeSelect.value = "";
       if (segmentSelect) segmentSelect.value = "";
       if (sortSelect) sortSelect.value = "dex-asc";
+      updateActiveFilterBadge();
       renderActiveTab();
     });
   }
@@ -584,9 +625,11 @@ function renderMissingList(container) {
         <span class="method-label">${p.evolveDetails.description || `Evolve ${p.preEvolutionName}`}</span>
       `;
     } else if (p.hasWildLocations) {
+      const hasRaids = ACTIVE_GAME_ID === "swsh" || ACTIVE_GAME_ID === "sv";
+      const wildLabel = hasRaids ? "Catch in Wild / Raids" : "Catch in Wild";
       methodBadge.innerHTML = `
         <span class="method-icon">🌿</span>
-        <span class="method-label">Catch in Wild / Raids</span>
+        <span class="method-label">${wildLabel}</span>
       `;
     } else {
       methodBadge.innerHTML = `
