@@ -754,6 +754,8 @@ export const SHINY_CAUGHT_STORAGE_KEY = `${ACTIVE_GAME.storagePrefix}-shiny-caug
 export const SEGMENTS_STORAGE_KEY = `${ACTIVE_GAME.storagePrefix}-segments-v1`;
 export const BOX_LABELS_STORAGE_KEY = `${ACTIVE_GAME.storagePrefix}-box-labels-v1`;
 export const COLLAPSED_BOXES_STORAGE_KEY = `${ACTIVE_GAME.storagePrefix}-collapsed-boxes-v1`;
+export const ITEM_INVENTORY_STORAGE_KEY = `${ACTIVE_GAME.storagePrefix}-item-inventory-v1`;
+export const SPECIMEN_INVENTORY_STORAGE_KEY = `${ACTIVE_GAME.storagePrefix}-specimen-inventory-v1`;
 
 // Global app settings
 export const SETTINGS_STORAGE_KEY = "settings-v1";
@@ -872,3 +874,69 @@ export const spriteUrlForSpecies = (
  */
 export const normalizeSpeciesName = (name) =>
   name.replace(/-/g, " ").replace(/\b\w/g, (value) => value.toUpperCase());
+
+/**
+ * Generates the remote PokeAPI CDN URL for an item sprite.
+ *
+ * @param {string} itemName - Raw item name or slug (e.g. 'moon-stone', 'kings-rock').
+ * @returns {string} URL pointing to the item sprite image.
+ */
+export const itemSpriteUrl = (itemName) => {
+  if (!itemName) return "";
+  const slug = String(itemName)
+    .trim()
+    .toLowerCase()
+    .replace(/\s+/g, "-")
+    .replace(/[^a-z0-9-]/g, "");
+  return `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/${slug}.png`;
+};
+
+/**
+ * Formats a hyphenated item slug into a clean Title Case display name.
+ * E.g., 'kings-rock' -> "King's Rock", 'thunder-stone' -> "Thunder Stone".
+ *
+ * @param {string} slug - Hyphenated item slug.
+ * @returns {string} Title-cased formatted item name.
+ */
+export const normalizeItemName = (slug) => {
+  if (!slug) return "";
+  const specialCases = {
+    "kings-rock": "King's Rock",
+    "dragon-scale": "Dragon Scale",
+    "up-grade": "Up-Grade",
+    "dubious-disc": "Dubious Disc",
+    "deep-sea-tooth": "Deep Sea Tooth",
+    "deep-sea-scale": "Deep Sea Scale",
+    "oval-stone": "Oval Stone",
+    "razor-claw": "Razor Claw",
+    "razor-fang": "Razor Fang",
+    "reaper-cloth": "Reaper Cloth",
+    protector: "Protector",
+    electirizer: "Electirizer",
+    magmarizer: "Magmarizer",
+    "prism-scale": "Prism Scale",
+    "whipped-dream": "Whipped Dream",
+    sachet: "Sachet",
+    "sweet-apple": "Sweet Apple",
+    "tart-apple": "Tart Apple",
+    "cracked-pot": "Cracked Pot",
+    "chipped-pot": "Chipped Pot",
+    "galarica-cuff": "Galarica Cuff",
+    "galarica-wreath": "Galarica Wreath",
+    "black-augurite": "Black Augurite",
+    "peat-block": "Peat Block",
+    "auspicious-armor": "Auspicious Armor",
+    "malicious-armor": "Malicious Armor",
+    "syrupy-apple": "Syrupy Apple",
+    "unremarkable-teacup": "Unremarkable Teacup",
+    "masterpiece-teacup": "Masterpiece Teacup",
+    "metal-alloy": "Metal Alloy",
+  };
+  if (specialCases[slug.toLowerCase()]) {
+    return specialCases[slug.toLowerCase()];
+  }
+  return slug
+    .split("-")
+    .map((w) => w.charAt(0).toUpperCase() + w.slice(1))
+    .join(" ");
+};

@@ -132,6 +132,7 @@
       <div id="gameTitleRow">
         <h1 id="gameTitle">LivingDex Tracker</h1>
         <div class="game-title-actions">
+          <button id="missingGuideBtn" class="btn missing-guide-btn" type="button" title="Missing Pokémon &amp; Family Quotas Guide (M)" aria-label="Open Missing Pokémon Guide" aria-haspopup="dialog">🎯<span class="missing-guide-btn-text"> Missing Guide</span><span id="missingGuideBadge" class="missing-count-badge" hidden>0</span></button>
           <button id="segmentsBtn" class="btn segments-btn" type="button" title="Configure Pokédex Segments &amp; Forms" aria-label="Configure Pokédex Segments &amp; Forms" aria-haspopup="dialog">📑<span class="segments-btn-text"> Segments</span></button>
           <button id="shinyToggle" class="btn" type="button" title="Toggle Shiny Mode" aria-pressed="false" aria-label="Toggle Shiny Mode">✨</button>
           <button id="shareDex" class="btn" type="button" title="Share this progress"
@@ -719,6 +720,10 @@
           <span class="shortcut-desc">Toggle Shiny tracking mode</span>
         </div>
         <div class="shortcut-row">
+          <span class="shortcut-keys"><kbd class="kbd-badge">M</kbd></span>
+          <span class="shortcut-desc">Open Missing Pokémon &amp; Family Quotas Guide</span>
+        </div>
+        <div class="shortcut-row">
           <span class="shortcut-keys"><kbd class="kbd-badge">H</kbd></span>
           <span class="shortcut-desc">Cycle status filter (All / Uncaught / Caught)</span>
         </div>
@@ -737,6 +742,113 @@
       </div>
       <div class="modal-actions">
         <button id="closeShortcuts" class="btn" type="button" aria-label="Close shortcuts dialog">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Missing Pokémon & Living Dex Prerequisites Guide modal -->
+  <div id="modalMissingGuide" class="modal" role="dialog" aria-modal="true" aria-labelledby="missingGuideTitle"
+    aria-describedby="missingGuideDesc" hidden>
+    <div class="modal-backdrop" data-close></div>
+    <div class="modal-card missing-guide-modal-card" role="document">
+      <div class="missing-guide-header">
+        <div class="missing-guide-title-row">
+          <h3 id="missingGuideTitle">Missing Pokémon Guide</h3>
+          <span id="missingGuideStats" class="missing-guide-stats"></span>
+        </div>
+        <p id="missingGuideDesc">
+          Track uncaught Pokémon, acquisition methods, evolution items, and living dex family quotas.
+        </p>
+        <div id="missingGuideTabs" class="segmented-control missing-tabs-segmented" role="tablist" aria-label="Missing guide view mode">
+          <button type="button" class="segmented-btn is-active" data-tab="missing" role="tab" aria-selected="true" title="View all missing Pokémon">📋 Missing Pokémon</button>
+          <button type="button" class="segmented-btn" data-tab="family" role="tab" aria-selected="false" title="View living dex family quotas">🌳 Family Quotas</button>
+          <button type="button" class="segmented-btn" data-tab="items" role="tab" aria-selected="false" title="View items & tasks shopping list">🛍️ Items &amp; Tasks</button>
+        </div>
+      </div>
+
+      <!-- Filter & Sort Toolbar -->
+      <div class="missing-toolbar" role="search" aria-label="Filter missing guide">
+        <div class="missing-search-wrap">
+          <input id="missingSearch" type="search" class="input missing-search-input" placeholder="Search missing Pokémon, item, location..." aria-label="Search missing Pokémon" autocomplete="off" />
+          <button id="missingSearchClear" class="search-clear-btn" type="button" title="Clear search" aria-label="Clear search" hidden>✕</button>
+        </div>
+
+        <div class="missing-filters-row">
+          <div id="missingFilterMethodWrap" class="missing-filter-control">
+            <select id="missingFilterMethod" class="select missing-select" aria-label="Filter by acquisition method">
+              <option value="all">All Methods</option>
+              <option value="ready">🟢 Ready to Evolve</option>
+              <option value="wild">🌿 Wild Spawns</option>
+              <option value="item">💎 Evolution Items</option>
+              <option value="level">⚡ Level-Up</option>
+              <option value="trade">🔄 Trade</option>
+              <option value="special">✨ Special Conditions</option>
+              <option value="transfer">📦 Transfer / Trade Only</option>
+            </select>
+          </div>
+
+          <div id="missingFilterFamilyWrap" class="missing-filter-control" hidden>
+            <select id="missingFilterFamily" class="select missing-select" aria-label="Filter by family status">
+              <option value="all">All Incomplete Families</option>
+              <option value="ready">🟢 Base Specimen Caught</option>
+              <option value="zero">⚪ 0 Members Caught</option>
+            </select>
+          </div>
+
+          <div id="missingFilterTypeWrap" class="missing-filter-control">
+            <select id="missingFilterType" class="select missing-select" aria-label="Filter by Pokémon type">
+              <option value="">All Types</option>
+              <option value="normal">Normal</option>
+              <option value="fire">Fire</option>
+              <option value="water">Water</option>
+              <option value="grass">Grass</option>
+              <option value="electric">Electric</option>
+              <option value="ice">Ice</option>
+              <option value="fighting">Fighting</option>
+              <option value="poison">Poison</option>
+              <option value="ground">Ground</option>
+              <option value="flying">Flying</option>
+              <option value="psychic">Psychic</option>
+              <option value="bug">Bug</option>
+              <option value="rock">Rock</option>
+              <option value="ghost">Ghost</option>
+              <option value="dragon">Dragon</option>
+              <option value="dark">Dark</option>
+              <option value="steel">Steel</option>
+              <option value="fairy">Fairy</option>
+            </select>
+          </div>
+
+          <div id="missingFilterSegmentWrap" class="missing-filter-control">
+            <select id="missingFilterSegment" class="select missing-select" aria-label="Filter by Pokédex segment">
+              <option value="">All Segments</option>
+            </select>
+          </div>
+
+          <div id="missingSortWrap" class="missing-filter-control">
+            <select id="missingSort" class="select missing-select" aria-label="Sort options">
+              <option value="dex-asc">Dex # (Lowest first)</option>
+              <option value="dex-desc">Dex # (Highest first)</option>
+              <option value="name-asc">Name (A → Z)</option>
+              <option value="name-desc">Name (Z → A)</option>
+              <option value="category">Acquisition Method</option>
+              <option value="readiness">Ready to Evolve first</option>
+            </select>
+          </div>
+
+          <button id="missingResetFilters" class="btn btn-sm btn-ghost missing-reset-btn" type="button" aria-label="Reset all filters">Reset filters</button>
+        </div>
+      </div>
+
+      <!-- Main Scrollable Content -->
+      <div class="missing-guide-body">
+        <div id="missingListContainer" class="missing-tab-content"></div>
+        <div id="missingFamilyContainer" class="missing-tab-content" hidden></div>
+        <div id="missingItemsContainer" class="missing-tab-content" hidden></div>
+      </div>
+
+      <div class="modal-actions">
+        <button id="closeMissingGuide" class="btn btn-primary" type="button" aria-label="Close missing guide">Close</button>
       </div>
     </div>
   </div>

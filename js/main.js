@@ -29,6 +29,7 @@ import {
   registerShortcutsModal,
   registerFiltersModal,
   registerSegmentsModal,
+  registerMissingGuideModal,
   showToast,
 } from "./ui/modals.js";
 
@@ -94,6 +95,7 @@ async function initializeLivingDexApp() {
   registerShortcutsModal();
   registerFiltersModal();
   registerSegmentsModal({ onSegmentsUpdated: () => renderGameInfo() });
+  registerMissingGuideModal();
 
   const app = document.getElementById("app");
   if (!app) return;

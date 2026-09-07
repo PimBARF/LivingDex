@@ -1,8 +1,10 @@
-import { ACTIVE_GAME_ID } from "./config.js";
+import { ACTIVE_GAME_ID, normalizeItemName } from "./config.js";
 import {
   loadSegmentConfig,
   loadEnabledSegments,
   loadSettings,
+  loadItemInventory,
+  loadSpecimenInventory,
 } from "./storage.js";
 import { applyNamesToCells } from "./ui/dom-render.js";
 
@@ -1016,5 +1018,511 @@ export async function getPokemonModalData(speciesId, formId, gameId) {
     showEncounters,
     encounterGroups,
     evolutionPaths,
+  };
+}
+
+/**
+/**
+ * In-memory cache for species availability mapping in Pokemon HOME.
+ * @type {Map<number, string[]>|null}
+ */
+let homeSpeciesGamesCache = null;
+
+/**
+ * Maps each species ID to the list of games where it is obtainable in their Pokédexes.
+ *
+ * @returns {Promise<Map<number, string[]>>} Map of speciesId -> array of game titles.
+ */
+export async function getHomeSpeciesGamesMap() {
+  if (homeSpeciesGamesCache) return homeSpeciesGamesCache;
+
+  const map = new Map();
+  const GAME_LIST = [
+    { id: "sv", name: "Scarlet / Violet" },
+    { id: "swsh", name: "Sword / Shield" },
+    { id: "pla", name: "Legends: Arceus" },
+    { id: "bdsp", name: "BD / SP" },
+    { id: "lgpe", name: "Let's Go Pikachu / Eevee" },
+    { id: "usum", name: "Ultra Sun / Ultra Moon" },
+    { id: "sm", name: "Sun / Moon" },
+    { id: "oras", name: "Omega Ruby / Alpha Sapphire" },
+    { id: "xy", name: "X / Y" },
+    { id: "b2w2", name: "Black 2 / White 2" },
+    { id: "bw", name: "Black / White" },
+    { id: "hgss", name: "HeartGold / SoulSilver" },
+    { id: "dppt", name: "Diamond / Pearl / Platinum" },
+    { id: "frlg", name: "FireRed / LeafGreen" },
+    { id: "rse", name: "Ruby / Sapphire / Emerald" },
+    { id: "gsc", name: "Gold / Silver / Crystal" },
+    { id: "rby", name: "Red / Blue / Yellow" },
+  ];
+
+  await Promise.all(
+    GAME_LIST.map(async (g) => {
+      try {
+        const dexData = await getGameDexData(g.id);
+        if (dexData && Array.isArray(dexData.sections)) {
+          dexData.sections.forEach((sec) => {
+            if (Array.isArray(sec.entries)) {
+              sec.entries.forEach((e) => {
+                if (!map.has(e.speciesId)) {
+                  map.set(e.speciesId, []);
+                }
+                const list = map.get(e.speciesId);
+                if (!list.includes(g.name)) {
+                  list.push(g.name);
+                }
+              });
+            }
+          });
+        }
+      } catch {
+        // Skip games that fail to load
+      }
+    }),
+  );
+
+  homeSpeciesGamesCache = map;
+  return map;
+}
+
+/**
+ * Retrieves enriched data for all uncaught Pokémon in the active game / living dex.
+ *
+ * @param {string} gameId - Active game identifier.
+ * @param {Record<number, boolean>} [caughtSlots={}] - Map of caught slot indices.
+ * @returns {Promise<Array<Object>>} List of missing Pokémon records with acquisition details.
+ */
+export async function getMissingPokemonData(gameId, caughtSlots = {}) {
+  const allSpecies = await getAllSpeciesData();
+  const gameDexData = await getGameDexData(gameId);
+  const evoDataMap = await loadEvolutions(gameId);
+  const encountersData =
+    gameId !== "home" ? await getGameEncounterData(gameId) : { encounters: {} };
+  const { sections } = await buildActiveDexSections();
+  const language = loadSettings().language || "en";
+  const generationNumber = gameDexData?.generation || null;
+  const itemInventory = loadItemInventory();
+  const specimenInventory = loadSpecimenInventory();
+
+  const caughtSpeciesIds = new Set();
+  const caughtSlotsMap = caughtSlots || {};
+
+  let runningSlot = 0;
+  const allSlots = [];
+  sections.forEach((section) => {
+    (section.entries || []).forEach((entry) => {
+      runningSlot += 1;
+      const isCaught = Boolean(caughtSlotsMap[runningSlot]);
+      if (isCaught) {
+        caughtSpeciesIds.add(entry.speciesId);
+      }
+      allSlots.push({
+        slotNumber: runningSlot,
+        speciesId: entry.speciesId,
+        formId: entry.formId || entry.speciesId,
+        gender: entry.gender || "",
+        sectionKey: section.key,
+        sectionTitle: section.title,
+        isCaught,
+      });
+    });
+  });
+
+  const missingEntries = allSlots.filter((slot) => !slot.isCaught);
+  const isHome = gameId === "home";
+  const homeGamesMap = isHome ? await getHomeSpeciesGamesMap() : null;
+  const results = [];
+
+  for (const slot of missingEntries) {
+    const species = allSpecies[slot.speciesId];
+    if (!species) continue;
+
+    const form =
+      species.forms?.find((f) => f.formId === slot.formId) ||
+      species.forms?.[0];
+    const spriteId =
+      slot.gender === "female"
+        ? slot.speciesId
+        : form?.spriteId || slot.formId || slot.speciesId;
+    const displayName = resolveSpeciesDisplayName(
+      slot.speciesId,
+      species.names?.[language] || species.names?.en || species.name,
+    );
+    const types = resolveTypes(species, slot.formId, generationNumber);
+
+    // Locations or obtainable games
+    let locations = [];
+    if (isHome) {
+      locations = homeGamesMap?.get(slot.speciesId) || [];
+    } else if (gameDexData?.versions) {
+      const rawEnc = encountersData?.encounters || {};
+      for (const version of gameDexData.versions) {
+        const vEnc = getVersionEncounters(rawEnc, slot.speciesId, version);
+        if (vEnc?.locations?.length) {
+          locations.push(...vEnc.locations);
+        }
+      }
+      locations = Array.from(new Set(locations));
+    }
+
+    // Evolution path analysis
+    const chain = species.evolutionChainId
+      ? evoDataMap[species.evolutionChainId]
+      : null;
+    let evolveDetails = null;
+    let preEvolutionSpeciesId = null;
+    let preEvolutionName = "";
+    let isReadyToEvolve = false;
+    let hasPreEvo = false;
+    let hasItem = true;
+    let requiredItem = null;
+    let requiredCondition = "";
+    let methodCategory = locations.length > 0 ? "wild" : "transfer";
+
+    if (chain && Array.isArray(chain.transitions)) {
+      const incomingTransition = chain.transitions.find(
+        (t) => t.toSpeciesId === slot.speciesId,
+      );
+      if (incomingTransition) {
+        preEvolutionSpeciesId = incomingTransition.fromSpeciesId;
+        const preSpec = allSpecies[preEvolutionSpeciesId];
+        preEvolutionName = resolveSpeciesDisplayName(
+          preEvolutionSpeciesId,
+          preSpec?.names?.[language] || preSpec?.names?.en || preSpec?.name,
+        );
+
+        hasPreEvo =
+          caughtSpeciesIds.has(preEvolutionSpeciesId) ||
+          (specimenInventory[preEvolutionSpeciesId] || 0) > 0;
+
+        requiredItem =
+          incomingTransition.item || incomingTransition.heldItem || null;
+        requiredCondition = incomingTransition.description || "";
+
+        hasItem = requiredItem ? (itemInventory[requiredItem] || 0) > 0 : true;
+
+        isReadyToEvolve = Boolean(hasPreEvo && hasItem);
+
+        evolveDetails = {
+          fromSpeciesId: preEvolutionSpeciesId,
+          fromName: preEvolutionName,
+          trigger: incomingTransition.trigger,
+          description: incomingTransition.description,
+          item: requiredItem,
+          hasPreEvo,
+          hasItem,
+          isReady: isReadyToEvolve,
+        };
+
+        if (requiredItem) {
+          methodCategory = "item";
+        } else if (incomingTransition.trigger === "trade") {
+          methodCategory = "trade";
+        } else if (incomingTransition.trigger === "level-up") {
+          methodCategory = "level";
+        } else {
+          methodCategory = "special";
+        }
+      }
+    }
+
+    results.push({
+      slotNumber: slot.slotNumber,
+      speciesId: slot.speciesId,
+      formId: slot.formId,
+      gender: slot.gender,
+      spriteId,
+      name: displayName,
+      dexNumber: `#${slot.speciesId}`,
+      types,
+      sectionKey: slot.sectionKey,
+      sectionTitle: slot.sectionTitle,
+      locations,
+      hasWildLocations: locations.length > 0,
+      evolveDetails,
+      preEvolutionSpeciesId,
+      preEvolutionName,
+      isReadyToEvolve,
+      hasPreEvo,
+      hasItem,
+      requiredItem,
+      requiredCondition,
+      methodCategory,
+    });
+  }
+
+  return results;
+}
+
+/**
+ * Calculates evolution family Living Dex quotas and checklist for incomplete evolutionary trees.
+ *
+ * @param {string} gameId - Active game identifier.
+ * @param {Record<number, boolean>} [caughtSlots={}] - Map of caught slot indices.
+ * @returns {Promise<Array<Object>>} List of incomplete evolution families with quota calculations.
+ */
+export async function getEvolutionFamilyChecklist(gameId, caughtSlots = {}) {
+  const allSpecies = await getAllSpeciesData();
+  const gameDexData = await getGameDexData(gameId);
+  const evoDataMap = await loadEvolutions(gameId);
+  const { sections } = await buildActiveDexSections();
+  const language = loadSettings().language || "en";
+  const generationNumber = gameDexData?.generation || null;
+  const specimenInventory = loadSpecimenInventory();
+  const itemInventory = loadItemInventory();
+
+  const caughtSlotsMap = caughtSlots || {};
+
+  // Map all active slots by evolutionChainId
+  const chainSlotsMap = new Map();
+  let runningSlot = 0;
+
+  sections.forEach((section) => {
+    (section.entries || []).forEach((entry) => {
+      runningSlot += 1;
+      const species = allSpecies[entry.speciesId];
+      if (!species) return;
+
+      const chainId = species.evolutionChainId || `single-${entry.speciesId}`;
+      if (!chainSlotsMap.has(chainId)) {
+        chainSlotsMap.set(chainId, []);
+      }
+
+      const isCaught = Boolean(caughtSlotsMap[runningSlot]);
+      const form =
+        species.forms?.find((f) => f.formId === entry.formId) ||
+        species.forms?.[0];
+      const spriteId =
+        entry.gender === "female"
+          ? entry.speciesId
+          : form?.spriteId || entry.formId || entry.speciesId;
+      const displayName = resolveSpeciesDisplayName(
+        entry.speciesId,
+        species.names?.[language] || species.names?.en || species.name,
+      );
+      const types = resolveTypes(species, entry.formId, generationNumber);
+
+      chainSlotsMap.get(chainId).push({
+        slotNumber: runningSlot,
+        speciesId: entry.speciesId,
+        formId: entry.formId || entry.speciesId,
+        gender: entry.gender || "",
+        spriteId,
+        name: displayName,
+        dexNumber: `#${entry.speciesId}`,
+        types,
+        sectionKey: section.key,
+        sectionTitle: section.title,
+        isCaught,
+      });
+    });
+  });
+
+  const familyList = [];
+
+  for (const [chainId, slots] of chainSlotsMap.entries()) {
+    const totalCount = slots.length;
+    const caughtCount = slots.filter((s) => s.isCaught).length;
+    const missingCount = totalCount - caughtCount;
+
+    // Only include incomplete families
+    if (missingCount === 0) continue;
+
+    const chain = typeof chainId === "number" ? evoDataMap[chainId] : null;
+
+    // Identify root/base species
+    let rootSpeciesId = slots[0].speciesId;
+    let rootName = slots[0].name;
+    let rootSpriteId = slots[0].spriteId;
+
+    if (chain && Array.isArray(chain.nodes) && chain.nodes.length > 0) {
+      const baseNode = chain.nodes[0];
+      const baseSpec = allSpecies[baseNode.speciesId];
+      rootSpeciesId = baseNode.speciesId;
+      rootName = resolveSpeciesDisplayName(
+        baseNode.speciesId,
+        baseSpec?.names?.[language] || baseSpec?.names?.en || baseSpec?.name,
+      );
+      const rootForm = baseSpec?.forms?.[0];
+      rootSpriteId = rootForm?.spriteId || baseNode.speciesId;
+    }
+
+    // Required items and specimen counts for this family
+    let totalSpecimensOwnedInFamily = 0;
+    const requiredItemsMap = new Map();
+    const membersWithEvolutions = slots.map((slot) => {
+      let evolveText = "";
+      let evolveItem = null;
+
+      if (chain && Array.isArray(chain.transitions)) {
+        const transition = chain.transitions.find(
+          (t) => t.toSpeciesId === slot.speciesId,
+        );
+        if (transition) {
+          evolveText = transition.description || "";
+          evolveItem = transition.item || transition.heldItem || null;
+          if (!slot.isCaught && evolveItem) {
+            requiredItemsMap.set(
+              evolveItem,
+              (requiredItemsMap.get(evolveItem) || 0) + 1,
+            );
+          }
+        }
+      }
+
+      const explicitCount = specimenInventory[slot.speciesId];
+      const specimenCount =
+        typeof explicitCount === "number"
+          ? explicitCount
+          : slot.isCaught
+            ? 1
+            : 0;
+      totalSpecimensOwnedInFamily += specimenCount;
+
+      return {
+        ...slot,
+        specimenCount,
+        evolveText,
+        evolveItem,
+      };
+    });
+
+    const requiredItems = Array.from(requiredItemsMap.entries()).map(
+      ([item, count]) => {
+        const ownedCount = itemInventory[item] || 0;
+        const remainingCount = Math.max(0, count - ownedCount);
+        return {
+          itemKey: item,
+          itemName: normalizeItemName(item),
+          count,
+          ownedCount,
+          remainingCount,
+          isComplete: ownedCount >= count,
+        };
+      },
+    );
+
+    const baseQuota = Math.max(0, totalCount - totalSpecimensOwnedInFamily);
+
+    familyList.push({
+      chainId,
+      rootSpeciesId,
+      rootName,
+      rootSpriteId,
+      baseSpeciesName: rootName,
+      totalCount,
+      caughtCount,
+      missingCount,
+      totalSpecimensOwnedInFamily,
+      baseQuota,
+      members: membersWithEvolutions,
+      requiredItems,
+    });
+  }
+
+  // Sort families by root species ID
+  familyList.sort((a, b) => a.rootSpeciesId - b.rootSpeciesId);
+  return familyList;
+}
+
+/**
+ * Aggregates all evolution items, trade items, and condition tasks needed across all uncaught Pokémon.
+ *
+ * @param {string} gameId - Active game identifier.
+ * @param {Record<number, boolean>} [caughtSlots={}] - Map of caught slot indices.
+ * @returns {Promise<Object>} Aggregated shopping list of items, trades, and conditions.
+ */
+export async function getEvolutionItemsSummary(gameId, caughtSlots = {}) {
+  const missingPokemon = await getMissingPokemonData(gameId, caughtSlots);
+  const itemInventory = loadItemInventory();
+
+  const itemsMap = new Map();
+  const tradeList = [];
+  const tradeHoldingItemList = [];
+  const friendshipList = [];
+  const moveList = [];
+  const timeList = [];
+
+  for (const p of missingPokemon) {
+    if (!p.evolveDetails) continue;
+
+    const { item, trigger, description } = p.evolveDetails;
+
+    if (item) {
+      if (!itemsMap.has(item)) {
+        const owned = itemInventory[item] || 0;
+        itemsMap.set(item, {
+          itemKey: item,
+          itemName: normalizeItemName(item),
+          count: 0,
+          ownedCount: owned,
+          remainingCount: 0,
+          isComplete: false,
+          pokemonList: [],
+        });
+      }
+      const entry = itemsMap.get(item);
+      entry.count += 1;
+      entry.remainingCount = Math.max(0, entry.count - entry.ownedCount);
+      entry.isComplete = entry.ownedCount >= entry.count;
+      entry.pokemonList.push({
+        speciesId: p.speciesId,
+        name: p.name,
+        spriteId: p.spriteId,
+        slotNumber: p.slotNumber,
+      });
+    }
+
+    if (trigger === "trade") {
+      if (item) {
+        tradeHoldingItemList.push(p);
+      } else {
+        tradeList.push(p);
+      }
+    }
+
+    if (
+      description &&
+      (description.toLowerCase().includes("friendship") ||
+        description.toLowerCase().includes("happiness"))
+    ) {
+      friendshipList.push(p);
+    }
+
+    if (
+      description &&
+      (description.toLowerCase().includes("knowing") ||
+        description.toLowerCase().includes("move") ||
+        description.toLowerCase().includes("fist"))
+    ) {
+      moveList.push(p);
+    }
+
+    if (
+      description &&
+      (description.toLowerCase().includes("night") ||
+        description.toLowerCase().includes("day"))
+    ) {
+      timeList.push(p);
+    }
+  }
+
+  const itemsArray = Array.from(itemsMap.values()).sort(
+    (a, b) => b.count - a.count || a.itemName.localeCompare(b.itemName),
+  );
+
+  return {
+    items: itemsArray,
+    totalItemsCount: itemsArray.reduce((sum, item) => sum + item.count, 0),
+    totalRemainingCount: itemsArray.reduce(
+      (sum, item) => sum + item.remainingCount,
+      0,
+    ),
+    tradeList,
+    tradeHoldingItemList,
+    friendshipList,
+    moveList,
+    timeList,
   };
 }

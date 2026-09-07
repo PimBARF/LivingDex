@@ -32,6 +32,12 @@ import {
   buildActiveDexSections,
   loadSpeciesNames,
 } from "../db.js";
+import {
+  registerMissingGuideModal,
+  openMissingGuideModal,
+} from "./missing-guide.js";
+
+export { registerMissingGuideModal, openMissingGuideModal };
 
 /**
  * Attach common modal accessibility and event handlers including opening, closing,

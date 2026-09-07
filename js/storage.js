@@ -6,6 +6,8 @@ import {
   SEGMENTS_STORAGE_KEY,
   BOX_LABELS_STORAGE_KEY,
   COLLAPSED_BOXES_STORAGE_KEY,
+  ITEM_INVENTORY_STORAGE_KEY,
+  SPECIMEN_INVENTORY_STORAGE_KEY,
   SPECIES_CACHE_KEY,
   SPECIES_CACHE_META_KEY,
   SPECIES_CACHE_TTL_MS,
@@ -658,4 +660,68 @@ export async function decodeCaughtState(
     console.error("decodeCaughtState error:", err);
     return null;
   }
+}
+
+/**
+ * Loads the user's item inventory counts for the active game.
+ *
+ * @returns {Record<string, number>} Map of itemKey -> quantity owned.
+ */
+export function loadItemInventory() {
+  try {
+    const raw = localStorage.getItem(ITEM_INVENTORY_STORAGE_KEY);
+    if (!raw) return {};
+    const parsed = JSON.parse(raw);
+    return parsed && typeof parsed === "object" ? parsed : {};
+  } catch {
+    return {};
+  }
+}
+
+/**
+ * Persists the user's item inventory counts for the active game.
+ *
+ * @param {Record<string, number>} inventory - Map of itemKey -> quantity owned.
+ * @returns {Record<string, number>}
+ */
+export function saveItemInventory(inventory) {
+  try {
+    localStorage.setItem(
+      ITEM_INVENTORY_STORAGE_KEY,
+      JSON.stringify(inventory || {}),
+    );
+  } catch {}
+  return inventory;
+}
+
+/**
+ * Loads the user's Pokémon specimen inventory counts for the active game.
+ *
+ * @returns {Record<string|number, number>} Map of speciesId/formId -> quantity owned.
+ */
+export function loadSpecimenInventory() {
+  try {
+    const raw = localStorage.getItem(SPECIMEN_INVENTORY_STORAGE_KEY);
+    if (!raw) return {};
+    const parsed = JSON.parse(raw);
+    return parsed && typeof parsed === "object" ? parsed : {};
+  } catch {
+    return {};
+  }
+}
+
+/**
+ * Persists the user's Pokémon specimen inventory counts for the active game.
+ *
+ * @param {Record<string|number, number>} inventory - Map of speciesId/formId -> quantity owned.
+ * @returns {Record<string|number, number>}
+ */
+export function saveSpecimenInventory(inventory) {
+  try {
+    localStorage.setItem(
+      SPECIMEN_INVENTORY_STORAGE_KEY,
+      JSON.stringify(inventory || {}),
+    );
+  } catch {}
+  return inventory;
 }

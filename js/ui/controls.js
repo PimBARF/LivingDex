@@ -7,6 +7,9 @@ import { applyTheme, isMotionReduced } from "./theme.js";
 import { showToast } from "./modals.js";
 import { isShinyMode, setShinyMode, rebuildDexView } from "../state.js";
 import { buildActiveDexSections } from "../db.js";
+import { updateMissingGuideBadge } from "./missing-guide.js";
+
+export { updateMissingGuideBadge };
 
 /**
  * List of standard 18 Pokémon types with their display labels.
@@ -412,6 +415,12 @@ export function registerKeyboardShortcuts() {
     if (event.key === "s" || event.key === "S") {
       event.preventDefault();
       document.getElementById("shinyToggle")?.click();
+      return;
+    }
+
+    if (event.key === "m" || event.key === "M") {
+      event.preventDefault();
+      document.getElementById("missingGuideBtn")?.click();
       return;
     }
 

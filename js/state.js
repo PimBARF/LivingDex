@@ -12,6 +12,7 @@ import {
   registerBoxControls,
   updateAllBoxProgress,
 } from "./ui/dom-render.js";
+import { updateMissingGuideBadge } from "./ui/missing-guide.js";
 
 /**
  * Global state to track whether the user is viewing a shiny Pokédex or a normal Pokédex.
@@ -73,6 +74,7 @@ export function updateProgressBar(slotCount) {
 
   // Update completion badges and states across all boxes
   updateAllBoxProgress();
+  updateMissingGuideBadge(safeSlotCount);
 }
 
 /**
