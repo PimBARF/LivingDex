@@ -1176,6 +1176,80 @@ export function registerSettingsControls() {
     window.location.reload();
   }
 
+  let currentSettingsTab = "general";
+
+  /**
+   * Switch the active tab in the Settings modal.
+   * @param {string} tabKey - The tab identifier ("general" | "appearance" | "boxes" | "data").
+   * @param {boolean} [shouldFocus=false] - Whether to focus the activated tab button.
+   */
+  function switchSettingsTab(tabKey, shouldFocus = false) {
+    const tabButtons = modal?.querySelectorAll("#settingsTabs .segmented-btn");
+    const panels = modal?.querySelectorAll(".settings-tab-panel");
+    if (!tabButtons || !panels) return;
+
+    currentSettingsTab = tabKey;
+
+    tabButtons.forEach((btn) => {
+      const active = btn.dataset.settingsTab === tabKey;
+      btn.classList.toggle("is-active", active);
+      btn.setAttribute("aria-selected", String(active));
+      btn.setAttribute("tabindex", active ? "0" : "-1");
+      if (active && shouldFocus) {
+        btn.focus();
+      }
+    });
+
+    panels.forEach((panel) => {
+      const targetPanelId = `settingsPanel${tabKey.charAt(0).toUpperCase() + tabKey.slice(1)}`;
+      panel.hidden = panel.id !== targetPanelId;
+    });
+
+    const body = modal?.querySelector(".settings-body");
+    if (body) body.scrollTop = 0;
+  }
+
+  /**
+   * Attach click and keyboard arrow event listeners to the Settings tabs.
+   */
+  function setupSettingsTabs() {
+    const tabButtons = Array.from(
+      modal?.querySelectorAll("#settingsTabs .segmented-btn") || [],
+    );
+    if (!tabButtons.length) return;
+
+    tabButtons.forEach((btn, index) => {
+      btn.addEventListener("click", () => {
+        const tabKey = btn.dataset.settingsTab;
+        if (tabKey) switchSettingsTab(tabKey, false);
+      });
+
+      btn.addEventListener("keydown", (e) => {
+        let newIndex = -1;
+        if (e.key === "ArrowRight" || e.key === "ArrowDown") {
+          e.preventDefault();
+          newIndex = (index + 1) % tabButtons.length;
+        } else if (e.key === "ArrowLeft" || e.key === "ArrowUp") {
+          e.preventDefault();
+          newIndex = (index - 1 + tabButtons.length) % tabButtons.length;
+        } else if (e.key === "Home") {
+          e.preventDefault();
+          newIndex = 0;
+        } else if (e.key === "End") {
+          e.preventDefault();
+          newIndex = tabButtons.length - 1;
+        }
+
+        if (newIndex >= 0) {
+          const targetTabKey = tabButtons[newIndex]?.dataset.settingsTab;
+          if (targetTabKey) {
+            switchSettingsTab(targetTabKey, true);
+          }
+        }
+      });
+    });
+  }
+
   /**
    * Attach change listeners to theme radio inputs to immediately persist and apply selections.
    */
@@ -1200,6 +1274,8 @@ export function registerSettingsControls() {
     onOpen: () => {
       syncSettingsControls();
       attachThemeSettingsHandlers();
+      setupSettingsTabs();
+      switchSettingsTab(currentSettingsTab, false);
       closeBtn?.focus();
     },
     onClose: () => {},

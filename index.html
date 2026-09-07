@@ -203,245 +203,324 @@
         <p id="settingsDesc">
           Customize your display, preferences, and data on this device.
         </p>
+        <div id="settingsTabs" class="segmented-control settings-tabs-segmented" role="tablist" aria-label="Settings categories">
+          <button type="button" class="segmented-btn is-active" data-settings-tab="general" role="tab" id="settingsTabGeneral" aria-controls="settingsPanelGeneral" aria-selected="true" tabindex="0">
+            <span class="tab-icon">⚙️</span>
+            <span class="tab-label-full">General</span>
+            <span class="tab-label-short">General</span>
+          </button>
+          <button type="button" class="segmented-btn" data-settings-tab="appearance" role="tab" id="settingsTabAppearance" aria-controls="settingsPanelAppearance" aria-selected="false" tabindex="-1">
+            <span class="tab-icon">🎨</span>
+            <span class="tab-label-full">Appearance</span>
+            <span class="tab-label-short">Visuals</span>
+          </button>
+          <button type="button" class="segmented-btn" data-settings-tab="boxes" role="tab" id="settingsTabBoxes" aria-controls="settingsPanelBoxes" aria-selected="false" tabindex="-1">
+            <span class="tab-icon">📦</span>
+            <span class="tab-label-full">Boxes &amp; Grid</span>
+            <span class="tab-label-short">Boxes</span>
+          </button>
+          <button type="button" class="segmented-btn" data-settings-tab="data" role="tab" id="settingsTabData" aria-controls="settingsPanelData" aria-selected="false" tabindex="-1">
+            <span class="tab-icon">💾</span>
+            <span class="tab-label-full">Data &amp; System</span>
+            <span class="tab-label-short">Data</span>
+          </button>
+        </div>
       </div>
 
       <div class="settings-body">
-        <!-- Appearance -->
-        <section class="settings-section" aria-labelledby="settingsAppearanceHeading">
-          <h4 id="settingsAppearanceHeading">Appearance</h4>
-          <div class="settings-group">
-            <div class="settings-row">
-              <div class="settings-row-text">
-                <span class="settings-row-title">Theme</span>
-                <span class="settings-row-subtitle">Select your preferred color mode</span>
-              </div>
-              <div class="segmented-control settings-theme-segmented" role="radiogroup" aria-label="Theme">
-                <label class="settings-theme-option" title="Light theme">
-                  <input type="radio" name="settingsTheme" id="settingsThemeLight" value="light" class="sr-only">
-                  <span class="segmented-btn">☀️ Light</span>
-                </label>
-                <label class="settings-theme-option" title="Dark theme">
-                  <input type="radio" name="settingsTheme" id="settingsThemeDark" value="dark" class="sr-only">
-                  <span class="segmented-btn">🌙 Dark</span>
-                </label>
-                <label class="settings-theme-option" title="Auto (system preference)">
-                  <input type="radio" name="settingsTheme" id="settingsThemeAuto" value="auto" class="sr-only">
-                  <span class="segmented-btn">💻 Auto</span>
-                </label>
-              </div>
-            </div>
-
-            <label class="settings-row settings-row-clickable" for="settingsReducedMotion">
-              <div class="settings-row-text">
-                <span class="settings-row-title">Reduce motion</span>
-                <span class="settings-row-subtitle">Minimize transition animations and effects</span>
-              </div>
-              <span class="toggle-switch">
-                <input type="checkbox" id="settingsReducedMotion">
-                <span class="toggle-track"></span>
-              </span>
-            </label>
-          </div>
-        </section>
-
-        <!-- Display -->
-        <section class="settings-section" aria-labelledby="settingsDisplayHeading">
-          <h4 id="settingsDisplayHeading">Display</h4>
-          <div class="settings-group">
-            <label class="settings-row settings-row-clickable" for="settingsHideCaught">
-              <div class="settings-row-text">
-                <span class="settings-row-title">Hide caught Pokémon</span>
-                <span class="settings-row-subtitle">Start with caught Pokémon hidden by default</span>
-              </div>
-              <span class="toggle-switch">
-                <input type="checkbox" id="settingsHideCaught">
-                <span class="toggle-track"></span>
-              </span>
-            </label>
-
-            <label class="settings-row settings-row-clickable" for="settingsRememberCollapsed">
-              <div class="settings-row-text">
-                <span class="settings-row-title">Remember collapsed boxes</span>
-                <span class="settings-row-subtitle">Keep boxes collapsed across page reloads</span>
-              </div>
-              <span class="toggle-switch">
-                <input type="checkbox" id="settingsRememberCollapsed">
-                <span class="toggle-track"></span>
-              </span>
-            </label>
-
-            <label class="settings-row settings-row-clickable" for="settingsAutoCollapseFull">
-              <div class="settings-row-text">
-                <span class="settings-row-title">Auto-collapse full boxes</span>
-                <span class="settings-row-subtitle">Automatically collapse a box when all 30 slots are caught</span>
-              </div>
-              <span class="toggle-switch">
-                <input type="checkbox" id="settingsAutoCollapseFull">
-                <span class="toggle-track"></span>
-              </span>
-            </label>
-
-            <div class="settings-row">
-              <div class="settings-row-text">
-                <label for="settingsLanguage" class="settings-row-title">Pokémon names language</label>
-                <span class="settings-row-subtitle">Localization for species display names</span>
-              </div>
-              <div class="settings-row-control">
-                <select id="settingsLanguage" class="select settings-select">
-                  <option value="en">English (default)</option>
-                  <option value="ja">Japanese</option>
-                  <option value="fr">French</option>
-                  <option value="es">Spanish</option>
-                  <option value="de">German</option>
-                  <option value="it">Italian</option>
-                  <option value="ko">Korean</option>
-                  <option value="zh-Hans">Chinese (simplified)</option>
-                  <option value="zh-Hant">Chinese (traditional)</option>
-                </select>
-              </div>
-            </div>
-
-            <div class="settings-row">
-              <div class="settings-row-text">
-                <label for="settingsSpriteStyle" class="settings-row-title">Sprite artwork style</label>
-                <span class="settings-row-subtitle">Choose rendering style for Pokémon sprites</span>
-              </div>
-              <div class="settings-row-control">
-                <select id="settingsSpriteStyle" class="select settings-select">
-                  <option value="pokesprites">PokeAPI sprites (fast &amp; compact)</option>
-                  <option value="official-artwork">Official artwork</option>
-                  <option value="home">Home 3D models</option>
-                  <option value="showdown">Showdown (animated)</option>
-                </select>
-              </div>
-            </div>
-            <div id="settingsGameVersionRow" class="settings-row" hidden>
-              <div class="settings-row-text">
-                <label for="settingsGameVersion" class="settings-row-title">Active game version</label>
-                <span class="settings-row-subtitle">Tailor wild encounters and missing guide to your cartridge</span>
-              </div>
-              <div class="settings-row-control">
-                <select id="settingsGameVersion" class="select settings-select">
-                  <option value="all">All Versions</option>
-                </select>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <!-- Data & Storage -->
-        <section class="settings-section" aria-labelledby="settingsDataHeading">
-          <h4 id="settingsDataHeading">Data &amp; Storage</h4>
-          
-          <div class="settings-group">
-            <div class="settings-action-block">
-              <div class="settings-btn-grid">
-                <button type="button" id="settingsExportData" class="btn btn-secondary settings-action-btn">
-                  <span>📤</span> Export all data
-                </button>
-                <button type="button" id="settingsImportData" class="btn btn-secondary settings-action-btn" aria-describedby="settingsImportHelp">
-                  <span>📥</span> Import data
-                </button>
-              </div>
-              <p id="settingsImportHelp" class="settings-help-text">
-                Save a JSON backup of your progress or restore data from another device.
-              </p>
-            </div>
-
-            <div class="settings-action-block">
-              <div class="settings-btn-grid">
-                <button type="button" id="settingsResetBoxLabels" class="btn btn-secondary settings-action-btn" aria-describedby="settingsResetLabelsHelp">
-                  <span>🏷️</span> Reset box names
-                </button>
-                <button type="button" id="settingsRefreshCache" class="btn btn-secondary settings-action-btn">
-                  <span>🔄</span> Refresh offline cache
-                </button>
-              </div>
-              <p id="settingsResetLabelsHelp" class="settings-help-text">
-                Revert all custom box titles for the active game to default ranges.
-              </p>
-            </div>
-
-            <div class="settings-action-block">
-              <div class="settings-btn-grid">
-                <button type="button" id="settingsClearSpeciesCache" class="btn btn-secondary settings-action-btn">
-                  <span>🧹</span> Clear species cache
-                </button>
-                <button type="button" id="settingsCheckUpdates" class="btn btn-secondary settings-action-btn">
-                  <span>🚀</span> Check for updates
-                </button>
-              </div>
-            </div>
-
-            <div class="settings-danger-block">
-              <div class="settings-danger-content">
+        <!-- Tab 1: General -->
+        <div id="settingsPanelGeneral" class="settings-tab-panel" role="tabpanel" aria-labelledby="settingsTabGeneral">
+          <!-- Startup & Preferences -->
+          <section class="settings-section" aria-labelledby="settingsGeneralStartupHeading">
+            <h4 id="settingsGeneralStartupHeading">Startup &amp; Preferences</h4>
+            <div class="settings-group">
+              <div class="settings-row">
                 <div class="settings-row-text">
-                  <span class="settings-row-title text-danger">Reset active Pokédex</span>
-                  <span id="settingsResetDexHelp" class="settings-help-text">Clear caught progress for the currently selected game on this device.</span>
+                  <label for="settingsDefaultGameMode" class="settings-row-title">Default Pokédex</label>
+                  <span class="settings-row-subtitle">Game loaded automatically on startup</span>
                 </div>
-                <button type="button" id="resetDex" class="btn btn-danger"
-                  aria-describedby="settingsResetDexHelp" aria-haspopup="dialog">
-                  Reset progress
-                </button>
+                <div class="settings-row-control">
+                  <select id="settingsDefaultGameMode" class="select settings-select">
+                    <option value="last-used">Last used</option>
+                    <option value="specific">Specific game…</option>
+                  </select>
+                </div>
               </div>
-            </div>
 
-            <div class="settings-danger-block">
-              <div class="settings-danger-content">
+              <div class="settings-row" id="settingsDefaultGameWrapper" hidden>
                 <div class="settings-row-text">
-                  <span class="settings-row-title text-danger">Clear all saved data</span>
-                  <span id="settingsClearAllHelp" class="settings-help-text">Permanently wipes all caught progress and custom settings across all games on this device.</span>
+                  <label for="settingsDefaultGame" class="settings-row-title">Specific game</label>
+                  <span class="settings-row-subtitle">Selected game to launch by default</span>
                 </div>
-                <button type="button" id="settingsClearAllData" class="btn btn-danger"
-                  aria-describedby="settingsClearAllHelp">
-                  Clear all data ⚠️
-                </button>
+                <div class="settings-row-control">
+                  <select id="settingsDefaultGame" class="select settings-select">
+                    <option value="">Select a game…</option>
+                    <!-- Populate from GAMES in JS -->
+                  </select>
+                </div>
               </div>
-            </div>
-          </div>
-        </section>
 
-        <!-- General & About -->
-        <section class="settings-section" aria-labelledby="settingsOtherHeading">
-          <h4 id="settingsOtherHeading">General &amp; About</h4>
-          <div class="settings-group">
-            <div class="settings-row">
-              <div class="settings-row-text">
-                <label for="settingsDefaultGameMode" class="settings-row-title">Default Pokédex</label>
-                <span class="settings-row-subtitle">Game loaded automatically on startup</span>
+              <div class="settings-row">
+                <div class="settings-row-text">
+                  <label for="settingsLanguage" class="settings-row-title">Pokémon names language</label>
+                  <span class="settings-row-subtitle">Localization for species display names</span>
+                </div>
+                <div class="settings-row-control">
+                  <select id="settingsLanguage" class="select settings-select">
+                    <option value="en">English (default)</option>
+                    <option value="ja">Japanese</option>
+                    <option value="fr">French</option>
+                    <option value="es">Spanish</option>
+                    <option value="de">German</option>
+                    <option value="it">Italian</option>
+                    <option value="ko">Korean</option>
+                    <option value="zh-Hans">Chinese (simplified)</option>
+                    <option value="zh-Hant">Chinese (traditional)</option>
+                  </select>
+                </div>
               </div>
-              <div class="settings-row-control">
-                <select id="settingsDefaultGameMode" class="select settings-select">
-                  <option value="last-used">Last used</option>
-                  <option value="specific">Specific game…</option>
-                </select>
-              </div>
-            </div>
 
-            <div class="settings-row" id="settingsDefaultGameWrapper" hidden>
-              <div class="settings-row-text">
-                <label for="settingsDefaultGame" class="settings-row-title">Specific game</label>
-              </div>
-              <div class="settings-row-control">
-                <select id="settingsDefaultGame" class="select settings-select">
-                  <option value="">Select a game…</option>
-                  <!-- Populate from GAMES in JS -->
-                </select>
+              <div id="settingsGameVersionRow" class="settings-row" hidden>
+                <div class="settings-row-text">
+                  <label for="settingsGameVersion" class="settings-row-title">Active game version</label>
+                  <span class="settings-row-subtitle">Tailor wild encounters and missing guide to your cartridge</span>
+                </div>
+                <div class="settings-row-control">
+                  <select id="settingsGameVersion" class="select settings-select">
+                    <option value="all">All Versions</option>
+                  </select>
+                </div>
               </div>
             </div>
+          </section>
 
-            <div class="settings-nav-block">
-              <div class="settings-btn-grid">
-                <button type="button" id="settingsShortcuts" class="btn btn-secondary settings-action-btn">
-                  <span>⌨️</span> Shortcuts guide
-                </button>
-                <button type="button" id="settingsAbout" class="btn btn-secondary settings-action-btn">
-                  <span>ℹ️</span> About LivingDex
-                </button>
+          <!-- Help & Info -->
+          <section class="settings-section" aria-labelledby="settingsGeneralInfoHeading">
+            <h4 id="settingsGeneralInfoHeading">Help &amp; Information</h4>
+            <div class="settings-group">
+              <div class="settings-nav-block">
+                <div class="settings-btn-grid">
+                  <button type="button" id="settingsShortcuts" class="btn btn-secondary settings-action-btn">
+                    <span>⌨️</span> Shortcuts guide
+                  </button>
+                  <button type="button" id="settingsAbout" class="btn btn-secondary settings-action-btn">
+                    <span>ℹ️</span> About LivingDex
+                  </button>
+                </div>
               </div>
             </div>
-          </div>
-        </section>
+          </section>
+        </div>
+
+        <!-- Tab 2: Appearance -->
+        <div id="settingsPanelAppearance" class="settings-tab-panel" role="tabpanel" aria-labelledby="settingsTabAppearance" hidden>
+          <section class="settings-section" aria-labelledby="settingsAppearanceThemeHeading">
+            <h4 id="settingsAppearanceThemeHeading">Theme &amp; Style</h4>
+            <div class="settings-group">
+              <div class="settings-row">
+                <div class="settings-row-text">
+                  <span class="settings-row-title">Theme</span>
+                  <span class="settings-row-subtitle">Select your preferred color mode</span>
+                </div>
+                <div class="segmented-control settings-theme-segmented" role="radiogroup" aria-label="Theme">
+                  <label class="settings-theme-option" title="Light theme">
+                    <input type="radio" name="settingsTheme" id="settingsThemeLight" value="light" class="sr-only">
+                    <span class="segmented-btn">☀️ Light</span>
+                  </label>
+                  <label class="settings-theme-option" title="Dark theme">
+                    <input type="radio" name="settingsTheme" id="settingsThemeDark" value="dark" class="sr-only">
+                    <span class="segmented-btn">🌙 Dark</span>
+                  </label>
+                  <label class="settings-theme-option" title="Auto (system preference)">
+                    <input type="radio" name="settingsTheme" id="settingsThemeAuto" value="auto" class="sr-only">
+                    <span class="segmented-btn">💻 Auto</span>
+                  </label>
+                </div>
+              </div>
+
+              <div class="settings-row">
+                <div class="settings-row-text">
+                  <label for="settingsSpriteStyle" class="settings-row-title">Sprite artwork style</label>
+                  <span class="settings-row-subtitle">Choose rendering style for Pokémon sprites</span>
+                </div>
+                <div class="settings-row-control">
+                  <select id="settingsSpriteStyle" class="select settings-select">
+                    <option value="pokesprites">PokeAPI sprites (fast &amp; compact)</option>
+                    <option value="official-artwork">Official artwork</option>
+                    <option value="home">Home 3D models</option>
+                    <option value="showdown">Showdown (animated)</option>
+                  </select>
+                </div>
+              </div>
+
+              <label class="settings-row settings-row-clickable" for="settingsReducedMotion">
+                <div class="settings-row-text">
+                  <span class="settings-row-title">Reduce motion</span>
+                  <span class="settings-row-subtitle">Minimize transition animations and effects</span>
+                </div>
+                <span class="toggle-switch">
+                  <input type="checkbox" id="settingsReducedMotion">
+                  <span class="toggle-track"></span>
+                </span>
+              </label>
+            </div>
+          </section>
+        </div>
+
+        <!-- Tab 3: Boxes & Grid -->
+        <div id="settingsPanelBoxes" class="settings-tab-panel" role="tabpanel" aria-labelledby="settingsTabBoxes" hidden>
+          <section class="settings-section" aria-labelledby="settingsBoxesBehaviorHeading">
+            <h4 id="settingsBoxesBehaviorHeading">Tracker &amp; Box Behavior</h4>
+            <div class="settings-group">
+              <label class="settings-row settings-row-clickable" for="settingsHideCaught">
+                <div class="settings-row-text">
+                  <span class="settings-row-title">Hide caught Pokémon</span>
+                  <span class="settings-row-subtitle">Start with caught Pokémon hidden by default</span>
+                </div>
+                <span class="toggle-switch">
+                  <input type="checkbox" id="settingsHideCaught">
+                  <span class="toggle-track"></span>
+                </span>
+              </label>
+
+              <label class="settings-row settings-row-clickable" for="settingsRememberCollapsed">
+                <div class="settings-row-text">
+                  <span class="settings-row-title">Remember collapsed boxes</span>
+                  <span class="settings-row-subtitle">Keep boxes collapsed across page reloads</span>
+                </div>
+                <span class="toggle-switch">
+                  <input type="checkbox" id="settingsRememberCollapsed">
+                  <span class="toggle-track"></span>
+                </span>
+              </label>
+
+              <label class="settings-row settings-row-clickable" for="settingsAutoCollapseFull">
+                <div class="settings-row-text">
+                  <span class="settings-row-title">Auto-collapse full boxes</span>
+                  <span class="settings-row-subtitle">Automatically collapse a box when all 30 slots are caught</span>
+                </div>
+                <span class="toggle-switch">
+                  <input type="checkbox" id="settingsAutoCollapseFull">
+                  <span class="toggle-track"></span>
+                </span>
+              </label>
+            </div>
+          </section>
+
+          <section class="settings-section" aria-labelledby="settingsBoxesCustomHeading">
+            <h4 id="settingsBoxesCustomHeading">Box Layout &amp; Customization</h4>
+            <div class="settings-group">
+              <div class="settings-row settings-action-row">
+                <div class="settings-row-text">
+                  <span class="settings-row-title">Reset box titles</span>
+                  <span id="settingsResetLabelsHelp" class="settings-row-subtitle">Revert all custom box titles for the active game to default ranges.</span>
+                </div>
+                <div class="settings-row-control">
+                  <button type="button" id="settingsResetBoxLabels" class="btn btn-secondary settings-btn-compact" aria-describedby="settingsResetLabelsHelp">
+                    <span>🏷️</span> Reset names
+                  </button>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <!-- Tab 4: Data & System -->
+        <div id="settingsPanelData" class="settings-tab-panel" role="tabpanel" aria-labelledby="settingsTabData" hidden>
+          <!-- Backup & Restore -->
+          <section class="settings-section" aria-labelledby="settingsDataBackupHeading">
+            <h4 id="settingsDataBackupHeading">Backup &amp; Restore</h4>
+            <div class="settings-group">
+              <div class="settings-action-block">
+                <div class="settings-btn-grid">
+                  <button type="button" id="settingsExportData" class="btn btn-secondary settings-action-btn">
+                    <span>📤</span> Export all data
+                  </button>
+                  <button type="button" id="settingsImportData" class="btn btn-secondary settings-action-btn" aria-describedby="settingsImportHelp">
+                    <span>📥</span> Import data
+                  </button>
+                </div>
+                <p id="settingsImportHelp" class="settings-help-text">
+                  Save a JSON backup of your progress or restore data from another device.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <!-- Maintenance -->
+          <section class="settings-section" aria-labelledby="settingsDataMaintenanceHeading">
+            <h4 id="settingsDataMaintenanceHeading">Offline &amp; Cache Maintenance</h4>
+            <div class="settings-group">
+              <div class="settings-row settings-action-row">
+                <div class="settings-row-text">
+                  <span class="settings-row-title">Check for updates</span>
+                  <span class="settings-row-subtitle">Check if a newer version of the application is available.</span>
+                </div>
+                <div class="settings-row-control">
+                  <button type="button" id="settingsCheckUpdates" class="btn btn-secondary settings-btn-compact">
+                    <span>🚀</span> Check
+                  </button>
+                </div>
+              </div>
+
+              <div class="settings-row settings-action-row">
+                <div class="settings-row-text">
+                  <span class="settings-row-title">Refresh offline cache</span>
+                  <span class="settings-row-subtitle">Re-fetch application assets and Pokédex data from network.</span>
+                </div>
+                <div class="settings-row-control">
+                  <button type="button" id="settingsRefreshCache" class="btn btn-secondary settings-btn-compact">
+                    <span>🔄</span> Refresh
+                  </button>
+                </div>
+              </div>
+
+              <div class="settings-row settings-action-row">
+                <div class="settings-row-text">
+                  <span class="settings-row-title">Clear species cache</span>
+                  <span class="settings-row-subtitle">Clear stored localized Pokémon names from local cache.</span>
+                </div>
+                <div class="settings-row-control">
+                  <button type="button" id="settingsClearSpeciesCache" class="btn btn-secondary settings-btn-compact">
+                    <span>🧹</span> Clear
+                  </button>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Danger Zone -->
+          <section class="settings-section" aria-labelledby="settingsDataDangerHeading">
+            <h4 id="settingsDataDangerHeading" class="text-danger">Danger Zone</h4>
+            <div class="settings-group settings-danger-group">
+              <div class="settings-danger-block">
+                <div class="settings-danger-content">
+                  <div class="settings-row-text">
+                    <span class="settings-row-title text-danger">Reset active Pokédex</span>
+                    <span id="settingsResetDexHelp" class="settings-help-text">Clear caught progress for the currently selected game on this device.</span>
+                  </div>
+                  <button type="button" id="resetDex" class="btn btn-danger"
+                    aria-describedby="settingsResetDexHelp" aria-haspopup="dialog">
+                    Reset progress
+                  </button>
+                </div>
+              </div>
+
+              <div class="settings-danger-block">
+                <div class="settings-danger-content">
+                  <div class="settings-row-text">
+                    <span class="settings-row-title text-danger">Clear all saved data</span>
+                    <span id="settingsClearAllHelp" class="settings-help-text">Permanently wipes all caught progress and custom settings across all games on this device.</span>
+                  </div>
+                  <button type="button" id="settingsClearAllData" class="btn btn-danger"
+                    aria-describedby="settingsClearAllHelp">
+                    Clear all data ⚠️
+                  </button>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
       </div>
 
       <div class="modal-actions">

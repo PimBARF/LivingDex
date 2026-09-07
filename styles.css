@@ -1836,10 +1836,13 @@ body.is-drag-selecting .cell {
 
 /* --- Settings Modal --- */
 .settings-modal-card {
-  max-width: 540px;
+  max-width: 580px;
+  height: min(730px, calc(100dvh - 36px));
+  max-height: calc(100dvh - 36px);
 }
 
 .settings-header {
+  flex-shrink: 0;
   margin-bottom: 8px;
 }
 
@@ -1854,7 +1857,39 @@ body.is-drag-selecting .cell {
   line-height: 1.4;
 }
 
+/* Category Tabs Segmented Bar */
+.settings-tabs-segmented {
+  margin-top: 10px;
+  width: 100%;
+  display: flex;
+}
+
+.settings-tabs-segmented .segmented-btn {
+  flex: 1 1 0;
+  min-width: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  gap: 6px;
+  padding: 0 8px;
+  font-size: 13px;
+}
+
+.settings-tabs-segmented .tab-icon {
+  font-size: 14px;
+}
+
+.settings-tabs-segmented .tab-label-short {
+  display: none;
+}
+
+.settings-tabs-segmented .tab-label-full {
+  display: inline;
+}
+
 .settings-body {
+  flex: 1 1 auto;
+  min-height: 0;
   margin-top: 6px;
   padding: 2px 4px 6px 0;
   display: flex;
@@ -1862,6 +1897,16 @@ body.is-drag-selecting .cell {
   gap: 16px;
   overflow-y: auto;
   overscroll-behavior: contain;
+}
+
+.settings-tab-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.settings-tab-panel[hidden] {
+  display: none;
 }
 
 .settings-section {
@@ -1891,6 +1936,10 @@ body.is-drag-selecting .cell {
   border-radius: 50%;
   background: var(--accent-2);
   flex-shrink: 0;
+}
+
+.settings-section h4.text-danger::before {
+  background: var(--danger);
 }
 
 /* Unified group container per section — single clean surface */
@@ -1967,6 +2016,16 @@ body.is-drag-selecting .cell {
   font-size: 13px;
   font-weight: 500;
   border-radius: calc(var(--control-radius) - 2px);
+}
+
+.settings-btn-compact {
+  height: 34px;
+  padding: 0 12px;
+  font-size: 13px;
+  font-weight: 600;
+  gap: 5px;
+  flex-shrink: 0;
+  white-space: nowrap;
 }
 
 /* Theme Segmented Control in Settings */
@@ -2085,7 +2144,6 @@ body.is-drag-selecting .cell {
 /* Action Blocks & Button Grids */
 .settings-action-block {
   padding: 12px 14px;
-  border-bottom: 1px solid var(--surface-soft-border);
   display: flex;
   flex-direction: column;
   gap: 8px;
@@ -2118,10 +2176,18 @@ body.is-drag-selecting .cell {
 }
 
 /* Danger Zone */
+.settings-danger-group {
+  border-color: color-mix(in srgb, var(--danger) 25%, transparent);
+}
+
 .settings-danger-block {
   padding: 12px 14px;
   background: color-mix(in srgb, var(--danger) 5%, transparent);
-  border-top: 1px solid color-mix(in srgb, var(--danger) 18%, transparent);
+  border-bottom: 1px solid color-mix(in srgb, var(--danger) 18%, transparent);
+}
+
+.settings-danger-group > .settings-danger-block:last-child {
+  border-bottom: none;
 }
 
 .settings-danger-content {
@@ -2161,6 +2227,22 @@ body.is-drag-selecting .cell {
   .settings-modal-card {
     max-width: 100%;
     width: calc(100% - 20px);
+    height: min(730px, calc(100dvh - 24px));
+    max-height: calc(100dvh - 24px);
+  }
+
+  .settings-tabs-segmented .tab-label-full {
+    display: none;
+  }
+
+  .settings-tabs-segmented .tab-label-short {
+    display: inline;
+  }
+
+  .settings-tabs-segmented .segmented-btn {
+    padding: 0 4px;
+    font-size: 12px;
+    gap: 4px;
   }
 
   .settings-row {
@@ -2172,6 +2254,18 @@ body.is-drag-selecting .cell {
   .settings-row-clickable {
     flex-direction: row;
     align-items: center;
+  }
+
+  .settings-action-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .settings-action-row .settings-row-control,
+  .settings-action-row .settings-btn-compact {
+    width: 100%;
+    justify-content: center;
   }
 
   .settings-row-control,
