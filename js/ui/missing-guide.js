@@ -190,11 +190,11 @@ function updateModalHeaderStats() {
     : itemsCount;
 
   if (currentTab === "missing") {
-    statsEl.textContent = `${missingCount} Pokémon remaining`;
+    statsEl.innerHTML = `<span class="stats-label-full">${missingCount} Pokémon Remaining</span><span class="stats-label-short">${missingCount} Remaining</span>`;
   } else if (currentTab === "family") {
-    statsEl.textContent = `${familiesCount} incomplete evolution families`;
+    statsEl.innerHTML = `<span class="stats-label-full">${familiesCount} Incomplete Families</span><span class="stats-label-short">${familiesCount} Incomplete</span>`;
   } else if (currentTab === "items") {
-    statsEl.textContent = `${itemsCount} evolution items required (${remainingItemsCount} still needed)`;
+    statsEl.innerHTML = `<span class="stats-label-full">${remainingItemsCount} / ${itemsCount} Items Needed</span><span class="stats-label-short">${remainingItemsCount} Items Needed</span>`;
   }
 }
 

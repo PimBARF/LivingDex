@@ -620,6 +620,7 @@ header {
   line-height: 1;
   height: 100%;
   box-sizing: border-box;
+  white-space: nowrap;
 }
 
 .segmented-btn:hover {
@@ -3261,6 +3262,7 @@ body.is-drag-selecting .cell {
 .missing-guide-modal-card {
   max-width: 920px;
   width: calc(100% - 32px);
+  height: min(850px, calc(100dvh - 36px));
   max-height: calc(100dvh - 36px);
   padding: 16px 16px 12px;
 }
@@ -3276,22 +3278,39 @@ body.is-drag-selecting .cell {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: nowrap;
   gap: 12px;
+  min-height: 32px;
 }
 
 .missing-guide-title-row h3 {
   margin: 0;
-  font-size: clamp(1.25rem, 2vw, 1.5rem);
+  font-size: clamp(1.2rem, 2vw, 1.45rem);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  min-width: 0;
 }
 
 .missing-guide-stats {
-  font-size: 0.84rem;
+  font-size: 0.82rem;
   font-weight: 700;
   color: var(--accent-1);
   background: color-mix(in srgb, var(--accent-1) 12%, transparent);
   border: 1px solid color-mix(in srgb, var(--accent-1) 25%, transparent);
   padding: 3px 10px;
   border-radius: 20px;
+  white-space: nowrap;
+  flex-shrink: 0;
+  line-height: 1.2;
+}
+
+.missing-guide-stats .stats-label-short {
+  display: none;
+}
+
+.missing-guide-stats .stats-label-full {
+  display: inline;
 }
 
 #missingGuideDesc {
@@ -3303,6 +3322,26 @@ body.is-drag-selecting .cell {
 
 .missing-tabs-segmented {
   margin-top: 4px;
+  width: 100%;
+  display: flex;
+}
+
+.missing-tabs-segmented .segmented-btn {
+  flex: 1 1 0;
+  min-width: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  gap: 6px;
+  padding: 0 8px;
+}
+
+.missing-tabs-segmented .tab-label-short {
+  display: none;
+}
+
+.missing-tabs-segmented .tab-label-full {
+  display: inline;
 }
 
 /* Toolbar */
@@ -3318,6 +3357,7 @@ body.is-drag-selecting .cell {
 .missing-search-row {
   display: flex;
   align-items: center;
+  flex-wrap: nowrap;
   gap: 8px;
   width: 100%;
 }
@@ -3439,7 +3479,7 @@ body.is-drag-selecting .cell {
 /* Scrollable Body */
 .missing-guide-body {
   flex: 1 1 auto;
-  min-height: 280px;
+  min-height: 0;
   overflow-y: auto;
   padding-right: 4px;
   -webkit-overflow-scrolling: touch;
@@ -3642,18 +3682,46 @@ body.is-drag-selecting .cell {
 
 .missing-card-actions {
   display: flex;
-  gap: 8px;
-  margin-top: 10px;
+  align-items: center;
+  gap: 6px;
+  margin-top: 8px;
   padding-top: 8px;
   border-top: 1px solid var(--border);
 }
 
+.missing-catch-btn,
+.missing-info-btn {
+  height: 28px;
+  padding: 0 10px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  gap: 4px;
+  border-radius: 6px;
+}
+
 .missing-catch-btn {
   flex: 1 1 auto;
+  background: color-mix(in srgb, var(--success) 16%, var(--card));
+  border-color: color-mix(in srgb, var(--success) 35%, transparent);
+  color: var(--success);
+}
+
+.missing-catch-btn:hover {
+  background: var(--success);
+  border-color: var(--success);
+  color: #fff;
 }
 
 .missing-info-btn {
   flex: 0 0 auto;
+  background: color-mix(in srgb, var(--surface-soft) 80%, var(--border));
+  border-color: var(--border);
+  color: var(--muted);
+}
+
+.missing-info-btn:hover {
+  color: var(--text);
+  border-color: var(--accent-1);
 }
 
 /* Stepper Controls */
@@ -4039,22 +4107,42 @@ body.is-drag-selecting .cell {
   .missing-guide-modal-card {
     padding: 10px 10px 8px;
     width: calc(100% - 16px);
-    max-height: calc(100dvh - 16px);
+    height: calc(100dvh - 16px - env(safe-area-inset-top) - env(safe-area-inset-bottom));
+    max-height: calc(100dvh - 16px - env(safe-area-inset-top) - env(safe-area-inset-bottom));
     border-radius: 12px;
   }
 
-  .missing-guide-header {
-    gap: 4px;
-    margin-bottom: 4px;
+  .missing-guide-title-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    gap: 6px;
+    height: 28px;
+    min-height: 28px;
   }
 
   .missing-guide-title-row h3 {
-    font-size: 1.1rem;
+    font-size: 1.05rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    min-width: 0;
   }
 
   .missing-guide-stats {
     font-size: 0.74rem;
     padding: 2px 7px;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  .missing-guide-stats .stats-label-full {
+    display: none;
+  }
+
+  .missing-guide-stats .stats-label-short {
+    display: inline;
   }
 
   #missingGuideDesc {
@@ -4064,12 +4152,26 @@ body.is-drag-selecting .cell {
   .missing-tabs-segmented {
     height: 32px;
     margin-top: 2px;
+    width: 100%;
+    display: flex;
   }
 
   .missing-tabs-segmented .segmented-btn {
-    font-size: 0.76rem;
-    padding: 3px 6px;
+    font-size: 0.78rem;
+    padding: 0 4px;
+    gap: 4px;
     height: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .missing-tabs-segmented .tab-label-full {
+    display: none;
+  }
+
+  .missing-tabs-segmented .tab-label-short {
+    display: inline;
   }
 
   .missing-toolbar {
@@ -4078,21 +4180,36 @@ body.is-drag-selecting .cell {
     gap: 6px;
   }
 
+  .missing-search-row {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 6px;
+    width: 100%;
+  }
+
+  .missing-search-wrap {
+    flex: 1 1 auto;
+    min-width: 0;
+  }
+
   .missing-search-input {
-    height: 34px;
-    font-size: 0.84rem;
-    padding: 4px 30px 4px 10px;
+    height: 32px;
+    font-size: 0.82rem;
+    padding: 4px 28px 4px 8px;
   }
 
   .missing-toggle-filters-btn {
-    height: 34px;
+    height: 32px;
     padding: 0 8px;
-    font-size: 0.78rem;
+    font-size: 0.76rem;
     gap: 4px;
+    flex-shrink: 0;
+    white-space: nowrap;
   }
 
   .missing-guide-body {
-    min-height: 200px;
+    min-height: 0;
     padding-right: 2px;
   }
 
@@ -4147,16 +4264,18 @@ body.is-drag-selecting .cell {
   }
 
   .missing-card-actions {
-    margin-top: 6px;
-    padding-top: 6px;
-    gap: 6px;
+    margin-top: 5px;
+    padding-top: 5px;
+    gap: 5px;
   }
 
   .missing-catch-btn,
   .missing-info-btn {
-    height: 30px;
-    font-size: 0.78rem;
+    height: 26px;
+    font-size: 0.74rem;
     padding: 0 8px;
+    gap: 3px;
+    border-radius: 6px;
   }
 
   .family-quotas-list {
@@ -4308,5 +4427,22 @@ body.is-drag-selecting .cell {
   .missing-reset-btn {
     height: 28px;
     font-size: 0.74rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .missing-filters-btn-label {
+    display: none;
+  }
+
+  .missing-toggle-filters-btn {
+    padding: 0 6px;
+  }
+
+  .missing-catch-btn,
+  .missing-info-btn {
+    height: 24px;
+    font-size: 0.7rem;
+    padding: 0 6px;
   }
 }
