@@ -2722,7 +2722,40 @@ body.is-drag-selecting .cell {
 }
 
 .pokemon-info-encounter-location {
+  font-weight: 500;
+}
+
+.pokemon-info-encounter-method-note {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 9px;
+  background: var(--surface-soft-hover);
+  border: 1px solid rgba(66, 133, 244, 0.2);
+  border-radius: var(--control-radius);
+  color: var(--accent-2);
+  font-size: 11.5px;
   font-weight: 600;
+  line-height: 1.35;
+}
+
+.pokemon-info-encounter-method-icon {
+  font-size: 12px;
+  flex-shrink: 0;
+}
+
+.pokemon-info-encounter-tag {
+  display: inline-block;
+  padding: 1px 6px;
+  margin-left: 4px;
+  background: var(--surface-soft);
+  border: 1px solid var(--surface-soft-border);
+  border-radius: 6px;
+  font-size: 10.5px;
+  font-weight: 600;
+  color: var(--muted);
+  vertical-align: baseline;
+  line-height: 1.4;
 }
 
 /* --- Evolution Chain Visual Tree --- */

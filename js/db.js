@@ -824,6 +824,79 @@ function findPreEvolutionName(paths, speciesId) {
 }
 
 /**
+ * Detects if a set of encounter locations exclusively requires a specific method.
+ *
+ * @param {string[]} locations - List of location strings.
+ * @returns {string|null} Descriptive note or null if no single exclusive method applies.
+ */
+export function detectExclusiveEncounterMethod(locations) {
+  if (!locations || !locations.length) return null;
+
+  const wildLocs = locations.filter(
+    (loc) => !/^(Evolve|Trade|Breed|Received|Buy|Gift|Event)/i.test(loc.trim()),
+  );
+  if (!wildLocs.length) return null;
+
+  // 1. Fishing exclusively
+  const isAllFishing = wildLocs.every(
+    (loc) =>
+      /\b(fishing|old rod|good rod|super rod|rod)\b/i.test(loc) &&
+      !/\b(surfing|swimming|walking|grass|cave|overworld)\b/i.test(loc),
+  );
+  if (isAllFishing) {
+    const isAllSuperRod = wildLocs.every((loc) => /super rod/i.test(loc));
+    const isAllOldRod = wildLocs.every((loc) => /old rod/i.test(loc));
+    const isAllGoodRod = wildLocs.every((loc) => /good rod/i.test(loc));
+    if (isAllSuperRod) return "Encountered only via fishing (Super Rod)";
+    if (isAllOldRod) return "Encountered only via fishing (Old Rod)";
+    if (isAllGoodRod) return "Encountered only via fishing (Good Rod)";
+    return "Encountered only via fishing";
+  }
+
+  // 2. Surfing / Swimming exclusively
+  const isAllSurfing = wildLocs.every(
+    (loc) =>
+      /\b(surfing|swimming|sea skim)\b/i.test(loc) &&
+      !/\b(fishing|rod|walking|grass|cave)\b/i.test(loc),
+  );
+  if (isAllSurfing) {
+    return "Encountered only while swimming / surfing";
+  }
+
+  // 3. Diving / Underwater exclusively
+  const isAllDiving = wildLocs.every((loc) =>
+    /\b(underwater|diving)\b/i.test(loc),
+  );
+  if (isAllDiving) {
+    return "Encountered only underwater (Diving)";
+  }
+
+  // 4. Rock Smash exclusively
+  const isAllRockSmash = wildLocs.every((loc) => /\b(rock smash)\b/i.test(loc));
+  if (isAllRockSmash) {
+    return "Encountered only by using Rock Smash";
+  }
+
+  // 5. Trees / Headbutt / Honey Trees exclusively
+  const isAllTrees = wildLocs.every((loc) =>
+    /\b(honey trees?|headbutt|tree shaking)\b/i.test(loc),
+  );
+  if (isAllTrees) {
+    return "Encountered only in trees (Headbutt / Honey Trees)";
+  }
+
+  // 6. Raids exclusively
+  const isAllRaids = wildLocs.every((loc) =>
+    /\b(max raid|tera raid|dynamax adventure)\b/i.test(loc),
+  );
+  if (isAllRaids) {
+    return "Encountered only in Raid Battles";
+  }
+
+  return null;
+}
+
+/**
  * Clusters game versions by identical location arrays into unified display groups.
  * Handles base game versions and expansion pass versions separately using on-demand encounters data.
  *
@@ -901,6 +974,9 @@ function resolveEncounterGroups(
         {
           versionHeader: joinVersionNames(versions),
           locations: populatedGroups[0].entries,
+          methodNote: detectExclusiveEncounterMethod(
+            populatedGroups[0].entries,
+          ),
         },
       ];
     }
@@ -914,6 +990,7 @@ function resolveEncounterGroups(
           return {
             versionHeader: header,
             locations: groupData.entries,
+            methodNote: detectExclusiveEncounterMethod(groupData.entries),
           };
         }
 

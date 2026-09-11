@@ -246,6 +246,67 @@ function getInfoModalHandlers() {
 }
 
 /**
+ * Splits a location string into a base location name and parenthetical tags/badges.
+ *
+ * @param {string} entry - Raw location entry string (e.g. "Route 12 (Surfing)").
+ * @returns {{ name: string, tags: string[] }} Parsed location name and tags.
+ */
+function parseLocationEntry(entry) {
+  if (!entry) return { name: "", tags: [] };
+  if (
+    /^(?:Tera Raid|Evolve|Trade|Buy|Breed|Received|Gift|Event)/i.test(
+      entry.trim(),
+    )
+  ) {
+    return { name: entry, tags: [] };
+  }
+
+  let current = entry;
+  const tags = [];
+  const floorPattern =
+    /^(?:b?\d+f|main|area\s*\d+|outside|inside|exterior|entrance)$/i;
+
+  while (true) {
+    const match = current.match(/\s*\(([^()]+)\)$/);
+    if (!match) break;
+    const tagContent = match[1].trim();
+    if (floorPattern.test(tagContent)) {
+      break;
+    }
+    tags.unshift(tagContent);
+    current = current.slice(0, match.index).trim();
+  }
+
+  return { name: current || entry, tags };
+}
+
+/**
+ * Populates an `<li>` element with a styled location name and tags.
+ *
+ * @param {HTMLLIElement} li - Target list item element.
+ * @param {string} entry - Location entry string.
+ * @returns {void}
+ */
+function renderLocationItemContent(li, entry) {
+  const { name, tags } = parseLocationEntry(entry);
+  li.textContent = "";
+
+  const nameSpan = document.createElement("span");
+  nameSpan.className = "pokemon-info-encounter-location";
+  nameSpan.textContent = name;
+  li.appendChild(nameSpan);
+
+  if (tags.length > 0) {
+    tags.forEach((tag) => {
+      const tagSpan = document.createElement("span");
+      tagSpan.className = "pokemon-info-encounter-tag";
+      tagSpan.textContent = tag;
+      li.appendChild(tagSpan);
+    });
+  }
+}
+
+/**
  * Creates an encounter location list DOM element with a toggle button if entries exceed `maxVisible`.
  *
  * @param {string[]} entries - List of location names.
@@ -267,7 +328,7 @@ function createEncounterList(entries, { maxVisible = 5 } = {}) {
   visibleEntries.forEach((entry) => {
     const item = document.createElement("li");
     item.className = "pokemon-info-encounter-item";
-    item.textContent = entry;
+    renderLocationItemContent(item, entry);
     list.appendChild(item);
   });
 
@@ -277,7 +338,7 @@ function createEncounterList(entries, { maxVisible = 5 } = {}) {
       const item = document.createElement("li");
       item.className =
         "pokemon-info-encounter-item pokemon-info-encounter-item-hidden";
-      item.textContent = entry;
+      renderLocationItemContent(item, entry);
       item.hidden = true;
       list.appendChild(item);
     });
@@ -452,6 +513,19 @@ function renderEncounterDetails(encounterEl, encounterGroups) {
       header.className = "pokemon-info-encounter-header";
       header.textContent = groupData.versionHeader;
       group.appendChild(header);
+    }
+
+    if (groupData.methodNote) {
+      const methodEl = document.createElement("div");
+      methodEl.className = "pokemon-info-encounter-method-note";
+      const icon = document.createElement("span");
+      icon.className = "pokemon-info-encounter-method-icon";
+      icon.setAttribute("aria-hidden", "true");
+      icon.textContent = "💡";
+      const text = document.createElement("span");
+      text.textContent = groupData.methodNote;
+      methodEl.append(icon, text);
+      group.appendChild(methodEl);
     }
 
     if (groupData.locations && groupData.locations.length > 0) {
