@@ -285,7 +285,7 @@ export function applySearchFilter(query, { immediateScroll = false } = {}) {
       const end = isFocused ? searchInput?.selectionEnd : null;
 
       // Calculate combined sticky height (header + sticky progress bar + padding)
-      const isMobileScreen = window.matchMedia("(max-width: 640px)").matches;
+      const isMobileScreen = window.matchMedia("(max-width: 768px)").matches;
       const progressWrap = document.getElementById("progressWrap");
       const header = document.querySelector("header");
 
@@ -619,7 +619,7 @@ export function registerHeaderControls(slotCount) {
   setStatusFilter(hideDefault ? "uncaught" : "all");
 
   // Mobile: collapse the search bar after scrolling down (when not actively searching)
-  const isMobile = () => window.matchMedia("(max-width: 640px)").matches;
+  const isMobile = () => window.matchMedia("(max-width: 768px)").matches;
   const COLLAPSE_Y = 120;
   let lastScrollY = window.scrollY;
 

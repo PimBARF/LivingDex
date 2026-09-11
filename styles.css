@@ -487,7 +487,8 @@ header {
   display: flex;
   gap: 10px;
   align-items: center;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
+  flex-shrink: 0;
   justify-content: flex-end;
 }
 
@@ -713,8 +714,8 @@ footer {
   user-select: none;
 }
 
-/* --- Mobile Header & Collapsible Search (max-width: 640px) --- */
-@media (max-width: 640px) {
+/* --- Mobile Header & Collapsible Search (max-width: 768px) --- */
+@media (max-width: 768px) {
   /* Footer adjustments on touch / small screens */
   .footer-shortcuts-sep,
   .footer-shortcuts-btn {
@@ -912,7 +913,7 @@ body.is-scrolled #progressWrap {
 }
 
 /* Adjust sticky progress bar offset for mobile header height */
-@media (max-width: 640px) {
+@media (max-width: 768px) {
   #progressWrap {
     top: var(--header-expanded-height, 230px);
   }

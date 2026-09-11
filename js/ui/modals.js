@@ -101,7 +101,7 @@ export function attachModalHandlers({
     onOpen?.(lastFocus);
 
     const isMobile =
-      window.matchMedia("(max-width: 640px)").matches ||
+      window.matchMedia("(max-width: 768px)").matches ||
       "ontouchstart" in window;
 
     let targetEl = null;
