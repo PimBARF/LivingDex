@@ -30,6 +30,8 @@ import {
   registerFiltersModal,
   registerSegmentsModal,
   registerMissingGuideModal,
+  registerWelcomeGuideModal,
+  checkFirstTimeVisitor,
   showToast,
 } from "./ui/modals.js";
 
@@ -96,6 +98,7 @@ async function initializeLivingDexApp() {
   registerFiltersModal();
   registerSegmentsModal({ onSegmentsUpdated: () => renderGameInfo() });
   registerMissingGuideModal();
+  registerWelcomeGuideModal();
 
   const app = document.getElementById("app");
   if (!app) return;
@@ -155,6 +158,9 @@ async function initializeLivingDexApp() {
       "This shared link is for a different game or segment selection.",
       "warning",
     );
+  } else {
+    // Check if this is a first-time visitor and show Welcome Guide
+    checkFirstTimeVisitor(450);
   }
 
   // Watch for hash changes (e.g., user clicking shared link)

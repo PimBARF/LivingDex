@@ -12,6 +12,7 @@ import {
   SPECIES_CACHE_META_KEY,
   SPECIES_CACHE_TTL_MS,
   SETTINGS_STORAGE_KEY,
+  WELCOME_GUIDE_STORAGE_KEY,
   getDefaultEnabledSegments,
 } from "./config.js";
 
@@ -757,4 +758,47 @@ export function setSelectedGameVersion(gameId, version) {
   settings.gameVersions = versions;
   saveSettings(settings);
   return version;
+}
+
+/**
+ * Checks whether the user has previously completed or dismissed the first-time welcome guide.
+ *
+ * @returns {boolean} True if the guide has been seen or if existing progress exists; false otherwise.
+ */
+export function hasSeenWelcomeGuide() {
+  try {
+    const direct = localStorage.getItem(WELCOME_GUIDE_STORAGE_KEY);
+    if (direct === "true") return true;
+    if (direct === "false") return false;
+
+    // Smart heuristic: if user already has saved caught progress in any game, treat as seen
+    const hasExistingData = Object.keys(localStorage).some(
+      (k) =>
+        (k.endsWith("-caught-v1") || k.endsWith("-shiny-caught-v1")) &&
+        localStorage.getItem(k) &&
+        localStorage.getItem(k) !== "{}" &&
+        localStorage.getItem(k) !== "null",
+    );
+    if (hasExistingData) {
+      localStorage.setItem(WELCOME_GUIDE_STORAGE_KEY, "true");
+      return true;
+    }
+    return false;
+  } catch {
+    return false;
+  }
+}
+
+/**
+ * Persists the welcome guide seen state in localStorage.
+ *
+ * @param {boolean} [seen=true] - Whether the welcome guide has been seen.
+ * @returns {void}
+ */
+export function markWelcomeGuideSeen(seen = true) {
+  try {
+    localStorage.setItem(WELCOME_GUIDE_STORAGE_KEY, String(seen));
+  } catch {
+    // Ignore quota errors silently
+  }
 }

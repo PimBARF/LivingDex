@@ -158,6 +158,10 @@
           aria-label="Support LivingDex on Ko-fi">
           ☕ Support on Ko-fi
         </a>
+        <span class="footer-sep" aria-hidden="true">•</span>
+        <button id="footerGuideBtn" class="footer-link footer-guide-btn" type="button" title="Open first-time guide" aria-haspopup="dialog">
+          💡 Guide
+        </button>
         <span class="footer-sep footer-shortcuts-sep" aria-hidden="true">•</span>
         <button id="shortcutsBtn" class="footer-link footer-shortcuts-btn" type="button" title="View keyboard shortcuts" aria-haspopup="dialog">
           ⌨️ Shortcuts
@@ -300,6 +304,9 @@
             <div class="settings-group">
               <div class="settings-nav-block">
                 <div class="settings-btn-grid">
+                  <button type="button" id="settingsReplayGuideBtn" class="btn btn-secondary settings-action-btn">
+                    <span>💡</span> Welcome guide
+                  </button>
                   <button type="button" id="settingsShortcuts" class="btn btn-secondary settings-action-btn">
                     <span>⌨️</span> Shortcuts guide
                   </button>
@@ -618,6 +625,7 @@
       </div>
 
       <div class="modal-actions">
+        <button id="aboutReplayGuideBtn" class="btn btn-secondary" type="button" aria-label="Open Welcome Guide">💡 Welcome Guide</button>
         <button id="closeAbout" class="btn" type="button" aria-label="Close about dialog">Close</button>
       </div>
     </div>
@@ -782,6 +790,47 @@
 
       <div class="modal-actions">
         <button id="closeFilters" class="btn btn-primary" type="button" aria-label="Apply filters and close dialog">Done</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Welcome & First-time Guide modal -->
+  <div id="modalWelcome" class="modal" role="dialog" aria-modal="true" aria-labelledby="welcomeSlideTitle"
+    aria-describedby="welcomeSlideTagline" hidden>
+    <div class="modal-backdrop" data-close></div>
+    <div class="modal-card welcome-modal-card" role="document">
+      <div class="welcome-modal-header">
+        <div class="welcome-header-meta">
+          <span id="welcomeSlideBadge" class="welcome-badge">Step 1 of 5</span>
+          <div id="welcomeDotsContainer" class="welcome-dots" role="tablist" aria-label="Welcome Guide Steps"></div>
+        </div>
+        <button id="closeWelcomeGuide" class="btn btn-icon welcome-close-btn" type="button" aria-label="Close welcome guide">✕</button>
+      </div>
+
+      <div class="welcome-modal-body">
+        <div class="welcome-title-group">
+          <h3 id="welcomeSlideTitle">Welcome to LivingDex!</h3>
+          <p id="welcomeSlideTagline" class="welcome-tagline">A fast, privacy-first tracker for your Living Pokédex collection.</p>
+        </div>
+
+        <div id="welcomeSlideContent" class="welcome-slide-content">
+          <!-- Populated dynamically by welcome-guide.js -->
+        </div>
+
+        <div class="welcome-tip-banner">
+          <span class="welcome-tip-icon" aria-hidden="true">💡</span>
+          <div id="welcomeSlideTip" class="welcome-tip-text"></div>
+        </div>
+      </div>
+
+      <div class="modal-actions welcome-actions">
+        <button id="welcomePrevBtn" class="btn btn-ghost welcome-nav-btn is-prev" type="button" aria-label="Previous slide">
+          <span aria-hidden="true">‹</span> Back
+        </button>
+        <button id="welcomeSkipBtn" class="btn btn-ghost welcome-skip-btn" type="button" aria-label="Skip welcome guide">Skip</button>
+        <button id="welcomeNextBtn" class="btn btn-primary welcome-nav-btn is-next" type="button" aria-label="Next slide">
+          <span>Next</span> <span aria-hidden="true">➔</span>
+        </button>
       </div>
     </div>
   </div>

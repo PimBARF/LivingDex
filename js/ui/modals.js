@@ -39,8 +39,19 @@ import {
   registerMissingGuideModal,
   openMissingGuideModal,
 } from "./missing-guide.js";
+import {
+  registerWelcomeGuideModal,
+  openWelcomeGuideModal,
+  checkFirstTimeVisitor,
+} from "./welcome-guide.js";
 
-export { registerMissingGuideModal, openMissingGuideModal };
+export {
+  registerMissingGuideModal,
+  openMissingGuideModal,
+  registerWelcomeGuideModal,
+  openWelcomeGuideModal,
+  checkFirstTimeVisitor,
+};
 
 /**
  * Attach common modal accessibility and event handlers including opening, closing,
