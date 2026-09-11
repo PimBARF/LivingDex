@@ -9,7 +9,11 @@ import {
   loadCollapsedBoxes,
   saveCollapsedBoxes,
 } from "../storage.js";
-import { BOX_CAPACITY, spriteUrlForSpecies } from "../config.js";
+import {
+  BOX_CAPACITY,
+  spriteUrlForSpecies,
+  getSpeciesGeneration,
+} from "../config.js";
 import { openPokemonInfoModal } from "./pokemon-info.js";
 import { applyHideCaughtFilter } from "./controls.js";
 import { updateProgressBar, isShinyMode } from "../state.js";
@@ -555,6 +559,7 @@ export function createDexSlot(
   button.setAttribute("aria-pressed", "false");
   button.dataset.regional = slotIndex;
   button.dataset.national = speciesId;
+  button.dataset.generation = getSpeciesGeneration(speciesId);
   button.dataset.form = formId;
   button.dataset.sprite = spriteId || "";
   button.dataset.gender = gender || "";

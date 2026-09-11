@@ -44,6 +44,7 @@ import {
   openWelcomeGuideModal,
   checkFirstTimeVisitor,
 } from "./welcome-guide.js";
+import { syncFilterModalWithGame } from "./controls.js";
 
 export {
   registerMissingGuideModal,
@@ -310,7 +311,10 @@ export function registerFiltersModal() {
     openBtn,
     closeBtn,
     backdrop,
-    onOpen: () => closeBtn?.focus(),
+    onOpen: async () => {
+      await syncFilterModalWithGame(ACTIVE_GAME_ID);
+      closeBtn?.focus();
+    },
     onClose: () => {},
     focusSelector: "#closeFilters",
   });

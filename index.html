@@ -729,7 +729,7 @@
         <h3 id="segmentsModalTitle">Pokédex Segments</h3>
         <button id="resetSegmentsOrderBtn" class="btn btn-sm btn-ghost" type="button" aria-label="Reset segments to default order">Reset order</button>
       </div>
-      <p id="segmentsModalDesc">
+      <p id="segmentsModalDesc" class="segments-modal-desc">
         Choose which optional expansions, regional forms, or variants to display, and customize the order they appear in your dex.
       </p>
 
@@ -770,25 +770,100 @@
     <div class="modal-backdrop" data-close></div>
     <div class="modal-card filters-modal-card" role="document">
       <div class="filters-modal-header">
-        <h3 id="filtersModalTitle">Filter Pokémon</h3>
+        <div class="filters-header-title-wrap">
+          <h3 id="filtersModalTitle">Filter Pokémon</h3>
+          <span id="activeFilterCountBadge" class="filter-count-badge" hidden>0</span>
+        </div>
         <button id="clearAllFiltersBtn" class="btn btn-sm btn-ghost" type="button" aria-label="Reset all active filters">Reset filters</button>
       </div>
-      <p id="filtersModalDesc">
-        Filter the Pokédex by Pokémon type or other attributes.
+      <p id="filtersModalDesc" class="filters-modal-desc">
+        Filter Pokédex entries by type, generation, rarity, evolution stage, and form variants.
       </p>
+
+      <!-- Quick Presets -->
+      <div id="filterPresetsSection" class="filter-presets-bar" role="group" aria-label="Quick Filter Presets">
+        <span class="filter-presets-label">Presets:</span>
+        <div id="filterPresetsContainer" class="filter-presets-list">
+          <button type="button" class="filter-preset-chip" data-preset="starters">🌿 Starters</button>
+          <button type="button" class="filter-preset-chip" data-preset="legendary-mythical">🌟 Legendaries</button>
+          <button type="button" class="filter-preset-chip" data-preset="fossils" id="presetFossils">🦖 Fossils</button>
+          <button type="button" class="filter-preset-chip" data-preset="babies" id="presetBabies">👶 Babies</button>
+          <button type="button" class="filter-preset-chip" data-preset="paradox" id="presetParadox">⏳ Paradox</button>
+          <button type="button" class="filter-preset-chip" data-preset="regionals" id="presetRegionals">🌍 Regional Forms</button>
+          <button type="button" class="filter-preset-chip" data-preset="final">👑 Fully Evolved</button>
+        </div>
+      </div>
 
       <div class="filters-modal-body">
         <!-- Pokémon Type Section -->
-        <section class="filter-section" aria-labelledby="filterTypeHeading">
+        <section class="filter-section" id="filterSectionTypes" aria-labelledby="filterTypeHeading">
           <div class="filter-section-header">
             <h4 id="filterTypeHeading">Pokémon Type</h4>
-            <span class="filter-section-hint">Select one or more types</span>
+            <div class="type-match-mode-wrap" role="radiogroup" aria-label="Type match mode">
+              <button type="button" class="type-mode-btn is-active" data-mode="any" aria-checked="true" role="radio" title="Match any selected type">Any (OR)</button>
+              <button type="button" class="type-mode-btn" data-mode="all" aria-checked="false" role="radio" title="Match dual-types with all selected types">All (AND)</button>
+              <button type="button" class="type-mode-btn" data-mode="mono" aria-checked="false" role="radio" title="Match pure / mono-types only">Mono Only</button>
+            </div>
           </div>
           <div id="typeFilterGrid" class="filter-type-grid" role="group" aria-label="Filter by type"></div>
         </section>
+
+        <!-- Generation Section (Hidden if single gen) -->
+        <section class="filter-section" id="filterSectionGens" aria-labelledby="filterGenHeading">
+          <div class="filter-section-header">
+            <h4 id="filterGenHeading">Generation &amp; Origin</h4>
+            <span class="filter-section-hint">Filter by origin region</span>
+          </div>
+          <div id="genFilterGrid" class="filter-chip-grid" role="group" aria-label="Filter by generation"></div>
+        </section>
+
+        <!-- Category & Rarity Section -->
+        <section class="filter-section" id="filterSectionCategories" aria-labelledby="filterCategoryHeading">
+          <div class="filter-section-header">
+            <h4 id="filterCategoryHeading">Special Categories &amp; Rarity</h4>
+          </div>
+          <div id="categoryFilterGrid" class="filter-chip-grid" role="group" aria-label="Filter by category">
+            <button type="button" class="filter-chip-btn" data-category="starter" id="filterCatStarter">🌿 Starter Pokémon</button>
+            <button type="button" class="filter-chip-btn" data-category="fossil" id="filterCatFossil">🦖 Fossil Pokémon</button>
+            <button type="button" class="filter-chip-btn" data-category="baby" id="filterCatBaby">👶 Baby Pokémon</button>
+            <button type="button" class="filter-chip-btn" data-category="legendary" id="filterCatLegendary">⚔️ Legendary Pokémon</button>
+            <button type="button" class="filter-chip-btn" data-category="mythical" id="filterCatMythical">✨ Mythical Pokémon</button>
+            <button type="button" class="filter-chip-btn" data-category="ultra-beast" id="filterCatUltraBeast">🌌 Ultra Beasts</button>
+            <button type="button" class="filter-chip-btn" data-category="paradox" id="filterCatParadox">⏳ Paradox Pokémon</button>
+          </div>
+        </section>
+
+        <!-- Evolution Stage Section -->
+        <section class="filter-section" id="filterSectionStages" aria-labelledby="filterStageHeading">
+          <div class="filter-section-header">
+            <h4 id="filterStageHeading">Evolution Stage</h4>
+          </div>
+          <div id="stageFilterGrid" class="filter-chip-grid" role="group" aria-label="Filter by evolution stage">
+            <button type="button" class="filter-chip-btn" data-stage="base">🌱 First Stage / Unevolved</button>
+            <button type="button" class="filter-chip-btn" data-stage="middle">🌿 Middle Evolution</button>
+            <button type="button" class="filter-chip-btn" data-stage="final">🌳 Final / Fully Evolved</button>
+            <button type="button" class="filter-chip-btn" data-stage="single">⭐ Single Stage / No Evolution</button>
+          </div>
+        </section>
+
+        <!-- Form & Variant Section -->
+        <section class="filter-section" id="filterSectionForms" aria-labelledby="filterFormHeading">
+          <div class="filter-section-header">
+            <h4 id="filterFormHeading">Forms &amp; Variants</h4>
+          </div>
+          <div id="formFilterGrid" class="filter-chip-grid" role="group" aria-label="Filter by form type">
+            <button type="button" class="filter-chip-btn" data-form="standard">📌 Standard Forms</button>
+            <button type="button" class="filter-chip-btn" data-form="regional" id="filterFormRegional">🏝️ Regional Variants</button>
+            <button type="button" class="filter-chip-btn" data-form="gender" id="filterFormGender">⚧️ Gender Differences</button>
+            <button type="button" class="filter-chip-btn" data-form="special" id="filterFormSpecial">🎨 Special / Alternate Forms</button>
+          </div>
+        </section>
       </div>
 
-      <div class="modal-actions">
+      <div class="modal-actions filters-modal-actions">
+        <div class="filters-live-status">
+          <span id="filtersLiveCountText">Showing all Pokémon</span>
+        </div>
         <button id="closeFilters" class="btn btn-primary" type="button" aria-label="Apply filters and close dialog">Done</button>
       </div>
     </div>

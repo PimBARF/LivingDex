@@ -6,34 +6,48 @@ import {
 import { applyTheme, isMotionReduced } from "./theme.js";
 import { showToast } from "./modals.js";
 import { isShinyMode, setShinyMode, rebuildDexView } from "../state.js";
-import { buildActiveDexSections } from "../db.js";
+import {
+  buildActiveDexSections,
+  buildEvolutionStageMap,
+  getAllEvolutionData,
+  getGameFilterCapabilities,
+  getGameDexData,
+} from "../db.js";
+import {
+  ACTIVE_GAME_ID,
+  POKEMON_TYPES,
+  ALL_POKEMON_TYPES,
+  getSpeciesGeneration,
+  STARTER_SPECIES_IDS,
+  BABY_SPECIES_IDS,
+  FOSSIL_SPECIES_IDS,
+  LEGENDARY_SPECIES_IDS,
+  MYTHICAL_SPECIES_IDS,
+  ULTRA_BEAST_SPECIES_IDS,
+  PARADOX_SPECIES_IDS,
+} from "../config.js";
 import { updateMissingGuideBadge } from "./missing-guide.js";
 
 export { updateMissingGuideBadge };
 
 /**
- * List of standard 18 Pokémon types with their display labels.
+ * Cached evolution stage map: Record<speciesId, 'base'|'middle'|'final'|'single'>
  */
-export const POKEMON_TYPES = [
-  { id: "normal", name: "Normal" },
-  { id: "fire", name: "Fire" },
-  { id: "water", name: "Water" },
-  { id: "grass", name: "Grass" },
-  { id: "electric", name: "Electric" },
-  { id: "ice", name: "Ice" },
-  { id: "fighting", name: "Fighting" },
-  { id: "poison", name: "Poison" },
-  { id: "ground", name: "Ground" },
-  { id: "flying", name: "Flying" },
-  { id: "psychic", name: "Psychic" },
-  { id: "bug", name: "Bug" },
-  { id: "rock", name: "Rock" },
-  { id: "ghost", name: "Ghost" },
-  { id: "dragon", name: "Dragon" },
-  { id: "dark", name: "Dark" },
-  { id: "steel", name: "Steel" },
-  { id: "fairy", name: "Fairy" },
-];
+let cachedEvolutionStageMap = null;
+
+export async function ensureEvolutionStageMap() {
+  if (!cachedEvolutionStageMap) {
+    try {
+      const evolutions = await getAllEvolutionData();
+      cachedEvolutionStageMap = buildEvolutionStageMap(evolutions);
+    } catch {
+      cachedEvolutionStageMap = {};
+    }
+  }
+  return cachedEvolutionStageMap;
+}
+
+export { POKEMON_TYPES };
 
 /**
  * Active status filter mode: 'all' | 'uncaught' | 'caught'
@@ -42,10 +56,16 @@ export const POKEMON_TYPES = [
 let currentStatusFilter = "all";
 
 /**
- * Set of active selected type filters.
- * @type {Set<string>}
+ * Comprehensive multi-criteria filter state.
  */
-const activeTypeFilters = new Set();
+export const activeFilterState = {
+  types: new Set(),
+  typeMode: "any", // 'any' | 'all' | 'mono'
+  generations: new Set(),
+  categories: new Set(), // 'starter' | 'fossil' | 'baby' | 'legendary' | 'mythical' | 'ultra-beast' | 'paradox'
+  stages: new Set(), // 'base' | 'middle' | 'final' | 'single'
+  forms: new Set(), // 'standard' | 'regional' | 'gender' | 'special'
+};
 
 /**
  * Returns the currently active status filter mode.
@@ -91,17 +111,39 @@ export function applyHideCaughtFilter() {
 }
 
 /**
- * Updates the active filter badge count and button styling on the main header.
+ * Computes total number of active filter constraints.
+ * @returns {number}
+ */
+export function getActiveFilterCount() {
+  return (
+    activeFilterState.types.size +
+    activeFilterState.generations.size +
+    activeFilterState.categories.size +
+    activeFilterState.stages.size +
+    activeFilterState.forms.size +
+    (activeFilterState.types.size > 0 && activeFilterState.typeMode !== "any"
+      ? 1
+      : 0)
+  );
+}
+
+/**
+ * Updates the active filter badge count and button styling on the main header and modal.
  * @returns {void}
  */
-function updateTypeFilterBadge() {
+export function updateFilterBadge() {
   const badge = document.getElementById("activeFilterBadge");
+  const modalBadge = document.getElementById("activeFilterCountBadge");
   const filtersBtn = document.getElementById("filtersBtn");
-  const count = activeTypeFilters.size;
+  const count = getActiveFilterCount();
 
   if (badge) {
     badge.textContent = String(count);
     badge.hidden = count === 0;
+  }
+  if (modalBadge) {
+    modalBadge.textContent = String(count);
+    modalBadge.hidden = count === 0;
   }
 
   if (filtersBtn) {
@@ -110,41 +152,433 @@ function updateTypeFilterBadge() {
 }
 
 /**
- * Applies active type filters to all dex cells.
- * Hides non-matching cells by adding the `type-hidden` CSS class.
- *
+ * Updates the real-time match status counter in the filter modal footer.
  * @returns {void}
  */
-export function applyTypeFilter() {
-  const hasActiveTypes = activeTypeFilters.size > 0;
-  document.body.classList.toggle("type-filter-active", hasActiveTypes);
+export function updateFilterLiveStatus() {
+  const statusEl = document.getElementById("filtersLiveCountText");
+  if (!statusEl) return;
 
-  const cells = document.querySelectorAll(".cell:not(.is-placeholder)");
-  if (!hasActiveTypes) {
-    cells.forEach((cell) => cell.classList.remove("type-hidden"));
-    updateTypeFilterBadge();
+  const totalCells = document.querySelectorAll(
+    ".cell:not(.is-placeholder)",
+  ).length;
+  if (totalCells === 0) {
+    statusEl.textContent = "No Pokémon available";
     return;
   }
 
-  const selectedList = Array.from(activeTypeFilters);
-  cells.forEach((cell) => {
-    const cellTypes = (cell.dataset.types || "").split(" ").filter(Boolean);
-    const matchesAll = selectedList.every((type) => cellTypes.includes(type));
-    cell.classList.toggle("type-hidden", !matchesAll);
-  });
+  const activeCount = getActiveFilterCount();
+  if (activeCount === 0) {
+    statusEl.textContent = `Showing all ${totalCells} Pokémon`;
+    return;
+  }
 
-  updateTypeFilterBadge();
+  const matchingCells = document.querySelectorAll(
+    ".cell:not(.is-placeholder):not(.filter-hidden):not(.type-hidden)",
+  ).length;
+  statusEl.textContent = `Showing ${matchingCells} of ${totalCells} Pokémon matching filters`;
 }
 
 /**
- * Clears all active type filters and refreshes the dex view.
+ * Synchronizes visual active classes on all filter buttons in the modal.
  * @returns {void}
  */
+export function syncFilterModalActiveStates() {
+  // Type buttons
+  document.querySelectorAll(".filter-type-btn").forEach((btn) => {
+    btn.classList.toggle(
+      "is-active",
+      activeFilterState.types.has(btn.dataset.type),
+    );
+  });
+
+  // Type mode
+  document.querySelectorAll(".type-mode-btn").forEach((btn) => {
+    const isActive = btn.dataset.mode === activeFilterState.typeMode;
+    btn.classList.toggle("is-active", isActive);
+    btn.setAttribute("aria-checked", String(isActive));
+  });
+
+  // Generations
+  document.querySelectorAll(".filter-gen-btn").forEach((btn) => {
+    btn.classList.toggle(
+      "is-active",
+      activeFilterState.generations.has(Number(btn.dataset.gen)),
+    );
+  });
+
+  // Categories
+  document
+    .querySelectorAll("#categoryFilterGrid [data-category]")
+    .forEach((btn) => {
+      btn.classList.toggle(
+        "is-active",
+        activeFilterState.categories.has(btn.dataset.category),
+      );
+    });
+
+  // Stages
+  document.querySelectorAll("#stageFilterGrid [data-stage]").forEach((btn) => {
+    btn.classList.toggle(
+      "is-active",
+      activeFilterState.stages.has(btn.dataset.stage),
+    );
+  });
+
+  // Forms
+  document.querySelectorAll("#formFilterGrid [data-form]").forEach((btn) => {
+    btn.classList.toggle(
+      "is-active",
+      activeFilterState.forms.has(btn.dataset.form),
+    );
+  });
+
+  // Presets active highlight
+  document.querySelectorAll(".filter-preset-chip").forEach((btn) => {
+    const preset = btn.dataset.preset;
+    let isActive = false;
+    if (
+      preset === "starters" &&
+      activeFilterState.categories.has("starter") &&
+      activeFilterState.categories.size === 1
+    ) {
+      isActive = true;
+    }
+    if (
+      preset === "legendary-mythical" &&
+      activeFilterState.categories.has("legendary") &&
+      activeFilterState.categories.has("mythical") &&
+      activeFilterState.categories.size === 2
+    ) {
+      isActive = true;
+    }
+    if (
+      preset === "fossils" &&
+      activeFilterState.categories.has("fossil") &&
+      activeFilterState.categories.size === 1
+    ) {
+      isActive = true;
+    }
+    if (
+      preset === "babies" &&
+      activeFilterState.categories.has("baby") &&
+      activeFilterState.categories.size === 1
+    ) {
+      isActive = true;
+    }
+    if (
+      preset === "paradox" &&
+      activeFilterState.categories.has("paradox") &&
+      activeFilterState.categories.size === 1
+    ) {
+      isActive = true;
+    }
+    if (
+      preset === "regionals" &&
+      activeFilterState.forms.has("regional") &&
+      activeFilterState.forms.size === 1
+    ) {
+      isActive = true;
+    }
+    if (
+      preset === "final" &&
+      activeFilterState.stages.has("final") &&
+      activeFilterState.stages.has("single") &&
+      activeFilterState.stages.size === 2
+    ) {
+      isActive = true;
+    }
+    btn.classList.toggle("is-active", isActive);
+  });
+}
+
+/**
+ * Dynamically configures the filter modal based on the capabilities and era of the active game.
+ *
+ * @param {string} [gameId=ACTIVE_GAME_ID] - Active game ID.
+ * @returns {Promise<void>}
+ */
+export async function syncFilterModalWithGame(gameId = ACTIVE_GAME_ID) {
+  await ensureEvolutionStageMap();
+
+  let dexData = null;
+  try {
+    dexData = await getGameDexData(gameId);
+  } catch {
+    dexData = null;
+  }
+
+  const caps = await getGameFilterCapabilities(gameId, dexData);
+
+  // 1. Populate Type Buttons for the game's era
+  const typeGrid = document.getElementById("typeFilterGrid");
+  if (typeGrid) {
+    typeGrid.innerHTML = "";
+    caps.availableTypes.forEach((typeId) => {
+      const btn = document.createElement("button");
+      btn.type = "button";
+      btn.className = "filter-type-btn";
+      btn.dataset.type = typeId;
+      btn.textContent = typeId.charAt(0).toUpperCase() + typeId.slice(1);
+      btn.addEventListener("click", () => {
+        if (activeFilterState.types.has(typeId)) {
+          activeFilterState.types.delete(typeId);
+        } else {
+          activeFilterState.types.add(typeId);
+        }
+        syncFilterModalActiveStates();
+        applyAllFilters();
+      });
+      typeGrid.appendChild(btn);
+    });
+  }
+
+  // 2. Populate Generation Chips (or hide generation section if only 1 generation in dex)
+  const genSection = document.getElementById("filterSectionGens");
+  const genGrid = document.getElementById("genFilterGrid");
+  if (genSection && genGrid) {
+    if (caps.availableGens.length <= 1) {
+      genSection.hidden = true;
+    } else {
+      genSection.hidden = false;
+      genGrid.innerHTML = "";
+      const genLabels = [
+        "",
+        "Kanto (Gen 1)",
+        "Johto (Gen 2)",
+        "Hoenn (Gen 3)",
+        "Sinnoh (Gen 4)",
+        "Unova (Gen 5)",
+        "Kalos (Gen 6)",
+        "Alola (Gen 7)",
+        "Galar/Hisui (Gen 8)",
+        "Paldea (Gen 9)",
+      ];
+      caps.availableGens.forEach((genNum) => {
+        const btn = document.createElement("button");
+        btn.type = "button";
+        btn.className = "filter-chip-btn filter-gen-btn";
+        btn.dataset.gen = String(genNum);
+        btn.textContent = genLabels[genNum] || `Gen ${genNum}`;
+        btn.addEventListener("click", () => {
+          if (activeFilterState.generations.has(genNum)) {
+            activeFilterState.generations.delete(genNum);
+          } else {
+            activeFilterState.generations.add(genNum);
+          }
+          syncFilterModalActiveStates();
+          applyAllFilters();
+        });
+        genGrid.appendChild(btn);
+      });
+    }
+  }
+
+  // 3. Conditional Category & Preset buttons
+  const catBaby = document.getElementById("filterCatBaby");
+  const presetBabies = document.getElementById("presetBabies");
+  if (catBaby) catBaby.hidden = !caps.hasBabies;
+  if (presetBabies) presetBabies.hidden = !caps.hasBabies;
+
+  const catFossil = document.getElementById("filterCatFossil");
+  const presetFossils = document.getElementById("presetFossils");
+  if (catFossil) catFossil.hidden = !caps.hasFossils;
+  if (presetFossils) presetFossils.hidden = !caps.hasFossils;
+
+  const catParadox = document.getElementById("filterCatParadox");
+  const presetParadox = document.getElementById("presetParadox");
+  if (catParadox) catParadox.hidden = !caps.hasParadox;
+  if (presetParadox) presetParadox.hidden = !caps.hasParadox;
+
+  const catUB = document.getElementById("filterCatUltraBeast");
+  if (catUB) catUB.hidden = !caps.hasUltraBeasts;
+
+  const formRegional = document.getElementById("filterFormRegional");
+  const presetRegionals = document.getElementById("presetRegionals");
+  if (formRegional) formRegional.hidden = !caps.hasRegionalForms;
+  if (presetRegionals) presetRegionals.hidden = !caps.hasRegionalForms;
+
+  const formGender = document.getElementById("filterFormGender");
+  if (formGender) formGender.hidden = !caps.hasGenderForms;
+
+  const formSpecial = document.getElementById("filterFormSpecial");
+  if (formSpecial) formSpecial.hidden = !caps.hasSpecialForms;
+
+  syncFilterModalActiveStates();
+  updateFilterLiveStatus();
+}
+
+/**
+ * Applies all active multi-criteria filters to all Pokémon cells in the Pokédex.
+ * Hides non-matching cells by adding the `filter-hidden` / `type-hidden` CSS classes.
+ *
+ * @returns {void}
+ */
+export function applyAllFilters() {
+  const hasActiveFilters = getActiveFilterCount() > 0;
+  document.body.classList.toggle("filter-active", hasActiveFilters);
+  document.body.classList.toggle("type-filter-active", hasActiveFilters);
+
+  const cells = document.querySelectorAll(".cell:not(.is-placeholder)");
+  if (!hasActiveFilters) {
+    cells.forEach((cell) => {
+      cell.classList.remove("filter-hidden");
+      cell.classList.remove("type-hidden");
+    });
+    updateFilterBadge();
+    updateFilterLiveStatus();
+    return;
+  }
+
+  const selectedTypesList = Array.from(activeFilterState.types);
+  const typeMode = activeFilterState.typeMode;
+  const stageMap = cachedEvolutionStageMap || {};
+
+  cells.forEach((cell) => {
+    let matches = true;
+
+    // 1. Type matching
+    if (activeFilterState.types.size > 0) {
+      const cellTypes = (cell.dataset.types || "").split(" ").filter(Boolean);
+      if (typeMode === "any") {
+        matches = cellTypes.some((t) => activeFilterState.types.has(t));
+      } else if (typeMode === "all") {
+        matches = selectedTypesList.every((t) => cellTypes.includes(t));
+      } else if (typeMode === "mono") {
+        matches =
+          cellTypes.length === 1 && activeFilterState.types.has(cellTypes[0]);
+      }
+    }
+
+    // 2. Generation matching
+    if (matches && activeFilterState.generations.size > 0) {
+      const gen =
+        Number(cell.dataset.generation) ||
+        getSpeciesGeneration(cell.dataset.national);
+      matches = activeFilterState.generations.has(gen);
+    }
+
+    // 3. Category & Rarity matching
+    if (matches && activeFilterState.categories.size > 0) {
+      const sid = Number(cell.dataset.national);
+      let catMatch = false;
+
+      if (
+        activeFilterState.categories.has("starter") &&
+        STARTER_SPECIES_IDS.has(sid)
+      ) {
+        catMatch = true;
+      }
+      if (
+        activeFilterState.categories.has("baby") &&
+        BABY_SPECIES_IDS.has(sid)
+      ) {
+        catMatch = true;
+      }
+      if (
+        activeFilterState.categories.has("fossil") &&
+        FOSSIL_SPECIES_IDS.has(sid)
+      ) {
+        catMatch = true;
+      }
+      if (
+        activeFilterState.categories.has("legendary") &&
+        LEGENDARY_SPECIES_IDS.has(sid)
+      ) {
+        catMatch = true;
+      }
+      if (
+        activeFilterState.categories.has("mythical") &&
+        MYTHICAL_SPECIES_IDS.has(sid)
+      ) {
+        catMatch = true;
+      }
+      if (
+        activeFilterState.categories.has("ultra-beast") &&
+        ULTRA_BEAST_SPECIES_IDS.has(sid)
+      ) {
+        catMatch = true;
+      }
+      if (
+        activeFilterState.categories.has("paradox") &&
+        PARADOX_SPECIES_IDS.has(sid)
+      ) {
+        catMatch = true;
+      }
+
+      matches = catMatch;
+    }
+
+    // 4. Evolution Stage matching
+    if (matches && activeFilterState.stages.size > 0) {
+      const sid = Number(cell.dataset.national);
+      const stage = stageMap[sid] || "single";
+      matches = activeFilterState.stages.has(stage);
+    }
+
+    // 5. Form & Variant matching
+    if (matches && activeFilterState.forms.size > 0) {
+      const formName = (cell.dataset.formName || "").toLowerCase();
+      const isRegional =
+        formName.includes("alola") ||
+        formName.includes("galar") ||
+        formName.includes("hisui") ||
+        formName.includes("paldea");
+      const isGender = Boolean(cell.dataset.gender);
+      const formId = Number(cell.dataset.form);
+      const sid = Number(cell.dataset.national);
+      const isSpecial = Boolean(
+        formId && formId > 0 && formId !== sid && !isRegional && !isGender,
+      );
+      const isStandard = !isRegional && !isGender && !isSpecial;
+
+      let formMatch = false;
+      if (activeFilterState.forms.has("standard") && isStandard)
+        formMatch = true;
+      if (activeFilterState.forms.has("regional") && isRegional)
+        formMatch = true;
+      if (activeFilterState.forms.has("gender") && isGender) formMatch = true;
+      if (activeFilterState.forms.has("special") && isSpecial) formMatch = true;
+
+      matches = formMatch;
+    }
+
+    cell.classList.toggle("filter-hidden", !matches);
+    cell.classList.toggle("type-hidden", !matches);
+  });
+
+  updateFilterBadge();
+  updateFilterLiveStatus();
+}
+
+/**
+ * Backward compatibility alias for applyAllFilters.
+ */
+export function applyTypeFilter() {
+  applyAllFilters();
+}
+
+/**
+ * Clears all active filters and restores the dex view.
+ * @returns {void}
+ */
+export function clearAllFilters() {
+  activeFilterState.types.clear();
+  activeFilterState.typeMode = "any";
+  activeFilterState.generations.clear();
+  activeFilterState.categories.clear();
+  activeFilterState.stages.clear();
+  activeFilterState.forms.clear();
+
+  syncFilterModalActiveStates();
+  applyAllFilters();
+}
+
+/**
+ * Backward compatibility alias for clearAllFilters.
+ */
 export function clearTypeFilters() {
-  activeTypeFilters.clear();
-  const buttons = document.querySelectorAll(".filter-type-btn");
-  buttons.forEach((btn) => btn.classList.remove("is-active"));
-  applyTypeFilter();
+  clearAllFilters();
 }
 
 /**
@@ -154,18 +588,59 @@ export function clearTypeFilters() {
  * @returns {void}
  */
 export function toggleTypeFilter(typeId) {
-  if (activeTypeFilters.has(typeId)) {
-    activeTypeFilters.delete(typeId);
+  if (activeFilterState.types.has(typeId)) {
+    activeFilterState.types.delete(typeId);
   } else {
-    activeTypeFilters.add(typeId);
+    activeFilterState.types.add(typeId);
   }
 
-  const btn = document.querySelector(`.filter-type-btn[data-type='${typeId}']`);
-  if (btn) {
-    btn.classList.toggle("is-active", activeTypeFilters.has(typeId));
+  syncFilterModalActiveStates();
+  applyAllFilters();
+}
+
+/**
+ * Applies a quick preset filter bundle.
+ *
+ * @param {string} presetName - Preset identifier.
+ * @returns {void}
+ */
+export function applyFilterPreset(presetName) {
+  // Clear other active filters to cleanly activate preset
+  activeFilterState.types.clear();
+  activeFilterState.generations.clear();
+  activeFilterState.categories.clear();
+  activeFilterState.stages.clear();
+  activeFilterState.forms.clear();
+  activeFilterState.typeMode = "any";
+
+  switch (presetName) {
+    case "starters":
+      activeFilterState.categories.add("starter");
+      break;
+    case "legendary-mythical":
+      activeFilterState.categories.add("legendary");
+      activeFilterState.categories.add("mythical");
+      break;
+    case "fossils":
+      activeFilterState.categories.add("fossil");
+      break;
+    case "babies":
+      activeFilterState.categories.add("baby");
+      break;
+    case "paradox":
+      activeFilterState.categories.add("paradox");
+      break;
+    case "regionals":
+      activeFilterState.forms.add("regional");
+      break;
+    case "final":
+      activeFilterState.stages.add("final");
+      activeFilterState.stages.add("single");
+      break;
   }
 
-  applyTypeFilter();
+  syncFilterModalActiveStates();
+  applyAllFilters();
 }
 
 /**
@@ -193,8 +668,13 @@ export function getVisiblePokemonCells() {
     }
     // Exclude dimmed non-matching search results
     if (isSearchActive && cell.classList.contains("dimmed")) return false;
-    // Exclude hidden types
-    if (cell.classList.contains("type-hidden")) return false;
+    // Exclude hidden filters
+    if (
+      cell.classList.contains("filter-hidden") ||
+      cell.classList.contains("type-hidden")
+    ) {
+      return false;
+    }
     // Exclude caught/uncaught filter mismatches
     if (
       document.body.classList.contains("hide-caught") &&
@@ -453,30 +933,101 @@ export function registerKeyboardShortcuts() {
 }
 
 /**
- * Initializes and binds all type filter modal buttons and controls.
+ * Initializes and binds all filter modal event listeners and controls.
  * @returns {void}
  */
-function initializeTypeFilterControls() {
-  const grid = document.getElementById("typeFilterGrid");
+export function initializeFilterControls() {
   const clearBtn = document.getElementById("clearAllFiltersBtn");
-
-  if (grid && !grid.hasChildNodes()) {
-    const fragment = document.createDocumentFragment();
-    POKEMON_TYPES.forEach((type) => {
-      const button = document.createElement("button");
-      button.type = "button";
-      button.className = "filter-type-btn";
-      button.dataset.type = type.id;
-      button.textContent = type.name;
-      button.addEventListener("click", () => toggleTypeFilter(type.id));
-      fragment.appendChild(button);
-    });
-    grid.appendChild(fragment);
-  }
-
   clearBtn?.addEventListener("click", () => {
-    clearTypeFilters();
+    clearAllFilters();
   });
+
+  // Type Match Mode buttons
+  const modeButtons = document.querySelectorAll(".type-mode-btn");
+  modeButtons.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const mode = btn.dataset.mode;
+      if (mode) {
+        activeFilterState.typeMode = mode;
+        modeButtons.forEach((b) => {
+          const isActive = b.dataset.mode === mode;
+          b.classList.toggle("is-active", isActive);
+          b.setAttribute("aria-checked", String(isActive));
+        });
+        applyAllFilters();
+      }
+    });
+  });
+
+  // Category buttons
+  const catButtons = document.querySelectorAll(
+    "#categoryFilterGrid [data-category]",
+  );
+  catButtons.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const cat = btn.dataset.category;
+      if (activeFilterState.categories.has(cat)) {
+        activeFilterState.categories.delete(cat);
+      } else {
+        activeFilterState.categories.add(cat);
+      }
+      syncFilterModalActiveStates();
+      applyAllFilters();
+    });
+  });
+
+  // Stage buttons
+  const stageButtons = document.querySelectorAll(
+    "#stageFilterGrid [data-stage]",
+  );
+  stageButtons.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const stage = btn.dataset.stage;
+      if (activeFilterState.stages.has(stage)) {
+        activeFilterState.stages.delete(stage);
+      } else {
+        activeFilterState.stages.add(stage);
+      }
+      syncFilterModalActiveStates();
+      applyAllFilters();
+    });
+  });
+
+  // Form buttons
+  const formButtons = document.querySelectorAll("#formFilterGrid [data-form]");
+  formButtons.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const form = btn.dataset.form;
+      if (activeFilterState.forms.has(form)) {
+        activeFilterState.forms.delete(form);
+      } else {
+        activeFilterState.forms.add(form);
+      }
+      syncFilterModalActiveStates();
+      applyAllFilters();
+    });
+  });
+
+  // Quick Preset chips
+  const presetChips = document.querySelectorAll(".filter-preset-chip");
+  presetChips.forEach((chip) => {
+    chip.addEventListener("click", () => {
+      const preset = chip.dataset.preset;
+      if (preset) {
+        applyFilterPreset(preset);
+      }
+    });
+  });
+
+  // Pre-load evolution stage map in background
+  ensureEvolutionStageMap();
+}
+
+/**
+ * Backward compatibility alias for initializeFilterControls.
+ */
+export function initializeTypeFilterControls() {
+  initializeFilterControls();
 }
 
 /**
@@ -494,7 +1045,7 @@ export function registerHeaderControls(slotCount) {
   const shinyToggle = document.getElementById("shinyToggle");
   const statusFilter = document.getElementById("statusFilter");
 
-  initializeTypeFilterControls();
+  initializeFilterControls();
   registerKeyboardShortcuts();
 
   const searchClear = document.getElementById("searchClear");

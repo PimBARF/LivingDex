@@ -941,3 +941,158 @@ export const normalizeItemName = (slug) => {
     .map((w) => w.charAt(0).toUpperCase() + w.slice(1))
     .join(" ");
 };
+
+// =============================================================================
+// SPECIES CLASSIFICATION, GENERATIONS & TYPES
+// =============================================================================
+
+export const ALL_POKEMON_TYPES = [
+  "normal",
+  "fire",
+  "water",
+  "grass",
+  "electric",
+  "ice",
+  "fighting",
+  "poison",
+  "ground",
+  "flying",
+  "psychic",
+  "bug",
+  "rock",
+  "ghost",
+  "dragon",
+  "steel",
+  "dark",
+  "fairy",
+];
+
+export const GEN1_TYPES = [
+  "normal",
+  "fire",
+  "water",
+  "grass",
+  "electric",
+  "ice",
+  "fighting",
+  "poison",
+  "ground",
+  "flying",
+  "psychic",
+  "bug",
+  "rock",
+  "ghost",
+  "dragon",
+];
+
+export const GEN2_5_TYPES = [
+  "normal",
+  "fire",
+  "water",
+  "grass",
+  "electric",
+  "ice",
+  "fighting",
+  "poison",
+  "ground",
+  "flying",
+  "psychic",
+  "bug",
+  "rock",
+  "ghost",
+  "dragon",
+  "steel",
+  "dark",
+];
+
+export const POKEMON_TYPES = ALL_POKEMON_TYPES.map((id) => ({
+  id,
+  name: id.charAt(0).toUpperCase() + id.slice(1),
+}));
+
+export const STARTER_SPECIES_IDS = new Set([
+  // Gen 1
+  1, 2, 3, 4, 5, 6, 7, 8, 9,
+  // Gen 2
+  152, 153, 154, 155, 156, 157, 158, 159, 160,
+  // Gen 3
+  252, 253, 254, 255, 256, 257, 258, 259, 260,
+  // Gen 4
+  387, 388, 389, 390, 391, 392, 393, 394, 395,
+  // Gen 5
+  495, 496, 497, 498, 499, 500, 501, 502, 503,
+  // Gen 6
+  650, 651, 652, 653, 654, 655, 656, 657, 658,
+  // Gen 7
+  722, 723, 724, 725, 726, 727, 728, 729, 730,
+  // Gen 8
+  810, 811, 812, 813, 814, 815, 816, 817, 818,
+  // Gen 9
+  906, 907, 908, 909, 910, 911, 912, 913, 914,
+]);
+
+export const BABY_SPECIES_IDS = new Set([
+  172, 173, 174, 175, 236, 238, 239, 240, 298, 360, 406, 433, 438, 439, 440,
+  446, 447, 458, 848,
+]);
+
+export const FOSSIL_SPECIES_IDS = new Set([
+  138, 139, 140, 141, 142, 345, 346, 347, 348, 408, 409, 410, 411, 564, 565,
+  566, 567, 696, 697, 698, 699, 880, 881, 882, 883,
+]);
+
+export const LEGENDARY_SPECIES_IDS = new Set([
+  144, 145, 146, 150, 243, 244, 245, 249, 250, 377, 378, 379, 380, 381, 382,
+  383, 384, 480, 481, 482, 483, 484, 485, 486, 487, 488, 638, 639, 640, 641,
+  642, 643, 644, 645, 646, 716, 717, 718, 772, 773, 785, 786, 787, 788, 789,
+  790, 791, 792, 800, 888, 889, 890, 891, 892, 894, 895, 896, 897, 898, 905,
+  1001, 1002, 1003, 1004, 1007, 1008, 1014, 1015, 1016, 1017, 1024,
+]);
+
+export const MYTHICAL_SPECIES_IDS = new Set([
+  151, 251, 385, 386, 489, 490, 491, 492, 493, 494, 647, 648, 649, 719, 720,
+  721, 801, 802, 807, 808, 809, 893, 1025,
+]);
+
+export const ULTRA_BEAST_SPECIES_IDS = new Set([
+  793, 794, 795, 796, 797, 798, 799, 803, 804, 805, 806,
+]);
+
+export const PARADOX_SPECIES_IDS = new Set([
+  984, 985, 986, 987, 988, 989, 990, 991, 992, 993, 994, 995, 1005, 1006, 1009,
+  1010, 1020, 1021, 1022, 1023,
+]);
+
+/**
+ * Resolves the generation number for a given species ID.
+ *
+ * @param {number|string} speciesId - National Pokédex species ID.
+ * @returns {number} Generation index (1–9).
+ */
+export function getSpeciesGeneration(speciesId) {
+  const id = Number(speciesId);
+  if (id <= 151) return 1;
+  if (id <= 251) return 2;
+  if (id <= 386) return 3;
+  if (id <= 493) return 4;
+  if (id <= 649) return 5;
+  if (id <= 721) return 6;
+  if (id <= 809) return 7;
+  if (id <= 905) return 8;
+  return 9;
+}
+
+/**
+ * Returns available types for a given game generation era.
+ *
+ * @param {number|string} [generationNumber] - Game generation number.
+ * @returns {string[]} Array of type names.
+ */
+export function getEraAvailableTypes(generationNumber) {
+  if (!generationNumber || generationNumber === "home")
+    return ALL_POKEMON_TYPES;
+  const gen = Number(generationNumber);
+  if (gen === 1) return GEN1_TYPES;
+  if (gen >= 2 && gen <= 5) return GEN2_5_TYPES;
+  return ALL_POKEMON_TYPES;
+}

@@ -1311,16 +1311,16 @@ body.is-scrolled #progressWrap {
   display: none;
 }
 
-/* Type filter active state */
-.type-filter-active .cell.type-hidden {
-  display: none;
+/* Filter active state */
+:is(.filter-active, .type-filter-active) .cell:is(.filter-hidden, .type-hidden) {
+  display: none !important;
 }
 
 /* Hide placeholders when filtering */
 .hide-caught .cell.is-placeholder,
 .hide-uncaught .cell.is-placeholder,
-.type-filter-active .cell.is-placeholder {
-  display: none;
+:is(.filter-active, .type-filter-active) .cell.is-placeholder {
+  display: none !important;
 }
 
 /* Slot index number badge (top-left) */
@@ -1647,13 +1647,23 @@ body.is-drag-selecting .cell {
 
 /* --- Filters & Options Modal --- */
 .filters-modal-card {
-  max-width: 540px;
+  max-width: 620px;
+  max-height: 88vh;
+  display: flex;
+  flex-direction: column;
 }
 
 .filters-modal-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.filters-header-title-wrap {
+  display: flex;
+  align-items: center;
   gap: 8px;
 }
 
@@ -1661,19 +1671,99 @@ body.is-drag-selecting .cell {
   margin: 0;
 }
 
-#filtersModalDesc {
-  margin: 0 0 6px;
+#clearAllFiltersBtn,
+#resetSegmentsOrderBtn {
+  height: 32px;
+  padding: 4px 12px;
+  font-size: 12.5px;
+  font-weight: 600;
+  border-radius: var(--control-radius);
+  background: var(--surface-soft);
+  border: 1px solid var(--border);
   color: var(--muted);
-  font-size: 0.94rem;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  white-space: nowrap;
+}
+
+#clearAllFiltersBtn:hover,
+#resetSegmentsOrderBtn:hover {
+  background: var(--surface-soft-hover);
+  color: var(--text);
+  border-color: var(--accent-2);
+}
+
+.segments-modal-desc,
+.filters-modal-desc {
+  margin: 0 0 12px;
+  color: var(--muted);
+  font-size: 0.88rem;
+  line-height: 1.45;
+}
+
+/* Quick Presets Bar */
+.filter-presets-bar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+  flex-wrap: wrap;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--border);
+}
+
+.filter-presets-label {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.filter-presets-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  align-items: center;
+}
+
+.filter-preset-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 11.5px;
+  font-weight: 600;
+  border: 1px solid var(--border);
+  background: var(--surface-soft);
+  color: var(--text);
+  cursor: pointer;
+  transition: all 0.15s ease;
+  user-select: none;
+}
+
+.filter-preset-chip:hover {
+  background: var(--surface-soft-hover);
+  border-color: var(--accent-2);
+  color: var(--accent-2);
+}
+
+.filter-preset-chip.is-active {
+  background: var(--accent-2);
+  color: #fff;
+  border-color: var(--accent-2);
+  box-shadow: 0 2px 6px rgba(66, 133, 244, 0.35);
 }
 
 .filters-modal-body {
-  margin-top: 8px;
+  margin-top: 4px;
   padding: 2px 4px 0 0;
   display: flex;
   flex-direction: column;
   gap: 12px;
   overflow-y: auto;
+  flex: 1;
 }
 
 .filter-section {
@@ -1684,12 +1774,19 @@ body.is-drag-selecting .cell {
   box-shadow: 0 1px 0 rgba(0, 0, 0, 0.04);
 }
 
+.filter-section[hidden],
+.filter-chip-btn[hidden],
+.filter-preset-chip[hidden] {
+  display: none !important;
+}
+
 .filter-section-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 8px;
   margin-bottom: 8px;
+  flex-wrap: wrap;
 }
 
 .filter-section-header h4 {
@@ -1712,8 +1809,42 @@ body.is-drag-selecting .cell {
 }
 
 .filter-section-hint {
-  font-size: 12px;
+  font-size: 11.5px;
   color: var(--muted);
+}
+
+/* Type Match Mode Segmented Control */
+.type-match-mode-wrap {
+  display: inline-flex;
+  align-items: center;
+  background: var(--surface-soft);
+  border: 1px solid var(--surface-soft-border);
+  border-radius: 8px;
+  padding: 2px;
+  gap: 2px;
+}
+
+.type-mode-btn {
+  border: none;
+  background: transparent;
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 600;
+  padding: 3px 8px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  user-select: none;
+}
+
+.type-mode-btn:hover {
+  color: var(--text);
+}
+
+.type-mode-btn.is-active {
+  background: var(--card);
+  color: var(--text);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
 }
 
 .filter-type-grid {
@@ -1769,6 +1900,70 @@ body.is-drag-selecting .cell {
 .filter-type-btn[data-type="flying"].is-active,
 .filter-type-btn[data-type="fairy"].is-active {
   border-color: #222;
+}
+
+/* Generic Chip Grid (Generations, Categories, Stages, Forms) */
+.filter-chip-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(132px, 1fr));
+  gap: 8px;
+}
+
+.filter-chip-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 7px 10px;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 600;
+  border: 1px solid var(--border);
+  background: var(--surface-soft);
+  color: var(--text);
+  cursor: pointer;
+  transition: all 0.15s ease;
+  text-align: center;
+  user-select: none;
+}
+
+.filter-chip-btn:hover {
+  background: var(--surface-soft-hover);
+  border-color: var(--accent-2);
+  color: var(--accent-2);
+}
+
+.filter-chip-btn.is-active {
+  background: color-mix(in srgb, var(--accent-2) 16%, var(--card));
+  border-color: var(--accent-2);
+  color: var(--accent-2);
+  box-shadow: 0 0 0 1px var(--accent-2);
+  font-weight: 700;
+}
+
+/* Modal Actions Footer & Live Counter */
+.filters-modal-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 14px;
+}
+
+.filters-live-status {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--muted);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  min-width: 0;
+}
+
+.filters-live-status::before {
+  content: "📊";
+  font-size: 14px;
+  flex-shrink: 0;
 }
 
 /* =============================================================================
@@ -3354,7 +3549,8 @@ body.is-drag-selecting .cell {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 10px;
+  gap: 12px;
+  margin-bottom: 8px;
 }
 
 .segments-modal-header h3 {
