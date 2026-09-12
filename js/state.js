@@ -45,7 +45,7 @@ export function countCaughtSlots(slotCount) {
     for (const cell of cells) {
       const key = cell.dataset.specimenKey;
       const slot = Number(cell.dataset.regional);
-      if ((key && caught[key]) || (slot && caught[slot])) {
+      if (key ? Boolean(caught[key]) : slot && Boolean(caught[slot])) {
         total += 1;
       }
     }

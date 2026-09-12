@@ -119,6 +119,45 @@ export function clearAllSavedData() {
 }
 
 /**
+ * Normalizes caught dictionary by migrating legacy purely-numeric keys to canonical specimen keys
+ * and stripping out stale numeric positional indices when specimen keys are present.
+ *
+ * @param {Record<string, boolean>} raw - Raw parsed caught dictionary.
+ * @returns {Record<string, boolean>} Sanitized caught dictionary.
+ */
+function sanitizeCaughtSlots(raw) {
+  if (!raw || typeof raw !== "object" || Array.isArray(raw)) return {};
+  const keys = Object.keys(raw);
+  if (keys.length === 0) return {};
+
+  const hasSpecimenKeys = keys.some((k) => k.includes(":"));
+  const sanitized = {};
+
+  if (hasSpecimenKeys) {
+    // Retain canonical specimen keys, strip out positional slot numbers
+    for (const key of keys) {
+      if (key.includes(":") && raw[key]) {
+        sanitized[key] = true;
+      }
+    }
+  } else {
+    // Pure legacy format (e.g. { "1": true, "25": true }):
+    // Migrate 1..1025 to canonical species specimenKey "N:N::N"
+    for (const key of keys) {
+      if (raw[key]) {
+        const num = Number(key);
+        if (Number.isInteger(num) && num >= 1 && num <= 1025) {
+          sanitized[`${num}:${num}::${num}`] = true;
+        } else {
+          sanitized[key] = true;
+        }
+      }
+    }
+  }
+  return sanitized;
+}
+
+/**
  * Load caught-slot data from localStorage for the active game.
  * Defaults to an empty object when nothing is stored yet or parsing fails.
  *
@@ -126,7 +165,8 @@ export function clearAllSavedData() {
  */
 export function loadCaughtSlots() {
   try {
-    return JSON.parse(localStorage.getItem(CAUGHT_STORAGE_KEY) || "{}");
+    const raw = JSON.parse(localStorage.getItem(CAUGHT_STORAGE_KEY) || "{}");
+    return sanitizeCaughtSlots(raw);
   } catch {
     return {};
   }
@@ -141,7 +181,8 @@ export function loadCaughtSlots() {
  */
 export function saveCaughtSlots(caught) {
   try {
-    localStorage.setItem(CAUGHT_STORAGE_KEY, JSON.stringify(caught));
+    const sanitized = sanitizeCaughtSlots(caught);
+    localStorage.setItem(CAUGHT_STORAGE_KEY, JSON.stringify(sanitized));
   } catch {
     // Ignore quota errors silently
   }
@@ -155,7 +196,10 @@ export function saveCaughtSlots(caught) {
  */
 export function loadShinyCaughtSlots() {
   try {
-    return JSON.parse(localStorage.getItem(SHINY_CAUGHT_STORAGE_KEY) || "{}");
+    const raw = JSON.parse(
+      localStorage.getItem(SHINY_CAUGHT_STORAGE_KEY) || "{}",
+    );
+    return sanitizeCaughtSlots(raw);
   } catch {
     return {};
   }
@@ -170,7 +214,8 @@ export function loadShinyCaughtSlots() {
  */
 export function saveShinyCaughtSlots(caught) {
   try {
-    localStorage.setItem(SHINY_CAUGHT_STORAGE_KEY, JSON.stringify(caught));
+    const sanitized = sanitizeCaughtSlots(caught);
+    localStorage.setItem(SHINY_CAUGHT_STORAGE_KEY, JSON.stringify(sanitized));
   } catch {
     // Ignore quota errors silently
   }

@@ -1261,7 +1261,12 @@ export async function getMissingPokemonData(
   sections.forEach((section) => {
     (section.entries || []).forEach((entry) => {
       runningSlot += 1;
-      const isCaught = Boolean(caughtSlotsMap[runningSlot]);
+      const specimenKey =
+        entry.specimenKey ||
+        `${entry.speciesId}:${entry.formId || entry.speciesId}:${entry.gender || ""}:${entry.spriteId || entry.formId || entry.speciesId}`;
+      const isCaught = specimenKey
+        ? Boolean(caughtSlotsMap[specimenKey])
+        : Boolean(caughtSlotsMap[runningSlot]);
       if (isCaught) {
         caughtSpeciesIds.add(entry.speciesId);
       }
@@ -1486,7 +1491,12 @@ export async function getEvolutionFamilyChecklist(gameId, caughtSlots = {}) {
         chainSlotsMap.set(chainId, []);
       }
 
-      const isCaught = Boolean(caughtSlotsMap[runningSlot]);
+      const specimenKey =
+        entry.specimenKey ||
+        `${entry.speciesId}:${entry.formId || entry.speciesId}:${entry.gender || ""}:${entry.spriteId || entry.formId || entry.speciesId}`;
+      const isCaught = specimenKey
+        ? Boolean(caughtSlotsMap[specimenKey])
+        : Boolean(caughtSlotsMap[runningSlot]);
       const form =
         species.forms?.find((f) => f.formId === entry.formId) ||
         species.forms?.[0];

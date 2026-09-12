@@ -293,7 +293,7 @@ export function updateBoxProgress(box) {
   for (const cell of cells) {
     const key = cell.dataset.specimenKey;
     const slot = Number(cell.dataset.regional);
-    if ((key && caught[key]) || (slot && caught[slot])) {
+    if (key ? Boolean(caught[key]) : slot && Boolean(caught[slot])) {
       caughtCount += 1;
     }
   }
@@ -768,7 +768,11 @@ export function populateDexSlots(sections, slotCount, onComplete) {
           getSpecimenKey(speciesId, formId, gender, spriteId);
         cell.dataset.specimenKey = specimenKey;
 
-        if ((specimenKey && caught[specimenKey]) || caught[slotIdx]) {
+        const isEntryCaught = specimenKey
+          ? Boolean(caught[specimenKey])
+          : Boolean(caught[slotIdx]);
+
+        if (isEntryCaught) {
           cell.classList.add("caught");
           cell.setAttribute("aria-pressed", "true");
         }
@@ -801,12 +805,18 @@ export function populateDexSlots(sections, slotCount, onComplete) {
                 targetCell.classList.toggle("caught", targetState);
                 targetCell.setAttribute("aria-pressed", String(targetState));
                 const tKey = targetCell.dataset.specimenKey;
-                if (targetState) {
-                  if (tKey) nextCaught[tKey] = true;
-                  nextCaught[slot] = true;
+                if (tKey) {
+                  if (targetState) {
+                    nextCaught[tKey] = true;
+                  } else {
+                    delete nextCaught[tKey];
+                  }
                 } else {
-                  if (tKey) delete nextCaught[tKey];
-                  delete nextCaught[slot];
+                  if (targetState) {
+                    nextCaught[slot] = true;
+                  } else {
+                    delete nextCaught[slot];
+                  }
                 }
               }
             }
@@ -814,12 +824,18 @@ export function populateDexSlots(sections, slotCount, onComplete) {
             cell.classList.toggle("caught", isCaught);
             cell.setAttribute("aria-pressed", String(isCaught));
             const cKey = cell.dataset.specimenKey;
-            if (isCaught) {
-              if (cKey) nextCaught[cKey] = true;
-              nextCaught[regionalSlot] = true;
+            if (cKey) {
+              if (isCaught) {
+                nextCaught[cKey] = true;
+              } else {
+                delete nextCaught[cKey];
+              }
             } else {
-              if (cKey) delete nextCaught[cKey];
-              delete nextCaught[regionalSlot];
+              if (isCaught) {
+                nextCaught[regionalSlot] = true;
+              } else {
+                delete nextCaught[regionalSlot];
+              }
             }
           }
 
@@ -1031,13 +1047,18 @@ export function registerTouchDragSelection(slotCount) {
       cell.classList.add("is-drag-active");
       setTimeout(() => cell.classList.remove("is-drag-active"), 250);
 
-      nextCaughtStateMap[slot] = targetCaughtState;
       const key = cell.dataset.specimenKey;
       if (key) {
         if (targetCaughtState) {
           nextCaughtStateMap[key] = true;
         } else {
           delete nextCaughtStateMap[key];
+        }
+      } else {
+        if (targetCaughtState) {
+          nextCaughtStateMap[slot] = true;
+        } else {
+          delete nextCaughtStateMap[slot];
         }
       }
       lastClickedSlotIndex = slot;
@@ -1172,13 +1193,18 @@ export function registerTouchDragSelection(slotCount) {
 
         startCell.classList.toggle("caught", targetCaughtState);
         startCell.setAttribute("aria-pressed", String(targetCaughtState));
-        nextCaughtStateMap[regionalSlot] = targetCaughtState;
         const key = startCell.dataset.specimenKey;
         if (key) {
           if (targetCaughtState) {
             nextCaughtStateMap[key] = true;
           } else {
             delete nextCaughtStateMap[key];
+          }
+        } else {
+          if (targetCaughtState) {
+            nextCaughtStateMap[regionalSlot] = true;
+          } else {
+            delete nextCaughtStateMap[regionalSlot];
           }
         }
         lastClickedSlotIndex = regionalSlot;
@@ -1297,7 +1323,7 @@ export function registerBoxControls(slotCount) {
         const allCaught = cells.every((cell) => {
           const key = cell.dataset.specimenKey;
           const reg = Number(cell.dataset.regional);
-          return (key && caught[key]) || (reg && caught[reg]);
+          return key ? Boolean(caught[key]) : reg && Boolean(caught[reg]);
         });
         cells.forEach((cell) => {
           const key = cell.dataset.specimenKey;
@@ -1305,11 +1331,17 @@ export function registerBoxControls(slotCount) {
           cell.classList.toggle("caught", !allCaught);
           cell.setAttribute("aria-pressed", String(!allCaught));
           if (!allCaught) {
-            if (key) caught[key] = true;
-            caught[reg] = true;
+            if (key) {
+              caught[key] = true;
+            } else {
+              caught[reg] = true;
+            }
           } else {
-            if (key) delete caught[key];
-            delete caught[reg];
+            if (key) {
+              delete caught[key];
+            } else {
+              delete caught[reg];
+            }
           }
         });
 
