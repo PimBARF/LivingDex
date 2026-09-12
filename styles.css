@@ -272,6 +272,12 @@ button:focus-visible,
   color: var(--text);
 }
 
+select option,
+.select option {
+  background-color: var(--card);
+  color: var(--text);
+}
+
 .input:focus,
 .select:focus,
 .textarea:focus,
@@ -2704,7 +2710,7 @@ body.is-drag-selecting .cell {
   font-family: inherit;
   font-weight: 600;
   color: var(--text);
-  background: var(--surface);
+  background: var(--surface-soft);
   border: 1px solid var(--border);
   border-radius: 4px;
 }
@@ -3691,16 +3697,16 @@ body.is-drag-selecting .cell {
   padding: 6px 10px;
   font-size: 13px;
   font-weight: 500;
-  background: var(--surface);
-  border: 1px solid var(--control-border);
-  border-radius: 6px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: calc(var(--control-radius) - 2px);
   color: var(--text);
   cursor: pointer;
 }
 
 .segment-layout-select:focus {
-  border-color: var(--accent);
-  outline: none;
+  outline: 3px solid var(--focus-ring);
+  outline-offset: 1px;
 }
 
 .segment-presets-section {
