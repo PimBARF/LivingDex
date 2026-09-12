@@ -588,6 +588,13 @@ export function registerSegmentsModal({ onSegmentsUpdated } = {}) {
   });
 
   // Layout preset dropdown handler
+  const segmentLayoutSection = document.getElementById(
+    "segmentLayoutPresetSection",
+  );
+  if (segmentLayoutSection) {
+    segmentLayoutSection.hidden = ACTIVE_GAME_ID !== "home";
+  }
+
   const segmentLayoutPreset = document.getElementById("segmentLayoutPreset");
   segmentLayoutPreset?.addEventListener("change", async () => {
     const nextVal = segmentLayoutPreset.value;
@@ -867,6 +874,8 @@ export function registerSettingsControls() {
     );
     if (autoCollapseFull)
       autoCollapseFull.checked = !!settings.autoCollapseFullBoxes;
+    const layoutPresetRow = document.getElementById("settingsLayoutPresetRow");
+    if (layoutPresetRow) layoutPresetRow.hidden = ACTIVE_GAME_ID !== "home";
     const layoutPreset = document.getElementById("settingsLayoutPreset");
     if (layoutPreset) layoutPreset.value = settings.layoutPreset || "standard";
     if (language) language.value = settings.language || "en";

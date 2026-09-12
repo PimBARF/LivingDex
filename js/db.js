@@ -369,7 +369,10 @@ export async function buildActiveDexSections() {
   }
 
   const settings = loadSettings();
-  const activePreset = settings.layoutPreset || "standard";
+  const activePreset =
+    ACTIVE_GAME_ID === "home"
+      ? settings.layoutPreset || "standard"
+      : "standard";
   const transformedSections = applyLayoutPreset(sections, activePreset, {
     speciesData,
     evolutionsData,

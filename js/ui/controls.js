@@ -1147,29 +1147,34 @@ export function registerHeaderControls(slotCount) {
     rebuildDexView({ sections, slotCount: currentSlotCount });
   });
 
-  // Layout preset dropdown in header
+  // Layout preset dropdown in header (Pokémon HOME only)
   const headerLayoutSelect = document.getElementById("headerLayoutPreset");
   if (headerLayoutSelect) {
-    headerLayoutSelect.value = loadSettings().layoutPreset || "standard";
-    headerLayoutSelect.addEventListener("change", async () => {
-      const nextPreset = headerLayoutSelect.value;
-      saveSettings({ layoutPreset: nextPreset });
+    if (ACTIVE_GAME_ID !== "home") {
+      headerLayoutSelect.hidden = true;
+    } else {
+      headerLayoutSelect.hidden = false;
+      headerLayoutSelect.value = loadSettings().layoutPreset || "standard";
+      headerLayoutSelect.addEventListener("change", async () => {
+        const nextPreset = headerLayoutSelect.value;
+        saveSettings({ layoutPreset: nextPreset });
 
-      const segSelect = document.getElementById("segmentLayoutPreset");
-      if (segSelect) segSelect.value = nextPreset;
-      const setSelect = document.getElementById("settingsLayoutPreset");
-      if (setSelect) setSelect.value = nextPreset;
+        const segSelect = document.getElementById("segmentLayoutPreset");
+        if (segSelect) segSelect.value = nextPreset;
+        const setSelect = document.getElementById("settingsLayoutPreset");
+        if (setSelect) setSelect.value = nextPreset;
 
-      const { sections } = await buildActiveDexSections();
-      const combinedSpeciesIds = sections.flatMap((s) =>
-        s.entries.map((e) => e.speciesId),
-      );
-      const currentSlotCount = combinedSpeciesIds.length;
-      rebuildDexView({ sections, slotCount: currentSlotCount });
-      if (combinedSpeciesIds.length) {
-        await loadSpeciesNames(combinedSpeciesIds);
-      }
-    });
+        const { sections } = await buildActiveDexSections();
+        const combinedSpeciesIds = sections.flatMap((s) =>
+          s.entries.map((e) => e.speciesId),
+        );
+        const currentSlotCount = combinedSpeciesIds.length;
+        rebuildDexView({ sections, slotCount: currentSlotCount });
+        if (combinedSpeciesIds.length) {
+          await loadSpeciesNames(combinedSpeciesIds);
+        }
+      });
+    }
   }
 
   // Share button

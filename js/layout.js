@@ -304,6 +304,11 @@ export function applyLayoutPreset(
 
   const { speciesData = {}, evolutionsData = {}, gameId = "home" } = context;
 
+  // Box layout presets apply exclusively to Pokémon HOME master storage
+  if (gameId !== "home") {
+    return transformToStandard(sections);
+  }
+
   switch (preset) {
     case LAYOUT_PRESETS.GENERATIONAL:
       return transformToGenerational(sections, speciesData, gameId);
