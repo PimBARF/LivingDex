@@ -3,6 +3,7 @@ import {
   loadSegmentConfig,
   loadEnabledSegments,
   loadSettings,
+  getGameLayoutPreset,
   loadItemInventory,
   loadSpecimenInventory,
   getSelectedGameVersion,
@@ -368,11 +369,7 @@ export async function buildActiveDexSections() {
     }
   }
 
-  const settings = loadSettings();
-  const activePreset =
-    ACTIVE_GAME_ID === "home"
-      ? settings.layoutPreset || "standard"
-      : "standard";
+  const activePreset = getGameLayoutPreset(ACTIVE_GAME_ID);
   const transformedSections = applyLayoutPreset(sections, activePreset, {
     speciesData,
     evolutionsData,

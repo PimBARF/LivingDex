@@ -1,9 +1,4 @@
-import {
-  BOX_CAPACITY,
-  GENERATION_RANGES,
-  LAYOUT_PRESETS,
-  ALL_POKEMON_TYPES,
-} from "./config.js";
+import { BOX_CAPACITY, GENERATION_RANGES, LAYOUT_PRESETS } from "./config.js";
 
 /**
  * Computes a unique and canonical specimen identifier for an entry or cell.
@@ -56,22 +51,6 @@ function getVariantSortPriority(entry) {
 }
 
 /**
- * Helper to extract the primary elemental type for a given entry.
- *
- * @param {Object} entry - Pokémon entry.
- * @param {Record<number, Object>} speciesData - Species dataset.
- * @returns {string} Primary type name (e.g., 'fire', 'water').
- */
-function getEntryPrimaryType(entry, speciesData) {
-  const spec = speciesData?.[entry.speciesId];
-  if (!spec) return "normal";
-  const form =
-    spec.forms?.find((f) => f.formId === entry.formId) || spec.forms?.[0];
-  const primary = form?.types?.[0] || spec.forms?.[0]?.types?.[0] || "normal";
-  return String(primary).toLowerCase();
-}
-
-/**
  * Standard Layout: Returns sections in the configured order as defined by the user.
  *
  * @param {Array<Object>} sections - Raw active Pokédex sections.
@@ -88,8 +67,57 @@ function transformToStandard(sections) {
 }
 
 /**
+ * National Pokédex Order Layout:
+ * Collects all unique specimen entries across enabled sections and sorts them strictly
+ * by National Pokédex number (#001–#1025).
+ *
+ * @param {Array<Object>} sections - Raw active Pokédex sections.
+ * @param {Record<number, Object>} [speciesData] - Master species dataset.
+ * @returns {Array<Object>} Single section sorted by National Dex number.
+ */
+function transformToNational(sections, speciesData = {}) {
+  const seenKeys = new Set();
+  const allEntries = [];
+
+  for (const sec of sections) {
+    for (const entry of sec.entries || []) {
+      const key = getSpecimenKey(entry);
+      if (!seenKeys.has(key)) {
+        seenKeys.add(key);
+        const sId = entry.speciesId || 0;
+        allEntries.push({
+          ...entry,
+          dexNumber: sId,
+          kind: entry.kind || sec.kind || "base",
+          specimenKey: key,
+        });
+      }
+    }
+  }
+
+  allEntries.sort((a, b) => {
+    if (a.speciesId !== b.speciesId) return a.speciesId - b.speciesId;
+    const pA = getVariantSortPriority(a);
+    const pB = getVariantSortPriority(b);
+    if (pA !== pB) return pA - pB;
+    return (Number(a.formId) || 0) - (Number(b.formId) || 0);
+  });
+
+  return [
+    {
+      id: "national-dex",
+      key: "national-dex",
+      title: "National Pokédex Order",
+      kind: "base",
+      entries: allEntries,
+      startIndex: 1,
+    },
+  ];
+}
+
+/**
  * Generational / Regional Clean Layout:
- * Splits the base National Pokédex entries into 9 distinct generational sections.
+ * Splits the base National Pokédex entries into 10 distinct generational sections (HOME).
  * Trailing slots of each generation's final box are left empty so that each new region
  * starts cleanly on Box N+1, Slot 1.
  *
@@ -125,6 +153,7 @@ function transformToGenerational(sections, speciesData, gameId = "home") {
 
     if (genEntries.length > 0) {
       generationalSections.push({
+        id: `gen-${gen}`,
         key: `gen-${gen}`,
         title: name,
         kind: "base",
@@ -134,7 +163,6 @@ function transformToGenerational(sections, speciesData, gameId = "home") {
     }
   }
 
-  // Append other enabled sections (regional forms, alternate forms, gender, etc.)
   const formattedOtherSections = otherSections.map((sec) => ({
     ...sec,
     entries: sec.entries.map((entry) => ({
@@ -152,13 +180,12 @@ function transformToGenerational(sections, speciesData, gameId = "home") {
  *
  * @param {Array<Object>} sections - Raw active Pokédex sections.
  * @param {Record<number, Object>} speciesData - Master species dataset.
- * @returns {Array<Object>} Single or generational sections with variants inlined.
+ * @returns {Array<Object>} Single section with variants inlined.
  */
 function transformToInline(sections, speciesData) {
-  // Collect all entries across all enabled sections, tagging their section kind
   const allEntries = [];
   for (const sec of sections) {
-    for (const entry of sec.entries) {
+    for (const entry of sec.entries || []) {
       allEntries.push({
         ...entry,
         kind: entry.kind || sec.kind || "base",
@@ -167,7 +194,6 @@ function transformToInline(sections, speciesData) {
     }
   }
 
-  // Group entries by speciesId
   const speciesMap = new Map();
   for (const entry of allEntries) {
     if (!speciesMap.has(entry.speciesId)) {
@@ -176,7 +202,6 @@ function transformToInline(sections, speciesData) {
     speciesMap.get(entry.speciesId).push(entry);
   }
 
-  // Sort entries within each species (Base -> Female -> Regional -> Forms -> GMax)
   const sortedSpeciesIds = Array.from(speciesMap.keys()).sort((a, b) => a - b);
   const flattenedEntries = [];
 
@@ -188,13 +213,19 @@ function transformToInline(sections, speciesData) {
       if (pA !== pB) return pA - pB;
       return (Number(a.formId) || 0) - (Number(b.formId) || 0);
     });
-    flattenedEntries.push(...variants);
+    for (const v of variants) {
+      flattenedEntries.push({
+        ...v,
+        dexNumber: v.dexNumber ?? sId,
+      });
+    }
   }
 
   return [
     {
+      id: "national-inline",
       key: "national-inline",
-      title: "National Pokédex (All Variants Inline)",
+      title: "Pokédex (All Forms Inline)",
       kind: "base",
       entries: flattenedEntries,
       startIndex: 1,
@@ -210,13 +241,12 @@ function transformToInline(sections, speciesData) {
  * @param {Array<Object>} sections - Raw active Pokédex sections.
  * @param {Record<number, Object>} speciesData - Master species dataset.
  * @param {Record<number, Object>} evolutionsData - Master evolution chains dataset.
- * @returns {Array<Object>} Evolutionary sections with inlined variants.
+ * @returns {Array<Object>} Evolutionary section with inlined variants.
  */
 function transformToEvolutionary(sections, speciesData, evolutionsData) {
-  // 1. Collect and tag all enabled entries
   const allEntries = [];
   for (const sec of sections) {
-    for (const entry of sec.entries) {
+    for (const entry of sec.entries || []) {
       allEntries.push({
         ...entry,
         kind: entry.kind || sec.kind || "base",
@@ -225,7 +255,6 @@ function transformToEvolutionary(sections, speciesData, evolutionsData) {
     }
   }
 
-  // 2. Group entries by speciesId first
   const speciesEntriesMap = new Map();
   for (const entry of allEntries) {
     if (!speciesEntriesMap.has(entry.speciesId)) {
@@ -234,7 +263,6 @@ function transformToEvolutionary(sections, speciesData, evolutionsData) {
     speciesEntriesMap.get(entry.speciesId).push(entry);
   }
 
-  // 3. Group species into evolution families
   const chainMap = new Map(); // chainId -> Set of speciesIds
   const speciesToChain = new Map();
 
@@ -249,14 +277,12 @@ function transformToEvolutionary(sections, speciesData, evolutionsData) {
     chainMap.get(chainId).add(sId);
   }
 
-  // 4. Sort families by the lowest speciesId in the family
   const sortedChainIds = Array.from(chainMap.keys()).sort((a, b) => {
     const minA = Math.min(...Array.from(chainMap.get(a)));
     const minB = Math.min(...Array.from(chainMap.get(b)));
     return minA - minB;
   });
 
-  // 5. Within each family, order species by evolution stage (using nodes from evolutionsData)
   const flattenedEntries = [];
 
   for (const chainId of sortedChainIds) {
@@ -282,7 +308,6 @@ function transformToEvolutionary(sections, speciesData, evolutionsData) {
       orderedSpecies.sort((a, b) => a - b);
     }
 
-    // For each species in the ordered family, append its variants in priority order
     for (const sId of orderedSpecies) {
       const variants = speciesEntriesMap.get(sId) || [];
       variants.sort((a, b) => {
@@ -291,98 +316,25 @@ function transformToEvolutionary(sections, speciesData, evolutionsData) {
         if (pA !== pB) return pA - pB;
         return (Number(a.formId) || 0) - (Number(b.formId) || 0);
       });
-      flattenedEntries.push(...variants);
+      for (const v of variants) {
+        flattenedEntries.push({
+          ...v,
+          dexNumber: sId,
+        });
+      }
     }
   }
 
   return [
     {
+      id: "national-evolutionary",
       key: "national-evolutionary",
-      title: "National Pokédex (Evolutionary Families)",
+      title: "Pokédex (Evolution Lines)",
       kind: "base",
       entries: flattenedEntries,
       startIndex: 1,
     },
   ];
-}
-
-const TYPE_METADATA = [
-  { id: "normal", title: "Normal Type" },
-  { id: "fire", title: "Fire Type" },
-  { id: "water", title: "Water Type" },
-  { id: "grass", title: "Grass Type" },
-  { id: "electric", title: "Electric Type" },
-  { id: "ice", title: "Ice Type" },
-  { id: "fighting", title: "Fighting Type" },
-  { id: "poison", title: "Poison Type" },
-  { id: "ground", title: "Ground Type" },
-  { id: "flying", title: "Flying Type" },
-  { id: "psychic", title: "Psychic Type" },
-  { id: "bug", title: "Bug Type" },
-  { id: "rock", title: "Rock Type" },
-  { id: "ghost", title: "Ghost Type" },
-  { id: "dragon", title: "Dragon Type" },
-  { id: "steel", title: "Steel Type" },
-  { id: "dark", title: "Dark Type" },
-  { id: "fairy", title: "Fairy Type" },
-];
-
-/**
- * Primary Type Layout:
- * Groups Pokémon into 18 distinct sections by their Primary Elemental Type.
- *
- * @param {Array<Object>} sections - Raw active Pokédex sections.
- * @param {Record<number, Object>} speciesData - Master species dataset.
- * @returns {Array<Object>} Type sections.
- */
-function transformToTypes(sections, speciesData) {
-  const allEntries = [];
-  for (const sec of sections) {
-    for (const entry of sec.entries) {
-      allEntries.push({
-        ...entry,
-        kind: entry.kind || sec.kind || "base",
-        specimenKey: getSpecimenKey(entry),
-      });
-    }
-  }
-
-  const typeBuckets = new Map();
-  for (const { id } of TYPE_METADATA) {
-    typeBuckets.set(id, []);
-  }
-
-  for (const entry of allEntries) {
-    const type = getEntryPrimaryType(entry, speciesData);
-    if (!typeBuckets.has(type)) {
-      typeBuckets.set(type, []);
-    }
-    typeBuckets.get(type).push(entry);
-  }
-
-  const resultSections = [];
-  for (const { id, title } of TYPE_METADATA) {
-    const entries = typeBuckets.get(id) || [];
-    if (entries.length > 0) {
-      entries.sort((a, b) => {
-        if (a.speciesId !== b.speciesId) return a.speciesId - b.speciesId;
-        const pA = getVariantSortPriority(a);
-        const pB = getVariantSortPriority(b);
-        if (pA !== pB) return pA - pB;
-        return (Number(a.formId) || 0) - (Number(b.formId) || 0);
-      });
-
-      resultSections.push({
-        key: `type-${id}`,
-        title,
-        kind: "type",
-        entries,
-        startIndex: 1,
-      });
-    }
-  }
-
-  return resultSections;
 }
 
 /**
@@ -396,9 +348,10 @@ function transformToTypes(sections, speciesData) {
 function transformToAlphabetical(sections, speciesData) {
   const allEntries = [];
   for (const sec of sections) {
-    for (const entry of sec.entries) {
+    for (const entry of sec.entries || []) {
       allEntries.push({
         ...entry,
+        dexNumber: entry.speciesId,
         kind: entry.kind || sec.kind || "base",
         specimenKey: getSpecimenKey(entry),
       });
@@ -428,13 +381,316 @@ function transformToAlphabetical(sections, speciesData) {
 
   return [
     {
+      id: "national-alphabetical",
       key: "national-alphabetical",
-      title: "National Pokédex (Alphabetical A-Z)",
+      title: "Pokédex (Alphabetical A-Z)",
       kind: "base",
       entries: allEntries,
       startIndex: 1,
     },
   ];
+}
+
+/**
+ * Alola Island Dexes Layout:
+ * Partitions the Alola Pokédex (Sun/Moon & Ultra Sun/Ultra Moon) into 4 distinct
+ * island sections: Melemele Island, Akala Island, Ula'ula Island, and Poni Island.
+ * Each island starts cleanly in its own box.
+ *
+ * @param {Array<Object>} sections - Raw active Pokédex sections.
+ * @param {Record<number, Object>} speciesData - Master species dataset.
+ * @param {string} [gameId="sm"] - Active game ID ('sm' or 'usum').
+ * @returns {Array<Object>} 4 island sections followed by any active form sections.
+ */
+function transformToAlolaIslands(sections, speciesData, gameId = "sm") {
+  const baseSection = sections.find(
+    (s) => s.kind === "base" || s.id === "alola" || s.key === "alola",
+  );
+  const otherSections = sections.filter((s) => s !== baseSection);
+
+  if (
+    !baseSection ||
+    !baseSection.entries ||
+    baseSection.entries.length === 0
+  ) {
+    return transformToStandard(sections);
+  }
+
+  const entries = baseSection.entries;
+  const isUSUM = gameId === "usum";
+
+  // Partition criteria based on official Island Pokédex assignments
+  const melemeleFilter = isUSUM
+    ? (e) => (e.dexNumber >= 1 && e.dexNumber <= 149) || e.dexNumber === 383
+    : (e) => (e.dexNumber >= 1 && e.dexNumber <= 119) || e.dexNumber === 285;
+
+  const akalaFilter = isUSUM
+    ? (e) => (e.dexNumber >= 150 && e.dexNumber <= 262) || e.dexNumber === 384
+    : (e) => (e.dexNumber >= 120 && e.dexNumber <= 204) || e.dexNumber === 286;
+
+  const ulaulaFilter = isUSUM
+    ? (e) => (e.dexNumber >= 263 && e.dexNumber <= 338) || e.dexNumber === 385
+    : (e) => (e.dexNumber >= 205 && e.dexNumber <= 257) || e.dexNumber === 287;
+
+  const poniFilter = isUSUM
+    ? (e) =>
+        (e.dexNumber >= 339 && e.dexNumber <= 382) ||
+        (e.dexNumber >= 386 && e.dexNumber <= 403)
+    : (e) =>
+        (e.dexNumber >= 258 && e.dexNumber <= 284) ||
+        (e.dexNumber >= 288 && e.dexNumber <= 302);
+
+  const melemeleEntries = entries.filter(melemeleFilter).map((e, idx) => ({
+    ...e,
+    dexNumber: idx + 1,
+    specimenKey: getSpecimenKey(e),
+  }));
+  const akalaEntries = entries.filter(akalaFilter).map((e, idx) => ({
+    ...e,
+    dexNumber: idx + 1,
+    specimenKey: getSpecimenKey(e),
+  }));
+  const ulaulaEntries = entries.filter(ulaulaFilter).map((e, idx) => ({
+    ...e,
+    dexNumber: idx + 1,
+    specimenKey: getSpecimenKey(e),
+  }));
+  const poniEntries = entries.filter(poniFilter).map((e, idx) => ({
+    ...e,
+    dexNumber: idx + 1,
+    specimenKey: getSpecimenKey(e),
+  }));
+
+  const islandSections = [
+    {
+      id: "island-melemele",
+      key: "island-melemele",
+      title: "Melemele Island",
+      kind: "base",
+      entries: melemeleEntries,
+      startIndex: 1,
+    },
+    {
+      id: "island-akala",
+      key: "island-akala",
+      title: "Akala Island",
+      kind: "base",
+      entries: akalaEntries,
+      startIndex: 1,
+    },
+    {
+      id: "island-ulaula",
+      key: "island-ulaula",
+      title: "Ula'ula Island",
+      kind: "base",
+      entries: ulaulaEntries,
+      startIndex: 1,
+    },
+    {
+      id: "island-poni",
+      key: "island-poni",
+      title: "Poni Island",
+      kind: "base",
+      entries: poniEntries,
+      startIndex: 1,
+    },
+  ];
+
+  const formattedOtherSections = otherSections.map((sec) => ({
+    ...sec,
+    entries: sec.entries.map((entry) => ({
+      ...entry,
+      specimenKey: getSpecimenKey(entry),
+    })),
+  }));
+
+  return [...islandSections, ...formattedOtherSections];
+}
+
+/**
+ * Unified Regional / DLC Layout:
+ * Merges multiple sub-regional or DLC sections (e.g. XY Central/Coastal/Mountain,
+ * SwSh Galar/Armor/Tundra, SV Paldea/Kitakami/Blueberry) into one seamless continuous sequence.
+ *
+ * @param {Array<Object>} sections - Raw active Pokédex sections.
+ * @param {string} title - Section title for the combined Pokédex.
+ * @returns {Array<Object>} Single unified base section followed by any optional form sections.
+ */
+function transformToUnified(sections, title = "Unified Pokédex") {
+  const baseSections = sections.filter(
+    (s) =>
+      s.kind === "base" ||
+      s.kind === "dlc" ||
+      s.type === "base" ||
+      s.type === "dlc",
+  );
+  const otherSections = sections.filter((s) => !baseSections.includes(s));
+
+  const unifiedEntries = [];
+  const seenKeys = new Set();
+
+  for (const sec of baseSections) {
+    for (const entry of sec.entries || []) {
+      const key = getSpecimenKey(entry);
+      if (!seenKeys.has(key)) {
+        seenKeys.add(key);
+        unifiedEntries.push({
+          ...entry,
+          dexNumber: unifiedEntries.length + 1,
+          kind: entry.kind || sec.kind || "base",
+          specimenKey: key,
+        });
+      }
+    }
+  }
+
+  const result = [
+    {
+      id: "unified-dex",
+      key: "unified-dex",
+      title,
+      kind: "base",
+      entries: unifiedEntries,
+      startIndex: 1,
+    },
+  ];
+
+  for (const sec of otherSections) {
+    result.push({
+      ...sec,
+      entries: sec.entries.map((e) => ({
+        ...e,
+        specimenKey: getSpecimenKey(e),
+      })),
+    });
+  }
+
+  return result;
+}
+
+/**
+ * Hisui Expedition Areas Layout:
+ * Partitions Legends: Arceus entries into Hisui's 5 exploration regions:
+ * Obsidian Fieldlands, Crimson Mirelands, Cobalt Coastlands, Coronet Highlands, and Alabaster Icelands.
+ *
+ * @param {Array<Object>} sections - Raw active Pokédex sections.
+ * @param {Record<number, Object>} speciesData - Master species dataset.
+ * @returns {Array<Object>} 5 expedition area sections followed by any active form sections.
+ */
+function transformToHisuiAreas(sections, speciesData) {
+  const baseSection = sections.find(
+    (s) => s.kind === "base" || s.id === "hisui" || s.key === "hisui",
+  );
+  const otherSections = sections.filter((s) => s !== baseSection);
+
+  if (
+    !baseSection ||
+    !baseSection.entries ||
+    baseSection.entries.length === 0
+  ) {
+    return transformToStandard(sections);
+  }
+
+  const entries = baseSection.entries;
+
+  const fieldlandsEntries = [];
+  const mirelandsEntries = [];
+  const coastlandsEntries = [];
+  const highlandsEntries = [];
+  const icelandsEntries = [];
+
+  for (const entry of entries) {
+    const sId = entry.speciesId;
+    const dexNum = entry.dexNumber || sId;
+    const formatted = { ...entry, specimenKey: getSpecimenKey(entry) };
+
+    if (
+      (dexNum >= 1 && dexNum <= 65) ||
+      (dexNum >= 74 && dexNum <= 83) ||
+      dexNum === 492
+    ) {
+      fieldlandsEntries.push(formatted);
+    } else if (
+      (dexNum >= 66 && dexNum <= 73) ||
+      (dexNum >= 84 && dexNum <= 135) ||
+      dexNum === 482 ||
+      dexNum === 201
+    ) {
+      mirelandsEntries.push(formatted);
+    } else if (
+      (dexNum >= 136 && dexNum <= 176) ||
+      dexNum === 485 ||
+      dexNum === 487 ||
+      dexNum === 489 ||
+      dexNum === 490
+    ) {
+      coastlandsEntries.push(formatted);
+    } else if (
+      (dexNum >= 177 && dexNum <= 214) ||
+      dexNum === 483 ||
+      dexNum === 484 ||
+      dexNum === 488 ||
+      dexNum === 491 ||
+      dexNum === 493
+    ) {
+      highlandsEntries.push(formatted);
+    } else {
+      icelandsEntries.push(formatted);
+    }
+  }
+
+  const areaSections = [
+    {
+      id: "area-fieldlands",
+      key: "area-fieldlands",
+      title: "Obsidian Fieldlands",
+      kind: "base",
+      entries: fieldlandsEntries,
+      startIndex: 1,
+    },
+    {
+      id: "area-mirelands",
+      key: "area-mirelands",
+      title: "Crimson Mirelands",
+      kind: "base",
+      entries: mirelandsEntries,
+      startIndex: 1,
+    },
+    {
+      id: "area-coastlands",
+      key: "area-coastlands",
+      title: "Cobalt Coastlands",
+      kind: "base",
+      entries: coastlandsEntries,
+      startIndex: 1,
+    },
+    {
+      id: "area-highlands",
+      key: "area-highlands",
+      title: "Coronet Highlands",
+      kind: "base",
+      entries: highlandsEntries,
+      startIndex: 1,
+    },
+    {
+      id: "area-icelands",
+      key: "area-icelands",
+      title: "Alabaster Icelands",
+      kind: "base",
+      entries: icelandsEntries,
+      startIndex: 1,
+    },
+  ].filter((sec) => sec.entries.length > 0);
+
+  const formattedOtherSections = otherSections.map((sec) => ({
+    ...sec,
+    entries: sec.entries.map((entry) => ({
+      ...entry,
+      specimenKey: getSpecimenKey(entry),
+    })),
+  }));
+
+  return [...areaSections, ...formattedOtherSections];
 }
 
 /**
@@ -456,22 +712,55 @@ export function applyLayoutPreset(
 
   const { speciesData = {}, evolutionsData = {}, gameId = "home" } = context;
 
-  // Box layout presets apply exclusively to Pokémon HOME master storage
-  if (gameId !== "home") {
-    return transformToStandard(sections);
-  }
-
   switch (preset) {
+    case LAYOUT_PRESETS.NATIONAL:
+      return transformToNational(sections, speciesData);
+
     case LAYOUT_PRESETS.GENERATIONAL:
-      return transformToGenerational(sections, speciesData, gameId);
+      if (gameId === "home") {
+        return transformToGenerational(sections, speciesData, gameId);
+      }
+      return transformToStandard(sections);
+
     case LAYOUT_PRESETS.INLINE:
       return transformToInline(sections, speciesData);
+
     case LAYOUT_PRESETS.EVOLUTIONARY:
       return transformToEvolutionary(sections, speciesData, evolutionsData);
-    case LAYOUT_PRESETS.TYPES:
-      return transformToTypes(sections, speciesData);
+
     case LAYOUT_PRESETS.ALPHABETICAL:
       return transformToAlphabetical(sections, speciesData);
+
+    case LAYOUT_PRESETS.ALOLA_ISLANDS:
+      if (gameId === "sm" || gameId === "usum") {
+        return transformToAlolaIslands(sections, speciesData, gameId);
+      }
+      return transformToStandard(sections);
+
+    case LAYOUT_PRESETS.KALOS_UNIFIED:
+      if (gameId === "xy") {
+        return transformToUnified(sections, "Unified Kalos Pokédex");
+      }
+      return transformToStandard(sections);
+
+    case LAYOUT_PRESETS.SWSH_UNIFIED:
+      if (gameId === "swsh") {
+        return transformToUnified(sections, "Unified Galar + DLC Pokédex");
+      }
+      return transformToStandard(sections);
+
+    case LAYOUT_PRESETS.SV_UNIFIED:
+      if (gameId === "sv") {
+        return transformToUnified(sections, "Unified Paldea + DLC Pokédex");
+      }
+      return transformToStandard(sections);
+
+    case LAYOUT_PRESETS.HISUI_AREAS:
+      if (gameId === "pla") {
+        return transformToHisuiAreas(sections, speciesData);
+      }
+      return transformToStandard(sections);
+
     case LAYOUT_PRESETS.STANDARD:
     default:
       return transformToStandard(sections);

@@ -403,6 +403,8 @@ export function renderDexSectionBoxes(
   const isBase =
     sectionMeta?.kind === "base" ||
     sectionMeta?.type === "base" ||
+    sectionMeta?.kind === "dlc" ||
+    sectionMeta?.type === "dlc" ||
     sectionKey === "national" ||
     sectionKey.startsWith("national-") ||
     (!sectionMeta?.kind &&
@@ -412,7 +414,9 @@ export function renderDexSectionBoxes(
       !sectionKey.startsWith("forms") &&
       !sectionKey.startsWith("gender") &&
       !sectionKey.startsWith("regional") &&
-      !sectionKey.startsWith("gmax"));
+      !sectionKey.startsWith("gmax") &&
+      !sectionKey.startsWith("mega") &&
+      !sectionKey.startsWith("totem"));
 
   const boxCount = Math.ceil(slotsInSection / BOX_CAPACITY);
   for (let boxIndex = 0; boxIndex < boxCount; boxIndex += 1) {
@@ -428,26 +432,58 @@ export function renderDexSectionBoxes(
       startGlobalSlot + slotsInSection - 1,
     );
     const boxId = `${sectionKey}:${boxIndex}`;
+    const boxEntries = Array.isArray(sectionMeta?.entries)
+      ? sectionMeta.entries.slice(
+          boxIndex * BOX_CAPACITY,
+          (boxIndex + 1) * BOX_CAPACITY,
+        )
+      : [];
+
+    let startNum = localStart;
+    let endNum = localEnd;
+    if (boxEntries.length > 0) {
+      const first = boxEntries[0];
+      const last = boxEntries[boxEntries.length - 1];
+      if (first.dexNumber != null) startNum = first.dexNumber;
+      else if (first.speciesId != null) startNum = first.speciesId;
+
+      if (last.dexNumber != null) endNum = last.dexNumber;
+      else if (last.speciesId != null) endNum = last.speciesId;
+    }
+
     const rangeText =
-      localStart === localEnd
-        ? `#${String(localStart).padStart(3, "0")}`
-        : `#${String(localStart).padStart(3, "0")}-${String(localEnd).padStart(3, "0")}`;
+      startNum === endNum
+        ? `#${String(startNum).padStart(3, "0")}`
+        : `#${String(startNum).padStart(3, "0")}-${String(endNum).padStart(3, "0")}`;
+
+    const isDlc = sectionMeta?.kind === "dlc" || sectionMeta?.type === "dlc";
 
     let defaultTitle = "";
     if (sectionKey.startsWith("gen-")) {
       // Generational Clean: "Kanto - #001-030", "Hisui - #899-905"
       defaultTitle = `${sectionTitle} - ${rangeText}`;
-    } else if (sectionKey.startsWith("type-")) {
-      // Primary Types: "Fire Type", "Water Type 1", "Water Type 2"
-      defaultTitle =
-        boxCount > 1 ? `${sectionTitle} ${boxIndex + 1}` : sectionTitle;
+    } else if (isDlc) {
+      // DLC Pokédexes: "Isle of Armor #001-030", "Crown Tundra #001-030", etc.
+      defaultTitle = `${sectionTitle} ${rangeText}`;
     } else if (sectionKey === "national-alphabetical") {
       // Alphabetical (A-Z): "Alphabetical 1", "Alphabetical 2", etc.
       defaultTitle =
         boxCount > 1 ? `Alphabetical ${boxIndex + 1}` : "Alphabetical";
+    } else if (sectionKey === "national-evolutionary") {
+      // Evolution Lines: "Evolution Lines 1", "Evolution Lines 2", etc.
+      defaultTitle =
+        boxCount > 1 ? `Evolution Lines ${boxIndex + 1}` : "Evolution Lines";
+    } else if (sectionKey.startsWith("island-")) {
+      // Alola Islands: "Melemele Island 1", "Akala Island 1", etc.
+      defaultTitle =
+        boxCount > 1 ? `${sectionTitle} ${boxIndex + 1}` : sectionTitle;
+    } else if (sectionKey.startsWith("area-")) {
+      // Hisui Expedition Areas: "Obsidian Fieldlands 1", "Crimson Mirelands 1", etc.
+      defaultTitle =
+        boxCount > 1 ? `${sectionTitle} ${boxIndex + 1}` : sectionTitle;
     } else if (isBase) {
-      // Base Dex / Standard National / All Forms Inline / Evolution Lines / Cartridge Dexes:
-      // Just the numbers on the boxes: "#001-030", "#031-060"
+      // Base Dex / Standard National / All Forms Inline / Unified / Cartridge Dexes:
+      // Numbers on the boxes: "#001-030", "#031-060"
       defaultTitle = rangeText;
     } else {
       // Forms / Extra segments (Regional Forms, Gender Variants, G-Max, etc.):

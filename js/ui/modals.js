@@ -9,6 +9,8 @@ import {
   resetSegmentConfig,
   getSelectedGameVersion,
   setSelectedGameVersion,
+  getGameLayoutPreset,
+  setGameLayoutPreset,
   encodeCaughtState,
   loadCaughtSlots,
   loadShinyCaughtSlots,
@@ -26,6 +28,8 @@ import {
   ACTIVE_GAME,
   ACTIVE_GAME_ID,
   getOrderedGameEntries,
+  getAvailableLayoutPresetsForGame,
+  LAYOUT_PRESETS,
 } from "../config.js";
 
 import {
@@ -331,13 +335,23 @@ export function registerFiltersModal() {
 
 export const PRESET_EXPLANATIONS = {
   standard: {
-    title: "Standard Dex",
-    badge: "Traditional Order",
-    desc: "Sequential National Pokédex order (#001–#1025). Regional variants, gender visual forms, and Gigantamax Pokémon are organized into dedicated form boxes at the end of the dex.",
+    title: "Regional Pokédex",
+    badge: "Default Order",
+    desc: "Sequential in-game regional Pokédex ordering. Regional variants, gender visual forms, and alternate battle forms appear in dedicated form boxes at the end.",
     details: [
-      "Continuous numerical flow from #001 Bulbasaur to #1025 Pecharunt",
+      "Follows official in-game regional Pokédex numbers",
       "Dedicated trailing boxes for optional forms and variants",
-      "Standard organization for official Pokémon HOME collections",
+      "Standard cartridge living dex organization",
+    ],
+  },
+  national: {
+    title: "National Pokédex",
+    badge: "Official #001–#1025",
+    desc: "Sorts all available Pokémon in the selected game strictly by their National Pokédex number from #001 Bulbasaur upwards.",
+    details: [
+      "Strict numerical National Pokédex order",
+      "Preserves species order across generations on cartridge PC boxes",
+      "Best for National living dexes within individual games",
     ],
   },
   generational: {
@@ -350,10 +364,60 @@ export const PRESET_EXPLANATIONS = {
       "Regional forms are placed with their debut generation",
     ],
   },
+  "alola-islands": {
+    title: "Alola Island Dexes",
+    badge: "4 Island Dexes",
+    desc: "Partitions the Alola Pokédex into 4 dedicated island sections: Melemele Island, Akala Island, Ula'ula Island, and Poni Island. Each island begins in a fresh box.",
+    details: [
+      "4 distinct Island sections: Melemele → Akala → Ula'ula → Poni",
+      "Numbered using official Island Pokédex assignments",
+      "Each island starts cleanly on Box N+1, Slot 1",
+    ],
+  },
+  "kalos-unified": {
+    title: "Unified Kalos Dex",
+    badge: "457-Pokémon Roster",
+    desc: "Combines Central Kalos, Coastal Kalos, and Mountain Kalos into a single unified continuous 457-Pokémon living dex.",
+    details: [
+      "Seamless flow from #001 Chespin to #457 Zygarde",
+      "Eliminates multiple section breaks between Kalos areas",
+      "Continuous box numbering across all 457 species",
+    ],
+  },
+  "swsh-unified": {
+    title: "Unified Galar + DLC",
+    badge: "All SwSh Species",
+    desc: "Combines the base Galar Pokédex, Isle of Armor Pokédex, and Crown Tundra Pokédex into a single unified living dex.",
+    details: [
+      "Seamless flow combining base game and all DLC expansions",
+      "Deduplicates species shared across DLCs",
+      "Continuous box run for the entire Sword & Shield roster",
+    ],
+  },
+  "sv-unified": {
+    title: "Unified Paldea + DLC",
+    badge: "All SV Species",
+    desc: "Combines the Paldea Pokédex, Kitakami (Teal Mask), and Blueberry (Indigo Disk) into a single unified living dex.",
+    details: [
+      "Seamless flow combining base Paldea and both DLC expansions",
+      "Deduplicates species shared across DLCs",
+      "Continuous box run for the entire Scarlet & Violet roster",
+    ],
+  },
+  "hisui-areas": {
+    title: "Expedition Area Dexes",
+    badge: "5 Hisui Regions",
+    desc: "Groups Pokémon by Hisui's 5 primary exploration regions: Obsidian Fieldlands, Crimson Mirelands, Cobalt Coastlands, Coronet Highlands, and Alabaster Icelands.",
+    details: [
+      "5 exploration regions based on survey assignments",
+      "Obsidian Fieldlands → Crimson Mirelands → Cobalt Coastlands → Coronet Highlands → Alabaster Icelands",
+      "Each exploration area starts in a fresh box",
+    ],
+  },
   inline: {
     title: "All Forms Inline",
     badge: "Species Complete",
-    desc: "Groups all regional variants, female visual differences, and form variations directly adjacent to their base species in numerical Pokédex order.",
+    desc: "Groups all regional variants, female visual differences, and form variations directly adjacent to their base species in numerical order.",
     details: [
       "Every variant immediately follows its base Pokémon (e.g. Raichu → Alolan Raichu)",
       "Continuous numerical flow across boxes",
@@ -365,19 +429,9 @@ export const PRESET_EXPLANATIONS = {
     badge: "Family Trees",
     desc: "Groups complete evolutionary families together across all generations in stage order, sorted by each line's earliest Pokédex number.",
     details: [
-      "Cross-gen evolutionary relatives stay together (e.g. Pichu → Pikachu → Raichu)",
+      "Evolutionary relatives stay together (e.g. Pichu → Pikachu → Raichu)",
       "Families arranged by stage (Basic → Stage 1 → Stage 2)",
       "Ideal for evolutionary line collectors",
-    ],
-  },
-  types: {
-    title: "Primary Types",
-    badge: "18 Elemental Boxes",
-    desc: "Divides all Pokémon into 18 dedicated elemental sections based on each species' primary type (Normal, Fire, Water, Grass, Electric, etc.).",
-    details: [
-      "18 dedicated type sections sorted from Normal to Fairy",
-      "Each elemental type starts in its own dedicated box",
-      "Ideal for themed elemental collections",
     ],
   },
   alphabetical: {
@@ -734,13 +788,39 @@ export function registerSegmentsModal({ onSegmentsUpdated } = {}) {
     "segmentLayoutPresetSection",
   );
   if (segmentLayoutSection) {
-    segmentLayoutSection.hidden = ACTIVE_GAME_ID !== "home";
+    segmentLayoutSection.hidden = false;
   }
 
   const segmentLayoutPreset = document.getElementById("segmentLayoutPreset");
+
+  async function populateLayoutPresetsSelect() {
+    if (!segmentLayoutPreset) return;
+    const dexData = await getGameDexData(ACTIVE_GAME_ID).catch(() => null);
+    const sections = dexData?.sections || [];
+    const availablePresets = getAvailableLayoutPresetsForGame(
+      ACTIVE_GAME_ID,
+      sections,
+    );
+
+    const currentVal = getGameLayoutPreset(ACTIVE_GAME_ID);
+    segmentLayoutPreset.innerHTML = "";
+
+    availablePresets.forEach((p) => {
+      const opt = document.createElement("option");
+      opt.value = p.id;
+      opt.textContent = p.title;
+      segmentLayoutPreset.appendChild(opt);
+    });
+
+    const isValid = availablePresets.some((p) => p.id === currentVal);
+    const activeVal = isValid ? currentVal : "standard";
+    segmentLayoutPreset.value = activeVal;
+    renderPresetExplanation(activeVal);
+  }
+
   segmentLayoutPreset?.addEventListener("change", async () => {
     const nextVal = segmentLayoutPreset.value;
-    saveSettings({ layoutPreset: nextVal });
+    setGameLayoutPreset(ACTIVE_GAME_ID, nextVal);
     renderPresetExplanation(nextVal);
     await refreshActiveDex();
   });
@@ -794,7 +874,7 @@ export function registerSegmentsModal({ onSegmentsUpdated } = {}) {
     openBtn,
     closeBtn,
     backdrop,
-    onOpen: () => {
+    onOpen: async () => {
       try {
         localStorage.setItem("livingdex-seen-segments-guide", "true");
         openBtn?.classList.remove("has-discovery-pulse");
@@ -805,15 +885,10 @@ export function registerSegmentsModal({ onSegmentsUpdated } = {}) {
       }
 
       if (segmentLayoutSection) {
-        segmentLayoutSection.hidden = ACTIVE_GAME_ID !== "home";
+        segmentLayoutSection.hidden = false;
       }
 
-      const activePreset = loadSettings().layoutPreset || "standard";
-      if (segmentLayoutPreset) {
-        segmentLayoutPreset.value = activePreset;
-      }
-      renderPresetExplanation(activePreset);
-
+      await populateLayoutPresetsSelect();
       populateGameVersionSelect();
       populateSegmentsList();
       closeBtn?.focus();

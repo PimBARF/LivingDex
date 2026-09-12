@@ -759,12 +759,11 @@
             <label for="segmentLayoutPreset" class="segment-layout-title">Box Layout Preset:</label>
             <span class="segment-layout-hint">Choose how boxes are sorted and grouped</span>
           </div>
-          <select id="segmentLayoutPreset" class="select segment-layout-select">
-            <option value="standard">Standard Dex (Forms at End)</option>
-            <option value="generational">Generational Clean (Padded Region Boxes)</option>
+          <select id="segmentLayoutPreset" class="select segment-layout-select" aria-label="Select box layout preset">
+            <option value="standard">Regional Pokédex (Default)</option>
+            <option value="national">National Pokédex Order (#001–#1025)</option>
             <option value="inline">All Forms Inline</option>
-            <option value="evolutionary">Evolution Lines (Cross-Gen Families)</option>
-            <option value="types">Primary Types (18 Boxes)</option>
+            <option value="evolutionary">Evolution Lines (Family Trees)</option>
             <option value="alphabetical">Alphabetical (A-Z)</option>
           </select>
           <div id="presetExplanationCard" class="preset-explanation-card" aria-live="polite"></div>

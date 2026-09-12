@@ -755,12 +755,124 @@ export const BOX_CAPACITY = 30;
  */
 export const LAYOUT_PRESETS = {
   STANDARD: "standard",
-  GENERATIONAL: "generational",
+  NATIONAL: "national",
   INLINE: "inline",
   EVOLUTIONARY: "evolutionary",
-  TYPES: "types",
   ALPHABETICAL: "alphabetical",
+  GENERATIONAL: "generational",
+  ALOLA_ISLANDS: "alola-islands",
+  KALOS_UNIFIED: "kalos-unified",
+  SWSH_UNIFIED: "swsh-unified",
+  SV_UNIFIED: "sv-unified",
+  HISUI_AREAS: "hisui-areas",
 };
+
+/**
+ * Resolves available layout presets for a specific game based on its capabilities and sections.
+ *
+ * @param {string} [gameId=ACTIVE_GAME_ID] - Active game ID.
+ * @param {Array<Object>} [sections=[]] - Active game sections.
+ * @returns {Array<{ id: string, title: string }>} List of valid layout preset descriptors.
+ */
+export function getAvailableLayoutPresetsForGame(
+  gameId = ACTIVE_GAME_ID,
+  sections = [],
+) {
+  const presets = [
+    {
+      id: LAYOUT_PRESETS.STANDARD,
+      title:
+        gameId === "home"
+          ? "Standard Dex (Forms at End)"
+          : "Regional Pokédex (Default)",
+    },
+  ];
+
+  // In Gen 1 (RBY), Kanto Dex is already identical to National Dex order (#001–#151)
+  if (gameId !== "rby") {
+    presets.push({
+      id: LAYOUT_PRESETS.NATIONAL,
+      title: "National Pokédex Order (#001–#1025)",
+    });
+  }
+
+  // Game-specific layout presets
+  if (gameId === "home") {
+    presets.push({
+      id: LAYOUT_PRESETS.GENERATIONAL,
+      title: "Generational Clean (Padded Region Boxes)",
+    });
+  } else if (gameId === "sm" || gameId === "usum") {
+    presets.push({
+      id: LAYOUT_PRESETS.ALOLA_ISLANDS,
+      title: "Alola Island Dexes (Melemele, Akala, Ula'ula, Poni)",
+    });
+  } else if (gameId === "xy") {
+    presets.push({
+      id: LAYOUT_PRESETS.KALOS_UNIFIED,
+      title: "Unified Kalos Dex (Central + Coastal + Mountain)",
+    });
+  } else if (gameId === "swsh") {
+    presets.push({
+      id: LAYOUT_PRESETS.SWSH_UNIFIED,
+      title: "Unified Galar + DLC Dex (Galar + Armor + Tundra)",
+    });
+  } else if (gameId === "sv") {
+    presets.push({
+      id: LAYOUT_PRESETS.SV_UNIFIED,
+      title: "Unified Paldea + DLC Dex (Paldea + Kitakami + Blueberry)",
+    });
+  } else if (gameId === "pla") {
+    presets.push({
+      id: LAYOUT_PRESETS.HISUI_AREAS,
+      title: "Expedition Area Dexes (5 Hisui Regions)",
+    });
+  }
+
+  // Check whether game has forms available before offering "All Forms Inline"
+  const hasForms =
+    Array.isArray(sections) &&
+    sections.some((sec) => {
+      const type = sec.type || sec.kind;
+      if (type === "forms" || type === "gender") {
+        return (
+          (sec.entries && sec.entries.length > 0) ||
+          (sec.manualIds && sec.manualIds.length > 0)
+        );
+      }
+      return (
+        sec.entries &&
+        sec.entries.some(
+          (e) =>
+            e.isRegional ||
+            (e.formId && e.formId !== e.speciesId) ||
+            e.gender === "female",
+        )
+      );
+    });
+
+  if (hasForms) {
+    presets.push({
+      id: LAYOUT_PRESETS.INLINE,
+      title: "All Forms Inline (Species Complete)",
+    });
+  }
+
+  // In Gen 1 (RBY), Kanto Dex is already in strict evolutionary line sequence
+  if (gameId !== "rby") {
+    presets.push({
+      id: LAYOUT_PRESETS.EVOLUTIONARY,
+      title: "Evolution Lines (Family Trees)",
+    });
+  }
+
+  presets.push({
+    id: LAYOUT_PRESETS.ALPHABETICAL,
+    title: "Alphabetical (A–Z)",
+  });
+
+  return presets;
+}
 
 /**
  * National Pokédex generation index ranges for generational box layout breaks.

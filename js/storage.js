@@ -45,7 +45,8 @@ const DEFAULT_SETTINGS = {
   defaultGameMode: "last-used", // 'last-used' | 'specific'
   defaultGameId: null,
   gameVersions: {}, // Map of gameId -> selected version string (e.g. { rby: "yellow" })
-  layoutPreset: "standard", // 'standard' | 'generational' | 'inline' | 'evolutionary' | 'dedicated-forms' | 'types' | 'alphabetical' | 'starters' | 'pantheon' | 'fossils'
+  gameLayoutPresets: {}, // Map of gameId -> selected layout preset (e.g. { sm: "alola-islands" })
+  layoutPreset: "standard", // Fallback / HOME preset
   showBoxCoordinates: false, // Whether to show Box X, Row R, Col C coordinates on slots/tooltips
   version: 1,
 };
@@ -84,6 +85,42 @@ export function saveSettings(next) {
     // ignore quota
   }
   return merged;
+}
+
+/**
+ * Get the active layout preset for a specific game.
+ * Falls back to global layoutPreset or 'standard'.
+ *
+ * @param {string} [gameId=ACTIVE_GAME_ID] - Target game ID.
+ * @returns {string} Layout preset identifier.
+ */
+export function getGameLayoutPreset(gameId = ACTIVE_GAME_ID) {
+  const settings = loadSettings();
+  if (settings.gameLayoutPresets && settings.gameLayoutPresets[gameId]) {
+    return settings.gameLayoutPresets[gameId];
+  }
+  if (gameId === "home" && settings.layoutPreset) {
+    return settings.layoutPreset;
+  }
+  return "standard";
+}
+
+/**
+ * Set and persist the layout preset for a specific game.
+ *
+ * @param {string} gameId - Target game ID.
+ * @param {string} presetKey - Layout preset identifier.
+ * @returns {AppSettings} Updated settings.
+ */
+export function setGameLayoutPreset(gameId, presetKey) {
+  const settings = loadSettings();
+  const gameLayoutPresets = { ...(settings.gameLayoutPresets || {}) };
+  gameLayoutPresets[gameId] = presetKey;
+  const update = { gameLayoutPresets };
+  if (gameId === "home") {
+    update.layoutPreset = presetKey;
+  }
+  return saveSettings(update);
 }
 
 /**
