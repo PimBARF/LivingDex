@@ -9,6 +9,9 @@ import {
   resetSegmentConfig,
   getSelectedGameVersion,
   setSelectedGameVersion,
+  encodeCaughtState,
+  loadCaughtSlots,
+  loadShinyCaughtSlots,
 } from "../storage.js";
 
 import {
@@ -25,7 +28,13 @@ import {
   getOrderedGameEntries,
 } from "../config.js";
 
-import { resetDexProgress, rebuildDexView } from "../state.js";
+import {
+  resetDexProgress,
+  rebuildDexView,
+  isShinyMode,
+  setShinyMode,
+  updateProgressBar,
+} from "../state.js";
 import { applyPersistedViewSettings } from "../main.js";
 import { refreshOfflineDataAndCaches, checkForUpdates } from "../pwa.js";
 import { applyBoxLabelsToHeaders, updateAllBoxProgress } from "./dom-render.js";
@@ -320,6 +329,95 @@ export function registerFiltersModal() {
   });
 }
 
+export const PRESET_EXPLANATIONS = {
+  standard: {
+    title: "Standard Dex",
+    badge: "Traditional Order",
+    desc: "Sequential National Pokédex order (#001–#1025). Regional variants, gender visual forms, and Gigantamax Pokémon are organized into dedicated form boxes at the end of the dex.",
+    details: [
+      "Continuous numerical flow from #001 Bulbasaur to #1025 Pecharunt",
+      "Dedicated trailing boxes for optional forms and variants",
+      "Standard organization for official Pokémon HOME collections",
+    ],
+  },
+  generational: {
+    title: "Generational Clean",
+    badge: "Regional Boxes",
+    desc: "Divides the Pokédex into 10 clean regional generation sections (Kanto through Paldea). Each generation starts in a fresh box, padding unused slots with empty spaces.",
+    details: [
+      "10 regional sections: Kanto → Johto → Hoenn → Sinnoh → Unova → Kalos → Alola → Galar → Hisui → Paldea",
+      "Boxes never mix Pokémon from different generations",
+      "Regional forms are placed with their debut generation",
+    ],
+  },
+  inline: {
+    title: "All Forms Inline",
+    badge: "Species Complete",
+    desc: "Groups all regional variants, female visual differences, and form variations directly adjacent to their base species in numerical Pokédex order.",
+    details: [
+      "Every variant immediately follows its base Pokémon (e.g. Raichu → Alolan Raichu)",
+      "Continuous numerical flow across boxes",
+      "Best for complete visual species living dexes",
+    ],
+  },
+  evolutionary: {
+    title: "Evolution Lines",
+    badge: "Family Trees",
+    desc: "Groups complete evolutionary families together across all generations in stage order, sorted by each line's earliest Pokédex number.",
+    details: [
+      "Cross-gen evolutionary relatives stay together (e.g. Pichu → Pikachu → Raichu)",
+      "Families arranged by stage (Basic → Stage 1 → Stage 2)",
+      "Ideal for evolutionary line collectors",
+    ],
+  },
+  types: {
+    title: "Primary Types",
+    badge: "18 Elemental Boxes",
+    desc: "Divides all Pokémon into 18 dedicated elemental sections based on each species' primary type (Normal, Fire, Water, Grass, Electric, etc.).",
+    details: [
+      "18 dedicated type sections sorted from Normal to Fairy",
+      "Each elemental type starts in its own dedicated box",
+      "Ideal for themed elemental collections",
+    ],
+  },
+  alphabetical: {
+    title: "Alphabetical (A–Z)",
+    badge: "A to Z Sequence",
+    desc: "Sorts all Pokémon alphabetically from A to Z based on your selected language (English, Japanese, French, German, etc.).",
+    details: [
+      "Strict A–Z alphabetical ordering",
+      "Automatically updates if display language changes",
+      "Boxes are numbered sequentially (Alphabetical 1, Alphabetical 2, etc.)",
+    ],
+  },
+};
+
+/**
+ * Renders the preset explanation card in both the Segments modal and Settings modal.
+ * @param {string} presetKey - The preset identifier (e.g. 'standard', 'generational').
+ */
+export function renderPresetExplanation(presetKey) {
+  const info = PRESET_EXPLANATIONS[presetKey] || PRESET_EXPLANATIONS.standard;
+  const cards = [
+    document.getElementById("presetExplanationCard"),
+    document.getElementById("settingsPresetExplanationCard"),
+  ];
+
+  cards.forEach((card) => {
+    if (!card) return;
+    card.innerHTML = `
+      <div class="preset-card-header">
+        <strong class="preset-card-title">${info.title}</strong>
+        <span class="preset-card-badge">${info.badge}</span>
+      </div>
+      <p class="preset-card-desc">${info.desc}</p>
+      <ul class="preset-card-details">
+        ${info.details.map((d) => `<li>${d}</li>`).join("")}
+      </ul>
+    `;
+  });
+}
+
 /**
  * Register Pokédex Segments & Reordering modal handlers and interactions.
  *
@@ -587,6 +685,56 @@ export function registerSegmentsModal({ onSegmentsUpdated } = {}) {
     syncAndSaveFromDom();
   });
 
+  // Shiny mode toggle inside modal
+  const modalShinyToggle = document.getElementById("modalShinyToggle");
+  modalShinyToggle?.addEventListener("change", async () => {
+    const nextMode = !!modalShinyToggle.checked;
+    setShinyMode(nextMode);
+    document.body.classList.toggle("shiny-mode", nextMode);
+
+    const { sections } = await buildActiveDexSections();
+    const combinedSpeciesIds = sections.flatMap((s) =>
+      s.entries.map((e) => e.speciesId),
+    );
+    const slotCount = combinedSpeciesIds.length;
+    rebuildDexView({ sections, slotCount });
+    if (combinedSpeciesIds.length) {
+      await loadSpeciesNames(combinedSpeciesIds);
+    }
+    updateProgressBar(slotCount);
+    showToast(
+      nextMode ? "✨ Switched to Shiny Dex" : "Switched to Regular Dex",
+      "info",
+    );
+  });
+
+  // Share progress link button inside modal
+  const modalShareBtn = document.getElementById("modalShareBtn");
+  modalShareBtn?.addEventListener("click", async () => {
+    const activeSlotCount =
+      document.querySelectorAll(".cell:not(.is-placeholder)").length || 0;
+    const shareHash = await encodeCaughtState(
+      isShinyMode ? loadShinyCaughtSlots() : loadCaughtSlots(),
+      activeSlotCount,
+    );
+    const url =
+      location.origin + location.pathname + location.search + shareHash;
+    try {
+      await navigator.clipboard.writeText(url);
+      showToast("Link copied to clipboard!", "success");
+      const btnText = document.getElementById("modalShareBtnText");
+      if (btnText) {
+        btnText.textContent = "Copied! ✓";
+        setTimeout(() => {
+          btnText.textContent = "Copy Link";
+        }, 2000);
+      }
+    } catch {
+      prompt("Copy this link:", url);
+      showToast("Manual copy required.", "warning");
+    }
+  });
+
   // Layout preset dropdown handler
   const segmentLayoutSection = document.getElementById(
     "segmentLayoutPresetSection",
@@ -603,6 +751,7 @@ export function registerSegmentsModal({ onSegmentsUpdated } = {}) {
       "settingsLayoutPreset",
     );
     if (settingsLayoutPreset) settingsLayoutPreset.value = nextVal;
+    renderPresetExplanation(nextVal);
     await refreshActiveDex();
   });
 
@@ -623,9 +772,17 @@ export function registerSegmentsModal({ onSegmentsUpdated } = {}) {
         localStorage.setItem("livingdex-seen-segments-guide", "true");
         openBtn?.classList.remove("has-discovery-pulse");
       } catch {}
-      if (segmentLayoutPreset) {
-        segmentLayoutPreset.value = loadSettings().layoutPreset || "standard";
+
+      if (modalShinyToggle) {
+        modalShinyToggle.checked = isShinyMode;
       }
+
+      const activePreset = loadSettings().layoutPreset || "standard";
+      if (segmentLayoutPreset) {
+        segmentLayoutPreset.value = activePreset;
+      }
+      renderPresetExplanation(activePreset);
+
       populateSegmentsList();
       closeBtn?.focus();
     },
@@ -877,7 +1034,9 @@ export function registerSettingsControls() {
     const layoutPresetRow = document.getElementById("settingsLayoutPresetRow");
     if (layoutPresetRow) layoutPresetRow.hidden = ACTIVE_GAME_ID !== "home";
     const layoutPreset = document.getElementById("settingsLayoutPreset");
-    if (layoutPreset) layoutPreset.value = settings.layoutPreset || "standard";
+    const activePreset = settings.layoutPreset || "standard";
+    if (layoutPreset) layoutPreset.value = activePreset;
+    renderPresetExplanation(activePreset);
     if (language) language.value = settings.language || "en";
     if (spriteStyle) spriteStyle.value = settings.spriteStyle || "pokesprites";
     if (defaultGameModeSelect)
@@ -976,6 +1135,7 @@ export function registerSettingsControls() {
     saveSettings(nextSettings);
     const segmentLayoutPreset = document.getElementById("segmentLayoutPreset");
     if (segmentLayoutPreset) segmentLayoutPreset.value = nextLayoutPreset;
+    renderPresetExplanation(nextLayoutPreset);
 
     applyTheme(nextSettings.theme);
     applyReducedMotionPreference(nextSettings.reducedMotion);

@@ -247,9 +247,7 @@ export async function renderGameInfo() {
 
   const segmentsBtn = document.getElementById("segmentsBtn");
   if (segmentsBtn) {
-    segmentsBtn.title = optionalSegments.length
-      ? `Configure ${ACTIVE_GAME.title} Segments & Order`
-      : `View ${ACTIVE_GAME.title} Dex Structure`;
+    segmentsBtn.title = `Configure ${ACTIVE_GAME.title} Dex Options, Layout & Forms`;
 
     try {
       const hasSeenGuide = localStorage.getItem(
