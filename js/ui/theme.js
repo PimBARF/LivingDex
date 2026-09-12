@@ -4,17 +4,19 @@ import { loadSettings, saveSettings } from "../storage.js";
  * Media query list to detect system dark mode preference.
  * @type {MediaQueryList | null}
  */
-const SYSTEM_THEME_MQL = window.matchMedia
-  ? window.matchMedia("(prefers-color-scheme: dark)")
-  : null;
+const SYSTEM_THEME_MQL =
+  typeof window !== "undefined" && typeof window.matchMedia === "function"
+    ? window.matchMedia("(prefers-color-scheme: dark)")
+    : null;
 
 /**
  * Media query list to detect system reduced motion preference.
  * @type {MediaQueryList | null}
  */
-const REDUCED_MOTION_MQL = window.matchMedia
-  ? window.matchMedia("(prefers-reduced-motion: reduce)")
-  : null;
+const REDUCED_MOTION_MQL =
+  typeof window !== "undefined" && typeof window.matchMedia === "function"
+    ? window.matchMedia("(prefers-reduced-motion: reduce)")
+    : null;
 
 /**
  * Resolve the effective color scheme ('light' or 'dark') based on the requested mode.

@@ -587,6 +587,20 @@ export function registerSegmentsModal({ onSegmentsUpdated } = {}) {
     syncAndSaveFromDom();
   });
 
+  // Layout preset dropdown handler
+  const segmentLayoutPreset = document.getElementById("segmentLayoutPreset");
+  segmentLayoutPreset?.addEventListener("change", async () => {
+    const nextVal = segmentLayoutPreset.value;
+    saveSettings({ layoutPreset: nextVal });
+    const headerLayoutPreset = document.getElementById("headerLayoutPreset");
+    if (headerLayoutPreset) headerLayoutPreset.value = nextVal;
+    const settingsLayoutPreset = document.getElementById(
+      "settingsLayoutPreset",
+    );
+    if (settingsLayoutPreset) settingsLayoutPreset.value = nextVal;
+    await refreshActiveDex();
+  });
+
   // Reset order button handler
   resetBtn?.addEventListener("click", () => {
     resetSegmentConfig();
@@ -604,6 +618,9 @@ export function registerSegmentsModal({ onSegmentsUpdated } = {}) {
         localStorage.setItem("livingdex-seen-segments-guide", "true");
         openBtn?.classList.remove("has-discovery-pulse");
       } catch {}
+      if (segmentLayoutPreset) {
+        segmentLayoutPreset.value = loadSettings().layoutPreset || "standard";
+      }
       populateSegmentsList();
       closeBtn?.focus();
     },
@@ -850,6 +867,8 @@ export function registerSettingsControls() {
     );
     if (autoCollapseFull)
       autoCollapseFull.checked = !!settings.autoCollapseFullBoxes;
+    const layoutPreset = document.getElementById("settingsLayoutPreset");
+    if (layoutPreset) layoutPreset.value = settings.layoutPreset || "standard";
     if (language) language.value = settings.language || "en";
     if (spriteStyle) spriteStyle.value = settings.spriteStyle || "pokesprites";
     if (defaultGameModeSelect)
@@ -900,10 +919,13 @@ export function registerSettingsControls() {
   async function persistSettingsFromControls() {
     const settings = loadSettings();
     const previousLanguage = settings.language;
+    const previousLayoutPreset = settings.layoutPreset || "standard";
     const selectedTheme =
       document.querySelector('input[name="settingsTheme"]:checked')?.value ||
       settings.theme ||
       "auto";
+    const nextLayoutPreset =
+      document.getElementById("settingsLayoutPreset")?.value || "standard";
     const nextSettings = {
       ...settings,
       theme: selectedTheme,
@@ -918,6 +940,7 @@ export function registerSettingsControls() {
       autoCollapseFullBoxes: !!document.getElementById(
         "settingsAutoCollapseFull",
       )?.checked,
+      layoutPreset: nextLayoutPreset,
       language: document.getElementById("settingsLanguage")?.value || "en",
       spriteStyle:
         document.getElementById("settingsSpriteStyle")?.value || "pokesprites",
@@ -937,8 +960,25 @@ export function registerSettingsControls() {
     }
 
     saveSettings(nextSettings);
+    const headerLayoutPreset = document.getElementById("headerLayoutPreset");
+    if (headerLayoutPreset) headerLayoutPreset.value = nextLayoutPreset;
+    const segmentLayoutPreset = document.getElementById("segmentLayoutPreset");
+    if (segmentLayoutPreset) segmentLayoutPreset.value = nextLayoutPreset;
+
     applyTheme(nextSettings.theme);
     applyReducedMotionPreference(nextSettings.reducedMotion);
+
+    if (previousLayoutPreset !== nextLayoutPreset) {
+      const { sections, warnings } = await buildActiveDexSections();
+      const combinedSpeciesIds = sections.flatMap((s) =>
+        s.entries.map((e) => e.speciesId),
+      );
+      const slotCount = combinedSpeciesIds.length;
+      rebuildDexView({ sections, slotCount });
+      if (combinedSpeciesIds.length) {
+        await loadSpeciesNames(combinedSpeciesIds);
+      }
+    }
 
     const speciesOrder = Array.from(
       document.querySelectorAll(".cell:not(.is-placeholder)"),
@@ -1345,6 +1385,9 @@ export function registerSettingsControls() {
     ?.addEventListener("change", persistSettingsFromControls);
   document
     .getElementById("settingsGameVersion")
+    ?.addEventListener("change", persistSettingsFromControls);
+  document
+    .getElementById("settingsLayoutPreset")
     ?.addEventListener("change", persistSettingsFromControls);
 
   defaultGameModeSelect?.addEventListener("change", () => {

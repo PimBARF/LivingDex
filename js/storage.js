@@ -45,6 +45,7 @@ const DEFAULT_SETTINGS = {
   defaultGameMode: "last-used", // 'last-used' | 'specific'
   defaultGameId: null,
   gameVersions: {}, // Map of gameId -> selected version string (e.g. { rby: "yellow" })
+  layoutPreset: "standard", // 'standard' | 'generational' | 'inline' | 'evolutionary'
   version: 1,
 };
 

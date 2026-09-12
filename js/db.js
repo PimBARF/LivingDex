@@ -7,6 +7,7 @@ import {
   loadSpecimenInventory,
   getSelectedGameVersion,
 } from "./storage.js";
+import { applyLayoutPreset } from "./layout.js";
 import { applyNamesToCells } from "./ui/dom-render.js";
 
 /**
@@ -305,9 +306,10 @@ export async function buildActiveDexSections() {
     ? segmentConfig.order
     : [];
 
-  const [gameData] = await Promise.all([
+  const [gameData, speciesData, evolutionsData] = await Promise.all([
     getGameDexData(ACTIVE_GAME_ID),
     getAllSpeciesData(),
+    getAllEvolutionData(),
   ]);
 
   const sections = [];
@@ -366,7 +368,15 @@ export async function buildActiveDexSections() {
     }
   }
 
-  return { sections, warnings };
+  const settings = loadSettings();
+  const activePreset = settings.layoutPreset || "standard";
+  const transformedSections = applyLayoutPreset(sections, activePreset, {
+    speciesData,
+    evolutionsData,
+    gameId: ACTIVE_GAME_ID,
+  });
+
+  return { sections: transformedSections, warnings };
 }
 
 /**

@@ -1,5 +1,6 @@
 import {
   loadSettings,
+  saveSettings,
   loadCaughtSlots,
   encodeCaughtState,
 } from "../storage.js";
@@ -8,6 +9,7 @@ import { showToast } from "./modals.js";
 import { isShinyMode, setShinyMode, rebuildDexView } from "../state.js";
 import {
   buildActiveDexSections,
+  loadSpeciesNames,
   buildEvolutionStageMap,
   getAllEvolutionData,
   getGameFilterCapabilities,
@@ -1144,6 +1146,31 @@ export function registerHeaderControls(slotCount) {
     const currentSlotCount = combinedSpeciesIds.length;
     rebuildDexView({ sections, slotCount: currentSlotCount });
   });
+
+  // Layout preset dropdown in header
+  const headerLayoutSelect = document.getElementById("headerLayoutPreset");
+  if (headerLayoutSelect) {
+    headerLayoutSelect.value = loadSettings().layoutPreset || "standard";
+    headerLayoutSelect.addEventListener("change", async () => {
+      const nextPreset = headerLayoutSelect.value;
+      saveSettings({ layoutPreset: nextPreset });
+
+      const segSelect = document.getElementById("segmentLayoutPreset");
+      if (segSelect) segSelect.value = nextPreset;
+      const setSelect = document.getElementById("settingsLayoutPreset");
+      if (setSelect) setSelect.value = nextPreset;
+
+      const { sections } = await buildActiveDexSections();
+      const combinedSpeciesIds = sections.flatMap((s) =>
+        s.entries.map((e) => e.speciesId),
+      );
+      const currentSlotCount = combinedSpeciesIds.length;
+      rebuildDexView({ sections, slotCount: currentSlotCount });
+      if (combinedSpeciesIds.length) {
+        await loadSpeciesNames(combinedSpeciesIds);
+      }
+    });
+  }
 
   // Share button
   shareButton?.addEventListener("click", async () => {

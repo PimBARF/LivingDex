@@ -132,6 +132,12 @@
       <div id="gameTitleRow">
         <h1 id="gameTitle">LivingDex Tracker</h1>
         <div class="game-title-actions">
+          <select id="headerLayoutPreset" class="select header-layout-select" title="Box Layout Preset" aria-label="Box Layout Preset">
+            <option value="standard">🌟 Standard Dex</option>
+            <option value="generational">🗺️ Generational Clean</option>
+            <option value="inline">🧩 All Forms Inline</option>
+            <option value="evolutionary">🌳 Evolution Lines</option>
+          </select>
           <button id="missingGuideBtn" class="btn missing-guide-btn" type="button" title="Missing Pokémon &amp; Family Quotas Guide (M)" aria-label="Open Missing Pokémon Guide" aria-haspopup="dialog">🎯<span class="missing-guide-btn-text"> Missing Guide</span><span id="missingGuideBadge" class="missing-count-badge" hidden>0</span></button>
           <button id="segmentsBtn" class="btn segments-btn" type="button" title="Configure Pokédex Segments &amp; Forms" aria-label="Configure Pokédex Segments &amp; Forms" aria-haspopup="dialog">📑<span class="segments-btn-text"> Segments</span></button>
           <button id="shinyToggle" class="btn" type="button" title="Toggle Shiny Mode" aria-pressed="false" aria-label="Toggle Shiny Mode">✨</button>
@@ -415,8 +421,23 @@
           </section>
 
           <section class="settings-section" aria-labelledby="settingsBoxesCustomHeading">
-            <h4 id="settingsBoxesCustomHeading">Box Layout &amp; Customization</h4>
+            <h4 id="settingsBoxesCustomHeading">Box Layout &amp; Presets</h4>
             <div class="settings-group">
+              <div class="settings-row">
+                <div class="settings-row-text">
+                  <label for="settingsLayoutPreset" class="settings-row-title">Box Sorting Preset</label>
+                  <span class="settings-row-subtitle">How Pokémon are grouped and ordered across boxes</span>
+                </div>
+                <div class="settings-row-control">
+                  <select id="settingsLayoutPreset" class="select settings-select">
+                    <option value="standard">Standard National (Forms at End)</option>
+                    <option value="generational">Generational Clean (Padded Region Boxes)</option>
+                    <option value="inline">Species-Complete (All Forms Inline)</option>
+                    <option value="evolutionary">Evolutionary Families (Cross-Gen Lines)</option>
+                  </select>
+                </div>
+              </div>
+
               <div class="settings-row settings-action-row">
                 <div class="settings-row-text">
                   <span class="settings-row-title">Reset box titles</span>
@@ -741,8 +762,21 @@
       </div>
 
       <div class="segments-modal-body">
+        <div class="segment-layout-section">
+          <div class="segment-layout-header">
+            <label for="segmentLayoutPreset" class="segment-layout-title">📦 Box Layout Preset:</label>
+            <span class="segment-layout-hint">Choose how boxes are sorted and grouped</span>
+          </div>
+          <select id="segmentLayoutPreset" class="select segment-layout-select">
+            <option value="standard">Standard National (Forms at End)</option>
+            <option value="generational">Generational Clean (Padded Region Boxes)</option>
+            <option value="inline">Species-Complete (All Forms Inline)</option>
+            <option value="evolutionary">Evolutionary Families (Cross-Gen Lines)</option>
+          </select>
+        </div>
+
         <div class="segment-presets-section">
-          <span class="segment-presets-title">Presets:</span>
+          <span class="segment-presets-title">Content Presets:</span>
           <div id="segmentPresetsGroup" class="segment-presets-group">
             <button type="button" class="btn btn-sm btn-secondary segment-preset-btn" data-preset="base">Base Game</button>
             <button type="button" class="btn btn-sm btn-secondary segment-preset-btn" data-preset="dlc">Base + DLC</button>

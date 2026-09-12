@@ -39,6 +39,18 @@ export function setShinyMode(active) {
  */
 export function countCaughtSlots(slotCount) {
   const caught = isShinyMode ? loadShinyCaughtSlots() : loadCaughtSlots();
+  const cells = document.querySelectorAll(".cell:not(.is-placeholder)");
+  if (cells.length > 0) {
+    let total = 0;
+    for (const cell of cells) {
+      const key = cell.dataset.specimenKey;
+      const slot = Number(cell.dataset.regional);
+      if ((key && caught[key]) || (slot && caught[slot])) {
+        total += 1;
+      }
+    }
+    return total;
+  }
   let total = 0;
   for (let slot = 1; slot <= slotCount; slot += 1) {
     if (caught[slot]) total += 1;

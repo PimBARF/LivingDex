@@ -18,6 +18,7 @@ import { openPokemonInfoModal } from "./pokemon-info.js";
 import { applyHideCaughtFilter } from "./controls.js";
 import { updateProgressBar, isShinyMode } from "../state.js";
 import { getSpeciesTypes } from "../db.js";
+import { getSpecimenKey } from "../layout.js";
 
 // =============================================================================
 // DOM RENDERING & BOX MANAGEMENT
@@ -290,8 +291,9 @@ export function updateBoxProgress(box) {
   const caught = isShinyMode ? loadShinyCaughtSlots() : loadCaughtSlots();
   let caughtCount = 0;
   for (const cell of cells) {
+    const key = cell.dataset.specimenKey;
     const slot = Number(cell.dataset.regional);
-    if (caught[slot]) {
+    if ((key && caught[key]) || (slot && caught[slot])) {
       caughtCount += 1;
     }
   }
@@ -566,6 +568,12 @@ export function createDexSlot(
   button.dataset.formName = formName || "";
   button.dataset.formTitle = formTitle || "";
   button.dataset.speciesName = name;
+  button.dataset.specimenKey = getSpecimenKey(
+    speciesId,
+    formId,
+    gender,
+    spriteId,
+  );
 
   const variantText = getVariantSubtitle(name, formTitle, formName, gender);
   const displayName =
@@ -755,7 +763,12 @@ export function populateDexSlots(sections, slotCount, onComplete) {
           spriteId,
         );
 
-        if (caught[slotIdx]) {
+        const specimenKey =
+          entry.specimenKey ||
+          getSpecimenKey(speciesId, formId, gender, spriteId);
+        cell.dataset.specimenKey = specimenKey;
+
+        if ((specimenKey && caught[specimenKey]) || caught[slotIdx]) {
           cell.classList.add("caught");
           cell.setAttribute("aria-pressed", "true");
         }
@@ -787,13 +800,27 @@ export function populateDexSlots(sections, slotCount, onComplete) {
               if (targetCell) {
                 targetCell.classList.toggle("caught", targetState);
                 targetCell.setAttribute("aria-pressed", String(targetState));
-                nextCaught[slot] = targetState;
+                const tKey = targetCell.dataset.specimenKey;
+                if (targetState) {
+                  if (tKey) nextCaught[tKey] = true;
+                  nextCaught[slot] = true;
+                } else {
+                  if (tKey) delete nextCaught[tKey];
+                  delete nextCaught[slot];
+                }
               }
             }
           } else {
             cell.classList.toggle("caught", isCaught);
             cell.setAttribute("aria-pressed", String(isCaught));
-            nextCaught[regionalSlot] = isCaught;
+            const cKey = cell.dataset.specimenKey;
+            if (isCaught) {
+              if (cKey) nextCaught[cKey] = true;
+              nextCaught[regionalSlot] = true;
+            } else {
+              if (cKey) delete nextCaught[cKey];
+              delete nextCaught[regionalSlot];
+            }
           }
 
           lastClickedSlotIndex = regionalSlot;
@@ -1005,6 +1032,14 @@ export function registerTouchDragSelection(slotCount) {
       setTimeout(() => cell.classList.remove("is-drag-active"), 250);
 
       nextCaughtStateMap[slot] = targetCaughtState;
+      const key = cell.dataset.specimenKey;
+      if (key) {
+        if (targetCaughtState) {
+          nextCaughtStateMap[key] = true;
+        } else {
+          delete nextCaughtStateMap[key];
+        }
+      }
       lastClickedSlotIndex = slot;
 
       if (navigator.vibrate) {
@@ -1138,6 +1173,14 @@ export function registerTouchDragSelection(slotCount) {
         startCell.classList.toggle("caught", targetCaughtState);
         startCell.setAttribute("aria-pressed", String(targetCaughtState));
         nextCaughtStateMap[regionalSlot] = targetCaughtState;
+        const key = startCell.dataset.specimenKey;
+        if (key) {
+          if (targetCaughtState) {
+            nextCaughtStateMap[key] = true;
+          } else {
+            delete nextCaughtStateMap[key];
+          }
+        }
         lastClickedSlotIndex = regionalSlot;
 
         updateDragHud(true, targetCaughtState, 1);
@@ -1251,13 +1294,23 @@ export function registerBoxControls(slotCount) {
       toggleBtn.onclick = () => {
         const caught = isShinyMode ? loadShinyCaughtSlots() : loadCaughtSlots();
         const cells = interactiveCells();
-        const allCaught = cells.every(
-          (cell) => caught[Number(cell.dataset.regional)],
-        );
+        const allCaught = cells.every((cell) => {
+          const key = cell.dataset.specimenKey;
+          const reg = Number(cell.dataset.regional);
+          return (key && caught[key]) || (reg && caught[reg]);
+        });
         cells.forEach((cell) => {
+          const key = cell.dataset.specimenKey;
+          const reg = Number(cell.dataset.regional);
           cell.classList.toggle("caught", !allCaught);
           cell.setAttribute("aria-pressed", String(!allCaught));
-          caught[Number(cell.dataset.regional)] = !allCaught;
+          if (!allCaught) {
+            if (key) caught[key] = true;
+            caught[reg] = true;
+          } else {
+            if (key) delete caught[key];
+            delete caught[reg];
+          }
         });
 
         if (isShinyMode) {
