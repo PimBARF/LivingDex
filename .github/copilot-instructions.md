@@ -76,6 +76,7 @@
    - Centralized **Dex Options** modal (`modalSegments`) integrates:
      - **Shiny Dex Mode** toggle (`modalShinyToggle`)
      - **Share Progress** button (`modalShareBtn`)
+     - **Active Game Version** selector (`segmentGameVersion`) for games with multiple versions (e.g. Scarlet/Violet, Red/Blue/Yellow)
      - **6 HOME Box Sorting Presets** (_Standard_, _Generational_, _Inline_, _Evolutionary_, _Types_, _Alphabetical_) with dynamic detail cards. Strictly scoped to Pokémon HOME (`ACTIVE_GAME_ID === "home"`).
      - Segment toggle checkboxes (DLCs, regional forms, cosmetic variants, visual gender differences) and drag-and-drop / arrow reordering.
    - Segment states are saved in `localStorage` under `${storagePrefix}-segments-v1` (`{ enabled: string[], order: string[] }`). Layout preset is stored under `livingdex-settings-v1.layoutPreset`.

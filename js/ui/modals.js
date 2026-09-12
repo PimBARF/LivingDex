@@ -745,6 +745,43 @@ export function registerSegmentsModal({ onSegmentsUpdated } = {}) {
     await refreshActiveDex();
   });
 
+  // Game version dropdown handler
+  const segmentGameVersionSection = document.getElementById(
+    "segmentGameVersionSection",
+  );
+  const segmentGameVersionSelect =
+    document.getElementById("segmentGameVersion");
+
+  async function populateGameVersionSelect() {
+    if (!segmentGameVersionSection || !segmentGameVersionSelect) return;
+    const dexData = await getGameDexData(ACTIVE_GAME_ID).catch(() => null);
+    const versions = dexData?.versions || [];
+    if (versions.length > 1 && ACTIVE_GAME_ID !== "home") {
+      segmentGameVersionSection.hidden = false;
+      segmentGameVersionSelect.innerHTML = "";
+
+      const allOpt = document.createElement("option");
+      allOpt.value = "all";
+      allOpt.textContent = `All Versions (${versions.map(formatVersionName).join(" / ")})`;
+      segmentGameVersionSelect.appendChild(allOpt);
+
+      versions.forEach((v) => {
+        const opt = document.createElement("option");
+        opt.value = v;
+        opt.textContent = formatVersionName(v);
+        segmentGameVersionSelect.appendChild(opt);
+      });
+      segmentGameVersionSelect.value =
+        getSelectedGameVersion(ACTIVE_GAME_ID) || "all";
+    } else {
+      segmentGameVersionSection.hidden = true;
+    }
+  }
+
+  segmentGameVersionSelect?.addEventListener("change", () => {
+    setSelectedGameVersion(ACTIVE_GAME_ID, segmentGameVersionSelect.value);
+  });
+
   // Reset order button handler
   resetBtn?.addEventListener("click", () => {
     resetSegmentConfig();
@@ -777,6 +814,7 @@ export function registerSegmentsModal({ onSegmentsUpdated } = {}) {
       }
       renderPresetExplanation(activePreset);
 
+      populateGameVersionSelect();
       populateSegmentsList();
       closeBtn?.focus();
     },
@@ -1038,34 +1076,6 @@ export function registerSettingsControls() {
       defaultGameWrapper.hidden =
         (defaultGameModeSelect?.value || "last-used") !== "specific";
     }
-
-    const gameVersionRow = document.getElementById("settingsGameVersionRow");
-    const gameVersionSelect = document.getElementById("settingsGameVersion");
-    if (gameVersionRow && gameVersionSelect) {
-      getGameDexData(ACTIVE_GAME_ID).then((dexData) => {
-        const versions = dexData?.versions || [];
-        if (versions.length > 1 && ACTIVE_GAME_ID !== "home") {
-          gameVersionRow.hidden = false;
-          gameVersionSelect.innerHTML = "";
-
-          const allOpt = document.createElement("option");
-          allOpt.value = "all";
-          allOpt.textContent = `All Versions (${versions.map(formatVersionName).join(" / ")})`;
-          gameVersionSelect.appendChild(allOpt);
-
-          versions.forEach((v) => {
-            const opt = document.createElement("option");
-            opt.value = v;
-            opt.textContent = formatVersionName(v);
-            gameVersionSelect.appendChild(opt);
-          });
-          gameVersionSelect.value =
-            getSelectedGameVersion(ACTIVE_GAME_ID) || "all";
-        } else {
-          gameVersionRow.hidden = true;
-        }
-      });
-    }
   }
 
   /**
@@ -1107,14 +1117,6 @@ export function registerSettingsControls() {
       defaultGameId:
         document.getElementById("settingsDefaultGame")?.value || null,
     };
-
-    const gameVersionSelect = document.getElementById("settingsGameVersion");
-    if (
-      gameVersionSelect &&
-      !gameVersionSelect.closest("#settingsGameVersionRow")?.hidden
-    ) {
-      setSelectedGameVersion(ACTIVE_GAME_ID, gameVersionSelect.value);
-    }
 
     saveSettings(nextSettings);
 
@@ -1526,9 +1528,6 @@ export function registerSettingsControls() {
     ?.addEventListener("change", persistSettingsFromControls);
   document
     .getElementById("settingsSpriteStyle")
-    ?.addEventListener("change", persistSettingsFromControls);
-  document
-    .getElementById("settingsGameVersion")
     ?.addEventListener("change", persistSettingsFromControls);
 
   defaultGameModeSelect?.addEventListener("change", () => {

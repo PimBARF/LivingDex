@@ -280,18 +280,6 @@
                   </select>
                 </div>
               </div>
-
-              <div id="settingsGameVersionRow" class="settings-row" hidden>
-                <div class="settings-row-text">
-                  <label for="settingsGameVersion" class="settings-row-title">Active game version</label>
-                  <span class="settings-row-subtitle">Tailor wild encounters and missing guide to your cartridge</span>
-                </div>
-                <div class="settings-row-control">
-                  <select id="settingsGameVersion" class="select settings-select">
-                    <option value="all">All Versions</option>
-                  </select>
-                </div>
-              </div>
             </div>
           </section>
 
@@ -780,6 +768,16 @@
             <option value="alphabetical">Alphabetical (A-Z)</option>
           </select>
           <div id="presetExplanationCard" class="preset-explanation-card" aria-live="polite"></div>
+        </div>
+
+        <div id="segmentGameVersionSection" class="segment-layout-section" hidden>
+          <div class="segment-layout-header">
+            <label for="segmentGameVersion" class="segment-layout-title">Active Game Version:</label>
+            <span class="segment-layout-hint">Tailor encounters &amp; missing guide to your cartridge</span>
+          </div>
+          <select id="segmentGameVersion" class="select segment-layout-select" aria-label="Select active game version">
+            <option value="all">All Versions</option>
+          </select>
         </div>
 
         <div class="segment-modal-tip">
