@@ -4,7 +4,13 @@ These rules apply when developing and modifying the **LivingDex** frontend Progr
 
 ---
 
-## 1. Service Worker & Cache Lifecycle (`sw.js`)
+## 1. Semantic Versioning & Service Worker Lifecycle (`sw.js`)
+
+Follow semantic versioning (`vMAJOR.MINOR.PATCH`) for all frontend and dataset updates:
+
+- **`PATCH` (`v1.10.0` ➔ `v1.10.1`)**: Bug fixes, CSS/UI layout adjustments, missing sprite fallbacks, typo fixes, or internal code refactors.
+- **`MINOR` (`v1.10.x` ➔ `v1.11.0`)**: New features, new game Pokédexes, new layout presets, new modals/tools (e.g. Missing Guide, HOME Sort, Multi-Filter), non-breaking dataset additions.
+- **`MAJOR` (`v1.x.x` ➔ `v2.0.0`)**: Incompatible storage schema changes (unmigrated `localStorage`/`IndexedDB`), URL hash sharing protocol breaks, or architectural rewrites.
 
 Whenever any changes are made to the frontend application:
 
@@ -23,6 +29,7 @@ For every new feature, bug fix, refactor, or dataset update in LivingDex:
   - Add or update the version entry under `## [vX.Y.Z] - YYYY-MM-DD`.
   - Update the top `## 📑 Release Timeline` summary table with the version anchor link, release date, and key highlights.
   - Categorize changes using standard sections: `### Added`, `### Changed`, `### Fixed`, `### Removed`.
+- **Sync Suite Changelog**: Keep `LivingDex-Suite/CHANGELOG.md` in lockstep with `LivingDex/CHANGELOG.md`.
 
 ---
 
