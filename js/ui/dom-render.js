@@ -386,6 +386,7 @@ export function renderDexSectionBoxes(
   slotsInSection,
   startGlobalSlot,
   startLocalIndex = 1,
+  sectionMeta = {},
 ) {
   const fragment = document.createDocumentFragment();
 
@@ -397,6 +398,20 @@ export function renderDexSectionBoxes(
 
   const labels = loadBoxLabels();
   const collapsedBoxes = getActiveCollapsedBoxes();
+
+  const isBase =
+    sectionMeta?.kind === "base" ||
+    sectionMeta?.type === "base" ||
+    sectionKey === "national" ||
+    sectionKey.startsWith("national-") ||
+    (!sectionMeta?.kind &&
+      !sectionMeta?.type &&
+      !sectionKey.startsWith("gen-") &&
+      !sectionKey.startsWith("type-") &&
+      !sectionKey.startsWith("forms") &&
+      !sectionKey.startsWith("gender") &&
+      !sectionKey.startsWith("regional") &&
+      !sectionKey.startsWith("gmax"));
 
   const boxCount = Math.ceil(slotsInSection / BOX_CAPACITY);
   for (let boxIndex = 0; boxIndex < boxCount; boxIndex += 1) {
@@ -411,8 +426,34 @@ export function renderDexSectionBoxes(
       startGlobalSlot + slotsInSection - 1,
     );
     const boxId = `${sectionKey}:${boxIndex}`;
-    const rangeText = `#${String(localStart).padStart(3, "0")}–${String(localEnd).padStart(3, "0")}`;
-    const defaultTitle = `${sectionTitle} — ${rangeText}`;
+    const rangeText =
+      localStart === localEnd
+        ? `#${String(localStart).padStart(3, "0")}`
+        : `#${String(localStart).padStart(3, "0")}-${String(localEnd).padStart(3, "0")}`;
+
+    let defaultTitle = "";
+    if (sectionKey.startsWith("gen-")) {
+      // Generational Clean: "Kanto - #001-030", "Hisui - #899-905"
+      defaultTitle = `${sectionTitle} - ${rangeText}`;
+    } else if (sectionKey.startsWith("type-")) {
+      // Primary Types: "Fire Type", "Water Type 1", "Water Type 2"
+      defaultTitle =
+        boxCount > 1 ? `${sectionTitle} ${boxIndex + 1}` : sectionTitle;
+    } else if (sectionKey === "national-alphabetical") {
+      // Alphabetical (A-Z): "Alphabetical 1", "Alphabetical 2", etc.
+      defaultTitle =
+        boxCount > 1 ? `Alphabetical ${boxIndex + 1}` : "Alphabetical";
+    } else if (isBase) {
+      // Base Dex / Standard National / All Forms Inline / Evolution Lines / Cartridge Dexes:
+      // Just the numbers on the boxes: "#001-030", "#031-060"
+      defaultTitle = rangeText;
+    } else {
+      // Forms / Extra segments (Regional Forms, Gender Variants, G-Max, etc.):
+      // Name without numbers; numbered if multiple boxes (e.g. "Regional Forms 1", "Regional Forms 2")
+      defaultTitle =
+        boxCount > 1 ? `${sectionTitle} ${boxIndex + 1}` : sectionTitle;
+    }
+
     const customTitle = labels[boxId] || "";
     const displayTitle = customTitle || defaultTitle;
     const isCollapsed = collapsedBoxes.has(boxId);
@@ -436,7 +477,7 @@ export function renderDexSectionBoxes(
         </div>
         <div class="box-action-pill" role="group" aria-label="Box actions for ${displayTitle}">
           <span class="box-progress-badge" aria-label="Box progress">0/30</span>
-          <button class="box-toggle" type="button" data-range="${globalStart}-${globalEnd}" aria-label="Mark all caught in ${rangeText}">✓ All</button>
+          <button class="box-toggle" type="button" data-range="${globalStart}-${globalEnd}" aria-label="Mark all caught in ${displayTitle}">✓ All</button>
         </div>
       </div>
       <div class="box-content">
@@ -733,10 +774,13 @@ export function populateDexSlots(sections, slotCount, onComplete) {
    */
   function renderBoxTask(task) {
     if (!task || !task.grid) return;
+    const boxEl = task.grid.closest(".box");
+    const boxNum = boxEl?.dataset?.boxNum || boxEl?.dataset?.boxIndex || "";
+    const showCoords = !!loadSettings().showBoxCoordinates;
     const fragment = document.createDocumentFragment();
 
     task.entries.forEach(
-      ({ entry, globalSlotIndex: slotIdx, localIndex: locIdx }) => {
+      ({ entry, globalSlotIndex: slotIdx, localIndex: locIdx }, entryIdx) => {
         const {
           speciesId,
           formId,
@@ -748,7 +792,7 @@ export function populateDexSlots(sections, slotCount, onComplete) {
         } = entry;
         const speciesName =
           window.__livingDexNames?.[speciesId] || `#${speciesId}`;
-        const num = dexNumber != null ? dexNumber : locIdx + 1;
+        const num = dexNumber != null ? dexNumber : speciesId;
         const displayIndex = String(num).padStart(3, "0");
         const cell = createDexSlot(
           slotIdx,
@@ -762,6 +806,21 @@ export function populateDexSlots(sections, slotCount, onComplete) {
           formTitle,
           spriteId,
         );
+
+        const slotInBox = entryIdx + 1;
+        const row = Math.floor(entryIdx / 6) + 1;
+        const col = (entryIdx % 6) + 1;
+        const coordText = `Box ${boxNum || "?"} · R${row}:C${col} (Slot ${slotInBox})`;
+        cell.dataset.boxCoord = coordText;
+
+        if (showCoords && boxNum) {
+          const coordEl = document.createElement("span");
+          coordEl.className = "cell-coord-badge";
+          coordEl.textContent = `B${boxNum} R${row}C${col}`;
+          coordEl.setAttribute("aria-hidden", "true");
+          cell.appendChild(coordEl);
+          cell.title = `[Box ${boxNum} · Row ${row}, Col ${col}] ${cell.title}`;
+        }
 
         const specimenKey =
           entry.specimenKey ||

@@ -45,7 +45,8 @@ const DEFAULT_SETTINGS = {
   defaultGameMode: "last-used", // 'last-used' | 'specific'
   defaultGameId: null,
   gameVersions: {}, // Map of gameId -> selected version string (e.g. { rby: "yellow" })
-  layoutPreset: "standard", // 'standard' | 'generational' | 'inline' | 'evolutionary'
+  layoutPreset: "standard", // 'standard' | 'generational' | 'inline' | 'evolutionary' | 'dedicated-forms' | 'types' | 'alphabetical' | 'starters' | 'pantheon' | 'fossils'
+  showBoxCoordinates: false, // Whether to show Box X, Row R, Col C coordinates on slots/tooltips
   version: 1,
 };
 

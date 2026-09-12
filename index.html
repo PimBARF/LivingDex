@@ -133,10 +133,12 @@
         <h1 id="gameTitle">LivingDex Tracker</h1>
         <div class="game-title-actions">
           <select id="headerLayoutPreset" class="select header-layout-select" title="Box Layout Preset" aria-label="Box Layout Preset">
-            <option value="standard">🌟 Standard Dex</option>
-            <option value="generational">🗺️ Generational Clean</option>
-            <option value="inline">🧩 All Forms Inline</option>
-            <option value="evolutionary">🌳 Evolution Lines</option>
+            <option value="standard">Standard Dex</option>
+            <option value="generational">Generational Clean</option>
+            <option value="inline">All Forms Inline</option>
+            <option value="evolutionary">Evolution Lines</option>
+            <option value="types">Primary Types</option>
+            <option value="alphabetical">Alphabetical (A-Z)</option>
           </select>
           <button id="missingGuideBtn" class="btn missing-guide-btn" type="button" title="Missing Pokémon &amp; Family Quotas Guide (M)" aria-label="Open Missing Pokémon Guide" aria-haspopup="dialog">🎯<span class="missing-guide-btn-text"> Missing Guide</span><span id="missingGuideBadge" class="missing-count-badge" hidden>0</span></button>
           <button id="segmentsBtn" class="btn segments-btn" type="button" title="Configure Pokédex Segments &amp; Forms" aria-label="Configure Pokédex Segments &amp; Forms" aria-haspopup="dialog">📑<span class="segments-btn-text"> Segments</span></button>
@@ -434,7 +436,22 @@
                     <option value="generational">Generational Clean (Padded Region Boxes)</option>
                     <option value="inline">Species-Complete (All Forms Inline)</option>
                     <option value="evolutionary">Evolutionary Families (Cross-Gen Lines)</option>
+                    <option value="types">Primary Elemental Types (18 Boxes)</option>
+                    <option value="alphabetical">Alphabetical (A-Z)</option>
                   </select>
+                </div>
+              </div>
+
+              <div class="settings-row">
+                <div class="settings-row-text">
+                  <label for="settingsShowBoxCoordinates" class="settings-row-title">Show Box Coordinates</label>
+                  <span class="settings-row-subtitle">Display in-game box, row, and column position on cells and tooltips</span>
+                </div>
+                <div class="settings-row-control">
+                  <label class="toggle-switch" title="Toggle box and slot coordinate display">
+                    <input type="checkbox" id="settingsShowBoxCoordinates">
+                    <span class="toggle-track"></span>
+                  </label>
                 </div>
               </div>
 
@@ -772,6 +789,8 @@
             <option value="generational">Generational Clean (Padded Region Boxes)</option>
             <option value="inline">Species-Complete (All Forms Inline)</option>
             <option value="evolutionary">Evolutionary Families (Cross-Gen Lines)</option>
+            <option value="types">Primary Elemental Types (18 Boxes)</option>
+            <option value="alphabetical">Alphabetical (A-Z)</option>
           </select>
         </div>
 

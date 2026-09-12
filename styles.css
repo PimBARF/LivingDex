@@ -1377,6 +1377,35 @@ body.is-scrolled #progressWrap {
   z-index: 4;
 }
 
+/* Box and row/column coordinate badge (top-right of cell) */
+.cell .cell-coord-badge {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  height: 18px;
+  padding: 0 4px;
+  box-sizing: border-box;
+  border-radius: 4px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--surface-soft);
+  border: 1px solid var(--border);
+  color: var(--muted);
+  font-size: 9px;
+  font-weight: 700;
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.cell.caught .cell-coord-badge {
+  background: rgba(0, 0, 0, 0.15);
+  border-color: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+}
+
 /* Species name label (bottom of cell) */
 .cell .label {
   position: absolute;

@@ -874,6 +874,8 @@ export function registerSettingsControls() {
     );
     if (autoCollapseFull)
       autoCollapseFull.checked = !!settings.autoCollapseFullBoxes;
+    const showBoxCoords = document.getElementById("settingsShowBoxCoordinates");
+    if (showBoxCoords) showBoxCoords.checked = !!settings.showBoxCoordinates;
     const layoutPresetRow = document.getElementById("settingsLayoutPresetRow");
     if (layoutPresetRow) layoutPresetRow.hidden = ACTIVE_GAME_ID !== "home";
     const layoutPreset = document.getElementById("settingsLayoutPreset");
@@ -929,12 +931,16 @@ export function registerSettingsControls() {
     const settings = loadSettings();
     const previousLanguage = settings.language;
     const previousLayoutPreset = settings.layoutPreset || "standard";
+    const previousShowCoords = !!settings.showBoxCoordinates;
     const selectedTheme =
       document.querySelector('input[name="settingsTheme"]:checked')?.value ||
       settings.theme ||
       "auto";
     const nextLayoutPreset =
       document.getElementById("settingsLayoutPreset")?.value || "standard";
+    const nextShowCoords = !!document.getElementById(
+      "settingsShowBoxCoordinates",
+    )?.checked;
     const nextSettings = {
       ...settings,
       theme: selectedTheme,
@@ -949,6 +955,7 @@ export function registerSettingsControls() {
       autoCollapseFullBoxes: !!document.getElementById(
         "settingsAutoCollapseFull",
       )?.checked,
+      showBoxCoordinates: nextShowCoords,
       layoutPreset: nextLayoutPreset,
       language: document.getElementById("settingsLanguage")?.value || "en",
       spriteStyle:

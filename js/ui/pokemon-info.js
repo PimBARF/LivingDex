@@ -667,7 +667,12 @@ export async function openPokemonInfoModal(
 
   // Immediate placeholder state
   titleEl.textContent = displayName;
-  numberEl.textContent = `#${speciesId}`;
+  const showCoords = !!loadSettings().showBoxCoordinates;
+  const coordSuffix =
+    showCoords && sourceCell?.dataset?.boxCoord
+      ? ` · ${sourceCell.dataset.boxCoord}`
+      : "";
+  numberEl.textContent = `#${speciesId}${coordSuffix}`;
   spriteEl.decoding = "async";
   spriteEl.crossOrigin = "anonymous";
   spriteEl.style.opacity = "";

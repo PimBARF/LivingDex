@@ -1,4 +1,9 @@
-import { BOX_CAPACITY, GENERATION_RANGES, LAYOUT_PRESETS } from "./config.js";
+import {
+  BOX_CAPACITY,
+  GENERATION_RANGES,
+  LAYOUT_PRESETS,
+  ALL_POKEMON_TYPES,
+} from "./config.js";
 
 /**
  * Computes a unique and canonical specimen identifier for an entry or cell.
@@ -48,6 +53,22 @@ function getVariantSortPriority(entry) {
   if (entry.kind === "regional" || entry.isRegional) return 2;
   if (entry.kind === "gigantamax" || entry.isGmax) return 4;
   return 3;
+}
+
+/**
+ * Helper to extract the primary elemental type for a given entry.
+ *
+ * @param {Object} entry - Pokémon entry.
+ * @param {Record<number, Object>} speciesData - Species dataset.
+ * @returns {string} Primary type name (e.g., 'fire', 'water').
+ */
+function getEntryPrimaryType(entry, speciesData) {
+  const spec = speciesData?.[entry.speciesId];
+  if (!spec) return "normal";
+  const form =
+    spec.forms?.find((f) => f.formId === entry.formId) || spec.forms?.[0];
+  const primary = form?.types?.[0] || spec.forms?.[0]?.types?.[0] || "normal";
+  return String(primary).toLowerCase();
 }
 
 /**
@@ -285,6 +306,137 @@ function transformToEvolutionary(sections, speciesData, evolutionsData) {
   ];
 }
 
+const TYPE_METADATA = [
+  { id: "normal", title: "Normal Type" },
+  { id: "fire", title: "Fire Type" },
+  { id: "water", title: "Water Type" },
+  { id: "grass", title: "Grass Type" },
+  { id: "electric", title: "Electric Type" },
+  { id: "ice", title: "Ice Type" },
+  { id: "fighting", title: "Fighting Type" },
+  { id: "poison", title: "Poison Type" },
+  { id: "ground", title: "Ground Type" },
+  { id: "flying", title: "Flying Type" },
+  { id: "psychic", title: "Psychic Type" },
+  { id: "bug", title: "Bug Type" },
+  { id: "rock", title: "Rock Type" },
+  { id: "ghost", title: "Ghost Type" },
+  { id: "dragon", title: "Dragon Type" },
+  { id: "steel", title: "Steel Type" },
+  { id: "dark", title: "Dark Type" },
+  { id: "fairy", title: "Fairy Type" },
+];
+
+/**
+ * Primary Type Layout:
+ * Groups Pokémon into 18 distinct sections by their Primary Elemental Type.
+ *
+ * @param {Array<Object>} sections - Raw active Pokédex sections.
+ * @param {Record<number, Object>} speciesData - Master species dataset.
+ * @returns {Array<Object>} Type sections.
+ */
+function transformToTypes(sections, speciesData) {
+  const allEntries = [];
+  for (const sec of sections) {
+    for (const entry of sec.entries) {
+      allEntries.push({
+        ...entry,
+        kind: entry.kind || sec.kind || "base",
+        specimenKey: getSpecimenKey(entry),
+      });
+    }
+  }
+
+  const typeBuckets = new Map();
+  for (const { id } of TYPE_METADATA) {
+    typeBuckets.set(id, []);
+  }
+
+  for (const entry of allEntries) {
+    const type = getEntryPrimaryType(entry, speciesData);
+    if (!typeBuckets.has(type)) {
+      typeBuckets.set(type, []);
+    }
+    typeBuckets.get(type).push(entry);
+  }
+
+  const resultSections = [];
+  for (const { id, title } of TYPE_METADATA) {
+    const entries = typeBuckets.get(id) || [];
+    if (entries.length > 0) {
+      entries.sort((a, b) => {
+        if (a.speciesId !== b.speciesId) return a.speciesId - b.speciesId;
+        const pA = getVariantSortPriority(a);
+        const pB = getVariantSortPriority(b);
+        if (pA !== pB) return pA - pB;
+        return (Number(a.formId) || 0) - (Number(b.formId) || 0);
+      });
+
+      resultSections.push({
+        key: `type-${id}`,
+        title,
+        kind: "type",
+        entries,
+        startIndex: 1,
+      });
+    }
+  }
+
+  return resultSections;
+}
+
+/**
+ * Alphabetical (A–Z) Layout:
+ * Sorts all active Pokémon alphabetically by localized species name.
+ *
+ * @param {Array<Object>} sections - Raw active Pokédex sections.
+ * @param {Record<number, Object>} speciesData - Master species dataset.
+ * @returns {Array<Object>} Single Alphabetical section.
+ */
+function transformToAlphabetical(sections, speciesData) {
+  const allEntries = [];
+  for (const sec of sections) {
+    for (const entry of sec.entries) {
+      allEntries.push({
+        ...entry,
+        kind: entry.kind || sec.kind || "base",
+        specimenKey: getSpecimenKey(entry),
+      });
+    }
+  }
+
+  const nameMap =
+    typeof window !== "undefined" ? window.__livingDexNames : null;
+
+  allEntries.sort((a, b) => {
+    const nameA =
+      nameMap?.[a.speciesId] ||
+      speciesData?.[a.speciesId]?.name ||
+      `#${a.speciesId}`;
+    const nameB =
+      nameMap?.[b.speciesId] ||
+      speciesData?.[b.speciesId]?.name ||
+      `#${b.speciesId}`;
+    const cmp = nameA.localeCompare(nameB);
+    if (cmp !== 0) return cmp;
+    if (a.speciesId !== b.speciesId) return a.speciesId - b.speciesId;
+    const pA = getVariantSortPriority(a);
+    const pB = getVariantSortPriority(b);
+    if (pA !== pB) return pA - pB;
+    return (Number(a.formId) || 0) - (Number(b.formId) || 0);
+  });
+
+  return [
+    {
+      key: "national-alphabetical",
+      title: "National Pokédex (Alphabetical A-Z)",
+      kind: "base",
+      entries: allEntries,
+      startIndex: 1,
+    },
+  ];
+}
+
 /**
  * Main entry point: Applies a layout preset to raw active Pokédex sections.
  *
@@ -316,6 +468,10 @@ export function applyLayoutPreset(
       return transformToInline(sections, speciesData);
     case LAYOUT_PRESETS.EVOLUTIONARY:
       return transformToEvolutionary(sections, speciesData, evolutionsData);
+    case LAYOUT_PRESETS.TYPES:
+      return transformToTypes(sections, speciesData);
+    case LAYOUT_PRESETS.ALPHABETICAL:
+      return transformToAlphabetical(sections, speciesData);
     case LAYOUT_PRESETS.STANDARD:
     default:
       return transformToStandard(sections);
