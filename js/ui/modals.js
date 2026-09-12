@@ -398,24 +398,18 @@ export const PRESET_EXPLANATIONS = {
  */
 export function renderPresetExplanation(presetKey) {
   const info = PRESET_EXPLANATIONS[presetKey] || PRESET_EXPLANATIONS.standard;
-  const cards = [
-    document.getElementById("presetExplanationCard"),
-    document.getElementById("settingsPresetExplanationCard"),
-  ];
-
-  cards.forEach((card) => {
-    if (!card) return;
-    card.innerHTML = `
-      <div class="preset-card-header">
-        <strong class="preset-card-title">${info.title}</strong>
-        <span class="preset-card-badge">${info.badge}</span>
-      </div>
-      <p class="preset-card-desc">${info.desc}</p>
-      <ul class="preset-card-details">
-        ${info.details.map((d) => `<li>${d}</li>`).join("")}
-      </ul>
-    `;
-  });
+  const card = document.getElementById("presetExplanationCard");
+  if (!card) return;
+  card.innerHTML = `
+    <div class="preset-card-header">
+      <strong class="preset-card-title">${info.title}</strong>
+      <span class="preset-card-badge">${info.badge}</span>
+    </div>
+    <p class="preset-card-desc">${info.desc}</p>
+    <ul class="preset-card-details">
+      ${info.details.map((d) => `<li>${d}</li>`).join("")}
+    </ul>
+  `;
 }
 
 /**
@@ -747,10 +741,6 @@ export function registerSegmentsModal({ onSegmentsUpdated } = {}) {
   segmentLayoutPreset?.addEventListener("change", async () => {
     const nextVal = segmentLayoutPreset.value;
     saveSettings({ layoutPreset: nextVal });
-    const settingsLayoutPreset = document.getElementById(
-      "settingsLayoutPreset",
-    );
-    if (settingsLayoutPreset) settingsLayoutPreset.value = nextVal;
     renderPresetExplanation(nextVal);
     await refreshActiveDex();
   });
@@ -775,6 +765,10 @@ export function registerSegmentsModal({ onSegmentsUpdated } = {}) {
 
       if (modalShinyToggle) {
         modalShinyToggle.checked = isShinyMode;
+      }
+
+      if (segmentLayoutSection) {
+        segmentLayoutSection.hidden = ACTIVE_GAME_ID !== "home";
       }
 
       const activePreset = loadSettings().layoutPreset || "standard";
@@ -1031,12 +1025,6 @@ export function registerSettingsControls() {
       autoCollapseFull.checked = !!settings.autoCollapseFullBoxes;
     const showBoxCoords = document.getElementById("settingsShowBoxCoordinates");
     if (showBoxCoords) showBoxCoords.checked = !!settings.showBoxCoordinates;
-    const layoutPresetRow = document.getElementById("settingsLayoutPresetRow");
-    if (layoutPresetRow) layoutPresetRow.hidden = ACTIVE_GAME_ID !== "home";
-    const layoutPreset = document.getElementById("settingsLayoutPreset");
-    const activePreset = settings.layoutPreset || "standard";
-    if (layoutPreset) layoutPreset.value = activePreset;
-    renderPresetExplanation(activePreset);
     if (language) language.value = settings.language || "en";
     if (spriteStyle) spriteStyle.value = settings.spriteStyle || "pokesprites";
     if (defaultGameModeSelect)
@@ -1087,14 +1075,11 @@ export function registerSettingsControls() {
   async function persistSettingsFromControls() {
     const settings = loadSettings();
     const previousLanguage = settings.language;
-    const previousLayoutPreset = settings.layoutPreset || "standard";
     const previousShowCoords = !!settings.showBoxCoordinates;
     const selectedTheme =
       document.querySelector('input[name="settingsTheme"]:checked')?.value ||
       settings.theme ||
       "auto";
-    const nextLayoutPreset =
-      document.getElementById("settingsLayoutPreset")?.value || "standard";
     const nextShowCoords = !!document.getElementById(
       "settingsShowBoxCoordinates",
     )?.checked;
@@ -1113,7 +1098,6 @@ export function registerSettingsControls() {
         "settingsAutoCollapseFull",
       )?.checked,
       showBoxCoordinates: nextShowCoords,
-      layoutPreset: nextLayoutPreset,
       language: document.getElementById("settingsLanguage")?.value || "en",
       spriteStyle:
         document.getElementById("settingsSpriteStyle")?.value || "pokesprites",
@@ -1133,24 +1117,9 @@ export function registerSettingsControls() {
     }
 
     saveSettings(nextSettings);
-    const segmentLayoutPreset = document.getElementById("segmentLayoutPreset");
-    if (segmentLayoutPreset) segmentLayoutPreset.value = nextLayoutPreset;
-    renderPresetExplanation(nextLayoutPreset);
 
     applyTheme(nextSettings.theme);
     applyReducedMotionPreference(nextSettings.reducedMotion);
-
-    if (previousLayoutPreset !== nextLayoutPreset) {
-      const { sections, warnings } = await buildActiveDexSections();
-      const combinedSpeciesIds = sections.flatMap((s) =>
-        s.entries.map((e) => e.speciesId),
-      );
-      const slotCount = combinedSpeciesIds.length;
-      rebuildDexView({ sections, slotCount });
-      if (combinedSpeciesIds.length) {
-        await loadSpeciesNames(combinedSpeciesIds);
-      }
-    }
 
     const speciesOrder = Array.from(
       document.querySelectorAll(".cell:not(.is-placeholder)"),
@@ -1560,9 +1529,6 @@ export function registerSettingsControls() {
     ?.addEventListener("change", persistSettingsFromControls);
   document
     .getElementById("settingsGameVersion")
-    ?.addEventListener("change", persistSettingsFromControls);
-  document
-    .getElementById("settingsLayoutPreset")
     ?.addEventListener("change", persistSettingsFromControls);
 
   defaultGameModeSelect?.addEventListener("change", () => {

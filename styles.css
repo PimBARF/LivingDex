@@ -3582,6 +3582,8 @@ body.is-drag-selecting .cell {
 
 .segments-modal-card {
   max-width: 560px;
+  height: min(900px, calc(100dvh - 40px));
+  max-height: calc(100dvh - 40px);
 }
 
 .segments-modal-header {
@@ -3633,23 +3635,9 @@ body.is-drag-selecting .cell {
   gap: 14px;
   margin: 8px 0 12px;
   overflow-y: auto;
-  max-height: min(65vh, 520px);
+  flex: 1;
+  min-height: 0;
   padding-right: 2px;
-}
-
-#settingsLayoutPresetRow {
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  gap: 8px;
-}
-
-#settingsLayoutPresetRow .settings-row-main {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 12px;
-  width: 100%;
 }
 
 /* Dex Options Modal Toolbar (Shiny Mode + Share Link) */
@@ -3787,6 +3775,10 @@ body.is-drag-selecting .cell {
   border: 1px solid var(--surface-soft-border);
   border-radius: var(--control-radius);
   margin-bottom: 8px;
+}
+
+.segment-layout-section[hidden] {
+  display: none !important;
 }
 
 .segment-layout-header {

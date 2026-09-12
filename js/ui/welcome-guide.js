@@ -18,7 +18,7 @@ export const WELCOME_SLIDES = [
           <div class="welcome-card-icon">📦</div>
           <div class="welcome-card-content">
             <strong>30-Slot PC Box Organization</strong>
-            <p>Pokémon are automatically arranged into clean 30-slot boxes matching the in-game PC box storage layout.</p>
+            <p>Pokémon are automatically arranged into clean 30-slot boxes (#001-030) matching official in-game PC box storage.</p>
           </div>
         </div>
         <div class="welcome-card">
@@ -116,35 +116,36 @@ export const WELCOME_SLIDES = [
   {
     id: "segments-boxes",
     badge: "Step 4 of 5",
-    title: "Segments & Custom Box Order",
-    tagline: "Tailor your Pokédex to match your personal in-game PC box setup.",
-    icon: "📑",
+    title: "Dex Options & Box Layout Presets",
+    tagline:
+      "Choose standard sorting presets or tailor your own box structure.",
+    icon: "⚙️",
     contentHtml: `
       <div class="welcome-feature-grid">
+        <div class="welcome-card">
+          <div class="welcome-card-icon">📦</div>
+          <div class="welcome-card-content">
+            <strong>6 Box Layout Presets (HOME)</strong>
+            <p>Switch between <em>Standard Dex</em>, <em>Generational Clean</em>, <em>All Forms Inline</em>, <em>Evolution Lines</em>, <em>Primary Types</em>, or <em>Alphabetical (A-Z)</em> with live explanations.</p>
+          </div>
+        </div>
         <div class="welcome-card">
           <div class="welcome-card-icon">📑</div>
           <div class="welcome-card-content">
             <strong>Toggle Expansions &amp; Forms</strong>
-            <p>Open <strong>📑 Segments</strong> to enable or disable DLCs (Teal Mask, Indigo Disk), Regional Forms, Gender variants, and Form collections (Unown, Vivillon, Alcremie).</p>
+            <p>Open <strong>⚙️ Dex Options</strong> to enable or disable DLC expansions, Regional Forms, Gender differences, and Form collections (Unown, Vivillon, Alcremie).</p>
           </div>
         </div>
         <div class="welcome-card">
           <div class="welcome-card-icon">↕️</div>
           <div class="welcome-card-content">
-            <strong>Custom Box Reordering</strong>
-            <p>Drag segments or use <strong>▲ / ▼</strong> to reorder sections. Each section aligns seamlessly to 30-slot boxes so your physical game matches.</p>
-          </div>
-        </div>
-        <div class="welcome-card">
-          <div class="welcome-card-icon">✏️</div>
-          <div class="welcome-card-content">
-            <strong>Rename &amp; Collapse Boxes</strong>
-            <p>Click any box header title to rename it (e.g. <em>"Starters"</em> or <em>"Trade Evolutions"</em>). Collapse boxes to keep your view tidy.</p>
+            <strong>Custom Box Reordering &amp; Naming</strong>
+            <p>Drag segments or use <strong>▲ / ▼</strong> to reorder sections. Click any box title to rename it or collapse completed boxes.</p>
           </div>
         </div>
       </div>
     `,
-    tip: "Tip: Use the Segments presets (Base, DLC, All Forms, Master) to configure your dex with a single click.",
+    tip: "Tip: Open <strong>⚙️ Dex Options</strong> anytime next to the game title to customize layout presets, modes, and form expansions.",
   },
   {
     id: "pro-tips",
@@ -158,28 +159,28 @@ export const WELCOME_SLIDES = [
           <div class="welcome-card-icon">✨</div>
           <div class="welcome-card-content">
             <strong>Shiny Living Dex Mode</strong>
-            <p>Click <strong>✨</strong> (or press <kbd class="kbd-badge">S</kbd>) to toggle into a dedicated Shiny tracker with full shiny sprite palettes.</p>
+            <p>Toggle <em>Shiny Dex Mode</em> inside <strong>⚙️ Dex Options</strong> (or press <kbd class="kbd-badge">S</kbd>) to track shiny progress with complete shiny sprite palettes.</p>
           </div>
         </div>
         <div class="welcome-card">
           <div class="welcome-card-icon">🔗</div>
           <div class="welcome-card-content">
             <strong>Zero-Cloud Share Links</strong>
-            <p>Click <strong>🔗</strong> to copy a bit-packed compressed URL hash that shares your exact progress snapshot with friends without an account.</p>
+            <p>Click <em>Share Progress</em> in <strong>⚙️ Dex Options</strong> to copy a bit-packed compressed URL snapshot to share with friends without an account.</p>
           </div>
         </div>
         <div class="welcome-card">
-          <div class="welcome-card-icon">🎨</div>
+          <div class="welcome-card-icon">🧭</div>
           <div class="welcome-card-content">
-            <strong>Custom Sprites &amp; Themes</strong>
-            <p>Head to <strong>⚙️ Settings</strong> to switch sprite styles (Pixel, HOME 3D, Official Artwork), theme modes, or UI languages.</p>
+            <strong>Floating Box Coordinates HUD</strong>
+            <p>Enable <em>Show Box Coordinates</em> in <strong>⚙️ Settings</strong> to display an in-game Box, Row, and Column HUD following your cursor on hover.</p>
           </div>
         </div>
         <div class="welcome-card">
           <div class="welcome-card-icon">⌨️</div>
           <div class="welcome-card-content">
             <strong>Keyboard Hotkeys</strong>
-            <p>Press <kbd class="kbd-badge">/</kbd> to search, <kbd class="kbd-badge">H</kbd> to cycle caught filter, <kbd class="kbd-badge">[</kbd> / <kbd class="kbd-badge">]</kbd> to jump boxes, and <kbd class="kbd-badge">?</kbd> for all shortcuts.</p>
+            <p>Press <kbd class="kbd-badge">/</kbd> to search, <kbd class="kbd-badge">H</kbd> to cycle caught filter, <kbd class="kbd-badge">M</kbd> for Missing Guide, and <kbd class="kbd-badge">?</kbd> for all shortcuts.</p>
           </div>
         </div>
       </div>
