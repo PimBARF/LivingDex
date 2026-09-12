@@ -89,6 +89,7 @@ Then visit `http://localhost:8080`.
 - `index.html` — App shell, semantic dialog modals, and UI structure
 - `styles.css` — Modern responsive styles, theme tokens, and animations
 - `manifest.json` & `sw.js` — PWA service worker with multi-tier caching
+- `CHANGELOG.md` — Complete update history, release timeline, and service worker changelog
 - `data/` — Pre-compiled local datasets (species, master evolutions, flavor text, game dexes, game evolutions, and encounters)
 - `js/` — Modular ES application logic:
   - `config.js` — Game, segment, and dex definitions
