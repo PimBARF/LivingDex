@@ -387,6 +387,7 @@ export function renderDexSectionBoxes(
   startGlobalSlot,
   startLocalIndex = 1,
   sectionMeta = {},
+  startBoxNumber = 1,
 ) {
   const fragment = document.createDocumentFragment();
 
@@ -415,6 +416,7 @@ export function renderDexSectionBoxes(
 
   const boxCount = Math.ceil(slotsInSection / BOX_CAPACITY);
   for (let boxIndex = 0; boxIndex < boxCount; boxIndex += 1) {
+    const sequentialBoxNum = startBoxNumber + boxIndex;
     const localStart = startLocalIndex + boxIndex * BOX_CAPACITY;
     const localEnd = Math.min(
       startLocalIndex + (boxIndex + 1) * BOX_CAPACITY - 1,
@@ -462,6 +464,8 @@ export function renderDexSectionBoxes(
     section.className = `box${isCollapsed ? " is-collapsed" : ""}`;
     section.dataset.section = sectionKey;
     section.dataset.boxId = boxId;
+    section.dataset.boxNum = String(sequentialBoxNum);
+    section.dataset.boxIndex = String(boxIndex + 1);
     section.dataset.defaultTitle = defaultTitle;
     section.dataset.rangeText = rangeText;
 
@@ -487,6 +491,113 @@ export function renderDexSectionBoxes(
     fragment.appendChild(section);
   }
   container.appendChild(fragment);
+}
+
+let coordTooltipEl = null;
+
+/**
+ * Retrieves or lazily creates the floating cursor coordinate tooltip element.
+ * @returns {HTMLElement} The coordinate tooltip element.
+ */
+function getOrCreateCoordTooltip() {
+  if (coordTooltipEl && document.body.contains(coordTooltipEl))
+    return coordTooltipEl;
+  let tip = document.getElementById("cellCoordTooltip");
+  if (!tip) {
+    tip = document.createElement("div");
+    tip.id = "cellCoordTooltip";
+    tip.className = "cell-coord-tooltip";
+    tip.setAttribute("role", "tooltip");
+    tip.setAttribute("aria-hidden", "true");
+    document.body.appendChild(tip);
+  }
+  coordTooltipEl = tip;
+  return coordTooltipEl;
+}
+
+let coordTooltipInitialized = false;
+
+/**
+ * Initializes cursor-following box coordinate tooltip functionality.
+ */
+export function initCellCoordTooltip() {
+  if (coordTooltipInitialized || typeof document === "undefined") return;
+  coordTooltipInitialized = true;
+
+  const tip = getOrCreateCoordTooltip();
+
+  document.addEventListener(
+    "pointermove",
+    (event) => {
+      if (!loadSettings().showBoxCoordinates) {
+        if (tip.classList.contains("is-visible")) {
+          tip.classList.remove("is-visible");
+        }
+        return;
+      }
+
+      const cell = event.target.closest(".cell:not(.is-placeholder)");
+      if (!cell || !cell.dataset.boxCoord) {
+        if (tip.classList.contains("is-visible")) {
+          tip.classList.remove("is-visible");
+        }
+        return;
+      }
+
+      tip.textContent = cell.dataset.boxCoord;
+      const tooltipWidth = tip.offsetWidth || 150;
+      const tooltipHeight = tip.offsetHeight || 28;
+      const offsetX = 14;
+      const offsetY = 14;
+
+      let left = event.clientX + offsetX;
+      let top = event.clientY + offsetY;
+
+      if (left + tooltipWidth > window.innerWidth - 10) {
+        left = event.clientX - tooltipWidth - 10;
+      }
+      if (top + tooltipHeight > window.innerHeight - 10) {
+        top = event.clientY - tooltipHeight - 10;
+      }
+
+      tip.style.transform = `translate3d(${Math.max(6, left)}px, ${Math.max(6, top)}px, 0)`;
+      if (!tip.classList.contains("is-visible")) {
+        tip.classList.add("is-visible");
+      }
+    },
+    { passive: true },
+  );
+
+  document.addEventListener(
+    "pointerleave",
+    () => {
+      if (tip.classList.contains("is-visible")) {
+        tip.classList.remove("is-visible");
+      }
+    },
+    { passive: true },
+  );
+
+  window.addEventListener(
+    "scroll",
+    () => {
+      if (tip.classList.contains("is-visible")) {
+        tip.classList.remove("is-visible");
+      }
+    },
+    { passive: true },
+  );
+}
+
+/**
+ * Updates coordinate tooltip state when settings change.
+ * @param {boolean} show - Whether coordinates are enabled.
+ */
+export function updateBoxCoordinatesDisplay(show) {
+  const tip = getOrCreateCoordTooltip();
+  if (!show && tip.classList.contains("is-visible")) {
+    tip.classList.remove("is-visible");
+  }
 }
 
 /**
@@ -776,7 +887,6 @@ export function populateDexSlots(sections, slotCount, onComplete) {
     if (!task || !task.grid) return;
     const boxEl = task.grid.closest(".box");
     const boxNum = boxEl?.dataset?.boxNum || boxEl?.dataset?.boxIndex || "";
-    const showCoords = !!loadSettings().showBoxCoordinates;
     const fragment = document.createDocumentFragment();
 
     task.entries.forEach(
@@ -810,17 +920,8 @@ export function populateDexSlots(sections, slotCount, onComplete) {
         const slotInBox = entryIdx + 1;
         const row = Math.floor(entryIdx / 6) + 1;
         const col = (entryIdx % 6) + 1;
-        const coordText = `Box ${boxNum || "?"} · R${row}:C${col} (Slot ${slotInBox})`;
+        const coordText = `Box ${boxNum || "?"} · Row ${row}, Col ${col} (Slot ${slotInBox})`;
         cell.dataset.boxCoord = coordText;
-
-        if (showCoords && boxNum) {
-          const coordEl = document.createElement("span");
-          coordEl.className = "cell-coord-badge";
-          coordEl.textContent = `B${boxNum} R${row}C${col}`;
-          coordEl.setAttribute("aria-hidden", "true");
-          cell.appendChild(coordEl);
-          cell.title = `[Box ${boxNum} · Row ${row}, Col ${col}] ${cell.title}`;
-        }
 
         const specimenKey =
           entry.specimenKey ||

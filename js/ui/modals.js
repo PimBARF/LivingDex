@@ -1394,6 +1394,9 @@ export function registerSettingsControls() {
       updateAllBoxProgress();
     });
   document
+    .getElementById("settingsShowBoxCoordinates")
+    ?.addEventListener("change", persistSettingsFromControls);
+  document
     .getElementById("settingsLanguage")
     ?.addEventListener("change", persistSettingsFromControls);
   document

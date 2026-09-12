@@ -175,7 +175,9 @@ export function rebuildDexView({ sections, slotCount, onComplete }) {
   }
 
   let startGlobal = 1;
+  let runningBoxNumber = 1;
   for (const sec of sections) {
+    const boxCount = Math.ceil(sec.entries.length / 30);
     renderDexSectionBoxes(
       app,
       sec.key,
@@ -184,7 +186,9 @@ export function rebuildDexView({ sections, slotCount, onComplete }) {
       startGlobal,
       sec.startIndex || 1,
       sec,
+      runningBoxNumber,
     );
+    runningBoxNumber += boxCount;
     startGlobal += sec.entries.length;
   }
 
