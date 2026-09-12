@@ -835,31 +835,6 @@ footer {
   margin-left: auto;
 }
 
-/* Header layout preset dropdown */
-.game-title-actions .header-layout-select {
-  height: 34px;
-  box-sizing: border-box;
-  font-size: 13px;
-  font-weight: 500;
-  padding: 0 10px;
-  border-radius: var(--control-radius);
-  border: 1px solid var(--border);
-  background: var(--card);
-  color: var(--text);
-  cursor: pointer;
-  width: auto;
-  min-width: 145px;
-  max-width: 195px;
-  line-height: 1;
-  display: inline-flex;
-  align-items: center;
-}
-
-.game-title-actions .header-layout-select:focus {
-  outline: 3px solid var(--focus-ring);
-  outline-offset: 1px;
-}
-
 /* Ensure all action buttons in game title bar share identical height and alignment */
 .game-title-actions .btn {
   height: 34px;

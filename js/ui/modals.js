@@ -599,8 +599,6 @@ export function registerSegmentsModal({ onSegmentsUpdated } = {}) {
   segmentLayoutPreset?.addEventListener("change", async () => {
     const nextVal = segmentLayoutPreset.value;
     saveSettings({ layoutPreset: nextVal });
-    const headerLayoutPreset = document.getElementById("headerLayoutPreset");
-    if (headerLayoutPreset) headerLayoutPreset.value = nextVal;
     const settingsLayoutPreset = document.getElementById(
       "settingsLayoutPreset",
     );
@@ -976,8 +974,6 @@ export function registerSettingsControls() {
     }
 
     saveSettings(nextSettings);
-    const headerLayoutPreset = document.getElementById("headerLayoutPreset");
-    if (headerLayoutPreset) headerLayoutPreset.value = nextLayoutPreset;
     const segmentLayoutPreset = document.getElementById("segmentLayoutPreset");
     if (segmentLayoutPreset) segmentLayoutPreset.value = nextLayoutPreset;
 
