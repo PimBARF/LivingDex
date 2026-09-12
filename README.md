@@ -109,6 +109,12 @@ Then visit `http://localhost:8080`.
 
 ---
 
+## 📜 Changelog
+
+Detailed release notes, version archives, and update history are documented in [CHANGELOG.md](./CHANGELOG.md).
+
+---
+
 ## ☕ Support
 
 If you enjoy using LivingDex and want to help support development and hosting:
