@@ -36,14 +36,17 @@
 └── js/                        # Modular ES6+ JavaScript
     ├── main.js                # App bootstrap, coordinator of initialization, hash routing, global events
     ├── config.js              # Game configurations, segment definitions, sprite URLs, storage keys
-    ├── db.js                  # In-memory cached dataset accessors, dynamic section loader & sorting
+    ├── db.js                  # In-memory cached dataset accessors, dynamic section loader, and layout presets
     ├── state.js               # Reactive caught state, shiny mode toggle, progress calculations, sync
     ├── storage.js             # LocalStorage CRUD, segment config (enabled + order), bit-packed share encoding
     ├── pwa.js                 # Service Worker lifecycle registration and sprite offline cache manager
     └── ui/                    # Modular UI renderers and event controllers
         ├── dom-render.js      # Box and cell grid DOM rendering, slot population, sprite assignment
         ├── controls.js        # Search input, hide-caught toggle, sort controls, scroll-to-top, share
-        ├── modals.js          # Settings, Segments Organizer, Reset, Shortcuts, and Import/Export modals
+        ├── modals.js          # Dex Options, Settings, Reset, Shortcuts, and Import/Export modals
+        ├── box-coords.js      # Floating Box Coordinates HUD cursor tooltip controller
+        ├── missing-guide.js   # Missing Pokémon tracker, evolution family quotas, and shopping list
+        ├── welcome-guide.js   # Interactive first-time welcome walkthrough carousel
         ├── pokemon-info.js    # Pokémon detail dialog/drawer (stats, encounters, evolutions, flavor text)
         └── theme.js           # Light/dark/auto theme engine (`data-theme`) and reduced motion preferences
 ```
@@ -56,8 +59,9 @@
    - Reads user settings from `localStorage` via `js/storage.js` and applies theme (`js/ui/theme.js`).
    - Determines active game from URL query parameter (`?game=<id>`, defaults to `home`).
    - Retrieves segment configuration (enabled set and custom order) via `js/storage.js` (`loadSegmentConfig()`).
-   - Compiles active Pokédex sections via `js/db.js` (`buildActiveDexSections()`), querying local datasets in `data/games/dex/<gameId>.json` and sorting sections according to user preference.
+   - Compiles active Pokédex sections via `js/db.js` (`buildActiveDexSections()`), querying local datasets in `data/games/dex/<gameId>.json` and applying the active **Box Layout Preset** (when in HOME) or sorting sections according to user preference.
    - Renders the box grid via `js/state.js` -> `js/ui/dom-render.js`.
+   - Initializes floating box coordinates HUD (`js/ui/box-coords.js`) if enabled in user settings.
    - Asynchronously loads localized Pokémon names (`loadSpeciesNames()`) and updates rendered cells.
    - Evaluates URL hash (`#s=...`) for shared caught checklist state.
 
@@ -65,22 +69,32 @@
    - Caught status is tracked per living dex slot (1-indexed).
    - Normal mode: Stored in localStorage under `${storagePrefix}-caught-v1`.
    - Shiny mode: Stored in localStorage under `${storagePrefix}-shiny-caught-v1`.
+   - Batch interaction support: Shift-click ranges, box `✓ All` / `✗ All`, and mobile touch-drag painting.
    - When a slot is toggled, `saveCaughtSlots()` / `saveShinyCaughtSlots()` persists the state and `updateProgressBar()` recalculates progress percentage.
 
-3. **Segment Management & Reordering (`js/ui/modals.js` & `js/storage.js`):**
-   - Optional sections (DLCs, regional forms, cosmetic variants, visual gender differences) can be toggled on/off and re-ordered using drag-and-drop or Move Up/Down buttons in the Segments Organizer modal.
-   - Preset templates (_Base Game_, _Base + DLC_, _All Forms_, _Master 100%_) allow 1-click batch configuration.
-   - Segment states are saved in `localStorage` under `${storagePrefix}-segments-v1` (`{ enabled: string[], order: string[] }`).
+3. **Dex Options & HOME Box Layout Presets (`js/ui/modals.js` & `js/db.js`):**
+   - Centralized **Dex Options** modal (`modalSegments`) integrates:
+     - **Shiny Dex Mode** toggle (`modalShinyToggle`)
+     - **Share Progress** button (`modalShareBtn`)
+     - **6 HOME Box Sorting Presets** (_Standard_, _Generational_, _Inline_, _Evolutionary_, _Types_, _Alphabetical_) with dynamic detail cards. Strictly scoped to Pokémon HOME (`ACTIVE_GAME_ID === "home"`).
+     - Segment toggle checkboxes (DLCs, regional forms, cosmetic variants, visual gender differences) and drag-and-drop / arrow reordering.
+   - Segment states are saved in `localStorage` under `${storagePrefix}-segments-v1` (`{ enabled: string[], order: string[] }`). Layout preset is stored under `livingdex-settings-v1.layoutPreset`.
 
-4. **Share Links (Bit-Packing):**
+4. **Missing Guide & Evolution Checklist (`js/ui/missing-guide.js`):**
+   - Keyboard shortcut <kbd>M</kbd> opens comprehensive missing analysis:
+     - Filterable uncaught Pokémon checklist with version exclusivities and encounter paths.
+     - Family quota breakdown showing caught/total status per evolutionary line.
+     - Evolutionary item shopping list aggregating required evolutionary stones and items.
+
+5. **Share Links (Bit-Packing):**
    - Caught states are encoded into bit-packed byte arrays and serialized into base64url hashes (`#s=<base64url>`).
    - Includes segment header checksums to verify compatibility when sharing across different segment configurations.
 
-5. **Offline Caching & PWA (`sw.js` & `js/pwa.js`):**
+6. **Offline Caching & PWA (`sw.js` & `js/pwa.js`):**
    - `SHELL_CACHE`: Core app shell files (`index.html`, `styles.css`, `js/**/*.js`, fonts, icons).
    - `DATA_CACHE`: Pre-cached static JSON datasets (`data/**/*.json`).
    - `SPRITE_CACHE`: Dynamic cache for sprite images fetched from external CDNs, with support for batch pre-downloading via the settings dialog.
-   - **MANDATORY Update Rule**: Whenever pushing updates or making changes to the UI, JavaScript, styles, HTML, or datasets, **always bump `CACHE_VERSION` in `sw.js`** (e.g. from `v1.4.1` to `v1.5.0`). This triggers the browser's background Service Worker update check and displays the floating `#updateBanner` ("Update Available") to users.
+   - **MANDATORY Update Rule**: Whenever pushing updates or making changes to the UI, JavaScript, styles, HTML, or datasets, **always bump `CACHE_VERSION` in `sw.js`** (e.g. from `v1.9.16` to `v1.9.17`). This triggers the browser's background Service Worker update check and displays the floating `#updateBanner` ("Update Available") to users.
 
 ---
 

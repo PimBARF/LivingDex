@@ -133,10 +133,7 @@
         <h1 id="gameTitle">LivingDex Tracker</h1>
         <div class="game-title-actions">
           <button id="missingGuideBtn" class="btn missing-guide-btn" type="button" title="Missing Pokémon &amp; Family Quotas Guide (M)" aria-label="Open Missing Pokémon Guide" aria-haspopup="dialog">🎯<span class="missing-guide-btn-text"> Missing Guide</span><span id="missingGuideBadge" class="missing-count-badge" hidden>0</span></button>
-          <button id="segmentsBtn" class="btn segments-btn" type="button" title="Configure Pokédex Segments &amp; Forms" aria-label="Configure Pokédex Segments &amp; Forms" aria-haspopup="dialog">📑<span class="segments-btn-text"> Segments</span></button>
-          <button id="shinyToggle" class="btn" type="button" title="Toggle Shiny Mode" aria-pressed="false" aria-label="Toggle Shiny Mode">✨</button>
-          <button id="shareDex" class="btn" type="button" title="Share this progress"
-            aria-label="Share your current Pokédex progress">🔗</button>
+          <button id="segmentsBtn" class="btn segments-btn" type="button" title="Configure Dex Options, Layout &amp; Forms" aria-label="Configure Dex Options, Layout &amp; Forms" aria-haspopup="dialog">⚙️<span class="segments-btn-text"> Dex Options</span></button>
         </div>
       </div>
     </div>
@@ -415,8 +412,20 @@
           </section>
 
           <section class="settings-section" aria-labelledby="settingsBoxesCustomHeading">
-            <h4 id="settingsBoxesCustomHeading">Box Layout &amp; Customization</h4>
+            <h4 id="settingsBoxesCustomHeading">Box Customization &amp; Coordinates</h4>
             <div class="settings-group">
+
+              <label class="settings-row settings-row-clickable" for="settingsShowBoxCoordinates">
+                <div class="settings-row-text">
+                  <span class="settings-row-title">Show Box Coordinates</span>
+                  <span class="settings-row-subtitle">Display in-game box, row, and column position on cells and tooltips</span>
+                </div>
+                <span class="toggle-switch">
+                  <input type="checkbox" id="settingsShowBoxCoordinates">
+                  <span class="toggle-track"></span>
+                </span>
+              </label>
+
               <div class="settings-row settings-action-row">
                 <div class="settings-row-text">
                   <span class="settings-row-title">Reset box titles</span>
@@ -572,19 +581,19 @@
           <div class="about-guide-list">
             <div class="guide-item">
               <div class="guide-item-title">📦 30-Slot Box Alignment</div>
-              <div class="guide-item-desc">LivingDex automatically arranges Pokémon into standard 30-slot PC boxes matching in-game storage.</div>
+              <div class="guide-item-desc">LivingDex automatically arranges Pokémon into standard 30-slot PC boxes (#001-030) matching in-game storage.</div>
             </div>
             <div class="guide-item">
-              <div class="guide-item-title">📑 Modular Forms &amp; Expansions</div>
-              <div class="guide-item-desc">Use <strong>Segments</strong> to toggle optional content (DLC, Unown, Vivillon, Alcremie, Regional forms) and reorder sections to fit your personal collection.</div>
+              <div class="guide-item-title">⚙️ Dex Options &amp; Layout Presets</div>
+              <div class="guide-item-desc">Use <strong>⚙️ Dex Options</strong> to choose from 6 box layout presets (Standard, Generational, Inline, Evolution Lines, Types, Alphabetical) and toggle optional forms &amp; DLC.</div>
             </div>
             <div class="guide-item">
               <div class="guide-item-title">⚡ Batch Progress Tracking</div>
               <div class="guide-item-desc">On PC, hold <kbd>Shift</kbd> and click to mark a range. On mobile or touch devices, <strong>press &amp; hold</strong> a Pokémon slot and <strong>drag</strong> across slots to batch mark them caught or uncaught.</div>
             </div>
             <div class="guide-item">
-              <div class="guide-item-title">✨ Shiny &amp; Share Mode</div>
-              <div class="guide-item-desc">Switch between Normal and Shiny trackers with <strong>✨</strong>, and share your exact progress snapshot using the <strong>🔗 Share</strong> button.</div>
+              <div class="guide-item-title">✨ Shiny, Sharing &amp; Coordinates</div>
+              <div class="guide-item-desc">Toggle Shiny Dex mode and copy shareable links inside <strong>⚙️ Dex Options</strong>, or enable the cursor box coordinates HUD in <strong>⚙️ Settings</strong>.</div>
             </div>
           </div>
         </div>
@@ -720,29 +729,68 @@
     </div>
   </div>
 
-  <!-- Pokédex Segments & Reordering modal -->
+  <!-- Dex Options, Layout & Structure modal -->
   <div id="modalSegments" class="modal" role="dialog" aria-modal="true" aria-labelledby="segmentsModalTitle"
     aria-describedby="segmentsModalDesc" hidden>
     <div class="modal-backdrop" data-close></div>
     <div class="modal-card segments-modal-card" role="document">
       <div class="segments-modal-header">
-        <h3 id="segmentsModalTitle">Pokédex Segments</h3>
+        <h3 id="segmentsModalTitle">Dex Options &amp; Structure</h3>
         <button id="resetSegmentsOrderBtn" class="btn btn-sm btn-ghost" type="button" aria-label="Reset segments to default order">Reset order</button>
       </div>
       <p id="segmentsModalDesc" class="segments-modal-desc">
-        Choose which optional expansions, regional forms, or variants to display, and customize the order they appear in your dex.
+        Customize view mode, box layout presets, optional form expansions, and sharing for this Pokédex.
       </p>
 
-      <div class="segment-modal-tip">
-        <span class="segment-tip-icon">💡</span>
-        <div class="segment-tip-text">
-          <strong>Tip:</strong> Drag (<span class="drag-icon-sample">⋮⋮</span>) or use <strong>▲ / ▼</strong> to match your in-game PC box order. Each section aligns cleanly to 30-slot boxes.
+      <div class="dex-options-toolbar">
+        <label class="dex-options-card dex-options-card-clickable" for="modalShinyToggle">
+          <div class="dex-options-card-text">
+            <span class="dex-options-card-title">✨ Shiny Dex Mode</span>
+            <span class="dex-options-card-desc">Track caught shinies separately</span>
+          </div>
+          <span class="toggle-switch">
+            <input type="checkbox" id="modalShinyToggle">
+            <span class="toggle-track"></span>
+          </span>
+        </label>
+
+        <div class="dex-options-card">
+          <div class="dex-options-card-text">
+            <span class="dex-options-card-title">🔗 Share Progress</span>
+            <span class="dex-options-card-desc">Copy caught checklist link</span>
+          </div>
+          <button type="button" id="modalShareBtn" class="btn btn-sm btn-secondary dex-share-btn" aria-label="Copy shareable link">
+            <span id="modalShareBtnText">Copy Link</span>
+          </button>
         </div>
       </div>
 
       <div class="segments-modal-body">
+        <div id="segmentLayoutPresetSection" class="segment-layout-section">
+          <div class="segment-layout-header">
+            <label for="segmentLayoutPreset" class="segment-layout-title">Box Layout Preset:</label>
+            <span class="segment-layout-hint">Choose how boxes are sorted and grouped</span>
+          </div>
+          <select id="segmentLayoutPreset" class="select segment-layout-select">
+            <option value="standard">Standard Dex (Forms at End)</option>
+            <option value="generational">Generational Clean (Padded Region Boxes)</option>
+            <option value="inline">All Forms Inline</option>
+            <option value="evolutionary">Evolution Lines (Cross-Gen Families)</option>
+            <option value="types">Primary Types (18 Boxes)</option>
+            <option value="alphabetical">Alphabetical (A-Z)</option>
+          </select>
+          <div id="presetExplanationCard" class="preset-explanation-card" aria-live="polite"></div>
+        </div>
+
+        <div class="segment-modal-tip">
+          <span class="segment-tip-icon">💡</span>
+          <div class="segment-tip-text">
+            <strong>Box Reordering:</strong> Drag (<span class="drag-icon-sample">⋮⋮</span>) or use <strong>▲ / ▼</strong> to match your in-game PC box order. Each section aligns cleanly to 30-slot boxes.
+          </div>
+        </div>
+
         <div class="segment-presets-section">
-          <span class="segment-presets-title">Presets:</span>
+          <span class="segment-presets-title">Content Presets:</span>
           <div id="segmentPresetsGroup" class="segment-presets-group">
             <button type="button" class="btn btn-sm btn-secondary segment-preset-btn" data-preset="base">Base Game</button>
             <button type="button" class="btn btn-sm btn-secondary segment-preset-btn" data-preset="dlc">Base + DLC</button>
@@ -759,7 +807,7 @@
       </div>
 
       <div class="modal-actions">
-        <button id="closeSegments" class="btn btn-primary" type="button" aria-label="Apply and close segment settings">Done</button>
+        <button id="closeSegments" class="btn btn-primary" type="button" aria-label="Apply and close settings">Done</button>
       </div>
     </div>
   </div>

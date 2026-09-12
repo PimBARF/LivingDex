@@ -45,6 +45,8 @@ import {
 import {
   registerBoxControls,
   applySpriteStyleToCells,
+  updateBoxCoordinatesDisplay,
+  initCellCoordTooltip,
 } from "./ui/dom-render.js";
 
 import { initPwa } from "./pwa.js";
@@ -99,6 +101,7 @@ async function initializeLivingDexApp() {
   registerSegmentsModal({ onSegmentsUpdated: () => renderGameInfo() });
   registerMissingGuideModal();
   registerWelcomeGuideModal();
+  initCellCoordTooltip();
 
   const app = document.getElementById("app");
   if (!app) return;
@@ -208,6 +211,7 @@ export async function applyPersistedViewSettings({
   setStatusFilter(settings.hideCaughtDefault ? "uncaught" : "all");
 
   applySpriteStyleToCells();
+  updateBoxCoordinatesDisplay(!!settings.showBoxCoordinates);
 
   if (
     speciesOrder.length &&
@@ -243,9 +247,7 @@ export async function renderGameInfo() {
 
   const segmentsBtn = document.getElementById("segmentsBtn");
   if (segmentsBtn) {
-    segmentsBtn.title = optionalSegments.length
-      ? `Configure ${ACTIVE_GAME.title} Segments & Order`
-      : `View ${ACTIVE_GAME.title} Dex Structure`;
+    segmentsBtn.title = `Configure ${ACTIVE_GAME.title} Dex Options, Layout & Forms`;
 
     try {
       const hasSeenGuide = localStorage.getItem(

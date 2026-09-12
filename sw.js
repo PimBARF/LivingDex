@@ -4,7 +4,7 @@
  * offline execution, background revalidation, and update lifecycle control.
  */
 
-const CACHE_VERSION = "v1.7.11";
+const CACHE_VERSION = "v1.9.18";
 const SHELL_CACHE = `livingdex-shell-${CACHE_VERSION}`;
 const DATA_CACHE = `livingdex-data-${CACHE_VERSION}`;
 const SPRITE_CACHE = "livingdex-sprites-v1";
@@ -22,6 +22,7 @@ const SHELL_ASSETS = [
   "./llms.txt",
   "./js/main.js",
   "./js/config.js",
+  "./js/layout.js",
   "./js/db.js",
   "./js/pwa.js",
   "./js/state.js",

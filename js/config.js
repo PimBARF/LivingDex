@@ -749,6 +749,36 @@ export const ACTIVE_GAME_ID = resolveActiveGameId();
 export const ACTIVE_GAME = GAMES[ACTIVE_GAME_ID] || GAMES["home"];
 export const BOX_CAPACITY = 30;
 
+/**
+ * Supported box layout presets for arranging living dex entries.
+ * @type {Record<string, string>}
+ */
+export const LAYOUT_PRESETS = {
+  STANDARD: "standard",
+  GENERATIONAL: "generational",
+  INLINE: "inline",
+  EVOLUTIONARY: "evolutionary",
+  TYPES: "types",
+  ALPHABETICAL: "alphabetical",
+};
+
+/**
+ * National Pokédex generation index ranges for generational box layout breaks.
+ * @type {Array<{ gen: number, name: string, start: number, end: number }>}
+ */
+export const GENERATION_RANGES = [
+  { gen: 1, name: "Kanto", start: 1, end: 151 },
+  { gen: 2, name: "Johto", start: 152, end: 251 },
+  { gen: 3, name: "Hoenn", start: 252, end: 386 },
+  { gen: 4, name: "Sinnoh", start: 387, end: 493 },
+  { gen: 5, name: "Unova", start: 494, end: 649 },
+  { gen: 6, name: "Kalos", start: 650, end: 721 },
+  { gen: 7, name: "Alola", start: 722, end: 809 },
+  { gen: 8, name: "Galar", start: 810, end: 898 },
+  { gen: "hisui", name: "Hisui", start: 899, end: 905 },
+  { gen: 9, name: "Paldea", start: 906, end: 1025 },
+];
+
 export const CAUGHT_STORAGE_KEY = `${ACTIVE_GAME.storagePrefix}-caught-v1`;
 export const SHINY_CAUGHT_STORAGE_KEY = `${ACTIVE_GAME.storagePrefix}-shiny-caught-v1`;
 export const SEGMENTS_STORAGE_KEY = `${ACTIVE_GAME.storagePrefix}-segments-v1`;

@@ -39,6 +39,18 @@ export function setShinyMode(active) {
  */
 export function countCaughtSlots(slotCount) {
   const caught = isShinyMode ? loadShinyCaughtSlots() : loadCaughtSlots();
+  const cells = document.querySelectorAll(".cell:not(.is-placeholder)");
+  if (cells.length > 0) {
+    let total = 0;
+    for (const cell of cells) {
+      const key = cell.dataset.specimenKey;
+      const slot = Number(cell.dataset.regional);
+      if (key ? Boolean(caught[key]) : slot && Boolean(caught[slot])) {
+        total += 1;
+      }
+    }
+    return total;
+  }
   let total = 0;
   for (let slot = 1; slot <= slotCount; slot += 1) {
     if (caught[slot]) total += 1;
@@ -163,7 +175,9 @@ export function rebuildDexView({ sections, slotCount, onComplete }) {
   }
 
   let startGlobal = 1;
+  let runningBoxNumber = 1;
   for (const sec of sections) {
+    const boxCount = Math.ceil(sec.entries.length / 30);
     renderDexSectionBoxes(
       app,
       sec.key,
@@ -171,7 +185,10 @@ export function rebuildDexView({ sections, slotCount, onComplete }) {
       sec.entries.length,
       startGlobal,
       sec.startIndex || 1,
+      sec,
+      runningBoxNumber,
     );
+    runningBoxNumber += boxCount;
     startGlobal += sec.entries.length;
   }
 

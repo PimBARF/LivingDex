@@ -1,5 +1,6 @@
 import {
   loadSettings,
+  saveSettings,
   loadCaughtSlots,
   encodeCaughtState,
 } from "../storage.js";
@@ -8,6 +9,7 @@ import { showToast } from "./modals.js";
 import { isShinyMode, setShinyMode, rebuildDexView } from "../state.js";
 import {
   buildActiveDexSections,
+  loadSpeciesNames,
   buildEvolutionStageMap,
   getAllEvolutionData,
   getGameFilterCapabilities,

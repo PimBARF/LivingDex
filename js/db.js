@@ -7,6 +7,7 @@ import {
   loadSpecimenInventory,
   getSelectedGameVersion,
 } from "./storage.js";
+import { applyLayoutPreset } from "./layout.js";
 import { applyNamesToCells } from "./ui/dom-render.js";
 
 /**
@@ -305,9 +306,10 @@ export async function buildActiveDexSections() {
     ? segmentConfig.order
     : [];
 
-  const [gameData] = await Promise.all([
+  const [gameData, speciesData, evolutionsData] = await Promise.all([
     getGameDexData(ACTIVE_GAME_ID),
     getAllSpeciesData(),
+    getAllEvolutionData(),
   ]);
 
   const sections = [];
@@ -366,7 +368,18 @@ export async function buildActiveDexSections() {
     }
   }
 
-  return { sections, warnings };
+  const settings = loadSettings();
+  const activePreset =
+    ACTIVE_GAME_ID === "home"
+      ? settings.layoutPreset || "standard"
+      : "standard";
+  const transformedSections = applyLayoutPreset(sections, activePreset, {
+    speciesData,
+    evolutionsData,
+    gameId: ACTIVE_GAME_ID,
+  });
+
+  return { sections: transformedSections, warnings };
 }
 
 /**
@@ -1248,7 +1261,12 @@ export async function getMissingPokemonData(
   sections.forEach((section) => {
     (section.entries || []).forEach((entry) => {
       runningSlot += 1;
-      const isCaught = Boolean(caughtSlotsMap[runningSlot]);
+      const specimenKey =
+        entry.specimenKey ||
+        `${entry.speciesId}:${entry.formId || entry.speciesId}:${entry.gender || ""}:${entry.spriteId || entry.formId || entry.speciesId}`;
+      const isCaught = specimenKey
+        ? Boolean(caughtSlotsMap[specimenKey])
+        : Boolean(caughtSlotsMap[runningSlot]);
       if (isCaught) {
         caughtSpeciesIds.add(entry.speciesId);
       }
@@ -1473,7 +1491,12 @@ export async function getEvolutionFamilyChecklist(gameId, caughtSlots = {}) {
         chainSlotsMap.set(chainId, []);
       }
 
-      const isCaught = Boolean(caughtSlotsMap[runningSlot]);
+      const specimenKey =
+        entry.specimenKey ||
+        `${entry.speciesId}:${entry.formId || entry.speciesId}:${entry.gender || ""}:${entry.spriteId || entry.formId || entry.speciesId}`;
+      const isCaught = specimenKey
+        ? Boolean(caughtSlotsMap[specimenKey])
+        : Boolean(caughtSlotsMap[runningSlot]);
       const form =
         species.forms?.find((f) => f.formId === entry.formId) ||
         species.forms?.[0];

@@ -18,6 +18,7 @@ import { openPokemonInfoModal } from "./pokemon-info.js";
 import { applyHideCaughtFilter } from "./controls.js";
 import { updateProgressBar, isShinyMode } from "../state.js";
 import { getSpeciesTypes } from "../db.js";
+import { getSpecimenKey } from "../layout.js";
 
 // =============================================================================
 // DOM RENDERING & BOX MANAGEMENT
@@ -290,8 +291,9 @@ export function updateBoxProgress(box) {
   const caught = isShinyMode ? loadShinyCaughtSlots() : loadCaughtSlots();
   let caughtCount = 0;
   for (const cell of cells) {
+    const key = cell.dataset.specimenKey;
     const slot = Number(cell.dataset.regional);
-    if (caught[slot]) {
+    if (key ? Boolean(caught[key]) : slot && Boolean(caught[slot])) {
       caughtCount += 1;
     }
   }
@@ -384,6 +386,8 @@ export function renderDexSectionBoxes(
   slotsInSection,
   startGlobalSlot,
   startLocalIndex = 1,
+  sectionMeta = {},
+  startBoxNumber = 1,
 ) {
   const fragment = document.createDocumentFragment();
 
@@ -396,8 +400,23 @@ export function renderDexSectionBoxes(
   const labels = loadBoxLabels();
   const collapsedBoxes = getActiveCollapsedBoxes();
 
+  const isBase =
+    sectionMeta?.kind === "base" ||
+    sectionMeta?.type === "base" ||
+    sectionKey === "national" ||
+    sectionKey.startsWith("national-") ||
+    (!sectionMeta?.kind &&
+      !sectionMeta?.type &&
+      !sectionKey.startsWith("gen-") &&
+      !sectionKey.startsWith("type-") &&
+      !sectionKey.startsWith("forms") &&
+      !sectionKey.startsWith("gender") &&
+      !sectionKey.startsWith("regional") &&
+      !sectionKey.startsWith("gmax"));
+
   const boxCount = Math.ceil(slotsInSection / BOX_CAPACITY);
   for (let boxIndex = 0; boxIndex < boxCount; boxIndex += 1) {
+    const sequentialBoxNum = startBoxNumber + boxIndex;
     const localStart = startLocalIndex + boxIndex * BOX_CAPACITY;
     const localEnd = Math.min(
       startLocalIndex + (boxIndex + 1) * BOX_CAPACITY - 1,
@@ -409,8 +428,34 @@ export function renderDexSectionBoxes(
       startGlobalSlot + slotsInSection - 1,
     );
     const boxId = `${sectionKey}:${boxIndex}`;
-    const rangeText = `#${String(localStart).padStart(3, "0")}–${String(localEnd).padStart(3, "0")}`;
-    const defaultTitle = `${sectionTitle} — ${rangeText}`;
+    const rangeText =
+      localStart === localEnd
+        ? `#${String(localStart).padStart(3, "0")}`
+        : `#${String(localStart).padStart(3, "0")}-${String(localEnd).padStart(3, "0")}`;
+
+    let defaultTitle = "";
+    if (sectionKey.startsWith("gen-")) {
+      // Generational Clean: "Kanto - #001-030", "Hisui - #899-905"
+      defaultTitle = `${sectionTitle} - ${rangeText}`;
+    } else if (sectionKey.startsWith("type-")) {
+      // Primary Types: "Fire Type", "Water Type 1", "Water Type 2"
+      defaultTitle =
+        boxCount > 1 ? `${sectionTitle} ${boxIndex + 1}` : sectionTitle;
+    } else if (sectionKey === "national-alphabetical") {
+      // Alphabetical (A-Z): "Alphabetical 1", "Alphabetical 2", etc.
+      defaultTitle =
+        boxCount > 1 ? `Alphabetical ${boxIndex + 1}` : "Alphabetical";
+    } else if (isBase) {
+      // Base Dex / Standard National / All Forms Inline / Evolution Lines / Cartridge Dexes:
+      // Just the numbers on the boxes: "#001-030", "#031-060"
+      defaultTitle = rangeText;
+    } else {
+      // Forms / Extra segments (Regional Forms, Gender Variants, G-Max, etc.):
+      // Name without numbers; numbered if multiple boxes (e.g. "Regional Forms 1", "Regional Forms 2")
+      defaultTitle =
+        boxCount > 1 ? `${sectionTitle} ${boxIndex + 1}` : sectionTitle;
+    }
+
     const customTitle = labels[boxId] || "";
     const displayTitle = customTitle || defaultTitle;
     const isCollapsed = collapsedBoxes.has(boxId);
@@ -419,6 +464,8 @@ export function renderDexSectionBoxes(
     section.className = `box${isCollapsed ? " is-collapsed" : ""}`;
     section.dataset.section = sectionKey;
     section.dataset.boxId = boxId;
+    section.dataset.boxNum = String(sequentialBoxNum);
+    section.dataset.boxIndex = String(boxIndex + 1);
     section.dataset.defaultTitle = defaultTitle;
     section.dataset.rangeText = rangeText;
 
@@ -434,7 +481,7 @@ export function renderDexSectionBoxes(
         </div>
         <div class="box-action-pill" role="group" aria-label="Box actions for ${displayTitle}">
           <span class="box-progress-badge" aria-label="Box progress">0/30</span>
-          <button class="box-toggle" type="button" data-range="${globalStart}-${globalEnd}" aria-label="Mark all caught in ${rangeText}">✓ All</button>
+          <button class="box-toggle" type="button" data-range="${globalStart}-${globalEnd}" aria-label="Mark all caught in ${displayTitle}">✓ All</button>
         </div>
       </div>
       <div class="box-content">
@@ -444,6 +491,113 @@ export function renderDexSectionBoxes(
     fragment.appendChild(section);
   }
   container.appendChild(fragment);
+}
+
+let coordTooltipEl = null;
+
+/**
+ * Retrieves or lazily creates the floating cursor coordinate tooltip element.
+ * @returns {HTMLElement} The coordinate tooltip element.
+ */
+function getOrCreateCoordTooltip() {
+  if (coordTooltipEl && document.body.contains(coordTooltipEl))
+    return coordTooltipEl;
+  let tip = document.getElementById("cellCoordTooltip");
+  if (!tip) {
+    tip = document.createElement("div");
+    tip.id = "cellCoordTooltip";
+    tip.className = "cell-coord-tooltip";
+    tip.setAttribute("role", "tooltip");
+    tip.setAttribute("aria-hidden", "true");
+    document.body.appendChild(tip);
+  }
+  coordTooltipEl = tip;
+  return coordTooltipEl;
+}
+
+let coordTooltipInitialized = false;
+
+/**
+ * Initializes cursor-following box coordinate tooltip functionality.
+ */
+export function initCellCoordTooltip() {
+  if (coordTooltipInitialized || typeof document === "undefined") return;
+  coordTooltipInitialized = true;
+
+  const tip = getOrCreateCoordTooltip();
+
+  document.addEventListener(
+    "pointermove",
+    (event) => {
+      if (!loadSettings().showBoxCoordinates) {
+        if (tip.classList.contains("is-visible")) {
+          tip.classList.remove("is-visible");
+        }
+        return;
+      }
+
+      const cell = event.target.closest(".cell:not(.is-placeholder)");
+      if (!cell || !cell.dataset.boxCoord) {
+        if (tip.classList.contains("is-visible")) {
+          tip.classList.remove("is-visible");
+        }
+        return;
+      }
+
+      tip.textContent = cell.dataset.boxCoord;
+      const tooltipWidth = tip.offsetWidth || 150;
+      const tooltipHeight = tip.offsetHeight || 28;
+      const offsetX = 14;
+      const offsetY = 14;
+
+      let left = event.clientX + offsetX;
+      let top = event.clientY + offsetY;
+
+      if (left + tooltipWidth > window.innerWidth - 10) {
+        left = event.clientX - tooltipWidth - 10;
+      }
+      if (top + tooltipHeight > window.innerHeight - 10) {
+        top = event.clientY - tooltipHeight - 10;
+      }
+
+      tip.style.transform = `translate3d(${Math.max(6, left)}px, ${Math.max(6, top)}px, 0)`;
+      if (!tip.classList.contains("is-visible")) {
+        tip.classList.add("is-visible");
+      }
+    },
+    { passive: true },
+  );
+
+  document.addEventListener(
+    "pointerleave",
+    () => {
+      if (tip.classList.contains("is-visible")) {
+        tip.classList.remove("is-visible");
+      }
+    },
+    { passive: true },
+  );
+
+  window.addEventListener(
+    "scroll",
+    () => {
+      if (tip.classList.contains("is-visible")) {
+        tip.classList.remove("is-visible");
+      }
+    },
+    { passive: true },
+  );
+}
+
+/**
+ * Updates coordinate tooltip state when settings change.
+ * @param {boolean} show - Whether coordinates are enabled.
+ */
+export function updateBoxCoordinatesDisplay(show) {
+  const tip = getOrCreateCoordTooltip();
+  if (!show && tip.classList.contains("is-visible")) {
+    tip.classList.remove("is-visible");
+  }
 }
 
 /**
@@ -566,6 +720,12 @@ export function createDexSlot(
   button.dataset.formName = formName || "";
   button.dataset.formTitle = formTitle || "";
   button.dataset.speciesName = name;
+  button.dataset.specimenKey = getSpecimenKey(
+    speciesId,
+    formId,
+    gender,
+    spriteId,
+  );
 
   const variantText = getVariantSubtitle(name, formTitle, formName, gender);
   const displayName =
@@ -725,10 +885,12 @@ export function populateDexSlots(sections, slotCount, onComplete) {
    */
   function renderBoxTask(task) {
     if (!task || !task.grid) return;
+    const boxEl = task.grid.closest(".box");
+    const boxNum = boxEl?.dataset?.boxNum || boxEl?.dataset?.boxIndex || "";
     const fragment = document.createDocumentFragment();
 
     task.entries.forEach(
-      ({ entry, globalSlotIndex: slotIdx, localIndex: locIdx }) => {
+      ({ entry, globalSlotIndex: slotIdx, localIndex: locIdx }, entryIdx) => {
         const {
           speciesId,
           formId,
@@ -740,7 +902,7 @@ export function populateDexSlots(sections, slotCount, onComplete) {
         } = entry;
         const speciesName =
           window.__livingDexNames?.[speciesId] || `#${speciesId}`;
-        const num = dexNumber != null ? dexNumber : locIdx + 1;
+        const num = dexNumber != null ? dexNumber : speciesId;
         const displayIndex = String(num).padStart(3, "0");
         const cell = createDexSlot(
           slotIdx,
@@ -755,7 +917,22 @@ export function populateDexSlots(sections, slotCount, onComplete) {
           spriteId,
         );
 
-        if (caught[slotIdx]) {
+        const slotInBox = entryIdx + 1;
+        const row = Math.floor(entryIdx / 6) + 1;
+        const col = (entryIdx % 6) + 1;
+        const coordText = `Box ${boxNum || "?"} · Row ${row}, Col ${col} (Slot ${slotInBox})`;
+        cell.dataset.boxCoord = coordText;
+
+        const specimenKey =
+          entry.specimenKey ||
+          getSpecimenKey(speciesId, formId, gender, spriteId);
+        cell.dataset.specimenKey = specimenKey;
+
+        const isEntryCaught = specimenKey
+          ? Boolean(caught[specimenKey])
+          : Boolean(caught[slotIdx]);
+
+        if (isEntryCaught) {
           cell.classList.add("caught");
           cell.setAttribute("aria-pressed", "true");
         }
@@ -787,13 +964,39 @@ export function populateDexSlots(sections, slotCount, onComplete) {
               if (targetCell) {
                 targetCell.classList.toggle("caught", targetState);
                 targetCell.setAttribute("aria-pressed", String(targetState));
-                nextCaught[slot] = targetState;
+                const tKey = targetCell.dataset.specimenKey;
+                if (tKey) {
+                  if (targetState) {
+                    nextCaught[tKey] = true;
+                  } else {
+                    delete nextCaught[tKey];
+                  }
+                } else {
+                  if (targetState) {
+                    nextCaught[slot] = true;
+                  } else {
+                    delete nextCaught[slot];
+                  }
+                }
               }
             }
           } else {
             cell.classList.toggle("caught", isCaught);
             cell.setAttribute("aria-pressed", String(isCaught));
-            nextCaught[regionalSlot] = isCaught;
+            const cKey = cell.dataset.specimenKey;
+            if (cKey) {
+              if (isCaught) {
+                nextCaught[cKey] = true;
+              } else {
+                delete nextCaught[cKey];
+              }
+            } else {
+              if (isCaught) {
+                nextCaught[regionalSlot] = true;
+              } else {
+                delete nextCaught[regionalSlot];
+              }
+            }
           }
 
           lastClickedSlotIndex = regionalSlot;
@@ -1004,7 +1207,20 @@ export function registerTouchDragSelection(slotCount) {
       cell.classList.add("is-drag-active");
       setTimeout(() => cell.classList.remove("is-drag-active"), 250);
 
-      nextCaughtStateMap[slot] = targetCaughtState;
+      const key = cell.dataset.specimenKey;
+      if (key) {
+        if (targetCaughtState) {
+          nextCaughtStateMap[key] = true;
+        } else {
+          delete nextCaughtStateMap[key];
+        }
+      } else {
+        if (targetCaughtState) {
+          nextCaughtStateMap[slot] = true;
+        } else {
+          delete nextCaughtStateMap[slot];
+        }
+      }
       lastClickedSlotIndex = slot;
 
       if (navigator.vibrate) {
@@ -1137,7 +1353,20 @@ export function registerTouchDragSelection(slotCount) {
 
         startCell.classList.toggle("caught", targetCaughtState);
         startCell.setAttribute("aria-pressed", String(targetCaughtState));
-        nextCaughtStateMap[regionalSlot] = targetCaughtState;
+        const key = startCell.dataset.specimenKey;
+        if (key) {
+          if (targetCaughtState) {
+            nextCaughtStateMap[key] = true;
+          } else {
+            delete nextCaughtStateMap[key];
+          }
+        } else {
+          if (targetCaughtState) {
+            nextCaughtStateMap[regionalSlot] = true;
+          } else {
+            delete nextCaughtStateMap[regionalSlot];
+          }
+        }
         lastClickedSlotIndex = regionalSlot;
 
         updateDragHud(true, targetCaughtState, 1);
@@ -1251,13 +1480,29 @@ export function registerBoxControls(slotCount) {
       toggleBtn.onclick = () => {
         const caught = isShinyMode ? loadShinyCaughtSlots() : loadCaughtSlots();
         const cells = interactiveCells();
-        const allCaught = cells.every(
-          (cell) => caught[Number(cell.dataset.regional)],
-        );
+        const allCaught = cells.every((cell) => {
+          const key = cell.dataset.specimenKey;
+          const reg = Number(cell.dataset.regional);
+          return key ? Boolean(caught[key]) : reg && Boolean(caught[reg]);
+        });
         cells.forEach((cell) => {
+          const key = cell.dataset.specimenKey;
+          const reg = Number(cell.dataset.regional);
           cell.classList.toggle("caught", !allCaught);
           cell.setAttribute("aria-pressed", String(!allCaught));
-          caught[Number(cell.dataset.regional)] = !allCaught;
+          if (!allCaught) {
+            if (key) {
+              caught[key] = true;
+            } else {
+              caught[reg] = true;
+            }
+          } else {
+            if (key) {
+              delete caught[key];
+            } else {
+              delete caught[reg];
+            }
+          }
         });
 
         if (isShinyMode) {

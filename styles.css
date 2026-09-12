@@ -272,6 +272,12 @@ button:focus-visible,
   color: var(--text);
 }
 
+select option,
+.select option {
+  background-color: var(--card);
+  color: var(--text);
+}
+
 .input:focus,
 .select:focus,
 .textarea:focus,
@@ -1350,6 +1356,39 @@ body.is-scrolled #progressWrap {
 .cell.highlight .index,
 .cell.caught .index {
   z-index: 4;
+}
+
+/* Floating cursor tooltip for box coordinates HUD */
+.cell-coord-tooltip {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 10000;
+  display: inline-flex;
+  align-items: center;
+  padding: 5px 9px;
+  font-size: 11.5px;
+  font-weight: 600;
+  font-family: inherit;
+  line-height: 1.2;
+  font-variant-numeric: tabular-nums;
+  color: var(--text);
+  background: var(--surface-overlay, var(--card));
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25), 0 1px 3px rgba(0, 0, 0, 0.12);
+  opacity: 0;
+  transform: translate3d(-9999px, -9999px, 0);
+  transition: opacity 0.12s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform, opacity;
+  white-space: nowrap;
+}
+
+.cell-coord-tooltip.is-visible {
+  opacity: 1;
 }
 
 /* Species name label (bottom of cell) */
@@ -2646,7 +2685,7 @@ body.is-drag-selecting .cell {
   font-family: inherit;
   font-weight: 600;
   color: var(--text);
-  background: var(--surface);
+  background: var(--surface-soft);
   border: 1px solid var(--border);
   border-radius: 4px;
 }
@@ -3543,6 +3582,8 @@ body.is-drag-selecting .cell {
 
 .segments-modal-card {
   max-width: 560px;
+  height: min(900px, calc(100dvh - 40px));
+  max-height: calc(100dvh - 40px);
 }
 
 .segments-modal-header {
@@ -3594,8 +3635,186 @@ body.is-drag-selecting .cell {
   gap: 14px;
   margin: 8px 0 12px;
   overflow-y: auto;
-  max-height: min(65vh, 520px);
+  flex: 1;
+  min-height: 0;
   padding-right: 2px;
+}
+
+/* Dex Options Modal Toolbar (Shiny Mode + Share Link) */
+.dex-options-toolbar {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 560px) {
+  .dex-options-toolbar {
+    grid-template-columns: 1fr;
+  }
+}
+
+.dex-options-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 10px 12px;
+  background: var(--surface-soft);
+  border: 1px solid var(--surface-soft-border);
+  border-radius: var(--control-radius);
+}
+
+.dex-options-card-clickable {
+  cursor: pointer;
+  user-select: none;
+  transition: background-color 0.15s ease, border-color 0.15s ease;
+}
+
+.dex-options-card-clickable:hover {
+  background: var(--surface-soft-hover);
+  border-color: var(--border);
+}
+
+.dex-options-card-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.dex-options-card-title {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--text);
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.dex-options-card-desc {
+  font-size: 11.5px;
+  color: var(--muted);
+  line-height: 1.3;
+}
+
+.dex-share-btn {
+  flex-shrink: 0;
+  height: 32px;
+  padding: 0 12px;
+  font-weight: 600;
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+/* Dynamic Preset Explanation Card */
+.preset-explanation-card {
+  margin-top: 6px;
+  padding: 10px 12px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+}
+
+.preset-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.preset-card-title {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.preset-card-badge {
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: 2px 7px;
+  border-radius: 9999px;
+  background: var(--surface-soft-hover);
+  color: var(--accent-2);
+  border: 1px solid color-mix(in srgb, var(--accent-2) 25%, transparent);
+}
+
+.preset-card-desc {
+  font-size: 12px;
+  line-height: 1.45;
+  color: var(--text);
+  margin: 0;
+}
+
+.preset-card-details {
+  margin: 0;
+  padding-left: 18px;
+  font-size: 11.5px;
+  color: var(--muted);
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.preset-card-details li {
+  line-height: 1.35;
+}
+
+.segment-layout-section {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 10px 12px;
+  background: var(--surface-soft);
+  border: 1px solid var(--surface-soft-border);
+  border-radius: var(--control-radius);
+  margin-bottom: 8px;
+}
+
+.segment-layout-section[hidden] {
+  display: none !important;
+}
+
+.segment-layout-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.segment-layout-title {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.segment-layout-hint {
+  font-size: 11px;
+  color: var(--muted);
+}
+
+.segment-layout-select {
+  width: 100%;
+  padding: 6px 10px;
+  font-size: 13px;
+  font-weight: 500;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: calc(var(--control-radius) - 2px);
+  color: var(--text);
+  cursor: pointer;
+}
+
+.segment-layout-select:focus {
+  outline: 3px solid var(--focus-ring);
+  outline-offset: 1px;
 }
 
 .segment-presets-section {
