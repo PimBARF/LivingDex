@@ -57,6 +57,7 @@
   --border: rgba(0, 0, 0, 0.12);                 /* Subtle structural borders */
   --muted: rgba(0, 0, 0, 0.65);                  /* Secondary / descriptive text */
   --accent: rgb(255, 204, 0);                    /* Primary brand accent (Pikachu yellow) */
+  --accent-1: rgb(66, 133, 244);                 /* Alias to action color for compatibility */
   --accent-2: rgb(66, 133, 244);                 /* Action color (interactive links/buttons) */
   --focus-ring: rgb(37, 99, 235);                /* Accessible focus outline ring */
 
@@ -96,6 +97,7 @@
   --border: rgba(255, 255, 255, 0.16);
   --muted: rgba(255, 255, 255, 0.75);
   --accent: rgb(255, 204, 0);
+  --accent-1: rgb(66, 133, 244);
   --accent-2: rgb(66, 133, 244);
   --focus-ring: rgb(96, 165, 250);
   --surface-soft: rgba(255, 255, 255, 0.06);
@@ -4183,7 +4185,7 @@ body.is-drag-selecting .cell {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background: var(--accent-1);
+  background: var(--accent-2);
   color: #fff;
   font-size: 0.7rem;
   font-weight: 700;
@@ -4236,9 +4238,9 @@ body.is-drag-selecting .cell {
 .missing-guide-stats {
   font-size: 0.82rem;
   font-weight: 700;
-  color: var(--accent-1);
-  background: color-mix(in srgb, var(--accent-1) 12%, transparent);
-  border: 1px solid color-mix(in srgb, var(--accent-1) 25%, transparent);
+  color: var(--accent-2);
+  background: color-mix(in srgb, var(--accent-2) 12%, transparent);
+  border: 1px solid color-mix(in srgb, var(--accent-2) 25%, transparent);
   padding: 3px 10px;
   border-radius: 20px;
   white-space: nowrap;
@@ -4333,10 +4335,10 @@ body.is-drag-selecting .cell {
 }
 
 .missing-filter-chip {
-  border: 1px solid color-mix(in srgb, var(--accent-1) 35%, transparent);
+  border: 1px solid color-mix(in srgb, var(--accent-2) 35%, transparent);
   border-radius: 999px;
-  background: color-mix(in srgb, var(--accent-1) 10%, var(--card));
-  color: var(--accent-1);
+  background: color-mix(in srgb, var(--accent-2) 10%, var(--card));
+  color: var(--accent-2);
   cursor: pointer;
   font-size: 0.72rem;
   font-weight: 700;
@@ -4459,8 +4461,8 @@ body.is-drag-selecting .cell {
 
 .missing-search-input:focus {
   outline: none;
-  border-color: var(--accent-1);
-  box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent-1) 20%, transparent);
+  border-color: var(--accent-2);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent-2) 20%, transparent);
 }
 
 .missing-toggle-filters-btn {
@@ -4482,25 +4484,25 @@ body.is-drag-selecting .cell {
 
 .missing-toggle-filters-btn:hover {
   background: var(--surface-soft-hover);
-  border-color: var(--accent-1);
+  border-color: var(--accent-2);
 }
 
 .missing-toggle-filters-btn.is-active {
-  background: color-mix(in srgb, var(--accent-1) 12%, var(--card));
-  border-color: var(--accent-1);
-  color: var(--accent-1);
+  background: color-mix(in srgb, var(--accent-2) 12%, var(--card));
+  border-color: var(--accent-2);
+  color: var(--accent-2);
 }
 
 .missing-toggle-filters-btn.has-active-filters {
-  border-color: var(--accent-1);
-  box-shadow: 0 0 0 2px color-mix(in srgb, var(--accent-1) 25%, transparent);
+  border-color: var(--accent-2);
+  box-shadow: 0 0 0 2px color-mix(in srgb, var(--accent-2) 25%, transparent);
 }
 
 .missing-filter-count-badge {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background: var(--accent-1);
+  background: var(--accent-2);
   color: #fff;
   font-size: 0.7rem;
   font-weight: 700;
@@ -4772,7 +4774,7 @@ body.is-drag-selecting .cell {
 }
 
 .locations-more-tag {
-  color: var(--accent-1);
+  color: var(--accent-2);
   font-weight: 600;
   list-style-type: none;
   margin-left: -12px;
@@ -4804,8 +4806,8 @@ body.is-drag-selecting .cell {
 }
 
 .missing-recommended-route-pill {
-  background: color-mix(in srgb, var(--accent-1) 12%, var(--card));
-  border: 1px solid color-mix(in srgb, var(--accent-1) 28%, transparent);
+  background: color-mix(in srgb, var(--accent-2) 12%, var(--card));
+  border: 1px solid color-mix(in srgb, var(--accent-2) 28%, transparent);
   border-radius: 6px;
   padding: 5px 8px;
   margin-bottom: 4px;
@@ -4824,7 +4826,7 @@ body.is-drag-selecting .cell {
 
 .missing-rec-title {
   font-weight: 600;
-  color: var(--accent-1);
+  color: var(--accent-2);
 }
 
 .missing-rec-location {
@@ -4913,7 +4915,7 @@ body.is-drag-selecting .cell {
 
 .missing-info-btn:hover {
   color: var(--text);
-  border-color: var(--accent-1);
+  border-color: var(--accent-2);
 }
 
 /* Stepper Controls */
@@ -4947,11 +4949,11 @@ body.is-drag-selecting .cell {
 
 .stepper-btn:hover {
   background: var(--surface-soft-hover);
-  color: var(--accent-1);
+  color: var(--accent-2);
 }
 
 .stepper-btn:active {
-  background: color-mix(in srgb, var(--accent-1) 20%, transparent);
+  background: color-mix(in srgb, var(--accent-2) 20%, transparent);
 }
 
 .stepper-input {
@@ -4975,7 +4977,7 @@ body.is-drag-selecting .cell {
 
 .stepper-input:focus {
   outline: none;
-  background: color-mix(in srgb, var(--accent-1) 10%, transparent);
+  background: color-mix(in srgb, var(--accent-2) 10%, transparent);
 }
 
 /* Tab 2: Family Quotas */
@@ -5026,8 +5028,8 @@ body.is-drag-selecting .cell {
   font-weight: 700;
   padding: 3px 8px;
   border-radius: 12px;
-  background: color-mix(in srgb, var(--accent-1) 15%, transparent);
-  color: var(--accent-1);
+  background: color-mix(in srgb, var(--accent-2) 15%, transparent);
+  color: var(--accent-2);
 }
 
 .family-progress-track {
@@ -5228,7 +5230,7 @@ body.is-drag-selecting .cell {
 .shopping-item-count {
   font-size: 0.78rem;
   font-weight: 700;
-  color: var(--accent-1);
+  color: var(--accent-2);
 }
 
 .shopping-item-inv-row {
@@ -5260,8 +5262,8 @@ body.is-drag-selecting .cell {
 }
 
 .shopping-status-badge.is-needed {
-  background: color-mix(in srgb, var(--accent-1) 15%, transparent);
-  color: var(--accent-1);
+  background: color-mix(in srgb, var(--accent-2) 15%, transparent);
+  color: var(--accent-2);
 }
 
 .shopping-item-targets {

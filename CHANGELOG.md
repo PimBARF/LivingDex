@@ -8,6 +8,7 @@ All notable changes, new features, improvements, and bug fixes for **LivingDex**
 
 | Version                                                               | Release Date          | Major Highlights                                                                                                 |
 | :-------------------------------------------------------------------- | :-------------------- | :--------------------------------------------------------------------------------------------------------------- |
+| **[v1.18.5](#v1185---2026-09-13)**                                    | Sep 13, 2026          | Fix Field Guide count badge color and contrast in Light mode by correcting design token references               |
 | **[v1.18.4](#v1184---2026-09-13)**                                    | Sep 13, 2026          | Fix starter and gift Pokémon acquisition method pills and wild encounter badge fallback in Field Guide           |
 | **[v1.18.3](#v1183---2026-09-13)**                                    | Sep 13, 2026          | Rename Missing Pokémon Guide to Field Guide across toolbar, modal headers, shortcuts, and welcome walkthroughs   |
 | **[v1.18.2](#v1182---2026-09-13)**                                    | Sep 13, 2026          | Fix Missing Pokémon Guide undo toast appearance, color contrast, button sizing, positioning, and animation       |
@@ -53,6 +54,18 @@ All notable changes, new features, improvements, and bug fixes for **LivingDex**
 | **[Expansion Phase](#multi-game-expansion--localization---aug-2026)** | Aug 17–31, 2026       | All mainline games, 8-language localization, Info modal, UI modular split                                        |
 | **[Modular JS Split](#modular-js-split---nov-2025)**                  | Nov 13–15, 2025       | ES module decomposition (`main.js`, `ui.js`, `api.js`, `storage.js`)                                             |
 | **[Genesis & Prototype](#initial-release---oct-2025)**                | Oct 27 – Nov 10, 2025 | Initial LivingDex tracker release, 30-slot PC boxes, PokeAPI integration                                         |
+
+---
+
+## [v1.18.5] - 2026-09-13
+
+### Fixed
+
+- **Field Guide Button Badge & Modal Color Contrast in Light Mode**:
+  - Replaced undefined CSS variable `var(--accent-1)` with the design token `var(--accent-2)` across `.missing-count-badge`, `.missing-filter-count-badge`, filter chips, active toggle buttons, stepper buttons, and modal progress badges.
+  - Added `--accent-1` as an alias to `--accent-2` in both `:root` and `[data-theme="dark"]` design tokens to guarantee backward compatibility and prevent badge background transparency.
+  - Fixed invisible badge count text on the Field Guide toolbar button in Light mode, restoring crisp white text against the solid blue brand action background.
+  - Bumped Service Worker `CACHE_VERSION` to `v1.18.5` in `LivingDex/sw.js`.
 
 ---
 
