@@ -8,7 +8,7 @@ import {
   loadSpecimenInventory,
   getSelectedGameVersion,
 } from "./storage.js";
-import { applyLayoutPreset } from "./layout.js";
+import { applyLayoutPreset, getSpecimenKey } from "./layout.js";
 import { applyNamesToCells } from "./ui/dom-render.js";
 
 /**
@@ -1249,6 +1249,18 @@ export async function getMissingPokemonData(
   const generationNumber = gameDexData?.generation || null;
   const itemInventory = loadItemInventory();
   const specimenInventory = loadSpecimenInventory();
+  const regionalDexMap = new Map();
+  (gameDexData?.sections || []).forEach((section, sectionIndex) => {
+    (section.entries || []).forEach((entry) => {
+      const key = getSpecimenKey(entry);
+      if (!regionalDexMap.has(key)) {
+        regionalDexMap.set(key, {
+          sectionIndex,
+          dexNumber: Number(entry.dexNumber) || Number(entry.speciesId) || 0,
+        });
+      }
+    });
+  });
 
   const caughtSpeciesIds = new Set();
   const caughtSlotsMap = caughtSlots || {};
@@ -1303,6 +1315,8 @@ export async function getMissingPokemonData(
       species.names?.[language] || species.names?.en || species.name,
     );
     const types = resolveTypes(species, slot.formId, generationNumber);
+    const regionalDex = regionalDexMap.get(slot.specimenKey);
+    const regionalDexNumber = regionalDex?.dexNumber || slot.speciesId;
 
     // Locations or obtainable games
     let locations = [];
@@ -1429,6 +1443,8 @@ export async function getMissingPokemonData(
       gender: slot.gender,
       spriteId,
       name: displayName,
+      regionalDexNumber,
+      nationalDexNumber: slot.speciesId,
       dexNumber: `#${slot.speciesId}`,
       types,
       sectionKey: slot.sectionKey,

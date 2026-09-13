@@ -70,7 +70,7 @@ let filterState = {
   type: "",
   segment: "",
   version: "all",
-  sort: "dex-asc",
+  sort: "regional-asc",
   familyFilter: "all",
 };
 
@@ -183,7 +183,7 @@ function updateActiveFilterBadge() {
   if (filterState.method !== "all") count += 1;
   if (filterState.type) count += 1;
   if (filterState.segment) count += 1;
-  if (filterState.sort !== "dex-asc") count += 1;
+  if (filterState.sort !== "regional-asc") count += 1;
   if (filterState.familyFilter !== "all" && currentTab === "family") count += 1;
 
   badge.textContent = String(count);
@@ -576,7 +576,7 @@ function setupFilterListeners() {
         type: "",
         segment: "",
         version: "all",
-        sort: "dex-asc",
+        sort: "regional-asc",
         familyFilter: "all",
       };
       setSelectedGameVersion(ACTIVE_GAME_ID, "all");
@@ -587,7 +587,7 @@ function setupFilterListeners() {
       if (familySelect) familySelect.value = "all";
       if (typeSelect) typeSelect.value = "";
       if (segmentSelect) segmentSelect.value = "";
-      if (sortSelect) sortSelect.value = "dex-asc";
+      if (sortSelect) sortSelect.value = "regional-asc";
       updateActiveFilterBadge();
       updateGuideFeedback();
       await refreshMissingGuideData();
@@ -641,7 +641,9 @@ function getFilteredMissingList(list) {
       const q = filterState.search;
       const matchName = p.name.toLowerCase().includes(q);
       const matchNum =
-        String(p.speciesId) === q || p.dexNumber.toLowerCase().includes(q);
+        String(p.nationalDexNumber) === q ||
+        String(p.regionalDexNumber) === q ||
+        p.dexNumber.toLowerCase().includes(q);
       const matchItem =
         p.requiredItem && p.requiredItem.toLowerCase().includes(q);
       const matchLoc = p.locations.some((l) => l.toLowerCase().includes(q));
@@ -694,11 +696,27 @@ function getFilteredMissingList(list) {
 
   // Sorting
   result.sort((a, b) => {
-    if (filterState.sort === "dex-asc") {
-      return a.speciesId - b.speciesId || a.slotNumber - b.slotNumber;
+    if (
+      filterState.sort === "regional-asc" ||
+      filterState.sort === "regional-desc"
+    ) {
+      const direction = filterState.sort === "regional-asc" ? 1 : -1;
+      return (
+        direction * (a.regionalDexNumber - b.regionalDexNumber) ||
+        direction * (a.nationalDexNumber - b.nationalDexNumber) ||
+        a.slotNumber - b.slotNumber
+      );
     }
-    if (filterState.sort === "dex-desc") {
-      return b.speciesId - a.speciesId || b.slotNumber - a.slotNumber;
+    if (
+      filterState.sort === "national-asc" ||
+      filterState.sort === "national-desc"
+    ) {
+      const direction = filterState.sort === "national-asc" ? 1 : -1;
+      return (
+        direction * (a.nationalDexNumber - b.nationalDexNumber) ||
+        direction * (a.regionalDexNumber - b.regionalDexNumber) ||
+        a.slotNumber - b.slotNumber
+      );
     }
     if (filterState.sort === "name-asc") {
       return a.name.localeCompare(b.name);
@@ -806,7 +824,9 @@ function renderMissingList(container) {
 
     const numSpan = document.createElement("span");
     numSpan.className = "missing-card-number";
-    numSpan.textContent = p.dexNumber;
+    numSpan.textContent = filterState.sort.startsWith("national")
+      ? `#${String(p.nationalDexNumber).padStart(3, "0")}`
+      : `#${String(p.regionalDexNumber).padStart(3, "0")}`;
 
     const nameSpan = document.createElement("h4");
     nameSpan.className = "missing-card-name";

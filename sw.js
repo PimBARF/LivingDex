@@ -4,7 +4,7 @@
  * offline execution, background revalidation, and update lifecycle control.
  */
 
-const CACHE_VERSION = "v1.12.0";
+const CACHE_VERSION = "v1.13.1";
 const SHELL_CACHE = `livingdex-shell-${CACHE_VERSION}`;
 const DATA_CACHE = `livingdex-data-${CACHE_VERSION}`;
 const SPRITE_CACHE = "livingdex-sprites-v1";
@@ -68,6 +68,25 @@ const DATA_ASSETS = [
   "./data/games/dex/bdsp.json",
   "./data/games/dex/pla.json",
   "./data/games/dex/za.json",
+  "./data/games/encounters/home.json",
+  "./data/games/encounters/sv.json",
+  "./data/games/encounters/swsh.json",
+  "./data/games/encounters/rby.json",
+  "./data/games/encounters/gsc.json",
+  "./data/games/encounters/rse.json",
+  "./data/games/encounters/frlg.json",
+  "./data/games/encounters/dppt.json",
+  "./data/games/encounters/hgss.json",
+  "./data/games/encounters/bw.json",
+  "./data/games/encounters/b2w2.json",
+  "./data/games/encounters/xy.json",
+  "./data/games/encounters/oras.json",
+  "./data/games/encounters/sm.json",
+  "./data/games/encounters/usum.json",
+  "./data/games/encounters/lgpe.json",
+  "./data/games/encounters/bdsp.json",
+  "./data/games/encounters/pla.json",
+  "./data/games/encounters/za.json",
   "./data/games/evolutions/home.json",
   "./data/games/evolutions/sv.json",
   "./data/games/evolutions/swsh.json",
