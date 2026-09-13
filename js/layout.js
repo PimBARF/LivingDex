@@ -1,4 +1,9 @@
-import { BOX_CAPACITY, GENERATION_RANGES, LAYOUT_PRESETS } from "./config.js";
+import {
+  BOX_CAPACITY,
+  GENERATION_RANGES,
+  LAYOUT_PRESETS,
+  GAME_ORIGIN_RANGES,
+} from "./config.js";
 
 /**
  * Computes a unique and canonical specimen identifier for an entry or cell.
@@ -694,6 +699,90 @@ function transformToHisuiAreas(sections, speciesData) {
 }
 
 /**
+ * Regional Origin Layout:
+ * Filters the active dex to only include species introduced in the active game's region
+ * (e.g. Johto #152–#251 for GSC/HGSS, Hoenn #252–#386 for RSE/ORAS, Paldea #906–#1025 for SV).
+ * Uses canonical National Pokédex numbering and starts Box 1 cleanly at Slot 1.
+ *
+ * @param {Array<Object>} sections - Raw active Pokédex sections.
+ * @param {Record<number, Object>} speciesData - Master species dataset.
+ * @param {string} [gameId="gsc"] - Active game ID.
+ * @returns {Array<Object>} Single Regional Origin base section followed by enabled form sections.
+ */
+function transformToRegionalOrigin(sections, speciesData, gameId = "gsc") {
+  const originInfo = GAME_ORIGIN_RANGES[gameId];
+  if (!originInfo) {
+    return transformToStandard(sections);
+  }
+
+  const { name, start, end } = originInfo;
+
+  const baseSections = sections.filter(
+    (s) =>
+      s.kind === "base" ||
+      s.kind === "dlc" ||
+      s.type === "base" ||
+      s.type === "dlc",
+  );
+  const otherSections = sections.filter((s) => !baseSections.includes(s));
+
+  const seenKeys = new Set();
+  const originEntries = [];
+
+  for (const sec of baseSections) {
+    for (const entry of sec.entries || []) {
+      const sId = entry.speciesId || 0;
+      if (sId >= start && sId <= end) {
+        const key = getSpecimenKey(entry);
+        if (!seenKeys.has(key)) {
+          seenKeys.add(key);
+          originEntries.push({
+            ...entry,
+            dexNumber: sId,
+            kind: entry.kind || sec.kind || "base",
+            specimenKey: key,
+          });
+        }
+      }
+    }
+  }
+
+  originEntries.sort((a, b) => {
+    if (a.speciesId !== b.speciesId) return a.speciesId - b.speciesId;
+    const pA = getVariantSortPriority(a);
+    const pB = getVariantSortPriority(b);
+    if (pA !== pB) return pA - pB;
+    return (Number(a.formId) || 0) - (Number(b.formId) || 0);
+  });
+
+  const formattedStart = String(start).padStart(3, "0");
+  const formattedEnd = String(end).padStart(3, "0");
+
+  const result = [
+    {
+      id: "regional-origin",
+      key: "regional-origin",
+      title: `${name} Origin (#${formattedStart}–#${formattedEnd})`,
+      kind: "base",
+      entries: originEntries,
+      startIndex: 1,
+    },
+  ];
+
+  for (const sec of otherSections) {
+    result.push({
+      ...sec,
+      entries: sec.entries.map((e) => ({
+        ...e,
+        specimenKey: getSpecimenKey(e),
+      })),
+    });
+  }
+
+  return result;
+}
+
+/**
  * Main entry point: Applies a layout preset to raw active Pokédex sections.
  *
  * @param {Array<Object>} sections - Raw active Pokédex sections.
@@ -715,6 +804,9 @@ export function applyLayoutPreset(
   switch (preset) {
     case LAYOUT_PRESETS.NATIONAL:
       return transformToNational(sections, speciesData);
+
+    case LAYOUT_PRESETS.REGIONAL_ORIGIN:
+      return transformToRegionalOrigin(sections, speciesData, gameId);
 
     case LAYOUT_PRESETS.GENERATIONAL:
       if (gameId === "home") {

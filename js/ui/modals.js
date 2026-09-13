@@ -354,6 +354,16 @@ export const PRESET_EXPLANATIONS = {
       "Best for National living dexes within individual games",
     ],
   },
+  "regional-origin": {
+    title: "Regional Origin",
+    badge: "Generation Native",
+    desc: "Filters the living dex strictly to new Pokémon species introduced in that game's region, numbered by their official National Pokédex ID.",
+    details: [
+      "Isolates native generation species (e.g. #152–#251 for Johto, #252–#386 for Hoenn)",
+      "Uses canonical National Pokédex numbering for all entries",
+      "Starts cleanly at Box 1 with compact, contiguous box layouts",
+    ],
+  },
   generational: {
     title: "Generational Clean",
     badge: "Regional Boxes",

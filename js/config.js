@@ -750,12 +750,37 @@ export const ACTIVE_GAME = GAMES[ACTIVE_GAME_ID] || GAMES["home"];
 export const BOX_CAPACITY = 30;
 
 /**
+ * Generation origin ranges for each supported post-Gen 1 game.
+ * Used by the Regional Origin layout preset to isolate newly introduced species.
+ * Excludes Kanto games (RBY, FRLG, LGPE) and Pokémon HOME.
+ * @type {Record<string, { name: string, start: number, end: number }>}
+ */
+export const GAME_ORIGIN_RANGES = {
+  gsc: { name: "Johto", start: 152, end: 251 },
+  hgss: { name: "Johto", start: 152, end: 251 },
+  rse: { name: "Hoenn", start: 252, end: 386 },
+  oras: { name: "Hoenn", start: 252, end: 386 },
+  dppt: { name: "Sinnoh", start: 387, end: 493 },
+  bdsp: { name: "Sinnoh", start: 387, end: 493 },
+  bw: { name: "Unova", start: 494, end: 649 },
+  b2w2: { name: "Unova", start: 494, end: 649 },
+  xy: { name: "Kalos", start: 650, end: 721 },
+  sm: { name: "Alola", start: 722, end: 809 },
+  usum: { name: "Alola", start: 722, end: 809 },
+  swsh: { name: "Galar", start: 810, end: 898 },
+  pla: { name: "Hisui", start: 899, end: 905 },
+  sv: { name: "Paldea", start: 906, end: 1025 },
+  za: { name: "Kalos", start: 650, end: 721 },
+};
+
+/**
  * Supported box layout presets for arranging living dex entries.
  * @type {Record<string, string>}
  */
 export const LAYOUT_PRESETS = {
   STANDARD: "standard",
   NATIONAL: "national",
+  REGIONAL_ORIGIN: "regional-origin",
   INLINE: "inline",
   EVOLUTIONARY: "evolutionary",
   ALPHABETICAL: "alphabetical",
@@ -793,6 +818,17 @@ export function getAvailableLayoutPresetsForGame(
     presets.push({
       id: LAYOUT_PRESETS.NATIONAL,
       title: "National Pokédex Order (#001–#1025)",
+    });
+  }
+
+  // Regional Origin preset for games with a distinct regional generation (excluding Kanto & HOME)
+  const originInfo = GAME_ORIGIN_RANGES[gameId];
+  if (originInfo) {
+    const formattedStart = String(originInfo.start).padStart(3, "0");
+    const formattedEnd = String(originInfo.end).padStart(3, "0");
+    presets.push({
+      id: LAYOUT_PRESETS.REGIONAL_ORIGIN,
+      title: `Regional Origin (${originInfo.name} #${formattedStart}–#${formattedEnd})`,
     });
   }
 

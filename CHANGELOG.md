@@ -8,6 +8,7 @@ All notable changes, new features, improvements, and bug fixes for **LivingDex**
 
 | Version                                                               | Release Date          | Major Highlights                                                                                               |
 | :-------------------------------------------------------------------- | :-------------------- | :------------------------------------------------------------------------------------------------------------- |
+| **[v1.11.0](#v1110---2026-09-13)**                                    | Sep 13, 2026          | Regional Origin box layout preset for post-Gen 1 games (GSC through SV) in canonical National Dex numbering    |
 | **[v1.10.1](#v1101---2026-09-12)**                                    | Sep 12, 2026          | Game-specific layout presets (Alola Islands, Kalos/Galar/Paldea Unified, Hisui Areas), dynamic preset resolver |
 | **[v1.9.19](#v1919---2026-09-12)**                                    | Sep 12, 2026          | Active game version selector in Dex Options modal                                                              |
 | **[v1.9.18](#v1918---2026-09-12)**                                    | Sep 12, 2026          | Centralized Dex Options redesign with interactive preset detail cards                                          |
@@ -35,6 +36,18 @@ All notable changes, new features, improvements, and bug fixes for **LivingDex**
 | **[Expansion Phase](#multi-game-expansion--localization---aug-2026)** | Aug 17–31, 2026       | All mainline games, 8-language localization, Info modal, UI modular split                                      |
 | **[Modular JS Split](#modular-js-split---nov-2025)**                  | Nov 13–15, 2025       | ES module decomposition (`main.js`, `ui.js`, `api.js`, `storage.js`)                                           |
 | **[Genesis & Prototype](#initial-release---oct-2025)**                | Oct 27 – Nov 10, 2025 | Initial LivingDex tracker release, 30-slot PC boxes, PokeAPI integration                                       |
+
+---
+
+## [v1.11.0] - 2026-09-13
+
+### Added
+
+- **Regional Origin Box Layout Preset** (`regional-origin`): Added a dedicated layout preset for all post-Gen 1 games (`gsc`, `rse`, `dppt`, `hgss`, `bw`, `b2w2`, `xy`, `oras`, `sm`, `usum`, `swsh`, `bdsp`, `pla`, `sv`, `za`).
+  - Filters out legacy species to display strictly the new Pokémon species native to that game's region.
+  - Automatically indexes every entry with its canonical National Pokédex number (e.g. `#152`–`#251` for Johto, `#252`–`#386` for Hoenn, `#906`–`#1025` for Paldea).
+  - Starts cleanly at Box 1, Slot 1 for compact, contiguous cartridge-based Origin Living Dexes.
+  - Appropriately omitted for Kanto games (`rby`, `frlg`, `lgpe`) and Pokémon HOME where generation ranges are already naturally covered.
 
 ---
 
