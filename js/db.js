@@ -1,4 +1,5 @@
 import { ACTIVE_GAME_ID, normalizeItemName } from "./config.js";
+import { getEncounterProgressionInfo } from "./routes.js";
 import {
   loadSegmentConfig,
   loadEnabledSegments,
@@ -1623,6 +1624,44 @@ export async function getMissingPokemonData(
     });
   }
 
+  // Two-pass progression resolution for accurate evolution inheritance
+  const baseSpeciesScores = new Map();
+  const getBaseScore = (baseId) => baseSpeciesScores.get(baseId) || null;
+
+  for (const r of results) {
+    if (r.locations && r.locations.length > 0) {
+      const prog = getEncounterProgressionInfo(
+        gameId,
+        effectiveVersion,
+        r.speciesId,
+        r.locations,
+        null,
+        null,
+      );
+      baseSpeciesScores.set(r.speciesId, prog);
+    }
+  }
+
+  for (const r of results) {
+    const prog = getEncounterProgressionInfo(
+      gameId,
+      effectiveVersion,
+      r.speciesId,
+      r.locations,
+      r.evolveDetails,
+      getBaseScore,
+    );
+    r.earliestRouteIndex = prog.earliestRouteIndex;
+    r.smartRouteIndex = prog.smartRouteIndex;
+    r.earliestLocation = prog.earliestLocation;
+    r.recommendedLocation = prog.recommendedLocation;
+    r.earliestChance = prog.earliestChance;
+    r.recommendedChance = prog.recommendedChance;
+    r.rateBadgeText = prog.rateBadgeText;
+    r.rateBadgeType = prog.rateBadgeType;
+    r.isSmartBetter = prog.isSmartBetter;
+  }
+
   return results;
 }
 
@@ -1637,6 +1676,8 @@ export async function getEvolutionFamilyChecklist(gameId, caughtSlots = {}) {
   const allSpecies = await getAllSpeciesData();
   const gameDexData = await getGameDexData(gameId);
   const evoDataMap = await loadEvolutions(gameId);
+  const encountersData =
+    gameId !== "home" ? await getGameEncounterData(gameId) : { encounters: {} };
   const { sections } = await buildActiveDexSections();
   const language = loadSettings().language || "en";
   const generationNumber = gameDexData?.generation || null;
@@ -1690,11 +1731,13 @@ export async function getEvolutionFamilyChecklist(gameId, caughtSlots = {}) {
         species.names?.[language] || species.names?.en || species.name,
       );
       const types = resolveTypes(species, entry.formId, generationNumber);
+      const regionalDexNumber =
+        regionalDexMap.get(specimenKey) || entry.speciesId;
 
       chainSlotsMap.get(chainId).push({
         slotNumber: runningSlot,
         specimenKey,
-        regionalDexNumber: regionalDexMap.get(specimenKey) || entry.speciesId,
+        regionalDexNumber,
         speciesId: entry.speciesId,
         formId: entry.formId || entry.speciesId,
         gender: entry.gender || "",
@@ -1795,6 +1838,24 @@ export async function getEvolutionFamilyChecklist(gameId, caughtSlots = {}) {
 
     const baseQuota = Math.max(0, totalCount - totalSpecimensOwnedInFamily);
 
+    let rootLocations = [];
+    if (encountersData?.encounters?.[rootSpeciesId]) {
+      for (const lObj of Object.values(
+        encountersData.encounters[rootSpeciesId],
+      )) {
+        if (Array.isArray(lObj.locations))
+          rootLocations.push(...lObj.locations);
+      }
+    }
+    const rootProg = getEncounterProgressionInfo(
+      gameId,
+      "all",
+      rootSpeciesId,
+      rootLocations,
+      null,
+      null,
+    );
+
     familyList.push({
       chainId,
       rootSpeciesId,
@@ -1814,6 +1875,10 @@ export async function getEvolutionFamilyChecklist(gameId, caughtSlots = {}) {
       baseQuota,
       members: membersWithEvolutions,
       requiredItems,
+      smartRouteIndex: rootProg.smartRouteIndex,
+      earliestRouteIndex: rootProg.earliestRouteIndex,
+      recommendedLocation: rootProg.recommendedLocation,
+      earliestLocation: rootProg.earliestLocation,
     });
   }
 

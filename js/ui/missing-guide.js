@@ -505,6 +505,8 @@ function syncSortOptions() {
   const options =
     currentTab === "family"
       ? [
+          ["route-smart", "Catching Order (Recommended Routes)"],
+          ["route-asc", "Catching Order (Earliest Route first)"],
           ["regional-asc", "Regional Dex # (Lowest first)"],
           ["regional-desc", "Regional Dex # (Highest first)"],
           ["national-asc", "National Dex # (Lowest first)"],
@@ -515,6 +517,8 @@ function syncSortOptions() {
           ["family-needed", "Specimens Needed (Fewest first)"],
         ]
       : [
+          ["route-smart", "Catching Order (Recommended Routes)"],
+          ["route-asc", "Catching Order (Earliest Route first)"],
           ["regional-asc", "Regional Dex # (Lowest first)"],
           ["regional-desc", "Regional Dex # (Highest first)"],
           ["national-asc", "National Dex # (Lowest first)"],
@@ -787,6 +791,24 @@ function getFilteredMissingList(list) {
 
   // Sorting
   result.sort((a, b) => {
+    if (filterState.sort === "route-smart") {
+      const scoreA = a.smartRouteIndex ?? 9999;
+      const scoreB = b.smartRouteIndex ?? 9999;
+      return (
+        scoreA - scoreB ||
+        a.regionalDexNumber - b.regionalDexNumber ||
+        a.slotNumber - b.slotNumber
+      );
+    }
+    if (filterState.sort === "route-asc") {
+      const scoreA = a.earliestRouteIndex ?? 9999;
+      const scoreB = b.earliestRouteIndex ?? 9999;
+      return (
+        scoreA - scoreB ||
+        a.regionalDexNumber - b.regionalDexNumber ||
+        a.slotNumber - b.slotNumber
+      );
+    }
     if (
       filterState.sort === "regional-asc" ||
       filterState.sort === "regional-desc"
@@ -1048,9 +1070,37 @@ function renderMissingList(container) {
         });
         locWrap.appendChild(gamesList);
       } else {
+        const isRouteSort = filterState.sort.startsWith("route");
+        if (isRouteSort && (p.recommendedLocation || p.earliestLocation)) {
+          const recBadge = document.createElement("div");
+          recBadge.className = "missing-recommended-route-pill";
+          const isAsc = filterState.sort === "route-asc";
+          const titleLabel = isAsc ? "Earliest Encounter" : "Recommended Spot";
+          const locToShow = isAsc
+            ? p.earliestLocation || p.recommendedLocation
+            : p.recommendedLocation || p.earliestLocation;
+          const rateText = p.rateBadgeText
+            ? `<span class="missing-rate-tag rate-${p.rateBadgeType}">${p.rateBadgeText}</span>`
+            : "";
+          const subtext =
+            p.isSmartBetter && !isAsc && p.earliestLocation
+              ? `<span class="missing-smart-alt-hint">Earliest: ${p.earliestLocation}${typeof p.earliestChance === "number" ? ` (${p.earliestChance}%)` : ""}</span>`
+              : "";
+
+          recBadge.innerHTML = `
+            <div class="missing-rec-header">
+              <span class="missing-rec-title">📍 ${titleLabel}:</span>
+              <strong class="missing-rec-location">${locToShow}</strong>
+              ${rateText}
+            </div>
+            ${subtext}
+          `;
+          locWrap.appendChild(recBadge);
+        }
+
         const locTitle = document.createElement("span");
         locTitle.className = "missing-locations-title";
-        locTitle.textContent = "📍 Locations:";
+        locTitle.textContent = isRouteSort ? "All Locations:" : "📍 Locations:";
         locWrap.appendChild(locTitle);
 
         const locList = document.createElement("ul");
@@ -1297,6 +1347,18 @@ function getFilteredFamilyList(families) {
   });
 
   filtered.sort((a, b) => {
+    if (filterState.sort === "route-smart") {
+      return (
+        (a.smartRouteIndex ?? 9999) - (b.smartRouteIndex ?? 9999) ||
+        a.rootRegionalDexNumber - b.rootRegionalDexNumber
+      );
+    }
+    if (filterState.sort === "route-asc") {
+      return (
+        (a.earliestRouteIndex ?? 9999) - (b.earliestRouteIndex ?? 9999) ||
+        a.rootRegionalDexNumber - b.rootRegionalDexNumber
+      );
+    }
     if (filterState.sort === "regional-desc") {
       return b.rootRegionalDexNumber - a.rootRegionalDexNumber;
     }

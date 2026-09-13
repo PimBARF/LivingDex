@@ -1,1 +1,1 @@
-{"gameId":"home","encounters":{"25":{"home":{"locations":["Pokémon HOME (Starter)"]}}}}
+{"gameId":"home","encounters":{"25":{"home":{"locations":[{"location":"Pokémon HOME (Starter)","chance":100,"levels":"Lv. 5"}]}}}}

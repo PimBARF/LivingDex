@@ -4745,6 +4745,75 @@ body.is-drag-selecting .cell {
   border-color: color-mix(in srgb, #9b59b6 30%, transparent);
 }
 
+.missing-recommended-route-pill {
+  background: color-mix(in srgb, var(--accent-1) 12%, var(--card));
+  border: 1px solid color-mix(in srgb, var(--accent-1) 28%, transparent);
+  border-radius: 6px;
+  padding: 5px 8px;
+  margin-bottom: 4px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.missing-rec-header {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 5px;
+  font-size: 0.78rem;
+}
+
+.missing-rec-title {
+  font-weight: 600;
+  color: var(--accent-1);
+}
+
+.missing-rec-location {
+  color: var(--text);
+  font-weight: 700;
+}
+
+.missing-rate-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 1px 6px;
+  border-radius: 4px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.missing-rate-tag.rate-gift {
+  background: color-mix(in srgb, #9b59b6 18%, transparent);
+  color: #9b59b6;
+  border: 1px solid color-mix(in srgb, #9b59b6 35%, transparent);
+}
+
+.missing-rate-tag.rate-common {
+  background: color-mix(in srgb, var(--success) 18%, transparent);
+  color: var(--success);
+  border: 1px solid color-mix(in srgb, var(--success) 35%, transparent);
+}
+
+.missing-rate-tag.rate-uncommon {
+  background: color-mix(in srgb, var(--warning) 18%, transparent);
+  color: var(--warning);
+  border: 1px solid color-mix(in srgb, var(--warning) 35%, transparent);
+}
+
+.missing-rate-tag.rate-rare {
+  background: color-mix(in srgb, var(--danger) 18%, transparent);
+  color: var(--danger);
+  border: 1px solid color-mix(in srgb, var(--danger) 35%, transparent);
+}
+
+.missing-smart-alt-hint {
+  font-size: 0.7rem;
+  color: var(--muted);
+  font-style: italic;
+}
+
 .missing-card-actions {
   display: flex;
   align-items: center;
