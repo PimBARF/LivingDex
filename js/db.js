@@ -1578,6 +1578,8 @@ export async function getMissingPokemonData(
       const str = getLocStr(l);
       return (
         str &&
+        !str.startsWith("Evolve ") &&
+        !str.startsWith("Trade ") &&
         !/\((?:Gift|Fossil|Gift Egg|Mystery Gift|Starter|In-game Trade|Gift from [^)]+)\)/i.test(
           str,
         ) &&

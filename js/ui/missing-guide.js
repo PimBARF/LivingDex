@@ -84,6 +84,13 @@ let cachedSlotCount = 0;
 let _missingModalHandlers = null;
 
 /**
+ * Resolves a normalized location string from a raw location entry.
+ * @param {string|Object} l
+ * @returns {string}
+ */
+const getLocStr = (l) => (typeof l === "string" ? l : l?.location || "");
+
+/**
  * Returns active caught slots map based on current shiny tracking mode.
  * @returns {Record<number, boolean>}
  */
