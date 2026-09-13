@@ -199,19 +199,19 @@ self.addEventListener("install", (event) => {
         caches.open(DATA_CACHE),
       ]);
 
-      // Cache shell assets (fail-safe individually)
+      // Cache shell assets (fail-safe individually, bypassing HTTP browser cache)
       await Promise.allSettled(
         SHELL_ASSETS.map((url) =>
-          shellCache.add(url).catch((err) => {
+          shellCache.add(new Request(url, { cache: "reload" })).catch((err) => {
             console.warn(`[SW] Shell precache failed for ${url}:`, err);
           }),
         ),
       );
 
-      // Cache data assets
+      // Cache data assets (bypassing HTTP browser cache)
       await Promise.allSettled(
         DATA_ASSETS.map((url) =>
-          dataCache.add(url).catch((err) => {
+          dataCache.add(new Request(url, { cache: "reload" })).catch((err) => {
             console.warn(`[SW] Data precache failed for ${url}:`, err);
           }),
         ),
