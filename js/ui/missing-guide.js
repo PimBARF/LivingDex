@@ -149,7 +149,11 @@ export function registerMissingGuideModal() {
       renderActiveTab();
     },
     onClose: () => {
-      // Clean up search on close if desired
+      if (pendingUndo) {
+        clearTimeout(pendingUndo._dismissTimer);
+        pendingUndo.remove();
+        pendingUndo = null;
+      }
     },
     focusSelector: "#missingSearch",
   });
@@ -1159,7 +1163,7 @@ function renderMissingList(container) {
     catchBtn.innerHTML = `<span>✓</span> Mark Caught`;
     catchBtn.setAttribute("aria-label", `Mark ${p.name} as caught`);
     catchBtn.addEventListener("click", async () => {
-      await markPokemonCaught(p.specimenKey, p.slotNumber, card);
+      await markPokemonCaught(p.specimenKey, p.slotNumber, card, p.name);
     });
 
     const infoBtn = document.createElement("button");
@@ -1192,16 +1196,22 @@ function renderMissingList(container) {
  *
  * @param {string} specimenKey
  * @param {number} slotNumber
- * @param {HTMLElement} cardElement
+ * @param {HTMLElement} [cardElement]
+ * @param {string} [pokemonName]
  */
-async function markPokemonCaught(specimenKey, slotNumber, cardElement) {
+async function markPokemonCaught(
+  specimenKey,
+  slotNumber,
+  cardElement,
+  pokemonName = "",
+) {
   const caught = getActiveCaughtSlots();
   const caughtKey = specimenKey || slotNumber;
   caught[caughtKey] = true;
 
   syncCaughtState(caught, cachedSlotCount);
   updateMissingGuideBadge(cachedSlotCount);
-  showUndoToast(caughtKey);
+  showUndoToast(caughtKey, pokemonName);
 
   if (cardElement) {
     cardElement.classList.add("is-caught-animating");
@@ -1217,34 +1227,79 @@ async function markPokemonCaught(specimenKey, slotNumber, cardElement) {
   }
 }
 
-function showUndoToast(caughtKey) {
-  pendingUndo?.remove();
+function showUndoToast(caughtKey, pokemonName = "") {
+  if (pendingUndo) {
+    clearTimeout(pendingUndo._dismissTimer);
+    pendingUndo.remove();
+    pendingUndo = null;
+  }
+
+  const modalContainer = document.querySelector(".missing-guide-modal-card");
+  if (!modalContainer) return;
+
   const toast = document.createElement("div");
   toast.className = "missing-undo-toast";
   toast.setAttribute("role", "status");
-  toast.innerHTML = `<span>Marked caught</span>`;
+  toast.setAttribute("aria-live", "polite");
+
+  const messageSpan = document.createElement("span");
+  messageSpan.className = "missing-undo-toast-message";
+
+  const checkIcon = document.createElement("span");
+  checkIcon.className = "missing-undo-check";
+  checkIcon.textContent = "✓";
+
+  const textSpan = document.createElement("span");
+  textSpan.textContent = pokemonName
+    ? `Marked ${pokemonName} caught`
+    : "Marked caught";
+
+  messageSpan.append(checkIcon, textSpan);
+
   const undoButton = document.createElement("button");
   undoButton.type = "button";
-  undoButton.className = "btn btn-sm btn-ghost";
+  undoButton.className = "btn missing-undo-btn";
   undoButton.textContent = "Undo";
+  undoButton.setAttribute(
+    "aria-label",
+    pokemonName
+      ? `Undo marking ${pokemonName} as caught`
+      : "Undo marking as caught",
+  );
   undoButton.addEventListener("click", async () => {
     const caught = getActiveCaughtSlots();
     delete caught[caughtKey];
     syncCaughtState(caught, cachedSlotCount);
     updateMissingGuideBadge(cachedSlotCount);
     clearTimeout(toast._dismissTimer);
-    toast.remove();
-    pendingUndo = null;
+    toast.classList.remove("show");
+    toast.classList.add("hide");
+    setTimeout(() => {
+      toast.remove();
+      if (pendingUndo === toast) pendingUndo = null;
+    }, 200);
     await refreshMissingGuideData();
+    await ensureActiveTabData();
+    updateModalHeaderStats();
     renderActiveTab();
   });
-  toast.appendChild(undoButton);
-  document.querySelector(".missing-guide-modal-card")?.appendChild(toast);
+
+  toast.append(messageSpan, undoButton);
+  modalContainer.appendChild(toast);
   pendingUndo = toast;
+
+  requestAnimationFrame(() => {
+    toast.classList.add("show");
+  });
+
   toast._dismissTimer = setTimeout(() => {
-    toast.remove();
-    if (pendingUndo === toast) pendingUndo = null;
-  }, 5000);
+    toast.classList.remove("show");
+    toast.classList.add("hide");
+    setTimeout(() => {
+      toast.remove();
+      if (pendingUndo === toast) pendingUndo = null;
+    }, 250);
+  }, 4000);
 }
 
 /**

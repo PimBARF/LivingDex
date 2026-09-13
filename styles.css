@@ -4362,24 +4362,82 @@ body.is-drag-selecting .cell {
 }
 
 .missing-undo-toast {
-  align-items: center;
-  background: var(--text);
-  border: 1px solid var(--border);
-  border-radius: 8px;
-  bottom: 56px;
-  color: var(--card);
-  display: flex;
-  font-size: 0.82rem;
-  gap: 12px;
-  left: 16px;
-  padding: 7px 9px 7px 12px;
   position: absolute;
-  z-index: 2;
+  bottom: 64px;
+  left: 50%;
+  transform: translateX(-50%) translateY(12px);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: var(--card);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--success);
+  border-radius: var(--control-radius);
+  padding: 8px 12px 8px 14px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.35), 0 0 0 1px color-mix(in srgb, var(--border) 60%, transparent);
+  z-index: 50;
+  opacity: 0;
+  pointer-events: none;
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.2s ease;
+  white-space: nowrap;
+  max-width: calc(100% - 32px);
+  box-sizing: border-box;
 }
 
-.missing-undo-toast .btn {
-  color: var(--card);
-  min-height: 26px;
+.missing-undo-toast.show {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+  pointer-events: auto;
+}
+
+.missing-undo-toast.hide {
+  opacity: 0;
+  transform: translateX(-50%) translateY(8px);
+  pointer-events: none;
+}
+
+.missing-undo-toast-message {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.missing-undo-check {
+  color: var(--success);
+  font-weight: 800;
+  font-size: 0.95rem;
+}
+
+.missing-undo-btn {
+  height: 28px;
+  min-height: 28px;
+  padding: 0 10px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  border-radius: 6px;
+  background: color-mix(in srgb, var(--accent-2) 15%, var(--card));
+  color: var(--accent-2);
+  border: 1px solid color-mix(in srgb, var(--accent-2) 40%, transparent);
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease, transform 0.1s ease;
+}
+
+.missing-undo-btn:hover {
+  background: var(--accent-2);
+  color: #fff;
+  border-color: var(--accent-2);
+  transform: translateY(-1px);
+}
+
+.missing-undo-btn:active {
+  transform: translateY(0);
 }
 
 .missing-search-wrap {
@@ -5448,6 +5506,14 @@ body.is-drag-selecting .cell {
     padding: 0 8px;
     gap: 3px;
     border-radius: 6px;
+  }
+
+  .missing-undo-toast {
+    bottom: 56px;
+    font-size: 0.8rem;
+    padding: 6px 10px 6px 12px;
+    gap: 8px;
+    max-width: calc(100% - 20px);
   }
 
   .family-quotas-list {
