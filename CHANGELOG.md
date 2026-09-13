@@ -8,6 +8,7 @@ All notable changes, new features, improvements, and bug fixes for **LivingDex**
 
 | Version                                                               | Release Date          | Major Highlights                                                                                                 |
 | :-------------------------------------------------------------------- | :-------------------- | :--------------------------------------------------------------------------------------------------------------- |
+| **[v1.18.6](#v1186---2026-09-13)**                                    | Sep 13, 2026          | Increase mobile long-press hold duration to 500ms to prevent accidental multi-select gestures                    |
 | **[v1.18.5](#v1185---2026-09-13)**                                    | Sep 13, 2026          | Fix Field Guide count badge color and contrast in Light mode by correcting design token references               |
 | **[v1.18.4](#v1184---2026-09-13)**                                    | Sep 13, 2026          | Fix starter and gift Pokémon acquisition method pills and wild encounter badge fallback in Field Guide           |
 | **[v1.18.3](#v1183---2026-09-13)**                                    | Sep 13, 2026          | Rename Missing Pokémon Guide to Field Guide across toolbar, modal headers, shortcuts, and welcome walkthroughs   |
@@ -54,6 +55,17 @@ All notable changes, new features, improvements, and bug fixes for **LivingDex**
 | **[Expansion Phase](#multi-game-expansion--localization---aug-2026)** | Aug 17–31, 2026       | All mainline games, 8-language localization, Info modal, UI modular split                                        |
 | **[Modular JS Split](#modular-js-split---nov-2025)**                  | Nov 13–15, 2025       | ES module decomposition (`main.js`, `ui.js`, `api.js`, `storage.js`)                                             |
 | **[Genesis & Prototype](#initial-release---oct-2025)**                | Oct 27 – Nov 10, 2025 | Initial LivingDex tracker release, 30-slot PC boxes, PokeAPI integration                                         |
+
+---
+
+## [v1.18.6] - 2026-09-13
+
+### Changed
+
+- **Mobile Touch Multi-Select Long-Press Duration**:
+  - Increased `LONG_PRESS_DELAY` from 320ms to 500ms in `js/ui/dom-render.js` to ensure a more deliberate hold is required before activating drag selection on mobile devices, preventing accidental multi-selections while scrolling or tapping.
+  - Adjusted the `.cell.is-press-holding` CSS transform transition timing to 0.5s in `styles.css` for smooth visual feedback matching the increased hold delay.
+  - Bumped Service Worker `CACHE_VERSION` to `v1.18.6` in `LivingDex/sw.js`.
 
 ---
 

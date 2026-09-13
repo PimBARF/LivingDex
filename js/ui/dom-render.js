@@ -1218,7 +1218,7 @@ export function registerTouchDragSelection(slotCount) {
   if (!app || app.dataset.touchDragBound === "true") return;
   app.dataset.touchDragBound = "true";
 
-  const LONG_PRESS_DELAY = 320; // ms to activate drag selection
+  const LONG_PRESS_DELAY = 500; // ms to activate drag selection
   const MOVE_SLOP = 10; // px allowed movement before identifying gesture as scroll
 
   let longPressTimer = null;
