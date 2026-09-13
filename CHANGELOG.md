@@ -8,6 +8,7 @@ All notable changes, new features, improvements, and bug fixes for **LivingDex**
 
 | Version                                                               | Release Date          | Major Highlights                                                                                               |
 | :-------------------------------------------------------------------- | :-------------------- | :------------------------------------------------------------------------------------------------------------- |
+| **[v1.14.0](#v1140---2026-09-13)**                                    | Sep 13, 2026          | Starter & Gift Pokémon identification, Missing Guide starter/gift filters & badges, Gift Multi-Filter category  |
 | **[v1.13.2](#v1132---2026-09-13)**                                    | Sep 13, 2026          | Tab-specific Missing Guide controls and working Family Quotas sorting                                          |
 | **[v1.13.1](#v1131---2026-09-13)**                                    | Sep 13, 2026          | Offline encounter data caching fixes for Missing Guide and Pokémon Information modal                           |
 | **[v1.13.0](#v1130---2026-09-13)**                                    | Sep 13, 2026          | Regional Dex default sorting with explicit National Dex sorting in Missing Guide                               |
@@ -43,6 +44,18 @@ All notable changes, new features, improvements, and bug fixes for **LivingDex**
 | **[Genesis & Prototype](#initial-release---oct-2025)**                | Oct 27 – Nov 10, 2025 | Initial LivingDex tracker release, 30-slot PC boxes, PokeAPI integration                                       |
 
 ---
+
+## [v1.14.0] - 2026-09-13
+
+### Added
+
+- **Starter Pokémon Tracking**: Canonical starter encounter locations across all 19 games with dedicated styled chips (`(Starter)`) in the Pokémon Information modal. Modern starter trios lacking wild encounter tables (e.g., Gen 8 Grookey/Scorbunny/Sobble and Gen 9 Sprigatito/Fuecoco/Quaxly) now correctly display their starting location instead of *"No encounters in this generation"*.
+- **In-Game Gift & Fossil Tags**: In-game gifts, gift eggs, and fossil revivals across all games are now cleanly identified with distinct badge styling (`(Gift)`, `(Gift Egg)`, `(Fossil)`).
+- **Missing Pokémon Guide Integration**:
+  - Added **`🌟 Starter Choice`** and **`🎁 In-Game Gift / Fossil`** acquisition method filter options to the Missing Pokémon Guide.
+  - Rendered dedicated method badges (e.g., `🌟 Starter: Cabo Poco`, `🎁 Gift: Silph Co.`, `🦖 Fossil: Mining Museum`) in card views.
+  - Added Starter and Gift priority levels in Acquisition Method sorting.
+- **Gift Pokémon Category Filter**: Added a new **"🎁 Gift Pokémon"** category preset and button in the Multi-Filter modal alongside Starters, Fossils, Babies, and Legendaries.
 
 ## [v1.13.2] - 2026-09-13
 

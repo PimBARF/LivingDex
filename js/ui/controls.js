@@ -21,6 +21,7 @@ import {
   ALL_POKEMON_TYPES,
   getSpeciesGeneration,
   STARTER_SPECIES_IDS,
+  GIFT_SPECIES_IDS,
   BABY_SPECIES_IDS,
   FOSSIL_SPECIES_IDS,
   LEGENDARY_SPECIES_IDS,
@@ -262,6 +263,13 @@ export function syncFilterModalActiveStates() {
       isActive = true;
     }
     if (
+      preset === "gifts" &&
+      activeFilterState.categories.has("gift") &&
+      activeFilterState.categories.size === 1
+    ) {
+      isActive = true;
+    }
+    if (
       preset === "babies" &&
       activeFilterState.categories.has("baby") &&
       activeFilterState.categories.size === 1
@@ -472,6 +480,12 @@ export function applyAllFilters() {
         catMatch = true;
       }
       if (
+        activeFilterState.categories.has("gift") &&
+        GIFT_SPECIES_IDS.has(sid)
+      ) {
+        catMatch = true;
+      }
+      if (
         activeFilterState.categories.has("baby") &&
         BABY_SPECIES_IDS.has(sid)
       ) {
@@ -625,6 +639,9 @@ export function applyFilterPreset(presetName) {
       break;
     case "fossils":
       activeFilterState.categories.add("fossil");
+      break;
+    case "gifts":
+      activeFilterState.categories.add("gift");
       break;
     case "babies":
       activeFilterState.categories.add("baby");

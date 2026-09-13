@@ -842,8 +842,28 @@ function findPreEvolutionName(paths, speciesId) {
 export function detectExclusiveEncounterMethod(locations) {
   if (!locations || !locations.length) return null;
 
+  const isAllStarters = locations.every((loc) => /\(Starter\)/i.test(loc));
+  if (isAllStarters) {
+    return "Encountered as a Starter Pokémon";
+  }
+
+  const isAllGifts = locations.every((loc) =>
+    /\((?:Gift|Fossil|Gift Egg|Mystery Gift)\)/i.test(loc),
+  );
+  if (isAllGifts) {
+    if (locations.every((loc) => /\(Fossil\)/i.test(loc))) {
+      return "Revived from a Fossil";
+    }
+    if (locations.every((loc) => /\(Gift Egg\)/i.test(loc))) {
+      return "Received as a Gift Egg";
+    }
+    return "Received as an In-Game Gift";
+  }
+
   const wildLocs = locations.filter(
-    (loc) => !/^(Evolve|Trade|Breed|Received|Buy|Gift|Event)/i.test(loc.trim()),
+    (loc) =>
+      !/^(Evolve|Trade|Breed|Received|Buy|Gift|Event)/i.test(loc.trim()) &&
+      !/\((?:Starter|Gift|Fossil|Gift Egg)\)/i.test(loc),
   );
   if (!wildLocs.length) return null;
 
@@ -1433,6 +1453,28 @@ export async function getMissingPokemonData(
           methodCategory = "special";
         }
       }
+    } else {
+      const isStarter =
+        locations.some((l) => /\(Starter\)/i.test(l)) ||
+        BASE_STARTER_SPECIES_IDS.has(slot.speciesId);
+
+      if (isStarter) {
+        methodCategory = "starter";
+      } else {
+        const hasGiftTag = locations.some((l) =>
+          /\((?:Gift|Fossil|Gift Egg|Mystery Gift)\)/i.test(l),
+        );
+        const hasWildLoc = locations.some(
+          (l) => !/\((?:Gift|Fossil|Gift Egg|Mystery Gift|Starter)\)/i.test(l),
+        );
+
+        if (
+          hasGiftTag ||
+          (!hasWildLoc && GIFT_SPECIES_IDS.has(slot.speciesId))
+        ) {
+          methodCategory = "gift";
+        }
+      }
     }
 
     results.push({
@@ -1858,6 +1900,11 @@ export const STARTER_SPECIES_IDS = new Set([
   906, 907, 908, 909, 910, 911, 912, 913, 914,
 ]);
 
+export const BASE_STARTER_SPECIES_IDS = new Set([
+  1, 4, 7, 25, 133, 152, 155, 158, 252, 255, 258, 387, 390, 393, 495, 498, 501,
+  650, 653, 656, 722, 725, 728, 810, 813, 816, 906, 909, 912,
+]);
+
 export const BABY_SPECIES_IDS = new Set([
   172, 173, 174, 175, 236, 238, 239, 240, 298, 360, 406, 433, 438, 439, 440,
   446, 447, 458, 848,
@@ -1866,6 +1913,15 @@ export const BABY_SPECIES_IDS = new Set([
 export const FOSSIL_SPECIES_IDS = new Set([
   138, 139, 140, 141, 142, 345, 346, 347, 348, 408, 409, 410, 411, 564, 565,
   566, 567, 696, 697, 698, 699, 880, 881, 882, 883,
+]);
+
+export const GIFT_SPECIES_IDS = new Set([
+  21, 25, 37, 52, 53, 58, 59, 63, 106, 107, 129, 131, 133, 137, 138, 139, 140,
+  141, 142, 147, 148, 151, 172, 173, 174, 175, 213, 236, 238, 239, 240, 319,
+  323, 345, 346, 347, 348, 351, 360, 374, 380, 381, 385, 408, 409, 410, 411,
+  440, 443, 447, 448, 489, 490, 491, 492, 511, 513, 515, 564, 565, 566, 567,
+  570, 585, 612, 636, 696, 697, 698, 699, 772, 789, 801, 803, 848, 880, 881,
+  882, 883, 891,
 ]);
 
 export const LEGENDARY_SPECIES_IDS = new Set([
@@ -2037,6 +2093,9 @@ export async function getGameFilterCapabilities(gameId, dexData) {
   const hasFossils = Array.from(dexSpeciesIds).some((id) =>
     FOSSIL_SPECIES_IDS.has(id),
   );
+  const hasGifts = Array.from(dexSpeciesIds).some((id) =>
+    GIFT_SPECIES_IDS.has(id),
+  );
   const hasLegendaries = Array.from(dexSpeciesIds).some((id) =>
     LEGENDARY_SPECIES_IDS.has(id),
   );
@@ -2058,6 +2117,7 @@ export async function getGameFilterCapabilities(gameId, dexData) {
     hasStarters,
     hasBabies,
     hasFossils,
+    hasGifts,
     hasLegendaries,
     hasMythicals,
     hasUltraBeasts,

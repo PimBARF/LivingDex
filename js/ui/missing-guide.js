@@ -732,8 +732,17 @@ function getFilteredMissingList(list) {
     if (filterState.method !== "all") {
       if (filterState.method === "ready") {
         if (!p.isReadyToEvolve && !p.isSacrificeEvolve) return false;
+      } else if (filterState.method === "starter") {
+        if (p.methodCategory !== "starter") return false;
+      } else if (filterState.method === "gift") {
+        if (p.methodCategory !== "gift") return false;
       } else if (filterState.method === "wild") {
-        if (!p.hasWildLocations) return false;
+        if (
+          !p.hasWildLocations ||
+          p.methodCategory === "starter" ||
+          p.methodCategory === "gift"
+        )
+          return false;
       } else if (filterState.method === "item") {
         if (p.methodCategory !== "item" && !p.requiredItem) return false;
       } else if (filterState.method === "trade") {
@@ -804,12 +813,14 @@ function getFilteredMissingList(list) {
     }
     if (filterState.sort === "category") {
       const order = {
-        wild: 1,
-        level: 2,
-        item: 3,
-        trade: 4,
-        special: 5,
-        transfer: 6,
+        starter: 1,
+        gift: 2,
+        wild: 3,
+        level: 4,
+        item: 5,
+        trade: 6,
+        special: 7,
+        transfer: 8,
       };
       return (order[a.methodCategory] || 99) - (order[b.methodCategory] || 99);
     }
@@ -950,7 +961,33 @@ function renderMissingList(container) {
     const methodBadge = document.createElement("div");
     methodBadge.className = `missing-method-badge method-${p.methodCategory}`;
 
-    if (p.requiredItem) {
+    if (p.methodCategory === "starter") {
+      const starterLoc =
+        p.locations?.find((l) => /\(Starter\)/i.test(l)) ||
+        p.locations?.[0] ||
+        "Starter Choice";
+      const cleanLoc = starterLoc.replace(/\s*\([^)]+\)$/, "").trim();
+      methodBadge.innerHTML = `
+        <span class="method-icon">🌟</span>
+        <span class="method-label">Starter: ${cleanLoc}</span>
+      `;
+    } else if (p.methodCategory === "gift") {
+      const giftLoc =
+        p.locations?.find((l) =>
+          /\((?:Gift|Fossil|Gift Egg|Mystery Gift)\)/i.test(l),
+        ) ||
+        p.locations?.[0] ||
+        "In-Game Gift";
+      const isFossil = /\(Fossil\)/i.test(giftLoc);
+      const isEgg = /\(Gift Egg\)/i.test(giftLoc);
+      const icon = isFossil ? "🦖" : isEgg ? "🥚" : "🎁";
+      const prefix = isFossil ? "Fossil" : isEgg ? "Gift Egg" : "Gift";
+      const cleanLoc = giftLoc.replace(/\s*\([^)]+\)$/, "").trim();
+      methodBadge.innerHTML = `
+        <span class="method-icon">${icon}</span>
+        <span class="method-label">${prefix}: ${cleanLoc}</span>
+      `;
+    } else if (p.requiredItem) {
       const itemImg = itemSpriteUrl(p.requiredItem);
       methodBadge.innerHTML = `
         <span class="method-icon"><img src="${itemImg}" alt="${normalizeItemName(p.requiredItem)}" class="missing-inline-item-icon" loading="lazy" onerror="this.style.display='none'"/></span>

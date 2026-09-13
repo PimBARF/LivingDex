@@ -300,6 +300,14 @@ function renderLocationItemContent(li, entry) {
     tags.forEach((tag) => {
       const tagSpan = document.createElement("span");
       tagSpan.className = "pokemon-info-encounter-tag";
+      const lower = tag.toLowerCase();
+      if (lower.includes("starter")) {
+        tagSpan.classList.add("tag-starter");
+      } else if (lower.includes("fossil")) {
+        tagSpan.classList.add("tag-fossil");
+      } else if (lower.includes("gift") || lower.includes("egg")) {
+        tagSpan.classList.add("tag-gift");
+      }
       tagSpan.textContent = tag;
       li.appendChild(tagSpan);
     });
