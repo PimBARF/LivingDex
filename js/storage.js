@@ -27,6 +27,7 @@ import {
  * @property {string} spriteStyle - Selected sprite style key.
  * @property {'last-used'|'specific'} defaultGameMode - Mode for initial game selection.
  * @property {string|null} defaultGameId - Target game ID when defaultGameMode is 'specific'.
+ * @property {string|null} lastUsedGameId - Last selected/active game ID.
  * @property {boolean} keepScreenAwake - Whether to request screen wake lock to prevent dimming.
  * @property {number} version - Settings schema version.
  */
@@ -46,6 +47,7 @@ const DEFAULT_SETTINGS = {
   spriteStyle: "pokesprites",
   defaultGameMode: "last-used", // 'last-used' | 'specific'
   defaultGameId: null,
+  lastUsedGameId: null,
   gameVersions: {}, // Map of gameId -> selected version string (e.g. { rby: "yellow" })
   gameLayoutPresets: {}, // Map of gameId -> selected layout preset (e.g. { sm: "alola-islands" })
   layoutPreset: "standard", // Fallback / HOME preset
@@ -74,19 +76,31 @@ export function loadSettings() {
 }
 
 /**
- * Persist app settings to localStorage after merging with defaults.
+ * Persist app settings to localStorage after merging with defaults and existing settings.
  *
  * @param {Partial<AppSettings>} next - Updated settings or partial changes to save.
  * @returns {AppSettings} The newly merged and saved settings object.
  */
 export function saveSettings(next) {
-  const merged = { ...DEFAULT_SETTINGS, ...next };
+  const current = loadSettings();
+  const merged = { ...DEFAULT_SETTINGS, ...current, ...next };
   try {
     localStorage.setItem(SETTINGS_STORAGE_KEY, JSON.stringify(merged));
   } catch {
     // ignore quota
   }
   return merged;
+}
+
+/**
+ * Record the last used Pokédex / game ID in user settings.
+ *
+ * @param {string} gameId - Game identifier.
+ * @returns {AppSettings} Updated settings.
+ */
+export function setLastUsedGame(gameId) {
+  if (!gameId) return loadSettings();
+  return saveSettings({ lastUsedGameId: gameId });
 }
 
 /**

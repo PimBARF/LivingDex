@@ -734,11 +734,22 @@ export function resolveActiveGameId(
 ) {
   const params = new URLSearchParams(search);
   const urlGame = params.get("game");
-  if (urlGame) return urlGame;
+  if (urlGame && GAMES[urlGame]) return urlGame;
 
   const settings = readSavedSettings();
-  if (settings.defaultGameMode === "specific" && settings.defaultGameId) {
+  if (
+    settings.defaultGameMode === "specific" &&
+    settings.defaultGameId &&
+    GAMES[settings.defaultGameId]
+  ) {
     return settings.defaultGameId;
+  }
+  if (
+    (!settings.defaultGameMode || settings.defaultGameMode === "last-used") &&
+    settings.lastUsedGameId &&
+    GAMES[settings.lastUsedGameId]
+  ) {
+    return settings.lastUsedGameId;
   }
 
   return "home";

@@ -8,6 +8,7 @@ All notable changes, new features, improvements, and bug fixes for **LivingDex**
 
 | Version                                                               | Release Date          | Major Highlights                                                                                               |
 | :-------------------------------------------------------------------- | :-------------------- | :------------------------------------------------------------------------------------------------------------- |
+| **[v1.16.3](#v1163---2026-09-13)**                                    | Sep 13, 2026          | Fix "Last used" default Pokédex startup resolution and persistence across sessions                             |
 | **[v1.16.2](#v1162---2026-09-13)**                                    | Sep 13, 2026          | Exclusive time/condition notices, multi-cartridge dual-slot consolidation & clean UI de-cluttering             |
 | **[v1.16.1](#v1161---2026-09-13)**                                    | Sep 13, 2026          | Fix variable reference and search matching in Missing Guide card rendering                                     |
 | **[v1.16.0](#v1160---2026-09-13)**                                    | Sep 13, 2026          | Encounter rate probabilities, time-of-day condition chips, rarity badges, and level range indicators           |
@@ -46,6 +47,16 @@ All notable changes, new features, improvements, and bug fixes for **LivingDex**
 | **[Expansion Phase](#multi-game-expansion--localization---aug-2026)** | Aug 17–31, 2026       | All mainline games, 8-language localization, Info modal, UI modular split                                      |
 | **[Modular JS Split](#modular-js-split---nov-2025)**                  | Nov 13–15, 2025       | ES module decomposition (`main.js`, `ui.js`, `api.js`, `storage.js`)                                           |
 | **[Genesis & Prototype](#initial-release---oct-2025)**                | Oct 27 – Nov 10, 2025 | Initial LivingDex tracker release, 30-slot PC boxes, PokeAPI integration                                       |
+
+## [v1.16.3] - 2026-09-13
+
+### Fixed
+
+- **"Last Used" Default Pokédex Startup Resolution (`config.js`, `storage.js`, `main.js`)**:
+  - Added persistence for the last viewed/selected Pokédex via `lastUsedGameId` in application settings.
+  - Resolved `lastUsedGameId` during startup initialization when `defaultGameMode` is set to `"last-used"` (the default startup setting) and no explicit `?game=` query parameter is present in the URL.
+  - Updated `saveSettings` to safely preserve existing settings keys on partial updates.
+  - Automatically recorded active game changes on initial load and when switching games in the dex selector.
 
 ## [v1.16.2] - 2026-09-13
 

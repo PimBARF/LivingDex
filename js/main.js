@@ -6,6 +6,7 @@ import {
 
 import {
   loadSettings,
+  setLastUsedGame,
   loadEnabledSegments,
   loadSegmentConfig,
   saveSegmentConfig,
@@ -86,6 +87,7 @@ async function initializeLivingDexApp() {
   setGameTitles();
   renderGameSelector();
   renderGameInfo();
+  setLastUsedGame(ACTIVE_GAME_ID);
 
   const settings = loadSettings();
   applyTheme(settings.theme);
@@ -304,6 +306,7 @@ export function renderGameSelector() {
   selector.addEventListener("change", (e) => {
     const newGame = e.target.value;
     if (newGame && newGame !== ACTIVE_GAME_ID) {
+      setLastUsedGame(newGame);
       const url = new URL(location.href);
       url.searchParams.set("game", newGame);
       url.hash = "";
