@@ -110,8 +110,9 @@ export function syncCaughtState(caught, slotCount) {
 
   // Update all cells in the UI to match caught state
   document.querySelectorAll(".cell:not(.is-placeholder)").forEach((cell) => {
+    const key = cell.dataset.specimenKey;
     const slot = Number(cell.dataset.regional);
-    const isCaught = !!caught[slot];
+    const isCaught = key ? !!caught[key] : !!caught[slot];
     cell.classList.toggle("caught", isCaught);
     cell.setAttribute("aria-pressed", String(isCaught));
   });

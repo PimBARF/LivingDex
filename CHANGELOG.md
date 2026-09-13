@@ -8,6 +8,7 @@ All notable changes, new features, improvements, and bug fixes for **LivingDex**
 
 | Version                                                               | Release Date          | Major Highlights                                                                                               |
 | :-------------------------------------------------------------------- | :-------------------- | :------------------------------------------------------------------------------------------------------------- |
+| **[v1.12.0](#v1120---2026-09-13)**                                    | Sep 13, 2026          | Missing Guide usability, canonical caught-state fixes, lazy tab loading, compact view, and undo actions        |
 | **[v1.11.1](#v1111---2026-09-13)**                                    | Sep 13, 2026          | Separate box sections in National Dex order & out-of-dex gender/form variant filtering across game datasets    |
 | **[v1.11.0](#v1110---2026-09-13)**                                    | Sep 13, 2026          | Regional Origin box layout preset for post-Gen 1 games (GSC through SV) in canonical National Dex numbering    |
 | **[v1.10.1](#v1101---2026-09-12)**                                    | Sep 12, 2026          | Game-specific layout presets (Alola Islands, Kalos/Galar/Paldea Unified, Hisui Areas), dynamic preset resolver |
@@ -39,6 +40,21 @@ All notable changes, new features, improvements, and bug fixes for **LivingDex**
 | **[Genesis & Prototype](#initial-release---oct-2025)**                | Oct 27 – Nov 10, 2025 | Initial LivingDex tracker release, 30-slot PC boxes, PokeAPI integration                                       |
 
 ---
+
+## [v1.12.0] - 2026-09-13
+
+### Added
+
+- **Missing Guide Usability Improvements**: Added result summaries, removable active-filter chips, persisted tab and view preferences, compact list mode, family progress bars, lazy family/item tab loading, and undo feedback after marking a Pokémon caught.
+
+### Changed
+
+- **Guide Performance**: Reused the computed missing Pokémon dataset for the Items & Tasks summary and deferred family/item calculations until their tabs are opened.
+- **Guide Accessibility**: Added tab/panel relationships, roving tab focus, live result feedback, grouped family member controls, reduced-motion support, and mobile overflow refinements.
+
+### Fixed
+
+- **Canonical Caught-State Updates**: Missing Guide actions and inventory quantity changes now use canonical specimen keys, preserving correct state for alternate forms, gender variants, custom layouts, and shiny tracking.
 
 ## [v1.11.1] - 2026-09-13
 

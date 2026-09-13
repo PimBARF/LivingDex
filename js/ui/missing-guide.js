@@ -31,8 +31,37 @@ import { openPokemonInfoModal } from "./pokemon-info.js";
 // MISSING GUIDE & LIVING DEX PREREQUISITES CONTROLLER
 // =============================================================================
 
+const GUIDE_PREFERENCES_KEY = "livingdex-missing-guide-preferences-v1";
+
+function loadGuidePreferences() {
+  try {
+    return JSON.parse(localStorage.getItem(GUIDE_PREFERENCES_KEY) || "{}");
+  } catch {
+    return {};
+  }
+}
+
+function saveGuidePreferences(update) {
+  try {
+    const current = loadGuidePreferences();
+    localStorage.setItem(
+      GUIDE_PREFERENCES_KEY,
+      JSON.stringify({ ...current, ...update }),
+    );
+  } catch {
+    // Preferences are optional; keep the guide usable when storage is unavailable.
+  }
+}
+
+const guidePreferences = loadGuidePreferences();
+
 /** Active view mode tab in the modal: 'missing' | 'family' | 'items' */
-let currentTab = "missing";
+let currentTab = ["missing", "family", "items"].includes(guidePreferences.tab)
+  ? guidePreferences.tab
+  : "missing";
+let guideViewMode =
+  guidePreferences.viewMode === "compact" ? "compact" : "cards";
+let pendingUndo = null;
 
 /** Filter and sorting state */
 let filterState = {
@@ -109,10 +138,14 @@ export function registerMissingGuideModal() {
     backdrop,
     onOpen: async () => {
       filterState.version = getSelectedGameVersion(ACTIVE_GAME_ID) || "all";
+      cachedFamilyData = null;
+      cachedItemsData = null;
       await populateVersionFilterDropdown();
       await refreshMissingGuideData();
       populateSegmentFilterDropdown();
       updateActiveFilterBadge();
+      await ensureActiveTabData();
+      syncTabUI();
       renderActiveTab();
     },
     onClose: () => {
@@ -123,6 +156,7 @@ export function registerMissingGuideModal() {
 
   setupTabListeners();
   setupFilterListeners();
+  setupViewToggle();
 
   return _missingModalHandlers;
 }
@@ -159,6 +193,90 @@ function updateActiveFilterBadge() {
   }
 }
 
+function updateGuideFeedback(filteredCount = null) {
+  const summary = document.getElementById("missingResultsSummary");
+  const chips = document.getElementById("missingActiveFilterChips");
+  if (summary) {
+    const total = cachedMissingData?.length || 0;
+    const visible =
+      filteredCount ?? getFilteredMissingList(cachedMissingData).length;
+    summary.textContent = `${visible} of ${total} missing`;
+  }
+  if (!chips) return;
+
+  chips.innerHTML = "";
+  const active = [];
+  if (filterState.search) active.push(["Search", "search"]);
+  if (filterState.version !== "all") active.push(["Version", "version"]);
+  if (filterState.method !== "all") active.push(["Method", "method"]);
+  if (filterState.type) active.push(["Type", "type"]);
+  if (filterState.segment) active.push(["Segment", "segment"]);
+  if (filterState.familyFilter !== "all" && currentTab === "family") {
+    active.push(["Family", "familyFilter"]);
+  }
+
+  active.forEach(([label, key]) => {
+    const chip = document.createElement("button");
+    chip.type = "button";
+    chip.className = "missing-filter-chip";
+    chip.textContent = `${label}: ${key === "search" ? filterState.search : "active"} ×`;
+    chip.setAttribute("aria-label", `Remove ${label} filter`);
+    chip.addEventListener("click", () => {
+      if (key === "search") filterState.search = "";
+      else if (key === "version") filterState.version = "all";
+      else if (key === "method") filterState.method = "all";
+      else if (key === "type") filterState.type = "";
+      else if (key === "segment") filterState.segment = "";
+      else filterState.familyFilter = "all";
+      syncFilterControls();
+      updateActiveFilterBadge();
+      renderActiveTab();
+    });
+    chips.appendChild(chip);
+  });
+}
+
+function syncFilterControls() {
+  const values = {
+    missingSearch: filterState.search,
+    missingFilterVersion: filterState.version,
+    missingFilterMethod: filterState.method,
+    missingFilterFamily: filterState.familyFilter,
+    missingFilterType: filterState.type,
+    missingFilterSegment: filterState.segment,
+  };
+  Object.entries(values).forEach(([id, value]) => {
+    const element = document.getElementById(id);
+    if (element) element.value = value;
+  });
+  const clear = document.getElementById("missingSearchClear");
+  if (clear) clear.hidden = !filterState.search;
+}
+
+function setupViewToggle() {
+  const toggle = document.getElementById("missingViewToggle");
+  if (!toggle) return;
+  toggle.addEventListener("click", () => {
+    guideViewMode = guideViewMode === "cards" ? "compact" : "cards";
+    saveGuidePreferences({ viewMode: guideViewMode });
+    updateViewToggle();
+    renderActiveTab();
+  });
+  updateViewToggle();
+}
+
+function updateViewToggle() {
+  const toggle = document.getElementById("missingViewToggle");
+  if (!toggle) return;
+  const compact = guideViewMode === "compact";
+  toggle.setAttribute("aria-pressed", String(compact));
+  toggle.title = compact
+    ? "Switch to card view"
+    : "Switch to compact list view";
+  const label = toggle.querySelector(".view-toggle-label");
+  if (label) label.textContent = compact ? "Cards" : "Compact";
+}
+
 /**
  * Refreshes data from db.js for missing Pokémon, families, and items.
  */
@@ -170,16 +288,34 @@ async function refreshMissingGuideData() {
     0,
   );
 
-  const [missing, families, items] = await Promise.all([
-    getMissingPokemonData(ACTIVE_GAME_ID, caught, filterState.version),
-    getEvolutionFamilyChecklist(ACTIVE_GAME_ID, caught),
-    getEvolutionItemsSummary(ACTIVE_GAME_ID, caught),
-  ]);
-
+  const missing = await getMissingPokemonData(
+    ACTIVE_GAME_ID,
+    caught,
+    filterState.version,
+  );
   cachedMissingData = missing;
-  cachedFamilyData = families;
-  cachedItemsData = items;
+  cachedFamilyData = null;
+  cachedItemsData = null;
 
+  updateModalHeaderStats();
+}
+
+async function ensureActiveTabData() {
+  const caught = getActiveCaughtSlots();
+  if (currentTab === "family" && !cachedFamilyData) {
+    cachedFamilyData = await getEvolutionFamilyChecklist(
+      ACTIVE_GAME_ID,
+      caught,
+    );
+  }
+  if (currentTab === "items" && !cachedItemsData) {
+    if (!cachedMissingData) await refreshMissingGuideData();
+    cachedItemsData = await getEvolutionItemsSummary(
+      ACTIVE_GAME_ID,
+      caught,
+      cachedMissingData,
+    );
+  }
   updateModalHeaderStats();
 }
 
@@ -272,15 +408,17 @@ function setupTabListeners() {
     "#missingGuideTabs .segmented-btn",
   );
   tabButtons.forEach((btn) => {
-    btn.addEventListener("click", () => {
+    btn.addEventListener("click", async () => {
       const tab = btn.dataset.tab;
       if (!tab || tab === currentTab) return;
 
       currentTab = tab;
+      saveGuidePreferences({ tab: currentTab });
       tabButtons.forEach((b) => {
         const active = b.dataset.tab === currentTab;
         b.classList.toggle("is-active", active);
         b.setAttribute("aria-selected", String(active));
+        b.tabIndex = active ? 0 : -1;
       });
 
       // Update toolbar visibility per tab
@@ -297,10 +435,33 @@ function setupTabListeners() {
       if (sortSelect) sortSelect.hidden = currentTab === "items";
 
       updateActiveFilterBadge();
+      await ensureActiveTabData();
       updateModalHeaderStats();
       renderActiveTab();
     });
   });
+}
+
+function syncTabUI() {
+  const tabButtons = document.querySelectorAll(
+    "#missingGuideTabs .segmented-btn",
+  );
+  tabButtons.forEach((button) => {
+    const active = button.dataset.tab === currentTab;
+    button.classList.toggle("is-active", active);
+    button.setAttribute("aria-selected", String(active));
+    button.tabIndex = active ? 0 : -1;
+  });
+  const methodFilter = document.getElementById("missingFilterMethodWrap");
+  const familyFilter = document.getElementById("missingFilterFamilyWrap");
+  const typeFilter = document.getElementById("missingFilterTypeWrap");
+  const segmentFilter = document.getElementById("missingFilterSegmentWrap");
+  const sortSelect = document.getElementById("missingSortWrap");
+  if (methodFilter) methodFilter.hidden = currentTab !== "missing";
+  if (familyFilter) familyFilter.hidden = currentTab !== "family";
+  if (typeFilter) typeFilter.hidden = currentTab === "items";
+  if (segmentFilter) segmentFilter.hidden = currentTab === "items";
+  if (sortSelect) sortSelect.hidden = currentTab === "items";
 }
 
 /**
@@ -334,6 +495,7 @@ function setupFilterListeners() {
       setSelectedGameVersion(ACTIVE_GAME_ID, filterState.version);
       updateActiveFilterBadge();
       await refreshMissingGuideData();
+      await ensureActiveTabData();
       updateModalHeaderStats();
       renderActiveTab();
     });
@@ -343,6 +505,7 @@ function setupFilterListeners() {
     searchInput.addEventListener("input", (e) => {
       filterState.search = e.target.value.trim().toLowerCase();
       if (searchClear) searchClear.hidden = !filterState.search;
+      updateGuideFeedback();
       renderActiveTab();
     });
   }
@@ -354,6 +517,7 @@ function setupFilterListeners() {
         filterState.search = "";
         searchClear.hidden = true;
         searchInput.focus();
+        updateGuideFeedback();
         renderActiveTab();
       }
     });
@@ -363,6 +527,7 @@ function setupFilterListeners() {
     methodSelect.addEventListener("change", (e) => {
       filterState.method = e.target.value;
       updateActiveFilterBadge();
+      updateGuideFeedback();
       renderActiveTab();
     });
   }
@@ -371,6 +536,7 @@ function setupFilterListeners() {
     familySelect.addEventListener("change", (e) => {
       filterState.familyFilter = e.target.value;
       updateActiveFilterBadge();
+      updateGuideFeedback();
       renderActiveTab();
     });
   }
@@ -379,6 +545,7 @@ function setupFilterListeners() {
     typeSelect.addEventListener("change", (e) => {
       filterState.type = e.target.value;
       updateActiveFilterBadge();
+      updateGuideFeedback();
       renderActiveTab();
     });
   }
@@ -387,6 +554,7 @@ function setupFilterListeners() {
     segmentSelect.addEventListener("change", (e) => {
       filterState.segment = e.target.value;
       updateActiveFilterBadge();
+      updateGuideFeedback();
       renderActiveTab();
     });
   }
@@ -395,6 +563,7 @@ function setupFilterListeners() {
     sortSelect.addEventListener("change", (e) => {
       filterState.sort = e.target.value;
       updateActiveFilterBadge();
+      updateGuideFeedback();
       renderActiveTab();
     });
   }
@@ -420,7 +589,9 @@ function setupFilterListeners() {
       if (segmentSelect) segmentSelect.value = "";
       if (sortSelect) sortSelect.value = "dex-asc";
       updateActiveFilterBadge();
+      updateGuideFeedback();
       await refreshMissingGuideData();
+      await ensureActiveTabData();
       updateModalHeaderStats();
       renderActiveTab();
     });
@@ -448,6 +619,7 @@ function renderActiveTab() {
   } else if (currentTab === "items") {
     renderItemsShoppingList(itemsContainer);
   }
+  updateGuideFeedback();
 }
 
 // =============================================================================
@@ -589,7 +761,7 @@ function renderMissingList(container) {
   }
 
   const grid = document.createElement("div");
-  grid.className = "missing-cards-grid";
+  grid.className = `missing-cards-grid ${guideViewMode === "compact" ? "is-compact" : ""}`;
 
   filtered.forEach((p) => {
     const card = document.createElement("div");
@@ -787,7 +959,7 @@ function renderMissingList(container) {
     catchBtn.innerHTML = `<span>✓</span> Mark Caught`;
     catchBtn.setAttribute("aria-label", `Mark ${p.name} as caught`);
     catchBtn.addEventListener("click", async () => {
-      await markPokemonCaught(p.slotNumber, card);
+      await markPokemonCaught(p.specimenKey, p.slotNumber, card);
     });
 
     const infoBtn = document.createElement("button");
@@ -818,26 +990,61 @@ function renderMissingList(container) {
 /**
  * Toggles a slot as caught, syncs state, animates the card out, and updates counters.
  *
+ * @param {string} specimenKey
  * @param {number} slotNumber
  * @param {HTMLElement} cardElement
  */
-async function markPokemonCaught(slotNumber, cardElement) {
+async function markPokemonCaught(specimenKey, slotNumber, cardElement) {
   const caught = getActiveCaughtSlots();
-  caught[slotNumber] = true;
+  const caughtKey = specimenKey || slotNumber;
+  caught[caughtKey] = true;
 
   syncCaughtState(caught, cachedSlotCount);
   updateMissingGuideBadge(cachedSlotCount);
+  showUndoToast(caughtKey);
 
   if (cardElement) {
     cardElement.classList.add("is-caught-animating");
     setTimeout(async () => {
       await refreshMissingGuideData();
+      await ensureActiveTabData();
       renderActiveTab();
     }, 250);
   } else {
     await refreshMissingGuideData();
+    await ensureActiveTabData();
     renderActiveTab();
   }
+}
+
+function showUndoToast(caughtKey) {
+  pendingUndo?.remove();
+  const toast = document.createElement("div");
+  toast.className = "missing-undo-toast";
+  toast.setAttribute("role", "status");
+  toast.innerHTML = `<span>Marked caught</span>`;
+  const undoButton = document.createElement("button");
+  undoButton.type = "button";
+  undoButton.className = "btn btn-sm btn-ghost";
+  undoButton.textContent = "Undo";
+  undoButton.addEventListener("click", async () => {
+    const caught = getActiveCaughtSlots();
+    delete caught[caughtKey];
+    syncCaughtState(caught, cachedSlotCount);
+    updateMissingGuideBadge(cachedSlotCount);
+    clearTimeout(toast._dismissTimer);
+    toast.remove();
+    pendingUndo = null;
+    await refreshMissingGuideData();
+    renderActiveTab();
+  });
+  toast.appendChild(undoButton);
+  document.querySelector(".missing-guide-modal-card")?.appendChild(toast);
+  pendingUndo = toast;
+  toast._dismissTimer = setTimeout(() => {
+    toast.remove();
+    if (pendingUndo === toast) pendingUndo = null;
+  }, 5000);
 }
 
 /**
@@ -846,24 +1053,32 @@ async function markPokemonCaught(slotNumber, cardElement) {
  * @param {number} speciesId
  * @param {number} newCount
  * @param {number} slotNumber
+ * @param {string} specimenKey
  */
-async function updateSpecimenCount(speciesId, newCount, slotNumber) {
+async function updateSpecimenCount(
+  speciesId,
+  newCount,
+  slotNumber,
+  specimenKey,
+) {
   const inv = loadSpecimenInventory();
   inv[speciesId] = newCount;
   saveSpecimenInventory(inv);
 
   const caught = getActiveCaughtSlots();
-  if (newCount > 0 && !caught[slotNumber]) {
-    caught[slotNumber] = true;
+  const caughtKey = specimenKey || slotNumber;
+  if (newCount > 0 && !caught[caughtKey]) {
+    caught[caughtKey] = true;
     syncCaughtState(caught, cachedSlotCount);
     updateMissingGuideBadge(cachedSlotCount);
-  } else if (newCount === 0 && caught[slotNumber]) {
-    delete caught[slotNumber];
+  } else if (newCount === 0 && caught[caughtKey]) {
+    delete caught[caughtKey];
     syncCaughtState(caught, cachedSlotCount);
     updateMissingGuideBadge(cachedSlotCount);
   }
 
   await refreshMissingGuideData();
+  await ensureActiveTabData();
   renderActiveTab();
 }
 
@@ -879,6 +1094,7 @@ async function updateItemInventoryCount(itemKey, newCount) {
   saveItemInventory(inv);
 
   await refreshMissingGuideData();
+  await ensureActiveTabData();
   renderActiveTab();
 }
 
@@ -999,6 +1215,14 @@ function renderFamilyQuotas(container) {
 
     header.append(titleWrap, progressBadge);
 
+    const progressTrack = document.createElement("div");
+    progressTrack.className = "family-progress-track";
+    const progressFill = document.createElement("span");
+    progressFill.className = "family-progress-fill";
+    progressFill.style.width = `${Math.round((fam.caughtCount / fam.totalCount) * 100)}%`;
+    progressFill.setAttribute("aria-hidden", "true");
+    progressTrack.appendChild(progressFill);
+
     // Catch/Breed Quota Banner
     const quotaBanner = document.createElement("div");
     quotaBanner.className = `family-quota-banner ${fam.baseQuota === 0 ? "is-fulfilled" : ""}`;
@@ -1026,6 +1250,7 @@ function renderFamilyQuotas(container) {
       const chip = document.createElement("div");
       chip.className = `family-member-chip ${m.specimenCount > 0 ? "is-caught" : "is-missing"}`;
       chip.title = `${m.name} (${m.specimenCount > 0 ? `${m.specimenCount} Owned` : "Missing"})`;
+      chip.setAttribute("role", "group");
 
       const mSprite = document.createElement("img");
       mSprite.className = "family-member-sprite";
@@ -1065,7 +1290,7 @@ function renderFamilyQuotas(container) {
       decBtn.setAttribute("aria-label", `Decrease ${m.name} quantity`);
       decBtn.addEventListener("click", () => {
         const nextVal = Math.max(0, m.specimenCount - 1);
-        updateSpecimenCount(m.speciesId, nextVal, m.slotNumber);
+        updateSpecimenCount(m.speciesId, nextVal, m.slotNumber, m.specimenKey);
       });
 
       const numInput = document.createElement("input");
@@ -1080,7 +1305,7 @@ function renderFamilyQuotas(container) {
           0,
           Math.min(99, parseInt(e.target.value, 10) || 0),
         );
-        updateSpecimenCount(m.speciesId, val, m.slotNumber);
+        updateSpecimenCount(m.speciesId, val, m.slotNumber, m.specimenKey);
       });
 
       const incBtn = document.createElement("button");
@@ -1090,7 +1315,7 @@ function renderFamilyQuotas(container) {
       incBtn.setAttribute("aria-label", `Increase ${m.name} quantity`);
       incBtn.addEventListener("click", () => {
         const nextVal = Math.min(99, m.specimenCount + 1);
-        updateSpecimenCount(m.speciesId, nextVal, m.slotNumber);
+        updateSpecimenCount(m.speciesId, nextVal, m.slotNumber, m.specimenKey);
       });
 
       stepperWrap.append(decBtn, numInput, incBtn);
@@ -1120,7 +1345,7 @@ function renderFamilyQuotas(container) {
       });
     }
 
-    card.append(header, quotaBanner, membersRow);
+    card.append(header, progressTrack, quotaBanner, membersRow);
     if (itemsWrap) card.appendChild(itemsWrap);
     list.appendChild(card);
   });

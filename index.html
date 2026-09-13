@@ -1022,9 +1022,9 @@
           Track uncaught Pokémon, acquisition methods, evolution items, and living dex family quotas.
         </p>
         <div id="missingGuideTabs" class="segmented-control missing-tabs-segmented" role="tablist" aria-label="Missing guide view mode">
-          <button type="button" class="segmented-btn is-active" data-tab="missing" role="tab" aria-selected="true" title="View all missing Pokémon"><span class="tab-icon">📋</span> <span class="tab-label-full">Missing Pokémon</span><span class="tab-label-short">Missing</span></button>
-          <button type="button" class="segmented-btn" data-tab="family" role="tab" aria-selected="false" title="View living dex family quotas"><span class="tab-icon">🌳</span> <span class="tab-label-full">Family Quotas</span><span class="tab-label-short">Families</span></button>
-          <button type="button" class="segmented-btn" data-tab="items" role="tab" aria-selected="false" title="View items & tasks shopping list"><span class="tab-icon">🛍️</span> <span class="tab-label-full">Items &amp; Tasks</span><span class="tab-label-short">Items</span></button>
+          <button id="missingTab" type="button" class="segmented-btn is-active" data-tab="missing" role="tab" aria-selected="true" aria-controls="missingListContainer" tabindex="0" title="View all missing Pokémon"><span class="tab-icon">📋</span> <span class="tab-label-full">Missing Pokémon</span><span class="tab-label-short">Missing</span></button>
+          <button id="familyTab" type="button" class="segmented-btn" data-tab="family" role="tab" aria-selected="false" aria-controls="missingFamilyContainer" tabindex="-1" title="View living dex family quotas"><span class="tab-icon">🌳</span> <span class="tab-label-full">Family Quotas</span><span class="tab-label-short">Families</span></button>
+          <button id="itemsTab" type="button" class="segmented-btn" data-tab="items" role="tab" aria-selected="false" aria-controls="missingItemsContainer" tabindex="-1" title="View items & tasks shopping list"><span class="tab-icon">🛍️</span> <span class="tab-label-full">Items &amp; Tasks</span><span class="tab-label-short">Items</span></button>
         </div>
       </div>
 
@@ -1038,6 +1038,13 @@
           <button id="missingToggleFiltersBtn" class="btn missing-toggle-filters-btn" type="button" aria-expanded="false" title="Toggle filters and sorting options">
             <span class="filter-icon">🔍</span><span class="missing-filters-btn-label"> Filters</span>
             <span id="missingActiveFilterBadge" class="missing-filter-count-badge" hidden>0</span>
+          </button>
+        </div>
+        <div class="missing-results-row">
+          <span id="missingResultsSummary" class="missing-results-summary" role="status" aria-live="polite"></span>
+          <div id="missingActiveFilterChips" class="missing-active-filter-chips" aria-label="Active filters"></div>
+          <button id="missingViewToggle" class="btn btn-ghost missing-view-toggle" type="button" aria-pressed="false" title="Switch to compact list view">
+            <span class="view-toggle-icon">☷</span><span class="view-toggle-label">Compact</span>
           </button>
         </div>
 
@@ -1118,9 +1125,9 @@
 
       <!-- Main Scrollable Content -->
       <div class="missing-guide-body">
-        <div id="missingListContainer" class="missing-tab-content"></div>
-        <div id="missingFamilyContainer" class="missing-tab-content" hidden></div>
-        <div id="missingItemsContainer" class="missing-tab-content" hidden></div>
+        <div id="missingListContainer" class="missing-tab-content" role="tabpanel" aria-labelledby="missingTab"></div>
+        <div id="missingFamilyContainer" class="missing-tab-content" role="tabpanel" aria-labelledby="familyTab" hidden></div>
+        <div id="missingItemsContainer" class="missing-tab-content" role="tabpanel" aria-labelledby="itemsTab" hidden></div>
       </div>
 
       <div class="modal-actions">

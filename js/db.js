@@ -1269,6 +1269,7 @@ export async function getMissingPokemonData(
       }
       allSlots.push({
         slotNumber: runningSlot,
+        specimenKey,
         speciesId: entry.speciesId,
         formId: entry.formId || entry.speciesId,
         gender: entry.gender || "",
@@ -1422,6 +1423,7 @@ export async function getMissingPokemonData(
 
     results.push({
       slotNumber: slot.slotNumber,
+      specimenKey: slot.specimenKey,
       speciesId: slot.speciesId,
       formId: slot.formId,
       gender: slot.gender,
@@ -1509,6 +1511,7 @@ export async function getEvolutionFamilyChecklist(gameId, caughtSlots = {}) {
 
       chainSlotsMap.get(chainId).push({
         slotNumber: runningSlot,
+        specimenKey,
         speciesId: entry.speciesId,
         formId: entry.formId || entry.speciesId,
         gender: entry.gender || "",
@@ -1637,8 +1640,13 @@ export async function getEvolutionFamilyChecklist(gameId, caughtSlots = {}) {
  * @param {Record<number, boolean>} [caughtSlots={}] - Map of caught slot indices.
  * @returns {Promise<Object>} Aggregated shopping list of items, trades, and conditions.
  */
-export async function getEvolutionItemsSummary(gameId, caughtSlots = {}) {
-  const missingPokemon = await getMissingPokemonData(gameId, caughtSlots);
+export async function getEvolutionItemsSummary(
+  gameId,
+  caughtSlots = {},
+  missingPokemon = null,
+) {
+  const missing =
+    missingPokemon || (await getMissingPokemonData(gameId, caughtSlots));
   const itemInventory = loadItemInventory();
 
   const itemsMap = new Map();
@@ -1648,7 +1656,7 @@ export async function getEvolutionItemsSummary(gameId, caughtSlots = {}) {
   const moveList = [];
   const timeList = [];
 
-  for (const p of missingPokemon) {
+  for (const p of missing) {
     if (!p.evolveDetails) continue;
 
     const { item, trigger, description } = p.evolveDetails;
