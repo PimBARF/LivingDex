@@ -29,7 +29,6 @@ For every new feature, bug fix, refactor, or dataset update in LivingDex:
   - Add or update the version entry under `## [vX.Y.Z] - YYYY-MM-DD`.
   - Update the top `## 📑 Release Timeline` summary table with the version anchor link, release date, and key highlights.
   - Categorize changes using standard sections: `### Added`, `### Changed`, `### Fixed`, `### Removed`.
-- **Sync Suite Changelog**: Keep `LivingDex-Suite/CHANGELOG.md` in lockstep with `LivingDex/CHANGELOG.md`.
 
 ---
 
