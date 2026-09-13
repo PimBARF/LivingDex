@@ -1488,6 +1488,18 @@ export async function getEvolutionFamilyChecklist(gameId, caughtSlots = {}) {
   const generationNumber = gameDexData?.generation || null;
   const specimenInventory = loadSpecimenInventory();
   const itemInventory = loadItemInventory();
+  const regionalDexMap = new Map();
+  (gameDexData?.sections || []).forEach((section) => {
+    (section.entries || []).forEach((entry) => {
+      const key = getSpecimenKey(entry);
+      if (!regionalDexMap.has(key)) {
+        regionalDexMap.set(
+          key,
+          Number(entry.dexNumber) || Number(entry.speciesId) || 0,
+        );
+      }
+    });
+  });
 
   const caughtSlotsMap = caughtSlots || {};
 
@@ -1528,6 +1540,7 @@ export async function getEvolutionFamilyChecklist(gameId, caughtSlots = {}) {
       chainSlotsMap.get(chainId).push({
         slotNumber: runningSlot,
         specimenKey,
+        regionalDexNumber: regionalDexMap.get(specimenKey) || entry.speciesId,
         speciesId: entry.speciesId,
         formId: entry.formId || entry.speciesId,
         gender: entry.gender || "",
@@ -1631,6 +1644,12 @@ export async function getEvolutionFamilyChecklist(gameId, caughtSlots = {}) {
     familyList.push({
       chainId,
       rootSpeciesId,
+      rootRegionalDexNumber:
+        membersWithEvolutions.find(
+          (member) => member.speciesId === rootSpeciesId,
+        )?.regionalDexNumber ||
+        membersWithEvolutions[0]?.regionalDexNumber ||
+        rootSpeciesId,
       rootName,
       rootSpriteId,
       baseSpeciesName: rootName,

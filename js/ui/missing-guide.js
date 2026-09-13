@@ -197,10 +197,17 @@ function updateGuideFeedback(filteredCount = null) {
   const summary = document.getElementById("missingResultsSummary");
   const chips = document.getElementById("missingActiveFilterChips");
   if (summary) {
-    const total = cachedMissingData?.length || 0;
-    const visible =
-      filteredCount ?? getFilteredMissingList(cachedMissingData).length;
-    summary.textContent = `${visible} of ${total} missing`;
+    if (currentTab === "family") {
+      const total = cachedFamilyData?.length || 0;
+      const visible =
+        filteredCount ?? getFilteredFamilyList(cachedFamilyData).length;
+      summary.textContent = `${visible} of ${total} families`;
+    } else {
+      const total = cachedMissingData?.length || 0;
+      const visible =
+        filteredCount ?? getFilteredMissingList(cachedMissingData).length;
+      summary.textContent = `${visible} of ${total} missing`;
+    }
   }
   if (!chips) return;
 
@@ -434,6 +441,7 @@ function setupTabListeners() {
       if (segmentFilter) segmentFilter.hidden = currentTab === "items";
       if (sortSelect) sortSelect.hidden = currentTab === "items";
 
+      syncTabUI();
       updateActiveFilterBadge();
       await ensureActiveTabData();
       updateModalHeaderStats();
@@ -454,14 +462,84 @@ function syncTabUI() {
   });
   const methodFilter = document.getElementById("missingFilterMethodWrap");
   const familyFilter = document.getElementById("missingFilterFamilyWrap");
+  const versionFilter = document.getElementById("missingFilterVersionWrap");
   const typeFilter = document.getElementById("missingFilterTypeWrap");
   const segmentFilter = document.getElementById("missingFilterSegmentWrap");
   const sortSelect = document.getElementById("missingSortWrap");
-  if (methodFilter) methodFilter.hidden = currentTab !== "missing";
-  if (familyFilter) familyFilter.hidden = currentTab !== "family";
-  if (typeFilter) typeFilter.hidden = currentTab === "items";
-  if (segmentFilter) segmentFilter.hidden = currentTab === "items";
-  if (sortSelect) sortSelect.hidden = currentTab === "items";
+  const searchWrap = document.querySelector(".missing-search-wrap");
+  const filterToggle = document.getElementById("missingToggleFiltersBtn");
+  const viewToggle = document.getElementById("missingViewToggle");
+  const activeChips = document.getElementById("missingActiveFilterChips");
+  const resultsSummary = document.getElementById("missingResultsSummary");
+  const filtersCollapse = document.getElementById("missingFiltersCollapse");
+  setGuideElementVisibility(methodFilter, currentTab === "missing");
+  setGuideElementVisibility(familyFilter, currentTab === "family");
+  setGuideElementVisibility(versionFilter, currentTab === "missing");
+  setGuideElementVisibility(typeFilter, currentTab !== "items");
+  setGuideElementVisibility(segmentFilter, currentTab !== "items");
+  setGuideElementVisibility(sortSelect, currentTab !== "items");
+  setGuideElementVisibility(searchWrap, currentTab !== "items");
+  setGuideElementVisibility(filterToggle, currentTab !== "items");
+  setGuideElementVisibility(viewToggle, currentTab === "missing");
+  setGuideElementVisibility(activeChips, currentTab !== "items");
+  setGuideElementVisibility(resultsSummary, currentTab !== "items");
+  if (filtersCollapse && currentTab === "items") {
+    filtersCollapse.hidden = true;
+    filtersCollapse.style.display = "none";
+  } else if (filtersCollapse) {
+    filtersCollapse.style.display = "";
+  }
+  syncSortOptions();
+}
+
+function setGuideElementVisibility(element, visible) {
+  if (!element) return;
+  element.hidden = !visible;
+  element.style.display = visible ? "" : "none";
+}
+
+function syncSortOptions() {
+  const sortSelect = document.getElementById("missingSort");
+  if (!sortSelect) return;
+
+  const options =
+    currentTab === "family"
+      ? [
+          ["regional-asc", "Regional Dex # (Lowest first)"],
+          ["regional-desc", "Regional Dex # (Highest first)"],
+          ["national-asc", "National Dex # (Lowest first)"],
+          ["national-desc", "National Dex # (Highest first)"],
+          ["name-asc", "Family Name (A → Z)"],
+          ["name-desc", "Family Name (Z → A)"],
+          ["family-completion", "Completion (Most first)"],
+          ["family-needed", "Specimens Needed (Fewest first)"],
+        ]
+      : [
+          ["regional-asc", "Regional Dex # (Lowest first)"],
+          ["regional-desc", "Regional Dex # (Highest first)"],
+          ["national-asc", "National Dex # (Lowest first)"],
+          ["national-desc", "National Dex # (Highest first)"],
+          ["name-asc", "Name (A → Z)"],
+          ["name-desc", "Name (Z → A)"],
+          ["category", "Acquisition Method"],
+          ["readiness", "Ready to Evolve first"],
+        ];
+
+  const currentSort = filterState.sort;
+  sortSelect.replaceChildren(
+    ...options.map(([value, label]) => {
+      const option = document.createElement("option");
+      option.value = value;
+      option.textContent = label;
+      return option;
+    }),
+  );
+  if (options.some(([value]) => value === currentSort)) {
+    sortSelect.value = currentSort;
+  } else {
+    filterState.sort = "regional-asc";
+    sortSelect.value = filterState.sort;
+  }
 }
 
 /**
@@ -1131,7 +1209,7 @@ async function updateItemInventoryCount(itemKey, newCount) {
 function getFilteredFamilyList(families) {
   if (!families) return [];
 
-  return families.filter((f) => {
+  const filtered = families.filter((f) => {
     if (filterState.search) {
       const q = filterState.search;
       const matchRoot = f.rootName.toLowerCase().includes(q);
@@ -1165,6 +1243,42 @@ function getFilteredFamilyList(families) {
 
     return true;
   });
+
+  filtered.sort((a, b) => {
+    if (filterState.sort === "regional-desc") {
+      return b.rootRegionalDexNumber - a.rootRegionalDexNumber;
+    }
+    if (filterState.sort === "national-asc") {
+      return a.rootSpeciesId - b.rootSpeciesId;
+    }
+    if (filterState.sort === "national-desc") {
+      return b.rootSpeciesId - a.rootSpeciesId;
+    }
+    if (filterState.sort === "name-asc") {
+      return a.rootName.localeCompare(b.rootName);
+    }
+    if (filterState.sort === "name-desc") {
+      return b.rootName.localeCompare(a.rootName);
+    }
+    if (filterState.sort === "family-completion") {
+      return (
+        b.caughtCount / b.totalCount - a.caughtCount / a.totalCount ||
+        a.rootRegionalDexNumber - b.rootRegionalDexNumber
+      );
+    }
+    if (filterState.sort === "family-needed") {
+      return (
+        a.baseQuota - b.baseQuota ||
+        a.rootRegionalDexNumber - b.rootRegionalDexNumber
+      );
+    }
+    return (
+      a.rootRegionalDexNumber - b.rootRegionalDexNumber ||
+      a.rootSpeciesId - b.rootSpeciesId
+    );
+  });
+
+  return filtered;
 }
 
 /**

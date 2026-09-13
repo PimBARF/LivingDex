@@ -8,6 +8,7 @@ All notable changes, new features, improvements, and bug fixes for **LivingDex**
 
 | Version                                                               | Release Date          | Major Highlights                                                                                               |
 | :-------------------------------------------------------------------- | :-------------------- | :------------------------------------------------------------------------------------------------------------- |
+| **[v1.13.2](#v1132---2026-09-13)**                                    | Sep 13, 2026          | Tab-specific Missing Guide controls and working Family Quotas sorting                                          |
 | **[v1.13.1](#v1131---2026-09-13)**                                    | Sep 13, 2026          | Offline encounter data caching fixes for Missing Guide and Pokémon Information modal                           |
 | **[v1.13.0](#v1130---2026-09-13)**                                    | Sep 13, 2026          | Regional Dex default sorting with explicit National Dex sorting in Missing Guide                               |
 | **[v1.12.0](#v1120---2026-09-13)**                                    | Sep 13, 2026          | Missing Guide usability, canonical caught-state fixes, lazy tab loading, compact view, and undo actions        |
@@ -42,6 +43,13 @@ All notable changes, new features, improvements, and bug fixes for **LivingDex**
 | **[Genesis & Prototype](#initial-release---oct-2025)**                | Oct 27 – Nov 10, 2025 | Initial LivingDex tracker release, 30-slot PC boxes, PokeAPI integration                                       |
 
 ---
+
+## [v1.13.2] - 2026-09-13
+
+### Changed
+
+- **Missing Guide Tab Controls**: Hid compact/card switching and search/filter controls where they do not apply, especially in Items & Tasks.
+- **Family Quotas Sorting**: Added working Regional, National, family-name, completion, and specimen-needed sorting options.
 
 ## [v1.13.1] - 2026-09-13
 

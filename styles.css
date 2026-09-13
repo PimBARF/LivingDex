@@ -4209,6 +4209,16 @@ body.is-drag-selecting .cell {
   white-space: nowrap;
 }
 
+.missing-search-wrap[hidden],
+.missing-toggle-filters-btn[hidden],
+.missing-view-toggle[hidden],
+.missing-active-filter-chips[hidden],
+.missing-results-summary[hidden],
+.missing-filter-control[hidden],
+.missing-filters-collapse[hidden] {
+  display: none !important;
+}
+
 .missing-undo-toast {
   align-items: center;
   background: var(--text);
