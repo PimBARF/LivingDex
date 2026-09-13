@@ -102,7 +102,7 @@ Then visit `http://localhost:8080`.
   - `ui/dom-render.js` — Dex grid, PC boxes, collapse animations, and inline renaming
   - `ui/modals.js` — Dex Options, Settings, Shortcuts, and Backup Export/Import
   - `ui/box-coords.js` — Floating Box Coordinates HUD cursor tooltip
-  - `ui/missing-guide.js` — Missing Pokémon tracker, evolution family quotas, and items checklist
+  - `ui/missing-guide.js` — Field Guide tracker, evolution family quotas, and items checklist
   - `ui/welcome-guide.js` — Interactive first-time welcome walkthrough
   - `ui/pokemon-info.js` — Pokémon info modal, evolution trees, encounters, and audio cries
   - `main.js` — Startup initialization

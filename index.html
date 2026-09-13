@@ -132,7 +132,7 @@
       <div id="gameTitleRow">
         <h1 id="gameTitle">LivingDex Tracker</h1>
         <div class="game-title-actions">
-          <button id="missingGuideBtn" class="btn missing-guide-btn" type="button" title="Missing Pokémon &amp; Family Quotas Guide (M)" aria-label="Open Missing Pokémon Guide" aria-haspopup="dialog">🎯<span class="missing-guide-btn-text"> Missing Guide</span><span id="missingGuideBadge" class="missing-count-badge" hidden>0</span></button>
+          <button id="missingGuideBtn" class="btn missing-guide-btn" type="button" title="Field Guide &amp; Family Quotas (M)" aria-label="Open Field Guide" aria-haspopup="dialog">🎯<span class="missing-guide-btn-text"> Field Guide</span><span id="missingGuideBadge" class="missing-count-badge" hidden>0</span></button>
           <button id="segmentsBtn" class="btn segments-btn" type="button" title="Configure Dex Options, Layout &amp; Forms" aria-label="Configure Dex Options, Layout &amp; Forms" aria-haspopup="dialog">⚙️<span class="segments-btn-text"> Dex Options</span></button>
         </div>
       </div>
@@ -796,7 +796,7 @@
         <div id="segmentGameVersionSection" class="segment-layout-section" hidden>
           <div class="segment-layout-header">
             <label for="segmentGameVersion" class="segment-layout-title">Active Game Version:</label>
-            <span class="segment-layout-hint">Tailor encounters &amp; missing guide to your cartridge</span>
+            <span class="segment-layout-hint">Tailor encounters &amp; Field Guide to your cartridge</span>
           </div>
           <select id="segmentGameVersion" class="select segment-layout-select" aria-label="Select active game version">
             <option value="all">All Versions</option>
@@ -1008,7 +1008,7 @@
         </div>
         <div class="shortcut-row">
           <span class="shortcut-keys"><kbd class="kbd-badge">M</kbd></span>
-          <span class="shortcut-desc">Open Missing Pokémon &amp; Family Quotas Guide</span>
+          <span class="shortcut-desc">Open Field Guide &amp; Family Quotas</span>
         </div>
         <div class="shortcut-row">
           <span class="shortcut-keys"><kbd class="kbd-badge">H</kbd></span>
@@ -1033,20 +1033,20 @@
     </div>
   </div>
 
-  <!-- Missing Pokémon & Living Dex Prerequisites Guide modal -->
+  <!-- Field Guide modal -->
   <div id="modalMissingGuide" class="modal" role="dialog" aria-modal="true" aria-labelledby="missingGuideTitle"
     aria-describedby="missingGuideDesc" hidden>
     <div class="modal-backdrop" data-close></div>
     <div class="modal-card missing-guide-modal-card" role="document">
       <div class="missing-guide-header">
         <div class="missing-guide-title-row">
-          <h3 id="missingGuideTitle">Missing Pokémon Guide</h3>
+          <h3 id="missingGuideTitle">Field Guide</h3>
           <span id="missingGuideStats" class="missing-guide-stats"></span>
         </div>
         <p id="missingGuideDesc">
           Track uncaught Pokémon, acquisition methods, evolution items, and living dex family quotas.
         </p>
-        <div id="missingGuideTabs" class="segmented-control missing-tabs-segmented" role="tablist" aria-label="Missing guide view mode">
+        <div id="missingGuideTabs" class="segmented-control missing-tabs-segmented" role="tablist" aria-label="Field Guide view mode">
           <button id="missingTab" type="button" class="segmented-btn is-active" data-tab="missing" role="tab" aria-selected="true" aria-controls="missingListContainer" tabindex="0" title="View all missing Pokémon"><span class="tab-icon">📋</span> <span class="tab-label-full">Missing Pokémon</span><span class="tab-label-short">Missing</span></button>
           <button id="familyTab" type="button" class="segmented-btn" data-tab="family" role="tab" aria-selected="false" aria-controls="missingFamilyContainer" tabindex="-1" title="View living dex family quotas"><span class="tab-icon">🌳</span> <span class="tab-label-full">Family Quotas</span><span class="tab-label-short">Families</span></button>
           <button id="itemsTab" type="button" class="segmented-btn" data-tab="items" role="tab" aria-selected="false" aria-controls="missingItemsContainer" tabindex="-1" title="View items & tasks shopping list"><span class="tab-icon">🛍️</span> <span class="tab-label-full">Items &amp; Tasks</span><span class="tab-label-short">Items</span></button>
@@ -1054,10 +1054,10 @@
       </div>
 
       <!-- Filter & Sort Toolbar -->
-      <div class="missing-toolbar" role="search" aria-label="Filter missing guide">
+      <div class="missing-toolbar" role="search" aria-label="Filter Field Guide">
         <div class="missing-search-row">
           <div class="missing-search-wrap">
-            <input id="missingSearch" type="search" class="input missing-search-input" placeholder="Search name, item, location..." aria-label="Search missing Pokémon" autocomplete="off" />
+            <input id="missingSearch" type="search" class="input missing-search-input" placeholder="Search name, item, location..." aria-label="Search Field Guide" autocomplete="off" />
             <button id="missingSearchClear" class="search-clear-btn" type="button" title="Clear search" aria-label="Clear search" hidden>✕</button>
           </div>
           <button id="missingToggleFiltersBtn" class="btn missing-toggle-filters-btn" type="button" aria-expanded="false" title="Toggle filters and sorting options">
@@ -1160,7 +1160,7 @@
       </div>
 
       <div class="modal-actions">
-        <button id="closeMissingGuide" class="btn btn-primary" type="button" aria-label="Close missing guide">Close</button>
+        <button id="closeMissingGuide" class="btn btn-primary" type="button" aria-label="Close Field Guide">Close</button>
       </div>
     </div>
   </div>

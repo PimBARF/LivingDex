@@ -8,6 +8,7 @@ All notable changes, new features, improvements, and bug fixes for **LivingDex**
 
 | Version                                                               | Release Date          | Major Highlights                                                                                                 |
 | :-------------------------------------------------------------------- | :-------------------- | :--------------------------------------------------------------------------------------------------------------- |
+| **[v1.18.3](#v1183---2026-09-13)**                                    | Sep 13, 2026          | Rename Missing Pokémon Guide to Field Guide across toolbar, modal headers, shortcuts, and welcome walkthroughs   |
 | **[v1.18.2](#v1182---2026-09-13)**                                    | Sep 13, 2026          | Fix Missing Pokémon Guide undo toast appearance, color contrast, button sizing, positioning, and animation       |
 | **[v1.18.1](#v1181---2026-09-13)**                                    | Sep 13, 2026          | Fix starter, gift, and fossil encounter duplications and normalize PokéAPI encounter method tagging              |
 | **[v1.18.0](#v1180---2026-09-13)**                                    | Sep 13, 2026          | Catching Order & Smart Route Progression sort in Missing Guide with encounter rate weighting and route badges    |
@@ -51,6 +52,20 @@ All notable changes, new features, improvements, and bug fixes for **LivingDex**
 | **[Expansion Phase](#multi-game-expansion--localization---aug-2026)** | Aug 17–31, 2026       | All mainline games, 8-language localization, Info modal, UI modular split                                        |
 | **[Modular JS Split](#modular-js-split---nov-2025)**                  | Nov 13–15, 2025       | ES module decomposition (`main.js`, `ui.js`, `api.js`, `storage.js`)                                             |
 | **[Genesis & Prototype](#initial-release---oct-2025)**                | Oct 27 – Nov 10, 2025 | Initial LivingDex tracker release, 30-slot PC boxes, PokeAPI integration                                         |
+
+---
+
+## [v1.18.3] - 2026-09-13
+
+### Changed
+
+- **Field Guide Rebranding**:
+  - Renamed the **Missing Pokémon Guide** to **Field Guide** throughout the entire application.
+  - Updated main toolbar button label and hover tooltip (`Field Guide & Family Quotas (M)`).
+  - Updated modal header title (`Field Guide`), tab list accessibility labels, search input accessibility descriptions, and modal close buttons.
+  - Updated Keyboard Shortcuts guide modal entry (`Open Field Guide & Family Quotas`).
+  - Updated Dex Options game version filtering hint text (`Tailor encounters & Field Guide to your cartridge`).
+  - Updated Step 3 and Step 5 interactive slides in the Welcome Walkthrough guide.
 
 ---
 

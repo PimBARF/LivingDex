@@ -82,7 +82,7 @@ export const WELCOME_SLIDES = [
   {
     id: "missing-guide",
     badge: "Step 3 of 5",
-    title: "Missing Pokémon & Quota Guide",
+    title: "Field Guide & Quota Tracker",
     tagline:
       "Never wonder where to find an uncaught Pokémon or how many base forms to breed.",
     icon: "🎯",
@@ -91,8 +91,8 @@ export const WELCOME_SLIDES = [
         <div class="welcome-card">
           <div class="welcome-card-icon">📋</div>
           <div class="welcome-card-content">
-            <strong>Missing Pokémon Tracker</strong>
-            <p>Open <strong>🎯 Missing Guide</strong> (or press <kbd class="kbd-badge">M</kbd>) to view all uncaught Pokémon filtered by wild spawn locations, evolution items, and trades.</p>
+            <strong>Field Guide &amp; Targets</strong>
+            <p>Open <strong>🎯 Field Guide</strong> (or press <kbd class="kbd-badge">M</kbd>) to view all uncaught Pokémon filtered by wild spawn locations, evolution items, and trades.</p>
           </div>
         </div>
         <div class="welcome-card">
@@ -111,7 +111,7 @@ export const WELCOME_SLIDES = [
         </div>
       </div>
     `,
-    tip: "Tip: You can mark Pokémon caught directly from inside the Missing Guide modal!",
+    tip: "Tip: You can mark Pokémon caught directly from inside the Field Guide modal!",
   },
   {
     id: "segments-boxes",
@@ -180,7 +180,7 @@ export const WELCOME_SLIDES = [
           <div class="welcome-card-icon">⌨️</div>
           <div class="welcome-card-content">
             <strong>Keyboard Hotkeys</strong>
-            <p>Press <kbd class="kbd-badge">/</kbd> to search, <kbd class="kbd-badge">H</kbd> to cycle caught filter, <kbd class="kbd-badge">M</kbd> for Missing Guide, and <kbd class="kbd-badge">?</kbd> for all shortcuts.</p>
+            <p>Press <kbd class="kbd-badge">/</kbd> to search, <kbd class="kbd-badge">H</kbd> to cycle caught filter, <kbd class="kbd-badge">M</kbd> for Field Guide, and <kbd class="kbd-badge">?</kbd> for all shortcuts.</p>
           </div>
         </div>
       </div>

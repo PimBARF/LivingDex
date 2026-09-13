@@ -4159,7 +4159,7 @@ body.is-drag-selecting .cell {
   cursor: not-allowed;
 }
 
-/* Ensure Pokemon Info modal appears in front of the Missing Guide modal */
+/* Ensure Pokemon Info modal appears in front of the Field Guide modal */
 #modalPokemonInfo {
   z-index: 1050;
 }

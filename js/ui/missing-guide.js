@@ -28,7 +28,7 @@ import { attachModalHandlers } from "./modals.js";
 import { openPokemonInfoModal } from "./pokemon-info.js";
 
 // =============================================================================
-// MISSING GUIDE & LIVING DEX PREREQUISITES CONTROLLER
+// FIELD GUIDE & LIVING DEX PREREQUISITES CONTROLLER
 // =============================================================================
 
 const GUIDE_PREFERENCES_KEY = "livingdex-missing-guide-preferences-v1";
@@ -119,7 +119,7 @@ export function updateMissingGuideBadge(slotCount) {
 }
 
 /**
- * Attaches event listeners and initializes the Missing Guide modal.
+ * Attaches event listeners and initializes the Field Guide modal.
  *
  * @returns {{ openModal: () => void, closeModal: () => void }}
  */
@@ -166,7 +166,7 @@ export function registerMissingGuideModal() {
 }
 
 /**
- * Programmatically opens the Missing Guide modal.
+ * Programmatically opens the Field Guide modal.
  */
 export function openMissingGuideModal() {
   if (_missingModalHandlers) {
