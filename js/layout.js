@@ -225,14 +225,19 @@ function transformToGenerational(sections, speciesData, gameId = "home") {
  * @returns {Array<Object>} Single section with variants inlined.
  */
 function transformToInline(sections, speciesData) {
+  const seenKeys = new Set();
   const allEntries = [];
   for (const sec of sections) {
     for (const entry of sec.entries || []) {
-      allEntries.push({
-        ...entry,
-        kind: entry.kind || sec.kind || "base",
-        specimenKey: getSpecimenKey(entry),
-      });
+      const key = getSpecimenKey(entry);
+      if (!seenKeys.has(key)) {
+        seenKeys.add(key);
+        allEntries.push({
+          ...entry,
+          kind: entry.kind || sec.kind || "base",
+          specimenKey: key,
+        });
+      }
     }
   }
 
@@ -286,14 +291,19 @@ function transformToInline(sections, speciesData) {
  * @returns {Array<Object>} Evolutionary section with inlined variants.
  */
 function transformToEvolutionary(sections, speciesData, evolutionsData) {
+  const seenKeys = new Set();
   const allEntries = [];
   for (const sec of sections) {
     for (const entry of sec.entries || []) {
-      allEntries.push({
-        ...entry,
-        kind: entry.kind || sec.kind || "base",
-        specimenKey: getSpecimenKey(entry),
-      });
+      const key = getSpecimenKey(entry);
+      if (!seenKeys.has(key)) {
+        seenKeys.add(key);
+        allEntries.push({
+          ...entry,
+          kind: entry.kind || sec.kind || "base",
+          specimenKey: key,
+        });
+      }
     }
   }
 
@@ -388,15 +398,20 @@ function transformToEvolutionary(sections, speciesData, evolutionsData) {
  * @returns {Array<Object>} Single Alphabetical section.
  */
 function transformToAlphabetical(sections, speciesData) {
+  const seenKeys = new Set();
   const allEntries = [];
   for (const sec of sections) {
     for (const entry of sec.entries || []) {
-      allEntries.push({
-        ...entry,
-        dexNumber: entry.speciesId,
-        kind: entry.kind || sec.kind || "base",
-        specimenKey: getSpecimenKey(entry),
-      });
+      const key = getSpecimenKey(entry);
+      if (!seenKeys.has(key)) {
+        seenKeys.add(key);
+        allEntries.push({
+          ...entry,
+          dexNumber: entry.speciesId,
+          kind: entry.kind || sec.kind || "base",
+          specimenKey: key,
+        });
+      }
     }
   }
 

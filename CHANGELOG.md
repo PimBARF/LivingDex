@@ -49,6 +49,10 @@ All notable changes, new features, improvements, and bug fixes for **LivingDex**
   - Eliminated out-of-dex gender differences (e.g. Venusaur Female in Sun/Moon, Meganium/Torchic Female in Black/White, Gen 1–4 gender variants in Legends Arceus) across all 19 game datasets.
   - Omitted empty auxiliary sections for games that do not feature the base species (e.g. Flabébé in Sun/Moon).
 
+### Fixed
+
+- **Specimen Key Deduplication across Inline & Sorted Presets**: Added unique specimen key tracking (`seenKeys = new Set()`) using `getSpecimenKey(entry)` in `transformToInline`, `transformToEvolutionary`, and `transformToAlphabetical` (`js/layout.js`). Prevents duplicate identical cards (such as 2x Alolan Sandshrew / Sandslash / Vulpix / Ninetales in Sun/Moon) from appearing side-by-side when regional forms are present in both the base regional Pokédex and the active Regional Forms section.
+
 ## [v1.11.0] - 2026-09-13
 
 ### Added
