@@ -251,7 +251,7 @@ function getInfoModalHandlers() {
  * @param {string} entry - Raw location entry string (e.g. "Route 12 (Surfing)").
  * @returns {{ name: string, tags: string[] }} Parsed location name and tags.
  */
-function parseLocationEntry(entry) {
+export function parseLocationEntry(entry) {
   if (!entry) return { name: "", tags: [] };
   if (
     /^(?:Tera Raid|Evolve|Trade|Buy|Breed|Received|Gift|Event)/i.test(
@@ -286,11 +286,11 @@ function parseLocationEntry(entry) {
  * @param {Object} rate - Condition rate object.
  * @returns {string} Formatted label text.
  */
-function formatConditionChipText(rate) {
-  const cond = rate.condition || "";
+export function formatConditionChipText(rate) {
+  const cond = rate?.condition || "";
   let icon = "";
   if (/morning/i.test(cond)) icon = "🌅 ";
-  else if (/day/i.test(cond)) icon = "☀️ ";
+  else if (/\bday\b/i.test(cond)) icon = "☀️ ";
   else if (/night/i.test(cond)) icon = "🌙 ";
   else if (/radar/i.test(cond)) icon = "📡 ";
   else if (/swarm/i.test(cond)) icon = "🦗 ";
@@ -299,10 +299,61 @@ function formatConditionChipText(rate) {
   else if (/autumn|fall/i.test(cond)) icon = "🍂 ";
   else if (/winter/i.test(cond)) icon = "❄️ ";
   else if (/dual-slot/i.test(cond)) icon = "🎮 ";
-  else if (/sound/i.test(cond)) icon = "📻 ";
+  else if (/sound|radio/i.test(cond)) icon = "📻 ";
+  else if (/sandstorm/i.test(cond)) icon = "🏜️ ";
+  else if (/snowstorm|blizzard/i.test(cond)) icon = "❄️ ";
+  else if (/snowing|snow/i.test(cond)) icon = "🌨️ ";
+  else if (/thunderstorm/i.test(cond)) icon = "⛈️ ";
+  else if (/raining|rain/i.test(cond)) icon = "🌧️ ";
+  else if (/fog/i.test(cond)) icon = "🌫️ ";
+  else if (/overcast/i.test(cond)) icon = "☁️ ";
+  else if (/intense-sun|intense sun/i.test(cond)) icon = "☀️ ";
 
-  const label = cond ? `${icon}${cond}: ` : icon;
-  return `${label}${rate.chance}%`;
+  const label = cond ? `${icon}${cond}` : icon;
+  return typeof rate.chance === "number" ? `${label}: ${rate.chance}%` : label;
+}
+
+/**
+ * Formats a single location tag string with contextual icon.
+ *
+ * @param {string} tag - Tag label string.
+ * @returns {string} Formatted label with icon.
+ */
+export function formatConditionTag(tag) {
+  if (!tag) return "";
+  const t = String(tag).trim();
+  let icon = "";
+  if (/morning/i.test(t)) icon = "🌅 ";
+  else if (/\bday\b/i.test(t)) icon = "☀️ ";
+  else if (/night/i.test(t)) icon = "🌙 ";
+  else if (/radar/i.test(t)) icon = "📡 ";
+  else if (/swarm/i.test(t)) icon = "🦗 ";
+  else if (/spring/i.test(t)) icon = "🌸 ";
+  else if (/summer/i.test(t)) icon = "☀️ ";
+  else if (/autumn|fall/i.test(t)) icon = "🍂 ";
+  else if (/winter/i.test(t)) icon = "❄️ ";
+  else if (/dual-slot/i.test(t)) icon = "🎮 ";
+  else if (/sound|radio/i.test(t)) icon = "📻 ";
+  else if (/sandstorm/i.test(t)) icon = "🏜️ ";
+  else if (/snowstorm|blizzard/i.test(t)) icon = "❄️ ";
+  else if (/snowing|snow/i.test(t)) icon = "🌨️ ";
+  else if (/thunderstorm/i.test(t)) icon = "⛈️ ";
+  else if (/raining|rain/i.test(t)) icon = "🌧️ ";
+  else if (/fog/i.test(t)) icon = "🌫️ ";
+  else if (/overcast/i.test(t)) icon = "☁️ ";
+  else if (/intense-sun|intense sun/i.test(t)) icon = "☀️ ";
+  else if (/headbutt|honey tree/i.test(t)) icon = "🌳 ";
+  else if (/surfing|swimming/i.test(t)) icon = "🌊 ";
+  else if (/fishing|old rod|good rod|super rod/i.test(t)) icon = "🎣 ";
+  else if (/underwater|diving/i.test(t)) icon = "🤿 ";
+  else if (/rock smash/i.test(t)) icon = "🪨 ";
+  else if (/fossil/i.test(t)) icon = "🦴 ";
+  else if (/starter/i.test(t)) icon = "🌟 ";
+  else if (/gift egg/i.test(t)) icon = "🥚 ";
+  else if (/gift/i.test(t)) icon = "🎁 ";
+  else if (/contest/i.test(t)) icon = "🏆 ";
+
+  return `${icon}${t}`;
 }
 
 /**
@@ -321,6 +372,13 @@ function getMethodNoteIcon(note) {
   if (lower.includes("radar")) return "📡";
   if (lower.includes("dual-slot")) return "🎮";
   if (lower.includes("radio") || lower.includes("sound")) return "📻";
+  if (lower.includes("sandstorm")) return "🏜️";
+  if (lower.includes("snowstorm") || lower.includes("blizzard")) return "❄️";
+  if (lower.includes("snowing") || lower.includes("snow")) return "🌨️";
+  if (lower.includes("thunderstorm")) return "⛈️";
+  if (lower.includes("raining") || lower.includes("rain")) return "🌧️";
+  if (lower.includes("fog")) return "🌫️";
+  if (lower.includes("overcast")) return "☁️";
   if (lower.includes("fishing") || lower.includes("rod")) return "🎣";
   if (lower.includes("surfing") || lower.includes("swimming")) return "🌊";
   if (lower.includes("underwater") || lower.includes("diving")) return "🤿";
@@ -462,11 +520,9 @@ function renderLocationItemContent(li, entry, methodNote = "") {
   li.appendChild(mainRow);
 
   // Render condition chips if rates breakdown exists
-  if (isObject && Array.isArray(entry.rates) && entry.rates.length > 1) {
-    const validRates = entry.rates.filter(
-      (r) => r && r.condition && typeof r.chance === "number",
-    );
-    if (validRates.length > 1) {
+  if (isObject && Array.isArray(entry.rates) && entry.rates.length > 0) {
+    const validRates = entry.rates.filter((r) => r && r.condition);
+    if (validRates.length > 0) {
       const conditionsRow = document.createElement("div");
       conditionsRow.className = "pokemon-info-encounter-conditions";
 

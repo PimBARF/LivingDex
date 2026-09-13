@@ -25,7 +25,12 @@ import {
   formatVersionName,
 } from "../db.js";
 import { attachModalHandlers } from "./modals.js";
-import { openPokemonInfoModal } from "./pokemon-info.js";
+import {
+  openPokemonInfoModal,
+  parseLocationEntry,
+  formatConditionChipText,
+  formatConditionTag,
+} from "./pokemon-info.js";
 
 // =============================================================================
 // FIELD GUIDE & LIVING DEX PREREQUISITES CONTROLLER
@@ -739,11 +744,20 @@ function getFilteredMissingList(list) {
         p.dexNumber.toLowerCase().includes(q);
       const matchItem =
         p.requiredItem && p.requiredItem.toLowerCase().includes(q);
-      const matchLoc = p.locations.some((l) =>
-        (typeof l === "string" ? l : l?.location || "")
-          .toLowerCase()
-          .includes(q),
-      );
+      const matchLoc = p.locations.some((l) => {
+        const str = typeof l === "string" ? l : l?.location || "";
+        if (str.toLowerCase().includes(q)) return true;
+        if (typeof l === "object" && l !== null) {
+          if (l.levels && l.levels.toLowerCase().includes(q)) return true;
+          if (
+            Array.isArray(l.rates) &&
+            l.rates.some((r) => r?.condition?.toLowerCase().includes(q))
+          ) {
+            return true;
+          }
+        }
+        return false;
+      });
       if (!matchName && !matchNum && !matchItem && !matchLoc) return false;
     }
 
@@ -1099,12 +1113,30 @@ function renderMissingList(container) {
           recBadge.className = "missing-recommended-route-pill";
           const isAsc = filterState.sort === "route-asc";
           const titleLabel = isAsc ? "Earliest Encounter" : "Recommended Spot";
-          const locToShow = isAsc
+          const rawLocToShow = isAsc
             ? p.earliestLocation || p.recommendedLocation
             : p.recommendedLocation || p.earliestLocation;
+
+          const matchingLoc = p.locations.find((l) => {
+            const str = typeof l === "string" ? l : l?.location || "";
+            return (
+              str === rawLocToShow ||
+              str.toLowerCase() === rawLocToShow.toLowerCase()
+            );
+          });
+
+          const isMatchingObj =
+            typeof matchingLoc === "object" && matchingLoc !== null;
+          const { name: cleanLocName, tags: recTags } =
+            parseLocationEntry(rawLocToShow);
+
           const rateText = p.rateBadgeText
             ? `<span class="missing-rate-tag rate-${p.rateBadgeType}">${p.rateBadgeText}</span>`
             : "";
+          const levelText =
+            isMatchingObj && matchingLoc.levels
+              ? `<span class="missing-location-levels">${matchingLoc.levels}</span>`
+              : "";
           const subtext =
             p.isSmartBetter && !isAsc && p.earliestLocation
               ? `<span class="missing-smart-alt-hint">Earliest: ${p.earliestLocation}${typeof p.earliestChance === "number" ? ` (${p.earliestChance}%)` : ""}</span>`
@@ -1113,11 +1145,51 @@ function renderMissingList(container) {
           recBadge.innerHTML = `
             <div class="missing-rec-header">
               <span class="missing-rec-title">📍 ${titleLabel}:</span>
-              <strong class="missing-rec-location">${locToShow}</strong>
+              <strong class="missing-rec-location">${cleanLocName}</strong>
               ${rateText}
+              ${levelText}
             </div>
-            ${subtext}
           `;
+
+          const recCondRow = document.createElement("div");
+          recCondRow.className = "missing-rec-conditions";
+
+          if (
+            isMatchingObj &&
+            Array.isArray(matchingLoc.rates) &&
+            matchingLoc.rates.length > 0
+          ) {
+            const validRates = matchingLoc.rates.filter(
+              (r) => r && r.condition,
+            );
+            validRates.forEach((rate) => {
+              const chip = document.createElement("span");
+              chip.className = "missing-condition-chip";
+              chip.textContent = formatConditionChipText(rate);
+              recCondRow.appendChild(chip);
+            });
+          } else if (recTags.length > 0) {
+            const filteredRecTags = recTags.filter(
+              (t) => !/^(?:gift|starter|fossil|egg)$/i.test(t),
+            );
+            filteredRecTags.forEach((tag) => {
+              const chip = document.createElement("span");
+              chip.className = "missing-condition-chip";
+              chip.textContent = formatConditionTag(tag);
+              recCondRow.appendChild(chip);
+            });
+          }
+
+          if (recCondRow.hasChildNodes()) {
+            recBadge.appendChild(recCondRow);
+          }
+
+          if (subtext) {
+            const subEl = document.createElement("div");
+            subEl.innerHTML = subtext;
+            recBadge.appendChild(subEl.firstElementChild);
+          }
+
           locWrap.appendChild(recBadge);
         }
 
@@ -1131,15 +1203,62 @@ function renderMissingList(container) {
         const maxLocs = 2;
         p.locations.slice(0, maxLocs).forEach((loc) => {
           const li = document.createElement("li");
+          li.className = "missing-location-item";
           const isObj = typeof loc === "object" && loc !== null;
-          const locName = isObj ? loc.location : loc;
-          li.textContent = locName;
+          const rawLocStr = isObj ? loc.location || "" : loc;
+          const { name: locName, tags } = parseLocationEntry(rawLocStr);
+
+          const mainRow = document.createElement("div");
+          mainRow.className = "missing-location-main";
+
+          const nameSpan = document.createElement("span");
+          nameSpan.className = "missing-location-name";
+          nameSpan.textContent = locName;
+          mainRow.appendChild(nameSpan);
+
           if (isObj && typeof loc.chance === "number") {
             const rateSpan = document.createElement("span");
             rateSpan.className = "missing-location-rate";
             rateSpan.textContent = ` (${loc.chance}%)`;
-            li.appendChild(rateSpan);
+            mainRow.appendChild(rateSpan);
           }
+
+          if (isObj && loc.levels) {
+            const lvlSpan = document.createElement("span");
+            lvlSpan.className = "missing-location-levels";
+            lvlSpan.textContent = loc.levels;
+            mainRow.appendChild(lvlSpan);
+          }
+
+          li.appendChild(mainRow);
+
+          const conditionsRow = document.createElement("div");
+          conditionsRow.className = "missing-location-conditions";
+
+          if (isObj && Array.isArray(loc.rates) && loc.rates.length > 0) {
+            const validRates = loc.rates.filter((r) => r && r.condition);
+            validRates.forEach((rate) => {
+              const chip = document.createElement("span");
+              chip.className = "missing-condition-chip";
+              chip.textContent = formatConditionChipText(rate);
+              conditionsRow.appendChild(chip);
+            });
+          } else if (tags.length > 0) {
+            const filteredTags = tags.filter(
+              (t) => !/^(?:gift|starter|fossil|egg)$/i.test(t),
+            );
+            filteredTags.forEach((tag) => {
+              const chip = document.createElement("span");
+              chip.className = "missing-condition-chip";
+              chip.textContent = formatConditionTag(tag);
+              conditionsRow.appendChild(chip);
+            });
+          }
+
+          if (conditionsRow.hasChildNodes()) {
+            li.appendChild(conditionsRow);
+          }
+
           locList.appendChild(li);
         });
         if (p.locations.length > maxLocs) {

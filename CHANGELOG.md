@@ -8,6 +8,7 @@ All notable changes, new features, improvements, and bug fixes for **LivingDex**
 
 | Version                                                               | Release Date          | Major Highlights                                                                                                 |
 | :-------------------------------------------------------------------- | :-------------------- | :--------------------------------------------------------------------------------------------------------------- |
+| **[v1.19.0](#v1190---2026-09-13)**                                    | Sep 13, 2026          | Special encounter conditions (Day/Night, Weather, Swarms, Seasons, Methods) and level badges in Field Guide      |
 | **[v1.18.6](#v1186---2026-09-13)**                                    | Sep 13, 2026          | Increase mobile long-press hold duration to 500ms to prevent accidental multi-select gestures                    |
 | **[v1.18.5](#v1185---2026-09-13)**                                    | Sep 13, 2026          | Fix Field Guide count badge color and contrast in Light mode by correcting design token references               |
 | **[v1.18.4](#v1184---2026-09-13)**                                    | Sep 13, 2026          | Fix starter and gift Pokémon acquisition method pills and wild encounter badge fallback in Field Guide           |
@@ -55,6 +56,23 @@ All notable changes, new features, improvements, and bug fixes for **LivingDex**
 | **[Expansion Phase](#multi-game-expansion--localization---aug-2026)** | Aug 17–31, 2026       | All mainline games, 8-language localization, Info modal, UI modular split                                        |
 | **[Modular JS Split](#modular-js-split---nov-2025)**                  | Nov 13–15, 2025       | ES module decomposition (`main.js`, `ui.js`, `api.js`, `storage.js`)                                             |
 | **[Genesis & Prototype](#initial-release---oct-2025)**                | Oct 27 – Nov 10, 2025 | Initial LivingDex tracker release, 30-slot PC boxes, PokeAPI integration                                         |
+
+---
+
+## [v1.19.0] - 2026-09-13
+
+### Added
+
+- **Special Encounter Conditions & Time-of-Day Badges in Field Guide (`missing-guide.js`, `pokemon-info.js`, `styles.css`)**:
+  - Implemented special encounter condition chips and level range indicators for Pokémon locations in the Field Guide card list and Recommended Spot / Earliest Encounter pills.
+  - Added support for comprehensive condition types with dedicated emoji badges:
+    - **Time of Day**: Morning (🌅), Day (☀️), Night (🌙).
+    - **Weather**: Rain/Raining (🌧️), Thunderstorm (⛈️), Snow/Snowing (🌨️), Snowstorm/Blizzard (❄️), Sandstorm (🏜️), Fog/Heavy Fog (🌫️), Overcast (☁️), Intense Sun (☀️).
+    - **Seasons & Specials**: Spring (🌸), Summer (☀️), Autumn/Fall (🍂), Winter (❄️), Swarms (🦗), Poké Radar (📡), Dual-slot (🎮), Sound/Radio (📻).
+    - **Encounter Methods**: Trees/Headbutt (🌳), Surfing (🌊), Fishing/Rods (🎣), Diving (🤿), Rock Smash (🪨), Bug Catching Contest (🏆).
+  - Enhanced search filtering in the Field Guide to match condition names (e.g. searching for `"night"`, `"morning"`, `"swarm"`, or `"rain"` finds all Pokémon encounterable under those conditions).
+  - Synchronized location parsing and formatting helpers between the Pokémon Information modal and Field Guide modal.
+  - Bumped Service Worker `CACHE_VERSION` to `v1.19.0` in `LivingDex/sw.js`.
 
 ---
 
