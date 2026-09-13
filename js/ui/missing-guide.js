@@ -724,7 +724,11 @@ function getFilteredMissingList(list) {
         p.dexNumber.toLowerCase().includes(q);
       const matchItem =
         p.requiredItem && p.requiredItem.toLowerCase().includes(q);
-      const matchLoc = p.locations.some((l) => l.toLowerCase().includes(q));
+      const matchLoc = p.locations.some((l) =>
+        (typeof l === "string" ? l : l?.location || "")
+          .toLowerCase()
+          .includes(q),
+      );
       if (!matchName && !matchNum && !matchItem && !matchLoc) return false;
     }
 
@@ -962,22 +966,24 @@ function renderMissingList(container) {
     methodBadge.className = `missing-method-badge method-${p.methodCategory}`;
 
     if (p.methodCategory === "starter") {
-      const starterLoc =
-        p.locations?.find((l) => /\(Starter\)/i.test(l)) ||
+      const rawLoc =
+        p.locations?.find((l) => /\(Starter\)/i.test(getLocStr(l))) ||
         p.locations?.[0] ||
         "Starter Choice";
+      const starterLoc = getLocStr(rawLoc);
       const cleanLoc = starterLoc.replace(/\s*\([^)]+\)$/, "").trim();
       methodBadge.innerHTML = `
         <span class="method-icon">🌟</span>
         <span class="method-label">Starter: ${cleanLoc}</span>
       `;
     } else if (p.methodCategory === "gift") {
-      const giftLoc =
+      const rawLoc =
         p.locations?.find((l) =>
-          /\((?:Gift|Fossil|Gift Egg|Mystery Gift)\)/i.test(l),
+          /\((?:Gift|Fossil|Gift Egg|Mystery Gift)\)/i.test(getLocStr(l)),
         ) ||
         p.locations?.[0] ||
         "In-Game Gift";
+      const giftLoc = getLocStr(rawLoc);
       const isFossil = /\(Fossil\)/i.test(giftLoc);
       const isEgg = /\(Gift Egg\)/i.test(giftLoc);
       const icon = isFossil ? "🦖" : isEgg ? "🥚" : "🎁";
@@ -1036,7 +1042,8 @@ function renderMissingList(container) {
         p.locations.forEach((gameTitle) => {
           const gTag = document.createElement("span");
           gTag.className = "missing-game-tag";
-          gTag.textContent = gameTitle;
+          gTag.textContent =
+            typeof gameTitle === "string" ? gameTitle : gameTitle.location;
           gamesList.appendChild(gTag);
         });
         locWrap.appendChild(gamesList);
@@ -1051,7 +1058,15 @@ function renderMissingList(container) {
         const maxLocs = 2;
         p.locations.slice(0, maxLocs).forEach((loc) => {
           const li = document.createElement("li");
-          li.textContent = loc;
+          const isObj = typeof loc === "object" && loc !== null;
+          const locName = isObj ? loc.location : loc;
+          li.textContent = locName;
+          if (isObj && typeof loc.chance === "number") {
+            const rateSpan = document.createElement("span");
+            rateSpan.className = "missing-location-rate";
+            rateSpan.textContent = ` (${loc.chance}%)`;
+            li.appendChild(rateSpan);
+          }
           locList.appendChild(li);
         });
         if (p.locations.length > maxLocs) {

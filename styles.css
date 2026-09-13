@@ -3029,6 +3029,98 @@ body.is-drag-selecting .cell {
   color: #f59e0b;
 }
 
+.pokemon-info-encounter-tag.tag-levels {
+  background: var(--surface-soft);
+  border-color: var(--surface-soft-border);
+  color: var(--muted);
+  font-family: monospace;
+  font-size: 10px;
+}
+
+/* --- Encounter Rates & Condition Chips --- */
+.pokemon-info-encounter-main {
+  display: inline-flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.pokemon-info-encounter-rate {
+  display: inline-flex;
+  align-items: center;
+  padding: 1px 5px;
+  font-size: 10.5px;
+  font-weight: 700;
+  border-radius: 6px;
+  line-height: 1.35;
+  letter-spacing: -0.01em;
+  margin-left: 2px;
+}
+
+.pokemon-info-encounter-rate.rate-common {
+  background: rgba(16, 185, 129, 0.12);
+  border: 1px solid rgba(16, 185, 129, 0.3);
+  color: #059669;
+}
+
+[data-theme="dark"] .pokemon-info-encounter-rate.rate-common {
+  background: rgba(16, 185, 129, 0.18);
+  border-color: rgba(16, 185, 129, 0.4);
+  color: #34d399;
+}
+
+.pokemon-info-encounter-rate.rate-uncommon {
+  background: rgba(59, 130, 246, 0.12);
+  border: 1px solid rgba(59, 130, 246, 0.3);
+  color: #2563eb;
+}
+
+[data-theme="dark"] .pokemon-info-encounter-rate.rate-uncommon {
+  background: rgba(59, 130, 246, 0.18);
+  border-color: rgba(59, 130, 246, 0.4);
+  color: #60a5fa;
+}
+
+.pokemon-info-encounter-rate.rate-rare {
+  background: rgba(245, 158, 11, 0.14);
+  border: 1px solid rgba(245, 158, 11, 0.35);
+  color: #d97706;
+}
+
+[data-theme="dark"] .pokemon-info-encounter-rate.rate-rare {
+  background: rgba(245, 158, 11, 0.22);
+  border-color: rgba(245, 158, 11, 0.45);
+  color: #fbbf24;
+}
+
+.pokemon-info-encounter-conditions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin-top: 3px;
+  margin-left: 2px;
+}
+
+.pokemon-info-condition-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  padding: 1px 6px;
+  font-size: 10px;
+  font-weight: 600;
+  border-radius: 4px;
+  background: var(--surface-soft);
+  border: 1px solid var(--surface-soft-border);
+  color: var(--muted);
+  line-height: 1.35;
+}
+
+.missing-location-rate {
+  font-weight: 700;
+  color: var(--accent-2);
+  font-size: 11px;
+}
+
 /* --- Evolution Chain Visual Tree --- */
 .pokemon-info-evo {
   display: flex;

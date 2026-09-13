@@ -281,21 +281,167 @@ function parseLocationEntry(entry) {
 }
 
 /**
- * Populates an `<li>` element with a styled location name and tags.
+ * Formats a condition rate chip label with appropriate emoji icon.
+ *
+ * @param {Object} rate - Condition rate object.
+ * @returns {string} Formatted label text.
+ */
+function formatConditionChipText(rate) {
+  const cond = rate.condition || "";
+  let icon = "";
+  if (/morning/i.test(cond)) icon = "🌅 ";
+  else if (/day/i.test(cond)) icon = "☀️ ";
+  else if (/night/i.test(cond)) icon = "🌙 ";
+  else if (/radar/i.test(cond)) icon = "📡 ";
+  else if (/swarm/i.test(cond)) icon = "🦗 ";
+  else if (/spring/i.test(cond)) icon = "🌸 ";
+  else if (/summer/i.test(cond)) icon = "☀️ ";
+  else if (/autumn|fall/i.test(cond)) icon = "🍂 ";
+  else if (/winter/i.test(cond)) icon = "❄️ ";
+  else if (/dual-slot/i.test(cond)) icon = "🎮 ";
+  else if (/sound/i.test(cond)) icon = "📻 ";
+
+  const label = cond ? `${icon}${cond}: ` : icon;
+  return `${label}${rate.chance}%`;
+}
+
+/**
+ * Gets a contextual emoji icon for exclusive encounter method notes.
+ *
+ * @param {string} note - Method note string.
+ * @returns {string} Emoji icon.
+ */
+function getMethodNoteIcon(note) {
+  if (!note) return "💡";
+  const lower = note.toLowerCase();
+  if (lower.includes("night")) return "🌙";
+  if (lower.includes("morning")) return "🌅";
+  if (lower.includes("day")) return "☀️";
+  if (lower.includes("swarm")) return "🦗";
+  if (lower.includes("radar")) return "📡";
+  if (lower.includes("dual-slot")) return "🎮";
+  if (lower.includes("radio") || lower.includes("sound")) return "📻";
+  if (lower.includes("fishing") || lower.includes("rod")) return "🎣";
+  if (lower.includes("surfing") || lower.includes("swimming")) return "🌊";
+  if (lower.includes("underwater") || lower.includes("diving")) return "🤿";
+  if (lower.includes("rock smash")) return "🪨";
+  if (lower.includes("trees") || lower.includes("headbutt")) return "🌳";
+  if (lower.includes("fossil")) return "🦴";
+  if (lower.includes("gift egg")) return "🥚";
+  if (lower.includes("gift")) return "🎁";
+  if (lower.includes("starter")) return "⭐";
+  if (lower.includes("raid")) return "⚔️";
+  return "💡";
+}
+
+/**
+ * Filters out redundant location tags when a global top-level method note already communicates the condition.
+ *
+ * @param {string[]} tags - Extracted location tags.
+ * @param {string} [methodNote=""] - Top-level exclusive method note.
+ * @returns {string[]} Filtered tags.
+ */
+function filterRedundantTags(tags, methodNote = "") {
+  if (!methodNote || !Array.isArray(tags) || tags.length === 0) return tags;
+  const noteLower = methodNote.toLowerCase();
+
+  return tags.filter((tag) => {
+    const tLower = tag.toLowerCase();
+    if (noteLower.includes("night") && tLower === "night") return false;
+    if (noteLower.includes("morning") && tLower === "morning") return false;
+    if (noteLower.includes("day") && tLower === "day") return false;
+    if (noteLower.includes("starter") && tLower === "starter") return false;
+    if (noteLower.includes("fossil") && tLower === "fossil") return false;
+    if (noteLower.includes("gift egg") && tLower === "gift egg") return false;
+    if (
+      noteLower.includes("gift") &&
+      (tLower === "gift" || tLower === "in-game gift")
+    )
+      return false;
+    if (noteLower.includes("super rod") && tLower.includes("super rod"))
+      return false;
+    if (noteLower.includes("old rod") && tLower.includes("old rod"))
+      return false;
+    if (noteLower.includes("good rod") && tLower.includes("good rod"))
+      return false;
+    if (noteLower.includes("fishing") && tLower === "fishing") return false;
+    if (
+      noteLower.includes("surfing") &&
+      (tLower === "surfing" || tLower === "swimming")
+    )
+      return false;
+    if (
+      noteLower.includes("underwater") &&
+      (tLower === "underwater" || tLower === "diving")
+    )
+      return false;
+    if (noteLower.includes("rock smash") && tLower === "rock smash")
+      return false;
+    if (
+      noteLower.includes("trees") &&
+      (tLower === "headbutt" || tLower === "honey tree")
+    )
+      return false;
+    if (
+      noteLower.includes("poké radar") &&
+      (tLower === "poké radar" || tLower === "poke radar")
+    )
+      return false;
+    if (noteLower.includes("swarms") && tLower === "swarm") return false;
+    if (noteLower.includes("dual-slot") && tLower.startsWith("dual-slot"))
+      return false;
+    return true;
+  });
+}
+
+/**
+ * Populates an `<li>` element with a styled location name, rate badge, and tags.
  *
  * @param {HTMLLIElement} li - Target list item element.
- * @param {string} entry - Location entry string.
+ * @param {string|Object} entry - Location entry string or structured encounter object.
+ * @param {string} [methodNote=""] - Active exclusive encounter note if applicable.
  * @returns {void}
  */
-function renderLocationItemContent(li, entry) {
-  const { name, tags } = parseLocationEntry(entry);
+function renderLocationItemContent(li, entry, methodNote = "") {
   li.textContent = "";
+
+  const isObject = typeof entry === "object" && entry !== null;
+  const rawLoc = isObject ? entry.location || "" : entry;
+  const { name, tags: rawTags } = parseLocationEntry(rawLoc);
+  const tags = filterRedundantTags(rawTags, methodNote);
+
+  const mainRow = document.createElement("div");
+  mainRow.className = "pokemon-info-encounter-main";
 
   const nameSpan = document.createElement("span");
   nameSpan.className = "pokemon-info-encounter-location";
   nameSpan.textContent = name;
-  li.appendChild(nameSpan);
+  mainRow.appendChild(nameSpan);
 
+  // Render Rate Badge if chance is present
+  if (isObject && typeof entry.chance === "number") {
+    const rateBadge = document.createElement("span");
+    rateBadge.className = "pokemon-info-encounter-rate";
+    if (entry.chance < 10) {
+      rateBadge.classList.add("rate-rare");
+    } else if (entry.chance < 20) {
+      rateBadge.classList.add("rate-uncommon");
+    } else {
+      rateBadge.classList.add("rate-common");
+    }
+    rateBadge.textContent = `${entry.chance}%`;
+    mainRow.appendChild(rateBadge);
+  }
+
+  // Level range badge if present
+  if (isObject && entry.levels) {
+    const lvlSpan = document.createElement("span");
+    lvlSpan.className = "pokemon-info-encounter-tag tag-levels";
+    lvlSpan.textContent = entry.levels;
+    mainRow.appendChild(lvlSpan);
+  }
+
+  // Render location tags (Starter, Gift, Fossil, methods)
   if (tags.length > 0) {
     tags.forEach((tag) => {
       const tagSpan = document.createElement("span");
@@ -309,8 +455,30 @@ function renderLocationItemContent(li, entry) {
         tagSpan.classList.add("tag-gift");
       }
       tagSpan.textContent = tag;
-      li.appendChild(tagSpan);
+      mainRow.appendChild(tagSpan);
     });
+  }
+
+  li.appendChild(mainRow);
+
+  // Render condition chips if rates breakdown exists
+  if (isObject && Array.isArray(entry.rates) && entry.rates.length > 1) {
+    const validRates = entry.rates.filter(
+      (r) => r && r.condition && typeof r.chance === "number",
+    );
+    if (validRates.length > 1) {
+      const conditionsRow = document.createElement("div");
+      conditionsRow.className = "pokemon-info-encounter-conditions";
+
+      validRates.forEach((rate) => {
+        const chip = document.createElement("span");
+        chip.className = "pokemon-info-condition-chip";
+        chip.textContent = formatConditionChipText(rate);
+        conditionsRow.appendChild(chip);
+      });
+
+      li.appendChild(conditionsRow);
+    }
   }
 }
 
@@ -320,9 +488,13 @@ function renderLocationItemContent(li, entry) {
  * @param {string[]} entries - List of location names.
  * @param {Object} [options] - Configuration options.
  * @param {number} [options.maxVisible=5] - Maximum number of items shown before collapsing.
+ * @param {string} [options.methodNote=""] - Active exclusive encounter note.
  * @returns {HTMLUListElement|null} The created `<ul>` element, or `null` if entries is empty.
  */
-function createEncounterList(entries, { maxVisible = 5 } = {}) {
+function createEncounterList(
+  entries,
+  { maxVisible = 5, methodNote = "" } = {},
+) {
   if (!entries || !entries.length) {
     return null;
   }
@@ -336,7 +508,7 @@ function createEncounterList(entries, { maxVisible = 5 } = {}) {
   visibleEntries.forEach((entry) => {
     const item = document.createElement("li");
     item.className = "pokemon-info-encounter-item";
-    renderLocationItemContent(item, entry);
+    renderLocationItemContent(item, entry, methodNote);
     list.appendChild(item);
   });
 
@@ -346,7 +518,7 @@ function createEncounterList(entries, { maxVisible = 5 } = {}) {
       const item = document.createElement("li");
       item.className =
         "pokemon-info-encounter-item pokemon-info-encounter-item-hidden";
-      renderLocationItemContent(item, entry);
+      renderLocationItemContent(item, entry, methodNote);
       item.hidden = true;
       list.appendChild(item);
     });
@@ -529,7 +701,7 @@ function renderEncounterDetails(encounterEl, encounterGroups) {
       const icon = document.createElement("span");
       icon.className = "pokemon-info-encounter-method-icon";
       icon.setAttribute("aria-hidden", "true");
-      icon.textContent = "💡";
+      icon.textContent = getMethodNoteIcon(groupData.methodNote);
       const text = document.createElement("span");
       text.textContent = groupData.methodNote;
       methodEl.append(icon, text);
@@ -537,7 +709,9 @@ function renderEncounterDetails(encounterEl, encounterGroups) {
     }
 
     if (groupData.locations && groupData.locations.length > 0) {
-      const list = createEncounterList(groupData.locations);
+      const list = createEncounterList(groupData.locations, {
+        methodNote: groupData.methodNote,
+      });
       if (list) group.appendChild(list);
     } else if (groupData.evolveNote) {
       const list = document.createElement("ul");

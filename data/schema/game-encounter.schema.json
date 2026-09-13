@@ -3,10 +3,7 @@
   "title": "PokemonGameEncounterDatabase",
   "description": "Schema for game-specific encounter tables",
   "type": "object",
-  "required": [
-    "gameId",
-    "encounters"
-  ],
+  "required": ["gameId", "encounters"],
   "properties": {
     "gameId": {
       "type": "string",
@@ -24,7 +21,35 @@
             "properties": {
               "locations": {
                 "type": "array",
-                "items": { "type": "string" }
+                "items": {
+                  "oneOf": [
+                    { "type": "string" },
+                    {
+                      "type": "object",
+                      "required": ["location"],
+                      "properties": {
+                        "location": { "type": "string" },
+                        "chance": { "type": "number" },
+                        "method": { "type": "string" },
+                        "levels": { "type": "string" },
+                        "rates": {
+                          "type": "array",
+                          "items": {
+                            "type": "object",
+                            "properties": {
+                              "condition": { "type": "string" },
+                              "chance": { "type": "number" },
+                              "method": { "type": "string" },
+                              "levels": { "type": "string" }
+                            },
+                            "additionalProperties": true
+                          }
+                        }
+                      },
+                      "additionalProperties": true
+                    }
+                  ]
+                }
               },
               "method": { "type": ["string", "null"] },
               "evolveFrom": { "type": ["string", "null"] },

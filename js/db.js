@@ -841,42 +841,55 @@ function findPreEvolutionName(paths, speciesId) {
  */
 export function detectExclusiveEncounterMethod(locations) {
   if (!locations || !locations.length) return null;
+  const getLocStr = (l) => (typeof l === "string" ? l : l?.location || "");
 
-  const isAllStarters = locations.every((loc) => /\(Starter\)/i.test(loc));
+  const isAllStarters = locations.every((loc) =>
+    /\(Starter\)/i.test(getLocStr(loc)),
+  );
   if (isAllStarters) {
     return "Encountered as a Starter Pokémon";
   }
 
   const isAllGifts = locations.every((loc) =>
-    /\((?:Gift|Fossil|Gift Egg|Mystery Gift)\)/i.test(loc),
+    /\((?:Gift|Fossil|Gift Egg|Mystery Gift)\)/i.test(getLocStr(loc)),
   );
   if (isAllGifts) {
-    if (locations.every((loc) => /\(Fossil\)/i.test(loc))) {
+    if (locations.every((loc) => /\(Fossil\)/i.test(getLocStr(loc)))) {
       return "Revived from a Fossil";
     }
-    if (locations.every((loc) => /\(Gift Egg\)/i.test(loc))) {
+    if (locations.every((loc) => /\(Gift Egg\)/i.test(getLocStr(loc)))) {
       return "Received as a Gift Egg";
     }
     return "Received as an In-Game Gift";
   }
 
-  const wildLocs = locations.filter(
-    (loc) =>
-      !/^(Evolve|Trade|Breed|Received|Buy|Gift|Event)/i.test(loc.trim()) &&
-      !/\((?:Starter|Gift|Fossil|Gift Egg)\)/i.test(loc),
-  );
+  const wildLocs = locations.filter((loc) => {
+    const str = getLocStr(loc);
+    return (
+      !/^(Evolve|Trade|Breed|Received|Buy|Gift|Event)/i.test(str.trim()) &&
+      !/\((?:Starter|Gift|Fossil|Gift Egg)\)/i.test(str)
+    );
+  });
   if (!wildLocs.length) return null;
 
   // 1. Fishing exclusively
-  const isAllFishing = wildLocs.every(
-    (loc) =>
-      /\b(fishing|old rod|good rod|super rod|rod)\b/i.test(loc) &&
-      !/\b(surfing|swimming|walking|grass|cave|overworld)\b/i.test(loc),
-  );
+  const isAllFishing = wildLocs.every((loc) => {
+    const str = getLocStr(loc);
+    return (
+      /\b(fishing|old rod|good rod|super rod|rod)\b/i.test(str) &&
+      !/\b(surfing|swimming|walking|grass|cave|overworld)\b/i.test(str)
+    );
+  });
   if (isAllFishing) {
-    const isAllSuperRod = wildLocs.every((loc) => /super rod/i.test(loc));
-    const isAllOldRod = wildLocs.every((loc) => /old rod/i.test(loc));
-    const isAllGoodRod = wildLocs.every((loc) => /good rod/i.test(loc));
+    const isAllSuperRod = wildLocs.every((loc) =>
+      /super rod/i.test(getLocStr(loc)),
+    );
+    const isAllOldRod = wildLocs.every((loc) =>
+      /old rod/i.test(getLocStr(loc)),
+    );
+    const isAllGoodRod = wildLocs.every((loc) =>
+      /good rod/i.test(getLocStr(loc)),
+    );
     if (isAllSuperRod) return "Encountered only via fishing (Super Rod)";
     if (isAllOldRod) return "Encountered only via fishing (Old Rod)";
     if (isAllGoodRod) return "Encountered only via fishing (Good Rod)";
@@ -884,32 +897,36 @@ export function detectExclusiveEncounterMethod(locations) {
   }
 
   // 2. Surfing / Swimming exclusively
-  const isAllSurfing = wildLocs.every(
-    (loc) =>
-      /\b(surfing|swimming|sea skim)\b/i.test(loc) &&
-      !/\b(fishing|rod|walking|grass|cave)\b/i.test(loc),
-  );
+  const isAllSurfing = wildLocs.every((loc) => {
+    const str = getLocStr(loc);
+    return (
+      /\b(surfing|swimming|sea skim)\b/i.test(str) &&
+      !/\b(fishing|rod|walking|grass|cave)\b/i.test(str)
+    );
+  });
   if (isAllSurfing) {
     return "Encountered only while swimming / surfing";
   }
 
   // 3. Diving / Underwater exclusively
   const isAllDiving = wildLocs.every((loc) =>
-    /\b(underwater|diving)\b/i.test(loc),
+    /\b(underwater|diving)\b/i.test(getLocStr(loc)),
   );
   if (isAllDiving) {
     return "Encountered only underwater (Diving)";
   }
 
   // 4. Rock Smash exclusively
-  const isAllRockSmash = wildLocs.every((loc) => /\b(rock smash)\b/i.test(loc));
+  const isAllRockSmash = wildLocs.every((loc) =>
+    /\b(rock smash)\b/i.test(getLocStr(loc)),
+  );
   if (isAllRockSmash) {
     return "Encountered only by using Rock Smash";
   }
 
   // 5. Trees / Headbutt / Honey Trees exclusively
   const isAllTrees = wildLocs.every((loc) =>
-    /\b(honey trees?|headbutt|tree shaking)\b/i.test(loc),
+    /\b(honey trees?|headbutt|tree shaking)\b/i.test(getLocStr(loc)),
   );
   if (isAllTrees) {
     return "Encountered only in trees (Headbutt / Honey Trees)";
@@ -917,10 +934,89 @@ export function detectExclusiveEncounterMethod(locations) {
 
   // 6. Raids exclusively
   const isAllRaids = wildLocs.every((loc) =>
-    /\b(max raid|tera raid|dynamax adventure)\b/i.test(loc),
+    /\b(max raid|tera raid|dynamax adventure)\b/i.test(getLocStr(loc)),
   );
   if (isAllRaids) {
     return "Encountered only in Raid Battles";
+  }
+
+  // 7. Time of day exclusively
+  const isAllNight = wildLocs.every((loc) => {
+    const str = getLocStr(loc);
+    if (/\bnight\b/i.test(str)) return true;
+    if (typeof loc === "object" && Array.isArray(loc.rates)) {
+      return (
+        loc.rates.length > 0 &&
+        loc.rates.every((r) => /night/i.test(r.condition || ""))
+      );
+    }
+    return false;
+  });
+  if (isAllNight) {
+    return "Encountered only at Night";
+  }
+
+  const isAllMorning = wildLocs.every((loc) => {
+    const str = getLocStr(loc);
+    if (/\bmorning\b/i.test(str)) return true;
+    if (typeof loc === "object" && Array.isArray(loc.rates)) {
+      return (
+        loc.rates.length > 0 &&
+        loc.rates.every((r) => /morning/i.test(r.condition || ""))
+      );
+    }
+    return false;
+  });
+  if (isAllMorning) {
+    return "Encountered only in the Morning";
+  }
+
+  const isAllDay = wildLocs.every((loc) => {
+    const str = getLocStr(loc);
+    if (/\bday\b/i.test(str)) return true;
+    if (typeof loc === "object" && Array.isArray(loc.rates)) {
+      return (
+        loc.rates.length > 0 &&
+        loc.rates.every((r) => /day/i.test(r.condition || ""))
+      );
+    }
+    return false;
+  });
+  if (isAllDay) {
+    return "Encountered only during the Day";
+  }
+
+  // 8. Special encounter mechanics exclusively
+  const isAllRadar = wildLocs.every((loc) => {
+    const str = getLocStr(loc);
+    return /\b(poké radar|poke radar)\b/i.test(str);
+  });
+  if (isAllRadar) {
+    return "Encountered only via Poké Radar";
+  }
+
+  const isAllSwarm = wildLocs.every((loc) => {
+    const str = getLocStr(loc);
+    return /\b(swarm)\b/i.test(str);
+  });
+  if (isAllSwarm) {
+    return "Encountered only during Swarms";
+  }
+
+  const isAllDualSlot = wildLocs.every((loc) => {
+    const str = getLocStr(loc);
+    return /\b(dual-slot)\b/i.test(str);
+  });
+  if (isAllDualSlot) {
+    return "Encountered only via GBA Dual-Slot insertion";
+  }
+
+  const isAllRadio = wildLocs.every((loc) => {
+    const str = getLocStr(loc);
+    return /\b(hoenn sound|sinnoh sound)\b/i.test(str);
+  });
+  if (isAllRadio) {
+    return "Encountered only via Pokémon Music (Radio)";
   }
 
   return null;
@@ -974,7 +1070,10 @@ function resolveEncounterGroups(
     const groupMap = new Map();
     for (const version of versions) {
       const locs = versionLocationMap.get(version) || [];
-      const key = locs.slice().sort().join("|||");
+      const key = locs
+        .map((l) => (typeof l === "string" ? l : JSON.stringify(l)))
+        .sort()
+        .join("|||");
       if (!groupMap.has(key)) {
         groupMap.set(key, { versions: [], entries: locs });
       }
@@ -1372,7 +1471,16 @@ export async function getMissingPokemonData(
             locations.push(...vEnc.locations);
           }
         }
-        locations = Array.from(new Set(locations));
+        const seenLocs = new Set();
+        const uniqueLocs = [];
+        for (const l of locations) {
+          const k = typeof l === "string" ? l : l.location || JSON.stringify(l);
+          if (!seenLocs.has(k)) {
+            seenLocs.add(k);
+            uniqueLocs.push(l);
+          }
+        }
+        locations = uniqueLocs;
       }
     }
 
@@ -1454,18 +1562,22 @@ export async function getMissingPokemonData(
         }
       }
     } else {
+      const getLocStr = (l) => (typeof l === "string" ? l : l?.location || "");
       const isStarter =
-        locations.some((l) => /\(Starter\)/i.test(l)) ||
+        locations.some((l) => /\(Starter\)/i.test(getLocStr(l))) ||
         BASE_STARTER_SPECIES_IDS.has(slot.speciesId);
 
       if (isStarter) {
         methodCategory = "starter";
       } else {
         const hasGiftTag = locations.some((l) =>
-          /\((?:Gift|Fossil|Gift Egg|Mystery Gift)\)/i.test(l),
+          /\((?:Gift|Fossil|Gift Egg|Mystery Gift)\)/i.test(getLocStr(l)),
         );
         const hasWildLoc = locations.some(
-          (l) => !/\((?:Gift|Fossil|Gift Egg|Mystery Gift|Starter)\)/i.test(l),
+          (l) =>
+            !/\((?:Gift|Fossil|Gift Egg|Mystery Gift|Starter)\)/i.test(
+              getLocStr(l),
+            ),
         );
 
         if (

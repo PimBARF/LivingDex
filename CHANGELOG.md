@@ -8,6 +8,9 @@ All notable changes, new features, improvements, and bug fixes for **LivingDex**
 
 | Version                                                               | Release Date          | Major Highlights                                                                                               |
 | :-------------------------------------------------------------------- | :-------------------- | :------------------------------------------------------------------------------------------------------------- |
+| **[v1.16.2](#v1162---2026-09-13)**                                    | Sep 13, 2026          | Exclusive time/condition notices, multi-cartridge dual-slot consolidation & clean UI de-cluttering             |
+| **[v1.16.1](#v1161---2026-09-13)**                                    | Sep 13, 2026          | Fix variable reference and search matching in Missing Guide card rendering                                     |
+| **[v1.16.0](#v1160---2026-09-13)**                                    | Sep 13, 2026          | Encounter rate probabilities, time-of-day condition chips, rarity badges, and level range indicators           |
 | **[v1.15.0](#v1150---2026-09-13)**                                    | Sep 13, 2026          | Keep Screen Awake setting via Screen Wake Lock API to prevent mobile display timeout                           |
 | **[v1.14.0](#v1140---2026-09-13)**                                    | Sep 13, 2026          | Starter & Gift Pokémon identification, Missing Guide starter/gift filters & badges, Gift Multi-Filter category |
 | **[v1.13.2](#v1132---2026-09-13)**                                    | Sep 13, 2026          | Tab-specific Missing Guide controls and working Family Quotas sorting                                          |
@@ -44,7 +47,37 @@ All notable changes, new features, improvements, and bug fixes for **LivingDex**
 | **[Modular JS Split](#modular-js-split---nov-2025)**                  | Nov 13–15, 2025       | ES module decomposition (`main.js`, `ui.js`, `api.js`, `storage.js`)                                           |
 | **[Genesis & Prototype](#initial-release---oct-2025)**                | Oct 27 – Nov 10, 2025 | Initial LivingDex tracker release, 30-slot PC boxes, PokeAPI integration                                       |
 
----
+## [v1.16.2] - 2026-09-13
+
+### Added
+
+- **Exclusive Condition Notices (`db.js`)**: Extended `detectExclusiveEncounterMethod` to identify when 100% of a Pokémon's encounters in a game group share a single condition (e.g. `🌙 Encountered only at Night` for Hoothoot in Gold/Silver, `🌅 Encountered only in the Morning`, `☀️ Encountered only during the Day`, `🦗 Encountered only during Swarms`, `📡 Encountered only via Poké Radar`, `🎮 Encountered only via GBA Dual-Slot insertion`).
+- **Contextual Notice Icons**: Added dedicated contextual icons for encounter notice banners (`🌙`, `🌅`, `☀️`, `🦗`, `📡`, `🎮`, `🎣`, `🌊`, `🤿`, `🪨`, `🌳`, `🦴`, `🥚`, `🎁`, `⭐`, `⚔️`).
+- **Redundant Tag Filtering**: Automatically suppressed repetitive per-item condition tags when an exclusive top-level notice is present, keeping location lists clean and readable.
+
+### Changed
+
+- **Multi-Cartridge Dual-Slot Consolidation**: Consolidated multi-cartridge GBA insertion condition variants sharing identical percentages (e.g. Chansey on Route 209/210 in DPPt) into clean, compact single-line titles/chips (e.g. `Route 209 (Dual-slot: Ruby, Sapphire, Emerald, FireRed) [4%]`), eliminating multi-line wrapping and clutter on mobile displays.
+
+## [v1.16.1] - 2026-09-13
+
+### Fixed
+
+- **Missing Guide Card Rendering**: Fixed a `ReferenceError` (`isHomeMode`) during missing Pokémon card DOM construction, restoring full card list rendering in the **Missing Pokémon** tab.
+- **Search Filter Resilience**: Safely handled structured location objects when executing string query matching in `getFilteredMissingList`.
+
+## [v1.16.0] - 2026-09-13
+
+### Added
+
+- **Encounter Rate Probabilities**: Displayed encounter chance percentages (e.g. `20%`, `45%`, `5%`) directly in the Pokémon Information modal alongside location names.
+- **Rarity Accenting**: Styled encounter rate badges according to probability rarity:
+  - Common / High (≥20%): Emerald green pill badge.
+  - Uncommon (10–19%): Royal blue pill badge.
+  - Rare (<10%): Warm amber/gold pill badge.
+- **Time-of-Day & Special Condition Chips**: When encounter rates vary by time of day, seasons, weather, or game mechanics, compact emoji condition chips (e.g., `🌅 Morning 20%`, `☀️ Day 20%`, `🌙 Night 10%`, `🦗 Swarm 40%`, `📡 Radar 12%`, `🎮 Dual-slot 8%`) are neatly rendered below the location row without cluttering the interface.
+- **Level Range Indicators**: Added subtle level badges (e.g., `Lv. 2–4`) for granular encounter insights.
+- **Missing Guide Rate Insights**: Surfaced encounter probability rates next to location previews in the Missing Guide checklist, allowing collectors to quickly identify the best catching locations.
 
 ## [v1.15.0] - 2026-09-13
 
