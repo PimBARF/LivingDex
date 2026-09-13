@@ -6,11 +6,63 @@ All notable changes, new features, improvements, and bug fixes for **LivingDex**
 
 ## 📑 Release Timeline
 
-| Version                            | Release Date | Major Highlights                                                                                                 |
-| :--------------------------------- | :----------- | :--------------------------------------------------------------------------------------------------------------- |
-| **[v1.18.1](#v1181---2026-09-13)** | Sep 13, 2026 | Fix starter, gift, and fossil encounter duplications and normalize PokéAPI encounter method tagging              |
-| **[v1.18.0](#v1180---2026-09-13)** | Sep 13, 2026 | Catching Order & Smart Route Progression sort in Missing Guide with encounter rate weighting and route badges    |
-| **[v1.17.0](#v1170---2026-09-13)** | Sep 13, 2026 | Configurable 20-slot PC box capacity for Gen 1 & 2 (Game Boy authentic) with settings toggle and 5x4 grid layout |
+| Version                                                               | Release Date          | Major Highlights                                                                                                 |
+| :-------------------------------------------------------------------- | :-------------------- | :--------------------------------------------------------------------------------------------------------------- |
+| **[v1.18.2](#v1182---2026-09-13)**                                    | Sep 13, 2026          | Fix Missing Pokémon Guide undo toast appearance, color contrast, button sizing, positioning, and animation       |
+| **[v1.18.1](#v1181---2026-09-13)**                                    | Sep 13, 2026          | Fix starter, gift, and fossil encounter duplications and normalize PokéAPI encounter method tagging              |
+| **[v1.18.0](#v1180---2026-09-13)**                                    | Sep 13, 2026          | Catching Order & Smart Route Progression sort in Missing Guide with encounter rate weighting and route badges    |
+| **[v1.17.0](#v1170---2026-09-13)**                                    | Sep 13, 2026          | Configurable 20-slot PC box capacity for Gen 1 & 2 (Game Boy authentic) with settings toggle and 5x4 grid layout |
+| **[v1.16.3](#v1163---2026-09-13)**                                    | Sep 13, 2026          | Fix "Last used" default Pokédex startup resolution and persistence across sessions                               |
+| **[v1.16.2](#v1162---2026-09-13)**                                    | Sep 13, 2026          | Exclusive time/condition notices, multi-cartridge dual-slot consolidation & clean UI de-cluttering               |
+| **[v1.16.1](#v1161---2026-09-13)**                                    | Sep 13, 2026          | Fix variable reference and search matching in Missing Guide card rendering                                       |
+| **[v1.16.0](#v1160---2026-09-13)**                                    | Sep 13, 2026          | Encounter rate probabilities, time-of-day condition chips, rarity badges, and level range indicators             |
+| **[v1.15.0](#v1150---2026-09-13)**                                    | Sep 13, 2026          | Keep Screen Awake setting via Screen Wake Lock API to prevent mobile display timeout                             |
+| **[v1.14.0](#v1140---2026-09-13)**                                    | Sep 13, 2026          | Starter & Gift Pokémon identification, Missing Guide starter/gift filters & badges, Gift Multi-Filter category   |
+| **[v1.13.2](#v1132---2026-09-13)**                                    | Sep 13, 2026          | Tab-specific Missing Guide controls and working Family Quotas sorting                                            |
+| **[v1.13.1](#v1131---2026-09-13)**                                    | Sep 13, 2026          | Offline encounter data caching fixes for Missing Guide and Pokémon Information modal                             |
+| **[v1.13.0](#v1130---2026-09-13)**                                    | Sep 13, 2026          | Regional Dex default sorting with explicit National Dex sorting in Missing Guide                                 |
+| **[v1.12.0](#v1120---2026-09-13)**                                    | Sep 13, 2026          | Missing Guide usability, canonical caught-state fixes, lazy tab loading, compact view, and undo actions          |
+| **[v1.11.1](#v1111---2026-09-13)**                                    | Sep 13, 2026          | Separate box sections in National Dex order & out-of-dex gender/form variant filtering across game datasets      |
+| **[v1.11.0](#v1110---2026-09-13)**                                    | Sep 13, 2026          | Regional Origin box layout preset for post-Gen 1 games (GSC through SV) in canonical National Dex numbering      |
+| **[v1.10.1](#v1101---2026-09-12)**                                    | Sep 12, 2026          | Game-specific layout presets (Alola Islands, Kalos/Galar/Paldea Unified, Hisui Areas), dynamic preset resolver   |
+| **[v1.9.19](#v1919---2026-09-12)**                                    | Sep 12, 2026          | Active game version selector in Dex Options modal                                                                |
+| **[v1.9.18](#v1918---2026-09-12)**                                    | Sep 12, 2026          | Centralized Dex Options redesign with interactive preset detail cards                                            |
+| **[v1.9.10](#v1910---2026-09-12)**                                    | Sep 12, 2026          | Floating Box Coordinates HUD tooltip with live cursor tracking                                                   |
+| **[v1.9.7](#v197---2026-09-12)**                                      | Sep 12, 2026          | Pokémon HOME Types (18 Boxes) & Alphabetical (A-Z) box layout presets                                            |
+| **[v1.8.2](#v182---2026-09-12)**                                      | Sep 12, 2026          | Storage normalization for legacy keys and custom caught state sync                                               |
+| **[v1.8.0](#v180---2026-09-12)**                                      | Sep 12, 2026          | Pokémon HOME 6-Preset Box Sorting Engine                                                                         |
+| **[v1.7.11](#v1711---2026-09-12)**                                    | Sep 12, 2026          | Multi-criteria filter engine (Evolution Stages, Categories, Generations, Forms)                                  |
+| **[v1.7.7](#v177---2026-09-12)**                                      | Sep 12, 2026          | First-time visitor Welcome Guide modal and interactive walkthrough                                               |
+| **[v1.7.6](#v176---2026-09-12)**                                      | Sep 12, 2026          | Exclusive encounter method detection (Raids, Roaming, Gifts, Outbreaks)                                          |
+| **[v1.6.5](#v165---2026-09-07)**                                      | Sep 07, 2026          | Missing Guide evolution family tracking, sacrifice quotas & tabbed Settings                                      |
+| **[v1.6.0](#v160---2026-09-07)**                                      | Sep 07, 2026          | Missing Pokémon & Evolution Checklist Guide (`M` key)                                                            |
+| **[v1.5.24](#v1524---2026-09-04)**                                    | Sep 04, 2026          | Mobile touch drag selection & real-time Drag HUD painter                                                         |
+| **[v1.5.19](#v1519---2026-09-04)**                                    | Sep 04, 2026          | Pokémon Info modal next/previous navigation & audio cries                                                        |
+| **[v1.5.15](#v1515---2026-09-04)**                                    | Sep 04, 2026          | Mobile search UX improvements, keyboard dismissal, and clear button                                              |
+| **[v1.5.9](#v159---2026-09-01)**                                      | Sep 01, 2026          | Pokémon Legends: Z-A Hyperspace Pokédex dataset                                                                  |
+| **[v1.5.4](#v154---2026-09-01)**                                      | Sep 01, 2026          | Gender difference & variant-specific sprite rendering pipeline                                                   |
+| **[v1.5.1](#v151---2026-09-01)**                                      | Sep 01, 2026          | Comprehensive Form Variant system with subtitles & category badges                                               |
+| **[v1.4.0](#v140---2026-09-01)**                                      | Sep 01, 2026          | Game-specific evolution tree databases (`evolutions.json`)                                                       |
+| **[v1.3.0](#v130---2026-09-01)**                                      | Sep 01, 2026          | Custom inline box renaming, title persistence & smart auto-collapse                                              |
+| **[v1.1.0](#v110---2026-09-01)**                                      | Sep 01, 2026          | In-app update notification banner                                                                                |
+| **[v1.0.8](#v108---2026-09-01)**                                      | Sep 01, 2026          | Per-game slice dataset architecture (`./data/games/*.json`)                                                      |
+| **[v1.0.7](#v107---2026-09-01)**                                      | Sep 01, 2026          | Native `CompressionStream` URL hash sharing (Pako replacement)                                                   |
+| **[v1.0.0](#v100---2026-09-01)**                                      | Sep 01, 2026          | Full offline PWA support & standalone data scraper architecture                                                  |
+| **[Expansion Phase](#multi-game-expansion--localization---aug-2026)** | Aug 17–31, 2026       | All mainline games, 8-language localization, Info modal, UI modular split                                        |
+| **[Modular JS Split](#modular-js-split---nov-2025)**                  | Nov 13–15, 2025       | ES module decomposition (`main.js`, `ui.js`, `api.js`, `storage.js`)                                             |
+| **[Genesis & Prototype](#initial-release---oct-2025)**                | Oct 27 – Nov 10, 2025 | Initial LivingDex tracker release, 30-slot PC boxes, PokeAPI integration                                         |
+
+---
+
+## [v1.18.2] - 2026-09-13
+
+### Fixed
+
+- **Missing Pokémon Guide "Mark Caught" Toast**:
+  - Fixed toast styling and text contrast by replacing unstyled button rules with a themed `.missing-undo-btn` featuring proper interactive hover/active states.
+  - Positioned the undo toast cleanly with bottom-center alignment, elevated shadow, `z-index: 50`, and smooth entry (`.show`) and exit (`.hide`) transition animations.
+  - Displayed Pokémon name in toast feedback (`Marked <Name> caught`) and ensured modal cleanup on close.
+  - Bumped Service Worker `CACHE_VERSION` to `v1.18.2` for instant client cache refresh.
 
 ---
 
@@ -22,50 +74,6 @@ All notable changes, new features, improvements, and bug fixes for **LivingDex**
   - Resolved duplicate encounter rate and location entries across all 19 game Pokédexes (e.g., GSC starters, Pichu/Cleffa/Togepi gift eggs, fossils, and in-game gift encounters).
   - Merged PokéAPI gift/egg encounter metadata (`100%`, `Lv. 5`) into canonical `(Starter)`, `(Gift Egg)`, `(Gift)`, and `(Fossil)` tags without duplicating plain text strings.
   - Bumped Service Worker `CACHE_VERSION` to `v1.18.1` to ensure instant cache refresh for all updated game encounter datasets.
-
----
-
-## [v1.18.0] - 2026-09-13
-
-| **[v1.16.3](#v1163---2026-09-13)** | Sep 13, 2026 | Fix "Last used" default Pokédex startup resolution and persistence across sessions |
-| **[v1.16.2](#v1162---2026-09-13)** | Sep 13, 2026 | Exclusive time/condition notices, multi-cartridge dual-slot consolidation & clean UI de-cluttering |
-| **[v1.16.1](#v1161---2026-09-13)** | Sep 13, 2026 | Fix variable reference and search matching in Missing Guide card rendering |
-| **[v1.16.0](#v1160---2026-09-13)** | Sep 13, 2026 | Encounter rate probabilities, time-of-day condition chips, rarity badges, and level range indicators |
-| **[v1.15.0](#v1150---2026-09-13)** | Sep 13, 2026 | Keep Screen Awake setting via Screen Wake Lock API to prevent mobile display timeout |
-| **[v1.14.0](#v1140---2026-09-13)** | Sep 13, 2026 | Starter & Gift Pokémon identification, Missing Guide starter/gift filters & badges, Gift Multi-Filter category |
-| **[v1.13.2](#v1132---2026-09-13)** | Sep 13, 2026 | Tab-specific Missing Guide controls and working Family Quotas sorting |
-| **[v1.13.1](#v1131---2026-09-13)** | Sep 13, 2026 | Offline encounter data caching fixes for Missing Guide and Pokémon Information modal |
-| **[v1.13.0](#v1130---2026-09-13)** | Sep 13, 2026 | Regional Dex default sorting with explicit National Dex sorting in Missing Guide |
-| **[v1.12.0](#v1120---2026-09-13)** | Sep 13, 2026 | Missing Guide usability, canonical caught-state fixes, lazy tab loading, compact view, and undo actions |
-| **[v1.11.1](#v1111---2026-09-13)** | Sep 13, 2026 | Separate box sections in National Dex order & out-of-dex gender/form variant filtering across game datasets |
-| **[v1.11.0](#v1110---2026-09-13)** | Sep 13, 2026 | Regional Origin box layout preset for post-Gen 1 games (GSC through SV) in canonical National Dex numbering |
-| **[v1.10.1](#v1101---2026-09-12)** | Sep 12, 2026 | Game-specific layout presets (Alola Islands, Kalos/Galar/Paldea Unified, Hisui Areas), dynamic preset resolver |
-| **[v1.9.19](#v1919---2026-09-12)** | Sep 12, 2026 | Active game version selector in Dex Options modal |
-| **[v1.9.18](#v1918---2026-09-12)** | Sep 12, 2026 | Centralized Dex Options redesign with interactive preset detail cards |
-| **[v1.9.10](#v1910---2026-09-12)** | Sep 12, 2026 | Floating Box Coordinates HUD tooltip with live cursor tracking |
-| **[v1.9.7](#v197---2026-09-12)** | Sep 12, 2026 | Pokémon HOME Types (18 Boxes) & Alphabetical (A-Z) box layout presets |
-| **[v1.8.2](#v182---2026-09-12)** | Sep 12, 2026 | Storage normalization for legacy keys and custom caught state sync |
-| **[v1.8.0](#v180---2026-09-12)** | Sep 12, 2026 | Pokémon HOME 6-Preset Box Sorting Engine |
-| **[v1.7.11](#v1711---2026-09-12)** | Sep 12, 2026 | Multi-criteria filter engine (Evolution Stages, Categories, Generations, Forms) |
-| **[v1.7.7](#v177---2026-09-12)** | Sep 12, 2026 | First-time visitor Welcome Guide modal and interactive walkthrough |
-| **[v1.7.6](#v176---2026-09-12)** | Sep 12, 2026 | Exclusive encounter method detection (Raids, Roaming, Gifts, Outbreaks) |
-| **[v1.6.5](#v165---2026-09-07)** | Sep 07, 2026 | Missing Guide evolution family tracking, sacrifice quotas & tabbed Settings |
-| **[v1.6.0](#v160---2026-09-07)** | Sep 07, 2026 | Missing Pokémon & Evolution Checklist Guide (`M` key) |
-| **[v1.5.24](#v1524---2026-09-04)** | Sep 04, 2026 | Mobile touch drag selection & real-time Drag HUD painter |
-| **[v1.5.19](#v1519---2026-09-04)** | Sep 04, 2026 | Pokémon Info modal next/previous navigation & audio cries |
-| **[v1.5.15](#v1515---2026-09-04)** | Sep 04, 2026 | Mobile search UX improvements, keyboard dismissal, and clear button |
-| **[v1.5.9](#v159---2026-09-01)** | Sep 01, 2026 | Pokémon Legends: Z-A Hyperspace Pokédex dataset |
-| **[v1.5.4](#v154---2026-09-01)** | Sep 01, 2026 | Gender difference & variant-specific sprite rendering pipeline |
-| **[v1.5.1](#v151---2026-09-01)** | Sep 01, 2026 | Comprehensive Form Variant system with subtitles & category badges |
-| **[v1.4.0](#v140---2026-09-01)** | Sep 01, 2026 | Game-specific evolution tree databases (`evolutions.json`) |
-| **[v1.3.0](#v130---2026-09-01)** | Sep 01, 2026 | Custom inline box renaming, title persistence & smart auto-collapse |
-| **[v1.1.0](#v110---2026-09-01)** | Sep 01, 2026 | In-app update notification banner |
-| **[v1.0.8](#v108---2026-09-01)** | Sep 01, 2026 | Per-game slice dataset architecture (`./data/games/*.json`) |
-| **[v1.0.7](#v107---2026-09-01)** | Sep 01, 2026 | Native `CompressionStream` URL hash sharing (Pako replacement) |
-| **[v1.0.0](#v100---2026-09-01)** | Sep 01, 2026 | Full offline PWA support & standalone data scraper architecture |
-| **[Expansion Phase](#multi-game-expansion--localization---aug-2026)** | Aug 17–31, 2026 | All mainline games, 8-language localization, Info modal, UI modular split |
-| **[Modular JS Split](#modular-js-split---nov-2025)** | Nov 13–15, 2025 | ES module decomposition (`main.js`, `ui.js`, `api.js`, `storage.js`) |
-| **[Genesis & Prototype](#initial-release---oct-2025)** | Oct 27 – Nov 10, 2025 | Initial LivingDex tracker release, 30-slot PC boxes, PokeAPI integration |
 
 ---
 
