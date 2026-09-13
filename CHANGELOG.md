@@ -8,6 +8,7 @@ All notable changes, new features, improvements, and bug fixes for **LivingDex**
 
 | Version                                                               | Release Date          | Major Highlights                                                                                               |
 | :-------------------------------------------------------------------- | :-------------------- | :------------------------------------------------------------------------------------------------------------- |
+| **[v1.17.0](#v1170---2026-09-13)**                                    | Sep 13, 2026          | Configurable 20-slot PC box capacity for Gen 1 & 2 (Game Boy authentic) with settings toggle and 5x4 grid layout |
 | **[v1.16.3](#v1163---2026-09-13)**                                    | Sep 13, 2026          | Fix "Last used" default Pokédex startup resolution and persistence across sessions                             |
 | **[v1.16.2](#v1162---2026-09-13)**                                    | Sep 13, 2026          | Exclusive time/condition notices, multi-cartridge dual-slot consolidation & clean UI de-cluttering             |
 | **[v1.16.1](#v1161---2026-09-13)**                                    | Sep 13, 2026          | Fix variable reference and search matching in Missing Guide card rendering                                     |
@@ -47,6 +48,22 @@ All notable changes, new features, improvements, and bug fixes for **LivingDex**
 | **[Expansion Phase](#multi-game-expansion--localization---aug-2026)** | Aug 17–31, 2026       | All mainline games, 8-language localization, Info modal, UI modular split                                      |
 | **[Modular JS Split](#modular-js-split---nov-2025)**                  | Nov 13–15, 2025       | ES module decomposition (`main.js`, `ui.js`, `api.js`, `storage.js`)                                           |
 | **[Genesis & Prototype](#initial-release---oct-2025)**                | Oct 27 – Nov 10, 2025 | Initial LivingDex tracker release, 30-slot PC boxes, PokeAPI integration                                       |
+
+---
+
+## [v1.17.0] - 2026-09-13
+
+### Added
+
+- **Authentic 20-Slot PC Box Capacity for Gen 1 & 2 (`config.js`, `storage.js`, `dom-render.js`, `modals.js`, `styles.css`)**:
+  - Configured authentic 20-slot PC box storage capacity for Pokémon Red/Blue/Yellow (`rby`) and Pokémon Gold/Silver/Crystal (`gsc`), matching Game Boy cartridge storage mechanics.
+  - Added **Gen 1 & 2 Box Size** setting under Settings > Boxes & Grid allowing users to seamlessly toggle between **20 slots (Cartridge authentic)** and **30 slots (Pokémon HOME standard)**.
+  - Dynamically updated box titles and range numbering:
+    - Gen 1 (RBY): 8 boxes (`#001-020`, `#021-040`, ..., `#141-151`) at 20 slots, or 6 boxes (`#001-030`, ..., `#151`) at 30 slots.
+    - Gen 2 (GSC): 13 boxes (`#001-020`, ..., `#241-251`) at 20 slots, or 9 boxes (`#001-030`, ..., `#241-251`) at 30 slots.
+  - Added adaptive $5 \times 4$ CSS grid styling on desktop (`repeat(5, minmax(0, 1fr))`) and $2 \times 10$ on mobile (`repeat(2, minmax(0, 1fr))`) for 20-slot boxes.
+  - Updated Box Coordinates HUD and tooltips to compute 5-column rows (1–4) and columns (1–5) for 20-slot boxes.
+  - Updated box progress badges and auto-collapse behavior to respect the active box capacity.
 
 ## [v1.16.3] - 2026-09-13
 

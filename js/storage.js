@@ -29,6 +29,7 @@ import {
  * @property {string|null} defaultGameId - Target game ID when defaultGameMode is 'specific'.
  * @property {string|null} lastUsedGameId - Last selected/active game ID.
  * @property {boolean} keepScreenAwake - Whether to request screen wake lock to prevent dimming.
+ * @property {20|30} [gen12BoxCapacity] - Box capacity preference for Gen 1 & 2 games (20 or 30).
  * @property {number} version - Settings schema version.
  */
 
@@ -43,6 +44,7 @@ const DEFAULT_SETTINGS = {
   rememberCollapsedBoxes: false,
   autoCollapseFullBoxes: false,
   keepScreenAwake: false,
+  gen12BoxCapacity: 20, // 20 (Game Boy Cartridge authentic) | 30 (Pokémon HOME / Standard)
   language: "en",
   spriteStyle: "pokesprites",
   defaultGameMode: "last-used", // 'last-used' | 'specific'

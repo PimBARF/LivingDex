@@ -1,4 +1,4 @@
-import { ACTIVE_GAME } from "./config.js";
+import { ACTIVE_GAME, ACTIVE_GAME_ID, getBoxCapacity } from "./config.js";
 import {
   loadCaughtSlots,
   saveCaughtSlots,
@@ -177,8 +177,9 @@ export function rebuildDexView({ sections, slotCount, onComplete }) {
 
   let startGlobal = 1;
   let runningBoxNumber = 1;
+  const boxCapacity = getBoxCapacity(ACTIVE_GAME_ID);
   for (const sec of sections) {
-    const boxCount = Math.ceil(sec.entries.length / 30);
+    const boxCount = Math.ceil(sec.entries.length / boxCapacity);
     renderDexSectionBoxes(
       app,
       sec.key,
@@ -188,6 +189,7 @@ export function rebuildDexView({ sections, slotCount, onComplete }) {
       sec.startIndex || 1,
       sec,
       runningBoxNumber,
+      boxCapacity,
     );
     runningBoxNumber += boxCount;
     startGlobal += sec.entries.length;

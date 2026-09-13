@@ -31,6 +31,7 @@ import {
   getOrderedGameEntries,
   getAvailableLayoutPresetsForGame,
   LAYOUT_PRESETS,
+  getBoxCapacity,
 } from "../config.js";
 
 import {
@@ -596,7 +597,9 @@ export function registerSegmentsModal({ onSegmentsUpdated } = {}) {
       const entryCount = Array.isArray(seg.entries)
         ? seg.entries.length
         : seg.manualIds?.length || 0;
-      const boxCount = entryCount > 0 ? Math.ceil(entryCount / 30) : undefined;
+      const boxCapacity = getBoxCapacity(ACTIVE_GAME_ID, loadSettings());
+      const boxCount =
+        entryCount > 0 ? Math.ceil(entryCount / boxCapacity) : undefined;
 
       const typeKey = seg.type || "base";
       let badgeClass = "segment-badge-base";
@@ -1147,6 +1150,9 @@ export function registerSettingsControls() {
     );
     if (autoCollapseFull)
       autoCollapseFull.checked = !!settings.autoCollapseFullBoxes;
+    const gen12BoxCap = document.getElementById("settingsGen12BoxCapacity");
+    if (gen12BoxCap)
+      gen12BoxCap.value = String(settings.gen12BoxCapacity || 20);
     const showBoxCoords = document.getElementById("settingsShowBoxCoordinates");
     if (showBoxCoords) showBoxCoords.checked = !!settings.showBoxCoordinates;
     const keepAwake = document.getElementById("settingsKeepAwake");
@@ -1193,6 +1199,7 @@ export function registerSettingsControls() {
     const settings = loadSettings();
     const previousLanguage = settings.language;
     const previousShowCoords = !!settings.showBoxCoordinates;
+    const previousGen12Cap = Number(settings.gen12BoxCapacity) || 20;
     const selectedTheme =
       document.querySelector('input[name="settingsTheme"]:checked')?.value ||
       settings.theme ||
@@ -1203,6 +1210,8 @@ export function registerSettingsControls() {
     const nextKeepAwake = isWakeLockSupported()
       ? !!document.getElementById("settingsKeepAwake")?.checked
       : false;
+    const nextGen12Cap =
+      Number(document.getElementById("settingsGen12BoxCapacity")?.value) || 20;
     const nextSettings = {
       ...settings,
       theme: selectedTheme,
@@ -1217,6 +1226,7 @@ export function registerSettingsControls() {
       autoCollapseFullBoxes: !!document.getElementById(
         "settingsAutoCollapseFull",
       )?.checked,
+      gen12BoxCapacity: nextGen12Cap,
       keepScreenAwake: nextKeepAwake,
       showBoxCoordinates: nextShowCoords,
       language: document.getElementById("settingsLanguage")?.value || "en",
@@ -1234,6 +1244,16 @@ export function registerSettingsControls() {
     applyTheme(nextSettings.theme);
     applyReducedMotionPreference(nextSettings.reducedMotion);
     await applyWakeLockPreference(nextSettings.keepScreenAwake);
+
+    const isGen1Or2 =
+      ACTIVE_GAME.group === "gen1" || ACTIVE_GAME.group === "gen2";
+    if (previousGen12Cap !== nextGen12Cap && isGen1Or2) {
+      const { sections } = await buildActiveDexSections();
+      const currentSlotCount =
+        document.querySelectorAll(".cell:not(.is-placeholder)").length ||
+        sections.reduce((acc, s) => acc + (s.entries?.length || 0), 0);
+      rebuildDexView({ sections, slotCount: currentSlotCount });
+    }
 
     const speciesOrder = Array.from(
       document.querySelectorAll(".cell:not(.is-placeholder)"),
@@ -1632,6 +1652,9 @@ export function registerSettingsControls() {
       persistSettingsFromControls();
       updateAllBoxProgress();
     });
+  document
+    .getElementById("settingsGen12BoxCapacity")
+    ?.addEventListener("change", persistSettingsFromControls);
   document
     .getElementById("settingsShowBoxCoordinates")
     ?.addEventListener("change", persistSettingsFromControls);

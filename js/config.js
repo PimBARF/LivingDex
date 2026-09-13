@@ -138,6 +138,7 @@ export const GAMES = {
     title: "Red / Blue / Yellow",
     storagePrefix: "rby",
     group: "gen1",
+    boxCapacity: 20,
     order: 10,
     dexes: [
       {
@@ -155,6 +156,7 @@ export const GAMES = {
     title: "Gold / Silver / Crystal",
     storagePrefix: "gsc",
     group: "gen2",
+    boxCapacity: 20,
     order: 10,
     dexes: [
       {
@@ -759,6 +761,33 @@ export function resolveActiveGameId(
 export const ACTIVE_GAME_ID = resolveActiveGameId();
 export const ACTIVE_GAME = GAMES[ACTIVE_GAME_ID] || GAMES["home"];
 export const BOX_CAPACITY = 30;
+
+/**
+ * Returns the effective box capacity (number of slots per PC box) for a given game.
+ * Gen 1 (RBY) and Gen 2 (GSC) default to 20 (matching authentic Game Boy cartridges),
+ * but can be configured to 30 (e.g. for Pokémon HOME organization) via user settings.
+ * Gen 3 and later games, as well as Pokémon HOME, use 30 slots per box.
+ *
+ * @param {string} [gameId=ACTIVE_GAME_ID] - Identifier of the target game.
+ * @param {Object|null} [settings=null] - Optional settings object. If omitted, loaded from storage.
+ * @returns {number} Box capacity (20 or 30).
+ */
+export function getBoxCapacity(gameId = ACTIVE_GAME_ID, settings = null) {
+  const game = GAMES[gameId] || ACTIVE_GAME;
+  if (!game) return 30;
+
+  const isGen1Or2 = game.group === "gen1" || game.group === "gen2";
+  if (isGen1Or2) {
+    const s = settings || readSavedSettings();
+    const capacitySetting = Number(s?.gen12BoxCapacity);
+    if (capacitySetting === 30 || capacitySetting === 20) {
+      return capacitySetting;
+    }
+    return game.boxCapacity ?? 20;
+  }
+
+  return game.boxCapacity ?? 30;
+}
 
 /**
  * Generation origin ranges for each supported post-Gen 1 game.

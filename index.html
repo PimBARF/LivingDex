@@ -400,13 +400,26 @@
               <label class="settings-row settings-row-clickable" for="settingsAutoCollapseFull">
                 <div class="settings-row-text">
                   <span class="settings-row-title">Auto-collapse full boxes</span>
-                  <span class="settings-row-subtitle">Automatically collapse a box when all 30 slots are caught</span>
+                  <span class="settings-row-subtitle">Automatically collapse a box when all slots are caught</span>
                 </div>
                 <span class="toggle-switch">
                   <input type="checkbox" id="settingsAutoCollapseFull">
                   <span class="toggle-track"></span>
                 </span>
               </label>
+
+              <div class="settings-row">
+                <div class="settings-row-text">
+                  <label for="settingsGen12BoxCapacity" class="settings-row-title">Gen 1 &amp; 2 Box Size</label>
+                  <span class="settings-row-subtitle">Box capacity for Game Boy &amp; GBC Pokédexes (RBY / GSC)</span>
+                </div>
+                <div class="settings-row-control">
+                  <select id="settingsGen12BoxCapacity" class="select settings-select">
+                    <option value="20">20 slots (Cartridge authentic)</option>
+                    <option value="30">30 slots (Pokémon HOME standard)</option>
+                  </select>
+                </div>
+              </div>
             </div>
           </section>
 

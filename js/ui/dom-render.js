@@ -11,6 +11,8 @@ import {
 } from "../storage.js";
 import {
   BOX_CAPACITY,
+  ACTIVE_GAME_ID,
+  getBoxCapacity,
   spriteUrlForSpecies,
   getSpeciesGeneration,
 } from "../config.js";
@@ -388,6 +390,7 @@ export function renderDexSectionBoxes(
   startLocalIndex = 1,
   sectionMeta = {},
   startBoxNumber = 1,
+  boxCapacity = getBoxCapacity(ACTIVE_GAME_ID),
 ) {
   const fragment = document.createDocumentFragment();
 
@@ -418,24 +421,24 @@ export function renderDexSectionBoxes(
       !sectionKey.startsWith("mega") &&
       !sectionKey.startsWith("totem"));
 
-  const boxCount = Math.ceil(slotsInSection / BOX_CAPACITY);
+  const boxCount = Math.ceil(slotsInSection / boxCapacity);
   for (let boxIndex = 0; boxIndex < boxCount; boxIndex += 1) {
     const sequentialBoxNum = startBoxNumber + boxIndex;
-    const localStart = startLocalIndex + boxIndex * BOX_CAPACITY;
+    const localStart = startLocalIndex + boxIndex * boxCapacity;
     const localEnd = Math.min(
-      startLocalIndex + (boxIndex + 1) * BOX_CAPACITY - 1,
+      startLocalIndex + (boxIndex + 1) * boxCapacity - 1,
       startLocalIndex + slotsInSection - 1,
     );
-    const globalStart = startGlobalSlot + boxIndex * BOX_CAPACITY;
+    const globalStart = startGlobalSlot + boxIndex * boxCapacity;
     const globalEnd = Math.min(
-      startGlobalSlot + (boxIndex + 1) * BOX_CAPACITY - 1,
+      startGlobalSlot + (boxIndex + 1) * boxCapacity - 1,
       startGlobalSlot + slotsInSection - 1,
     );
     const boxId = `${sectionKey}:${boxIndex}`;
     const boxEntries = Array.isArray(sectionMeta?.entries)
       ? sectionMeta.entries.slice(
-          boxIndex * BOX_CAPACITY,
-          (boxIndex + 1) * BOX_CAPACITY,
+          boxIndex * boxCapacity,
+          (boxIndex + 1) * boxCapacity,
         )
       : [];
 
@@ -483,7 +486,7 @@ export function renderDexSectionBoxes(
         boxCount > 1 ? `${sectionTitle} ${boxIndex + 1}` : sectionTitle;
     } else if (isBase) {
       // Base Dex / Standard National / All Forms Inline / Unified / Cartridge Dexes:
-      // Numbers on the boxes: "#001-030", "#031-060"
+      // Numbers on the boxes: "#001-020", "#001-030", etc.
       defaultTitle = rangeText;
     } else {
       // Forms / Extra segments (Regional Forms, Gender Variants, G-Max, etc.):
@@ -495,11 +498,16 @@ export function renderDexSectionBoxes(
     const customTitle = labels[boxId] || "";
     const displayTitle = customTitle || defaultTitle;
     const isCollapsed = collapsedBoxes.has(boxId);
+    const expectedSlotCount = Math.min(
+      boxCapacity,
+      slotsInSection - boxIndex * boxCapacity,
+    );
 
     const section = document.createElement("section");
-    section.className = `box${isCollapsed ? " is-collapsed" : ""}`;
+    section.className = `box${isCollapsed ? " is-collapsed" : ""}${boxCapacity === 20 ? " box-capacity-20" : ""}`;
     section.dataset.section = sectionKey;
     section.dataset.boxId = boxId;
+    section.dataset.boxCapacity = String(boxCapacity);
     section.dataset.boxNum = String(sequentialBoxNum);
     section.dataset.boxIndex = String(boxIndex + 1);
     section.dataset.defaultTitle = defaultTitle;
@@ -516,7 +524,7 @@ export function renderDexSectionBoxes(
           </div>
         </div>
         <div class="box-action-pill" role="group" aria-label="Box actions for ${displayTitle}">
-          <span class="box-progress-badge" aria-label="Box progress">0/30</span>
+          <span class="box-progress-badge" aria-label="Box progress">0/${expectedSlotCount}</span>
           <button class="box-toggle" type="button" data-range="${globalStart}-${globalEnd}" aria-label="Mark all caught in ${displayTitle}">✓ All</button>
         </div>
       </div>
@@ -869,6 +877,7 @@ export function applySpriteStyleToCells() {
  */
 export function populateDexSlots(sections, slotCount, onComplete) {
   const caught = isShinyMode ? loadShinyCaughtSlots() : loadCaughtSlots();
+  const boxCapacity = getBoxCapacity(ACTIVE_GAME_ID);
   let globalSlotIndex = 1; // continuous global slot numbering for storage
 
   const boxTasks = [];
@@ -894,7 +903,7 @@ export function populateDexSlots(sections, slotCount, onComplete) {
       localIndex += 1;
       slotsPlacedInCurrentBox += 1;
 
-      if (slotsPlacedInCurrentBox >= BOX_CAPACITY) {
+      if (slotsPlacedInCurrentBox >= boxCapacity) {
         boxTasks.push({
           grid: sectionBoxes[boxCursor],
           entries: currentBoxEntries,
@@ -910,7 +919,7 @@ export function populateDexSlots(sections, slotCount, onComplete) {
       boxTasks.push({
         grid: sectionBoxes[boxCursor],
         entries: currentBoxEntries,
-        placeholderCount: BOX_CAPACITY - slotsPlacedInCurrentBox,
+        placeholderCount: boxCapacity - slotsPlacedInCurrentBox,
       });
     }
   });
@@ -923,6 +932,9 @@ export function populateDexSlots(sections, slotCount, onComplete) {
     if (!task || !task.grid) return;
     const boxEl = task.grid.closest(".box");
     const boxNum = boxEl?.dataset?.boxNum || boxEl?.dataset?.boxIndex || "";
+    const effectiveCapacity =
+      Number(boxEl?.dataset?.boxCapacity) || boxCapacity;
+    const cols = effectiveCapacity === 20 ? 5 : 6;
     const fragment = document.createDocumentFragment();
 
     task.entries.forEach(
@@ -954,8 +966,8 @@ export function populateDexSlots(sections, slotCount, onComplete) {
         );
 
         const slotInBox = entryIdx + 1;
-        const row = Math.floor(entryIdx / 6) + 1;
-        const col = (entryIdx % 6) + 1;
+        const row = Math.floor(entryIdx / cols) + 1;
+        const col = (entryIdx % cols) + 1;
         const coordText = `Box ${boxNum || "?"} · Row ${row}, Col ${col} (Slot ${slotInBox})`;
         cell.dataset.boxCoord = coordText;
 

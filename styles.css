@@ -1232,6 +1232,20 @@ body.is-scrolled #progressWrap {
   }
 }
 
+/* 5-column grid on desktop (5x4 = 20-slot PC box for Gen 1 & 2) */
+.box[data-box-capacity="20"] .grid,
+.box.box-capacity-20 .grid {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+
+/* 2-column grid on mobile (2x10 = 20-slot PC box) */
+@media (max-width: 600px) {
+  .box[data-box-capacity="20"] .grid,
+  .box.box-capacity-20 .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
 /* Individual Pokémon slot cell */
 .cell {
   background: var(--card);
