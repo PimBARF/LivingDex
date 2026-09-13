@@ -8,6 +8,7 @@ All notable changes, new features, improvements, and bug fixes for **LivingDex**
 
 | Version                                                               | Release Date          | Major Highlights                                                                                                 |
 | :-------------------------------------------------------------------- | :-------------------- | :--------------------------------------------------------------------------------------------------------------- |
+| **[v1.18.4](#v1184---2026-09-13)**                                    | Sep 13, 2026          | Fix starter and gift Pokémon acquisition method pills and wild encounter badge fallback in Field Guide           |
 | **[v1.18.3](#v1183---2026-09-13)**                                    | Sep 13, 2026          | Rename Missing Pokémon Guide to Field Guide across toolbar, modal headers, shortcuts, and welcome walkthroughs   |
 | **[v1.18.2](#v1182---2026-09-13)**                                    | Sep 13, 2026          | Fix Missing Pokémon Guide undo toast appearance, color contrast, button sizing, positioning, and animation       |
 | **[v1.18.1](#v1181---2026-09-13)**                                    | Sep 13, 2026          | Fix starter, gift, and fossil encounter duplications and normalize PokéAPI encounter method tagging              |
@@ -52,6 +53,18 @@ All notable changes, new features, improvements, and bug fixes for **LivingDex**
 | **[Expansion Phase](#multi-game-expansion--localization---aug-2026)** | Aug 17–31, 2026       | All mainline games, 8-language localization, Info modal, UI modular split                                        |
 | **[Modular JS Split](#modular-js-split---nov-2025)**                  | Nov 13–15, 2025       | ES module decomposition (`main.js`, `ui.js`, `api.js`, `storage.js`)                                             |
 | **[Genesis & Prototype](#initial-release---oct-2025)**                | Oct 27 – Nov 10, 2025 | Initial LivingDex tracker release, 30-slot PC boxes, PokeAPI integration                                         |
+
+---
+
+## [v1.18.4] - 2026-09-13
+
+### Fixed
+
+- **Field Guide Starter & Gift Pokémon Method Badges**:
+  - Decoupled starter and gift acquisition method categorization from evolution chain existence checks in `computeMissingPokemon` (`db.js`), allowing base-stage Pokémon that evolve (such as starters, Eevee, fossils, and baby gift Pokémon) to be properly identified as `starter` or `gift` instead of falling through to `wild`.
+  - Refined `hasWildLocations` to accurately distinguish true wild encounter locations from guaranteed gifts, fossils, and starter selections.
+  - Enhanced starter and gift method pill rendering and location tag matching in `missing-guide.js` to support broader tag patterns (`Gift from...`, `Gift Egg`, `Fossil`) and display clean, non-redundant labels.
+  - Bumped Service Worker `CACHE_VERSION` to `v1.18.4` in `LivingDex/sw.js`.
 
 ---
 

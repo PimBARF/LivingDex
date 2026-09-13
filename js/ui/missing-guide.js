@@ -993,31 +993,43 @@ function renderMissingList(container) {
 
     if (p.methodCategory === "starter") {
       const rawLoc =
-        p.locations?.find((l) => /\(Starter\)/i.test(getLocStr(l))) ||
+        p.locations?.find((l) => /\bStarter\b/i.test(getLocStr(l))) ||
         p.locations?.[0] ||
         "Starter Choice";
       const starterLoc = getLocStr(rawLoc);
       const cleanLoc = starterLoc.replace(/\s*\([^)]+\)$/, "").trim();
+      const displayLoc =
+        !cleanLoc || /starter/i.test(cleanLoc)
+          ? "Starter Choice"
+          : `Starter: ${cleanLoc}`;
       methodBadge.innerHTML = `
         <span class="method-icon">🌟</span>
-        <span class="method-label">Starter: ${cleanLoc}</span>
+        <span class="method-label">${displayLoc}</span>
       `;
     } else if (p.methodCategory === "gift") {
       const rawLoc =
-        p.locations?.find((l) =>
-          /\((?:Gift|Fossil|Gift Egg|Mystery Gift)\)/i.test(getLocStr(l)),
+        p.locations?.find(
+          (l) =>
+            /\((?:Gift|Fossil|Gift Egg|Mystery Gift|Gift from [^)]+)\)/i.test(
+              getLocStr(l),
+            ) ||
+            /\b(?:Gift|Fossil|Gift Egg|Mystery Gift)\b/i.test(getLocStr(l)),
         ) ||
         p.locations?.[0] ||
         "In-Game Gift";
       const giftLoc = getLocStr(rawLoc);
-      const isFossil = /\(Fossil\)/i.test(giftLoc);
-      const isEgg = /\(Gift Egg\)/i.test(giftLoc);
+      const isFossil = /\bFossil\b/i.test(giftLoc);
+      const isEgg = /\b(?:Gift Egg|Egg)\b/i.test(giftLoc);
       const icon = isFossil ? "🦖" : isEgg ? "🥚" : "🎁";
       const prefix = isFossil ? "Fossil" : isEgg ? "Gift Egg" : "Gift";
       const cleanLoc = giftLoc.replace(/\s*\([^)]+\)$/, "").trim();
+      const displayLoc =
+        !cleanLoc || cleanLoc.toLowerCase().includes(prefix.toLowerCase())
+          ? cleanLoc || "In-Game Gift"
+          : `${prefix}: ${cleanLoc}`;
       methodBadge.innerHTML = `
         <span class="method-icon">${icon}</span>
-        <span class="method-label">${prefix}: ${cleanLoc}</span>
+        <span class="method-label">${displayLoc}</span>
       `;
     } else if (p.requiredItem) {
       const itemImg = itemSpriteUrl(p.requiredItem);

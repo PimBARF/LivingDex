@@ -1562,31 +1562,44 @@ export async function getMissingPokemonData(
           methodCategory = "special";
         }
       }
-    } else {
-      const getLocStr = (l) => (typeof l === "string" ? l : l?.location || "");
-      const isStarter =
-        locations.some((l) => /\(Starter\)/i.test(getLocStr(l))) ||
-        BASE_STARTER_SPECIES_IDS.has(slot.speciesId);
+    }
 
-      if (isStarter) {
+    const getLocStr = (l) => (typeof l === "string" ? l : l?.location || "");
+    const hasStarterTag = locations.some((l) =>
+      /\bStarter\b/i.test(getLocStr(l)),
+    );
+    const hasGiftTag = locations.some(
+      (l) =>
+        /\((?:Gift|Fossil|Gift Egg|Mystery Gift|Gift from [^)]+)\)/i.test(
+          getLocStr(l),
+        ) || /\b(?:Gift|Fossil|Gift Egg|Mystery Gift)\b/i.test(getLocStr(l)),
+    );
+    const hasWildLoc = locations.some((l) => {
+      const str = getLocStr(l);
+      return (
+        str &&
+        !/\((?:Gift|Fossil|Gift Egg|Mystery Gift|Starter|In-game Trade|Gift from [^)]+)\)/i.test(
+          str,
+        ) &&
+        !/\b(?:Gift|Fossil|Gift Egg|Mystery Gift|Starter)\b/i.test(str)
+      );
+    });
+
+    if (!evolveDetails) {
+      if (
+        hasStarterTag ||
+        (!hasWildLoc &&
+          BASE_STARTER_SPECIES_IDS.has(slot.speciesId) &&
+          locations.length > 0)
+      ) {
         methodCategory = "starter";
-      } else {
-        const hasGiftTag = locations.some((l) =>
-          /\((?:Gift|Fossil|Gift Egg|Mystery Gift)\)/i.test(getLocStr(l)),
-        );
-        const hasWildLoc = locations.some(
-          (l) =>
-            !/\((?:Gift|Fossil|Gift Egg|Mystery Gift|Starter)\)/i.test(
-              getLocStr(l),
-            ),
-        );
-
-        if (
-          hasGiftTag ||
-          (!hasWildLoc && GIFT_SPECIES_IDS.has(slot.speciesId))
-        ) {
-          methodCategory = "gift";
-        }
+      } else if (
+        hasGiftTag ||
+        (!hasWildLoc &&
+          GIFT_SPECIES_IDS.has(slot.speciesId) &&
+          locations.length > 0)
+      ) {
+        methodCategory = "gift";
       }
     }
 
@@ -1605,7 +1618,7 @@ export async function getMissingPokemonData(
       sectionKey: slot.sectionKey,
       sectionTitle: slot.sectionTitle,
       locations,
-      hasWildLocations: locations.length > 0,
+      hasWildLocations: hasWildLoc,
       exclusiveTo,
       targetVersion: effectiveVersion,
       evolveDetails,
