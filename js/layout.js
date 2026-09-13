@@ -81,16 +81,31 @@ function transformToStandard(sections) {
  * @returns {Array<Object>} Single section sorted by National Dex number.
  */
 function transformToNational(sections, speciesData = {}) {
-  const seenKeys = new Set();
-  const allEntries = [];
+  const baseSections = sections.filter(
+    (s) =>
+      s.kind === "base" ||
+      s.kind === "dlc" ||
+      s.type === "base" ||
+      s.type === "dlc" ||
+      s.key === "national" ||
+      s.id === "national",
+  );
+  const otherSections = sections.filter((s) => !baseSections.includes(s));
 
-  for (const sec of sections) {
+  if (baseSections.length === 0) {
+    return transformToStandard(sections);
+  }
+
+  const seenKeys = new Set();
+  const baseEntries = [];
+
+  for (const sec of baseSections) {
     for (const entry of sec.entries || []) {
       const key = getSpecimenKey(entry);
       if (!seenKeys.has(key)) {
         seenKeys.add(key);
         const sId = entry.speciesId || 0;
-        allEntries.push({
+        baseEntries.push({
           ...entry,
           dexNumber: sId,
           kind: entry.kind || sec.kind || "base",
@@ -100,7 +115,7 @@ function transformToNational(sections, speciesData = {}) {
     }
   }
 
-  allEntries.sort((a, b) => {
+  baseEntries.sort((a, b) => {
     if (a.speciesId !== b.speciesId) return a.speciesId - b.speciesId;
     const pA = getVariantSortPriority(a);
     const pB = getVariantSortPriority(b);
@@ -108,16 +123,38 @@ function transformToNational(sections, speciesData = {}) {
     return (Number(a.formId) || 0) - (Number(b.formId) || 0);
   });
 
-  return [
+  const result = [
     {
       id: "national-dex",
       key: "national-dex",
       title: "National Pokédex Order",
       kind: "base",
-      entries: allEntries,
+      entries: baseEntries,
       startIndex: 1,
     },
   ];
+
+  for (const sec of otherSections) {
+    const formattedEntries = (sec.entries || []).map((e) => ({
+      ...e,
+      specimenKey: getSpecimenKey(e),
+    }));
+
+    formattedEntries.sort((a, b) => {
+      if (a.speciesId !== b.speciesId) return a.speciesId - b.speciesId;
+      const pA = getVariantSortPriority(a);
+      const pB = getVariantSortPriority(b);
+      if (pA !== pB) return pA - pB;
+      return (Number(a.formId) || 0) - (Number(b.formId) || 0);
+    });
+
+    result.push({
+      ...sec,
+      entries: formattedEntries,
+    });
+  }
+
+  return result;
 }
 
 /**

@@ -8,6 +8,7 @@ All notable changes, new features, improvements, and bug fixes for **LivingDex**
 
 | Version                                                               | Release Date          | Major Highlights                                                                                               |
 | :-------------------------------------------------------------------- | :-------------------- | :------------------------------------------------------------------------------------------------------------- |
+| **[v1.11.1](#v1111---2026-09-13)**                                    | Sep 13, 2026          | Separate box sections in National Dex order & out-of-dex gender/form variant filtering across game datasets    |
 | **[v1.11.0](#v1110---2026-09-13)**                                    | Sep 13, 2026          | Regional Origin box layout preset for post-Gen 1 games (GSC through SV) in canonical National Dex numbering    |
 | **[v1.10.1](#v1101---2026-09-12)**                                    | Sep 12, 2026          | Game-specific layout presets (Alola Islands, Kalos/Galar/Paldea Unified, Hisui Areas), dynamic preset resolver |
 | **[v1.9.19](#v1919---2026-09-12)**                                    | Sep 12, 2026          | Active game version selector in Dex Options modal                                                              |
@@ -38,6 +39,15 @@ All notable changes, new features, improvements, and bug fixes for **LivingDex**
 | **[Genesis & Prototype](#initial-release---oct-2025)**                | Oct 27 – Nov 10, 2025 | Initial LivingDex tracker release, 30-slot PC boxes, PokeAPI integration                                       |
 
 ---
+
+## [v1.11.1] - 2026-09-13
+
+### Changed
+
+- **National Pokédex Order Section Partitioning**: Refactored `transformToNational` in `js/layout.js` to sort the primary/base Pokédex into strict National Pokédex order (`#001`–`#1025`) while keeping active auxiliary sections (Regional Forms, Alternate & Battle Forms, Gender Variants, Vivillon, etc.) in their own **separate box sections** at the bottom, maintaining clear demarcation from the "All Forms Inline" preset.
+- **Game-Specific Form & Gender Filtering**: Updated `LivingDex-Scraper` pipeline to automatically filter optional form and gender variant entries against the game's actual base/DLC Pokédex roster.
+  - Eliminated out-of-dex gender differences (e.g. Venusaur Female in Sun/Moon, Meganium/Torchic Female in Black/White, Gen 1–4 gender variants in Legends Arceus) across all 19 game datasets.
+  - Omitted empty auxiliary sections for games that do not feature the base species (e.g. Flabébé in Sun/Moon).
 
 ## [v1.11.0] - 2026-09-13
 
