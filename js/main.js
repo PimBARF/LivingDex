@@ -22,6 +22,7 @@ import {
 import { rebuildDexView, updateProgressBar, syncCaughtState } from "./state.js";
 
 import { applyTheme, applyReducedMotionPreference } from "./ui/theme.js";
+import { applyWakeLockPreference } from "./wake-lock.js";
 
 import {
   registerResetControls,
@@ -89,6 +90,7 @@ async function initializeLivingDexApp() {
   const settings = loadSettings();
   applyTheme(settings.theme);
   applyReducedMotionPreference(settings.reducedMotion);
+  applyWakeLockPreference(settings.keepScreenAwake);
 
   // Register controls immediately so the UI is interactive during data loading.
   // slotCount 0 is safe — both functions use live DOM queries as primary source.

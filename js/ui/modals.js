@@ -22,6 +22,7 @@ import {
   syncThemeSettingsRadios,
   resolveReducedMotionPreference,
 } from "./theme.js";
+import { applyWakeLockPreference, isWakeLockSupported } from "../wake-lock.js";
 
 import {
   GAMES,
@@ -1148,6 +1149,27 @@ export function registerSettingsControls() {
       autoCollapseFull.checked = !!settings.autoCollapseFullBoxes;
     const showBoxCoords = document.getElementById("settingsShowBoxCoordinates");
     if (showBoxCoords) showBoxCoords.checked = !!settings.showBoxCoordinates;
+    const keepAwake = document.getElementById("settingsKeepAwake");
+    const keepAwakeSubtitle = document.getElementById(
+      "settingsKeepAwakeSubtitle",
+    );
+    if (keepAwake) {
+      if (!isWakeLockSupported()) {
+        keepAwake.checked = false;
+        keepAwake.disabled = true;
+        if (keepAwakeSubtitle) {
+          keepAwakeSubtitle.textContent =
+            "Screen wake lock is not supported on this browser";
+        }
+      } else {
+        keepAwake.checked = !!settings.keepScreenAwake;
+        keepAwake.disabled = false;
+        if (keepAwakeSubtitle) {
+          keepAwakeSubtitle.textContent =
+            "Prevent screen from dimming or timing out while app is open";
+        }
+      }
+    }
     if (language) language.value = settings.language || "en";
     if (spriteStyle) spriteStyle.value = settings.spriteStyle || "pokesprites";
     if (defaultGameModeSelect)
@@ -1178,6 +1200,9 @@ export function registerSettingsControls() {
     const nextShowCoords = !!document.getElementById(
       "settingsShowBoxCoordinates",
     )?.checked;
+    const nextKeepAwake = isWakeLockSupported()
+      ? !!document.getElementById("settingsKeepAwake")?.checked
+      : false;
     const nextSettings = {
       ...settings,
       theme: selectedTheme,
@@ -1192,6 +1217,7 @@ export function registerSettingsControls() {
       autoCollapseFullBoxes: !!document.getElementById(
         "settingsAutoCollapseFull",
       )?.checked,
+      keepScreenAwake: nextKeepAwake,
       showBoxCoordinates: nextShowCoords,
       language: document.getElementById("settingsLanguage")?.value || "en",
       spriteStyle:
@@ -1207,6 +1233,7 @@ export function registerSettingsControls() {
 
     applyTheme(nextSettings.theme);
     applyReducedMotionPreference(nextSettings.reducedMotion);
+    await applyWakeLockPreference(nextSettings.keepScreenAwake);
 
     const speciesOrder = Array.from(
       document.querySelectorAll(".cell:not(.is-placeholder)"),
@@ -1607,6 +1634,9 @@ export function registerSettingsControls() {
     });
   document
     .getElementById("settingsShowBoxCoordinates")
+    ?.addEventListener("change", persistSettingsFromControls);
+  document
+    .getElementById("settingsKeepAwake")
     ?.addEventListener("change", persistSettingsFromControls);
   document
     .getElementById("settingsLanguage")

@@ -27,6 +27,7 @@ import {
  * @property {string} spriteStyle - Selected sprite style key.
  * @property {'last-used'|'specific'} defaultGameMode - Mode for initial game selection.
  * @property {string|null} defaultGameId - Target game ID when defaultGameMode is 'specific'.
+ * @property {boolean} keepScreenAwake - Whether to request screen wake lock to prevent dimming.
  * @property {number} version - Settings schema version.
  */
 
@@ -40,6 +41,7 @@ const DEFAULT_SETTINGS = {
   hideCaughtDefault: false,
   rememberCollapsedBoxes: false,
   autoCollapseFullBoxes: false,
+  keepScreenAwake: false,
   language: "en",
   spriteStyle: "pokesprites",
   defaultGameMode: "last-used", // 'last-used' | 'specific'

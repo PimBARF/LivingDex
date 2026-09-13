@@ -8,7 +8,8 @@ All notable changes, new features, improvements, and bug fixes for **LivingDex**
 
 | Version                                                               | Release Date          | Major Highlights                                                                                               |
 | :-------------------------------------------------------------------- | :-------------------- | :------------------------------------------------------------------------------------------------------------- |
-| **[v1.14.0](#v1140---2026-09-13)**                                    | Sep 13, 2026          | Starter & Gift Pokémon identification, Missing Guide starter/gift filters & badges, Gift Multi-Filter category  |
+| **[v1.15.0](#v1150---2026-09-13)**                                    | Sep 13, 2026          | Keep Screen Awake setting via Screen Wake Lock API to prevent mobile display timeout                           |
+| **[v1.14.0](#v1140---2026-09-13)**                                    | Sep 13, 2026          | Starter & Gift Pokémon identification, Missing Guide starter/gift filters & badges, Gift Multi-Filter category |
 | **[v1.13.2](#v1132---2026-09-13)**                                    | Sep 13, 2026          | Tab-specific Missing Guide controls and working Family Quotas sorting                                          |
 | **[v1.13.1](#v1131---2026-09-13)**                                    | Sep 13, 2026          | Offline encounter data caching fixes for Missing Guide and Pokémon Information modal                           |
 | **[v1.13.0](#v1130---2026-09-13)**                                    | Sep 13, 2026          | Regional Dex default sorting with explicit National Dex sorting in Missing Guide                               |
@@ -45,11 +46,19 @@ All notable changes, new features, improvements, and bug fixes for **LivingDex**
 
 ---
 
+## [v1.15.0] - 2026-09-13
+
+### Added
+
+- **Keep Screen Awake (Wake Lock)**: Added a **"Keep screen awake"** toggle switch in the Settings modal under _General > Startup & Preferences_. When enabled, it utilizes the standard Screen Wake Lock API (`navigator.wakeLock`) to prevent mobile screens and tablets from dimming or locking while the Pokédex tracker is open.
+- **Smart Lifecycle Management**: The wake lock seamlessly releases when switching tabs or backgrounding the app to preserve battery life, and automatically re-acquires upon returning when enabled.
+- **Graceful Fallback**: If the browser or environment does not support the Screen Wake Lock API, the toggle is automatically disabled with an informative indicator message.
+
 ## [v1.14.0] - 2026-09-13
 
 ### Added
 
-- **Starter Pokémon Tracking**: Canonical starter encounter locations across all 19 games with dedicated styled chips (`(Starter)`) in the Pokémon Information modal. Modern starter trios lacking wild encounter tables (e.g., Gen 8 Grookey/Scorbunny/Sobble and Gen 9 Sprigatito/Fuecoco/Quaxly) now correctly display their starting location instead of *"No encounters in this generation"*.
+- **Starter Pokémon Tracking**: Canonical starter encounter locations across all 19 games with dedicated styled chips (`(Starter)`) in the Pokémon Information modal. Modern starter trios lacking wild encounter tables (e.g., Gen 8 Grookey/Scorbunny/Sobble and Gen 9 Sprigatito/Fuecoco/Quaxly) now correctly display their starting location instead of _"No encounters in this generation"_.
 - **In-Game Gift & Fossil Tags**: In-game gifts, gift eggs, and fossil revivals across all games are now cleanly identified with distinct badge styling (`(Gift)`, `(Gift Egg)`, `(Fossil)`).
 - **Missing Pokémon Guide Integration**:
   - Added **`🌟 Starter Choice`** and **`🎁 In-Game Gift / Fossil`** acquisition method filter options to the Missing Pokémon Guide.
