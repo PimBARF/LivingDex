@@ -11,17 +11,6 @@ All notable changes, new features, improvements, and bug fixes for **LivingDex**
 | **[v1.19.4](#v1194---2026-09-14)**                                    | Sep 14, 2026          | Automated Playwright cross-generation testing & Chrome DevTools MCP verification rules                           |
 | **[v1.19.3](#v1193---2026-09-14)**                                    | Sep 14, 2026          | Semantic encounter notes, concise metadata pills & readable form labels                                          |
 | **[v1.19.2](#v1192---2026-09-14)**                                    | Sep 14, 2026          | Clean Base vs DLC encounter separation, normalized raid labels & corrected expansion pass clustering             |
-
----
-
-## [v1.19.4] - 2026-09-14
-
-### Added
-
-- **Automated Cross-Gen Testing & Verification Standards (`AGENTS.md`)**:
-  - Add Playwright automated smoke test rules sampling across all 9 Pokémon generations.
-  - Integrate Chrome DevTools MCP guidelines for visual, responsive layout, and accessibility auditing.
-  - Formalize standardized release checklist and GitHub MCP workflows.
 | **[v1.19.1](#v1191---2026-09-14)**                                    | Sep 14, 2026          | Regenerated data synchronization with corrected form sprites and game encounter records                          |
 | **[v1.19.0](#v1190---2026-09-13)**                                    | Sep 13, 2026          | Special encounter conditions (Day/Night, Weather, Swarms, Seasons, Methods) and level badges in Field Guide      |
 | **[v1.18.6](#v1186---2026-09-13)**                                    | Sep 13, 2026          | Increase mobile long-press hold duration to 500ms to prevent accidental multi-select gestures                    |
@@ -70,7 +59,18 @@ All notable changes, new features, improvements, and bug fixes for **LivingDex**
 | **[v1.0.0](#v100---2026-09-01)**                                      | Sep 01, 2026          | Full offline PWA support & standalone data scraper architecture                                                  |
 | **[Expansion Phase](#multi-game-expansion--localization---aug-2026)** | Aug 17–31, 2026       | All mainline games, 8-language localization, Info modal, UI modular split                                        |
 | **[Modular JS Split](#modular-js-split---nov-2025)**                  | Nov 13–15, 2025       | ES module decomposition (`main.js`, `ui.js`, `api.js`, `storage.js`)                                             |
-| **[Genesis & Prototype](#initial-release---oct-2025)**                | Oct 27 – Nov 10, 2025 | Initial LivingDex tracker release, 30-slot PC boxes, PokeAPI integration                                         |
+| **[Genesis & Prototype](#initial-release---oct-2025)**                 | Oct 27 – Nov 10, 2025 | Initial LivingDex tracker release, 30-slot PC boxes, PokeAPI integration                                         |
+
+---
+
+## [v1.19.4] - 2026-09-14
+
+### Added
+
+- **Automated Cross-Gen Testing & Verification Standards (`AGENTS.md`)**:
+  - Add Playwright automated smoke test rules sampling across all 9 Pokémon generations.
+  - Integrate Chrome DevTools MCP guidelines for visual, responsive layout, and accessibility auditing.
+  - Formalize standardized release checklist and GitHub MCP workflows.
 
 ---
 

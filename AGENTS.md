@@ -21,14 +21,15 @@ Whenever any changes are made to the frontend application:
 
 ---
 
-## 2. Changelog Maintenance (`CHANGELOG.md`)
+## 2. Changelog Maintenance & Structural Integrity (`CHANGELOG.md`)
 
 For every new feature, bug fix, refactor, or dataset update in LivingDex:
 
-- **Update `CHANGELOG.md`**:
-  - Add or update the version entry under `## [vX.Y.Z] - YYYY-MM-DD`.
-  - Update the top `## 📑 Release Timeline` summary table with the version anchor link, release date, and key highlights.
-  - Categorize changes using standard sections: `### Added`, `### Changed`, `### Fixed`, `### Removed`.
+- **Strict 2-Step Changelog Editing Protocol**:
+  1. **Step 1 (Timeline Row)**: Insert ONLY the new row into the `## 📑 Release Timeline` table directly below the table header.
+  2. **Step 2 (Body Section)**: Insert the `## [vX.Y.Z] - YYYY-MM-DD` entry **after the closing separator (`---`) at the bottom of the entire Release Timeline table**, directly above the previous version entry.
+  3. **Prohibition**: **NEVER** combine timeline table row insertion and body section insertion into a single edit chunk.
+  4. Categorize changes using standard sections: `### Added`, `### Changed`, `### Fixed`, `### Removed`.
 
 ---
 
