@@ -280,7 +280,9 @@ export function parseLocationEntry(entry) {
     }
     if (
       !compactPattern.test(tagContent) &&
-      (tagContent.length > 42 || /[;.!?]/.test(tagContent) || notePattern.test(tagContent))
+      (tagContent.length > 42 ||
+        /[;.!?]/.test(tagContent) ||
+        notePattern.test(tagContent))
     ) {
       notes.unshift(tagContent);
     } else {
@@ -481,7 +483,9 @@ function filterRedundantTags(tags, methodNote = "") {
       return false;
     if (
       noteLower.includes("raid") &&
-      (tLower === "max raid" || tLower === "max raid battle" || tLower === "gigantamax raid battle")
+      (tLower === "max raid" ||
+        tLower === "max raid battle" ||
+        tLower === "gigantamax raid battle")
     )
       return false;
     return true;

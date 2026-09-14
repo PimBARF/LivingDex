@@ -8,7 +8,7 @@ All notable changes, new features, improvements, and bug fixes for **LivingDex**
 
 | Version                                                               | Release Date          | Major Highlights                                                                                                 |
 | :-------------------------------------------------------------------- | :-------------------- | :--------------------------------------------------------------------------------------------------------------- |
-| **[v1.19.3](#v1193---2026-09-14)**                                    | Sep 14, 2026          | Semantic encounter notes, concise metadata pills & readable form labels                                      |
+| **[v1.19.3](#v1193---2026-09-14)**                                    | Sep 14, 2026          | Semantic encounter notes, concise metadata pills & readable form labels                                          |
 | **[v1.19.2](#v1192---2026-09-14)**                                    | Sep 14, 2026          | Clean Base vs DLC encounter separation, normalized raid labels & corrected expansion pass clustering             |
 | **[v1.19.1](#v1191---2026-09-14)**                                    | Sep 14, 2026          | Regenerated data synchronization with corrected form sprites and game encounter records                          |
 | **[v1.19.0](#v1190---2026-09-13)**                                    | Sep 13, 2026          | Special encounter conditions (Day/Night, Weather, Swarms, Seasons, Methods) and level badges in Field Guide      |
