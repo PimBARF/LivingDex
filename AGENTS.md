@@ -48,3 +48,12 @@ For every new feature, bug fix, refactor, or dataset update in LivingDex:
   - Avoid shortcut collisions with global hotkeys (`/`, `Space`, `S`, `M`, `H`, `[`, `]`, `?`).
 - **CSS Design System & Theme Support**:
   - Use custom CSS variables defined in `styles.css` (`--bg-primary`, `--card-bg`, `--accent`, etc.) to ensure seamless dark and light theme rendering.
+
+---
+
+## 4. UI Testing & Visual Verification
+
+- **Playwright Regression Checks**:
+  - When modifying UI modules, sorting algorithms, or encounter resolvers (`pokemon-info.js`, `missing-guide.js`, `dom-render.js`), run Playwright headless checks against sampled Pokémon across multiple generations to verify modal opening, data clustering, and event binding.
+- **Chrome DevTools MCP Inspection**:
+  - Use Chrome DevTools MCP for live UI inspections, responsive styling checks (mobile viewport testing), focus-trap audits on dialogs, and console error monitoring.
