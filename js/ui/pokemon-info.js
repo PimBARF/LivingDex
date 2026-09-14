@@ -246,38 +246,69 @@ function getInfoModalHandlers() {
 }
 
 /**
- * Splits a location string into a base location name and parenthetical tags/badges.
+ * Splits a location string into a base location name, concise tags, and notes.
  *
  * @param {string} entry - Raw location entry string (e.g. "Route 12 (Surfing)").
- * @returns {{ name: string, tags: string[] }} Parsed location name and tags.
+ * @returns {{ name: string, tags: string[], notes: string[] }} Parsed location details.
  */
 export function parseLocationEntry(entry) {
-  if (!entry) return { name: "", tags: [] };
+  if (!entry) return { name: "", tags: [], notes: [] };
   if (
     /^(?:Tera Raid|Evolve|Trade|Buy|Breed|Received|Gift|Event)/i.test(
       entry.trim(),
     )
   ) {
-    return { name: entry, tags: [] };
+    return { name: entry, tags: [], notes: [] };
   }
 
   let current = entry;
   const tags = [];
+  const notes = [];
   const floorPattern =
     /^(?:b?\d+f|main|area\s*\d+|outside|inside|exterior|entrance)$/i;
+  const compactPattern =
+    /^(?:b?\d+f,\s*)?(?:dual-slot|morning|day|night|swarm|radar|surfing|swimming|fishing|underwater|diving|rock smash|headbutt|honey tree|starter|gift|gift egg|fossil|(?:max|tera|gigantamax) raid|amped\s+\(sword\)\s*\/\s*low key\s+\(shield\)\s+form|[a-z]+(?:\s+[a-z]+)* form)\b/i;
+  const notePattern =
+    /^(?:cannot|requires?|only one|after|before|available|must|changed|transfer)/i;
 
   while (true) {
-    const match = current.match(/\s*\(([^()]+)\)$/);
+    const match = getTrailingParenthetical(current);
     if (!match) break;
-    const tagContent = match[1].trim();
+    const tagContent = match.content.trim();
     if (floorPattern.test(tagContent)) {
       break;
     }
-    tags.unshift(tagContent);
-    current = current.slice(0, match.index).trim();
+    if (
+      !compactPattern.test(tagContent) &&
+      (tagContent.length > 42 || /[;.!?]/.test(tagContent) || notePattern.test(tagContent))
+    ) {
+      notes.unshift(tagContent);
+    } else {
+      tags.unshift(tagContent);
+    }
+    current = current.slice(0, match.start).trim();
   }
 
-  return { name: current || entry, tags };
+  return { name: current || entry, tags, notes };
+}
+
+function getTrailingParenthetical(text) {
+  const trimmed = text.trim();
+  if (!trimmed.endsWith(")")) return null;
+
+  let depth = 0;
+  for (let index = trimmed.length - 1; index >= 0; index--) {
+    if (trimmed[index] === ")") depth++;
+    if (trimmed[index] === "(") depth--;
+    if (depth === 0) {
+      return {
+        content: trimmed.slice(index + 1, -1),
+        start: index,
+      };
+    }
+  }
+
+  return null;
 }
 
 /**
@@ -448,6 +479,11 @@ function filterRedundantTags(tags, methodNote = "") {
     if (noteLower.includes("swarms") && tLower === "swarm") return false;
     if (noteLower.includes("dual-slot") && tLower.startsWith("dual-slot"))
       return false;
+    if (
+      noteLower.includes("raid") &&
+      (tLower === "max raid" || tLower === "max raid battle" || tLower === "gigantamax raid battle")
+    )
+      return false;
     return true;
   });
 }
@@ -465,7 +501,7 @@ function renderLocationItemContent(li, entry, methodNote = "") {
 
   const isObject = typeof entry === "object" && entry !== null;
   const rawLoc = isObject ? entry.location || "" : entry;
-  const { name, tags: rawTags } = parseLocationEntry(rawLoc);
+  const { name, tags: rawTags, notes } = parseLocationEntry(rawLoc);
   const tags = filterRedundantTags(rawTags, methodNote);
 
   const mainRow = document.createElement("div");
@@ -515,6 +551,13 @@ function renderLocationItemContent(li, entry, methodNote = "") {
       tagSpan.textContent = tag;
       mainRow.appendChild(tagSpan);
     });
+  }
+
+  if (notes.length > 0) {
+    const noteSpan = document.createElement("span");
+    noteSpan.className = "pokemon-info-encounter-detail";
+    noteSpan.textContent = notes.join("; ");
+    mainRow.appendChild(noteSpan);
   }
 
   li.appendChild(mainRow);

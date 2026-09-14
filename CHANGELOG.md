@@ -8,6 +8,7 @@ All notable changes, new features, improvements, and bug fixes for **LivingDex**
 
 | Version                                                               | Release Date          | Major Highlights                                                                                                 |
 | :-------------------------------------------------------------------- | :-------------------- | :--------------------------------------------------------------------------------------------------------------- |
+| **[v1.19.3](#v1193---2026-09-14)**                                    | Sep 14, 2026          | Semantic encounter notes, concise metadata pills & readable form labels                                      |
 | **[v1.19.2](#v1192---2026-09-14)**                                    | Sep 14, 2026          | Clean Base vs DLC encounter separation, normalized raid labels & corrected expansion pass clustering             |
 | **[v1.19.1](#v1191---2026-09-14)**                                    | Sep 14, 2026          | Regenerated data synchronization with corrected form sprites and game encounter records                          |
 | **[v1.19.0](#v1190---2026-09-13)**                                    | Sep 13, 2026          | Special encounter conditions (Day/Night, Weather, Swarms, Seasons, Methods) and level badges in Field Guide      |
@@ -60,6 +61,15 @@ All notable changes, new features, improvements, and bug fixes for **LivingDex**
 | **[Genesis & Prototype](#initial-release---oct-2025)**                | Oct 27 – Nov 10, 2025 | Initial LivingDex tracker release, 30-slot PC boxes, PokeAPI integration                                         |
 
 ---
+
+## [v1.19.3] - 2026-09-14
+
+### Changed
+
+- **Encounter Detail Presentation**:
+  - Keep concise encounter metadata as pills while rendering long explanatory parenthetical notes as readable secondary text.
+  - Suppress redundant row-level raid labels when the encounter group already identifies raid battles.
+  - Refresh the frontend encounter cache after regenerating corrected SV records.
 
 ## [v1.19.2] - 2026-09-14
 

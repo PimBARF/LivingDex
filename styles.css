@@ -3053,6 +3053,15 @@ body.is-drag-selecting .cell {
   font-size: 10px;
 }
 
+.pokemon-info-encounter-detail {
+  flex-basis: 100%;
+  margin-left: 2px;
+  color: var(--muted);
+  font-size: 11px;
+  font-style: italic;
+  line-height: 1.4;
+}
+
 /* --- Encounter Rates & Condition Chips --- */
 .pokemon-info-encounter-main {
   display: inline-flex;
