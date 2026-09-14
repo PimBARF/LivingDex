@@ -70,9 +70,7 @@ export const autoCollapsedBoxes = new Set();
 
 export function getActiveCollapsedBoxes() {
   const settings = loadSettings();
-  return settings.rememberCollapsedBoxes
-    ? loadCollapsedBoxes()
-    : sessionCollapsedBoxes;
+  return settings.rememberCollapsedBoxes ? loadCollapsedBoxes() : sessionCollapsedBoxes;
 }
 
 /**
@@ -306,17 +304,11 @@ export function updateBoxProgress(box) {
   if (isComplete) {
     badge.textContent = `${totalSlots}/${totalSlots}`;
     badge.classList.add("is-completed");
-    badge.setAttribute(
-      "aria-label",
-      `Box complete: ${totalSlots} of ${totalSlots} caught`,
-    );
+    badge.setAttribute("aria-label", `Box complete: ${totalSlots} of ${totalSlots} caught`);
   } else {
     badge.textContent = `${caughtCount}/${totalSlots}`;
     badge.classList.remove("is-completed");
-    badge.setAttribute(
-      "aria-label",
-      `Box progress: ${caughtCount} of ${totalSlots} caught`,
-    );
+    badge.setAttribute("aria-label", `Box progress: ${caughtCount} of ${totalSlots} caught`);
   }
 
   if (toggleBtn) {
@@ -330,8 +322,7 @@ export function updateBoxProgress(box) {
 
   const settings = loadSettings();
   const boxId = box.dataset.boxId;
-  const isAutoCollapsed =
-    autoCollapsedBoxes.has(boxId) || box.dataset.autoCollapsed === "true";
+  const isAutoCollapsed = autoCollapsedBoxes.has(boxId) || box.dataset.autoCollapsed === "true";
 
   if (settings.autoCollapseFullBoxes) {
     if (isComplete) {
@@ -436,10 +427,7 @@ export function renderDexSectionBoxes(
     );
     const boxId = `${sectionKey}:${boxIndex}`;
     const boxEntries = Array.isArray(sectionMeta?.entries)
-      ? sectionMeta.entries.slice(
-          boxIndex * boxCapacity,
-          (boxIndex + 1) * boxCapacity,
-        )
+      ? sectionMeta.entries.slice(boxIndex * boxCapacity, (boxIndex + 1) * boxCapacity)
       : [];
 
     let startNum = localStart;
@@ -470,20 +458,16 @@ export function renderDexSectionBoxes(
       defaultTitle = `${sectionTitle} ${rangeText}`;
     } else if (sectionKey === "national-alphabetical") {
       // Alphabetical (A-Z): "Alphabetical 1", "Alphabetical 2", etc.
-      defaultTitle =
-        boxCount > 1 ? `Alphabetical ${boxIndex + 1}` : "Alphabetical";
+      defaultTitle = boxCount > 1 ? `Alphabetical ${boxIndex + 1}` : "Alphabetical";
     } else if (sectionKey === "national-evolutionary") {
       // Evolution Lines: "Evolution Lines 1", "Evolution Lines 2", etc.
-      defaultTitle =
-        boxCount > 1 ? `Evolution Lines ${boxIndex + 1}` : "Evolution Lines";
+      defaultTitle = boxCount > 1 ? `Evolution Lines ${boxIndex + 1}` : "Evolution Lines";
     } else if (sectionKey.startsWith("island-")) {
       // Alola Islands: "Melemele Island 1", "Akala Island 1", etc.
-      defaultTitle =
-        boxCount > 1 ? `${sectionTitle} ${boxIndex + 1}` : sectionTitle;
+      defaultTitle = boxCount > 1 ? `${sectionTitle} ${boxIndex + 1}` : sectionTitle;
     } else if (sectionKey.startsWith("area-")) {
       // Hisui Expedition Areas: "Obsidian Fieldlands 1", "Crimson Mirelands 1", etc.
-      defaultTitle =
-        boxCount > 1 ? `${sectionTitle} ${boxIndex + 1}` : sectionTitle;
+      defaultTitle = boxCount > 1 ? `${sectionTitle} ${boxIndex + 1}` : sectionTitle;
     } else if (isBase) {
       // Base Dex / Standard National / All Forms Inline / Unified / Cartridge Dexes:
       // Numbers on the boxes: "#001-020", "#001-030", etc.
@@ -491,17 +475,13 @@ export function renderDexSectionBoxes(
     } else {
       // Forms / Extra segments (Regional Forms, Gender Variants, G-Max, etc.):
       // Name without numbers; numbered if multiple boxes (e.g. "Regional Forms 1", "Regional Forms 2")
-      defaultTitle =
-        boxCount > 1 ? `${sectionTitle} ${boxIndex + 1}` : sectionTitle;
+      defaultTitle = boxCount > 1 ? `${sectionTitle} ${boxIndex + 1}` : sectionTitle;
     }
 
     const customTitle = labels[boxId] || "";
     const displayTitle = customTitle || defaultTitle;
     const isCollapsed = collapsedBoxes.has(boxId);
-    const expectedSlotCount = Math.min(
-      boxCapacity,
-      slotsInSection - boxIndex * boxCapacity,
-    );
+    const expectedSlotCount = Math.min(boxCapacity, slotsInSection - boxIndex * boxCapacity);
 
     const section = document.createElement("section");
     section.className = `box${isCollapsed ? " is-collapsed" : ""}${boxCapacity === 20 ? " box-capacity-20" : ""}`;
@@ -544,8 +524,7 @@ let coordTooltipEl = null;
  * @returns {HTMLElement} The coordinate tooltip element.
  */
 function getOrCreateCoordTooltip() {
-  if (coordTooltipEl && document.body.contains(coordTooltipEl))
-    return coordTooltipEl;
+  if (coordTooltipEl && document.body.contains(coordTooltipEl)) return coordTooltipEl;
   let tip = document.getElementById("cellCoordTooltip");
   if (!tip) {
     tip = document.createElement("div");
@@ -665,12 +644,7 @@ export function updateBoxCoordinatesDisplay(show) {
  * @param {string} [gender=""] - Gender variant ('female' or '').
  * @returns {string} The variant subtitle, or empty string if standard form.
  */
-export function getVariantSubtitle(
-  speciesName,
-  formTitle = "",
-  formName = "",
-  gender = "",
-) {
+export function getVariantSubtitle(speciesName, formTitle = "", formName = "", gender = "") {
   if (formTitle) return formTitle;
   if (gender === "female") return "Female";
   if (formName && formName !== speciesName) {
@@ -700,16 +674,12 @@ export function getCellDisplayInfo(cell) {
   const formName = cell.dataset.formName || "";
   const formTitle = cell.dataset.formTitle || "";
   const baseName =
-    cell.dataset.speciesName ||
-    window.__livingDexNames?.[speciesId] ||
-    `#${speciesId}`;
+    cell.dataset.speciesName || window.__livingDexNames?.[speciesId] || `#${speciesId}`;
   const variantText = getVariantSubtitle(baseName, formTitle, formName, gender);
-  const displayName =
-    formName || (variantText ? `${baseName} (${variantText})` : baseName);
+  const displayName = formName || (variantText ? `${baseName} (${variantText})` : baseName);
 
   const indexEl = cell.querySelector(".index");
-  const displayIndex =
-    indexEl?.textContent?.trim() || String(speciesId).padStart(3, "0");
+  const displayIndex = indexEl?.textContent?.trim() || String(speciesId).padStart(3, "0");
 
   return {
     cell,
@@ -764,37 +734,20 @@ export function createDexSlot(
   button.dataset.formName = formName || "";
   button.dataset.formTitle = formTitle || "";
   button.dataset.speciesName = name;
-  button.dataset.specimenKey = getSpecimenKey(
-    speciesId,
-    formId,
-    gender,
-    spriteId,
-  );
+  button.dataset.specimenKey = getSpecimenKey(speciesId, formId, gender, spriteId);
 
   const variantText = getVariantSubtitle(name, formTitle, formName, gender);
-  const displayName =
-    formName || (variantText ? `${name} (${variantText})` : name);
+  const displayName = formName || (variantText ? `${name} (${variantText})` : name);
   button.dataset.name = `${name} ${variantText}`.trim().toLowerCase();
 
-  const resolvedTypes = types.length
-    ? types
-    : getSpeciesTypes(speciesId, formId);
+  const resolvedTypes = types.length ? types : getSpeciesTypes(speciesId, formId);
   button.dataset.types = resolvedTypes.join(" ");
   button.title = `#${displayIndex} — ${displayName} (${speciesId})`;
 
   const spriteStyle = loadSettings().spriteStyle || "pokesprites";
   const targetSpriteId = gender === "female" ? speciesId : spriteId || formId;
-  const primarySpriteUrl = spriteUrlForSpecies(
-    targetSpriteId,
-    spriteStyle,
-    isShinyMode,
-    gender,
-  );
-  const fallbackSpriteUrl = spriteUrlForSpecies(
-    speciesId,
-    spriteStyle,
-    isShinyMode,
-  );
+  const primarySpriteUrl = spriteUrlForSpecies(targetSpriteId, spriteStyle, isShinyMode, gender);
+  const fallbackSpriteUrl = spriteUrlForSpecies(speciesId, spriteStyle, isShinyMode);
 
   button.innerHTML = `
     <div class="index">${displayIndex}</div>
@@ -816,40 +769,29 @@ export function createDexSlot(
  */
 export function applySpriteStyleToCells() {
   const spriteStyle = loadSettings().spriteStyle || "pokesprites";
-  document
-    .querySelectorAll(".cell:not(.is-placeholder) img.sprite")
-    .forEach((img) => {
-      const cell = img.closest(".cell");
-      const formId = cell?.dataset.form;
-      const spriteId = cell?.dataset.sprite;
-      const speciesId = cell?.dataset.national;
-      const gender = cell?.dataset.gender || "";
-      if (!formId || !speciesId) return;
+  document.querySelectorAll(".cell:not(.is-placeholder) img.sprite").forEach((img) => {
+    const cell = img.closest(".cell");
+    const formId = cell?.dataset.form;
+    const spriteId = cell?.dataset.sprite;
+    const speciesId = cell?.dataset.national;
+    const gender = cell?.dataset.gender || "";
+    if (!formId || !speciesId) return;
 
-      const targetId = gender === "female" ? speciesId : spriteId || formId;
-      const primaryUrl = spriteUrlForSpecies(
-        targetId,
-        spriteStyle,
-        isShinyMode,
-        gender,
-      );
-      const fallbackUrl = spriteUrlForSpecies(
-        speciesId,
-        spriteStyle,
-        isShinyMode,
-      );
+    const targetId = gender === "female" ? speciesId : spriteId || formId;
+    const primaryUrl = spriteUrlForSpecies(targetId, spriteStyle, isShinyMode, gender);
+    const fallbackUrl = spriteUrlForSpecies(speciesId, spriteStyle, isShinyMode);
 
-      img.style.opacity = "";
-      img.dataset.fallback = fallbackUrl;
-      img.onerror = function onSpriteError() {
-        if (this.dataset.fallback && this.src !== this.dataset.fallback) {
-          this.src = this.dataset.fallback;
-        } else {
-          this.style.opacity = ".2";
-        }
-      };
-      img.src = primaryUrl;
-    });
+    img.style.opacity = "";
+    img.dataset.fallback = fallbackUrl;
+    img.onerror = function onSpriteError() {
+      if (this.dataset.fallback && this.src !== this.dataset.fallback) {
+        this.src = this.dataset.fallback;
+      } else {
+        this.style.opacity = ".2";
+      }
+    };
+    img.src = primaryUrl;
+  });
 }
 
 /**
@@ -884,9 +826,7 @@ export function populateDexSlots(sections, slotCount, onComplete) {
 
   sections.forEach((section) => {
     const { key, entries, startIndex } = section;
-    const sectionBoxes = Array.from(
-      document.querySelectorAll(`.box[data-section='${key}'] .grid`),
-    );
+    const sectionBoxes = Array.from(document.querySelectorAll(`.box[data-section='${key}'] .grid`));
     let localIndex = (startIndex || 1) - 1;
     let boxCursor = 0;
     let slotsPlacedInCurrentBox = 0;
@@ -932,175 +872,146 @@ export function populateDexSlots(sections, slotCount, onComplete) {
     if (!task || !task.grid) return;
     const boxEl = task.grid.closest(".box");
     const boxNum = boxEl?.dataset?.boxNum || boxEl?.dataset?.boxIndex || "";
-    const effectiveCapacity =
-      Number(boxEl?.dataset?.boxCapacity) || boxCapacity;
+    const effectiveCapacity = Number(boxEl?.dataset?.boxCapacity) || boxCapacity;
     const cols = effectiveCapacity === 20 ? 5 : 6;
     const fragment = document.createDocumentFragment();
 
-    task.entries.forEach(
-      ({ entry, globalSlotIndex: slotIdx, localIndex: locIdx }, entryIdx) => {
-        const {
-          speciesId,
-          formId,
-          spriteId,
-          dexNumber,
-          gender,
-          formName,
-          formTitle,
-        } = entry;
-        const speciesName =
-          window.__livingDexNames?.[speciesId] || `#${speciesId}`;
-        const num = dexNumber != null ? dexNumber : speciesId;
-        const displayIndex = String(num).padStart(3, "0");
-        const cell = createDexSlot(
-          slotIdx,
-          speciesId,
-          formId,
-          speciesName,
-          displayIndex,
-          [],
-          gender,
-          formName,
-          formTitle,
-          spriteId,
-        );
+    task.entries.forEach(({ entry, globalSlotIndex: slotIdx, localIndex: locIdx }, entryIdx) => {
+      const { speciesId, formId, spriteId, dexNumber, gender, formName, formTitle } = entry;
+      const speciesName = window.__livingDexNames?.[speciesId] || `#${speciesId}`;
+      const num = dexNumber != null ? dexNumber : speciesId;
+      const displayIndex = String(num).padStart(3, "0");
+      const cell = createDexSlot(
+        slotIdx,
+        speciesId,
+        formId,
+        speciesName,
+        displayIndex,
+        [],
+        gender,
+        formName,
+        formTitle,
+        spriteId,
+      );
 
-        const slotInBox = entryIdx + 1;
-        const row = Math.floor(entryIdx / cols) + 1;
-        const col = (entryIdx % cols) + 1;
-        const coordText = `Box ${boxNum || "?"} · Row ${row}, Col ${col} (Slot ${slotInBox})`;
-        cell.dataset.boxCoord = coordText;
+      const slotInBox = entryIdx + 1;
+      const row = Math.floor(entryIdx / cols) + 1;
+      const col = (entryIdx % cols) + 1;
+      const coordText = `Box ${boxNum || "?"} · Row ${row}, Col ${col} (Slot ${slotInBox})`;
+      cell.dataset.boxCoord = coordText;
 
-        const specimenKey =
-          entry.specimenKey ||
-          getSpecimenKey(speciesId, formId, gender, spriteId);
-        cell.dataset.specimenKey = specimenKey;
+      const specimenKey = entry.specimenKey || getSpecimenKey(speciesId, formId, gender, spriteId);
+      cell.dataset.specimenKey = specimenKey;
 
-        const isEntryCaught = specimenKey
-          ? Boolean(caught[specimenKey])
-          : Boolean(caught[slotIdx]);
+      const isEntryCaught = specimenKey ? Boolean(caught[specimenKey]) : Boolean(caught[slotIdx]);
 
-        if (isEntryCaught) {
-          cell.classList.add("caught");
-          cell.setAttribute("aria-pressed", "true");
+      if (isEntryCaught) {
+        cell.classList.add("caught");
+        cell.setAttribute("aria-pressed", "true");
+      }
+
+      cell.onclick = (event) => {
+        if (suppressNextClick) {
+          suppressNextClick = false;
+          return;
         }
+        const nextCaught = isShinyMode ? loadShinyCaughtSlots() : loadCaughtSlots();
+        const regionalSlot = Number(cell.dataset.regional);
+        const isCaught = !cell.classList.contains("caught");
 
-        cell.onclick = (event) => {
-          if (suppressNextClick) {
-            suppressNextClick = false;
-            return;
-          }
-          const nextCaught = isShinyMode
-            ? loadShinyCaughtSlots()
-            : loadCaughtSlots();
-          const regionalSlot = Number(cell.dataset.regional);
-          const isCaught = !cell.classList.contains("caught");
+        if (
+          event.shiftKey &&
+          lastClickedSlotIndex !== null &&
+          lastClickedSlotIndex !== regionalSlot
+        ) {
+          const start = Math.min(lastClickedSlotIndex, regionalSlot);
+          const end = Math.max(lastClickedSlotIndex, regionalSlot);
+          const targetState = isCaught;
 
-          if (
-            event.shiftKey &&
-            lastClickedSlotIndex !== null &&
-            lastClickedSlotIndex !== regionalSlot
-          ) {
-            const start = Math.min(lastClickedSlotIndex, regionalSlot);
-            const end = Math.max(lastClickedSlotIndex, regionalSlot);
-            const targetState = isCaught;
-
-            for (let slot = start; slot <= end; slot += 1) {
-              const targetCell = document.querySelector(
-                `.cell[data-regional='${slot}']`,
-              );
-              if (targetCell) {
-                targetCell.classList.toggle("caught", targetState);
-                targetCell.setAttribute("aria-pressed", String(targetState));
-                const tKey = targetCell.dataset.specimenKey;
-                if (tKey) {
-                  if (targetState) {
-                    nextCaught[tKey] = true;
-                  } else {
-                    delete nextCaught[tKey];
-                  }
+          for (let slot = start; slot <= end; slot += 1) {
+            const targetCell = document.querySelector(`.cell[data-regional='${slot}']`);
+            if (targetCell) {
+              targetCell.classList.toggle("caught", targetState);
+              targetCell.setAttribute("aria-pressed", String(targetState));
+              const tKey = targetCell.dataset.specimenKey;
+              if (tKey) {
+                if (targetState) {
+                  nextCaught[tKey] = true;
                 } else {
-                  if (targetState) {
-                    nextCaught[slot] = true;
-                  } else {
-                    delete nextCaught[slot];
-                  }
+                  delete nextCaught[tKey];
+                }
+              } else {
+                if (targetState) {
+                  nextCaught[slot] = true;
+                } else {
+                  delete nextCaught[slot];
                 }
               }
             }
-          } else {
-            cell.classList.toggle("caught", isCaught);
-            cell.setAttribute("aria-pressed", String(isCaught));
-            const cKey = cell.dataset.specimenKey;
-            if (cKey) {
-              if (isCaught) {
-                nextCaught[cKey] = true;
-              } else {
-                delete nextCaught[cKey];
-              }
+          }
+        } else {
+          cell.classList.toggle("caught", isCaught);
+          cell.setAttribute("aria-pressed", String(isCaught));
+          const cKey = cell.dataset.specimenKey;
+          if (cKey) {
+            if (isCaught) {
+              nextCaught[cKey] = true;
             } else {
-              if (isCaught) {
-                nextCaught[regionalSlot] = true;
-              } else {
-                delete nextCaught[regionalSlot];
-              }
+              delete nextCaught[cKey];
             }
-          }
-
-          lastClickedSlotIndex = regionalSlot;
-
-          if (isShinyMode) {
-            saveShinyCaughtSlots(nextCaught);
           } else {
-            saveCaughtSlots(nextCaught);
-          }
-          updateProgressBar(slotCount);
-          applyHideCaughtFilter();
-        };
-
-        const infoBtn = cell.querySelector(".cell-info-btn");
-        if (infoBtn) {
-          /**
-           * Event handler to open the Pokémon info modal without toggling caught state.
-           * @param {MouseEvent|KeyboardEvent} event - The click or keydown event.
-           */
-          const handleInfo = (event) => {
-            event.stopPropagation();
-            const latestBaseName =
-              window.__livingDexNames?.[speciesId] || speciesName;
-            const variantText = getVariantSubtitle(
-              latestBaseName,
-              formTitle,
-              formName,
-              gender,
-            );
-            const latestDisplayName =
-              formName ||
-              (variantText
-                ? `${latestBaseName} (${variantText})`
-                : latestBaseName);
-            openPokemonInfoModal(
-              speciesId,
-              formId,
-              latestDisplayName,
-              gender,
-              formName,
-              spriteId,
-              cell,
-            );
-          };
-          infoBtn.addEventListener("click", handleInfo);
-          infoBtn.addEventListener("keydown", (event) => {
-            if (event.key === "Enter" || event.key === " ") {
-              event.preventDefault();
-              handleInfo(event);
+            if (isCaught) {
+              nextCaught[regionalSlot] = true;
+            } else {
+              delete nextCaught[regionalSlot];
             }
-          });
+          }
         }
 
-        fragment.appendChild(cell);
-      },
-    );
+        lastClickedSlotIndex = regionalSlot;
+
+        if (isShinyMode) {
+          saveShinyCaughtSlots(nextCaught);
+        } else {
+          saveCaughtSlots(nextCaught);
+        }
+        updateProgressBar(slotCount);
+        applyHideCaughtFilter();
+      };
+
+      const infoBtn = cell.querySelector(".cell-info-btn");
+      if (infoBtn) {
+        /**
+         * Event handler to open the Pokémon info modal without toggling caught state.
+         * @param {MouseEvent|KeyboardEvent} event - The click or keydown event.
+         */
+        const handleInfo = (event) => {
+          event.stopPropagation();
+          const latestBaseName = window.__livingDexNames?.[speciesId] || speciesName;
+          const variantText = getVariantSubtitle(latestBaseName, formTitle, formName, gender);
+          const latestDisplayName =
+            formName || (variantText ? `${latestBaseName} (${variantText})` : latestBaseName);
+          openPokemonInfoModal(
+            speciesId,
+            formId,
+            latestDisplayName,
+            gender,
+            formName,
+            spriteId,
+            cell,
+          );
+        };
+        infoBtn.addEventListener("click", handleInfo);
+        infoBtn.addEventListener("keydown", (event) => {
+          if (event.key === "Enter" || event.key === " ") {
+            event.preventDefault();
+            handleInfo(event);
+          }
+        });
+      }
+
+      fragment.appendChild(cell);
+    });
 
     for (let p = 0; p < task.placeholderCount; p += 1) {
       const placeholder = document.createElement("div");
@@ -1298,8 +1209,7 @@ export function registerTouchDragSelection(slotCount) {
         const intensity = (edgeThreshold - currentTouchY) / edgeThreshold;
         scrollSpeed = -Math.round(intensity * 16);
       } else if (currentTouchY > viewportHeight - edgeThreshold) {
-        const intensity =
-          (currentTouchY - (viewportHeight - edgeThreshold)) / edgeThreshold;
+        const intensity = (currentTouchY - (viewportHeight - edgeThreshold)) / edgeThreshold;
         scrollSpeed = Math.round(intensity * 16);
       }
 
@@ -1389,9 +1299,7 @@ export function registerTouchDragSelection(slotCount) {
           } catch (_) {}
         }
 
-        nextCaughtStateMap = isShinyMode
-          ? loadShinyCaughtSlots()
-          : loadCaughtSlots();
+        nextCaughtStateMap = isShinyMode ? loadShinyCaughtSlots() : loadCaughtSlots();
 
         const regionalSlot = Number(startCell.dataset.regional);
         targetCaughtState = !startCell.classList.contains("caught");
@@ -1581,24 +1489,15 @@ export function applyNamesToCells() {
     const formTitle = cell.dataset.formTitle || "";
     const gender = cell.dataset.gender || "";
     const baseName =
-      window.__livingDexNames?.[national] ||
-      cell.dataset.speciesName ||
-      `#${national}`;
+      window.__livingDexNames?.[national] || cell.dataset.speciesName || `#${national}`;
     cell.dataset.speciesName = baseName;
 
-    const variantText = getVariantSubtitle(
-      baseName,
-      formTitle,
-      formName,
-      gender,
-    );
-    const displayName =
-      formName || (variantText ? `${baseName} (${variantText})` : baseName);
+    const variantText = getVariantSubtitle(baseName, formTitle, formName, gender);
+    const displayName = formName || (variantText ? `${baseName} (${variantText})` : baseName);
     cell.dataset.name = `${baseName} ${variantText}`.trim().toLowerCase();
 
     // Keep existing title format using the number shown in the badge
-    const indexText =
-      cell.querySelector(".index")?.textContent || String(regional);
+    const indexText = cell.querySelector(".index")?.textContent || String(regional);
     cell.title = `#${indexText} — ${displayName} (${national})`;
 
     const label = cell.querySelector(".label");

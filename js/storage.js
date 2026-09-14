@@ -149,10 +149,7 @@ export function setGameLayoutPreset(gameId, presetKey) {
 export function clearSpeciesCache() {
   try {
     Object.keys(localStorage).forEach((key) => {
-      if (
-        key.endsWith("-species-names-v1") ||
-        key.endsWith("-species-names-meta-v1")
-      ) {
+      if (key.endsWith("-species-names-v1") || key.endsWith("-species-names-meta-v1")) {
         localStorage.removeItem(key);
       }
     });
@@ -252,9 +249,7 @@ export function saveCaughtSlots(caught) {
  */
 export function loadShinyCaughtSlots() {
   try {
-    const raw = JSON.parse(
-      localStorage.getItem(SHINY_CAUGHT_STORAGE_KEY) || "{}",
-    );
+    const raw = JSON.parse(localStorage.getItem(SHINY_CAUGHT_STORAGE_KEY) || "{}");
     return sanitizeCaughtSlots(raw);
   } catch {
     return {};
@@ -368,10 +363,7 @@ export function loadCollapsedBoxes(gamePrefix = ACTIVE_GAME.storagePrefix) {
  * @param {string} [gamePrefix=ACTIVE_GAME.storagePrefix] - Game storage prefix.
  * @returns {void}
  */
-export function saveCollapsedBoxes(
-  collapsedSet,
-  gamePrefix = ACTIVE_GAME.storagePrefix,
-) {
+export function saveCollapsedBoxes(collapsedSet, gamePrefix = ACTIVE_GAME.storagePrefix) {
   try {
     const key = `${gamePrefix}-collapsed-boxes-v1`;
     const list = Array.from(collapsedSet);
@@ -523,9 +515,7 @@ export function loadSegmentConfig(game = ACTIVE_GAME) {
       };
     }
 
-    const enabledList = Array.isArray(parsed.enabled)
-      ? parsed.enabled
-      : Array.from(defaultEnabled);
+    const enabledList = Array.isArray(parsed.enabled) ? parsed.enabled : Array.from(defaultEnabled);
     const orderList = Array.isArray(parsed.order) ? parsed.order : defaultOrder;
 
     return {
@@ -547,10 +537,7 @@ export function loadSegmentConfig(game = ACTIVE_GAME) {
  * @param {string} [gamePrefix=ACTIVE_GAME.storagePrefix] - Game storage prefix.
  * @returns {void}
  */
-export function saveSegmentConfig(
-  config,
-  gamePrefix = ACTIVE_GAME.storagePrefix,
-) {
+export function saveSegmentConfig(config, gamePrefix = ACTIVE_GAME.storagePrefix) {
   try {
     const key = `${gamePrefix}-segments-v1`;
     const payload = {
@@ -594,10 +581,7 @@ export function loadEnabledSegments(game = ACTIVE_GAME) {
  * @param {string} [gamePrefix=ACTIVE_GAME.storagePrefix] - Game storage prefix.
  * @returns {void}
  */
-export function saveEnabledSegments(
-  set,
-  gamePrefix = ACTIVE_GAME.storagePrefix,
-) {
+export function saveEnabledSegments(set, gamePrefix = ACTIVE_GAME.storagePrefix) {
   const current = loadSegmentConfig(ACTIVE_GAME);
   saveSegmentConfig({ enabled: set, order: current.order }, gamePrefix);
 }
@@ -632,10 +616,7 @@ function bytesToBase64Url(bytes) {
   for (let i = 0; i < bytes.length; i += 1) {
     binary += String.fromCharCode(bytes[i]);
   }
-  return btoa(binary)
-    .replace(/\+/g, "-")
-    .replace(/\//g, "_")
-    .replace(/=+$/g, "");
+  return btoa(binary).replace(/\+/g, "-").replace(/\//g, "_").replace(/=+$/g, "");
 }
 
 /**
@@ -674,17 +655,12 @@ function base64UrlToBytes(encoded) {
  */
 function shareContextMatches(payload, slotCount, segments) {
   if (!payload || payload.version !== SHARE_PAYLOAD_VERSION) return false;
-  if (payload.gameId !== ACTIVE_GAME_ID || payload.slotCount !== slotCount)
-    return false;
+  if (payload.gameId !== ACTIVE_GAME_ID || payload.slotCount !== slotCount) return false;
   const expectedSegments = [...segments].sort();
-  const payloadSegments = Array.isArray(payload.segments)
-    ? [...payload.segments].sort()
-    : [];
+  const payloadSegments = Array.isArray(payload.segments) ? [...payload.segments].sort() : [];
   return (
     expectedSegments.length === payloadSegments.length &&
-    expectedSegments.every(
-      (segment, index) => segment === payloadSegments[index],
-    )
+    expectedSegments.every((segment, index) => segment === payloadSegments[index])
   );
 }
 
@@ -734,19 +710,13 @@ export async function encodeCaughtState(caught, slotCount) {
  * @param {Iterable<string>} [segments=getShareSegments()] - Enabled segment keys to validate against.
  * @returns {Promise<Record<number, boolean>|null>} Map of slot numbers to caught status, or null if invalid or mismatched.
  */
-export async function decodeCaughtState(
-  hash,
-  slotCount,
-  segments = getShareSegments(),
-) {
+export async function decodeCaughtState(hash, slotCount, segments = getShareSegments()) {
   try {
     const match = /#s=([^&]+)/.exec(hash);
     if (!match) return null;
 
     const compressed = base64UrlToBytes(match[1]);
-    const stream = new Blob([compressed])
-      .stream()
-      .pipeThrough(new DecompressionStream("deflate"));
+    const stream = new Blob([compressed]).stream().pipeThrough(new DecompressionStream("deflate"));
     const decompressedText = await new Response(stream).text();
     const payload = JSON.parse(decompressedText);
     if (!shareContextMatches(payload, slotCount, segments)) return null;
@@ -790,10 +760,7 @@ export function loadItemInventory() {
  */
 export function saveItemInventory(inventory) {
   try {
-    localStorage.setItem(
-      ITEM_INVENTORY_STORAGE_KEY,
-      JSON.stringify(inventory || {}),
-    );
+    localStorage.setItem(ITEM_INVENTORY_STORAGE_KEY, JSON.stringify(inventory || {}));
   } catch {}
   return inventory;
 }
@@ -822,10 +789,7 @@ export function loadSpecimenInventory() {
  */
 export function saveSpecimenInventory(inventory) {
   try {
-    localStorage.setItem(
-      SPECIMEN_INVENTORY_STORAGE_KEY,
-      JSON.stringify(inventory || {}),
-    );
+    localStorage.setItem(SPECIMEN_INVENTORY_STORAGE_KEY, JSON.stringify(inventory || {}));
   } catch {}
   return inventory;
 }

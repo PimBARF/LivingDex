@@ -23,26 +23,26 @@
 
 const HOME_REGIONAL_FORM_IDS = [
   // Alolan Forms
-  10091, 10092, 10100, 10101, 10102, 10103, 10104, 10105, 10106, 10107, 10108,
-  10109, 10110, 10111, 10112, 10113, 10114, 10115,
+  10091, 10092, 10100, 10101, 10102, 10103, 10104, 10105, 10106, 10107, 10108, 10109, 10110, 10111,
+  10112, 10113, 10114, 10115,
   // Galarian Forms
-  10161, 10162, 10163, 10164, 10165, 10166, 10167, 10168, 10169, 10170, 10171,
-  10172, 10173, 10174, 10175, 10176, 10177, 10179, 10180,
+  10161, 10162, 10163, 10164, 10165, 10166, 10167, 10168, 10169, 10170, 10171, 10172, 10173, 10174,
+  10175, 10176, 10177, 10179, 10180,
   // Hisuian Forms
-  10229, 10230, 10231, 10232, 10233, 10234, 10235, 10236, 10237, 10238, 10239,
-  10240, 10241, 10242, 10243, 10244, 10247,
+  10229, 10230, 10231, 10232, 10233, 10234, 10235, 10236, 10237, 10238, 10239, 10240, 10241, 10242,
+  10243, 10244, 10247,
   // Paldean Forms
   10250, 10253,
 ];
 
 const ALOLAN_FORM_IDS = [
-  10091, 10092, 10100, 10101, 10102, 10103, 10104, 10105, 10106, 10107, 10108,
-  10109, 10110, 10111, 10112, 10113, 10114, 10115,
+  10091, 10092, 10100, 10101, 10102, 10103, 10104, 10105, 10106, 10107, 10108, 10109, 10110, 10111,
+  10112, 10113, 10114, 10115,
 ];
 
 const GALARIAN_FORM_IDS = [
-  10161, 10162, 10163, 10164, 10165, 10166, 10167, 10168, 10169, 10170, 10171,
-  10172, 10173, 10174, 10175, 10176, 10177, 10179, 10180,
+  10161, 10162, 10163, 10164, 10165, 10166, 10167, 10168, 10169, 10170, 10171, 10172, 10173, 10174,
+  10175, 10176, 10177, 10179, 10180,
 ];
 
 /**
@@ -54,15 +54,13 @@ const GALARIAN_FORM_IDS = [
  */
 export function getDefaultEnabledSegments(game = ACTIVE_GAME) {
   return new Set(
-    game.dexes
-      .filter((seg) => !seg.optional || seg.defaultEnabled === true)
-      .map((seg) => seg.id),
+    game.dexes.filter((seg) => !seg.optional || seg.defaultEnabled === true).map((seg) => seg.id),
   );
 }
 
 const HISUIAN_FORM_IDS = [
-  10229, 10230, 10231, 10232, 10233, 10234, 10235, 10236, 10237, 10238, 10239,
-  10240, 10241, 10242, 10243, 10244, 10247,
+  10229, 10230, 10231, 10232, 10233, 10234, 10235, 10236, 10237, 10238, 10239, 10240, 10241, 10242,
+  10243, 10244, 10247,
 ];
 
 const PALDEAN_FORM_IDS = [10250, 10253];
@@ -74,9 +72,9 @@ const PALDEAN_FORM_IDS = [10250, 10253];
 // flapple, appletun, sandaconda, toxtricity-amped, centiskorch, hatterene,
 // grimmsnarl, alcremie, copperajah, duraludon, urshifu-single-strike, urshifu-rapid-strike
 const GIGANTAMAX_FORM_IDS = [
-  10195, 10196, 10197, 10198, 10199, 10200, 10201, 10202, 10203, 10204, 10205,
-  10206, 10207, 10208, 10209, 10210, 10211, 10212, 10213, 10214, 10215, 10216,
-  10217, 10218, 10219, 10220, 10221, 10222, 10223, 10224, 10225, 10226, 10227,
+  10195, 10196, 10197, 10198, 10199, 10200, 10201, 10202, 10203, 10204, 10205, 10206, 10207, 10208,
+  10209, 10210, 10211, 10212, 10213, 10214, 10215, 10216, 10217, 10218, 10219, 10220, 10221, 10222,
+  10223, 10224, 10225, 10226, 10227,
 ];
 
 /**
@@ -839,17 +837,11 @@ export const LAYOUT_PRESETS = {
  * @param {Array<Object>} [sections=[]] - Active game sections.
  * @returns {Array<{ id: string, title: string }>} List of valid layout preset descriptors.
  */
-export function getAvailableLayoutPresetsForGame(
-  gameId = ACTIVE_GAME_ID,
-  sections = [],
-) {
+export function getAvailableLayoutPresetsForGame(gameId = ACTIVE_GAME_ID, sections = []) {
   const presets = [
     {
       id: LAYOUT_PRESETS.STANDARD,
-      title:
-        gameId === "home"
-          ? "Standard Dex (Forms at End)"
-          : "Regional Pokédex (Default)",
+      title: gameId === "home" ? "Standard Dex (Forms at End)" : "Regional Pokédex (Default)",
     },
   ];
 
@@ -912,17 +904,13 @@ export function getAvailableLayoutPresetsForGame(
       const type = sec.type || sec.kind;
       if (type === "forms" || type === "gender") {
         return (
-          (sec.entries && sec.entries.length > 0) ||
-          (sec.manualIds && sec.manualIds.length > 0)
+          (sec.entries && sec.entries.length > 0) || (sec.manualIds && sec.manualIds.length > 0)
         );
       }
       return (
         sec.entries &&
         sec.entries.some(
-          (e) =>
-            e.isRegional ||
-            (e.formId && e.formId !== e.speciesId) ||
-            e.gender === "female",
+          (e) => e.isRegional || (e.formId && e.formId !== e.speciesId) || e.gender === "female",
         )
       );
     });
@@ -1039,11 +1027,7 @@ export const remoteSpriteUrlForSpecies = (
   isShiny = false,
   gender = "",
 ) =>
-  (SPRITE_REMOTE_STYLE_URLS[style] || SPRITE_REMOTE_STYLE_URLS["pokesprites"])(
-    id,
-    isShiny,
-    gender,
-  );
+  (SPRITE_REMOTE_STYLE_URLS[style] || SPRITE_REMOTE_STYLE_URLS["pokesprites"])(id, isShiny, gender);
 
 /**
  * Generates the local asset path for a sprite.
@@ -1077,12 +1061,8 @@ export const localSpriteUrlForSpecies = (
  * @param {string} [gender=""] - Gender variant ('female' or '').
  * @returns {string} URL pointing to the Pokémon sprite image.
  */
-export const spriteUrlForSpecies = (
-  id,
-  style = "pokesprites",
-  isShiny = false,
-  gender = "",
-) => remoteSpriteUrlForSpecies(id, style, isShiny, gender);
+export const spriteUrlForSpecies = (id, style = "pokesprites", isShiny = false, gender = "") =>
+  remoteSpriteUrlForSpecies(id, style, isShiny, gender);
 
 /**
  * Normalizes a hyphenated Pokémon or form name into a title-cased, space-separated display name.
@@ -1250,40 +1230,37 @@ export const STARTER_SPECIES_IDS = new Set([
 ]);
 
 export const BASE_STARTER_SPECIES_IDS = new Set([
-  1, 4, 7, 25, 133, 152, 155, 158, 252, 255, 258, 387, 390, 393, 495, 498, 501,
-  650, 653, 656, 722, 725, 728, 810, 813, 816, 906, 909, 912,
+  1, 4, 7, 25, 133, 152, 155, 158, 252, 255, 258, 387, 390, 393, 495, 498, 501, 650, 653, 656, 722,
+  725, 728, 810, 813, 816, 906, 909, 912,
 ]);
 
 export const BABY_SPECIES_IDS = new Set([
-  172, 173, 174, 175, 236, 238, 239, 240, 298, 360, 406, 433, 438, 439, 440,
-  446, 447, 458, 848,
+  172, 173, 174, 175, 236, 238, 239, 240, 298, 360, 406, 433, 438, 439, 440, 446, 447, 458, 848,
 ]);
 
 export const FOSSIL_SPECIES_IDS = new Set([
-  138, 139, 140, 141, 142, 345, 346, 347, 348, 408, 409, 410, 411, 564, 565,
-  566, 567, 696, 697, 698, 699, 880, 881, 882, 883,
+  138, 139, 140, 141, 142, 345, 346, 347, 348, 408, 409, 410, 411, 564, 565, 566, 567, 696, 697,
+  698, 699, 880, 881, 882, 883,
 ]);
 
 export const GIFT_SPECIES_IDS = new Set([
-  21, 25, 37, 52, 53, 58, 59, 63, 106, 107, 129, 131, 133, 137, 138, 139, 140,
-  141, 142, 147, 148, 151, 172, 173, 174, 175, 213, 236, 238, 239, 240, 319,
-  323, 345, 346, 347, 348, 351, 360, 374, 380, 381, 385, 408, 409, 410, 411,
-  440, 443, 447, 448, 489, 490, 491, 492, 511, 513, 515, 564, 565, 566, 567,
-  570, 585, 612, 636, 696, 697, 698, 699, 772, 789, 801, 803, 848, 880, 881,
-  882, 883, 891,
+  21, 25, 37, 52, 53, 58, 59, 63, 106, 107, 129, 131, 133, 137, 138, 139, 140, 141, 142, 147, 148,
+  151, 172, 173, 174, 175, 213, 236, 238, 239, 240, 319, 323, 345, 346, 347, 348, 351, 360, 374,
+  380, 381, 385, 408, 409, 410, 411, 440, 443, 447, 448, 489, 490, 491, 492, 511, 513, 515, 564,
+  565, 566, 567, 570, 585, 612, 636, 696, 697, 698, 699, 772, 789, 801, 803, 848, 880, 881, 882,
+  883, 891,
 ]);
 
 export const LEGENDARY_SPECIES_IDS = new Set([
-  144, 145, 146, 150, 243, 244, 245, 249, 250, 377, 378, 379, 380, 381, 382,
-  383, 384, 480, 481, 482, 483, 484, 485, 486, 487, 488, 638, 639, 640, 641,
-  642, 643, 644, 645, 646, 716, 717, 718, 772, 773, 785, 786, 787, 788, 789,
-  790, 791, 792, 800, 888, 889, 890, 891, 892, 894, 895, 896, 897, 898, 905,
-  1001, 1002, 1003, 1004, 1007, 1008, 1014, 1015, 1016, 1017, 1024,
+  144, 145, 146, 150, 243, 244, 245, 249, 250, 377, 378, 379, 380, 381, 382, 383, 384, 480, 481,
+  482, 483, 484, 485, 486, 487, 488, 638, 639, 640, 641, 642, 643, 644, 645, 646, 716, 717, 718,
+  772, 773, 785, 786, 787, 788, 789, 790, 791, 792, 800, 888, 889, 890, 891, 892, 894, 895, 896,
+  897, 898, 905, 1001, 1002, 1003, 1004, 1007, 1008, 1014, 1015, 1016, 1017, 1024,
 ]);
 
 export const MYTHICAL_SPECIES_IDS = new Set([
-  151, 251, 385, 386, 489, 490, 491, 492, 493, 494, 647, 648, 649, 719, 720,
-  721, 801, 802, 807, 808, 809, 893, 1025,
+  151, 251, 385, 386, 489, 490, 491, 492, 493, 494, 647, 648, 649, 719, 720, 721, 801, 802, 807,
+  808, 809, 893, 1025,
 ]);
 
 export const ULTRA_BEAST_SPECIES_IDS = new Set([
@@ -1291,8 +1268,8 @@ export const ULTRA_BEAST_SPECIES_IDS = new Set([
 ]);
 
 export const PARADOX_SPECIES_IDS = new Set([
-  984, 985, 986, 987, 988, 989, 990, 991, 992, 993, 994, 995, 1005, 1006, 1009,
-  1010, 1020, 1021, 1022, 1023,
+  984, 985, 986, 987, 988, 989, 990, 991, 992, 993, 994, 995, 1005, 1006, 1009, 1010, 1020, 1021,
+  1022, 1023,
 ]);
 
 /**
@@ -1321,8 +1298,7 @@ export function getSpeciesGeneration(speciesId) {
  * @returns {string[]} Array of type names.
  */
 export function getEraAvailableTypes(generationNumber) {
-  if (!generationNumber || generationNumber === "home")
-    return ALL_POKEMON_TYPES;
+  if (!generationNumber || generationNumber === "home") return ALL_POKEMON_TYPES;
   const gen = Number(generationNumber);
   if (gen === 1) return GEN1_TYPES;
   if (gen >= 2 && gen <= 5) return GEN2_5_TYPES;

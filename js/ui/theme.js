@@ -40,9 +40,7 @@ function resolveTheme(mode) {
  * @param {boolean | string | null | undefined} [value=loadSettings().reducedMotion] - Motion setting ('system', true/'true', false/'false', or undefined).
  * @returns {boolean} True if reduced motion is enabled, false otherwise.
  */
-export function resolveReducedMotionPreference(
-  value = loadSettings().reducedMotion,
-) {
+export function resolveReducedMotionPreference(value = loadSettings().reducedMotion) {
   if (value === true || value === "true") return true;
   if (value === false || value === "false") return false;
   return !!(REDUCED_MOTION_MQL && REDUCED_MOTION_MQL.matches);

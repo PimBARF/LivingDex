@@ -33,10 +33,7 @@ export async function requestWakeLock() {
     return false;
   }
 
-  if (
-    typeof document !== "undefined" &&
-    document.visibilityState !== "visible"
-  ) {
+  if (typeof document !== "undefined" && document.visibilityState !== "visible") {
     return false;
   }
 

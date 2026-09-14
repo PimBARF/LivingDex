@@ -80,10 +80,7 @@ export async function initPwa() {
       if (!installingWorker) return;
 
       installingWorker.addEventListener("statechange", () => {
-        if (
-          installingWorker.state === "installed" &&
-          navigator.serviceWorker.controller
-        ) {
+        if (installingWorker.state === "installed" && navigator.serviceWorker.controller) {
           showUpdateBanner(installingWorker);
         }
       });
@@ -142,8 +139,7 @@ export async function checkForUpdates() {
   }
 
   try {
-    const reg =
-      swRegistration || (await navigator.serviceWorker.getRegistration());
+    const reg = swRegistration || (await navigator.serviceWorker.getRegistration());
     if (!reg) {
       return {
         status: "unsupported",
@@ -175,16 +171,12 @@ export async function checkForUpdates() {
       return new Promise((resolve) => {
         const worker = reg.installing;
         const onStateChange = () => {
-          if (
-            worker.state === "installed" &&
-            navigator.serviceWorker.controller
-          ) {
+          if (worker.state === "installed" && navigator.serviceWorker.controller) {
             worker.removeEventListener("statechange", onStateChange);
             showUpdateBanner(worker);
             resolve({
               status: "update-available",
-              message:
-                "A new update is available! Click 'Update now' to apply.",
+              message: "A new update is available! Click 'Update now' to apply.",
             });
           } else if (worker.state === "redundant") {
             worker.removeEventListener("statechange", onStateChange);
@@ -204,8 +196,7 @@ export async function checkForUpdates() {
             showUpdateBanner(reg.waiting);
             resolve({
               status: "update-available",
-              message:
-                "A new update is available! Click 'Update now' to apply.",
+              message: "A new update is available! Click 'Update now' to apply.",
             });
           } else {
             resolve({

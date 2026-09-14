@@ -139,9 +139,7 @@ export async function getGameEvolutionData(gameId) {
  */
 export async function getEvolutionData(chainId, gameId = null) {
   if (!chainId) return null;
-  const allEvolutions = gameId
-    ? await loadEvolutions(gameId)
-    : await getAllEvolutionData();
+  const allEvolutions = gameId ? await loadEvolutions(gameId) : await getAllEvolutionData();
   return allEvolutions[Number(chainId)] || null;
 }
 
@@ -218,9 +216,7 @@ export function getVersionEncounters(encounters, speciesId, version) {
   if (!sp) return null;
   if (sp[version]) return sp[version];
   if (sp["all"]) return sp["all"];
-  const match = Object.entries(sp).find(([key]) =>
-    key.split("/").includes(version),
-  );
+  const match = Object.entries(sp).find(([key]) => key.split("/").includes(version));
   return match ? match[1] : null;
 }
 
@@ -285,10 +281,7 @@ export async function getNamesData(lang = "en") {
       }
       namesDataCache[lang] = await res.json();
     } catch (err) {
-      console.warn(
-        `Failed to load localized names for language '${lang}':`,
-        err,
-      );
+      console.warn(`Failed to load localized names for language '${lang}':`, err);
       namesDataCache[lang] = {};
     }
   }
@@ -304,9 +297,7 @@ export async function getNamesData(lang = "en") {
 export async function buildActiveDexSections() {
   const segmentConfig = loadSegmentConfig();
   const enabled = segmentConfig.enabled;
-  const preferredOrder = Array.isArray(segmentConfig.order)
-    ? segmentConfig.order
-    : [];
+  const preferredOrder = Array.isArray(segmentConfig.order) ? segmentConfig.order : [];
 
   const [gameData, speciesData, evolutionsData] = await Promise.all([
     getGameDexData(ACTIVE_GAME_ID),
@@ -355,10 +346,7 @@ export async function buildActiveDexSections() {
           title: seg.title,
           kind: seg.type,
           entries: seg.entries || [],
-          startIndex:
-            seg.startIndex ||
-            seg.startEntry ||
-            (seg.entries?.[0]?.dexNumber ?? 1),
+          startIndex: seg.startIndex || seg.startEntry || (seg.entries?.[0]?.dexNumber ?? 1),
         });
       } catch (err) {
         warnings.push({
@@ -397,8 +385,7 @@ export async function loadSpeciesNames(speciesOrder) {
 
   try {
     const allSpecies = await getAllSpeciesData();
-    const localizedNames =
-      language !== "en" ? await getNamesData(language) : null;
+    const localizedNames = language !== "en" ? await getNamesData(language) : null;
 
     // Map translated names to the global cache
     for (const [idStr, data] of Object.entries(allSpecies)) {
@@ -461,13 +448,10 @@ function prettifyVersionName(name) {
 function joinVersionNames(versions) {
   if (!versions || !versions.length) return "";
 
-  const allExpansion =
-    versions.length > 1 && versions.every((v) => v.endsWith("-expansion-pass"));
+  const allExpansion = versions.length > 1 && versions.every((v) => v.endsWith("-expansion-pass"));
 
   if (allExpansion) {
-    const baseNames = versions.map((v) =>
-      prettifyVersionName(v.replace(/-expansion-pass$/, "")),
-    );
+    const baseNames = versions.map((v) => prettifyVersionName(v.replace(/-expansion-pass$/, "")));
     if (baseNames.length === 2) {
       return `${baseNames[0]} / ${baseNames[1]} Expansion Pass`;
     }
@@ -503,11 +487,7 @@ function formatTradeSourceList(versions) {
  * @returns {string} Resolved display name.
  */
 function resolveSpeciesDisplayName(speciesId, fallbackName = "") {
-  return (
-    window.__livingDexNames?.[speciesId] ||
-    fallbackName ||
-    `Species #${speciesId}`
-  );
+  return window.__livingDexNames?.[speciesId] || fallbackName || `Species #${speciesId}`;
 }
 
 /**
@@ -529,9 +509,7 @@ function resolveMemberSpriteId(
 ) {
   if (targetSpeciesId === activeSpeciesId) {
     const activeSpecies = allSpecies[activeSpeciesId];
-    const activeForm = activeSpecies?.forms?.find(
-      (f) => f.formId === activeFormId,
-    );
+    const activeForm = activeSpecies?.forms?.find((f) => f.formId === activeFormId);
     return activeForm?.spriteId || activeFormId || targetSpeciesId;
   }
 
@@ -553,11 +531,7 @@ function resolveMemberSpriteId(
   return targetSpeciesId;
 }
 
-export function getSpeciesTypes(
-  speciesId,
-  formId = null,
-  generationNumber = null,
-) {
+export function getSpeciesTypes(speciesId, formId = null, generationNumber = null) {
   if (!speciesDataCache) return [];
   const species = speciesDataCache[Number(speciesId)];
   if (!species) return [];
@@ -595,14 +569,8 @@ function resolveTypes(speciesData, formId, generationNumber) {
 
 const REGIONAL_SPECIES_MAP = {
   alola: [19, 26, 27, 28, 37, 38, 50, 51, 52, 53, 74, 75, 76, 88, 89, 103, 105],
-  galar: [
-    52, 77, 78, 79, 80, 83, 110, 122, 144, 145, 146, 199, 222, 263, 264, 554,
-    555, 562, 618,
-  ],
-  hisui: [
-    58, 59, 100, 101, 157, 211, 215, 503, 549, 570, 571, 628, 705, 706, 713,
-    724,
-  ],
+  galar: [52, 77, 78, 79, 80, 83, 110, 122, 144, 145, 146, 199, 222, 263, 264, 554, 555, 562, 618],
+  hisui: [58, 59, 100, 101, 157, 211, 215, 503, 549, 570, 571, 628, 705, 706, 713, 724],
   paldea: [128, 194],
 };
 
@@ -628,8 +596,7 @@ function resolveEvolutionFlowchart(
 ) {
   const activeSpecies = allSpecies[speciesId];
   const activeForm =
-    activeSpecies?.forms?.find((f) => f.formId === formId) ||
-    activeSpecies?.forms?.[0];
+    activeSpecies?.forms?.find((f) => f.formId === formId) || activeSpecies?.forms?.[0];
   const resolvedRootSpriteId = activeForm?.spriteId || formId || speciesId;
 
   if (!evoData || !evoData.paths || !evoData.paths.length) {
@@ -646,8 +613,7 @@ function resolveEvolutionFlowchart(
   }
   const activeRegion =
     activeForm?.region ||
-    (activeForm?.formKey &&
-    ["alola", "galar", "hisui", "paldea"].includes(activeForm.formKey)
+    (activeForm?.formKey && ["alola", "galar", "hisui", "paldea"].includes(activeForm.formKey)
       ? activeForm.formKey
       : null);
 
@@ -669,12 +635,7 @@ function resolveEvolutionFlowchart(
     const rootIndex = fullLine.findIndex((member) => {
       const gen = nodeGenMap.get(member.speciesId) || 1;
       if (generationNumber && gen > generationNumber) return false;
-      if (
-        isLgpe &&
-        member.speciesId > 151 &&
-        member.speciesId !== 808 &&
-        member.speciesId !== 809
-      )
+      if (isLgpe && member.speciesId > 151 && member.speciesId !== 808 && member.speciesId !== 809)
         return false;
       return true;
     });
@@ -718,26 +679,16 @@ function resolveEvolutionFlowchart(
 
       // 3. Skip standard steps when inspecting regional forms that have their own exclusive evolution paths
       if (!step.region && activeRegion) {
-        if (
-          activeRegion === "alola" &&
-          [19, 27, 37, 52].includes(newRootSpecies.speciesId)
-        )
+        if (activeRegion === "alola" && [19, 27, 37, 52].includes(newRootSpecies.speciesId))
           continue;
         if (
           activeRegion === "galar" &&
           [52, 79, 122, 222, 264, 554, 562].includes(newRootSpecies.speciesId)
         )
           continue;
-        if (
-          activeRegion === "hisui" &&
-          [100, 211, 215].includes(newRootSpecies.speciesId)
-        )
+        if (activeRegion === "hisui" && [100, 211, 215].includes(newRootSpecies.speciesId))
           continue;
-        if (
-          activeRegion === "paldea" &&
-          [194].includes(newRootSpecies.speciesId)
-        )
-          continue;
+        if (activeRegion === "paldea" && [194].includes(newRootSpecies.speciesId)) continue;
       }
 
       validSteps.push({
@@ -751,15 +702,11 @@ function resolveEvolutionFlowchart(
         ),
         toName: resolveSpeciesDisplayName(step.toSpeciesId, step.toName),
         description: step.description,
-        reverseBreeding:
-          generationNumber === 1 ? null : step.reverseBreeding || null,
+        reverseBreeding: generationNumber === 1 ? null : step.reverseBreeding || null,
       });
     }
 
-    const pathSpecies = [
-      newRootSpecies.speciesId,
-      ...validSteps.map((s) => s.toSpeciesId),
-    ];
+    const pathSpecies = [newRootSpecies.speciesId, ...validSteps.map((s) => s.toSpeciesId)];
     if (!pathSpecies.includes(speciesId)) continue;
 
     filteredPaths.push({
@@ -772,10 +719,7 @@ function resolveEvolutionFlowchart(
           formId,
           activeRegion,
         ),
-        name: resolveSpeciesDisplayName(
-          newRootSpecies.speciesId,
-          newRootSpecies.name,
-        ),
+        name: resolveSpeciesDisplayName(newRootSpecies.speciesId, newRootSpecies.name),
       },
       steps: validSteps,
     });
@@ -844,9 +788,7 @@ export function detectExclusiveEncounterMethod(locations) {
   if (!locations || !locations.length) return null;
   const getLocStr = (l) => (typeof l === "string" ? l : l?.location || "");
 
-  const isAllStarters = locations.every((loc) =>
-    /\(Starter\)/i.test(getLocStr(loc)),
-  );
+  const isAllStarters = locations.every((loc) => /\(Starter\)/i.test(getLocStr(loc)));
   if (isAllStarters) {
     return "Encountered as a Starter Pokémon";
   }
@@ -882,15 +824,9 @@ export function detectExclusiveEncounterMethod(locations) {
     );
   });
   if (isAllFishing) {
-    const isAllSuperRod = wildLocs.every((loc) =>
-      /super rod/i.test(getLocStr(loc)),
-    );
-    const isAllOldRod = wildLocs.every((loc) =>
-      /old rod/i.test(getLocStr(loc)),
-    );
-    const isAllGoodRod = wildLocs.every((loc) =>
-      /good rod/i.test(getLocStr(loc)),
-    );
+    const isAllSuperRod = wildLocs.every((loc) => /super rod/i.test(getLocStr(loc)));
+    const isAllOldRod = wildLocs.every((loc) => /old rod/i.test(getLocStr(loc)));
+    const isAllGoodRod = wildLocs.every((loc) => /good rod/i.test(getLocStr(loc)));
     if (isAllSuperRod) return "Encountered only via fishing (Super Rod)";
     if (isAllOldRod) return "Encountered only via fishing (Old Rod)";
     if (isAllGoodRod) return "Encountered only via fishing (Good Rod)";
@@ -910,17 +846,13 @@ export function detectExclusiveEncounterMethod(locations) {
   }
 
   // 3. Diving / Underwater exclusively
-  const isAllDiving = wildLocs.every((loc) =>
-    /\b(underwater|diving)\b/i.test(getLocStr(loc)),
-  );
+  const isAllDiving = wildLocs.every((loc) => /\b(underwater|diving)\b/i.test(getLocStr(loc)));
   if (isAllDiving) {
     return "Encountered only underwater (Diving)";
   }
 
   // 4. Rock Smash exclusively
-  const isAllRockSmash = wildLocs.every((loc) =>
-    /\b(rock smash)\b/i.test(getLocStr(loc)),
-  );
+  const isAllRockSmash = wildLocs.every((loc) => /\b(rock smash)\b/i.test(getLocStr(loc)));
   if (isAllRockSmash) {
     return "Encountered only by using Rock Smash";
   }
@@ -946,10 +878,7 @@ export function detectExclusiveEncounterMethod(locations) {
     const str = getLocStr(loc);
     if (/\bnight\b/i.test(str)) return true;
     if (typeof loc === "object" && Array.isArray(loc.rates)) {
-      return (
-        loc.rates.length > 0 &&
-        loc.rates.every((r) => /night/i.test(r.condition || ""))
-      );
+      return loc.rates.length > 0 && loc.rates.every((r) => /night/i.test(r.condition || ""));
     }
     return false;
   });
@@ -961,10 +890,7 @@ export function detectExclusiveEncounterMethod(locations) {
     const str = getLocStr(loc);
     if (/\bmorning\b/i.test(str)) return true;
     if (typeof loc === "object" && Array.isArray(loc.rates)) {
-      return (
-        loc.rates.length > 0 &&
-        loc.rates.every((r) => /morning/i.test(r.condition || ""))
-      );
+      return loc.rates.length > 0 && loc.rates.every((r) => /morning/i.test(r.condition || ""));
     }
     return false;
   });
@@ -976,10 +902,7 @@ export function detectExclusiveEncounterMethod(locations) {
     const str = getLocStr(loc);
     if (/\bday\b/i.test(str)) return true;
     if (typeof loc === "object" && Array.isArray(loc.rates)) {
-      return (
-        loc.rates.length > 0 &&
-        loc.rates.every((r) => /day/i.test(r.condition || ""))
-      );
+      return loc.rates.length > 0 && loc.rates.every((r) => /day/i.test(r.condition || ""));
     }
     return false;
   });
@@ -1033,23 +956,14 @@ export function detectExclusiveEncounterMethod(locations) {
  * @param {string} preEvolutionName - Pre-evolution name if applicable.
  * @returns {Array<Object>} Formatted encounter groups for UI.
  */
-function resolveEncounterGroups(
-  gameDexData,
-  gameEncountersData,
-  speciesId,
-  preEvolutionName,
-) {
+function resolveEncounterGroups(gameDexData, gameEncountersData, speciesId, preEvolutionName) {
   if (!gameDexData || !gameDexData.versions) return [];
 
   const allVersions = gameDexData.versions;
   const rawEncounters = gameEncountersData?.encounters || {};
 
-  const baseVersions = allVersions.filter(
-    (v) => !v.endsWith("-expansion-pass"),
-  );
-  const expansionVersions = allVersions.filter((v) =>
-    v.endsWith("-expansion-pass"),
-  );
+  const baseVersions = allVersions.filter((v) => !v.endsWith("-expansion-pass"));
+  const expansionVersions = allVersions.filter((v) => v.endsWith("-expansion-pass"));
 
   /**
    * Clusters a subset of versions by identical location entries.
@@ -1096,17 +1010,12 @@ function resolveEncounterGroups(
     }
 
     // All versions in this set share identical encounters
-    if (
-      populatedGroups.length === 1 &&
-      populatedGroups[0].versions.length === versions.length
-    ) {
+    if (populatedGroups.length === 1 && populatedGroups[0].versions.length === versions.length) {
       return [
         {
           versionHeader: joinVersionNames(versions),
           locations: populatedGroups[0].entries,
-          methodNote: detectExclusiveEncounterMethod(
-            populatedGroups[0].entries,
-          ),
+          methodNote: detectExclusiveEncounterMethod(populatedGroups[0].entries),
         },
       ];
     }
@@ -1124,9 +1033,7 @@ function resolveEncounterGroups(
           };
         }
 
-        const tradeSources = populatedVersions.filter(
-          (v) => !groupData.versions.includes(v),
-        );
+        const tradeSources = populatedVersions.filter((v) => !groupData.versions.includes(v));
         return {
           versionHeader: header,
           locations: [],
@@ -1143,9 +1050,7 @@ function resolveEncounterGroups(
     if (preEvolutionName) {
       return [
         {
-          versionHeader: joinVersionNames(
-            baseVersions.length ? baseVersions : allVersions,
-          ),
+          versionHeader: joinVersionNames(baseVersions.length ? baseVersions : allVersions),
           locations: [],
           evolveNote: `Evolve ${preEvolutionName}`,
         },
@@ -1354,11 +1259,7 @@ export function formatVersionName(v) {
  * @param {string} [targetVersion=""] - Optional specific game version (e.g. 'yellow' or 'all').
  * @returns {Promise<Array<Object>>} List of missing Pokémon records with acquisition details.
  */
-export async function getMissingPokemonData(
-  gameId,
-  caughtSlots = {},
-  targetVersion = "",
-) {
+export async function getMissingPokemonData(gameId, caughtSlots = {}, targetVersion = "") {
   const allSpecies = await getAllSpeciesData();
   const gameDexData = await getGameDexData(gameId);
   const evoDataMap = await loadEvolutions(gameId);
@@ -1415,21 +1316,16 @@ export async function getMissingPokemonData(
   const missingEntries = allSlots.filter((slot) => !slot.isCaught);
   const isHome = gameId === "home";
   const homeGamesMap = isHome ? await getHomeSpeciesGamesMap() : null;
-  const effectiveVersion =
-    targetVersion || getSelectedGameVersion(gameId) || "all";
+  const effectiveVersion = targetVersion || getSelectedGameVersion(gameId) || "all";
   const results = [];
 
   for (const slot of missingEntries) {
     const species = allSpecies[slot.speciesId];
     if (!species) continue;
 
-    const form =
-      species.forms?.find((f) => f.formId === slot.formId) ||
-      species.forms?.[0];
+    const form = species.forms?.find((f) => f.formId === slot.formId) || species.forms?.[0];
     const spriteId =
-      slot.gender === "female"
-        ? slot.speciesId
-        : form?.spriteId || slot.formId || slot.speciesId;
+      slot.gender === "female" ? slot.speciesId : form?.spriteId || slot.formId || slot.speciesId;
     const displayName = resolveSpeciesDisplayName(
       slot.speciesId,
       species.names?.[language] || species.names?.en || species.name,
@@ -1446,18 +1342,12 @@ export async function getMissingPokemonData(
     } else if (gameDexData?.versions) {
       const rawEnc = encountersData?.encounters || {};
       if (effectiveVersion && effectiveVersion !== "all") {
-        const vEnc = getVersionEncounters(
-          rawEnc,
-          slot.speciesId,
-          effectiveVersion,
-        );
+        const vEnc = getVersionEncounters(rawEnc, slot.speciesId, effectiveVersion);
         if (vEnc?.locations?.length) {
           locations = [...vEnc.locations];
         } else {
           // Check sibling versions for availability
-          const siblings = gameDexData.versions.filter(
-            (v) => v !== effectiveVersion,
-          );
+          const siblings = gameDexData.versions.filter((v) => v !== effectiveVersion);
           for (const sib of siblings) {
             const sEnc = getVersionEncounters(rawEnc, slot.speciesId, sib);
             if (sEnc?.locations?.length) {
@@ -1486,9 +1376,7 @@ export async function getMissingPokemonData(
     }
 
     // Evolution path analysis
-    const chain = species.evolutionChainId
-      ? evoDataMap[species.evolutionChainId]
-      : null;
+    const chain = species.evolutionChainId ? evoDataMap[species.evolutionChainId] : null;
     let evolveDetails = null;
     let preEvolutionSpeciesId = null;
     let preEvolutionName = "";
@@ -1504,9 +1392,7 @@ export async function getMissingPokemonData(
     let methodCategory = locations.length > 0 ? "wild" : "transfer";
 
     if (chain && Array.isArray(chain.transitions)) {
-      const incomingTransition = chain.transitions.find(
-        (t) => t.toSpeciesId === slot.speciesId,
-      );
+      const incomingTransition = chain.transitions.find((t) => t.toSpeciesId === slot.speciesId);
       if (incomingTransition) {
         preEvolutionSpeciesId = incomingTransition.fromSpeciesId;
         const preSpec = allSpecies[preEvolutionSpeciesId];
@@ -1518,18 +1404,13 @@ export async function getMissingPokemonData(
         const preInventoryCount = specimenInventory[preEvolutionSpeciesId];
         const preCaughtInDex = caughtSpeciesIds.has(preEvolutionSpeciesId);
         preSpecimenCount =
-          typeof preInventoryCount === "number"
-            ? preInventoryCount
-            : preCaughtInDex
-              ? 1
-              : 0;
+          typeof preInventoryCount === "number" ? preInventoryCount : preCaughtInDex ? 1 : 0;
 
         hasSurplusPreEvo = preSpecimenCount >= 2;
         hasExactOnePreEvo = preSpecimenCount === 1;
         hasPreEvo = preSpecimenCount > 0;
 
-        requiredItem =
-          incomingTransition.item || incomingTransition.heldItem || null;
+        requiredItem = incomingTransition.item || incomingTransition.heldItem || null;
         requiredCondition = incomingTransition.description || "";
 
         hasItem = requiredItem ? (itemInventory[requiredItem] || 0) > 0 : true;
@@ -1565,14 +1446,11 @@ export async function getMissingPokemonData(
     }
 
     const getLocStr = (l) => (typeof l === "string" ? l : l?.location || "");
-    const hasStarterTag = locations.some((l) =>
-      /\bStarter\b/i.test(getLocStr(l)),
-    );
+    const hasStarterTag = locations.some((l) => /\bStarter\b/i.test(getLocStr(l)));
     const hasGiftTag = locations.some(
       (l) =>
-        /\((?:Gift|Fossil|Gift Egg|Mystery Gift|Gift from [^)]+)\)/i.test(
-          getLocStr(l),
-        ) || /\b(?:Gift|Fossil|Gift Egg|Mystery Gift)\b/i.test(getLocStr(l)),
+        /\((?:Gift|Fossil|Gift Egg|Mystery Gift|Gift from [^)]+)\)/i.test(getLocStr(l)) ||
+        /\b(?:Gift|Fossil|Gift Egg|Mystery Gift)\b/i.test(getLocStr(l)),
     );
     const hasWildLoc = locations.some((l) => {
       const str = getLocStr(l);
@@ -1590,16 +1468,12 @@ export async function getMissingPokemonData(
     if (!evolveDetails) {
       if (
         hasStarterTag ||
-        (!hasWildLoc &&
-          BASE_STARTER_SPECIES_IDS.has(slot.speciesId) &&
-          locations.length > 0)
+        (!hasWildLoc && BASE_STARTER_SPECIES_IDS.has(slot.speciesId) && locations.length > 0)
       ) {
         methodCategory = "starter";
       } else if (
         hasGiftTag ||
-        (!hasWildLoc &&
-          GIFT_SPECIES_IDS.has(slot.speciesId) &&
-          locations.length > 0)
+        (!hasWildLoc && GIFT_SPECIES_IDS.has(slot.speciesId) && locations.length > 0)
       ) {
         methodCategory = "gift";
       }
@@ -1703,10 +1577,7 @@ export async function getEvolutionFamilyChecklist(gameId, caughtSlots = {}) {
     (section.entries || []).forEach((entry) => {
       const key = getSpecimenKey(entry);
       if (!regionalDexMap.has(key)) {
-        regionalDexMap.set(
-          key,
-          Number(entry.dexNumber) || Number(entry.speciesId) || 0,
-        );
+        regionalDexMap.set(key, Number(entry.dexNumber) || Number(entry.speciesId) || 0);
       }
     });
   });
@@ -1734,9 +1605,7 @@ export async function getEvolutionFamilyChecklist(gameId, caughtSlots = {}) {
       const isCaught = specimenKey
         ? Boolean(caughtSlotsMap[specimenKey])
         : Boolean(caughtSlotsMap[runningSlot]);
-      const form =
-        species.forms?.find((f) => f.formId === entry.formId) ||
-        species.forms?.[0];
+      const form = species.forms?.find((f) => f.formId === entry.formId) || species.forms?.[0];
       const spriteId =
         entry.gender === "female"
           ? entry.speciesId
@@ -1746,8 +1615,7 @@ export async function getEvolutionFamilyChecklist(gameId, caughtSlots = {}) {
         species.names?.[language] || species.names?.en || species.name,
       );
       const types = resolveTypes(species, entry.formId, generationNumber);
-      const regionalDexNumber =
-        regionalDexMap.get(specimenKey) || entry.speciesId;
+      const regionalDexNumber = regionalDexMap.get(specimenKey) || entry.speciesId;
 
       chainSlotsMap.get(chainId).push({
         slotNumber: runningSlot,
@@ -1804,28 +1672,19 @@ export async function getEvolutionFamilyChecklist(gameId, caughtSlots = {}) {
       let evolveItem = null;
 
       if (chain && Array.isArray(chain.transitions)) {
-        const transition = chain.transitions.find(
-          (t) => t.toSpeciesId === slot.speciesId,
-        );
+        const transition = chain.transitions.find((t) => t.toSpeciesId === slot.speciesId);
         if (transition) {
           evolveText = transition.description || "";
           evolveItem = transition.item || transition.heldItem || null;
           if (!slot.isCaught && evolveItem) {
-            requiredItemsMap.set(
-              evolveItem,
-              (requiredItemsMap.get(evolveItem) || 0) + 1,
-            );
+            requiredItemsMap.set(evolveItem, (requiredItemsMap.get(evolveItem) || 0) + 1);
           }
         }
       }
 
       const explicitCount = specimenInventory[slot.speciesId];
       const specimenCount =
-        typeof explicitCount === "number"
-          ? explicitCount
-          : slot.isCaught
-            ? 1
-            : 0;
+        typeof explicitCount === "number" ? explicitCount : slot.isCaught ? 1 : 0;
       totalSpecimensOwnedInFamily += specimenCount;
 
       return {
@@ -1836,30 +1695,25 @@ export async function getEvolutionFamilyChecklist(gameId, caughtSlots = {}) {
       };
     });
 
-    const requiredItems = Array.from(requiredItemsMap.entries()).map(
-      ([item, count]) => {
-        const ownedCount = itemInventory[item] || 0;
-        const remainingCount = Math.max(0, count - ownedCount);
-        return {
-          itemKey: item,
-          itemName: normalizeItemName(item),
-          count,
-          ownedCount,
-          remainingCount,
-          isComplete: ownedCount >= count,
-        };
-      },
-    );
+    const requiredItems = Array.from(requiredItemsMap.entries()).map(([item, count]) => {
+      const ownedCount = itemInventory[item] || 0;
+      const remainingCount = Math.max(0, count - ownedCount);
+      return {
+        itemKey: item,
+        itemName: normalizeItemName(item),
+        count,
+        ownedCount,
+        remainingCount,
+        isComplete: ownedCount >= count,
+      };
+    });
 
     const baseQuota = Math.max(0, totalCount - totalSpecimensOwnedInFamily);
 
     let rootLocations = [];
     if (encountersData?.encounters?.[rootSpeciesId]) {
-      for (const lObj of Object.values(
-        encountersData.encounters[rootSpeciesId],
-      )) {
-        if (Array.isArray(lObj.locations))
-          rootLocations.push(...lObj.locations);
+      for (const lObj of Object.values(encountersData.encounters[rootSpeciesId])) {
+        if (Array.isArray(lObj.locations)) rootLocations.push(...lObj.locations);
       }
     }
     const rootProg = getEncounterProgressionInfo(
@@ -1875,9 +1729,8 @@ export async function getEvolutionFamilyChecklist(gameId, caughtSlots = {}) {
       chainId,
       rootSpeciesId,
       rootRegionalDexNumber:
-        membersWithEvolutions.find(
-          (member) => member.speciesId === rootSpeciesId,
-        )?.regionalDexNumber ||
+        membersWithEvolutions.find((member) => member.speciesId === rootSpeciesId)
+          ?.regionalDexNumber ||
         membersWithEvolutions[0]?.regionalDexNumber ||
         rootSpeciesId,
       rootName,
@@ -1909,13 +1762,8 @@ export async function getEvolutionFamilyChecklist(gameId, caughtSlots = {}) {
  * @param {Record<number, boolean>} [caughtSlots={}] - Map of caught slot indices.
  * @returns {Promise<Object>} Aggregated shopping list of items, trades, and conditions.
  */
-export async function getEvolutionItemsSummary(
-  gameId,
-  caughtSlots = {},
-  missingPokemon = null,
-) {
-  const missing =
-    missingPokemon || (await getMissingPokemonData(gameId, caughtSlots));
+export async function getEvolutionItemsSummary(gameId, caughtSlots = {}, missingPokemon = null) {
+  const missing = missingPokemon || (await getMissingPokemonData(gameId, caughtSlots));
   const itemInventory = loadItemInventory();
 
   const itemsMap = new Map();
@@ -1982,8 +1830,7 @@ export async function getEvolutionItemsSummary(
 
     if (
       description &&
-      (description.toLowerCase().includes("night") ||
-        description.toLowerCase().includes("day"))
+      (description.toLowerCase().includes("night") || description.toLowerCase().includes("day"))
     ) {
       timeList.push(p);
     }
@@ -1996,10 +1843,7 @@ export async function getEvolutionItemsSummary(
   return {
     items: itemsArray,
     totalItemsCount: itemsArray.reduce((sum, item) => sum + item.count, 0),
-    totalRemainingCount: itemsArray.reduce(
-      (sum, item) => sum + item.remainingCount,
-      0,
-    ),
+    totalRemainingCount: itemsArray.reduce((sum, item) => sum + item.remainingCount, 0),
     tradeList,
     tradeHoldingItemList,
     friendshipList,
@@ -2093,40 +1937,37 @@ export const STARTER_SPECIES_IDS = new Set([
 ]);
 
 export const BASE_STARTER_SPECIES_IDS = new Set([
-  1, 4, 7, 25, 133, 152, 155, 158, 252, 255, 258, 387, 390, 393, 495, 498, 501,
-  650, 653, 656, 722, 725, 728, 810, 813, 816, 906, 909, 912,
+  1, 4, 7, 25, 133, 152, 155, 158, 252, 255, 258, 387, 390, 393, 495, 498, 501, 650, 653, 656, 722,
+  725, 728, 810, 813, 816, 906, 909, 912,
 ]);
 
 export const BABY_SPECIES_IDS = new Set([
-  172, 173, 174, 175, 236, 238, 239, 240, 298, 360, 406, 433, 438, 439, 440,
-  446, 447, 458, 848,
+  172, 173, 174, 175, 236, 238, 239, 240, 298, 360, 406, 433, 438, 439, 440, 446, 447, 458, 848,
 ]);
 
 export const FOSSIL_SPECIES_IDS = new Set([
-  138, 139, 140, 141, 142, 345, 346, 347, 348, 408, 409, 410, 411, 564, 565,
-  566, 567, 696, 697, 698, 699, 880, 881, 882, 883,
+  138, 139, 140, 141, 142, 345, 346, 347, 348, 408, 409, 410, 411, 564, 565, 566, 567, 696, 697,
+  698, 699, 880, 881, 882, 883,
 ]);
 
 export const GIFT_SPECIES_IDS = new Set([
-  21, 25, 37, 52, 53, 58, 59, 63, 106, 107, 129, 131, 133, 137, 138, 139, 140,
-  141, 142, 147, 148, 151, 172, 173, 174, 175, 213, 236, 238, 239, 240, 319,
-  323, 345, 346, 347, 348, 351, 360, 374, 380, 381, 385, 408, 409, 410, 411,
-  440, 443, 447, 448, 489, 490, 491, 492, 511, 513, 515, 564, 565, 566, 567,
-  570, 585, 612, 636, 696, 697, 698, 699, 772, 789, 801, 803, 848, 880, 881,
-  882, 883, 891,
+  21, 25, 37, 52, 53, 58, 59, 63, 106, 107, 129, 131, 133, 137, 138, 139, 140, 141, 142, 147, 148,
+  151, 172, 173, 174, 175, 213, 236, 238, 239, 240, 319, 323, 345, 346, 347, 348, 351, 360, 374,
+  380, 381, 385, 408, 409, 410, 411, 440, 443, 447, 448, 489, 490, 491, 492, 511, 513, 515, 564,
+  565, 566, 567, 570, 585, 612, 636, 696, 697, 698, 699, 772, 789, 801, 803, 848, 880, 881, 882,
+  883, 891,
 ]);
 
 export const LEGENDARY_SPECIES_IDS = new Set([
-  144, 145, 146, 150, 243, 244, 245, 249, 250, 377, 378, 379, 380, 381, 382,
-  383, 384, 480, 481, 482, 483, 484, 485, 486, 487, 488, 638, 639, 640, 641,
-  642, 643, 644, 645, 646, 716, 717, 718, 772, 773, 785, 786, 787, 788, 789,
-  790, 791, 792, 800, 888, 889, 890, 891, 892, 894, 895, 896, 897, 898, 905,
-  1001, 1002, 1003, 1004, 1007, 1008, 1014, 1015, 1016, 1017, 1024,
+  144, 145, 146, 150, 243, 244, 245, 249, 250, 377, 378, 379, 380, 381, 382, 383, 384, 480, 481,
+  482, 483, 484, 485, 486, 487, 488, 638, 639, 640, 641, 642, 643, 644, 645, 646, 716, 717, 718,
+  772, 773, 785, 786, 787, 788, 789, 790, 791, 792, 800, 888, 889, 890, 891, 892, 894, 895, 896,
+  897, 898, 905, 1001, 1002, 1003, 1004, 1007, 1008, 1014, 1015, 1016, 1017, 1024,
 ]);
 
 export const MYTHICAL_SPECIES_IDS = new Set([
-  151, 251, 385, 386, 489, 490, 491, 492, 493, 494, 647, 648, 649, 719, 720,
-  721, 801, 802, 807, 808, 809, 893, 1025,
+  151, 251, 385, 386, 489, 490, 491, 492, 493, 494, 647, 648, 649, 719, 720, 721, 801, 802, 807,
+  808, 809, 893, 1025,
 ]);
 
 export const ULTRA_BEAST_SPECIES_IDS = new Set([
@@ -2134,8 +1975,8 @@ export const ULTRA_BEAST_SPECIES_IDS = new Set([
 ]);
 
 export const PARADOX_SPECIES_IDS = new Set([
-  984, 985, 986, 987, 988, 989, 990, 991, 992, 993, 994, 995, 1005, 1006, 1009,
-  1010, 1020, 1021, 1022, 1023,
+  984, 985, 986, 987, 988, 989, 990, 991, 992, 993, 994, 995, 1005, 1006, 1009, 1010, 1020, 1021,
+  1022, 1023,
 ]);
 
 /**
@@ -2164,8 +2005,7 @@ export function getSpeciesGeneration(speciesId) {
  * @returns {string[]} Array of type names.
  */
 export function getEraAvailableTypes(generationNumber) {
-  if (!generationNumber || generationNumber === "home")
-    return ALL_POKEMON_TYPES;
+  if (!generationNumber || generationNumber === "home") return ALL_POKEMON_TYPES;
   const gen = Number(generationNumber);
   if (gen === 1) return GEN1_TYPES;
   if (gen >= 2 && gen <= 5) return GEN2_5_TYPES;
@@ -2242,11 +2082,7 @@ export async function getGameFilterCapabilities(gameId, dexData) {
           dexSpeciesIds.add(Number(entry.speciesId));
           availableGens.add(getSpeciesGeneration(entry.speciesId));
         }
-        if (
-          entry.formId &&
-          entry.formId > 0 &&
-          entry.formId !== entry.speciesId
-        ) {
+        if (entry.formId && entry.formId > 0 && entry.formId !== entry.speciesId) {
           hasSpecial = true;
         }
       }
@@ -2276,30 +2112,15 @@ export async function getGameFilterCapabilities(gameId, dexData) {
     });
   }
 
-  const hasStarters = Array.from(dexSpeciesIds).some((id) =>
-    STARTER_SPECIES_IDS.has(id),
-  );
+  const hasStarters = Array.from(dexSpeciesIds).some((id) => STARTER_SPECIES_IDS.has(id));
   const hasBabies =
-    genNumber > 1 &&
-    Array.from(dexSpeciesIds).some((id) => BABY_SPECIES_IDS.has(id));
-  const hasFossils = Array.from(dexSpeciesIds).some((id) =>
-    FOSSIL_SPECIES_IDS.has(id),
-  );
-  const hasGifts = Array.from(dexSpeciesIds).some((id) =>
-    GIFT_SPECIES_IDS.has(id),
-  );
-  const hasLegendaries = Array.from(dexSpeciesIds).some((id) =>
-    LEGENDARY_SPECIES_IDS.has(id),
-  );
-  const hasMythicals = Array.from(dexSpeciesIds).some((id) =>
-    MYTHICAL_SPECIES_IDS.has(id),
-  );
-  const hasUltraBeasts = Array.from(dexSpeciesIds).some((id) =>
-    ULTRA_BEAST_SPECIES_IDS.has(id),
-  );
-  const hasParadox = Array.from(dexSpeciesIds).some((id) =>
-    PARADOX_SPECIES_IDS.has(id),
-  );
+    genNumber > 1 && Array.from(dexSpeciesIds).some((id) => BABY_SPECIES_IDS.has(id));
+  const hasFossils = Array.from(dexSpeciesIds).some((id) => FOSSIL_SPECIES_IDS.has(id));
+  const hasGifts = Array.from(dexSpeciesIds).some((id) => GIFT_SPECIES_IDS.has(id));
+  const hasLegendaries = Array.from(dexSpeciesIds).some((id) => LEGENDARY_SPECIES_IDS.has(id));
+  const hasMythicals = Array.from(dexSpeciesIds).some((id) => MYTHICAL_SPECIES_IDS.has(id));
+  const hasUltraBeasts = Array.from(dexSpeciesIds).some((id) => ULTRA_BEAST_SPECIES_IDS.has(id));
+  const hasParadox = Array.from(dexSpeciesIds).some((id) => PARADOX_SPECIES_IDS.has(id));
 
   return {
     gameId,

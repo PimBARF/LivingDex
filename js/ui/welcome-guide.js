@@ -9,8 +9,7 @@ export const WELCOME_SLIDES = [
     id: "welcome-basics",
     badge: "Step 1 of 5",
     title: "Welcome to LivingDex!",
-    tagline:
-      "A fast, privacy-first tracker for your Living Pokédex collection.",
+    tagline: "A fast, privacy-first tracker for your Living Pokédex collection.",
     icon: "🌟",
     contentHtml: `
       <div class="welcome-feature-grid">
@@ -83,8 +82,7 @@ export const WELCOME_SLIDES = [
     id: "missing-guide",
     badge: "Step 3 of 5",
     title: "Field Guide & Quota Tracker",
-    tagline:
-      "Never wonder where to find an uncaught Pokémon or how many base forms to breed.",
+    tagline: "Never wonder where to find an uncaught Pokémon or how many base forms to breed.",
     icon: "🎯",
     contentHtml: `
       <div class="welcome-feature-grid">
@@ -117,8 +115,7 @@ export const WELCOME_SLIDES = [
     id: "segments-boxes",
     badge: "Step 4 of 5",
     title: "Dex Options & Box Layout Presets",
-    tagline:
-      "Choose standard sorting presets or tailor your own box structure.",
+    tagline: "Choose standard sorting presets or tailor your own box structure.",
     icon: "⚙️",
     contentHtml: `
       <div class="welcome-feature-grid">
@@ -300,10 +297,7 @@ export function completeWelcomeGuide() {
  * @param {number} [startSlide=0] - Initial slide index to display.
  */
 export function openWelcomeGuideModal(startSlide = 0) {
-  activeSlideIndex = Math.max(
-    0,
-    Math.min(startSlide, WELCOME_SLIDES.length - 1),
-  );
+  activeSlideIndex = Math.max(0, Math.min(startSlide, WELCOME_SLIDES.length - 1));
   renderActiveSlide();
   modalController?.openModal();
 }

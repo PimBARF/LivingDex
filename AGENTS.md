@@ -58,3 +58,11 @@ For every new feature, bug fix, refactor, or dataset update in LivingDex:
   - When modifying UI modules, sorting algorithms, or encounter resolvers (`pokemon-info.js`, `missing-guide.js`, `dom-render.js`), run Playwright headless checks against sampled Pokémon across multiple generations to verify modal opening, data clustering, and event binding.
 - **Chrome DevTools MCP Inspection**:
   - Use Chrome DevTools MCP for live UI inspections, responsive styling checks (mobile viewport testing), focus-trap audits on dialogs, and console error monitoring.
+
+---
+
+## 5. Code Formatting & Linting
+
+- **Prettier & ESLint Conformity**:
+  - Always run `npm run format` (via Scraper toolchain) before committing frontend JavaScript, CSS, or Markdown files.
+  - Keep JS code formatted to the shared `.prettierrc.json` and free of syntax/lint warnings.

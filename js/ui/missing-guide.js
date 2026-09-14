@@ -49,10 +49,7 @@ function loadGuidePreferences() {
 function saveGuidePreferences(update) {
   try {
     const current = loadGuidePreferences();
-    localStorage.setItem(
-      GUIDE_PREFERENCES_KEY,
-      JSON.stringify({ ...current, ...update }),
-    );
+    localStorage.setItem(GUIDE_PREFERENCES_KEY, JSON.stringify({ ...current, ...update }));
   } catch {
     // Preferences are optional; keep the guide usable when storage is unavailable.
   }
@@ -64,8 +61,7 @@ const guidePreferences = loadGuidePreferences();
 let currentTab = ["missing", "family", "items"].includes(guidePreferences.tab)
   ? guidePreferences.tab
   : "missing";
-let guideViewMode =
-  guidePreferences.viewMode === "compact" ? "compact" : "cards";
+let guideViewMode = guidePreferences.viewMode === "compact" ? "compact" : "cards";
 let pendingUndo = null;
 
 /** Filter and sorting state */
@@ -215,13 +211,11 @@ function updateGuideFeedback(filteredCount = null) {
   if (summary) {
     if (currentTab === "family") {
       const total = cachedFamilyData?.length || 0;
-      const visible =
-        filteredCount ?? getFilteredFamilyList(cachedFamilyData).length;
+      const visible = filteredCount ?? getFilteredFamilyList(cachedFamilyData).length;
       summary.textContent = `${visible} of ${total} families`;
     } else {
       const total = cachedMissingData?.length || 0;
-      const visible =
-        filteredCount ?? getFilteredMissingList(cachedMissingData).length;
+      const visible = filteredCount ?? getFilteredMissingList(cachedMissingData).length;
       summary.textContent = `${visible} of ${total} missing`;
     }
   }
@@ -293,9 +287,7 @@ function updateViewToggle() {
   if (!toggle) return;
   const compact = guideViewMode === "compact";
   toggle.setAttribute("aria-pressed", String(compact));
-  toggle.title = compact
-    ? "Switch to card view"
-    : "Switch to compact list view";
+  toggle.title = compact ? "Switch to card view" : "Switch to compact list view";
   const label = toggle.querySelector(".view-toggle-label");
   if (label) label.textContent = compact ? "Cards" : "Compact";
 }
@@ -306,16 +298,9 @@ function updateViewToggle() {
 async function refreshMissingGuideData() {
   const caught = getActiveCaughtSlots();
   const { sections } = await buildActiveDexSections();
-  cachedSlotCount = sections.reduce(
-    (sum, s) => sum + (s.entries ? s.entries.length : 0),
-    0,
-  );
+  cachedSlotCount = sections.reduce((sum, s) => sum + (s.entries ? s.entries.length : 0), 0);
 
-  const missing = await getMissingPokemonData(
-    ACTIVE_GAME_ID,
-    caught,
-    filterState.version,
-  );
+  const missing = await getMissingPokemonData(ACTIVE_GAME_ID, caught, filterState.version);
   cachedMissingData = missing;
   cachedFamilyData = null;
   cachedItemsData = null;
@@ -326,18 +311,11 @@ async function refreshMissingGuideData() {
 async function ensureActiveTabData() {
   const caught = getActiveCaughtSlots();
   if (currentTab === "family" && !cachedFamilyData) {
-    cachedFamilyData = await getEvolutionFamilyChecklist(
-      ACTIVE_GAME_ID,
-      caught,
-    );
+    cachedFamilyData = await getEvolutionFamilyChecklist(ACTIVE_GAME_ID, caught);
   }
   if (currentTab === "items" && !cachedItemsData) {
     if (!cachedMissingData) await refreshMissingGuideData();
-    cachedItemsData = await getEvolutionItemsSummary(
-      ACTIVE_GAME_ID,
-      caught,
-      cachedMissingData,
-    );
+    cachedItemsData = await getEvolutionItemsSummary(ACTIVE_GAME_ID, caught, cachedMissingData);
   }
   updateModalHeaderStats();
 }
@@ -352,9 +330,7 @@ function updateModalHeaderStats() {
   const missingCount = cachedMissingData ? cachedMissingData.length : 0;
   const familiesCount = cachedFamilyData ? cachedFamilyData.length : 0;
   const itemsCount = cachedItemsData ? cachedItemsData.totalItemsCount : 0;
-  const remainingItemsCount = cachedItemsData
-    ? cachedItemsData.totalRemainingCount
-    : itemsCount;
+  const remainingItemsCount = cachedItemsData ? cachedItemsData.totalRemainingCount : itemsCount;
 
   if (currentTab === "missing") {
     statsEl.innerHTML = `<span class="stats-label-full">${missingCount} Pokémon Remaining</span><span class="stats-label-short">${missingCount} Remaining</span>`;
@@ -427,9 +403,7 @@ async function populateSegmentFilterDropdown() {
  * Sets up tab switching listeners.
  */
 function setupTabListeners() {
-  const tabButtons = document.querySelectorAll(
-    "#missingGuideTabs .segmented-btn",
-  );
+  const tabButtons = document.querySelectorAll("#missingGuideTabs .segmented-btn");
   tabButtons.forEach((btn) => {
     btn.addEventListener("click", async () => {
       const tab = btn.dataset.tab;
@@ -467,9 +441,7 @@ function setupTabListeners() {
 }
 
 function syncTabUI() {
-  const tabButtons = document.querySelectorAll(
-    "#missingGuideTabs .segmented-btn",
-  );
+  const tabButtons = document.querySelectorAll("#missingGuideTabs .segmented-btn");
   tabButtons.forEach((button) => {
     const active = button.dataset.tab === currentTab;
     button.classList.toggle("is-active", active);
@@ -742,8 +714,7 @@ function getFilteredMissingList(list) {
         String(p.nationalDexNumber) === q ||
         String(p.regionalDexNumber) === q ||
         p.dexNumber.toLowerCase().includes(q);
-      const matchItem =
-        p.requiredItem && p.requiredItem.toLowerCase().includes(q);
+      const matchItem = p.requiredItem && p.requiredItem.toLowerCase().includes(q);
       const matchLoc = p.locations.some((l) => {
         const str = typeof l === "string" ? l : l?.location || "";
         if (str.toLowerCase().includes(q)) return true;
@@ -770,33 +741,18 @@ function getFilteredMissingList(list) {
       } else if (filterState.method === "gift") {
         if (p.methodCategory !== "gift") return false;
       } else if (filterState.method === "wild") {
-        if (
-          !p.hasWildLocations ||
-          p.methodCategory === "starter" ||
-          p.methodCategory === "gift"
-        )
+        if (!p.hasWildLocations || p.methodCategory === "starter" || p.methodCategory === "gift")
           return false;
       } else if (filterState.method === "item") {
         if (p.methodCategory !== "item" && !p.requiredItem) return false;
       } else if (filterState.method === "trade") {
-        if (
-          p.evolveDetails?.trigger !== "trade" &&
-          p.methodCategory !== "trade"
-        )
-          return false;
+        if (p.evolveDetails?.trigger !== "trade" && p.methodCategory !== "trade") return false;
       } else if (filterState.method === "level") {
-        if (
-          p.methodCategory !== "level" &&
-          p.evolveDetails?.trigger !== "level-up"
-        )
-          return false;
+        if (p.methodCategory !== "level" && p.evolveDetails?.trigger !== "level-up") return false;
       } else if (filterState.method === "special") {
         if (p.methodCategory !== "special") return false;
       } else if (filterState.method === "transfer") {
-        if (
-          p.methodCategory !== "transfer" &&
-          (p.hasWildLocations || p.evolveDetails)
-        )
+        if (p.methodCategory !== "transfer" && (p.hasWildLocations || p.evolveDetails))
           return false;
       }
     }
@@ -820,24 +776,17 @@ function getFilteredMissingList(list) {
       const scoreA = a.smartRouteIndex ?? 9999;
       const scoreB = b.smartRouteIndex ?? 9999;
       return (
-        scoreA - scoreB ||
-        a.regionalDexNumber - b.regionalDexNumber ||
-        a.slotNumber - b.slotNumber
+        scoreA - scoreB || a.regionalDexNumber - b.regionalDexNumber || a.slotNumber - b.slotNumber
       );
     }
     if (filterState.sort === "route-asc") {
       const scoreA = a.earliestRouteIndex ?? 9999;
       const scoreB = b.earliestRouteIndex ?? 9999;
       return (
-        scoreA - scoreB ||
-        a.regionalDexNumber - b.regionalDexNumber ||
-        a.slotNumber - b.slotNumber
+        scoreA - scoreB || a.regionalDexNumber - b.regionalDexNumber || a.slotNumber - b.slotNumber
       );
     }
-    if (
-      filterState.sort === "regional-asc" ||
-      filterState.sort === "regional-desc"
-    ) {
+    if (filterState.sort === "regional-asc" || filterState.sort === "regional-desc") {
       const direction = filterState.sort === "regional-asc" ? 1 : -1;
       return (
         direction * (a.regionalDexNumber - b.regionalDexNumber) ||
@@ -845,10 +794,7 @@ function getFilteredMissingList(list) {
         a.slotNumber - b.slotNumber
       );
     }
-    if (
-      filterState.sort === "national-asc" ||
-      filterState.sort === "national-desc"
-    ) {
+    if (filterState.sort === "national-asc" || filterState.sort === "national-desc") {
       const direction = filterState.sort === "national-asc" ? 1 : -1;
       return (
         direction * (a.nationalDexNumber - b.nationalDexNumber) ||
@@ -927,17 +873,8 @@ function renderMissingList(container) {
     card.dataset.slot = String(p.slotNumber);
 
     // Primary sprite & fallback
-    const spriteUrl = spriteUrlForSpecies(
-      p.spriteId,
-      spriteStyle,
-      isShinyMode,
-      p.gender,
-    );
-    const fallbackUrl = spriteUrlForSpecies(
-      p.speciesId,
-      spriteStyle,
-      isShinyMode,
-    );
+    const spriteUrl = spriteUrlForSpecies(p.spriteId, spriteStyle, isShinyMode, p.gender);
+    const fallbackUrl = spriteUrlForSpecies(p.speciesId, spriteStyle, isShinyMode);
 
     // Header info (Sprite + Meta)
     const header = document.createElement("div");
@@ -1020,9 +957,7 @@ function renderMissingList(container) {
       const starterLoc = getLocStr(rawLoc);
       const cleanLoc = starterLoc.replace(/\s*\([^)]+\)$/, "").trim();
       const displayLoc =
-        !cleanLoc || /starter/i.test(cleanLoc)
-          ? "Starter Choice"
-          : `Starter: ${cleanLoc}`;
+        !cleanLoc || /starter/i.test(cleanLoc) ? "Starter Choice" : `Starter: ${cleanLoc}`;
       methodBadge.innerHTML = `
         <span class="method-icon">🌟</span>
         <span class="method-label">${displayLoc}</span>
@@ -1031,9 +966,7 @@ function renderMissingList(container) {
       const rawLoc =
         p.locations?.find(
           (l) =>
-            /\((?:Gift|Fossil|Gift Egg|Mystery Gift|Gift from [^)]+)\)/i.test(
-              getLocStr(l),
-            ) ||
+            /\((?:Gift|Fossil|Gift Egg|Mystery Gift|Gift from [^)]+)\)/i.test(getLocStr(l)) ||
             /\b(?:Gift|Fossil|Gift Egg|Mystery Gift)\b/i.test(getLocStr(l)),
         ) ||
         p.locations?.[0] ||
@@ -1101,8 +1034,7 @@ function renderMissingList(container) {
         p.locations.forEach((gameTitle) => {
           const gTag = document.createElement("span");
           gTag.className = "missing-game-tag";
-          gTag.textContent =
-            typeof gameTitle === "string" ? gameTitle : gameTitle.location;
+          gTag.textContent = typeof gameTitle === "string" ? gameTitle : gameTitle.location;
           gamesList.appendChild(gTag);
         });
         locWrap.appendChild(gamesList);
@@ -1119,16 +1051,11 @@ function renderMissingList(container) {
 
           const matchingLoc = p.locations.find((l) => {
             const str = typeof l === "string" ? l : l?.location || "";
-            return (
-              str === rawLocToShow ||
-              str.toLowerCase() === rawLocToShow.toLowerCase()
-            );
+            return str === rawLocToShow || str.toLowerCase() === rawLocToShow.toLowerCase();
           });
 
-          const isMatchingObj =
-            typeof matchingLoc === "object" && matchingLoc !== null;
-          const { name: cleanLocName, tags: recTags } =
-            parseLocationEntry(rawLocToShow);
+          const isMatchingObj = typeof matchingLoc === "object" && matchingLoc !== null;
+          const { name: cleanLocName, tags: recTags } = parseLocationEntry(rawLocToShow);
 
           const rateText = p.rateBadgeText
             ? `<span class="missing-rate-tag rate-${p.rateBadgeType}">${p.rateBadgeText}</span>`
@@ -1154,14 +1081,8 @@ function renderMissingList(container) {
           const recCondRow = document.createElement("div");
           recCondRow.className = "missing-rec-conditions";
 
-          if (
-            isMatchingObj &&
-            Array.isArray(matchingLoc.rates) &&
-            matchingLoc.rates.length > 0
-          ) {
-            const validRates = matchingLoc.rates.filter(
-              (r) => r && r.condition,
-            );
+          if (isMatchingObj && Array.isArray(matchingLoc.rates) && matchingLoc.rates.length > 0) {
+            const validRates = matchingLoc.rates.filter((r) => r && r.condition);
             validRates.forEach((rate) => {
               const chip = document.createElement("span");
               chip.className = "missing-condition-chip";
@@ -1244,9 +1165,7 @@ function renderMissingList(container) {
               conditionsRow.appendChild(chip);
             });
           } else if (tags.length > 0) {
-            const filteredTags = tags.filter(
-              (t) => !/^(?:gift|starter|fossil|egg)$/i.test(t),
-            );
+            const filteredTags = tags.filter((t) => !/^(?:gift|starter|fossil|egg)$/i.test(t));
             filteredTags.forEach((tag) => {
               const chip = document.createElement("span");
               chip.className = "missing-condition-chip";
@@ -1310,14 +1229,7 @@ function renderMissingList(container) {
     infoBtn.innerHTML = `<span>ℹ️</span> Info`;
     infoBtn.setAttribute("aria-label", `View detailed info for ${p.name}`);
     infoBtn.addEventListener("click", () => {
-      openPokemonInfoModal(
-        p.speciesId,
-        p.formId,
-        p.name,
-        p.gender,
-        "",
-        p.spriteId,
-      );
+      openPokemonInfoModal(p.speciesId, p.formId, p.name, p.gender, "", p.spriteId);
     });
 
     actions.append(catchBtn, infoBtn);
@@ -1337,12 +1249,7 @@ function renderMissingList(container) {
  * @param {HTMLElement} [cardElement]
  * @param {string} [pokemonName]
  */
-async function markPokemonCaught(
-  specimenKey,
-  slotNumber,
-  cardElement,
-  pokemonName = "",
-) {
+async function markPokemonCaught(specimenKey, slotNumber, cardElement, pokemonName = "") {
   const caught = getActiveCaughtSlots();
   const caughtKey = specimenKey || slotNumber;
   caught[caughtKey] = true;
@@ -1388,9 +1295,7 @@ function showUndoToast(caughtKey, pokemonName = "") {
   checkIcon.textContent = "✓";
 
   const textSpan = document.createElement("span");
-  textSpan.textContent = pokemonName
-    ? `Marked ${pokemonName} caught`
-    : "Marked caught";
+  textSpan.textContent = pokemonName ? `Marked ${pokemonName} caught` : "Marked caught";
 
   messageSpan.append(checkIcon, textSpan);
 
@@ -1400,9 +1305,7 @@ function showUndoToast(caughtKey, pokemonName = "") {
   undoButton.textContent = "Undo";
   undoButton.setAttribute(
     "aria-label",
-    pokemonName
-      ? `Undo marking ${pokemonName} as caught`
-      : "Undo marking as caught",
+    pokemonName ? `Undo marking ${pokemonName} as caught` : "Undo marking as caught",
   );
   undoButton.addEventListener("click", async () => {
     const caught = getActiveCaughtSlots();
@@ -1448,12 +1351,7 @@ function showUndoToast(caughtKey, pokemonName = "") {
  * @param {number} slotNumber
  * @param {string} specimenKey
  */
-async function updateSpecimenCount(
-  speciesId,
-  newCount,
-  slotNumber,
-  specimenKey,
-) {
+async function updateSpecimenCount(speciesId, newCount, slotNumber, specimenKey) {
   const inv = loadSpecimenInventory();
   inv[speciesId] = newCount;
   saveSpecimenInventory(inv);
@@ -1511,9 +1409,7 @@ function getFilteredFamilyList(families) {
       const matchMembers = f.members.some(
         (m) => m.name.toLowerCase().includes(q) || String(m.speciesId) === q,
       );
-      const matchItems = f.requiredItems.some((i) =>
-        i.itemName.toLowerCase().includes(q),
-      );
+      const matchItems = f.requiredItems.some((i) => i.itemName.toLowerCase().includes(q));
       if (!matchRoot && !matchMembers && !matchItems) return false;
     }
 
@@ -1530,9 +1426,7 @@ function getFilteredFamilyList(families) {
     }
 
     if (filterState.segment) {
-      const hasSegment = f.members.some(
-        (m) => m.sectionKey === filterState.segment,
-      );
+      const hasSegment = f.members.some((m) => m.sectionKey === filterState.segment);
       if (!hasSegment) return false;
     }
 
@@ -1574,15 +1468,9 @@ function getFilteredFamilyList(families) {
       );
     }
     if (filterState.sort === "family-needed") {
-      return (
-        a.baseQuota - b.baseQuota ||
-        a.rootRegionalDexNumber - b.rootRegionalDexNumber
-      );
+      return a.baseQuota - b.baseQuota || a.rootRegionalDexNumber - b.rootRegionalDexNumber;
     }
-    return (
-      a.rootRegionalDexNumber - b.rootRegionalDexNumber ||
-      a.rootSpeciesId - b.rootSpeciesId
-    );
+    return a.rootRegionalDexNumber - b.rootRegionalDexNumber || a.rootSpeciesId - b.rootSpeciesId;
   });
 
   return filtered;
@@ -1635,11 +1523,7 @@ function renderFamilyQuotas(container) {
 
     const rootSprite = document.createElement("img");
     rootSprite.className = "family-root-sprite";
-    rootSprite.src = spriteUrlForSpecies(
-      fam.rootSpriteId,
-      spriteStyle,
-      isShinyMode,
-    );
+    rootSprite.src = spriteUrlForSpecies(fam.rootSpriteId, spriteStyle, isShinyMode);
     rootSprite.alt = fam.rootName;
     rootSprite.loading = "lazy";
     rootSprite.crossOrigin = "anonymous";
@@ -1695,12 +1579,7 @@ function renderFamilyQuotas(container) {
 
       const mSprite = document.createElement("img");
       mSprite.className = "family-member-sprite";
-      mSprite.src = spriteUrlForSpecies(
-        m.spriteId,
-        spriteStyle,
-        isShinyMode,
-        m.gender,
-      );
+      mSprite.src = spriteUrlForSpecies(m.spriteId, spriteStyle, isShinyMode, m.gender);
       mSprite.alt = m.name;
       mSprite.loading = "lazy";
       mSprite.crossOrigin = "anonymous";
@@ -1742,10 +1621,7 @@ function renderFamilyQuotas(container) {
       numInput.value = String(m.specimenCount);
       numInput.setAttribute("aria-label", `Owned count for ${m.name}`);
       numInput.addEventListener("change", (e) => {
-        const val = Math.max(
-          0,
-          Math.min(99, parseInt(e.target.value, 10) || 0),
-        );
+        const val = Math.max(0, Math.min(99, parseInt(e.target.value, 10) || 0));
         updateSpecimenCount(m.speciesId, val, m.slotNumber, m.specimenKey);
       });
 
@@ -1898,10 +1774,7 @@ function renderItemsShoppingList(container) {
       numInput.value = String(item.ownedCount);
       numInput.setAttribute("aria-label", `Owned count for ${item.itemName}`);
       numInput.addEventListener("change", (e) => {
-        const val = Math.max(
-          0,
-          Math.min(99, parseInt(e.target.value, 10) || 0),
-        );
+        const val = Math.max(0, Math.min(99, parseInt(e.target.value, 10) || 0));
         updateItemInventoryCount(item.itemKey, val);
       });
 
@@ -1919,9 +1792,7 @@ function renderItemsShoppingList(container) {
 
       const statusBadge = document.createElement("span");
       statusBadge.className = `shopping-status-badge ${item.isComplete ? "is-complete" : "is-needed"}`;
-      statusBadge.textContent = item.isComplete
-        ? `✓ Complete`
-        : `Need ${item.remainingCount}`;
+      statusBadge.textContent = item.isComplete ? `✓ Complete` : `Need ${item.remainingCount}`;
 
       invRow.append(label, stepperWrap, statusBadge);
 
@@ -1930,11 +1801,7 @@ function renderItemsShoppingList(container) {
       item.pokemonList.forEach((poke) => {
         const tag = document.createElement("span");
         tag.className = "shopping-target-tag";
-        const pSprite = spriteUrlForSpecies(
-          poke.spriteId,
-          spriteStyle,
-          isShinyMode,
-        );
+        const pSprite = spriteUrlForSpecies(poke.spriteId, spriteStyle, isShinyMode);
         tag.innerHTML = `
           <img src="${pSprite}" alt="${poke.name}" class="shopping-target-sprite" loading="lazy" crossOrigin="anonymous"/>
           <span>${poke.name}</span>
@@ -1951,8 +1818,7 @@ function renderItemsShoppingList(container) {
   }
 
   // Section 2: Trade Evolutions
-  const totalTrades =
-    itemsSummary.tradeList.length + itemsSummary.tradeHoldingItemList.length;
+  const totalTrades = itemsSummary.tradeList.length + itemsSummary.tradeHoldingItemList.length;
   if (totalTrades > 0) {
     const section = document.createElement("section");
     section.className = "items-shopping-section";
@@ -1982,11 +1848,7 @@ function renderItemsShoppingList(container) {
       itemsSummary.tradeList.forEach((p) => {
         const tag = document.createElement("span");
         tag.className = "shopping-target-tag";
-        const pSprite = spriteUrlForSpecies(
-          p.spriteId,
-          spriteStyle,
-          isShinyMode,
-        );
+        const pSprite = spriteUrlForSpecies(p.spriteId, spriteStyle, isShinyMode);
         tag.innerHTML = `
           <img src="${pSprite}" alt="${p.name}" class="shopping-target-sprite" loading="lazy" crossOrigin="anonymous"/>
           <span>${p.name}</span>
@@ -2014,11 +1876,7 @@ function renderItemsShoppingList(container) {
       itemsSummary.tradeHoldingItemList.forEach((p) => {
         const tag = document.createElement("span");
         tag.className = "shopping-target-tag";
-        const pSprite = spriteUrlForSpecies(
-          p.spriteId,
-          spriteStyle,
-          isShinyMode,
-        );
+        const pSprite = spriteUrlForSpecies(p.spriteId, spriteStyle, isShinyMode);
         tag.innerHTML = `
           <img src="${pSprite}" alt="${p.name}" class="shopping-target-sprite" loading="lazy" crossOrigin="anonymous"/>
           <span>${p.name} (${normalizeItemName(p.requiredItem)})</span>
@@ -2068,11 +1926,7 @@ function renderItemsShoppingList(container) {
       itemsSummary.friendshipList.forEach((p) => {
         const tag = document.createElement("span");
         tag.className = "shopping-target-tag";
-        const pSprite = spriteUrlForSpecies(
-          p.spriteId,
-          spriteStyle,
-          isShinyMode,
-        );
+        const pSprite = spriteUrlForSpecies(p.spriteId, spriteStyle, isShinyMode);
         tag.innerHTML = `
           <img src="${pSprite}" alt="${p.name}" class="shopping-target-sprite" loading="lazy" crossOrigin="anonymous"/>
           <span>${p.name}</span>
@@ -2100,11 +1954,7 @@ function renderItemsShoppingList(container) {
       itemsSummary.timeList.forEach((p) => {
         const tag = document.createElement("span");
         tag.className = "shopping-target-tag";
-        const pSprite = spriteUrlForSpecies(
-          p.spriteId,
-          spriteStyle,
-          isShinyMode,
-        );
+        const pSprite = spriteUrlForSpecies(p.spriteId, spriteStyle, isShinyMode);
         tag.innerHTML = `
           <img src="${pSprite}" alt="${p.name}" class="shopping-target-sprite" loading="lazy" crossOrigin="anonymous"/>
           <span>${p.name} (${p.requiredCondition || "Time of day"})</span>
@@ -2132,11 +1982,7 @@ function renderItemsShoppingList(container) {
       itemsSummary.moveList.forEach((p) => {
         const tag = document.createElement("span");
         tag.className = "shopping-target-tag";
-        const pSprite = spriteUrlForSpecies(
-          p.spriteId,
-          spriteStyle,
-          isShinyMode,
-        );
+        const pSprite = spriteUrlForSpecies(p.spriteId, spriteStyle, isShinyMode);
         tag.innerHTML = `
           <img src="${pSprite}" alt="${p.name}" class="shopping-target-sprite" loading="lazy" crossOrigin="anonymous"/>
           <span>${p.name} (${p.requiredCondition || "Move"})</span>

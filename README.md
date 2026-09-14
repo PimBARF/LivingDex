@@ -54,9 +54,11 @@ It’s a lightweight static web app: no login, no backend, and no build step. Ju
 ## 🚀 Quick start
 
 1. Download or clone this repo:
+
    ```bash
    git clone https://github.com/PimBARF/LivingDex.git
    ```
+
 2. Open `index.html` directly in your browser.
 
 Or run a lightweight local server:

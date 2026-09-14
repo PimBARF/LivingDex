@@ -1,8 +1,4 @@
-import {
-  buildActiveDexSections,
-  loadSpeciesNames,
-  getGameDexData,
-} from "./db.js";
+import { buildActiveDexSections, loadSpeciesNames, getGameDexData } from "./db.js";
 
 import {
   loadSettings,
@@ -14,11 +10,7 @@ import {
   saveEnabledSegments,
 } from "./storage.js";
 
-import {
-  ACTIVE_GAME,
-  ACTIVE_GAME_ID,
-  getOrderedGameEntries,
-} from "./config.js";
+import { ACTIVE_GAME, ACTIVE_GAME_ID, getOrderedGameEntries } from "./config.js";
 
 import { rebuildDexView, updateProgressBar, syncCaughtState } from "./state.js";
 
@@ -112,9 +104,7 @@ async function initializeLivingDexApp() {
 
   // Compute active sections and combined order
   const { sections, warnings } = await buildActiveDexSections();
-  const combinedSpeciesIds = sections.flatMap((s) =>
-    s.entries.map((e) => e.speciesId),
-  );
+  const combinedSpeciesIds = sections.flatMap((s) => s.entries.map((e) => e.speciesId));
   LIVING_DEX_SPECIES_ORDER = combinedSpeciesIds;
   LIVING_DEX_SLOT_COUNT = combinedSpeciesIds.length;
 
@@ -161,10 +151,7 @@ async function initializeLivingDexApp() {
       });
     });
   } else if (/#s=/.test(location.hash)) {
-    showToast(
-      "This shared link is for a different game or segment selection.",
-      "warning",
-    );
+    showToast("This shared link is for a different game or segment selection.", "warning");
   } else {
     // Check if this is a first-time visitor and show Welcome Guide
     checkFirstTimeVisitor(450);
@@ -173,8 +160,7 @@ async function initializeLivingDexApp() {
   // Watch for hash changes (e.g., user clicking shared link)
   window.addEventListener("hashchange", async () => {
     const activeSlotCount =
-      document.querySelectorAll(".cell:not(.is-placeholder)").length ||
-      LIVING_DEX_SLOT_COUNT;
+      document.querySelectorAll(".cell:not(.is-placeholder)").length || LIVING_DEX_SLOT_COUNT;
     const incomingState = await decodeCaughtState(
       location.hash,
       activeSlotCount,
@@ -187,10 +173,7 @@ async function initializeLivingDexApp() {
         });
       });
     } else if (/#s=/.test(location.hash)) {
-      showToast(
-        "This shared link is for a different game or segment selection.",
-        "warning",
-      );
+      showToast("This shared link is for a different game or segment selection.", "warning");
     }
   });
 }
@@ -207,10 +190,7 @@ async function initializeLivingDexApp() {
  * @param {string} [options.previousLanguage] - The previously configured language code to compare against the current setting.
  * @returns {Promise<void>} Resolves when view settings and potential name refreshes have been applied.
  */
-export async function applyPersistedViewSettings({
-  speciesOrder = [],
-  previousLanguage,
-} = {}) {
+export async function applyPersistedViewSettings({ speciesOrder = [], previousLanguage } = {}) {
   const settings = loadSettings();
   setStatusFilter(settings.hideCaughtDefault ? "uncaught" : "all");
 
@@ -243,9 +223,7 @@ export async function renderGameInfo() {
 
   const gameData = await getGameDexData(ACTIVE_GAME_ID).catch(() => null);
   const rawSections =
-    gameData && Array.isArray(gameData.sections)
-      ? gameData.sections
-      : ACTIVE_GAME.dexes || [];
+    gameData && Array.isArray(gameData.sections) ? gameData.sections : ACTIVE_GAME.dexes || [];
 
   const optionalSegments = rawSections.filter((s) => s.optional);
 
@@ -254,9 +232,7 @@ export async function renderGameInfo() {
     segmentsBtn.title = `Configure ${ACTIVE_GAME.title} Dex Options, Layout & Forms`;
 
     try {
-      const hasSeenGuide = localStorage.getItem(
-        "livingdex-seen-segments-guide",
-      );
+      const hasSeenGuide = localStorage.getItem("livingdex-seen-segments-guide");
       if (!hasSeenGuide && optionalSegments.length > 0) {
         segmentsBtn.classList.add("has-discovery-pulse");
       }

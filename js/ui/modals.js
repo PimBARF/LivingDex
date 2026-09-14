@@ -50,10 +50,7 @@ import {
   loadSpeciesNames,
   formatVersionName,
 } from "../db.js";
-import {
-  registerMissingGuideModal,
-  openMissingGuideModal,
-} from "./missing-guide.js";
+import { registerMissingGuideModal, openMissingGuideModal } from "./missing-guide.js";
 import {
   registerWelcomeGuideModal,
   openWelcomeGuideModal,
@@ -116,9 +113,7 @@ export function attachModalHandlers({
     modal.hidden = false;
     onOpen?.(lastFocus);
 
-    const isMobile =
-      window.matchMedia("(max-width: 768px)").matches ||
-      "ontouchstart" in window;
+    const isMobile = window.matchMedia("(max-width: 768px)").matches || "ontouchstart" in window;
 
     let targetEl = null;
     if (focusSelector) {
@@ -144,8 +139,7 @@ export function attachModalHandlers({
     }
 
     const fallbackTarget =
-      targetEl ||
-      modal.querySelector("button, [href], input, select, textarea");
+      targetEl || modal.querySelector("button, [href], input, select, textarea");
     fallbackTarget?.focus();
 
     /**
@@ -162,9 +156,7 @@ export function attachModalHandlers({
         const focusables = modal.querySelectorAll(
           'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])',
         );
-        const list = Array.from(focusables).filter(
-          (el) => !el.hasAttribute("disabled"),
-        );
+        const list = Array.from(focusables).filter((el) => !el.hasAttribute("disabled"));
         if (!list.length) return;
         const first = list[0];
         const last = list[list.length - 1];
@@ -501,9 +493,7 @@ export function registerSegmentsModal({ onSegmentsUpdated } = {}) {
    */
   async function refreshActiveDex() {
     const { sections, warnings } = await buildActiveDexSections();
-    const combinedSpeciesIds = sections.flatMap((s) =>
-      s.entries.map((e) => e.speciesId),
-    );
+    const combinedSpeciesIds = sections.flatMap((s) => s.entries.map((e) => e.speciesId));
     const slotCount = combinedSpeciesIds.length;
 
     rebuildDexView({ sections, slotCount });
@@ -559,14 +549,10 @@ export function registerSegmentsModal({ onSegmentsUpdated } = {}) {
     if (!listEl) return;
     listEl.innerHTML = "";
 
-    const [gameData] = await Promise.all([
-      getGameDexData(ACTIVE_GAME_ID).catch(() => null),
-    ]);
+    const [gameData] = await Promise.all([getGameDexData(ACTIVE_GAME_ID).catch(() => null)]);
 
     const rawSections =
-      gameData && Array.isArray(gameData.sections)
-        ? gameData.sections
-        : ACTIVE_GAME.dexes || [];
+      gameData && Array.isArray(gameData.sections) ? gameData.sections : ACTIVE_GAME.dexes || [];
 
     const sectionMap = new Map();
     rawSections.forEach((s) => sectionMap.set(s.id, s));
@@ -598,8 +584,7 @@ export function registerSegmentsModal({ onSegmentsUpdated } = {}) {
         ? seg.entries.length
         : seg.manualIds?.length || 0;
       const boxCapacity = getBoxCapacity(ACTIVE_GAME_ID, loadSettings());
-      const boxCount =
-        entryCount > 0 ? Math.ceil(entryCount / boxCapacity) : undefined;
+      const boxCount = entryCount > 0 ? Math.ceil(entryCount / boxCapacity) : undefined;
 
       const typeKey = seg.type || "base";
       let badgeClass = "segment-badge-base";
@@ -737,8 +722,7 @@ export function registerSegmentsModal({ onSegmentsUpdated } = {}) {
       } else if (preset === "dlc") {
         checkbox.checked = type === "base" || type === "dlc";
       } else if (preset === "forms") {
-        checkbox.checked =
-          type === "base" || type === "dlc" || type === "forms";
+        checkbox.checked = type === "base" || type === "dlc" || type === "forms";
       } else if (preset === "all") {
         checkbox.checked = true;
       }
@@ -755,32 +739,25 @@ export function registerSegmentsModal({ onSegmentsUpdated } = {}) {
     document.body.classList.toggle("shiny-mode", nextMode);
 
     const { sections } = await buildActiveDexSections();
-    const combinedSpeciesIds = sections.flatMap((s) =>
-      s.entries.map((e) => e.speciesId),
-    );
+    const combinedSpeciesIds = sections.flatMap((s) => s.entries.map((e) => e.speciesId));
     const slotCount = combinedSpeciesIds.length;
     rebuildDexView({ sections, slotCount });
     if (combinedSpeciesIds.length) {
       await loadSpeciesNames(combinedSpeciesIds);
     }
     updateProgressBar(slotCount);
-    showToast(
-      nextMode ? "✨ Switched to Shiny Dex" : "Switched to Regular Dex",
-      "info",
-    );
+    showToast(nextMode ? "✨ Switched to Shiny Dex" : "Switched to Regular Dex", "info");
   });
 
   // Share progress link button inside modal
   const modalShareBtn = document.getElementById("modalShareBtn");
   modalShareBtn?.addEventListener("click", async () => {
-    const activeSlotCount =
-      document.querySelectorAll(".cell:not(.is-placeholder)").length || 0;
+    const activeSlotCount = document.querySelectorAll(".cell:not(.is-placeholder)").length || 0;
     const shareHash = await encodeCaughtState(
       isShinyMode ? loadShinyCaughtSlots() : loadCaughtSlots(),
       activeSlotCount,
     );
-    const url =
-      location.origin + location.pathname + location.search + shareHash;
+    const url = location.origin + location.pathname + location.search + shareHash;
     try {
       await navigator.clipboard.writeText(url);
       showToast("Link copied to clipboard!", "success");
@@ -798,9 +775,7 @@ export function registerSegmentsModal({ onSegmentsUpdated } = {}) {
   });
 
   // Layout preset dropdown handler
-  const segmentLayoutSection = document.getElementById(
-    "segmentLayoutPresetSection",
-  );
+  const segmentLayoutSection = document.getElementById("segmentLayoutPresetSection");
   if (segmentLayoutSection) {
     segmentLayoutSection.hidden = false;
   }
@@ -811,10 +786,7 @@ export function registerSegmentsModal({ onSegmentsUpdated } = {}) {
     if (!segmentLayoutPreset) return;
     const dexData = await getGameDexData(ACTIVE_GAME_ID).catch(() => null);
     const sections = dexData?.sections || [];
-    const availablePresets = getAvailableLayoutPresetsForGame(
-      ACTIVE_GAME_ID,
-      sections,
-    );
+    const availablePresets = getAvailableLayoutPresetsForGame(ACTIVE_GAME_ID, sections);
 
     const currentVal = getGameLayoutPreset(ACTIVE_GAME_ID);
     segmentLayoutPreset.innerHTML = "";
@@ -840,11 +812,8 @@ export function registerSegmentsModal({ onSegmentsUpdated } = {}) {
   });
 
   // Game version dropdown handler
-  const segmentGameVersionSection = document.getElementById(
-    "segmentGameVersionSection",
-  );
-  const segmentGameVersionSelect =
-    document.getElementById("segmentGameVersion");
+  const segmentGameVersionSection = document.getElementById("segmentGameVersionSection");
+  const segmentGameVersionSelect = document.getElementById("segmentGameVersion");
 
   async function populateGameVersionSelect() {
     if (!segmentGameVersionSection || !segmentGameVersionSelect) return;
@@ -865,8 +834,7 @@ export function registerSegmentsModal({ onSegmentsUpdated } = {}) {
         opt.textContent = formatVersionName(v);
         segmentGameVersionSelect.appendChild(opt);
       });
-      segmentGameVersionSelect.value =
-        getSelectedGameVersion(ACTIVE_GAME_ID) || "all";
+      segmentGameVersionSelect.value = getSelectedGameVersion(ACTIVE_GAME_ID) || "all";
     } else {
       segmentGameVersionSection.hidden = true;
     }
@@ -1012,9 +980,7 @@ function normalizeImportPayload(rawPayload) {
     throw new Error("Invalid payload");
   }
 
-  const settings = isPlainObject(rawPayload.settings)
-    ? rawPayload.settings
-    : null;
+  const settings = isPlainObject(rawPayload.settings) ? rawPayload.settings : null;
   const games = {};
 
   if (isPlainObject(rawPayload.games)) {
@@ -1022,16 +988,11 @@ function normalizeImportPayload(rawPayload) {
       if (!GAMES[gameKey] || !isPlainObject(gamePayload)) continue;
 
       const nextGame = {};
-      if (isPlainObject(gamePayload.caught))
-        nextGame.caught = gamePayload.caught;
-      if (isPlainObject(gamePayload.shinyCaught))
-        nextGame.shinyCaught = gamePayload.shinyCaught;
-      if (isPlainObject(gamePayload.segments))
-        nextGame.segments = gamePayload.segments;
-      if (isPlainObject(gamePayload.boxLabels))
-        nextGame.boxLabels = gamePayload.boxLabels;
-      if (isPlainObject(gamePayload.speciesCache))
-        nextGame.speciesCache = gamePayload.speciesCache;
+      if (isPlainObject(gamePayload.caught)) nextGame.caught = gamePayload.caught;
+      if (isPlainObject(gamePayload.shinyCaught)) nextGame.shinyCaught = gamePayload.shinyCaught;
+      if (isPlainObject(gamePayload.segments)) nextGame.segments = gamePayload.segments;
+      if (isPlainObject(gamePayload.boxLabels)) nextGame.boxLabels = gamePayload.boxLabels;
+      if (isPlainObject(gamePayload.speciesCache)) nextGame.speciesCache = gamePayload.speciesCache;
       if (isPlainObject(gamePayload.speciesCacheMeta))
         nextGame.speciesCacheMeta = gamePayload.speciesCacheMeta;
 
@@ -1046,11 +1007,8 @@ function normalizeImportPayload(rawPayload) {
   }
 
   return {
-    exportedAt:
-      typeof rawPayload.exportedAt === "string" ? rawPayload.exportedAt : null,
-    schemaVersion: Number.isFinite(rawPayload.schemaVersion)
-      ? rawPayload.schemaVersion
-      : null,
+    exportedAt: typeof rawPayload.exportedAt === "string" ? rawPayload.exportedAt : null,
+    schemaVersion: Number.isFinite(rawPayload.schemaVersion) ? rawPayload.schemaVersion : null,
     settings,
     games,
   };
@@ -1075,13 +1033,9 @@ export function registerSettingsControls() {
   const clearCacheBtn = document.getElementById("settingsClearSpeciesCache");
   const checkUpdatesBtn = document.getElementById("settingsCheckUpdates");
   const clearAllBtn = document.getElementById("settingsClearAllData");
-  const defaultGameModeSelect = document.getElementById(
-    "settingsDefaultGameMode",
-  );
+  const defaultGameModeSelect = document.getElementById("settingsDefaultGameMode");
   const defaultGameSelect = document.getElementById("settingsDefaultGame");
-  const defaultGameWrapper = document.getElementById(
-    "settingsDefaultGameWrapper",
-  );
+  const defaultGameWrapper = document.getElementById("settingsDefaultGameWrapper");
   const importModal = document.getElementById("modalImportData");
   const importBackdrop = importModal?.querySelector("[data-close]");
   const importSummary = document.getElementById("importDataSummary");
@@ -1121,9 +1075,7 @@ export function registerSettingsControls() {
           : "Other";
         const normalized = label.startsWith("Generation") ? label : label;
         if (!groups.has(normalized)) groups.set(normalized, []);
-        groups
-          .get(normalized)
-          .push(`<option value="${key}">${config.title}</option>`);
+        groups.get(normalized).push(`<option value="${key}">${config.title}</option>`);
       }
 
       const orderedGroups = Array.from(groups.entries())
@@ -1136,36 +1088,24 @@ export function registerSettingsControls() {
 
     syncThemeSettingsRadios(settings.theme);
     if (reducedMotion)
-      reducedMotion.checked = resolveReducedMotionPreference(
-        settings.reducedMotion,
-      );
+      reducedMotion.checked = resolveReducedMotionPreference(settings.reducedMotion);
     if (hideCaught) hideCaught.checked = !!settings.hideCaughtDefault;
-    const rememberCollapsed = document.getElementById(
-      "settingsRememberCollapsed",
-    );
-    if (rememberCollapsed)
-      rememberCollapsed.checked = !!settings.rememberCollapsedBoxes;
-    const autoCollapseFull = document.getElementById(
-      "settingsAutoCollapseFull",
-    );
-    if (autoCollapseFull)
-      autoCollapseFull.checked = !!settings.autoCollapseFullBoxes;
+    const rememberCollapsed = document.getElementById("settingsRememberCollapsed");
+    if (rememberCollapsed) rememberCollapsed.checked = !!settings.rememberCollapsedBoxes;
+    const autoCollapseFull = document.getElementById("settingsAutoCollapseFull");
+    if (autoCollapseFull) autoCollapseFull.checked = !!settings.autoCollapseFullBoxes;
     const gen12BoxCap = document.getElementById("settingsGen12BoxCapacity");
-    if (gen12BoxCap)
-      gen12BoxCap.value = String(settings.gen12BoxCapacity || 20);
+    if (gen12BoxCap) gen12BoxCap.value = String(settings.gen12BoxCapacity || 20);
     const showBoxCoords = document.getElementById("settingsShowBoxCoordinates");
     if (showBoxCoords) showBoxCoords.checked = !!settings.showBoxCoordinates;
     const keepAwake = document.getElementById("settingsKeepAwake");
-    const keepAwakeSubtitle = document.getElementById(
-      "settingsKeepAwakeSubtitle",
-    );
+    const keepAwakeSubtitle = document.getElementById("settingsKeepAwakeSubtitle");
     if (keepAwake) {
       if (!isWakeLockSupported()) {
         keepAwake.checked = false;
         keepAwake.disabled = true;
         if (keepAwakeSubtitle) {
-          keepAwakeSubtitle.textContent =
-            "Screen wake lock is not supported on this browser";
+          keepAwakeSubtitle.textContent = "Screen wake lock is not supported on this browser";
         }
       } else {
         keepAwake.checked = !!settings.keepScreenAwake;
@@ -1186,8 +1126,7 @@ export function registerSettingsControls() {
     }
 
     if (defaultGameWrapper) {
-      defaultGameWrapper.hidden =
-        (defaultGameModeSelect?.value || "last-used") !== "specific";
+      defaultGameWrapper.hidden = (defaultGameModeSelect?.value || "last-used") !== "specific";
     }
   }
 
@@ -1204,39 +1143,25 @@ export function registerSettingsControls() {
       document.querySelector('input[name="settingsTheme"]:checked')?.value ||
       settings.theme ||
       "auto";
-    const nextShowCoords = !!document.getElementById(
-      "settingsShowBoxCoordinates",
-    )?.checked;
+    const nextShowCoords = !!document.getElementById("settingsShowBoxCoordinates")?.checked;
     const nextKeepAwake = isWakeLockSupported()
       ? !!document.getElementById("settingsKeepAwake")?.checked
       : false;
-    const nextGen12Cap =
-      Number(document.getElementById("settingsGen12BoxCapacity")?.value) || 20;
+    const nextGen12Cap = Number(document.getElementById("settingsGen12BoxCapacity")?.value) || 20;
     const nextSettings = {
       ...settings,
       theme: selectedTheme,
-      reducedMotion: document.getElementById("settingsReducedMotion")?.checked
-        ? true
-        : false,
-      hideCaughtDefault:
-        !!document.getElementById("settingsHideCaught")?.checked,
-      rememberCollapsedBoxes: !!document.getElementById(
-        "settingsRememberCollapsed",
-      )?.checked,
-      autoCollapseFullBoxes: !!document.getElementById(
-        "settingsAutoCollapseFull",
-      )?.checked,
+      reducedMotion: document.getElementById("settingsReducedMotion")?.checked ? true : false,
+      hideCaughtDefault: !!document.getElementById("settingsHideCaught")?.checked,
+      rememberCollapsedBoxes: !!document.getElementById("settingsRememberCollapsed")?.checked,
+      autoCollapseFullBoxes: !!document.getElementById("settingsAutoCollapseFull")?.checked,
       gen12BoxCapacity: nextGen12Cap,
       keepScreenAwake: nextKeepAwake,
       showBoxCoordinates: nextShowCoords,
       language: document.getElementById("settingsLanguage")?.value || "en",
-      spriteStyle:
-        document.getElementById("settingsSpriteStyle")?.value || "pokesprites",
-      defaultGameMode:
-        document.getElementById("settingsDefaultGameMode")?.value ||
-        "last-used",
-      defaultGameId:
-        document.getElementById("settingsDefaultGame")?.value || null,
+      spriteStyle: document.getElementById("settingsSpriteStyle")?.value || "pokesprites",
+      defaultGameMode: document.getElementById("settingsDefaultGameMode")?.value || "last-used",
+      defaultGameId: document.getElementById("settingsDefaultGame")?.value || null,
     };
 
     saveSettings(nextSettings);
@@ -1245,8 +1170,7 @@ export function registerSettingsControls() {
     applyReducedMotionPreference(nextSettings.reducedMotion);
     await applyWakeLockPreference(nextSettings.keepScreenAwake);
 
-    const isGen1Or2 =
-      ACTIVE_GAME.group === "gen1" || ACTIVE_GAME.group === "gen2";
+    const isGen1Or2 = ACTIVE_GAME.group === "gen1" || ACTIVE_GAME.group === "gen2";
     if (previousGen12Cap !== nextGen12Cap && isGen1Or2) {
       const { sections } = await buildActiveDexSections();
       const currentSlotCount =
@@ -1255,9 +1179,7 @@ export function registerSettingsControls() {
       rebuildDexView({ sections, slotCount: currentSlotCount });
     }
 
-    const speciesOrder = Array.from(
-      document.querySelectorAll(".cell:not(.is-placeholder)"),
-    )
+    const speciesOrder = Array.from(document.querySelectorAll(".cell:not(.is-placeholder)"))
       .map((cell) => Number(cell.dataset.national))
       .filter(Number.isFinite);
     await applyPersistedViewSettings({ speciesOrder, previousLanguage });
@@ -1289,9 +1211,7 @@ export function registerSettingsControls() {
 
     const gameEntries = Object.entries(payload.games || {});
     const hasSettings = !!payload.settings;
-    const fileLabel = pendingImportFileName
-      ? ` from ${pendingImportFileName}`
-      : "";
+    const fileLabel = pendingImportFileName ? ` from ${pendingImportFileName}` : "";
     const settingsCount = hasSettings ? 1 : 0;
 
     importSummary.textContent = `This file${fileLabel} contains ${settingsCount ? "settings and " : ""}${gameEntries.length} game entr${gameEntries.length === 1 ? "y" : "ies"}. Select what you want to import.`;
@@ -1364,9 +1284,7 @@ export function registerSettingsControls() {
    */
   function applySelectedImport() {
     if (!pendingImportPayload) return;
-    const importSettingsChecked = document.getElementById(
-      "importSettingsCheckbox",
-    )?.checked;
+    const importSettingsChecked = document.getElementById("importSettingsCheckbox")?.checked;
     const selectedGameKeys = Array.from(
       importOptions?.querySelectorAll("input[data-game-key]") || [],
     )
@@ -1441,9 +1359,7 @@ export function registerSettingsControls() {
     const reader = new FileReader();
     reader.onload = () => {
       try {
-        const payload = normalizeImportPayload(
-          JSON.parse(String(reader.result)),
-        );
+        const payload = normalizeImportPayload(JSON.parse(String(reader.result)));
         openImportReviewModal(payload, file.name);
       } catch {
         showToast("Import failed: invalid JSON.", "danger");
@@ -1496,11 +1412,7 @@ export function registerSettingsControls() {
    * Prompt user for confirmation before wiping all stored progress and settings.
    */
   function clearAllDataAction() {
-    if (
-      !window.confirm(
-        "This will clear all saved progress and settings for this site. Continue?",
-      )
-    )
+    if (!window.confirm("This will clear all saved progress and settings for this site. Continue?"))
       return;
     clearAllSavedData();
     window.location.reload();
@@ -1543,9 +1455,7 @@ export function registerSettingsControls() {
    * Attach click and keyboard arrow event listeners to the Settings tabs.
    */
   function setupSettingsTabs() {
-    const tabButtons = Array.from(
-      modal?.querySelectorAll("#settingsTabs .segmented-btn") || [],
-    );
+    const tabButtons = Array.from(modal?.querySelectorAll("#settingsTabs .segmented-btn") || []);
     if (!tabButtons.length) return;
 
     tabButtons.forEach((btn, index) => {
@@ -1622,20 +1532,18 @@ export function registerSettingsControls() {
     focusSelector: "#closeAbout",
   });
 
-  const {
-    openModal: openImportReviewDialog,
-    closeModal: closeImportReviewDialog,
-  } = attachModalHandlers({
-    modal: importModal,
-    openBtn: null,
-    closeBtn: cancelImportBtn,
-    backdrop: importBackdrop,
-    onOpen: () => confirmImportBtn?.focus(),
-    onClose: () => {
-      resetImportReviewState();
-    },
-    focusSelector: '#importDataOptions input[type="checkbox"]',
-  });
+  const { openModal: openImportReviewDialog, closeModal: closeImportReviewDialog } =
+    attachModalHandlers({
+      modal: importModal,
+      openBtn: null,
+      closeBtn: cancelImportBtn,
+      backdrop: importBackdrop,
+      onOpen: () => confirmImportBtn?.focus(),
+      onClose: () => {
+        resetImportReviewState();
+      },
+      focusSelector: '#importDataOptions input[type="checkbox"]',
+    });
 
   document
     .getElementById("settingsReducedMotion")
@@ -1646,12 +1554,10 @@ export function registerSettingsControls() {
   document
     .getElementById("settingsRememberCollapsed")
     ?.addEventListener("change", persistSettingsFromControls);
-  document
-    .getElementById("settingsAutoCollapseFull")
-    ?.addEventListener("change", () => {
-      persistSettingsFromControls();
-      updateAllBoxProgress();
-    });
+  document.getElementById("settingsAutoCollapseFull")?.addEventListener("change", () => {
+    persistSettingsFromControls();
+    updateAllBoxProgress();
+  });
   document
     .getElementById("settingsGen12BoxCapacity")
     ?.addEventListener("change", persistSettingsFromControls);
@@ -1681,18 +1587,14 @@ export function registerSettingsControls() {
     if (importInput) importInput.value = "";
     importInput?.click();
   });
-  importInput?.addEventListener("change", (event) =>
-    importAllData(event.target.files?.[0]),
-  );
+  importInput?.addEventListener("change", (event) => importAllData(event.target.files?.[0]));
   confirmImportBtn?.addEventListener("click", applySelectedImport);
 
-  document
-    .getElementById("settingsResetBoxLabels")
-    ?.addEventListener("click", () => {
-      clearBoxLabels();
-      applyBoxLabelsToHeaders();
-      showToast("Box names reset to default.", "success");
-    });
+  document.getElementById("settingsResetBoxLabels")?.addEventListener("click", () => {
+    clearBoxLabels();
+    applyBoxLabelsToHeaders();
+    showToast("Box names reset to default.", "success");
+  });
 
   refreshCacheBtn?.addEventListener("click", refreshCacheAction);
   clearCacheBtn?.addEventListener("click", clearSpeciesCacheAction);

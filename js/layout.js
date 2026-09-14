@@ -1,9 +1,4 @@
-import {
-  BOX_CAPACITY,
-  GENERATION_RANGES,
-  LAYOUT_PRESETS,
-  GAME_ORIGIN_RANGES,
-} from "./config.js";
+import { BOX_CAPACITY, GENERATION_RANGES, LAYOUT_PRESETS, GAME_ORIGIN_RANGES } from "./config.js";
 
 /**
  * Computes a unique and canonical specimen identifier for an entry or cell.
@@ -23,13 +18,9 @@ export function getSpecimenKey(entryOrSpeciesId, formId, gender, spriteId) {
       entryOrSpeciesId.national ??
       0;
     const fId =
-      entryOrSpeciesId.formId ??
-      entryOrSpeciesId.dataset?.form ??
-      entryOrSpeciesId.form ??
-      sId;
+      entryOrSpeciesId.formId ?? entryOrSpeciesId.dataset?.form ?? entryOrSpeciesId.form ?? sId;
     const g = entryOrSpeciesId.gender ?? entryOrSpeciesId.dataset?.gender ?? "";
-    const spr =
-      entryOrSpeciesId.spriteId ?? entryOrSpeciesId.dataset?.sprite ?? fId;
+    const spr = entryOrSpeciesId.spriteId ?? entryOrSpeciesId.dataset?.sprite ?? fId;
     return `${sId}:${fId}:${g}:${spr}`;
   }
 
@@ -169,16 +160,10 @@ function transformToNational(sections, speciesData = {}) {
  * @returns {Array<Object>} Generational sections followed by enabled form sections.
  */
 function transformToGenerational(sections, speciesData, gameId = "home") {
-  const baseSection = sections.find(
-    (s) => s.kind === "base" || s.key === "national",
-  );
+  const baseSection = sections.find((s) => s.kind === "base" || s.key === "national");
   const otherSections = sections.filter((s) => s !== baseSection);
 
-  if (
-    !baseSection ||
-    !baseSection.entries ||
-    baseSection.entries.length === 0
-  ) {
+  if (!baseSection || !baseSection.entries || baseSection.entries.length === 0) {
     return transformToStandard(sections);
   }
 
@@ -342,14 +327,8 @@ function transformToEvolutionary(sections, speciesData, evolutionsData) {
     const chainInfo = evolutionsData?.[chainId];
 
     let orderedSpecies = presentSpeciesIds;
-    if (
-      chainInfo &&
-      Array.isArray(chainInfo.nodes) &&
-      chainInfo.nodes.length > 0
-    ) {
-      const nodeOrder = new Map(
-        chainInfo.nodes.map((node, idx) => [node.speciesId, idx]),
-      );
+    if (chainInfo && Array.isArray(chainInfo.nodes) && chainInfo.nodes.length > 0) {
+      const nodeOrder = new Map(chainInfo.nodes.map((node, idx) => [node.speciesId, idx]));
       orderedSpecies.sort((a, b) => {
         const orderA = nodeOrder.has(a) ? nodeOrder.get(a) : 999;
         const orderB = nodeOrder.has(b) ? nodeOrder.get(b) : 999;
@@ -415,18 +394,11 @@ function transformToAlphabetical(sections, speciesData) {
     }
   }
 
-  const nameMap =
-    typeof window !== "undefined" ? window.__livingDexNames : null;
+  const nameMap = typeof window !== "undefined" ? window.__livingDexNames : null;
 
   allEntries.sort((a, b) => {
-    const nameA =
-      nameMap?.[a.speciesId] ||
-      speciesData?.[a.speciesId]?.name ||
-      `#${a.speciesId}`;
-    const nameB =
-      nameMap?.[b.speciesId] ||
-      speciesData?.[b.speciesId]?.name ||
-      `#${b.speciesId}`;
+    const nameA = nameMap?.[a.speciesId] || speciesData?.[a.speciesId]?.name || `#${a.speciesId}`;
+    const nameB = nameMap?.[b.speciesId] || speciesData?.[b.speciesId]?.name || `#${b.speciesId}`;
     const cmp = nameA.localeCompare(nameB);
     if (cmp !== 0) return cmp;
     if (a.speciesId !== b.speciesId) return a.speciesId - b.speciesId;
@@ -465,11 +437,7 @@ function transformToAlolaIslands(sections, speciesData, gameId = "sm") {
   );
   const otherSections = sections.filter((s) => s !== baseSection);
 
-  if (
-    !baseSection ||
-    !baseSection.entries ||
-    baseSection.entries.length === 0
-  ) {
+  if (!baseSection || !baseSection.entries || baseSection.entries.length === 0) {
     return transformToStandard(sections);
   }
 
@@ -491,11 +459,9 @@ function transformToAlolaIslands(sections, speciesData, gameId = "sm") {
 
   const poniFilter = isUSUM
     ? (e) =>
-        (e.dexNumber >= 339 && e.dexNumber <= 382) ||
-        (e.dexNumber >= 386 && e.dexNumber <= 403)
+        (e.dexNumber >= 339 && e.dexNumber <= 382) || (e.dexNumber >= 386 && e.dexNumber <= 403)
     : (e) =>
-        (e.dexNumber >= 258 && e.dexNumber <= 284) ||
-        (e.dexNumber >= 288 && e.dexNumber <= 302);
+        (e.dexNumber >= 258 && e.dexNumber <= 284) || (e.dexNumber >= 288 && e.dexNumber <= 302);
 
   const melemeleEntries = entries.filter(melemeleFilter).map((e, idx) => ({
     ...e,
@@ -575,11 +541,7 @@ function transformToAlolaIslands(sections, speciesData, gameId = "sm") {
  */
 function transformToUnified(sections, title = "Unified Pokédex") {
   const baseSections = sections.filter(
-    (s) =>
-      s.kind === "base" ||
-      s.kind === "dlc" ||
-      s.type === "base" ||
-      s.type === "dlc",
+    (s) => s.kind === "base" || s.kind === "dlc" || s.type === "base" || s.type === "dlc",
   );
   const otherSections = sections.filter((s) => !baseSections.includes(s));
 
@@ -640,11 +602,7 @@ function transformToHisuiAreas(sections, speciesData) {
   );
   const otherSections = sections.filter((s) => s !== baseSection);
 
-  if (
-    !baseSection ||
-    !baseSection.entries ||
-    baseSection.entries.length === 0
-  ) {
+  if (!baseSection || !baseSection.entries || baseSection.entries.length === 0) {
     return transformToStandard(sections);
   }
 
@@ -661,11 +619,7 @@ function transformToHisuiAreas(sections, speciesData) {
     const dexNum = entry.dexNumber || sId;
     const formatted = { ...entry, specimenKey: getSpecimenKey(entry) };
 
-    if (
-      (dexNum >= 1 && dexNum <= 65) ||
-      (dexNum >= 74 && dexNum <= 83) ||
-      dexNum === 492
-    ) {
+    if ((dexNum >= 1 && dexNum <= 65) || (dexNum >= 74 && dexNum <= 83) || dexNum === 492) {
       fieldlandsEntries.push(formatted);
     } else if (
       (dexNum >= 66 && dexNum <= 73) ||
@@ -770,11 +724,7 @@ function transformToRegionalOrigin(sections, speciesData, gameId = "gsc") {
   const { name, start, end } = originInfo;
 
   const baseSections = sections.filter(
-    (s) =>
-      s.kind === "base" ||
-      s.kind === "dlc" ||
-      s.type === "base" ||
-      s.type === "dlc",
+    (s) => s.kind === "base" || s.kind === "dlc" || s.type === "base" || s.type === "dlc",
   );
   const otherSections = sections.filter((s) => !baseSections.includes(s));
 
@@ -842,11 +792,7 @@ function transformToRegionalOrigin(sections, speciesData, gameId = "gsc") {
  * @param {Object} [context={}] - Context metadata including speciesData, evolutionsData, gameId.
  * @returns {Array<Object>} Layout-transformed Pokédex sections.
  */
-export function applyLayoutPreset(
-  sections,
-  preset = LAYOUT_PRESETS.STANDARD,
-  context = {},
-) {
+export function applyLayoutPreset(sections, preset = LAYOUT_PRESETS.STANDARD, context = {}) {
   if (!Array.isArray(sections) || sections.length === 0) {
     return [];
   }

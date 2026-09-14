@@ -253,19 +253,14 @@ function getInfoModalHandlers() {
  */
 export function parseLocationEntry(entry) {
   if (!entry) return { name: "", tags: [], notes: [] };
-  if (
-    /^(?:Tera Raid|Evolve|Trade|Buy|Breed|Received|Gift|Event)/i.test(
-      entry.trim(),
-    )
-  ) {
+  if (/^(?:Tera Raid|Evolve|Trade|Buy|Breed|Received|Gift|Event)/i.test(entry.trim())) {
     return { name: entry, tags: [], notes: [] };
   }
 
   let current = entry;
   const tags = [];
   const notes = [];
-  const floorPattern =
-    /^(?:b?\d+f|main|area\s*\d+|outside|inside|exterior|entrance)$/i;
+  const floorPattern = /^(?:b?\d+f|main|area\s*\d+|outside|inside|exterior|entrance)$/i;
   const compactPattern =
     /^(?:b?\d+f,\s*)?(?:dual-slot|morning|day|night|swarm|radar|surfing|swimming|fishing|underwater|diving|rock smash|headbutt|honey tree|starter|gift|gift egg|fossil|(?:max|tera|gigantamax) raid|amped\s+\(sword\)\s*\/\s*low key\s+\(shield\)\s+form|[a-z]+(?:\s+[a-z]+)* form)\b/i;
   const notePattern =
@@ -280,9 +275,7 @@ export function parseLocationEntry(entry) {
     }
     if (
       !compactPattern.test(tagContent) &&
-      (tagContent.length > 42 ||
-        /[;.!?]/.test(tagContent) ||
-        notePattern.test(tagContent))
+      (tagContent.length > 42 || /[;.!?]/.test(tagContent) || notePattern.test(tagContent))
     ) {
       notes.unshift(tagContent);
     } else {
@@ -444,48 +437,26 @@ function filterRedundantTags(tags, methodNote = "") {
     if (noteLower.includes("starter") && tLower === "starter") return false;
     if (noteLower.includes("fossil") && tLower === "fossil") return false;
     if (noteLower.includes("gift egg") && tLower === "gift egg") return false;
-    if (
-      noteLower.includes("gift") &&
-      (tLower === "gift" || tLower === "in-game gift")
-    )
+    if (noteLower.includes("gift") && (tLower === "gift" || tLower === "in-game gift"))
       return false;
-    if (noteLower.includes("super rod") && tLower.includes("super rod"))
-      return false;
-    if (noteLower.includes("old rod") && tLower.includes("old rod"))
-      return false;
-    if (noteLower.includes("good rod") && tLower.includes("good rod"))
-      return false;
+    if (noteLower.includes("super rod") && tLower.includes("super rod")) return false;
+    if (noteLower.includes("old rod") && tLower.includes("old rod")) return false;
+    if (noteLower.includes("good rod") && tLower.includes("good rod")) return false;
     if (noteLower.includes("fishing") && tLower === "fishing") return false;
-    if (
-      noteLower.includes("surfing") &&
-      (tLower === "surfing" || tLower === "swimming")
-    )
+    if (noteLower.includes("surfing") && (tLower === "surfing" || tLower === "swimming"))
       return false;
-    if (
-      noteLower.includes("underwater") &&
-      (tLower === "underwater" || tLower === "diving")
-    )
+    if (noteLower.includes("underwater") && (tLower === "underwater" || tLower === "diving"))
       return false;
-    if (noteLower.includes("rock smash") && tLower === "rock smash")
+    if (noteLower.includes("rock smash") && tLower === "rock smash") return false;
+    if (noteLower.includes("trees") && (tLower === "headbutt" || tLower === "honey tree"))
       return false;
-    if (
-      noteLower.includes("trees") &&
-      (tLower === "headbutt" || tLower === "honey tree")
-    )
-      return false;
-    if (
-      noteLower.includes("poké radar") &&
-      (tLower === "poké radar" || tLower === "poke radar")
-    )
+    if (noteLower.includes("poké radar") && (tLower === "poké radar" || tLower === "poke radar"))
       return false;
     if (noteLower.includes("swarms") && tLower === "swarm") return false;
-    if (noteLower.includes("dual-slot") && tLower.startsWith("dual-slot"))
-      return false;
+    if (noteLower.includes("dual-slot") && tLower.startsWith("dual-slot")) return false;
     if (
       noteLower.includes("raid") &&
-      (tLower === "max raid" ||
-        tLower === "max raid battle" ||
-        tLower === "gigantamax raid battle")
+      (tLower === "max raid" || tLower === "max raid battle" || tLower === "gigantamax raid battle")
     )
       return false;
     return true;
@@ -594,10 +565,7 @@ function renderLocationItemContent(li, entry, methodNote = "") {
  * @param {string} [options.methodNote=""] - Active exclusive encounter note.
  * @returns {HTMLUListElement|null} The created `<ul>` element, or `null` if entries is empty.
  */
-function createEncounterList(
-  entries,
-  { maxVisible = 5, methodNote = "" } = {},
-) {
+function createEncounterList(entries, { maxVisible = 5, methodNote = "" } = {}) {
   if (!entries || !entries.length) {
     return null;
   }
@@ -619,8 +587,7 @@ function createEncounterList(
     const hiddenEntries = entries.slice(maxVisible);
     hiddenEntries.forEach((entry) => {
       const item = document.createElement("li");
-      item.className =
-        "pokemon-info-encounter-item pokemon-info-encounter-item-hidden";
+      item.className = "pokemon-info-encounter-item pokemon-info-encounter-item-hidden";
       renderLocationItemContent(item, entry, methodNote);
       item.hidden = true;
       list.appendChild(item);
@@ -633,17 +600,13 @@ function createEncounterList(
     toggle.setAttribute("aria-expanded", "false");
     toggle.addEventListener("click", () => {
       const isExpanded = toggle.getAttribute("aria-expanded") === "true";
-      const hiddenItems = list.querySelectorAll(
-        ".pokemon-info-encounter-item-hidden",
-      );
+      const hiddenItems = list.querySelectorAll(".pokemon-info-encounter-item-hidden");
       hiddenItems.forEach((item) => {
         item.hidden = isExpanded;
       });
 
       toggle.setAttribute("aria-expanded", String(!isExpanded));
-      toggle.textContent = isExpanded
-        ? `Show ${hiddenEntries.length} more`
-        : "Show fewer";
+      toggle.textContent = isExpanded ? `Show ${hiddenEntries.length} more` : "Show fewer";
     });
     list.appendChild(toggle);
   }
@@ -661,25 +624,12 @@ function createEncounterList(
  * @param {string} [options.spriteStyle] - Sprite style preference key.
  * @returns {HTMLDivElement} Member container element.
  */
-function createEvolutionMember({
-  speciesId,
-  spriteId = speciesId,
-  name,
-  spriteStyle,
-}) {
+function createEvolutionMember({ speciesId, spriteId = speciesId, name, spriteStyle }) {
   const member = document.createElement("div");
   member.className = "evo-member";
 
-  const primarySpriteUrl = spriteUrlForSpecies(
-    spriteId,
-    spriteStyle,
-    isShinyMode,
-  );
-  const fallbackSpriteUrl = spriteUrlForSpecies(
-    speciesId,
-    spriteStyle,
-    isShinyMode,
-  );
+  const primarySpriteUrl = spriteUrlForSpecies(spriteId, spriteStyle, isShinyMode);
+  const fallbackSpriteUrl = spriteUrlForSpecies(speciesId, spriteStyle, isShinyMode);
 
   const sprite = document.createElement("img");
   sprite.className = "evo-sprite";
@@ -869,9 +819,7 @@ function renderEvolutionDetails(evoEl, evolutionPaths, spriteStyle) {
           arrowSymbol: "→",
           methods: [step.description],
           reverseArrowSymbol: step.reverseBreeding ? "←" : "",
-          reverseMethods: step.reverseBreeding
-            ? [`Hold ${step.reverseBreeding.itemName}`]
-            : [],
+          reverseMethods: step.reverseBreeding ? [`Hold ${step.reverseBreeding.itemName}`] : [],
         }),
       );
 
@@ -929,17 +877,8 @@ export async function openPokemonInfoModal(
 
   const spriteStyle = loadSettings().spriteStyle || "pokesprites";
   const targetSpriteId = gender === "female" ? speciesId : spriteId || formId;
-  const primarySpriteUrl = spriteUrlForSpecies(
-    targetSpriteId,
-    spriteStyle,
-    isShinyMode,
-    gender,
-  );
-  const fallbackSpriteUrl = spriteUrlForSpecies(
-    speciesId,
-    spriteStyle,
-    isShinyMode,
-  );
+  const primarySpriteUrl = spriteUrlForSpecies(targetSpriteId, spriteStyle, isShinyMode, gender);
+  const fallbackSpriteUrl = spriteUrlForSpecies(speciesId, spriteStyle, isShinyMode);
 
   stopCurrentAudio();
   const cryBtn = document.getElementById("pokemonInfoCryBtn");
@@ -954,9 +893,7 @@ export async function openPokemonInfoModal(
   titleEl.textContent = displayName;
   const showCoords = !!loadSettings().showBoxCoordinates;
   const coordSuffix =
-    showCoords && sourceCell?.dataset?.boxCoord
-      ? ` · ${sourceCell.dataset.boxCoord}`
-      : "";
+    showCoords && sourceCell?.dataset?.boxCoord ? ` · ${sourceCell.dataset.boxCoord}` : "";
   numberEl.textContent = `#${speciesId}${coordSuffix}`;
   spriteEl.decoding = "async";
   spriteEl.crossOrigin = "anonymous";
@@ -1007,8 +944,7 @@ export async function openPokemonInfoModal(
   } catch (err) {
     console.error("Error loading pokemon info modal", err);
     loadingEl.hidden = true;
-    errorEl.textContent =
-      "Could not load Pokémon info. Check your connection and try again.";
+    errorEl.textContent = "Could not load Pokémon info. Check your connection and try again.";
     errorEl.hidden = false;
   }
 }

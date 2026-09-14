@@ -66,19 +66,16 @@ export function countCaughtSlots(slotCount) {
  * @returns {void}
  */
 export function updateProgressBar(slotCount) {
-  const safeSlotCount =
-    Number.isFinite(slotCount) && slotCount > 0 ? slotCount : 0;
+  const safeSlotCount = Number.isFinite(slotCount) && slotCount > 0 ? slotCount : 0;
   const caught = countCaughtSlots(safeSlotCount);
-  const percentage =
-    safeSlotCount > 0 ? Math.round((caught * 100) / safeSlotCount) : 0;
+  const percentage = safeSlotCount > 0 ? Math.round((caught * 100) / safeSlotCount) : 0;
   const fill = document.getElementById("progressFill");
   const label = document.getElementById("progressText");
   if (fill) fill.style.width = `${percentage}%`;
 
   // Differentiate between shiny and normal dex in the progress label
   const modeText = isShinyMode ? "✨ Shiny caught" : "caught";
-  if (label)
-    label.textContent = `${caught}/${safeSlotCount} ${modeText} (${percentage}%)`;
+  if (label) label.textContent = `${caught}/${safeSlotCount} ${modeText} (${percentage}%)`;
 
   // Update the window title with an optional shiny indicator
   const titlePrefix = isShinyMode ? "✨ Shiny " : "";

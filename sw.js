@@ -124,23 +124,17 @@ function mapRemoteSpriteToLocalPath(pathname) {
     return `./assets/sprites/official-artwork/${match[1] || ""}${match[2] || ""}${match[3]}.png`;
   }
 
-  match = pathname.match(
-    /\/sprites\/pokemon\/other\/home\/(shiny\/)?(female\/)?(\d+)\.png$/,
-  );
+  match = pathname.match(/\/sprites\/pokemon\/other\/home\/(shiny\/)?(female\/)?(\d+)\.png$/);
   if (match) {
     return `./assets/sprites/home/${match[1] || ""}${match[2] || ""}${match[3]}.png`;
   }
 
-  match = pathname.match(
-    /\/sprites\/pokemon\/other\/showdown\/(shiny\/)?(female\/)?(\d+)\.gif$/,
-  );
+  match = pathname.match(/\/sprites\/pokemon\/other\/showdown\/(shiny\/)?(female\/)?(\d+)\.gif$/);
   if (match) {
     return `./assets/sprites/showdown/${match[1] || ""}${match[2] || ""}${match[3]}.gif`;
   }
 
-  match = pathname.match(
-    /\/sprites\/pokemon\/(shiny\/)?(female\/)?(\d+)\.png$/,
-  );
+  match = pathname.match(/\/sprites\/pokemon\/(shiny\/)?(female\/)?(\d+)\.png$/);
   if (match) {
     return `./assets/sprites/pokesprites/${match[1] || ""}${match[2] || ""}${match[3]}.png`;
   }
@@ -155,8 +149,7 @@ function mapRemoteSpriteToLocalPath(pathname) {
  * @returns {string|null}
  */
 function mapLocalSpriteToRemoteUrl(pathname) {
-  const GITHUB_BASE =
-    "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon";
+  const GITHUB_BASE = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon";
 
   let match = pathname.match(
     /\/assets\/sprites\/official-artwork\/(shiny\/)?(female\/)?(\d+)\.png$/,
@@ -165,23 +158,17 @@ function mapLocalSpriteToRemoteUrl(pathname) {
     return `${GITHUB_BASE}/other/official-artwork/${match[1] || ""}${match[2] || ""}${match[3]}.png`;
   }
 
-  match = pathname.match(
-    /\/assets\/sprites\/home\/(shiny\/)?(female\/)?(\d+)\.png$/,
-  );
+  match = pathname.match(/\/assets\/sprites\/home\/(shiny\/)?(female\/)?(\d+)\.png$/);
   if (match) {
     return `${GITHUB_BASE}/other/home/${match[1] || ""}${match[2] || ""}${match[3]}.png`;
   }
 
-  match = pathname.match(
-    /\/assets\/sprites\/showdown\/(shiny\/)?(female\/)?(\d+)\.gif$/,
-  );
+  match = pathname.match(/\/assets\/sprites\/showdown\/(shiny\/)?(female\/)?(\d+)\.gif$/);
   if (match) {
     return `${GITHUB_BASE}/other/showdown/${match[1] || ""}${match[2] || ""}${match[3]}.gif`;
   }
 
-  match = pathname.match(
-    /\/assets\/sprites\/pokesprites\/(shiny\/)?(female\/)?(\d+)\.png$/,
-  );
+  match = pathname.match(/\/assets\/sprites\/pokesprites\/(shiny\/)?(female\/)?(\d+)\.png$/);
   if (match) {
     return `${GITHUB_BASE}/${match[1] || ""}${match[2] || ""}${match[3]}.png`;
   }
@@ -257,8 +244,7 @@ self.addEventListener("fetch", (event) => {
 
   // Strategy 1: Sprites & Artwork (Smart Cache-First with Local + Remote fallback)
   const isSprite =
-    url.pathname.includes("/sprites/") ||
-    url.hostname === "raw.githubusercontent.com";
+    url.pathname.includes("/sprites/") || url.hostname === "raw.githubusercontent.com";
 
   if (isSprite) {
     event.respondWith(handleSpriteFetch(request));
@@ -323,10 +309,7 @@ async function handleSpriteFetch(request) {
         const localRes = await fetch(localPath);
         const contentType = localRes.headers.get("content-type") || "";
         // Ensure local server returned an actual image and not an HTML 404 page
-        if (
-          localRes.ok &&
-          (contentType.startsWith("image/") || localRes.status === 200)
-        ) {
+        if (localRes.ok && (contentType.startsWith("image/") || localRes.status === 200)) {
           cache.put(request, localRes.clone());
           return localRes;
         }
@@ -350,9 +333,7 @@ async function handleSpriteFetch(request) {
       const fallbackRes = await fetch(request);
       if (
         fallbackRes &&
-        (fallbackRes.ok ||
-          fallbackRes.status === 200 ||
-          fallbackRes.type === "opaque")
+        (fallbackRes.ok || fallbackRes.status === 200 || fallbackRes.type === "opaque")
       ) {
         cache.put(request, fallbackRes.clone());
       }
@@ -382,12 +363,7 @@ async function handleSpriteFetch(request) {
   if (remoteUrl) {
     try {
       const remoteRes = await fetch(remoteUrl, { mode: "cors" });
-      if (
-        remoteRes &&
-        (remoteRes.ok ||
-          remoteRes.status === 200 ||
-          remoteRes.type === "opaque")
-      ) {
+      if (remoteRes && (remoteRes.ok || remoteRes.status === 200 || remoteRes.type === "opaque")) {
         cache.put(request, remoteRes.clone());
       }
       return remoteRes;

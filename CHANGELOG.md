@@ -59,7 +59,7 @@ All notable changes, new features, improvements, and bug fixes for **LivingDex**
 | **[v1.0.0](#v100---2026-09-01)**                                      | Sep 01, 2026          | Full offline PWA support & standalone data scraper architecture                                                  |
 | **[Expansion Phase](#multi-game-expansion--localization---aug-2026)** | Aug 17–31, 2026       | All mainline games, 8-language localization, Info modal, UI modular split                                        |
 | **[Modular JS Split](#modular-js-split---nov-2025)**                  | Nov 13–15, 2025       | ES module decomposition (`main.js`, `ui.js`, `api.js`, `storage.js`)                                             |
-| **[Genesis & Prototype](#initial-release---oct-2025)**                 | Oct 27 – Nov 10, 2025 | Initial LivingDex tracker release, 30-slot PC boxes, PokeAPI integration                                         |
+| **[Genesis & Prototype](#initial-release---oct-2025)**                | Oct 27 – Nov 10, 2025 | Initial LivingDex tracker release, 30-slot PC boxes, PokeAPI integration                                         |
 
 ---
 

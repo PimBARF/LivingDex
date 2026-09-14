@@ -1422,10 +1422,7 @@ export function parseLocationDetails(entry) {
 
   const rawName = typeof entry === "string" ? entry : entry.location || "";
   const levels = typeof entry === "object" ? entry.levels || "" : "";
-  let chance =
-    typeof entry === "object" && typeof entry.chance === "number"
-      ? entry.chance
-      : null;
+  let chance = typeof entry === "object" && typeof entry.chance === "number" ? entry.chance : null;
 
   // Try extracting chance from string if present e.g. " (20%)" or " (Super Rod - 40%)"
   if (chance === null) {
@@ -1549,10 +1546,7 @@ export function getEncounterProgressionInfo(
       if (!details.name) continue;
 
       // Skip generic evolution tags in raw location list
-      if (
-        details.name.startsWith("Evolve ") ||
-        details.name.startsWith("Trade ")
-      ) {
+      if (details.name.startsWith("Evolve ") || details.name.startsWith("Trade ")) {
         continue;
       }
 
@@ -1570,10 +1564,7 @@ export function getEncounterProgressionInfo(
         matchedRouteName = matched.route;
       }
 
-      const rarityPenalty = calculateRarityPenalty(
-        details.chance,
-        details.isGift,
-      );
+      const rarityPenalty = calculateRarityPenalty(details.chance, details.isGift);
       const smartScore = routeIndex + rarityPenalty;
 
       // Track absolute earliest geographic encounter
@@ -1594,9 +1585,7 @@ export function getEncounterProgressionInfo(
 
   // Handle evolution inheritance if no wild location exists or if pre-evolution is available earlier
   if (evolveDetails?.fromSpeciesId && getBaseSpeciesEarliestScore) {
-    const preEvoScores = getBaseSpeciesEarliestScore(
-      evolveDetails.fromSpeciesId,
-    );
+    const preEvoScores = getBaseSpeciesEarliestScore(evolveDetails.fromSpeciesId);
     if (preEvoScores) {
       const evoOffset = 0.1; // Place evolved form immediately after pre-evolution
       const inheritedEarliest = preEvoScores.earliestRouteIndex + evoOffset;

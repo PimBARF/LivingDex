@@ -1,9 +1,4 @@
-import {
-  loadSettings,
-  saveSettings,
-  loadCaughtSlots,
-  encodeCaughtState,
-} from "../storage.js";
+import { loadSettings, saveSettings, loadCaughtSlots, encodeCaughtState } from "../storage.js";
 import { applyTheme, isMotionReduced } from "./theme.js";
 import { showToast } from "./modals.js";
 import { isShinyMode, setShinyMode, rebuildDexView } from "../state.js";
@@ -124,9 +119,7 @@ export function getActiveFilterCount() {
     activeFilterState.categories.size +
     activeFilterState.stages.size +
     activeFilterState.forms.size +
-    (activeFilterState.types.size > 0 && activeFilterState.typeMode !== "any"
-      ? 1
-      : 0)
+    (activeFilterState.types.size > 0 && activeFilterState.typeMode !== "any" ? 1 : 0)
   );
 }
 
@@ -162,9 +155,7 @@ export function updateFilterLiveStatus() {
   const statusEl = document.getElementById("filtersLiveCountText");
   if (!statusEl) return;
 
-  const totalCells = document.querySelectorAll(
-    ".cell:not(.is-placeholder)",
-  ).length;
+  const totalCells = document.querySelectorAll(".cell:not(.is-placeholder)").length;
   if (totalCells === 0) {
     statusEl.textContent = "No Pokémon available";
     return;
@@ -189,10 +180,7 @@ export function updateFilterLiveStatus() {
 export function syncFilterModalActiveStates() {
   // Type buttons
   document.querySelectorAll(".filter-type-btn").forEach((btn) => {
-    btn.classList.toggle(
-      "is-active",
-      activeFilterState.types.has(btn.dataset.type),
-    );
+    btn.classList.toggle("is-active", activeFilterState.types.has(btn.dataset.type));
   });
 
   // Type mode
@@ -204,36 +192,22 @@ export function syncFilterModalActiveStates() {
 
   // Generations
   document.querySelectorAll(".filter-gen-btn").forEach((btn) => {
-    btn.classList.toggle(
-      "is-active",
-      activeFilterState.generations.has(Number(btn.dataset.gen)),
-    );
+    btn.classList.toggle("is-active", activeFilterState.generations.has(Number(btn.dataset.gen)));
   });
 
   // Categories
-  document
-    .querySelectorAll("#categoryFilterGrid [data-category]")
-    .forEach((btn) => {
-      btn.classList.toggle(
-        "is-active",
-        activeFilterState.categories.has(btn.dataset.category),
-      );
-    });
+  document.querySelectorAll("#categoryFilterGrid [data-category]").forEach((btn) => {
+    btn.classList.toggle("is-active", activeFilterState.categories.has(btn.dataset.category));
+  });
 
   // Stages
   document.querySelectorAll("#stageFilterGrid [data-stage]").forEach((btn) => {
-    btn.classList.toggle(
-      "is-active",
-      activeFilterState.stages.has(btn.dataset.stage),
-    );
+    btn.classList.toggle("is-active", activeFilterState.stages.has(btn.dataset.stage));
   });
 
   // Forms
   document.querySelectorAll("#formFilterGrid [data-form]").forEach((btn) => {
-    btn.classList.toggle(
-      "is-active",
-      activeFilterState.forms.has(btn.dataset.form),
-    );
+    btn.classList.toggle("is-active", activeFilterState.forms.has(btn.dataset.form));
   });
 
   // Presets active highlight
@@ -455,16 +429,13 @@ export function applyAllFilters() {
       } else if (typeMode === "all") {
         matches = selectedTypesList.every((t) => cellTypes.includes(t));
       } else if (typeMode === "mono") {
-        matches =
-          cellTypes.length === 1 && activeFilterState.types.has(cellTypes[0]);
+        matches = cellTypes.length === 1 && activeFilterState.types.has(cellTypes[0]);
       }
     }
 
     // 2. Generation matching
     if (matches && activeFilterState.generations.size > 0) {
-      const gen =
-        Number(cell.dataset.generation) ||
-        getSpeciesGeneration(cell.dataset.national);
+      const gen = Number(cell.dataset.generation) || getSpeciesGeneration(cell.dataset.national);
       matches = activeFilterState.generations.has(gen);
     }
 
@@ -473,52 +444,28 @@ export function applyAllFilters() {
       const sid = Number(cell.dataset.national);
       let catMatch = false;
 
-      if (
-        activeFilterState.categories.has("starter") &&
-        STARTER_SPECIES_IDS.has(sid)
-      ) {
+      if (activeFilterState.categories.has("starter") && STARTER_SPECIES_IDS.has(sid)) {
         catMatch = true;
       }
-      if (
-        activeFilterState.categories.has("gift") &&
-        GIFT_SPECIES_IDS.has(sid)
-      ) {
+      if (activeFilterState.categories.has("gift") && GIFT_SPECIES_IDS.has(sid)) {
         catMatch = true;
       }
-      if (
-        activeFilterState.categories.has("baby") &&
-        BABY_SPECIES_IDS.has(sid)
-      ) {
+      if (activeFilterState.categories.has("baby") && BABY_SPECIES_IDS.has(sid)) {
         catMatch = true;
       }
-      if (
-        activeFilterState.categories.has("fossil") &&
-        FOSSIL_SPECIES_IDS.has(sid)
-      ) {
+      if (activeFilterState.categories.has("fossil") && FOSSIL_SPECIES_IDS.has(sid)) {
         catMatch = true;
       }
-      if (
-        activeFilterState.categories.has("legendary") &&
-        LEGENDARY_SPECIES_IDS.has(sid)
-      ) {
+      if (activeFilterState.categories.has("legendary") && LEGENDARY_SPECIES_IDS.has(sid)) {
         catMatch = true;
       }
-      if (
-        activeFilterState.categories.has("mythical") &&
-        MYTHICAL_SPECIES_IDS.has(sid)
-      ) {
+      if (activeFilterState.categories.has("mythical") && MYTHICAL_SPECIES_IDS.has(sid)) {
         catMatch = true;
       }
-      if (
-        activeFilterState.categories.has("ultra-beast") &&
-        ULTRA_BEAST_SPECIES_IDS.has(sid)
-      ) {
+      if (activeFilterState.categories.has("ultra-beast") && ULTRA_BEAST_SPECIES_IDS.has(sid)) {
         catMatch = true;
       }
-      if (
-        activeFilterState.categories.has("paradox") &&
-        PARADOX_SPECIES_IDS.has(sid)
-      ) {
+      if (activeFilterState.categories.has("paradox") && PARADOX_SPECIES_IDS.has(sid)) {
         catMatch = true;
       }
 
@@ -543,16 +490,12 @@ export function applyAllFilters() {
       const isGender = Boolean(cell.dataset.gender);
       const formId = Number(cell.dataset.form);
       const sid = Number(cell.dataset.national);
-      const isSpecial = Boolean(
-        formId && formId > 0 && formId !== sid && !isRegional && !isGender,
-      );
+      const isSpecial = Boolean(formId && formId > 0 && formId !== sid && !isRegional && !isGender);
       const isStandard = !isRegional && !isGender && !isSpecial;
 
       let formMatch = false;
-      if (activeFilterState.forms.has("standard") && isStandard)
-        formMatch = true;
-      if (activeFilterState.forms.has("regional") && isRegional)
-        formMatch = true;
+      if (activeFilterState.forms.has("standard") && isStandard) formMatch = true;
+      if (activeFilterState.forms.has("regional") && isRegional) formMatch = true;
       if (activeFilterState.forms.has("gender") && isGender) formMatch = true;
       if (activeFilterState.forms.has("special") && isSpecial) formMatch = true;
 
@@ -669,42 +612,26 @@ export function applyFilterPreset(presetName) {
  * @returns {HTMLButtonElement[]} Array of active, visible cell elements.
  */
 export function getVisiblePokemonCells() {
-  const isSearchActive = Boolean(
-    document.getElementById("search")?.value.trim(),
-  );
-  const allCells = Array.from(
-    document.querySelectorAll(".cell:not(.is-placeholder)"),
-  );
+  const isSearchActive = Boolean(document.getElementById("search")?.value.trim());
+  const allCells = Array.from(document.querySelectorAll(".cell:not(.is-placeholder)"));
 
   return allCells.filter((cell) => {
     // Exclude cells in hidden sections / tabs
     if (cell.closest("[hidden]")) return false;
-    if (
-      cell.offsetParent === null &&
-      window.getComputedStyle(cell).display === "none"
-    ) {
+    if (cell.offsetParent === null && window.getComputedStyle(cell).display === "none") {
       return false;
     }
     // Exclude dimmed non-matching search results
     if (isSearchActive && cell.classList.contains("dimmed")) return false;
     // Exclude hidden filters
-    if (
-      cell.classList.contains("filter-hidden") ||
-      cell.classList.contains("type-hidden")
-    ) {
+    if (cell.classList.contains("filter-hidden") || cell.classList.contains("type-hidden")) {
       return false;
     }
     // Exclude caught/uncaught filter mismatches
-    if (
-      document.body.classList.contains("hide-caught") &&
-      cell.classList.contains("caught")
-    ) {
+    if (document.body.classList.contains("hide-caught") && cell.classList.contains("caught")) {
       return false;
     }
-    if (
-      document.body.classList.contains("hide-uncaught") &&
-      !cell.classList.contains("caught")
-    ) {
+    if (document.body.classList.contains("hide-uncaught") && !cell.classList.contains("caught")) {
       return false;
     }
     return true;
@@ -761,8 +688,7 @@ export function applySearchFilter(query, { immediateScroll = false } = {}) {
   } else {
     // Match by name
     matches = cells.filter((cell) => {
-      const name =
-        cell.dataset.name || cell.querySelector(".label")?.textContent || "";
+      const name = cell.dataset.name || cell.querySelector(".label")?.textContent || "";
       return name.toLowerCase().includes(trimmed);
     });
   }
@@ -798,8 +724,7 @@ export function applySearchFilter(query, { immediateScroll = false } = {}) {
         stickyOffset += 16;
       }
 
-      const cellAbsoluteTop =
-        firstMatch.getBoundingClientRect().top + window.scrollY;
+      const cellAbsoluteTop = firstMatch.getBoundingClientRect().top + window.scrollY;
       const targetY = Math.max(0, cellAbsoluteTop - stickyOffset);
 
       // Skip scroll only if already at the target scroll position
@@ -812,10 +737,7 @@ export function applySearchFilter(query, { immediateScroll = false } = {}) {
 
       // Guard against mobile browser resetting input cursor on document scroll
       if (isFocused && typeof start === "number" && typeof end === "number") {
-        if (
-          searchInput.selectionStart !== start ||
-          searchInput.selectionEnd !== end
-        ) {
+        if (searchInput.selectionStart !== start || searchInput.selectionEnd !== end) {
           searchInput.setSelectionRange(start, end);
         }
         requestAnimationFrame(() => {
@@ -979,9 +901,7 @@ export function initializeFilterControls() {
   });
 
   // Category buttons
-  const catButtons = document.querySelectorAll(
-    "#categoryFilterGrid [data-category]",
-  );
+  const catButtons = document.querySelectorAll("#categoryFilterGrid [data-category]");
   catButtons.forEach((btn) => {
     btn.addEventListener("click", () => {
       const cat = btn.dataset.category;
@@ -996,9 +916,7 @@ export function initializeFilterControls() {
   });
 
   // Stage buttons
-  const stageButtons = document.querySelectorAll(
-    "#stageFilterGrid [data-stage]",
-  );
+  const stageButtons = document.querySelectorAll("#stageFilterGrid [data-stage]");
   stageButtons.forEach((btn) => {
     btn.addEventListener("click", () => {
       const stage = btn.dataset.stage;
@@ -1136,8 +1054,7 @@ export function registerHeaderControls(slotCount) {
     const currentMode = settings.theme || "light";
     let nextMode;
     if (currentMode === "auto") {
-      const resolved =
-        document.documentElement.getAttribute("data-theme") || "light";
+      const resolved = document.documentElement.getAttribute("data-theme") || "light";
       nextMode = resolved === "dark" ? "light" : "dark";
     } else {
       nextMode = currentMode === "dark" ? "light" : "dark";
@@ -1157,9 +1074,7 @@ export function registerHeaderControls(slotCount) {
 
     // Rebuild the dex view to reflect shiny mode change
     const { sections } = await buildActiveDexSections();
-    const combinedSpeciesIds = sections.flatMap((s) =>
-      s.entries.map((e) => e.speciesId),
-    );
+    const combinedSpeciesIds = sections.flatMap((s) => s.entries.map((e) => e.speciesId));
     const currentSlotCount = combinedSpeciesIds.length;
     rebuildDexView({ sections, slotCount: currentSlotCount });
   });
@@ -1167,14 +1082,9 @@ export function registerHeaderControls(slotCount) {
   // Share button
   shareButton?.addEventListener("click", async () => {
     const activeSlotCount =
-      document.querySelectorAll(".cell:not(.is-placeholder)").length ||
-      slotCount;
-    const shareHash = await encodeCaughtState(
-      loadCaughtSlots(),
-      activeSlotCount,
-    );
-    const url =
-      location.origin + location.pathname + location.search + shareHash;
+      document.querySelectorAll(".cell:not(.is-placeholder)").length || slotCount;
+    const shareHash = await encodeCaughtState(loadCaughtSlots(), activeSlotCount);
+    const url = location.origin + location.pathname + location.search + shareHash;
     try {
       await navigator.clipboard.writeText(url);
       showToast("Link copied to clipboard!", "success");
@@ -1199,9 +1109,7 @@ export function registerHeaderControls(slotCount) {
       document.documentElement.style.removeProperty("--searchrow-height");
       document.documentElement.style.removeProperty("--searchrow-height-only");
       document.documentElement.style.removeProperty("--header-expanded-height");
-      document.documentElement.style.removeProperty(
-        "--header-collapsed-height",
-      );
+      document.documentElement.style.removeProperty("--header-collapsed-height");
       return;
     }
 
@@ -1216,14 +1124,8 @@ export function registerHeaderControls(slotCount) {
       const searchRowDelta = searchRowHeight + 8 + 4;
       const collapsedHeaderHeight = Math.max(0, headerHeight - searchRowDelta);
 
-      document.documentElement.style.setProperty(
-        "--searchrow-height-only",
-        `${searchRowHeight}px`,
-      );
-      document.documentElement.style.setProperty(
-        "--searchrow-height",
-        `${searchRowDelta}px`,
-      );
+      document.documentElement.style.setProperty("--searchrow-height-only", `${searchRowHeight}px`);
+      document.documentElement.style.setProperty("--searchrow-height", `${searchRowDelta}px`);
       document.documentElement.style.setProperty(
         "--header-expanded-height",
         `${headerHeight + 8}px`,
