@@ -665,7 +665,7 @@ function shareContextMatches(payload, slotCount, segments) {
  * Bit-pack and compress the current caught state into a URL hash string.
  *
  * @async
- * @param {Record<string|number, boolean>} caught - Map of slot numbers to caught status.
+ * @param {Record<string|number, boolean>} caught - Map of slot numbers or specimen keys to caught status.
  * @param {number} slotCount - Total number of slots in the dex.
  * @returns {Promise<string>} URL hash fragment containing compressed state (e.g. "#s=..."), or empty string on error.
  */
@@ -673,10 +673,30 @@ export async function encodeCaughtState(caught, slotCount) {
   try {
     // 1) Bit-pack caught slots into bytes
     const bytes = new Uint8Array(Math.ceil(slotCount / 8));
-    for (let slot = 1; slot <= slotCount; slot += 1) {
-      if (caught[slot]) {
-        const i = slot - 1;
-        bytes[i >> 3] |= 1 << (i & 7);
+    const cells =
+      typeof document !== "undefined"
+        ? document.querySelectorAll(".cell:not(.is-placeholder)")
+        : [];
+
+    if (cells.length > 0) {
+      cells.forEach((cell, idx) => {
+        const slot = Number(cell.dataset.regional) || idx + 1;
+        if (slot >= 1 && slot <= slotCount) {
+          const key = cell.dataset.specimenKey;
+          const isCaught =
+            key && caught[key] !== undefined ? Boolean(caught[key]) : Boolean(caught[slot]);
+          if (isCaught) {
+            const i = slot - 1;
+            bytes[i >> 3] |= 1 << (i & 7);
+          }
+        }
+      });
+    } else {
+      for (let slot = 1; slot <= slotCount; slot += 1) {
+        if (caught[slot]) {
+          const i = slot - 1;
+          bytes[i >> 3] |= 1 << (i & 7);
+        }
       }
     }
 
@@ -705,7 +725,7 @@ export async function encodeCaughtState(caught, slotCount) {
  * @param {string} hash - URL hash containing "#s=...".
  * @param {number} slotCount - Expected number of slots.
  * @param {Iterable<string>} [segments=getShareSegments()] - Enabled segment keys to validate against.
- * @returns {Promise<Record<number, boolean>|null>} Map of slot numbers to caught status, or null if invalid or mismatched.
+ * @returns {Promise<Record<string|number, boolean>|null>} Map of slot numbers and specimen keys to caught status, or null if invalid or mismatched.
  */
 export async function decodeCaughtState(hash, slotCount, segments = getShareSegments()) {
   try {
@@ -726,6 +746,21 @@ export async function decodeCaughtState(hash, slotCount, segments = getShareSegm
       const i = slot - 1;
       caught[slot] = !!(bytes[i >> 3] & (1 << (i & 7)));
     }
+
+    const cells =
+      typeof document !== "undefined"
+        ? document.querySelectorAll(".cell:not(.is-placeholder)")
+        : [];
+    if (cells.length > 0) {
+      cells.forEach((cell, idx) => {
+        const slot = Number(cell.dataset.regional) || idx + 1;
+        const key = cell.dataset.specimenKey;
+        if (key && caught[slot]) {
+          caught[key] = true;
+        }
+      });
+    }
+
     return caught;
   } catch (err) {
     console.error("decodeCaughtState error:", err);

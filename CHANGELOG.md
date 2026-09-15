@@ -8,6 +8,7 @@ All notable changes, new features, improvements, and bug fixes for **LivingDex**
 
 | Version                                                               | Release Date          | Major Highlights                                                                                                 |
 | :-------------------------------------------------------------------- | :-------------------- | :--------------------------------------------------------------------------------------------------------------- |
+| **[v1.19.8](#v1198---2026-09-15)**                                    | Sep 15, 2026          | Fix shared link import resetting dex progress by supporting specimenKey and slot indexing                        |
 | **[v1.19.7](#v1197---2026-09-15)**                                    | Sep 15, 2026          | Fix broken dynamic import in main.js for shared link warning modal                                               |
 | **[v1.19.6](#v1196---2026-09-15)**                                    | Sep 15, 2026          | Dead code cleanup, removed unused imports & resolved all ESLint warnings                                         |
 | **[v1.19.5](#v1195---2026-09-15)**                                    | Sep 15, 2026          | Prettier ignore rules for datasets & clean single-line ESLint configuration                                      |
@@ -63,6 +64,19 @@ All notable changes, new features, improvements, and bug fixes for **LivingDex**
 | **[Expansion Phase](#multi-game-expansion--localization---aug-2026)** | Aug 17–31, 2026       | All mainline games, 8-language localization, Info modal, UI modular split                                        |
 | **[Modular JS Split](#modular-js-split---nov-2025)**                  | Nov 13–15, 2025       | ES module decomposition (`main.js`, `ui.js`, `api.js`, `storage.js`)                                             |
 | **[Genesis & Prototype](#initial-release---oct-2025)**                | Oct 27 – Nov 10, 2025 | Initial LivingDex tracker release, 30-slot PC boxes, PokeAPI integration                                         |
+
+---
+
+## [v1.19.8] - 2026-09-15
+
+### Fixed
+
+- **Shared Link Caught State Reset (`state.js`, `storage.js`, `controls.js`)**:
+  - Resolved an issue where importing a shared URL link (`#s=...`) cleared all dex progress because slot-indexed bitmasks (`1..N`) did not match specimen-keyed cell datasets (`specimenKey`).
+  - Updated `encodeCaughtState` and `decodeCaughtState` to seamlessly bridge positional slot numbers and canonical specimen keys across standard and shiny modes.
+  - Updated `syncCaughtState` and `countCaughtSlots` to check both `specimenKey` and numeric slot indices, properly normalizing and persisting imported progress.
+- **Service Worker (`sw.js`)**:
+  - Bumped `CACHE_VERSION` to `v1.19.8`.
 
 ---
 

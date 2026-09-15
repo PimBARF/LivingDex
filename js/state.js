@@ -45,7 +45,7 @@ export function countCaughtSlots(slotCount) {
     for (const cell of cells) {
       const key = cell.dataset.specimenKey;
       const slot = Number(cell.dataset.regional);
-      if (key ? Boolean(caught[key]) : slot && Boolean(caught[slot])) {
+      if (key && caught[key] !== undefined ? Boolean(caught[key]) : slot && Boolean(caught[slot])) {
         total += 1;
       }
     }
@@ -91,28 +91,40 @@ export function updateProgressBar(slotCount) {
  * Ensures consistency across all representations (local storage, DOM cell
  * classes/attributes, progress bar, and active visibility filters).
  *
- * @param {Record<number, boolean>} caught - Map of slot indices (1-based) to caught boolean flags.
+ * @param {Record<string|number, boolean>} caught - Map of slot indices (1-based) or specimen keys to caught boolean flags.
  * @param {number} slotCount - Total number of living dex slots.
  * @returns {void}
  */
 export function syncCaughtState(caught, slotCount) {
   if (!caught) return;
 
-  // Route data to correct storage key based on shiny mode
-  if (isShinyMode) {
-    saveShinyCaughtSlots(caught);
-  } else {
-    saveCaughtSlots(caught);
-  }
+  const normalizedCaught = {};
+  const cells = document.querySelectorAll(".cell:not(.is-placeholder)");
 
   // Update all cells in the UI to match caught state
-  document.querySelectorAll(".cell:not(.is-placeholder)").forEach((cell) => {
+  cells.forEach((cell) => {
     const key = cell.dataset.specimenKey;
     const slot = Number(cell.dataset.regional);
-    const isCaught = key ? !!caught[key] : !!caught[slot];
+    const isCaught = key && caught[key] !== undefined ? !!caught[key] : !!caught[slot];
     cell.classList.toggle("caught", isCaught);
     cell.setAttribute("aria-pressed", String(isCaught));
+    if (isCaught) {
+      if (key) {
+        normalizedCaught[key] = true;
+      } else if (slot) {
+        normalizedCaught[slot] = true;
+      }
+    }
   });
+
+  const targetCaught = cells.length > 0 ? normalizedCaught : caught;
+
+  // Route data to correct storage key based on shiny mode
+  if (isShinyMode) {
+    saveShinyCaughtSlots(targetCaught);
+  } else {
+    saveCaughtSlots(targetCaught);
+  }
 
   updateProgressBar(slotCount);
   applyHideCaughtFilter();

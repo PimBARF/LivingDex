@@ -1,4 +1,9 @@
-import { loadSettings, loadCaughtSlots, encodeCaughtState } from "../storage.js";
+import {
+  loadSettings,
+  loadCaughtSlots,
+  loadShinyCaughtSlots,
+  encodeCaughtState,
+} from "../storage.js";
 import { applyTheme, isMotionReduced } from "./theme.js";
 import { showToast } from "./modals.js";
 import { isShinyMode, setShinyMode, rebuildDexView } from "../state.js";
@@ -1081,7 +1086,10 @@ export function registerHeaderControls(slotCount) {
   shareButton?.addEventListener("click", async () => {
     const activeSlotCount =
       document.querySelectorAll(".cell:not(.is-placeholder)").length || slotCount;
-    const shareHash = await encodeCaughtState(loadCaughtSlots(), activeSlotCount);
+    const shareHash = await encodeCaughtState(
+      isShinyMode ? loadShinyCaughtSlots() : loadCaughtSlots(),
+      activeSlotCount,
+    );
     const url = location.origin + location.pathname + location.search + shareHash;
     try {
       await navigator.clipboard.writeText(url);
