@@ -22,6 +22,7 @@ import {
   registerSegmentsModal,
   registerMissingGuideModal,
   registerWelcomeGuideModal,
+  showSharedLinkWarningModal,
   checkFirstTimeVisitor,
   showToast,
 } from "./ui/modals.js";
@@ -140,10 +141,8 @@ async function initializeLivingDexApp() {
   );
   if (sharedState && Object.keys(sharedState).length) {
     // Show shared link warning modal
-    import("./ui.js").then((ui) => {
-      ui.showSharedLinkWarningModal(() => {
-        syncCaughtState(sharedState, LIVING_DEX_SLOT_COUNT);
-      });
+    showSharedLinkWarningModal(() => {
+      syncCaughtState(sharedState, LIVING_DEX_SLOT_COUNT);
     });
   } else if (/#s=/.test(location.hash)) {
     showToast("This shared link is for a different game or segment selection.", "warning");
@@ -162,10 +161,8 @@ async function initializeLivingDexApp() {
       getShareSegments(),
     );
     if (incomingState) {
-      import("./ui.js").then((ui) => {
-        ui.showSharedLinkWarningModal(() => {
-          syncCaughtState(incomingState, activeSlotCount);
-        });
+      showSharedLinkWarningModal(() => {
+        syncCaughtState(incomingState, activeSlotCount);
       });
     } else if (/#s=/.test(location.hash)) {
       showToast("This shared link is for a different game or segment selection.", "warning");
