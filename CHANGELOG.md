@@ -8,6 +8,7 @@ All notable changes, new features, improvements, and bug fixes for **LivingDex**
 
 | Version                                                               | Release Date          | Major Highlights                                                                                                 |
 | :-------------------------------------------------------------------- | :-------------------- | :--------------------------------------------------------------------------------------------------------------- |
+| **[v1.20.4](#v1204---2026-09-15)**                                    | Sep 15, 2026          | Modal action button hover reversal animation with outline accent contrast across light & dark themes             |
 | **[v1.20.3](#v1203---2026-09-15)**                                    | Sep 15, 2026          | Modern Crisp Clean Slate light mode theme tokens, high-contrast slate typography & opaque modal dialog cards     |
 | **[v1.20.2](#v1202---2026-09-15)**                                    | Sep 15, 2026          | Standardize modal action button hierarchy across all dialogs (primary blue dismissals & secondary neutrals)      |
 | **[v1.20.1](#v1201---2026-09-15)**                                    | Sep 15, 2026          | Shared design token system, global button hierarchy, modal & toast consistency, and dark mode header text fix    |
@@ -70,6 +71,18 @@ All notable changes, new features, improvements, and bug fixes for **LivingDex**
 | **[Genesis & Prototype](#initial-release---oct-2025)**                | Oct 27 – Nov 10, 2025 | Initial LivingDex tracker release, 30-slot PC boxes, PokeAPI integration                                         |
 
 ---
+
+## [v1.20.4] - 2026-09-15
+
+### Changed
+
+- **Button Hover Reversal & Outline Contrast (`styles.css`)**:
+  - Implemented background and outline reversal animations on button hover across `.btn`, `.btn-primary`, `.btn-secondary`, `.btn-success`, and `.btn-danger`.
+  - On hover, solid buttons seamlessly clear their background to transparent with matching colored borders and text accents, while secondary buttons elevate to accent-outlined interactive states.
+  - Added subtle active-state scaling (`transform: scale(0.98)`) and soft color-mix tap feedback for responsive touch and click interactions.
+  - Removed obsolete button border hover tokens from design system declarations.
+- **Service Worker Cache Lifecycle (`sw.js`)**:
+  - Bumped `CACHE_VERSION` to `v1.20.4`.
 
 ## [v1.20.3] - 2026-09-15
 
