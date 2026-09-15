@@ -685,7 +685,7 @@ function base64UrlToBytes(encoded) {
  * @param {Iterable<string>} segments - Expected enabled segment keys.
  * @returns {boolean} True if payload matches the current dex context, false otherwise.
  */
-function shareContextMatches(payload, slotCount, segments) {
+export function shareContextMatches(payload, slotCount, segments) {
   if (!payload || payload.version !== SHARE_PAYLOAD_VERSION) return false;
   if (payload.gameId !== ACTIVE_GAME_ID || payload.slotCount !== slotCount) return false;
   const expectedSegments = [...segments].sort();
@@ -930,7 +930,7 @@ export async function inspectSharePayload(hash, currentSegments = getShareSegmen
  * @param {Iterable<string>} [segments=getShareSegments()] - Enabled segment keys to validate against.
  * @returns {Promise<Record<string|number, boolean>|null>} Map of slot numbers and specimen keys to caught status, or null if invalid or mismatched.
  */
-export async function decodeCaughtState(hashOrPayload, slotCount, segments = getShareSegments()) {
+export async function decodeCaughtState(hashOrPayload, slotCount, _segments = getShareSegments()) {
   try {
     let payload;
     if (typeof hashOrPayload === "object" && hashOrPayload !== null && hashOrPayload.bits) {

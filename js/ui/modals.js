@@ -1716,18 +1716,29 @@ export function registerSettingsControls() {
   return { closeModal };
 }
 
+let toastDismissTimer = null;
+
 /**
  * Display a toast notification with automatic dismissal.
  *
  * @param {string} message - The message to display.
- * @param {'success'|'warning'|'danger'} [type="success"] - The toast type for styling.
+ * @param {'success'|'warning'|'danger'|'info'} [type="success"] - The toast type for styling.
+ * @param {number} [duration=2500] - Duration in milliseconds before dismissing.
  */
-export function showToast(message, type = "success") {
+export function showToast(message, type = "success", duration = 2500) {
   const toast = document.getElementById("toast");
   if (!toast) return;
+
+  if (toastDismissTimer) {
+    clearTimeout(toastDismissTimer);
+    toastDismissTimer = null;
+  }
 
   toast.className = `toast toast-${type}`;
   toast.textContent = message;
   toast.classList.add("show");
-  setTimeout(() => toast.classList.remove("show"), 2000);
+  toastDismissTimer = setTimeout(() => {
+    toast.classList.remove("show");
+    toastDismissTimer = null;
+  }, duration);
 }

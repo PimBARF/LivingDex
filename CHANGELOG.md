@@ -8,6 +8,7 @@ All notable changes, new features, improvements, and bug fixes for **LivingDex**
 
 | Version                                                               | Release Date          | Major Highlights                                                                                                 |
 | :-------------------------------------------------------------------- | :-------------------- | :--------------------------------------------------------------------------------------------------------------- |
+| **[v1.20.1](#v1201---2026-09-15)**                                    | Sep 15, 2026          | Shared design token system, global button hierarchy, modal & toast consistency, and dark mode header text fix    |
 | **[v1.20.0](#v1200---2026-09-15)**                                    | Sep 15, 2026          | Modernized shared link modal, cross-game & cross-segment URL loading, and Dex Options share clarification        |
 | **[v1.19.8](#v1198---2026-09-15)**                                    | Sep 15, 2026          | Fix shared link import resetting dex progress by supporting specimenKey and slot indexing                        |
 | **[v1.19.7](#v1197---2026-09-15)**                                    | Sep 15, 2026          | Fix broken dynamic import in main.js for shared link warning modal                                               |
@@ -67,6 +68,44 @@ All notable changes, new features, improvements, and bug fixes for **LivingDex**
 | **[Genesis & Prototype](#initial-release---oct-2025)**                | Oct 27 – Nov 10, 2025 | Initial LivingDex tracker release, 30-slot PC boxes, PokeAPI integration                                         |
 
 ---
+
+## [v1.20.1] - 2026-09-15
+
+### Added
+
+- **Unified Design Token System (`styles.css`)**:
+  - Established a comprehensive, theme-agnostic spatial and structural scale (`--space-*`, `--radius-*`, `--control-height`, `--control-height-sm`, `--control-height-xs`, `--searchrow-height`, `--header-expanded-height`, `--header-collapsed-height`, `--shadow-*`, `--ease-*`, `--transition-*`).
+  - Standardized the z-index layering scale (`--z-base: 0`, `--z-dropdown: 20`, `--z-sticky: 40`, `--z-floating: 60`, `--z-banner: 100`, `--z-modal-backdrop: 200`, `--z-modal: 210`, `--z-modal-stacked: 220`, `--z-toast: 300`, `--z-tooltip: 400`) to resolve previous layering conflicts between notifications and dialog modals.
+  - Declared full semantic color palettes for Light and Dark themes (`--bg-header`, `--surface-overlay`, `--backdrop-color`, `--text-on-accent`, `--text-on-brand`, `--border-subtle`, `--border-strong`, `--info`, `--purple`, `--amber`) preparing the engine for extensible custom theme additions.
+- **Global Button & Action Hierarchy (`styles.css`)**:
+  - Added global utility rules for `.btn-primary`, `.btn-secondary`, `.btn-ghost`, `.btn-success`, `.btn-danger`, `.btn-sm`, and `.btn-icon` ensuring consistent styling, heights, hover states, and tap targets across all modals and toolbars.
+  - Provided clean, high-contrast background and border transitions on hover and active states that seamlessly integrate with the app's minimalist aesthetic without shadows or harsh double rings.
+- **Info Toast Variant (`styles.css`, `js/ui/modals.js`)**:
+  - Added `.toast-info` style variant mapped to `--info` blue token.
+  - Enhanced `showToast()` to support configurable durations, handle info toasts properly, and manage dismissal timers without collision.
+
+### Changed
+
+- **Modal & Dialog Sizing Standard (`styles.css`)**:
+  - Standardized modal card geometry (`.modal-card`), padding, and viewport height limits using `calc(100dvh - 36px - safe-area-insets)` and custom max-width tokens (`--modal-max-width`).
+  - Standardized `#modalFilters`, `#modalSegments`, and `#modalMissingGuide` height bounds across mobile and desktop.
+- **Form Controls & Inputs (`styles.css`)**:
+  - Aligned `.input`, `.select`, and `#search` with `--control-radius` (10px) and standard `--control-height` (41px).
+  - Improved contrast on `.settings-theme-segmented` by rendering the container with `--surface-soft` so that active options stand out cleanly in Light theme.
+
+### Fixed
+
+- **Destructive / Danger Button Styling (`styles.css`)**:
+  - Replaced dark mode pastel salmon pink (`#f87171`) with a bold, authoritative danger red (`rgb(225, 45, 57)` in dark mode and `rgb(220, 38, 38)` in light mode).
+  - Fixed button hover specificity where `.btn-danger`, `.btn-primary`, and `.btn-success` were inheriting greyish `.btn:hover` background overrides, ensuring dark and bold active/hover color shades across all themes.
+- **Pokémon Info Cry Pill Button (`index.html`, `styles.css`)**:
+  - Fixed content overflow on the "Play cry" action button by removing unintended square `.btn-icon` sizing class and styling it cleanly as a pill action button (`--radius-pill`, flex centering, smooth active scale).
+- **Dark Theme Header Text Contrast (`styles.css`)**:
+  - Fixed hardcoded `color: rgb(33, 33, 33)` in `header` rule, restoring dynamic `var(--text)` inheritance across Light and Dark themes.
+- **Encounter Tags & Condition Overrides (`styles.css`)**:
+  - Replaced hardcoded tag and encounter rate colors with clean semantic `color-mix()` tokens (`--warning`, `--purple`, `--amber`, `--success`, `--info`), removing redundant dark theme duplicate rules.
+- **Undeclared Variable Cleanup (`styles.css`)**:
+  - Fixed 6 previously undeclared CSS variable references (`--searchrow-height-only`, `--searchrow-height`, `--header-expanded-height`, `--header-collapsed-height`, `--surface-overlay`, `--border-radius-sm`).
 
 ## [v1.20.0] - 2026-09-15
 

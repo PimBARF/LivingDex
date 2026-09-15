@@ -19,18 +19,17 @@ const REDUCED_MOTION_MQL =
     : null;
 
 /**
- * Resolve the effective color scheme ('light' or 'dark') based on the requested mode.
+ * Resolve the effective color scheme based on the requested mode.
  * Evaluates the system preference media query when mode is 'auto'.
  *
- * @param {string} [mode] - Theme mode ('light', 'dark', or 'auto').
- * @returns {"light" | "dark"} The resolved theme ('light' or 'dark').
+ * @param {string} [mode] - Theme mode ('light', 'dark', 'auto', or custom theme ID).
+ * @returns {string} The resolved theme identifier.
  */
-function resolveTheme(mode) {
+export function resolveTheme(mode) {
   if (mode === "auto") {
     return SYSTEM_THEME_MQL && SYSTEM_THEME_MQL.matches ? "dark" : "light";
   }
-  // Fallback to light/dark if anything unexpected is stored
-  return mode === "dark" ? "dark" : "light";
+  return mode || "light";
 }
 
 /**

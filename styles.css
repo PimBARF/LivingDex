@@ -49,36 +49,118 @@
    ============================================================================= */
 
 :root {
-  /* --- Brand & Base Color Palette --- */
-  --bg: rgb(245, 247, 250);                      /* Page background (light) */
-  --bg-header: rgba(255, 255, 255, 0.5);         /* Header gradient base */
-  --text: rgb(33, 33, 33);                       /* Primary body text */
-  --card: rgb(255, 255, 255);                    /* Card & surface background */
-  --border: rgba(0, 0, 0, 0.12);                 /* Subtle structural borders */
-  --muted: rgba(0, 0, 0, 0.65);                  /* Secondary / descriptive text */
-  --accent: rgb(255, 204, 0);                    /* Primary brand accent (Pikachu yellow) */
-  --accent-1: rgb(66, 133, 244);                 /* Alias to action color for compatibility */
-  --accent-2: rgb(66, 133, 244);                 /* Action color (interactive links/buttons) */
-  --focus-ring: rgb(37, 99, 235);                /* Accessible focus outline ring */
+  /* ===========================================================================
+     SHARED SPATIAL, STRUCTURAL & SHADOW TOKENS (Theme-Agnostic)
+     =========================================================================== */
 
-  /* --- Interactive Surfaces & Tints --- */
+  /* --- Spacing Scale --- */
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 12px;
+  --space-lg: 16px;
+  --space-xl: 20px;
+  --space-2xl: 24px;
+  --space-3xl: 32px;
+  --grid-gap: 8px;
+
+  /* --- Border Radii Scale --- */
+  --radius-xs: 4px;
+  --radius-sm: 6px;
+  --radius-md: 8px;
+  --radius-control: 10px;                         /* Buttons, chips, dropdowns, inputs */
+  --radius-panel: 12px;                           /* Inner cards, sprite wrappers, grid cells */
+  --radius-box: 14px;                             /* PC box containers */
+  --radius-dialog: 16px;                          /* Modal dialog windows */
+  --radius-pill: 9999px;                          /* Badges, circular chips, pill buttons */
+
+  /* Aliases for core components */
+  --radius: var(--radius-box);
+  --panel-radius: var(--radius-panel);
+  --control-radius: var(--radius-control);
+  --dialog-radius: var(--radius-dialog);
+  --modal-max-width: 540px;
+
+  /* --- Component Heights & Sizing --- */
+  --control-height: 41px;
+  --control-height-sm: 32px;
+  --control-height-xs: 26px;
+  --searchrow-height: 101px;
+  --searchrow-height-only: 89px;
+  --header-expanded-height: 230px;
+  --header-collapsed-height: 130px;
+
+  /* --- Z-Index Layering Scale --- */
+  --z-base: 0;
+  --z-dropdown: 20;
+  --z-sticky: 40;                                 /* Sticky header & progress tracker */
+  --z-floating: 60;                               /* Scroll to top button */
+  --z-banner: 100;                                /* Floating update banner & selection bar */
+  --z-modal-backdrop: 200;
+  --z-modal: 210;                                 /* Dialog windows */
+  --z-modal-stacked: 220;                         /* Nested modals (e.g. Pokemon Info above Field Guide) */
+  --z-toast: 300;                                 /* Toasts & undo alerts */
+  --z-tooltip: 400;                               /* HUD coordinate tooltip */
+
+  /* --- Elevation & Shadows --- */
+  --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.06);
+  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.16), 0 1px 3px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.22), 0 2px 8px rgba(0, 0, 0, 0.10);
+  --shadow-dialog: 0 18px 42px rgba(0, 0, 0, 0.28), 0 4px 12px rgba(0, 0, 0, 0.12);
+  --dialog-shadow: var(--shadow-dialog);
+
+  /* --- Animation & Transitions --- */
+  --ease-spring: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-smooth: cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-fast: 120ms ease;
+  --transition-base: 200ms ease;
+  --transition-spring: 350ms var(--ease-spring);
+
+  /* ===========================================================================
+     LIGHT THEME (Default) COLOR PALETTE & SEMANTIC TOKENS
+     =========================================================================== */
+
+  /* --- Backgrounds & Surfaces --- */
+  --bg: rgb(245, 247, 250);                      /* Page canvas background */
+  --bg-header: rgba(255, 255, 255, 0.5);         /* Header gradient base */
+  --card: rgb(255, 255, 255);                    /* Primary card / surface */
   --surface-soft: rgba(0, 0, 0, 0.03);           /* Low-contrast chip/row background */
   --surface-soft-border: rgba(0, 0, 0, 0.06);    /* Chip/row border */
   --surface-soft-hover: rgba(66, 133, 244, 0.08);/* Hover tint for interactive chips */
-  --label: rgba(255, 255, 255, 0.8);             /* Cell badge/label background overlay */
+  --surface-overlay: rgba(255, 255, 255, 0.92);  /* Tooltip & popover glass surface */
+  --backdrop-color: rgba(10, 12, 16, 0.58);      /* Modal frosted backdrop overlay */
+  --label: rgba(255, 255, 255, 0.85);            /* Cell badge background overlay */
 
-  /* --- State & Status Colors --- */
-  --success: rgb(16, 185, 129);                  /* Positive feedback / completed */
-  --warning: rgb(245, 158, 11);                  /* Cautionary notes / warnings */
-  --danger: rgb(239, 68, 68);                    /* Destructive actions / errors */
+  /* --- Typography & Text --- */
+  --text: rgb(33, 33, 33);                       /* Primary body text */
+  --muted: rgba(0, 0, 0, 0.65);                  /* Secondary / description text */
+  --text-tertiary: rgba(0, 0, 0, 0.45);          /* Tertiary subtle captions */
+  --text-on-accent: rgb(255, 255, 255);          /* Pure white text on colored buttons */
+  --text-on-brand: rgb(17, 17, 17);              /* Dark text on bright Pikachu yellow */
 
-  /* --- Layout & Border Radii Scale --- */
-  --grid-gap: 8px;                               /* Spacing between dex cells */
-  --radius: 14px;                                /* Box container corner radius */
-  --panel-radius: 12px;                          /* Inner section & sprite panel radius */
-  --control-radius: 10px;                        /* Buttons, chips & inputs radius */
-  --dialog-radius: 16px;                         /* Modal dialog window radius */
-  --dialog-shadow: 0 18px 42px rgba(0, 0, 0, 0.24);
+  /* --- Structural Borders --- */
+  --border: rgba(0, 0, 0, 0.12);                 /* Default border */
+  --border-subtle: rgba(0, 0, 0, 0.06);          /* Subtle partition border */
+  --border-strong: rgba(0, 0, 0, 0.22);          /* Emphasized border */
+
+  /* --- Brand & Interactive Accents --- */
+  --accent: rgb(255, 204, 0);                    /* Brand yellow (Pikachu) */
+  --accent-2: rgb(66, 133, 244);                 /* Action color (interactive links/buttons) */
+  --focus-ring: rgb(37, 99, 235);                /* Accessible focus outline ring */
+
+  /* --- Semantic Status Colors --- */
+  --success: rgb(16, 185, 129);                  /* Positive / caught / completed */
+  --warning: rgb(245, 158, 11);                  /* Caution / warning */
+  --danger: rgb(220, 38, 38);                    /* Destructive / error (bold vivid red) */
+  --info: rgb(59, 130, 246);                     /* Informational feedback */
+  --purple: rgb(147, 51, 234);                   /* Gift / special categories */
+  --amber: rgb(217, 119, 6);                     /* Fossil / ground categories */
+
+  /* --- Button Border Hover Contrast Tokens --- */
+  --btn-primary-border-hover: color-mix(in srgb, var(--accent-2) 35%, black);
+  --btn-danger-border-hover: color-mix(in srgb, var(--danger) 35%, black);
+  --btn-success-border-hover: color-mix(in srgb, var(--success) 35%, black);
+  --btn-secondary-border-hover: var(--accent-2);
 
   /* --- Accessible Focus Glow Shadows --- */
   --focus-shadow-primary: 0 0 0 3px color-mix(in srgb, var(--focus-ring) 28%, transparent);
@@ -88,22 +170,49 @@
   --focus-shadow-toggle: 0 0 0 3px color-mix(in srgb, var(--focus-ring) 18%, transparent);
 }
 
-/* Dark Theme Overrides (Applied via data-theme attribute on <html>) */
+/* Dark Theme Overrides (Applied via data-theme="dark" attribute on <html>) */
 [data-theme="dark"] {
+  /* --- Backgrounds & Surfaces --- */
   --bg: rgb(24, 26, 27);
   --bg-header: rgba(40, 42, 45, 0.5);
-  --text: rgb(235, 235, 235);
   --card: rgb(40, 42, 45);
-  --border: rgba(255, 255, 255, 0.16);
-  --muted: rgba(255, 255, 255, 0.75);
-  --accent: rgb(255, 204, 0);
-  --accent-1: rgb(66, 133, 244);
-  --accent-2: rgb(66, 133, 244);
-  --focus-ring: rgb(96, 165, 250);
   --surface-soft: rgba(255, 255, 255, 0.06);
   --surface-soft-border: rgba(255, 255, 255, 0.12);
   --surface-soft-hover: rgba(66, 133, 244, 0.14);
+  --surface-overlay: rgba(30, 32, 34, 0.94);
+  --backdrop-color: rgba(0, 0, 0, 0.72);
   --label: rgba(24, 26, 27, 0.86);
+
+  /* --- Typography & Text --- */
+  --text: rgb(235, 235, 235);
+  --muted: rgba(255, 255, 255, 0.75);
+  --text-tertiary: rgba(255, 255, 255, 0.50);
+  --text-on-accent: rgb(255, 255, 255);
+  --text-on-brand: rgb(17, 17, 17);
+
+  /* --- Structural Borders --- */
+  --border: rgba(255, 255, 255, 0.16);
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --border-strong: rgba(255, 255, 255, 0.28);
+
+  /* --- Brand & Interactive Accents --- */
+  --accent: rgb(255, 204, 0);
+  --accent-2: rgb(66, 133, 244);
+  --focus-ring: rgb(96, 165, 250);
+
+  /* --- Semantic Status Colors --- */
+  --success: rgb(52, 211, 153);
+  --warning: rgb(251, 191, 36);
+  --danger: rgb(225, 45, 57);                    /* Bold warning crimson red (not salmon pink) */
+  --info: rgb(96, 165, 250);
+  --purple: rgb(192, 132, 252);
+  --amber: rgb(245, 158, 11);
+
+  /* --- Button Border Hover Contrast Tokens --- */
+  --btn-primary-border-hover: color-mix(in srgb, var(--accent-2) 40%, white);
+  --btn-danger-border-hover: color-mix(in srgb, var(--danger) 40%, white);
+  --btn-success-border-hover: color-mix(in srgb, var(--success) 40%, white);
+  --btn-secondary-border-hover: color-mix(in srgb, var(--accent-2) 40%, white);
 }
 
 /* =============================================================================
@@ -192,32 +301,149 @@ button:focus-visible,
   justify-content: center;
   gap: 0.5rem;
   padding: 0.6rem 1rem;
-  height: 41px;
+  height: var(--control-height);
   box-sizing: border-box;
   border-radius: var(--control-radius);
   border: 1px solid var(--border);
   background: var(--card);
   color: var(--text);
   font-weight: 600;
+  line-height: 1;
   cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
   transition:
-    transform 120ms ease,
-    box-shadow 120ms ease,
-    background 120ms ease,
-    color 120ms ease,
-    border-color 120ms ease;
+    box-shadow var(--transition-fast),
+    background var(--transition-fast),
+    color var(--transition-fast),
+    border-color var(--transition-fast),
+    filter var(--transition-fast),
+    transform var(--transition-fast);
   white-space: nowrap;
 }
 
 .btn:hover {
-  transform: translateY(-1px);
+  background: var(--surface-soft-hover);
   border-color: var(--accent-2);
+}
+
+.btn:active {
+  transform: scale(0.98);
 }
 
 .btn[disabled],
 .btn.is-disabled {
   opacity: 0.55;
   pointer-events: none;
+  transform: none;
+}
+
+/* Primary prominent action button */
+.btn-primary {
+  background: var(--accent-2);
+  color: var(--text-on-accent);
+  border: 1px solid var(--accent-2);
+}
+
+.btn-primary:hover {
+  background: color-mix(in srgb, var(--accent-2) 82%, black);
+  border-color: var(--btn-primary-border-hover);
+  color: var(--text-on-accent);
+}
+
+.btn-primary:active {
+  background: color-mix(in srgb, var(--accent-2) 65%, black);
+  border-color: var(--btn-primary-border-hover);
+  transform: scale(0.98);
+}
+
+/* Secondary subtle action button */
+.btn-secondary {
+  background: var(--surface-soft);
+  color: var(--text);
+  border: 1px solid var(--border);
+}
+
+.btn-secondary:hover {
+  background: var(--surface-soft-hover);
+  color: var(--text);
+  border-color: var(--btn-secondary-border-hover);
+}
+
+.btn-secondary:active {
+  background: color-mix(in srgb, var(--surface-soft-hover) 80%, black);
+  transform: scale(0.98);
+}
+
+/* Ghost / borderless button */
+.btn-ghost {
+  background: transparent;
+  border: 1px solid transparent;
+  color: var(--muted);
+}
+
+.btn-ghost:hover {
+  background: var(--surface-soft-hover);
+  color: var(--text);
+  border-color: var(--border);
+}
+
+.btn-ghost:active {
+  transform: scale(0.98);
+}
+
+/* Success / positive action button */
+.btn-success {
+  background: var(--success);
+  color: var(--text-on-accent);
+  border: 1px solid var(--success);
+}
+
+.btn-success:hover {
+  background: color-mix(in srgb, var(--success) 82%, black);
+  border-color: var(--btn-success-border-hover);
+  color: var(--text-on-accent);
+}
+
+.btn-success:active {
+  background: color-mix(in srgb, var(--success) 65%, black);
+  border-color: var(--btn-success-border-hover);
+  transform: scale(0.98);
+}
+
+/* Destructive / danger action button (Reset progress, clear data, overwrite) */
+.btn-danger {
+  background: var(--danger);
+  color: var(--text-on-accent);
+  border: 1px solid var(--danger);
+}
+
+.btn-danger:hover {
+  background: color-mix(in srgb, var(--danger) 82%, black);
+  border-color: var(--btn-danger-border-hover);
+  color: var(--text-on-accent);
+}
+
+.btn-danger:active {
+  background: color-mix(in srgb, var(--danger) 65%, black);
+  border-color: var(--btn-danger-border-hover);
+  transform: scale(0.98);
+}
+
+/* Compact small button modifier */
+.btn-sm {
+  height: var(--control-height-sm);
+  padding: 0 10px;
+  font-size: 13px;
+  border-radius: var(--radius-sm);
+}
+
+/* Square icon button modifier */
+.btn-icon {
+  padding: 0;
+  width: var(--control-height);
+  height: var(--control-height);
+  flex-shrink: 0;
 }
 
 /* Ko-fi donation / support CTA button */
@@ -244,18 +470,6 @@ button:focus-visible,
   border-color: color-mix(in srgb, var(--accent) 90%, transparent);
 }
 
-/* Destructive / danger action button (Reset progress, clear data, overwrite) */
-.btn-danger {
-  background: var(--danger);
-  color: #fff;
-  border-color: var(--danger);
-}
-
-.btn-danger:hover {
-  filter: brightness(0.95);
-  border-color: var(--danger);
-}
-
 /* =============================================================================
    4) FORM CONTROLS & INPUTS
    ============================================================================= */
@@ -267,11 +481,18 @@ button:focus-visible,
   display: inline-block;
   width: 100%;
   min-width: 0;
-  padding: 0.55rem 0.7rem;
-  border-radius: 8px;
+  padding: 0.55rem 0.85rem;
+  border-radius: var(--control-radius);
   border: 1px solid var(--border);
   background: var(--card);
   color: var(--text);
+  box-sizing: border-box;
+}
+
+.input,
+.select,
+#search {
+  height: var(--control-height);
 }
 
 select option,
@@ -301,7 +522,7 @@ select option,
   width: 270px;
   min-width: 270px;
   font-weight: 600;
-  height: 41px;
+  height: var(--control-height);
   padding: 0.6rem 1rem;
   border-radius: var(--control-radius);
   line-height: 1.2;
@@ -326,18 +547,22 @@ select option,
   left: 50%;
   transform: translateX(-50%) translateY(100%);
   min-width: 240px;
+  max-width: calc(100% - 32px);
   text-align: center;
-  border-radius: 12px;
-  padding: 0.75rem 1rem;
-  border-left: 12px solid var(--success);
+  border-radius: var(--control-radius);
+  padding: 0.75rem 1.25rem;
+  border: 1px solid var(--border);
+  border-left: 5px solid var(--success);
   background: var(--card);
   color: var(--text);
   font-weight: 600;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+  font-size: 0.92rem;
+  box-shadow: var(--shadow-lg);
   opacity: 0;
-  transition: opacity 0.4s ease, transform 0.4s ease;
-  z-index: 200;
+  transition: opacity var(--transition-base), transform var(--transition-base);
+  z-index: var(--z-toast);
   pointer-events: none;
+  box-sizing: border-box;
 }
 
 .toast.show {
@@ -349,6 +574,7 @@ select option,
 .toast-success { border-left-color: var(--success); }
 .toast-warning { border-left-color: var(--warning); }
 .toast-danger  { border-left-color: var(--danger);  }
+.toast-info    { border-left-color: var(--info);    }
 
 /* Floating bottom update notification banner */
 .update-banner {
@@ -361,15 +587,15 @@ select option,
   border: 1px solid var(--border);
   border-left: 6px solid var(--accent-2);
   border-radius: var(--panel-radius);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.22);
+  box-shadow: var(--shadow-lg);
   padding: 14px 16px;
-  z-index: 150;
+  z-index: var(--z-banner);
   display: flex;
   flex-direction: column;
   gap: 12px;
   transform: translateY(120%);
   opacity: 0;
-  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.35s ease;
+  transition: transform var(--transition-spring), opacity var(--transition-base);
   pointer-events: auto;
 }
 
@@ -415,29 +641,13 @@ select option,
 }
 
 .update-banner-actions .btn-primary {
-  background: var(--accent-2);
-  color: #fff;
-  font-weight: 600;
-  border-color: var(--accent-2);
   padding: 6px 14px;
   font-size: 13px;
 }
 
-.update-banner-actions .btn-primary:hover {
-  filter: brightness(1.1);
-}
-
 .update-banner-actions .btn-ghost {
-  background: transparent;
-  border: none;
-  color: var(--muted);
-  font-size: 16px;
+  font-size: 14px;
   padding: 4px 8px;
-  cursor: pointer;
-}
-
-.update-banner-actions .btn-ghost:hover {
-  color: var(--text);
 }
 
 @media (max-width: 600px) {
@@ -457,14 +667,14 @@ select option,
 header {
   position: sticky;
   top: 0;
-  z-index: 50;
+  z-index: var(--z-sticky);
   padding: 12px 16px 10px;
   border-bottom: 1px solid var(--border);
   background-color: var(--card);
   background: linear-gradient(var(--card) 35%, var(--bg-header));
   backdrop-filter: saturate(180%) blur(5px);
   -webkit-backdrop-filter: saturate(180%) blur(5px);
-  color: rgb(33, 33, 33);
+  color: var(--text);
   overflow-anchor: none;
   transition: padding 350ms ease, margin-bottom 350ms ease;
   margin-bottom: 0;
@@ -877,7 +1087,7 @@ footer {
 #progressWrap {
   position: sticky;
   top: 135px;
-  z-index: 45;
+  z-index: var(--z-sticky);
   width: 100%;
   max-width: 680px;
   margin: 6px auto 16px;
@@ -1380,7 +1590,7 @@ body.is-scrolled #progressWrap {
   top: 0;
   left: 0;
   pointer-events: none;
-  z-index: 10000;
+  z-index: var(--z-tooltip);
   display: inline-flex;
   align-items: center;
   padding: 5px 9px;
@@ -1390,15 +1600,15 @@ body.is-scrolled #progressWrap {
   line-height: 1.2;
   font-variant-numeric: tabular-nums;
   color: var(--text);
-  background: var(--surface-overlay, var(--card));
+  background: var(--surface-overlay);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border: 1px solid var(--border);
-  border-radius: 6px;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25), 0 1px 3px rgba(0, 0, 0, 0.12);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-md);
   opacity: 0;
   transform: translate3d(-9999px, -9999px, 0);
-  transition: opacity 0.12s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 0.12s var(--ease-smooth);
   will-change: transform, opacity;
   white-space: nowrap;
 }
@@ -1697,13 +1907,14 @@ body.is-drag-selecting .cell {
 .type-badge[data-type="ice"],
 .type-badge[data-type="flying"],
 .type-badge[data-type="fairy"] {
-  color: #333;
+  color: var(--text-on-brand);
 }
 
 /* --- Filters & Options Modal --- */
 .filters-modal-card {
   max-width: 620px;
-  max-height: 88vh;
+  height: min(820px, calc(100dvh - 36px));
+  max-height: calc(100dvh - 36px);
   display: flex;
   flex-direction: column;
 }
@@ -2034,7 +2245,7 @@ body.is-drag-selecting .cell {
 .modal {
   position: fixed;
   inset: 0;
-  z-index: 100;
+  z-index: var(--z-modal);
   display: grid;
   place-items: center;
 }
@@ -2043,7 +2254,7 @@ body.is-drag-selecting .cell {
 .modal-backdrop {
   position: absolute;
   inset: 0;
-  background: rgba(10, 12, 16, 0.58);
+  background: var(--backdrop-color);
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);
 }
@@ -2051,21 +2262,20 @@ body.is-drag-selecting .cell {
 /* Modal dialog surface card */
 .modal-card {
   position: relative;
-  max-width: 520px;
+  max-width: var(--modal-max-width, 520px);
   width: calc(100% - 32px);
-  border-radius: var(--dialog-radius);
-  background: color-mix(in srgb, var(--card) 86%, transparent);
+  border-radius: var(--radius-dialog);
+  background: color-mix(in srgb, var(--card) 88%, transparent);
   color: var(--text);
   border: 1px solid var(--border);
-  padding: 16px 16px 12px;
-  box-shadow: var(--dialog-shadow);
+  padding: 16px;
+  box-shadow: var(--shadow-dialog);
   display: flex;
   flex-direction: column;
-  max-height: calc(100vh - 32px);
-  max-height: calc(100dvh - 32px - env(safe-area-inset-top) - env(safe-area-inset-bottom));
+  max-height: calc(100dvh - 36px - env(safe-area-inset-top) - env(safe-area-inset-bottom));
   overflow: hidden;
-  backdrop-filter: blur(10px) saturate(120%);
-  -webkit-backdrop-filter: blur(10px) saturate(120%);
+  backdrop-filter: blur(12px) saturate(120%);
+  -webkit-backdrop-filter: blur(12px) saturate(120%);
 }
 
 .modal-card h3 {
@@ -2282,7 +2492,7 @@ body.is-drag-selecting .cell {
 /* Theme Segmented Control in Settings */
 .settings-theme-segmented {
   display: inline-flex;
-  background: var(--card);
+  background: var(--surface-soft);
   border: 1px solid var(--border);
   border-radius: calc(var(--control-radius) - 2px);
   padding: 3px;
@@ -2309,7 +2519,7 @@ body.is-drag-selecting .cell {
   color: var(--muted);
   border-radius: calc(var(--control-radius) - 4px);
   border: 1px solid transparent;
-  transition: all 0.15s ease;
+  transition: all var(--transition-fast);
   white-space: nowrap;
 }
 
@@ -2322,13 +2532,8 @@ body.is-drag-selecting .cell {
   background: var(--card);
   color: var(--text);
   border-color: var(--border);
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+  box-shadow: var(--shadow-xs);
   font-weight: 700;
-}
-
-[data-theme="dark"] .settings-theme-option:has(input:checked) .segmented-btn {
-  background: rgba(255, 255, 255, 0.12);
-  border-color: rgba(255, 255, 255, 0.18);
 }
 
 .settings-theme-option input:focus-visible + .segmented-btn {
@@ -2428,13 +2633,13 @@ body.is-drag-selecting .cell {
 
 /* Danger Zone */
 .settings-danger-group {
-  border-color: color-mix(in srgb, var(--danger) 25%, transparent);
+  border-color: color-mix(in srgb, var(--danger) 35%, transparent);
 }
 
 .settings-danger-block {
   padding: 12px 14px;
-  background: color-mix(in srgb, var(--danger) 5%, transparent);
-  border-bottom: 1px solid color-mix(in srgb, var(--danger) 18%, transparent);
+  background: color-mix(in srgb, var(--danger) 6%, transparent);
+  border-bottom: 1px solid color-mix(in srgb, var(--danger) 20%, transparent);
 }
 
 .settings-danger-group > .settings-danger-block:last-child {
@@ -2454,6 +2659,20 @@ body.is-drag-selecting .cell {
   padding: 0 14px;
   font-size: 13px;
   font-weight: 600;
+  background: var(--danger);
+  border: 1px solid var(--danger);
+  color: var(--text-on-accent);
+}
+
+.settings-danger-content .btn-danger:hover {
+  background: color-mix(in srgb, var(--danger) 82%, black);
+  border-color: var(--btn-danger-border-hover);
+  color: var(--text-on-accent);
+}
+
+.settings-danger-content .btn-danger:active {
+  background: color-mix(in srgb, var(--danger) 65%, black);
+  border-color: var(--btn-danger-border-hover);
 }
 
 .text-danger {
@@ -2993,22 +3212,35 @@ body.is-drag-selecting .cell {
 .pokemon-info-cry-btn {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 5px;
-  padding: 3px 9px;
+  padding: 0 10px;
   height: 28px;
+  width: auto;
+  flex-shrink: 0;
   font-size: 12px;
   font-weight: 600;
-  border-radius: 999px;
+  font-family: inherit;
+  border-radius: var(--radius-pill);
   background: var(--surface-soft);
   border: 1px solid var(--surface-soft-border);
   color: var(--text);
   cursor: pointer;
-  transition: background-color 0.15s ease, border-color 0.15s ease, transform 0.15s ease;
+  white-space: nowrap;
+  line-height: 1;
+  transition:
+    background-color 0.15s ease,
+    border-color 0.15s ease,
+    transform 0.15s ease;
 }
 
 .pokemon-info-cry-btn:hover {
   background: var(--surface-soft-hover);
   border-color: var(--accent-2);
+}
+
+.pokemon-info-cry-btn:active {
+  transform: scale(0.96);
 }
 
 .pokemon-info-cry-btn.is-playing {
@@ -3020,6 +3252,12 @@ body.is-drag-selecting .cell {
 
 .pokemon-info-cry-btn .cry-icon {
   font-size: 13px;
+  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+}
+
+.pokemon-info-cry-btn .cry-label {
   line-height: 1;
 }
 
@@ -3203,39 +3441,21 @@ body.is-drag-selecting .cell {
 }
 
 .pokemon-info-encounter-tag.tag-starter {
-  background: rgba(234, 179, 8, 0.15);
-  border-color: rgba(234, 179, 8, 0.35);
-  color: #d97706;
-}
-
-[data-theme="dark"] .pokemon-info-encounter-tag.tag-starter {
-  background: rgba(245, 158, 11, 0.2);
-  border-color: rgba(245, 158, 11, 0.4);
-  color: #fbbf24;
+  background: color-mix(in srgb, var(--warning) 15%, transparent);
+  border-color: color-mix(in srgb, var(--warning) 35%, transparent);
+  color: var(--warning);
 }
 
 .pokemon-info-encounter-tag.tag-gift {
-  background: rgba(147, 51, 234, 0.12);
-  border-color: rgba(147, 51, 234, 0.3);
-  color: #7c3aed;
-}
-
-[data-theme="dark"] .pokemon-info-encounter-tag.tag-gift {
-  background: rgba(168, 85, 247, 0.2);
-  border-color: rgba(168, 85, 247, 0.4);
-  color: #c084fc;
+  background: color-mix(in srgb, var(--purple) 15%, transparent);
+  border-color: color-mix(in srgb, var(--purple) 35%, transparent);
+  color: var(--purple);
 }
 
 .pokemon-info-encounter-tag.tag-fossil {
-  background: rgba(180, 83, 9, 0.12);
-  border-color: rgba(180, 83, 9, 0.3);
-  color: #b45309;
-}
-
-[data-theme="dark"] .pokemon-info-encounter-tag.tag-fossil {
-  background: rgba(217, 119, 6, 0.2);
-  border-color: rgba(217, 119, 6, 0.4);
-  color: #f59e0b;
+  background: color-mix(in srgb, var(--amber) 15%, transparent);
+  border-color: color-mix(in srgb, var(--amber) 35%, transparent);
+  color: var(--amber);
 }
 
 .pokemon-info-encounter-tag.tag-levels {
@@ -3276,39 +3496,21 @@ body.is-drag-selecting .cell {
 }
 
 .pokemon-info-encounter-rate.rate-common {
-  background: rgba(16, 185, 129, 0.12);
-  border: 1px solid rgba(16, 185, 129, 0.3);
-  color: #059669;
-}
-
-[data-theme="dark"] .pokemon-info-encounter-rate.rate-common {
-  background: rgba(16, 185, 129, 0.18);
-  border-color: rgba(16, 185, 129, 0.4);
-  color: #34d399;
+  background: color-mix(in srgb, var(--success) 14%, transparent);
+  border: 1px solid color-mix(in srgb, var(--success) 35%, transparent);
+  color: var(--success);
 }
 
 .pokemon-info-encounter-rate.rate-uncommon {
-  background: rgba(59, 130, 246, 0.12);
-  border: 1px solid rgba(59, 130, 246, 0.3);
-  color: #2563eb;
-}
-
-[data-theme="dark"] .pokemon-info-encounter-rate.rate-uncommon {
-  background: rgba(59, 130, 246, 0.18);
-  border-color: rgba(59, 130, 246, 0.4);
-  color: #60a5fa;
+  background: color-mix(in srgb, var(--info) 14%, transparent);
+  border: 1px solid color-mix(in srgb, var(--info) 35%, transparent);
+  color: var(--info);
 }
 
 .pokemon-info-encounter-rate.rate-rare {
-  background: rgba(245, 158, 11, 0.14);
-  border: 1px solid rgba(245, 158, 11, 0.35);
-  color: #d97706;
-}
-
-[data-theme="dark"] .pokemon-info-encounter-rate.rate-rare {
-  background: rgba(245, 158, 11, 0.22);
-  border-color: rgba(245, 158, 11, 0.45);
-  color: #fbbf24;
+  background: color-mix(in srgb, var(--warning) 16%, transparent);
+  border: 1px solid color-mix(in srgb, var(--warning) 40%, transparent);
+  color: var(--warning);
 }
 
 .pokemon-info-encounter-conditions {
@@ -3485,7 +3687,7 @@ body.is-drag-selecting .cell {
   background: var(--surface-soft);
   border: 1px solid var(--surface-soft-border);
   color: var(--text);
-  border-radius: var(--border-radius-sm, 6px);
+  border-radius: var(--radius-sm);
   cursor: pointer;
   transition: background-color 0.15s ease, border-color 0.15s ease, opacity 0.15s ease, transform 0.1s ease;
   user-select: none;
@@ -3766,38 +3968,6 @@ body.is-drag-selecting .cell {
 
 .welcome-nav-btn.is-prev {
   margin-right: auto;
-}
-
-.welcome-actions .btn-primary {
-  background: var(--accent-2);
-  color: #fff;
-  border-color: var(--accent-2);
-}
-
-.welcome-actions .btn-primary:hover {
-  filter: brightness(0.92);
-}
-
-.welcome-actions .btn-success {
-  background: var(--success);
-  color: #fff;
-  border-color: var(--success);
-}
-
-.welcome-actions .btn-success:hover {
-  filter: brightness(0.92);
-}
-
-.welcome-actions .btn-ghost {
-  background: transparent;
-  border: 1px solid transparent;
-  color: var(--muted);
-}
-
-.welcome-actions .btn-ghost:hover {
-  background: var(--surface-soft);
-  color: var(--text);
-  border-color: var(--border);
 }
 
 @media (max-width: 480px) {
@@ -4365,7 +4535,7 @@ body.is-drag-selecting .cell {
 
 /* Ensure Pokemon Info modal appears in front of the Field Guide modal */
 #modalPokemonInfo {
-  z-index: 1050;
+  z-index: var(--z-modal-stacked);
 }
 
 /* =============================================================================
@@ -5028,12 +5198,6 @@ body.is-drag-selecting .cell {
   border: 1px solid var(--surface-soft-border);
   color: var(--muted);
   line-height: 1.3;
-}
-
-[data-theme="dark"] .missing-condition-chip {
-  background: rgba(255, 255, 255, 0.05);
-  border-color: rgba(255, 255, 255, 0.1);
-  color: var(--muted);
 }
 
 .locations-more-tag {
