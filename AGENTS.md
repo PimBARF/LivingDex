@@ -52,17 +52,17 @@ For every new feature, bug fix, refactor, or dataset update in LivingDex:
 
 ---
 
-## 4. UI Testing & Visual Verification
+## 4. UI Testing & Visual Verification (Token-Conscious)
 
-- **Playwright Regression Checks**:
-  - When modifying UI modules, sorting algorithms, or encounter resolvers (`pokemon-info.js`, `missing-guide.js`, `dom-render.js`), run Playwright headless checks against sampled Pokémon across multiple generations to verify modal opening, data clustering, and event binding.
-- **Chrome DevTools MCP Inspection**:
-  - Use Chrome DevTools MCP for live UI inspections, responsive styling checks (mobile viewport testing), focus-trap audits on dialogs, and console error monitoring.
+- **Targeted UI & Visual Checks**:
+  - Run Playwright regression checks or DevTools inspections only when necessary (e.g. substantial UI refactoring, modal mechanics overhaul, or new interactive tools).
+  - For minor CSS tweaks, copy fixes, or small UI adjustments, use lightweight inspection and avoid full heavy DOM dumps to conserve tokens.
 
 ---
 
-## 5. Code Formatting & Linting
+## 5. Code Formatting, Linting & Commit Prompting
 
-- **Prettier & ESLint Conformity**:
-  - Always run `npm run format` (via Scraper toolchain) before committing frontend JavaScript, CSS, or Markdown files.
-  - Keep JS code formatted to the shared `.prettierrc.json` and free of syntax/lint warnings.
+- **Pre-Commit Formatting**:
+  - Run `npm run format` (via Scraper toolchain) before proposing commits or when finalizing a feature to keep files formatted to Prettier standards. Avoid running full formatting cycles after every micro-edit.
+- **Git Commit Policy**:
+  - Do NOT autonomously commit changes. Prompt the user when a milestone is reached proposing a Conventional Commit message, or inform the user if additional checks or changes are needed beforehand.
