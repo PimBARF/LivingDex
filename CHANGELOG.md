@@ -8,6 +8,7 @@ All notable changes, new features, improvements, and bug fixes for **LivingDex**
 
 | Version                                                               | Release Date          | Major Highlights                                                                                                 |
 | :-------------------------------------------------------------------- | :-------------------- | :--------------------------------------------------------------------------------------------------------------- |
+| **[v1.19.5](#v1195---2026-09-15)**                                    | Sep 15, 2026          | Prettier ignore rules for datasets & clean single-line ESLint configuration                                      |
 | **[v1.19.4](#v1194---2026-09-14)**                                    | Sep 14, 2026          | Automated Playwright cross-generation testing & Chrome DevTools MCP verification rules                           |
 | **[v1.19.3](#v1193---2026-09-14)**                                    | Sep 14, 2026          | Semantic encounter notes, concise metadata pills & readable form labels                                          |
 | **[v1.19.2](#v1192---2026-09-14)**                                    | Sep 14, 2026          | Clean Base vs DLC encounter separation, normalized raid labels & corrected expansion pass clustering             |
@@ -60,6 +61,22 @@ All notable changes, new features, improvements, and bug fixes for **LivingDex**
 | **[Expansion Phase](#multi-game-expansion--localization---aug-2026)** | Aug 17–31, 2026       | All mainline games, 8-language localization, Info modal, UI modular split                                        |
 | **[Modular JS Split](#modular-js-split---nov-2025)**                  | Nov 13–15, 2025       | ES module decomposition (`main.js`, `ui.js`, `api.js`, `storage.js`)                                             |
 | **[Genesis & Prototype](#initial-release---oct-2025)**                | Oct 27 – Nov 10, 2025 | Initial LivingDex tracker release, 30-slot PC boxes, PokeAPI integration                                         |
+
+---
+
+## [v1.19.5] - 2026-09-15
+
+### Added
+
+- **Prettier Ignore Rules (`.prettierignore`)**:
+  - Excluded raw JSON datasets and assets directory from Prettier formatting passes.
+
+### Changed
+
+- **Linter Configuration (`eslint.config.mjs`)**:
+  - Normalized array formatting and updated ignored paths.
+- **Service Worker (`sw.js`)**:
+  - Bumped `CACHE_VERSION` to `v1.19.5`.
 
 ---
 
