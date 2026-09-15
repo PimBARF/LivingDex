@@ -102,11 +102,11 @@
   --z-tooltip: 400;                               /* HUD coordinate tooltip */
 
   /* --- Elevation & Shadows --- */
-  --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.05);
-  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.06);
-  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.16), 0 1px 3px rgba(0, 0, 0, 0.08);
-  --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.22), 0 2px 8px rgba(0, 0, 0, 0.10);
-  --shadow-dialog: 0 18px 42px rgba(0, 0, 0, 0.28), 0 4px 12px rgba(0, 0, 0, 0.12);
+  --shadow-xs: 0 1px 2px rgba(15, 23, 42, 0.04);
+  --shadow-sm: 0 1px 3px rgba(15, 23, 42, 0.08), 0 1px 2px rgba(15, 23, 42, 0.04);
+  --shadow-md: 0 4px 16px rgba(15, 23, 42, 0.08), 0 1px 3px rgba(15, 23, 42, 0.04);
+  --shadow-lg: 0 10px 25px -5px rgba(15, 23, 42, 0.10), 0 8px 10px -6px rgba(15, 23, 42, 0.04);
+  --shadow-dialog: 0 20px 45px -10px rgba(15, 23, 42, 0.20), 0 4px 12px rgba(15, 23, 42, 0.08);
   --dialog-shadow: var(--shadow-dialog);
 
   /* --- Animation & Transitions --- */
@@ -117,36 +117,36 @@
   --transition-spring: 350ms var(--ease-spring);
 
   /* ===========================================================================
-     LIGHT THEME (Default) COLOR PALETTE & SEMANTIC TOKENS
+     LIGHT THEME (Default) COLOR PALETTE & SEMANTIC TOKENS (Crisp Clean Slate)
      =========================================================================== */
 
   /* --- Backgrounds & Surfaces --- */
-  --bg: rgb(245, 247, 250);                      /* Page canvas background */
-  --bg-header: rgba(255, 255, 255, 0.5);         /* Header gradient base */
-  --card: rgb(255, 255, 255);                    /* Primary card / surface */
-  --surface-soft: rgba(0, 0, 0, 0.03);           /* Low-contrast chip/row background */
-  --surface-soft-border: rgba(0, 0, 0, 0.06);    /* Chip/row border */
-  --surface-soft-hover: rgba(66, 133, 244, 0.08);/* Hover tint for interactive chips */
-  --surface-overlay: rgba(255, 255, 255, 0.92);  /* Tooltip & popover glass surface */
-  --backdrop-color: rgba(10, 12, 16, 0.58);      /* Modal frosted backdrop overlay */
-  --label: rgba(255, 255, 255, 0.85);            /* Cell badge background overlay */
+  --bg: #f8fafc;                                  /* Slate 50 page canvas */
+  --bg-header: rgba(248, 250, 252, 0.85);         /* Frosted header base */
+  --card: #ffffff;                                /* Primary card / surface */
+  --surface-soft: #f1f5f9;                        /* Slate 100 chip/row background */
+  --surface-soft-border: #e2e8f0;                 /* Slate 200 chip/row border */
+  --surface-soft-hover: rgba(59, 130, 246, 0.08); /* Blue-tinted hover for interactive elements */
+  --surface-overlay: rgba(255, 255, 255, 0.96);   /* Tooltip & popover surface */
+  --backdrop-color: rgba(15, 23, 42, 0.38);       /* Soft deep-slate modal backdrop overlay */
+  --label: rgba(255, 255, 255, 0.90);             /* Cell badge background overlay */
 
   /* --- Typography & Text --- */
-  --text: rgb(33, 33, 33);                       /* Primary body text */
-  --muted: rgba(0, 0, 0, 0.65);                  /* Secondary / description text */
-  --text-tertiary: rgba(0, 0, 0, 0.45);          /* Tertiary subtle captions */
-  --text-on-accent: rgb(255, 255, 255);          /* Pure white text on colored buttons */
-  --text-on-brand: rgb(17, 17, 17);              /* Dark text on bright Pikachu yellow */
+  --text: #0f172a;                                /* Deep Slate 900 primary text */
+  --muted: #64748b;                               /* Slate 500 secondary / description text */
+  --text-tertiary: #94a3b8;                       /* Slate 400 tertiary subtle captions */
+  --text-on-accent: rgb(255, 255, 255);           /* Pure white text on colored buttons */
+  --text-on-brand: rgb(17, 17, 17);               /* Dark text on bright Pikachu yellow */
 
   /* --- Structural Borders --- */
-  --border: rgba(0, 0, 0, 0.12);                 /* Default border */
-  --border-subtle: rgba(0, 0, 0, 0.06);          /* Subtle partition border */
-  --border-strong: rgba(0, 0, 0, 0.22);          /* Emphasized border */
+  --border: #e2e8f0;                              /* Crisp Slate 200 border */
+  --border-subtle: #f1f5f9;                       /* Subtle Slate 100 partition border */
+  --border-strong: #cbd5e1;                       /* Emphasized Slate 300 border */
 
   /* --- Brand & Interactive Accents --- */
-  --accent: rgb(255, 204, 0);                    /* Brand yellow (Pikachu) */
-  --accent-2: rgb(66, 133, 244);                 /* Action color (interactive links/buttons) */
-  --focus-ring: rgb(37, 99, 235);                /* Accessible focus outline ring */
+  --accent: rgb(255, 204, 0);                     /* Brand yellow (Pikachu) */
+  --accent-2: rgb(37, 99, 235);                   /* Action color (accessible royal blue) */
+  --focus-ring: rgb(37, 99, 235);                 /* Accessible focus outline ring */
 
   /* --- Semantic Status Colors --- */
   --success: rgb(16, 185, 129);                  /* Positive / caught / completed */
@@ -213,6 +213,13 @@
   --btn-danger-border-hover: color-mix(in srgb, var(--danger) 40%, white);
   --btn-success-border-hover: color-mix(in srgb, var(--success) 40%, white);
   --btn-secondary-border-hover: color-mix(in srgb, var(--accent-2) 40%, white);
+
+  /* --- Elevation & Shadows (Dark Theme) --- */
+  --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.3);
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.4), 0 1px 2px rgba(0, 0, 0, 0.2);
+  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.5), 0 1px 3px rgba(0, 0, 0, 0.3);
+  --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.6), 0 2px 8px rgba(0, 0, 0, 0.4);
+  --shadow-dialog: 0 24px 48px rgba(0, 0, 0, 0.7), 0 4px 16px rgba(0, 0, 0, 0.4);
 }
 
 /* =============================================================================
@@ -2265,7 +2272,7 @@ body.is-drag-selecting .cell {
   max-width: var(--modal-max-width, 520px);
   width: calc(100% - 32px);
   border-radius: var(--radius-dialog);
-  background: color-mix(in srgb, var(--card) 88%, transparent);
+  background: var(--card);
   color: var(--text);
   border: 1px solid var(--border);
   padding: 16px;
@@ -2274,8 +2281,6 @@ body.is-drag-selecting .cell {
   flex-direction: column;
   max-height: calc(100dvh - 36px - env(safe-area-inset-top) - env(safe-area-inset-bottom));
   overflow: hidden;
-  backdrop-filter: blur(12px) saturate(120%);
-  -webkit-backdrop-filter: blur(12px) saturate(120%);
 }
 
 .modal-card h3 {

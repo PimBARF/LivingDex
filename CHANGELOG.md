@@ -8,6 +8,7 @@ All notable changes, new features, improvements, and bug fixes for **LivingDex**
 
 | Version                                                               | Release Date          | Major Highlights                                                                                                 |
 | :-------------------------------------------------------------------- | :-------------------- | :--------------------------------------------------------------------------------------------------------------- |
+| **[v1.20.3](#v1203---2026-09-15)**                                    | Sep 15, 2026          | Modern Crisp Clean Slate light mode theme tokens, high-contrast slate typography & opaque modal dialog cards     |
 | **[v1.20.2](#v1202---2026-09-15)**                                    | Sep 15, 2026          | Standardize modal action button hierarchy across all dialogs (primary blue dismissals & secondary neutrals)      |
 | **[v1.20.1](#v1201---2026-09-15)**                                    | Sep 15, 2026          | Shared design token system, global button hierarchy, modal & toast consistency, and dark mode header text fix    |
 | **[v1.20.0](#v1200---2026-09-15)**                                    | Sep 15, 2026          | Modernized shared link modal, cross-game & cross-segment URL loading, and Dex Options share clarification        |
@@ -69,6 +70,19 @@ All notable changes, new features, improvements, and bug fixes for **LivingDex**
 | **[Genesis & Prototype](#initial-release---oct-2025)**                | Oct 27 – Nov 10, 2025 | Initial LivingDex tracker release, 30-slot PC boxes, PokeAPI integration                                         |
 
 ---
+
+## [v1.20.3] - 2026-09-15
+
+### Changed
+
+- **Modern Crisp Clean Slate Light Mode Theme (`styles.css`)**:
+  - Upgraded `:root` design tokens to a crisp Slate-50 canvas (`#f8fafc`), crisp pure white surfaces (`#ffffff`), and Slate-100 group containers (`#f1f5f9`) with Slate-200 borders (`#e2e8f0`).
+  - Elevated body and caption typography from raw neutral black opacities to high-contrast Slate-900 (`#0f172a`), Slate-500 (`#64748b`), and Slate-400 (`#94a3b8`) for sharp legibility.
+  - Softened modal backdrop overlay (`--backdrop-color`) from heavy dark black (`rgba(10, 12, 16, 0.58)`) to light navy slate (`rgba(15, 23, 42, 0.38)`).
+  - Modernized `.modal-card` background to solid `var(--card)` (`#ffffff`), completely eliminating dark backdrop translucency bleed-through and grey hazing.
+  - Refined light theme elevation shadows with soft slate ambient diffusion and added explicit dark theme shadow overrides.
+- **Service Worker Cache Lifecycle (`sw.js`)**:
+  - Bumped `CACHE_VERSION` to `v1.20.3`.
 
 ## [v1.20.2] - 2026-09-15
 
