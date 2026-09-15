@@ -157,9 +157,9 @@
   --amber: rgb(217, 119, 6);                     /* Fossil / ground categories */
 
   /* --- Button Border Hover Contrast Tokens --- */
-  --btn-primary-border-hover: color-mix(in srgb, var(--accent-2) 35%, black);
-  --btn-danger-border-hover: color-mix(in srgb, var(--danger) 35%, black);
-  --btn-success-border-hover: color-mix(in srgb, var(--success) 35%, black);
+  --btn-primary-border-hover: color-mix(in srgb, var(--accent-2) 58%, black);
+  --btn-danger-border-hover: color-mix(in srgb, var(--danger) 58%, black);
+  --btn-success-border-hover: color-mix(in srgb, var(--success) 58%, black);
   --btn-secondary-border-hover: var(--accent-2);
 
   /* --- Accessible Focus Glow Shadows --- */
@@ -3681,6 +3681,7 @@ body.is-drag-selecting .cell {
   font-size: 0.85rem;
   font-weight: 600;
   box-sizing: border-box;
+  border-radius: var(--radius-sm);
 }
 
 .pokemon-info-nav-btn {

@@ -8,6 +8,7 @@ All notable changes, new features, improvements, and bug fixes for **LivingDex**
 
 | Version                                                               | Release Date          | Major Highlights                                                                                                 |
 | :-------------------------------------------------------------------- | :-------------------- | :--------------------------------------------------------------------------------------------------------------- |
+| **[v1.20.2](#v1202---2026-09-15)**                                    | Sep 15, 2026          | Standardize modal action button hierarchy across all dialogs (primary blue dismissals & secondary neutrals)      |
 | **[v1.20.1](#v1201---2026-09-15)**                                    | Sep 15, 2026          | Shared design token system, global button hierarchy, modal & toast consistency, and dark mode header text fix    |
 | **[v1.20.0](#v1200---2026-09-15)**                                    | Sep 15, 2026          | Modernized shared link modal, cross-game & cross-segment URL loading, and Dex Options share clarification        |
 | **[v1.19.8](#v1198---2026-09-15)**                                    | Sep 15, 2026          | Fix shared link import resetting dex progress by supporting specimenKey and slot indexing                        |
@@ -68,6 +69,16 @@ All notable changes, new features, improvements, and bug fixes for **LivingDex**
 | **[Genesis & Prototype](#initial-release---oct-2025)**                | Oct 27 – Nov 10, 2025 | Initial LivingDex tracker release, 30-slot PC boxes, PokeAPI integration                                         |
 
 ---
+
+## [v1.20.2] - 2026-09-15
+
+### Changed
+
+- **Standardized Modal Action Buttons & Visual Hierarchy (`index.html`, `styles.css`)**:
+  - Unified modal dismiss and close buttons (`#closeAbout`, `#closeShortcuts`, `#closePokemonInfo`) using primary button styling (`.btn-primary`), ensuring consistent prominent blue CTA styling across all informational and configuration dialogs.
+  - Standardized cancellation buttons (`#cancelReset`, `#cancelImportData`) with explicit secondary neutral styling (`.btn-secondary`), ensuring clean visual distinction between destructive actions (`.btn-danger`) and neutral dismissal.
+  - Aligned corner radius tokens on Pokémon Info navigation and close actions (`.pokemon-info-nav-btn`, `.pokemon-info-close-btn`).
+  - Fixed Light theme button hover border contrast tokens (`--btn-primary-border-hover`, `--btn-danger-border-hover`, `--btn-success-border-hover`) by adjusting color-mix weighting from harsh black outlines to natural tone-matched borders.
 
 ## [v1.20.1] - 2026-09-15
 
