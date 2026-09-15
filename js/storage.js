@@ -855,10 +855,32 @@ export async function inspectSharePayload(hash, currentSegments = getShareSegmen
     const gameConfig = GAMES[payload.gameId];
     const gameName = gameConfig ? gameConfig.title : payload.gameId;
 
+    const SEGMENT_TITLE_MAP = {
+      forms: "Form Variants",
+      gender: "Gender Differences",
+      regional: "Regional Forms",
+      alcremie: "Alcremie Forms",
+      flabebe: "Flabébé / Floette",
+      minior: "Minior Cores",
+      vivillon: "Vivillon Patterns",
+      unown: "Unown Forms",
+      furfrou: "Furfrou Trims",
+      spinda: "Spinda Patterns",
+      deoxys: "Deoxys Formes",
+      rotom: "Rotom Catalog",
+      deerling: "Seasonal Deerling",
+      genesect: "Genesect Drives",
+      silvally: "Silvally Memories",
+    };
+
     const payloadSegments = Array.isArray(payload.segments) ? payload.segments : [];
     const segmentNames = payloadSegments.map((segId) => {
       const found = gameConfig?.dexes?.find((d) => d.id === segId);
-      return found ? found.title : segId;
+      if (found && found.title) return found.title;
+      if (SEGMENT_TITLE_MAP[segId]) return SEGMENT_TITLE_MAP[segId];
+      return String(segId)
+        .replace(/[-_]/g, " ")
+        .replace(/\b\w/g, (c) => c.toUpperCase());
     });
 
     const isCurrentGame = payload.gameId === ACTIVE_GAME_ID;

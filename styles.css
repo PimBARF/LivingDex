@@ -2651,8 +2651,8 @@ body.is-drag-selecting .cell {
 .shared-link-summary-box {
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  padding: 12px 14px;
+  gap: 12px;
+  padding: 14px 16px;
   background: var(--surface-soft);
   border: 1px solid var(--surface-soft-border);
   border-radius: var(--control-radius);
@@ -2663,15 +2663,20 @@ body.is-drag-selecting .cell {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 8px;
-  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.shared-link-segments-block {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
 }
 
 .shared-link-meta-label {
   font-size: 11px;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.05em;
   color: var(--muted);
 }
 
@@ -2680,30 +2685,36 @@ body.is-drag-selecting .cell {
   align-items: center;
   gap: 6px;
   font-weight: 700;
-  font-size: 13px;
+  font-size: 12.5px;
   color: var(--accent-2);
   background: color-mix(in srgb, var(--accent-2) 15%, transparent);
   border: 1px solid color-mix(in srgb, var(--accent-2) 35%, transparent);
   padding: 3px 10px;
   border-radius: 999px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
 .shared-link-segments-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 4px;
-  justify-content: flex-end;
-  max-width: 70%;
+  gap: 6px;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
 }
 
 .shared-link-segment-chip {
-  font-size: 11px;
+  display: inline-flex;
+  align-items: center;
+  font-size: 11.5px;
   font-weight: 600;
-  padding: 2px 7px;
-  border-radius: 6px;
+  line-height: 1.25;
+  padding: 4px 10px;
+  border-radius: 999px;
   background: var(--card);
   border: 1px solid var(--border);
   color: var(--text);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
   white-space: nowrap;
 }
 
@@ -2780,9 +2791,10 @@ body.is-drag-selecting .cell {
 }
 
 @media (max-width: 480px) {
-  .shared-link-segments-list {
-    max-width: 100%;
-    justify-content: flex-start;
+  .shared-link-meta-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
   }
 
   .shared-link-stats-grid {
