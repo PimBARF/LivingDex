@@ -30,7 +30,6 @@ import {
   ACTIVE_GAME_ID,
   getOrderedGameEntries,
   getAvailableLayoutPresetsForGame,
-  LAYOUT_PRESETS,
   getBoxCapacity,
 } from "../config.js";
 
@@ -1137,7 +1136,6 @@ export function registerSettingsControls() {
   async function persistSettingsFromControls() {
     const settings = loadSettings();
     const previousLanguage = settings.language;
-    const previousShowCoords = !!settings.showBoxCoordinates;
     const previousGen12Cap = Number(settings.gen12BoxCapacity) || 20;
     const selectedTheme =
       document.querySelector('input[name="settingsTheme"]:checked')?.value ||

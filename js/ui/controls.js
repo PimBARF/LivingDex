@@ -1,10 +1,9 @@
-import { loadSettings, saveSettings, loadCaughtSlots, encodeCaughtState } from "../storage.js";
+import { loadSettings, loadCaughtSlots, encodeCaughtState } from "../storage.js";
 import { applyTheme, isMotionReduced } from "./theme.js";
 import { showToast } from "./modals.js";
 import { isShinyMode, setShinyMode, rebuildDexView } from "../state.js";
 import {
   buildActiveDexSections,
-  loadSpeciesNames,
   buildEvolutionStageMap,
   getAllEvolutionData,
   getGameFilterCapabilities,
@@ -13,7 +12,6 @@ import {
 import {
   ACTIVE_GAME_ID,
   POKEMON_TYPES,
-  ALL_POKEMON_TYPES,
   getSpeciesGeneration,
   STARTER_SPECIES_IDS,
   GIFT_SPECIES_IDS,

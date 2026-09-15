@@ -1554,14 +1554,11 @@ export function getEncounterProgressionInfo(
       const matched = matchRouteProgression(gameId, details.cleanName);
 
       let routeIndex = maxRouteIndex + 10;
-      let matchedRouteName = details.name;
 
       if (details.isStarter) {
         routeIndex = 0;
-        matchedRouteName = "Starter";
       } else if (matched) {
         routeIndex = matched.index;
-        matchedRouteName = matched.route;
       }
 
       const rarityPenalty = calculateRarityPenalty(details.chance, details.isGift);

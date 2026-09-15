@@ -1,4 +1,4 @@
-import { BOX_CAPACITY, GENERATION_RANGES, LAYOUT_PRESETS, GAME_ORIGIN_RANGES } from "./config.js";
+import { GENERATION_RANGES, LAYOUT_PRESETS, GAME_ORIGIN_RANGES } from "./config.js";
 
 /**
  * Computes a unique and canonical specimen identifier for an entry or cell.
@@ -71,7 +71,7 @@ function transformToStandard(sections) {
  * @param {Record<number, Object>} [speciesData] - Master species dataset.
  * @returns {Array<Object>} Single section sorted by National Dex number.
  */
-function transformToNational(sections, speciesData = {}) {
+function transformToNational(sections, _speciesData = {}) {
   const baseSections = sections.filter(
     (s) =>
       s.kind === "base" ||
@@ -159,7 +159,7 @@ function transformToNational(sections, speciesData = {}) {
  * @param {string} [gameId="home"] - Active game ID.
  * @returns {Array<Object>} Generational sections followed by enabled form sections.
  */
-function transformToGenerational(sections, speciesData, gameId = "home") {
+function transformToGenerational(sections, _speciesData, _gameId = "home") {
   const baseSection = sections.find((s) => s.kind === "base" || s.key === "national");
   const otherSections = sections.filter((s) => s !== baseSection);
 
@@ -209,7 +209,7 @@ function transformToGenerational(sections, speciesData, gameId = "home") {
  * @param {Record<number, Object>} speciesData - Master species dataset.
  * @returns {Array<Object>} Single section with variants inlined.
  */
-function transformToInline(sections, speciesData) {
+function transformToInline(sections, _speciesData) {
   const seenKeys = new Set();
   const allEntries = [];
   for (const sec of sections) {
@@ -596,7 +596,7 @@ function transformToUnified(sections, title = "Unified Pokédex") {
  * @param {Record<number, Object>} speciesData - Master species dataset.
  * @returns {Array<Object>} 5 expedition area sections followed by any active form sections.
  */
-function transformToHisuiAreas(sections, speciesData) {
+function transformToHisuiAreas(sections, _speciesData) {
   const baseSection = sections.find(
     (s) => s.kind === "base" || s.id === "hisui" || s.key === "hisui",
   );

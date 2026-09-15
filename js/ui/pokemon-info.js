@@ -16,9 +16,6 @@ let _infoModalHandlers = null;
 /** Currently active HTML5 Audio element for cries. */
 let currentAudio = null;
 
-/** Currently active Pokémon cell element displayed in the modal. */
-let currentActiveCell = null;
-
 /**
  * Opens the info modal for the specified Pokémon cell.
  *
@@ -71,7 +68,6 @@ function updateNavigationButtons(activeCell, speciesId, formId, gender) {
       null;
   }
 
-  currentActiveCell = resolvedCell;
   const currentIndex = resolvedCell ? visibleCells.indexOf(resolvedCell) : -1;
 
   const prevCell = currentIndex > 0 ? visibleCells[currentIndex - 1] : null;
@@ -223,7 +219,6 @@ function getInfoModalHandlers() {
     onOpen: () => closeBtn?.focus(),
     onClose: () => {
       stopCurrentAudio();
-      currentActiveCell = null;
     },
     onKeydown: (event) => {
       if (event.key === "ArrowLeft") {

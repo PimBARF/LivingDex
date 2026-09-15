@@ -21,30 +21,6 @@
  * @property {PokedexSegment[]} dexes - Array of Pokédexes/segments within the game.
  */
 
-const HOME_REGIONAL_FORM_IDS = [
-  // Alolan Forms
-  10091, 10092, 10100, 10101, 10102, 10103, 10104, 10105, 10106, 10107, 10108, 10109, 10110, 10111,
-  10112, 10113, 10114, 10115,
-  // Galarian Forms
-  10161, 10162, 10163, 10164, 10165, 10166, 10167, 10168, 10169, 10170, 10171, 10172, 10173, 10174,
-  10175, 10176, 10177, 10179, 10180,
-  // Hisuian Forms
-  10229, 10230, 10231, 10232, 10233, 10234, 10235, 10236, 10237, 10238, 10239, 10240, 10241, 10242,
-  10243, 10244, 10247,
-  // Paldean Forms
-  10250, 10253,
-];
-
-const ALOLAN_FORM_IDS = [
-  10091, 10092, 10100, 10101, 10102, 10103, 10104, 10105, 10106, 10107, 10108, 10109, 10110, 10111,
-  10112, 10113, 10114, 10115,
-];
-
-const GALARIAN_FORM_IDS = [
-  10161, 10162, 10163, 10164, 10165, 10166, 10167, 10168, 10169, 10170, 10171, 10172, 10173, 10174,
-  10175, 10176, 10177, 10179, 10180,
-];
-
 /**
  * Returns a Set of default enabled Pokédex segment IDs for a given game.
  * Non-optional segments and optional segments with `defaultEnabled: true` are included.
@@ -57,13 +33,6 @@ export function getDefaultEnabledSegments(game = ACTIVE_GAME) {
     game.dexes.filter((seg) => !seg.optional || seg.defaultEnabled === true).map((seg) => seg.id),
   );
 }
-
-const HISUIAN_FORM_IDS = [
-  10229, 10230, 10231, 10232, 10233, 10234, 10235, 10236, 10237, 10238, 10239, 10240, 10241, 10242,
-  10243, 10244, 10247,
-];
-
-const PALDEAN_FORM_IDS = [10250, 10253];
 
 // IDs verified against PokeAPI (pokemon/[name]-gmax). Order:
 // venusaur, charizard, blastoise, butterfree, pikachu, meowth, machamp, gengar,

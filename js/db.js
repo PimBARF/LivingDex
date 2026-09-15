@@ -2,7 +2,6 @@ import { ACTIVE_GAME_ID, normalizeItemName } from "./config.js";
 import { getEncounterProgressionInfo } from "./routes.js";
 import {
   loadSegmentConfig,
-  loadEnabledSegments,
   loadSettings,
   getGameLayoutPreset,
   loadItemInventory,

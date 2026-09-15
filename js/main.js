@@ -4,10 +4,7 @@ import {
   loadSettings,
   setLastUsedGame,
   loadEnabledSegments,
-  loadSegmentConfig,
-  saveSegmentConfig,
   decodeCaughtState,
-  saveEnabledSegments,
 } from "./storage.js";
 
 import { ACTIVE_GAME, ACTIVE_GAME_ID, getOrderedGameEntries } from "./config.js";
@@ -32,12 +29,10 @@ import {
 import {
   registerHeaderControls,
   registerScrollToTopButton,
-  applyHideCaughtFilter,
   setStatusFilter,
 } from "./ui/controls.js";
 
 import {
-  registerBoxControls,
   applySpriteStyleToCells,
   updateBoxCoordinatesDisplay,
   initCellCoordTooltip,

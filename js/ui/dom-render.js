@@ -10,7 +10,6 @@ import {
   saveCollapsedBoxes,
 } from "../storage.js";
 import {
-  BOX_CAPACITY,
   ACTIVE_GAME_ID,
   getBoxCapacity,
   spriteUrlForSpecies,
@@ -876,7 +875,7 @@ export function populateDexSlots(sections, slotCount, onComplete) {
     const cols = effectiveCapacity === 20 ? 5 : 6;
     const fragment = document.createDocumentFragment();
 
-    task.entries.forEach(({ entry, globalSlotIndex: slotIdx, localIndex: locIdx }, entryIdx) => {
+    task.entries.forEach(({ entry, globalSlotIndex: slotIdx, localIndex: _locIdx }, entryIdx) => {
       const { speciesId, formId, spriteId, dexNumber, gender, formName, formTitle } = entry;
       const speciesName = window.__livingDexNames?.[speciesId] || `#${speciesId}`;
       const num = dexNumber != null ? dexNumber : speciesId;
@@ -1185,7 +1184,7 @@ export function registerTouchDragSelection(slotCount) {
       if (navigator.vibrate) {
         try {
           navigator.vibrate(8);
-        } catch (_) {}
+        } catch {}
       }
 
       updateDragHud(true, targetCaughtState, modifiedSlots.size);
@@ -1296,7 +1295,7 @@ export function registerTouchDragSelection(slotCount) {
         if (navigator.vibrate) {
           try {
             navigator.vibrate(15);
-          } catch (_) {}
+          } catch {}
         }
 
         nextCaughtStateMap = isShinyMode ? loadShinyCaughtSlots() : loadCaughtSlots();
