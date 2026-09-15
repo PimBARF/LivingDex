@@ -1,6 +1,7 @@
 import {
   ACTIVE_GAME,
   ACTIVE_GAME_ID,
+  GAMES,
   CAUGHT_STORAGE_KEY,
   SHINY_CAUGHT_STORAGE_KEY,
   ITEM_INVENTORY_STORAGE_KEY,
@@ -266,6 +267,40 @@ export function saveShinyCaughtSlots(caught) {
     localStorage.setItem(SHINY_CAUGHT_STORAGE_KEY, JSON.stringify(sanitized));
   } catch {
     // Ignore quota errors silently
+  }
+}
+
+/**
+ * Load caught-slot data from localStorage for a specific game key.
+ *
+ * @param {string} gameKey - Game identifier.
+ * @returns {Record<string|number, boolean>} Map of slot numbers or keys to caught status.
+ */
+export function loadGameCaughtSlots(gameKey) {
+  const config = GAMES[gameKey];
+  if (!config) return {};
+  try {
+    const raw = JSON.parse(localStorage.getItem(`${config.storagePrefix}-caught-v1`) || "{}");
+    return sanitizeCaughtSlots(raw);
+  } catch {
+    return {};
+  }
+}
+
+/**
+ * Load shiny caught-slot data from localStorage for a specific game key.
+ *
+ * @param {string} gameKey - Game identifier.
+ * @returns {Record<string|number, boolean>} Map of slot numbers or keys to shiny caught status.
+ */
+export function loadGameShinyCaughtSlots(gameKey) {
+  const config = GAMES[gameKey];
+  if (!config) return {};
+  try {
+    const raw = JSON.parse(localStorage.getItem(`${config.storagePrefix}-shiny-caught-v1`) || "{}");
+    return sanitizeCaughtSlots(raw);
+  } catch {
+    return {};
   }
 }
 
@@ -719,30 +754,186 @@ export async function encodeCaughtState(caught, slotCount) {
 }
 
 /**
- * Decompress and decode a caught state from a URL hash fragment.
+ * @typedef {Object} SharePayloadInspection
+ * @property {boolean} valid - Whether the hash was successfully decompressed and parsed.
+ * @property {'no_hash'|'invalid_format'|'unsupported_version'|'corrupt_data'} [error] - Error code if invalid.
+ * @property {number} [version] - Payload schema version if present.
+ * @property {string} [gameId] - Target game ID.
+ * @property {string} [gameName] - Display name of target game.
+ * @property {string[]} [segments] - Included segment IDs.
+ * @property {string[]} [segmentNames] - Display names of included segments.
+ * @property {number} [slotCount] - Total slot count in the share snapshot.
+ * @property {number} [caughtCount] - Total caught count in the share snapshot.
+ * @property {number} [caughtPercentage] - Caught percentage (0-100).
+ * @property {number} [localCaughtCount] - Current caught count in local storage for target game.
+ * @property {boolean} [isCurrentGame] - Whether the share payload matches the active game.
+ * @property {boolean} [isCurrentSegments] - Whether the share payload matches the current active segments.
+ * @property {SharePayload} [payload] - The raw parsed payload.
+ * @property {string} [rawHash] - The matched #s=... hash string.
+ */
+
+/**
+ * Decompress and inspect a share URL hash payload without altering state.
  *
  * @async
- * @param {string} hash - URL hash containing "#s=...".
+ * @param {string} hash - URL hash string (e.g. location.hash or a full URL).
+ * @param {Iterable<string>} [currentSegments=getShareSegments()] - Currently active segment keys.
+ * @returns {Promise<SharePayloadInspection>} Inspection metadata and validation details.
+ */
+export async function inspectSharePayload(hash, currentSegments = getShareSegments()) {
+  try {
+    if (!hash || typeof hash !== "string") {
+      return { valid: false, error: "no_hash" };
+    }
+    const match = /#s=([^&]+)/.exec(hash);
+    if (!match) {
+      return { valid: false, error: "no_hash" };
+    }
+
+    let compressed;
+    try {
+      compressed = base64UrlToBytes(match[1]);
+    } catch {
+      return { valid: false, error: "corrupt_data" };
+    }
+
+    let decompressedText;
+    try {
+      const stream = new Blob([compressed])
+        .stream()
+        .pipeThrough(new DecompressionStream("deflate"));
+      decompressedText = await new Response(stream).text();
+    } catch {
+      return { valid: false, error: "corrupt_data" };
+    }
+
+    let payload;
+    try {
+      payload = JSON.parse(decompressedText);
+    } catch {
+      return { valid: false, error: "corrupt_data" };
+    }
+
+    if (!payload || typeof payload !== "object") {
+      return { valid: false, error: "corrupt_data" };
+    }
+
+    if (payload.version !== SHARE_PAYLOAD_VERSION) {
+      return { valid: false, error: "unsupported_version", version: payload.version };
+    }
+
+    if (
+      !payload.gameId ||
+      typeof payload.slotCount !== "number" ||
+      typeof payload.bits !== "string"
+    ) {
+      return { valid: false, error: "corrupt_data" };
+    }
+
+    let bytes;
+    try {
+      bytes = base64UrlToBytes(payload.bits);
+    } catch {
+      return { valid: false, error: "corrupt_data" };
+    }
+
+    if (bytes.length !== Math.ceil(payload.slotCount / 8)) {
+      return { valid: false, error: "corrupt_data" };
+    }
+
+    // Count caught slots
+    let caughtCount = 0;
+    for (let slot = 1; slot <= payload.slotCount; slot += 1) {
+      const i = slot - 1;
+      if (bytes[i >> 3] & (1 << (i & 7))) {
+        caughtCount += 1;
+      }
+    }
+    const caughtPercentage =
+      payload.slotCount > 0 ? Math.round((caughtCount / payload.slotCount) * 100) : 0;
+
+    const gameConfig = GAMES[payload.gameId];
+    const gameName = gameConfig ? gameConfig.title : payload.gameId;
+
+    const payloadSegments = Array.isArray(payload.segments) ? payload.segments : [];
+    const segmentNames = payloadSegments.map((segId) => {
+      const found = gameConfig?.dexes?.find((d) => d.id === segId);
+      return found ? found.title : segId;
+    });
+
+    const isCurrentGame = payload.gameId === ACTIVE_GAME_ID;
+
+    // Check segment equality
+    const expectedSegments = [...currentSegments].sort();
+    const sortedPayloadSegments = [...payloadSegments].sort();
+    const isCurrentSegments =
+      isCurrentGame &&
+      expectedSegments.length === sortedPayloadSegments.length &&
+      expectedSegments.every((segment, idx) => segment === sortedPayloadSegments[idx]);
+
+    // Local caught count for this game
+    const localCaught = isCurrentGame ? loadCaughtSlots() : loadGameCaughtSlots(payload.gameId);
+    let localCaughtCount = 0;
+    if (localCaught && typeof localCaught === "object") {
+      localCaughtCount = Object.values(localCaught).filter(Boolean).length;
+    }
+
+    return {
+      valid: true,
+      gameId: payload.gameId,
+      gameName,
+      segments: payloadSegments,
+      segmentNames,
+      slotCount: payload.slotCount,
+      caughtCount,
+      caughtPercentage,
+      localCaughtCount,
+      isCurrentGame,
+      isCurrentSegments,
+      payload,
+      rawHash: match[0],
+    };
+  } catch (err) {
+    console.error("inspectSharePayload error:", err);
+    return { valid: false, error: "corrupt_data" };
+  }
+}
+
+/**
+ * Decompress and decode a caught state from a URL hash fragment or inspected payload.
+ *
+ * @async
+ * @param {string|SharePayload} hashOrPayload - URL hash containing "#s=..." or parsed payload.
  * @param {number} slotCount - Expected number of slots.
  * @param {Iterable<string>} [segments=getShareSegments()] - Enabled segment keys to validate against.
  * @returns {Promise<Record<string|number, boolean>|null>} Map of slot numbers and specimen keys to caught status, or null if invalid or mismatched.
  */
-export async function decodeCaughtState(hash, slotCount, segments = getShareSegments()) {
+export async function decodeCaughtState(hashOrPayload, slotCount, segments = getShareSegments()) {
   try {
-    const match = /#s=([^&]+)/.exec(hash);
-    if (!match) return null;
+    let payload;
+    if (typeof hashOrPayload === "object" && hashOrPayload !== null && hashOrPayload.bits) {
+      payload = hashOrPayload;
+    } else if (typeof hashOrPayload === "string") {
+      const match = /#s=([^&]+)/.exec(hashOrPayload);
+      if (!match) return null;
+      const compressed = base64UrlToBytes(match[1]);
+      const stream = new Blob([compressed])
+        .stream()
+        .pipeThrough(new DecompressionStream("deflate"));
+      const decompressedText = await new Response(stream).text();
+      payload = JSON.parse(decompressedText);
+    } else {
+      return null;
+    }
 
-    const compressed = base64UrlToBytes(match[1]);
-    const stream = new Blob([compressed]).stream().pipeThrough(new DecompressionStream("deflate"));
-    const decompressedText = await new Response(stream).text();
-    const payload = JSON.parse(decompressedText);
-    if (!shareContextMatches(payload, slotCount, segments)) return null;
+    if (!payload || !payload.bits || typeof payload.slotCount !== "number") return null;
 
+    const payloadSlotCount = payload.slotCount;
     const bytes = base64UrlToBytes(payload.bits);
-    if (bytes.length !== Math.ceil(slotCount / 8)) return null;
+    if (bytes.length !== Math.ceil(payloadSlotCount / 8)) return null;
 
     const caught = {};
-    for (let slot = 1; slot <= slotCount; slot += 1) {
+    for (let slot = 1; slot <= payloadSlotCount; slot += 1) {
       const i = slot - 1;
       caught[slot] = !!(bytes[i >> 3] & (1 << (i & 7)));
     }

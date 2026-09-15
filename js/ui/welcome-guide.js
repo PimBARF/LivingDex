@@ -163,7 +163,7 @@ export const WELCOME_SLIDES = [
           <div class="welcome-card-icon">🔗</div>
           <div class="welcome-card-content">
             <strong>Zero-Cloud Share Links</strong>
-            <p>Click <em>Share Progress</em> in <strong>⚙️ Dex Options</strong> to copy a bit-packed compressed URL snapshot to share with friends without an account.</p>
+            <p>Click <em>Share Current Dex</em> in <strong>⚙️ Dex Options</strong> to copy a bit-packed compressed URL snapshot to share with friends without an account.</p>
           </div>
         </div>
         <div class="welcome-card">

@@ -185,19 +185,123 @@ export function attachModalHandlers({
  * Show the shared link warning modal when a shared URL hash is detected and run a callback on confirm.
  * On either confirm or cancel, the URL hash is cleared to avoid re-prompting.
  *
- * @param {() => void} [onConfirm] - Callback function executed if the user confirms importing the shared progress.
+ * @param {import('../storage.js').SharePayloadInspection|(() => void)} [inspectionOrConfirm] - Inspected share payload info or onConfirm callback.
+ * @param {() => void} [onConfirmCallback] - Callback function executed if the user confirms importing or switching games.
  */
-export function showSharedLinkWarningModal(onConfirm) {
+export function showSharedLinkWarningModal(inspectionOrConfirm, onConfirmCallback) {
   const modal = document.getElementById("modalSharedLink");
   const confirmBtn = document.getElementById("confirmSharedLink");
   const cancelBtn = document.getElementById("cancelSharedLink");
   const backdrop = modal?.querySelector("[data-close]");
+
+  const info =
+    typeof inspectionOrConfirm === "object" && inspectionOrConfirm !== null
+      ? inspectionOrConfirm
+      : null;
+  const onConfirm =
+    typeof inspectionOrConfirm === "function" ? inspectionOrConfirm : onConfirmCallback;
 
   if (!modal) {
     try {
       onConfirm?.();
     } catch {}
     return;
+  }
+
+  // Populate dynamic fields if inspection info was provided
+  if (info && info.valid) {
+    const headerTag = document.getElementById("sharedLinkHeaderTag");
+    const title = document.getElementById("sharedLinkTitle");
+    const desc = document.getElementById("sharedLinkDesc");
+    const gameName = document.getElementById("sharedLinkGameName");
+    const segmentsList = document.getElementById("sharedLinkSegmentsList");
+    const statsProgress = document.getElementById("sharedLinkStatsProgress");
+    const localProgress = document.getElementById("sharedLinkLocalProgress");
+    const noticeText = document.getElementById("sharedLinkNoticeText");
+
+    if (headerTag) {
+      if (!info.isCurrentGame) {
+        headerTag.textContent = "Switch Game Snapshot";
+      } else if (!info.isCurrentSegments) {
+        headerTag.textContent = "Segment Expansion";
+      } else {
+        headerTag.textContent = "Shared Progress Snapshot";
+      }
+    }
+
+    if (title) {
+      if (!info.isCurrentGame) {
+        title.textContent = `Shared Link: ${info.gameName || "New Game"}`;
+      } else if (!info.isCurrentSegments) {
+        title.textContent = "Update Segments & Load";
+      } else {
+        title.textContent = "Shared Progress Loaded";
+      }
+    }
+
+    if (desc) {
+      if (!info.isCurrentGame) {
+        desc.textContent = `This shared link was created for ${info.gameName || "another game"}. Review the snapshot details below before switching games.`;
+      } else if (!info.isCurrentSegments) {
+        desc.textContent = `This shared link includes a different segment selection for ${info.gameName || "this dex"}. Review the details below before applying.`;
+      } else {
+        desc.textContent =
+          "A shared living dex checklist snapshot was detected. Review the details below before applying it to your device.";
+      }
+    }
+
+    if (gameName) {
+      gameName.textContent = info.gameName || "Pokémon HOME";
+    }
+
+    if (segmentsList) {
+      segmentsList.innerHTML = "";
+      const names = info.segmentNames?.length ? info.segmentNames : ["Default Segments"];
+      names.forEach((name) => {
+        const chip = document.createElement("span");
+        chip.className = "shared-link-segment-chip";
+        chip.textContent = name;
+        segmentsList.appendChild(chip);
+      });
+    }
+
+    if (statsProgress) {
+      statsProgress.textContent = `${info.caughtCount ?? 0} / ${info.slotCount ?? 0} (${info.caughtPercentage ?? 0}%)`;
+    }
+
+    if (localProgress) {
+      const activeCells = document.querySelectorAll(".cell:not(.is-placeholder)").length;
+      if (info.isCurrentGame && activeCells > 0) {
+        const localPct = Math.round(((info.localCaughtCount ?? 0) / activeCells) * 100);
+        localProgress.textContent = `${info.localCaughtCount ?? 0} / ${activeCells} (${localPct}%)`;
+      } else {
+        localProgress.textContent = `${info.localCaughtCount ?? 0} caught`;
+      }
+    }
+
+    if (noticeText) {
+      if (!info.isCurrentGame) {
+        noticeText.innerHTML = `Switching will navigate to <strong>${info.gameName || "the target game"}</strong> and prepare to import this caught checklist. Your current game progress remains safe.`;
+      } else if (!info.isCurrentSegments) {
+        noticeText.innerHTML = `Importing will update your active segment selection to match this shared dex and <strong>replace</strong> your local caught progress for this Pokédex.`;
+      } else {
+        noticeText.innerHTML = `Importing will <strong>replace</strong> your local caught progress for this Pokédex. Other games and settings will not be affected.`;
+      }
+    }
+
+    if (confirmBtn) {
+      if (!info.isCurrentGame) {
+        confirmBtn.textContent = `🔄 Switch to ${info.gameName || "Game"} & Import`;
+      } else if (!info.isCurrentSegments) {
+        confirmBtn.textContent = "📥 Update Segments & Import";
+      } else {
+        confirmBtn.textContent = "📥 Import & Replace";
+      }
+    }
+
+    if (cancelBtn) {
+      cancelBtn.textContent = !info.isCurrentGame ? "Stay on Current Game" : "Keep My Progress";
+    }
   }
 
   /**
@@ -209,6 +313,7 @@ export function showSharedLinkWarningModal(onConfirm) {
     }
   }
 
+  let isSwitching = false;
   let confirmHandler;
   let cancelHandler;
   const { openModal, closeModal } = attachModalHandlers({
@@ -218,7 +323,9 @@ export function showSharedLinkWarningModal(onConfirm) {
     backdrop,
     onOpen: () => confirmBtn?.focus(),
     onClose: () => {
-      clearHash();
+      if (!isSwitching) {
+        clearHash();
+      }
       confirmBtn?.removeEventListener("click", confirmHandler);
       cancelBtn?.removeEventListener("click", cancelHandler);
     },
@@ -229,9 +336,14 @@ export function showSharedLinkWarningModal(onConfirm) {
   });
 
   confirmHandler = () => {
+    if (info && !info.isCurrentGame) {
+      isSwitching = true;
+    }
     try {
       onConfirm?.();
-    } catch {}
+    } catch (err) {
+      console.error("Shared link confirm handler error:", err);
+    }
     closeModal();
   };
   confirmBtn?.addEventListener("click", confirmHandler);

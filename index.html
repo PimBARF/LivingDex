@@ -656,17 +656,59 @@
   <div id="modalSharedLink" class="modal" role="dialog" aria-modal="true" aria-labelledby="sharedLinkTitle"
     aria-describedby="sharedLinkDesc" hidden>
     <div class="modal-backdrop" data-close></div>
-    <div class="modal-card" role="document">
-      <h3 id="sharedLinkTitle">Shared Progress Loaded</h3>
-      <p id="sharedLinkDesc">
-        You opened a shared link. This will <strong>replace</strong> your current progress.<br>
-        Changes will be saved to your device only if you continue. This cannot be undone.
+    <div class="modal-card shared-link-modal-card" role="document">
+      <div class="shared-link-header">
+        <div class="shared-link-header-badge">
+          <span class="shared-link-badge-icon" aria-hidden="true">🔗</span>
+          <span id="sharedLinkHeaderTag">Shared Progress Snapshot</span>
+        </div>
+        <h3 id="sharedLinkTitle">Shared Progress Loaded</h3>
+      </div>
+      <p id="sharedLinkDesc" class="shared-link-desc">
+        A shared living dex checklist snapshot was detected. Review the details below before applying it to your device.
       </p>
+
+      <div class="shared-link-summary-box">
+        <div class="shared-link-meta-row">
+          <span class="shared-link-meta-label">Target Pokédex:</span>
+          <span id="sharedLinkGameName" class="shared-link-game-badge">Pokémon HOME</span>
+        </div>
+
+        <div id="sharedLinkSegmentsRow" class="shared-link-meta-row">
+          <span class="shared-link-meta-label">Included Segments:</span>
+          <div id="sharedLinkSegmentsList" class="shared-link-segments-list">
+            <!-- Populated dynamically with segment chips -->
+          </div>
+        </div>
+
+        <div class="shared-link-stats-grid">
+          <div class="shared-link-stat-card is-shared">
+            <span class="shared-link-stat-title">Shared Link Progress</span>
+            <div class="shared-link-stat-val" id="sharedLinkStatsProgress">0 / 0 (0%)</div>
+            <span class="shared-link-stat-sub" id="sharedLinkStatsSub">Snapshot caught total</span>
+          </div>
+          <div class="shared-link-stat-card is-local">
+            <span class="shared-link-stat-title">Your Current Progress</span>
+            <div class="shared-link-stat-val" id="sharedLinkLocalProgress">0 / 0 (0%)</div>
+            <span class="shared-link-stat-sub" id="sharedLinkLocalSub">Saved on this device</span>
+          </div>
+        </div>
+      </div>
+
+      <div id="sharedLinkNotice" class="shared-link-callout" role="alert">
+        <span class="shared-link-callout-icon" aria-hidden="true">⚠️</span>
+        <div class="shared-link-callout-text" id="sharedLinkNoticeText">
+          Importing will <strong>replace</strong> your local caught progress for this Pokédex. Other games and settings will not be affected.
+        </div>
+      </div>
+
       <div class="modal-actions">
-        <button id="confirmSharedLink" class="btn btn-danger" type="button" aria-label="Confirm load shared link">
-          Yes, replace my progress
+        <button id="cancelSharedLink" class="btn btn-secondary" type="button" aria-label="Cancel and keep current progress">
+          Keep My Progress
         </button>
-        <button id="cancelSharedLink" class="btn" type="button" aria-label="Cancel load shared link">Cancel</button>
+        <button id="confirmSharedLink" class="btn btn-primary" type="button" aria-label="Confirm import shared progress">
+          📥 Import &amp; Replace
+        </button>
       </div>
     </div>
   </div>
@@ -768,10 +810,10 @@
 
         <div class="dex-options-card">
           <div class="dex-options-card-text">
-            <span class="dex-options-card-title">🔗 Share Progress</span>
-            <span class="dex-options-card-desc">Copy caught checklist link</span>
+            <span class="dex-options-card-title">🔗 Share Current Dex</span>
+            <span class="dex-options-card-desc">Copy snapshot link for active game &amp; segments</span>
           </div>
-          <button type="button" id="modalShareBtn" class="btn btn-sm btn-secondary dex-share-btn" aria-label="Copy shareable link">
+          <button type="button" id="modalShareBtn" class="btn btn-sm btn-secondary dex-share-btn" aria-label="Copy shareable link for current dex">
             <span id="modalShareBtnText">Copy Link</span>
           </button>
         </div>

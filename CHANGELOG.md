@@ -8,6 +8,7 @@ All notable changes, new features, improvements, and bug fixes for **LivingDex**
 
 | Version                                                               | Release Date          | Major Highlights                                                                                                 |
 | :-------------------------------------------------------------------- | :-------------------- | :--------------------------------------------------------------------------------------------------------------- |
+| **[v1.20.0](#v1200---2026-09-15)**                                    | Sep 15, 2026          | Modernized shared link modal, cross-game & cross-segment URL loading, and Dex Options share clarification        |
 | **[v1.19.8](#v1198---2026-09-15)**                                    | Sep 15, 2026          | Fix shared link import resetting dex progress by supporting specimenKey and slot indexing                        |
 | **[v1.19.7](#v1197---2026-09-15)**                                    | Sep 15, 2026          | Fix broken dynamic import in main.js for shared link warning modal                                               |
 | **[v1.19.6](#v1196---2026-09-15)**                                    | Sep 15, 2026          | Dead code cleanup, removed unused imports & resolved all ESLint warnings                                         |
@@ -64,6 +65,32 @@ All notable changes, new features, improvements, and bug fixes for **LivingDex**
 | **[Expansion Phase](#multi-game-expansion--localization---aug-2026)** | Aug 17–31, 2026       | All mainline games, 8-language localization, Info modal, UI modular split                                        |
 | **[Modular JS Split](#modular-js-split---nov-2025)**                  | Nov 13–15, 2025       | ES module decomposition (`main.js`, `ui.js`, `api.js`, `storage.js`)                                             |
 | **[Genesis & Prototype](#initial-release---oct-2025)**                | Oct 27 – Nov 10, 2025 | Initial LivingDex tracker release, 30-slot PC boxes, PokeAPI integration                                         |
+
+---
+
+## [v1.20.0] - 2026-09-15
+
+### Added
+
+- **Modernized Shared Progress Modal (`index.html`, `styles.css`, `js/ui/modals.js`)**:
+  - Redesigned `#modalSharedLink` with modern glassmorphic surface card (`.shared-link-modal-card`), header badge, game title badge, segment chips list, side-by-side progress comparison stats (Shared Link vs. Local Progress), and context-aware action buttons.
+  - Added clear overwrite warning callout (`.shared-link-callout`) highlighting that only the target Pokédex will be updated while other games and app settings remain untouched.
+- **Shared Payload Inspector (`js/storage.js`)**:
+  - Added `inspectSharePayload()` to safely decompress and parse `#s=...` snapshots without mutating application state, providing validation error codes (`unsupported_version`, `corrupt_data`), target game metadata, included segment titles, and calculated caught statistics.
+  - Added `loadGameCaughtSlots()` and `loadGameShinyCaughtSlots()` helpers to retrieve local progress counts for comparison.
+- **Intelligent Cross-Game & Cross-Segment URL Loading (`js/main.js`, `js/ui/modals.js`)**:
+  - Enabled cross-game shared link detection: links for other games present a seamless _"Switch Game & Import"_ prompt and navigation flow.
+  - Enabled dynamic segment matching: shared links with different segment sets (e.g. DLC expansions) automatically update active segment configurations upon import confirmation and rebuild the Pokédex grid cleanly.
+  - Replaced generic warning toasts with specific, actionable messages for corrupted data or incompatible versions.
+
+### Changed
+
+- **Dex Options Sharing Clarification (`index.html`, `js/ui/welcome-guide.js`)**:
+  - Clarified the Share Progress action in the Dex Options modal (`#modalSegments`) by updating the title to **"🔗 Share Current Dex"** and description to **"Copy snapshot link for active game & enabled segments"**.
+  - Updated welcome guide walkthrough copy to reflect the current dex sharing behavior.
+
+- **Service Worker (`sw.js`)**:
+  - Bumped `CACHE_VERSION` to `v1.20.0`.
 
 ---
 

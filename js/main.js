@@ -4,7 +4,9 @@ import {
   loadSettings,
   setLastUsedGame,
   loadEnabledSegments,
+  saveEnabledSegments,
   decodeCaughtState,
+  inspectSharePayload,
 } from "./storage.js";
 
 import { ACTIVE_GAME, ACTIVE_GAME_ID, getOrderedGameEntries } from "./config.js";
@@ -134,39 +136,150 @@ async function initializeLivingDexApp() {
    * @returns {string[]} List of enabled segment identifiers.
    */
   const getShareSegments = () => Array.from(loadEnabledSegments());
-  const sharedState = await decodeCaughtState(
-    location.hash,
-    LIVING_DEX_SLOT_COUNT,
-    getShareSegments(),
-  );
-  if (sharedState && Object.keys(sharedState).length) {
-    // Show shared link warning modal
-    showSharedLinkWarningModal(() => {
-      syncCaughtState(sharedState, LIVING_DEX_SLOT_COUNT);
-    });
-  } else if (/#s=/.test(location.hash)) {
-    showToast("This shared link is for a different game or segment selection.", "warning");
-  } else {
+
+  /**
+   * Evaluates the current URL hash for a shared living dex snapshot and triggers inspection/import modal.
+   * @async
+   * @returns {Promise<boolean>} True if a valid share hash was processed.
+   */
+  async function processShareHash() {
+    // 1. Check for pending auto-import from cross-game redirect
+    try {
+      const pendingRaw = sessionStorage.getItem("livingdex-pending-share-import");
+      if (pendingRaw) {
+        sessionStorage.removeItem("livingdex-pending-share-import");
+        const pending = JSON.parse(pendingRaw);
+        if (pending && pending.gameId === ACTIVE_GAME_ID && pending.rawHash) {
+          const inspection = await inspectSharePayload(pending.rawHash, getShareSegments());
+          if (inspection.valid) {
+            if (inspection.segments?.length) {
+              saveEnabledSegments(new Set(inspection.segments));
+              const { sections, warnings } = await buildActiveDexSections();
+              const combinedSpeciesIds = sections.flatMap((s) => s.entries.map((e) => e.speciesId));
+              LIVING_DEX_SPECIES_ORDER = combinedSpeciesIds;
+              LIVING_DEX_SLOT_COUNT = combinedSpeciesIds.length;
+              rebuildDexView({ sections, slotCount: LIVING_DEX_SLOT_COUNT });
+              if (warnings.length) console.warn("Pokédex sections reloaded:", warnings);
+              await loadSpeciesNames(LIVING_DEX_SPECIES_ORDER);
+              await applyPersistedViewSettings();
+            }
+            const activeSlotCount =
+              document.querySelectorAll(".cell:not(.is-placeholder)").length ||
+              LIVING_DEX_SLOT_COUNT;
+            const sharedState = await decodeCaughtState(
+              inspection.payload,
+              activeSlotCount,
+              inspection.segments,
+            );
+            if (sharedState) {
+              syncCaughtState(sharedState, activeSlotCount);
+              showToast(
+                `Imported ${inspection.caughtCount} caught Pokémon for ${inspection.gameName}!`,
+                "success",
+              );
+              if (location.hash) {
+                history.replaceState(null, "", location.pathname + location.search);
+              }
+              return true;
+            }
+          }
+        }
+      }
+    } catch (err) {
+      console.error("Error processing pending share import:", err);
+    }
+
+    if (!location.hash || !/#s=/.test(location.hash)) {
+      return false;
+    }
+
+    const inspection = await inspectSharePayload(location.hash, getShareSegments());
+    if (!inspection.valid) {
+      if (inspection.error === "unsupported_version") {
+        showToast(
+          "This shared link was created with an incompatible version of LivingDex.",
+          "warning",
+        );
+      } else if (inspection.error === "corrupt_data") {
+        showToast("This shared link is corrupted or invalid.", "warning");
+      }
+      return false;
+    }
+
+    // Case 1: Different game
+    if (!inspection.isCurrentGame) {
+      showSharedLinkWarningModal(inspection, () => {
+        try {
+          sessionStorage.setItem(
+            "livingdex-pending-share-import",
+            JSON.stringify({
+              gameId: inspection.gameId,
+              segments: inspection.segments,
+              rawHash: inspection.rawHash,
+            }),
+          );
+        } catch {}
+        setLastUsedGame(inspection.gameId);
+        location.href = `${location.origin}${location.pathname}?game=${encodeURIComponent(inspection.gameId)}${inspection.rawHash}`;
+      });
+      return true;
+    }
+
+    // Case 2: Same game, different segments
+    if (!inspection.isCurrentSegments) {
+      showSharedLinkWarningModal(inspection, async () => {
+        saveEnabledSegments(new Set(inspection.segments));
+        const { sections, warnings } = await buildActiveDexSections();
+        const combinedSpeciesIds = sections.flatMap((s) => s.entries.map((e) => e.speciesId));
+        LIVING_DEX_SPECIES_ORDER = combinedSpeciesIds;
+        LIVING_DEX_SLOT_COUNT = combinedSpeciesIds.length;
+        rebuildDexView({ sections, slotCount: LIVING_DEX_SLOT_COUNT });
+        if (warnings.length) {
+          console.warn("Pokédex sections reloaded with warnings:", warnings);
+        }
+        await loadSpeciesNames(LIVING_DEX_SPECIES_ORDER);
+        await applyPersistedViewSettings();
+        const sharedState = await decodeCaughtState(
+          inspection.payload,
+          LIVING_DEX_SLOT_COUNT,
+          inspection.segments,
+        );
+        if (sharedState) {
+          syncCaughtState(sharedState, LIVING_DEX_SLOT_COUNT);
+          showToast(`Imported ${inspection.caughtCount} caught Pokémon!`, "success");
+        }
+      });
+      return true;
+    }
+
+    // Case 3: Same game, same segments
+    const activeSlotCount =
+      document.querySelectorAll(".cell:not(.is-placeholder)").length || LIVING_DEX_SLOT_COUNT;
+    const sharedState = await decodeCaughtState(
+      inspection.payload,
+      activeSlotCount,
+      getShareSegments(),
+    );
+    if (sharedState) {
+      showSharedLinkWarningModal(inspection, () => {
+        syncCaughtState(sharedState, activeSlotCount);
+        showToast(`Imported ${inspection.caughtCount} caught Pokémon!`, "success");
+      });
+      return true;
+    }
+
+    return false;
+  }
+
+  const hashHandled = await processShareHash();
+  if (!hashHandled) {
     // Check if this is a first-time visitor and show Welcome Guide
     checkFirstTimeVisitor(450);
   }
 
-  // Watch for hash changes (e.g., user clicking shared link)
+  // Watch for hash changes (e.g., user clicking shared link or pasting hash)
   window.addEventListener("hashchange", async () => {
-    const activeSlotCount =
-      document.querySelectorAll(".cell:not(.is-placeholder)").length || LIVING_DEX_SLOT_COUNT;
-    const incomingState = await decodeCaughtState(
-      location.hash,
-      activeSlotCount,
-      getShareSegments(),
-    );
-    if (incomingState) {
-      showSharedLinkWarningModal(() => {
-        syncCaughtState(incomingState, activeSlotCount);
-      });
-    } else if (/#s=/.test(location.hash)) {
-      showToast("This shared link is for a different game or segment selection.", "warning");
-    }
+    await processShareHash();
   });
 }
 

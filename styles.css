@@ -2609,6 +2609,187 @@ body.is-drag-selecting .cell {
   color: var(--warning);
 }
 
+/* --- Shared Link Warning Modal --- */
+.shared-link-modal-card {
+  max-width: 500px;
+}
+
+.shared-link-header {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 6px;
+}
+
+.shared-link-header-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--accent-2);
+  background: color-mix(in srgb, var(--accent-2) 12%, transparent);
+  border: 1px solid color-mix(in srgb, var(--accent-2) 28%, transparent);
+  padding: 3px 8px;
+  border-radius: 999px;
+  width: fit-content;
+}
+
+.shared-link-badge-icon {
+  font-size: 12px;
+}
+
+.shared-link-desc {
+  margin: 0 0 12px;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.45;
+}
+
+.shared-link-summary-box {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 12px 14px;
+  background: var(--surface-soft);
+  border: 1px solid var(--surface-soft-border);
+  border-radius: var(--control-radius);
+  margin-bottom: 12px;
+}
+
+.shared-link-meta-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.shared-link-meta-label {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--muted);
+}
+
+.shared-link-game-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 700;
+  font-size: 13px;
+  color: var(--accent-2);
+  background: color-mix(in srgb, var(--accent-2) 15%, transparent);
+  border: 1px solid color-mix(in srgb, var(--accent-2) 35%, transparent);
+  padding: 3px 10px;
+  border-radius: 999px;
+}
+
+.shared-link-segments-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  justify-content: flex-end;
+  max-width: 70%;
+}
+
+.shared-link-segment-chip {
+  font-size: 11px;
+  font-weight: 600;
+  padding: 2px 7px;
+  border-radius: 6px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  color: var(--text);
+  white-space: nowrap;
+}
+
+.shared-link-stats-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-top: 2px;
+}
+
+.shared-link-stat-card {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 8px 10px;
+  border-radius: 8px;
+  background: var(--card);
+  border: 1px solid var(--border);
+}
+
+.shared-link-stat-card.is-shared {
+  border-color: color-mix(in srgb, var(--accent-2) 40%, var(--border));
+  background: color-mix(in srgb, var(--accent-2) 5%, var(--card));
+}
+
+.shared-link-stat-title {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--muted);
+}
+
+.shared-link-stat-val {
+  font-size: 14px;
+  font-weight: 800;
+  color: var(--text);
+  letter-spacing: -0.01em;
+}
+
+.shared-link-stat-card.is-shared .shared-link-stat-val {
+  color: var(--accent-2);
+}
+
+.shared-link-stat-sub {
+  font-size: 10.5px;
+  color: var(--muted);
+}
+
+.shared-link-callout {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 10px 12px;
+  border-radius: var(--control-radius);
+  font-size: 12.5px;
+  line-height: 1.4;
+  background: color-mix(in srgb, var(--warning) 12%, transparent);
+  border: 1px solid color-mix(in srgb, var(--warning) 35%, transparent);
+  color: var(--text);
+  margin-bottom: 12px;
+}
+
+.shared-link-callout-icon {
+  font-size: 15px;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.shared-link-callout-text {
+  flex: 1;
+}
+
+.shared-link-callout-text strong {
+  color: var(--warning);
+}
+
+@media (max-width: 480px) {
+  .shared-link-segments-list {
+    max-width: 100%;
+    justify-content: flex-start;
+  }
+
+  .shared-link-stats-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* --- About Modal --- */
 .about-body {
   display: flex;
