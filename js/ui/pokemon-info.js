@@ -907,6 +907,10 @@ export async function openPokemonInfoModal(
   flavorEl.textContent = "";
   encounterEl.innerHTML = "";
   evoEl.innerHTML = "";
+  const scrollEl = document.getElementById("pokemonInfoScroll");
+  if (scrollEl) scrollEl.scrollTop = 0;
+  if (evoEl) evoEl.scrollTop = 0;
+  bodyEl.scrollTop = 0;
   bodyEl.hidden = true;
   errorEl.hidden = true;
   loadingEl.hidden = false;

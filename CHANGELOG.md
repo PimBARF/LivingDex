@@ -8,6 +8,7 @@ All notable changes, new features, improvements, and bug fixes for **LivingDex**
 
 | Version                                                               | Release Date          | Major Highlights                                                                                                 |
 | :-------------------------------------------------------------------- | :-------------------- | :--------------------------------------------------------------------------------------------------------------- |
+| **[v1.20.5](#v1205---2026-09-17)**                                    | Sep 17, 2026          | Fixed height and scrollable body for Pokémon Information modal to prevent dialog resizing on navigation          |
 | **[v1.20.4](#v1204---2026-09-15)**                                    | Sep 15, 2026          | Modal action button hover reversal animation with outline accent contrast across light & dark themes             |
 | **[v1.20.3](#v1203---2026-09-15)**                                    | Sep 15, 2026          | Modern Crisp Clean Slate light mode theme tokens, high-contrast slate typography & opaque modal dialog cards     |
 | **[v1.20.2](#v1202---2026-09-15)**                                    | Sep 15, 2026          | Standardize modal action button hierarchy across all dialogs (primary blue dismissals & secondary neutrals)      |
@@ -71,6 +72,21 @@ All notable changes, new features, improvements, and bug fixes for **LivingDex**
 | **[Genesis & Prototype](#initial-release---oct-2025)**                | Oct 27 – Nov 10, 2025 | Initial LivingDex tracker release, 30-slot PC boxes, PokeAPI integration                                         |
 
 ---
+
+## [v1.20.5] - 2026-09-17
+
+### Fixed
+
+- **Fixed-Height Pokémon Information Modal & Evolution Shelf (`styles.css`, `pokemon-info.js`, `index.html`)**:
+  - Standardized `.pokemon-info-card` to match Dex Options on desktop (`max-width: 560px; height: min(900px, calc(100dvh - 40px))`) and Settings modal on mobile (`calc(100% - 20px)` width, `min(730px, calc(100dvh - 24px))` height).
+  - Divided modal body into a flexible upper scroll area for flavor lore and encounter locations (`.pokemon-info-scroll`) and a dedicated bottom evolution shelf (`.pokemon-info-evo-shelf`) with its own independent vertical scrolling.
+  - Aligned base/root species to the left edge, final evolved species to the right edge, and middle evolutions centered with a centered `400px` max-width constraint for balanced desktop spacing and straight columnar alignment across branching families.
+  - Implemented pure CSS dynamic top/bottom scroll shadows on encounter and evolution containers to subtly indicate overflowing content across mobile and desktop.
+  - Added styled thin 4px rounded scrollbar tracks matching theme tokens for smooth visual scroll cues.
+  - Added global and component `[hidden]` CSS resets to guarantee seamless dismissal of loading state indicators upon data arrival.
+  - Automatically resets scroll positions (`scrollTop = 0`) across body, encounters, and evolution containers upon Pokémon navigation.
+- **Service Worker Cache Lifecycle (`sw.js`)**:
+  - Bumped `CACHE_VERSION` to `v1.20.5`.
 
 ## [v1.20.4] - 2026-09-15
 

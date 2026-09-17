@@ -214,9 +214,15 @@
    2) BASE & RESET
    ============================================================================= */
 
-/* Universal box-sizing reset */
-* {
+/* Universal box-sizing & hidden attribute reset */
+*,
+*::before,
+*::after {
   box-sizing: border-box;
+}
+
+[hidden] {
+  display: none !important;
 }
 
 html,
@@ -3162,7 +3168,11 @@ body.is-drag-selecting .cell {
    ============================================================================= */
 
 .pokemon-info-card {
-  max-width: 500px;
+  max-width: 560px;
+  height: min(900px, calc(100dvh - 40px));
+  max-height: calc(100dvh - 40px);
+  display: flex;
+  flex-direction: column;
 }
 
 /* Header with sprite artwork thumbnail and name/number/types */
@@ -3171,6 +3181,7 @@ body.is-drag-selecting .cell {
   gap: 16px;
   align-items: center;
   margin-bottom: 14px;
+  flex-shrink: 0;
 }
 
 .pokemon-info-sprite-wrap {
@@ -3289,10 +3300,69 @@ body.is-drag-selecting .cell {
 .pokemon-info-body {
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  gap: 10px;
+  flex: 1;
+  min-height: 0;
+  overflow: hidden;
+}
+
+/* Flexible top scrollable container for lore and encounters */
+.pokemon-info-scroll {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  flex: 1;
+  min-height: 0;
   overflow-y: auto;
-  max-height: min(56vh, 440px);
-  padding-right: 2px;
+  padding: 2px 2px 4px 0;
+  background:
+    linear-gradient(var(--card) 30%, color-mix(in srgb, var(--card) 0%, transparent)) center top,
+    linear-gradient(color-mix(in srgb, var(--card) 0%, transparent), var(--card) 70%) center bottom,
+    radial-gradient(farthest-side at 50% 0, rgba(0, 0, 0, 0.25), transparent) center top,
+    radial-gradient(farthest-side at 50% 100%, rgba(0, 0, 0, 0.25), transparent) center bottom;
+  background-repeat: no-repeat;
+  background-size:
+    100% 36px,
+    100% 36px,
+    100% 12px,
+    100% 12px;
+  background-attachment: local, local, scroll, scroll;
+  scrollbar-width: thin;
+  scrollbar-color: color-mix(in srgb, var(--text-tertiary, var(--muted)) 60%, transparent) transparent;
+}
+
+.pokemon-info-scroll::-webkit-scrollbar,
+.pokemon-info-evo::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+
+.pokemon-info-scroll::-webkit-scrollbar-track,
+.pokemon-info-evo::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.pokemon-info-scroll::-webkit-scrollbar-thumb,
+.pokemon-info-evo::-webkit-scrollbar-thumb {
+  background: color-mix(in srgb, var(--text-tertiary, var(--muted)) 50%, transparent);
+  border-radius: 999px;
+}
+
+.pokemon-info-scroll::-webkit-scrollbar-thumb:hover,
+.pokemon-info-evo::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-2);
+}
+
+/* Dedicated bottom evolution shelf */
+.pokemon-info-evo-shelf {
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  border-top: 1px solid var(--border);
+  padding-top: 8px;
+  max-height: 200px;
+  min-height: 0;
 }
 
 /* --- Pokédex Flavor Text Quote --- */
@@ -3549,17 +3619,42 @@ body.is-drag-selecting .cell {
   flex-direction: column;
   align-items: center;
   gap: 8px;
+  overflow-y: auto;
+  overflow-x: auto;
+  flex: 1;
+  min-height: 0;
+  padding: 2px 4px 4px;
+  width: 100%;
+  background:
+    linear-gradient(var(--card) 30%, color-mix(in srgb, var(--card) 0%, transparent)) center top,
+    linear-gradient(color-mix(in srgb, var(--card) 0%, transparent), var(--card) 70%) center bottom,
+    radial-gradient(farthest-side at 50% 0, rgba(0, 0, 0, 0.25), transparent) center top,
+    radial-gradient(farthest-side at 50% 100%, rgba(0, 0, 0, 0.25), transparent) center bottom;
+  background-repeat: no-repeat;
+  background-size:
+    100% 36px,
+    100% 36px,
+    100% 12px,
+    100% 12px;
+  background-attachment: local, local, scroll, scroll;
+  scrollbar-width: thin;
+  scrollbar-color: color-mix(in srgb, var(--text-tertiary, var(--muted)) 60%, transparent) transparent;
 }
 
 .evo-row {
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 6px;
+  justify-content: space-between;
+  gap: 8px;
   flex-wrap: nowrap;
-  overflow-x: auto;
-  padding-bottom: 2px;
+  flex-shrink: 0;
   width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.evo-row .evo-member:only-child {
+  margin: 0 auto;
 }
 
 .evo-member {
@@ -3567,7 +3662,9 @@ body.is-drag-selecting .cell {
   flex-direction: column;
   align-items: center;
   gap: 3px;
+  width: 56px;
   min-width: 56px;
+  flex-shrink: 0;
 }
 
 .evo-sprite {
@@ -3596,7 +3693,8 @@ body.is-drag-selecting .cell {
   align-items: center;
   justify-content: center;
   gap: 2px;
-  min-width: 56px;
+  flex: 1;
+  min-width: 44px;
 }
 
 .evo-method-lines {
@@ -3604,7 +3702,7 @@ body.is-drag-selecting .cell {
   flex-direction: column;
   align-items: center;
   gap: 1px;
-  min-width: 56px;
+  width: 100%;
 }
 
 .evo-method-line {
@@ -3635,10 +3733,21 @@ body.is-drag-selecting .cell {
 /* --- Loading & Error States --- */
 .pokemon-info-loading,
 .pokemon-info-error {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   padding: 24px 0;
   text-align: center;
   color: var(--muted);
   font-size: 0.9rem;
+}
+
+.pokemon-info-loading[hidden],
+.pokemon-info-error[hidden],
+.pokemon-info-body[hidden] {
+  display: none !important;
 }
 
 .pokemon-info-error {
@@ -3652,6 +3761,7 @@ body.is-drag-selecting .cell {
   justify-content: space-between;
   gap: 8px;
   width: 100%;
+  flex-shrink: 0;
 }
 
 .pokemon-info-nav-group {
@@ -3746,14 +3856,24 @@ body.is-drag-selecting .cell {
 
 /* --- Mobile Adjustments for Pokémon Info (max-width: 520px) --- */
 @media (max-width: 520px) {
-  .pokemon-info-body {
-    max-height: min(42vh, 320px);
+  .pokemon-info-card {
+    max-width: 100%;
+    width: calc(100% - 20px);
+    height: min(730px, calc(100dvh - 24px));
+    max-height: calc(100dvh - 24px);
   }
 
-  .evo-member,
-  .evo-connector,
-  .evo-method-lines {
-    min-width: 52px;
+  .pokemon-info-evo-shelf {
+    max-height: 180px;
+  }
+
+  .evo-member {
+    width: 50px;
+    min-width: 50px;
+  }
+
+  .evo-connector {
+    min-width: 36px;
   }
 }
 
