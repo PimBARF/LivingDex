@@ -4700,8 +4700,8 @@ body.is-drag-selecting .cell {
 .missing-guide-modal-card {
   max-width: 920px;
   width: calc(100% - 32px);
-  height: min(850px, calc(100dvh - 36px));
-  max-height: calc(100dvh - 36px);
+  height: min(900px, calc(100dvh - 40px));
+  max-height: calc(100dvh - 40px);
   padding: 16px 16px 12px;
 }
 

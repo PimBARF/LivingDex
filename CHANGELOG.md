@@ -8,6 +8,7 @@ All notable changes, new features, improvements, and bug fixes for **LivingDex**
 
 | Version                                                               | Release Date          | Major Highlights                                                                                                 |
 | :-------------------------------------------------------------------- | :-------------------- | :--------------------------------------------------------------------------------------------------------------- |
+| **[v1.20.6](#v1206---2026-09-18)**                                    | Sep 18, 2026          | Increase Field Guide modal height to match Dex Options modal dialog                                              |
 | **[v1.20.5](#v1205---2026-09-17)**                                    | Sep 17, 2026          | Fixed height and scrollable body for Pokémon Information modal to prevent dialog resizing on navigation          |
 | **[v1.20.4](#v1204---2026-09-15)**                                    | Sep 15, 2026          | Modal action button hover reversal animation with outline accent contrast across light & dark themes             |
 | **[v1.20.3](#v1203---2026-09-15)**                                    | Sep 15, 2026          | Modern Crisp Clean Slate light mode theme tokens, high-contrast slate typography & opaque modal dialog cards     |
@@ -72,6 +73,15 @@ All notable changes, new features, improvements, and bug fixes for **LivingDex**
 | **[Genesis & Prototype](#initial-release---oct-2025)**                | Oct 27 – Nov 10, 2025 | Initial LivingDex tracker release, 30-slot PC boxes, PokeAPI integration                                         |
 
 ---
+
+## [v1.20.6] - 2026-09-18
+
+### Changed
+
+- **Field Guide Modal Height Standardization (`styles.css`)**:
+  - Increased `.missing-guide-modal-card` height to `min(900px, calc(100dvh - 40px))` with `max-height: calc(100dvh - 40px)` to match the Dex Options dialog height.
+- **Service Worker Cache Lifecycle (`sw.js`)**:
+  - Bumped `CACHE_VERSION` to `v1.20.6`.
 
 ## [v1.20.5] - 2026-09-17
 
