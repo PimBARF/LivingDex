@@ -3613,6 +3613,76 @@ body.is-drag-selecting .cell {
   font-size: 11px;
 }
 
+/* --- Pokémon HOME Encounter & Debut Details --- */
+.pokemon-info-home-encounter-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.pokemon-info-home-debut,
+.pokemon-info-home-obtainable {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 8px 10px;
+  background: var(--surface-soft);
+  border: 1px solid var(--surface-soft-border);
+  border-radius: var(--control-radius);
+}
+
+.pokemon-info-home-label {
+  font-size: 10.5px;
+  font-weight: 700;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.pokemon-info-home-debut-val {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.pokemon-info-home-debut-game {
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.pokemon-info-home-debut-gen {
+  display: inline-flex;
+  align-items: center;
+  padding: 1px 6px;
+  font-size: 10.5px;
+  font-weight: 700;
+  border-radius: 4px;
+  background: color-mix(in srgb, var(--accent-2) 14%, transparent);
+  color: var(--accent-2);
+  border: 1px solid color-mix(in srgb, var(--accent-2) 30%, transparent);
+  line-height: 1.35;
+}
+
+.pokemon-info-home-games-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.pokemon-info-home-game-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 7px;
+  font-size: 11px;
+  font-weight: 600;
+  border-radius: 5px;
+  background: color-mix(in srgb, var(--accent-2) 10%, transparent);
+  color: var(--accent-2);
+  border: 1px solid color-mix(in srgb, var(--accent-2) 22%, transparent);
+  line-height: 1.35;
+}
+
 /* --- Evolution Chain Visual Tree --- */
 .pokemon-info-evo {
   display: flex;

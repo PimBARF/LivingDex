@@ -8,6 +8,7 @@ All notable changes, new features, improvements, and bug fixes for **LivingDex**
 
 | Version                                                               | Release Date          | Major Highlights                                                                                                 |
 | :-------------------------------------------------------------------- | :-------------------- | :--------------------------------------------------------------------------------------------------------------- |
+| **[v1.21.0](#v1210---2026-09-18)**                                    | Sep 18, 2026          | Encounter details in Pokémon HOME showing first introduced game/generation and catchable games list              |
 | **[v1.20.6](#v1206---2026-09-18)**                                    | Sep 18, 2026          | Increase Field Guide modal height to match Dex Options modal dialog                                              |
 | **[v1.20.5](#v1205---2026-09-17)**                                    | Sep 17, 2026          | Fixed height and scrollable body for Pokémon Information modal to prevent dialog resizing on navigation          |
 | **[v1.20.4](#v1204---2026-09-15)**                                    | Sep 15, 2026          | Modal action button hover reversal animation with outline accent contrast across light & dark themes             |
@@ -73,6 +74,19 @@ All notable changes, new features, improvements, and bug fixes for **LivingDex**
 | **[Genesis & Prototype](#initial-release---oct-2025)**                | Oct 27 – Nov 10, 2025 | Initial LivingDex tracker release, 30-slot PC boxes, PokeAPI integration                                         |
 
 ---
+
+## [v1.21.0] - 2026-09-18
+
+### Added
+
+- **Pokémon HOME Encounter & Debut Details (`db.js`, `pokemon-info.js`, `styles.css`)**:
+  - Enhanced Pokémon Information modal when active in Pokémon HOME mode (`gameId === "home"`) to show dedicated encounter and acquisition details instead of an empty/hidden section.
+  - Added **First Introduced** debut card showing the mainline game title and generation era badge where the species or form variant first debuted (e.g. _Red / Blue / Yellow (Gen I)_, _Legends: Arceus (Gen VIII)_, _Scarlet / Violet (The Teal Mask) (Gen IX)_, _Alolan Form in Sun / Moon_, etc.).
+  - Added **Available to Catch In** interactive tags listing all main series games where the species is obtainable in their Pokédex, with fallback messaging for event/transfer-only Pokémon.
+  - Implemented `getSpeciesDebutGame()` in `db.js` supporting all 1,025 base species, regional forms, mega evolutions, Gigantamax variants, and DLC debuts.
+  - Standardized `getHomeSpeciesGamesMap()` with deterministic resolution ordering and consistent game titles.
+- **Service Worker Cache Lifecycle (`sw.js`)**:
+  - Bumped `CACHE_VERSION` to `v1.21.0`.
 
 ## [v1.20.6] - 2026-09-18
 

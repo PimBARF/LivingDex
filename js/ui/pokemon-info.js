@@ -725,6 +725,72 @@ function renderEncounterDetails(encounterEl, encounterGroups) {
   }
 
   encounterGroups.forEach((groupData) => {
+    if (groupData.isHome) {
+      const homeGroup = document.createElement("div");
+      homeGroup.className = "pokemon-info-home-encounter-group";
+
+      if (groupData.debut) {
+        const debutCard = document.createElement("div");
+        debutCard.className = "pokemon-info-home-debut";
+
+        const label = document.createElement("div");
+        label.className = "pokemon-info-home-label";
+        label.textContent = "First Introduced";
+        debutCard.appendChild(label);
+
+        const valRow = document.createElement("div");
+        valRow.className = "pokemon-info-home-debut-val";
+
+        const gameSpan = document.createElement("span");
+        gameSpan.className = "pokemon-info-home-debut-game";
+        gameSpan.textContent = groupData.debut.game;
+        valRow.appendChild(gameSpan);
+
+        if (groupData.debut.generationRoman || groupData.debut.generation) {
+          const genSpan = document.createElement("span");
+          genSpan.className = "pokemon-info-home-debut-gen";
+          genSpan.textContent =
+            groupData.debut.generationRoman || `Gen ${groupData.debut.generation}`;
+          valRow.appendChild(genSpan);
+        }
+
+        debutCard.appendChild(valRow);
+        homeGroup.appendChild(debutCard);
+      }
+
+      const obtainCard = document.createElement("div");
+      obtainCard.className = "pokemon-info-home-obtainable";
+
+      const obtainLabel = document.createElement("div");
+      obtainLabel.className = "pokemon-info-home-label";
+      const count = groupData.obtainableGames?.length || 0;
+      obtainLabel.textContent = `Available to Catch In (${count} ${count === 1 ? "game" : "games"})`;
+      obtainCard.appendChild(obtainLabel);
+
+      if (count > 0) {
+        const gamesList = document.createElement("div");
+        gamesList.className = "pokemon-info-home-games-list";
+
+        groupData.obtainableGames.forEach((gameTitle) => {
+          const tag = document.createElement("span");
+          tag.className = "pokemon-info-home-game-tag";
+          tag.textContent = typeof gameTitle === "string" ? gameTitle : gameTitle.location;
+          gamesList.appendChild(tag);
+        });
+
+        obtainCard.appendChild(gamesList);
+      } else {
+        const empty = document.createElement("div");
+        empty.className = "pokemon-info-encounter-note";
+        empty.textContent = "Not catchable in any standard game Pokédex (Event / Transfer only).";
+        obtainCard.appendChild(empty);
+      }
+
+      homeGroup.appendChild(obtainCard);
+      encounterEl.appendChild(homeGroup);
+      return;
+    }
+
     if (groupData.emptyNote) {
       const empty = document.createElement("div");
       empty.className = "pokemon-info-encounter-note";

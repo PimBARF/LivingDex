@@ -1108,9 +1108,20 @@ export async function getPokemonModalData(speciesId, formId, gameId) {
   );
   const preEvolutionName = findPreEvolutionName(evolutionPaths, speciesId);
 
-  const showEncounters = gameId !== "home";
+  const showEncounters = true;
   let encounterGroups = [];
-  if (showEncounters) {
+  if (gameId === "home") {
+    const homeGamesMap = await getHomeSpeciesGamesMap();
+    const obtainableGames = homeGamesMap.get(speciesId) || [];
+    const debut = getSpeciesDebutGame(speciesId, formId, speciesData);
+    encounterGroups = [
+      {
+        isHome: true,
+        debut,
+        obtainableGames,
+      },
+    ];
+  } else {
     const gameEncountersData = await getGameEncounterData(gameId);
     encounterGroups = resolveEncounterGroups(
       gameDexData,
@@ -1134,6 +1145,111 @@ export async function getPokemonModalData(speciesId, formId, gameId) {
 }
 
 /**
+ * Resolves the debut game and generation era where a species or form was first introduced.
+ *
+ * @param {number|string} speciesId - National Pokédex species ID.
+ * @param {number|string|null} [formId=null] - Specific form ID or variant sprite ID.
+ * @param {Object|null} [speciesData=null] - Full species database entry if available.
+ * @returns {{ game: string, generation: number, generationRoman: string }} Debut information.
+ */
+export function getSpeciesDebutGame(speciesId, formId = null, speciesData = null) {
+  const id = Number(speciesId);
+  const fid = Number(formId || speciesId);
+
+  if (speciesData && Array.isArray(speciesData.forms)) {
+    const form = speciesData.forms.find((f) => f.formId === fid);
+    if (form) {
+      if (form.isRegional) {
+        if (form.region === "alola")
+          return { game: "Sun / Moon", generation: 7, generationRoman: "Gen VII" };
+        if (form.region === "galar")
+          return { game: "Sword / Shield", generation: 8, generationRoman: "Gen VIII" };
+        if (form.region === "hisui")
+          return { game: "Legends: Arceus", generation: 8, generationRoman: "Gen VIII" };
+        if (form.region === "paldea")
+          return { game: "Scarlet / Violet", generation: 9, generationRoman: "Gen IX" };
+      }
+      if (form.isGmax) {
+        return { game: "Sword / Shield", generation: 8, generationRoman: "Gen VIII" };
+      }
+      if (form.isMega) {
+        const orasMegaFormIds = new Set([
+          10071, 10072, 10073, 10074, 10075, 10076, 10077, 10078, 10079, 10086, 10087, 10088, 10089,
+          10090,
+        ]);
+        const zaMegaFormIds = new Set([10278, 10279, 10304, 10305]);
+        if (zaMegaFormIds.has(fid)) {
+          return { game: "Legends: Z-A", generation: 9, generationRoman: "Gen IX" };
+        }
+        if (orasMegaFormIds.has(fid)) {
+          return { game: "Omega Ruby / Alpha Sapphire", generation: 6, generationRoman: "Gen VI" };
+        }
+        return { game: "X / Y", generation: 6, generationRoman: "Gen VI" };
+      }
+      if (form.formKey === "bloodmoon") {
+        return {
+          game: "Scarlet / Violet (The Teal Mask)",
+          generation: 9,
+          generationRoman: "Gen IX",
+        };
+      }
+      if (form.formKey === "origin" && (id === 483 || id === 484)) {
+        return { game: "Legends: Arceus", generation: 8, generationRoman: "Gen VIII" };
+      }
+      if (form.formKey === "white-striped" && id === 550) {
+        return { game: "Legends: Arceus", generation: 8, generationRoman: "Gen VIII" };
+      }
+    }
+  }
+
+  if (id >= 1 && id <= 151)
+    return { game: "Red / Blue / Yellow", generation: 1, generationRoman: "Gen I" };
+  if (id >= 152 && id <= 251)
+    return { game: "Gold / Silver / Crystal", generation: 2, generationRoman: "Gen II" };
+  if (id >= 252 && id <= 386)
+    return { game: "Ruby / Sapphire / Emerald", generation: 3, generationRoman: "Gen III" };
+  if (id >= 387 && id <= 493)
+    return { game: "Diamond / Pearl / Platinum", generation: 4, generationRoman: "Gen IV" };
+  if (id >= 494 && id <= 649)
+    return { game: "Black / White", generation: 5, generationRoman: "Gen V" };
+  if (id >= 650 && id <= 721) return { game: "X / Y", generation: 6, generationRoman: "Gen VI" };
+  if (id >= 722 && id <= 802)
+    return { game: "Sun / Moon", generation: 7, generationRoman: "Gen VII" };
+  if (id >= 803 && id <= 807)
+    return { game: "Ultra Sun / Ultra Moon", generation: 7, generationRoman: "Gen VII" };
+  if (id >= 808 && id <= 809)
+    return { game: "Let's Go Pikachu & Eevee", generation: 7, generationRoman: "Gen VII" };
+  if (id >= 810 && id <= 890)
+    return { game: "Sword / Shield", generation: 8, generationRoman: "Gen VIII" };
+  if (id >= 891 && id <= 892) {
+    return {
+      game: "Sword / Shield (The Isle of Armor)",
+      generation: 8,
+      generationRoman: "Gen VIII",
+    };
+  }
+  if (id === 893) return { game: "Sword / Shield", generation: 8, generationRoman: "Gen VIII" };
+  if (id >= 894 && id <= 898) {
+    return {
+      game: "Sword / Shield (The Crown Tundra)",
+      generation: 8,
+      generationRoman: "Gen VIII",
+    };
+  }
+  if (id >= 899 && id <= 905)
+    return { game: "Legends: Arceus", generation: 8, generationRoman: "Gen VIII" };
+  if (id >= 906 && id <= 1010)
+    return { game: "Scarlet / Violet", generation: 9, generationRoman: "Gen IX" };
+  if (id >= 1011 && id <= 1017) {
+    return { game: "Scarlet / Violet (The Teal Mask)", generation: 9, generationRoman: "Gen IX" };
+  }
+  if (id >= 1018 && id <= 1025) {
+    return { game: "Scarlet / Violet (The Indigo Disk)", generation: 9, generationRoman: "Gen IX" };
+  }
+
+  return { game: "Unknown", generation: 1, generationRoman: "Gen I" };
+}
+
 /**
  * In-memory cache for species availability mapping in Pokemon HOME.
  * @type {Map<number, string[]>|null}
@@ -1153,8 +1269,8 @@ export async function getHomeSpeciesGamesMap() {
     { id: "sv", name: "Scarlet / Violet" },
     { id: "swsh", name: "Sword / Shield" },
     { id: "pla", name: "Legends: Arceus" },
-    { id: "bdsp", name: "BD / SP" },
-    { id: "lgpe", name: "Let's Go Pikachu / Eevee" },
+    { id: "bdsp", name: "Brilliant Diamond / Shining Pearl" },
+    { id: "lgpe", name: "Let's Go Pikachu & Eevee" },
     { id: "usum", name: "Ultra Sun / Ultra Moon" },
     { id: "sm", name: "Sun / Moon" },
     { id: "oras", name: "Omega Ruby / Alpha Sapphire" },
@@ -1169,30 +1285,34 @@ export async function getHomeSpeciesGamesMap() {
     { id: "rby", name: "Red / Blue / Yellow" },
   ];
 
-  await Promise.all(
+  const results = await Promise.all(
     GAME_LIST.map(async (g) => {
       try {
         const dexData = await getGameDexData(g.id);
-        if (dexData && Array.isArray(dexData.sections)) {
-          dexData.sections.forEach((sec) => {
-            if (Array.isArray(sec.entries)) {
-              sec.entries.forEach((e) => {
-                if (!map.has(e.speciesId)) {
-                  map.set(e.speciesId, []);
-                }
-                const list = map.get(e.speciesId);
-                if (!list.includes(g.name)) {
-                  list.push(g.name);
-                }
-              });
-            }
-          });
-        }
+        return { game: g, dexData };
       } catch {
-        // Skip games that fail to load
+        return { game: g, dexData: null };
       }
     }),
   );
+
+  results.forEach(({ game, dexData }) => {
+    if (dexData && Array.isArray(dexData.sections)) {
+      dexData.sections.forEach((sec) => {
+        if (Array.isArray(sec.entries)) {
+          sec.entries.forEach((e) => {
+            if (!map.has(e.speciesId)) {
+              map.set(e.speciesId, []);
+            }
+            const list = map.get(e.speciesId);
+            if (!list.includes(game.name)) {
+              list.push(game.name);
+            }
+          });
+        }
+      });
+    }
+  });
 
   homeSpeciesGamesCache = map;
   return map;
