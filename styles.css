@@ -1714,6 +1714,35 @@ body.is-scrolled #progressWrap {
   opacity: 1;
 }
 
+/* Floating specimen count badge (bottom-right of cell) */
+.cell-specimen-badge {
+  position: absolute;
+  bottom: 24px;
+  right: 5px;
+  z-index: 4;
+  padding: 1px 5px;
+  border-radius: 6px;
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 1.2;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.01em;
+  background: var(--surface-overlay);
+  color: var(--text);
+  border: 1px solid var(--border);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  box-shadow: var(--shadow-sm);
+  pointer-events: none;
+  user-select: none;
+}
+
+.cell.caught .cell-specimen-badge {
+  background: rgba(0, 0, 0, 0.65);
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.25);
+}
+
 /* Placeholder (empty trailing slots in box) */
 .cell.is-placeholder {
   background: repeating-linear-gradient(
@@ -3398,6 +3427,179 @@ body.is-drag-selecting .cell {
   content: "”";
   right: 0.3rem;
   bottom: -1.05rem;
+}
+
+/* --- Specimen Inventory & Family Quota Card --- */
+.pokemon-info-specimen-card {
+  margin-top: 4px;
+}
+
+.pokemon-info-specimen-card[hidden] {
+  display: none !important;
+}
+
+.pokemon-info-specimen-card-inner {
+  background: var(--surface-overlay);
+  border: 1px solid var(--border);
+  border-radius: var(--control-radius);
+  padding: 10px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.pokemon-info-specimen-stepper-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.pokemon-info-specimen-label-block {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.pokemon-info-specimen-title {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--text);
+  line-height: 1.2;
+}
+
+.pokemon-info-specimen-subtitle {
+  font-size: 11px;
+  color: var(--muted);
+  line-height: 1.2;
+}
+
+.pokemon-info-specimen-stepper-controls {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--control-radius);
+  padding: 3px 6px;
+}
+
+.btn-stepper {
+  width: 28px;
+  height: 28px;
+  min-width: 28px;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  background: var(--surface-overlay);
+  color: var(--text);
+  font-size: 16px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 0;
+  line-height: 1;
+  transition: background 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+}
+
+.btn-stepper:hover {
+  background: var(--accent-2);
+  color: #fff;
+  border-color: transparent;
+}
+
+.btn-stepper:active {
+  transform: scale(0.95);
+}
+
+.pokemon-info-specimen-count {
+  min-width: 28px;
+  text-align: center;
+  font-size: 15px;
+  font-weight: 800;
+  font-variant-numeric: tabular-nums;
+  color: var(--text);
+}
+
+/* Collapsible Family Quota Details */
+.pokemon-info-family-details {
+  border-top: 1px dashed var(--border);
+  padding-top: 8px;
+  margin-top: 2px;
+}
+
+.pokemon-info-family-summary {
+  cursor: pointer;
+  user-select: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text);
+  list-style: none;
+}
+
+.pokemon-info-family-summary::-webkit-details-marker {
+  display: none;
+}
+
+.pokemon-info-family-summary-left {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.pokemon-info-family-summary-icon {
+  font-size: 13px;
+  line-height: 1;
+}
+
+.pokemon-info-family-summary-title {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.pokemon-info-quota-badge {
+  font-size: 11px;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: rgba(234, 179, 8, 0.15);
+  color: #ca8a04;
+  border: 1px solid rgba(234, 179, 8, 0.3);
+  white-space: nowrap;
+}
+
+.pokemon-info-quota-badge.is-met {
+  background: rgba(34, 197, 94, 0.15);
+  color: #16a34a;
+  border-color: rgba(34, 197, 94, 0.3);
+}
+
+.pokemon-info-family-breakdown {
+  padding-top: 8px;
+  font-size: 11px;
+  color: var(--muted);
+  line-height: 1.45;
+}
+
+.pokemon-info-family-math {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.pokemon-info-family-math strong {
+  color: var(--text);
+}
+
+.pokemon-info-family-math-sub {
+  font-style: italic;
+  opacity: 0.85;
 }
 
 /* Section label headings ("Encounter details", "Evolution details") */

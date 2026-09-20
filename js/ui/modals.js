@@ -42,7 +42,11 @@ import {
 } from "../state.js";
 import { applyPersistedViewSettings } from "../main.js";
 import { refreshOfflineDataAndCaches, checkForUpdates } from "../pwa.js";
-import { applyBoxLabelsToHeaders, updateAllBoxProgress } from "./dom-render.js";
+import {
+  applyBoxLabelsToHeaders,
+  updateAllBoxProgress,
+  refreshAllSpecimenBadges,
+} from "./dom-render.js";
 import {
   getGameDexData,
   buildActiveDexSections,
@@ -1209,6 +1213,8 @@ export function registerSettingsControls() {
     if (gen12BoxCap) gen12BoxCap.value = String(settings.gen12BoxCapacity || 20);
     const showBoxCoords = document.getElementById("settingsShowBoxCoordinates");
     if (showBoxCoords) showBoxCoords.checked = !!settings.showBoxCoordinates;
+    const showSpecimenBadges = document.getElementById("settingsShowSpecimenBadges");
+    if (showSpecimenBadges) showSpecimenBadges.checked = settings.showSpecimenBadges !== false;
     const keepAwake = document.getElementById("settingsKeepAwake");
     const keepAwakeSubtitle = document.getElementById("settingsKeepAwakeSubtitle");
     if (keepAwake) {
@@ -1254,6 +1260,8 @@ export function registerSettingsControls() {
       settings.theme ||
       "auto";
     const nextShowCoords = !!document.getElementById("settingsShowBoxCoordinates")?.checked;
+    const nextShowSpecimenBadges =
+      document.getElementById("settingsShowSpecimenBadges")?.checked !== false;
     const nextKeepAwake = isWakeLockSupported()
       ? !!document.getElementById("settingsKeepAwake")?.checked
       : false;
@@ -1268,6 +1276,7 @@ export function registerSettingsControls() {
       gen12BoxCapacity: nextGen12Cap,
       keepScreenAwake: nextKeepAwake,
       showBoxCoordinates: nextShowCoords,
+      showSpecimenBadges: nextShowSpecimenBadges,
       language: document.getElementById("settingsLanguage")?.value || "en",
       spriteStyle: document.getElementById("settingsSpriteStyle")?.value || "pokesprites",
       defaultGameMode: document.getElementById("settingsDefaultGameMode")?.value || "last-used",
@@ -1279,6 +1288,7 @@ export function registerSettingsControls() {
     applyTheme(nextSettings.theme);
     applyReducedMotionPreference(nextSettings.reducedMotion);
     await applyWakeLockPreference(nextSettings.keepScreenAwake);
+    refreshAllSpecimenBadges();
 
     const isGen1Or2 = ACTIVE_GAME.group === "gen1" || ACTIVE_GAME.group === "gen2";
     if (previousGen12Cap !== nextGen12Cap && isGen1Or2) {

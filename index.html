@@ -438,6 +438,17 @@
                 </span>
               </label>
 
+              <label class="settings-row settings-row-clickable" for="settingsShowSpecimenBadges">
+                <div class="settings-row-text">
+                  <span class="settings-row-title">Specimen count badges</span>
+                  <span class="settings-row-subtitle">Display ×N badge on grid cells when you own multiple specimens</span>
+                </div>
+                <span class="toggle-switch">
+                  <input type="checkbox" id="settingsShowSpecimenBadges" checked>
+                  <span class="toggle-track"></span>
+                </span>
+              </label>
+
               <div class="settings-row settings-action-row">
                 <div class="settings-row-text">
                   <span class="settings-row-title">Reset box titles</span>
@@ -736,6 +747,7 @@
       <div id="pokemonInfoBody" class="pokemon-info-body">
         <div id="pokemonInfoScroll" class="pokemon-info-scroll">
           <div id="pokemonInfoFlavor" class="pokemon-info-flavor"></div>
+          <div id="pokemonInfoSpecimenCard" class="pokemon-info-specimen-card" hidden></div>
           <div id="pokemonInfoEncounterLabel" class="pokemon-info-section-label">Encounter details</div>
           <div id="pokemonInfoEncounter" class="pokemon-info-encounter"></div>
         </div>

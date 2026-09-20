@@ -1,10 +1,19 @@
-import { loadSettings } from "../storage.js";
+import {
+  loadSettings,
+  loadSpecimenInventory,
+  saveSpecimenInventory,
+  loadCaughtSlots,
+  saveCaughtSlots,
+  loadShinyCaughtSlots,
+  saveShinyCaughtSlots,
+} from "../storage.js";
 import { ACTIVE_GAME_ID, spriteUrlForSpecies } from "../config.js";
 import { attachModalHandlers } from "./modals.js";
-import { isShinyMode } from "../state.js";
-import { getPokemonModalData } from "../db.js";
-import { getVisiblePokemonCells } from "./controls.js";
-import { getCellDisplayInfo } from "./dom-render.js";
+import { isShinyMode, updateProgressBar } from "../state.js";
+import { getPokemonModalData, calculateFamilyQuota } from "../db.js";
+import { getVisiblePokemonCells, applyHideCaughtFilter } from "./controls.js";
+import { getCellDisplayInfo, updateCellSpecimenBadge } from "./dom-render.js";
+import { updateMissingGuideBadge } from "./missing-guide.js";
 
 // =============================================================================
 // POKÉMON INFO MODAL (VIEW LAYER)
@@ -899,6 +908,204 @@ function renderEvolutionDetails(evoEl, evolutionPaths, spriteStyle) {
 }
 
 /**
+ * Renders the always-visible specimen inventory stepper with a collapsible family quota section.
+ *
+ * @param {HTMLElement} cardEl - Target container element for the specimen card.
+ * @param {Object} data - Modal data containing speciesId, name, familyInfo.
+ * @param {HTMLElement|null} sourceCell - Originating dex slot cell element.
+ */
+function renderSpecimenCard(cardEl, data, sourceCell) {
+  if (!cardEl) return;
+  const speciesId = data.speciesId;
+  const inv = loadSpecimenInventory();
+  const caught = isShinyMode ? loadShinyCaughtSlots() : loadCaughtSlots();
+  const regionalSlot = sourceCell ? Number(sourceCell.dataset.regional) : null;
+  const specimenKey = sourceCell?.dataset?.specimenKey || null;
+  const isCaught = specimenKey ? Boolean(caught[specimenKey]) : Boolean(caught[regionalSlot]);
+
+  let currentCount = typeof inv[speciesId] === "number" ? inv[speciesId] : isCaught ? 1 : 0;
+
+  cardEl.hidden = false;
+  cardEl.innerHTML = "";
+
+  const container = document.createElement("div");
+  container.className = "pokemon-info-specimen-card-inner";
+
+  // Stepper Header / Row
+  const stepperRow = document.createElement("div");
+  stepperRow.className = "pokemon-info-specimen-stepper-row";
+
+  const labelBlock = document.createElement("div");
+  labelBlock.className = "pokemon-info-specimen-label-block";
+
+  const title = document.createElement("span");
+  title.className = "pokemon-info-specimen-title";
+  title.textContent = "Specimens in PC Box / Bag";
+
+  const subtitle = document.createElement("span");
+  subtitle.className = "pokemon-info-specimen-subtitle";
+  subtitle.textContent = "Syncs with Living Dex grid & Field Guide";
+
+  labelBlock.append(title, subtitle);
+
+  const stepperControls = document.createElement("div");
+  stepperControls.className = "pokemon-info-specimen-stepper-controls";
+
+  const minusBtn = document.createElement("button");
+  minusBtn.type = "button";
+  minusBtn.className = "btn-stepper btn-stepper-minus";
+  minusBtn.textContent = "−";
+  minusBtn.setAttribute("aria-label", `Decrease specimen count for ${data.name}`);
+
+  const countVal = document.createElement("span");
+  countVal.className = "pokemon-info-specimen-count";
+  countVal.textContent = String(currentCount);
+
+  const plusBtn = document.createElement("button");
+  plusBtn.type = "button";
+  plusBtn.className = "btn-stepper btn-stepper-plus";
+  plusBtn.textContent = "+";
+  plusBtn.setAttribute("aria-label", `Increase specimen count for ${data.name}`);
+
+  stepperControls.append(minusBtn, countVal, plusBtn);
+  stepperRow.append(labelBlock, stepperControls);
+  container.appendChild(stepperRow);
+
+  // Collapsible Family Quota Section
+  let detailsEl = null;
+  let quotaBadge = null;
+  let quotaSummaryText = null;
+  let breakdownContainer = null;
+
+  if (data.familyInfo && Array.isArray(data.familyInfo.familySpecies)) {
+    detailsEl = document.createElement("details");
+    detailsEl.className = "pokemon-info-family-details";
+
+    const summary = document.createElement("summary");
+    summary.className = "pokemon-info-family-summary";
+
+    const summaryLeft = document.createElement("div");
+    summaryLeft.className = "pokemon-info-family-summary-left";
+
+    const summaryIcon = document.createElement("span");
+    summaryIcon.className = "pokemon-info-family-summary-icon";
+    summaryIcon.textContent = "🥚";
+
+    quotaSummaryText = document.createElement("span");
+    quotaSummaryText.className = "pokemon-info-family-summary-title";
+
+    summaryLeft.append(summaryIcon, quotaSummaryText);
+
+    quotaBadge = document.createElement("span");
+    quotaBadge.className = "pokemon-info-quota-badge";
+
+    summary.append(summaryLeft, quotaBadge);
+    detailsEl.appendChild(summary);
+
+    breakdownContainer = document.createElement("div");
+    breakdownContainer.className = "pokemon-info-family-breakdown";
+    detailsEl.appendChild(breakdownContainer);
+
+    container.appendChild(detailsEl);
+  }
+
+  function updateFamilyQuotaDisplay(updatedCount) {
+    if (!detailsEl || !data.familyInfo) return;
+    const currentInv = { ...loadSpecimenInventory() };
+    if (updatedCount > 0) {
+      currentInv[speciesId] = updatedCount;
+    } else {
+      delete currentInv[speciesId];
+    }
+
+    const quotaResult = calculateFamilyQuota(
+      data.familyInfo.chain,
+      data.familyInfo.familySpecies,
+      currentInv,
+    );
+
+    const isMet = quotaResult.isFulfilled;
+    const remaining = quotaResult.baseQuota;
+    const totalOwnedInFamily = quotaResult.totalOwned;
+    const totalRequired = quotaResult.totalRequired;
+
+    quotaSummaryText.textContent = `Family Quota: ${data.familyInfo.rootName} (${totalOwnedInFamily}/${totalRequired} Owned)`;
+
+    quotaBadge.textContent = isMet ? "Quota Met ✓" : `${remaining} Needed`;
+    quotaBadge.classList.toggle("is-met", isMet);
+
+    breakdownContainer.innerHTML = `
+      <div class="pokemon-info-family-math">
+        <span>Need <strong>${totalRequired}×</strong> specimens across the ${data.familyInfo.rootName} family line:</span>
+        <span class="pokemon-info-family-math-sub">(${data.familyInfo.familySpecies.map((m) => m.name).join(" + ")})</span>
+        ${
+          !isMet
+            ? `<span class="pokemon-info-family-math-sub" style="margin-top: 4px; color: var(--text);">Need <strong>${remaining}× ${data.familyInfo.rootName}</strong> (catch/breed) to evolve into remaining missing stages.</span>`
+            : `<span class="pokemon-info-family-math-sub" style="margin-top: 4px; color: #16a34a;">You own enough unevolved specimens to complete all remaining evolutions.</span>`
+        }
+      </div>
+    `;
+  }
+
+  updateFamilyQuotaDisplay(currentCount);
+
+  async function handleCountChange(delta) {
+    const nextCount = Math.max(0, currentCount + delta);
+    if (nextCount === currentCount) return;
+    currentCount = nextCount;
+
+    const latestInv = loadSpecimenInventory();
+    if (currentCount > 0) {
+      latestInv[speciesId] = currentCount;
+    } else {
+      delete latestInv[speciesId];
+    }
+    saveSpecimenInventory(latestInv);
+
+    const latestCaught = isShinyMode ? loadShinyCaughtSlots() : loadCaughtSlots();
+    const targetState = currentCount > 0;
+
+    if (sourceCell) {
+      const k = sourceCell.dataset.specimenKey;
+      const r = Number(sourceCell.dataset.regional);
+      if (k) {
+        if (targetState) latestCaught[k] = true;
+        else delete latestCaught[k];
+      } else if (r) {
+        if (targetState) latestCaught[r] = true;
+        else delete latestCaught[r];
+      }
+    } else {
+      if (targetState) latestCaught[speciesId] = true;
+      else delete latestCaught[speciesId];
+    }
+
+    if (isShinyMode) saveShinyCaughtSlots(latestCaught);
+    else saveCaughtSlots(latestCaught);
+
+    const matchingCells = document.querySelectorAll(`.cell[data-national='${speciesId}']`);
+    matchingCells.forEach((c) => {
+      c.classList.toggle("caught", targetState);
+      c.setAttribute("aria-pressed", String(targetState));
+      updateCellSpecimenBadge(c, currentCount);
+    });
+
+    countVal.textContent = String(currentCount);
+    updateFamilyQuotaDisplay(currentCount);
+
+    const slotCount = document.querySelectorAll(".cell:not(.is-placeholder)").length;
+    updateProgressBar(slotCount);
+    updateMissingGuideBadge(slotCount);
+    applyHideCaughtFilter();
+  }
+
+  minusBtn.addEventListener("click", () => handleCountChange(-1));
+  plusBtn.addEventListener("click", () => handleCountChange(1));
+
+  cardEl.appendChild(container);
+}
+
+/**
  * Fetch and display info for a Pokémon in the info modal.
  * Uses local database to avoid redundant API calls and parse operations.
  *
@@ -929,6 +1136,7 @@ export async function openPokemonInfoModal(
   const spriteEl = document.getElementById("pokemonInfoSprite");
   const typesEl = document.getElementById("pokemonInfoTypes");
   const flavorEl = document.getElementById("pokemonInfoFlavor");
+  const specimenCardEl = document.getElementById("pokemonInfoSpecimenCard");
   const encounterEl = document.getElementById("pokemonInfoEncounter");
   const encounterLabelEl = document.getElementById("pokemonInfoEncounterLabel");
   const evoEl = document.getElementById("pokemonInfoEvo");
@@ -971,6 +1179,10 @@ export async function openPokemonInfoModal(
   spriteEl.alt = displayName;
   typesEl.innerHTML = "";
   flavorEl.textContent = "";
+  if (specimenCardEl) {
+    specimenCardEl.innerHTML = "";
+    specimenCardEl.hidden = true;
+  }
   encounterEl.innerHTML = "";
   evoEl.innerHTML = "";
   const scrollEl = document.getElementById("pokemonInfoScroll");
@@ -997,6 +1209,10 @@ export async function openPokemonInfoModal(
       .join("");
 
     flavorEl.textContent = data.flavorText;
+
+    if (specimenCardEl) {
+      renderSpecimenCard(specimenCardEl, data, sourceCell);
+    }
 
     if (data.showEncounters) {
       renderEncounterDetails(encounterEl, data.encounterGroups);

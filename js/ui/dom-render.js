@@ -8,6 +8,8 @@ import {
   saveBoxLabels,
   loadCollapsedBoxes,
   saveCollapsedBoxes,
+  loadSpecimenInventory,
+  saveSpecimenInventory,
 } from "../storage.js";
 import {
   ACTIVE_GAME_ID,
@@ -761,6 +763,46 @@ export function createDexSlot(
 }
 
 /**
+ * Updates or removes the bottom-right specimen count badge (xN) on a dex cell.
+ *
+ * @param {HTMLElement} cell - The target cell element.
+ * @param {number} count - Quantity of specimens owned.
+ */
+export function updateCellSpecimenBadge(cell, count) {
+  if (!cell) return;
+  let badge = cell.querySelector(".cell-specimen-badge");
+  const showBadges = loadSettings().showSpecimenBadges !== false;
+  const numCount = typeof count === "number" ? count : 0;
+
+  if (numCount > 1 && showBadges) {
+    if (!badge) {
+      badge = document.createElement("span");
+      badge.className = "cell-specimen-badge";
+      cell.appendChild(badge);
+    }
+    badge.dataset.count = String(numCount);
+    badge.textContent = `×${numCount}`;
+    badge.setAttribute("aria-label", `${numCount} specimens owned`);
+    badge.hidden = false;
+  } else if (badge) {
+    badge.remove();
+  }
+}
+
+/**
+ * Refreshes specimen count badges on all rendered cells according to current storage & settings.
+ */
+export function refreshAllSpecimenBadges() {
+  const inv = loadSpecimenInventory();
+  const showBadges = loadSettings().showSpecimenBadges !== false;
+  document.querySelectorAll(".cell:not(.is-placeholder)").forEach((cell) => {
+    const speciesId = Number(cell.dataset.national);
+    const count = inv[speciesId] || 0;
+    updateCellSpecimenBadge(cell, showBadges ? count : 0);
+  });
+}
+
+/**
  * Refresh the `src` and opacity of every rendered sprite image to match the currently
  * selected sprite style setting and shiny mode, without re-building the whole DOM.
  *
@@ -818,6 +860,7 @@ export function applySpriteStyleToCells() {
  */
 export function populateDexSlots(sections, slotCount, onComplete) {
   const caught = isShinyMode ? loadShinyCaughtSlots() : loadCaughtSlots();
+  const specimenInv = loadSpecimenInventory();
   const boxCapacity = getBoxCapacity(ACTIVE_GAME_ID);
   let globalSlotIndex = 1; // continuous global slot numbering for storage
 
@@ -909,12 +952,15 @@ export function populateDexSlots(sections, slotCount, onComplete) {
         cell.setAttribute("aria-pressed", "true");
       }
 
+      updateCellSpecimenBadge(cell, specimenInv[speciesId]);
+
       cell.onclick = (event) => {
         if (suppressNextClick) {
           suppressNextClick = false;
           return;
         }
         const nextCaught = isShinyMode ? loadShinyCaughtSlots() : loadCaughtSlots();
+        const nextSpecimens = loadSpecimenInventory();
         const regionalSlot = Number(cell.dataset.regional);
         const isCaught = !cell.classList.contains("caught");
 
@@ -933,38 +979,50 @@ export function populateDexSlots(sections, slotCount, onComplete) {
               targetCell.classList.toggle("caught", targetState);
               targetCell.setAttribute("aria-pressed", String(targetState));
               const tKey = targetCell.dataset.specimenKey;
+              const spId = Number(targetCell.dataset.national);
               if (tKey) {
                 if (targetState) {
                   nextCaught[tKey] = true;
+                  if (!nextSpecimens[spId]) nextSpecimens[spId] = 1;
                 } else {
                   delete nextCaught[tKey];
+                  delete nextSpecimens[spId];
                 }
               } else {
                 if (targetState) {
                   nextCaught[slot] = true;
+                  if (!nextSpecimens[spId]) nextSpecimens[spId] = 1;
                 } else {
                   delete nextCaught[slot];
+                  delete nextSpecimens[spId];
                 }
               }
+              updateCellSpecimenBadge(targetCell, nextSpecimens[spId]);
             }
           }
         } else {
           cell.classList.toggle("caught", isCaught);
           cell.setAttribute("aria-pressed", String(isCaught));
           const cKey = cell.dataset.specimenKey;
+          const spId = Number(cell.dataset.national);
           if (cKey) {
             if (isCaught) {
               nextCaught[cKey] = true;
+              if (!nextSpecimens[spId]) nextSpecimens[spId] = 1;
             } else {
               delete nextCaught[cKey];
+              delete nextSpecimens[spId];
             }
           } else {
             if (isCaught) {
               nextCaught[regionalSlot] = true;
+              if (!nextSpecimens[spId]) nextSpecimens[spId] = 1;
             } else {
               delete nextCaught[regionalSlot];
+              delete nextSpecimens[spId];
             }
           }
+          updateCellSpecimenBadge(cell, nextSpecimens[spId]);
         }
 
         lastClickedSlotIndex = regionalSlot;
@@ -974,6 +1032,7 @@ export function populateDexSlots(sections, slotCount, onComplete) {
         } else {
           saveCaughtSlots(nextCaught);
         }
+        saveSpecimenInventory(nextSpecimens);
         updateProgressBar(slotCount);
         applyHideCaughtFilter();
       };

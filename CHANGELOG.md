@@ -8,6 +8,7 @@ All notable changes, new features, improvements, and bug fixes for **LivingDex**
 
 | Version                                                               | Release Date          | Major Highlights                                                                                                 |
 | :-------------------------------------------------------------------- | :-------------------- | :--------------------------------------------------------------------------------------------------------------- |
+| **[v1.23.0](#v1230---2026-09-20)**                                    | Sep 20, 2026          | Species specimen count tracking badge on grid cells, modal inventory stepper, and family quota sync              |
 | **[v1.22.0](#v1220---2026-09-20)**                                    | Sep 20, 2026          | Dynamic Day/Night cycle time of day filter in Field Guide for supported games (Morning, Day, Night)              |
 | **[v1.21.0](#v1210---2026-09-18)**                                    | Sep 18, 2026          | Encounter details in Pokémon HOME showing first introduced game/generation and catchable games list              |
 | **[v1.20.6](#v1206---2026-09-18)**                                    | Sep 18, 2026          | Increase Field Guide modal height to match Dex Options modal dialog                                              |
@@ -75,6 +76,24 @@ All notable changes, new features, improvements, and bug fixes for **LivingDex**
 | **[Genesis & Prototype](#initial-release---oct-2025)**                | Oct 27 – Nov 10, 2025 | Initial LivingDex tracker release, 30-slot PC boxes, PokeAPI integration                                         |
 
 ---
+
+## [v1.23.0] - 2026-09-20
+
+### Added
+
+- **Species Specimen Count Tracking & Badge Overlay (`dom-render.js`, `styles.css`, `storage.js`, `modals.js`, `index.html`)**:
+  - Added bottom-right floating count chip (`×N`) on main Pokédex grid cells when you own $>1$ specimen of a species (`inv[speciesId] > 1`).
+  - Added full synchronization with caught status: marking a slot caught defaults species inventory to at least 1, and unmarking caught clears the count and removes the badge.
+  - Added `showSpecimenBadges` setting (enabled by default) with checkbox toggle under the **Boxes & Grid** tab in the Settings modal to allow toggling specimen badges on or off.
+  - Added automatic real-time DOM badge updating across multi-form species cells and filtered views.
+- **Pokémon Information Modal Specimen Inventory & Family Quota Card (`pokemon-info.js`, `db.js`, `styles.css`)**:
+  - Added always-visible specimen inventory stepper (`[ − ] N Owned [ + ]`) inside the Pokémon Info modal, directly below flavor text.
+  - Stepper buttons allow quick incrementing/decrementing of owned specimens, immediately updating storage, main dex grid cell badges, and progress counters.
+  - Added collapsible **Family Quota** accordion card (`<details>`) showing the species evolutionary family line, total required quota, current total owned in the family, remaining needed count, and dynamic completion badges (`Quota Met ✓` vs `N Needed`).
+  - Implemented directed tree flow algorithm (`calculateFamilyQuota` in `db.js`) ensuring surplus specimens can only propagate downstream along valid evolution paths (e.g. 3 Charizards cannot satisfy unevolved Charmander/Charmeleon stages, but 3 Charmanders can satisfy all 3 stages).
+  - Seamlessly integrated bidirectional sync between the Info modal stepper, main dex grid clicks/range-selections, and the Field Guide Family Quotas tab.
+- **Service Worker Cache Lifecycle (`sw.js`)**:
+  - Bumped `CACHE_VERSION` to `v1.23.0`.
 
 ## [v1.22.0] - 2026-09-20
 

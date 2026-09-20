@@ -32,6 +32,7 @@ import {
   formatConditionChipText,
   formatConditionTag,
 } from "./pokemon-info.js";
+import { updateCellSpecimenBadge } from "./dom-render.js";
 
 // =============================================================================
 // FIELD GUIDE & LIVING DEX PREREQUISITES CONTROLLER
@@ -1501,6 +1502,11 @@ async function updateSpecimenCount(speciesId, newCount, slotNumber, specimenKey)
     syncCaughtState(caught, cachedSlotCount);
     updateMissingGuideBadge(cachedSlotCount);
   }
+
+  const cells = document.querySelectorAll(`.cell[data-national='${speciesId}']`);
+  cells.forEach((cell) => {
+    updateCellSpecimenBadge(cell, newCount);
+  });
 
   await refreshMissingGuideData();
   await ensureActiveTabData();

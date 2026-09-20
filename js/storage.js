@@ -52,6 +52,7 @@ const DEFAULT_SETTINGS = {
   gameLayoutPresets: {}, // Map of gameId -> selected layout preset (e.g. { sm: "alola-islands" })
   layoutPreset: "standard", // Fallback / HOME preset
   showBoxCoordinates: false, // Whether to show Box X, Row R, Col C coordinates on slots/tooltips
+  showSpecimenBadges: true, // Whether to show xN specimen count badges on grid cells
   version: 1,
 };
 

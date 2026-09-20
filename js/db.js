@@ -1131,6 +1131,35 @@ export async function getPokemonModalData(speciesId, formId, gameId) {
     );
   }
 
+  // Family quota details for living dex tracking
+  let familyInfo = null;
+  if (evoData && Array.isArray(evoData.nodes) && evoData.nodes.length > 0) {
+    const rootNode = evoData.nodes[0];
+    const rootSpec = allSpecies[rootNode.speciesId];
+    const rootName = resolveSpeciesDisplayName(
+      rootNode.speciesId,
+      rootSpec?.names?.[language] || rootSpec?.names?.en || rootSpec?.name,
+    );
+    const familySpecies = evoData.nodes.map((n) => {
+      const spec = allSpecies[n.speciesId];
+      return {
+        speciesId: n.speciesId,
+        name: resolveSpeciesDisplayName(
+          n.speciesId,
+          spec?.names?.[language] || spec?.names?.en || spec?.name,
+        ),
+      };
+    });
+    familyInfo = {
+      chain: evoData,
+      chainId: speciesData.evolutionChainId,
+      rootSpeciesId: rootNode.speciesId,
+      rootName,
+      familySpecies,
+      totalFamilyMembers: familySpecies.length,
+    };
+  }
+
   return {
     speciesId,
     formId,
@@ -1141,6 +1170,7 @@ export async function getPokemonModalData(speciesId, formId, gameId) {
     showEncounters,
     encounterGroups,
     evolutionPaths,
+    familyInfo,
   };
 }
 
@@ -1674,6 +1704,144 @@ export async function getMissingPokemonData(gameId, caughtSlots = {}, targetVers
 }
 
 /**
+ * Calculates the exact specimen requirements and remaining base quota needed
+ * to fulfill all species in an evolutionary family, respecting directed evolution flow.
+ * (e.g. 3 Charizards cannot satisfy Charmander/Charmeleon, but 3 Charmanders can evolve into all 3).
+ *
+ * @param {Object} chain - Evolution chain definition from evolutions.json.
+ * @param {Array<{ speciesId: number, name?: string }>} familyMembers - Array of species in the family.
+ * @param {Record<number, number>} specimenInventory - Current owned specimen counts by speciesId.
+ * @returns {{
+ *   totalRequired: number,
+ *   totalOwned: number,
+ *   baseQuota: number,
+ *   isFulfilled: boolean,
+ *   unfulfilledSpeciesIds: number[],
+ * }}
+ */
+export function calculateFamilyQuota(chain, familyMembers, specimenInventory = {}) {
+  if (!familyMembers || !familyMembers.length) {
+    return {
+      totalRequired: 0,
+      totalOwned: 0,
+      baseQuota: 0,
+      isFulfilled: true,
+      unfulfilledSpeciesIds: [],
+    };
+  }
+
+  const memberIds = new Set(familyMembers.map((m) => m.speciesId));
+  const totalRequired = memberIds.size;
+
+  // Build parent-child relationships from transitions
+  const childrenMap = new Map();
+  const parentMap = new Map();
+
+  if (chain && Array.isArray(chain.transitions)) {
+    chain.transitions.forEach((t) => {
+      if (memberIds.has(t.fromSpeciesId) && memberIds.has(t.toSpeciesId)) {
+        if (!childrenMap.has(t.fromSpeciesId)) {
+          childrenMap.set(t.fromSpeciesId, []);
+        }
+        if (!childrenMap.get(t.fromSpeciesId).includes(t.toSpeciesId)) {
+          childrenMap.get(t.fromSpeciesId).push(t.toSpeciesId);
+        }
+        parentMap.set(t.toSpeciesId, t.fromSpeciesId);
+      }
+    });
+  }
+
+  // Find root species (no parent in this family)
+  const rootIds = Array.from(memberIds).filter((id) => !parentMap.has(id));
+  if (!rootIds.length && familyMembers.length > 0) {
+    rootIds.push(familyMembers[0].speciesId);
+  }
+
+  // Initial state for each species
+  let totalOwned = 0;
+  const inventory = new Map();
+  const deficit = new Map();
+  const surplus = new Map();
+
+  memberIds.forEach((id) => {
+    const rawCount = specimenInventory[id];
+    const count = typeof rawCount === "number" ? Math.max(0, rawCount) : 0;
+    totalOwned += count;
+    inventory.set(id, count);
+    if (count >= 1) {
+      deficit.set(id, 0);
+      surplus.set(id, count - 1);
+    } else {
+      deficit.set(id, 1);
+      surplus.set(id, 0);
+    }
+  });
+
+  // Helper to calculate total subtree deficit
+  function getSubtreeDeficit(nodeId) {
+    let sum = deficit.get(nodeId) || 0;
+    const children = childrenMap.get(nodeId) || [];
+    children.forEach((c) => {
+      sum += getSubtreeDeficit(c);
+    });
+    return sum;
+  }
+
+  // Traverse tree top-down from roots to propagate surplus downwards
+  function flowSurplus(nodeId, passedDownSurplus) {
+    let available = (surplus.get(nodeId) || 0) + passedDownSurplus;
+
+    // First fulfill self if in deficit
+    if (deficit.get(nodeId) === 1 && available > 0) {
+      deficit.set(nodeId, 0);
+      available -= 1;
+    }
+
+    const children = childrenMap.get(nodeId) || [];
+    if (children.length > 0 && available > 0) {
+      // Distribute available surplus to child subtrees with deficits
+      for (const childId of children) {
+        if (available <= 0) break;
+        const subDeficit = getSubtreeDeficit(childId);
+        const allocate = Math.min(available, subDeficit);
+        flowSurplus(childId, allocate);
+        available -= allocate;
+      }
+      // If there is still surplus left after fulfilling all child subtrees, pass down
+      if (available > 0 && children.length > 0) {
+        flowSurplus(children[0], available);
+      }
+    } else {
+      for (const childId of children) {
+        flowSurplus(childId, 0);
+      }
+    }
+  }
+
+  rootIds.forEach((rootId) => {
+    flowSurplus(rootId, 0);
+  });
+
+  let remainingBaseQuota = 0;
+  const unfulfilledSpeciesIds = [];
+
+  memberIds.forEach((id) => {
+    if (deficit.get(id) === 1) {
+      remainingBaseQuota += 1;
+      unfulfilledSpeciesIds.push(id);
+    }
+  });
+
+  return {
+    totalRequired,
+    totalOwned,
+    baseQuota: remainingBaseQuota,
+    isFulfilled: remainingBaseQuota === 0,
+    unfulfilledSpeciesIds,
+  };
+}
+
+/**
  * Calculates evolution family Living Dex quotas and checklist for incomplete evolutionary trees.
  *
  * @param {string} gameId - Active game identifier.
@@ -1739,15 +1907,13 @@ export async function getEvolutionFamilyChecklist(gameId, caughtSlots = {}) {
       chainSlotsMap.get(chainId).push({
         slotNumber: runningSlot,
         specimenKey,
-        regionalDexNumber,
         speciesId: entry.speciesId,
         formId: entry.formId || entry.speciesId,
         gender: entry.gender || "",
         spriteId,
         name: displayName,
-        dexNumber: `#${entry.speciesId}`,
         types,
-        sectionKey: section.key,
+        regionalDexNumber,
         sectionTitle: section.title,
         isCaught,
       });
@@ -1784,7 +1950,6 @@ export async function getEvolutionFamilyChecklist(gameId, caughtSlots = {}) {
     }
 
     // Required items and specimen counts for this family
-    let totalSpecimensOwnedInFamily = 0;
     const requiredItemsMap = new Map();
     const membersWithEvolutions = slots.map((slot) => {
       let evolveText = "";
@@ -1804,7 +1969,6 @@ export async function getEvolutionFamilyChecklist(gameId, caughtSlots = {}) {
       const explicitCount = specimenInventory[slot.speciesId];
       const specimenCount =
         typeof explicitCount === "number" ? explicitCount : slot.isCaught ? 1 : 0;
-      totalSpecimensOwnedInFamily += specimenCount;
 
       return {
         ...slot,
@@ -1813,6 +1977,10 @@ export async function getEvolutionFamilyChecklist(gameId, caughtSlots = {}) {
         evolveItem,
       };
     });
+
+    const quotaResult = calculateFamilyQuota(chain, membersWithEvolutions, specimenInventory);
+    const baseQuota = quotaResult.baseQuota;
+    const totalSpecimensOwnedInFamily = quotaResult.totalOwned;
 
     const requiredItems = Array.from(requiredItemsMap.entries()).map(([item, count]) => {
       const ownedCount = itemInventory[item] || 0;
@@ -1826,8 +1994,6 @@ export async function getEvolutionFamilyChecklist(gameId, caughtSlots = {}) {
         isComplete: ownedCount >= count,
       };
     });
-
-    const baseQuota = Math.max(0, totalCount - totalSpecimensOwnedInFamily);
 
     let rootLocations = [];
     if (encountersData?.encounters?.[rootSpeciesId]) {
