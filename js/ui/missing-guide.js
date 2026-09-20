@@ -3,6 +3,7 @@ import {
   spriteUrlForSpecies,
   itemSpriteUrl,
   normalizeItemName,
+  getGameDayNightTimes,
 } from "../config.js";
 import {
   loadSettings,
@@ -68,6 +69,7 @@ let pendingUndo = null;
 let filterState = {
   search: "",
   method: "all",
+  time: "all",
   type: "",
   segment: "",
   version: "all",
@@ -149,6 +151,7 @@ export function registerMissingGuideModal() {
       cachedFamilyData = null;
       cachedItemsData = null;
       await populateVersionFilterDropdown();
+      populateTimeFilterDropdown();
       await refreshMissingGuideData();
       populateSegmentFilterDropdown();
       updateActiveFilterBadge();
@@ -193,6 +196,7 @@ function updateActiveFilterBadge() {
   let count = 0;
   if (filterState.version && filterState.version !== "all") count += 1;
   if (filterState.method !== "all") count += 1;
+  if (filterState.time && filterState.time !== "all") count += 1;
   if (filterState.type) count += 1;
   if (filterState.segment) count += 1;
   if (filterState.sort !== "regional-asc") count += 1;
@@ -226,6 +230,7 @@ function updateGuideFeedback(filteredCount = null) {
   if (filterState.search) active.push(["Search", "search"]);
   if (filterState.version !== "all") active.push(["Version", "version"]);
   if (filterState.method !== "all") active.push(["Method", "method"]);
+  if (filterState.time !== "all") active.push(["Time", "time"]);
   if (filterState.type) active.push(["Type", "type"]);
   if (filterState.segment) active.push(["Segment", "segment"]);
   if (filterState.familyFilter !== "all" && currentTab === "family") {
@@ -236,12 +241,21 @@ function updateGuideFeedback(filteredCount = null) {
     const chip = document.createElement("button");
     chip.type = "button";
     chip.className = "missing-filter-chip";
-    chip.textContent = `${label}: ${key === "search" ? filterState.search : "active"} ×`;
+    let chipVal = "active";
+    if (key === "search") {
+      chipVal = filterState.search;
+    } else if (key === "time") {
+      const timeConfig = getGameDayNightTimes(ACTIVE_GAME_ID);
+      const timeOpt = timeConfig?.find((t) => t.value === filterState.time);
+      chipVal = timeOpt ? timeOpt.label : filterState.time;
+    }
+    chip.textContent = `${label}: ${chipVal} ×`;
     chip.setAttribute("aria-label", `Remove ${label} filter`);
     chip.addEventListener("click", () => {
       if (key === "search") filterState.search = "";
       else if (key === "version") filterState.version = "all";
       else if (key === "method") filterState.method = "all";
+      else if (key === "time") filterState.time = "all";
       else if (key === "type") filterState.type = "";
       else if (key === "segment") filterState.segment = "";
       else filterState.familyFilter = "all";
@@ -258,6 +272,7 @@ function syncFilterControls() {
     missingSearch: filterState.search,
     missingFilterVersion: filterState.version,
     missingFilterMethod: filterState.method,
+    missingFilterTime: filterState.time,
     missingFilterFamily: filterState.familyFilter,
     missingFilterType: filterState.type,
     missingFilterSegment: filterState.segment,
@@ -400,6 +415,40 @@ async function populateSegmentFilterDropdown() {
 }
 
 /**
+ * Populates time of day filter dropdown options based on active game's day/night cycle support.
+ */
+function populateTimeFilterDropdown() {
+  const timeWrap = document.getElementById("missingFilterTimeWrap");
+  const timeSelect = document.getElementById("missingFilterTime");
+  if (!timeSelect || !timeWrap) return;
+
+  const times = getGameDayNightTimes(ACTIVE_GAME_ID);
+  if (!times || times.length === 0) {
+    timeWrap.hidden = true;
+    timeWrap.style.display = "none";
+    filterState.time = "all";
+    return;
+  }
+
+  timeWrap.hidden = currentTab !== "missing";
+  timeWrap.style.display = currentTab === "missing" ? "" : "none";
+
+  timeSelect.innerHTML = '<option value="all">All Times of Day</option>';
+  times.forEach((t) => {
+    const opt = document.createElement("option");
+    opt.value = t.value;
+    opt.textContent = t.label;
+    timeSelect.appendChild(opt);
+  });
+
+  const validValues = ["all", ...times.map((t) => t.value)];
+  if (!validValues.includes(filterState.time)) {
+    filterState.time = "all";
+  }
+  timeSelect.value = filterState.time;
+}
+
+/**
  * Sets up tab switching listeners.
  */
 function setupTabListeners() {
@@ -420,12 +469,15 @@ function setupTabListeners() {
 
       // Update toolbar visibility per tab
       const methodFilter = document.getElementById("missingFilterMethodWrap");
+      const timeFilter = document.getElementById("missingFilterTimeWrap");
       const familyFilter = document.getElementById("missingFilterFamilyWrap");
       const typeFilter = document.getElementById("missingFilterTypeWrap");
       const segmentFilter = document.getElementById("missingFilterSegmentWrap");
       const sortSelect = document.getElementById("missingSortWrap");
 
       if (methodFilter) methodFilter.hidden = currentTab !== "missing";
+      if (timeFilter)
+        timeFilter.hidden = currentTab !== "missing" || !getGameDayNightTimes(ACTIVE_GAME_ID);
       if (familyFilter) familyFilter.hidden = currentTab !== "family";
       if (typeFilter) typeFilter.hidden = currentTab === "items";
       if (segmentFilter) segmentFilter.hidden = currentTab === "items";
@@ -449,6 +501,7 @@ function syncTabUI() {
     button.tabIndex = active ? 0 : -1;
   });
   const methodFilter = document.getElementById("missingFilterMethodWrap");
+  const timeFilter = document.getElementById("missingFilterTimeWrap");
   const familyFilter = document.getElementById("missingFilterFamilyWrap");
   const versionFilter = document.getElementById("missingFilterVersionWrap");
   const typeFilter = document.getElementById("missingFilterTypeWrap");
@@ -461,6 +514,10 @@ function syncTabUI() {
   const resultsSummary = document.getElementById("missingResultsSummary");
   const filtersCollapse = document.getElementById("missingFiltersCollapse");
   setGuideElementVisibility(methodFilter, currentTab === "missing");
+  setGuideElementVisibility(
+    timeFilter,
+    currentTab === "missing" && Boolean(getGameDayNightTimes(ACTIVE_GAME_ID)),
+  );
   setGuideElementVisibility(familyFilter, currentTab === "family");
   setGuideElementVisibility(versionFilter, currentTab === "missing");
   setGuideElementVisibility(typeFilter, currentTab !== "items");
@@ -544,6 +601,7 @@ function setupFilterListeners() {
   const filtersCollapse = document.getElementById("missingFiltersCollapse");
   const versionSelect = document.getElementById("missingFilterVersion");
   const methodSelect = document.getElementById("missingFilterMethod");
+  const timeSelect = document.getElementById("missingFilterTime");
   const familySelect = document.getElementById("missingFilterFamily");
   const typeSelect = document.getElementById("missingFilterType");
   const segmentSelect = document.getElementById("missingFilterSegment");
@@ -602,6 +660,15 @@ function setupFilterListeners() {
     });
   }
 
+  if (timeSelect) {
+    timeSelect.addEventListener("change", (e) => {
+      filterState.time = e.target.value;
+      updateActiveFilterBadge();
+      updateGuideFeedback();
+      renderActiveTab();
+    });
+  }
+
   if (familySelect) {
     familySelect.addEventListener("change", (e) => {
       filterState.familyFilter = e.target.value;
@@ -643,6 +710,7 @@ function setupFilterListeners() {
       filterState = {
         search: "",
         method: "all",
+        time: "all",
         type: "",
         segment: "",
         version: "all",
@@ -654,6 +722,7 @@ function setupFilterListeners() {
       if (searchInput) searchInput.value = "";
       if (searchClear) searchClear.hidden = true;
       if (methodSelect) methodSelect.value = "all";
+      if (timeSelect) timeSelect.value = "all";
       if (familySelect) familySelect.value = "all";
       if (typeSelect) typeSelect.value = "";
       if (segmentSelect) segmentSelect.value = "";
@@ -695,6 +764,66 @@ function renderActiveTab() {
 // =============================================================================
 // TAB 1: INDIVIDUAL MISSING POKÉMON LIST
 // =============================================================================
+
+const TIME_REGEXES = {
+  morning: /\bmorning\b/i,
+  day: /\bday\b/i,
+  night: /\bnight\b/i,
+};
+const ALL_TIMES = ["morning", "day", "night"];
+
+/**
+ * Checks if a specific location entry matches a time of day filter.
+ *
+ * @param {string|Object} loc - Location entry or string.
+ * @param {string} time - Time of day ('morning', 'day', 'night').
+ * @returns {boolean}
+ */
+function locationMatchesTimeOfDay(loc, time) {
+  if (!loc) return false;
+  const str = typeof loc === "string" ? loc : loc.location || "";
+
+  // 1. Check structured rates condition array if present
+  if (typeof loc === "object" && Array.isArray(loc.rates) && loc.rates.length > 0) {
+    const hasAnyTimeInRates = loc.rates.some((r) =>
+      ALL_TIMES.some((t) => TIME_REGEXES[t].test(r.condition || "")),
+    );
+    if (hasAnyTimeInRates) {
+      return loc.rates.some((r) => TIME_REGEXES[time]?.test(r.condition || ""));
+    }
+  }
+
+  // 2. Check location text for specific time keywords
+  const hasSpecificTimeInStr = ALL_TIMES.some((t) => TIME_REGEXES[t].test(str));
+  if (hasSpecificTimeInStr) {
+    return Boolean(TIME_REGEXES[time]?.test(str));
+  }
+
+  // 3. Exclude non-wild acquisition methods when filtering by time of day
+  if (
+    /^(?:Tera Raid|Evolve|Trade|Buy|Breed|Received|Gift|Event|Revive|Starter|Transfer|Special)/i.test(
+      str.trim(),
+    )
+  ) {
+    return false;
+  }
+
+  // 4. Wild location without specific time restriction (available all day)
+  return true;
+}
+
+/**
+ * Checks if any of a Pokémon's locations match a time of day filter.
+ *
+ * @param {Object} p - Missing Pokémon entry.
+ * @param {string} time - Time of day ('morning', 'day', 'night').
+ * @returns {boolean}
+ */
+function pokemonMatchesTimeOfDay(p, time) {
+  if (!time || time === "all") return true;
+  if (!p || !Array.isArray(p.locations) || p.locations.length === 0) return false;
+  return p.locations.some((loc) => locationMatchesTimeOfDay(loc, time));
+}
 
 /**
  * Filters and sorts individual missing Pokémon data.
@@ -755,6 +884,11 @@ function getFilteredMissingList(list) {
         if (p.methodCategory !== "transfer" && (p.hasWildLocations || p.evolveDetails))
           return false;
       }
+    }
+
+    // Time of Day filter
+    if (filterState.time && filterState.time !== "all") {
+      if (!pokemonMatchesTimeOfDay(p, filterState.time)) return false;
     }
 
     // Type filter

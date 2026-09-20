@@ -8,6 +8,7 @@ All notable changes, new features, improvements, and bug fixes for **LivingDex**
 
 | Version                                                               | Release Date          | Major Highlights                                                                                                 |
 | :-------------------------------------------------------------------- | :-------------------- | :--------------------------------------------------------------------------------------------------------------- |
+| **[v1.22.0](#v1220---2026-09-20)**                                    | Sep 20, 2026          | Dynamic Day/Night cycle time of day filter in Field Guide for supported games (Morning, Day, Night)              |
 | **[v1.21.0](#v1210---2026-09-18)**                                    | Sep 18, 2026          | Encounter details in Pokémon HOME showing first introduced game/generation and catchable games list              |
 | **[v1.20.6](#v1206---2026-09-18)**                                    | Sep 18, 2026          | Increase Field Guide modal height to match Dex Options modal dialog                                              |
 | **[v1.20.5](#v1205---2026-09-17)**                                    | Sep 17, 2026          | Fixed height and scrollable body for Pokémon Information modal to prevent dialog resizing on navigation          |
@@ -74,6 +75,19 @@ All notable changes, new features, improvements, and bug fixes for **LivingDex**
 | **[Genesis & Prototype](#initial-release---oct-2025)**                | Oct 27 – Nov 10, 2025 | Initial LivingDex tracker release, 30-slot PC boxes, PokeAPI integration                                         |
 
 ---
+
+## [v1.22.0] - 2026-09-20
+
+### Added
+
+- **Dynamic Day / Night Cycle Filter in Field Guide (`config.js`, `missing-guide.js`, `index.html`)**:
+  - Added dynamic time-of-day encounter filter in the Field Guide toolbar for games featuring day and night encounter cycles (`gsc`, `dppt`, `hgss`, `bdsp`, `pla`, `za`).
+  - Added `GAME_DAY_NIGHT_TIMES` configuration mapping and helper `getGameDayNightTimes()` supporting game-accurate time divisions (Morning, Day, and Night for Gen 2 / Gen 4 / Remakes; Day and Night for Legends: Arceus and Legends: Z-A).
+  - Kept time-of-day filter cleanly hidden in games without day/night wild encounter mechanics (`rby`, `rse`, `frlg`, `bw`, `b2w2`, `xy`, `oras`, `sm`, `usum`, `lgpe`, `swsh`, `sv`, `home`) and across non-Missing tabs (Family Quotas & Evolution Items).
+  - Added encounter location matching for both structured encounter rates condition tags and location string descriptors, retaining all-day wild encounters while filtering out non-matching time-restricted spawns and non-wild acquisition methods.
+  - Connected time filter to active filter badge counter, filter chip dismissals, search summary, and filter reset action.
+- **Service Worker Cache Lifecycle (`sw.js`)**:
+  - Bumped `CACHE_VERSION` to `v1.22.0`.
 
 ## [v1.21.0] - 2026-09-18
 

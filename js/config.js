@@ -908,6 +908,52 @@ export function getAvailableLayoutPresetsForGame(gameId = ACTIVE_GAME_ID, sectio
 }
 
 /**
+ * Supported Day/Night cycle time options for games featuring time-based encounters.
+ * Maps game IDs to their specific supported time intervals.
+ * @type {Record<string, Array<{ value: string, label: string }>>}
+ */
+export const GAME_DAY_NIGHT_TIMES = {
+  gsc: [
+    { value: "morning", label: "🌅 Morning" },
+    { value: "day", label: "☀️ Day" },
+    { value: "night", label: "🌙 Night" },
+  ],
+  dppt: [
+    { value: "morning", label: "🌅 Morning" },
+    { value: "day", label: "☀️ Day" },
+    { value: "night", label: "🌙 Night" },
+  ],
+  hgss: [
+    { value: "morning", label: "🌅 Morning" },
+    { value: "day", label: "☀️ Day" },
+    { value: "night", label: "🌙 Night" },
+  ],
+  bdsp: [
+    { value: "morning", label: "🌅 Morning" },
+    { value: "day", label: "☀️ Day" },
+    { value: "night", label: "🌙 Night" },
+  ],
+  pla: [
+    { value: "day", label: "☀️ Day" },
+    { value: "night", label: "🌙 Night" },
+  ],
+  za: [
+    { value: "day", label: "☀️ Day" },
+    { value: "night", label: "🌙 Night" },
+  ],
+};
+
+/**
+ * Returns supported day/night cycle time options for a given game ID, or null if unsupported.
+ *
+ * @param {string} [gameId=ACTIVE_GAME_ID] - Game identifier.
+ * @returns {Array<{ value: string, label: string }>|null} Array of supported time option objects or null.
+ */
+export function getGameDayNightTimes(gameId = ACTIVE_GAME_ID) {
+  return GAME_DAY_NIGHT_TIMES[gameId] || null;
+}
+
+/**
  * National Pokédex generation index ranges for generational box layout breaks.
  * @type {Array<{ gen: number, name: string, start: number, end: number }>}
  */
