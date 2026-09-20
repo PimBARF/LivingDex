@@ -10,7 +10,7 @@ import {
 import { ACTIVE_GAME_ID, spriteUrlForSpecies } from "../config.js";
 import { attachModalHandlers } from "./modals.js";
 import { isShinyMode, updateProgressBar } from "../state.js";
-import { getPokemonModalData, calculateFamilyQuota } from "../db.js";
+import { getPokemonModalData } from "../db.js";
 import { getVisiblePokemonCells, applyHideCaughtFilter } from "./controls.js";
 import { getCellDisplayInfo, updateCellSpecimenBadge } from "./dom-render.js";
 import { updateMissingGuideBadge } from "./missing-guide.js";
@@ -908,10 +908,10 @@ function renderEvolutionDetails(evoEl, evolutionPaths, spriteStyle) {
 }
 
 /**
- * Renders the always-visible specimen inventory stepper with a collapsible family quota section.
+ * Renders the specimen inventory stepper in the Pokémon Information modal.
  *
  * @param {HTMLElement} cardEl - Target container element for the specimen card.
- * @param {Object} data - Modal data containing speciesId, name, familyInfo.
+ * @param {Object} data - Modal data containing speciesId, name.
  * @param {HTMLElement|null} sourceCell - Originating dex slot cell element.
  */
 function renderSpecimenCard(cardEl, data, sourceCell) {
@@ -931,22 +931,13 @@ function renderSpecimenCard(cardEl, data, sourceCell) {
   const container = document.createElement("div");
   container.className = "pokemon-info-specimen-card-inner";
 
-  // Stepper Header / Row
+  // Stepper Row
   const stepperRow = document.createElement("div");
   stepperRow.className = "pokemon-info-specimen-stepper-row";
-
-  const labelBlock = document.createElement("div");
-  labelBlock.className = "pokemon-info-specimen-label-block";
 
   const title = document.createElement("span");
   title.className = "pokemon-info-specimen-title";
   title.textContent = "Specimens in PC Box / Bag";
-
-  const subtitle = document.createElement("span");
-  subtitle.className = "pokemon-info-specimen-subtitle";
-  subtitle.textContent = "Syncs with Living Dex grid & Field Guide";
-
-  labelBlock.append(title, subtitle);
 
   const stepperControls = document.createElement("div");
   stepperControls.className = "pokemon-info-specimen-stepper-controls";
@@ -968,86 +959,8 @@ function renderSpecimenCard(cardEl, data, sourceCell) {
   plusBtn.setAttribute("aria-label", `Increase specimen count for ${data.name}`);
 
   stepperControls.append(minusBtn, countVal, plusBtn);
-  stepperRow.append(labelBlock, stepperControls);
+  stepperRow.append(title, stepperControls);
   container.appendChild(stepperRow);
-
-  // Collapsible Family Quota Section
-  let detailsEl = null;
-  let quotaBadge = null;
-  let quotaSummaryText = null;
-  let breakdownContainer = null;
-
-  if (data.familyInfo && Array.isArray(data.familyInfo.familySpecies)) {
-    detailsEl = document.createElement("details");
-    detailsEl.className = "pokemon-info-family-details";
-
-    const summary = document.createElement("summary");
-    summary.className = "pokemon-info-family-summary";
-
-    const summaryLeft = document.createElement("div");
-    summaryLeft.className = "pokemon-info-family-summary-left";
-
-    const summaryIcon = document.createElement("span");
-    summaryIcon.className = "pokemon-info-family-summary-icon";
-    summaryIcon.textContent = "🥚";
-
-    quotaSummaryText = document.createElement("span");
-    quotaSummaryText.className = "pokemon-info-family-summary-title";
-
-    summaryLeft.append(summaryIcon, quotaSummaryText);
-
-    quotaBadge = document.createElement("span");
-    quotaBadge.className = "pokemon-info-quota-badge";
-
-    summary.append(summaryLeft, quotaBadge);
-    detailsEl.appendChild(summary);
-
-    breakdownContainer = document.createElement("div");
-    breakdownContainer.className = "pokemon-info-family-breakdown";
-    detailsEl.appendChild(breakdownContainer);
-
-    container.appendChild(detailsEl);
-  }
-
-  function updateFamilyQuotaDisplay(updatedCount) {
-    if (!detailsEl || !data.familyInfo) return;
-    const currentInv = { ...loadSpecimenInventory() };
-    if (updatedCount > 0) {
-      currentInv[speciesId] = updatedCount;
-    } else {
-      delete currentInv[speciesId];
-    }
-
-    const quotaResult = calculateFamilyQuota(
-      data.familyInfo.chain,
-      data.familyInfo.familySpecies,
-      currentInv,
-    );
-
-    const isMet = quotaResult.isFulfilled;
-    const remaining = quotaResult.baseQuota;
-    const totalOwnedInFamily = quotaResult.totalOwned;
-    const totalRequired = quotaResult.totalRequired;
-
-    quotaSummaryText.textContent = `Family Quota: ${data.familyInfo.rootName} (${totalOwnedInFamily}/${totalRequired} Owned)`;
-
-    quotaBadge.textContent = isMet ? "Quota Met ✓" : `${remaining} Needed`;
-    quotaBadge.classList.toggle("is-met", isMet);
-
-    breakdownContainer.innerHTML = `
-      <div class="pokemon-info-family-math">
-        <span>Need <strong>${totalRequired}×</strong> specimens across the ${data.familyInfo.rootName} family line:</span>
-        <span class="pokemon-info-family-math-sub">(${data.familyInfo.familySpecies.map((m) => m.name).join(" + ")})</span>
-        ${
-          !isMet
-            ? `<span class="pokemon-info-family-math-sub" style="margin-top: 4px; color: var(--text);">Need <strong>${remaining}× ${data.familyInfo.rootName}</strong> (catch/breed) to evolve into remaining missing stages.</span>`
-            : `<span class="pokemon-info-family-math-sub" style="margin-top: 4px; color: #16a34a;">You own enough unevolved specimens to complete all remaining evolutions.</span>`
-        }
-      </div>
-    `;
-  }
-
-  updateFamilyQuotaDisplay(currentCount);
 
   async function handleCountChange(delta) {
     const nextCount = Math.max(0, currentCount + delta);
@@ -1091,7 +1004,6 @@ function renderSpecimenCard(cardEl, data, sourceCell) {
     });
 
     countVal.textContent = String(currentCount);
-    updateFamilyQuotaDisplay(currentCount);
 
     const slotCount = document.querySelectorAll(".cell:not(.is-placeholder)").length;
     updateProgressBar(slotCount);

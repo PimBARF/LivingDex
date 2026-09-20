@@ -92,6 +92,11 @@ All notable changes, new features, improvements, and bug fixes for **LivingDex**
   - Added collapsible **Family Quota** accordion card (`<details>`) showing the species evolutionary family line, total required quota, current total owned in the family, remaining needed count, and dynamic completion badges (`Quota Met ✓` vs `N Needed`).
   - Implemented directed tree flow algorithm (`calculateFamilyQuota` in `db.js`) ensuring surplus specimens can only propagate downstream along valid evolution paths (e.g. 3 Charizards cannot satisfy unevolved Charmander/Charmeleon stages, but 3 Charmanders can satisfy all 3 stages).
   - Seamlessly integrated bidirectional sync between the Info modal stepper, main dex grid clicks/range-selections, and the Field Guide Family Quotas tab.
+- **Pokémon Information Modal Specimen Inventory Stepper (`pokemon-info.js`, `styles.css`)**:
+  - Added clean, always-visible specimen inventory stepper (`[ − ] N [ + ]`) inside the Pokémon Info modal directly below flavor text.
+  - Stepper buttons allow quick incrementing and decrementing of owned specimens, immediately updating storage, main dex grid cell badges, progress counters, and Field Guide Family Quotas in real time.
+- **Directed Evolution Tree Family Quota Engine (`db.js`, `missing-guide.js`)**:
+  - Implemented directed tree flow algorithm (`calculateFamilyQuota` in `db.js`) powering the Field Guide Family Quotas tab, ensuring surplus specimens can only propagate downstream along valid evolution paths (e.g. 3 Charizards cannot satisfy unevolved Charmander/Charmeleon stages, but 3 Charmanders can satisfy all 3 stages).
 - **Service Worker Cache Lifecycle (`sw.js`)**:
   - Bumped `CACHE_VERSION` to `v1.23.0`.
 

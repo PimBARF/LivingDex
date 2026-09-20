@@ -3430,6 +3430,7 @@ body.is-drag-selecting .cell {
 }
 
 /* --- Specimen Inventory & Family Quota Card --- */
+/* --- Specimen Inventory Stepper Card --- */
 .pokemon-info-specimen-card {
   margin-top: 4px;
 }
