@@ -62,6 +62,9 @@ For every new feature, bug fix, refactor, or dataset update in LivingDex:
 
 ## 5. Code Formatting, Linting & Commit Prompting
 
+- **Decoupled File Edits & Terminal Verification**:
+  - **Strict Prohibition**: **NEVER** run terminal commands (`run_command`) in the same turn/response as file modification tools (`write_to_file`, `replace_file_content`).
+  - **Mandatory Flow**: Apply all code/markup/styling changes, stop calling tools immediately, and prompt the user to click **Keep** in the VS Code review bar. Run linters, formatters, and commit prompts only in a subsequent turn after the user confirms the edits are saved.
 - **Pre-Commit Formatting**:
   - Run `npm run format` (via Scraper toolchain) before proposing commits or when finalizing a feature to keep files formatted to Prettier standards. Avoid running full formatting cycles after every micro-edit.
 - **Git Commit Policy**:
