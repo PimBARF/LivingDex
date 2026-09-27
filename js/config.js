@@ -981,6 +981,10 @@ export const SPECIMEN_INVENTORY_STORAGE_KEY = `${ACTIVE_GAME.storagePrefix}-spec
 // Global app settings
 export const SETTINGS_STORAGE_KEY = "settings-v1";
 export const WELCOME_GUIDE_STORAGE_KEY = "livingdex-welcome-seen-v1";
+export const SYNC_STORAGE_KEY = "livingdex-sync-settings-v1";
+
+// Cloud Sync Configuration
+export const DEFAULT_GOOGLE_CLIENT_ID = "";
 
 export const SPECIES_CACHE_KEY = `${ACTIVE_GAME.storagePrefix}-species-names-v1`;
 export const SPECIES_CACHE_META_KEY = `${ACTIVE_GAME.storagePrefix}-species-names-meta-v1`;

@@ -4,7 +4,7 @@
  * offline execution, background revalidation, and update lifecycle control.
  */
 
-const CACHE_VERSION = "v1.23.0";
+const CACHE_VERSION = "v1.24.0";
 const SHELL_CACHE = `livingdex-shell-${CACHE_VERSION}`;
 const DATA_CACHE = `livingdex-data-${CACHE_VERSION}`;
 const SPRITE_CACHE = "livingdex-sprites-v1";
@@ -36,6 +36,12 @@ const SHELL_ASSETS = [
   "./js/ui/pokemon-info.js",
   "./js/ui/missing-guide.js",
   "./js/ui/welcome-guide.js",
+  "./js/services/sync/schema.js",
+  "./js/services/sync/sync-manager.js",
+  "./js/services/sync/providers/base-provider.js",
+  "./js/services/sync/providers/file-provider.js",
+  "./js/services/sync/providers/google-drive-provider.js",
+  "./js/services/sync/providers/firebase-stub-provider.js",
   "./assets/favicon.ico",
   "./assets/icon-192.png",
   "./assets/icon-512.png",
@@ -241,6 +247,11 @@ self.addEventListener("fetch", (event) => {
 
   // Ignore browser extensions or other schemes
   if (!url.protocol.startsWith("http")) return;
+
+  // Ignore external OAuth / Google API requests
+  if (url.hostname.includes("google.com") || url.hostname.includes("googleapis.com")) {
+    return;
+  }
 
   // Strategy 1: Sprites & Artwork (Smart Cache-First with Local + Remote fallback)
   const isSprite =

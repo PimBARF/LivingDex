@@ -8,6 +8,7 @@ All notable changes, new features, improvements, and bug fixes for **LivingDex**
 
 | Version                                                               | Release Date          | Major Highlights                                                                                                 |
 | :-------------------------------------------------------------------- | :-------------------- | :--------------------------------------------------------------------------------------------------------------- |
+| **[v1.24.0](#v1240---2026-09-27)**                                    | Sep 27, 2026          | Google Drive cloud backup, extensible SyncManager provider architecture, and Schema v3 data payload              |
 | **[v1.23.0](#v1230---2026-09-20)**                                    | Sep 20, 2026          | Species specimen count tracking badge on grid cells, modal inventory stepper, and family quota sync              |
 | **[v1.22.0](#v1220---2026-09-20)**                                    | Sep 20, 2026          | Dynamic Day/Night cycle time of day filter in Field Guide for supported games (Morning, Day, Night)              |
 | **[v1.21.0](#v1210---2026-09-18)**                                    | Sep 18, 2026          | Encounter details in Pokémon HOME showing first introduced game/generation and catchable games list              |
@@ -76,6 +77,30 @@ All notable changes, new features, improvements, and bug fixes for **LivingDex**
 | **[Genesis & Prototype](#initial-release---oct-2025)**                | Oct 27 – Nov 10, 2025 | Initial LivingDex tracker release, 30-slot PC boxes, PokeAPI integration                                         |
 
 ---
+
+## [v1.24.0] - 2026-09-27
+
+### Added
+
+- **Google Drive Cloud Backup & Restore (`sync-manager.js`, `google-drive-provider.js`, `schema.js`, `modals.js`, `index.html`)**:
+  - Added seamless cloud backup and restore integration with Google Drive using Google Identity Services (GIS) token authorization.
+  - Saves encrypted and structured backup payloads directly into the application's isolated Google Drive `appDataFolder` (`drive.appdata` scope) to protect user privacy without requesting full Drive access.
+  - Added Google Drive connect / disconnect authentication flow, automatic session restoration, and real-time connection status pill.
+- **Extensible Sync Architecture & Provider Registry (`sync-manager.js`, `base-provider.js`, `file-provider.js`, `firebase-stub-provider.js`)**:
+  - Implemented `BaseSyncProvider` contract standardizing `connect()`, `disconnect()`, `saveBackup()`, `loadBackup()`, and `subscribeToRemoteChanges()`.
+  - Added `SyncManager` event coordinator with `provider:changed`, `sync:status`, and `sync:progress` lifecycle event dispatchers.
+  - Added `FirebaseStubProvider` placeholder architecture ready for future user accounts and live multi-device real-time synchronization.
+  - Added reactive storage mutation listeners (`livingdex:storage-mutated`) for debounced auto-sync triggers.
+- **Canonical Schema v3 & Backward-Compatible Normalizer (`schema.js`)**:
+  - Upgraded data schema to version 3, encapsulating all game progress (standard caught slots, shiny caught slots, custom box labels, segment configurations) alongside full item and Pokémon specimen inventory counts.
+  - Added automatic payload normalizer with full backwards compatibility supporting Schema v1 (legacy direct keys), Schema v2, and Schema v3 files.
+- **Settings Modal Cloud Sync & Account Tab (`modals.js`, `styles.css`, `index.html`)**:
+  - Added dedicated **Cloud Sync & Account** card under the **Data & System** tab with connection controls, last-synced timestamp, and manual Backup / Restore action buttons.
+  - Added custom Google Client ID configuration field with persistent local storage.
+  - Added **Local File Backup** card for standard JSON export and import actions.
+- **Service Worker & Offline Caching Updates (`sw.js`)**:
+  - Bumped cache version to `v1.24.0` and included all new sync service modules in `SHELL_ASSETS`.
+  - Added bypass rule ensuring Google Identity Services and Google Drive API requests are not intercepted by the service worker cache.
 
 ## [v1.23.0] - 2026-09-20
 
