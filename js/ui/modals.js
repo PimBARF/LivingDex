@@ -1210,10 +1210,11 @@ export function registerSettingsControls() {
    * @param {Object} payload - The normalized import payload.
    */
   function renderImportReview(payload) {
-    if (!importSummary || !importOptions) return;
+    if (!importSummary || !importOptions || !payload) return;
 
-    const gameEntries = Object.entries(payload.games || {});
-    const hasSettings = !!payload.settings;
+    const data = payload.data || payload;
+    const gameEntries = Object.entries(data.games || {});
+    const hasSettings = !!data.settings;
     const fileLabel = pendingImportFileName ? ` from ${pendingImportFileName}` : "";
     const settingsCount = hasSettings ? 1 : 0;
 
@@ -1238,11 +1239,13 @@ export function registerSettingsControls() {
       if (!config) continue;
 
       const caughtCount = countObjectEntries(gamePayload.caught);
-      const shinyCount = countObjectEntries(gamePayload.shinyCaught);
+      const shinyCount = countObjectEntries(gamePayload.shiny || gamePayload.shinyCaught);
       const labelCount = countObjectEntries(gamePayload.boxLabels);
-      const segmentCount = countObjectEntries(gamePayload.segments);
-      const itemCount = countObjectEntries(gamePayload.itemInventory);
-      const specimenCount = countObjectEntries(gamePayload.specimenInventory);
+      const segmentCount = countObjectEntries(gamePayload.segmentSettings || gamePayload.segments);
+      const itemCount = countObjectEntries(gamePayload.itemInventory || data.inventory?.items);
+      const specimenCount = countObjectEntries(
+        gamePayload.specimenInventory || data.inventory?.specimens,
+      );
       const cacheCount = countObjectEntries(gamePayload.speciesCache);
       const hasMeta = isPlainObject(gamePayload.speciesCacheMeta);
 
@@ -1310,14 +1313,20 @@ export function registerSettingsControls() {
       return;
     }
 
-    syncManager.applyImportPayload(pendingImportPayload, {
-      importSettings: !!importSettingsChecked,
-      selectedGameKeys,
-    });
+    try {
+      syncManager.applyImportPayload(pendingImportPayload, {
+        importSettings: !!importSettingsChecked,
+        selectedGameKeys,
+      });
 
-    closeImportReviewDialog();
-    showToast("Selected data imported.", "success");
-    window.location.reload();
+      closeImportReviewDialog();
+      showToast("Selected data imported successfully!", "success");
+      setTimeout(() => {
+        window.location.reload();
+      }, 300);
+    } catch (err) {
+      showToast(`Import error: ${err.message}`, "danger");
+    }
   }
 
   /**
@@ -1484,8 +1493,6 @@ export function registerSettingsControls() {
   const gdriveBackupBtn = document.getElementById("gdriveBackupBtn");
   const gdriveRestoreBtn = document.getElementById("gdriveRestoreBtn");
   const gdriveMetaText = document.getElementById("gdriveMetaText");
-  const gdriveCustomClientId = document.getElementById("gdriveCustomClientId");
-  const gdriveSaveClientId = document.getElementById("gdriveSaveClientId");
 
   const gdriveProvider = syncManager.getProvider("google-drive");
 
@@ -1494,10 +1501,6 @@ export function registerSettingsControls() {
    */
   async function syncGoogleDriveUI() {
     if (!gdriveStatusText || !gdriveProvider) return;
-
-    if (gdriveCustomClientId) {
-      gdriveCustomClientId.value = gdriveProvider.getClientId() || "";
-    }
 
     try {
       const isAuth = await gdriveProvider.isAuthenticated();
@@ -1669,13 +1672,6 @@ export function registerSettingsControls() {
     } finally {
       if (gdriveRestoreBtn) gdriveRestoreBtn.disabled = false;
     }
-  });
-
-  gdriveSaveClientId?.addEventListener("click", async () => {
-    const val = gdriveCustomClientId?.value?.trim() || "";
-    gdriveProvider.setCustomClientId(val);
-    showToast("Google OAuth Client ID saved.", "success");
-    await syncGoogleDriveUI();
   });
 
   document.getElementById("settingsResetBoxLabels")?.addEventListener("click", () => {

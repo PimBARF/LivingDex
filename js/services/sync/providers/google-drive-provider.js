@@ -9,7 +9,8 @@ import { buildExportPayload, normalizeImportPayload } from "../schema.js";
 import { DEFAULT_GOOGLE_CLIENT_ID } from "../../../config.js";
 
 const GIS_SCRIPT_URL = "https://accounts.google.com/gsi/client";
-const DRIVE_APPDATA_SCOPE = "https://www.googleapis.com/auth/drive.appdata";
+const DRIVE_APPDATA_SCOPE =
+  "https://www.googleapis.com/auth/drive.appdata https://www.googleapis.com/auth/userinfo.profile https://www.googleapis.com/auth/userinfo.email";
 const BACKUP_FILENAME = "livingdex-cloud-backup.json";
 const AUTH_STORAGE_KEY = "livingdex_gdrive_auth";
 
@@ -22,6 +23,33 @@ export class GoogleDriveProvider extends BaseSyncProvider {
     this.clientId = DEFAULT_GOOGLE_CLIENT_ID;
     this.userInfo = null;
     this.lastBackupMeta = null;
+
+    // Immediately restore persisted authentication state from localStorage
+    this.restoreSavedSession();
+  }
+
+  /**
+   * Restore token and user info session from localStorage
+   * @returns {boolean}
+   */
+  restoreSavedSession() {
+    try {
+      const savedAuth = localStorage.getItem(AUTH_STORAGE_KEY);
+      if (savedAuth) {
+        const parsed = JSON.parse(savedAuth);
+        if (parsed.userInfo) {
+          this.userInfo = parsed.userInfo;
+        }
+        if (parsed.accessToken) {
+          this.accessToken = parsed.accessToken;
+          this.tokenExpiresAt = Number(parsed.tokenExpiresAt) || 0;
+        }
+        return Boolean(this.userInfo || this.accessToken);
+      }
+    } catch {
+      // Ignore parse errors
+    }
+    return false;
   }
 
   /**
@@ -33,29 +61,13 @@ export class GoogleDriveProvider extends BaseSyncProvider {
   }
 
   /**
-   * Set custom Google Client ID if user configured their own OAuth App
-   * @param {string} clientId
-   */
-  setClientId(clientId) {
-    if (clientId && typeof clientId === "string" && clientId.trim()) {
-      this.clientId = clientId.trim();
-    } else {
-      this.clientId = DEFAULT_GOOGLE_CLIENT_ID;
-    }
-  }
-
-  /**
-   * Alias for setClientId
-   */
-  setCustomClientId(clientId) {
-    this.setClientId(clientId);
-  }
-
-  /**
    * Get current authenticated user profile
    * @returns {object|null}
    */
   getUser() {
+    if (!this.userInfo) {
+      this.restoreSavedSession();
+    }
     return this.userInfo;
   }
 
@@ -89,28 +101,24 @@ export class GoogleDriveProvider extends BaseSyncProvider {
   }
 
   /**
-   * Restore token session from localStorage if still valid
+   * Initialize provider and verify saved session
    */
   async init() {
-    try {
-      const savedAuth = localStorage.getItem(AUTH_STORAGE_KEY);
-      if (savedAuth) {
-        const parsed = JSON.parse(savedAuth);
-        if (parsed.accessToken && parsed.tokenExpiresAt > Date.now() + 60000) {
-          this.accessToken = parsed.accessToken;
-          this.tokenExpiresAt = parsed.tokenExpiresAt;
-          this.userInfo = parsed.userInfo || null;
-          return true;
-        }
-      }
-    } catch {
-      // Ignore parse errors
-    }
-    return false;
+    this.clientId = DEFAULT_GOOGLE_CLIENT_ID;
+    this.restoreSavedSession();
+    return this.isConnected();
   }
 
+  /**
+   * Check if user is connected
+   * @returns {boolean}
+   */
   isConnected() {
-    return Boolean(this.accessToken && this.tokenExpiresAt > Date.now());
+    if (!this.userInfo && !this.accessToken) {
+      this.restoreSavedSession();
+    }
+    // Considered connected if user info is persisted or a valid unexpired token exists
+    return Boolean(this.userInfo || (this.accessToken && this.tokenExpiresAt > Date.now()));
   }
 
   /**
@@ -121,10 +129,27 @@ export class GoogleDriveProvider extends BaseSyncProvider {
   }
 
   /**
+   * Ensures an active, unexpired access token is available.
+   * Prompts user only if token is expired or missing.
+   * @returns {Promise<string>}
+   */
+  async ensureValidToken() {
+    this.restoreSavedSession();
+    if (this.accessToken && this.tokenExpiresAt > Date.now() + 60000) {
+      return this.accessToken;
+    }
+    // Token is expired or missing, request token renewal
+    await this.connect({ prompt: "" });
+    return this.accessToken;
+  }
+
+  /**
    * Connect and authorize using Google Identity Services popup
+   * @param {object} [opts]
+   * @param {string} [opts.prompt='consent']
    * @returns {Promise<boolean>}
    */
-  async connect() {
+  async connect({ prompt = "consent" } = {}) {
     if (!this.clientId) {
       throw new Error("Google Client ID is not configured.");
     }
@@ -154,7 +179,7 @@ export class GoogleDriveProvider extends BaseSyncProvider {
                 this.userInfo = await infoRes.json();
               }
             } catch {
-              this.userInfo = null;
+              // Keep existing user info if available
             }
 
             localStorage.setItem(
@@ -170,7 +195,7 @@ export class GoogleDriveProvider extends BaseSyncProvider {
           },
         });
 
-        this.tokenClient.requestAccessToken({ prompt: "consent" });
+        this.tokenClient.requestAccessToken({ prompt });
       } catch (err) {
         reject(err);
       }
@@ -180,12 +205,12 @@ export class GoogleDriveProvider extends BaseSyncProvider {
   /**
    * Alias for connect
    */
-  async authenticate(_opts = {}) {
-    return this.connect();
+  async authenticate(opts = {}) {
+    return this.connect(opts);
   }
 
   /**
-   * Disconnect and revoke token
+   * Disconnect and clear session
    */
   async disconnect() {
     if (this.accessToken && window.google?.accounts?.oauth2?.revoke) {
@@ -215,6 +240,8 @@ export class GoogleDriveProvider extends BaseSyncProvider {
    * @returns {Promise<{ id: string, modifiedTime: string }|null>}
    */
   async findBackupFile() {
+    await this.ensureValidToken();
+
     const query = encodeURIComponent(
       `name = '${BACKUP_FILENAME}' and 'appDataFolder' in parents and trashed = false`,
     );
@@ -263,11 +290,8 @@ export class GoogleDriveProvider extends BaseSyncProvider {
    * @returns {Promise<{ success: boolean, timestamp?: string, error?: string }>}
    */
   async saveBackup(customPayload = null) {
-    if (!this.isConnected()) {
-      return { success: false, error: "Not connected to Google Drive" };
-    }
-
     try {
+      await this.ensureValidToken();
       const payload = customPayload || buildExportPayload();
       const fileContent = JSON.stringify(payload, null, 2);
       const existingFile = await this.findBackupFile();
@@ -343,11 +367,8 @@ export class GoogleDriveProvider extends BaseSyncProvider {
    * @returns {Promise<{ success: boolean, payload?: object, timestamp?: string, error?: string }>}
    */
   async loadBackup() {
-    if (!this.isConnected()) {
-      return { success: false, error: "Not connected to Google Drive" };
-    }
-
     try {
+      await this.ensureValidToken();
       const file = await this.findBackupFile();
       if (!file || !file.id) {
         return null;

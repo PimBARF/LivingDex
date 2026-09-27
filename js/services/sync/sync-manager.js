@@ -188,15 +188,26 @@ export class SyncManager extends EventTarget {
     }
   }
 
-  applyBackupPayload(normalizedData, { overwrite = true } = {}) {
-    if (!normalizedData || typeof normalizedData !== "object") {
+  applyBackupPayload(
+    normalizedData,
+    { overwrite = true, selectedGameKeys = null, importSettings = false } = {},
+  ) {
+    const raw = normalizedData?.data || normalizedData;
+    if (!raw || typeof raw !== "object") {
       throw new Error("Invalid normalized backup payload");
     }
 
-    const { games = {}, inventory = {} } = normalizedData;
+    const { games = {}, inventory = {} } = raw;
 
     for (const [gameId, gData] of Object.entries(games)) {
       if (!gData) continue;
+      if (
+        selectedGameKeys &&
+        Array.isArray(selectedGameKeys) &&
+        !selectedGameKeys.includes(gameId)
+      ) {
+        continue;
+      }
 
       if (gData.caught && typeof gData.caught === "object") {
         const caughtMap = Array.isArray(gData.caught)
@@ -208,13 +219,14 @@ export class SyncManager extends EventTarget {
         saveGameCaughtSlots(gameId, caughtMap);
       }
 
-      if (gData.shiny && typeof gData.shiny === "object") {
-        const shinyMap = Array.isArray(gData.shiny)
-          ? gData.shiny.reduce((acc, k) => {
+      const shinySource = gData.shiny || gData.shinyCaught;
+      if (shinySource && typeof shinySource === "object") {
+        const shinyMap = Array.isArray(shinySource)
+          ? shinySource.reduce((acc, k) => {
               acc[k] = true;
               return acc;
             }, {})
-          : gData.shiny;
+          : shinySource;
         saveGameShinyCaughtSlots(gameId, shinyMap);
       }
 
@@ -222,8 +234,9 @@ export class SyncManager extends EventTarget {
         saveGameBoxLabels(gameId, gData.boxLabels);
       }
 
-      if (gData.segmentSettings && typeof gData.segmentSettings === "object") {
-        saveGameSegmentSettings(gameId, gData.segmentSettings);
+      const segmentSource = gData.segmentSettings || gData.segments;
+      if (segmentSource && typeof segmentSource === "object") {
+        saveGameSegmentSettings(gameId, segmentSource);
       }
     }
 
@@ -235,6 +248,13 @@ export class SyncManager extends EventTarget {
     }
 
     this.emit("data:applied", { timestamp: new Date().toISOString() });
+  }
+
+  /**
+   * Alias for applyBackupPayload with import options
+   */
+  applyImportPayload(normalizedData, options = {}) {
+    return this.applyBackupPayload(normalizedData, options);
   }
 
   handleStorageMutation(_detail) {
