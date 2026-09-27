@@ -85,21 +85,23 @@ All notable changes, new features, improvements, and bug fixes for **LivingDex**
 - **Google Drive Cloud Backup & Restore (`sync-manager.js`, `google-drive-provider.js`, `schema.js`, `modals.js`, `index.html`)**:
   - Added seamless cloud backup and restore integration with Google Drive using Google Identity Services (GIS) token authorization.
   - Saves encrypted and structured backup payloads directly into the application's isolated Google Drive `appDataFolder` (`drive.appdata` scope) to protect user privacy without requesting full Drive access.
-  - Added Google Drive connect / disconnect authentication flow, automatic session restoration, and real-time connection status pill.
+  - Added Google Drive 1-click connect / disconnect authentication flow, automatic session restoration, and real-time connection status indicator.
+  - Manual-only cloud backup and restore triggers with network offline guards (`navigator.onLine`) to prevent accidental data overwrites.
+- **Privacy Policy Page & Disclosures (`privacy.html`, `index.html`, `sw.js`)**:
+  - Added dedicated, accessible, and theme-compliant `privacy.html` page documenting strict client-side data isolation, zero tracking, and `drive.appdata` limited scope usage.
+  - Added Privacy Policy navigation link under About modal and cached page in Service Worker.
 - **Extensible Sync Architecture & Provider Registry (`sync-manager.js`, `base-provider.js`, `file-provider.js`, `firebase-stub-provider.js`)**:
   - Implemented `BaseSyncProvider` contract standardizing `connect()`, `disconnect()`, `saveBackup()`, `loadBackup()`, and `subscribeToRemoteChanges()`.
   - Added `SyncManager` event coordinator with `provider:changed`, `sync:status`, and `sync:progress` lifecycle event dispatchers.
   - Added `FirebaseStubProvider` placeholder architecture ready for future user accounts and live multi-device real-time synchronization.
-  - Added reactive storage mutation listeners (`livingdex:storage-mutated`) for debounced auto-sync triggers.
 - **Canonical Schema v3 & Backward-Compatible Normalizer (`schema.js`)**:
   - Upgraded data schema to version 3, encapsulating all game progress (standard caught slots, shiny caught slots, custom box labels, segment configurations) alongside full item and Pokémon specimen inventory counts.
   - Added automatic payload normalizer with full backwards compatibility supporting Schema v1 (legacy direct keys), Schema v2, and Schema v3 files.
 - **Settings Modal Cloud Sync & Account Tab (`modals.js`, `styles.css`, `index.html`)**:
   - Added dedicated **Cloud Sync & Account** card under the **Data & System** tab with connection controls, last-synced timestamp, and manual Backup / Restore action buttons.
-  - Added custom Google Client ID configuration field with persistent local storage.
   - Added **Local File Backup** card for standard JSON export and import actions.
 - **Service Worker & Offline Caching Updates (`sw.js`)**:
-  - Bumped cache version to `v1.24.0` and included all new sync service modules in `SHELL_ASSETS`.
+  - Bumped cache version to `v1.24.0` and included all new sync service modules and privacy policy in `SHELL_ASSETS`.
   - Added bypass rule ensuring Google Identity Services and Google Drive API requests are not intercepted by the service worker cache.
 
 ## [v1.23.0] - 2026-09-20
