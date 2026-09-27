@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Privacy Policy - LivingDex.app</title>
+  <meta name="description"
+    content="Privacy Policy for LivingDex.app - Learn how we protect your data with zero-tracking and privacy-first Google Drive backup." />
+  <link rel="icon" type="image/x-icon" href="./assets/favicon.ico">
+  <meta name="theme-color" content="#f5f7fa" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#181a1b" media="(prefers-color-scheme: dark)">
+  <link rel="stylesheet" href="styles.css">
+
+  <script>
+    (function () {
+      try {
+        var raw = localStorage.getItem('settings-v1');
+        if (raw) {
+          var s = JSON.parse(raw);
+          var theme = s.theme || 'auto';
+          if (theme === 'dark' || (theme === 'auto' && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.setAttribute('data-theme', 'dark');
+          } else {
+            document.documentElement.setAttribute('data-theme', 'light');
+          }
+        }
+      } catch (e) {}
+    })();
+  </script>
+
+  <style>
+    .privacy-container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 32px 20px 60px;
+      line-height: 1.65;
+      color: var(--text, #1e293b);
+    }
+
+    .privacy-header {
+      margin-bottom: 28px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid var(--surface-soft-border, #e2e8f0);
+    }
+
+    .privacy-title {
+      font-size: 28px;
+      font-weight: 700;
+      margin: 0 0 8px;
+      color: var(--text, #0f172a);
+    }
+
+    .privacy-subtitle {
+      font-size: 14px;
+      color: var(--muted, #64748b);
+      margin: 0;
+    }
+
+    .privacy-card {
+      background: var(--card, #ffffff);
+      border: 1px solid var(--surface-soft-border, #e2e8f0);
+      border-radius: var(--radius-md, 8px);
+      padding: 24px;
+      margin-bottom: 20px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+    }
+
+    .privacy-card h2 {
+      font-size: 18px;
+      font-weight: 600;
+      margin: 0 0 12px;
+      color: var(--text, #0f172a);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .privacy-card p, .privacy-card ul {
+      margin: 0 0 12px;
+      font-size: 14px;
+    }
+
+    .privacy-card p:last-child, .privacy-card ul:last-child {
+      margin-bottom: 0;
+    }
+
+    .privacy-card ul {
+      padding-left: 20px;
+    }
+
+    .privacy-card li {
+      margin-bottom: 6px;
+    }
+
+    .privacy-highlight {
+      background: var(--surface-soft, #f8fafc);
+      border-left: 3px solid var(--accent, #3b82f6);
+      padding: 12px 16px;
+      border-radius: 0 var(--radius-sm, 6px) var(--radius-sm, 6px) 0;
+      font-size: 13.5px;
+      margin: 14px 0;
+    }
+
+    .privacy-back-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      margin-bottom: 20px;
+      color: var(--accent, #3b82f6);
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 500;
+    }
+
+    .privacy-back-btn:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="privacy-container">
+    <a href="./" class="privacy-back-btn" id="privacyBackBtn">← Back to LivingDex</a>
+
+    <header class="privacy-header">
+      <h1 class="privacy-title">Privacy Policy</h1>
+      <p class="privacy-subtitle">Last updated: September 27, 2026 · Effective Date: September 27, 2026</p>
+    </header>
+
+    <div class="privacy-card">
+      <h2>🛡️ Overview &amp; Privacy Commitment</h2>
+      <p>
+        <strong>LivingDex</strong> (available at <a href="https://livingdex.app/">https://livingdex.app</a>) is an open-source, client-side Progressive Web Application designed for tracking Living Pokédex progress.
+      </p>
+      <p>
+        We believe in absolute user privacy: <strong>LivingDex does not run external tracking servers, does not host user databases, and does not collect, sell, or monetize personal information.</strong>
+      </p>
+    </div>
+
+    <div class="privacy-card">
+      <h2>📁 Google Drive Integration &amp; Limited Scope Usage</h2>
+      <p>
+        LivingDex offers an optional Google Drive cloud backup feature that allows you to store and restore your collection checklists across your devices.
+      </p>
+
+      <div class="privacy-highlight">
+        <strong>Requested Scope:</strong> <code>https://www.googleapis.com/auth/drive.appdata</code> (Application Data Folder)
+      </div>
+
+      <p><strong>How we access and use Google User Data:</strong></p>
+      <ul>
+        <li><strong>Strict Sandbox Isolation:</strong> LivingDex uses only the <code>drive.appdata</code> scope. This restricts the app exclusively to its own hidden, isolated application folder inside your Google Drive.</li>
+        <li><strong>No Access to Personal Drive Files:</strong> LivingDex <strong>cannot</strong> view, read, modify, list, or delete any of your personal files, folders, photos, or documents stored in Google Drive.</li>
+        <li><strong>Sole Purpose (Backup &amp; Restore):</strong> The scope is used solely to write and read a single checklist backup file (<code>livingdex-cloud-backup.json</code>) when you explicitly click <em>"Backup to Drive"</em> or <em>"Restore from Drive"</em>.</li>
+        <li><strong>No Automated Overwrites:</strong> Backups to Google Drive are performed manually upon user request to prevent accidental data overwrites.</li>
+        <li><strong>Direct Client-to-Google Communication:</strong> Authentication and file transfers happen directly between your web browser and Google's official APIs (<code>accounts.google.com</code> and <code>googleapis.com</code>). Your data never passes through or touches any intermediate third-party servers.</li>
+      </ul>
+    </div>
+
+    <div class="privacy-card">
+      <h2>🔒 Data Sharing &amp; Retention</h2>
+      <p>
+        <strong>Google User Data is never shared with third parties or external services.</strong>
+      </p>
+      <ul>
+        <li>We do not share, transfer, or disclose Google user data to any third parties or advertising partners.</li>
+        <li>We do not use Google user data for advertising, machine learning, or analytics.</li>
+        <li>Your authentication tokens are stored locally in your browser's <code>localStorage</code> and are only transmitted directly to Google's OAuth endpoints.</li>
+        <li>You can disconnect and revoke access at any time by clicking <strong>"Disconnect"</strong> in Settings or managing permissions in your <a href="https://myaccount.google.com/permissions" target="_blank" rel="noopener noreferrer">Google Account Security Settings</a>.</li>
+      </ul>
+    </div>
+
+    <div class="privacy-card">
+      <h2>💾 Local Storage &amp; Offline Data</h2>
+      <p>
+        By default, all Pokédex caught states, custom box names, and preferences are saved locally on your device using browser <code>localStorage</code>. This data never leaves your device unless you choose to export a file or use Google Drive backup.
+      </p>
+    </div>
+
+    <div class="privacy-card">
+      <h2>📬 Contact Information &amp; Open Source</h2>
+      <p>
+        LivingDex is an open-source project maintained by <strong>PimBARF</strong>.
+      </p>
+      <p>
+        If you have questions regarding this Privacy Policy or data security, please contact us or inspect our source code:
+      </p>
+      <ul>
+        <li>GitHub Repository: <a href="https://github.com/PimBARF/LivingDex" target="_blank" rel="noopener noreferrer">https://github.com/PimBARF/LivingDex</a></li>
+        <li>Issue Tracker: <a href="https://github.com/PimBARF/LivingDex/issues" target="_blank" rel="noopener noreferrer">https://github.com/PimBARF/LivingDex/issues</a></li>
+        <li>Developer Contact: <a href="mailto:pimbarf@gmail.com">pimbarf@gmail.com</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById("privacyBackBtn")?.addEventListener("click", (e) => {
+      if (window.opener && !window.opener.closed) {
+        e.preventDefault();
+        window.close();
+      } else if (window.history.length > 1 && document.referrer && document.referrer.includes(window.location.host)) {
+        e.preventDefault();
+        window.history.back();
+      }
+    });
+  </script>
+</body>
+
+</html>
