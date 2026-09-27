@@ -22,7 +22,6 @@ export class SyncManager extends EventTarget {
     super();
     this.providers = new Map();
     this.activeProviderId = "gdrive";
-    this.autoSyncTimer = null;
 
     const gdrive = new GoogleDriveProvider();
     const file = new FileSyncProvider();
@@ -33,12 +32,6 @@ export class SyncManager extends EventTarget {
     this.providers.set("google-drive", gdrive);
     this.registerProvider(file);
     this.registerProvider(firebase);
-
-    if (typeof window !== "undefined") {
-      window.addEventListener("livingdex:storage-mutated", (event) => {
-        this.handleStorageMutation(event.detail);
-      });
-    }
   }
 
   registerProvider(provider) {
@@ -255,26 +248,6 @@ export class SyncManager extends EventTarget {
    */
   applyImportPayload(normalizedData, options = {}) {
     return this.applyBackupPayload(normalizedData, options);
-  }
-
-  handleStorageMutation(_detail) {
-    const provider = this.getActiveProvider();
-    if (!provider || !provider.isConnected() || provider.id === "file") {
-      return;
-    }
-
-    if (this.autoSyncTimer) {
-      clearTimeout(this.autoSyncTimer);
-    }
-
-    this.autoSyncTimer = setTimeout(async () => {
-      this.autoSyncTimer = null;
-      try {
-        await this.saveBackup(provider.id);
-      } catch (err) {
-        console.warn("Auto-sync failed:", err);
-      }
-    }, 5000);
   }
 
   on(eventName, handler) {

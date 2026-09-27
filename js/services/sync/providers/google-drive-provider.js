@@ -150,6 +150,11 @@ export class GoogleDriveProvider extends BaseSyncProvider {
    * @returns {Promise<boolean>}
    */
   async connect({ prompt = "consent" } = {}) {
+    if (typeof navigator !== "undefined" && !navigator.onLine) {
+      throw new Error(
+        "You are offline. Google Drive connection requires an active internet connection.",
+      );
+    }
     if (!this.clientId) {
       throw new Error("Google Client ID is not configured.");
     }
@@ -290,6 +295,12 @@ export class GoogleDriveProvider extends BaseSyncProvider {
    * @returns {Promise<{ success: boolean, timestamp?: string, error?: string }>}
    */
   async saveBackup(customPayload = null) {
+    if (typeof navigator !== "undefined" && !navigator.onLine) {
+      return {
+        success: false,
+        error: "You are offline. Cloud backup requires an active internet connection.",
+      };
+    }
     try {
       await this.ensureValidToken();
       const payload = customPayload || buildExportPayload();
@@ -367,6 +378,9 @@ export class GoogleDriveProvider extends BaseSyncProvider {
    * @returns {Promise<{ success: boolean, payload?: object, timestamp?: string, error?: string }>}
    */
   async loadBackup() {
+    if (typeof navigator !== "undefined" && !navigator.onLine) {
+      throw new Error("You are offline. Cloud restore requires an active internet connection.");
+    }
     try {
       await this.ensureValidToken();
       const file = await this.findBackupFile();

@@ -17,6 +17,7 @@ const EXPECTED_CACHES = [SHELL_CACHE, DATA_CACHE, SPRITE_CACHE];
 const SHELL_ASSETS = [
   "./",
   "./index.html",
+  "./privacy.html",
   "./styles.css",
   "./manifest.json",
   "./llms.txt",

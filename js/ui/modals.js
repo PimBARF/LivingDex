@@ -1627,6 +1627,13 @@ export function registerSettingsControls() {
 
   // Google Drive event bindings
   gdriveAuthBtn?.addEventListener("click", async () => {
+    if (!navigator.onLine) {
+      showToast(
+        "You are offline. Google Drive connection requires an active internet connection.",
+        "warning",
+      );
+      return;
+    }
     try {
       const isAuth = await gdriveProvider.isAuthenticated();
       if (isAuth) {
@@ -1644,10 +1651,17 @@ export function registerSettingsControls() {
   });
 
   gdriveBackupBtn?.addEventListener("click", async () => {
+    if (!navigator.onLine) {
+      showToast("You are offline. Cloud backup requires an active internet connection.", "warning");
+      return;
+    }
     try {
       if (gdriveBackupBtn) gdriveBackupBtn.disabled = true;
       showToast("Saving backup to Google Drive...", "warning", 4000);
-      await syncManager.backup("google-drive");
+      const res = await syncManager.backup("google-drive");
+      if (res && res.success === false) {
+        throw new Error(res.error || "Backup failed");
+      }
       showToast("Backup saved to Google Drive!", "success");
       await syncGoogleDriveUI();
     } catch (err) {
@@ -1658,6 +1672,13 @@ export function registerSettingsControls() {
   });
 
   gdriveRestoreBtn?.addEventListener("click", async () => {
+    if (!navigator.onLine) {
+      showToast(
+        "You are offline. Cloud restore requires an active internet connection.",
+        "warning",
+      );
+      return;
+    }
     try {
       if (gdriveRestoreBtn) gdriveRestoreBtn.disabled = true;
       showToast("Fetching backup from Google Drive...", "warning", 4000);
