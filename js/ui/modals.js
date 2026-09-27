@@ -60,6 +60,8 @@ import {
   checkFirstTimeVisitor,
 } from "./welcome-guide.js";
 import { syncFilterModalWithGame } from "./controls.js";
+import { syncManager } from "../services/sync/sync-manager.js";
+import { normalizeImportPayload } from "../services/sync/schema.js";
 
 export {
   registerMissingGuideModal,
@@ -1006,24 +1008,6 @@ function isPlainObject(value) {
 }
 
 /**
- * Read and JSON-parse an object from localStorage by key with a fallback.
- *
- * @param {string} key - The localStorage key to read.
- * @param {*} [fallback=null] - Fallback value if key is not found or parsing fails.
- * @returns {Object|*} Parsed plain object or fallback value.
- */
-function readStoredObject(key, fallback = null) {
-  try {
-    const raw = localStorage.getItem(key);
-    if (!raw) return fallback;
-    const parsed = JSON.parse(raw);
-    return isPlainObject(parsed) ? parsed : fallback;
-  } catch {
-    return fallback;
-  }
-}
-
-/**
  * Count the number of own enumerable keys in a plain object.
  *
  * @param {*} value - The object to count keys from.
@@ -1031,102 +1015,6 @@ function readStoredObject(key, fallback = null) {
  */
 function countObjectEntries(value) {
   return isPlainObject(value) ? Object.keys(value).length : 0;
-}
-
-/**
- * Build the full application export payload including settings and per-game progress.
- *
- * @returns {{
- *   exportedAt: string,
- *   schemaVersion: number,
- *   settings: Object,
- *   games: Object<string, {
- *     caught: Object,
- *     segments: Object|null,
- *     speciesCache: Object|null,
- *     speciesCacheMeta: Object|null
- *   }>
- * }} Structured export data payload.
- */
-function buildExportPayload() {
-  return {
-    exportedAt: new Date().toISOString(),
-    schemaVersion: 2,
-    settings: loadSettings(),
-    games: Object.fromEntries(
-      Object.entries(GAMES).map(([gameKey, config]) => {
-        const caughtKey = `${config.storagePrefix}-caught-v1`;
-        const shinyCaughtKey = `${config.storagePrefix}-shiny-caught-v1`;
-        const segmentsKey = `${config.storagePrefix}-segments-v1`;
-        const boxLabelsKey = `${config.storagePrefix}-box-labels-v1`;
-        const speciesCacheKey = `${config.storagePrefix}-species-names-v1`;
-        const speciesCacheMetaKey = `${config.storagePrefix}-species-names-meta-v1`;
-
-        return [
-          gameKey,
-          {
-            caught: readStoredObject(caughtKey, {}),
-            shinyCaught: readStoredObject(shinyCaughtKey, {}),
-            segments: readStoredObject(segmentsKey, null),
-            boxLabels: readStoredObject(boxLabelsKey, null),
-            speciesCache: readStoredObject(speciesCacheKey, null),
-            speciesCacheMeta: readStoredObject(speciesCacheMetaKey, null),
-          },
-        ];
-      }),
-    ),
-  };
-}
-
-/**
- * Validate and normalize a raw payload from an imported backup file.
- *
- * @param {*} rawPayload - The parsed JSON data from the imported file.
- * @returns {{
- *   exportedAt: string|null,
- *   schemaVersion: number|null,
- *   settings: Object|null,
- *   games: Object<string, Object>
- * }} Validated import payload.
- * @throws {Error} If the payload is not a plain object or contains neither valid settings nor games.
- */
-function normalizeImportPayload(rawPayload) {
-  if (!isPlainObject(rawPayload)) {
-    throw new Error("Invalid payload");
-  }
-
-  const settings = isPlainObject(rawPayload.settings) ? rawPayload.settings : null;
-  const games = {};
-
-  if (isPlainObject(rawPayload.games)) {
-    for (const [gameKey, gamePayload] of Object.entries(rawPayload.games)) {
-      if (!GAMES[gameKey] || !isPlainObject(gamePayload)) continue;
-
-      const nextGame = {};
-      if (isPlainObject(gamePayload.caught)) nextGame.caught = gamePayload.caught;
-      if (isPlainObject(gamePayload.shinyCaught)) nextGame.shinyCaught = gamePayload.shinyCaught;
-      if (isPlainObject(gamePayload.segments)) nextGame.segments = gamePayload.segments;
-      if (isPlainObject(gamePayload.boxLabels)) nextGame.boxLabels = gamePayload.boxLabels;
-      if (isPlainObject(gamePayload.speciesCache)) nextGame.speciesCache = gamePayload.speciesCache;
-      if (isPlainObject(gamePayload.speciesCacheMeta))
-        nextGame.speciesCacheMeta = gamePayload.speciesCacheMeta;
-
-      if (Object.keys(nextGame).length) {
-        games[gameKey] = nextGame;
-      }
-    }
-  }
-
-  if (!settings && !Object.keys(games).length) {
-    throw new Error("Invalid payload");
-  }
-
-  return {
-    exportedAt: typeof rawPayload.exportedAt === "string" ? rawPayload.exportedAt : null,
-    schemaVersion: Number.isFinite(rawPayload.schemaVersion) ? rawPayload.schemaVersion : null,
-    settings,
-    games,
-  };
 }
 
 /**
@@ -1308,18 +1196,13 @@ export function registerSettingsControls() {
   /**
    * Export all user data and settings as a downloadable JSON file.
    */
-  function exportAllData() {
-    const payload = buildExportPayload();
-    const blob = new Blob([JSON.stringify(payload, null, 2)], {
-      type: "application/json",
-    });
-    const url = URL.createObjectURL(blob);
-    const anchor = document.createElement("a");
-    anchor.href = url;
-    anchor.download = "livingdex-export.json";
-    anchor.click();
-    URL.revokeObjectURL(url);
-    showToast("Data exported.", "success");
+  async function exportAllData() {
+    try {
+      await syncManager.backup("file");
+      showToast("Data exported successfully.", "success");
+    } catch (err) {
+      showToast(err.message || "Failed to export data.", "danger");
+    }
   }
 
   /**
@@ -1327,14 +1210,15 @@ export function registerSettingsControls() {
    * @param {Object} payload - The normalized import payload.
    */
   function renderImportReview(payload) {
-    if (!importSummary || !importOptions) return;
+    if (!importSummary || !importOptions || !payload) return;
 
-    const gameEntries = Object.entries(payload.games || {});
-    const hasSettings = !!payload.settings;
+    const data = payload.data || payload;
+    const gameEntries = Object.entries(data.games || {});
+    const hasSettings = !!data.settings;
     const fileLabel = pendingImportFileName ? ` from ${pendingImportFileName}` : "";
     const settingsCount = hasSettings ? 1 : 0;
 
-    importSummary.textContent = `This file${fileLabel} contains ${settingsCount ? "settings and " : ""}${gameEntries.length} game entr${gameEntries.length === 1 ? "y" : "ies"}. Select what you want to import.`;
+    importSummary.textContent = `This backup${fileLabel} contains ${settingsCount ? "settings and " : ""}${gameEntries.length} game entr${gameEntries.length === 1 ? "y" : "ies"}. Select what you want to import.`;
     importOptions.innerHTML = "";
 
     if (hasSettings) {
@@ -1345,7 +1229,7 @@ export function registerSettingsControls() {
           <input type="checkbox" id="importSettingsCheckbox" checked>
           <span>Import settings</span>
         </span>
-        <p class="import-option-meta">Theme, display preferences, default game, and other app settings will be merged into the current device settings.</p>
+        <p class="import-option-meta">Theme, display preferences, default game, and other app settings will be merged into current device settings.</p>
       `;
       importOptions.appendChild(row);
     }
@@ -1355,11 +1239,25 @@ export function registerSettingsControls() {
       if (!config) continue;
 
       const caughtCount = countObjectEntries(gamePayload.caught);
-      const shinyCount = countObjectEntries(gamePayload.shinyCaught);
+      const shinyCount = countObjectEntries(gamePayload.shiny || gamePayload.shinyCaught);
       const labelCount = countObjectEntries(gamePayload.boxLabels);
-      const segmentCount = countObjectEntries(gamePayload.segments);
+      const segmentCount = countObjectEntries(gamePayload.segmentSettings || gamePayload.segments);
+      const itemCount = countObjectEntries(gamePayload.itemInventory || data.inventory?.items);
+      const specimenCount = countObjectEntries(
+        gamePayload.specimenInventory || data.inventory?.specimens,
+      );
       const cacheCount = countObjectEntries(gamePayload.speciesCache);
       const hasMeta = isPlainObject(gamePayload.speciesCacheMeta);
+
+      const metaParts = [];
+      metaParts.push(`Caught: ${caughtCount}`);
+      if (shinyCount) metaParts.push(`Shiny: ${shinyCount}`);
+      if (labelCount) metaParts.push(`Box labels: ${labelCount}`);
+      if (itemCount) metaParts.push(`Items: ${itemCount}`);
+      if (specimenCount) metaParts.push(`Specimens: ${specimenCount}`);
+      if (segmentCount) metaParts.push(`Segments: ${segmentCount}`);
+      if (cacheCount) metaParts.push(`Names: ${cacheCount}`);
+      if (hasMeta) metaParts.push(`Cache meta`);
 
       const row = document.createElement("label");
       row.className = "import-option";
@@ -1368,9 +1266,7 @@ export function registerSettingsControls() {
           <input type="checkbox" data-game-key="${gameKey}" checked>
           <span>${config.title}</span>
         </span>
-        <p class="import-option-meta">
-          Caught: ${caughtCount}${shinyCount ? ` · Shiny: ${shinyCount}` : ""}${labelCount ? ` · Box labels: ${labelCount}` : ""} · Segments: ${segmentCount} · Cache names: ${cacheCount}${hasMeta ? " · Cache metadata included" : ""}
-        </p>
+        <p class="import-option-meta">${metaParts.join(" · ")}</p>
       `;
       importOptions.appendChild(row);
     }
@@ -1417,56 +1313,20 @@ export function registerSettingsControls() {
       return;
     }
 
-    if (importSettingsChecked && pendingImportPayload.settings) {
-      saveSettings({ ...loadSettings(), ...pendingImportPayload.settings });
+    try {
+      syncManager.applyImportPayload(pendingImportPayload, {
+        importSettings: !!importSettingsChecked,
+        selectedGameKeys,
+      });
+
+      closeImportReviewDialog();
+      showToast("Selected data imported successfully!", "success");
+      setTimeout(() => {
+        window.location.reload();
+      }, 300);
+    } catch (err) {
+      showToast(`Import error: ${err.message}`, "danger");
     }
-
-    for (const gameKey of selectedGameKeys) {
-      const gamePayload = pendingImportPayload.games?.[gameKey];
-      const config = GAMES[gameKey];
-      if (!config || !gamePayload) continue;
-
-      if (isPlainObject(gamePayload.caught)) {
-        localStorage.setItem(
-          `${config.storagePrefix}-caught-v1`,
-          JSON.stringify(gamePayload.caught),
-        );
-      }
-      if (isPlainObject(gamePayload.shinyCaught)) {
-        localStorage.setItem(
-          `${config.storagePrefix}-shiny-caught-v1`,
-          JSON.stringify(gamePayload.shinyCaught),
-        );
-      }
-      if (isPlainObject(gamePayload.segments)) {
-        localStorage.setItem(
-          `${config.storagePrefix}-segments-v1`,
-          JSON.stringify(gamePayload.segments),
-        );
-      }
-      if (isPlainObject(gamePayload.boxLabels)) {
-        localStorage.setItem(
-          `${config.storagePrefix}-box-labels-v1`,
-          JSON.stringify(gamePayload.boxLabels),
-        );
-      }
-      if (isPlainObject(gamePayload.speciesCache)) {
-        localStorage.setItem(
-          `${config.storagePrefix}-species-names-v1`,
-          JSON.stringify(gamePayload.speciesCache),
-        );
-      }
-      if (isPlainObject(gamePayload.speciesCacheMeta)) {
-        localStorage.setItem(
-          `${config.storagePrefix}-species-names-meta-v1`,
-          JSON.stringify(gamePayload.speciesCacheMeta),
-        );
-      }
-    }
-
-    closeImportReviewDialog();
-    showToast("Selected data imported.", "success");
-    window.location.reload();
   }
 
   /**
@@ -1626,6 +1486,60 @@ export function registerSettingsControls() {
     });
   }
 
+  const gdriveStatusText = document.getElementById("gdriveStatusText");
+  const gdriveAuthBtn = document.getElementById("gdriveAuthBtn");
+  const gdriveAuthBtnText = document.getElementById("gdriveAuthBtnText");
+  const gdriveActions = document.getElementById("gdriveActions");
+  const gdriveBackupBtn = document.getElementById("gdriveBackupBtn");
+  const gdriveRestoreBtn = document.getElementById("gdriveRestoreBtn");
+  const gdriveMetaText = document.getElementById("gdriveMetaText");
+
+  const gdriveProvider = syncManager.getProvider("google-drive");
+
+  /**
+   * Sync Google Drive connection state and metadata to settings UI.
+   */
+  async function syncGoogleDriveUI() {
+    if (!gdriveStatusText || !gdriveProvider) return;
+
+    try {
+      const isAuth = await gdriveProvider.isAuthenticated();
+      if (isAuth) {
+        const user = await gdriveProvider.getUser();
+        const userName = user?.name || user?.email || "Google Account";
+        gdriveStatusText.textContent = `Connected: ${userName}`;
+        gdriveStatusText.classList.add("is-connected");
+        if (gdriveAuthBtnText) gdriveAuthBtnText.textContent = "Disconnect";
+        if (gdriveActions) gdriveActions.hidden = false;
+
+        gdriveProvider
+          .getMetadata()
+          .then((meta) => {
+            if (gdriveMetaText) {
+              if (meta && meta.modifiedAt) {
+                const formatted = new Date(meta.modifiedAt).toLocaleString();
+                gdriveMetaText.textContent = `Last cloud backup: ${formatted}`;
+              } else {
+                gdriveMetaText.textContent = "No backup found in Google Drive yet.";
+              }
+            }
+          })
+          .catch(() => {});
+      } else {
+        gdriveStatusText.textContent = "Not connected";
+        gdriveStatusText.classList.remove("is-connected");
+        if (gdriveAuthBtnText) gdriveAuthBtnText.textContent = "Connect";
+        if (gdriveActions) gdriveActions.hidden = true;
+        if (gdriveMetaText) gdriveMetaText.textContent = "";
+      }
+    } catch {
+      gdriveStatusText.textContent = "Not connected";
+      gdriveStatusText.classList.remove("is-connected");
+      if (gdriveAuthBtnText) gdriveAuthBtnText.textContent = "Connect";
+      if (gdriveActions) gdriveActions.hidden = true;
+    }
+  }
+
   const { closeModal } = attachModalHandlers({
     modal,
     openBtn,
@@ -1636,6 +1550,7 @@ export function registerSettingsControls() {
       attachThemeSettingsHandlers();
       setupSettingsTabs();
       switchSettingsTab(currentSettingsTab, false);
+      syncGoogleDriveUI();
       closeBtn?.focus();
     },
     onClose: () => {},
@@ -1709,6 +1624,76 @@ export function registerSettingsControls() {
   });
   importInput?.addEventListener("change", (event) => importAllData(event.target.files?.[0]));
   confirmImportBtn?.addEventListener("click", applySelectedImport);
+
+  // Google Drive event bindings
+  gdriveAuthBtn?.addEventListener("click", async () => {
+    if (!navigator.onLine) {
+      showToast(
+        "You are offline. Google Drive connection requires an active internet connection.",
+        "warning",
+      );
+      return;
+    }
+    try {
+      const isAuth = await gdriveProvider.isAuthenticated();
+      if (isAuth) {
+        await gdriveProvider.signOut();
+        showToast("Disconnected from Google Drive.", "success");
+      } else {
+        showToast("Connecting to Google Drive...", "warning", 3000);
+        await gdriveProvider.authenticate({ interactive: true });
+        showToast("Connected to Google Drive!", "success");
+      }
+      await syncGoogleDriveUI();
+    } catch (err) {
+      showToast(err.message || "Authentication failed.", "danger");
+    }
+  });
+
+  gdriveBackupBtn?.addEventListener("click", async () => {
+    if (!navigator.onLine) {
+      showToast("You are offline. Cloud backup requires an active internet connection.", "warning");
+      return;
+    }
+    try {
+      if (gdriveBackupBtn) gdriveBackupBtn.disabled = true;
+      showToast("Saving backup to Google Drive...", "warning", 4000);
+      const res = await syncManager.backup("google-drive");
+      if (res && res.success === false) {
+        throw new Error(res.error || "Backup failed");
+      }
+      showToast("Backup saved to Google Drive!", "success");
+      await syncGoogleDriveUI();
+    } catch (err) {
+      showToast(err.message || "Failed to save backup to Google Drive.", "danger");
+    } finally {
+      if (gdriveBackupBtn) gdriveBackupBtn.disabled = false;
+    }
+  });
+
+  gdriveRestoreBtn?.addEventListener("click", async () => {
+    if (!navigator.onLine) {
+      showToast(
+        "You are offline. Cloud restore requires an active internet connection.",
+        "warning",
+      );
+      return;
+    }
+    try {
+      if (gdriveRestoreBtn) gdriveRestoreBtn.disabled = true;
+      showToast("Fetching backup from Google Drive...", "warning", 4000);
+      const payload = await syncManager.loadBackup("google-drive");
+      if (!payload) {
+        showToast("No cloud backup found on Google Drive.", "warning");
+        return;
+      }
+      openImportReviewModal(payload, "Google Drive (Cloud)");
+    } catch (err) {
+      showToast(err.message || "Failed to load cloud backup.", "danger");
+    } finally {
+      if (gdriveRestoreBtn) gdriveRestoreBtn.disabled = false;
+    }
+  });
 
   document.getElementById("settingsResetBoxLabels")?.addEventListener("click", () => {
     clearBoxLabels();

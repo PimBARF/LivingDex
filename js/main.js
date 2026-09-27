@@ -42,6 +42,7 @@ import {
 } from "./ui/dom-render.js";
 
 import { initPwa } from "./pwa.js";
+import { syncManager } from "./services/sync/sync-manager.js";
 
 /**
  * Array of Pokémon species IDs in display order for the active game and enabled segments.
@@ -83,6 +84,9 @@ async function initializeLivingDexApp() {
   applyTheme(settings.theme);
   applyReducedMotionPreference(settings.reducedMotion);
   applyWakeLockPreference(settings.keepScreenAwake);
+
+  // Initialize sync providers from saved session
+  syncManager.init().catch(() => {});
 
   // Register controls immediately so the UI is interactive during data loading.
   // slotCount 0 is safe — both functions use live DOM queries as primary source.

@@ -225,6 +225,23 @@ export function loadCaughtSlots() {
 }
 
 /**
+ * Internal helper to dispatch storage mutation events for reactive UI and sync services.
+ * @param {string} type
+ * @param {Object} [detail]
+ */
+function emitStorageMutation(type, detail = {}) {
+  try {
+    window.dispatchEvent(
+      new CustomEvent("livingdex:storage-mutated", {
+        detail: { type, gamePrefix: ACTIVE_GAME.storagePrefix, ...detail, timestamp: Date.now() },
+      }),
+    );
+  } catch {
+    // Ignore environments without window / CustomEvent
+  }
+}
+
+/**
  * Persist caught-slot data to localStorage for the active game.
  * Ignores quota errors silently to keep the UI responsive.
  *
@@ -235,6 +252,7 @@ export function saveCaughtSlots(caught) {
   try {
     const sanitized = sanitizeCaughtSlots(caught);
     localStorage.setItem(CAUGHT_STORAGE_KEY, JSON.stringify(sanitized));
+    emitStorageMutation("caught", { count: Object.keys(sanitized).length });
   } catch {
     // Ignore quota errors silently
   }
@@ -266,6 +284,7 @@ export function saveShinyCaughtSlots(caught) {
   try {
     const sanitized = sanitizeCaughtSlots(caught);
     localStorage.setItem(SHINY_CAUGHT_STORAGE_KEY, JSON.stringify(sanitized));
+    emitStorageMutation("shinyCaught", { count: Object.keys(sanitized).length });
   } catch {
     // Ignore quota errors silently
   }
@@ -335,6 +354,7 @@ export function saveBoxLabels(labels, gamePrefix = ACTIVE_GAME.storagePrefix) {
     } else {
       localStorage.setItem(key, JSON.stringify(labels));
     }
+    emitStorageMutation("boxLabels", { gamePrefix });
   } catch {
     // Ignore quota errors silently
   }
@@ -1007,6 +1027,7 @@ export function loadItemInventory() {
 export function saveItemInventory(inventory) {
   try {
     localStorage.setItem(ITEM_INVENTORY_STORAGE_KEY, JSON.stringify(inventory || {}));
+    emitStorageMutation("itemInventory", { count: Object.keys(inventory || {}).length });
   } catch {}
   return inventory;
 }
@@ -1036,6 +1057,7 @@ export function loadSpecimenInventory() {
 export function saveSpecimenInventory(inventory) {
   try {
     localStorage.setItem(SPECIMEN_INVENTORY_STORAGE_KEY, JSON.stringify(inventory || {}));
+    emitStorageMutation("specimenInventory", { count: Object.keys(inventory || {}).length });
   } catch {}
   return inventory;
 }
@@ -1113,4 +1135,138 @@ export function markWelcomeGuideSeen(seen = true) {
   } catch {
     // Ignore quota errors silently
   }
+}
+
+/**
+ * Loads all caught slots across all configured games.
+ * @returns {Record<string, Record<string, boolean>>}
+ */
+export function getAllCaughtSlots() {
+  const result = {};
+  for (const gameId of Object.keys(GAMES)) {
+    const caught = loadGameCaughtSlots(gameId);
+    if (caught && Object.keys(caught).length > 0) {
+      result[gameId] = caught;
+    }
+  }
+  return result;
+}
+
+/**
+ * Loads all shiny caught slots across all configured games.
+ * @returns {Record<string, Record<string, boolean>>}
+ */
+export function getAllShinyCaughtSlots() {
+  const result = {};
+  for (const gameId of Object.keys(GAMES)) {
+    const shiny = loadGameShinyCaughtSlots(gameId);
+    if (shiny && Object.keys(shiny).length > 0) {
+      result[gameId] = shiny;
+    }
+  }
+  return result;
+}
+
+/**
+ * Loads all custom box labels across all configured games.
+ * @returns {Record<string, Record<string, string>>}
+ */
+export function getAllBoxLabels() {
+  const result = {};
+  for (const [gameId, gameConfig] of Object.entries(GAMES)) {
+    const labels = loadBoxLabels(gameConfig.storagePrefix);
+    if (labels && Object.keys(labels).length > 0) {
+      result[gameId] = labels;
+    }
+  }
+  return result;
+}
+
+/**
+ * Loads all custom segment settings across all configured games.
+ * @returns {Record<string, { enabled?: string[], order?: string[] }>}
+ */
+export function getAllSegmentSettings() {
+  const result = {};
+  for (const [gameId, gameConfig] of Object.entries(GAMES)) {
+    const key = `${gameConfig.storagePrefix}-segments-v1`;
+    const raw = localStorage.getItem(key);
+    if (raw) {
+      try {
+        const parsed = JSON.parse(raw);
+        if (parsed && typeof parsed === "object") {
+          result[gameId] = parsed;
+        }
+      } catch {}
+    }
+  }
+  return result;
+}
+
+/**
+ * Alias for loadItemInventory.
+ * @returns {Record<string, number>}
+ */
+export function getItemInventory() {
+  return loadItemInventory();
+}
+
+/**
+ * Alias for loadSpecimenInventory.
+ * @returns {Record<string|number, number>}
+ */
+export function getSpecimenInventory() {
+  return loadSpecimenInventory();
+}
+
+/**
+ * Saves caught slots for a specific game identifier.
+ * @param {string} gameId
+ * @param {Record<string|number, boolean>} caught
+ */
+export function saveGameCaughtSlots(gameId, caught) {
+  const config = GAMES[gameId];
+  if (!config) return;
+  try {
+    const sanitized = sanitizeCaughtSlots(caught);
+    localStorage.setItem(`${config.storagePrefix}-caught-v1`, JSON.stringify(sanitized));
+    emitStorageMutation("caught", { gameId, count: Object.keys(sanitized).length });
+  } catch {}
+}
+
+/**
+ * Saves shiny caught slots for a specific game identifier.
+ * @param {string} gameId
+ * @param {Record<string|number, boolean>} caught
+ */
+export function saveGameShinyCaughtSlots(gameId, caught) {
+  const config = GAMES[gameId];
+  if (!config) return;
+  try {
+    const sanitized = sanitizeCaughtSlots(caught);
+    localStorage.setItem(`${config.storagePrefix}-shiny-caught-v1`, JSON.stringify(sanitized));
+    emitStorageMutation("shinyCaught", { gameId, count: Object.keys(sanitized).length });
+  } catch {}
+}
+
+/**
+ * Saves box labels for a specific game identifier.
+ * @param {string} gameId
+ * @param {Record<string, string>} labels
+ */
+export function saveGameBoxLabels(gameId, labels) {
+  const config = GAMES[gameId];
+  if (!config) return;
+  saveBoxLabels(labels, config.storagePrefix);
+}
+
+/**
+ * Saves segment settings for a specific game identifier.
+ * @param {string} gameId
+ * @param {{ enabled?: Iterable<string>, order?: string[] }} settings
+ */
+export function saveGameSegmentSettings(gameId, settings) {
+  const config = GAMES[gameId];
+  if (!config || !settings) return;
+  saveSegmentConfig(settings, config.storagePrefix);
 }

@@ -466,21 +466,69 @@
 
         <!-- Tab 4: Data & System -->
         <div id="settingsPanelData" class="settings-tab-panel" role="tabpanel" aria-labelledby="settingsTabData" hidden>
-          <!-- Backup & Restore -->
+          <!-- Cloud Sync & Account -->
+          <section class="settings-section" aria-labelledby="settingsCloudSyncHeading">
+            <h4 id="settingsCloudSyncHeading">Cloud Sync &amp; Account</h4>
+            <div class="settings-group">
+              <div class="settings-action-block">
+                <!-- Google Drive Sync Card -->
+                <div class="cloud-sync-card" id="gdriveSyncCard">
+                  <div class="cloud-sync-header">
+                    <div class="cloud-sync-title-wrap">
+                      <span class="cloud-sync-icon" aria-hidden="true">📁</span>
+                      <div>
+                        <div class="cloud-sync-title">Google Drive Sync</div>
+                        <div class="cloud-sync-status" id="gdriveStatusText">Not connected</div>
+                      </div>
+                    </div>
+                    <button type="button" id="gdriveAuthBtn" class="btn btn-secondary settings-btn-compact">
+                      <span>🔗</span> <span id="gdriveAuthBtnText">Connect</span>
+                    </button>
+                  </div>
+                  <div class="cloud-sync-actions" id="gdriveActions" hidden>
+                    <div class="settings-btn-grid">
+                      <button type="button" id="gdriveBackupBtn" class="btn btn-secondary settings-action-btn">
+                        <span>☁️</span> Backup to Drive
+                      </button>
+                      <button type="button" id="gdriveRestoreBtn" class="btn btn-secondary settings-action-btn">
+                        <span>📥</span> Restore from Drive
+                      </button>
+                    </div>
+                    <div class="cloud-sync-meta" id="gdriveMetaText"></div>
+                  </div>
+                </div>
+
+                <!-- Future Live Sync Preview Card -->
+                <div class="cloud-sync-card cloud-sync-card-disabled">
+                  <div class="cloud-sync-header">
+                    <div class="cloud-sync-title-wrap">
+                      <span class="cloud-sync-icon" aria-hidden="true">⚡</span>
+                      <div>
+                        <div class="cloud-sync-title">LivingDex Live Sync <span class="badge-coming-soon">Coming Soon</span></div>
+                        <div class="cloud-sync-status">Instant two-way live sync across devices with user accounts.</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Local File Backup -->
           <section class="settings-section" aria-labelledby="settingsDataBackupHeading">
-            <h4 id="settingsDataBackupHeading">Backup &amp; Restore</h4>
+            <h4 id="settingsDataBackupHeading">Local File Backup</h4>
             <div class="settings-group">
               <div class="settings-action-block">
                 <div class="settings-btn-grid">
                   <button type="button" id="settingsExportData" class="btn btn-secondary settings-action-btn">
-                    <span>📤</span> Export all data
+                    <span>📤</span> Export JSON file
                   </button>
                   <button type="button" id="settingsImportData" class="btn btn-secondary settings-action-btn" aria-describedby="settingsImportHelp">
-                    <span>📥</span> Import data
+                    <span>📥</span> Import JSON file
                   </button>
                 </div>
                 <p id="settingsImportHelp" class="settings-help-text">
-                  Save a JSON backup of your progress or restore data from another device.
+                  Save a JSON backup file to your device or restore progress from another device.
                 </p>
               </div>
             </div>
