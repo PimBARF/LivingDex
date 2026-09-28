@@ -44,12 +44,38 @@ export class GoogleDriveProvider extends BaseSyncProvider {
           this.accessToken = parsed.accessToken;
           this.tokenExpiresAt = Number(parsed.tokenExpiresAt) || 0;
         }
+        if (parsed.lastBackupMeta) {
+          this.lastBackupMeta = parsed.lastBackupMeta;
+        }
         return Boolean(this.userInfo || this.accessToken);
       }
     } catch {
       // Ignore parse errors
     }
     return false;
+  }
+
+  /**
+   * Persist current authentication state and metadata to localStorage
+   */
+  persistSession() {
+    try {
+      if (this.userInfo || this.accessToken || this.lastBackupMeta) {
+        localStorage.setItem(
+          AUTH_STORAGE_KEY,
+          JSON.stringify({
+            accessToken: this.accessToken,
+            tokenExpiresAt: this.tokenExpiresAt,
+            userInfo: this.userInfo,
+            lastBackupMeta: this.lastBackupMeta,
+          }),
+        );
+      } else {
+        localStorage.removeItem(AUTH_STORAGE_KEY);
+      }
+    } catch {
+      // Ignore storage quota errors
+    }
   }
 
   /**
@@ -110,6 +136,14 @@ export class GoogleDriveProvider extends BaseSyncProvider {
   }
 
   /**
+   * Check if an active, unexpired access token is available.
+   * @returns {boolean}
+   */
+  hasValidToken() {
+    return Boolean(this.accessToken && this.tokenExpiresAt > Date.now() + 60000);
+  }
+
+  /**
    * Check if user is connected
    * @returns {boolean}
    */
@@ -118,7 +152,7 @@ export class GoogleDriveProvider extends BaseSyncProvider {
       this.restoreSavedSession();
     }
     // Considered connected if user info is persisted or a valid unexpired token exists
-    return Boolean(this.userInfo || (this.accessToken && this.tokenExpiresAt > Date.now()));
+    return Boolean(this.userInfo || this.hasValidToken());
   }
 
   /**
@@ -130,15 +164,23 @@ export class GoogleDriveProvider extends BaseSyncProvider {
 
   /**
    * Ensures an active, unexpired access token is available.
-   * Prompts user only if token is expired or missing.
+   * Only prompts user if interactive is explicitly true (e.g. during user-initiated backup/restore).
+   * Passive / non-interactive calls will NOT open auth popups.
+   * @param {object} [opts]
+   * @param {boolean} [opts.interactive=false]
    * @returns {Promise<string>}
    */
-  async ensureValidToken() {
+  async ensureValidToken({ interactive = false } = {}) {
     this.restoreSavedSession();
-    if (this.accessToken && this.tokenExpiresAt > Date.now() + 60000) {
+    if (this.hasValidToken()) {
       return this.accessToken;
     }
-    // Token is expired or missing, request token renewal
+
+    if (!interactive) {
+      throw new Error("Google Drive access token expired or not available.");
+    }
+
+    // Token is expired or missing, request token renewal only during interactive user actions
     await this.connect({ prompt: "" });
     return this.accessToken;
   }
@@ -187,15 +229,7 @@ export class GoogleDriveProvider extends BaseSyncProvider {
               // Keep existing user info if available
             }
 
-            localStorage.setItem(
-              AUTH_STORAGE_KEY,
-              JSON.stringify({
-                accessToken: this.accessToken,
-                tokenExpiresAt: this.tokenExpiresAt,
-                userInfo: this.userInfo,
-              }),
-            );
-
+            this.persistSession();
             resolve(true);
           },
         });
@@ -241,11 +275,12 @@ export class GoogleDriveProvider extends BaseSyncProvider {
 
   /**
    * Find existing backup file in appDataFolder
-   * @private
+   * @param {object} [opts]
+   * @param {boolean} [opts.interactive=false]
    * @returns {Promise<{ id: string, modifiedTime: string }|null>}
    */
-  async findBackupFile() {
-    await this.ensureValidToken();
+  async findBackupFile({ interactive = false } = {}) {
+    await this.ensureValidToken({ interactive });
 
     const query = encodeURIComponent(
       `name = '${BACKUP_FILENAME}' and 'appDataFolder' in parents and trashed = false`,
@@ -258,7 +293,9 @@ export class GoogleDriveProvider extends BaseSyncProvider {
 
     if (!res.ok) {
       if (res.status === 401) {
-        await this.disconnect();
+        this.accessToken = null;
+        this.tokenExpiresAt = 0;
+        this.persistSession();
         throw new Error("Google Drive authorization expired. Please reconnect.");
       }
       throw new Error(`Drive search failed: ${res.statusText}`);
@@ -270,23 +307,29 @@ export class GoogleDriveProvider extends BaseSyncProvider {
         id: data.files[0].id,
         modifiedAt: data.files[0].modifiedTime,
       };
+      this.persistSession();
       return data.files[0];
     }
     return null;
   }
 
   /**
-   * Get metadata for the cloud backup file
+   * Get metadata for the cloud backup file.
+   * Passive check: returns cached metadata if token is expired, or fetches fresh if valid token exists.
+   * Never triggers auth popup.
    * @returns {Promise<{ modifiedAt?: string }|null>}
    */
   async getMetadata() {
     if (!this.isConnected()) return null;
-    try {
-      const file = await this.findBackupFile();
-      return file ? { modifiedAt: file.modifiedTime } : null;
-    } catch {
-      return null;
+    if (this.hasValidToken()) {
+      try {
+        const file = await this.findBackupFile({ interactive: false });
+        return file ? { modifiedAt: file.modifiedTime } : null;
+      } catch {
+        // Fall back to cached metadata
+      }
     }
+    return this.lastBackupMeta ? { modifiedAt: this.lastBackupMeta.modifiedAt } : null;
   }
 
   /**
@@ -302,10 +345,10 @@ export class GoogleDriveProvider extends BaseSyncProvider {
       };
     }
     try {
-      await this.ensureValidToken();
+      await this.ensureValidToken({ interactive: true });
       const payload = customPayload || buildExportPayload();
       const fileContent = JSON.stringify(payload, null, 2);
-      const existingFile = await this.findBackupFile();
+      const existingFile = await this.findBackupFile({ interactive: false });
 
       let uploadUrl;
       let method;
@@ -358,11 +401,20 @@ export class GoogleDriveProvider extends BaseSyncProvider {
 
       if (!res.ok) {
         if (res.status === 401) {
-          await this.disconnect();
+          this.accessToken = null;
+          this.tokenExpiresAt = 0;
+          this.persistSession();
           return { success: false, error: "Google Drive authorization expired. Please reconnect." };
         }
         return { success: false, error: `Drive upload failed: ${res.statusText}` };
       }
+
+      const uploadedData = await res.json().catch(() => ({}));
+      this.lastBackupMeta = {
+        id: uploadedData.id || existingFile?.id || "",
+        modifiedAt: uploadedData.modifiedTime || new Date().toISOString(),
+      };
+      this.persistSession();
 
       return {
         success: true,
@@ -382,8 +434,8 @@ export class GoogleDriveProvider extends BaseSyncProvider {
       throw new Error("You are offline. Cloud restore requires an active internet connection.");
     }
     try {
-      await this.ensureValidToken();
-      const file = await this.findBackupFile();
+      await this.ensureValidToken({ interactive: true });
+      const file = await this.findBackupFile({ interactive: false });
       if (!file || !file.id) {
         return null;
       }
@@ -395,7 +447,9 @@ export class GoogleDriveProvider extends BaseSyncProvider {
 
       if (!res.ok) {
         if (res.status === 401) {
-          await this.disconnect();
+          this.accessToken = null;
+          this.tokenExpiresAt = 0;
+          this.persistSession();
           throw new Error("Google Drive authorization expired. Please reconnect.");
         }
         throw new Error(`Drive download failed: ${res.statusText}`);

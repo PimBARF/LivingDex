@@ -8,6 +8,7 @@ All notable changes, new features, improvements, and bug fixes for **LivingDex**
 
 | Version                                                               | Release Date          | Major Highlights                                                                                                 |
 | :-------------------------------------------------------------------- | :-------------------- | :--------------------------------------------------------------------------------------------------------------- |
+| **[v1.24.1](#v1241---2026-09-28)**                                    | Sep 28, 2026          | Fix unexpected Google OAuth login popup appearing when opening Settings modal                                    |
 | **[v1.24.0](#v1240---2026-09-27)**                                    | Sep 27, 2026          | Google Drive cloud backup, extensible SyncManager provider architecture, and Schema v3 data payload              |
 | **[v1.23.0](#v1230---2026-09-20)**                                    | Sep 20, 2026          | Species specimen count tracking badge on grid cells, modal inventory stepper, and family quota sync              |
 | **[v1.22.0](#v1220---2026-09-20)**                                    | Sep 20, 2026          | Dynamic Day/Night cycle time of day filter in Field Guide for supported games (Morning, Day, Night)              |
@@ -77,6 +78,16 @@ All notable changes, new features, improvements, and bug fixes for **LivingDex**
 | **[Genesis & Prototype](#initial-release---oct-2025)**                | Oct 27 – Nov 10, 2025 | Initial LivingDex tracker release, 30-slot PC boxes, PokeAPI integration                                         |
 
 ---
+
+## [v1.24.1] - 2026-09-28
+
+### Fixed
+
+- **Google Drive Authentication Popup Triggers (`google-drive-provider.js`, `modals.js`, `sw.js`)**:
+  - Resolved an issue where opening the Settings modal unexpectedly triggered Google Identity Services (GIS) OAuth account selection / login popups when a user's previous access token had expired.
+  - Decoupled passive status and backup metadata queries from interactive token refresh by adding non-interactive token guards (`hasValidToken()`, `ensureValidToken({ interactive })`).
+  - Added session persistence for last cloud backup metadata (`lastBackupMeta`) in localStorage so backup timestamps can display in the UI without requiring active Google API calls or token renewals.
+  - Deferred Google Drive UI synchronization to only execute when switching to the "Data & System" tab rather than on general Settings modal initialization.
 
 ## [v1.24.0] - 2026-09-27
 

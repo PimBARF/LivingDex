@@ -1427,6 +1427,10 @@ export function registerSettingsControls() {
       panel.hidden = panel.id !== targetPanelId;
     });
 
+    if (tabKey === "data") {
+      syncGoogleDriveUI();
+    }
+
     const body = modal?.querySelector(".settings-body");
     if (body) body.scrollTop = 0;
   }
@@ -1537,6 +1541,7 @@ export function registerSettingsControls() {
       gdriveStatusText.classList.remove("is-connected");
       if (gdriveAuthBtnText) gdriveAuthBtnText.textContent = "Connect";
       if (gdriveActions) gdriveActions.hidden = true;
+      if (gdriveMetaText) gdriveMetaText.textContent = "";
     }
   }
 
@@ -1550,7 +1555,6 @@ export function registerSettingsControls() {
       attachThemeSettingsHandlers();
       setupSettingsTabs();
       switchSettingsTab(currentSettingsTab, false);
-      syncGoogleDriveUI();
       closeBtn?.focus();
     },
     onClose: () => {},
